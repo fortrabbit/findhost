@@ -44,6 +44,12 @@ export const countryPoints: Record<string, { label: string; lat: number; lng: nu
   TH: { label: 'Thailand', lat: 13.8, lng: 100.5 },
   TR: { label: 'Türkiye', lat: 41.0, lng: 29.0 },
   ZA: { label: 'South Africa', lat: -26.2, lng: 28.0 },
+  TW: { label: 'Taiwan', lat: 25.0, lng: 121.6 },
+  PH: { label: 'Philippines', lat: 14.6, lng: 121.0 },
+  VN: { label: 'Vietnam', lat: 10.8, lng: 106.7 },
+  PK: { label: 'Pakistan', lat: 24.9, lng: 67.1 },
+  SA: { label: 'Saudi Arabia', lat: 24.7, lng: 46.7 },
+  RU: { label: 'Russia', lat: 55.8, lng: 37.6 },
 };
 
 export const spacing = 4;

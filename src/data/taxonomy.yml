@@ -170,6 +170,12 @@
     - { id: MY, label: Malaysia }
     - { id: TH, label: Thailand }
     - { id: NZ, label: New Zealand }
+    - { id: TW, label: Taiwan }
+    - { id: PH, label: Philippines }
+    - { id: VN, label: Vietnam }
+    - { id: PK, label: Pakistan }
+    - { id: SA, label: Saudi Arabia }
+    - { id: RU, label: Russia }
 
 - id: entry-price
   label: Entry price
