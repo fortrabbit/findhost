@@ -32,9 +32,16 @@ deployMethods:
 sshAccess: full
 pricingModel: fixed-tier
 entryPriceBand: 5-15
+renewalMultiple: 9
+contractMinimum: annual
 freeTier: none
 regions:
   - DE
+checkedAt: 2026-07-31
+sources:
+  - { field: entryPriceBand, url: 'https://www.strato.de/webhosting/', checkedAt: 2026-07-31 }
+  - { field: renewalMultiple, url: 'https://www.strato.de/webhosting/', checkedAt: 2026-07-31 }
+  - { field: contractMinimum, url: 'https://www.strato.de/webhosting/', checkedAt: 2026-07-31 }
 figure:
   emoji: 📻
   color: rgb(60, 30, 80)
@@ -51,4 +58,6 @@ The offering is deliberately plain. Every tariff carries PHP 8.4 with SSH and SF
 
 ## Reservations
 
-The advertised entry price is a twelve-month promotion; the standing rate is several times higher, and that is the figure banded here. Only one PHP version is documented, so there is no published path for a legacy application. No public status page surfaced.
+The advertised entry price is a promotion; the standing rate is several times higher, and that is the figure banded here. All four shared tariffs run on a twelve-month term: Starter is free for one month and then €5, Plus free for one month and then €12, Pro free for one month and then €22. Basic is the one with a genuine introductory rate — €1 a month for twelve months, then €9 — so the renewal multiple recorded here is nine, taken from that plan.
+
+Only one PHP version is documented, so there is no published path for a legacy application. No public status page surfaced.

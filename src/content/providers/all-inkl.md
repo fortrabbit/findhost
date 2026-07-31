@@ -29,8 +29,14 @@ sshAccess: limited
 pricingModel: fixed-tier
 entryPriceBand: under-5
 freeTier: trial
+contractMinimum: none
 regions:
   - DE
+checkedAt: 2026-07-31
+sources:
+  - { field: entryPriceBand, url: 'https://www.all-inkl.com/webhosting/', checkedAt: 2026-07-31 }
+  - { field: contractMinimum, url: 'https://www.all-inkl.com/webhosting/', checkedAt: 2026-07-31 }
+  - { field: regions, url: 'https://www.all-inkl.com/webhosting/', checkedAt: 2026-07-31 }
 supportChannels:
   - phone
   - email
@@ -44,7 +50,7 @@ ai: authored
 
 ## About ALL-INKL.COM
 
-ALL-INKL.COM trades as Neue Medien Münnich, a privately held company founded in 2000 in Friedersdorf, Saxony, with more than a hundred employees and servers in Dresden. Four shared tariffs run from the entry Privat plan to Business, alongside managed dedicated servers and a reseller line.
+ALL-INKL.COM trades as Neue Medien Münnich, a privately held company founded in 2000 in Friedersdorf, Saxony, with more than a hundred employees and servers in Dresden. Four shared tariffs run from the entry Privat plan to Business, alongside managed dedicated servers and a reseller line: Privat at €4.95 a month, Privat+ at €7.95, Premium at €9.95 and Business at €24.95. There is no minimum contract term, and the first month is free once per customer in any 365-day period. The regular price is printed next to the offer rather than replacing it, so there is no introductory rate that reverts — the reason no renewal multiple is recorded here. All data is stated to be held exclusively on the company's own servers in Germany.
 
 Administration runs through KAS, the company's own control panel rather than cPanel or Plesk — which is what the third-party ACME clients that support it automate against. Support is by telephone across a wide daily window plus round-the-clock email, and the top tariff adds a dedicated hotline.
 
