@@ -1,0 +1,62 @@
+---
+id: netcup
+name: netcup
+url: https://www.netcup.com
+category: vps
+pricingUrl: https://www.netcup.com/de/hosting
+statusUrl: https://netcup-status.de
+description: Karlsruhe-based provider selling low-priced webhosting, VPS and root servers across five data-centre locations, part of the Anexia group.
+founded: 2008
+hqCountry: DE
+ownership: subsidiary
+parent: Anexia
+useCases:
+  - cms
+  - api
+  - saas
+  - side-project
+  - game-server
+  - learning
+audience:
+  - indie-hacker
+  - freelancer
+  - smb
+  - agency
+software:
+  - wordpress
+runtimes:
+  - php
+  - python
+  - node
+  - ruby
+  - any
+deployMethods:
+  - ftp
+  - ssh
+  - control-panel
+sshAccess: full
+pricingModel: fixed-tier
+entryPriceBand: under-5
+freeTier: none
+supportChannels:
+  - email
+  - forum
+figure:
+  emoji: 🪙
+  color: rgb(30, 70, 55)
+  textColor: rgb(190, 235, 200)
+  text: Cheap, and the price stays.
+ai: authored
+---
+
+## About netcup
+
+netcup began as a sole proprietorship and became netcup GmbH in Karlsruhe in 2008. It has belonged to the Austrian Anexia group since 2016 and states more than 100,000 customers. Server locations offered are Vienna, Nuremberg, Amsterdam, Manassas in the United States and Singapore, with a "no preference, somewhere in Europe" option for anyone who does not care.
+
+Price is the defining characteristic: webhosting starts under €3 a month including VAT and a four-core VPS sits under €6, with the rate held for the whole contract term rather than reverting after an introductory period. Root servers give full control; webhosting runs on Plesk with PHP on every tariff and documented support for Python, cron and PHP extensions.
+
+Support is by ticket and through an active customer forum rather than by phone, which is part of how the pricing works.
+
+## Reservations
+
+Node.js and Ruby appear on the tariff comparison table only from the larger webhosting plans upwards, and neither is covered in the help centre — the advertised support is thinner than the documented support. Windows on a VPS requires installing it yourself under a trial licence.

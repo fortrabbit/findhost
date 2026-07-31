@@ -3,7 +3,40 @@ id: linode
 name: Linode
 url: https://www.linode.com
 category: vps
+pricingUrl: https://www.linode.com/pricing/
 description: Linode is a US VPS provider founded in 2003, acquired by Akamai in 2022 and now sold as Akamai Cloud.
+whoManagesOs: you
+audience:
+  - developer
+runtimes:
+  - any
+sshAccess: full
+pricingModel: hourly
+entryPriceBand: 5-15
+regions:
+  - US
+  - CA
+  - BR
+  - GB
+  - FR
+  - ES
+  - IT
+  - NL
+  - DE
+  - SE
+  - IN
+  - SG
+  - ID
+  - JP
+  - AU
+apiAvailable: public
+status: active
+checkedAt: 2026-07-31
+sources:
+  - { field: regions, url: 'https://api.linode.com/v4/regions', checkedAt: 2026-07-31 }
+  - { field: entryPriceBand, url: 'https://api.linode.com/v4/linode/types', checkedAt: 2026-07-31 }
+  - { field: pricingModel, url: 'https://api.linode.com/v4/linode/types', checkedAt: 2026-07-31 }
+  - { field: apiAvailable, url: 'https://api.linode.com/v4/regions', checkedAt: 2026-07-31 }
 figure:
   emoji: 🇺🇸
   color: rgb(30, 85, 158)
@@ -15,6 +48,8 @@ ai: co-authored
 ## About Linode
 
 Linode has sold Linux virtual servers to developers since 2003. Akamai acquired the company in 2022 and the product is now marketed as Akamai Cloud. The catalogue has widened accordingly, from plain VPS instances towards broader infrastructure services integrated with Akamai's CDN and edge network.
+
+Linode's public API — which needs no credentials to read the catalogue — lists 33 regions across 15 countries and puts the cheapest instance, the 1 GB Nanode, at $5.00 a month or $0.0075 an hour.
 
 ## Reservations
 
