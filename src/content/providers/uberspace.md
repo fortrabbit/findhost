@@ -3,7 +3,7 @@ id: uberspace
 name: Uberspace
 url: https://uberspace.de
 category: vps
-description: Alternative boutique hosting service from Germany.
+description: Uberspace is a small German hosting service sitting between shared hosting and a VPS, running since 2011.
 figure:
   emoji: 🧑‍🚀
   color: rgb(60, 60, 60)
@@ -15,4 +15,4 @@ greenWebId: 778
 
 ## About Uberspace
 
-Uberspace is a small service oriented, developer friendly hosting service that might be located somewhere between shared hosting and VPS. It's based in Germany, privacy friendly since 2011. Support is available in German too. We have heard good things about them. They are popular with the Kirby CMS community. The German word 'Über' means 'over'. Uberspace was founded long before taxi service Uber.
+Uberspace is a small service oriented, developer friendly hosting service that might be located somewhere between shared hosting and VPS. It's based in Germany, privacy friendly since 2011. Support is available in German as well as English, and the service has a following in the Kirby CMS community. The name predates the taxi company: 'über' is the German for 'over'.

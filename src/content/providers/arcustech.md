@@ -14,8 +14,8 @@ ai: co-authored
 
 ## About Arcustech
 
-Arcustech is a smaller VPS hosting company based in Minneapolis, US. Founded in 2013, it continues a hosting lineage that goes back to EngineHosting in the late 1990s. The offering includes managed and self-managed NVMe SSD VPS hosting for Craft CMS, Statamic, WordPress, Laravel, ExpressionEngine and other PHP/MySQL web applications. Data centers span North America, Europe and Asia-Pacific, and the company documents its green hosting initiatives.
+Arcustech is a smaller VPS hosting company based in Minneapolis, US. Founded in 2013, it continues a hosting lineage that goes back to EngineHosting in the late 1990s. The offering includes managed and self-managed NVMe SSD VPS hosting for Craft CMS, Statamic, WordPress, Laravel, ExpressionEngine and other PHP/MySQL web applications. Data centers span North America, Europe and Asia-Pacific, and the company documents its green hosting initiatives. It is independent, and is a visible sponsor of and participant in the Craft CMS community.
 
 ## Reservations
 
-We like Arcustech for being independent. They have a good reputation among developers and are especially known for their deep involvement with the Craft CMS community, which they sponsor and support. You get more horse power for the penny. On the managed line Arcustech administers the server; on the self-managed line that work is yours — either way it is still a server per project, not a platform. If you really want to host on a VPS (we think you should not), consider Arcustech.
+The unit sold is a server, not a platform. On the managed line Arcustech administers it; on the self-managed line that work belongs to the customer. Either way a project gets a machine rather than an allocation of capacity, so a portfolio of sites means a fleet of servers, each with its own patch cycle and its own bill.

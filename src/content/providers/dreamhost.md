@@ -3,14 +3,14 @@ id: dreamhost
 name: DreamHost
 url: https://www.dreamhost.com
 category: shared
-description: We don't recommend shared hosting at all. But maybe DreamHost is one of the better options.
+description: DreamHost is an independent shared hosting company from Los Angeles, founded in 1996, with a long open-source track record.
 ai: co-authored
 ---
 
 ## About DreamHost
 
-DreamHost is one of the better classical shared hosting services, based in Los Angeles and founded in 1996 by four Harvey Mudd College students. The company has stayed independent, without venture capital. It promotes cheap WordPress hosting with a 100% uptime guarantee, backed by service credits. DreamHost also has real open source credentials: co-founder Sage Weil created the Ceph storage platform there — later spun off as Inktank and sold to Red Hat — and the company contributed to OpenStack. We don't have first hand experience.
+DreamHost is a classical shared hosting company based in Los Angeles, founded in 1996 by four Harvey Mudd College students. It has stayed independent, without venture capital. The marketing centres on low-cost WordPress hosting with a 100% uptime guarantee backed by service credits. The company has an open-source track record: co-founder Sage Weil created the Ceph storage platform there — later spun off as Inktank and sold to Red Hat — and DreamHost contributed to OpenStack.
 
 ## Reservations
 
-For a no-frills website on a shared hosting budget, DreamHost is one of the more sympathetic choices — independent, long-running, open source friendly — compared to GoDaddy, HostGator and others. It is still shared hosting though: no Git-based deployment workflow, and tooling geared at site owners rather than developers.
+This is shared hosting, with the constraints that implies: no git-based deployment workflow, and tooling aimed at site owners rather than developers. The independence and the open-source history distinguish DreamHost from the conglomerate-owned brands in the same segment; the product underneath is the same shape.

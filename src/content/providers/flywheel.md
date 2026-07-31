@@ -1,6 +1,6 @@
 ---
 id: flywheel
-name: Flywheel alternative
+name: Flywheel
 url: https://getflywheel.com
 category: vanity-hosting
 description: Flywheel is a managed WordPress host built for web designers, freelancers, and agencies.

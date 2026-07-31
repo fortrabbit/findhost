@@ -14,7 +14,7 @@ ai: co-authored
 
 ## About HostGator
 
-HostGator is a low cost provider of shared, reseller, virtual private server, and dedicated web hosting, founded in 2002 in Texas. Like Bluehost, it's a hosting brand of Newfold Digital, the portfolio company formerly known as Endurance International Group, which bundles dozens of hosting brands. We don't have first hand experience.
+HostGator is a low cost provider of shared, reseller, virtual private server, and dedicated web hosting, founded in 2002 in Texas. Like Bluehost, it's a hosting brand of Newfold Digital, the portfolio company formerly known as Endurance International Group, which bundles dozens of hosting brands.
 
 ## Reservations
 

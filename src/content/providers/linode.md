@@ -3,7 +3,7 @@ id: linode
 name: Linode
 url: https://www.linode.com
 category: vps
-description: Linode has been one of the most dev-friendly VPS providers in the US since 2003, known for reliable Linux servers. Now owned by Akamai.
+description: Linode is a US VPS provider founded in 2003, acquired by Akamai in 2022 and now sold as Akamai Cloud.
 figure:
   emoji: 🇺🇸
   color: rgb(30, 85, 158)
@@ -14,8 +14,10 @@ ai: co-authored
 
 ## About Linode
 
-Linode has been one of the most dev-friendly VPS providers in the US since 2003, known for reliable Linux servers. In 2022 they were acquired by Akamai and are now rebranded as Akamai Cloud. The product line is shifting away from simple VPS offerings toward broader IaaS and CDN-integrated services, which makes the future of the individual developer-focused plans less certain.
+Linode has sold Linux virtual servers to developers since 2003. Akamai acquired the company in 2022 and the product is now marketed as Akamai Cloud. The catalogue has widened accordingly, from plain VPS instances towards broader infrastructure services integrated with Akamai's CDN and edge network.
 
 ## Reservations
 
-Linode gives you a Linux server — which means you also get the full responsibility that comes with it. Setting up and maintaining a web stack (NGINX, PHP-FPM, MySQL, SSL, firewalls) takes real time and expertise. Security patches, OS upgrades, and monitoring are ongoing tasks that never stop. Beyond that, the direction of the Akamai-owned platform is moving toward enterprise infrastructure, which may not be the right fit for independent developers or small teams building PHP web applications.
+A Linode is a Linux server, and the responsibility that comes with one. Building and maintaining the web stack — Nginx, PHP-FPM, MySQL, TLS certificates, firewall rules — takes time and expertise, and security patches, operating system upgrades and monitoring are standing work rather than a one-off setup.
+
+The product's centre of gravity has also moved. Marketing, packaging and roadmap now sit inside Akamai's enterprise infrastructure business, which is a different customer from the independent developer the original Linode was built around.

@@ -3,7 +3,7 @@ id: ploi-cloud
 name: Ploi Cloud
 url: https://ploi.cloud
 category: paas
-description: Of all the providers listed in this hosting guide, Ploi Cloud is one we would recommend more than most.
+description: Ploi Cloud is the managed platform built by the team behind the Ploi server-management panel.
 figure:
   emoji: ☁️
   color: rgb(255, 140, 0)
@@ -12,6 +12,10 @@ figure:
 ai: co-authored
 ---
 
+## About Ploi Cloud
+
+Ploi Cloud is the managed platform from the Dutch team behind [Ploi](/provider/ploi/), the server-management panel. Where Ploi configures a server the customer rents, Ploi Cloud runs the infrastructure itself.
+
 ## Reservations
 
-Of all the providers listed in this [hosting guide](/guide/), Ploi Cloud is one we would recommend more than most. The offerings and features are comparable, which is great news for developers seeking a progressive hosting solution. There's healthy competition in this space. The Ploi founders have extensive experience hosting PHP applications, but Ploi Cloud is a relatively new service and not yet battle-tested.
+The team's experience with PHP hosting comes from the panel business rather than from operating a platform, and Ploi Cloud is a young product by the standards of the category. There is less operating history behind it than behind the platforms it sits alongside — which is a fact about its age, not a prediction about its reliability.
