@@ -1,6 +1,9 @@
 ---
 import AiDisclosure from '../components/AiDisclosure.astro';
 import type { AiLevel } from '../components/AiDisclosure.astro';
+import '../styles/tokens.css';
+import '../styles/base.css';
+import '../styles/components.css';
 
 interface Props {
   title: string;
@@ -25,7 +28,7 @@ const fathomSiteId = import.meta.env.PUBLIC_FATHOM_SITE_ID;
   <body>
     <header>
       <a href="/" class="wordmark">FindHost</a>
-      <form class="search" role="search" action="/search/">
+      <form class="site-search" role="search" action="/search/">
         <input type="search" name="q" placeholder="Search providers and guide" aria-label="Search" />
         <button type="submit">Search</button>
       </form>
@@ -38,132 +41,10 @@ const fathomSiteId = import.meta.env.PUBLIC_FATHOM_SITE_ID;
     <footer>
       <AiDisclosure ai={ai} />
       <p>
-        Published by fortrabbit, who also appear in the dataset. Code under MIT, data under
-        <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
+        Published by fortrabbit, who also appear in the dataset. Code under MIT, data under <a
+          href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a
+        >.
       </p>
     </footer>
   </body>
 </html>
-
-<style is:global>
-  :root {
-    --bg: #ffffff;
-    --fg: #151515;
-    --dim: #5f6068;
-    --line: #e2e3e8;
-    --line-strong: #151515;
-    --link: #1a3fd0;
-    --visited: #5b2a97;
-    --serif: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, Georgia, serif;
-    --ui: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-    --data: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #000000;
-      --fg: #ededf0;
-      --dim: #9b9ca6;
-      --line: #262930;
-      --line-strong: #ededf0;
-      --link: #89aaff;
-      --visited: #c7a6ff;
-    }
-  }
-
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
-
-  body {
-    margin: 0 auto;
-    padding: 1.5rem 1.25rem 4rem;
-    max-width: 62rem;
-    background: var(--bg);
-    color: var(--fg);
-    font-family: var(--ui);
-    font-size: 17.5px;
-    line-height: 1.62;
-  }
-
-  h1,
-  h2,
-  h3 {
-    font-family: var(--serif);
-    font-weight: 600;
-    line-height: 1.2;
-    text-wrap: balance;
-  }
-
-  a {
-    color: var(--link);
-  }
-
-  a:visited {
-    color: var(--visited);
-  }
-
-  header {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem 1.5rem;
-    align-items: center;
-    padding-bottom: 0.75rem;
-    border-bottom: 1px solid var(--line-strong);
-  }
-
-  .wordmark {
-    font-family: var(--serif);
-    font-size: 1.3rem;
-    color: var(--fg);
-    text-decoration: none;
-  }
-
-  .search {
-    display: flex;
-    margin-left: auto;
-  }
-
-  .search input {
-    width: 17rem;
-    padding: 0.3rem 0.6rem;
-    border: 1px solid var(--line-strong);
-    border-right: 0;
-    background: var(--bg);
-    color: var(--fg);
-    font: inherit;
-    font-size: 0.86rem;
-  }
-
-  .search button {
-    padding: 0.3rem 0.9rem;
-    border: 1px solid var(--line-strong);
-    background: var(--fg);
-    color: var(--bg);
-    font: inherit;
-    font-size: 0.86rem;
-    cursor: pointer;
-  }
-
-  @media (max-width: 640px) {
-    .search {
-      flex-basis: 100%;
-      margin-left: 0;
-    }
-
-    .search input {
-      flex: 1;
-      width: auto;
-    }
-  }
-
-  footer {
-    margin-top: 4rem;
-    padding-top: 0.75rem;
-    border-top: 1px solid var(--line);
-    color: var(--dim);
-    font-size: 0.86rem;
-  }
-</style>

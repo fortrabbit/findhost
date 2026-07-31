@@ -1,0 +1,113 @@
+/*
+ * Element defaults and the page shell. Markdown bodies render as bare elements,
+ * so these selectors — not classes — are what style most of the site's words.
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light dark;
+}
+
+body {
+  max-width: var(--measure-page);
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-md) var(--space-2xl);
+  background: var(--color-page);
+  color: var(--color-ink);
+  font-family: var(--font-text);
+  font-size: var(--text-base);
+  line-height: var(--leading-body);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: var(--space-lg) 0 var(--space-xs);
+  font-family: var(--font-display);
+  font-weight: var(--weight-strong);
+  line-height: var(--leading-tight);
+  text-wrap: balance;
+}
+
+h1 {
+  margin-top: var(--space-md);
+  font-size: var(--text-2xl);
+}
+
+h2 {
+  font-size: var(--text-xl);
+}
+
+h3 {
+  font-size: var(--text-lg);
+}
+
+h4 {
+  font-size: var(--text-md);
+}
+
+p,
+ul,
+ol,
+dl,
+blockquote,
+figure {
+  margin: 0 0 var(--space-md);
+  max-width: var(--measure-prose);
+}
+
+a {
+  color: var(--color-link);
+}
+
+a:visited {
+  color: var(--color-link-visited);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--color-link);
+  outline-offset: 2px;
+}
+
+code,
+kbd,
+samp {
+  font-family: var(--font-data);
+  font-size: 0.9em;
+}
+
+hr {
+  margin: var(--space-lg) 0;
+  border: 0;
+  border-top: var(--rule-hairline) solid var(--color-ink);
+}
+
+/* Page shell — semantic elements, no wrapper classes needed */
+
+body > header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm) var(--space-lg);
+  align-items: center;
+  padding-bottom: var(--space-sm);
+  border-bottom: var(--rule-strong) solid var(--color-ink);
+}
+
+body > footer {
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-sm);
+  border-top: var(--rule-hairline) solid var(--color-ink);
+  font-size: var(--text-sm);
+}
+
+body > footer p {
+  margin-bottom: var(--space-2xs);
+}

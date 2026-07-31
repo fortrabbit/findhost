@@ -1,0 +1,191 @@
+/*
+ * Named parts of the site. Every class here says what the thing IS, never what
+ * it looks like, and every value comes from a token — so a page that needs a
+ * pattern reuses the class instead of restating the measurements.
+ */
+
+/* --- Identity and navigation --- */
+
+/** An anchor, so it has to opt out of the link colour explicitly. */
+.wordmark {
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  font-size: var(--text-md);
+  text-decoration: none;
+}
+
+.site-search {
+  display: flex;
+  margin-left: auto;
+}
+
+.site-search input {
+  width: 17rem;
+  padding: var(--space-2xs) var(--space-xs);
+  border: var(--rule-strong) solid var(--color-ink);
+  border-right: 0;
+  background: var(--color-page);
+  font: inherit;
+  font-size: var(--text-sm);
+}
+
+/* No grey anywhere, so the placeholder separates from a real value by style, not tone. */
+.site-search input::placeholder {
+  color: var(--color-ink);
+  font-style: italic;
+  opacity: 1;
+}
+
+.site-search button {
+  padding: var(--space-2xs) var(--space-sm);
+  border: var(--rule-strong) solid var(--color-ink);
+  background: var(--color-ink);
+  color: var(--color-ink-inverse);
+  font: inherit;
+  font-size: var(--text-sm);
+  cursor: pointer;
+}
+
+@media (max-width: 40rem) {
+  .site-search {
+    flex-basis: 100%;
+    margin-left: 0;
+  }
+
+  .site-search input {
+    flex: 1;
+    width: auto;
+  }
+}
+
+/* --- Editorial text --- */
+
+/** Opening paragraph, set slightly larger than the body it introduces. */
+.lede {
+  font-size: var(--text-md);
+}
+
+/** Something true about our data or our process rather than about a provider. */
+.annotation {
+  font-size: var(--text-sm);
+}
+
+/** fortrabbit's own record. Permanent, never decorative. */
+.self-marker {
+  margin-left: var(--space-xs);
+  font-size: var(--text-xs);
+}
+
+/* --- Provider list --- */
+
+.provider-list {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.provider-list > li {
+  padding: var(--space-sm) 0;
+  border-top: var(--rule-hairline) solid var(--color-ink);
+}
+
+/* Close the table, so the list ends rather than trailing off. */
+.provider-list > li:last-child {
+  border-bottom: var(--rule-hairline) solid var(--color-ink);
+}
+
+.provider-list p {
+  margin: var(--space-3xs) 0 0;
+  font-size: var(--text-sm);
+}
+
+/* --- The figure pair --- */
+
+/** Identity: an emoji and two colours the record supplies itself. */
+.figure-band {
+  max-width: var(--measure-prose);
+  margin: var(--space-md) 0;
+  padding: var(--space-sm) var(--space-md);
+  font-family: var(--font-display);
+  font-size: var(--text-md);
+}
+
+/**
+ * The reservation. Deliberately not a mirror of .figure-band — two matching
+ * tiles side by side read as a scorecard, and a scorecard is a rating in costume.
+ */
+.caveat {
+  max-width: var(--measure-prose);
+  margin: var(--space-lg) 0;
+  padding-left: var(--space-md);
+  border-left: var(--rule-heavy) solid var(--color-ink);
+}
+
+.caveat p {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--text-md);
+}
+
+.caveat-source {
+  margin-top: var(--space-2xs);
+  font-family: var(--font-text);
+  font-size: var(--text-xs);
+}
+
+/* --- The record itself --- */
+
+.record-links {
+  font-size: var(--text-sm);
+}
+
+/** Dense and capped, because this table is scanned rather than read. */
+.fact-groups {
+  max-width: var(--measure-data);
+  columns: 2;
+  column-gap: var(--space-xl);
+}
+
+@media (max-width: 39rem) {
+  .fact-groups {
+    columns: 1;
+  }
+}
+
+.fact-group {
+  display: flow-root;
+  margin: 0 0 var(--space-md);
+  break-inside: avoid;
+}
+
+.fact-group > h3 {
+  margin: 0 0 var(--space-2xs);
+  padding-bottom: var(--space-3xs);
+  border-bottom: var(--rule-strong) solid var(--color-ink);
+  font-size: var(--text-md);
+}
+
+.fact-list {
+  display: grid;
+  grid-template-columns: 9.5rem 1fr;
+  gap: 0 var(--space-sm);
+  align-items: baseline;
+  max-width: none;
+  margin: 0;
+}
+
+.fact-list > dt {
+  padding: var(--space-3xs) 0;
+  font-size: var(--text-xs);
+  line-height: var(--leading-data);
+}
+
+.fact-list > dd {
+  margin: 0;
+  padding: var(--space-3xs) 0;
+  font-family: var(--font-data);
+  font-size: var(--text-xs);
+  font-variant-numeric: tabular-nums;
+  line-height: var(--leading-data);
+}

@@ -107,11 +107,11 @@ const known = attributeGroups
 <Base title={`${data.name} — FindHost`} description={data.description} ai={data.ai}>
   <article>
     <h1>{data.name}</h1>
-    {data.publishedByUs && <p class="marker">This is us. We publish this site and we appear in its dataset.</p>}
+    {data.publishedByUs && <p class="annotation">This is us. We publish this site and we appear in its dataset.</p>}
 
     {
       data.figure && (
-        <p class="figure" style={`background:${data.figure.color};color:${data.figure.textColor}`}>
+        <p class="figure-band" style={`background:${data.figure.color};color:${data.figure.textColor}`}>
           <span aria-hidden="true">{data.figure.emoji}</span> {data.figure.text}
         </p>
       )
@@ -119,7 +119,7 @@ const known = attributeGroups
 
     {data.description && <p class="lede">{data.description}</p>}
 
-    <p class="links">
+    <p class="record-links">
       <a href={data.url} rel="nofollow">{data.url.replace('https://', '')}</a>
       {data.pricingUrl && <> · <a href={data.pricingUrl} rel="nofollow">pricing</a></>}
       {data.statusUrl && <> · <a href={data.statusUrl} rel="nofollow">status</a></>}
@@ -133,7 +133,7 @@ const known = attributeGroups
           <p>
             <span aria-hidden="true">{data.caveat.emoji}</span> {data.caveat.text}
           </p>
-          <p class="attribution">
+          <p class="caveat-source">
             A judgement by {data.caveat.by}, {data.caveat.on.toISOString().slice(0, 10)}. Not a filterable field.
           </p>
         </aside>
@@ -141,7 +141,7 @@ const known = attributeGroups
     }
 
     <h2>The record</h2>
-    <p class="note">
+    <p class="annotation">
       {known} of {total} attributes recorded. That is a fact about our work, not about {data.name} — it never affects
       sort order.
       {
@@ -151,12 +151,12 @@ const known = attributeGroups
       }
     </p>
 
-    <div class="groups">
+    <div class="fact-groups">
       {
         attributeGroups.map((group) => (
-          <section class="group">
+          <section class="fact-group">
             <h3>{group.label}</h3>
-            <dl>
+            <dl class="fact-list">
               {group.fields.map(([label, value]) => (
                 <>
                   <dt>{label}</dt>
@@ -169,100 +169,9 @@ const known = attributeGroups
       }
     </div>
 
-    <p class="note">
+    <p class="annotation">
       Something wrong or missing? <a href="https://github.com/fortrabbit/findhost">Complete this record.</a>
     </p>
   </article>
 </Base>
 
-<style>
-  .figure {
-    margin: 1.2rem 0;
-    padding: 1rem 1.2rem;
-    font-family: var(--serif);
-    font-size: 1.2rem;
-  }
-
-  .lede {
-    font-size: 1.06rem;
-  }
-
-  .links,
-  .note {
-    color: var(--dim);
-    font-size: 0.86rem;
-  }
-
-  .marker {
-    color: var(--dim);
-    font-size: 0.86rem;
-  }
-
-  .caveat {
-    margin: 1.6rem 0;
-    padding-left: 1rem;
-    border-left: 3px solid var(--line-strong);
-  }
-
-  .caveat p {
-    margin: 0;
-    font-family: var(--serif);
-    font-size: 1.1rem;
-  }
-
-  .caveat .attribution {
-    margin-top: 0.3rem;
-    color: var(--dim);
-    font-family: var(--ui);
-    font-size: 0.8rem;
-  }
-
-  .groups {
-    max-width: 46rem;
-    columns: 2;
-    column-gap: 2.8rem;
-  }
-
-  @media (max-width: 620px) {
-    .groups {
-      columns: 1;
-    }
-  }
-
-  .group {
-    display: flow-root;
-    margin: 0 0 1.15rem;
-    break-inside: avoid;
-  }
-
-  .group h3 {
-    margin: 0 0 0.3rem;
-    padding-bottom: 0.22rem;
-    border-bottom: 1px solid var(--line-strong);
-    font-size: 1.06rem;
-  }
-
-  dl {
-    display: grid;
-    grid-template-columns: 9.5rem 1fr;
-    gap: 0 0.9rem;
-    align-items: baseline;
-    margin: 0;
-  }
-
-  dt {
-    padding: 0.09rem 0;
-    color: var(--dim);
-    font-size: 0.77rem;
-    line-height: 1.38;
-  }
-
-  dd {
-    margin: 0;
-    padding: 0.09rem 0;
-    font-family: var(--data);
-    font-size: 0.75rem;
-    font-variant-numeric: tabular-nums;
-    line-height: 1.38;
-  }
-</style>
