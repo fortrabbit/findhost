@@ -7,6 +7,12 @@ pricingUrl: https://kinsta.com/wordpress-hosting/
 description: Kinsta is a managed WordPress host founded in 2013, with plans metered on monthly visits and 14-day backup retention.
 founded: 2013
 whoManagesOs: provider
+useCases:
+  - cms
+specialisation:
+  - wordpress
+software:
+  - wordpress
 runtimes:
   - php
 backupsIncluded: included
@@ -19,6 +25,8 @@ sources:
   - { field: entryPriceBand, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-07-31 }
   - { field: backupsIncluded, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-07-31 }
+  - { field: software, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-07-31 }
+  - { field: specialisation, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-07-31 }
 figure:
   emoji: 👑
   color: rgb(138, 43, 226)

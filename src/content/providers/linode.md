@@ -1,9 +1,9 @@
 ---
 id: linode
-name: Linode alternative
+name: Linode
 url: https://www.linode.com
 category: vps
-description: Linode has been one of the most dev-friendly VPS providers in the US since 2003, known for reliable Linux servers.
+description: Linode has been one of the most dev-friendly VPS providers in the US since 2003, known for reliable Linux servers. Now owned by Akamai.
 figure:
   emoji: 🇺🇸
   color: rgb(30, 85, 158)

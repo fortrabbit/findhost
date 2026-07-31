@@ -6,6 +6,15 @@ category: paas
 pricingUrl: https://laravel.com/cloud/pricing
 description: Laravel Cloud is the official platform by Laravel Holdings — managed, scale-to-zero hosting for Laravel and Symfony applications, billed by subscription plus usage.
 whoManagesOs: provider
+useCases:
+  - saas
+  - e-commerce
+  - side-project
+specialisation:
+  - laravel
+software:
+  - laravel
+  - symfony
 deployMethods:
   - git-integration
 managedDatabases:
@@ -36,6 +45,8 @@ sources:
   - { field: contractMinimum, url: 'https://laravel.com/cloud/pricing', checkedAt: 2026-07-31 }
   - { field: deployMethods, url: 'https://laravel.com/cloud/pricing', checkedAt: 2026-07-31 }
   - { field: supportTiering, url: 'https://laravel.com/cloud/pricing', checkedAt: 2026-07-31 }
+  - { field: software, url: 'https://laravel.com/cloud/pricing', checkedAt: 2026-07-31 }
+  - { field: useCases, url: 'https://laravel.com/cloud/pricing', checkedAt: 2026-07-31 }
 figure:
   emoji: 🧺
   color: rgb(173, 150, 74)

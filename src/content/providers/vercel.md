@@ -6,6 +6,22 @@ category: serverless
 pricingUrl: https://vercel.com/docs/plans
 description: Vercel is a serverless frontend platform. Its official function runtimes do not include PHP, which is available only through a community runtime.
 whoManagesOs: provider
+useCases:
+  - saas
+  - ai-app
+audience:
+  - enterprise
+software:
+  - nextjs
+  - sveltekit
+  - nuxt
+  - astro
+  - remix
+social:
+  x: https://x.com/vercel
+  linkedin: https://linkedin.com/company/vercel
+  github: https://github.com/vercel
+  youtube: https://youtube.com/@VercelHQ
 runtimes:
   - node
   - python
@@ -44,6 +60,10 @@ sources:
   - { field: supportChannels, url: 'https://vercel.com/docs/plans', checkedAt: 2026-07-31 }
   - { field: supportTiering, url: 'https://vercel.com/docs/plans', checkedAt: 2026-07-31 }
   - { field: cliTool, url: 'https://vercel.com/docs/plans', checkedAt: 2026-07-31 }
+  - { field: audience, url: 'https://vercel.com/docs/plans', checkedAt: 2026-07-31 }
+  - { field: software, url: 'https://vercel.com/docs/frameworks', checkedAt: 2026-07-31 }
+  - { field: useCases, url: 'https://vercel.com/', checkedAt: 2026-07-31 }
+  - { field: social, url: 'https://vercel.com/', checkedAt: 2026-07-31 }
 figure:
   emoji: 🔺
   color: rgb(20, 20, 24)

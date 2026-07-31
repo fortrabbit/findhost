@@ -7,6 +7,11 @@ pricingUrl: https://docs.railway.com/reference/pricing/plans
 statusUrl: https://status.railway.com
 description: Railway is a polyglot deployment platform with subscription plus usage billing, four regions and a build system that detects most common languages.
 whoManagesOs: provider
+useCases:
+  - side-project
+audience:
+  - indie-hacker
+  - enterprise
 runtimes:
   - node
   - python
@@ -48,6 +53,8 @@ sources:
   - { field: deployMethods, url: 'https://docs.railway.com/guides/cli', checkedAt: 2026-07-31 }
   - { field: cliTool, url: 'https://docs.railway.com/guides/cli', checkedAt: 2026-07-31 }
   - { field: apiAvailable, url: 'https://docs.railway.com/guides/cli', checkedAt: 2026-07-31 }
+  - { field: audience, url: 'https://railway.com/pricing', checkedAt: 2026-07-31 }
+  - { field: useCases, url: 'https://railway.com/pricing', checkedAt: 2026-07-31 }
   - { field: mcpServer, url: 'https://docs.railway.com/guides/cli', checkedAt: 2026-07-31 }
   - { field: supportChannels, url: 'https://docs.railway.com/reference/support', checkedAt: 2026-07-31 }
   - { field: supportTiering, url: 'https://docs.railway.com/reference/support', checkedAt: 2026-07-31 }

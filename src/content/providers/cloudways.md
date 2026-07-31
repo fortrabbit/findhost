@@ -6,6 +6,22 @@ category: server-management
 pricingUrl: https://www.cloudways.com/en/pricing.php
 description: Cloudways provisions and manages servers on other people's infrastructure — DigitalOcean, Vultr, Linode, AWS and Google Cloud — through its own control panel.
 infraContract: resells-iaas
+useCases:
+  - cms
+  - e-commerce
+audience:
+  - agency
+  - smb
+software:
+  - wordpress
+  - woocommerce
+  - laravel
+  - magento
+social:
+  x: https://twitter.com/cloudways
+  linkedin: https://www.linkedin.com/company/cloudways
+  facebook: https://www.facebook.com/cloudways
+  youtube: https://www.youtube.com/@Cloudways
 runsOn:
   - digitalocean
   - vultr
@@ -23,6 +39,10 @@ sources:
   - { field: entryPriceBand, url: 'https://www.cloudways.com/en/pricing.php', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://www.cloudways.com/en/pricing.php', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://www.cloudways.com/en/pricing.php', checkedAt: 2026-07-31 }
+  - { field: useCases, url: 'https://www.cloudways.com/en/', checkedAt: 2026-07-31 }
+  - { field: audience, url: 'https://www.cloudways.com/en/', checkedAt: 2026-07-31 }
+  - { field: software, url: 'https://www.cloudways.com/en/', checkedAt: 2026-07-31 }
+  - { field: social, url: 'https://www.cloudways.com/en/', checkedAt: 2026-07-31 }
 figure:
   emoji: ☁️
   color: rgb(45, 110, 210)

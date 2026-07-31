@@ -8,6 +8,10 @@ founded: 2003
 hqCountry: US
 ownership: subsidiary
 parent: World Host Group
+useCases:
+  - cms
+software:
+  - wordpress
 entryPriceBand: under-5
 status: active
 checkedAt: 2026-07-31
@@ -17,6 +21,8 @@ sources:
   - { field: ownership, url: 'https://www.hosting.com/about/', checkedAt: 2026-07-31 }
   - { field: parent, url: 'https://www.hosting.com/about/', checkedAt: 2026-07-31 }
   - { field: entryPriceBand, url: 'https://www.hosting.com/', checkedAt: 2026-07-31 }
+  - { field: software, url: 'https://www.hosting.com/', checkedAt: 2026-07-31 }
+  - { field: useCases, url: 'https://www.hosting.com/', checkedAt: 2026-07-31 }
 figure:
   emoji: 🐌
   color: rgb(170, 68, 68)

@@ -7,6 +7,15 @@ pricingUrl: https://laravel.com/forge/pricing
 description: Laravel Forge is server-management software — it provisions and configures servers, either on a VPS you bring yourself or on its own Laravel VPS product.
 whoManagesOs: panel-assisted
 infraContract: byo-iaas
+audience:
+  - agency
+  - freelancer
+software:
+  - laravel
+  - wordpress
+  - statamic
+  - nextjs
+  - nuxt
 runtimes:
   - php
   - node
@@ -38,6 +47,8 @@ sources:
   - { field: contractMinimum, url: 'https://laravel.com/forge/pricing', checkedAt: 2026-07-31 }
   - { field: supportTiering, url: 'https://laravel.com/forge/pricing', checkedAt: 2026-07-31 }
   - { field: supportHours, url: 'https://laravel.com/forge/pricing', checkedAt: 2026-07-31 }
+  - { field: software, url: 'https://laravel.com/forge', checkedAt: 2026-07-31 }
+  - { field: audience, url: 'https://laravel.com/forge', checkedAt: 2026-07-31 }
 figure:
   emoji: 💸
   color: rgb(100, 200, 60)

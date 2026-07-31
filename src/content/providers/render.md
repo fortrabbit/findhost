@@ -9,6 +9,17 @@ description: Render is a polyglot PaaS with native runtimes for Node, Python, Ru
 hqCountry: US
 ownership: vc-backed
 whoManagesOs: provider
+useCases:
+  - static-site
+  - background-jobs
+audience:
+  - startup
+social:
+  x: https://x.com/render
+  linkedin: https://www.linkedin.com/company/renderco/
+  github: https://github.com/render-oss
+  youtube: https://www.youtube.com/@render-inc
+  discord: https://discord.gg/kt5namUTqb
 runtimes:
   - node
   - python
@@ -49,6 +60,9 @@ sources:
   - { field: managedDatabases, url: 'https://render.com/docs/databases', checkedAt: 2026-07-31 }
   - { field: apiAvailable, url: 'https://render.com/docs/api', checkedAt: 2026-07-31 }
   - { field: cliTool, url: 'https://render.com/docs/api', checkedAt: 2026-07-31 }
+  - { field: useCases, url: 'https://render.com/', checkedAt: 2026-07-31 }
+  - { field: social, url: 'https://render.com/', checkedAt: 2026-07-31 }
+  - { field: audience, url: 'https://render.com/', checkedAt: 2026-07-31 }
 figure:
   emoji: 🎨
   color: rgb(72, 209, 204)

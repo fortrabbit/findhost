@@ -10,6 +10,19 @@ founded: 2012
 hqCountry: US
 ownership: public
 whoManagesOs: you
+useCases:
+  - ai-app
+audience:
+  - startup
+  - smb
+  - enterprise
+social:
+  x: https://twitter.com/digitalocean
+  linkedin: https://www.linkedin.com/company/digitalocean/
+  github: https://github.com/digitalocean
+  facebook: https://www.facebook.com/DigitalOceanCloudHosting
+  youtube: https://www.youtube.com/DigitalOcean
+  discord: https://discord.gg/digitalocean
 runtimes:
   - any
 sshAccess: full
@@ -57,6 +70,9 @@ sources:
   - { field: cliTool, url: 'https://docs.digitalocean.com/reference/', checkedAt: 2026-07-31 }
   - { field: mcpServer, url: 'https://docs.digitalocean.com/reference/', checkedAt: 2026-07-31 }
   - { field: iacSupport, url: 'https://docs.digitalocean.com/reference/', checkedAt: 2026-07-31 }
+  - { field: useCases, url: 'https://www.digitalocean.com/', checkedAt: 2026-07-31 }
+  - { field: social, url: 'https://www.digitalocean.com/', checkedAt: 2026-07-31 }
+  - { field: audience, url: 'https://www.digitalocean.com/', checkedAt: 2026-07-31 }
 figure:
   emoji: 🐟
   color: rgb(0, 170, 255)

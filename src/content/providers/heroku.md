@@ -11,6 +11,20 @@ hqCountry: US
 ownership: subsidiary
 parent: Salesforce
 whoManagesOs: provider
+useCases:
+  - ai-app
+  - e-commerce
+  - side-project
+audience:
+  - startup
+  - smb
+  - enterprise
+  - agency
+social:
+  x: https://x.com/heroku
+  bluesky: https://bsky.app/profile/heroku.com
+  linkedin: https://www.linkedin.com/company/heroku
+  github: https://github.com/heroku
 runtimes:
   - node
   - ruby
@@ -53,6 +67,9 @@ sources:
   - { field: deployMethods, url: 'https://devcenter.heroku.com/articles/getting-started-with-php', checkedAt: 2026-07-31 }
   - { field: cliTool, url: 'https://devcenter.heroku.com/articles/getting-started-with-php', checkedAt: 2026-07-31 }
   - { field: managedDatabases, url: 'https://elements.heroku.com/addons/heroku-postgresql', checkedAt: 2026-07-31 }
+  - { field: useCases, url: 'https://www.heroku.com/', checkedAt: 2026-07-31 }
+  - { field: audience, url: 'https://www.heroku.com/', checkedAt: 2026-07-31 }
+  - { field: social, url: 'https://www.heroku.com/', checkedAt: 2026-07-31 }
 figure:
   emoji: 🎸
   color: rgb(121, 40, 202)
