@@ -43,6 +43,9 @@
     - { id: payload, label: Payload }
     - { id: medusa, label: Medusa }
     - { id: n8n, label: n8n }
+    - { id: pimcore, label: Pimcore }
+    - { id: expressionengine, label: ExpressionEngine }
+    - { id: nextcloud, label: Nextcloud }
 
 - id: runtimes
   label: Runs
@@ -59,6 +62,10 @@
     - { id: elixir, label: Elixir }
     - { id: rust, label: Rust }
     - { id: static, label: Static files }
+    - { id: bun, label: Bun }
+    - { id: deno, label: Deno }
+    - { id: scala, label: Scala }
+    - { id: clojure, label: Clojure }
     - { id: docker, label: Docker }
     - { id: any, label: Anything }
 
@@ -117,6 +124,8 @@
     - { id: government, label: Government and public sector }
     - { id: education, label: Education and research }
     - { id: non-profit, label: Non-profits }
+    - { id: developer, label: Developers }
+    - { id: beginner, label: Beginners }
 
 # Country codes, not regions. EU / US / APAC grouping is derived at build time
 # from these values rather than stored — see lib/facets.ts.
@@ -137,6 +146,30 @@
     - { id: IN, label: India }
     - { id: JP, label: Japan }
     - { id: BR, label: Brazil }
+    - { id: AE, label: United Arab Emirates }
+    - { id: CL, label: Chile }
+    - { id: ES, label: Spain }
+    - { id: FR, label: France }
+    - { id: HK, label: Hong Kong }
+    - { id: IL, label: Israel }
+    - { id: IT, label: Italy }
+    - { id: KR, label: South Korea }
+    - { id: MX, label: Mexico }
+    - { id: PL, label: Poland }
+    - { id: SE, label: Sweden }
+    - { id: ZA, label: South Africa }
+    - { id: CH, label: Switzerland }
+    - { id: AT, label: Austria }
+    - { id: NO, label: Norway }
+    - { id: DK, label: Denmark }
+    - { id: BE, label: Belgium }
+    - { id: CZ, label: Czechia }
+    - { id: RO, label: Romania }
+    - { id: TR, label: Türkiye }
+    - { id: ID, label: Indonesia }
+    - { id: MY, label: Malaysia }
+    - { id: TH, label: Thailand }
+    - { id: NZ, label: New Zealand }
 
 - id: entry-price
   label: Entry price
@@ -172,6 +205,7 @@
     - { id: you, label: You do }
     - { id: panel-assisted, label: You do, with a panel }
     - { id: provider, label: The provider does }
+    - { id: container, label: You own the image, they run the host }
 
 - id: hardware
   label: Whose hardware

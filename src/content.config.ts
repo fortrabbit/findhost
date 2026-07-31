@@ -55,7 +55,7 @@ const providers = defineCollection({
 
     // Classification
     alsoOffers: z.array(z.string()).optional(),
-    whoManagesOs: z.enum(['you', 'panel-assisted', 'provider']).optional(),
+    whoManagesOs: z.enum(['you', 'panel-assisted', 'provider', 'container']).optional(),
     infraContract: z.enum(['owns-metal', 'resells-iaas', 'byo-iaas']).optional(),
     specialisation: z.array(z.string()).optional(),
     /** What a provider positions itself for, in its own words — not our verdict on fit. */
@@ -79,7 +79,17 @@ const providers = defineCollection({
     backupsIncluded: z.enum(['included', 'paid-addon', 'none']).optional(),
     restrictions: z.array(z.string()).optional(),
 
-    // Pricing — bands only. This is not a price tracker.
+    /*
+     * Pricing — bands only. This is not a price tracker.
+     *
+     * entryPriceBand is the cheapest way to run one small production app with
+     * every mandatory component included, which is the only reading that
+     * survives per-seat licences and per-project fees charged on top.
+     *
+     * renewalMultiple is renewal ÷ introductory, so 3.3 means a €2.99 offer
+     * that renews at €9.99. A value below 1 would mean the price falls, which
+     * happens to nobody.
+     */
     pricingModel: z.enum(['fixed-tier', 'per-resource', 'usage-based', 'hourly', 'credit']).optional(),
     entryPriceBand: z.enum(['free-tier', 'under-5', '5-15', '15-50', '50-150', 'over-150']).optional(),
     renewalMultiple: z.number().nullable().optional(),
