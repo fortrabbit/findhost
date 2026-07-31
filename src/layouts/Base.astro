@@ -13,6 +13,10 @@ interface Props {
 
 const { title, description, ai } = Astro.props;
 const fathomSiteId = import.meta.env.PUBLIC_FATHOM_SITE_ID;
+
+// Belt and braces with robots.txt: the file stops the crawl, this stops a URL
+// someone links to from being listed anyway.
+const indexable = import.meta.env.PUBLIC_INDEXABLE === 'true';
 ---
 
 <!doctype html>
@@ -22,6 +26,7 @@ const fathomSiteId = import.meta.env.PUBLIC_FATHOM_SITE_ID;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     {description && <meta name="description" content={description} />}
+    {!indexable && <meta name="robots" content="noindex, nofollow" />}
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     {fathomSiteId && <script is:inline src="https://cdn.usefathom.com/script.js" data-site={fathomSiteId} defer />}
   </head>

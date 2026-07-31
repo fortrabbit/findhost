@@ -1,18 +1,22 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import ProviderList from '../../components/ProviderList.astro';
 
+// The category page is the guide page: the explainer opens it, the records it
+// describes are listed directly beneath.
 export async function getStaticPaths() {
   const taxonomy = await getCollection('taxonomy');
   const category = taxonomy.find((facet) => facet.data.id === 'category');
   const providers = await getCollection('providers');
+  const explainers = await getCollection('categories');
 
   return (category?.data.values ?? [])
     .map((value) => ({
       params: { category: value.id },
       props: {
         label: value.label,
+        explainer: explainers.find((entry) => entry.id === value.id),
         matches: providers
           .filter((provider) => provider.data.category === value.id)
           .map((provider) => ({
@@ -27,15 +31,31 @@ export async function getStaticPaths() {
     .filter((route) => route.props.matches.length > 0);
 }
 
-const { label, matches } = Astro.props;
+const { label, explainer, matches } = Astro.props;
+const Explainer = explainer ? (await render(explainer)).Content : null;
 ---
 
-<Base title={`${label} — FindHost`} description={`Every ${label.toLowerCase()} provider in the dataset.`} ai="co-authored">
-  <h1>{label}</h1>
+<Base
+  title={`${explainer?.data.title ?? label} — FindHost`}
+  description={explainer?.data.description ?? `Every ${label.toLowerCase()} provider in the dataset.`}
+  ai={explainer?.data.ai}
+>
+  <h1>{explainer?.data.title ?? label}</h1>
 
+  {
+    explainer?.data.figure && (
+      <p class="figure-band" style={`background:${explainer.data.figure.color};color:${explainer.data.figure.textColor}`}>
+        <span aria-hidden="true">{explainer.data.figure.emoji}</span> {explainer.data.figure.text}
+      </p>
+    )
+  }
+
+  {Explainer && <Explainer />}
+
+  <h2>{label}</h2>
   <p class="annotation">
-    {matches.length} {matches.length === 1 ? 'record' : 'records'}, sorted alphabetically. A provider's primary category is
-    one field of many — several also offer what other categories describe.
+    {matches.length} {matches.length === 1 ? 'record' : 'records'}, sorted alphabetically. A primary category is one
+    field of many — several of these also offer what other categories describe.
   </p>
 
   <ProviderList providers={matches} />

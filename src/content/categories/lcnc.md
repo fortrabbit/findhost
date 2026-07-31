@@ -1,0 +1,19 @@
+---
+id: lcnc
+title: Low-code and no-code hosting
+description: Low-code and no-code (LCNC) platforms bundle design, hosting, and updates into one product.
+figure:
+  emoji: 🛤️
+  color: rgb(140, 90, 70)
+  textColor: rgb(220, 230, 255)
+  text: Fixed rails.
+ai: co-authored
+---
+
+## About low-code and no-code platforms
+
+Low-code and no-code platforms let people build websites with visual editors instead of writing code. Hosting, templates, updates, and security are bundled, which makes setup fast but also limits control over the runtime. These tools are different from shared hosting or PaaS because you are working inside a product, not deploying your own code. Portability is limited, and the feature set is defined by the platform.
+
+## Providers in this section
+
+This section covers hosted builders and adjacent services, including [Wix](/provider/wix/), [Squarespace](/provider/squarespace/), [Webflow](/provider/webflow/), [Bubble](/provider/bubble/), [Weebly](/provider/weebly/), [Shopify](/provider/shopify/), [Jimdo](/provider/jimdo/), and [Duda](/provider/duda/).

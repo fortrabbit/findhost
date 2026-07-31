@@ -2,36 +2,20 @@
 id: cloudways
 name: Cloudways
 url: https://www.cloudways.com
-category: paas
-description: A managed layer over other people's infrastructure — you pick the underlying cloud, they run the stack.
-ownership: subsidiary
-parent: DigitalOcean
-whoManagesOs: provider
-infraContract: resells-iaas
-runtimes:
-  - php
-sshAccess: full
-pricingModel: fixed-tier
-runsOn:
-  - digitalocean
-  - aws
-  - gcp
-status: active
-ai: co-authored
+category: server-management
+description: Cloudways is a managed cloud hosting platform that runs on top of IaaS providers like DigitalOcean, Vultr, and AWS. Acquired by DigitalOcean in 2022.
 figure:
-  emoji: 🏨
-  color: rgb(60, 110, 160)
-  textColor: rgb(250, 250, 252)
-  text: A managed floor in someone else's building.
-caveat:
-  emoji: 🪆
-  color: rgb(150, 90, 60)
-  textColor: rgb(252, 248, 244)
-  text: Two companies now stand between you and the hardware.
-  by: fl
-  on: 2026-07-31
+  emoji: ☁️
+  color: rgb(45, 110, 210)
+  textColor: rgb(240, 245, 255)
+  text: Control panel on clouds still leaves ops on you.
+ai: co-authored
 ---
 
-Cloudways sits between you and a cloud you choose yourself, managing the stack on top of it. DigitalOcean acquired the company in 2022.
+## About Cloudways
 
-This record exists to exercise the `caveat` object. A caveat is a dated judgement by a named person, never a property of the company, and it is display-only — it cannot be filtered, sorted or counted, so no "fewest caveats" view can ever exist.
+Cloudways is a hosting [server management software](/category/server-management/) and thus actually a software service not a full hosting service. It helps you to spin up VPS machines on other providers. Marketing is a strong focus, with well optimized landing pages. It was acquired by [DigitalOcean](/provider/digitalocean/) in 2022. Cloudways also advertises WordPress hosting. We don't have first hand experience.
+
+## Reservations
+
+Cloudways might look like a good option for novice web developers with a tight budget. But take care when using server management software: there is the risk of a responsibility gap. Cloudways manages the software layer, the underlying VPS contract is a separate concern — when something breaks in between, it can be unclear who is responsible.

@@ -40,7 +40,7 @@ const providers = defineCollection({
     id: z.string(),
     name: z.string(),
     url: publicUrl,
-    category: z.enum(['paas', 'vps', 'iaas', 'shared', 'managed-wp', 'dedicated', 'serverless', 'lcnc']),
+    category: z.enum(['paas', 'vps', 'iaas', 'shared', 'serverless', 'server-management', 'vanity-hosting', 'lcnc']),
 
     // Identity
     pricingUrl: publicUrl.optional(),
@@ -113,6 +113,18 @@ const providers = defineCollection({
   }),
 });
 
+/** The explainer that heads each category listing. */
+const categories = defineCollection({
+  loader: glob({ base: 'src/content/categories', pattern: '**/*.md' }),
+  schema: z.object({
+    id: z.string(),
+    title: z.string(),
+    description: z.string().max(200).optional(),
+    figure: figure.optional(),
+    ai: z.enum(['none', 'grammar', 'co-authored', 'authored']).optional(),
+  }),
+});
+
 /** The cross-cutting explainers. Openly editorial, and structurally unable to name a winner. */
 const guide = defineCollection({
   loader: glob({ base: 'src/content/guide', pattern: '**/*.md' }),
@@ -137,4 +149,4 @@ const taxonomy = defineCollection({
   }),
 });
 
-export const collections = { providers, guide, taxonomy };
+export const collections = { providers, categories, guide, taxonomy };

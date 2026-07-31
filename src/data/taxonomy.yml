@@ -12,9 +12,9 @@
     - { id: vps, label: Virtual private servers }
     - { id: iaas, label: Infrastructure as a service }
     - { id: shared, label: Shared hosting }
-    - { id: managed-wp, label: Managed WordPress }
-    - { id: dedicated, label: Dedicated servers }
     - { id: serverless, label: Serverless }
+    - { id: server-management, label: Server management }
+    - { id: vanity-hosting, label: Vanity hosting }
     - { id: lcnc, label: Low-code and no-code }
 
 - id: runtimes
