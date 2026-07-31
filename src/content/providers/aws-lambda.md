@@ -3,7 +3,37 @@ id: aws-lambda
 name: AWS Lambda
 url: https://aws.amazon.com/lambda/
 category: serverless
-description: AWS Lambda is the function-as-a-service primitive most serverless PHP runs on.
+pricingUrl: https://aws.amazon.com/lambda/pricing/
+description: AWS Lambda is the function-as-a-service primitive most serverless PHP runs on. PHP is not a managed runtime; it arrives through a custom one.
+parent: Amazon
+whoManagesOs: provider
+useCases:
+  - api
+  - background-jobs
+  - data-pipeline
+runtimes:
+  - node
+  - python
+  - java
+  - dotnet
+  - ruby
+  - docker
+persistentStorage: false
+pricingModel: usage-based
+entryPriceBand: free-tier
+freeTier: permanent
+apiAvailable: public
+cliTool: official
+iacSupport:
+  - terraform
+  - cloudformation
+status: active
+checkedAt: 2026-07-31
+sources:
+  - { field: runtimes, url: 'https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html', checkedAt: 2026-07-31 }
+  - { field: pricingModel, url: 'https://aws.amazon.com/lambda/pricing/', checkedAt: 2026-07-31 }
+  - { field: freeTier, url: 'https://aws.amazon.com/lambda/pricing/', checkedAt: 2026-07-31 }
+  - { field: entryPriceBand, url: 'https://aws.amazon.com/lambda/pricing/', checkedAt: 2026-07-31 }
 figure:
   emoji: ⚙️
   color: rgb(35, 43, 60)
@@ -16,7 +46,9 @@ ai: co-authored
 
 Lambda is the primitive most serverless PHP ends up running on. It runs a handler on demand in an isolated, short-lived environment and bills per invocation. The hard edges come with it. A 15-minute limit. A 250 MB unzipped package. 512 MB of ephemeral `/tmp` by default. No state between invocations. Lambda is a building block, nothing more. The database, storage, gateway, and session handling are separate services you bolt on.
 
-PHP is not a built-in Lambda language. It runs through a custom runtime, a `bootstrap` executable that implements the Lambda runtime loop. Almost nobody writes that by hand.
+The managed runtimes AWS lists are Node.js, Python, Java, .NET and Ruby, plus an OS-only runtime for everything else and the option of a container image. PHP is not among them: it runs through a custom runtime, a `bootstrap` executable implementing the Lambda runtime loop. Almost nobody writes that by hand.
+
+Billing is per request and per GB-second: $0.20 per million requests and $0.0000166667 per GB-second on x86 beyond a monthly free allowance of one million requests and 400,000 GB-seconds. That allowance recurs every month rather than expiring.
 
 ## Running PHP on Lambda: Bref
 

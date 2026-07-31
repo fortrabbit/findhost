@@ -49,7 +49,7 @@ figure:
   emoji: ☁️
   color: rgb(45, 110, 210)
   textColor: rgb(240, 245, 255)
-  text: Control panel on clouds still leaves ops on you.
+  text: Control panel in the clouds.
 ai: co-authored
 ---
 

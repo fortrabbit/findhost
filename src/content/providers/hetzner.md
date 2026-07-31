@@ -37,6 +37,7 @@ regions:
 supportChannels:
   - phone
   - forum
+supportHours: 24-7
 apiAvailable: public
 cliTool: official
 status: active
