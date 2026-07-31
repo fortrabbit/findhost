@@ -1,0 +1,62 @@
+---
+import { countryPoints, landPath, latLngToXY, spacing, viewBox } from '../lib/map';
+
+interface Props {
+  /** ISO country codes to mark. Repeats are counted, not deduplicated. */
+  regions: string[];
+  /** Countries carrying more records get a larger dot. */
+  weighted?: boolean;
+  label: string;
+}
+
+const { regions, weighted = false, label } = Astro.props;
+
+const counts = new Map<string, number>();
+for (const code of regions) counts.set(code, (counts.get(code) ?? 0) + 1);
+
+const highest = Math.max(1, ...counts.values());
+
+const marks = [...counts.entries()]
+  .filter(([code]) => countryPoints[code])
+  .map(([code, count]) => {
+    const point = countryPoints[code]!;
+    const scale = weighted ? 0.6 + (count / highest) * 0.9 : 1;
+    return { code, count, point, xy: latLngToXY(point.lat, point.lng), radius: spacing * 1.1 * scale };
+  })
+  .sort((a, b) => a.code.localeCompare(b.code, 'en'));
+
+const unplaced = [...counts.keys()].filter((code) => !countryPoints[code]);
+---
+
+<figure class="world-map">
+  <svg viewBox={viewBox} xmlns="http://www.w3.org/2000/svg" role="img" aria-label={label}>
+    <path
+      d={landPath}
+      fill="none"
+      stroke="currentColor"
+      stroke-width={spacing * 0.7}
+      stroke-linecap="round"
+      stroke-dasharray={`0 ${spacing}`}
+      opacity="0.35"
+    />
+    {
+      marks.map((mark) => (
+        <g>
+          <title>
+            {mark.point.label}
+            {weighted && ` — ${mark.count} ${mark.count === 1 ? 'record' : 'records'}`}
+          </title>
+          <circle cx={mark.xy.x} cy={mark.xy.y} r={mark.radius} fill="currentColor" />
+        </g>
+      ))
+    }
+  </svg>
+
+  <figcaption class="annotation">
+    {marks.map((mark) => mark.point.label).join(' · ')}
+    {unplaced.length > 0 && ` · not on the map yet: ${unplaced.join(', ')}`}
+    <br />
+    Dots sit at country level, not at data centres — the dataset records which countries a provider operates in, not
+    where the racks are.
+  </figcaption>
+</figure>

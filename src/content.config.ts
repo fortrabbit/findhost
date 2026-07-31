@@ -81,6 +81,15 @@ const providers = defineCollection({
     runsOn: z.array(z.string()).nullable().optional(),
     gdprDpa: z.enum(['standard', 'on-request', 'unclear']).optional(),
 
+    // Environmental impact — what a provider publishes, never a judgement of it.
+    // The value is the distinction: offsets, annual matching and 24/7 carbon-free
+    // are three different claims that marketing routinely blurs into one.
+    energyClaim: z.enum(['24-7-cfe', 'annual-matched', 'offset', 'none-published']).optional(),
+    sustainabilityUrl: publicUrl.optional(),
+    pue: z.number().nullable().optional(),
+    certifications: z.array(z.string()).optional(),
+    carbonReport: z.enum(['published', 'parent-only', 'none']).optional(),
+
     // Support
     supportChannels: z.array(z.enum(['email', 'chat', 'phone', 'forum'])).optional(),
     supportHours: z.enum(['24-7', 'business-hours', 'community-only']).optional(),

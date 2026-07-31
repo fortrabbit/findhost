@@ -205,6 +205,23 @@
   margin: 0;
 }
 
+/* --- Where a provider operates --- */
+
+.world-map {
+  max-width: var(--measure-data);
+  margin: var(--space-lg) 0;
+}
+
+.world-map svg {
+  display: block;
+  width: 100%;
+  color: var(--color-ink);
+}
+
+.world-map figcaption {
+  margin-top: var(--space-2xs);
+}
+
 /* --- The record itself --- */
 
 .record-links {

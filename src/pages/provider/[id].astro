@@ -2,6 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import { loadFacets } from '../../lib/facets';
+import WorldMap from '../../components/WorldMap.astro';
 
 export async function getStaticPaths() {
   const providers = await getCollection('providers');
@@ -68,6 +69,15 @@ const attributeGroups: { label: string; fields: Attribute[] }[] = [
     fields: [
       ['Regions', data.regions, 'regions'],
       ['DPA', data.gdprDpa],
+    ],
+  },
+  {
+    label: 'Environment',
+    fields: [
+      ['Energy claim', data.energyClaim],
+      ['PUE', data.pue],
+      ['Certifications', data.certifications],
+      ['Carbon report', data.carbonReport],
     ],
   },
   {
@@ -153,6 +163,15 @@ const known = attributeGroups
             <strong>Disclosure.</strong> {data.editorialNote}
           </p>
         </aside>
+      )
+    }
+
+    {
+      data.regions?.length && (
+        <>
+          <h2>Where it operates</h2>
+          <WorldMap regions={data.regions} label={`Countries ${data.name} operates in`} />
+        </>
       )
     }
 

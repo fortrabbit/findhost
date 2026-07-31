@@ -1,0 +1,63 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import WorldMap from '../components/WorldMap.astro';
+import { countryPoints } from '../lib/map';
+
+const providers = await getCollection('providers');
+
+const withRegions = providers.filter((provider) => provider.data.regions?.length);
+const regions = withRegions.flatMap((provider) => provider.data.regions ?? []);
+
+const byCountry = [...new Set(regions)]
+  .filter((code) => countryPoints[code])
+  .map((code) => ({
+    code,
+    label: countryPoints[code]!.label,
+    providers: withRegions
+      .filter((provider) => provider.data.regions?.includes(code))
+      .map((provider) => ({ id: provider.id, name: provider.data.name }))
+      .sort((a, b) => a.name.localeCompare(b.name, 'en')),
+  }))
+  .sort((a, b) => a.label.localeCompare(b.label, 'en'));
+
+const unknown = providers.length - withRegions.length;
+---
+
+<Base
+  title="Where providers operate — FindHost"
+  description="A map of the countries each hosting provider runs in."
+  ai="co-authored"
+>
+  <h1>Where providers operate</h1>
+
+  <p class="lede">
+    Hosting is more local than it looks. Where a provider actually runs decides latency, which law applies and who can
+    be subpoenaed — and it is one of the few facts you can check.
+  </p>
+
+  <WorldMap regions={regions} weighted label="Countries the providers in this dataset operate in" />
+
+  <p class="annotation">
+    {withRegions.length} of {providers.length} records say where they operate.
+    {
+      unknown > 0 &&
+        ` The other ${unknown} do not record it yet, so they are absent from this map — which says nothing about where they run.`
+    }
+  </p>
+
+  {
+    byCountry.map((country) => (
+      <section>
+        <h2>{country.label}</h2>
+        <ul class="provider-list">
+          {country.providers.map((provider) => (
+            <li>
+              <a href={`/provider/${provider.id}/`}>{provider.name}</a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))
+  }
+</Base>
