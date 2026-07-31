@@ -3,7 +3,29 @@ id: server-pilot
 name: ServerPilot
 url: https://serverpilot.io
 category: server-management
-description: ServerPilot is a server management service, not a hosting service.
+pricingUrl: https://serverpilot.io/pricing/
+description: ServerPilot installs and maintains a PHP stack on an Ubuntu server the customer brings, billed per server and per application.
+founded: 2012
+infraContract:
+  - byo-iaas
+whoManagesOs: panel-assisted
+audience:
+  - developer
+useCases:
+  - cms
+runtimes:
+  - php
+sshAccess: full
+pricingModel: per-resource
+entryPriceBand: 5-15
+freeTier: trial
+status: active
+checkedAt: 2026-07-31
+sources:
+  - { field: entryPriceBand, url: 'https://serverpilot.io/pricing/', checkedAt: 2026-07-31 }
+  - { field: pricingModel, url: 'https://serverpilot.io/pricing/', checkedAt: 2026-07-31 }
+  - { field: freeTier, url: 'https://serverpilot.io/pricing/', checkedAt: 2026-07-31 }
+  - { field: infraContract, url: 'https://serverpilot.io/pricing/', checkedAt: 2026-07-31 }
 figure:
   emoji: ✈️
   color: rgb(10, 120, 170)
@@ -14,7 +36,9 @@ ai: co-authored
 
 ## About ServerPilot
 
-ServerPilot is a [server management service](/category/server-management/), not a hosting service. It does not sell or provision servers: connect a fresh Ubuntu VPS from any provider — DigitalOcean, Hetzner, AWS — and ServerPilot installs and maintains the stack on it: Nginx and Apache, multiple PHP versions, MySQL, a firewall, automatic security updates and free SSL. Around since 2012, it is one of the earliest services in this category and often seen as the natural next step up from shared hosting.
+ServerPilot is a [server management service](/category/server-management/), not a hosting service. It does not sell or provision servers: connect a fresh Ubuntu VPS from any provider — DigitalOcean, Hetzner, AWS — and ServerPilot installs and maintains the stack on it: Nginx and Apache, multiple PHP versions, MySQL, a firewall, automatic security updates and free SSL. Around since 2012, it is one of the earliest services in this category.
+
+Pricing is per server and per application, billed hourly with no subscription: Economy at $5 per server plus $0.50 per app a month, Business at $10 plus $1, First Class at $20 plus $2. A 14-day trial takes no credit card. The FAQ is explicit about the split: "Servers are your servers at any cloud provider. You pay your cloud provider directly for your servers."
 
 ## Reservations
 
