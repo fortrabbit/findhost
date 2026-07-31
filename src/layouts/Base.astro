@@ -9,9 +9,11 @@ interface Props {
   title: string;
   description?: string;
   ai?: AiLevel;
+  /** Path to the same page as markdown, announced for readers that prefer text. */
+  markdown?: string;
 }
 
-const { title, description, ai } = Astro.props;
+const { title, description, ai, markdown } = Astro.props;
 const fathomSiteId = import.meta.env.PUBLIC_FATHOM_SITE_ID;
 
 // Belt and braces with robots.txt: the file stops the crawl, this stops a URL
@@ -40,6 +42,7 @@ const current = sections.find((section) => section.owns.some((prefix) => path.st
     {description && <meta name="description" content={description} />}
     {!indexable && <meta name="robots" content="noindex, nofollow" />}
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    {markdown && <link rel="alternate" type="text/markdown" href={markdown} />}
     {fathomSiteId && <script is:inline src="https://cdn.usefathom.com/script.js" data-site={fathomSiteId} defer />}
   </head>
   <body>

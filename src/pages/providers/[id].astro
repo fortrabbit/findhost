@@ -139,7 +139,12 @@ const total = attributeGroups.flatMap((group) => group.fields).length;
 const known = attributeGroups.flatMap((group) => group.fields).filter(([, value]) => format(value) !== '?').length;
 ---
 
-<Base title={`${data.name} — FindHost`} description={data.description} ai={data.ai}>
+<Base
+  title={`${data.name} — FindHost`}
+  description={data.description}
+  ai={data.ai}
+  markdown={`/providers/${provider.id}.md`}
+>
   <article>
     {
       data.figure && (
