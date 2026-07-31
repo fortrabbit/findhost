@@ -30,6 +30,7 @@ const sections = [
 // A record and a category page both live under Providers, so the nav says where
 // you are rather than only where you clicked.
 const path = Astro.url.pathname;
+const canonical = new URL(path, Astro.site ?? Astro.url).href;
 const current = sections.find((section) => section.owns.some((prefix) => path.startsWith(prefix)));
 ---
 
@@ -43,6 +44,14 @@ const current = sections.find((section) => section.owns.some((prefix) => path.st
     {!indexable && <meta name="robots" content="noindex, nofollow" />}
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     {markdown && <link rel="alternate" type="text/markdown" href={markdown} />}
+    <link rel="canonical" href={canonical} />
+
+    <meta property="og:title" content={title} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content="FindHost" />
+    {description && <meta property="og:description" content={description} />}
+    <meta name="twitter:card" content="summary" />
     {fathomSiteId && <script is:inline src="https://cdn.usefathom.com/script.js" data-site={fathomSiteId} defer />}
   </head>
   <body>
@@ -57,6 +66,10 @@ const current = sections.find((section) => section.owns.some((prefix) => path.st
           ))
         }
       </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+        <span data-theme-label>Dark</span>
+      </button>
+
       <form class="site-search" role="search" action="/search/">
         <input
           type="search"
@@ -83,7 +96,36 @@ const current = sections.find((section) => section.owns.some((prefix) => path.st
       </p>
     </footer>
 
+    <script is:inline>
+      // Before first paint, or the page flashes the wrong theme on the way in.
+      const stored = localStorage.getItem('theme');
+      if (stored === 'dark' || stored === 'light') document.documentElement.dataset.theme = stored;
+    </script>
+
     <script>
+      const root = document.documentElement;
+      const toggle = document.querySelector<HTMLButtonElement>('[data-theme-toggle]');
+      const label = document.querySelector<HTMLElement>('[data-theme-label]');
+
+      const dark = () =>
+        root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+
+      const describe = () => {
+        if (!toggle || !label) return;
+        label.textContent = dark() ? 'Light' : 'Dark';
+        toggle.setAttribute('aria-pressed', String(dark()));
+        toggle.title = `Switch to ${dark() ? 'light' : 'dark'}`;
+      };
+
+      toggle?.addEventListener('click', () => {
+        const next = dark() ? 'light' : 'dark';
+        root.dataset.theme = next;
+        localStorage.setItem('theme', next);
+        describe();
+      });
+
+      describe();
+
       // `/` focuses search, the way it works everywhere else a developer types.
       const field = document.querySelector<HTMLInputElement>('[data-search-shortcut]');
 

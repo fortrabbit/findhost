@@ -34,9 +34,19 @@
   text-underline-offset: 0.25em;
 }
 
+.theme-toggle {
+  margin-left: auto;
+  padding: var(--space-3xs) var(--space-xs);
+  border: var(--rule-hairline) solid var(--color-ink);
+  background: var(--color-page);
+  color: var(--color-ink);
+  font: inherit;
+  font-size: var(--text-xs);
+  cursor: pointer;
+}
+
 .site-search {
   display: flex;
-  margin-left: auto;
 }
 
 .site-search input {
