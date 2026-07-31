@@ -3,7 +3,17 @@ id: runcloud
 name: RunCloud
 url: https://runcloud.io
 category: server-management
-description: RunCloud is a server management service from Malaysia, run as an independent company out of Cyberjaya.
+pricingUrl: https://runcloud.io/pricing
+description: RunCloud is a server management control panel for PHP and WordPress stacks, installed as an agent on a VPS the customer brings.
+whoManagesOs: panel-assisted
+infraContract: byo-iaas
+audience:
+  - startup
+  - enterprise
+runtimes:
+  - php
+sources:
+  - { field: audience, url: 'https://runcloud.io/pricing', checkedAt: 2026-07-31 }
 figure:
   emoji: 🔁
   color: rgb(0, 135, 150)
@@ -14,4 +24,8 @@ ai: co-authored
 
 ## About RunCloud
 
-RunCloud is a [server management service](/category/server-management/) from Malaysia, run as an independent company out of Cyberjaya. It's a control panel for VPS providers like DigitalOcean, Linode, AWS, Vultr, and Azure: an agent gets installed on the server and sets up a stack tuned for PHP — Nginx or OpenLiteSpeed, with a strong focus on WordPress sites. You bring the server. RunCloud helps you configure and operate it. It's a good fit if you want full ownership of the box and you're fine handling OS patches, backups, and incidents yourself.
+RunCloud is [server management software](/category/server-management/) from Cyberjaya, Malaysia, run as an independent company. It is a control panel for VPS providers — DigitalOcean, Linode, AWS, Vultr and Azure among them: an agent is installed on the server and configures a PHP stack on Nginx or OpenLiteSpeed, with WordPress sites a stated focus. The server is the customer's, and RunCloud configures and operates the software on top of it. Its pricing page describes a range of customers "from early-stage startups to enterprise hosting companies".
+
+## Reservations
+
+The panel does not change who owns the machine. Operating system patches, backups and incident response stay with the account holder, and the subscription covers the management layer only — a split worth being explicit about, because the marketing of every product in this category sits close to the marketing of managed hosting.

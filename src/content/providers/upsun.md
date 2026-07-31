@@ -3,7 +3,42 @@ id: upsun
 name: Upsun
 url: https://upsun.com
 category: paas
-description: Upsun is the PaaS formerly known as Platform.sh — the company completed its rebrand to Upsun in 2025.
+pricingUrl: https://upsun.com/pricing/
+description: Upsun is the PaaS formerly known as Platform.sh. Projects are described in YAML and billed per resource, on top of a per-project and per-user fee.
+whoManagesOs: provider
+useCases:
+  - cms
+  - e-commerce
+audience:
+  - enterprise
+  - education
+software:
+  - laravel
+  - symfony
+  - drupal
+  - wordpress
+  - magento
+  - shopware
+  - django
+  - express
+  - nextjs
+  - strapi
+runtimes:
+  - php
+  - node
+  - python
+pricingModel: per-resource
+entryPriceBand: 15-50
+freeTier: trial
+status: active
+checkedAt: 2026-07-31
+sources:
+  - { field: runtimes, url: 'https://developer.upsun.com/docs/get-started/stacks', checkedAt: 2026-07-31 }
+  - { field: software, url: 'https://developer.upsun.com/docs/get-started/stacks', checkedAt: 2026-07-31 }
+  - { field: pricingModel, url: 'https://upsun.com/pricing/', checkedAt: 2026-07-31 }
+  - { field: entryPriceBand, url: 'https://upsun.com/pricing/', checkedAt: 2026-07-31 }
+  - { field: freeTier, url: 'https://upsun.com/pricing/', checkedAt: 2026-07-31 }
+  - { field: audience, url: 'https://upsun.com/pricing/', checkedAt: 2026-07-31 }
 figure:
   emoji: ☀️
   color: rgb(0, 85, 164)
@@ -14,4 +49,12 @@ ai: co-authored
 
 ## About Upsun
 
-Upsun is the PaaS formerly known as Platform.sh — the company completed its rebrand to Upsun in 2025. Upsun is language-agnostic, but deeply rooted in the Symfony world — Platform.sh ran the official Symfony PaaS. It targets enterprise-level customers with big budgets and large applications. Projects are described in YAML configuration files covering routes, services, and app containers, which gives fine control but takes time to learn.
+Upsun is the platform-as-a-service formerly known as Platform.sh; the company completed the rebrand in 2025. It is language-agnostic — PHP, JavaScript and Python are documented, with framework guides for Laravel, Symfony, Django, Flask, Express, Next.js and Strapi, and tutorials for WordPress, Drupal, Magento, Shopware and Pimcore. Projects are described in YAML files covering routes, services and application containers, which gives fine-grained control at the cost of a learning curve.
+
+There are no named plans. Resources are provisioned per project and billed hourly, metered per second, on top of a €9.00 per project per month base fee and €10.00 per user licence per month. A 15-day trial runs without a credit card and includes credits covering one project fee and one user licence. Upsun describes its customers as "teams running regulated and production workloads across finance, SaaS, and higher ed".
+
+## Reservations
+
+The entry cost is not a single figure. The floor is the project fee plus at least one user licence — €19.00 a month before any compute, storage or bandwidth is provisioned — and the resource bill on top depends on how the YAML is written. That makes the platform hard to price before building on it.
+
+The configuration model is also a commitment. Routes, services and containers are described in Upsun-specific YAML, so moving an application on or off the platform means rewriting that layer rather than porting it.
