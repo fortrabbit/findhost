@@ -8,9 +8,9 @@
   label: Category
   field: category
   values:
-    - { id: paas, label: Platform as a service }
-    - { id: vps, label: Virtual private servers }
-    - { id: iaas, label: Infrastructure as a service }
+    - { id: paas, label: Platform as a Service }
+    - { id: vps, label: Virtual Private Servers }
+    - { id: iaas, label: Infrastructure as a Service }
     - { id: shared, label: Shared hosting }
     - { id: serverless, label: Serverless }
     - { id: server-management, label: Server management }
@@ -33,7 +33,7 @@
     - { id: rust, label: Rust }
     - { id: static, label: Static files }
     - { id: docker, label: Docker }
-    - { id: any, label: Anything you install }
+    - { id: any, label: Anything }
 
 - id: ownership
   label: Ownership
@@ -139,6 +139,62 @@
     - { id: background-jobs, label: Background jobs and queues }
     - { id: data-pipeline, label: Data pipelines }
     - { id: game-server, label: Game servers }
-    - { id: agency-multi-client, label: Agencies with many clients }
-    - { id: enterprise, label: Enterprise workloads }
     - { id: learning, label: Learning and experiments }
+
+# Named software a provider documents support for — a one-click installer, an
+# official guide, a maintained buildpack. It records what the provider says it
+# supports, not how well it runs. `specialisation` is the stronger, rarer claim:
+# a platform built for one thing, like Servd for Craft or Kinsta for WordPress.
+- id: software
+  label: Runs
+  field: software
+  multiple: true
+  values:
+    - { id: wordpress, label: WordPress }
+    - { id: woocommerce, label: WooCommerce }
+    - { id: drupal, label: Drupal }
+    - { id: typo3, label: TYPO3 }
+    - { id: joomla, label: Joomla }
+    - { id: craft-cms, label: Craft CMS }
+    - { id: statamic, label: Statamic }
+    - { id: kirby, label: Kirby }
+    - { id: ghost, label: Ghost }
+    - { id: laravel, label: Laravel }
+    - { id: symfony, label: Symfony }
+    - { id: magento, label: Magento }
+    - { id: shopware, label: Shopware }
+    - { id: rails, label: Ruby on Rails }
+    - { id: django, label: Django }
+    - { id: express, label: Express }
+    - { id: nextjs, label: Next.js }
+    - { id: nuxt, label: Nuxt }
+    - { id: astro, label: Astro }
+    - { id: sveltekit, label: SvelteKit }
+    - { id: remix, label: Remix }
+    - { id: gatsby, label: Gatsby }
+    - { id: hugo, label: Hugo }
+    - { id: eleventy, label: Eleventy }
+    - { id: jekyll, label: Jekyll }
+    - { id: strapi, label: Strapi }
+    - { id: directus, label: Directus }
+    - { id: payload, label: Payload }
+    - { id: medusa, label: Medusa }
+    - { id: n8n, label: n8n }
+
+# Who a provider sells to, kept apart from what it is used for: a one-person
+# side project and a government department can want the same CMS and will never
+# want the same contract, support model or invoice.
+- id: audience
+  label: Sold to
+  field: audience
+  multiple: true
+  values:
+    - { id: indie-hacker, label: Indie hackers }
+    - { id: freelancer, label: Freelancers }
+    - { id: agency, label: Agencies }
+    - { id: startup, label: Startups }
+    - { id: smb, label: Small and medium businesses }
+    - { id: enterprise, label: Enterprises }
+    - { id: government, label: Government and public sector }
+    - { id: education, label: Education and research }
+    - { id: non-profit, label: Non-profits }

@@ -22,6 +22,7 @@ const { facets } = await loadFacets();
 // "What do I need to run" is the first question anyone actually asks, so it is
 // the first thing on the page — as links to pages that already exist.
 const runtimes = (facets.find((facet) => facet.id === 'runtimes')?.values ?? []).filter((value) => value.count > 0);
+const software = (facets.find((facet) => facet.id === 'software')?.values ?? []).filter((value) => value.count > 0);
 const categories = (facets.find((facet) => facet.id === 'category')?.values ?? []).filter((value) => value.count > 0);
 
 const regions = records.flatMap((provider) => provider.data.regions ?? []);
@@ -41,6 +42,21 @@ const placed = records.filter((provider) => provider.data.regions?.length).lengt
   </p>
 
   <h2>I want to host…</h2>
+
+  {
+    software.length > 0 && (
+      <ul class="entry-list">
+        {software.map((entry) => (
+          <li>
+            <a href={`/software/${entry.id}/`}>{entry.label}</a>
+            <span class="entry-count">{entry.count}</span>
+          </li>
+        ))}
+      </ul>
+    )
+  }
+
+  <h2>…or anything written in…</h2>
 
   <ul class="entry-list">
     {
@@ -78,7 +94,7 @@ const placed = records.filter((provider) => provider.data.regions?.length).lengt
 
   <h2>{providers.length} providers</h2>
 
-  <p class="annotation">Sorted alphabetically. Nothing here is ordered by quality, or by how much we happen to know.</p>
+  <p class="annotation">Sorted alphabetically.</p>
 
   <ProviderList providers={providers} />
 </Base>

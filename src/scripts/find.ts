@@ -89,12 +89,20 @@ if (filtersEl && resultsEl && summaryEl) {
 
     for (const facet of facets) {
       const chosen = selected.get(facet.id) ?? new Set<string>();
-      const fieldset = document.createElement('fieldset');
-      fieldset.className = 'find-facet';
 
-      const legend = document.createElement('legend');
-      legend.textContent = facet.label;
-      fieldset.append(legend);
+      // A div rather than a fieldset: fieldsets size to their widest content
+      // regardless of the column they sit in, which pushed the filters over the
+      // results. role=group keeps the semantics a fieldset was there for.
+      const group = document.createElement('div');
+      group.className = 'find-facet';
+      group.setAttribute('role', 'group');
+      group.setAttribute('aria-labelledby', `facet-${facet.id}`);
+
+      const heading = document.createElement('h2');
+      heading.className = 'find-facet-title';
+      heading.id = `facet-${facet.id}`;
+      heading.textContent = facet.label;
+      group.append(heading);
 
       for (const value of facet.values) {
         if (!value.count) continue;
@@ -119,17 +127,17 @@ if (filtersEl && resultsEl && summaryEl) {
         count.textContent = String(value.count);
 
         label.append(input, document.createTextNode(` ${value.label} `), count);
-        fieldset.append(label);
+        group.append(label);
       }
 
       if (facet.unknown > 0) {
         const unknown = document.createElement('p');
         unknown.className = 'annotation';
         unknown.textContent = `${facet.unknown} unknown`;
-        fieldset.append(unknown);
+        group.append(unknown);
       }
 
-      filtersEl.append(fieldset);
+      filtersEl.append(group);
     }
   };
 

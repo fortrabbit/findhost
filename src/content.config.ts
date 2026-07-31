@@ -60,6 +60,14 @@ const providers = defineCollection({
     specialisation: z.array(z.string()).optional(),
     /** What a provider positions itself for, in its own words — not our verdict on fit. */
     useCases: z.array(z.string()).optional(),
+    /** Who the provider sells to, in its own words. Separate from what it is used for. */
+    audience: z.array(z.string()).optional(),
+    /**
+     * Named software the provider documents support for. Most people search for
+     * "WordPress hosting", not "PHP hosting" — the runtime is the precise
+     * question and the software is the one people actually ask.
+     */
+    software: z.array(z.string()).optional(),
 
     // Tech stack
     runtimes: z.array(z.string()).optional(),

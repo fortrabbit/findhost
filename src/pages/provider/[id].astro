@@ -45,12 +45,15 @@ const attributeGroups: { label: string; fields: Attribute[] }[] = [
       ['Hardware', data.infraContract, 'infraContract'],
       ['Runs on', data.runsOn],
       ['Built for', data.useCases, 'useCases'],
+      ['Sold to', data.audience, 'audience'],
     ],
   },
   {
     label: 'Tech stack',
     fields: [
       ['Runtimes', data.runtimes, 'runtimes'],
+      ['Runs', data.software, 'software'],
+      ['Specialised in', data.specialisation],
       ['Deploy methods', data.deployMethods],
       ['SSH access', data.sshAccess, 'sshAccess'],
       ['Managed databases', data.managedDatabases],
