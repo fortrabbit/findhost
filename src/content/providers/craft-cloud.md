@@ -1,9 +1,30 @@
 ---
 id: craft-cloud
-name: Craft Cloud alternative
+name: Craft Cloud
 url: https://craftcms.com/cloud
 category: vanity-hosting
-description: Craft Cloud is the official hosting platform by Pixel & Tonic, the makers of Craft CMS.
+pricingUrl: https://craftcms.com/cloud
+description: Craft Cloud is the serverless hosting platform built by Pixel & Tonic, the makers of Craft CMS, priced per project from $120 a month.
+whoManagesOs: provider
+useCases:
+  - cms
+specialisation:
+  - craft-cms
+software:
+  - craft-cms
+runtimes:
+  - php
+deployMethods:
+  - git-integration
+pricingModel: fixed-tier
+entryPriceBand: 50-150
+status: active
+checkedAt: 2026-07-31
+sources:
+  - { field: entryPriceBand, url: 'https://craftcms.com/cloud', checkedAt: 2026-07-31 }
+  - { field: pricingModel, url: 'https://craftcms.com/cloud', checkedAt: 2026-07-31 }
+  - { field: deployMethods, url: 'https://craftcms.com/cloud', checkedAt: 2026-07-31 }
+  - { field: specialisation, url: 'https://craftcms.com/docs/cloud/', checkedAt: 2026-07-31 }
 figure:
   emoji: ⛅
   color: rgb(120, 120, 220)
@@ -14,6 +35,12 @@ ai: co-authored
 
 ## About Craft Cloud
 
-Craft Cloud is the official hosting platform by Pixel & Tonic, the makers of Craft CMS. It launched in 2024, is specialized in Craft CMS, and bundles the Craft license into the plan. The architecture is serverless — Craft runs on AWS Lambda behind Cloudflare, with a read-only filesystem, object storage plus a CDN for assets, on-demand image transforms, and zero-config queue workers. Deploys are push-to-deploy from GitHub, GitLab, or Bitbucket, with one environment per branch.
+Craft Cloud is made by Pixel & Tonic, the company behind Craft CMS, and described in its own documentation as "our very own serverless hosting platform… designed from the ground-up to be the best way to launch and scale your Craft project". It launched in 2024.
 
-That deep, first-party integration is the appeal, and it comes with trade-offs. There is no SSH or SFTP — the serverless model means there is nothing to log into, so console commands run through Craft Cloud's own dashboard. Plans are flat and per project, starting around $120 a month for the Team tier, with the matching Craft license included. It is also a relatively new product compared with the long-established Craft specialists.
+Deployment is push-to-deploy from GitHub, Bitbucket or GitLab, with a build pipeline that runs Composer and npm tasks, and a global CDN in front. Three plans are listed: Team at $120 a month per project and Pro at $240 a month per project, both quoted at the annual rate, with Enterprise by request.
+
+## Reservations
+
+The price is per project, and it starts high relative to the segment — a single Craft site on Craft Cloud costs more than several sites on a general-purpose platform. That buys first-party integration with the CMS, which is the whole proposition, but it makes the platform a poor fit for a portfolio of small sites.
+
+Being the vendor's own platform is also a concentration of dependency: the CMS, the licence and the hosting arrive from one company on one invoice. Neither the marketing page nor the documentation index states which infrastructure it runs on or which regions are available.
