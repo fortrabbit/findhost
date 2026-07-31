@@ -81,9 +81,10 @@ export async function loadFacets(): Promise<{ facets: Facet[]; providers: Provid
         values,
         unknown: providers.length - known.length,
       };
-    })
-    .sort((a, b) => a.id.localeCompare(b.id, 'en'));
+    });
 
+  // Taxonomy order, not alphabetical: the file is arranged most-asked first and
+  // the filter panel should read the same way.
   return { facets, providers };
 }
 

@@ -4,143 +4,6 @@
 # `field` names the provider field a facet reads. Every value a record uses must
 # appear here; scripts/validate.ts fails the build otherwise.
 
-- id: category
-  label: Category
-  field: category
-  values:
-    - { id: paas, label: Platform as a Service }
-    - { id: vps, label: Virtual Private Servers }
-    - { id: iaas, label: Infrastructure as a Service }
-    - { id: shared, label: Shared hosting }
-    - { id: serverless, label: Serverless }
-    - { id: server-management, label: Server management }
-    - { id: vanity-hosting, label: Vanity hosting }
-    - { id: lcnc, label: Low-code and no-code }
-
-- id: runtimes
-  label: Runs
-  field: runtimes
-  multiple: true
-  values:
-    - { id: php, label: PHP }
-    - { id: node, label: Node.js }
-    - { id: python, label: Python }
-    - { id: ruby, label: Ruby }
-    - { id: go, label: Go }
-    - { id: java, label: Java }
-    - { id: dotnet, label: .NET }
-    - { id: elixir, label: Elixir }
-    - { id: rust, label: Rust }
-    - { id: static, label: Static files }
-    - { id: docker, label: Docker }
-    - { id: any, label: Anything }
-
-- id: ownership
-  label: Ownership
-  field: ownership
-  values:
-    - { id: independent, label: Independent }
-    - { id: vc-backed, label: VC-backed }
-    - { id: pe-owned, label: Private-equity owned }
-    - { id: public, label: Publicly listed }
-    - { id: subsidiary, label: Subsidiary }
-
-# Country codes, not regions. EU / US / APAC grouping is derived at build time
-# from these values rather than stored — see lib/facets.ts.
-- id: regions
-  label: Regions
-  field: regions
-  multiple: true
-  values:
-    - { id: DE, label: Germany }
-    - { id: FI, label: Finland }
-    - { id: IE, label: Ireland }
-    - { id: NL, label: Netherlands }
-    - { id: GB, label: United Kingdom }
-    - { id: US, label: United States }
-    - { id: CA, label: Canada }
-    - { id: SG, label: Singapore }
-    - { id: AU, label: Australia }
-    - { id: IN, label: India }
-    - { id: JP, label: Japan }
-    - { id: BR, label: Brazil }
-
-- id: entry-price
-  label: Entry price
-  field: entryPriceBand
-  values:
-    - { id: free-tier, label: Free tier }
-    - { id: under-5, label: Under €5 a month }
-    - { id: 5-15, label: €5 to €15 a month }
-    - { id: 15-50, label: €15 to €50 a month }
-    - { id: 50-150, label: €50 to €150 a month }
-    - { id: over-150, label: Over €150 a month }
-
-- id: free-tier
-  label: Free tier
-  field: freeTier
-  values:
-    - { id: permanent, label: Permanent }
-    - { id: trial, label: Trial only }
-    - { id: none, label: None }
-
-- id: os-managed-by
-  label: Who manages the OS
-  field: whoManagesOs
-  values:
-    - { id: you, label: You do }
-    - { id: panel-assisted, label: You do, with a panel }
-    - { id: provider, label: The provider does }
-
-- id: hardware
-  label: Whose hardware
-  field: infraContract
-  values:
-    - { id: owns-metal, label: Owns the hardware }
-    - { id: resells-iaas, label: Resells someone else's }
-    - { id: byo-iaas, label: You bring your own }
-
-- id: ssh
-  label: SSH access
-  field: sshAccess
-  values:
-    - { id: full, label: Full }
-    - { id: limited, label: Limited }
-    - { id: none, label: None }
-
-- id: mcp
-  label: MCP server
-  field: mcpServer
-  values:
-    - { id: official, label: Official }
-    - { id: community, label: Community }
-    - { id: none, label: None }
-
-# What a provider markets itself for, taken from its own site. This records a
-# claim the provider makes, never a judgement about what it is good at — the
-# fields above are what a reader should use to decide whether the claim holds.
-- id: use-case
-  label: Built for
-  field: useCases
-  multiple: true
-  values:
-    - { id: cms, label: CMS sites }
-    - { id: headless-cms, label: Headless CMS }
-    - { id: e-commerce, label: Online shops }
-    - { id: saas, label: SaaS products }
-    - { id: api, label: API backends }
-    - { id: dashboard, label: Dashboards and admin panels }
-    - { id: internal-tool, label: Internal tools }
-    - { id: static-site, label: Static sites }
-    - { id: campaign-site, label: Campaign and landing sites }
-    - { id: portfolio, label: Portfolios }
-    - { id: side-project, label: Side projects }
-    - { id: ai-app, label: AI and LLM apps }
-    - { id: background-jobs, label: Background jobs and queues }
-    - { id: data-pipeline, label: Data pipelines }
-    - { id: game-server, label: Game servers }
-    - { id: learning, label: Learning and experiments }
-
 # Named software a provider documents support for — a one-click installer, an
 # official guide, a maintained buildpack. It records what the provider says it
 # supports, not how well it runs. `specialisation` is the stronger, rarer claim:
@@ -181,6 +44,62 @@
     - { id: medusa, label: Medusa }
     - { id: n8n, label: n8n }
 
+- id: runtimes
+  label: Runs
+  field: runtimes
+  multiple: true
+  values:
+    - { id: php, label: PHP }
+    - { id: node, label: Node.js }
+    - { id: python, label: Python }
+    - { id: ruby, label: Ruby }
+    - { id: go, label: Go }
+    - { id: java, label: Java }
+    - { id: dotnet, label: .NET }
+    - { id: elixir, label: Elixir }
+    - { id: rust, label: Rust }
+    - { id: static, label: Static files }
+    - { id: docker, label: Docker }
+    - { id: any, label: Anything }
+
+- id: category
+  label: Category
+  field: category
+  values:
+    - { id: paas, label: Platform as a Service }
+    - { id: vps, label: Virtual Private Servers }
+    - { id: iaas, label: Infrastructure as a Service }
+    - { id: shared, label: Shared hosting }
+    - { id: serverless, label: Serverless }
+    - { id: server-management, label: Server management }
+    - { id: vanity-hosting, label: Vanity hosting }
+    - { id: lcnc, label: Low-code and no-code }
+
+# What a provider markets itself for, taken from its own site. This records a
+# claim the provider makes, never a judgement about what it is good at — the
+# fields above are what a reader should use to decide whether the claim holds.
+- id: use-case
+  label: Built for
+  field: useCases
+  multiple: true
+  values:
+    - { id: cms, label: CMS sites }
+    - { id: headless-cms, label: Headless CMS }
+    - { id: e-commerce, label: Online shops }
+    - { id: saas, label: SaaS products }
+    - { id: api, label: API backends }
+    - { id: dashboard, label: Dashboards and admin panels }
+    - { id: internal-tool, label: Internal tools }
+    - { id: static-site, label: Static sites }
+    - { id: campaign-site, label: Campaign and landing sites }
+    - { id: portfolio, label: Portfolios }
+    - { id: side-project, label: Side projects }
+    - { id: ai-app, label: AI and LLM apps }
+    - { id: background-jobs, label: Background jobs and queues }
+    - { id: data-pipeline, label: Data pipelines }
+    - { id: game-server, label: Game servers }
+    - { id: learning, label: Learning and experiments }
+
 # Who a provider sells to, kept apart from what it is used for: a one-person
 # side project and a government department can want the same CMS and will never
 # want the same contract, support model or invoice.
@@ -198,3 +117,84 @@
     - { id: government, label: Government and public sector }
     - { id: education, label: Education and research }
     - { id: non-profit, label: Non-profits }
+
+# Country codes, not regions. EU / US / APAC grouping is derived at build time
+# from these values rather than stored — see lib/facets.ts.
+- id: regions
+  label: Regions
+  field: regions
+  multiple: true
+  values:
+    - { id: DE, label: Germany }
+    - { id: FI, label: Finland }
+    - { id: IE, label: Ireland }
+    - { id: NL, label: Netherlands }
+    - { id: GB, label: United Kingdom }
+    - { id: US, label: United States }
+    - { id: CA, label: Canada }
+    - { id: SG, label: Singapore }
+    - { id: AU, label: Australia }
+    - { id: IN, label: India }
+    - { id: JP, label: Japan }
+    - { id: BR, label: Brazil }
+
+- id: entry-price
+  label: Entry price
+  field: entryPriceBand
+  values:
+    - { id: free-tier, label: Free tier }
+    - { id: under-5, label: Under €5 a month }
+    - { id: 5-15, label: €5 to €15 a month }
+    - { id: 15-50, label: €15 to €50 a month }
+    - { id: 50-150, label: €50 to €150 a month }
+    - { id: over-150, label: Over €150 a month }
+
+- id: free-tier
+  label: Free tier
+  field: freeTier
+  values:
+    - { id: permanent, label: Permanent }
+    - { id: trial, label: Trial only }
+    - { id: none, label: None }
+
+- id: ssh
+  label: SSH access
+  field: sshAccess
+  values:
+    - { id: full, label: Full }
+    - { id: limited, label: Limited }
+    - { id: none, label: None }
+
+- id: os-managed-by
+  label: Who manages the OS
+  field: whoManagesOs
+  values:
+    - { id: you, label: You do }
+    - { id: panel-assisted, label: You do, with a panel }
+    - { id: provider, label: The provider does }
+
+- id: hardware
+  label: Whose hardware
+  field: infraContract
+  values:
+    - { id: owns-metal, label: Owns the hardware }
+    - { id: resells-iaas, label: Resells someone else's }
+    - { id: byo-iaas, label: You bring your own }
+
+- id: ownership
+  label: Ownership
+  field: ownership
+  values:
+    - { id: independent, label: Independent }
+    - { id: vc-backed, label: VC-backed }
+    - { id: pe-owned, label: Private-equity owned }
+    - { id: public, label: Publicly listed }
+    - { id: subsidiary, label: Subsidiary }
+
+- id: mcp
+  label: MCP server
+  field: mcpServer
+  values:
+    - { id: official, label: Official }
+    - { id: community, label: Community }
+    - { id: none, label: None }
