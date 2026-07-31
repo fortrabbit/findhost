@@ -1,0 +1,70 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+
+// Alphabetical, always. The default sort is deterministic and content-independent,
+// and completeness never affects order.
+const providers = (await getCollection('providers')).sort((a, b) =>
+  a.data.name.localeCompare(b.data.name, 'en'),
+);
+---
+
+<Base
+  title="FindHost — a ratings-free dataset of hosting providers"
+  description="Every provider that meets the scope test, described by attributes rather than scores."
+  ai="co-authored"
+>
+  <h1>Every provider, described rather than ranked</h1>
+
+  <p>
+    This is a dataset first and a guide second. No scores, no stars, no "best for" badges and no affiliate links — the
+    fields are chosen so you can apply your own judgement instead of ours.
+  </p>
+
+  <h2>Providers</h2>
+  <p class="note">
+    {providers.length} records, sorted alphabetically. Nothing here is ordered by quality, or by how much we happen to know.
+  </p>
+
+  <ul class="records">
+    {
+      providers.map((provider) => (
+        <li>
+          <a href={`/provider/${provider.id}/`}>{provider.data.name}</a>
+          {provider.data.publishedByUs && <span class="marker">published by us</span>}
+          {provider.data.description && <p>{provider.data.description}</p>}
+        </li>
+      ))
+    }
+  </ul>
+</Base>
+
+<style>
+  .note {
+    color: var(--dim);
+    font-size: 0.86rem;
+  }
+
+  .records {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .records li {
+    padding: 0.9rem 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .records p {
+    margin: 0.15rem 0 0;
+    color: var(--dim);
+    font-size: 0.92rem;
+  }
+
+  .marker {
+    margin-left: 0.5rem;
+    color: var(--dim);
+    font-size: 0.78rem;
+  }
+</style>

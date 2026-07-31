@@ -1,0 +1,117 @@
+# Facet definitions. Data, not code — the find island renders whatever it is
+# handed, so an eleventh facet is an entry here and nothing else.
+#
+# `field` names the provider field a facet reads. Every value a record uses must
+# appear here; scripts/validate.ts fails the build otherwise.
+
+- id: category
+  label: Category
+  field: category
+  values:
+    - { id: paas, label: Platform as a service }
+    - { id: vps, label: Virtual private servers }
+    - { id: iaas, label: Infrastructure as a service }
+    - { id: shared, label: Shared hosting }
+    - { id: managed-wp, label: Managed WordPress }
+    - { id: dedicated, label: Dedicated servers }
+    - { id: serverless, label: Serverless }
+    - { id: lcnc, label: Low-code and no-code }
+
+- id: runtimes
+  label: Runs
+  field: runtimes
+  multiple: true
+  values:
+    - { id: php, label: PHP }
+    - { id: node, label: Node.js }
+    - { id: python, label: Python }
+    - { id: ruby, label: Ruby }
+    - { id: go, label: Go }
+    - { id: java, label: Java }
+    - { id: dotnet, label: .NET }
+    - { id: elixir, label: Elixir }
+    - { id: rust, label: Rust }
+    - { id: static, label: Static files }
+    - { id: docker, label: Docker }
+    - { id: any, label: Anything you install }
+
+- id: ownership
+  label: Ownership
+  field: ownership
+  values:
+    - { id: independent, label: Independent }
+    - { id: vc-backed, label: VC-backed }
+    - { id: pe-owned, label: Private-equity owned }
+    - { id: public, label: Publicly listed }
+    - { id: subsidiary, label: Subsidiary }
+
+# Country codes, not regions. EU / US / APAC grouping is derived at build time
+# from these values rather than stored — see lib/facets.ts.
+- id: regions
+  label: Regions
+  field: regions
+  multiple: true
+  values:
+    - { id: DE, label: Germany }
+    - { id: FI, label: Finland }
+    - { id: IE, label: Ireland }
+    - { id: NL, label: Netherlands }
+    - { id: GB, label: United Kingdom }
+    - { id: US, label: United States }
+    - { id: CA, label: Canada }
+    - { id: SG, label: Singapore }
+    - { id: AU, label: Australia }
+    - { id: IN, label: India }
+    - { id: JP, label: Japan }
+    - { id: BR, label: Brazil }
+
+- id: entryPriceBand
+  label: Entry price
+  field: entryPriceBand
+  values:
+    - { id: free-tier, label: Free tier }
+    - { id: '<5', label: Under €5 a month }
+    - { id: 5-15, label: €5 to €15 a month }
+    - { id: 15-50, label: €15 to €50 a month }
+    - { id: 50-150, label: €50 to €150 a month }
+    - { id: 150+, label: Over €150 a month }
+
+- id: freeTier
+  label: Free tier
+  field: freeTier
+  values:
+    - { id: permanent, label: Permanent }
+    - { id: trial, label: Trial only }
+    - { id: none, label: None }
+
+- id: whoManagesOs
+  label: Who manages the OS
+  field: whoManagesOs
+  values:
+    - { id: you, label: You do }
+    - { id: panel-assisted, label: You do, with a panel }
+    - { id: provider, label: The provider does }
+
+- id: infraContract
+  label: Whose hardware
+  field: infraContract
+  values:
+    - { id: owns-metal, label: Owns the hardware }
+    - { id: resells-iaas, label: Resells someone else's }
+    - { id: byo-iaas, label: You bring your own }
+
+- id: sshAccess
+  label: SSH access
+  field: sshAccess
+  values:
+    - { id: full, label: Full }
+    - { id: limited, label: Limited }
+    - { id: none, label: None }
+
+- id: mcpServer
+  label: MCP server
+  field: mcpServer
+  values:
+    - { id: official, label: Official }
+    - { id: community, label: Community }
+    - { id: none, label: None }

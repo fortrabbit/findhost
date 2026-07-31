@@ -1,0 +1,268 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+
+export async function getStaticPaths() {
+  const providers = await getCollection('providers');
+  return providers.map((provider) => ({ params: { id: provider.id }, props: { provider } }));
+}
+
+const { provider } = Astro.props;
+const { Content } = await render(provider);
+const data = provider.data;
+
+// Fields describing the provider. Meta and provenance are excluded — they
+// describe our work, not the provider, so they do not belong in the denominator.
+type Attribute = [label: string, value: unknown];
+
+const attributeGroups: { label: string; fields: Attribute[] }[] = [
+  {
+    label: 'Identity',
+    fields: [
+      ['Founded', data.founded],
+      ['Headquarters', data.hqCountry],
+      ['Ownership', data.ownership],
+      ['Parent', data.parent],
+      ['Status', data.status],
+    ],
+  },
+  {
+    label: 'Classification',
+    fields: [
+      ['Category', data.category],
+      ['Also offers', data.alsoOffers],
+      ['Manages the OS', data.whoManagesOs],
+      ['Hardware', data.infraContract],
+      ['Runs on', data.runsOn],
+    ],
+  },
+  {
+    label: 'Tech stack',
+    fields: [
+      ['Runtimes', data.runtimes],
+      ['Deploy methods', data.deployMethods],
+      ['SSH access', data.sshAccess],
+      ['Managed databases', data.managedDatabases],
+      ['Persistent storage', data.persistentStorage],
+      ['Backups', data.backupsIncluded],
+    ],
+  },
+  {
+    label: 'Pricing',
+    fields: [
+      ['Pricing model', data.pricingModel],
+      ['Entry price', data.entryPriceBand],
+      ['Renewal multiple', data.renewalMultiple],
+      ['Free tier', data.freeTier],
+      ['Minimum contract', data.contractMinimum],
+    ],
+  },
+  {
+    label: 'Regions and law',
+    fields: [
+      ['Regions', data.regions],
+      ['DPA', data.gdprDpa],
+    ],
+  },
+  {
+    label: 'Support',
+    fields: [
+      ['Channels', data.supportChannels],
+      ['Hours', data.supportHours],
+      ['Tiering', data.supportTiering],
+    ],
+  },
+  {
+    label: 'Openness',
+    fields: [
+      ['Data export', data.dataExport],
+      ['Lock-in', data.proprietaryLockIn],
+    ],
+  },
+  {
+    label: 'Automation',
+    fields: [
+      ['API', data.apiAvailable],
+      ['CLI', data.cliTool],
+      ['MCP server', data.mcpServer],
+      ['Infrastructure as code', data.iacSupport],
+      ['Agent-readable docs', data.agentReadyDocs],
+    ],
+  },
+];
+
+const format = (value: unknown) => {
+  if (value === undefined || value === null) return '?';
+  if (Array.isArray(value)) return value.length ? value.join(', ') : '?';
+  if (typeof value === 'boolean') return value ? 'yes' : 'no';
+  return String(value);
+};
+
+const total = attributeGroups.flatMap((group) => group.fields).length;
+const known = attributeGroups
+  .flatMap((group) => group.fields)
+  .filter(([, value]) => format(value) !== '?').length;
+---
+
+<Base title={`${data.name} — FindHost`} description={data.description} ai={data.ai}>
+  <article>
+    <h1>{data.name}</h1>
+    {data.publishedByUs && <p class="marker">This is us. We publish this site and we appear in its dataset.</p>}
+
+    {
+      data.figure && (
+        <p class="figure" style={`background:${data.figure.color};color:${data.figure.textColor}`}>
+          <span aria-hidden="true">{data.figure.emoji}</span> {data.figure.text}
+        </p>
+      )
+    }
+
+    {data.description && <p class="lede">{data.description}</p>}
+
+    <p class="links">
+      <a href={data.url} rel="nofollow">{data.url.replace('https://', '')}</a>
+      {data.pricingUrl && <> · <a href={data.pricingUrl} rel="nofollow">pricing</a></>}
+      {data.statusUrl && <> · <a href={data.statusUrl} rel="nofollow">status</a></>}
+    </p>
+
+    <Content />
+
+    {
+      data.caveat && (
+        <aside class="caveat">
+          <p>
+            <span aria-hidden="true">{data.caveat.emoji}</span> {data.caveat.text}
+          </p>
+          <p class="attribution">
+            A judgement by {data.caveat.by}, {data.caveat.on.toISOString().slice(0, 10)}. Not a filterable field.
+          </p>
+        </aside>
+      )
+    }
+
+    <h2>The record</h2>
+    <p class="note">
+      {known} of {total} attributes recorded. That is a fact about our work, not about {data.name} — it never affects
+      sort order.
+      {
+        data.checkedAt
+          ? ` Last checked ${data.checkedAt.toISOString().slice(0, 10)}.`
+          : ' Never checked against the provider — no date is claimed.'
+      }
+    </p>
+
+    <div class="groups">
+      {
+        attributeGroups.map((group) => (
+          <section class="group">
+            <h3>{group.label}</h3>
+            <dl>
+              {group.fields.map(([label, value]) => (
+                <>
+                  <dt>{label}</dt>
+                  <dd>{format(value)}</dd>
+                </>
+              ))}
+            </dl>
+          </section>
+        ))
+      }
+    </div>
+
+    <p class="note">
+      Something wrong or missing? <a href="https://github.com/fortrabbit/findhost">Complete this record.</a>
+    </p>
+  </article>
+</Base>
+
+<style>
+  .figure {
+    margin: 1.2rem 0;
+    padding: 1rem 1.2rem;
+    font-family: var(--serif);
+    font-size: 1.2rem;
+  }
+
+  .lede {
+    font-size: 1.06rem;
+  }
+
+  .links,
+  .note {
+    color: var(--dim);
+    font-size: 0.86rem;
+  }
+
+  .marker {
+    color: var(--dim);
+    font-size: 0.86rem;
+  }
+
+  .caveat {
+    margin: 1.6rem 0;
+    padding-left: 1rem;
+    border-left: 3px solid var(--line-strong);
+  }
+
+  .caveat p {
+    margin: 0;
+    font-family: var(--serif);
+    font-size: 1.1rem;
+  }
+
+  .caveat .attribution {
+    margin-top: 0.3rem;
+    color: var(--dim);
+    font-family: var(--ui);
+    font-size: 0.8rem;
+  }
+
+  .groups {
+    max-width: 46rem;
+    columns: 2;
+    column-gap: 2.8rem;
+  }
+
+  @media (max-width: 620px) {
+    .groups {
+      columns: 1;
+    }
+  }
+
+  .group {
+    display: flow-root;
+    margin: 0 0 1.15rem;
+    break-inside: avoid;
+  }
+
+  .group h3 {
+    margin: 0 0 0.3rem;
+    padding-bottom: 0.22rem;
+    border-bottom: 1px solid var(--line-strong);
+    font-size: 1.06rem;
+  }
+
+  dl {
+    display: grid;
+    grid-template-columns: 9.5rem 1fr;
+    gap: 0 0.9rem;
+    align-items: baseline;
+    margin: 0;
+  }
+
+  dt {
+    padding: 0.09rem 0;
+    color: var(--dim);
+    font-size: 0.77rem;
+    line-height: 1.38;
+  }
+
+  dd {
+    margin: 0;
+    padding: 0.09rem 0;
+    font-family: var(--data);
+    font-size: 0.75rem;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.38;
+  }
+</style>
