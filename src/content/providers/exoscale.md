@@ -45,6 +45,15 @@ managedDatabases:
 pricingModel: hourly
 entryPriceBand: 5-15
 freeTier: none
+regions:
+  - CH
+  - AT
+  - DE
+status: active
+checkedAt: 2026-07-31
+sources:
+  - { field: regions, url: 'https://www.exoscale.com/pricing/', checkedAt: 2026-07-31 }
+  - { field: pricingModel, url: 'https://www.exoscale.com/pricing/', checkedAt: 2026-07-31 }
 supportChannels:
   - email
   - chat
@@ -72,4 +81,4 @@ Eight zones span five countries — Geneva and Zurich, Vienna twice, Frankfurt, 
 
 ## Reservations
 
-This is infrastructure, not a platform: nothing here builds an application, and the customer owns everything above the operating-system image. Billing is per second with no fixed monthly plan, so cost prediction requires modelling. There is no free tier beyond the free Kubernetes control plane, and support past the basic tier is a paid monthly subscription on top of usage. The Bulgarian and Croatian zones are absent from the region list here because the taxonomy has no entry for them yet.
+This is infrastructure, not a platform: nothing here builds an application, and the customer owns everything above the operating-system image. Billing is per second with no fixed monthly plan, so cost prediction requires modelling. There is no free tier beyond the free Kubernetes control plane, and support past the basic tier is a paid monthly subscription on top of usage. The Bulgarian and Croatian zones are absent from the region list here because the taxonomy has no entry for BG or HR yet; the pricing page names CH-GVA-2, CH-DK-2, AT-VIE-1, AT-VIE-2, DE-FRA-1 and HR-ZAG-1, so only the Swiss, Austrian and German zones are recorded.

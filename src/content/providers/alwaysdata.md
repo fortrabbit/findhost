@@ -63,6 +63,12 @@ supportChannels:
   - email
   - forum
 apiAvailable: public
+status: active
+checkedAt: 2026-07-31
+sources:
+  - { field: entryPriceBand, url: 'https://www.alwaysdata.com/en/pricing/', checkedAt: 2026-07-31 }
+  - { field: freeTier, url: 'https://www.alwaysdata.com/en/pricing/', checkedAt: 2026-07-31 }
+  - { field: pricingModel, url: 'https://www.alwaysdata.com/en/pricing/', checkedAt: 2026-07-31 }
 figure:
   emoji: 🧬
   color: rgb(25, 60, 50)
@@ -75,7 +81,7 @@ ai: authored
 
 alwaysdata is a Paris company registered in October 2006 that owns its hardware, runs it in Equinix facilities in the Paris region on its own autonomous system, and buys transit from four carriers. Nothing leaves France.
 
-Architecturally it is not conventional shared hosting. Accounts are isolated with cgroups on Debian, each account runs its own HTTP servers and long-lived background processes, and unused capacity is redistributed between accounts rather than hard-capped. Eleven runtimes have their own documentation pages — Deno, .NET, Elixir, Go, Java, Lua, Node.js, PHP, Python, Ruby and Rust — and PHP is provisioned from 4.4 through to 8.5, a range almost nobody else still publishes. The free plan is permanent rather than a trial: 1 GB of SSD, no advertising, mailboxes included.
+Architecturally it is not conventional shared hosting. Accounts are isolated with cgroups on Debian, each account runs its own HTTP servers and long-lived background processes, and unused capacity is redistributed between accounts rather than hard-capped. Eleven runtimes have their own documentation pages — Deno, .NET, Elixir, Go, Java, Lua, Node.js, PHP, Python, Ruby and Rust — and PHP is provisioned from 4.4 through to 8.5, a range almost nobody else still publishes. The free plan is permanent rather than a trial — the pricing page calls it an "ad-free offer available for life" — with 1 GB of SSD and mailboxes included. Above it sit Plus from €5 a month excluding VAT and Max from €369.
 
 Independent projects have built against it. wallabag keeps an alwaysdata install script inside its own organisation, and third-party packages drive the REST API for certificate issuance.
 

@@ -36,7 +36,14 @@ deployMethods:
 sshAccess: full
 pricingModel: fixed-tier
 entryPriceBand: 15-50
+renewalMultiple: 3.3
 freeTier: none
+status: active
+checkedAt: 2026-07-31
+sources:
+  - { field: entryPriceBand, url: 'https://www.combell.com/en/hosting/web-hosting', checkedAt: 2026-07-31 }
+  - { field: renewalMultiple, url: 'https://www.combell.com/en/hosting/web-hosting', checkedAt: 2026-07-31 }
+  - { field: pricingModel, url: 'https://www.combell.com/en/hosting/web-hosting', checkedAt: 2026-07-31 }
 supportChannels:
   - email
   - chat
@@ -58,4 +65,4 @@ Shared hosting is PHP-FPM on Percona MySQL with SSH, an "Auto GIT" deployment pi
 
 ## Reservations
 
-First-year pricing runs at roughly a third of the renewal rate, so the advertised figure is not the recurring one. The independent tooling that exists is unofficial API clients rather than any mention in framework documentation, which is a thinner form of ecosystem presence.
+First-year pricing runs at roughly a third of the renewal rate, and Combell prints both figures: Business is €5.99 a month in the first year against €19.49 after, Professional €8.99 against €27.99, Expert €14.99 against €45.99. The entry plan therefore renews at about 3.3 times what it was bought at, and the band recorded here is the standing rate rather than the advertised one. The independent tooling that exists is unofficial API clients rather than any mention in framework documentation, which is a thinner form of ecosystem presence.
