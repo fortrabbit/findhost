@@ -58,8 +58,7 @@ const Explainer = explainer ? (await render(explainer)).Content : null;
   <h2>{label}</h2>
   <p class="annotation">
     {matches.length}
-    {matches.length === 1 ? 'record' : 'records'}, sorted alphabetically. A primary category is one field of many —
-    several of these also offer what other categories describe.
+    {matches.length === 1 ? 'record' : 'records'}, sorted alphabetically.
   </p>
 
   <ProviderList providers={matches} />

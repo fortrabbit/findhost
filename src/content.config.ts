@@ -164,6 +164,21 @@ const categories = defineCollection({
   }),
 });
 
+/**
+ * An optional explainer for a single facet value, keyed `<facet>/<value>` —
+ * `software/wordpress.md`, `runtimes/go.md`. Written only where there is
+ * something true and useful to say; a page without one is still a good page,
+ * and inventing filler for every value is what the sites this dataset exists to
+ * correct do for a living.
+ */
+const notes = defineCollection({
+  loader: glob({ base: 'src/content/notes', pattern: '**/*.md' }),
+  schema: z.object({
+    title: z.string().optional(),
+    ai: z.enum(['none', 'grammar', 'co-authored', 'authored']).optional(),
+  }),
+});
+
 /** The cross-cutting explainers. Openly editorial, and structurally unable to name a winner. */
 const guide = defineCollection({
   loader: glob({ base: 'src/content/guide', pattern: '**/*.md' }),
@@ -188,4 +203,4 @@ const taxonomy = defineCollection({
   }),
 });
 
-export const collections = { providers, categories, guide, taxonomy };
+export const collections = { providers, categories, guide, notes, taxonomy };

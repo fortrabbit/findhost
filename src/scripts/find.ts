@@ -128,6 +128,16 @@ if (filtersEl && resultsEl && summaryEl) {
 
         label.append(input, document.createTextNode(` ${value.label} `), count);
         group.append(label);
+
+        // Every facet value is also a page. Filtering narrows this list; the page
+        // is where anything worth writing about that value lives.
+        const jump = document.createElement('a');
+        jump.className = 'find-jump';
+        jump.href = `/${facet.id}/${value.id}/`;
+        jump.textContent = '→';
+        jump.title = `Open the ${value.label} page`;
+        jump.setAttribute('aria-label', `Open the ${value.label} page`);
+        label.append(jump);
       }
 
       if (facet.unknown > 0) {

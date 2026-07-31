@@ -209,6 +209,11 @@
   flex: none;
 }
 
+/** The page behind the filter, not the filter itself. */
+.find-jump {
+  text-decoration: none;
+}
+
 /** A count, not a score — mono so it reads as data. */
 .find-count {
   margin-left: auto;

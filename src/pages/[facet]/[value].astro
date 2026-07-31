@@ -1,4 +1,5 @@
 ---
+import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import ProviderList from '../../components/ProviderList.astro';
 import { facetRoutes } from '../../lib/facets';
@@ -10,6 +11,12 @@ export async function getStaticPaths() {
 }
 
 const { facet, value, matches } = Astro.props;
+
+// A written explainer exists for some values and not others, which is the
+// intended state: filler for all of them would be thin content by definition.
+const notes = await getCollection('notes');
+const note = notes.find((entry) => entry.id === `${facet.id}/${value.id}`);
+const Note = note ? (await render(note)).Content : null;
 ---
 
 <Base
@@ -27,6 +34,8 @@ const { facet, value, matches } = Astro.props;
         ` A further ${facet.unknown} ${facet.unknown === 1 ? 'record does' : 'records do'} not record this field, so they cannot appear here either way.`
     }
   </p>
+
+  {Note && <Note />}
 
   <ProviderList providers={matches} />
 
