@@ -128,6 +128,23 @@ const socialLabels: Record<string, string> = {
 
 const social = Object.entries(data.social ?? {}).filter(([, url]) => url);
 
+// The policy page promises staleness is computed from the recorded date rather
+// than from a promise to re-check. This is where that is kept.
+const staleAfterDays = 180;
+const checkedDaysAgo = data.checkedAt ? Math.floor((Date.now() - data.checkedAt.getTime()) / 86_400_000) : undefined;
+const stale = checkedDaysAgo !== undefined && checkedDaysAgo > staleAfterDays;
+
+const statusNotice: Record<string, string> = {
+  acquired: 'Acquired, still operating.',
+  renamed: 'Renamed. Same service under a new name.',
+  'winding-down': 'Winding down: an end of life has been announced.',
+  discontinued: 'Discontinued. The facts below are the last ones known to be true.',
+  unverifiable: 'Basic facts can no longer be confirmed from public sources.',
+  'delisted-on-request': 'The provider asked to be removed. The record stays; entries are never deleted.',
+};
+
+const notice = typeof data.status === 'string' ? statusNotice[data.status] : undefined;
+
 const format = (value: unknown) => {
   if (value === undefined || value === null) return '?';
   if (Array.isArray(value)) return value.length ? value.join(', ') : '?';
@@ -156,6 +173,27 @@ const known = attributeGroups.flatMap((group) => group.fields).filter(([, value]
 
     <h1>{data.name}</h1>
     {data.publishedByUs && <p class="annotation">This is us. We publish this site and we appear in its dataset.</p>}
+
+    {
+      notice && (
+        <aside class="editorial-note">
+          <p>
+            <strong>Status.</strong> {notice}
+          </p>
+        </aside>
+      )
+    }
+
+    {
+      stale && (
+        <aside class="editorial-note">
+          <p>
+            <strong>May be out of date.</strong> Last checked {checkedDaysAgo} days ago. Everything below was true then
+            and has not been confirmed since.
+          </p>
+        </aside>
+      )
+    }
 
     {data.description && <p class="lede">{data.description}</p>}
 

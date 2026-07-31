@@ -161,7 +161,14 @@ const providers = defineCollection({
     // Meta & provenance
     checkedAt: z.coerce.date().optional(),
     sources: z.array(z.object({ field: z.string(), url: publicUrl, checkedAt: z.coerce.date() })).optional(),
-    status: z.enum(['active', 'acquired', 'discontinued']).optional(),
+    /*
+     * Entries are never deleted — for a dataset published by a competitor,
+     * removal is the power that has to be given up. A provider that dies or
+     * leaves scope keeps its page and changes status.
+     */
+    status: z
+      .enum(['active', 'acquired', 'renamed', 'winding-down', 'discontinued', 'unverifiable', 'delisted-on-request'])
+      .optional(),
     editorialNote: z.string().optional(),
     ai: z.enum(['none', 'grammar', 'co-authored', 'authored']).optional(),
 
