@@ -1,0 +1,61 @@
+---
+id: kinghost
+name: KingHost
+url: https://king.host
+category: shared
+pricingUrl: https://king.host/hospedagem-de-sites
+statusUrl: https://status.kinghost.net.br/
+description: Brazilian shared, WordPress and VPS hosting brand under LWSA, documenting PHP, Node.js, Python and Java application deployment on shared plans.
+founded: 2006
+hqCountry: BR
+ownership: subsidiary
+parent: LWSA
+whoManagesOs: provider
+useCases:
+  - cms
+  - campaign-site
+  - api
+  - side-project
+audience:
+  - smb
+  - freelancer
+  - agency
+software:
+  - wordpress
+  - django
+runtimes:
+  - php
+  - node
+  - python
+  - java
+deployMethods:
+  - ssh
+  - ftp
+  - git-integration
+  - control-panel
+sshAccess: limited
+pricingModel: fixed-tier
+entryPriceBand: under-5
+freeTier: none
+regions:
+  - BR
+supportChannels:
+  - chat
+  - phone
+figure:
+  emoji: 👑
+  color: rgb(70, 25, 55)
+  textColor: rgb(250, 205, 235)
+  text: Shared hosting that admits Java exists.
+ai: authored
+---
+
+## About KingHost
+
+KingHost started in Porto Alegre in 2006, was acquired by Locaweb in 2019 and is now sold alongside it under the listed Brazilian group LWSA. Servers are stated to be in Brazil.
+
+What separates it from the rest of the Brazilian shared-hosting field is its documentation. The knowledge base publishes real deployment walkthroughs for Node.js with Socket.IO, Django, Spring Boot, React, Angular and Phalcon, with SSH and a git clone from GitHub, GitLab or Bitbucket as the working path and a panel-assigned port for long-running Node processes. Third parties have built against its reseller API — there is a community WHMCS module, and acme.sh ships a KingHost DNS driver maintained inside that project.
+
+## Reservations
+
+Parts of the language documentation are visibly stale: the PHP version-switching article still enumerates 5.6, 7.0 and 7.1, so what the panel actually offers has to be checked rather than read. Advertised prices are promotional first-term rates that rise on renewal. The brand shares group infrastructure with Locaweb and the two have had correlated incidents.
