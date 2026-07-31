@@ -37,8 +37,7 @@ const unplaced = [...counts.keys()].filter((code) => !countryPoints[code]);
       stroke-width={spacing * 0.7}
       stroke-linecap="round"
       stroke-dasharray={`0 ${spacing}`}
-      opacity="0.35"
-    />
+      opacity="0.35"></path>
     {
       marks.map((mark) => (
         <g>
@@ -56,7 +55,7 @@ const unplaced = [...counts.keys()].filter((code) => !countryPoints[code]);
     {marks.map((mark) => mark.point.label).join(' · ')}
     {unplaced.length > 0 && ` · not on the map yet: ${unplaced.join(', ')}`}
     <br />
-    Dots sit at country level, not at data centres — the dataset records which countries a provider operates in, not
-    where the racks are.
+    Dots sit at country level, not at data centres — the dataset records which countries a provider operates in, not where
+    the racks are.
   </figcaption>
 </figure>

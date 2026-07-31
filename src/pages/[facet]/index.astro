@@ -12,12 +12,20 @@ const inUse = facet.values.filter((value) => value.count > 0);
 const unused = facet.values.filter((value) => value.count === 0);
 ---
 
-<Base title={`${facet.label} — FindHost`} description={`Every value recorded for ${facet.label.toLowerCase()}.`} ai="co-authored">
+<Base
+  title={`${facet.label} — FindHost`}
+  description={`Every value recorded for ${facet.label.toLowerCase()}.`}
+  ai="co-authored"
+>
   <h1>{facet.label}</h1>
 
   <p class="annotation">
-    {inUse.length} {inUse.length === 1 ? 'value' : 'values'} in use.
-    {facet.unknown > 0 && ` ${facet.unknown} ${facet.unknown === 1 ? 'record does' : 'records do'} not record this field.`}
+    {inUse.length}
+    {inUse.length === 1 ? 'value' : 'values'} in use.
+    {
+      facet.unknown > 0 &&
+        ` ${facet.unknown} ${facet.unknown === 1 ? 'record does' : 'records do'} not record this field.`
+    }
   </p>
 
   <ul class="provider-list">

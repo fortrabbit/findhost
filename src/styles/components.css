@@ -66,9 +66,12 @@
 
 /* --- Editorial text --- */
 
-/** Opening paragraph, set slightly larger than the body it introduces. */
+/** Opening paragraph. Big enough to be read instead of skipped past. */
 .lede {
-  font-size: var(--text-md);
+  max-width: var(--measure-prose);
+  font-size: var(--text-lg);
+  line-height: 1.4;
+  text-wrap: pretty;
 }
 
 /** Something true about our data or our process rather than about a provider. */

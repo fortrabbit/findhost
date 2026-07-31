@@ -22,7 +22,9 @@ const providerSlugs = new Set(
 );
 
 const directories = readdirSync(SRC).filter((name) => statSync(join(SRC, name)).isDirectory());
-const pathToCategory = Object.fromEntries(directories.map((name) => [name.split('.').slice(1).join('.'), CATEGORY[name]]));
+const pathToCategory = Object.fromEntries(
+  directories.map((name) => [name.split('.').slice(1).join('.'), CATEGORY[name]]),
+);
 
 const dropSectionsWhere = (body, matches) => {
   const parts = body.split(/^(## .*)$/m);
@@ -87,6 +89,9 @@ for (const directory of directories.sort()) {
   }
   record.ai = data.ai ?? 'co-authored';
 
-  writeFileSync(join(DST, `${CATEGORY[directory]}.md`), `---\n${stringify(record, { lineWidth: 0 }).trim()}\n---\n\n${body}\n`);
+  writeFileSync(
+    join(DST, `${CATEGORY[directory]}.md`),
+    `---\n${stringify(record, { lineWidth: 0 }).trim()}\n---\n\n${body}\n`,
+  );
   console.log(`${CATEGORY[directory]} ← ${directory}/${overview}`);
 }

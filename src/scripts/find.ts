@@ -67,7 +67,9 @@ if (filtersEl && resultsEl && summaryEl) {
 
   const matches = () =>
     providers.filter((provider) =>
-      activeFacets().every((facet) => [...selected.get(facet.id)!].some((value) => holds(provider, facet.field, value))),
+      activeFacets().every((facet) =>
+        [...selected.get(facet.id)!].some((value) => holds(provider, facet.field, value)),
+      ),
     );
 
   /**
@@ -160,7 +162,9 @@ if (filtersEl && resultsEl && summaryEl) {
     }
 
     const dropped = excluded();
-    const parts = [`${found.length} of ${providers.length} ${providers.length === 1 ? 'record' : 'records'}, sorted alphabetically.`];
+    const parts = [
+      `${found.length} of ${providers.length} ${providers.length === 1 ? 'record' : 'records'}, sorted alphabetically.`,
+    ];
     if (dropped.length) {
       parts.push(
         `Set aside as unknown: ${dropped.map((entry) => `${entry.count} without ${entry.label.toLowerCase()}`).join(', ')}.`,

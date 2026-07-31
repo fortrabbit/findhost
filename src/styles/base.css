@@ -135,7 +135,7 @@ body > header {
   gap: var(--space-sm) var(--space-lg);
   align-items: center;
   padding-top: var(--space-lg);
-  padding-bottom: var(--space-sm);
+  padding-bottom: var(--space-md);
   border-bottom: var(--rule-strong) solid var(--color-ink);
 }
 

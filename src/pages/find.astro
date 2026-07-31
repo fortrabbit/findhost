@@ -19,7 +19,8 @@ const { facets, providers } = await loadFacets();
   </p>
 
   <p class="annotation" data-find-summary>
-    {providers.length} {providers.length === 1 ? 'record' : 'records'}, sorted alphabetically.
+    {providers.length}
+    {providers.length === 1 ? 'record' : 'records'}, sorted alphabetically.
   </p>
 
   <div class="find">
@@ -37,7 +38,12 @@ const { facets, providers } = await loadFacets();
         facets.map((facet) => (
           <li>
             <a href={`/${facet.id}/`}>{facet.label}</a>
-            <p>{facet.values.filter((value) => value.count > 0).map((value) => value.label).join(' · ')}</p>
+            <p>
+              {facet.values
+                .filter((value) => value.count > 0)
+                .map((value) => value.label)
+                .join(' · ')}
+            </p>
           </li>
         ))
       }

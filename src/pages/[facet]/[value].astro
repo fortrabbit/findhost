@@ -20,7 +20,8 @@ const { facet, value, matches } = Astro.props;
   <h1>{value.label}</h1>
 
   <p class="annotation">
-    {facet.label}: {value.label} — {matches.length} {matches.length === 1 ? 'record' : 'records'}, sorted alphabetically.
+    {facet.label}: {value.label} — {matches.length}
+    {matches.length === 1 ? 'record' : 'records'}, sorted alphabetically.
     {
       facet.unknown > 0 &&
         ` A further ${facet.unknown} ${facet.unknown === 1 ? 'record does' : 'records do'} not record this field, so they cannot appear here either way.`
@@ -30,6 +31,8 @@ const { facet, value, matches } = Astro.props;
   <ProviderList providers={matches} />
 
   <p class="annotation">
-    <a href="/find/">Combine this with other filters</a> · <a href={`/${facet.id}/`}>every {facet.label.toLowerCase()} value</a>
+    <a href="/find/">Combine this with other filters</a> · <a href={`/${facet.id}/`}
+      >every {facet.label.toLowerCase()} value</a
+    >
   </p>
 </Base>

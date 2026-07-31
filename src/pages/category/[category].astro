@@ -42,7 +42,10 @@ const Explainer = explainer ? (await render(explainer)).Content : null;
 >
   {
     explainer?.data.figure && (
-      <p class="figure-band full-bleed" style={`background:${explainer.data.figure.color};color:${explainer.data.figure.textColor}`}>
+      <p
+        class="figure-band full-bleed"
+        style={`background:${explainer.data.figure.color};color:${explainer.data.figure.textColor}`}
+      >
         <span aria-hidden="true">{explainer.data.figure.emoji}</span> {explainer.data.figure.text}
       </p>
     )
@@ -54,8 +57,9 @@ const Explainer = explainer ? (await render(explainer)).Content : null;
 
   <h2>{label}</h2>
   <p class="annotation">
-    {matches.length} {matches.length === 1 ? 'record' : 'records'}, sorted alphabetically. A primary category is one
-    field of many — several of these also offer what other categories describe.
+    {matches.length}
+    {matches.length === 1 ? 'record' : 'records'}, sorted alphabetically. A primary category is one field of many —
+    several of these also offer what other categories describe.
   </p>
 
   <ProviderList providers={matches} />

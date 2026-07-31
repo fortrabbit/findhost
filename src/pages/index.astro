@@ -1,12 +1,10 @@
 ---
-import { getCollection } from "astro:content";
-import Base from "../layouts/Base.astro";
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
 
 // Alphabetical, always. The default sort is deterministic and content-independent,
 // and completeness never affects order.
-const providers = (await getCollection("providers")).sort((a, b) =>
-  a.data.name.localeCompare(b.data.name, "en"),
-);
+const providers = (await getCollection('providers')).sort((a, b) => a.data.name.localeCompare(b.data.name, 'en'));
 ---
 
 <Base
@@ -17,9 +15,8 @@ const providers = (await getCollection("providers")).sort((a, b) =>
   <h1>Find your next hosting provider</h1>
 
   <p class="lede">
-    Don't shop hosting by horse power and price only. Understand what really
-    matters. A developer-friendly, opinionated field guide to choose the right
-    hosting provider.
+    Don't shop hosting by horse power and price only. Understand what really matters. A developer-friendly, opinionated
+    field guide to choose the right hosting provider.
   </p>
 
   <h2>{providers.length} Providers</h2>
@@ -29,9 +26,7 @@ const providers = (await getCollection("providers")).sort((a, b) =>
       providers.map((provider) => (
         <li>
           <a href={`/provider/${provider.id}/`}>{provider.data.name}</a>
-          {provider.data.publishedByUs && (
-            <span class="self-marker">published by us</span>
-          )}
+          {provider.data.publishedByUs && <span class="self-marker">published by us</span>}
           {provider.data.description && <p>{provider.data.description}</p>}
         </li>
       ))

@@ -15,7 +15,10 @@ const { Content } = await render(page);
   <article>
     {
       page.data.figure && (
-        <p class="figure-band full-bleed" style={`background:${page.data.figure.color};color:${page.data.figure.textColor}`}>
+        <p
+          class="figure-band full-bleed"
+          style={`background:${page.data.figure.color};color:${page.data.figure.textColor}`}
+        >
           <span aria-hidden="true">{page.data.figure.emoji}</span> {page.data.figure.text}
         </p>
       )

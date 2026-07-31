@@ -6,7 +6,10 @@ import WorldMap from '../../components/WorldMap.astro';
 
 export async function getStaticPaths() {
   const providers = await getCollection('providers');
-  return providers.map((provider) => ({ params: { id: provider.id }, props: { provider } }));
+  return providers.map((provider) => ({
+    params: { id: provider.id },
+    props: { provider },
+  }));
 }
 
 const { provider } = Astro.props;
@@ -116,9 +119,7 @@ const format = (value: unknown) => {
 };
 
 const total = attributeGroups.flatMap((group) => group.fields).length;
-const known = attributeGroups
-  .flatMap((group) => group.fields)
-  .filter(([, value]) => format(value) !== '?').length;
+const known = attributeGroups.flatMap((group) => group.fields).filter(([, value]) => format(value) !== '?').length;
 ---
 
 <Base title={`${data.name} — FindHost`} description={data.description} ai={data.ai}>
@@ -138,18 +139,27 @@ const known = attributeGroups
 
     <p class="record-links">
       <a href={data.url} rel="nofollow">{data.url.replace('https://', '')}</a>
-      {data.pricingUrl && <> · <a href={data.pricingUrl} rel="nofollow">pricing</a></>}
-      {data.statusUrl && <> · <a href={data.statusUrl} rel="nofollow">status</a></>}
-    </p>
-
-    <h2>The record</h2>
-    <p class="annotation">
-      {known} of {total} attributes recorded. That is a fact about our work, not about {data.name} — it never affects
-      sort order.
       {
-        data.checkedAt
-          ? ` Last checked ${data.checkedAt.toISOString().slice(0, 10)}.`
-          : ' Never checked against the provider — no date is claimed.'
+        data.pricingUrl && (
+          <>
+            {' '}
+            ·{' '}
+            <a href={data.pricingUrl} rel="nofollow">
+              pricing
+            </a>
+          </>
+        )
+      }
+      {
+        data.statusUrl && (
+          <>
+            {' '}
+            ·{' '}
+            <a href={data.statusUrl} rel="nofollow">
+              status
+            </a>
+          </>
+        )
       }
     </p>
 
@@ -167,18 +177,16 @@ const known = attributeGroups
                   <>
                     <dt>{label}</dt>
                     <dd>
-                      {facet && values.length ? (
-                        values.map((entry, index) => (
-                          <>
-                            {index > 0 && ', '}
-                            <a href={`/${facet.id}/${entry}/`} data-pagefind-filter={facet.id}>
-                              {String(entry)}
-                            </a>
-                          </>
-                        ))
-                      ) : (
-                        format(value)
-                      )}
+                      {facet && values.length
+                        ? values.map((entry, index) => (
+                            <>
+                              {index > 0 && ', '}
+                              <a href={`/${facet.id}/${entry}/`} data-pagefind-filter={facet.id}>
+                                {String(entry)}
+                              </a>
+                            </>
+                          ))
+                        : format(value)}
                     </dd>
                   </>
                 );
@@ -224,8 +232,14 @@ const known = attributeGroups
     }
 
     <p class="annotation">
-      Something wrong or missing? <a href="https://github.com/fortrabbit/findhost">Complete this record.</a>
+      {known} of {total} attributes recorded — a fact about our work, not about {data.name}, and it never affects sort
+      order.
+      {
+        data.checkedAt
+          ? ` Last checked ${data.checkedAt.toISOString().slice(0, 10)}.`
+          : ' Never checked against the provider, so no date is claimed.'
+      }
+      <a href="https://github.com/fortrabbit/findhost">Complete this record.</a>
     </p>
   </article>
 </Base>
-

@@ -25,33 +25,67 @@ const CATEGORY = {
 // A provider whose URL is not known is not migrated — a guessed URL is exactly
 // the kind of unchecked fact this dataset exists not to publish.
 const URL_MAP = {
-  'hosting-com': 'https://www.hosting.com', bluehost: 'https://www.bluehost.com',
-  dreamhost: 'https://www.dreamhost.com', godaddy: 'https://www.godaddy.com',
-  hostgator: 'https://www.hostgator.com', hostinger: 'https://www.hostinger.com',
-  knownhost: 'https://www.knownhost.com', nixihost: 'https://nixihost.com',
-  arcustech: 'https://www.arcustech.com', contabo: 'https://contabo.com',
-  digitalocean: 'https://www.digitalocean.com', hetzner: 'https://www.hetzner.com',
-  linode: 'https://www.linode.com', 'liquid-web': 'https://www.liquidweb.com',
-  ovh: 'https://www.ovhcloud.com', uberspace: 'https://uberspace.de', vultr: 'https://www.vultr.com',
-  apiscp: 'https://apiscp.com', cloudways: 'https://www.cloudways.com', coolify: 'https://coolify.io',
-  'laravel-forge': 'https://forge.laravel.com', ploi: 'https://ploi.io', runcloud: 'https://runcloud.io',
-  'server-pilot': 'https://serverpilot.io', spinupwp: 'https://spinupwp.com', xcloud: 'https://xcloud.host',
-  'craft-cloud': 'https://craftcms.com/cloud', flywheel: 'https://getflywheel.com',
-  kinsta: 'https://kinsta.com', servd: 'https://servd.host', wpengine: 'https://wpengine.com',
-  'aws-lambda': 'https://aws.amazon.com/lambda/', 'cloudflare-workers': 'https://workers.cloudflare.com',
+  'hosting-com': 'https://www.hosting.com',
+  bluehost: 'https://www.bluehost.com',
+  dreamhost: 'https://www.dreamhost.com',
+  godaddy: 'https://www.godaddy.com',
+  hostgator: 'https://www.hostgator.com',
+  hostinger: 'https://www.hostinger.com',
+  knownhost: 'https://www.knownhost.com',
+  nixihost: 'https://nixihost.com',
+  arcustech: 'https://www.arcustech.com',
+  contabo: 'https://contabo.com',
+  digitalocean: 'https://www.digitalocean.com',
+  hetzner: 'https://www.hetzner.com',
+  linode: 'https://www.linode.com',
+  'liquid-web': 'https://www.liquidweb.com',
+  ovh: 'https://www.ovhcloud.com',
+  uberspace: 'https://uberspace.de',
+  vultr: 'https://www.vultr.com',
+  apiscp: 'https://apiscp.com',
+  cloudways: 'https://www.cloudways.com',
+  coolify: 'https://coolify.io',
+  'laravel-forge': 'https://forge.laravel.com',
+  ploi: 'https://ploi.io',
+  runcloud: 'https://runcloud.io',
+  'server-pilot': 'https://serverpilot.io',
+  spinupwp: 'https://spinupwp.com',
+  xcloud: 'https://xcloud.host',
+  'craft-cloud': 'https://craftcms.com/cloud',
+  flywheel: 'https://getflywheel.com',
+  kinsta: 'https://kinsta.com',
+  servd: 'https://servd.host',
+  wpengine: 'https://wpengine.com',
+  'aws-lambda': 'https://aws.amazon.com/lambda/',
+  'cloudflare-workers': 'https://workers.cloudflare.com',
   'digitalocean-functions': 'https://www.digitalocean.com/products/functions',
-  'google-cloud-run': 'https://cloud.google.com/run', 'laravel-vapor': 'https://vapor.laravel.com',
+  'google-cloud-run': 'https://cloud.google.com/run',
+  'laravel-vapor': 'https://vapor.laravel.com',
   'scaleway-functions': 'https://www.scaleway.com/en/serverless-functions/',
-  vercel: 'https://vercel.com', wasmer: 'https://wasmer.io',
-  fly: 'https://fly.io', heroku: 'https://www.heroku.com', hostim: 'https://hostim.dev', 'laravel-cloud': 'https://cloud.laravel.com', 'ploi-cloud': 'https://ploi.cloud',
-  railway: 'https://railway.com', render: 'https://render.com', sevalla: 'https://sevalla.com',
+  vercel: 'https://vercel.com',
+  wasmer: 'https://wasmer.io',
+  fly: 'https://fly.io',
+  heroku: 'https://www.heroku.com',
+  hostim: 'https://hostim.dev',
+  'laravel-cloud': 'https://cloud.laravel.com',
+  'ploi-cloud': 'https://ploi.cloud',
+  railway: 'https://railway.com',
+  render: 'https://render.com',
+  sevalla: 'https://sevalla.com',
   upsun: 'https://upsun.com',
-  aws: 'https://aws.amazon.com', azure: 'https://azure.microsoft.com', gcp: 'https://cloud.google.com',
+  aws: 'https://aws.amazon.com',
+  azure: 'https://azure.microsoft.com',
+  gcp: 'https://cloud.google.com',
   upcloud: 'https://upcloud.com',
-  bubble: 'https://bubble.io', duda: 'https://www.duda.co', jimdo: 'https://www.jimdo.com',
-  lovable: 'https://lovable.dev', shopify: 'https://www.shopify.com',
-  squarespace: 'https://www.squarespace.com', webflow: 'https://webflow.com',
-  weebly: 'https://www.weebly.com', wix: 'https://www.wix.com',
+  bubble: 'https://bubble.io',
+  duda: 'https://www.duda.co',
+  jimdo: 'https://www.jimdo.com',
+  lovable: 'https://lovable.dev',
+  shopify: 'https://www.shopify.com',
+  squarespace: 'https://www.squarespace.com',
+  webflow: 'https://webflow.com',
+  weebly: 'https://www.weebly.com',
+  wix: 'https://www.wix.com',
 };
 
 // Slug fixes and rebrands. The filename is the id is the URL, so a rename here
@@ -69,10 +103,7 @@ const DROP_SECTIONS = {
 };
 
 const DROP_TEXT = {
-  ploi: [
-    'We abstract the AWS infrastructure underneath',
-    'One plan, one invoice, one place to ask for help.',
-  ],
+  ploi: ['We abstract the AWS infrastructure underneath', 'One plan, one invoice, one place to ask for help.'],
   'ploi-cloud': ['Both platforms are tailored for freelancers, agencies, and startups'],
   upcloud: ['We are still considering UpCloud as an alternative'],
   'craft-cloud': ['Looking to switch?'],
@@ -164,21 +195,25 @@ const rewrite = (body, pathToCategory) => {
     const slug = RENAME[name] ?? name;
     return URL_MAP[slug] ? `/provider/${slug}/` : `${WWW}${whole}`;
   });
-  body = body.replace(
-    /\/hosting-guide\/providers\/([a-z0-9-]+)/g,
-    (whole, dir) => (pathToCategory[dir] ? `/category/${pathToCategory[dir]}/` : `${WWW}${whole}`),
+  body = body.replace(/\/hosting-guide\/providers\/([a-z0-9-]+)/g, (whole, dir) =>
+    pathToCategory[dir] ? `/category/${pathToCategory[dir]}/` : `${WWW}${whole}`,
   );
   body = body.replace('/hosting-guide/intro', '/guide/why-hosting-is-hard/');
   body = body.replace(/\]\(\/hosting-guide\/?\)/g, '](/guide/)');
   body = body.replace('/hosting-guide/tips', '/guide/how-to-choose/');
-  body = body.replace(/\]\((\/(?:alternatives|solutions|pricing|why|company|legal|docs|blog|support|contact|hosting-guide|raw)[^)]*)\)/g, `](${WWW}$1)`);
+  body = body.replace(
+    /\]\((\/(?:alternatives|solutions|pricing|why|company|legal|docs|blog|support|contact|hosting-guide|raw)[^)]*)\)/g,
+    `](${WWW}$1)`,
+  );
   return body;
 };
 
 mkdirSync(DST, { recursive: true });
 
 const directories = readdirSync(SRC).filter((name) => statSync(join(SRC, name)).isDirectory());
-const pathToCategory = Object.fromEntries(directories.map((name) => [name.split('.').slice(1).join('.'), CATEGORY[name]]));
+const pathToCategory = Object.fromEntries(
+  directories.map((name) => [name.split('.').slice(1).join('.'), CATEGORY[name]]),
+);
 
 const skipped = [];
 const scrubbed = [];
@@ -217,7 +252,10 @@ for (const directory of directories.sort()) {
       .trim();
     if (!description) {
       const firstParagraph = body.split(/\n{2,}/).find((paragraph) => !paragraph.startsWith('#')) ?? '';
-      description = firstParagraph.split(/(?<=[.!?]) /)[0].replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').trim();
+      description = firstParagraph
+        .split(/(?<=[.!?]) /)[0]
+        .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+        .trim();
     }
     if (description.length > 200) {
       const first = description.split(/(?<=[.!?]) /)[0];

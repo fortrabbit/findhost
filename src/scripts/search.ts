@@ -31,7 +31,8 @@ if (form && input && resultsEl && summaryEl) {
       const importModule = new Function('path', 'return import(path)') as (path: string) => Promise<unknown>;
       pagefind = (await importModule('/pagefind/pagefind.js')) as Pagefind;
     } catch {
-      summaryEl.textContent = 'The search index is only built for the deployed site. Run `pnpm build` to try it locally.';
+      summaryEl.textContent =
+        'The search index is only built for the deployed site. Run `pnpm build` to try it locally.';
     }
     return pagefind;
   };
