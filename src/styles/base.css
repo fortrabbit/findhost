@@ -143,6 +143,11 @@ body > main {
   padding-top: var(--space-md);
 }
 
+body > main:has(> .figure-band:first-child),
+body > main:has(> article > .figure-band:first-child) {
+  padding-top: 0;
+}
+
 body > footer {
   margin-top: var(--space-2xl);
   padding-top: var(--space-md);

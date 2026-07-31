@@ -40,8 +40,6 @@ const Explainer = explainer ? (await render(explainer)).Content : null;
   description={explainer?.data.description ?? `Every ${label.toLowerCase()} provider in the dataset.`}
   ai={explainer?.data.ai}
 >
-  <h1>{explainer?.data.title ?? label}</h1>
-
   {
     explainer?.data.figure && (
       <p class="figure-band full-bleed" style={`background:${explainer.data.figure.color};color:${explainer.data.figure.textColor}`}>
@@ -49,6 +47,8 @@ const Explainer = explainer ? (await render(explainer)).Content : null;
       </p>
     )
   }
+
+  <h1>{explainer?.data.title ?? label}</h1>
 
   {Explainer && <Explainer />}
 

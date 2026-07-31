@@ -178,6 +178,11 @@
   text-wrap: balance;
 }
 
+/* When the band opens the page it meets the header rule, with no gap to explain. */
+.figure-band:first-child {
+  margin-block-start: 0;
+}
+
 .figure-band span[aria-hidden] {
   font-size: 2.4em;
   line-height: 1;

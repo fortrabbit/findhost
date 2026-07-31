@@ -13,8 +13,6 @@ const { Content } = await render(page);
 
 <Base title={`${page.data.title} — FindHost`} description={page.data.description} ai={page.data.ai}>
   <article>
-    <h1>{page.data.title}</h1>
-
     {
       page.data.figure && (
         <p class="figure-band full-bleed" style={`background:${page.data.figure.color};color:${page.data.figure.textColor}`}>
@@ -22,6 +20,8 @@ const { Content } = await render(page);
         </p>
       )
     }
+
+    <h1>{page.data.title}</h1>
 
     <Content />
   </article>
