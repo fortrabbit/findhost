@@ -50,6 +50,21 @@ export const countryPoints: Record<string, { label: string; lat: number; lng: nu
   PK: { label: 'Pakistan', lat: 24.9, lng: 67.1 },
   SA: { label: 'Saudi Arabia', lat: 24.7, lng: 46.7 },
   RU: { label: 'Russia', lat: 55.8, lng: 37.6 },
+  EE: { label: 'Estonia', lat: 59.4, lng: 24.8 },
+  LV: { label: 'Latvia', lat: 56.9, lng: 24.1 },
+  LT: { label: 'Lithuania', lat: 54.7, lng: 25.3 },
+  BG: { label: 'Bulgaria', lat: 42.7, lng: 23.3 },
+  HR: { label: 'Croatia', lat: 45.8, lng: 16.0 },
+  LU: { label: 'Luxembourg', lat: 49.6, lng: 6.1 },
+  PT: { label: 'Portugal', lat: 38.7, lng: -9.1 },
+  HU: { label: 'Hungary', lat: 47.5, lng: 19.1 },
+  SK: { label: 'Slovakia', lat: 48.1, lng: 17.1 },
+  SI: { label: 'Slovenia', lat: 46.1, lng: 14.5 },
+  IS: { label: 'Iceland', lat: 64.1, lng: -21.9 },
+  GR: { label: 'Greece', lat: 38.0, lng: 23.7 },
+  AR: { label: 'Argentina', lat: -34.6, lng: -58.4 },
+  KE: { label: 'Kenya', lat: -1.3, lng: 36.8 },
+  NG: { label: 'Nigeria', lat: 6.5, lng: 3.4 },
 };
 
 export const spacing = 4;

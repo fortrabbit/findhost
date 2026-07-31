@@ -96,7 +96,27 @@ const providers = defineCollection({
      * that renews at €9.99. A value below 1 would mean the price falls, which
      * happens to nobody.
      */
-    pricingModel: z.enum(['fixed-tier', 'per-resource', 'usage-based', 'hourly', 'credit']).optional(),
+    /*
+     * How the bill is computed, by what happens at the margin:
+     *   fixed-tier         the bill does not change with usage
+     *   plan-plus-overage  a plan fee, an included allowance, metered above it
+     *   per-resource       per unit provisioned, whether or not it is used
+     *   usage-based        metered consumption, no plan fee
+     *   hourly             per hour a resource exists
+     *   credit             prepaid credits drawn down
+     *   per-server-licence a licence per server you already own
+     */
+    pricingModel: z
+      .enum([
+        'fixed-tier',
+        'plan-plus-overage',
+        'per-resource',
+        'usage-based',
+        'hourly',
+        'credit',
+        'per-server-licence',
+      ])
+      .optional(),
     entryPriceBand: z.enum(['free-tier', 'under-5', '5-15', '15-50', '50-150', 'over-150']).optional(),
     renewalMultiple: z.number().nullable().optional(),
     freeTier: z.enum(['permanent', 'trial', 'none']).optional(),

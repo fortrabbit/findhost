@@ -46,6 +46,23 @@
     - { id: pimcore, label: Pimcore }
     - { id: expressionengine, label: ExpressionEngine }
     - { id: nextcloud, label: Nextcloud }
+    - { id: prestashop, label: PrestaShop }
+    - { id: opencart, label: OpenCart }
+    - { id: odoo, label: Odoo }
+    - { id: moodle, label: Moodle }
+    - { id: mastodon, label: Mastodon }
+    - { id: mattermost, label: Mattermost }
+    - { id: gitea, label: Gitea }
+    - { id: keycloak, label: Keycloak }
+    - { id: metabase, label: Metabase }
+    - { id: vaultwarden, label: Vaultwarden }
+    - { id: silverstripe, label: Silverstripe }
+    - { id: umbraco, label: Umbraco }
+    - { id: wagtail, label: Wagtail }
+    - { id: django-cms, label: django CMS }
+    - { id: spring-boot, label: Spring Boot }
+    - { id: flask, label: Flask }
+    - { id: fastapi, label: FastAPI }
 
 - id: runtimes
   label: Runs
@@ -66,6 +83,11 @@
     - { id: deno, label: Deno }
     - { id: scala, label: Scala }
     - { id: clojure, label: Clojure }
+    - { id: perl, label: Perl }
+    - { id: swift, label: Swift }
+    - { id: gleam, label: Gleam }
+    - { id: lua, label: Lua }
+    - { id: haskell, label: Haskell }
     - { id: docker, label: Docker }
     - { id: any, label: Anything }
 
@@ -176,6 +198,21 @@
     - { id: PK, label: Pakistan }
     - { id: SA, label: Saudi Arabia }
     - { id: RU, label: Russia }
+    - { id: EE, label: Estonia }
+    - { id: LV, label: Latvia }
+    - { id: LT, label: Lithuania }
+    - { id: BG, label: Bulgaria }
+    - { id: HR, label: Croatia }
+    - { id: LU, label: Luxembourg }
+    - { id: PT, label: Portugal }
+    - { id: HU, label: Hungary }
+    - { id: SK, label: Slovakia }
+    - { id: SI, label: Slovenia }
+    - { id: IS, label: Iceland }
+    - { id: GR, label: Greece }
+    - { id: AR, label: Argentina }
+    - { id: KE, label: Kenya }
+    - { id: NG, label: Nigeria }
 
 - id: entry-price
   label: Entry price
