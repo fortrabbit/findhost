@@ -16,6 +16,7 @@ useCases:
   - e-commerce
   - side-project
 audience:
+  - developer
   - startup
   - smb
   - enterprise
@@ -32,6 +33,8 @@ runtimes:
   - java
   - php
   - go
+  - scala
+  - clojure
   - dotnet
 deployMethods:
   - git-push

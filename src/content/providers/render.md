@@ -22,6 +22,7 @@ social:
   discord: https://discord.gg/kt5namUTqb
 runtimes:
   - node
+  - bun
   - python
   - ruby
   - go

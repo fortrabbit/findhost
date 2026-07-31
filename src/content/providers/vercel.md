@@ -24,6 +24,7 @@ social:
   youtube: https://youtube.com/@VercelHQ
 runtimes:
   - node
+  - bun
   - python
   - ruby
   - go
@@ -36,14 +37,20 @@ freeTier: permanent
 regions:
   - US
   - CA
+  - BR
   - IE
   - GB
+  - FR
   - DE
+  - SE
+  - AE
+  - ZA
   - IN
   - SG
+  - HK
   - JP
+  - KR
   - AU
-  - BR
 supportChannels:
   - email
 supportTiering: paid-upgrade

@@ -11,6 +11,7 @@ hqCountry: DE
 whoManagesOs: you
 infraContract: owns-metal
 audience:
+  - beginner
   - smb
   - enterprise
 social:

@@ -10,6 +10,7 @@ infraContract: byo-iaas
 useCases:
   - cms
 audience:
+  - developer
   - agency
 specialisation:
   - wordpress

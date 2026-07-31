@@ -13,13 +13,23 @@ entryPriceBand: under-5
 regions:
   - US
   - CA
+  - MX
   - BR
+  - CL
   - GB
+  - FR
+  - ES
+  - IT
   - NL
   - DE
+  - SE
+  - PL
+  - IL
+  - ZA
   - IN
   - SG
   - JP
+  - KR
   - AU
 apiAvailable: public
 status: active
