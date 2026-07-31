@@ -35,8 +35,20 @@ deployMethods:
   - api
 pricingModel: usage-based
 entryPriceBand: 15-50
+freeTier: none
+regions:
+  - US
+  - DE
+  - SG
 apiAvailable: public
 cliTool: official
+status: active
+checkedAt: 2026-07-31
+sources:
+  - { field: entryPriceBand, url: 'https://www.koyeb.com/pricing', checkedAt: 2026-07-31 }
+  - { field: pricingModel, url: 'https://www.koyeb.com/pricing', checkedAt: 2026-07-31 }
+  - { field: freeTier, url: 'https://www.koyeb.com/pricing', checkedAt: 2026-07-31 }
+  - { field: regions, url: 'https://www.koyeb.com/pricing', checkedAt: 2026-07-31 }
 figure:
   emoji: 🛫
   color: rgb(30, 35, 80)
@@ -49,7 +61,9 @@ ai: authored
 
 Koyeb is a Paris-founded platform that takes a git repository or a container image and runs it across seven regions, with automatic HTTPS, scale-to-zero and per-second billing. Alongside ordinary CPU workloads it sells GPU instances by the hour — from an RTX 4000 up to eight-way H200 configurations — and a serverless Postgres with a free allowance, which puts it in front of the machine-learning inference market as much as the web one.
 
-Plans are Pro at twenty-nine dollars a month including ten dollars of compute credit, Scale at two hundred and ninety-nine with a hundred, and a custom enterprise tier that adds dedicated infrastructure and access to AWS regions.
+Plans are Pro at $29 a month plus compute, Scale at $299 plus compute, and a custom enterprise tier starting at $1,000 a month that adds dedicated infrastructure and access to AWS regions. Billing is "only pay for what you use, by the second", with Postgres storage at $0.50 a month per GB.
+
+The pricing page cites seven regions across the US, the EU and Asia but names only three of them — Washington DC, Frankfurt and Singapore — so those three are what is recorded here.
 
 ## Reservations
 

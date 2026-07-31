@@ -40,6 +40,13 @@ freeTier: none
 regions:
   - FR
 apiAvailable: public
+status: active
+checkedAt: 2026-07-31
+sources:
+  - { field: entryPriceBand, url: 'https://www.gandi.net/en/simple-hosting', checkedAt: 2026-07-31 }
+  - { field: pricingModel, url: 'https://www.gandi.net/en/simple-hosting', checkedAt: 2026-07-31 }
+  - { field: runtimes, url: 'https://www.gandi.net/en/simple-hosting', checkedAt: 2026-07-31 }
+  - { field: regions, url: 'https://www.gandi.net/en/simple-hosting', checkedAt: 2026-07-31 }
 figure:
   emoji: 📮
   color: rgb(35, 35, 40)
@@ -50,7 +57,9 @@ ai: authored
 
 ## About Gandi
 
-Gandi is best known as a domain registrar; Simple Hosting, now also branded Web Hosting, is the side of it that runs application code. Each instance is an isolated Linux container with its own dedicated resources and Varnish caching, deployed by git or SFTP, with a choice of Paris or Bissen in Luxembourg. PHP, Python and Node.js are the documented runtimes, with MySQL and PostgreSQL alongside.
+Gandi is best known as a domain registrar; Simple Hosting, now also branded Web Hosting, is the side of it that runs application code. Each instance is an isolated Linux container with its own dedicated resources and Varnish caching, deployed by git or SFTP, with a choice of Paris or Bissen in Luxembourg. PHP, Python and Node.js are the documented runtimes on every plan, with MySQL and PostgreSQL alongside. Five tiers are listed: Essential from €2.00 a month, Starter from €3.99, Advanced from €5.32, Pro from €6.65 and Business from €7.98.
+
+Only France appears in the regions field: Luxembourg has no country code in this dataset's taxonomy yet, so the Bissen option is recorded here in prose and nowhere else.
 
 The independent tooling that exists around it is mostly small and mostly old — a Vagrant configuration reproducing the Simple Hosting architecture locally, deployment scripts wiring GitHub to an instance, a working Flarum layout — but it is written by people outside the company, which is the point.
 
