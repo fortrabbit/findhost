@@ -3,7 +3,26 @@ id: cloudways
 name: Cloudways
 url: https://www.cloudways.com
 category: server-management
-description: Cloudways is a managed cloud hosting platform that runs on top of IaaS providers like DigitalOcean, Vultr, and AWS. Acquired by DigitalOcean in 2022.
+pricingUrl: https://www.cloudways.com/en/pricing.php
+description: Cloudways provisions and manages servers on other people's infrastructure — DigitalOcean, Vultr, Linode, AWS and Google Cloud — through its own control panel.
+infraContract: resells-iaas
+runsOn:
+  - digitalocean
+  - vultr
+  - linode
+  - aws
+  - gcp
+pricingModel: hourly
+entryPriceBand: 5-15
+freeTier: trial
+status: active
+checkedAt: 2026-07-31
+sources:
+  - { field: runsOn, url: 'https://www.cloudways.com/en/pricing.php', checkedAt: 2026-07-31 }
+  - { field: infraContract, url: 'https://www.cloudways.com/en/pricing.php', checkedAt: 2026-07-31 }
+  - { field: entryPriceBand, url: 'https://www.cloudways.com/en/pricing.php', checkedAt: 2026-07-31 }
+  - { field: freeTier, url: 'https://www.cloudways.com/en/pricing.php', checkedAt: 2026-07-31 }
+  - { field: pricingModel, url: 'https://www.cloudways.com/en/pricing.php', checkedAt: 2026-07-31 }
 figure:
   emoji: ☁️
   color: rgb(45, 110, 210)
@@ -14,8 +33,12 @@ ai: co-authored
 
 ## About Cloudways
 
-Cloudways is a hosting [server management software](/category/server-management/) and thus actually a software service not a full hosting service. It helps you to spin up VPS machines on other providers. Marketing is a strong focus, with well optimized landing pages. It was acquired by [DigitalOcean](/provider/digitalocean/) in 2022. Cloudways also advertises WordPress hosting. We don't have first hand experience.
+Cloudways is [server management software](/category/server-management/) rather than a hosting service in its own right: it provisions VPS machines on five infrastructure providers — DigitalOcean, Vultr, Linode, AWS and Google Cloud — and puts a control panel over them. The cheapest listed plan is a Micro server on DigitalOcean at $11 a month for 2 GB RAM, 1 vCPU and 50 GB storage. Billing is pay-as-you-go by the hour, invoiced in arrears in the first week of the following month, and a three-day trial runs without a credit card.
+
+Because the servers sit on other providers' hardware, the regions on offer are whatever those providers operate — Cloudways cites 25 data centres for Linode alone — so the geography of a Cloudways account is decided upstream. It was acquired by [DigitalOcean](/provider/digitalocean/) in 2022. WordPress hosting is a separately marketed product line.
 
 ## Reservations
 
-Cloudways might look like a good option for novice web developers with a tight budget. But take care when using server management software: there is the risk of a responsibility gap. Cloudways manages the software layer, the underlying VPS contract is a separate concern — when something breaks in between, it can be unclear who is responsible.
+Server management software carries a responsibility gap. Cloudways manages the software layer while the underlying machine belongs to a different contract, and when a fault falls between the two it is not always obvious who owns it.
+
+The bundled price also hides the split: one figure covers both the panel and the machine, so what the management layer costs on top of the compute is not separable from the invoice.
