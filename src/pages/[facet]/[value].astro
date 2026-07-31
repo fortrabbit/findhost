@@ -2,7 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import ProviderList from '../../components/ProviderList.astro';
-import { facetRoutes } from '../../lib/facets';
+import { facetRoutes, loadFacets, summarise } from '../../lib/facets';
 
 // One static page per facet value in use. These are what a crawler follows and
 // what the no-JS fallback links to — the find view is a convenience on top.
@@ -11,6 +11,47 @@ export async function getStaticPaths() {
 }
 
 const { facet, value, matches } = Astro.props;
+
+// Phrased per facet so the sentence reads as English rather than as a template.
+const subjects: Record<string, string> = {
+  software: `document support for ${value.label}`,
+  runtimes: `run ${value.label}`,
+  category: `are ${value.label.toLowerCase()}`,
+  'use-case': `market themselves for ${value.label.toLowerCase()}`,
+  audience: `sell to ${value.label.toLowerCase()}`,
+  regions: `operate in ${value.label}`,
+  'entry-price': `start at ${value.label.toLowerCase()}`,
+  'free-tier':
+    {
+      permanent: 'offer a permanent free tier',
+      trial: 'offer a free trial rather than a free tier',
+      none: 'have no free tier',
+    }[value.id] ?? `record a free tier of ${value.label.toLowerCase()}`,
+  ssh: `give ${value.label.toLowerCase()} SSH access`,
+  'os-managed-by':
+    {
+      you: 'leave the operating system to you',
+      'panel-assisted': 'give you the operating system with a panel to manage it',
+      provider: 'manage the operating system for you',
+      container: 'run the host while you own the image',
+    }[value.id] ?? `answer "${value.label.toLowerCase()}" to who manages the operating system`,
+  hardware:
+    {
+      'owns-metal': 'own their hardware',
+      'resells-iaas': "resell someone else's hardware",
+      'byo-iaas': 'run on hardware you bring',
+    }[value.id] ?? value.label.toLowerCase(),
+  ownership: `are ${value.label.toLowerCase()}`,
+  mcp: `ship ${value.label.toLowerCase()} MCP support`,
+};
+
+const { facets } = await loadFacets();
+const lead = summarise(
+  matches,
+  facets,
+  facet.id,
+  subjects[facet.id] ?? `record ${facet.label.toLowerCase()}: ${value.label}`,
+);
 
 // A written explainer exists for some values and not others, which is the
 // intended state: filler for all of them would be thin content by definition.
@@ -25,6 +66,8 @@ const Note = note ? (await render(note)).Content : null;
   ai="co-authored"
 >
   <h1>{value.label}</h1>
+
+  <p class="lede">{lead}</p>
 
   <p class="annotation">
     {facet.label}: {value.label} — {matches.length}
