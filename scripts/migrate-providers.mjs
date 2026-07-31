@@ -198,6 +198,8 @@ const rewrite = (body, pathToCategory) => {
   body = body.replace(/\/hosting-guide\/providers\/([a-z0-9-]+)/g, (whole, dir) =>
     pathToCategory[dir] ? `/category/${pathToCategory[dir]}/` : `${WWW}${whole}`,
   );
+  // Links into fortrabbit's own marketing pages lose the link and keep the words.
+  body = body.replace(/\[([^\]]+)\]\(\/software\/[a-z0-9-]+\)/g, '$1');
   body = body.replace('/hosting-guide/intro', '/guide/why-hosting-is-hard/');
   body = body.replace(/\]\(\/hosting-guide\/?\)/g, '](/guide/)');
   body = body.replace('/hosting-guide/tips', '/guide/how-to-choose/');

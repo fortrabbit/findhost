@@ -70,11 +70,11 @@
   field: entryPriceBand
   values:
     - { id: free-tier, label: Free tier }
-    - { id: '<5', label: Under €5 a month }
+    - { id: under-5, label: Under €5 a month }
     - { id: 5-15, label: €5 to €15 a month }
     - { id: 15-50, label: €15 to €50 a month }
     - { id: 50-150, label: €50 to €150 a month }
-    - { id: 150+, label: Over €150 a month }
+    - { id: over-150, label: Over €150 a month }
 
 - id: free-tier
   label: Free tier

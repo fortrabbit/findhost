@@ -71,7 +71,7 @@ const providers = defineCollection({
 
     // Pricing — bands only. This is not a price tracker.
     pricingModel: z.enum(['fixed-tier', 'per-resource', 'usage-based', 'hourly', 'credit']).optional(),
-    entryPriceBand: z.enum(['free-tier', '<5', '5-15', '15-50', '50-150', '150+']).optional(),
+    entryPriceBand: z.enum(['free-tier', 'under-5', '5-15', '15-50', '50-150', 'over-150']).optional(),
     renewalMultiple: z.number().nullable().optional(),
     freeTier: z.enum(['permanent', 'trial', 'none']).optional(),
     contractMinimum: z.enum(['none', 'monthly', 'annual', 'multi-year']).optional(),

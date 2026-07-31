@@ -16,7 +16,7 @@ sshAccess: full
 persistentStorage: true
 backupsIncluded: paid-addon
 pricingModel: hourly
-entryPriceBand: '<5'
+entryPriceBand: under-5
 contractMinimum: none
 regions:
   - DE

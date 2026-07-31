@@ -23,7 +23,7 @@ managedDatabases:
   - opensearch
   - kafka
 pricingModel: hourly
-entryPriceBand: '<5'
+entryPriceBand: under-5
 contractMinimum: none
 regions:
   - US

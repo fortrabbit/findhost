@@ -8,7 +8,7 @@ founded: 2003
 hqCountry: US
 ownership: subsidiary
 parent: World Host Group
-entryPriceBand: '<5'
+entryPriceBand: under-5
 status: active
 checkedAt: 2026-07-31
 sources:

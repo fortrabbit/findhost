@@ -56,6 +56,7 @@ for (const directory of directories.sort()) {
   body = body.replace(/\/hosting-guide\/providers\/([a-z0-9-]+)/g, (whole, dir) =>
     pathToCategory[dir] ? `/category/${pathToCategory[dir]}/` : `${WWW}${whole}`,
   );
+  body = body.replace(/\[([^\]]+)\]\(\/software\/[a-z0-9-]+\)/g, '$1');
   body = body.replace('/hosting-guide/intro', '/guide/why-hosting-is-hard/');
   body = body.replace('/hosting-guide/tips', '/guide/how-to-choose/');
   body = body.replace(

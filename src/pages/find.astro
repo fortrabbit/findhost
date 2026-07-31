@@ -11,16 +11,11 @@ const { facets, providers } = await loadFacets();
   description="Filter the dataset by runtime, region, ownership, price band and more."
   ai="co-authored"
 >
-  <h1>Find</h1>
-
-  <p class="lede">
-    Combine any of the {facets.length} facets. Filters narrow the list; nothing here reorders it, and a record is never ranked
-    against another.
-  </p>
+  <h1>Filter and find hosting providers</h1>
 
   <p class="annotation" data-find-summary>
     {providers.length}
-    {providers.length === 1 ? 'record' : 'records'}, sorted alphabetically.
+    {providers.length === 1 ? 'record' : 'records'}, sorted alphabetically
   </p>
 
   <div class="find">

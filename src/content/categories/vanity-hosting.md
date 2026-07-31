@@ -14,7 +14,7 @@ Certain software can have certain requirements on hosting. For a CMS it might be
 
 Vanity hosting is not an official term. It's something we made up.
 
-For [WordPress](/software/wordpress) there are of course plenty of vanity hosting services, since it has such a big market share and it's so easy to make WordPress slow. [Flywheel](/provider/flywheel/), [WP Engine](/provider/wpengine/), and [Kinsta](/provider/kinsta/) come to mind. For [Typo3](/software/typo3-cms) Jochen Weiland and Mittwald are to be mentioned.
+For WordPress there are of course plenty of vanity hosting services, since it has such a big market share and it's so easy to make WordPress slow. [Flywheel](/provider/flywheel/), [WP Engine](/provider/wpengine/), and [Kinsta](/provider/kinsta/) come to mind. For Typo3 Jochen Weiland and Mittwald are to be mentioned.
 
 Sometimes, vanity hosting is the business, while the free software is the inbound marketing channel. In other words, software creators are monetizing their user base. You can say that about [Laravel Cloud](/provider/laravel-cloud/), [Craft Cloud](/provider/craft-cloud/), Symfony Cloud, Shopware Cloud and others.
 
