@@ -28,6 +28,11 @@ const fathomSiteId = import.meta.env.PUBLIC_FATHOM_SITE_ID;
   <body>
     <header>
       <a href="/" class="wordmark">FindHost</a>
+      <nav class="site-nav">
+        <a href="/find/">Find</a>
+        <a href="/guide/">Guide</a>
+        <a href="/about/">About</a>
+      </nav>
       <form class="site-search" role="search" action="/search/">
         <input type="search" name="q" placeholder="Search providers and guide" aria-label="Search" />
         <button type="submit">Search</button>

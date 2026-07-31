@@ -1,0 +1,44 @@
+---
+import Base from '../../layouts/Base.astro';
+import { loadFacets } from '../../lib/facets';
+
+export async function getStaticPaths() {
+  const { facets } = await loadFacets();
+  return facets.map((facet) => ({ params: { facet: facet.id }, props: { facet } }));
+}
+
+const { facet } = Astro.props;
+const inUse = facet.values.filter((value) => value.count > 0);
+const unused = facet.values.filter((value) => value.count === 0);
+---
+
+<Base title={`${facet.label} — FindHost`} description={`Every value recorded for ${facet.label.toLowerCase()}.`} ai="co-authored">
+  <h1>{facet.label}</h1>
+
+  <p class="annotation">
+    {inUse.length} {inUse.length === 1 ? 'value' : 'values'} in use.
+    {facet.unknown > 0 && ` ${facet.unknown} ${facet.unknown === 1 ? 'record does' : 'records do'} not record this field.`}
+  </p>
+
+  <ul class="provider-list">
+    {
+      inUse.map((value) => (
+        <li>
+          <a href={`/${facet.id}/${value.id}/`}>{value.label}</a>
+          <span class="self-marker">
+            {value.count} {value.count === 1 ? 'record' : 'records'}
+          </span>
+        </li>
+      ))
+    }
+  </ul>
+
+  {
+    unused.length > 0 && (
+      <p class="annotation">
+        Defined but unused so far: {unused.map((value) => value.label).join(', ')}. A value with no records is a gap in
+        our coverage, not a statement about the market.
+      </p>
+    )
+  }
+</Base>

@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
+import { loadFacets } from '../../lib/facets';
 
 export async function getStaticPaths() {
   const providers = await getCollection('providers');
@@ -8,12 +9,17 @@ export async function getStaticPaths() {
 }
 
 const { provider } = Astro.props;
+
+// Facet values must reach the markup even where the design does not show them:
+// Pagefind indexes rendered HTML, so what is absent here cannot be searched later.
+const { facets } = await loadFacets();
+const facetByField = new Map(facets.map((facet) => [facet.field, facet]));
 const { Content } = await render(provider);
 const data = provider.data;
 
 // Fields describing the provider. Meta and provenance are excluded — they
 // describe our work, not the provider, so they do not belong in the denominator.
-type Attribute = [label: string, value: unknown];
+type Attribute = [label: string, value: unknown, field?: string];
 
 const attributeGroups: { label: string; fields: Attribute[] }[] = [
   {
@@ -21,7 +27,7 @@ const attributeGroups: { label: string; fields: Attribute[] }[] = [
     fields: [
       ['Founded', data.founded],
       ['Headquarters', data.hqCountry],
-      ['Ownership', data.ownership],
+      ['Ownership', data.ownership, 'ownership'],
       ['Parent', data.parent],
       ['Status', data.status],
     ],
@@ -29,19 +35,19 @@ const attributeGroups: { label: string; fields: Attribute[] }[] = [
   {
     label: 'Classification',
     fields: [
-      ['Category', data.category],
-      ['Also offers', data.alsoOffers],
-      ['Manages the OS', data.whoManagesOs],
-      ['Hardware', data.infraContract],
+      ['Category', data.category, 'category'],
+      ['Also offers', data.alsoOffers, 'alsoOffers'],
+      ['Manages the OS', data.whoManagesOs, 'whoManagesOs'],
+      ['Hardware', data.infraContract, 'infraContract'],
       ['Runs on', data.runsOn],
     ],
   },
   {
     label: 'Tech stack',
     fields: [
-      ['Runtimes', data.runtimes],
+      ['Runtimes', data.runtimes, 'runtimes'],
       ['Deploy methods', data.deployMethods],
-      ['SSH access', data.sshAccess],
+      ['SSH access', data.sshAccess, 'sshAccess'],
       ['Managed databases', data.managedDatabases],
       ['Persistent storage', data.persistentStorage],
       ['Backups', data.backupsIncluded],
@@ -51,16 +57,16 @@ const attributeGroups: { label: string; fields: Attribute[] }[] = [
     label: 'Pricing',
     fields: [
       ['Pricing model', data.pricingModel],
-      ['Entry price', data.entryPriceBand],
+      ['Entry price', data.entryPriceBand, 'entryPriceBand'],
       ['Renewal multiple', data.renewalMultiple],
-      ['Free tier', data.freeTier],
+      ['Free tier', data.freeTier, 'freeTier'],
       ['Minimum contract', data.contractMinimum],
     ],
   },
   {
     label: 'Regions and law',
     fields: [
-      ['Regions', data.regions],
+      ['Regions', data.regions, 'regions'],
       ['DPA', data.gdprDpa],
     ],
   },
@@ -84,7 +90,7 @@ const attributeGroups: { label: string; fields: Attribute[] }[] = [
     fields: [
       ['API', data.apiAvailable],
       ['CLI', data.cliTool],
-      ['MCP server', data.mcpServer],
+      ['MCP server', data.mcpServer, 'mcpServer'],
       ['Infrastructure as code', data.iacSupport],
       ['Agent-readable docs', data.agentReadyDocs],
     ],
@@ -157,12 +163,30 @@ const known = attributeGroups
           <section class="fact-group">
             <h3>{group.label}</h3>
             <dl class="fact-list">
-              {group.fields.map(([label, value]) => (
-                <>
-                  <dt>{label}</dt>
-                  <dd>{format(value)}</dd>
-                </>
-              ))}
+              {group.fields.map(([label, value, field]) => {
+                const facet = field ? facetByField.get(field) : undefined;
+                const values = value === undefined || value === null ? [] : Array.isArray(value) ? value : [value];
+
+                return (
+                  <>
+                    <dt>{label}</dt>
+                    <dd>
+                      {facet && values.length ? (
+                        values.map((entry, index) => (
+                          <>
+                            {index > 0 && ', '}
+                            <a href={`/${facet.id}/${entry}/`} data-pagefind-filter={facet.id}>
+                              {String(entry)}
+                            </a>
+                          </>
+                        ))
+                      ) : (
+                        format(value)
+                      )}
+                    </dd>
+                  </>
+                );
+              })}
             </dl>
           </section>
         ))

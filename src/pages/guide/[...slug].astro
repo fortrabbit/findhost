@@ -1,0 +1,28 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+
+export async function getStaticPaths() {
+  const pages = await getCollection('guide');
+  return pages.map((page) => ({ params: { slug: page.id }, props: { page } }));
+}
+
+const { page } = Astro.props;
+const { Content } = await render(page);
+---
+
+<Base title={`${page.data.title} — FindHost`} description={page.data.description} ai={page.data.ai}>
+  <article>
+    <h1>{page.data.title}</h1>
+
+    {
+      page.data.figure && (
+        <p class="figure-band" style={`background:${page.data.figure.color};color:${page.data.figure.textColor}`}>
+          <span aria-hidden="true">{page.data.figure.emoji}</span> {page.data.figure.text}
+        </p>
+      )
+    }
+
+    <Content />
+  </article>
+</Base>

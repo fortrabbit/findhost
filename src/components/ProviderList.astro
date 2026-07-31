@@ -1,0 +1,26 @@
+---
+interface Row {
+  id: string;
+  name: string;
+  description?: string;
+  publishedByUs?: boolean;
+}
+
+interface Props {
+  providers: Row[];
+}
+
+const { providers } = Astro.props;
+---
+
+<ul class="provider-list">
+  {
+    providers.map((provider) => (
+      <li>
+        <a href={`/provider/${provider.id}/`}>{provider.name}</a>
+        {provider.publishedByUs && <span class="self-marker">published by us</span>}
+        {provider.description && <p>{provider.description}</p>}
+      </li>
+    ))
+  }
+</ul>

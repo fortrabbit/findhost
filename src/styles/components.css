@@ -14,6 +14,12 @@
   text-decoration: none;
 }
 
+.site-nav {
+  display: flex;
+  gap: var(--space-md);
+  font-size: var(--text-sm);
+}
+
 .site-search {
   display: flex;
   margin-left: auto;
@@ -98,6 +104,58 @@
 .provider-list p {
   margin: var(--space-3xs) 0 0;
   font-size: var(--text-sm);
+}
+
+/* --- The find view --- */
+
+.find {
+  display: grid;
+  grid-template-columns: 15rem 1fr;
+  gap: var(--space-lg);
+  align-items: start;
+}
+
+@media (max-width: 46rem) {
+  .find {
+    grid-template-columns: 1fr;
+  }
+}
+
+.find-facet {
+  margin: 0 0 var(--space-md);
+  padding: 0;
+  border: 0;
+}
+
+/* The rule belongs under the legend, not through it. */
+.find-facet legend {
+  float: left;
+  width: 100%;
+  margin-bottom: var(--space-2xs);
+  padding: 0 0 var(--space-3xs);
+  border-bottom: var(--rule-hairline) solid var(--color-ink);
+  font-family: var(--font-display);
+  font-size: var(--text-md);
+}
+
+.find-facet label {
+  display: flex;
+  gap: var(--space-2xs);
+  align-items: baseline;
+  font-size: var(--text-sm);
+}
+
+/** A count, not a score — mono so it reads as data. */
+.find-count {
+  margin-left: auto;
+  font-family: var(--font-data);
+  font-size: var(--text-xs);
+  font-variant-numeric: tabular-nums;
+}
+
+.find-facet .annotation {
+  margin: var(--space-2xs) 0 0;
+  font-size: var(--text-xs);
 }
 
 /* --- The figure pair --- */

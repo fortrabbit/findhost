@@ -1,0 +1,35 @@
+---
+import Base from '../../layouts/Base.astro';
+import ProviderList from '../../components/ProviderList.astro';
+import { facetRoutes } from '../../lib/facets';
+
+// One static page per facet value in use. These are what a crawler follows and
+// what the no-JS fallback links to — the find view is a convenience on top.
+export async function getStaticPaths() {
+  return facetRoutes();
+}
+
+const { facet, value, matches } = Astro.props;
+---
+
+<Base
+  title={`${facet.label}: ${value.label} — FindHost`}
+  description={`Providers where ${facet.label.toLowerCase()} is ${value.label.toLowerCase()}.`}
+  ai="co-authored"
+>
+  <h1>{value.label}</h1>
+
+  <p class="annotation">
+    {facet.label}: {value.label} — {matches.length} {matches.length === 1 ? 'record' : 'records'}, sorted alphabetically.
+    {
+      facet.unknown > 0 &&
+        ` A further ${facet.unknown} ${facet.unknown === 1 ? 'record does' : 'records do'} not record this field, so they cannot appear here either way.`
+    }
+  </p>
+
+  <ProviderList providers={matches} />
+
+  <p class="annotation">
+    <a href="/find/">Combine this with other filters</a> · <a href={`/${facet.id}/`}>every {facet.label.toLowerCase()} value</a>
+  </p>
+</Base>

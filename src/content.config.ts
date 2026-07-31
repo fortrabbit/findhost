@@ -113,6 +113,18 @@ const providers = defineCollection({
   }),
 });
 
+/** The cross-cutting explainers. Openly editorial, and structurally unable to name a winner. */
+const guide = defineCollection({
+  loader: glob({ base: 'src/content/guide', pattern: '**/*.md' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string().max(200).optional(),
+    order: z.number().int().default(50),
+    figure: figure.optional(),
+    ai: z.enum(['none', 'grammar', 'co-authored', 'authored']).optional(),
+  }),
+});
+
 /** Facet definitions are data, so adding an eleventh facet touches no TypeScript. */
 const taxonomy = defineCollection({
   loader: file('src/data/taxonomy.yml', { parser: (text) => parseYaml(text) }),
@@ -125,4 +137,4 @@ const taxonomy = defineCollection({
   }),
 });
 
-export const collections = { providers, taxonomy };
+export const collections = { providers, guide, taxonomy };

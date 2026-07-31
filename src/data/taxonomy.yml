@@ -65,7 +65,7 @@
     - { id: JP, label: Japan }
     - { id: BR, label: Brazil }
 
-- id: entryPriceBand
+- id: entry-price
   label: Entry price
   field: entryPriceBand
   values:
@@ -76,7 +76,7 @@
     - { id: 50-150, label: €50 to €150 a month }
     - { id: 150+, label: Over €150 a month }
 
-- id: freeTier
+- id: free-tier
   label: Free tier
   field: freeTier
   values:
@@ -84,7 +84,7 @@
     - { id: trial, label: Trial only }
     - { id: none, label: None }
 
-- id: whoManagesOs
+- id: os-managed-by
   label: Who manages the OS
   field: whoManagesOs
   values:
@@ -92,7 +92,7 @@
     - { id: panel-assisted, label: You do, with a panel }
     - { id: provider, label: The provider does }
 
-- id: infraContract
+- id: hardware
   label: Whose hardware
   field: infraContract
   values:
@@ -100,7 +100,7 @@
     - { id: resells-iaas, label: Resells someone else's }
     - { id: byo-iaas, label: You bring your own }
 
-- id: sshAccess
+- id: ssh
   label: SSH access
   field: sshAccess
   values:
@@ -108,7 +108,7 @@
     - { id: limited, label: Limited }
     - { id: none, label: None }
 
-- id: mcpServer
+- id: mcp
   label: MCP server
   field: mcpServer
   values:

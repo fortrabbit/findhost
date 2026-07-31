@@ -1,0 +1,42 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import ProviderList from '../../components/ProviderList.astro';
+
+export async function getStaticPaths() {
+  const taxonomy = await getCollection('taxonomy');
+  const category = taxonomy.find((facet) => facet.data.id === 'category');
+  const providers = await getCollection('providers');
+
+  return (category?.data.values ?? [])
+    .map((value) => ({
+      params: { category: value.id },
+      props: {
+        label: value.label,
+        matches: providers
+          .filter((provider) => provider.data.category === value.id)
+          .map((provider) => ({
+            id: provider.id,
+            name: provider.data.name,
+            description: provider.data.description,
+            publishedByUs: provider.data.publishedByUs,
+          }))
+          .sort((a, b) => a.name.localeCompare(b.name, 'en')),
+      },
+    }))
+    .filter((route) => route.props.matches.length > 0);
+}
+
+const { label, matches } = Astro.props;
+---
+
+<Base title={`${label} — FindHost`} description={`Every ${label.toLowerCase()} provider in the dataset.`} ai="co-authored">
+  <h1>{label}</h1>
+
+  <p class="annotation">
+    {matches.length} {matches.length === 1 ? 'record' : 'records'}, sorted alphabetically. A provider's primary category is
+    one field of many — several also offer what other categories describe.
+  </p>
+
+  <ProviderList providers={matches} />
+</Base>
