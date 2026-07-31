@@ -44,6 +44,7 @@ const attributeGroups: { label: string; fields: Attribute[] }[] = [
       ['Manages the OS', data.whoManagesOs, 'whoManagesOs'],
       ['Hardware', data.infraContract, 'infraContract'],
       ['Runs on', data.runsOn],
+      ['Built for', data.useCases, 'useCases'],
     ],
   },
   {
@@ -111,6 +112,19 @@ const attributeGroups: { label: string; fields: Attribute[] }[] = [
   },
 ];
 
+const socialLabels: Record<string, string> = {
+  x: 'X',
+  bluesky: 'Bluesky',
+  mastodon: 'Mastodon',
+  linkedin: 'LinkedIn',
+  github: 'GitHub',
+  facebook: 'Facebook',
+  youtube: 'YouTube',
+  discord: 'Discord',
+};
+
+const social = Object.entries(data.social ?? {}).filter(([, url]) => url);
+
 const format = (value: unknown) => {
   if (value === undefined || value === null) return '?';
   if (Array.isArray(value)) return value.length ? value.join(', ') : '?';
@@ -162,6 +176,22 @@ const known = attributeGroups.flatMap((group) => group.fields).filter(([, value]
         )
       }
     </p>
+
+    {
+      social.length > 0 && (
+        <p class="record-links">
+          Elsewhere:{' '}
+          {social.map(([key, url], index) => (
+            <>
+              {index > 0 && ' · '}
+              <a href={url} rel="nofollow">
+                {socialLabels[key] ?? key}
+              </a>
+            </>
+          ))}
+        </p>
+      )
+    }
 
     <div class="fact-groups full-width">
       {

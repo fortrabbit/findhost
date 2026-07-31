@@ -115,3 +115,30 @@
     - { id: official, label: Official }
     - { id: community, label: Community }
     - { id: none, label: None }
+
+# What a provider markets itself for, taken from its own site. This records a
+# claim the provider makes, never a judgement about what it is good at — the
+# fields above are what a reader should use to decide whether the claim holds.
+- id: use-case
+  label: Built for
+  field: useCases
+  multiple: true
+  values:
+    - { id: cms, label: CMS sites }
+    - { id: headless-cms, label: Headless CMS }
+    - { id: e-commerce, label: Online shops }
+    - { id: saas, label: SaaS products }
+    - { id: api, label: API backends }
+    - { id: dashboard, label: Dashboards and admin panels }
+    - { id: internal-tool, label: Internal tools }
+    - { id: static-site, label: Static sites }
+    - { id: campaign-site, label: Campaign and landing sites }
+    - { id: portfolio, label: Portfolios }
+    - { id: side-project, label: Side projects }
+    - { id: ai-app, label: AI and LLM apps }
+    - { id: background-jobs, label: Background jobs and queues }
+    - { id: data-pipeline, label: Data pipelines }
+    - { id: game-server, label: Game servers }
+    - { id: agency-multi-client, label: Agencies with many clients }
+    - { id: enterprise, label: Enterprise workloads }
+    - { id: learning, label: Learning and experiments }

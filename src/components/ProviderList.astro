@@ -4,6 +4,7 @@ interface Row {
   name: string;
   description?: string;
   publishedByUs?: boolean;
+  greenWebId?: number | null;
 }
 
 interface Props {
@@ -18,6 +19,14 @@ const { providers } = Astro.props;
     providers.map((provider) => (
       <li>
         <a href={`/provider/${provider.id}/`}>{provider.name}</a>
+        {provider.greenWebId && (
+          <span
+            class="green-mark"
+            title="Listed in the Green Web Foundation directory, which verifies the claim against published evidence"
+          >
+            🌿<span class="visually-hidden"> Listed in the Green Web Foundation directory</span>
+          </span>
+        )}
         {provider.publishedByUs && <span class="self-marker">published by us</span>}
         {provider.description && <p>{provider.description}</p>}
       </li>

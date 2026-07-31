@@ -20,6 +20,20 @@
   font-size: var(--text-sm);
 }
 
+/* Where you are, marked with weight and a rule rather than a colour. */
+.site-nav a[aria-current='page'] {
+  color: var(--color-ink);
+  font-weight: var(--weight-strong);
+  text-decoration-thickness: var(--rule-strong);
+  text-underline-offset: 0.25em;
+}
+
+.wordmark[aria-current='page'] {
+  text-decoration: underline;
+  text-decoration-thickness: var(--rule-strong);
+  text-underline-offset: 0.25em;
+}
+
 .site-search {
   display: flex;
   margin-left: auto;
@@ -83,6 +97,48 @@
 .self-marker {
   margin-left: var(--space-xs);
   font-size: var(--text-xs);
+}
+
+/* --- Entry points --- */
+
+/** The first question, answered as links: what do you need to run, and where. */
+.entry-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2xs) var(--space-md);
+  max-width: none;
+  margin: 0 0 var(--space-lg);
+  padding: 0;
+  list-style: none;
+}
+
+.entry-list > li {
+  display: flex;
+  gap: var(--space-3xs);
+  align-items: baseline;
+  padding: var(--space-3xs) 0;
+  font-size: var(--text-md);
+}
+
+.entry-count {
+  font-family: var(--font-data);
+  font-size: var(--text-xs);
+  font-variant-numeric: tabular-nums;
+}
+
+/** A third party's verification, marked once. Never a score, never sortable. */
+.green-mark {
+  margin-left: var(--space-2xs);
+  font-size: var(--text-sm);
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
 }
 
 /* --- Provider list --- */

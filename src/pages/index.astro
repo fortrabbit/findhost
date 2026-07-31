@@ -1,10 +1,31 @@
 ---
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
+import ProviderList from '../components/ProviderList.astro';
+import WorldMap from '../components/WorldMap.astro';
+import { loadFacets } from '../lib/facets';
 
 // Alphabetical, always. The default sort is deterministic and content-independent,
 // and completeness never affects order.
-const providers = (await getCollection('providers')).sort((a, b) => a.data.name.localeCompare(b.data.name, 'en'));
+const records = (await getCollection('providers')).sort((a, b) => a.data.name.localeCompare(b.data.name, 'en'));
+
+const providers = records.map((provider) => ({
+  id: provider.id,
+  name: provider.data.name,
+  description: provider.data.description,
+  publishedByUs: provider.data.publishedByUs,
+  greenWebId: provider.data.greenWebId,
+}));
+
+const { facets } = await loadFacets();
+
+// "What do I need to run" is the first question anyone actually asks, so it is
+// the first thing on the page — as links to pages that already exist.
+const runtimes = (facets.find((facet) => facet.id === 'runtimes')?.values ?? []).filter((value) => value.count > 0);
+const categories = (facets.find((facet) => facet.id === 'category')?.values ?? []).filter((value) => value.count > 0);
+
+const regions = records.flatMap((provider) => provider.data.regions ?? []);
+const placed = records.filter((provider) => provider.data.regions?.length).length;
 ---
 
 <Base
@@ -19,17 +40,45 @@ const providers = (await getCollection('providers')).sort((a, b) => a.data.name.
     field guide to choose the right hosting provider.
   </p>
 
-  <h2>{providers.length} Providers</h2>
+  <h2>I want to host…</h2>
 
-  <ul class="provider-list">
+  <ul class="entry-list">
     {
-      providers.map((provider) => (
+      runtimes.map((runtime) => (
         <li>
-          <a href={`/provider/${provider.id}/`}>{provider.data.name}</a>
-          {provider.data.publishedByUs && <span class="self-marker">published by us</span>}
-          {provider.data.description && <p>{provider.data.description}</p>}
+          <a href={`/runtimes/${runtime.id}/`}>{runtime.label}</a>
+          <span class="entry-count">{runtime.count}</span>
         </li>
       ))
     }
   </ul>
+
+  <h2>…on this kind of platform</h2>
+
+  <ul class="entry-list">
+    {
+      categories.map((category) => (
+        <li>
+          <a href={`/category/${category.id}/`}>{category.label}</a>
+          <span class="entry-count">{category.count}</span>
+        </li>
+      ))
+    }
+  </ul>
+
+  <h2>…in a place you choose</h2>
+
+  <WorldMap regions={regions} weighted label="Countries the providers in this dataset operate in" />
+
+  <p class="annotation">
+    {placed} of {providers.length} records say where they operate. <a href="/map/">See the map in full</a>, or <a
+      href="/find/">combine regions with everything else</a
+    >.
+  </p>
+
+  <h2>{providers.length} providers</h2>
+
+  <p class="annotation">Sorted alphabetically. Nothing here is ordered by quality, or by how much we happen to know.</p>
+
+  <ProviderList providers={providers} />
 </Base>

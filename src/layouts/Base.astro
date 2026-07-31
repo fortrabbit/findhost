@@ -17,6 +17,18 @@ const fathomSiteId = import.meta.env.PUBLIC_FATHOM_SITE_ID;
 // Belt and braces with robots.txt: the file stops the crawl, this stops a URL
 // someone links to from being listed anyway.
 const indexable = import.meta.env.PUBLIC_INDEXABLE === 'true';
+
+const sections = [
+  { href: '/find/', label: 'Find', owns: ['/find/', '/provider/', '/category/'] },
+  { href: '/map/', label: 'Map', owns: ['/map/', '/regions/'] },
+  { href: '/guide/', label: 'Guide', owns: ['/guide/'] },
+  { href: '/about/', label: 'About', owns: ['/about/'] },
+];
+
+// A facet page belongs to Find, a record belongs to Find — so the nav says
+// where you are rather than only where you clicked.
+const path = Astro.url.pathname;
+const current = sections.find((section) => section.owns.some((prefix) => path.startsWith(prefix)));
 ---
 
 <!doctype html>
@@ -32,15 +44,25 @@ const indexable = import.meta.env.PUBLIC_INDEXABLE === 'true';
   </head>
   <body>
     <header>
-      <a href="/" class="wordmark">FindHost</a>
+      <a href="/" class="wordmark" aria-current={path === '/' ? 'page' : undefined}>FindHost</a>
       <nav class="site-nav">
-        <a href="/find/">Find</a>
-        <a href="/map/">Map</a>
-        <a href="/guide/">Guide</a>
-        <a href="/about/">About</a>
+        {
+          sections.map((section) => (
+            <a href={section.href} aria-current={section === current ? 'page' : undefined}>
+              {section.label}
+            </a>
+          ))
+        }
       </nav>
       <form class="site-search" role="search" action="/search/">
-        <input type="search" name="q" placeholder="Search providers and guide" aria-label="Search" />
+        <input
+          type="search"
+          name="q"
+          placeholder="Search providers and guide"
+          aria-label="Search"
+          title="Press / to search"
+          data-search-shortcut
+        />
         <button type="submit">Search</button>
       </form>
     </header>
@@ -57,5 +79,25 @@ const indexable = import.meta.env.PUBLIC_INDEXABLE === 'true';
         >.
       </p>
     </footer>
+
+    <script>
+      // `/` focuses search, the way it works everywhere else a developer types.
+      const field = document.querySelector<HTMLInputElement>('[data-search-shortcut]');
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key !== '/' || event.metaKey || event.ctrlKey || event.altKey) return;
+
+        const active = document.activeElement;
+        const typing =
+          active instanceof HTMLInputElement ||
+          active instanceof HTMLTextAreaElement ||
+          (active instanceof HTMLElement && active.isContentEditable);
+        if (typing) return;
+
+        event.preventDefault();
+        field?.focus();
+        field?.select();
+      });
+    </script>
   </body>
 </html>

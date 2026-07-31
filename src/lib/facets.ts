@@ -21,6 +21,8 @@ export interface ProviderRow {
   name: string;
   description?: string;
   publishedByUs?: boolean;
+  /** Present when a third party has verified the energy claim. Not a score. */
+  greenWebId?: number | null;
   /** Facet fields only, keyed by field name. A missing key means unknown. */
   facets: Record<string, string | string[]>;
 }
@@ -52,6 +54,7 @@ export async function loadFacets(): Promise<{ facets: Facet[]; providers: Provid
         name: record.data.name,
         description: record.data.description,
         publishedByUs: record.data.publishedByUs,
+        greenWebId: record.data.greenWebId,
         facets,
       };
     })

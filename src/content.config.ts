@@ -58,6 +58,8 @@ const providers = defineCollection({
     whoManagesOs: z.enum(['you', 'panel-assisted', 'provider']).optional(),
     infraContract: z.enum(['owns-metal', 'resells-iaas', 'byo-iaas']).optional(),
     specialisation: z.array(z.string()).optional(),
+    /** What a provider positions itself for, in its own words — not our verdict on fit. */
+    useCases: z.array(z.string()).optional(),
 
     // Tech stack
     runtimes: z.array(z.string()).optional(),
@@ -89,6 +91,24 @@ const providers = defineCollection({
     pue: z.number().nullable().optional(),
     certifications: z.array(z.string()).optional(),
     carbonReport: z.enum(['published', 'parent-only', 'none']).optional(),
+    /**
+     * Where a provider talks in public. Not a facet — nobody filters by "has a
+     * Facebook page" — but a dormant account is checkable, and a company's own
+     * GitHub says more about a developer platform than its marketing does.
+     */
+    social: z
+      .object({
+        x: publicUrl.optional(),
+        bluesky: publicUrl.optional(),
+        mastodon: publicUrl.optional(),
+        linkedin: publicUrl.optional(),
+        github: publicUrl.optional(),
+        facebook: publicUrl.optional(),
+        youtube: publicUrl.optional(),
+        discord: publicUrl.optional(),
+      })
+      .optional(),
+
     /** Green Web Foundation directory id — someone else's verification, linked rather than copied. */
     greenWebId: z.number().int().nullable().optional(),
 
