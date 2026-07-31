@@ -17,15 +17,12 @@ const providers = (await getCollection("providers")).sort((a, b) =>
   <h1>Find your next hosting provider</h1>
 
   <p class="lede">
-    A developer-friendly, opinionated field guide to choose the right hosting
-    provider. Don't go shopping for horse power. Understand what really matters.
+    Don't shop hosting by horse power and price only. Understand what really
+    matters. A developer-friendly, opinionated field guide to choose the right
+    hosting provider.
   </p>
 
-  <h2>Providers</h2>
-  <p class="annotation">
-    {providers.length} records, sorted alphabetically. Nothing here is ordered by
-    quality, or by how much we happen to know.
-  </p>
+  <h2>{providers.length} Providers</h2>
 
   <ul class="provider-list">
     {

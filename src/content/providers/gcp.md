@@ -5,6 +5,7 @@ url: https://cloud.google.com
 category: iaas
 description: The Google Cloud Platform is one of the largest cloud infrastructure providers. Why not host websites directly on GCP?
 ai: co-authored
+greenWebId: 595
 ---
 
 ## About GCP

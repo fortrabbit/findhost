@@ -160,13 +160,27 @@
 
 /* --- The figure pair --- */
 
-/** Identity: an emoji and two colours the record supplies itself. */
+/**
+ * Identity: an emoji and two colours the record supplies itself. The colour is
+ * the only colour on the page, so it runs edge to edge while the words stay in
+ * the centred column.
+ */
 .figure-band {
-  max-width: var(--measure-prose);
-  margin: var(--space-md) 0;
-  padding: var(--space-sm) var(--space-md);
+  display: flex;
+  gap: var(--space-md);
+  align-items: center;
+  max-width: none;
+  margin-block: var(--space-lg);
+  padding-block: var(--space-lg);
   font-family: var(--font-display);
-  font-size: var(--text-md);
+  font-size: var(--text-xl);
+  line-height: var(--leading-tight);
+  text-wrap: balance;
+}
+
+.figure-band span[aria-hidden] {
+  font-size: 2.4em;
+  line-height: 1;
 }
 
 /**
@@ -228,17 +242,15 @@
   font-size: var(--text-sm);
 }
 
-/** Dense and capped, because this table is scanned rather than read. */
+/**
+ * Scanned rather than read, so the columns stay narrow and dense — but as many
+ * of them fit as the screen allows. `column-width` does that without a single
+ * breakpoint: wide screens get four, a phone gets one.
+ */
 .fact-groups {
-  max-width: var(--measure-data);
-  columns: 2;
+  max-width: none;
+  columns: 16rem;
   column-gap: var(--space-xl);
-}
-
-@media (max-width: 39rem) {
-  .fact-groups {
-    columns: 1;
-  }
 }
 
 .fact-group {
@@ -256,7 +268,7 @@
 
 .fact-list {
   display: grid;
-  grid-template-columns: 9.5rem 1fr;
+  grid-template-columns: 7.5rem 1fr;
   gap: 0 var(--space-sm);
   align-items: baseline;
   max-width: none;

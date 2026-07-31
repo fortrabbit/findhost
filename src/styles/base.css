@@ -13,15 +13,50 @@ html {
   color-scheme: light dark;
 }
 
+/*
+ * The page runs full width and the *content* is centred, so a rule or a colour
+ * band can reach the edges of the screen while the words stay where they are
+ * readable. One variable does it: --gutter is whatever space is left over.
+ */
 body {
-  max-width: var(--measure-page);
-  margin: 0 auto;
-  padding: var(--space-lg) var(--space-md) var(--space-2xl);
+  /*
+   * Viewport units, not percentages: a percentage inside a custom property is
+   * resolved where the variable is *used*, so a breakout element would measure
+   * its own column and pull out by nothing.
+   */
+  --gutter: max(var(--space-md), (100vw - var(--measure-page)) / 2);
+
+  margin: 0;
+  overflow-x: clip;
+  padding: 0 0 var(--space-2xl);
   background: var(--color-page);
   color: var(--color-ink);
   font-family: var(--font-text);
   font-size: var(--text-base);
   line-height: var(--leading-body);
+}
+
+body > header,
+body > main,
+body > footer {
+  padding-inline: var(--gutter);
+}
+
+/** Background reaches the edges of the screen; the words stay in the column. */
+.full-bleed {
+  margin-inline: calc(var(--gutter) * -1);
+  padding-inline: var(--gutter);
+}
+
+/**
+ * The content itself uses the whole screen — for things that are scanned rather
+ * than read. It keeps a quarter of the gutter so it reads as a deliberate
+ * widening rather than as text that has fallen off the edge.
+ */
+.full-width {
+  max-width: none;
+  margin-inline: calc(var(--gutter) * -1);
+  padding-inline: max(var(--space-md), calc(var(--gutter) / 4));
 }
 
 h1,
@@ -92,19 +127,26 @@ hr {
 
 /* Page shell — semantic elements, no wrapper classes needed */
 
+/* The rule under the header and over the footer runs edge to edge; the content
+   inside them stays in the centred column. */
 body > header {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-sm) var(--space-lg);
   align-items: center;
+  padding-top: var(--space-lg);
   padding-bottom: var(--space-sm);
   border-bottom: var(--rule-strong) solid var(--color-ink);
 }
 
+body > main {
+  padding-top: var(--space-md);
+}
+
 body > footer {
   margin-top: var(--space-2xl);
-  padding-top: var(--space-sm);
-  border-top: var(--rule-hairline) solid var(--color-ink);
+  padding-top: var(--space-md);
+  border-top: var(--rule-heavy) solid var(--color-ink);
   font-size: var(--text-sm);
 }
 

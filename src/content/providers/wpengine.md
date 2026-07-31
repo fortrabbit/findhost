@@ -1,6 +1,6 @@
 ---
 id: wpengine
-name: WP Engine alternative
+name: WP Engine
 url: https://wpengine.com
 category: vanity-hosting
 description: WP Engine is one of the largest managed WordPress hosts, founded in 2010 and based in Austin, Texas, with an office in Limerick, Ireland.

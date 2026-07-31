@@ -10,6 +10,7 @@ figure:
   textColor: rgb(200, 200, 200)
   text: Hello Ubernauts!
 ai: co-authored
+greenWebId: 778
 ---
 
 ## About Uberspace

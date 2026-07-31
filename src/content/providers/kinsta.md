@@ -1,6 +1,6 @@
 ---
 id: kinsta
-name: Kinsta alternative
+name: Kinsta
 url: https://kinsta.com
 category: vanity-hosting
 description: Kinsta is a premium managed WordPress host, founded in 2013.

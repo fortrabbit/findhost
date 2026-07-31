@@ -89,6 +89,8 @@ const providers = defineCollection({
     pue: z.number().nullable().optional(),
     certifications: z.array(z.string()).optional(),
     carbonReport: z.enum(['published', 'parent-only', 'none']).optional(),
+    /** Green Web Foundation directory id — someone else's verification, linked rather than copied. */
+    greenWebId: z.number().int().nullable().optional(),
 
     // Support
     supportChannels: z.array(z.enum(['email', 'chat', 'phone', 'forum'])).optional(),

@@ -78,6 +78,7 @@ const attributeGroups: { label: string; fields: Attribute[] }[] = [
       ['PUE', data.pue],
       ['Certifications', data.certifications],
       ['Carbon report', data.carbonReport],
+      ['Green Web directory', data.greenWebId],
     ],
   },
   {
@@ -127,7 +128,7 @@ const known = attributeGroups
 
     {
       data.figure && (
-        <p class="figure-band" style={`background:${data.figure.color};color:${data.figure.textColor}`}>
+        <p class="figure-band full-bleed" style={`background:${data.figure.color};color:${data.figure.textColor}`}>
           <span aria-hidden="true">{data.figure.emoji}</span> {data.figure.text}
         </p>
       )
@@ -186,7 +187,7 @@ const known = attributeGroups
       }
     </p>
 
-    <div class="fact-groups">
+    <div class="fact-groups full-width">
       {
         attributeGroups.map((group) => (
           <section class="fact-group">

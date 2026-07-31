@@ -25,7 +25,7 @@ const CATEGORY = {
 // A provider whose URL is not known is not migrated — a guessed URL is exactly
 // the kind of unchecked fact this dataset exists not to publish.
 const URL_MAP = {
-  'a2-hosting': 'https://www.a2hosting.com', bluehost: 'https://www.bluehost.com',
+  'hosting-com': 'https://www.hosting.com', bluehost: 'https://www.bluehost.com',
   dreamhost: 'https://www.dreamhost.com', godaddy: 'https://www.godaddy.com',
   hostgator: 'https://www.hostgator.com', hostinger: 'https://www.hostinger.com',
   knownhost: 'https://www.knownhost.com', nixihost: 'https://nixihost.com',
@@ -54,7 +54,9 @@ const URL_MAP = {
   weebly: 'https://www.weebly.com', wix: 'https://www.wix.com',
 };
 
-const RENAME = { archustech: 'arcustech' };
+// Slug fixes and rebrands. The filename is the id is the URL, so a rename here
+// is a rename of the record.
+const RENAME = { archustech: 'arcustech', 'a2-hosting': 'hosting-com' };
 
 // Sections and paragraphs written in our voice that never say our name, so
 // nothing mechanical can find them. Listed by hand, here rather than in the

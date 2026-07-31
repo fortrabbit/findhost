@@ -10,6 +10,7 @@ figure:
   textColor: rgb(77, 0, 0)
   text: Some like it hot.
 ai: co-authored
+greenWebId: 1305
 ---
 
 ## About OVHcloud
