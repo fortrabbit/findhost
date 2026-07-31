@@ -141,6 +141,34 @@
   white-space: nowrap;
 }
 
+/* --- The alphabet --- */
+
+.alphabet {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2xs) var(--space-sm);
+  margin-bottom: var(--space-md);
+  font-family: var(--font-data);
+  font-size: var(--text-sm);
+}
+
+.letter-group > h2 {
+  margin: var(--space-lg) 0 var(--space-2xs);
+  font-size: var(--text-lg);
+}
+
+.letter-group:first-child > h2 {
+  margin-top: 0;
+}
+
+/** The anchor, shown rather than hidden until hover — it is a link, not a secret. */
+.anchor-link {
+  margin-right: var(--space-2xs);
+  font-family: var(--font-data);
+  font-size: var(--text-sm);
+  text-decoration: none;
+}
+
 /* --- Provider list --- */
 
 .provider-list {

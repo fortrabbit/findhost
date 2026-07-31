@@ -1,0 +1,102 @@
+---
+import Base from '../../layouts/Base.astro';
+import { loadFacets } from '../../lib/facets';
+
+const { facets, providers } = await loadFacets();
+
+// One page, not two: the list is the page, and the filters narrow it in place.
+// Grouped by initial so it can be scanned and linked to without JavaScript.
+const letterOf = (name: string) => {
+  const initial = name.replace(/^the /i, '').charAt(0).toUpperCase();
+  return /[A-Z]/.test(initial) ? initial : '#';
+};
+
+const letters = [...new Set(providers.map((provider) => letterOf(provider.name)))].sort();
+
+const groups = letters.map((letter) => ({
+  letter,
+  anchor: letter === '#' ? 'other' : letter.toLowerCase(),
+  rows: providers.filter((provider) => letterOf(provider.name) === letter),
+}));
+---
+
+<Base
+  title="Providers — FindHost"
+  description="Every hosting provider in the dataset, listed alphabetically and filterable by what it runs, where and for whom."
+  ai="co-authored"
+>
+  <h1>Providers</h1>
+
+  <p class="lede">
+    Every provider that meets the scope test, in alphabetical order. Nothing here is ranked, and nothing is ordered by
+    how much we happen to know about it.
+  </p>
+
+  <nav class="alphabet" aria-label="Jump to a letter">
+    {groups.map((group) => <a href={`#${group.anchor}`}>{group.letter}</a>)}
+  </nav>
+
+  <p class="annotation" data-find-summary>
+    {providers.length}
+    {providers.length === 1 ? 'record' : 'records'}
+  </p>
+
+  <div class="find">
+    <div class="find-filters" data-find-filters></div>
+
+    <div data-find-results>
+      {
+        groups.map((group) => (
+          <section class="letter-group" id={group.anchor}>
+            <h2>
+              <a class="anchor-link" href={`#${group.anchor}`} aria-label={`Link to ${group.letter}`}>
+                #
+              </a>
+              {group.letter}
+            </h2>
+
+            <ul class="provider-list">
+              {group.rows.map((provider) => (
+                <li>
+                  <a href={`/providers/${provider.id}/`}>{provider.name}</a>
+                  {provider.greenWebId && (
+                    <span
+                      class="green-mark"
+                      title="Listed in the Green Web Foundation directory, which verifies the claim against published evidence"
+                    >
+                      🌿<span class="visually-hidden"> Listed in the Green Web Foundation directory</span>
+                    </span>
+                  )}
+                  {provider.publishedByUs && <span class="self-marker">published by us</span>}
+                  {provider.description && <p>{provider.description}</p>}
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))
+      }
+    </div>
+  </div>
+
+  <div data-find-fallback>
+    <p class="annotation">
+      Filtering needs JavaScript. Without it, every facet value has a page of its own — pick one and the list is the
+      same:
+    </p>
+
+    <ul class="entry-list">
+      {
+        facets.map((facet) => (
+          <li>
+            <a href={`/${facet.id}/`}>{facet.label}</a>
+            <span class="entry-count">{facet.values.filter((value) => value.count > 0).length}</span>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+
+  <script>
+    import '../../scripts/find.ts';
+  </script>
+</Base>

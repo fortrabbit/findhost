@@ -54,7 +54,7 @@ ai: co-authored
 
 ## About Ploi
 
-Ploi is [server management software](/category/server-management/) from the Netherlands, with Laravel-optimised support and one-click installs for WordPress, Statamic, Craft CMS, Nextcloud and phpMyAdmin. The customer brings the server: UpCloud, DigitalOcean, Linode, Hetzner, Vultr, AWS EC2, Scaleway and a custom-VPS option are the named targets. The company also runs [Ploi Cloud](/provider/ploi-cloud/), a separate managed product.
+Ploi is [server management software](/category/server-management/) from the Netherlands, with Laravel-optimised support and one-click installs for WordPress, Statamic, Craft CMS, Nextcloud and phpMyAdmin. The customer brings the server: UpCloud, DigitalOcean, Linode, Hetzner, Vultr, AWS EC2, Scaleway and a custom-VPS option are the named targets. The company also runs [Ploi Cloud](/providers/ploi-cloud/), a separate managed product.
 
 Four plans are listed: Free at €0, Basic at €8, Pro at €13 and Unlimited at €30 a month, with a five-day Pro trial that takes no credit card. The pricing page is explicit that "our pricing does not include server fees".
 

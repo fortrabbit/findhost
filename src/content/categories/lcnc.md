@@ -16,4 +16,4 @@ Low-code and no-code platforms let people build websites with visual editors ins
 
 ## Providers in this section
 
-This section covers hosted builders and adjacent services, including [Wix](/provider/wix/), [Squarespace](/provider/squarespace/), [Webflow](/provider/webflow/), [Bubble](/provider/bubble/), [Weebly](/provider/weebly/), [Shopify](/provider/shopify/), [Jimdo](/provider/jimdo/), and [Duda](/provider/duda/).
+This section covers hosted builders and adjacent services, including [Wix](/providers/wix/), [Squarespace](/providers/squarespace/), [Webflow](/providers/webflow/), [Bubble](/providers/bubble/), [Weebly](/providers/weebly/), [Shopify](/providers/shopify/), [Jimdo](/providers/jimdo/), and [Duda](/providers/duda/).

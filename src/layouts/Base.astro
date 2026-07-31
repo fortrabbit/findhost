@@ -19,14 +19,14 @@ const fathomSiteId = import.meta.env.PUBLIC_FATHOM_SITE_ID;
 const indexable = import.meta.env.PUBLIC_INDEXABLE === 'true';
 
 const sections = [
-  { href: '/find/', label: 'Find', owns: ['/find/', '/provider/', '/category/'] },
+  { href: '/providers/', label: 'Providers', owns: ['/providers/', '/category/'] },
   { href: '/map/', label: 'Map', owns: ['/map/', '/regions/'] },
   { href: '/guide/', label: 'Guide', owns: ['/guide/'] },
   { href: '/about/', label: 'About', owns: ['/about/'] },
 ];
 
-// A facet page belongs to Find, a record belongs to Find — so the nav says
-// where you are rather than only where you clicked.
+// A record and a category page both live under Providers, so the nav says where
+// you are rather than only where you clicked.
 const path = Astro.url.pathname;
 const current = sections.find((section) => section.owns.some((prefix) => path.startsWith(prefix)));
 ---

@@ -9,5 +9,9 @@ const site = process.env.SITE_URL || 'http://localhost:4321';
 export default defineConfig({
   site,
   trailingSlash: 'always',
+  redirects: {
+    '/find': '/providers',
+    '/provider/[id]': '/providers/[id]',
+  },
   build: { format: 'directory' },
 });

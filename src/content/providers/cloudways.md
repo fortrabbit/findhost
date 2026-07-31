@@ -57,7 +57,7 @@ ai: co-authored
 
 Cloudways is [server management software](/category/server-management/) rather than a hosting service in its own right: it provisions VPS machines on five infrastructure providers — DigitalOcean, Vultr, Linode, AWS and Google Cloud — and puts a control panel over them. The cheapest listed plan is a Micro server on DigitalOcean at $11 a month for 2 GB RAM, 1 vCPU and 50 GB storage. Billing is pay-as-you-go by the hour, invoiced in arrears in the first week of the following month, and a three-day trial runs without a credit card.
 
-Because the servers sit on other providers' hardware, the regions on offer are whatever those providers operate — Cloudways cites 25 data centres for Linode alone — so the geography of a Cloudways account is decided upstream. It was acquired by [DigitalOcean](/provider/digitalocean/) in 2022. WordPress hosting is a separately marketed product line.
+Because the servers sit on other providers' hardware, the regions on offer are whatever those providers operate — Cloudways cites 25 data centres for Linode alone — so the geography of a Cloudways account is decided upstream. It was acquired by [DigitalOcean](/providers/digitalocean/) in 2022. WordPress hosting is a separately marketed product line.
 
 ## Reservations
 

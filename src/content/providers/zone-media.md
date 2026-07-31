@@ -20,7 +20,6 @@ audience:
   - freelancer
   - smb
   - agency
-  - government
   - indie-hacker
 software:
   - wordpress

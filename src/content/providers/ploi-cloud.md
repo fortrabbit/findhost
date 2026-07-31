@@ -14,7 +14,7 @@ ai: co-authored
 
 ## About Ploi Cloud
 
-Ploi Cloud is the managed platform from the Dutch team behind [Ploi](/provider/ploi/), the server-management panel. Where Ploi configures a server the customer rents, Ploi Cloud runs the infrastructure itself.
+Ploi Cloud is the managed platform from the Dutch team behind [Ploi](/providers/ploi/), the server-management panel. Where Ploi configures a server the customer rents, Ploi Cloud runs the infrastructure itself.
 
 ## Reservations
 

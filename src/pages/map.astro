@@ -37,7 +37,7 @@ const unknown = providers.length - withRegions.length;
     regions={regions}
     weighted
     full
-    linkPattern="#{code}"
+    linkPattern="#{lower}"
     label="Countries the providers in this dataset operate in"
   />
 
@@ -51,12 +51,15 @@ const unknown = providers.length - withRegions.length;
 
   {
     byCountry.map((country) => (
-      <section id={country.code}>
-        <h2>{country.label}</h2>
+      <section id={country.code.toLowerCase()}>
+        <h2>
+          <a class="anchor-link" href={`#${country.code.toLowerCase()}`} aria-label={`Link to ${country.label}`}>#</a>
+          {country.label}
+        </h2>
         <ul class="provider-list">
           {country.providers.map((provider) => (
             <li>
-              <a href={`/provider/${provider.id}/`}>{provider.name}</a>
+              <a href={`/providers/${provider.id}/`}>{provider.name}</a>
             </li>
           ))}
         </ul>

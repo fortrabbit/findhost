@@ -91,4 +91,4 @@ Officially supported languages are Node.js, Ruby, Python, Java, PHP, Go, Scala, 
 
 The free tier is gone. The cheapest entry is the Eco plan, a $5 flat monthly subscription covering a pool of 1,000 dyno hours shared across an account; an Eco web dyno sleeps after thirty minutes without traffic and takes a delay to wake. Eco is also restricted to personal apps — anything inside a Heroku Team or Enterprise Team starts at the $7 Basic dyno. Prices climb steeply from there: Standard dynos are $25 and $50, Performance dynos $250 and up, and Private Spaces start at $125 per dyno before the space itself.
 
-Other platforms now occupy the ground Heroku defined — [Render](/provider/render/), [Fly.io](/provider/fly/) and [Railway](/provider/railway/) all describe themselves in relation to it.
+Other platforms now occupy the ground Heroku defined — [Render](/providers/render/), [Fly.io](/providers/fly/) and [Railway](/providers/railway/) all describe themselves in relation to it.

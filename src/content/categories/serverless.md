@@ -18,10 +18,10 @@ ai: co-authored
 
 Bref is a serverless AWS Lambda layer that packages PHP as a runtime. Lambda has no native PHP runtime, so PHP gets there through Bref. Where a platform lands depends on how close it stays to per-request billing and scale-to-zero.
 
-- [AWS Lambda](/provider/aws-lambda/) is the archetype: per-request billing, scale-to-zero.
-- [Google Cloud Run](/provider/google-cloud-run/) sits further out, stopping when idle but running a normal container. "Serverless" databases that never scale to zero sit further out still.
-- [Laravel Vapor](/provider/laravel-vapor/) wraps Bref for Laravel.
-- [DigitalOcean](/provider/digitalocean-functions/) and [Scaleway](/provider/scaleway-functions/) ship a PHP function runtime of their own.
+- [AWS Lambda](/providers/aws-lambda/) is the archetype: per-request billing, scale-to-zero.
+- [Google Cloud Run](/providers/google-cloud-run/) sits further out, stopping when idle but running a normal container. "Serverless" databases that never scale to zero sit further out still.
+- [Laravel Vapor](/providers/laravel-vapor/) wraps Bref for Laravel.
+- [DigitalOcean](/providers/digitalocean-functions/) and [Scaleway](/providers/scaleway-functions/) ship a PHP function runtime of their own.
 
 ## What serverless is good at
 
@@ -46,4 +46,4 @@ This is where a normal PHP app has to give things up. In short: complexity and l
 
 Not by itself. WebAssembly (WASM) is a compile target, a fast sandbox to run code in. Serverless is a billing and deployment model. They meet because some serverless edge platforms use WASM as their engine and trade container cold starts for near-instant ones. Run PHP as WASM on one of those and yes, it counts. On its own it is a runtime, nothing more.
 
-As a way to host real PHP, it is early. [Wasmer](/provider/wasmer/) runs WordPress, Laravel, and Symfony at the edge, with rough edges around storage. [Cloudflare Workers](/provider/cloudflare-workers/) runs PHP only through the community php-wasm project, not as a first-class runtime. The slickest PHP-in-WASM today, WordPress Playground, runs in a browser as a dev tool, not a host. Worth watching. Not where production PHP lives yet.
+As a way to host real PHP, it is early. [Wasmer](/providers/wasmer/) runs WordPress, Laravel, and Symfony at the edge, with rough edges around storage. [Cloudflare Workers](/providers/cloudflare-workers/) runs PHP only through the community php-wasm project, not as a first-class runtime. The slickest PHP-in-WASM today, WordPress Playground, runs in a browser as a dev tool, not a host. Worth watching. Not where production PHP lives yet.

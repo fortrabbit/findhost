@@ -193,7 +193,7 @@ const dropParagraph = (body, marker) =>
 const rewrite = (body, pathToCategory) => {
   body = body.replace(/\/hosting-guide\/providers\/([a-z0-9-]+)\/([a-z0-9-]+)/g, (whole, _dir, name) => {
     const slug = RENAME[name] ?? name;
-    return URL_MAP[slug] ? `/provider/${slug}/` : `${WWW}${whole}`;
+    return URL_MAP[slug] ? `/providers/${slug}/` : `${WWW}${whole}`;
   });
   body = body.replace(/\/hosting-guide\/providers\/([a-z0-9-]+)/g, (whole, dir) =>
     pathToCategory[dir] ? `/category/${pathToCategory[dir]}/` : `${WWW}${whole}`,

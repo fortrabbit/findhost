@@ -51,7 +51,7 @@ for (const directory of directories.sort()) {
   body = body.replace(/:ContentLink\{href="([^"]+)"\s+text="([^"]+)"\}/g, '[$2]($1)');
   body = body.replace(/::?ContactUs\{[^}]*\}\n?/g, '');
   body = body.replace(/\/hosting-guide\/providers\/([a-z0-9-]+)\/([a-z0-9-]+)/g, (whole, _dir, name) =>
-    providerSlugs.has(name) ? `/provider/${name}/` : `${WWW}${whole}`,
+    providerSlugs.has(name) ? `/providers/${name}/` : `${WWW}${whole}`,
   );
   body = body.replace(/\/hosting-guide\/providers\/([a-z0-9-]+)/g, (whole, dir) =>
     pathToCategory[dir] ? `/category/${pathToCategory[dir]}/` : `${WWW}${whole}`,

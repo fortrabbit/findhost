@@ -151,15 +151,48 @@ if (filtersEl && resultsEl && summaryEl) {
     }
   };
 
+  const letterOf = (name: string) => {
+    const initial = name.replace(/^the /i, '').charAt(0).toUpperCase();
+    return /[A-Z]/.test(initial) ? initial : '#';
+  };
+
   const renderResults = () => {
     const found = matches();
 
     resultsEl.innerHTML = '';
+
+    let letter = '';
+    let list: HTMLUListElement | null = null;
+
     for (const provider of found) {
+      const initial = letterOf(provider.name);
+
+      if (initial !== letter) {
+        letter = initial;
+        const anchor = initial === '#' ? 'other' : initial.toLowerCase();
+
+        const section = document.createElement('section');
+        section.className = 'letter-group';
+        section.id = anchor;
+
+        const heading = document.createElement('h2');
+        const anchorLink = document.createElement('a');
+        anchorLink.className = 'anchor-link';
+        anchorLink.href = `#${anchor}`;
+        anchorLink.textContent = '#';
+        heading.append(anchorLink, document.createTextNode(initial));
+        section.append(heading);
+
+        list = document.createElement('ul');
+        list.className = 'provider-list';
+        section.append(list);
+        resultsEl.append(section);
+      }
+
       const item = document.createElement('li');
 
       const link = document.createElement('a');
-      link.href = `/provider/${provider.id}/`;
+      link.href = `/providers/${provider.id}/`;
       link.textContent = provider.name;
       item.append(link);
 
@@ -176,7 +209,7 @@ if (filtersEl && resultsEl && summaryEl) {
         item.append(description);
       }
 
-      resultsEl.append(item);
+      list?.append(item);
     }
 
     const dropped = excluded();

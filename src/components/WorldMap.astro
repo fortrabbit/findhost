@@ -6,7 +6,7 @@ interface Props {
   regions: string[];
   /** Countries carrying more records get a larger dot. */
   weighted?: boolean;
-  /** Where a dot leads. `{code}` is replaced — '#{code}' or '/regions/{code}/'. */
+  /** Where a dot leads. `{code}` and `{lower}` are replaced — '#{lower}', '/regions/{code}/'. */
   linkPattern?: string;
   /** Let the map use the width of the screen rather than the reading column. */
   full?: boolean;
@@ -31,7 +31,7 @@ const marks = [...counts.entries()]
       point,
       xy: latLngToXY(point.lat, point.lng),
       radius: spacing * 1.1 * scale,
-      href: linkPattern?.replace('{code}', code),
+      href: linkPattern?.replace('{code}', code).replace('{lower}', code.toLowerCase()),
     };
   })
   .sort((a, b) => a.code.localeCompare(b.code, 'en'));

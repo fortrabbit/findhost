@@ -18,7 +18,7 @@ const { providers } = Astro.props;
   {
     providers.map((provider) => (
       <li>
-        <a href={`/provider/${provider.id}/`}>{provider.name}</a>
+        <a href={`/providers/${provider.id}/`}>{provider.name}</a>
         {provider.greenWebId && (
           <span
             class="green-mark"

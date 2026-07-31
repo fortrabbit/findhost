@@ -83,7 +83,7 @@ ai: co-authored
 
 ## About DigitalOcean
 
-DigitalOcean Holdings, Inc. was founded in 2012 and trades on the New York Stock Exchange as DOCN. It started with a single product — the Droplet, a virtual private server — and has since added block storage, managed databases, managed Kubernetes, object storage, serverless functions and an application platform. It acquired [Cloudways](/provider/cloudways/) in 2022.
+DigitalOcean Holdings, Inc. was founded in 2012 and trades on the New York Stock Exchange as DOCN. It started with a single product — the Droplet, a virtual private server — and has since added block storage, managed databases, managed Kubernetes, object storage, serverless functions and an application platform. It acquired [Cloudways](/providers/cloudways/) in 2022.
 
 Droplets are billed per second against fixed plan rates, with a minimum charge of sixty seconds; the smallest plan is listed at $4.00 a month. Backups are a paid add-on at 20 per cent of the Droplet cost for weekly copies or 30 per cent for daily. Managed database clusters cover PostgreSQL, MySQL, MongoDB, Valkey, OpenSearch and Kafka.
 
