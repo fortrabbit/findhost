@@ -6,7 +6,8 @@ category: server-management
 pricingUrl: https://ploi.io/pricing
 description: Ploi is a server management control panel for PHP servers. The subscription covers the panel only — the server is rented separately from a VPS provider.
 whoManagesOs: panel-assisted
-infraContract: byo-iaas
+infraContract:
+  - byo-iaas
 audience:
   - developer
 runsOn:

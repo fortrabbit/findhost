@@ -33,7 +33,13 @@ const unknown = providers.length - withRegions.length;
 
   <p class="lede">Where a provider actually runs decides latency, which law applies and who can be subpoenaed.</p>
 
-  <WorldMap regions={regions} weighted label="Countries the providers in this dataset operate in" />
+  <WorldMap
+    regions={regions}
+    weighted
+    full
+    linkPattern="#{code}"
+    label="Countries the providers in this dataset operate in"
+  />
 
   <p class="annotation">
     {withRegions.length} of {providers.length} records say where they operate.
@@ -45,7 +51,7 @@ const unknown = providers.length - withRegions.length;
 
   {
     byCountry.map((country) => (
-      <section>
+      <section id={country.code}>
         <h2>{country.label}</h2>
         <ul class="provider-list">
           {country.providers.map((provider) => (

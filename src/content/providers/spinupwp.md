@@ -6,7 +6,8 @@ category: server-management
 pricingUrl: https://spinupwp.com/pricing/
 description: SpinupWP is a control panel that configures and manages a WordPress-tuned server stack on an Ubuntu machine the customer brings.
 whoManagesOs: panel-assisted
-infraContract: byo-iaas
+infraContract:
+  - byo-iaas
 useCases:
   - cms
 audience:

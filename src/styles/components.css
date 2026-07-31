@@ -236,7 +236,7 @@
  */
 .figure-band {
   display: flex;
-  gap: var(--space-md);
+  gap: var(--space-lg);
   align-items: center;
   max-width: none;
   margin-block: var(--space-lg);
@@ -298,6 +298,20 @@
 .world-map {
   max-width: var(--measure-data);
   margin: var(--space-lg) 0;
+}
+
+/* A dot is a link, so it says so on hover and keeps a visible focus ring. */
+.world-map-dot {
+  cursor: pointer;
+}
+
+.world-map-dot:hover circle,
+.world-map-dot:focus-visible circle {
+  fill: var(--color-link);
+}
+
+.world-map-dot circle[fill='transparent'] {
+  fill: transparent;
 }
 
 .world-map svg {

@@ -56,7 +56,13 @@ const providers = defineCollection({
     // Classification
     alsoOffers: z.array(z.string()).optional(),
     whoManagesOs: z.enum(['you', 'panel-assisted', 'provider', 'container']).optional(),
-    infraContract: z.enum(['owns-metal', 'resells-iaas', 'byo-iaas']).optional(),
+    /*
+     * More than one can be true at once: Laravel Forge provisions onto your own
+     * cloud account *and* resells its own VPS, and panels are increasingly doing
+     * both. Absent still means unknown — a provider that sells no infrastructure
+     * at all is already saying so through `category: server-management`.
+     */
+    infraContract: z.array(z.enum(['owns-metal', 'resells-iaas', 'byo-iaas'])).optional(),
     specialisation: z.array(z.string()).optional(),
     /** What a provider positions itself for, in its own words — not our verdict on fit. */
     useCases: z.array(z.string()).optional(),
@@ -130,7 +136,13 @@ const providers = defineCollection({
     /** Green Web Foundation directory id — someone else's verification, linked rather than copied. */
     greenWebId: z.number().int().nullable().optional(),
 
-    // Support
+    /*
+     * Support. supportHours answers one question only: when can you reach a
+     * human about a production problem. A provider running a business-hours
+     * sales line and a 24-hour technical line is `24-7` — the office hours are
+     * not the ones that matter when a site is down. Whether that line costs
+     * extra is supportTiering's job, not this field's.
+     */
     supportChannels: z.array(z.enum(['email', 'chat', 'phone', 'forum'])).optional(),
     supportHours: z.enum(['24-7', 'business-hours', 'community-only']).optional(),
     supportTiering: z.enum(['all-plans', 'paid-upgrade', 'enterprise-only']).optional(),

@@ -60,28 +60,27 @@ export async function loadFacets(): Promise<{ facets: Facet[]; providers: Provid
     })
     .sort(byName);
 
-  const facets: Facet[] = taxonomy
-    .map((facet) => {
-      const known = providers.filter((provider) => provider.facets[facet.data.field] !== undefined);
+  const facets: Facet[] = taxonomy.map((facet) => {
+    const known = providers.filter((provider) => provider.facets[facet.data.field] !== undefined);
 
-      const values = facet.data.values.map((value) => ({
-        id: value.id,
-        label: value.label,
-        count: known.filter((provider) => {
-          const held = provider.facets[facet.data.field];
-          return Array.isArray(held) ? held.includes(value.id) : held === value.id;
-        }).length,
-      }));
+    const values = facet.data.values.map((value) => ({
+      id: value.id,
+      label: value.label,
+      count: known.filter((provider) => {
+        const held = provider.facets[facet.data.field];
+        return Array.isArray(held) ? held.includes(value.id) : held === value.id;
+      }).length,
+    }));
 
-      return {
-        id: facet.data.id,
-        label: facet.data.label,
-        field: facet.data.field,
-        multiple: facet.data.multiple,
-        values,
-        unknown: providers.length - known.length,
-      };
-    });
+    return {
+      id: facet.data.id,
+      label: facet.data.label,
+      field: facet.data.field,
+      multiple: facet.data.multiple,
+      values,
+      unknown: providers.length - known.length,
+    };
+  });
 
   // Taxonomy order, not alphabetical: the file is arranged most-asked first and
   // the filter panel should read the same way.

@@ -9,7 +9,8 @@ description: Hetzner is an independent German hosting company offering VPS, dedi
 founded: 1997
 hqCountry: DE
 whoManagesOs: you
-infraContract: owns-metal
+infraContract:
+  - owns-metal
 audience:
   - beginner
   - smb

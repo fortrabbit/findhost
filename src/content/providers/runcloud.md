@@ -6,7 +6,8 @@ category: server-management
 pricingUrl: https://runcloud.io/pricing
 description: RunCloud is a server management control panel for PHP and WordPress stacks, installed as an agent on a VPS the customer brings.
 whoManagesOs: panel-assisted
-infraContract: byo-iaas
+infraContract:
+  - byo-iaas
 audience:
   - startup
   - enterprise

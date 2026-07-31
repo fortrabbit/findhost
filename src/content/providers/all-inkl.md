@@ -38,7 +38,7 @@ figure:
   emoji: 🧰
   color: rgb(70, 45, 15)
   textColor: rgb(240, 210, 160)
-  text: Everything included, some of it later.
+  text: Everything included, kinda.
 ai: authored
 ---
 

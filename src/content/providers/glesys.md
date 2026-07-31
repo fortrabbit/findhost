@@ -11,7 +11,8 @@ hqCountry: SE
 ownership: pe-owned
 parent: Cube Infrastructure Managers
 whoManagesOs: you
-infraContract: owns-metal
+infraContract:
+  - owns-metal
 useCases:
   - saas
   - api

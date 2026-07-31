@@ -13,11 +13,11 @@ This exists to make the rest of it visible. Every provider meeting the scope tes
 
 ## Who publishes it
 
-**fortrabbit is one of those small providers, and fortrabbit pays for this.** That aim is self-serving, and saying so plainly is the only honest option available: we benefit if small hosting is more visible. So the benefit is put out of our own reach. The bias may act on *effort* — which records get researched first, which facets get built — and never on inclusion, order or field values.
+**fortrabbit is one of those small providers.** That aim is self-serving, and saying so plainly is the only honest option available: we benefit if small hosting is more visible. So the benefit is put out of our own reach. The bias may act on *effort* — which records get researched first, which facets get built — and never on inclusion, order or field values.
 
 fortrabbit appears in the dataset in alphabetical position, with the same fields and a permanent marker. If our record reads more favourably than the evidence supports, that is a bug.
 
-## What this will never do
+## What this is not
 
 - Rank, score or rate. There is no "best for" badge and no star, and the schema rejects any field that implies one.
 - Carry affiliate links. Every provider URL is checked for tracking parameters at build time.

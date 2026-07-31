@@ -61,7 +61,7 @@
   --rule-heavy: 4px;
 
   /* Measures — prose is read, data is scanned, and they want different widths */
-  --measure-prose: 66ch;
+  --measure-prose: 58ch;
   --measure-data: 46rem;
   --measure-page: 62rem;
 }

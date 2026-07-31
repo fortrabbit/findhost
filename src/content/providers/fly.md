@@ -5,7 +5,8 @@ url: https://fly.io
 category: paas
 pricingUrl: https://fly.io/docs/about/pricing/
 description: Fly.io runs Firecracker microVMs on its own servers in 18 regions, deployed from a Dockerfile through the flyctl CLI and billed purely by usage.
-infraContract: owns-metal
+infraContract:
+  - owns-metal
 whoManagesOs: container
 runtimes:
   - docker

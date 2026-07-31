@@ -10,7 +10,8 @@ founded: 2012
 hqCountry: DE
 ownership: independent
 whoManagesOs: provider
-infraContract: resells-iaas
+infraContract:
+  - resells-iaas
 runtimes:
   - php
 deployMethods:

@@ -5,7 +5,8 @@ url: https://www.cloudways.com
 category: server-management
 pricingUrl: https://www.cloudways.com/en/pricing.php
 description: Cloudways provisions and manages servers on other people's infrastructure — DigitalOcean, Vultr, Linode, AWS and Google Cloud — through its own control panel.
-infraContract: resells-iaas
+infraContract:
+  - resells-iaas
 useCases:
   - cms
   - e-commerce
