@@ -53,7 +53,9 @@ const unknown = providers.length - withRegions.length;
     byCountry.map((country) => (
       <section id={country.code.toLowerCase()}>
         <h2>
-          <a class="anchor-link" href={`#${country.code.toLowerCase()}`} aria-label={`Link to ${country.label}`}>#</a>
+          <a class="anchor-link" href={`#${country.code.toLowerCase()}`} aria-label={`Link to ${country.label}`}>
+            #
+          </a>
           {country.label}
         </h2>
         <ul class="provider-list">

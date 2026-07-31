@@ -174,6 +174,27 @@ const providers = defineCollection({
   }),
 });
 
+/**
+ * Providers that were considered and not listed, with the numbered criterion
+ * they failed. Published because a scope test nobody can audit is not a scope
+ * test — and because "why is my competitor listed and I am not" deserves a diff
+ * rather than an argument.
+ */
+const rejected = defineCollection({
+  loader: glob({ base: 'src/content/rejected', pattern: '**/*.md' }),
+  schema: z.object({
+    id: z.string(),
+    name: z.string(),
+    url: publicUrl,
+    /** The numbered inclusion criterion that failed. */
+    criterion: z.number().int().min(1).max(6),
+    checkedAt: z.coerce.date(),
+    /** Set when the failure is "we could not find it", not "it does not exist". */
+    boundedSearch: z.boolean().optional(),
+    ai: z.enum(['none', 'grammar', 'co-authored', 'authored']).optional(),
+  }),
+});
+
 /** The explainer that heads each category listing. */
 const categories = defineCollection({
   loader: glob({ base: 'src/content/categories', pattern: '**/*.md' }),
@@ -225,4 +246,4 @@ const taxonomy = defineCollection({
   }),
 });
 
-export const collections = { providers, categories, guide, notes, taxonomy };
+export const collections = { providers, rejected, categories, guide, notes, taxonomy };
