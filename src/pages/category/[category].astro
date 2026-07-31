@@ -36,7 +36,7 @@ const Explainer = explainer ? (await render(explainer)).Content : null;
 ---
 
 <Base
-  title={`${explainer?.data.title ?? label} — FindHost`}
+  title={`${label} — FindHost`}
   description={explainer?.data.description ?? `Every ${label.toLowerCase()} provider in the dataset.`}
   ai={explainer?.data.ai}
 >
@@ -51,14 +51,14 @@ const Explainer = explainer ? (await render(explainer)).Content : null;
     )
   }
 
-  <h1>{explainer?.data.title ?? label}</h1>
+  <h1>{label}</h1>
 
   {Explainer && <Explainer />}
 
-  <h2>{label}</h2>
+  <h2>{matches.length === 1 ? '1 provider' : `${matches.length} providers`}</h2>
   <p class="annotation">
-    {matches.length}
-    {matches.length === 1 ? 'record' : 'records'}, sorted alphabetically.
+    Sorted alphabetically. A primary category is one field of many — several of these also offer what other categories
+    describe.
   </p>
 
   <ProviderList providers={matches} />
