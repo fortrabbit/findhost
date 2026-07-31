@@ -192,6 +192,19 @@
   font-size: var(--text-xs);
 }
 
+/** Kept apart from the fields, because it is our judgement rather than a fact about the provider. */
+.editorial-note {
+  max-width: var(--measure-prose);
+  margin: var(--space-lg) 0;
+  padding: var(--space-sm) var(--space-md);
+  border: var(--rule-hairline) solid var(--color-ink);
+  font-size: var(--text-sm);
+}
+
+.editorial-note p {
+  margin: 0;
+}
+
 /* --- The record itself --- */
 
 .record-links {

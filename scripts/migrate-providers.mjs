@@ -43,7 +43,7 @@ const URL_MAP = {
   'google-cloud-run': 'https://cloud.google.com/run', 'laravel-vapor': 'https://vapor.laravel.com',
   'scaleway-functions': 'https://www.scaleway.com/en/serverless-functions/',
   vercel: 'https://vercel.com', wasmer: 'https://wasmer.io',
-  fly: 'https://fly.io', heroku: 'https://www.heroku.com', 'laravel-cloud': 'https://cloud.laravel.com',
+  fly: 'https://fly.io', heroku: 'https://www.heroku.com', hostim: 'https://hostim.dev', 'laravel-cloud': 'https://cloud.laravel.com', 'ploi-cloud': 'https://ploi.cloud',
   railway: 'https://railway.com', render: 'https://render.com', sevalla: 'https://sevalla.com',
   upsun: 'https://upsun.com',
   aws: 'https://aws.amazon.com', azure: 'https://azure.microsoft.com', gcp: 'https://cloud.google.com',
@@ -56,29 +56,108 @@ const URL_MAP = {
 
 const RENAME = { archustech: 'arcustech' };
 
+// Sections and paragraphs written in our voice that never say our name, so
+// nothing mechanical can find them. Listed by hand, here rather than in the
+// records, so re-running the migration reproduces the same result.
+const DROP_SECTIONS = {
+  hetzner: ['## Data protection'],
+  aws: ['## Alternatives'],
+  uberspace: ['### Privacy'],
+  'craft-cloud': ['## The alternative'],
+};
+
+const DROP_TEXT = {
+  ploi: [
+    'We abstract the AWS infrastructure underneath',
+    'One plan, one invoice, one place to ask for help.',
+  ],
+  'ploi-cloud': ['Both platforms are tailored for freelancers, agencies, and startups'],
+  upcloud: ['We are still considering UpCloud as an alternative'],
+  'craft-cloud': ['Looking to switch?'],
+  aws: ['not economical'],
+};
+
+// Facts the source carries in our own voice, restated as data. A relationship
+// between us and a listed provider belongs on the record, not edited out of it.
+const EXTRA = {
+  hostim: {
+    editorialNote:
+      'Hostim is run by a former fortrabbit employee. Disclosed because fortrabbit publishes this site; it changes nothing about how the record is written.',
+  },
+};
+
 const splitFrontmatter = (raw) => {
   const match = raw.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
   return { data: parse(match[1]), body: match[2] };
 };
 
-/** Drop a whole `## …` section when heading or body matches. */
-const dropSectionsWhere = (body, matches) => {
+/**
+ * Remove the pitch at two grains.
+ *
+ * A section whose heading argues our case goes entirely — it was written to
+ * sell and cannot be salvaged. A section that merely mentions us in passing
+ * keeps its subject matter and loses only those sentences, because deleting
+ * the whole thing throws away a real description of someone else's product.
+ * A section left empty by that scrub is dropped too.
+ */
+const isOurs = (text) => text.toLowerCase().includes('fortrabbit');
+
+let partiallyScrubbed = false;
+
+const scrub = (text) =>
+  text
+    .split(/\n{2,}/)
+    .map((paragraph) => {
+      const sentences = paragraph.split(/(?<=[.!?]) (?=[A-Z“"'\[])/);
+      const kept = sentences.filter((sentence) => !isOurs(sentence));
+      // A paragraph that lost a sentence but not all of them may now refer back
+      // to something that is no longer there — worth a human reading it.
+      if (kept.length && kept.length !== sentences.length) partiallyScrubbed = true;
+      return kept.join(' ').trim();
+    })
+    .filter(Boolean)
+    .join('\n\n');
+
+const depitch = (body) => {
   const parts = body.split(/^(## .*)$/m);
-  let out = matches('', parts[0]) ? '' : parts[0];
+  let out = scrub(parts[0]);
+
   for (let i = 1; i < parts.length; i += 2) {
-    if (!matches(parts[i], parts[i + 1])) out += parts[i] + parts[i + 1];
+    if (isOurs(parts[i])) continue;
+    const content = scrub(parts[i + 1]);
+    if (content) out += `\n\n${parts[i]}\n\n${content}`;
   }
   return out;
 };
 
-const rewrite = (body, pathToCategory) => {
+/** MDC components have no equivalent here. Run before anything reflows the text. */
+const stripComponents = (body) => {
+  body = body.replace(/^::[A-Za-z]+[\s\S]*?^::\s*$/gm, '');
   body = body.replace(/:ContentLink\{href="([^"]+)"\s+text="([^"]+)"\}/g, '[$2]($1)');
   body = body.replace(
     /:ContentQuote\{author="([^"]+)"\s+text="([^"]+)"\}/g,
     (_m, author, text) => `> ${text}\n>\n> — ${author}`,
   );
-  body = body.replace(/::?ContactUs\{[^}]*\}\n?/g, '');
+  body = body.replace(/:ContentQuote\{text="([^"]+)"\}/g, (_m, text) => `> ${text}`);
+  return body.replace(/::?ContactUs(\{[^}]*\})?/g, '');
+};
 
+/** Remove a `##`/`###` section by heading, up to the next heading of any level. */
+const dropSection = (body, heading) => {
+  const start = body.indexOf(heading);
+  if (start === -1) return body;
+  const rest = body.slice(start + heading.length);
+  const next = rest.search(/^#{2,3} /m);
+  return body.slice(0, start) + (next === -1 ? '' : rest.slice(next));
+};
+
+const dropParagraph = (body, marker) =>
+  body
+    .split(/\n{2,}/)
+    .filter((paragraph) => !paragraph.includes(marker))
+    .join('\n\n');
+
+const rewrite = (body, pathToCategory) => {
   body = body.replace(/\/hosting-guide\/providers\/([a-z0-9-]+)\/([a-z0-9-]+)/g, (whole, _dir, name) => {
     const slug = RENAME[name] ?? name;
     return URL_MAP[slug] ? `/provider/${slug}/` : `${WWW}${whole}`;
@@ -88,6 +167,7 @@ const rewrite = (body, pathToCategory) => {
     (whole, dir) => (pathToCategory[dir] ? `/category/${pathToCategory[dir]}/` : `${WWW}${whole}`),
   );
   body = body.replace('/hosting-guide/intro', '/guide/why-hosting-is-hard/');
+  body = body.replace(/\]\(\/hosting-guide\/?\)/g, '](/guide/)');
   body = body.replace('/hosting-guide/tips', '/guide/how-to-choose/');
   body = body.replace(/\]\((\/(?:alternatives|solutions|pricing|why|company|legal|docs|blog|support|contact|hosting-guide|raw)[^)]*)\)/g, `](${WWW}$1)`);
   return body;
@@ -99,6 +179,7 @@ const directories = readdirSync(SRC).filter((name) => statSync(join(SRC, name)).
 const pathToCategory = Object.fromEntries(directories.map((name) => [name.split('.').slice(1).join('.'), CATEGORY[name]]));
 
 const skipped = [];
+const scrubbed = [];
 let written = 0;
 
 for (const directory of directories.sort()) {
@@ -115,19 +196,15 @@ for (const directory of directories.sort()) {
       continue;
     }
 
-    // Drop the pitch wholesale: any section that talks about us at all. A
-    // section arguing our case cannot also be a neutral description of someone
-    // else's product, and rewriting it would just be pitching in another voice.
-    let body = dropSectionsWhere(rawBody, (heading, content) =>
-      `${heading}\n${content}`.toLowerCase().includes('fortrabbit'),
-    );
+    let body = stripComponents(rawBody);
+    for (const heading of DROP_SECTIONS[slug] ?? []) body = dropSection(body, heading);
+    for (const marker of DROP_TEXT[slug] ?? []) body = dropParagraph(body, marker);
+
+    partiallyScrubbed = false;
+    body = depitch(body);
+    if (partiallyScrubbed) scrubbed.push(slug);
     body = body.replace(/^## Why not.*$/gm, '## Reservations');
     body = rewrite(body, pathToCategory);
-    // Stray pitch paragraphs survive section-dropping — "Looking to switch? …"
-    body = body
-      .split(/\n{2,}/)
-      .filter((paragraph) => !paragraph.toLowerCase().includes('fortrabbit'))
-      .join('\n\n');
     body = body.replace(/\n{3,}/g, '\n\n').trim();
 
     // The lead was written to sell; keep only the part that describes the provider.
@@ -157,6 +234,7 @@ for (const directory of directories.sort()) {
         text: figure.text,
       };
     }
+    Object.assign(record, EXTRA[slug] ?? {});
     record.ai = data.ai ?? 'co-authored';
 
     writeFileSync(join(DST, `${slug}.md`), `---\n${stringify(record, { lineWidth: 0 }).trim()}\n---\n\n${body}\n`);
@@ -166,3 +244,4 @@ for (const directory of directories.sort()) {
 
 console.log(`${written} records written`);
 for (const line of skipped) console.log(`  skipped: ${line}`);
+if (scrubbed.length) console.log(`  read for dangling references: ${scrubbed.join(', ')}`);

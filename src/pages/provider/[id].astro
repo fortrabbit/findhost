@@ -146,6 +146,16 @@ const known = attributeGroups
       )
     }
 
+    {
+      data.editorialNote && (
+        <aside class="editorial-note">
+          <p>
+            <strong>Disclosure.</strong> {data.editorialNote}
+          </p>
+        </aside>
+      )
+    }
+
     <h2>The record</h2>
     <p class="annotation">
       {known} of {total} attributes recorded. That is a fact about our work, not about {data.name} — it never affects
