@@ -49,6 +49,13 @@ supportChannels:
   - email
 apiAvailable: public
 cliTool: official
+status: active
+checkedAt: 2026-07-31
+sources:
+  - { field: entryPriceBand, url: 'https://www.mittwald.de/hosting', checkedAt: 2026-07-31 }
+  - { field: freeTier, url: 'https://www.mittwald.de/hosting', checkedAt: 2026-07-31 }
+  - { field: regions, url: 'https://www.mittwald.de/hosting', checkedAt: 2026-07-31 }
+  - { field: pricingModel, url: 'https://www.mittwald.de/hosting', checkedAt: 2026-07-31 }
 social:
   github: https://github.com/mittwald
 figure:
@@ -69,4 +76,4 @@ The audience it addresses is agencies and freelancers handling client sites — 
 
 ## Reservations
 
-Prices are quoted excluding VAT, which makes them read lower than German competitors that quote gross. Entry tariffs start at a level well above commodity hosting, and the single-country footprint means anyone who needs capacity outside Germany needs a second supplier.
+Prices are quoted excluding VAT, which makes them read lower than German competitors that quote gross: webhosting from €13 a month, a vServer from €21, a dedicated server from €169, all net. Entry tariffs start at a level well above commodity hosting, and the single-country footprint means anyone who needs capacity outside Germany needs a second supplier.

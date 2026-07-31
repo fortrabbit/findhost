@@ -39,6 +39,11 @@ freeTier: none
 regions:
   - NL
 apiAvailable: public
+status: active
+checkedAt: 2026-07-31
+sources:
+  - { field: entryPriceBand, url: 'https://www.transip.eu/web-hosting/', checkedAt: 2026-07-31 }
+  - { field: pricingModel, url: 'https://www.transip.eu/web-hosting/', checkedAt: 2026-07-31 }
 figure:
   emoji: 🌷
   color: rgb(15, 55, 50)
@@ -55,4 +60,4 @@ The three product lines sit at different levels. Shared webhosting is PHP with S
 
 ## Reservations
 
-The headline webhosting price is a three-month promotion against a regular rate several times higher. The status page is a single "all systems online" banner rather than a component-level incident history, which makes it hard to reconstruct what happened after the fact.
+The headline webhosting price on the Dutch site is a three-month promotion against a regular rate several times higher. The English-language site lists the same three tiers — Core at €9.99 a month, Pro at €15.99, Max at €29.99 — without a promotional qualifier, so which number a buyer sees depends on which door they come in through. The status page is a single "all systems online" banner rather than a component-level incident history, which makes it hard to reconstruct what happened after the fact.

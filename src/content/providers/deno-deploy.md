@@ -40,6 +40,12 @@ apiAvailable: public
 cliTool: official
 iacSupport:
   - terraform
+status: active
+checkedAt: 2026-07-31
+sources:
+  - { field: entryPriceBand, url: 'https://deno.com/deploy/pricing', checkedAt: 2026-07-31 }
+  - { field: freeTier, url: 'https://deno.com/deploy/pricing', checkedAt: 2026-07-31 }
+  - { field: pricingModel, url: 'https://deno.com/deploy/pricing', checkedAt: 2026-07-31 }
 figure:
   emoji: 🦕
   color: rgb(15, 15, 20)
@@ -52,7 +58,7 @@ ai: authored
 
 Deno Deploy is the hosting service built by the company that makes the Deno runtime, which gives it an unusual property: the platform and the language runtime are the same project, so what runs locally and what runs in production are the same binary. Node and npm compatibility means most existing JavaScript works, and the framework list covers Fresh, Next.js, Astro, Vue, React and others, with server-side rendering, static generation, incremental regeneration, subprocesses and foreign-function calls all supported.
 
-Plans are Free, Pro at twenty dollars a month, Builder at two hundred for people reselling the platform to their own users, and a custom enterprise tier. The free tier is substantial: a million requests, twenty gigabytes of egress, fifteen hours of CPU time and fifty custom domains a month.
+Plans are Free, Pro at twenty dollars a month, Builder at two hundred for people reselling the platform to their own users, and a custom enterprise tier. The free tier is substantial: a million requests, twenty gigabytes of egress, fifteen hours of CPU time and fifty custom domains a month. Pro raises that to five million requests and forty CPU hours, and prices the overage openly — $2 per million requests and $0.05 per CPU hour beyond the allowance. Builder covers twenty million requests and a hundred thousand active deployments.
 
 ## Reservations
 

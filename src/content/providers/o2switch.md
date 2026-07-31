@@ -46,6 +46,10 @@ supportChannels:
   - email
   - chat
 cliTool: none
+sources:
+  - { field: infraContract, url: 'https://www.o2switch.fr/', checkedAt: 2026-07-31 }
+  - { field: regions, url: 'https://www.o2switch.fr/', checkedAt: 2026-07-31 }
+  - { field: hqCountry, url: 'https://www.o2switch.fr/', checkedAt: 2026-07-31 }
 figure:
   emoji: 🌋
   color: rgb(60, 30, 25)
@@ -62,4 +66,4 @@ The historic pitch was a single unlimited offer, and that has become three sizes
 
 ## Reservations
 
-PHP is the only documented application runtime — Node, Python and Ruby do not appear on the offer page at all. Discounting is aggressive: the middle plan is listed at €16 a month and sold at under €2 for the first year, renewing at list price, so the advertised figure and the recurring figure are different numbers. Independent tooling around the platform is thin, amounting to a couple of small community deploy actions.
+PHP is the only documented application runtime — Node, Python and Ruby do not appear on the offer page at all. Discounting is aggressive, and the home page leads with the discounted figure: "L'Offre Unique" is fronted at €1.86 a month net, which is the annual-payment promotional rate rather than the recurring one. The list price it renews at is not shown beside it, so no renewal multiple is recorded — and the entry price band here has not been verified against a standing rate. Independent tooling around the platform is thin, amounting to a couple of small community deploy actions.
