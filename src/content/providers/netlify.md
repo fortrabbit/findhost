@@ -45,6 +45,12 @@ entryPriceBand: free-tier
 freeTier: permanent
 apiAvailable: public
 cliTool: official
+status: active
+checkedAt: 2026-07-31
+sources:
+  - { field: pricingModel, url: 'https://www.netlify.com/pricing/', checkedAt: 2026-07-31 }
+  - { field: entryPriceBand, url: 'https://www.netlify.com/pricing/', checkedAt: 2026-07-31 }
+  - { field: freeTier, url: 'https://www.netlify.com/pricing/', checkedAt: 2026-07-31 }
 figure:
   emoji: 🕸️
   color: rgb(20, 60, 70)
@@ -57,7 +63,7 @@ ai: authored
 
 Netlify connects to a git repository, runs the framework's build, and serves the result from a CDN, with serverless functions, edge functions, blob storage and a database available alongside. It did more than any other company to establish the pattern, and the deployment pages of Astro, Nuxt, SvelteKit, Eleventy and most other static-site frameworks still carry a Netlify guide as a matter of course — which makes it about as ecosystem-embedded as a platform can be.
 
-Plans are Free, Personal at nine dollars a month, Pro at twenty, and a custom enterprise tier. Above the plan fee everything is metered in credits: production deploys, compute by the gigabyte-hour, bandwidth by the gigabyte, web requests by the ten thousand, and AI inference by the model.
+Plans are Free at "$0 forever", Personal at $9 a month, Pro at $20, and a custom enterprise tier. Above the plan fee everything is metered in credits, and the plan decides the monthly allowance: 300 credits on Free, 1,000 on Personal, 3,000 on Pro, unlimited on Enterprise. The published rates are 15 credits per production deploy, 10 per GB-hour of compute, 20 per GB of bandwidth, 2 per 10,000 web requests, and a model-dependent rate for AI inference. Extra credits come in packs at $5 for 500 or $10 for 1,500.
 
 ## Reservations
 

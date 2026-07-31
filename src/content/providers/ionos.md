@@ -41,6 +41,8 @@ deployMethods:
 sshAccess: full
 pricingModel: fixed-tier
 entryPriceBand: 5-15
+renewalMultiple: 2
+contractMinimum: annual
 freeTier: none
 regions:
   - DE
@@ -49,6 +51,13 @@ supportChannels:
   - phone
   - email
 apiAvailable: public
+status: active
+checkedAt: 2026-07-31
+sources:
+  - { field: entryPriceBand, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-07-31 }
+  - { field: renewalMultiple, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-07-31 }
+  - { field: contractMinimum, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-07-31 }
+  - { field: pricingModel, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-07-31 }
 figure:
   emoji: 🏢
   color: rgb(0, 60, 120)
@@ -65,4 +74,4 @@ For a mass-market host the shared line is unusually tolerant of developers: SSH,
 
 ## Reservations
 
-Advertised pricing is heavily promotional. The headline first-term rate reverts to the standing price after the introductory period, so the number on the front page is not the number a customer pays in year two. The product catalogue is also wide enough that documentation quality varies noticeably between the consumer help centre and the cloud developer docs.
+Advertised pricing is heavily promotional, and IONOS prints both numbers, which makes the size of the step visible. Webhosting Standard is €3 a month for six months and then €6; Plus is €1 a month for twelve months and then €11; Premium €8 then €16; Ultimate €14 then €28. Every plan also carries a €10 setup fee. The multiple recorded here, two, is the entry plan's; Plus is the sharpest at eleven times, and it is the tier the page pushes hardest. The product catalogue is also wide enough that documentation quality varies noticeably between the consumer help centre and the cloud developer docs.
