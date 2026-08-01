@@ -30,7 +30,7 @@ const columns = [
   pick('software', 'Software', (id) => `/software/${id}/`),
   pick('runtimes', 'Language', (id) => `/runtimes/${id}/`),
   pick('category', 'Platform', (id) => `/category/${id}/`),
-  pick('regions', 'Place', (id) => `/regions/${id}/`),
+  pick('regions', 'Region', (id) => `/regions/${id}/`),
 ];
 
 const regions = records.flatMap((provider) => provider.data.regions ?? []);
