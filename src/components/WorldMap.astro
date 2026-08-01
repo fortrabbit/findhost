@@ -12,10 +12,12 @@ interface Props {
   full?: boolean;
   /** Off where the map is a doorway rather than the subject — the home page sends you to /map/ for the detail. */
   caption?: boolean;
+  /** Centre it in its column, for the one place it is an image rather than a figure in a text flow. */
+  centred?: boolean;
   label: string;
 }
 
-const { regions, weighted = false, linkPattern, full = false, caption = true, label } = Astro.props;
+const { regions, weighted = false, linkPattern, full = false, caption = true, centred = false, label } = Astro.props;
 
 const counts = new Map<string, number>();
 for (const code of regions) counts.set(code, (counts.get(code) ?? 0) + 1);
@@ -50,7 +52,7 @@ const marks = [...counts.entries()]
 const unplaced = [...counts.keys()].filter((code) => !countryPoints[code]);
 ---
 
-<figure class:list={['world-map', full && 'full-width']}>
+<figure class:list={['world-map', full && 'full-width', centred && 'world-map-centred']}>
   <svg viewBox={viewBox} xmlns="http://www.w3.org/2000/svg" role="img" aria-label={label}>
     <path
       d={landPath}
