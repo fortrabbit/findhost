@@ -1,9 +1,10 @@
 ---
 id: upsun
 name: Upsun
-url: https://upsun.com
+urls:
+  home: https://upsun.com
+  pricing: https://upsun.com/pricing/
 category: paas
-pricingUrl: https://upsun.com/pricing/
 description: Upsun is the PaaS formerly known as Platform.sh. Projects are described in YAML and billed per resource, on top of a per-project and per-user fee.
 whoManagesOs: provider
 useCases:

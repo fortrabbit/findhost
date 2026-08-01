@@ -1,9 +1,10 @@
 ---
 id: azure
 name: Azure
-url: https://azure.microsoft.com
+urls:
+  home: https://azure.microsoft.com
+  pricing: https://azure.microsoft.com/en-us/pricing/details/app-service/linux/
 category: iaas
-pricingUrl: https://azure.microsoft.com/en-us/pricing/details/app-service/linux/
 description: Microsoft Azure is the second-largest cloud infrastructure provider, with PHP reaching it through App Service on Linux.
 parent: Microsoft
 ownership: subsidiary

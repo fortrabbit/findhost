@@ -1,9 +1,10 @@
 ---
 id: lovable
 name: Lovable
-url: https://lovable.dev
+urls:
+  home: https://lovable.dev
+  pricing: https://lovable.dev/pricing
 category: lcnc
-pricingUrl: https://lovable.dev/pricing
 description: Lovable is an AI-assisted low-code no-code platform that generates web app code from natural language prompts and deploys it on its own infrastructure.
 whoManagesOs: provider
 audience:

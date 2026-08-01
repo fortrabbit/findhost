@@ -1,9 +1,10 @@
 ---
 id: cloudflare-workers
 name: Cloudflare Workers
-url: https://workers.cloudflare.com
+urls:
+  home: https://workers.cloudflare.com
+  pricing: https://developers.cloudflare.com/workers/platform/pricing/
 category: serverless
-pricingUrl: https://developers.cloudflare.com/workers/platform/pricing/
 description: Cloudflare Workers runs JavaScript, TypeScript, Python and Rust in V8 isolates at the edge. PHP is not among the supported languages.
 whoManagesOs: provider
 runtimes:

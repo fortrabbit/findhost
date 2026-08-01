@@ -1,9 +1,10 @@
 ---
 id: dreamhost
 name: DreamHost
-url: https://www.dreamhost.com
+urls:
+  home: https://www.dreamhost.com
+  pricing: https://www.dreamhost.com/hosting/shared/
 category: shared
-pricingUrl: https://www.dreamhost.com/hosting/shared/
 description: DreamHost is an independent shared hosting company from Los Angeles, founded in 1996, with a long open-source track record.
 founded: 1996
 hqCountry: US

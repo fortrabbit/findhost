@@ -1,9 +1,10 @@
 ---
 id: google-cloud-run
 name: Google Cloud Run
-url: https://cloud.google.com/run
+urls:
+  home: https://cloud.google.com/run
+  pricing: https://cloud.google.com/run/pricing
 category: serverless
-pricingUrl: https://cloud.google.com/run/pricing
 description: Google Cloud Run runs any container image, scales it to zero when idle and bills per request and per resource-second.
 parent: Google
 whoManagesOs: container

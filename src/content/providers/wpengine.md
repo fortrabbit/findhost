@@ -1,9 +1,10 @@
 ---
 id: wpengine
 name: WP Engine
-url: https://wpengine.com
+urls:
+  home: https://wpengine.com
+  pricing: https://wpengine.com/plans/
 category: vanity-hosting
-pricingUrl: https://wpengine.com/plans/
 description: WP Engine is one of the largest managed WordPress hosts, founded in 2010 and based in Austin, Texas, with an office in Limerick, Ireland.
 whoManagesOs: provider
 useCases:

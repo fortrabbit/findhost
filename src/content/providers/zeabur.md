@@ -1,9 +1,10 @@
 ---
 id: zeabur
 name: Zeabur
-url: https://zeabur.com
+urls:
+  home: https://zeabur.com
+  pricing: https://zeabur.com/pricing
 category: paas
-pricingUrl: https://zeabur.com/pricing
 description: Taiwanese platform that detects a repository's project type and deploys it in one click, covering Node, Python, PHP, Go, Rust, Java, .NET, Bun and Deno.
 whoManagesOs: container
 useCases:

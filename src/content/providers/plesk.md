@@ -1,9 +1,10 @@
 ---
 id: plesk
 name: Plesk
-url: https://www.plesk.com
+urls:
+  home: https://www.plesk.com
+  pricing: https://www.plesk.com/pricing/
 category: server-management
-pricingUrl: https://www.plesk.com/pricing/
 description: Hosting control panel licensed per server, managing sites, domains, mail, databases and WordPress on Linux and Windows machines the customer supplies.
 ownership: subsidiary
 parent: WebPros International GmbH

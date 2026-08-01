@@ -1,9 +1,10 @@
 ---
 id: dinahosting
 name: Dinahosting
-url: https://dinahosting.com
+urls:
+  home: https://dinahosting.com
+  pricing: https://dinahosting.com/hosting
 category: shared
-pricingUrl: https://dinahosting.com/hosting
 description: Galician host trading since 2001, running PHP 7.4 to 8.5, Python, Ruby, Node and Perl on servers in Spain with Spanish IP addresses and renewable power.
 founded: 2001
 hqCountry: ES

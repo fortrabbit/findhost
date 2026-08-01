@@ -1,10 +1,11 @@
 ---
 id: modal
 name: Modal
-url: https://modal.com
+urls:
+  home: https://modal.com
+  pricing: https://modal.com/pricing
+  status: https://status.modal.com/
 category: serverless
-pricingUrl: https://modal.com/pricing
-statusUrl: https://status.modal.com/
 description: Serverless compute platform for Python, where functions are decorated in code and run in containers on CPU or GPU with per-second billing.
 hqCountry: US
 ownership: vc-backed

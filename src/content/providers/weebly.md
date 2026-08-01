@@ -1,7 +1,8 @@
 ---
 id: weebly
 name: Weebly
-url: https://www.weebly.com
+urls:
+  home: https://www.weebly.com
 category: lcnc
 description: Weebly is a simple website builder that bundles templates, hosting, and basic ecommerce features.
 figure:

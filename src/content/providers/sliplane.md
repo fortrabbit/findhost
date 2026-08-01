@@ -1,9 +1,10 @@
 ---
 id: sliplane
 name: Sliplane
-url: https://sliplane.io
+urls:
+  home: https://sliplane.io
+  pricing: https://sliplane.io/pricing
 category: paas
-pricingUrl: https://sliplane.io/pricing
 description: German Docker hosting that bills for the server rather than the container, so unlimited services can share one machine, with managed Postgres and S3 storage.
 hqCountry: DE
 whoManagesOs: container

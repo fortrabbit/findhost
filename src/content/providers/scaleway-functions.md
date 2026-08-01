@@ -1,9 +1,10 @@
 ---
 id: scaleway-functions
 name: Scaleway Functions
-url: https://www.scaleway.com/en/serverless-functions/
+urls:
+  home: https://www.scaleway.com/en/serverless-functions/
+  pricing: https://www.scaleway.com/en/serverless-functions/
 category: serverless
-pricingUrl: https://www.scaleway.com/en/serverless-functions/
 description: Scaleway Functions is a European function-as-a-service with a native PHP runtime, billed by request and by memory consumed.
 whoManagesOs: provider
 useCases:

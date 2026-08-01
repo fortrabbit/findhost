@@ -1,7 +1,8 @@
 ---
 id: gcp
 name: Google Cloud Platform
-url: https://cloud.google.com
+urls:
+  home: https://cloud.google.com
 category: iaas
 description: Google Cloud Platform is one of the three hyperscalers, running 130 zones across 43 regions on the infrastructure behind Google's own products.
 parent: Google

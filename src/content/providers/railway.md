@@ -1,10 +1,11 @@
 ---
 id: railway
 name: Railway
-url: https://railway.com
+urls:
+  home: https://railway.com
+  pricing: https://docs.railway.com/reference/pricing/plans
+  status: https://status.railway.com
 category: paas
-pricingUrl: https://docs.railway.com/reference/pricing/plans
-statusUrl: https://status.railway.com
 description: Railway is a polyglot deployment platform with subscription plus usage billing, four regions and a build system that detects most common languages.
 whoManagesOs: provider
 useCases:

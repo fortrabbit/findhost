@@ -1,9 +1,10 @@
 ---
 id: mydevil
 name: MyDevil.net
-url: https://www.mydevil.net
+urls:
+  home: https://www.mydevil.net
+  pricing: https://www.mydevil.net/
 category: shared
-pricingUrl: https://www.mydevil.net/
 description: Polish shared hosting running PHP 5.6 to 8.4, Node.js, Python, Django and Rails with SSH on every plan and unlimited sites, mailboxes and databases.
 hqCountry: PL
 whoManagesOs: provider

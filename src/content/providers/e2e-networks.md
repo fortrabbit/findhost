@@ -1,9 +1,10 @@
 ---
 id: e2e-networks
 name: E2E Networks
-url: https://www.e2enetworks.com
+urls:
+  home: https://www.e2enetworks.com
+  pricing: https://www.e2enetworks.com/pricing
 category: iaas
-pricingUrl: https://www.e2enetworks.com/pricing
 description: Indian cloud infrastructure provider listed on the National Stock Exchange, selling CPU and GPU compute by the minute with published hourly rates.
 hqCountry: IN
 ownership: public

@@ -1,9 +1,10 @@
 ---
 id: craft-cloud
 name: Craft Cloud
-url: https://craftcms.com/cloud
+urls:
+  home: https://craftcms.com/cloud
+  pricing: https://craftcms.com/cloud
 category: vanity-hosting
-pricingUrl: https://craftcms.com/cloud
 description: Craft Cloud is the serverless hosting platform built by Pixel & Tonic, the makers of Craft CMS, priced per project from $120 a month.
 whoManagesOs: provider
 useCases:

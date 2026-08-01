@@ -1,9 +1,10 @@
 ---
 id: dokploy
 name: Dokploy
-url: https://dokploy.com
+urls:
+  home: https://dokploy.com
+  pricing: https://dokploy.com/pricing
 category: server-management
-pricingUrl: https://dokploy.com/pricing
 description: Open-source deployment platform billed per managed server, run either as a hosted service or installed on the customer's own machines.
 whoManagesOs: container
 infraContract:

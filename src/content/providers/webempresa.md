@@ -1,9 +1,10 @@
 ---
 id: webempresa
 name: Webempresa
-url: https://www.webempresa.com
+urls:
+  home: https://www.webempresa.com
+  pricing: https://www.webempresa.com/hosting-wordpress.html
 category: shared
-pricingUrl: https://www.webempresa.com/hosting-wordpress.html
 description: Spanish WordPress-oriented host trading since 1999, now part of team.blue, running PHP 8.2 to 8.5 with SSH and a choice of EU or US data centres.
 founded: 1999
 hqCountry: ES

@@ -1,9 +1,10 @@
 ---
 id: strato
 name: STRATO
-url: https://www.strato.de
+urls:
+  home: https://www.strato.de
+  pricing: https://www.strato.de/hosting/
 category: shared
-pricingUrl: https://www.strato.de/hosting/
 description: Berlin-based mass-market webhosting brand owned by IONOS, selling shared hosting, WordPress hosting, virtual and dedicated servers.
 founded: 1997
 hqCountry: DE

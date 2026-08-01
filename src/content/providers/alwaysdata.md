@@ -1,10 +1,11 @@
 ---
 id: alwaysdata
 name: alwaysdata
-url: https://www.alwaysdata.com
+urls:
+  home: https://www.alwaysdata.com
+  pricing: https://www.alwaysdata.com/en/pricing/
+  status: https://status.alwaysdata.com/
 category: shared
-pricingUrl: https://www.alwaysdata.com/en/pricing/
-statusUrl: https://status.alwaysdata.com/
 description: French managed hosting with a per-site choice of eleven language runtimes, unlimited databases and mailboxes, and a permanently free tier.
 founded: 2006
 hqCountry: FR

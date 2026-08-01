@@ -1,9 +1,10 @@
 ---
 id: all-inkl
 name: ALL-INKL.COM
-url: https://all-inkl.com
+urls:
+  home: https://all-inkl.com
+  pricing: https://all-inkl.com/webhosting/paketvergleich/
 category: shared
-pricingUrl: https://all-inkl.com/webhosting/paketvergleich/
 description: Owner-run German shared hosting and managed server provider operating from Friedersdorf in Saxony, with data centres in Dresden.
 founded: 2000
 hqCountry: DE

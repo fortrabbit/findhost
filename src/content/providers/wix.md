@@ -1,7 +1,8 @@
 ---
 id: wix
 name: Wix
-url: https://www.wix.com
+urls:
+  home: https://www.wix.com
 category: lcnc
 description: Wix is a hosted website builder with templates and a visual editor for small businesses and personal sites.
 figure:

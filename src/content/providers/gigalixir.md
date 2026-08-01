@@ -1,9 +1,10 @@
 ---
 id: gigalixir
 name: Gigalixir
-url: https://www.gigalixir.com
+urls:
+  home: https://www.gigalixir.com
+  pricing: https://www.gigalixir.com/pricing/
 category: paas
-pricingUrl: https://www.gigalixir.com/pricing/
 description: Platform built around Elixir and Phoenix, keeping hot upgrades, remote observer and clustering intact, with a permanently free tier and per-second billing.
 whoManagesOs: container
 specialisation:

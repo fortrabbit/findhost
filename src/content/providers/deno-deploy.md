@@ -1,9 +1,10 @@
 ---
 id: deno-deploy
 name: Deno Deploy
-url: https://deno.com/deploy
+urls:
+  home: https://deno.com/deploy
+  pricing: https://deno.com/deploy/pricing
 category: serverless
-pricingUrl: https://deno.com/deploy/pricing
 description: Serverless hosting for JavaScript and TypeScript built by the Deno team, running the Deno runtime with Node and npm compatibility.
 hqCountry: US
 ownership: vc-backed

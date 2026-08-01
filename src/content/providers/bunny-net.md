@@ -1,10 +1,11 @@
 ---
 id: bunny-net
 name: Bunny.net
-url: https://bunny.net
+urls:
+  home: https://bunny.net
+  pricing: https://bunny.net/pricing/
+  status: https://status.bunny.net/
 category: serverless
-pricingUrl: https://bunny.net/pricing/
-statusUrl: https://status.bunny.net/
 description: Slovenian edge platform selling CDN, storage, video and DNS, with Edge Scripting and Magic Containers running the customer's own code across its network.
 whoManagesOs: container
 useCases:

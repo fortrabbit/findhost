@@ -1,7 +1,8 @@
 ---
 id: upcloud
 name: UpCloud
-url: https://upcloud.com
+urls:
+  home: https://upcloud.com
 category: iaas
 description: UpCloud is a European cloud infrastructure provider based in Finland.
 ai: co-authored

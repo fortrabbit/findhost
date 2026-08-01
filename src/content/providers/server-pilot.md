@@ -1,9 +1,10 @@
 ---
 id: server-pilot
 name: ServerPilot
-url: https://serverpilot.io
+urls:
+  home: https://serverpilot.io
+  pricing: https://serverpilot.io/pricing/
 category: server-management
-pricingUrl: https://serverpilot.io/pricing/
 description: ServerPilot installs and maintains a PHP stack on an Ubuntu server the customer brings, billed per server and per application.
 founded: 2012
 infraContract:

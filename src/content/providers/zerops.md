@@ -1,10 +1,11 @@
 ---
 id: zerops
 name: Zerops
-url: https://zerops.io
+urls:
+  home: https://zerops.io
+  pricing: https://zerops.io/pricing
+  status: https://status.zerops.io
 category: paas
-pricingUrl: https://zerops.io/pricing
-statusUrl: https://status.zerops.io
 description: Czech developer platform with thirteen native runtimes, billed only for CPU, memory and disk consumed, with no subscription tiers and no per-seat charge.
 whoManagesOs: container
 useCases:

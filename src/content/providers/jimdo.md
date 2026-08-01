@@ -1,7 +1,8 @@
 ---
 id: jimdo
 name: Jimdo
-url: https://www.jimdo.com
+urls:
+  home: https://www.jimdo.com
 category: lcnc
 description: Jimdo is a website builder aimed at small businesses that want to publish quickly.
 figure:

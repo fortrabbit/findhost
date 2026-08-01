@@ -1,10 +1,11 @@
 ---
 id: heroku
 name: Heroku
-url: https://www.heroku.com
+urls:
+  home: https://www.heroku.com
+  pricing: https://www.heroku.com/pricing
+  status: https://status.heroku.com
 category: paas
-pricingUrl: https://www.heroku.com/pricing
-statusUrl: https://status.heroku.com
 description: Heroku is a polyglot PaaS — the original "git push to deploy" platform, now a business unit of Salesforce.
 founded: 2007
 hqCountry: US

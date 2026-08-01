@@ -1,9 +1,10 @@
 ---
 id: websupport
 name: WebSupport
-url: https://www.websupport.sk
+urls:
+  home: https://www.websupport.sk
+  pricing: https://www.websupport.sk/webhosting
 category: shared
-pricingUrl: https://www.websupport.sk/webhosting
 description: Slovakia's largest domain registrar, selling shared hosting and a website builder across Slovakia, Czechia and Hungary from its own data centre.
 hqCountry: SK
 ownership: subsidiary

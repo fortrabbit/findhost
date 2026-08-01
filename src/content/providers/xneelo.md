@@ -1,9 +1,10 @@
 ---
 id: xneelo
 name: xneelo
-url: https://xneelo.co.za
+urls:
+  home: https://xneelo.co.za
+  pricing: https://xneelo.co.za/web-hosting/
 category: shared
-pricingUrl: https://xneelo.co.za/web-hosting/
 description: South African host, formerly Hetzner South Africa, selling shared hosting, managed and self-managed servers and colocation with a choice of ZA or DE servers.
 founded: 1999
 hqCountry: ZA

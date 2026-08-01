@@ -1,10 +1,11 @@
 ---
 id: transip
 name: TransIP
-url: https://www.transip.nl
+urls:
+  home: https://www.transip.nl
+  pricing: https://www.transip.nl/webhosting/
+  status: https://www.transnoc.nl/
 category: shared
-pricingUrl: https://www.transip.nl/webhosting/
-statusUrl: https://www.transnoc.nl/
 description: Dutch registrar and hosting provider selling shared PHP webhosting, VPS, OpenStack cloud and managed Kubernetes from its own Netherlands data centres.
 founded: 2003
 hqCountry: NL

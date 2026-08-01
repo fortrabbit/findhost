@@ -1,10 +1,11 @@
 ---
 id: scaleway
 name: Scaleway
-url: https://www.scaleway.com
+urls:
+  home: https://www.scaleway.com
+  pricing: https://www.scaleway.com/en/pricing/
+  status: https://status.scaleway.com/
 category: iaas
-pricingUrl: https://www.scaleway.com/en/pricing/
-statusUrl: https://status.scaleway.com/
 description: French cloud provider selling instances, bare metal, managed Kubernetes, serverless containers and managed databases, with European data residency as the pitch.
 founded: 1999
 hqCountry: FR

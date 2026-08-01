@@ -1,9 +1,10 @@
 ---
 id: cherry-servers
 name: Cherry Servers
-url: https://www.cherryservers.com
+urls:
+  home: https://www.cherryservers.com
+  pricing: https://www.cherryservers.com/pricing
 category: iaas
-pricingUrl: https://www.cherryservers.com/pricing
 description: Lithuanian provider selling dedicated and virtual servers by the hour, by fixed term or as spot capacity, across seven data-centre locations.
 founded: 2001
 whoManagesOs: you

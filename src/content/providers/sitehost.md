@@ -1,9 +1,10 @@
 ---
 id: sitehost
 name: SiteHost
-url: https://sitehost.nz
+urls:
+  home: https://sitehost.nz
+  pricing: https://sitehost.nz/hosting/cloud-containers
 category: paas
-pricingUrl: https://sitehost.nz/hosting/cloud-containers
 description: New Zealand host running its own Auckland data centre, whose Cloud Containers product deploys prebuilt or custom Docker images for PHP, Node, Ruby and .NET apps.
 founded: 2004
 hqCountry: NZ

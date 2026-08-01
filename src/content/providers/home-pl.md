@@ -1,9 +1,10 @@
 ---
 id: home-pl
 name: home.pl
-url: https://home.pl
+urls:
+  home: https://home.pl
+  pricing: https://home.pl/hosting
 category: shared
-pricingUrl: https://home.pl/hosting
 description: Polish host running PHP 8.0 to 8.4, Perl and Python on Apache with HTTP/3, with SSH, MySQL on NVMe and PostgreSQL on the higher tiers.
 hqCountry: PL
 whoManagesOs: provider

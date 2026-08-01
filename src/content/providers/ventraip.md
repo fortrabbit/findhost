@@ -1,9 +1,10 @@
 ---
 id: ventraip
 name: VentraIP
-url: https://ventraip.com.au
+urls:
+  home: https://ventraip.com.au
+  pricing: https://ventraip.com.au/web-hosting/
 category: shared
-pricingUrl: https://ventraip.com.au/web-hosting/
 description: Australian domain registrar and hosting provider selling cPanel shared hosting, WordPress hosting and VPS, operated by Nexigen Digital.
 founded: 2008
 hqCountry: AU

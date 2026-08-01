@@ -1,10 +1,11 @@
 ---
 id: civo
 name: Civo
-url: https://www.civo.com
+urls:
+  home: https://www.civo.com
+  pricing: https://www.civo.com/pricing
+  status: https://status.civo.com/
 category: iaas
-pricingUrl: https://www.civo.com/pricing
-statusUrl: https://status.civo.com/
 description: Kubernetes-first cloud billing only for worker nodes, with free control planes, no egress charges and GPU instances up to Blackwell.
 hqCountry: GB
 whoManagesOs: you

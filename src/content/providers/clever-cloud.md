@@ -1,10 +1,11 @@
 ---
 id: clever-cloud
 name: Clever Cloud
-url: https://clever.cloud
+urls:
+  home: https://clever.cloud
+  pricing: https://clever.cloud/pricing/
+  status: https://clevercloudstatus.com/
 category: paas
-pricingUrl: https://clever.cloud/pricing/
-statusUrl: https://clevercloudstatus.com/
 description: French platform-as-a-service that builds and runs applications from a git push across a dozen runtimes, with managed databases sold as add-ons.
 hqCountry: FR
 whoManagesOs: container

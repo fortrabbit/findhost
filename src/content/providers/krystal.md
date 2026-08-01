@@ -1,10 +1,11 @@
 ---
 id: krystal
 name: Krystal
-url: https://krystal.io
+urls:
+  home: https://krystal.io
+  pricing: https://krystal.io/web-hosting
+  status: https://status.krystal.io/
 category: shared
-pricingUrl: https://krystal.io/web-hosting
-statusUrl: https://status.krystal.io/
 description: British host running PHP, Python, Perl and Ruby on cPanel, powered by certified renewable electricity and operated as a certified B Corp.
 hqCountry: GB
 ownership: independent

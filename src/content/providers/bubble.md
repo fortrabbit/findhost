@@ -1,7 +1,8 @@
 ---
 id: bubble
 name: Bubble
-url: https://bubble.io
+urls:
+  home: https://bubble.io
 category: lcnc
 description: Bubble is a no-code app builder that combines UI design with database and workflow tools.
 figure:

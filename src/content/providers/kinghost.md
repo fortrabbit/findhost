@@ -1,10 +1,11 @@
 ---
 id: kinghost
 name: KingHost
-url: https://king.host
+urls:
+  home: https://king.host
+  pricing: https://king.host/hospedagem-de-sites
+  status: https://status.kinghost.net.br/
 category: shared
-pricingUrl: https://king.host/hospedagem-de-sites
-statusUrl: https://status.kinghost.net.br/
 description: Brazilian shared, WordPress and VPS hosting brand under LWSA, documenting PHP, Node.js, Python and Java application deployment on shared plans.
 founded: 2006
 hqCountry: BR

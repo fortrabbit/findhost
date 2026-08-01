@@ -1,9 +1,10 @@
 ---
 id: papaki
 name: Papaki
-url: https://www.papaki.com
+urls:
+  home: https://www.papaki.com
+  pricing: https://www.papaki.com/en/web-hosting/
 category: shared
-pricingUrl: https://www.papaki.com/en/web-hosting/
 description: Greek registrar and host with over 110,000 customers, selling three shared plans with NVMe storage, automatic backups and SSH above the entry tier.
 hqCountry: GR
 ownership: subsidiary

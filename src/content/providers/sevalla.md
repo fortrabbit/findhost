@@ -1,9 +1,10 @@
 ---
 id: sevalla
 name: Sevalla
-url: https://sevalla.com
+urls:
+  home: https://sevalla.com
+  pricing: https://sevalla.com/pricing/
 category: paas
-pricingUrl: https://sevalla.com/pricing/
 description: Sevalla is a polyglot cloud hosting platform covering application hosting, database hosting, static sites, and object storage.
 parent: Kinsta
 whoManagesOs: container

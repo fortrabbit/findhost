@@ -1,9 +1,10 @@
 ---
 id: squarespace
 name: Squarespace
-url: https://www.squarespace.com
+urls:
+  home: https://www.squarespace.com
+  pricing: https://www.squarespace.com/pricing
 category: lcnc
-pricingUrl: https://www.squarespace.com/pricing
 description: Squarespace is a design-focused website builder that combines templates, hosting, and content tools.
 founded: 2004
 hqCountry: US

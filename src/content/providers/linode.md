@@ -1,9 +1,10 @@
 ---
 id: linode
 name: Linode
-url: https://www.linode.com
+urls:
+  home: https://www.linode.com
+  pricing: https://www.linode.com/pricing/
 category: vps
-pricingUrl: https://www.linode.com/pricing/
 description: Linode is a US VPS provider founded in 2003, acquired by Akamai in 2022 and now sold as Akamai Cloud.
 whoManagesOs: you
 audience:

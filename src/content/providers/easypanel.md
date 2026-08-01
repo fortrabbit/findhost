@@ -1,9 +1,10 @@
 ---
 id: easypanel
 name: Easypanel
-url: https://easypanel.io
+urls:
+  home: https://easypanel.io
+  pricing: https://easypanel.io/pricing
 category: server-management
-pricingUrl: https://easypanel.io/pricing
 description: Server panel that turns a rented Linux box into a container platform, billed per server, with a free tier capped at three projects.
 whoManagesOs: container
 infraContract:

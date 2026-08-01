@@ -1,9 +1,10 @@
 ---
 id: donweb
 name: DonWeb
-url: https://donweb.com
+urls:
+  home: https://donweb.com
+  pricing: https://donweb.com/es-ar/hosting
 category: shared
-pricingUrl: https://donweb.com/es-ar/hosting
 description: Argentine hosting and cloud provider running its own Rosario data centres, selling shared PHP hosting, VPS, bare metal and pre-configured application stacks.
 founded: 2002
 hqCountry: AR

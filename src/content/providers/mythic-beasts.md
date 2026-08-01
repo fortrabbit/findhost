@@ -1,10 +1,11 @@
 ---
 id: mythic-beasts
 name: Mythic Beasts
-url: https://www.mythic-beasts.com
+urls:
+  home: https://www.mythic-beasts.com
+  pricing: https://www.mythic-beasts.com/order/hosting
+  status: https://www.mythic-beasts.com/support/status
 category: shared
-pricingUrl: https://www.mythic-beasts.com/order/hosting
-statusUrl: https://www.mythic-beasts.com/support/status
 description: British host selling web and email hosting in eleven graded sizes, with multiple PHP versions per site, MySQL as standard and shell access as an add-on.
 hqCountry: GB
 ownership: independent

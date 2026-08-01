@@ -1,10 +1,11 @@
 ---
 id: gcore
 name: Gcore
-url: https://gcore.com
+urls:
+  home: https://gcore.com
+  pricing: https://gcore.com/pricing
+  status: https://status.gcore.com/
 category: iaas
-pricingUrl: https://gcore.com/pricing
-statusUrl: https://status.gcore.com/
 description: Luxembourg-registered edge provider selling CDN, streaming, DDoS protection, virtual machines, bare metal, Kubernetes and serverless functions.
 whoManagesOs: you
 useCases:

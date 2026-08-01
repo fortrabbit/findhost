@@ -1,9 +1,10 @@
 ---
 id: spinupwp
 name: SpinupWP
-url: https://spinupwp.com
+urls:
+  home: https://spinupwp.com
+  pricing: https://spinupwp.com/pricing/
 category: server-management
-pricingUrl: https://spinupwp.com/pricing/
 description: SpinupWP is a control panel that configures and manages a WordPress-tuned server stack on an Ubuntu machine the customer brings.
 whoManagesOs: panel-assisted
 infraContract:

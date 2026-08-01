@@ -1,10 +1,11 @@
 ---
 id: appwrite
 name: Appwrite
-url: https://appwrite.io
+urls:
+  home: https://appwrite.io
+  pricing: https://appwrite.io/pricing
+  status: https://status.appwrite.online/
 category: serverless
-pricingUrl: https://appwrite.io/pricing
-statusUrl: https://status.appwrite.online/
 description: Open-source backend platform sold as a hosted service, running user functions alongside managed databases, authentication, storage and messaging.
 whoManagesOs: container
 useCases:

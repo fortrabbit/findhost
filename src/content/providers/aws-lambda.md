@@ -1,9 +1,10 @@
 ---
 id: aws-lambda
 name: AWS Lambda
-url: https://aws.amazon.com/lambda/
+urls:
+  home: https://aws.amazon.com/lambda/
+  pricing: https://aws.amazon.com/lambda/pricing/
 category: serverless
-pricingUrl: https://aws.amazon.com/lambda/pricing/
 description: AWS Lambda is the function-as-a-service primitive most serverless PHP runs on. PHP is not a managed runtime; it arrives through a custom one.
 parent: Amazon
 whoManagesOs: provider

@@ -1,10 +1,11 @@
 ---
 id: mittwald
 name: Mittwald
-url: https://www.mittwald.de
+urls:
+  home: https://www.mittwald.de
+  pricing: https://www.mittwald.de/webhosting
+  status: https://www.mittwald-status.de/
 category: paas
-pricingUrl: https://www.mittwald.de/webhosting
-statusUrl: https://www.mittwald-status.de/
 description: German managed hosting platform with per-project containers, a control plane called mStudio, an official CLI and a public REST API.
 founded: 2003
 hqCountry: DE

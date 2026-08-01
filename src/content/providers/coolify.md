@@ -1,7 +1,8 @@
 ---
 id: coolify
 name: Coolify
-url: https://coolify.io
+urls:
+  home: https://coolify.io
 category: server-management
 description: Coolify is an open-source, self-hostable PaaS. It runs as a control panel on servers the operator rents and maintains, with a paid cloud-hosted panel as an alternative.
 whoManagesOs: panel-assisted

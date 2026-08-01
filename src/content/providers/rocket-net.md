@@ -1,9 +1,10 @@
 ---
 id: rocket-net
 name: Rocket.net
-url: https://rocket.net
+urls:
+  home: https://rocket.net
+  pricing: https://rocket.net/pricing/
 category: vanity-hosting
-pricingUrl: https://rocket.net/pricing/
 description: WordPress-only host built on an enterprise CDN, offering PHP 5.6 through 8.4 and a choice of ten server locations across three continents.
 whoManagesOs: provider
 specialisation:

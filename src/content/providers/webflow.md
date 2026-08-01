@@ -1,7 +1,8 @@
 ---
 id: webflow
 name: Webflow
-url: https://webflow.com
+urls:
+  home: https://webflow.com
 category: lcnc
 description: Webflow is a visual design platform that hosts sites and provides a built-in CMS.
 figure:

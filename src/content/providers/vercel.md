@@ -1,9 +1,10 @@
 ---
 id: vercel
 name: Vercel
-url: https://vercel.com
+urls:
+  home: https://vercel.com
+  pricing: https://vercel.com/docs/plans
 category: serverless
-pricingUrl: https://vercel.com/docs/plans
 description: Vercel is a serverless frontend platform. Its official function runtimes do not include PHP, which is available only through a community runtime.
 whoManagesOs: provider
 useCases:

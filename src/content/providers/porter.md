@@ -1,9 +1,10 @@
 ---
 id: porter
 name: Porter
-url: https://www.porter.run
+urls:
+  home: https://www.porter.run
+  pricing: https://www.porter.run/pricing
 category: server-management
-pricingUrl: https://www.porter.run/pricing
 description: Management layer that deploys applications from GitHub into the customer's own AWS, Azure or GCP account, priced per gigabyte of memory and per vCPU.
 ownership: vc-backed
 whoManagesOs: container

@@ -1,9 +1,10 @@
 ---
 id: pressable
 name: Pressable
-url: https://pressable.com
+urls:
+  home: https://pressable.com
+  pricing: https://pressable.com/plans/
 category: vanity-hosting
-pricingUrl: https://pressable.com/plans/
 description: Managed WordPress hosting owned by Automattic, sold in nine tiers metered by installs, monthly visits and storage, with staging and sandbox sites included.
 ownership: subsidiary
 parent: Automattic

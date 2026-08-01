@@ -1,10 +1,11 @@
 ---
 id: fortrabbit
 name: fortrabbit
-url: https://www.fortrabbit.com
+urls:
+  home: https://www.fortrabbit.com
+  pricing: https://www.fortrabbit.com/pricing
+  status: https://status.fortrabbit.com
 category: paas
-pricingUrl: https://www.fortrabbit.com/pricing
-statusUrl: https://status.fortrabbit.com
 description: Managed PHP platform for developers, run on rented AWS capacity in Ireland and the US.
 founded: 2012
 hqCountry: DE
@@ -43,7 +44,7 @@ figure:
   emoji: 🐰
   color: rgb(46, 62, 82)
   textColor: rgb(240, 240, 244)
-  text: The people who pay for this site.
+  text: As secure as Fort Knox, as fast as a rabbit.
 ---
 
 fortrabbit is a small, independent German company running a managed PHP platform on rented AWS capacity. It is also who publishes FindHost, which is why this record exists and why it carries a permanent marker.

@@ -1,9 +1,10 @@
 ---
 id: hostinger
 name: Hostinger
-url: https://www.hostinger.com
+urls:
+  home: https://www.hostinger.com
+  pricing: https://www.hostinger.com/web-hosting
 category: shared
-pricingUrl: https://www.hostinger.com/web-hosting
 description: Hostinger is a Lithuanian budget host, one of the largest worldwide, selling shared hosting on long prepayments at introductory rates.
 useCases:
   - cms

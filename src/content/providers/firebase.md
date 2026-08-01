@@ -1,10 +1,11 @@
 ---
 id: firebase
 name: Firebase
-url: https://firebase.google.com
+urls:
+  home: https://firebase.google.com
+  pricing: https://firebase.google.com/pricing
+  status: https://status.firebase.google.com/
 category: serverless
-pricingUrl: https://firebase.google.com/pricing
-statusUrl: https://status.firebase.google.com/
 description: Google's application platform, where App Hosting builds framework applications onto Cloud Run and Cloud Functions runs the customer's own code.
 ownership: subsidiary
 parent: Alphabet

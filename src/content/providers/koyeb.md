@@ -1,10 +1,11 @@
 ---
 id: koyeb
 name: Koyeb
-url: https://www.koyeb.com
+urls:
+  home: https://www.koyeb.com
+  pricing: https://www.koyeb.com/pricing
+  status: https://status.koyeb.com/
 category: paas
-pricingUrl: https://www.koyeb.com/pricing
-statusUrl: https://status.koyeb.com/
 description: French platform that deploys containers and repositories across global regions with scale-to-zero, per-second billing, GPU instances and serverless Postgres.
 hqCountry: FR
 ownership: vc-backed

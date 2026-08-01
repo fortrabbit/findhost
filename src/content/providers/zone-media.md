@@ -1,10 +1,11 @@
 ---
 id: zone-media
 name: Zone Media
-url: https://www.zone.ee
+urls:
+  home: https://www.zone.ee
+  pricing: https://www.zone.ee/en/web-hosting/prices/
+  status: https://status.zone.eu/
 category: shared
-pricingUrl: https://www.zone.ee/en/web-hosting/prices/
-statusUrl: https://status.zone.eu/
 description: Estonian hosting provider and registrar offering shared hosting with PHP, Node.js and Go, plus cloud servers, from Tallinn, Helsinki and Amsterdam.
 founded: 1999
 hqCountry: EE

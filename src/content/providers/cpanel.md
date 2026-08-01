@@ -1,9 +1,10 @@
 ---
 id: cpanel
 name: cPanel
-url: https://cpanel.net
+urls:
+  home: https://cpanel.net
+  pricing: https://cpanel.net/pricing/
 category: server-management
-pricingUrl: https://cpanel.net/pricing/
 description: The hosting control panel most shared hosting runs on, licensed per server and priced by the number of accounts it manages.
 ownership: subsidiary
 parent: WebPros International L.L.C.

@@ -1,10 +1,11 @@
 ---
 id: glesys
 name: GleSYS
-url: https://glesys.com
+urls:
+  home: https://glesys.com
+  pricing: https://glesys.com/pricing/
+  status: https://www.glesys-status.com/
 category: iaas
-pricingUrl: https://glesys.com/pricing/
-statusUrl: https://www.glesys-status.com/
 description: Swedish infrastructure provider offering KVM and VMware servers, bare metal, managed databases, object storage and colocation from Nordic data centres.
 founded: 1999
 hqCountry: SE

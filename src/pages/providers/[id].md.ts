@@ -27,7 +27,7 @@ export const GET: APIRoute = async ({ props, site }) => {
   const origin = site?.origin ?? '';
 
   const groups: [string, string[]][] = [
-    ['Identity', ['url', 'pricingUrl', 'statusUrl', 'founded', 'hqCountry', 'ownership', 'parent', 'status']],
+    ['Identity', ['founded', 'hqCountry', 'ownership', 'parent', 'status']],
     ['Classification', ['category', 'alsoOffers', 'useCases', 'audience', 'specialisation']],
     [
       'Tech',
@@ -44,7 +44,7 @@ export const GET: APIRoute = async ({ props, site }) => {
       ],
     ],
     ['Infrastructure', ['whoManagesOs', 'infraContract', 'runsOn', 'regions', 'gdprDpa']],
-    ['Pricing', ['pricingModel', 'entryPriceBand', 'renewalMultiple', 'freeTier', 'contractMinimum']],
+    ['Pricing', ['pricingModel', 'entryPriceBand', 'entryPrice', 'renewalMultiple', 'freeTier', 'contractMinimum']],
     ['Support', ['supportChannels', 'supportHours', 'supportTiering']],
     ['Openness', ['dataExport', 'proprietaryLockIn']],
     ['Automation', ['apiAvailable', 'cliTool', 'mcpServer', 'iacSupport', 'agentReadyDocs']],
@@ -63,6 +63,11 @@ export const GET: APIRoute = async ({ props, site }) => {
     data.publishedByUs ? 'Published by us: this site is run by fortrabbit, which appears in its own dataset.' : '',
     '',
     '## Record',
+    '',
+    '### Links',
+    '',
+    ...Object.entries((data.urls ?? {}) as Record<string, string>).map(([slot, url]) => `- ${slot}: ${url}`),
+    ...Object.entries((data.social ?? {}) as Record<string, string>).map(([slot, url]) => `- ${slot}: ${url}`),
     '',
     ...groups.flatMap(([heading, fields]) => [
       `### ${heading}`,

@@ -1,10 +1,11 @@
 ---
 id: gandi
 name: Gandi
-url: https://www.gandi.net
+urls:
+  home: https://www.gandi.net
+  pricing: https://www.gandi.net/en/simple-hosting
+  status: https://status.gandi.net/
 category: shared
-pricingUrl: https://www.gandi.net/en/simple-hosting
-statusUrl: https://status.gandi.net/
 description: French registrar whose Simple Hosting product runs PHP, Python and Node applications in per-customer Linux containers with git or SFTP deploys.
 hqCountry: FR
 whoManagesOs: container

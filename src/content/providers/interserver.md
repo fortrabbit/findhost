@@ -1,9 +1,10 @@
 ---
 id: interserver
 name: InterServer
-url: https://www.interserver.net
+urls:
+  home: https://www.interserver.net
+  pricing: https://www.interserver.net/webhosting/
 category: shared
-pricingUrl: https://www.interserver.net/webhosting/
 description: American host selling one shared plan at a price it undertakes not to raise, on DirectAdmin and CloudLinux, alongside VPS, dedicated servers and colocation.
 hqCountry: US
 ownership: independent

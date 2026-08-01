@@ -1,7 +1,10 @@
 ---
 id: fasthosts
 name: Fasthosts
-url: https://www.fasthosts.co.uk
+urls:
+  home: https://www.fasthosts.co.uk
+  pricing: https://www.fasthosts.co.uk/web-hosting
+  status: https://www.fasthosts-status.co.uk/
 category: shared
 description: UK hosting brand of the IONOS group, selling shared PHP hosting, VPS and dedicated servers from UK data centres.
 hqCountry: GB
@@ -40,8 +43,6 @@ supportChannels:
   - email
   - chat
   - phone
-pricingUrl: https://www.fasthosts.co.uk/web-hosting
-statusUrl: https://www.fasthosts-status.co.uk/
 social:
   x: https://twitter.com/fasthosts
   facebook: https://www.facebook.com/fasthostsinternet

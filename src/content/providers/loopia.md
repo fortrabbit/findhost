@@ -1,9 +1,10 @@
 ---
 id: loopia
 name: Loopia
-url: https://www.loopia.se
+urls:
+  home: https://www.loopia.se
+  pricing: https://www.loopia.se/webbhotell/priser/
 category: shared
-pricingUrl: https://www.loopia.se/webbhotell/priser/
 description: Swedish hosting provider and registrar in Västerås offering Linux and Windows shared hosting with SSH, PHP, Python, Perl and ASP.NET.
 founded: 1999
 hqCountry: SE

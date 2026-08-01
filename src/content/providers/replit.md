@@ -1,10 +1,11 @@
 ---
 id: replit
 name: Replit
-url: https://replit.com
+urls:
+  home: https://replit.com
+  pricing: https://replit.com/pricing
+  status: https://status.replit.com/
 category: paas
-pricingUrl: https://replit.com/pricing
-statusUrl: https://status.replit.com/
 description: Browser-based development environment with deployment attached, now sold primarily around an agent that writes and publishes the application for you.
 hqCountry: US
 ownership: vc-backed

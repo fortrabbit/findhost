@@ -1,10 +1,11 @@
 ---
 id: exoscale
 name: Exoscale
-url: https://www.exoscale.com
+urls:
+  home: https://www.exoscale.com
+  pricing: https://www.exoscale.com/pricing/
+  status: https://exoscalestatus.com/
 category: iaas
-pricingUrl: https://www.exoscale.com/pricing/
-statusUrl: https://exoscalestatus.com/
 description: Swiss infrastructure provider offering KVM instances, managed Kubernetes, object and block storage and managed databases across eight European zones.
 founded: 2011
 hqCountry: CH

@@ -1,7 +1,8 @@
 ---
 id: hostgator
 name: HostGator
-url: https://www.hostgator.com
+urls:
+  home: https://www.hostgator.com
 category: shared
 description: HostGator is a low cost provider of shared, reseller, virtual private server, and dedicated web hosting, founded in 2002 in Texas.
 figure:

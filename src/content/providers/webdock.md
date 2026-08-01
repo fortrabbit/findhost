@@ -1,9 +1,10 @@
 ---
 id: webdock
 name: Webdock
-url: https://webdock.io
+urls:
+  home: https://webdock.io
+  pricing: https://webdock.io/en/pricing
 category: vps
-pricingUrl: https://webdock.io/en/pricing
 description: Danish VPS provider selling AMD Epyc and Xeon virtual servers with a web control panel, prepared stacks and WordPress plans, from a single Denmark facility.
 hqCountry: DK
 ownership: independent

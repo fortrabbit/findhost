@@ -1,9 +1,10 @@
 ---
 id: divio
 name: Divio
-url: https://www.divio.com
+urls:
+  home: https://www.divio.com
+  pricing: https://www.divio.com/pricing/
 category: paas
-pricingUrl: https://www.divio.com/pricing/
 description: Swiss platform that runs Dockerised applications of any stack from git, with a free-trial tier, tiered support response times and a stated cloud-cost calculator.
 hqCountry: CH
 whoManagesOs: container

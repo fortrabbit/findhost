@@ -1,10 +1,11 @@
 ---
 id: render
 name: Render
-url: https://render.com
+urls:
+  home: https://render.com
+  pricing: https://render.com/pricing
+  status: https://status.render.com
 category: paas
-pricingUrl: https://render.com/pricing
-statusUrl: https://status.render.com
 description: Render is a polyglot PaaS with native runtimes for Node, Python, Ruby, Go, Rust and Elixir, a Docker runtime for everything else, and managed Postgres.
 hqCountry: US
 ownership: vc-backed

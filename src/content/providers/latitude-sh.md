@@ -1,9 +1,10 @@
 ---
 id: latitude-sh
 name: Latitude.sh
-url: https://www.latitude.sh
+urls:
+  home: https://www.latitude.sh
+  pricing: https://www.latitude.sh/pricing
 category: iaas
-pricingUrl: https://www.latitude.sh/pricing
 description: Bare-metal and GPU infrastructure billed hourly with automated provisioning, an API, SDKs, a CLI and Terraform support.
 whoManagesOs: you
 infraContract:

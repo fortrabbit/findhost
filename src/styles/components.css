@@ -415,3 +415,99 @@
   font-variant-numeric: tabular-nums;
   line-height: var(--leading-data);
 }
+
+/**
+ * Three facts, no labels. Six with little keys read as noise, and category,
+ * founding year and the read date all appear elsewhere on the page anyway.
+ */
+.record-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-3xs) var(--space-md);
+  max-width: none;
+  padding: var(--space-xs) 0;
+  border-bottom: var(--rule-hairline) solid var(--color-ink);
+}
+
+.strip-item {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--space-2xs);
+}
+
+.strip-detail {
+  font-family: var(--font-data);
+  font-size: var(--text-sm);
+  font-variant-numeric: tabular-nums;
+}
+
+/**
+ * A band rendered without a currency, because the dataset is international and
+ * a euro figure on a Japanese host is a conversion nobody asked for. Never
+ * coloured, never sorted, never the default order — a six-step scale is close
+ * enough to a rating to need saying.
+ */
+.coins {
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+/** A fact with no marker is visibly an unsourced assertion. That contrast is the point. */
+.footnote-ref {
+  padding-left: 0.15em;
+  font-family: var(--font-data);
+  font-size: 0.62em;
+  text-decoration: none;
+  vertical-align: super;
+}
+
+.footnote-ref:hover {
+  text-decoration: underline;
+}
+
+/** What is missing is named once, together, where it reads as an ask. */
+.missing-fields {
+  max-width: var(--measure-data);
+  margin: var(--space-md) 0;
+  padding-top: var(--space-xs);
+  border-top: var(--rule-hairline) solid var(--color-ink);
+  font-size: var(--text-sm);
+}
+
+.missing-fields summary {
+  cursor: pointer;
+}
+
+.missing-list {
+  margin: var(--space-xs) 0 var(--space-2xs);
+  font-family: var(--font-data);
+  font-size: var(--text-xs);
+  line-height: var(--leading-body);
+}
+
+.sources {
+  max-width: var(--measure-data);
+  margin: var(--space-lg) 0;
+}
+
+.sources ol {
+  margin: 0;
+  padding-left: var(--space-md);
+}
+
+.sources li {
+  font-size: var(--text-sm);
+}
+
+.source-fields {
+  font-family: var(--font-data);
+  font-size: var(--text-xs);
+}
+
+.source-date {
+  font-family: var(--font-data);
+  font-size: var(--text-xs);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}

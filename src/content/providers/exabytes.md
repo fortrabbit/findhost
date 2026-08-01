@@ -1,9 +1,10 @@
 ---
 id: exabytes
 name: Exabytes
-url: https://www.exabytes.my
+urls:
+  home: https://www.exabytes.my
+  pricing: https://www.exabytes.my/web-hosting
 category: shared
-pricingUrl: https://www.exabytes.my/web-hosting
 description: Malaysian host offering a choice of cPanel or Plesk on NVMe storage from a Tier 3 data centre in Malaysia, sold on three-year terms.
 hqCountry: MY
 whoManagesOs: panel-assisted

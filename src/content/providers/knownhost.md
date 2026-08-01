@@ -1,7 +1,8 @@
 ---
 id: knownhost
 name: KnownHost
-url: https://www.knownhost.com
+urls:
+  home: https://www.knownhost.com
 category: shared
 description: KnownHost is a US hosting provider, founded in 2006 and based in Birmingham, Alabama, with data centers across the US and in Amsterdam.
 figure:

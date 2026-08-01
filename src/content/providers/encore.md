@@ -1,9 +1,10 @@
 ---
 id: encore
 name: Encore Cloud
-url: https://encore.dev
+urls:
+  home: https://encore.dev
+  pricing: https://encore.dev/pricing
 category: server-management
-pricingUrl: https://encore.dev/pricing
 description: Backend framework for TypeScript and Go with a control plane that provisions the infrastructure it infers from the code, into the customer's AWS or GCP account.
 whoManagesOs: container
 infraContract:

@@ -1,9 +1,10 @@
 ---
 id: ploi-cloud
 name: Ploi Cloud
-url: https://ploi.cloud
+urls:
+  home: https://ploi.cloud
+  pricing: https://ploi.cloud
 category: paas
-pricingUrl: https://ploi.cloud
 description: Ploi Cloud is the managed platform built by the team behind the Ploi server-management panel, running on UpCloud infrastructure in three regions.
 infraContract:
   - resells-iaas

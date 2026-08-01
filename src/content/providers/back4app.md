@@ -1,9 +1,10 @@
 ---
 id: back4app
 name: Back4App
-url: https://www.back4app.com
+urls:
+  home: https://www.back4app.com
+  pricing: https://www.back4app.com/pricing/backend-as-a-service
 category: serverless
-pricingUrl: https://www.back4app.com/pricing/backend-as-a-service
 description: Managed Parse Server backend with an auto-generated REST and GraphQL API, plus a container platform that builds and runs Docker images from GitHub.
 whoManagesOs: container
 infraContract:

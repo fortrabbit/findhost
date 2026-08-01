@@ -6,7 +6,7 @@ import { z } from 'zod';
 /**
  * This file is a governance artifact, not a type definition.
  *
- * Four fields are required — id, name, url, category. Everything else is
+ * Four fields are required — id, name, urls.home, category. Everything else is
  * optional, so absent means unknown, renders as `?`, and the build stays green.
  * Nothing here may express a rank, score, boost or weight; scripts/validate.ts
  * asserts that no such field has appeared.
@@ -39,12 +39,25 @@ const providers = defineCollection({
     // Required — the four fields without which a record is not a record.
     id: z.string(),
     name: z.string(),
-    url: publicUrl,
+    /*
+     * Pages the provider operates, and which the dataset may cite — a `sources`
+     * entry points at one of these. `social` is deliberately not in here: those
+     * are accounts, not documents, and citing a LinkedIn profile is not the same
+     * act as citing a terms page. `terms` is the one that earns its keep:
+     * promotional versus renewal pricing is flagged by no structured data
+     * anywhere, so renewalMultiple can only be read off it by a person.
+     */
+    urls: z.object({
+      home: publicUrl,
+      pricing: publicUrl.optional(),
+      status: publicUrl.optional(),
+      terms: publicUrl.optional(),
+      sla: publicUrl.optional(),
+      docs: publicUrl.optional(),
+    }),
     category: z.enum(['paas', 'vps', 'iaas', 'shared', 'serverless', 'server-management', 'vanity-hosting', 'lcnc']),
 
     // Identity
-    pricingUrl: publicUrl.optional(),
-    statusUrl: publicUrl.optional(),
     description: z.string().max(200).optional(),
     mark: z.string().optional(),
     logo: z.string().optional(),
@@ -117,7 +130,25 @@ const providers = defineCollection({
         'per-server-licence',
       ])
       .optional(),
-    entryPriceBand: z.enum(['free-tier', 'under-5', '5-15', '15-50', '50-150', 'over-150']).optional(),
+    /*
+     * Bands, in US dollars, because the dataset is international and the euro
+     * was quietly making Europe the default reader. Rendered as coins, never as
+     * a currency the reader may not use, and never coloured or sorted — a
+     * six-step scale is close enough to a rating to need the guard.
+     */
+    entryPriceBand: z.enum(['free-tier', 'under-5', '5-15', '15-50', '50-150', '150-500', 'over-500']).optional(),
+    /*
+     * The exact starting figure in the provider's own currency, shown beside the
+     * coins so nobody reads a conversion we invented. One number with a date,
+     * not a series — this is not a price tracker.
+     */
+    entryPrice: z
+      .object({
+        amount: z.number(),
+        currency: z.string().length(3),
+        period: z.enum(['month', 'year', 'hour']).default('month'),
+      })
+      .optional(),
     renewalMultiple: z.number().nullable().optional(),
     freeTier: z.enum(['permanent', 'trial', 'none']).optional(),
     contractMinimum: z.enum(['none', 'monthly', 'annual', 'multi-year']).optional(),

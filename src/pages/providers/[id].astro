@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import { loadFacets } from '../../lib/facets';
 import WorldMap from '../../components/WorldMap.astro';
+import { coins, energy, flag, footnotes, price } from '../../lib/record';
 
 export async function getStaticPaths() {
   const providers = await getCollection('providers');
@@ -21,99 +22,123 @@ const facetByField = new Map(facets.map((facet) => [facet.field, facet]));
 const { Content } = await render(provider);
 const data = provider.data;
 
+const countryNames = new Map(
+  (facets.find((facet) => facet.id === 'regions')?.values ?? []).map((value) => [value.id, value.label]),
+);
+
 // Fields describing the provider. Meta and provenance are excluded — they
 // describe our work, not the provider, so they do not belong in the denominator.
-type Attribute = [label: string, value: unknown, field?: string];
+type Attribute = [label: string, key: string, value: unknown, facet?: string];
 
 const attributeGroups: { label: string; fields: Attribute[] }[] = [
   {
     label: 'Identity',
     fields: [
-      ['Founded', data.founded],
-      ['Headquarters', data.hqCountry],
-      ['Ownership', data.ownership, 'ownership'],
-      ['Parent', data.parent],
-      ['Status', data.status],
+      ['Founded', 'founded', data.founded],
+      ['Headquarters', 'hqCountry', data.hqCountry],
+      ['Ownership', 'ownership', data.ownership, 'ownership'],
+      ['Parent', 'parent', data.parent],
+      ['Status', 'status', data.status],
     ],
   },
   {
     label: 'Classification',
     fields: [
-      ['Category', data.category, 'category'],
-      ['Also offers', data.alsoOffers, 'alsoOffers'],
-      ['Manages the OS', data.whoManagesOs, 'whoManagesOs'],
-      ['Hardware', data.infraContract, 'infraContract'],
-      ['Runs on', data.runsOn],
-      ['Built for', data.useCases, 'useCases'],
-      ['Sold to', data.audience, 'audience'],
+      ['Category', 'category', data.category, 'category'],
+      ['Also offers', 'alsoOffers', data.alsoOffers, 'alsoOffers'],
+      ['Manages the OS', 'whoManagesOs', data.whoManagesOs, 'whoManagesOs'],
+      ['Hardware', 'infraContract', data.infraContract, 'infraContract'],
+      ['Runs on', 'runsOn', data.runsOn],
+      ['Built for', 'useCases', data.useCases, 'useCases'],
+      ['Sold to', 'audience', data.audience, 'audience'],
     ],
   },
   {
     label: 'Tech stack',
     fields: [
-      ['Runtimes', data.runtimes, 'runtimes'],
-      ['Runs', data.software, 'software'],
-      ['Specialised in', data.specialisation],
-      ['Deploy methods', data.deployMethods],
-      ['SSH access', data.sshAccess, 'sshAccess'],
-      ['Managed databases', data.managedDatabases],
-      ['Persistent storage', data.persistentStorage],
-      ['Backups', data.backupsIncluded],
+      ['Runtimes', 'runtimes', data.runtimes, 'runtimes'],
+      ['Runs', 'software', data.software, 'software'],
+      ['Specialised in', 'specialisation', data.specialisation],
+      ['Deploy methods', 'deployMethods', data.deployMethods],
+      ['SSH access', 'sshAccess', data.sshAccess, 'sshAccess'],
+      ['Managed databases', 'managedDatabases', data.managedDatabases],
+      ['Persistent storage', 'persistentStorage', data.persistentStorage],
+      ['Backups', 'backupsIncluded', data.backupsIncluded],
     ],
   },
   {
     label: 'Pricing',
     fields: [
-      ['Pricing model', data.pricingModel],
-      ['Entry price', data.entryPriceBand, 'entryPriceBand'],
-      ['Renewal multiple', data.renewalMultiple],
-      ['Free tier', data.freeTier, 'freeTier'],
-      ['Minimum contract', data.contractMinimum],
+      ['Pricing model', 'pricingModel', data.pricingModel],
+      ['Entry price', 'entryPriceBand', data.entryPriceBand, 'entryPriceBand'],
+      ['Renewal multiple', 'renewalMultiple', data.renewalMultiple],
+      ['Free tier', 'freeTier', data.freeTier, 'freeTier'],
+      ['Minimum contract', 'contractMinimum', data.contractMinimum],
     ],
   },
   {
     label: 'Regions and law',
     fields: [
-      ['Regions', data.regions, 'regions'],
-      ['DPA', data.gdprDpa],
+      ['Regions', 'regions', data.regions, 'regions'],
+      ['DPA', 'gdprDpa', data.gdprDpa],
     ],
   },
   {
     label: 'Environment',
     fields: [
-      ['Energy claim', data.energyClaim],
-      ['PUE', data.pue],
-      ['Certifications', data.certifications],
-      ['Carbon report', data.carbonReport],
-      ['Green Web directory', data.greenWebId],
+      ['Energy claim', 'energyClaim', data.energyClaim],
+      ['PUE', 'pue', data.pue],
+      ['Certifications', 'certifications', data.certifications],
+      ['Carbon report', 'carbonReport', data.carbonReport],
+      ['Green Web directory', 'greenWebId', data.greenWebId],
     ],
   },
   {
     label: 'Support',
     fields: [
-      ['Channels', data.supportChannels],
-      ['Hours', data.supportHours],
-      ['Tiering', data.supportTiering],
+      ['Channels', 'supportChannels', data.supportChannels],
+      ['Hours', 'supportHours', data.supportHours],
+      ['Tiering', 'supportTiering', data.supportTiering],
     ],
   },
   {
     label: 'Openness',
     fields: [
-      ['Data export', data.dataExport],
-      ['Lock-in', data.proprietaryLockIn],
+      ['Data export', 'dataExport', data.dataExport],
+      ['Lock-in', 'proprietaryLockIn', data.proprietaryLockIn],
     ],
   },
   {
     label: 'Automation',
     fields: [
-      ['API', data.apiAvailable],
-      ['CLI', data.cliTool],
-      ['MCP server', data.mcpServer, 'mcpServer'],
-      ['Infrastructure as code', data.iacSupport],
-      ['Agent-readable docs', data.agentReadyDocs],
+      ['API', 'apiAvailable', data.apiAvailable],
+      ['CLI', 'cliTool', data.cliTool],
+      ['MCP server', 'mcpServer', data.mcpServer, 'mcpServer'],
+      ['Infrastructure as code', 'iacSupport', data.iacSupport],
+      ['Agent-readable docs', 'agentReadyDocs', data.agentReadyDocs],
     ],
   },
 ];
+
+const held = (value: unknown) =>
+  value !== undefined && value !== null && (!Array.isArray(value) || value.length > 0);
+
+// Known first. What is missing is named once, together, where it reads as an
+// ask rather than as forty rows of `?`.
+const knownGroups = attributeGroups
+  .map((group) => ({ label: group.label, fields: group.fields.filter(([, , value]) => held(value)) }))
+  .filter((group) => group.fields.length > 0);
+
+const missing = attributeGroups.flatMap((group) => group.fields).filter(([, , value]) => !held(value));
+const total = attributeGroups.flatMap((group) => group.fields).length;
+
+const linkLabels: Record<string, string> = {
+  pricing: 'pricing',
+  status: 'status',
+  terms: 'terms',
+  sla: 'SLA',
+  docs: 'docs',
+};
 
 const socialLabels: Record<string, string> = {
   x: 'X',
@@ -126,7 +151,23 @@ const socialLabels: Record<string, string> = {
   discord: 'Discord',
 };
 
-const social = Object.entries(data.social ?? {}).filter(([, url]) => url);
+// Pages the provider operates and accounts it posts from are all routes off this
+// page to the provider, so they share one line.
+const outgoing = [
+  ...Object.entries(linkLabels)
+    .filter(([key]) => data.urls[key as keyof typeof data.urls])
+    .map(([key, label]) => [label, data.urls[key as keyof typeof data.urls] as string] as const),
+  ...Object.entries(data.social ?? {})
+    .filter(([, url]) => url)
+    .map(([key, url]) => [socialLabels[key] ?? key, url as string] as const),
+];
+
+const { notes, numberOf } = footnotes(data.sources);
+
+const entryPrice = price(data.entryPrice);
+const entryCoins = coins(data.entryPriceBand);
+const energyClaim = energy(data.energyClaim);
+const homeFlag = flag(data.hqCountry);
 
 // The policy page promises staleness is computed from the recorded date rather
 // than from a promise to re-check. This is where that is kept.
@@ -146,14 +187,10 @@ const statusNotice: Record<string, string> = {
 const notice = typeof data.status === 'string' ? statusNotice[data.status] : undefined;
 
 const format = (value: unknown) => {
-  if (value === undefined || value === null) return '?';
-  if (Array.isArray(value)) return value.length ? value.join(', ') : '?';
+  if (Array.isArray(value)) return value.join(', ');
   if (typeof value === 'boolean') return value ? 'yes' : 'no';
   return String(value);
 };
-
-const total = attributeGroups.flatMap((group) => group.fields).length;
-const known = attributeGroups.flatMap((group) => group.fields).filter(([, value]) => format(value) !== '?').length;
 ---
 
 <Base
@@ -198,71 +235,72 @@ const known = attributeGroups.flatMap((group) => group.fields).filter(([, value]
     {data.description && <p class="lede">{data.description}</p>}
 
     <p class="record-links">
-      <a href={data.url} rel="nofollow">{data.url.replace('https://', '')}</a>
+      <a href={data.urls.home} rel="nofollow">{data.urls.home.replace('https://', '')}</a>
       {
-        data.pricingUrl && (
+        outgoing.map(([label, url]) => (
           <>
-            {' '}
-            ·{' '}
-            <a href={data.pricingUrl} rel="nofollow">
-              pricing
+            {' · '}
+            <a href={url} rel="nofollow">
+              {label}
             </a>
           </>
-        )
-      }
-      {
-        data.statusUrl && (
-          <>
-            {' '}
-            ·{' '}
-            <a href={data.statusUrl} rel="nofollow">
-              status
-            </a>
-          </>
-        )
+        ))
       }
     </p>
 
     {
-      social.length > 0 && (
-        <p class="record-links">
-          Elsewhere:{' '}
-          {social.map(([key, url], index) => (
-            <>
-              {index > 0 && ' · '}
-              <a href={url} rel="nofollow">
-                {socialLabels[key] ?? key}
-              </a>
-            </>
-          ))}
+      (homeFlag || entryCoins || energyClaim) && (
+        <p class="record-strip">
+          {homeFlag && (
+            <span class="strip-item">
+              <span aria-hidden="true">{homeFlag}</span> {countryNames.get(data.hqCountry!) ?? data.hqCountry}
+            </span>
+          )}
+          {entryCoins && (
+            <span class="strip-item">
+              <span class="coins">{entryCoins}</span>
+              {entryPrice && <span class="strip-detail">{entryPrice}</span>}
+            </span>
+          )}
+          {energyClaim && (
+            <span class="strip-item">
+              <span aria-hidden="true">🌱</span> {energyClaim}
+            </span>
+          )}
         </p>
       )
     }
 
     <div class="fact-groups full-width">
       {
-        attributeGroups.map((group) => (
+        knownGroups.map((group) => (
           <section class="fact-group">
             <h3>{group.label}</h3>
             <dl class="fact-list">
-              {group.fields.map(([label, value, field]) => {
+              {group.fields.map(([label, key, value, field]) => {
                 const facet = field ? facetByField.get(field) : undefined;
-                const values = value === undefined || value === null ? [] : Array.isArray(value) ? value : [value];
+                const values = Array.isArray(value) ? value : [value];
+                const note = numberOf.get(key);
 
                 return (
                   <>
                     <dt>{label}</dt>
                     <dd>
-                      {facet && values.length
+                      {facet
                         ? values.map((entry, index) => (
                             <>
                               {index > 0 && ', '}
                               <a href={`/${facet.id}/${entry}/`} data-pagefind-filter={facet.id}>
-                                {String(entry)}
+                                {key === 'entryPriceBand' ? coins(String(entry)) : String(entry)}
                               </a>
                             </>
                           ))
                         : format(value)}
+                      {note && (
+                        <a class="footnote-ref" href={`#source-${note}`} aria-label={`Source ${note}`}>
+                          {note}
+                        </a>
+                      )}
                     </dd>
                   </>
                 );
@@ -272,6 +310,39 @@ const known = attributeGroups.flatMap((group) => group.fields).filter(([, value]
         ))
       }
     </div>
+
+    {
+      missing.length > 0 && (
+        <details class="missing-fields">
+          <summary>
+            {missing.length} of {total} fields not recorded yet
+          </summary>
+          <p class="missing-list">{missing.map(([label]) => label).join(' · ')}</p>
+          <p>
+            <a href="https://github.com/fortrabbit/findhost">Know one of these? Edit this record.</a>
+          </p>
+        </details>
+      )
+    }
+
+    {
+      notes.length > 0 && (
+        <section class="sources">
+          <h2>Sources</h2>
+          <ol>
+            {notes.map((note, index) => (
+              <li id={`source-${index + 1}`}>
+                <span class="source-fields">{note.fields.join(', ')}</span> —{' '}
+                <a href={note.url} rel="nofollow">
+                  {note.url.replace('https://', '')}
+                </a>{' '}
+                <span class="source-date">read {note.checkedAt.toISOString().slice(0, 10)}</span>
+              </li>
+            ))}
+          </ol>
+        </section>
+      )
+    }
 
     {
       data.regions?.length && (
@@ -308,7 +379,7 @@ const known = attributeGroups.flatMap((group) => group.fields).filter(([, value]
     }
 
     <p class="annotation">
-      {known} of {total} attributes recorded.
+      {total - missing.length} of {total} attributes recorded.
       {data.checkedAt ? ` Last checked ${data.checkedAt.toISOString().slice(0, 10)}. ` : ' Never checked. '}
       <br />
       <a href="https://github.com/fortrabbit/findhost">Complete this record.</a>

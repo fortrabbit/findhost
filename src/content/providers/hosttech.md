@@ -1,10 +1,11 @@
 ---
 id: hosttech
 name: hosttech
-url: https://www.hosttech.ch
+urls:
+  home: https://www.hosttech.ch
+  pricing: https://www.hosttech.ch/webhosting
+  status: https://status.hosttech.eu
 category: shared
-pricingUrl: https://www.hosttech.ch/webhosting
-statusUrl: https://status.hosttech.eu
 description: Swiss internet service provider from Richterswil operating its own data centres in Switzerland, with further sites in Germany and Austria.
 founded: 2004
 hqCountry: CH

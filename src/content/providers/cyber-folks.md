@@ -1,9 +1,10 @@
 ---
 id: cyber-folks
 name: cyber_Folks
-url: https://cyberfolks.pl
+urls:
+  home: https://cyberfolks.pl
+  pricing: https://cyberfolks.pl/hosting/
 category: shared
-pricingUrl: https://cyberfolks.pl/hosting/
 description: Polish host from Poznań running PHP 5.2 to 8.4 per domain plus Node and Python on LiteSpeed and DirectAdmin, with 28 days of daily backups.
 hqCountry: PL
 whoManagesOs: panel-assisted

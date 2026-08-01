@@ -1,10 +1,11 @@
 ---
 id: combell
 name: Combell
-url: https://www.combell.com
+urls:
+  home: https://www.combell.com
+  pricing: https://www.combell.com/en/hosting/web-hosting
+  status: https://status.combell.com/en/
 category: shared
-pricingUrl: https://www.combell.com/en/hosting/web-hosting
-statusUrl: https://status.combell.com/en/
 description: Belgian hosting provider offering shared PHP and Node.js hosting, VPS and OpenStack from data centres in Belgium and the Netherlands.
 founded: 1999
 hqCountry: BE

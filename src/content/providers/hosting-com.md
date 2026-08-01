@@ -1,7 +1,8 @@
 ---
 id: hosting-com
 name: Hosting.com
-url: https://www.hosting.com
+urls:
+  home: https://www.hosting.com
 description: Hosting.com is the shared hosting brand formerly known as A2 Hosting, rebranded in 2025 after World Host Group combined its brands under one name.
 category: shared
 founded: 2003

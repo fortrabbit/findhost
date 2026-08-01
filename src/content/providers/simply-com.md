@@ -1,9 +1,10 @@
 ---
 id: simply-com
 name: Simply.com
-url: https://www.simply.com
+urls:
+  home: https://www.simply.com
+  pricing: https://www.simply.com/en/hosting/
 category: shared
-pricingUrl: https://www.simply.com/en/hosting/
 description: Danish hosting provider selling three shared suites bundling web space, mail and a website builder, with a documented API third parties automate against.
 hqCountry: DK
 whoManagesOs: provider

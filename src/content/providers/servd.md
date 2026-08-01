@@ -1,9 +1,10 @@
 ---
 id: servd
 name: Servd
-url: https://servd.host
+urls:
+  home: https://servd.host
+  pricing: https://servd.host/pricing
 category: vanity-hosting
-pricingUrl: https://servd.host/pricing
 description: Servd is a fully managed hosting platform built for Craft CMS, sold as three fixed plans that each host one Craft installation.
 whoManagesOs: provider
 useCases:

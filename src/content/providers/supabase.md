@@ -1,10 +1,11 @@
 ---
 id: supabase
 name: Supabase
-url: https://supabase.com
+urls:
+  home: https://supabase.com
+  pricing: https://supabase.com/pricing
+  status: https://status.supabase.com/
 category: serverless
-pricingUrl: https://supabase.com/pricing
-statusUrl: https://status.supabase.com/
 description: Open-source backend built on PostgreSQL, with authentication, storage, realtime and Edge Functions that run the customer's own TypeScript on Deno.
 hqCountry: US
 ownership: vc-backed

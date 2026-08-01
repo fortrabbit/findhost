@@ -1,10 +1,11 @@
 ---
 id: netcup
 name: netcup
-url: https://www.netcup.com
+urls:
+  home: https://www.netcup.com
+  pricing: https://www.netcup.com/de/hosting
+  status: https://netcup-status.de
 category: vps
-pricingUrl: https://www.netcup.com/de/hosting
-statusUrl: https://netcup-status.de
 description: Karlsruhe-based provider selling low-priced webhosting, VPS and root servers across five data-centre locations, part of the Anexia group.
 founded: 2008
 hqCountry: DE

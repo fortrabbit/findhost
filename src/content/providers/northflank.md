@@ -1,10 +1,11 @@
 ---
 id: northflank
 name: Northflank
-url: https://northflank.com
+urls:
+  home: https://northflank.com
+  pricing: https://northflank.com/pricing
+  status: https://status.northflank.com/
 category: paas
-pricingUrl: https://northflank.com/pricing
-statusUrl: https://status.northflank.com/
 description: British platform running containers, jobs and managed databases on its own cloud, in the customer's cloud account, or on a self-hosted Kubernetes cluster.
 hqCountry: GB
 ownership: vc-backed

@@ -1,9 +1,10 @@
 ---
 id: wasmer
 name: Wasmer
-url: https://wasmer.io
+urls:
+  home: https://wasmer.io
+  pricing: https://wasmer.io/pricing
 category: serverless
-pricingUrl: https://wasmer.io/pricing
 description: Wasmer runs PHP compiled to WebAssembly at the edge, on a free-forever Hobby plan or $10 a month.
 whoManagesOs: provider
 useCases:

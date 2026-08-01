@@ -1,9 +1,10 @@
 ---
 id: lolipop
 name: Lolipop!
-url: https://lolipop.jp
+urls:
+  home: https://lolipop.jp
+  pricing: https://lolipop.jp/pricing/
 category: shared
-pricingUrl: https://lolipop.jp/pricing/
 description: Japanese rental server from GMO Pepabo, sold in five tiers from about a hundred yen a month, with SSH and LiteSpeed appearing only higher up the ladder.
 hqCountry: JP
 ownership: subsidiary

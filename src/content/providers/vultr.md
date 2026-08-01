@@ -1,9 +1,10 @@
 ---
 id: vultr
 name: Vultr
-url: https://www.vultr.com
+urls:
+  home: https://www.vultr.com
+  pricing: https://www.vultr.com/pricing/
 category: vps
-pricingUrl: https://www.vultr.com/pricing/
 description: Vultr is a cloud infrastructure provider offering VPS, bare metal, GPU instances and managed Kubernetes across 33 locations in 20 countries.
 whoManagesOs: you
 runtimes:

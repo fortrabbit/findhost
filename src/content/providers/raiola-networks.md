@@ -1,9 +1,10 @@
 ---
 id: raiola-networks
 name: Raiola Networks
-url: https://raiolanetworks.com
+urls:
+  home: https://raiolanetworks.com
+  pricing: https://raiolanetworks.com/hosting-web/
 category: shared
-pricingUrl: https://raiolanetworks.com/hosting-web/
 description: Spanish host from Lugo running twelve selectable PHP versions on cPanel, with servers it assembles itself in two Tier III facilities in Madrid.
 hqCountry: ES
 ownership: independent

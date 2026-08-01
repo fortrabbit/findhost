@@ -1,9 +1,10 @@
 ---
 id: contabo
 name: Contabo
-url: https://contabo.com
+urls:
+  home: https://contabo.com
+  pricing: https://contabo.com/en/vps/
 category: vps
-pricingUrl: https://contabo.com/en/vps/
 description: Contabo is a German hosting provider founded in 2003, headquartered in Munich, known for low-cost VPS plans with large resource allocations.
 whoManagesOs: you
 audience:

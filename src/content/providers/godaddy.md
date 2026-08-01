@@ -1,7 +1,8 @@
 ---
 id: godaddy
 name: GoDaddy
-url: https://www.godaddy.com
+urls:
+  home: https://www.godaddy.com
 category: shared
 description: GoDaddy is a US shared hosting company and the world's largest ICANN-accredited domain registrar, listed on the NYSE as GDDY.
 figure:

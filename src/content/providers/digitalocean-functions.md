@@ -1,9 +1,10 @@
 ---
 id: digitalocean-functions
 name: DigitalOcean Functions
-url: https://www.digitalocean.com/products/functions
+urls:
+  home: https://www.digitalocean.com/products/functions
+  pricing: https://docs.digitalocean.com/products/functions/details/pricing/
 category: serverless
-pricingUrl: https://docs.digitalocean.com/products/functions/details/pricing/
 description: DigitalOcean Functions is a function-as-a-service platform built on Apache OpenWhisk, with PHP among its native runtimes.
 parent: DigitalOcean
 whoManagesOs: provider

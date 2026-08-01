@@ -1,10 +1,11 @@
 ---
 id: ionos
 name: IONOS
-url: https://www.ionos.de
+urls:
+  home: https://www.ionos.de
+  pricing: https://www.ionos.de/hosting/webhosting
+  status: https://www.ionos-status.de/
 category: shared
-pricingUrl: https://www.ionos.de/hosting/webhosting
-statusUrl: https://www.ionos-status.de/
 description: Large European hosting group selling shared webhosting, VPS, dedicated and bare-metal servers and an IaaS cloud, listed on the Frankfurt exchange.
 founded: 1988
 hqCountry: DE

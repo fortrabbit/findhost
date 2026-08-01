@@ -1,9 +1,10 @@
 ---
 id: xserver
 name: Xserver
-url: https://www.xserver.ne.jp
+urls:
+  home: https://www.xserver.ne.jp
+  pricing: https://www.xserver.ne.jp/price/
 category: shared
-pricingUrl: https://www.xserver.ne.jp/price/
 description: Japanese rental server company selling three shared plans on long contracts, with WordPress tooling, automatic backups and free SSL included throughout.
 hqCountry: JP
 whoManagesOs: provider

@@ -1,10 +1,11 @@
 ---
 id: netlify
 name: Netlify
-url: https://www.netlify.com
+urls:
+  home: https://www.netlify.com
+  pricing: https://www.netlify.com/pricing/
+  status: https://www.netlifystatus.com/
 category: serverless
-pricingUrl: https://www.netlify.com/pricing/
-statusUrl: https://www.netlifystatus.com/
 description: Platform that builds sites from a git repository and serves them from a global CDN, with serverless functions, edge functions, blob storage and a database.
 hqCountry: US
 ownership: vc-backed

@@ -1,9 +1,10 @@
 ---
 id: o2switch
 name: o2switch
-url: https://www.o2switch.fr
+urls:
+  home: https://www.o2switch.fr
+  pricing: https://www.o2switch.fr/hebergement-illimite/
 category: shared
-pricingUrl: https://www.o2switch.fr/hebergement-illimite/
 description: French shared host selling a single all-inclusive cPanel offer in three sizes, running in its own data centres in Auvergne.
 founded: 2009
 hqCountry: FR

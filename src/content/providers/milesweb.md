@@ -1,9 +1,10 @@
 ---
 id: milesweb
 name: MilesWeb
-url: https://www.milesweb.in
+urls:
+  home: https://www.milesweb.in
+  pricing: https://www.milesweb.in/hosting/web-hosting
 category: shared
-pricingUrl: https://www.milesweb.in/hosting/web-hosting
 description: Indian host from Nashik running PHP 5.6 to 8.5 and Node.js on its own mPanel, with SSH and git on every plan and a stated renewal-price guarantee.
 founded: 2012
 hqCountry: IN

@@ -1,9 +1,10 @@
 ---
 id: elestio
 name: Elestio
-url: https://elest.io
+urls:
+  home: https://elest.io
+  pricing: https://elest.io/pricing
 category: server-management
-pricingUrl: https://elest.io/pricing
 description: Managed hosting for open-source software on dedicated virtual machines, provisioned into one of nine third-party clouds or the customer's own account.
 whoManagesOs: provider
 infraContract:

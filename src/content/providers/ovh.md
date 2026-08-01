@@ -1,9 +1,10 @@
 ---
 id: ovh
 name: OVHcloud
-url: https://www.ovhcloud.com
+urls:
+  home: https://www.ovhcloud.com
+  pricing: https://www.ovhcloud.com/en/vps/
 category: vps
-pricingUrl: https://www.ovhcloud.com/en/vps/
 description: OVHcloud — long known as OVH — is a large low cost hosting provider from Roubaix, France, founded in 1999 and listed on Euronext Paris since 2021.
 founded: 1999
 hqCountry: FR

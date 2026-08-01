@@ -1,9 +1,10 @@
 ---
 id: qoddi
 name: Qoddi
-url: https://qoddi.com
+urls:
+  home: https://qoddi.com
+  pricing: https://qoddi.com/pricing/
 category: paas
-pricingUrl: https://qoddi.com/pricing/
 description: Managed application platform deploying Node, Java, Go, Ruby, PHP and Python apps with per-second billing, unlimited bandwidth and three free static sites.
 whoManagesOs: container
 useCases:

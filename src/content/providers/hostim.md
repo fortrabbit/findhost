@@ -1,7 +1,8 @@
 ---
 id: hostim
 name: Hostim
-url: https://hostim.dev
+urls:
+  home: https://hostim.dev
 category: paas
 description: Hostim is a Docker-first PaaS from Germany, in the Railway mold.
 figure:

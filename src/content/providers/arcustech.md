@@ -1,7 +1,8 @@
 ---
 id: arcustech
 name: Arcustech
-url: https://www.arcustech.com
+urls:
+  home: https://www.arcustech.com
 category: vps
 description: Arcustech is a smaller VPS hosting company based in Minneapolis, US.
 figure:

@@ -1,10 +1,11 @@
 ---
 id: umbler
 name: Umbler
-url: https://www.umbler.com
+urls:
+  home: https://www.umbler.com
+  pricing: https://www.umbler.com/br/hospedagem-php
+  status: https://status.umbler.com
 category: shared
-pricingUrl: https://www.umbler.com/br/hospedagem-php
-statusUrl: https://status.umbler.com
 description: Brazilian host selling per-application PHP hosting billed by the hour from account credit, with git deploys and one-click CMS installs.
 founded: 2015
 hqCountry: BR

@@ -1,10 +1,11 @@
 ---
 id: hugging-face
 name: Hugging Face
-url: https://huggingface.co
+urls:
+  home: https://huggingface.co
+  pricing: https://huggingface.co/pricing
+  status: https://status.huggingface.co/
 category: paas
-pricingUrl: https://huggingface.co/pricing
-statusUrl: https://status.huggingface.co/
 description: Machine-learning hub whose Spaces product hosts running applications — Gradio, Streamlit or an arbitrary Dockerfile — on CPU or rented GPU hardware.
 hqCountry: US
 ownership: vc-backed

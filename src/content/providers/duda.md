@@ -1,7 +1,8 @@
 ---
 id: duda
 name: Duda
-url: https://www.duda.co
+urls:
+  home: https://www.duda.co
 category: lcnc
 description: Duda is a website builder focused on agencies that manage multiple client sites.
 figure:

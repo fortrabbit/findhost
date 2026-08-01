@@ -1,7 +1,9 @@
 ---
 id: siteground
 name: SiteGround
-url: https://www.siteground.com
+urls:
+  home: https://www.siteground.com
+  pricing: https://eu.siteground.com/web-hosting.htm
 category: shared
 description: Independently owned managed hosting running on Google Cloud, aimed at WordPress and WooCommerce, with its own control panel.
 founded: 2004
@@ -41,7 +43,6 @@ supportChannels:
   - email
   - chat
   - phone
-pricingUrl: https://eu.siteground.com/web-hosting.htm
 social:
   x: https://twitter.com/siteground
   facebook: https://www.facebook.com/siteground

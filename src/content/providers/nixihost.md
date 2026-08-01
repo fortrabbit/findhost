@@ -1,7 +1,8 @@
 ---
 id: nixihost
 name: NixiHost
-url: https://nixihost.com
+urls:
+  home: https://nixihost.com
 category: shared
 description: NixiHost is a small independent host from Houston, Texas, in business since 2007.
 figure:
