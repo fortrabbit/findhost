@@ -6,6 +6,7 @@ urls:
   pricing: https://easypanel.io/pricing
   docs: https://easypanel.io/docs
 category: server-management
+regions: null
 description: Server panel that turns a rented Linux box into a container platform, billed per server, with a free tier capped at three projects.
 whoManagesOs: container
 infraContract:

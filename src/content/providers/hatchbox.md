@@ -5,6 +5,7 @@ urls:
   home: https://www.hatchbox.io
   pricing: https://www.hatchbox.io/pricing
 category: server-management
+regions: null
 description: Deployment platform for Rails, Ruby and Node applications on servers the customer rents, billed at a flat rate per server rather than per application.
 founded: 2016
 ownership: independent

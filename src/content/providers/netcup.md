@@ -6,7 +6,6 @@ urls:
   pricing: https://www.netcup.com/de/hosting
   status: https://netcup-status.de
   terms: https://www.netcup.com/de/agb
-  sla: https://www.netcup.com/de/hosting/qualitaetsgarantien
 category: vps
 description: Karlsruhe-based provider selling low-priced webhosting, VPS and root servers across five data-centre locations, part of the Anexia group.
 founded: 2008

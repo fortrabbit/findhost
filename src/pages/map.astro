@@ -21,7 +21,13 @@ const byCountry = [...new Set(regions)]
   }))
   .sort((a, b) => a.label.localeCompare(b.label, 'en'));
 
-const unknown = providers.length - withRegions.length;
+/*
+ * `regions: null` means the question does not apply — a panel that provisions
+ * onto your own cloud account operates none of its own. Counting those as
+ * missing would overstate the gap and understate the dataset.
+ */
+const notApplicable = providers.filter((provider) => provider.data.regions === null).length;
+const unknown = providers.length - withRegions.length - notApplicable;
 ---
 
 <Base
@@ -45,7 +51,11 @@ const unknown = providers.length - withRegions.length;
     {withRegions.length} of {providers.length} records say where they operate.
     {
       unknown > 0 &&
-        ` The other ${unknown} do not record it yet, so they are absent from this map — which says nothing about where they run.`
+        ` ${unknown} do not record it yet, so they are absent from this map — which says nothing about where they run.`
+    }
+    {
+      notApplicable > 0 &&
+        ` A further ${notApplicable} run on infrastructure you bring yourself, so they have no regions of their own to record.`
     }
   </p>
 

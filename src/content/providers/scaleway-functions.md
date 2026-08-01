@@ -16,19 +16,6 @@ runtimes:
   - python
   - go
   - rust
-runtimeVersions:
-  php:
-    - '8.5'
-  node:
-    - '24'
-    - '26'
-  python:
-    - '3.14'
-  go:
-    - '1.25'
-    - '1.26'
-  rust:
-    - '1.96'
 persistentStorage: false
 pricingModel: usage-based
 regions:
@@ -39,7 +26,6 @@ status: active
 checkedAt: 2026-07-31
 sources:
   - { field: runtimes, url: 'https://www.scaleway.com/en/serverless-functions/', checkedAt: 2026-07-31 }
-  - { field: runtimeVersions, url: 'https://www.scaleway.com/en/serverless-functions/', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://www.scaleway.com/en/serverless-functions/', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://www.scaleway.com/en/serverless-functions/', checkedAt: 2026-07-31 }
 figure:

@@ -5,7 +5,6 @@ urls:
   home: https://www.interserver.net
   pricing: https://www.interserver.net/webhosting/
   terms: https://www.interserver.net/terms-of-service.html
-  sla: https://www.interserver.net/service-level-agreement.html
   docs: https://www.interserver.net/tips/kb/
 category: shared
 description: American host selling one shared plan at a price it undertakes not to raise, on DirectAdmin and CloudLinux, alongside VPS, dedicated servers and colocation.

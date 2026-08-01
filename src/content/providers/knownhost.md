@@ -5,7 +5,6 @@ urls:
   home: https://www.knownhost.com
   pricing: https://www.knownhost.com/web-hosting
   terms: https://www.knownhost.com/terms-of-service
-  sla: https://www.knownhost.com/service-level-agreement
   docs: https://www.knownhost.com/kb/
 category: shared
 description: KnownHost is a US hosting provider, founded in 2006 and based in Birmingham, Alabama, with data centers across the US and in Amsterdam.

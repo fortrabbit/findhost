@@ -31,24 +31,13 @@ export const GET: APIRoute = async ({ props, site }) => {
     ['Classification', ['category', 'alsoOffers', 'useCases', 'audience', 'specialisation']],
     [
       'Tech',
-      [
-        'runtimes',
-        'runtimeVersions',
-        'software',
-        'deployMethods',
-        'sshAccess',
-        'managedDatabases',
-        'persistentStorage',
-        'backupsIncluded',
-        'restrictions',
-      ],
+      ['runtimes', 'software', 'deployMethods', 'sshAccess', 'managedDatabases', 'persistentStorage', 'backupsIncluded'],
     ],
     ['Infrastructure', ['whoManagesOs', 'infraContract', 'runsOn', 'regions', 'gdprDpa']],
     ['Pricing', ['pricingModel', 'entryPriceBand', 'entryPrice', 'renewalMultiple', 'freeTier', 'contractMinimum']],
     ['Support', ['supportChannels', 'supportHours', 'supportTiering']],
-    ['Openness', ['dataExport', 'proprietaryLockIn']],
-    ['Automation', ['apiAvailable', 'cliTool', 'mcpServer', 'iacSupport', 'agentReadyDocs']],
-    ['Environment', ['energyClaim', 'sustainabilityUrl', 'pue', 'certifications', 'carbonReport', 'greenWebId']],
+    ['Automation', ['apiAvailable', 'cliTool', 'mcpServer', 'iacSupport']],
+    ['Environment', ['energyClaim', 'sustainabilityUrl', 'certifications', 'greenWebId']],
   ];
 
   const lines = [

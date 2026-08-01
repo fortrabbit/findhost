@@ -87,9 +87,7 @@ const attributeGroups: { label: string; fields: Attribute[] }[] = [
     label: 'Environment',
     fields: [
       ['Energy claim', 'energyClaim', data.energyClaim],
-      ['PUE', 'pue', data.pue],
       ['Certifications', 'certifications', data.certifications],
-      ['Carbon report', 'carbonReport', data.carbonReport],
       ['Green Web directory', 'greenWebId', data.greenWebId],
     ],
   },
@@ -102,20 +100,12 @@ const attributeGroups: { label: string; fields: Attribute[] }[] = [
     ],
   },
   {
-    label: 'Openness',
-    fields: [
-      ['Data export', 'dataExport', data.dataExport],
-      ['Lock-in', 'proprietaryLockIn', data.proprietaryLockIn],
-    ],
-  },
-  {
     label: 'Automation',
     fields: [
       ['API', 'apiAvailable', data.apiAvailable],
       ['CLI', 'cliTool', data.cliTool],
       ['MCP server', 'mcpServer', data.mcpServer, 'mcpServer'],
       ['Infrastructure as code', 'iacSupport', data.iacSupport],
-      ['Agent-readable docs', 'agentReadyDocs', data.agentReadyDocs],
     ],
   },
 ];
@@ -123,14 +113,23 @@ const attributeGroups: { label: string; fields: Attribute[] }[] = [
 const held = (value: unknown) =>
   value !== undefined && value !== null && (!Array.isArray(value) || value.length > 0);
 
+/*
+ * An explicit `null` means the question does not apply to this provider — a
+ * panel that provisions onto your own cloud account has no regions of its own.
+ * That is neither known nor missing, so it leaves the denominator entirely
+ * rather than inflating the gap on records that have no gap.
+ */
+const applies = ([, , value]: Attribute) => value !== null;
+
 // Known first. What is missing is named once, together, where it reads as an
 // ask rather than as forty rows of `?`.
 const knownGroups = attributeGroups
   .map((group) => ({ label: group.label, fields: group.fields.filter(([, , value]) => held(value)) }))
   .filter((group) => group.fields.length > 0);
 
-const missing = attributeGroups.flatMap((group) => group.fields).filter(([, , value]) => !held(value));
-const total = attributeGroups.flatMap((group) => group.fields).length;
+const applicable = attributeGroups.flatMap((group) => group.fields).filter(applies);
+const missing = applicable.filter(([, , value]) => !held(value));
+const total = applicable.length;
 
 const linkLabels: Record<string, string> = {
   pricing: 'pricing',

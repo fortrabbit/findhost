@@ -31,6 +31,7 @@ const columns = [
 
 const regions = records.flatMap((provider) => provider.data.regions ?? []);
 const placed = records.filter((provider) => provider.data.regions?.length).length;
+const notApplicable = records.filter((provider) => provider.data.regions === null).length;
 
 /*
  * Ordered by the date we last read a record against its provider. That is a
@@ -133,6 +134,7 @@ const recentlyUpdated = records
   </p>
 
   <p class="annotation">
-    {placed} of {records.length} records say where they operate. <a href="/map/">See the map in full.</a>
+    {placed} of {records.length} records say where they operate; {notApplicable} run on infrastructure you bring yourself
+    and have no regions of their own. <a href="/map/">See the map in full.</a>
   </p>
 </Base>

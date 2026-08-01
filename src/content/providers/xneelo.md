@@ -41,7 +41,6 @@ supportChannels:
   - chat
   - email
 supportHours: 24-7
-pue: 1.2
 certifications:
   - PCI DSS
 social:
@@ -55,7 +54,6 @@ sources:
   - { field: entryPriceBand, url: 'https://xneelo.co.za/web-hosting/', checkedAt: 2026-08-01 }
   - { field: supportHours, url: 'https://xneelo.co.za/web-hosting/', checkedAt: 2026-08-01 }
   - { field: supportChannels, url: 'https://xneelo.co.za/web-hosting/', checkedAt: 2026-08-01 }
-  - { field: pue, url: 'https://xneelo.co.za/data-centre/', checkedAt: 2026-08-01 }
   - { field: certifications, url: 'https://xneelo.co.za/data-centre/', checkedAt: 2026-08-01 }
   - { field: social, url: 'https://xneelo.co.za', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://xneelo.co.za/legal/terms-of-service/', checkedAt: 2026-08-01 }

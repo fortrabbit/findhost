@@ -5,6 +5,7 @@ urls:
   home: https://ploi.io
   pricing: https://ploi.io/pricing
 category: server-management
+regions: null
 description: Ploi is a server management control panel for PHP servers. The subscription covers the panel only — the server is rented separately from a VPS provider.
 hqCountry: NL
 whoManagesOs: panel-assisted

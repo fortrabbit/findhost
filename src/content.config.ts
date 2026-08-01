@@ -52,7 +52,6 @@ const providers = defineCollection({
       pricing: publicUrl.optional(),
       status: publicUrl.optional(),
       terms: publicUrl.optional(),
-      sla: publicUrl.optional(),
       docs: publicUrl.optional(),
     }),
     category: z.enum(['paas', 'vps', 'iaas', 'shared', 'serverless', 'server-management', 'vanity-hosting', 'lcnc']),
@@ -90,13 +89,11 @@ const providers = defineCollection({
 
     // Tech stack
     runtimes: z.array(z.string()).optional(),
-    runtimeVersions: z.record(z.string(), z.array(z.string())).optional(),
     deployMethods: z.array(z.string()).optional(),
     sshAccess: z.enum(['full', 'limited', 'none']).optional(),
     managedDatabases: z.array(z.string()).optional(),
     persistentStorage: z.boolean().optional(),
     backupsIncluded: z.enum(['included', 'paid-addon', 'none']).optional(),
-    restrictions: z.array(z.string()).optional(),
 
     /*
      * Pricing — bands only. This is not a price tracker.
@@ -104,6 +101,11 @@ const providers = defineCollection({
      * entryPriceBand is the cheapest way to run one small production app with
      * every mandatory component included, which is the only reading that
      * survives per-seat licences and per-project fees charged on top.
+     *
+     * It follows the STANDING price, never the introductory one. Filtering for
+     * "under $5" and being handed a host that costs eleven after three months
+     * is the exact deception this dataset exists to correct, and the teaser is
+     * already recorded in entryPrice.introductory beside the figure it names.
      *
      * renewalMultiple is renewal ÷ introductory, so 3.3 means a €2.99 offer
      * that renews at €9.99. A value below 1 would mean the price falls, which
@@ -147,25 +149,43 @@ const providers = defineCollection({
         amount: z.number(),
         currency: z.string().length(3),
         period: z.enum(['month', 'year', 'hour']).default('month'),
+        /*
+         * True where the figure is a teaser rather than what the customer keeps
+         * paying. Without this the field silently fills with introductory rates,
+         * which is what affiliate sites publish and why their prices never match
+         * anyone's invoice.
+         */
+        introductory: z.boolean().optional(),
       })
       .optional(),
     renewalMultiple: z.number().nullable().optional(),
     freeTier: z.enum(['permanent', 'trial', 'none']).optional(),
     contractMinimum: z.enum(['none', 'monthly', 'annual', 'multi-year']).optional(),
 
-    // Regions
-    regions: z.array(z.string().length(2)).optional(),
+    /*
+     * Regions. Absent means unknown; `null` means the question does not apply —
+     * a control panel that provisions onto your own cloud account operates no
+     * regions of its own, and counting it as missing data makes every "N records
+     * do not say" line on the map wrong.
+     */
+    regions: z.array(z.string().length(2)).nullable().optional(),
     runsOn: z.array(z.string()).nullable().optional(),
     gdprDpa: z.enum(['standard', 'on-request', 'unclear']).optional(),
 
-    // Environmental impact — what a provider publishes, never a judgement of it.
-    // The value is the distinction: offsets, annual matching and 24/7 carbon-free
-    // are three different claims that marketing routinely blurs into one.
-    energyClaim: z.enum(['24-7-cfe', 'annual-matched', 'offset', 'none-published']).optional(),
+    /*
+     * Environmental impact — what a provider publishes, never a judgement of it.
+     * The value is the distinction: offsets, annual matching and 24/7 carbon-free
+     * are three different claims that marketing routinely blurs into one.
+     *
+     * `grid-mix-disclosed` is for a published supply mix rather than a claim
+     * about it — o2switch prints "~94% décarbonée, ~6% carbonée (2019)", which
+     * is more information than most and fits none of the other values.
+     */
+    energyClaim: z
+      .enum(['24-7-cfe', 'annual-matched', 'offset', 'grid-mix-disclosed', 'none-published'])
+      .optional(),
     sustainabilityUrl: publicUrl.optional(),
-    pue: z.number().nullable().optional(),
     certifications: z.array(z.string()).optional(),
-    carbonReport: z.enum(['published', 'parent-only', 'none']).optional(),
     /**
      * Where a provider talks in public. Not a facet — nobody filters by "has a
      * Facebook page" — but a dormant account is checkable, and a company's own
@@ -191,23 +211,22 @@ const providers = defineCollection({
      * Support. supportHours answers one question only: when can you reach a
      * human about a production problem. A provider running a business-hours
      * sales line and a 24-hour technical line is `24-7` — the office hours are
-     * not the ones that matter when a site is down. Whether that line costs
-     * extra is supportTiering's job, not this field's.
+     * not the ones that matter when a site is down.
+     *
+     * It describes the CHEAPEST PAID PLAN, because that is where the buyer this
+     * dataset serves actually stands. Hours that only arrive at enterprise are
+     * supportTiering's job; without that rule every platform reads `24-7` on the
+     * strength of a tier almost nobody buys.
      */
     supportChannels: z.array(z.enum(['email', 'chat', 'phone', 'forum'])).optional(),
     supportHours: z.enum(['24-7', 'business-hours', 'community-only']).optional(),
     supportTiering: z.enum(['all-plans', 'paid-upgrade', 'enterprise-only']).optional(),
-
-    // Openness & lock-in
-    dataExport: z.enum(['standard-tools', 'provider-tools', 'manual', 'none']).optional(),
-    proprietaryLockIn: z.array(z.string()).optional(),
 
     // Automation & agent support — the axis nobody else records
     apiAvailable: z.enum(['public', 'partner-only', 'none']).optional(),
     cliTool: z.enum(['official', 'third-party', 'none']).optional(),
     mcpServer: z.enum(['official', 'community', 'none']).optional(),
     iacSupport: z.array(z.string()).optional(),
-    agentReadyDocs: z.array(z.string()).optional(),
 
     // Meta & provenance
     checkedAt: z.coerce.date().optional(),

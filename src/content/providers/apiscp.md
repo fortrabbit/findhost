@@ -5,6 +5,7 @@ urls:
   home: https://apiscp.com
   pricing: https://apiscp.com/pricing/
 category: server-management
+regions: null
 description: ApisCP — short for Apis Networks Control Panel, formerly known as apnscp — is a self-hosted hosting platform and control panel by Apis Networks, grown out of a panel the company has run internally…
 whoManagesOs: panel-assisted
 infraContract:

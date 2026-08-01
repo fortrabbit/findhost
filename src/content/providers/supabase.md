@@ -6,7 +6,6 @@ urls:
   pricing: https://supabase.com/pricing
   status: https://status.supabase.com/
   terms: https://supabase.com/terms
-  sla: https://supabase.com/docs/company/sla
   docs: https://supabase.com/docs
 category: serverless
 description: Open-source backend built on PostgreSQL, with authentication, storage, realtime and Edge Functions that run the customer's own TypeScript on Deno.

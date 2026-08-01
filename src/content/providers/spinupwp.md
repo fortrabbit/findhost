@@ -7,6 +7,7 @@ urls:
   terms: https://spinupwp.com/terms/
   docs: https://spinupwp.com/docs/
 category: server-management
+regions: null
 description: SpinupWP is a control panel that configures and manages a WordPress-tuned server stack on an Ubuntu machine the customer brings.
 whoManagesOs: panel-assisted
 infraContract:
