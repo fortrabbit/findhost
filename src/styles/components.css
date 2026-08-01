@@ -206,6 +206,27 @@
   font-size: var(--text-sm);
 }
 
+/** Every country the dataset covers, beneath the map that shows the same set. */
+.country-index {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+  gap: 0 var(--space-lg);
+  max-width: none;
+  margin-block: var(--space-lg);
+  padding: 0;
+  list-style: none;
+}
+
+.country-index > li {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-xs);
+  padding: var(--space-3xs) 0;
+  border-bottom: var(--rule-hairline) solid var(--color-ink);
+  font-size: var(--text-sm);
+}
+
 /** The one link on the page that has to be found without looking for it. */
 .show-all {
   margin-block: var(--space-lg);

@@ -4,7 +4,15 @@ import { loadFacets } from '../../lib/facets';
 
 export async function getStaticPaths() {
   const { facets } = await loadFacets();
-  return facets.map((facet) => ({ params: { facet: facet.id }, props: { facet } }));
+
+  /*
+   * `regions` has no index here. /map/ is the region index and lists the same
+   * countries with the same counts — this page was that page with the map taken
+   * out.
+   */
+  return facets
+    .filter((facet) => facet.id !== 'regions')
+    .map((facet) => ({ params: { facet: facet.id }, props: { facet } }));
 }
 
 const { facet } = Astro.props;

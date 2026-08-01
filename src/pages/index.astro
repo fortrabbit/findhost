@@ -1,7 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
-import WorldMap from '../components/WorldMap.astro';
 import { loadFacets } from '../lib/facets';
 
 const records = await getCollection('providers');
@@ -32,8 +31,6 @@ const columns = [
   pick('category', 'Platform', (id) => `/category/${id}/`),
   pick('regions', 'Region', (id) => `/regions/${id}/`),
 ];
-
-const regions = records.flatMap((provider) => provider.data.regions ?? []);
 ---
 
 <Base
@@ -51,16 +48,6 @@ const regions = records.flatMap((provider) => provider.data.regions ?? []);
   <p class="guide-links">
     {guides.map((guide) => <a href={`/guide/${guide.id}/`}>{guide.data.title}</a>)}
   </p>
-
-  {/* Where the providers are, before what they run — hosting is a local business. */}
-  <WorldMap
-    regions={regions}
-    weighted
-    caption={false}
-    centred
-    linkPattern="/map/#{lower}"
-    label="Countries the providers in this dataset operate in"
-  />
 
   <h2>I want to host…</h2>
 

@@ -12,6 +12,8 @@ export default defineConfig({
   redirects: {
     '/find': '/providers',
     '/provider/[id]': '/providers/[id]',
+    // The region index is the map. /regions/<code>/ pages are unaffected.
+    '/regions': '/map',
   },
   build: { format: 'directory' },
 });

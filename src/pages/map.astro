@@ -2,7 +2,6 @@
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import WorldMap from '../components/WorldMap.astro';
-import ProviderList from '../components/ProviderList.astro';
 import { countryPoints } from '../lib/map';
 
 const providers = await getCollection('providers');
@@ -10,22 +9,22 @@ const providers = await getCollection('providers');
 const withRegions = providers.filter((provider) => provider.data.regions?.length);
 const regions = withRegions.flatMap((provider) => provider.data.regions ?? []);
 
+/*
+ * This is the region index, and the only one. A facet index listing the same
+ * countries as a column of text was the same page with the map taken out.
+ * Each country leads to its own page rather than to an anchor further down
+ * this one, so the list exists once.
+ */
 const byCountry = [...new Set(regions)]
   .filter((code) => countryPoints[code])
   .map((code) => ({
     code,
     label: countryPoints[code]!.label,
-    providers: withRegions
-      .filter((provider) => provider.data.regions?.includes(code))
-      .map((provider) => ({
-        id: provider.id,
-        name: provider.data.name,
-        figure: provider.data.figure,
-        entryPriceBand: provider.data.entryPriceBand,
-      }))
-      .sort((a, b) => a.name.localeCompare(b.name, 'en')),
+    count: withRegions.filter((provider) => provider.data.regions?.includes(code)).length,
   }))
   .sort((a, b) => a.label.localeCompare(b.label, 'en'));
+
+const unplaced = [...new Set(regions)].filter((code) => !countryPoints[code]);
 
 /*
  * `regions: null` means the question does not apply — a panel that provisions
@@ -38,7 +37,7 @@ const unknown = providers.length - withRegions.length - notApplicable;
 
 <Base
   title="Where providers operate — FindHost"
-  description="A map of the countries each hosting provider runs in."
+  description="A map of the countries each hosting provider runs in, and a page for every one of them."
   ai="co-authored"
 >
   <h1>Find a host near you</h1>
@@ -49,9 +48,27 @@ const unknown = providers.length - withRegions.length - notApplicable;
     regions={regions}
     weighted
     full
-    linkPattern="#{lower}"
+    caption={false}
+    linkPattern="/regions/{code}/"
     label="Countries the providers in this dataset operate in"
   />
+
+  <ul class="country-index">
+    {
+      byCountry.map((country) => (
+        <li>
+          <a href={`/regions/${country.code}/`}>{country.label}</a>
+          <span class="entry-count">{country.count}</span>
+        </li>
+      ))
+    }
+  </ul>
+
+  <p class="annotation">
+    Dots sit at country level, not at data centres — the dataset records which countries a provider operates in, not
+    where the racks are. Countries large enough to hold separate hosting regions are drawn at each of them, with the
+    dot's area divided between them.
+  </p>
 
   <p class="annotation">
     {withRegions.length} of {providers.length} records say where they operate.
@@ -63,19 +80,6 @@ const unknown = providers.length - withRegions.length - notApplicable;
       notApplicable > 0 &&
         ` A further ${notApplicable} run on infrastructure you bring yourself, so they have no regions of their own to record.`
     }
+    {unplaced.length > 0 && ` No coordinates yet for ${unplaced.join(', ')}.`}
   </p>
-
-  {
-    byCountry.map((country) => (
-      <section id={country.code.toLowerCase()}>
-        <h2>
-          <a class="anchor-link" href={`#${country.code.toLowerCase()}`} aria-label={`Link to ${country.label}`}>
-            #
-          </a>
-          {country.label}
-        </h2>
-        <ProviderList providers={country.providers} namesOnly />
-      </section>
-    ))
-  }
 </Base>
