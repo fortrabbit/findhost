@@ -40,7 +40,10 @@ for (const filename of readdirSync(dir).filter((name) => name.endsWith('.md'))) 
     continue;
   }
 
-  const block = ['urls:', ...['home', 'pricing', 'status'].filter((slot) => found[slot]).map((slot) => `  ${slot}: ${found[slot]}`)];
+  const block = [
+    'urls:',
+    ...['home', 'pricing', 'status'].filter((slot) => found[slot]).map((slot) => `  ${slot}: ${found[slot]}`),
+  ];
 
   const nameAt = kept.findIndex((line) => line.startsWith('name:'));
   kept.splice(nameAt + 1, 0, ...block);

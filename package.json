@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "packageManager": "pnpm@11.18.0",
   "engines": {
-    "node": ">=22.12.0"
+    "node": ">=22.18.0"
   },
   "scripts": {
     "dev": "astro dev",
@@ -13,6 +13,11 @@
     "preview": "astro preview",
     "check": "astro check",
     "validate": "node scripts/validate.ts",
+    "test": "node --test 'src/**/*.test.ts'",
+    "test:e2e": "playwright test",
+    "format": "prettier --check .",
+    "format:write": "prettier --write .",
+    "linkcheck": "node scripts/linkcheck.mjs",
     "astro": "astro"
   },
   "dependencies": {
@@ -22,6 +27,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
+    "@playwright/test": "^1.62.1",
     "@types/node": "^26.1.2",
     "pagefind": "^1.5.2",
     "prettier": "^3.9.6",

@@ -4,7 +4,7 @@ name: Mythic Beasts
 urls:
   home: https://www.mythic-beasts.com
   pricing: https://www.mythic-beasts.com/order/hosting
-  status: https://www.mythic-beasts.com/support/status
+  status: https://status.mythic-beasts.com
   terms: https://www.mythic-beasts.com/terms/overview
   docs: https://www.mythic-beasts.com/support
 category: shared

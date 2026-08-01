@@ -61,14 +61,12 @@ const { providers, namesOnly = false } = Astro.props;
             {described && <p>{provider.description}</p>}
           </div>
 
-          {
-            (band || provider.checked) && (
-              <span class="provider-meta">
-                {band && <span class="coins">{band}</span>}
-                {provider.checked && <span class="provider-checked">read {provider.checked}</span>}
-              </span>
-            )
-          }
+          {(band || provider.checked) && (
+            <span class="provider-meta">
+              {band && <span class="coins">{band}</span>}
+              {provider.checked && <span class="provider-checked">read {provider.checked}</span>}
+            </span>
+          )}
         </li>
       );
     })

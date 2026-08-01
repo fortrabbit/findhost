@@ -31,7 +31,15 @@ export const GET: APIRoute = async ({ props, site }) => {
     ['Classification', ['category', 'alsoOffers', 'useCases', 'audience', 'specialisation']],
     [
       'Tech',
-      ['runtimes', 'software', 'deployMethods', 'sshAccess', 'managedDatabases', 'persistentStorage', 'backupsIncluded'],
+      [
+        'runtimes',
+        'software',
+        'deployMethods',
+        'sshAccess',
+        'managedDatabases',
+        'persistentStorage',
+        'backupsIncluded',
+      ],
     ],
     ['Infrastructure', ['whoManagesOs', 'infraContract', 'runsOn', 'regions', 'gdprDpa']],
     ['Pricing', ['pricingModel', 'entryPriceBand', 'entryPrice', 'renewalMultiple', 'freeTier', 'contractMinimum']],

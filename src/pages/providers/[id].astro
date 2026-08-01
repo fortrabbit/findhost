@@ -110,8 +110,7 @@ const attributeGroups: { label: string; fields: Attribute[] }[] = [
   },
 ];
 
-const held = (value: unknown) =>
-  value !== undefined && value !== null && (!Array.isArray(value) || value.length > 0);
+const held = (value: unknown) => value !== undefined && value !== null && (!Array.isArray(value) || value.length > 0);
 
 /*
  * An explicit `null` means the question does not apply to this provider — a
@@ -255,9 +254,10 @@ const format = (value: unknown) => {
               <span aria-hidden="true">{homeFlag}</span> {countryNames.get(data.hqCountry!) ?? data.hqCountry}
             </span>
           )}
+          {/* A bare "free" beside a flag reads as free what — the coins need no such help. */}
           {entryCoins && (
             <span class="strip-item">
-              <span class="coins">{entryCoins}</span>
+              <span class="coins">{entryCoins === 'free' ? 'free tier' : entryCoins}</span>
               {entryPrice && <span class="strip-detail">{entryPrice}</span>}
             </span>
           )}
@@ -312,7 +312,7 @@ const format = (value: unknown) => {
 
     {
       missing.length > 0 && (
-        <details class="missing-fields">
+        <details class="missing-fields full-width">
           <summary>
             {missing.length} of {total} fields not recorded yet
           </summary>

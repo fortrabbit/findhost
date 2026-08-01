@@ -1,0 +1,13 @@
+dist
+.astro
+node_modules
+pnpm-lock.yaml
+test-results
+playwright-report
+
+# Content is prose and data, not code. The schema validates its shape and people
+# read its words; a formatter reflowing 150 records' frontmatter is pure churn.
+**/*.md
+
+# A generated dot matrix. Formatting it would make the diff unreadable forever.
+src/lib/world-bitmap.ts

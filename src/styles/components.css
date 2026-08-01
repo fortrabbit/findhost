@@ -364,9 +364,18 @@
   white-space: nowrap;
 }
 
+/*
+ * One line, always, whatever the record wrote. A description is written to be
+ * read whole on the record page and truncated in a list, and holding every row
+ * to the same height is what lets one tile size match every row — a register is
+ * scanned down its left edge, and ragged rows defeat that.
+ */
 .provider-list p {
   margin: 0;
+  overflow: hidden;
   font-size: var(--text-sm);
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* --- The find view --- */
@@ -539,16 +548,24 @@
  * of them fit as the screen allows. `column-width` does that without a single
  * breakpoint: wide screens get four, a phone gets one.
  */
+/**
+ * A grid, not a multi-column flow. Column flow balances by height, which was
+ * fine while every record printed all forty rows — now that only held fields
+ * render, group heights vary enough that one column took a single group and
+ * another took four. Grid places each group in order and keeps the row tops
+ * aligned, so a sparse record reads as short rather than as broken.
+ */
 .fact-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  gap: var(--space-md) var(--space-xl);
+  align-items: start;
   max-width: none;
-  columns: 16rem;
-  column-gap: var(--space-xl);
 }
 
 .fact-group {
   display: flow-root;
-  margin: 0 0 var(--space-md);
-  break-inside: avoid;
+  margin: 0;
 }
 
 .fact-group > h3 {
@@ -633,9 +650,14 @@
 }
 
 /** What is missing is named once, together, where it reads as an ask. */
+/*
+ * Its rule closes the table above it, so it has to span exactly what the table
+ * spans. `margin-block` rather than the `margin` shorthand deliberately: the
+ * shorthand would reset the negative inline margins .full-width relies on, and
+ * components.css loads last, so it would win and quietly undo the bleed.
+ */
 .missing-fields {
-  max-width: var(--measure-data);
-  margin: var(--space-md) 0;
+  margin-block: var(--space-lg) var(--space-md);
   padding-top: var(--space-xs);
   border-top: var(--rule-hairline) solid var(--color-ink);
   font-size: var(--text-sm);

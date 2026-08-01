@@ -51,6 +51,7 @@ const energyLabels: Record<string, string> = {
   '24-7-cfe': '24/7 carbon-free',
   'annual-matched': 'annually matched renewables',
   offset: 'offsets purchased',
+  'grid-mix-disclosed': 'grid mix published',
 };
 
 export function energy(claim: string | undefined): string | undefined {

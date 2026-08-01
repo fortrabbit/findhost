@@ -2,7 +2,8 @@
 import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import ProviderList from '../../components/ProviderList.astro';
-import { facetRoutes, loadFacets, summarise } from '../../lib/facets';
+import { facetRoutes, loadFacets } from '../../lib/facets';
+import { summarise } from '../../lib/summarise';
 
 // One static page per facet value in use. These are what a crawler follows and
 // what the no-JS fallback links to — the find view is a convenience on top.

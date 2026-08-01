@@ -13,9 +13,34 @@ jobs:
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          # 24 rather than 22: the unit tests are TypeScript run straight through
+          # `node --test`, which needs the type stripping that ships unflagged here.
+          node-version: 24
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+      - run: pnpm run format
       - run: pnpm run check
+      - run: pnpm run test
       - run: pnpm run build
+      # Guards zod cannot express: unique ids, taxonomy coverage, and the
+      # assertion that no rank, boost or weight field has appeared anywhere.
       - run: pnpm run validate
+      - run: pnpm exec playwright install --with-deps chromium
+      - run: pnpm run test:e2e
+
+  # Third-party availability is not something a content pull request should be
+  # blocked on, so this reports and never fails the run. It exists because a
+  # dataset whose whole claim is "we read this page on this date" has to notice
+  # when the page stops existing.
+  links:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run linkcheck

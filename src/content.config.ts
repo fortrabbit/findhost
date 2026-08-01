@@ -181,9 +181,7 @@ const providers = defineCollection({
      * about it — o2switch prints "~94% décarbonée, ~6% carbonée (2019)", which
      * is more information than most and fits none of the other values.
      */
-    energyClaim: z
-      .enum(['24-7-cfe', 'annual-matched', 'offset', 'grid-mix-disclosed', 'none-published'])
-      .optional(),
+    energyClaim: z.enum(['24-7-cfe', 'annual-matched', 'offset', 'grid-mix-disclosed', 'none-published']).optional(),
     sustainabilityUrl: publicUrl.optional(),
     certifications: z.array(z.string()).optional(),
     /**
