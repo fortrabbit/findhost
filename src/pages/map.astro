@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import WorldMap from '../components/WorldMap.astro';
+import ProviderList from '../components/ProviderList.astro';
 import { countryPoints } from '../lib/map';
 
 const providers = await getCollection('providers');
@@ -16,7 +17,12 @@ const byCountry = [...new Set(regions)]
     label: countryPoints[code]!.label,
     providers: withRegions
       .filter((provider) => provider.data.regions?.includes(code))
-      .map((provider) => ({ id: provider.id, name: provider.data.name }))
+      .map((provider) => ({
+        id: provider.id,
+        name: provider.data.name,
+        figure: provider.data.figure,
+        entryPriceBand: provider.data.entryPriceBand,
+      }))
       .sort((a, b) => a.name.localeCompare(b.name, 'en')),
   }))
   .sort((a, b) => a.label.localeCompare(b.label, 'en'));
@@ -68,13 +74,7 @@ const unknown = providers.length - withRegions.length - notApplicable;
           </a>
           {country.label}
         </h2>
-        <ul class="provider-list">
-          {country.providers.map((provider) => (
-            <li>
-              <a href={`/providers/${provider.id}/`}>{provider.name}</a>
-            </li>
-          ))}
-        </ul>
+        <ProviderList providers={country.providers} namesOnly />
       </section>
     ))
   }

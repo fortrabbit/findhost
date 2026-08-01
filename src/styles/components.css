@@ -280,7 +280,35 @@
   text-decoration: none;
 }
 
-/* --- Provider list --- */
+/* --- Lists --- */
+
+/**
+ * A plain stack of linked rows, ruled like the register but with no columns.
+ * Anything that is not a provider belongs here: guide pages, facet values,
+ * search hits. `.provider-list` below is a three-column grid keyed to
+ * ProviderList's markup, and putting a bare link in it drops that link into the
+ * tile column, where it wraps a word at a time.
+ */
+.stack-list {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.stack-list > li {
+  padding: var(--space-sm) 0;
+  border-top: var(--rule-hairline) solid var(--color-ink);
+}
+
+.stack-list > li:last-child {
+  border-bottom: var(--rule-hairline) solid var(--color-ink);
+}
+
+.stack-list p {
+  margin: var(--space-3xs) 0 0;
+  font-size: var(--text-sm);
+}
 
 .provider-list {
   max-width: none;

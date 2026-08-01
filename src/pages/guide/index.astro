@@ -14,7 +14,7 @@ const pages = (await getCollection('guide')).sort((a, b) => a.data.order - b.dat
 
   <p class="lead">How to choose and not choose a hosting provider.</p>
 
-  <ul class="provider-list">
+  <ul class="stack-list">
     {
       pages.map((page) => (
         <li>

@@ -4,22 +4,44 @@ import { worldBitmap, worldBitmapBbox, worldBitmapCols, worldBitmapRows } from '
  * Country-level dots, drawn at build time.
  *
  * `regions` holds ISO country codes, so this is as precise as the data is: a dot
- * sits at a country's centre, not at a data centre. Every caption has to say so.
- * Recording actual locations is the phase-4 upgrade (MR-164).
+ * sits at a country's principal hosting metro, not at a data centre. Every
+ * caption has to say so. Recording actual locations is the phase-4 upgrade
+ * (MR-164).
+ *
+ * `spread` exists because one dot cannot stand for a country the size of a
+ * continent. The United States carries more records than anywhere else, and a
+ * single mark on the Atlantic coast reads as a claim that all of it sits in
+ * Virginia — which is exactly the impression this dataset should not give. Where
+ * a country has genuinely separate hosting regions they are listed here and the
+ * dot's area is divided between them, so the mark spreads without the country
+ * gaining ink it has not earned.
  */
-export const countryPoints: Record<string, { label: string; lat: number; lng: number }> = {
-  AU: { label: 'Australia', lat: -33.9, lng: 151.2 },
+export const countryPoints: Record<
+  string,
+  { label: string; lat: number; lng: number; spread?: { lat: number; lng: number }[] }
+> = {
+  AU: { label: 'Australia', lat: -33.9, lng: 151.2, spread: [{ lat: -31.95, lng: 115.86 }] },
   BR: { label: 'Brazil', lat: -23.5, lng: -46.6 },
-  CA: { label: 'Canada', lat: 43.7, lng: -79.4 },
+  CA: { label: 'Canada', lat: 43.7, lng: -79.4, spread: [{ lat: 49.28, lng: -123.12 }] },
   DE: { label: 'Germany', lat: 50.1, lng: 8.7 },
   FI: { label: 'Finland', lat: 60.2, lng: 24.9 },
   GB: { label: 'United Kingdom', lat: 51.5, lng: -0.1 },
   IE: { label: 'Ireland', lat: 53.3, lng: -6.2 },
-  IN: { label: 'India', lat: 19.1, lng: 72.9 },
+  IN: { label: 'India', lat: 19.1, lng: 72.9, spread: [{ lat: 12.97, lng: 77.59 }] },
   JP: { label: 'Japan', lat: 35.7, lng: 139.7 },
   NL: { label: 'Netherlands', lat: 52.4, lng: 4.9 },
   SG: { label: 'Singapore', lat: 1.35, lng: 103.8 },
-  US: { label: 'United States', lat: 38.9, lng: -77.0 },
+  // Ashburn, plus the Pacific Northwest and Texas — the three concentrations
+  // that between them hold nearly all US capacity.
+  US: {
+    label: 'United States',
+    lat: 38.9,
+    lng: -77.0,
+    spread: [
+      { lat: 45.52, lng: -122.68 },
+      { lat: 32.78, lng: -96.8 },
+    ],
+  },
   AE: { label: 'United Arab Emirates', lat: 25.2, lng: 55.3 },
   AT: { label: 'Austria', lat: 48.2, lng: 16.4 },
   BE: { label: 'Belgium', lat: 50.8, lng: 4.4 },
@@ -49,7 +71,7 @@ export const countryPoints: Record<string, { label: string; lat: number; lng: nu
   VN: { label: 'Vietnam', lat: 10.8, lng: 106.7 },
   PK: { label: 'Pakistan', lat: 24.9, lng: 67.1 },
   SA: { label: 'Saudi Arabia', lat: 24.7, lng: 46.7 },
-  RU: { label: 'Russia', lat: 55.8, lng: 37.6 },
+  RU: { label: 'Russia', lat: 55.8, lng: 37.6, spread: [{ lat: 55.03, lng: 82.92 }] },
   EE: { label: 'Estonia', lat: 59.4, lng: 24.8 },
   LV: { label: 'Latvia', lat: 56.9, lng: 24.1 },
   LT: { label: 'Lithuania', lat: 54.7, lng: 25.3 },

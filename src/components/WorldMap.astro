@@ -27,12 +27,21 @@ const marks = [...counts.entries()]
   .map(([code, count]) => {
     const point = countryPoints[code]!;
     const scale = weighted ? 0.6 + (count / highest) * 0.9 : 1;
+
+    /*
+     * A country with separate hosting regions is drawn at each of them, with the
+     * radius divided so the total area is what one dot would have been. The
+     * country reads as a spread rather than a pinpoint, and does not gain ink
+     * for being large.
+     */
+    const anchors = [{ lat: point.lat, lng: point.lng }, ...(point.spread ?? [])];
+    const radius = (spacing * 1.1 * scale) / Math.sqrt(anchors.length);
+
     return {
       code,
       count,
       point,
-      xy: latLngToXY(point.lat, point.lng),
-      radius: spacing * 1.1 * scale,
+      anchors: anchors.map((anchor) => ({ ...latLngToXY(anchor.lat, anchor.lng), radius })),
       href: linkPattern?.replace('{code}', code).replace('{lower}', code.toLowerCase()),
     };
   })
@@ -59,9 +68,18 @@ const unplaced = [...counts.keys()].filter((code) => !countryPoints[code]);
               {mark.point.label}
               {weighted && ` — ${mark.count} ${mark.count === 1 ? 'provider' : 'providers'}`}
             </title>
-            {/* A dot is smaller than a finger, so the target is not the dot. */}
-            <circle cx={mark.xy.x} cy={mark.xy.y} r={Math.max(mark.radius * 2.4, spacing * 2.4)} fill="transparent" />
-            <circle cx={mark.xy.x} cy={mark.xy.y} r={mark.radius} fill="currentColor" />
+            {mark.anchors.map((anchor) => (
+              <>
+                {/* A dot is smaller than a finger, so the target is not the dot. */}
+                <circle
+                  cx={anchor.x}
+                  cy={anchor.y}
+                  r={Math.max(anchor.radius * 2.4, spacing * 2.4)}
+                  fill="transparent"
+                />
+                <circle cx={anchor.x} cy={anchor.y} r={anchor.radius} fill="currentColor" />
+              </>
+            ))}
           </>
         );
 
