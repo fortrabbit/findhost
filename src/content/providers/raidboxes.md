@@ -1,7 +1,9 @@
 ---
 id: raidboxes
 name: Raidboxes
-url: https://raidboxes.io
+urls:
+  home: https://raidboxes.io
+status: out-of-scope
 criterion: 6
 checkedAt: 2026-07-31
 boundedSearch: true

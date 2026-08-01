@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 import { loadFacets } from '../lib/facets';
+import { loadProviders } from '../lib/providers';
 
 /**
  * Hand-rolled rather than an integration: the route list is short, entirely
@@ -9,7 +10,7 @@ import { loadFacets } from '../lib/facets';
  */
 export const GET: APIRoute = async ({ site }) => {
   const origin = site?.origin ?? '';
-  const providers = await getCollection('providers');
+  const providers = await loadProviders();
   const categories = await getCollection('categories');
   const guide = await getCollection('guide');
   const { facets } = await loadFacets();
@@ -20,7 +21,7 @@ export const GET: APIRoute = async ({ site }) => {
     '/map/',
     '/guide/',
     '/about/',
-    '/rejected/',
+    '/policies/',
     '/search/',
     ...providers.map((provider) => `/providers/${provider.id}/`),
     ...categories.map((entry) => `/category/${entry.id}/`),

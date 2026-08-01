@@ -1,7 +1,9 @@
 ---
 id: planethoster
 name: PlanetHoster
-url: https://www.planethoster.com
+urls:
+  home: https://www.planethoster.com
+status: out-of-scope
 criterion: 6
 checkedAt: 2026-07-31
 boundedSearch: true

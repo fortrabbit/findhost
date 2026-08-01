@@ -4,6 +4,7 @@ import Base from '../../layouts/Base.astro';
 import { loadFacets } from '../../lib/facets';
 import WorldMap from '../../components/WorldMap.astro';
 import { coins, energy, flag, footnotes, price } from '../../lib/record';
+import { isListed } from '../../lib/providers';
 
 export async function getStaticPaths() {
   const providers = await getCollection('providers');
@@ -173,7 +174,19 @@ const staleAfterDays = 180;
 const checkedDaysAgo = data.checkedAt ? Math.floor((Date.now() - data.checkedAt.getTime()) / 86_400_000) : undefined;
 const stale = checkedDaysAgo !== undefined && checkedDaysAgo > staleAfterDays;
 
+/* The scope test, in the order /policies/ numbers it. */
+const criteria: Record<number, string> = {
+  1: 'runs application code',
+  2: 'sold to the public',
+  3: 'public pricing',
+  4: 'public technical documentation',
+  5: 'twelve months old',
+  6: 'two independent artifacts',
+};
+
 const statusNotice: Record<string, string> = {
+  draft:
+    'A stub. Started and not finished, so it is not in the register and not counted — what is here is what has been confirmed, and nothing has been left out on purpose.',
   acquired: 'Acquired, still operating.',
   renamed: 'Renamed. Same service under a new name.',
   'winding-down': 'Winding down: an end of life has been announced.',
@@ -182,7 +195,21 @@ const statusNotice: Record<string, string> = {
   'delisted-on-request': 'The provider asked to be removed. The record stays; entries are never deleted.',
 };
 
-const notice = typeof data.status === 'string' ? statusNotice[data.status] : undefined;
+const listed = isListed(provider);
+
+/*
+ * Built rather than looked up, because it has to name the criterion: "not
+ * listed" without one is an assertion, and this page is where the decision is
+ * argued with.
+ */
+const outOfScope =
+  data.status === 'out-of-scope' && data.criterion
+    ? `Not listed. Fails criterion ${data.criterion} — ${criteria[data.criterion]}${
+        data.boundedSearch ? ', recorded as a bounded search rather than as proof of absence' : ''
+      }. Being out of scope is not a criticism and most of these are reversible: bring the missing evidence and the record goes in.`
+    : undefined;
+
+const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[data.status] : undefined);
 
 const format = (value: unknown) => {
   if (Array.isArray(value)) return value.join(', ');
@@ -196,6 +223,7 @@ const format = (value: unknown) => {
   description={data.description}
   ai={data.ai}
   markdown={`/providers/${provider.id}.md`}
+  hidden={!listed}
 >
   <article>
     {

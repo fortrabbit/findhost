@@ -1,5 +1,6 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
+import { loadProviders } from '../lib/providers';
 
 /**
  * The dataset is the asset and being cited is the distribution thesis, so the
@@ -8,7 +9,7 @@ import { getCollection } from 'astro:content';
  */
 export const GET: APIRoute = async ({ site }) => {
   const origin = site?.origin ?? '';
-  const providers = (await getCollection('providers')).sort((a, b) => a.data.name.localeCompare(b.data.name, 'en'));
+  const providers = (await loadProviders()).sort((a, b) => a.data.name.localeCompare(b.data.name, 'en'));
   const guide = (await getCollection('guide')).sort((a, b) => a.data.order - b.data.order);
   const categories = await getCollection('categories');
 
@@ -22,7 +23,6 @@ export const GET: APIRoute = async ({ site }) => {
     '## Start here',
     '',
     `- [About, and who publishes this](${origin}/about/)`,
-    `- [Not listed, and which criterion each one failed](${origin}/rejected/)`,
     `- [Every provider](${origin}/providers/)`,
     `- [Where providers operate](${origin}/map/)`,
     `- [providers.json, every facet and every record's facet fields](${origin}/providers.json)`,

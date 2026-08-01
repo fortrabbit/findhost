@@ -22,7 +22,9 @@ A provider **must** be listed if all six of these are true. Each is a fact any r
 
 If a provider meets all six and is not listed, that is a bug. Open an issue.
 
-Every provider considered and left out is published at [not listed](/rejected/), with the numbered criterion it failed and the date it was checked. A scope test nobody can audit is not a scope test.
+Every provider considered and left out keeps a record of its own, marked out of scope and naming the numbered criterion it failed and the date it was checked. Those records are not in the register, not counted and not indexed — but they are not deleted either, and each one is a page you can link to and argue with. A scope test nobody can audit is not a scope test.
+
+The same applies in the other direction: a record we have started and not finished is marked a draft and stays out of the register until it is done. Neither an unfinished record nor a rejected one is allowed to pad a count.
 
 ## What is out of scope
 

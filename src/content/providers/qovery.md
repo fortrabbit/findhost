@@ -1,7 +1,9 @@
 ---
 id: qovery
 name: Qovery
-url: https://www.qovery.com
+urls:
+  home: https://www.qovery.com
+status: out-of-scope
 criterion: 3
 checkedAt: 2026-07-31
 ai: authored

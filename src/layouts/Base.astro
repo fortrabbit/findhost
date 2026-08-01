@@ -11,14 +11,16 @@ interface Props {
   ai?: AiLevel;
   /** Path to the same page as markdown, announced for readers that prefer text. */
   markdown?: string;
+  /** A record kept for reference but not on show: out of the index and out of search, whatever the site-wide flag says. */
+  hidden?: boolean;
 }
 
-const { title, description, ai, markdown } = Astro.props;
+const { title, description, ai, markdown, hidden = false } = Astro.props;
 const fathomSiteId = import.meta.env.PUBLIC_FATHOM_SITE_ID;
 
 // Belt and braces with robots.txt: the file stops the crawl, this stops a URL
 // someone links to from being listed anyway.
-const indexable = import.meta.env.PUBLIC_INDEXABLE === 'true';
+const indexable = import.meta.env.PUBLIC_INDEXABLE === 'true' && !hidden;
 
 // Navigation lives in the footer. The top of the page says where you are; the
 // bottom says where you can go. That makes the footer load-bearing rather than
@@ -29,13 +31,6 @@ const sections = [
   { href: '/guide/', label: 'Guide' },
   { href: '/about/', label: 'About' },
   { href: '/policies/', label: 'Policies' },
-  { href: '/rejected/', label: 'Not listed' },
-];
-
-const contribute = [
-  { href: 'https://github.com/fortrabbit/findhost', label: 'Add a provider' },
-  { href: 'https://github.com/fortrabbit/findhost/issues', label: 'Corrections' },
-  { href: 'https://github.com/fortrabbit/findhost', label: 'GitHub' },
 ];
 
 const path = Astro.url.pathname;
@@ -62,7 +57,7 @@ const canonical = new URL(path, Astro.site ?? Astro.url).href;
     <meta name="twitter:card" content="summary" />
     {fathomSiteId && <script is:inline src="https://cdn.usefathom.com/script.js" data-site={fathomSiteId} defer />}
   </head>
-  <body>
+  <body data-pagefind-ignore={hidden ? 'all' : undefined}>
     <header>
       <a href="/" class="wordmark" aria-current={path === '/' ? 'page' : undefined}>FindHost</a>
 

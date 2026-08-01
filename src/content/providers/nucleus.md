@@ -1,7 +1,9 @@
 ---
 id: nucleus
 name: Nucleus
-url: https://www.nucleus.be
+urls:
+  home: https://www.nucleus.be
+status: out-of-scope
 criterion: 2
 checkedAt: 2026-07-31
 ai: authored

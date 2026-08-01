@@ -1,7 +1,9 @@
 ---
 id: genezio
 name: Genezio
-url: https://genezio.com
+urls:
+  home: https://genezio.com
+status: out-of-scope
 criterion: 1
 checkedAt: 2026-07-31
 ai: authored

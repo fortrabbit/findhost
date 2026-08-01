@@ -16,7 +16,9 @@ Records live in `src/content/providers/<slug>.md`, one file each, frontmatter an
 
 All six inclusion criteria must be true, and each is a fact you can check rather than a judgement we make: it runs application code, it is sold to the public without a sales call, it publishes a price without a login, it documents its platform publicly, it has been purchasable for twelve months, and two independent artifacts exist — a framework's own deployment guide, a third-party package or CLI, an unaffiliated talk or tutorial, or an issue-tracker thread discussing the platform. Press releases, sponsored posts, affiliate reviews and the provider's own blog do not count.
 
-If a provider meets all six and is not listed, that is a bug. If one fails, it belongs in `src/content/rejected/` with the numbered criterion, and it is published at `/rejected/` so the decision can be argued with.
+If a provider meets all six and is not listed, that is a bug. If one fails, the record still goes in `src/content/providers/` with `status: out-of-scope` and the numbered `criterion` it failed, so the decision keeps a page and can be argued with.
+
+A record is hidden from the register, every count, the search index and the sitemap by exactly two statuses: `out-of-scope`, and `draft` for one that is started and not finished. Only a listed record has to carry a `category`; a hidden one is allowed to be a stub. Nothing is ever deleted.
 
 ## What will never be merged
 

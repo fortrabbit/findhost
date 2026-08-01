@@ -1,7 +1,9 @@
 ---
 id: truehost
 name: Truehost
-url: https://truehost.co.ke
+urls:
+  home: https://truehost.co.ke
+status: out-of-scope
 criterion: 6
 checkedAt: 2026-07-31
 boundedSearch: true

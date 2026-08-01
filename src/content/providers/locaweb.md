@@ -1,7 +1,9 @@
 ---
 id: locaweb
 name: Locaweb
-url: https://www.locaweb.com.br
+urls:
+  home: https://www.locaweb.com.br
+status: out-of-scope
 criterion: 6
 checkedAt: 2026-07-31
 boundedSearch: true

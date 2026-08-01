@@ -1,7 +1,9 @@
 ---
 id: byte
 name: Byte
-url: https://www.byte.nl
+urls:
+  home: https://www.byte.nl
+status: out-of-scope
 criterion: 2
 checkedAt: 2026-07-31
 ai: authored

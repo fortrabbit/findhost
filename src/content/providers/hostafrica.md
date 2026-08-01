@@ -1,7 +1,9 @@
 ---
 id: hostafrica
 name: HOSTAFRICA
-url: https://hostafrica.com
+urls:
+  home: https://hostafrica.com
+status: out-of-scope
 criterion: 6
 checkedAt: 2026-07-31
 boundedSearch: true

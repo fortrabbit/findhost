@@ -1,7 +1,9 @@
 ---
 id: bearstech
 name: Bearstech
-url: https://bearstech.com
+urls:
+  home: https://bearstech.com
+status: out-of-scope
 criterion: 3
 checkedAt: 2026-07-31
 ai: authored

@@ -1,7 +1,9 @@
 ---
 id: wpserveur
 name: WPServeur
-url: https://www.wpserveur.net
+urls:
+  home: https://www.wpserveur.net
+status: out-of-scope
 criterion: 6
 checkedAt: 2026-07-31
 boundedSearch: true

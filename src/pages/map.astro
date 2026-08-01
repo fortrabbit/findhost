@@ -1,10 +1,10 @@
 ---
-import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import WorldMap from '../components/WorldMap.astro';
 import { countryPoints } from '../lib/map';
+import { loadProviders } from '../lib/providers';
 
-const providers = await getCollection('providers');
+const providers = await loadProviders();
 
 const withRegions = providers.filter((provider) => provider.data.regions?.length);
 const regions = withRegions.flatMap((provider) => provider.data.regions ?? []);

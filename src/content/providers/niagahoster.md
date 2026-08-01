@@ -1,7 +1,9 @@
 ---
 id: niagahoster
 name: Niagahoster
-url: https://www.niagahoster.co.id
+urls:
+  home: https://www.niagahoster.co.id
+status: out-of-scope
 criterion: 2
 checkedAt: 2026-07-31
 ai: authored

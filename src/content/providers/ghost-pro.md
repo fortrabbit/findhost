@@ -1,7 +1,9 @@
 ---
 id: ghost-pro
 name: Ghost(Pro)
-url: https://ghost.org
+urls:
+  home: https://ghost.org
+status: out-of-scope
 criterion: 1
 checkedAt: 2026-07-31
 ai: authored

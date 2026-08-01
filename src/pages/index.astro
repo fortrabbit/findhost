@@ -2,8 +2,9 @@
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import { loadFacets } from '../lib/facets';
+import { loadProviders } from '../lib/providers';
 
-const records = await getCollection('providers');
+const records = await loadProviders();
 const { facets } = await loadFacets();
 
 /*
@@ -35,7 +36,7 @@ const columns = [
 
 <Base
   title="FindHost — a ratings-free dataset of hosting providers"
-  description="Every provider that meets the scope test, described by attributes rather than scores."
+  description="Opinionated field guide to choose the right hosting provider."
   ai="co-authored"
 >
   <h1>Find your next hosting provider</h1>
@@ -49,7 +50,7 @@ const columns = [
     {guides.map((guide) => <a href={`/guide/${guide.id}/`}>{guide.data.title}</a>)}
   </p>
 
-  <h2>I want to host…</h2>
+  <!-- <h2>I want to host…</h2> -->
 
   <div class="picker">
     {
@@ -71,15 +72,11 @@ const columns = [
       ))
     }
   </div>
-
   <p class="show-all"><a href="/providers/">Show all {records.length} providers →</a></p>
-
-  <h2>Who publishes this</h2>
   <p>
-    FindHost is a pet project by Frank Lämmer from <a href="https://www.fortrabbit.com">fortrabbit</a> — a PHP hosting company
-    that appears <a href="/providers/fortrabbit/">in this dataset</a>. It may never shape whether a provider is listed,
-    where it appears, or what its fields say. There are no affiliate links here, and no provider has ever paid to be in,
-    out or higher.{' '}
-    <a href="/policies/">Read the governance policy →</a>
+    FindHost is a pet project by Frank Lämmer from <a href="/providers/fortrabbit/">fortrabbit</a>, which is a PHP
+    hosting company that appears in this dataset. It may never shape whether a provider is listed, where it appears, or
+    what its fields say. There are no affiliate links here, and no provider has ever paid to be in, out or higher.{' '}
+    <a href="/about">More →</a>
   </p>
 </Base>

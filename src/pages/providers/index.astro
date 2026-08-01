@@ -30,19 +30,16 @@ const groups = letters.map((letter) => ({
   ai="co-authored"
 >
   <h1>Providers</h1>
-
-  <p class="lead">
-    Every provider that meets the scope test, in alphabetical order. Nothing here is ranked, and nothing is ordered by
-    how much we happen to know about it.
-  </p>
-
-  <nav class="alphabet" aria-label="Jump to a letter">
+  <!-- <nav class="alphabet" aria-label="Jump to a letter">
     {groups.map((group) => <a href={`#${group.anchor}`}>{group.letter}</a>)}
-  </nav>
+  </nav> -->
 
+  {
+    /* Wording matched to what find.ts writes here once a filter is set — and the order is stated, because position is not ranking. */
+  }
   <p class="annotation" data-find-summary>
     {providers.length}
-    {providers.length === 1 ? 'record' : 'records'}
+    {providers.length === 1 ? 'record' : 'records'}, sorted alphabetically.
   </p>
 
   <div class="find">

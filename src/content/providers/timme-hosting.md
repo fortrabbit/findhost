@@ -1,7 +1,9 @@
 ---
 id: timme-hosting
 name: Timme Hosting
-url: https://timmehosting.de
+urls:
+  home: https://timmehosting.de
+status: out-of-scope
 criterion: 6
 checkedAt: 2026-07-31
 boundedSearch: true

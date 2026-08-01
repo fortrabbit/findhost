@@ -1,7 +1,9 @@
 ---
 id: one-com
 name: one.com
-url: https://www.one.com
+urls:
+  home: https://www.one.com
+status: out-of-scope
 criterion: 6
 checkedAt: 2026-07-31
 boundedSearch: true

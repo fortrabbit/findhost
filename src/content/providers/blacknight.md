@@ -1,7 +1,9 @@
 ---
 id: blacknight
 name: Blacknight
-url: https://www.blacknight.com
+urls:
+  home: https://www.blacknight.com
+status: out-of-scope
 criterion: 6
 checkedAt: 2026-07-31
 boundedSearch: true

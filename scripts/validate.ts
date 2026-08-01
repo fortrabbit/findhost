@@ -31,6 +31,12 @@ const taxonomy = parseYaml(readFileSync(taxonomyFile, 'utf8')) as {
 const files = readdirSync(providersDir).filter((name) => name.endsWith('.md'));
 const seen = new Map<string, string>();
 
+// Kept apart in the count only. Every guard below runs on a hidden record too —
+// a rejected name is still published, and a field this dataset may never carry
+// is no more acceptable on a page nobody links to.
+const hiddenStatuses = new Set(['draft', 'out-of-scope']);
+let hidden = 0;
+
 // A ranking field is the one thing this dataset may never grow. CI4, mechanically.
 const forbidden = ['rank', 'ranking', 'score', 'rating', 'boost', 'weight', 'stars', 'position', 'featured'];
 
@@ -44,6 +50,8 @@ for (const file of files) {
   }
 
   const slug = file.replace(/\.md$/, '');
+
+  if (hiddenStatuses.has(String(data.status))) hidden += 1;
 
   if (data.id !== slug) {
     fail(file, `id "${String(data.id)}" does not match the filename — the id is the URL`);
@@ -88,4 +96,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`${files.length} records, ${taxonomy.length} facets, no problems.`);
+console.log(`${files.length - hidden} listed records, ${hidden} hidden, ${taxonomy.length} facets, no problems.`);

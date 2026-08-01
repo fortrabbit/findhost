@@ -6,10 +6,10 @@ import { z } from 'zod';
 /**
  * This file is a governance artifact, not a type definition.
  *
- * Four fields are required — id, name, urls.home, category. Everything else is
- * optional, so absent means unknown, renders as `?`, and the build stays green.
- * Nothing here may express a rank, score, boost or weight; scripts/validate.ts
- * asserts that no such field has appeared.
+ * Four fields are required of a listed record — id, name, urls.home, category.
+ * Everything else is optional, so absent means unknown, renders as `?`, and the
+ * build stays green. Nothing here may express a rank, score, boost or weight;
+ * scripts/validate.ts asserts that no such field has appeared.
  */
 
 const affiliateParams = /[?&](ref|aff|affiliate|partner|utm_[a-z]+|fpr|via)=/i;
@@ -33,9 +33,8 @@ const caveat = figure.extend({
   on: z.coerce.date(),
 });
 
-const providers = defineCollection({
-  loader: glob({ base: 'src/content/providers', pattern: '**/*.md' }),
-  schema: z.object({
+const providerFields = z
+  .object({
     // Required — the four fields without which a record is not a record.
     id: z.string(),
     name: z.string(),
@@ -54,7 +53,10 @@ const providers = defineCollection({
       terms: publicUrl.optional(),
       docs: publicUrl.optional(),
     }),
-    category: z.enum(['paas', 'vps', 'iaas', 'shared', 'serverless', 'server-management', 'vanity-hosting', 'lcnc']),
+    /* Required of a listed record — see the superRefine below. A hidden one is allowed to be a stub. */
+    category: z
+      .enum(['paas', 'vps', 'iaas', 'shared', 'serverless', 'server-management', 'vanity-hosting', 'lcnc'])
+      .optional(),
 
     // Identity
     description: z.string().max(200).optional(),
@@ -233,10 +235,30 @@ const providers = defineCollection({
      * Entries are never deleted — for a dataset published by a competitor,
      * removal is the power that has to be given up. A provider that dies or
      * leaves scope keeps its page and changes status.
+     *
+     * Two of these hide the record: `draft` is one we have started and not
+     * finished, `out-of-scope` is one considered and failed against a numbered
+     * criterion. Both keep a page, so a decision has somewhere to be argued
+     * with, and neither is listed, counted or indexed. See lib/providers.ts —
+     * the filter lives in one place so no page can forget it.
      */
     status: z
-      .enum(['active', 'acquired', 'renamed', 'winding-down', 'discontinued', 'unverifiable', 'delisted-on-request'])
+      .enum([
+        'active',
+        'acquired',
+        'renamed',
+        'winding-down',
+        'discontinued',
+        'unverifiable',
+        'delisted-on-request',
+        'draft',
+        'out-of-scope',
+      ])
       .optional(),
+    /** The numbered inclusion criterion an out-of-scope record failed. */
+    criterion: z.number().int().min(1).max(6).optional(),
+    /** Set where the failure is "we could not find it", not "it does not exist". */
+    boundedSearch: z.boolean().optional(),
     editorialNote: z.string().optional(),
     ai: z.enum(['none', 'grammar', 'co-authored', 'authored']).optional(),
 
@@ -246,28 +268,36 @@ const providers = defineCollection({
 
     /** Set on our own record. Renders the "published by us" marker. */
     publishedByUs: z.boolean().optional(),
-  }),
-});
+  })
+  /*
+   * The required-field rule, which only a listed record has to satisfy. Hiding
+   * a record is how an unfinished one is admitted without lowering the bar for
+   * the ones on show, and an out-of-scope record has to name the criterion it
+   * failed — otherwise "not listed" is an assertion rather than a decision.
+   */
+  .superRefine((record, ctx) => {
+    const hidden = record.status === 'draft' || record.status === 'out-of-scope';
 
-/**
- * Providers that were considered and not listed, with the numbered criterion
- * they failed. Published because a scope test nobody can audit is not a scope
- * test — and because "why is my competitor listed and I am not" deserves a diff
- * rather than an argument.
- */
-const rejected = defineCollection({
-  loader: glob({ base: 'src/content/rejected', pattern: '**/*.md' }),
-  schema: z.object({
-    id: z.string(),
-    name: z.string(),
-    url: publicUrl,
-    /** The numbered inclusion criterion that failed. */
-    criterion: z.number().int().min(1).max(6),
-    checkedAt: z.coerce.date(),
-    /** Set when the failure is "we could not find it", not "it does not exist". */
-    boundedSearch: z.boolean().optional(),
-    ai: z.enum(['none', 'grammar', 'co-authored', 'authored']).optional(),
-  }),
+    if (!hidden && !record.category) {
+      ctx.addIssue({
+        code: 'custom',
+        path: ['category'],
+        message: 'Required unless the record is draft or out-of-scope',
+      });
+    }
+
+    if (record.status === 'out-of-scope' && !record.criterion) {
+      ctx.addIssue({
+        code: 'custom',
+        path: ['criterion'],
+        message: 'An out-of-scope record must name the criterion it failed',
+      });
+    }
+  });
+
+const providers = defineCollection({
+  loader: glob({ base: 'src/content/providers', pattern: '**/*.md' }),
+  schema: providerFields,
 });
 
 /** The explainer that heads each category listing. */
@@ -321,4 +351,4 @@ const taxonomy = defineCollection({
   }),
 });
 
-export const collections = { providers, rejected, categories, guide, notes, taxonomy };
+export const collections = { providers, categories, guide, notes, taxonomy };

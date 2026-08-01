@@ -1,7 +1,9 @@
 ---
 id: jweiland
 name: jweiland.net
-url: https://jweiland.net
+urls:
+  home: https://jweiland.net
+status: out-of-scope
 criterion: 6
 checkedAt: 2026-07-31
 boundedSearch: true

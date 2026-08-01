@@ -1,7 +1,9 @@
 ---
 id: platform-sh
 name: Platform.sh
-url: https://platform.sh
+urls:
+  home: https://platform.sh
+status: out-of-scope
 criterion: 2
 checkedAt: 2026-07-31
 ai: authored

@@ -1,7 +1,9 @@
 ---
 id: neubox
 name: Neubox
-url: https://www.neubox.com
+urls:
+  home: https://www.neubox.com
+status: out-of-scope
 criterion: 6
 checkedAt: 2026-07-31
 boundedSearch: true

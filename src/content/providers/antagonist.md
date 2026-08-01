@@ -1,7 +1,9 @@
 ---
 id: antagonist
 name: Antagonist
-url: https://www.antagonist.nl
+urls:
+  home: https://www.antagonist.nl
+status: out-of-scope
 criterion: 6
 checkedAt: 2026-07-31
 boundedSearch: true

@@ -1,4 +1,5 @@
 import { getCollection } from 'astro:content';
+import { loadProviders } from './providers';
 
 export interface FacetValue {
   id: string;
@@ -36,7 +37,7 @@ const byName = (a: { name: string }, b: { name: string }) => a.name.localeCompar
 
 export async function loadFacets(): Promise<{ facets: Facet[]; providers: ProviderRow[] }> {
   const taxonomy = await getCollection('taxonomy');
-  const records = await getCollection('providers');
+  const records = await loadProviders();
 
   const providers: ProviderRow[] = records
     .map((record) => {

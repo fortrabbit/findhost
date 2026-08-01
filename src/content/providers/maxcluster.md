@@ -1,7 +1,9 @@
 ---
 id: maxcluster
 name: maxcluster
-url: https://www.maxcluster.de
+urls:
+  home: https://www.maxcluster.de
+status: out-of-scope
 criterion: 6
 checkedAt: 2026-07-31
 boundedSearch: true

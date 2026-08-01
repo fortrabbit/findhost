@@ -1,7 +1,9 @@
 ---
 id: stackhero
 name: Stackhero
-url: https://www.stackhero.io
+urls:
+  home: https://www.stackhero.io
+status: out-of-scope
 criterion: 3
 checkedAt: 2026-07-31
 boundedSearch: true

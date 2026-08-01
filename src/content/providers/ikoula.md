@@ -1,7 +1,9 @@
 ---
 id: ikoula
 name: Ikoula
-url: https://www.ikoula.com
+urls:
+  home: https://www.ikoula.com
+status: out-of-scope
 criterion: 6
 checkedAt: 2026-07-31
 boundedSearch: true

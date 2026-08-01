@@ -2,13 +2,14 @@
 import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import ProviderList from '../../components/ProviderList.astro';
+import { loadProviders } from '../../lib/providers';
 
 // The category page is the guide page: the explainer opens it, the records it
 // describes are listed directly beneath.
 export async function getStaticPaths() {
   const taxonomy = await getCollection('taxonomy');
   const category = taxonomy.find((facet) => facet.data.id === 'category');
-  const providers = await getCollection('providers');
+  const providers = await loadProviders();
   const explainers = await getCollection('categories');
 
   return (category?.data.values ?? [])

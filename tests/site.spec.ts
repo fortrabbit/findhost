@@ -24,7 +24,7 @@ test.describe('the register', () => {
 
   test('announces its order, because position is not ranking', async ({ page }) => {
     await page.goto('/providers/');
-    await expect(page.locator('.lead')).toContainText('alphabetical');
+    await expect(page.locator('[data-find-summary]')).toContainText('alphabetical');
   });
 
   test('every row carries a tile, so a missing figure never looks broken', async ({ page }) => {
