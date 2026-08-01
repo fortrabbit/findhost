@@ -10,4 +10,6 @@ figure:
 ai: co-authored
 ---
 
-Shared hosting is a commodity product for end consumers. Shared hosting providers usually run the data centers and the bare metal servers themselves. Shared hosting often includes domain and email services. Lot's of stuff for little money. Shared hosting is for consumers and hobbyists. Developer tools and workflows are missing. With shared hosting you'll get long running contracts that lock you in, outdated software versions and bloated control panels.
+Shared hosting is a commodity product for end consumers. Many accounts share one machine, and the provider usually runs the data centre and the bare metal itself. Domain and email services are commonly bundled in. Lots of stuff for little money.
+
+The price is paid elsewhere. Developer tools and workflows are mostly absent, software versions run behind, control panels are bloated, and contracts tend to be long, with an introductory rate that jumps on renewal — which is why the dataset records a renewal multiple next to the [entry price band](/entry-price/). It is a product for consumers and hobbyists; [VPS](/category/vps/) and [PaaS](/category/paas/) are the categories next door.

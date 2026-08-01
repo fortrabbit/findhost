@@ -60,7 +60,9 @@ ai: authored
 
 hosttech was founded in Richterswil in March 2004 and became a GmbH in 2009. It reports more than 60,000 customers, over 250,000 domains and offices in Salzburg, Berlin and Cologne alongside the Swiss headquarters.
 
-Unusually for a host of its size it owns its facilities outright rather than renting rack space. DATAROCK in Nottwil occupies a former Swiss Army military hospital fifteen metres underground; DATAPARK in Wädenswil has run since 2014; a third site in Appenzell is Tier 4 certified with a photovoltaic facade. Berlin and Vienna complete five locations, all ISO 27001 certified and running on certified renewable power. Webhosting is PHP with configurable settings and git integration.
+Unusually for a host of its size it owns its facilities outright rather than renting rack space. DATAROCK in Nottwil occupies a former Swiss Army military hospital fifteen metres underground; DATAPARK in Wädenswil has run since 2014; a third site in Appenzell is Tier 4 certified with a photovoltaic facade. Webhosting is PHP with configurable settings and git integration.
+
+Only those three Swiss sites could be confirmed. hosttech has elsewhere been described as running data centres in Berlin and Vienna as well, but no page on hosttech.ch states it — the data-centre URLs that would say so return 404, and the webhosting page carries a "swiss hosting" certification asserting that data stays in Switzerland. The record therefore lists Switzerland alone. The Salzburg, Berlin and Cologne addresses the company does publish are offices, which is a different claim from a facility.
 
 ## Reservations
 

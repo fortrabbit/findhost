@@ -176,11 +176,12 @@
   margin-top: var(--space-lg);
 }
 
+/* The question is the heading; the answers are the list. Sized in that order. */
 .picker-column > h3 {
   margin: 0 0 var(--space-3xs);
   padding-bottom: var(--space-3xs);
   border-bottom: var(--rule-strong) solid var(--color-ink);
-  font-size: var(--text-sm);
+  font-size: var(--text-md);
 }
 
 .picker-column ul {
@@ -196,6 +197,7 @@
   gap: var(--space-xs);
   padding: var(--space-3xs) 0;
   border-bottom: var(--rule-hairline) solid var(--color-ink);
+  font-size: var(--text-sm);
 }
 
 .picker-all {

@@ -26,9 +26,17 @@ fortrabbit appears in the dataset in alphabetical position, with the same fields
 
 <h2 id="ai">How this site is made</h2>
 
-Agents gather the facts. A person reads every record before it is published. The editorial decisions are human, and much of the code is written by AI. Every page carries a disclosure in its footer saying which of those applies to that page.
+Agents gather the facts, working from providers' own public pages, and record the URL and the date for each one. The editorial decisions are human: what the fields mean, which providers are in scope, what a caveat says and whose name is on it. Much of the code is written by AI. Every page carries a disclosure in its footer saying which of those applies to that page.
+
+Two things this does *not* claim. A human has not read every record — a `checkedAt` date means a machine read that provider's pages on that day, and nothing stronger. And a source is a record of what a provider published, not a verification that it is true.
 
 The tier of sites this dataset exists to correct is largely AI-generated too. The difference is not whether a machine was involved — it is whether anyone tells you, and whether a human stands behind the result. So: sources per claim, a date on what was checked, an open repository, and this page.
+
+## Credits
+
+Built with [Astro](https://astro.build), which does the unglamorous work this project depends on: the content schema that rejects a malformed record at build time, and static output with no runtime to keep alive. Search is [Pagefind](https://pagefind.app), which indexes the built HTML rather than a database.
+
+The code and much of the research were written with [Claude](https://claude.ai). Saying so is the same principle as everything else on this page: the process is the product, and a process nobody can see is a process nobody can check.
 
 ## Licences
 

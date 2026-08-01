@@ -10,10 +10,10 @@ figure:
 ai: co-authored
 ---
 
-Platform as a Service (PaaS) is a cloud computing model that provides a 'platform' for hosting all kind of applications. It allows developers to build, test, and deploy applications without the need for infrastructure management. This reduces the time and cost associated with setting up and maintaining bare metal hosting infrastructure and maintaining the servers (sysops, devops).
+Platform as a Service (PaaS) is a cloud computing model that provides a 'platform' for hosting all kinds of applications. It lets developers build, test, and deploy applications without managing the infrastructure underneath. That removes the time and cost of setting up bare metal hosting infrastructure and keeping the servers running (sysops, devops).
 
-In cloud computing acronyms, [IaaS](/category/iaas/) is the ground level, on top of that is PaaS, the last layer is SaaS.
+In cloud computing acronyms, [IaaS](/category/iaas/) is the ground level, PaaS sits on top of it, and SaaS is the last layer.
 
-Fueled by the initial success of Heroku, it was predicted that PaaS will replace most classical hosting. That didn't happened. Many PaaS startups failed. So the term Platform as a Service has a bad reputation. But today there are plenty of new specialized PaaS-like cloud hosting solutions, though they don't call themselves like that any more.
+Fuelled by the early success of Heroku, PaaS was widely predicted to replace most classical hosting. That did not happen. Many PaaS startups failed, and the term Platform as a Service carries a bad reputation because of it. Plenty of specialised PaaS-like cloud hosting services exist regardless, though most of them avoid the label.
 
-PaaS is professional, usually language agnostic, containerized, service oriented cloud hosting. The boundaries are blurred.
+PaaS is professional, usually language-agnostic, containerised, service-oriented cloud hosting. The boundaries to [VPS](/category/vps/) on one side and [serverless](/category/serverless/) on the other are blurred.

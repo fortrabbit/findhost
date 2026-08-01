@@ -8,7 +8,12 @@ import { loadFacets } from '../lib/facets';
 const records = await getCollection('providers');
 const { facets } = await loadFacets();
 
-const guides = (await getCollection('guide')).sort((a, b) => a.data.order - b.data.order);
+/*
+ * The two orientation guides only. The rest are reachable from /guide/ and the
+ * footer — a home page that links every guide it has is a table of contents,
+ * and the job here is to change how one arrives at the question.
+ */
+const guides = (await getCollection('guide')).sort((a, b) => a.data.order - b.data.order).slice(0, 2);
 
 /*
  * Four questions, five answers each. The commonest values are the ones most

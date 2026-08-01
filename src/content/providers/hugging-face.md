@@ -60,6 +60,8 @@ Hugging Face is best known as the registry where machine-learning models and dat
 
 Hardware is where the money is. CPU Basic with two vCPUs and sixteen gigabytes is free, as is ZeroGPU with dynamically allocated capacity, and paid tiers rent Nvidia T4, L4, L40S and A100 cards by the hour. Account plans are PRO at nine dollars a month, Team at twenty per user and Enterprise at fifty, adding storage, SSO, audit logs and access controls.
 
+What is free has narrowed, and the distinction is fine enough to be worth stating exactly. Static Spaces remain free for everyone. Gradio and Docker Spaces run on compute and now require a paid plan to create — PRO for a personal account, Team or Enterprise for an organisation — with one exception: a free personal account in good standing may still run up to two Gradio Spaces on ZeroGPU. The free tier therefore survives for a static site and for a demo, while hosting an arbitrary containerised application starts at nine dollars a month.
+
 ## Reservations
 
 This is not a general web host and does not pretend to be. Spaces are shaped around demonstrating a model, the Python SDKs assume that shape, and a free Space sleeps when idle. Storage is billed by the terabyte on top of the plan, and GPU rental is charged by the hour whether or not anyone visits — a Space left running on an A100 is an expensive way to host a demo.

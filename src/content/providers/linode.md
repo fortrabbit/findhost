@@ -36,7 +36,7 @@ regions:
   - JP
   - AU
 apiAvailable: public
-status: active
+status: acquired
 checkedAt: 2026-08-01
 sources:
   - { field: entryPrice, url: 'https://api.linode.com/v4/linode/types', checkedAt: 2026-08-01 }
@@ -64,4 +64,4 @@ Linode's public API — which needs no credentials to read the catalogue — lis
 
 A Linode is a Linux server, and the responsibility that comes with one. Building and maintaining the web stack — Nginx, PHP-FPM, MySQL, TLS certificates, firewall rules — takes time and expertise, and security patches, operating system upgrades and monitoring are standing work rather than a one-off setup.
 
-The product's centre of gravity has also moved. Marketing, packaging and roadmap now sit inside Akamai's enterprise infrastructure business, which is a different customer from the independent developer the original Linode was built around.
+The product's centre of gravity has also moved. Marketing, packaging and roadmap now sit inside Akamai's enterprise infrastructure business, which is a different customer from the independent developer the original Linode was built around. The brand's own corporate pages have gone with it: `linode.com/company/about/` redirects to akamai.com and the Linode terms of service return 404, so the company behind the product can now only be read about under another name.

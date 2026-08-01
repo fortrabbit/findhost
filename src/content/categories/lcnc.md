@@ -12,8 +12,8 @@ ai: co-authored
 
 ## About low-code and no-code platforms
 
-Low-code and no-code platforms let people build websites with visual editors instead of writing code. Hosting, templates, updates, and security are bundled, which makes setup fast but also limits control over the runtime. These tools are different from shared hosting or PaaS because you are working inside a product, not deploying your own code. Portability is limited, and the feature set is defined by the platform.
+Low-code and no-code platforms let people build websites with visual editors instead of writing code. Hosting, templates, updates, and security are bundled, which makes setup fast but also limits control over the runtime. These tools differ from [shared hosting](/category/shared/) or [PaaS](/category/paas/) in that the work happens inside a product rather than in code that is deployed to a server. Portability is limited, and the feature set is defined by the platform.
 
 ## Providers in this section
 
-This section covers hosted builders and adjacent services, including [Wix](/providers/wix/), [Squarespace](/providers/squarespace/), [Webflow](/providers/webflow/), [Bubble](/providers/bubble/), [Weebly](/providers/weebly/), [Shopify](/providers/shopify/), [Jimdo](/providers/jimdo/), and [Duda](/providers/duda/).
+This section covers hosted builders and adjacent services, including [Wix](/providers/wix/), [Squarespace](/providers/squarespace/), [Webflow](/providers/webflow/), [Bubble](/providers/bubble/), [Weebly](/providers/weebly/), [Shopify](/providers/shopify/), [Jimdo](/providers/jimdo/), [Duda](/providers/duda/) and [Lovable](/providers/lovable/).

@@ -72,4 +72,4 @@ The offering is deliberately narrow: shared hosting from €2.99 a month on annu
 
 ## Reservations
 
-The technical detail a developer needs is not on the pages that sell the product: no PHP version, no SSH answer, no database specification and — despite the data-centre page — no stated location. Prices are annual-billing rates quoted both with and without VAT, so three different figures describe the same plan.
+The technical detail a developer needs is not on the pages that sell the product: no PHP version, no SSH answer and no database specification. The data-centre page is the exception: it names both Bratislava facilities plainly, which is more than most hosts of this size manage. Prices are annual-billing rates quoted both with and without VAT, so three different figures describe the same plan.

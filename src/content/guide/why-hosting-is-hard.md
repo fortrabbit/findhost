@@ -18,7 +18,7 @@ It is genuinely difficult to tell hosting services apart from the outside. That 
 
 ## Blurry categories
 
-Even skilled developers routinely lack a clear picture here, and the vocabulary is part of why. There is [shared hosting](/category/shared/), [VPS](/category/vps/) and [IaaS](/category/iaas/), but vendors blur those lines constantly, and newer services are harder still. Is serverless really server-less? The dataset answers this with fields rather than adjectives: a primary [category](/category/), plus what a provider [also offers](/providers/), plus [who manages the operating system](/os-managed-by/) and [whose hardware it runs on](/hardware/).
+Even skilled developers routinely lack a clear picture here, and the vocabulary is part of why. There is [shared hosting](/category/shared/), [VPS](/category/vps/) and [IaaS](/category/iaas/), but vendors blur those lines constantly, and the newer categories are harder still. Is [serverless](/category/serverless/) really server-less? The dataset answers this with fields rather than adjectives: a primary [category](/category/), [who manages the operating system](/os-managed-by/) and [whose hardware it runs on](/hardware/). Those last two settle most of the argument on their own, because they stay answerable whatever a vendor decides to call the product.
 
 ## Marketing-driven
 
@@ -32,4 +32,4 @@ That is the gap this dataset exists to fill: every provider that meets the [scop
 
 ## Hosting is still local
 
-Hosting remains a surprisingly local market. People in France host in France, people in the US host in the US, and plenty of good providers never appear in English-language comparisons at all. [Regions](/regions/) and headquarters country are fields for exactly that reason — so a preference for a jurisdiction is something you apply yourself, rather than something we decide for you.
+Hosting remains a surprisingly local market. People in France host in France, people in the US host in the US, and plenty of good providers never appear in English-language comparisons at all. [Regions](/regions/) and headquarters country are fields for exactly that reason — a preference for one jurisdiction over another stays the reader's to apply, rather than ours to decide.

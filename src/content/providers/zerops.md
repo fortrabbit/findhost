@@ -61,6 +61,8 @@ regions:
   - CZ
 infraContract:
   - resells-iaas
+runsOn:
+  - vshosting
 apiAvailable: public
 cliTool: official
 social:
@@ -71,6 +73,7 @@ social:
 checkedAt: 2026-08-01
 sources:
   - { field: regions, url: 'https://docs.zerops.io/company/about', checkedAt: 2026-08-01 }
+  - { field: runsOn, url: 'https://docs.zerops.io/company/about', checkedAt: 2026-08-01 }
   - { field: founded, url: 'https://docs.zerops.io/company/about', checkedAt: 2026-08-01 }
   - { field: hqCountry, url: 'https://docs.zerops.io/company/about', checkedAt: 2026-08-01 }
   - { field: ownership, url: 'https://docs.zerops.io/company/about', checkedAt: 2026-08-01 }
@@ -93,6 +96,10 @@ The second is the pricing structure, or the absence of one. There are no subscri
 
 New accounts are given credit to start with rather than a permanently free tier.
 
+The company documentation is unusually forthcoming about the layer underneath. Zerops began in 2018 as an internal project at vshosting.eu and was relaunched as an independent startup in June 2024; its servers sit in vshosting's Prague facility, and the docs state plainly that vshosting "is part of Contabo, owned by global investment firm KKR". Backing comes from Presto Ventures and Gi21 Capital.
+
 ## Reservations
 
-Neither the documentation nor the pricing page names a region or a data-centre country, which is a real gap for a European platform whose jurisdiction would otherwise be part of the appeal. Consumption-only billing removes the tier ladder but makes the monthly cost something to model rather than read, and no founding date or ownership is published.
+Consumption-only billing removes the tier ladder but makes the monthly cost something to model rather than read, and a new account starts on credit rather than a permanently free tier.
+
+The ownership chain is worth following for anyone choosing on European independence. The platform is Czech and its servers are in Prague, but the infrastructure beneath belongs to Contabo, which belongs to an American private-equity firm. Zerops publishes this itself, which is more than most do — the point is not concealment, it is that "European platform" and "European ownership all the way down" are different claims.

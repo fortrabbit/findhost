@@ -77,6 +77,6 @@ Cloud Run is Google's serverless container platform. It runs any container, scal
 
 Billing is per request, per vCPU-second and per GB-second, against a monthly free allowance of two million requests, 180,000 vCPU-seconds and 360,000 GB-seconds that resets every month. Code is deployed as a container image pushed to a registry.
 
-The locations page splits regions into two pricing tiers across roughly forty-three locations. Doha is among them and is not recorded here, because the region taxonomy in this dataset has no entry for Qatar.
+The locations page splits regions into two pricing tiers across roughly forty-three locations.
 
 Language-agnostic containers make it portable. That portability has a price, and the price is the container. A Dockerfile to write and keep current. An image registry. The surrounding Google Cloud services to wire up. And scale-to-zero still buys a cold start on the first request after a quiet spell.

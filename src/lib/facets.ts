@@ -93,25 +93,34 @@ export async function loadFacets(): Promise<{ facets: Facet[]; providers: Provid
   return { facets, providers };
 }
 
-/** Every facet value that at least one record uses — the pages worth generating. */
+/**
+ * Every facet value that at least one record uses — the pages worth generating.
+ *
+ * `category` is excluded: /category/<slug>/ has its own route, which heads the
+ * list with the explainer that makes it more than a filtered view. Generating it
+ * here too collides with that route, and Astro resolves the collision in the
+ * explainer's favour while warning about it on every build.
+ */
 export async function facetRoutes() {
   const { facets, providers } = await loadFacets();
 
-  return facets.flatMap((facet) =>
-    facet.values
-      .filter((value) => value.count > 0)
-      .map((value) => ({
-        params: { facet: facet.id, value: value.id },
-        props: {
-          facet,
-          value,
-          matches: providers.filter((provider) => {
-            const held = provider.facets[facet.field];
-            return Array.isArray(held) ? held.includes(value.id) : held === value.id;
-          }),
-        },
-      })),
-  );
+  return facets
+    .filter((facet) => facet.id !== 'category')
+    .flatMap((facet) =>
+      facet.values
+        .filter((value) => value.count > 0)
+        .map((value) => ({
+          params: { facet: facet.id, value: value.id },
+          props: {
+            facet,
+            value,
+            matches: providers.filter((provider) => {
+              const held = provider.facets[facet.field];
+              return Array.isArray(held) ? held.includes(value.id) : held === value.id;
+            }),
+          },
+        })),
+    );
 }
 
 /**
