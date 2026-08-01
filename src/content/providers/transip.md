@@ -5,6 +5,8 @@ urls:
   home: https://www.transip.nl
   pricing: https://www.transip.nl/webhosting/
   status: https://www.transnoc.nl/
+  terms: https://www.transip.nl/algemene-voorwaarden/
+  docs: https://api.transip.nl/rest/docs.html
 category: shared
 description: Dutch registrar and hosting provider selling shared PHP webhosting, VPS, OpenStack cloud and managed Kubernetes from its own Netherlands data centres.
 founded: 2003
@@ -40,11 +42,21 @@ freeTier: none
 regions:
   - NL
 apiAvailable: public
+social:
+  x: https://twitter.com/TransIP
+  linkedin: https://nl.linkedin.com/company/transip
+  facebook: https://www.facebook.com/transipNL
+  youtube: https://youtube.com/TransIP
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-01
 sources:
   - { field: entryPriceBand, url: 'https://www.transip.eu/web-hosting/', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://www.transip.eu/web-hosting/', checkedAt: 2026-07-31 }
+  - { field: regions, url: 'https://www.transip.nl/over-transip/', checkedAt: 2026-08-01 }
+  - { field: founded, url: 'https://www.transip.nl/over-transip/', checkedAt: 2026-08-01 }
+  - { field: parent, url: 'https://www.transip.nl/over-transip/', checkedAt: 2026-08-01 }
+  - { field: social, url: 'https://www.transip.nl', checkedAt: 2026-08-01 }
+  - { field: urls, url: 'https://www.transip.nl/algemene-voorwaarden/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🌷
   color: rgb(15, 55, 50)

@@ -4,6 +4,8 @@ name: Webdock
 urls:
   home: https://webdock.io
   pricing: https://webdock.io/en/pricing
+  status: https://status.webdock.io/
+  docs: https://webdock.io/en/docs
 category: vps
 description: Danish VPS provider selling AMD Epyc and Xeon virtual servers with a web control panel, prepared stacks and WordPress plans, from a single Denmark facility.
 hqCountry: DK
@@ -33,11 +35,23 @@ deployMethods:
 sshAccess: full
 pricingModel: fixed-tier
 entryPriceBand: under-5
+entryPrice: { amount: 2.15, currency: EUR, period: month }
 freeTier: none
 regions:
   - DK
 contractMinimum: none
 apiAvailable: public
+social:
+  linkedin: https://www.linkedin.com/company/webdock-io/
+  facebook: https://www.facebook.com/webdockio
+  youtube: https://www.youtube.com/@webdock
+checkedAt: 2026-08-01
+sources:
+  - { field: regions, url: 'https://webdock.io/en/pricing', checkedAt: 2026-08-01 }
+  - { field: entryPrice, url: 'https://webdock.io/en/pricing', checkedAt: 2026-08-01 }
+  - { field: entryPriceBand, url: 'https://webdock.io/en/pricing', checkedAt: 2026-08-01 }
+  - { field: social, url: 'https://webdock.io/en', checkedAt: 2026-08-01 }
+  - { field: urls, url: 'https://status.webdock.io/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🇩🇰
   color: rgb(60, 25, 30)

@@ -5,6 +5,8 @@ urls:
   home: https://www.mythic-beasts.com
   pricing: https://www.mythic-beasts.com/order/hosting
   status: https://www.mythic-beasts.com/support/status
+  terms: https://www.mythic-beasts.com/terms/overview
+  docs: https://www.mythic-beasts.com/support
 category: shared
 description: British host selling web and email hosting in eleven graded sizes, with multiple PHP versions per site, MySQL as standard and shell access as an add-on.
 hqCountry: GB
@@ -38,10 +40,24 @@ managedDatabases:
   - postgres
 backupsIncluded: included
 pricingModel: fixed-tier
+entryPrice: { amount: 1, currency: GBP, period: month }
 entryPriceBand: under-5
 freeTier: none
+contractMinimum: monthly
 regions:
   - GB
+supportChannels:
+  - email
+status: active
+checkedAt: 2026-08-01
+sources:
+  - { field: regions, url: 'https://www.mythic-beasts.com/order/hosting', checkedAt: 2026-08-01 }
+  - { field: entryPrice, url: 'https://www.mythic-beasts.com/order/hosting', checkedAt: 2026-08-01 }
+  - { field: entryPriceBand, url: 'https://www.mythic-beasts.com/order/hosting', checkedAt: 2026-08-01 }
+  - { field: contractMinimum, url: 'https://www.mythic-beasts.com/order/hosting', checkedAt: 2026-08-01 }
+  - { field: pricingModel, url: 'https://www.mythic-beasts.com/order/hosting', checkedAt: 2026-08-01 }
+  - { field: ownership, url: 'https://www.mythic-beasts.com/support', checkedAt: 2026-08-01 }
+  - { field: supportChannels, url: 'https://www.mythic-beasts.com/support', checkedAt: 2026-08-01 }
 figure:
   emoji: 🐉
   color: rgb(35, 25, 55)

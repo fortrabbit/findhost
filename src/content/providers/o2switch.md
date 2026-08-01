@@ -42,15 +42,22 @@ entryPriceBand: 5-15
 freeTier: none
 regions:
   - FR
+sustainabilityUrl: https://www.o2switch.fr/green/
 supportChannels:
   - phone
   - email
   - chat
+supportHours: 24-7
 cliTool: none
+status: active
+checkedAt: 2026-08-01
 sources:
   - { field: infraContract, url: 'https://www.o2switch.fr/', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://www.o2switch.fr/', checkedAt: 2026-07-31 }
   - { field: hqCountry, url: 'https://www.o2switch.fr/', checkedAt: 2026-07-31 }
+  - { field: supportHours, url: 'https://www.o2switch.fr/hebergement-illimite/', checkedAt: 2026-08-01 }
+  - { field: supportChannels, url: 'https://www.o2switch.fr/hebergement-illimite/', checkedAt: 2026-08-01 }
+  - { field: sustainabilityUrl, url: 'https://www.o2switch.fr/green/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🌋
   color: rgb(60, 30, 25)

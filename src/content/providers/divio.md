@@ -6,7 +6,9 @@ urls:
   pricing: https://www.divio.com/pricing/
 category: paas
 description: Swiss platform that runs Dockerised applications of any stack from git, with a free-trial tier, tiered support response times and a stated cloud-cost calculator.
+founded: 2006
 hqCountry: CH
+ownership: public
 whoManagesOs: container
 useCases:
   - cms
@@ -49,6 +51,14 @@ supportHours: 24-7
 supportTiering: paid-upgrade
 certifications:
   - ISO 27001
+status: active
+checkedAt: 2026-08-01
+sources:
+  - { field: founded, url: 'https://www.divio.com/company/', checkedAt: 2026-08-01 }
+  - { field: ownership, url: 'https://www.divio.com/company/', checkedAt: 2026-08-01 }
+  - { field: freeTier, url: 'https://www.divio.com/pricing/', checkedAt: 2026-08-01 }
+  - { field: supportTiering, url: 'https://www.divio.com/pricing/', checkedAt: 2026-08-01 }
+  - { field: certifications, url: 'https://www.divio.com/pricing/', checkedAt: 2026-08-01 }
 figure:
   emoji: 📦
   color: rgb(30, 40, 45)
@@ -65,4 +75,6 @@ Plans start with a Lite trial tier at a fifth of a CPU core and 256 MB of memory
 
 ## Reservations
 
-Three separate axes — resource tier, support tier and feature tier — have to be chosen before a price exists, and the pricing page does not resolve them into a single figure. Cloud providers and regions are described only as "multiple global cloudspaces", with no country named in either the pricing page or the documentation. The company's founding date and ownership are not published anywhere on the site.
+Three separate axes — resource tier, support tier and feature tier — have to be chosen before a price exists, and the pricing page does not resolve them into a single figure. Cloud providers and regions are described only as "multiple global cloudspaces", with no country named in either the pricing page or the documentation.
+
+The company page dates the founding to 2006 in Zurich and names the listed entity as Divio Technologies AB on Nasdaq First North Growth Market in Stockholm, which puts the operating identity and the registered one in different countries. Only the Swiss side is recorded here.

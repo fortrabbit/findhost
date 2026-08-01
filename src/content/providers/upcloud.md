@@ -3,8 +3,36 @@ id: upcloud
 name: UpCloud
 urls:
   home: https://upcloud.com
+  status: https://status.upcloud.com/
+  docs: https://developers.upcloud.com/
 category: iaas
 description: UpCloud is a European cloud infrastructure provider based in Finland.
+whoManagesOs: you
+runtimes:
+  - any
+sshAccess: full
+apiAvailable: public
+regions:
+  - FI
+  - SE
+  - NO
+  - DK
+  - DE
+  - NL
+  - PL
+  - ES
+  - GB
+  - SG
+  - AU
+  - US
+social:
+  github: https://github.com/UpCloudLtd
+checkedAt: 2026-08-01
+sources:
+  - { field: regions, url: 'https://status.upcloud.com/', checkedAt: 2026-08-01 }
+  - { field: apiAvailable, url: 'https://developers.upcloud.com/1.3/', checkedAt: 2026-08-01 }
+  - { field: urls, url: 'https://developers.upcloud.com/', checkedAt: 2026-08-01 }
+  - { field: social, url: 'https://github.com/UpCloudLtd', checkedAt: 2026-08-01 }
 ai: co-authored
 ---
 

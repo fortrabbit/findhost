@@ -4,6 +4,7 @@ name: WebSupport
 urls:
   home: https://www.websupport.sk
   pricing: https://www.websupport.sk/webhosting
+  terms: https://www.websupport.sk/podmienky
 category: shared
 description: Slovakia's largest domain registrar, selling shared hosting and a website builder across Slovakia, Czechia and Hungary from its own data centre.
 hqCountry: SK
@@ -31,12 +32,30 @@ deployMethods:
 backupsIncluded: included
 pricingModel: fixed-tier
 entryPriceBand: under-5
+entryPrice: { amount: 2.99, currency: EUR, period: month }
 freeTier: none
+regions:
+  - SK
+energyClaim: annual-matched
 supportChannels:
   - phone
   - email
   - chat
 supportHours: 24-7
+social:
+  facebook: https://www.facebook.com/WebSupport.sk
+  linkedin: https://sk.linkedin.com/company/websupportsk
+  youtube: https://www.youtube.com/websupport
+checkedAt: 2026-08-01
+sources:
+  - { field: regions, url: 'https://www.websupport.sk/datacentrum', checkedAt: 2026-08-01 }
+  - { field: energyClaim, url: 'https://www.websupport.sk/o-nas', checkedAt: 2026-08-01 }
+  - { field: parent, url: 'https://www.websupport.sk/o-nas', checkedAt: 2026-08-01 }
+  - { field: supportHours, url: 'https://www.websupport.sk/o-nas', checkedAt: 2026-08-01 }
+  - { field: entryPrice, url: 'https://www.websupport.sk/webhosting', checkedAt: 2026-08-01 }
+  - { field: entryPriceBand, url: 'https://www.websupport.sk/webhosting', checkedAt: 2026-08-01 }
+  - { field: social, url: 'https://www.websupport.sk', checkedAt: 2026-08-01 }
+  - { field: urls, url: 'https://www.websupport.sk/podmienky', checkedAt: 2026-08-01 }
 figure:
   emoji: 🏔️
   color: rgb(25, 45, 60)

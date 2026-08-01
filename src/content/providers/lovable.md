@@ -4,6 +4,7 @@ name: Lovable
 urls:
   home: https://lovable.dev
   pricing: https://lovable.dev/pricing
+  docs: https://docs.lovable.dev
 category: lcnc
 description: Lovable is an AI-assisted low-code no-code platform that generates web app code from natural language prompts and deploys it on its own infrastructure.
 whoManagesOs: provider
@@ -17,10 +18,10 @@ sshAccess: none
 pricingModel: credit
 freeTier: permanent
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-01
 sources:
-  - { field: pricingModel, url: 'https://lovable.dev/pricing', checkedAt: 2026-07-31 }
-  - { field: freeTier, url: 'https://lovable.dev/pricing', checkedAt: 2026-07-31 }
+  - { field: pricingModel, url: 'https://lovable.dev/pricing', checkedAt: 2026-08-01 }
+  - { field: freeTier, url: 'https://lovable.dev/pricing', checkedAt: 2026-08-01 }
 figure:
   emoji: 🔒
   color: rgb(160, 80, 80)

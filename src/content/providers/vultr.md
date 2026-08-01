@@ -4,13 +4,16 @@ name: Vultr
 urls:
   home: https://www.vultr.com
   pricing: https://www.vultr.com/pricing/
+  docs: https://docs.vultr.com/
 category: vps
 description: Vultr is a cloud infrastructure provider offering VPS, bare metal, GPU instances and managed Kubernetes across 33 locations in 20 countries.
 whoManagesOs: you
 runtimes:
   - any
 sshAccess: full
+pricingModel: hourly
 entryPriceBand: under-5
+entryPrice: { amount: 2.5, currency: USD, period: month }
 regions:
   - US
   - CA
@@ -34,8 +37,11 @@ regions:
   - AU
 apiAvailable: public
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-01
 sources:
+  - { field: entryPrice, url: 'https://api.vultr.com/v2/plans', checkedAt: 2026-08-01 }
+  - { field: pricingModel, url: 'https://api.vultr.com/v2/plans', checkedAt: 2026-08-01 }
+  - { field: urls, url: 'https://docs.vultr.com/', checkedAt: 2026-08-01 }
   - { field: regions, url: 'https://api.vultr.com/v2/regions', checkedAt: 2026-07-31 }
   - { field: entryPriceBand, url: 'https://api.vultr.com/v2/plans', checkedAt: 2026-07-31 }
   - { field: apiAvailable, url: 'https://api.vultr.com/v2/regions', checkedAt: 2026-07-31 }

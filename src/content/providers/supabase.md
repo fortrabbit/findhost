@@ -5,6 +5,9 @@ urls:
   home: https://supabase.com
   pricing: https://supabase.com/pricing
   status: https://status.supabase.com/
+  terms: https://supabase.com/terms
+  sla: https://supabase.com/docs/company/sla
+  docs: https://supabase.com/docs
 category: serverless
 description: Open-source backend built on PostgreSQL, with authentication, storage, realtime and Edge Functions that run the customer's own TypeScript on Deno.
 hqCountry: US
@@ -32,8 +35,32 @@ managedDatabases:
 pricingModel: fixed-tier
 entryPriceBand: free-tier
 freeTier: permanent
+regions:
+  - US
+  - CA
+  - BR
+  - IE
+  - GB
+  - FR
+  - DE
+  - CH
+  - SE
+  - IN
+  - SG
+  - JP
+  - KR
+  - AU
 apiAvailable: public
 cliTool: official
+social:
+  github: https://github.com/supabase
+  x: https://twitter.com/supabase
+checkedAt: 2026-08-01
+sources:
+  - { field: regions, url: 'https://supabase.com/docs/guides/platform/regions', checkedAt: 2026-08-01 }
+  - { field: ownership, url: 'https://supabase.com/company', checkedAt: 2026-08-01 }
+  - { field: social, url: 'https://supabase.com', checkedAt: 2026-08-01 }
+  - { field: urls, url: 'https://supabase.com/docs/company/sla', checkedAt: 2026-08-01 }
 figure:
   emoji: ⚡
   color: rgb(20, 50, 35)

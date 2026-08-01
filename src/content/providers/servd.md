@@ -4,8 +4,11 @@ name: Servd
 urls:
   home: https://servd.host
   pricing: https://servd.host/pricing
+  terms: https://servd.host/terms
 category: vanity-hosting
 description: Servd is a fully managed hosting platform built for Craft CMS, sold as three fixed plans that each host one Craft installation.
+hqCountry: GB
+ownership: independent
 whoManagesOs: provider
 useCases:
   - cms
@@ -29,8 +32,11 @@ regions:
 social:
   x: https://twitter.com/servdhosting
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-01
 sources:
+  - { field: hqCountry, url: 'https://servd.host/terms', checkedAt: 2026-08-01 }
+  - { field: ownership, url: 'https://servd.host/terms', checkedAt: 2026-08-01 }
+  - { field: urls, url: 'https://servd.host/terms', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://servd.host/pricing', checkedAt: 2026-07-31 }
   - { field: backupsIncluded, url: 'https://servd.host/pricing', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://servd.host/pricing', checkedAt: 2026-07-31 }

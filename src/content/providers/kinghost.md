@@ -5,6 +5,8 @@ urls:
   home: https://king.host
   pricing: https://king.host/hospedagem-de-sites
   status: https://status.kinghost.net.br/
+  terms: https://king.host/contratos-e-politicas
+  docs: https://king.host/wiki
 category: shared
 description: Brazilian shared, WordPress and VPS hosting brand under LWSA, documenting PHP, Node.js, Python and Java application deployment on shared plans.
 founded: 2006
@@ -36,13 +38,26 @@ deployMethods:
   - control-panel
 sshAccess: limited
 pricingModel: fixed-tier
+entryPrice: { amount: 9.99, currency: BRL, period: month }
 entryPriceBand: under-5
 freeTier: none
+contractMinimum: monthly
 regions:
   - BR
 supportChannels:
   - chat
   - phone
+supportHours: 24-7
+status: active
+checkedAt: 2026-08-01
+sources:
+  - { field: regions, url: 'https://king.host/hospedagem-de-sites', checkedAt: 2026-08-01 }
+  - { field: entryPrice, url: 'https://king.host/hospedagem-de-sites', checkedAt: 2026-08-01 }
+  - { field: entryPriceBand, url: 'https://king.host/hospedagem-de-sites', checkedAt: 2026-08-01 }
+  - { field: contractMinimum, url: 'https://king.host/hospedagem-de-sites', checkedAt: 2026-08-01 }
+  - { field: pricingModel, url: 'https://king.host/hospedagem-de-sites', checkedAt: 2026-08-01 }
+  - { field: supportHours, url: 'https://king.host/hospedagem-de-sites', checkedAt: 2026-08-01 }
+  - { field: supportChannels, url: 'https://king.host/hospedagem-de-sites', checkedAt: 2026-08-01 }
 figure:
   emoji: 👑
   color: rgb(70, 25, 55)

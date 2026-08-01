@@ -37,7 +37,23 @@ regions:
 supportChannels:
   - chat
   - phone
+supportHours: 24-7
 contractMinimum: none
+certifications:
+  - ISO 27001
+social:
+  x: https://twitter.com/VentraIP/
+  facebook: https://www.facebook.com/ventraip
+  youtube: https://www.youtube.com/c/VentraIPAU/videos
+checkedAt: 2026-08-01
+sources:
+  - { field: founded, url: 'https://ventraip.com.au/about-us/', checkedAt: 2026-08-01 }
+  - { field: hqCountry, url: 'https://ventraip.com.au/about-us/', checkedAt: 2026-08-01 }
+  - { field: parent, url: 'https://ventraip.com.au/about-us/', checkedAt: 2026-08-01 }
+  - { field: regions, url: 'https://ventraip.com.au/about-us/', checkedAt: 2026-08-01 }
+  - { field: supportHours, url: 'https://ventraip.com.au/about-us/', checkedAt: 2026-08-01 }
+  - { field: certifications, url: 'https://ventraip.com.au/about-us/', checkedAt: 2026-08-01 }
+  - { field: social, url: 'https://ventraip.com.au', checkedAt: 2026-08-01 }
 figure:
   emoji: 🪃
   color: rgb(65, 30, 20)

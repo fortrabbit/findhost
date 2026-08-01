@@ -4,6 +4,7 @@ name: STRATO
 urls:
   home: https://www.strato.de
   pricing: https://www.strato.de/hosting/
+  terms: https://www.strato.de/agb/
 category: shared
 description: Berlin-based mass-market webhosting brand owned by IONOS, selling shared hosting, WordPress hosting, virtual and dedicated servers.
 founded: 1997
@@ -38,11 +39,27 @@ contractMinimum: annual
 freeTier: none
 regions:
   - DE
-checkedAt: 2026-07-31
+energyClaim: annual-matched
+sustainabilityUrl: https://www.strato.de/ueber-uns/nachhaltigkeit/
+certifications:
+  - ISO 27001
+  - ISO 14001
+  - ISO 50001
+social:
+  x: https://x.com/STRATO_ag
+  linkedin: https://de.linkedin.com/company/strato-ag
+  facebook: https://www.facebook.com/strato/
+  youtube: https://www.youtube.com/user/stratoDE/
+checkedAt: 2026-08-01
 sources:
   - { field: entryPriceBand, url: 'https://www.strato.de/webhosting/', checkedAt: 2026-07-31 }
   - { field: renewalMultiple, url: 'https://www.strato.de/webhosting/', checkedAt: 2026-07-31 }
   - { field: contractMinimum, url: 'https://www.strato.de/webhosting/', checkedAt: 2026-07-31 }
+  - { field: regions, url: 'https://www.strato.de/ueber-uns/nachhaltigkeit/', checkedAt: 2026-08-01 }
+  - { field: energyClaim, url: 'https://www.strato.de/ueber-uns/nachhaltigkeit/', checkedAt: 2026-08-01 }
+  - { field: certifications, url: 'https://www.strato.de/ueber-uns/nachhaltigkeit/', checkedAt: 2026-08-01 }
+  - { field: social, url: 'https://www.strato.de', checkedAt: 2026-08-01 }
+  - { field: urls, url: 'https://www.strato.de/agb/', checkedAt: 2026-08-01 }
 figure:
   emoji: 📻
   color: rgb(60, 30, 80)

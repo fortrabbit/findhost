@@ -5,6 +5,8 @@ urls:
   home: https://www.hosttech.ch
   pricing: https://www.hosttech.ch/webhosting
   status: https://status.hosttech.eu
+  terms: https://www.hosttech.ch/agb/
+  docs: https://support.hosttech.ch/knowledge-base/
 category: shared
 description: Swiss internet service provider from Richterswil operating its own data centres in Switzerland, with further sites in Germany and Austria.
 founded: 2004
@@ -28,11 +30,24 @@ deployMethods:
   - git-push
 sshAccess: limited
 pricingModel: fixed-tier
+entryPrice: { amount: 6.9, currency: CHF, period: month }
 entryPriceBand: 5-15
 freeTier: none
+regions:
+  - CH
 supportChannels:
   - phone
   - email
+supportHours: 24-7
+status: active
+checkedAt: 2026-08-01
+sources:
+  - { field: regions, url: 'https://www.hosttech.ch/webhosting', checkedAt: 2026-08-01 }
+  - { field: entryPrice, url: 'https://www.hosttech.ch/webhosting', checkedAt: 2026-08-01 }
+  - { field: entryPriceBand, url: 'https://www.hosttech.ch/webhosting', checkedAt: 2026-08-01 }
+  - { field: pricingModel, url: 'https://www.hosttech.ch/webhosting', checkedAt: 2026-08-01 }
+  - { field: supportHours, url: 'https://www.hosttech.ch/webhosting', checkedAt: 2026-08-01 }
+  - { field: supportChannels, url: 'https://www.hosttech.ch/webhosting', checkedAt: 2026-08-01 }
 figure:
   emoji: ⛰️
   color: rgb(35, 55, 45)

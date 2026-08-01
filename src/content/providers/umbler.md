@@ -33,9 +33,19 @@ deployMethods:
   - control-panel
 pricingModel: per-resource
 entryPriceBand: under-5
+entryPrice: { amount: 24, currency: BRL, period: month }
 freeTier: trial
 supportChannels:
   - chat
+social:
+  linkedin: https://www.linkedin.com/company/umbler
+  youtube: https://www.youtube.com/umbler
+checkedAt: 2026-08-01
+sources:
+  - { field: entryPrice, url: 'https://www.umbler.com/br/hospedagem-php', checkedAt: 2026-08-01 }
+  - { field: entryPriceBand, url: 'https://www.umbler.com/br/hospedagem-php', checkedAt: 2026-08-01 }
+  - { field: runtimes, url: 'https://www.umbler.com/br/hospedagem-php', checkedAt: 2026-08-01 }
+  - { field: social, url: 'https://www.umbler.com/br', checkedAt: 2026-08-01 }
 figure:
   emoji: ⏱️
   color: rgb(25, 45, 75)

@@ -3,8 +3,20 @@ id: jimdo
 name: Jimdo
 urls:
   home: https://www.jimdo.com
+  pricing: https://www.jimdo.com/pricing/
+  terms: https://www.jimdo.com/info/terms-of-service/
+  docs: https://help.jimdo-dolphin.com/hc/en-us
 category: lcnc
 description: Jimdo is a website builder aimed at small businesses that want to publish quickly.
+founded: 2007
+freeTier: permanent
+entryPriceBand: free-tier
+status: active
+checkedAt: 2026-08-01
+sources:
+  - { field: founded, url: 'https://www.jimdo.com/pricing/', checkedAt: 2026-08-01 }
+  - { field: freeTier, url: 'https://www.jimdo.com/pricing/', checkedAt: 2026-08-01 }
+  - { field: entryPriceBand, url: 'https://www.jimdo.com/pricing/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🪴
   color: rgb(80, 120, 80)

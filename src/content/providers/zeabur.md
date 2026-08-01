@@ -4,6 +4,8 @@ name: Zeabur
 urls:
   home: https://zeabur.com
   pricing: https://zeabur.com/pricing
+  terms: https://zeabur.com/docs/legal/terms
+  docs: https://zeabur.com/docs
 category: paas
 description: Taiwanese platform that detects a repository's project type and deploys it in one click, covering Node, Python, PHP, Go, Rust, Java, .NET, Bun and Deno.
 whoManagesOs: container
@@ -48,6 +50,15 @@ entryPriceBand: free-tier
 freeTier: permanent
 apiAvailable: public
 cliTool: official
+hqCountry: US
+social:
+  github: https://github.com/zeabur
+  x: https://x.com/zeaburapp
+checkedAt: 2026-08-01
+sources:
+  - { field: hqCountry, url: 'https://zeabur.com/about', checkedAt: 2026-08-01 }
+  - { field: social, url: 'https://zeabur.com', checkedAt: 2026-08-01 }
+  - { field: urls, url: 'https://zeabur.com/docs/legal/terms', checkedAt: 2026-08-01 }
 figure:
   emoji: 🧩
   color: rgb(25, 30, 55)

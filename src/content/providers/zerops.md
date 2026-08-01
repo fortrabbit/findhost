@@ -5,8 +5,13 @@ urls:
   home: https://zerops.io
   pricing: https://zerops.io/pricing
   status: https://status.zerops.io
+  terms: https://zerops.io/terms
+  docs: https://docs.zerops.io/
 category: paas
 description: Czech developer platform with thirteen native runtimes, billed only for CPU, memory and disk consumed, with no subscription tiers and no per-seat charge.
+founded: 2018
+hqCountry: CZ
+ownership: vc-backed
 whoManagesOs: container
 useCases:
   - saas
@@ -52,8 +57,26 @@ managedDatabases:
   - kafka
 pricingModel: per-resource
 freeTier: trial
+regions:
+  - CZ
+infraContract:
+  - resells-iaas
 apiAvailable: public
 cliTool: official
+social:
+  github: https://github.com/zeropsio
+  x: https://x.com/zeropsio
+  linkedin: https://www.linkedin.com/company/zerops/
+  discord: https://discord.gg/zeropsio
+checkedAt: 2026-08-01
+sources:
+  - { field: regions, url: 'https://docs.zerops.io/company/about', checkedAt: 2026-08-01 }
+  - { field: founded, url: 'https://docs.zerops.io/company/about', checkedAt: 2026-08-01 }
+  - { field: hqCountry, url: 'https://docs.zerops.io/company/about', checkedAt: 2026-08-01 }
+  - { field: ownership, url: 'https://docs.zerops.io/company/about', checkedAt: 2026-08-01 }
+  - { field: infraContract, url: 'https://docs.zerops.io/company/about', checkedAt: 2026-08-01 }
+  - { field: social, url: 'https://zerops.io', checkedAt: 2026-08-01 }
+  - { field: urls, url: 'https://zerops.io/terms', checkedAt: 2026-08-01 }
 figure:
   emoji: 🧊
   color: rgb(20, 35, 50)

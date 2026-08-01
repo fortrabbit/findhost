@@ -33,6 +33,7 @@ managedDatabases:
   - mysql
 pricingModel: fixed-tier
 entryPriceBand: 5-15
+entryPrice: { amount: 8.95, currency: EUR, period: month }
 freeTier: none
 regions:
   - ES
@@ -40,6 +41,17 @@ supportChannels:
   - phone
   - email
 supportHours: 24-7
+status: active
+checkedAt: 2026-08-01
+sources:
+  - { field: entryPrice, url: 'https://raiolanetworks.com/hosting-web/', checkedAt: 2026-08-01 }
+  - { field: entryPriceBand, url: 'https://raiolanetworks.com/hosting-web/', checkedAt: 2026-08-01 }
+  - { field: pricingModel, url: 'https://raiolanetworks.com/hosting-web/', checkedAt: 2026-08-01 }
+  - { field: regions, url: 'https://raiolanetworks.com/hosting-web/', checkedAt: 2026-08-01 }
+  - { field: hqCountry, url: 'https://raiolanetworks.com/hosting-web/', checkedAt: 2026-08-01 }
+  - { field: supportHours, url: 'https://raiolanetworks.com/hosting-web/', checkedAt: 2026-08-01 }
+  - { field: supportChannels, url: 'https://raiolanetworks.com/hosting-web/', checkedAt: 2026-08-01 }
+  - { field: infraContract, url: 'https://raiolanetworks.com/hosting-web/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🔧
   color: rgb(40, 45, 25)

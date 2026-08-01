@@ -4,6 +4,7 @@ name: Kinsta
 urls:
   home: https://kinsta.com
   pricing: https://kinsta.com/wordpress-hosting/
+  docs: https://kinsta.com/docs/
 category: vanity-hosting
 description: Kinsta is a managed WordPress host founded in 2013, with plans metered on monthly visits and 14-day backup retention.
 founded: 2013
@@ -18,10 +19,38 @@ runtimes:
   - php
 backupsIncluded: included
 pricingModel: fixed-tier
+entryPrice: { amount: 35, currency: USD, period: month }
 entryPriceBand: 15-50
+regions:
+  - US
+  - CA
+  - MX
+  - BR
+  - CL
+  - CO
+  - GB
+  - NL
+  - DE
+  - FR
+  - ES
+  - IT
+  - SE
+  - CH
+  - IL
+  - AE
+  - SA
+  - ZA
+  - IN
+  - SG
+  - ID
+  - KR
+  - JP
+  - AU
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-01
 sources:
+  - { field: regions, url: 'https://kinsta.com/docs/service-information/data-center-locations/', checkedAt: 2026-08-01 }
+  - { field: entryPrice, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-08-01 }
   - { field: founded, url: 'https://kinsta.com/about-us/', checkedAt: 2026-07-31 }
   - { field: entryPriceBand, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-07-31 }

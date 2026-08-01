@@ -6,6 +6,7 @@ urls:
   pricing: https://contabo.com/en/vps/
 category: vps
 description: Contabo is a German hosting provider founded in 2003, headquartered in Munich, known for low-cost VPS plans with large resource allocations.
+hqCountry: DE
 whoManagesOs: you
 audience:
   - developer
@@ -16,8 +17,10 @@ sshAccess: full
 backupsIncluded: paid-addon
 pricingModel: fixed-tier
 entryPriceBand: 5-15
+entryPrice: { amount: 5.50, currency: EUR, period: month }
 contractMinimum: monthly
 regions:
+  - DE
   - US
   - GB
   - IN
@@ -25,13 +28,15 @@ regions:
   - JP
   - AU
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-01
 sources:
   - { field: entryPriceBand, url: 'https://contabo.com/en/vps/', checkedAt: 2026-07-31 }
+  - { field: entryPrice, url: 'https://contabo.com/en/vps/', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://contabo.com/en/vps/', checkedAt: 2026-07-31 }
   - { field: contractMinimum, url: 'https://contabo.com/en/vps/', checkedAt: 2026-07-31 }
   - { field: backupsIncluded, url: 'https://contabo.com/en/vps/', checkedAt: 2026-07-31 }
-  - { field: regions, url: 'https://contabo.com/en/vps/', checkedAt: 2026-07-31 }
+  - { field: regions, url: 'https://contabo.com/en/locations/', checkedAt: 2026-08-01 }
+  - { field: hqCountry, url: 'https://contabo.com/en/locations/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🥨
   color: rgb(240, 200, 80)

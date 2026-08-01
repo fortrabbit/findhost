@@ -4,6 +4,7 @@ name: Laravel Vapor
 urls:
   home: https://vapor.laravel.com
   pricing: https://vapor.laravel.com
+  docs: https://docs.vapor.build
 category: serverless
 description: Laravel Vapor is a serverless deployment platform for Laravel, powered by AWS. The subscription is flat; the AWS bill is the customer's own.
 infraContract:

@@ -22,6 +22,7 @@ managedDatabases:
   - postgres
   - valkey
 pricingModel: usage-based
+entryPrice: { amount: 5, currency: USD, period: month }
 entryPriceBand: 5-15
 freeTier: trial
 contractMinimum: monthly
@@ -36,9 +37,10 @@ regions:
   - AU
 supportTiering: all-plans
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-01
 sources:
-  - { field: regions, url: 'https://laravel.com/cloud/pricing', checkedAt: 2026-07-31 }
+  - { field: entryPrice, url: 'https://laravel.com/cloud/pricing', checkedAt: 2026-08-01 }
+  - { field: regions, url: 'https://laravel.com/cloud/pricing', checkedAt: 2026-08-01 }
   - { field: managedDatabases, url: 'https://laravel.com/cloud/pricing', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://laravel.com/cloud/pricing', checkedAt: 2026-07-31 }
   - { field: entryPriceBand, url: 'https://laravel.com/cloud/pricing', checkedAt: 2026-07-31 }

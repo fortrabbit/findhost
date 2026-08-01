@@ -5,6 +5,8 @@ urls:
   home: https://www.mittwald.de
   pricing: https://www.mittwald.de/webhosting
   status: https://www.mittwald-status.de/
+  terms: https://www.mittwald.de/agb
+  docs: https://developer.mittwald.de
 category: paas
 description: German managed hosting platform with per-project containers, a control plane called mStudio, an official CLI and a public REST API.
 founded: 2003
@@ -41,24 +43,39 @@ deployMethods:
   - control-panel
 sshAccess: full
 pricingModel: fixed-tier
+entryPrice: { amount: 13, currency: EUR, period: month }
 entryPriceBand: 5-15
 freeTier: trial
+contractMinimum: monthly
 regions:
   - DE
+energyClaim: annual-matched
+certifications:
+  - ISO 27001
 supportChannels:
   - phone
   - email
+supportHours: 24-7
 apiAvailable: public
 cliTool: official
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-01
 sources:
   - { field: entryPriceBand, url: 'https://www.mittwald.de/hosting', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://www.mittwald.de/hosting', checkedAt: 2026-07-31 }
-  - { field: regions, url: 'https://www.mittwald.de/hosting', checkedAt: 2026-07-31 }
+  - { field: regions, url: 'https://www.mittwald.de/webhosting', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://www.mittwald.de/hosting', checkedAt: 2026-07-31 }
+  - { field: entryPrice, url: 'https://www.mittwald.de/webhosting', checkedAt: 2026-08-01 }
+  - { field: contractMinimum, url: 'https://www.mittwald.de/webhosting', checkedAt: 2026-08-01 }
+  - { field: supportHours, url: 'https://www.mittwald.de/webhosting', checkedAt: 2026-08-01 }
+  - { field: supportChannels, url: 'https://www.mittwald.de/webhosting', checkedAt: 2026-08-01 }
+  - { field: energyClaim, url: 'https://www.mittwald.de/webhosting', checkedAt: 2026-08-01 }
+  - { field: certifications, url: 'https://www.mittwald.de/webhosting', checkedAt: 2026-08-01 }
+  - { field: social, url: 'https://www.mittwald.de/agb', checkedAt: 2026-08-01 }
 social:
   github: https://github.com/mittwald
+  facebook: https://www.facebook.com/mittwald
+  linkedin: https://de.linkedin.com/company/mittwald
 figure:
   emoji: 🏗️
   color: rgb(20, 40, 90)

@@ -4,6 +4,8 @@ name: home.pl
 urls:
   home: https://home.pl
   pricing: https://home.pl/hosting
+  terms: https://home.pl/regulaminy/
+  docs: https://pomoc.home.pl/
 category: shared
 description: Polish host running PHP 8.0 to 8.4, Perl and Python on Apache with HTTP/3, with SSH, MySQL on NVMe and PostgreSQL on the higher tiers.
 hqCountry: PL
@@ -36,6 +38,18 @@ pricingModel: fixed-tier
 freeTier: none
 regions:
   - PL
+supportChannels:
+  - phone
+  - email
+supportHours: 24-7
+status: active
+checkedAt: 2026-08-01
+sources:
+  - { field: regions, url: 'https://home.pl/hosting', checkedAt: 2026-08-01 }
+  - { field: supportHours, url: 'https://home.pl/hosting', checkedAt: 2026-08-01 }
+  - { field: supportChannels, url: 'https://home.pl/hosting', checkedAt: 2026-08-01 }
+  - { field: hqCountry, url: 'https://home.pl/firma/', checkedAt: 2026-08-01 }
+  - { field: pricingModel, url: 'https://home.pl/hosting', checkedAt: 2026-08-01 }
 figure:
   emoji: 🏠
   color: rgb(40, 30, 55)

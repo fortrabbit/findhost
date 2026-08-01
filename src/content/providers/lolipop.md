@@ -4,6 +4,8 @@ name: Lolipop!
 urls:
   home: https://lolipop.jp
   pricing: https://lolipop.jp/pricing/
+  terms: https://lolipop.jp/terms/tos/
+  docs: https://lolipop.jp/manual/
 category: shared
 description: Japanese rental server from GMO Pepabo, sold in five tiers from about a hundred yen a month, with SSH and LiteSpeed appearing only higher up the ladder.
 hqCountry: JP
@@ -32,11 +34,23 @@ sshAccess: limited
 managedDatabases:
   - mysql
 pricingModel: fixed-tier
+entryPrice: { amount: 121, currency: JPY, period: month }
 entryPriceBand: under-5
 freeTier: trial
 regions:
   - JP
 contractMinimum: annual
+supportChannels:
+  - chat
+  - phone
+status: active
+checkedAt: 2026-08-01
+sources:
+  - { field: regions, url: 'https://lolipop.jp/pricing/', checkedAt: 2026-08-01 }
+  - { field: entryPrice, url: 'https://lolipop.jp/pricing/', checkedAt: 2026-08-01 }
+  - { field: entryPriceBand, url: 'https://lolipop.jp/pricing/', checkedAt: 2026-08-01 }
+  - { field: pricingModel, url: 'https://lolipop.jp/pricing/', checkedAt: 2026-08-01 }
+  - { field: supportChannels, url: 'https://lolipop.jp/pricing/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🍭
   color: rgb(60, 25, 45)

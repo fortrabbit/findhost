@@ -65,10 +65,10 @@ supportChannels:
   - forum
 apiAvailable: public
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-01
 sources:
-  - { field: entryPriceBand, url: 'https://www.alwaysdata.com/en/pricing/', checkedAt: 2026-07-31 }
-  - { field: freeTier, url: 'https://www.alwaysdata.com/en/pricing/', checkedAt: 2026-07-31 }
+  - { field: entryPriceBand, url: 'https://www.alwaysdata.com/en/pricing/', checkedAt: 2026-08-01 }
+  - { field: freeTier, url: 'https://www.alwaysdata.com/en/pricing/', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://www.alwaysdata.com/en/pricing/', checkedAt: 2026-07-31 }
 figure:
   emoji: 🧬

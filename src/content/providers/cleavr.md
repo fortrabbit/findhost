@@ -42,7 +42,13 @@ managedDatabases:
   - postgres
 pricingModel: fixed-tier
 entryPriceBand: 5-15
+entryPrice: { amount: 5.50, currency: USD, period: month }
 freeTier: trial
+checkedAt: 2026-08-01
+sources:
+  - { field: entryPrice, url: 'https://cleavr.io/pricing', checkedAt: 2026-08-01 }
+  - { field: entryPriceBand, url: 'https://cleavr.io/pricing', checkedAt: 2026-08-01 }
+  - { field: freeTier, url: 'https://cleavr.io/pricing', checkedAt: 2026-08-01 }
 figure:
   emoji: 🔪
   color: rgb(40, 30, 30)

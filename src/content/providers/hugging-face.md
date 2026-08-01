@@ -5,6 +5,8 @@ urls:
   home: https://huggingface.co
   pricing: https://huggingface.co/pricing
   status: https://status.huggingface.co/
+  terms: https://huggingface.co/terms-of-service
+  docs: https://huggingface.co/docs/hub/spaces-overview
 category: paas
 description: Machine-learning hub whose Spaces product hosts running applications — Gradio, Streamlit or an arbitrary Dockerfile — on CPU or rented GPU hardware.
 hqCountry: US
@@ -32,8 +34,18 @@ deployMethods:
 pricingModel: fixed-tier
 entryPriceBand: free-tier
 freeTier: permanent
+persistentStorage: false
 apiAvailable: public
 cliTool: official
+status: active
+checkedAt: 2026-08-01
+sources:
+  - { field: entryPriceBand, url: 'https://huggingface.co/pricing', checkedAt: 2026-08-01 }
+  - { field: pricingModel, url: 'https://huggingface.co/pricing', checkedAt: 2026-08-01 }
+  - { field: freeTier, url: 'https://huggingface.co/docs/hub/spaces-overview', checkedAt: 2026-08-01 }
+  - { field: persistentStorage, url: 'https://huggingface.co/docs/hub/spaces-overview', checkedAt: 2026-08-01 }
+  - { field: runtimes, url: 'https://huggingface.co/docs/hub/spaces-overview', checkedAt: 2026-08-01 }
+  - { field: deployMethods, url: 'https://huggingface.co/docs/hub/spaces-overview', checkedAt: 2026-08-01 }
 figure:
   emoji: 🤗
   color: rgb(75, 55, 10)

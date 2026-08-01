@@ -6,6 +6,10 @@ urls:
   pricing: https://www.bluehost.com/hosting/shared
 category: shared
 description: Bluehost is a US shared hosting brand owned by Newfold Digital, listed by WordPress.org as a recommended host since 2005.
+founded: 2003
+hqCountry: US
+ownership: subsidiary
+parent: Newfold Digital
 useCases:
   - cms
   - e-commerce
@@ -17,8 +21,12 @@ entryPriceBand: under-5
 renewalMultiple: 2.5
 contractMinimum: multi-year
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-01
 sources:
+  - { field: founded, url: 'https://www.bluehost.com/about', checkedAt: 2026-08-01 }
+  - { field: hqCountry, url: 'https://www.bluehost.com/about', checkedAt: 2026-08-01 }
+  - { field: parent, url: 'https://www.bluehost.com/about', checkedAt: 2026-08-01 }
+  - { field: ownership, url: 'https://www.newfold.com/brands', checkedAt: 2026-08-01 }
   - { field: entryPriceBand, url: 'https://www.bluehost.com/hosting/shared', checkedAt: 2026-07-31 }
   - { field: renewalMultiple, url: 'https://www.bluehost.com/hosting/shared', checkedAt: 2026-07-31 }
   - { field: contractMinimum, url: 'https://www.bluehost.com/hosting/shared', checkedAt: 2026-07-31 }

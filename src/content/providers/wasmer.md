@@ -4,6 +4,7 @@ name: Wasmer
 urls:
   home: https://wasmer.io
   pricing: https://wasmer.io/pricing
+  docs: https://docs.wasmer.io/
 category: serverless
 description: Wasmer runs PHP compiled to WebAssembly at the edge, on a free-forever Hobby plan or $10 a month.
 whoManagesOs: provider
@@ -25,9 +26,21 @@ persistentStorage: false
 pricingModel: fixed-tier
 entryPriceBand: free-tier
 freeTier: permanent
+regions:
+  - FR
+  - DE
+  - CA
+  - US
+social:
+  github: https://github.com/wasmerio
+  x: https://twitter.com/wasmerio
+  discord: https://discord.gg/rWkMNStrEW
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-01
 sources:
+  - { field: regions, url: 'https://docs.wasmer.io/edge/learn/regions', checkedAt: 2026-08-01 }
+  - { field: social, url: 'https://wasmer.io', checkedAt: 2026-08-01 }
+  - { field: urls, url: 'https://docs.wasmer.io/', checkedAt: 2026-08-01 }
   - { field: entryPriceBand, url: 'https://wasmer.io/pricing', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://wasmer.io/pricing', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://wasmer.io/pricing', checkedAt: 2026-07-31 }

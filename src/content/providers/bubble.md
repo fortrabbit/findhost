@@ -3,8 +3,18 @@ id: bubble
 name: Bubble
 urls:
   home: https://bubble.io
+  docs: https://manual.bubble.io
 category: lcnc
 description: Bubble is a no-code app builder that combines UI design with database and workflow tools.
+regions:
+  - US
+runsOn:
+  - aws
+status: active
+checkedAt: 2026-08-01
+sources:
+  - { field: regions, url: 'https://manual.bubble.io/help-guides/optimizing-an-application/hosting-and-scaling/how-bubble-hosting-works', checkedAt: 2026-08-01 }
+  - { field: runsOn, url: 'https://manual.bubble.io/help-guides/optimizing-an-application/hosting-and-scaling/how-bubble-hosting-works', checkedAt: 2026-08-01 }
 figure:
   emoji: 🫧
   color: rgb(70, 110, 120)

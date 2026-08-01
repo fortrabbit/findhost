@@ -28,9 +28,38 @@ cliTool: official
 iacSupport:
   - terraform
   - cloudformation
+regions:
+  - AE
+  - AU
+  - BH
+  - BR
+  - CA
+  - CH
+  - DE
+  - ES
+  - FR
+  - GB
+  - HK
+  - ID
+  - IE
+  - IL
+  - IN
+  - IT
+  - JP
+  - KR
+  - MX
+  - MY
+  - NZ
+  - SE
+  - SG
+  - TH
+  - TW
+  - US
+  - ZA
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-01
 sources:
+  - { field: regions, url: 'https://docs.aws.amazon.com/general/latest/gr/lambda-service.html', checkedAt: 2026-08-01 }
   - { field: runtimes, url: 'https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://aws.amazon.com/lambda/pricing/', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://aws.amazon.com/lambda/pricing/', checkedAt: 2026-07-31 }

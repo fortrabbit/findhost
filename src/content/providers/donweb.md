@@ -4,6 +4,7 @@ name: DonWeb
 urls:
   home: https://donweb.com
   pricing: https://donweb.com/es-ar/hosting
+  status: https://estado.donweb.com/
 category: shared
 description: Argentine hosting and cloud provider running its own Rosario data centres, selling shared PHP hosting, VPS, bare metal and pre-configured application stacks.
 founded: 2002
@@ -36,6 +37,12 @@ deployMethods:
   - control-panel
 pricingModel: fixed-tier
 freeTier: none
+status: active
+checkedAt: 2026-08-01
+sources:
+  - { field: pricingModel, url: 'https://donweb.com/es-ar/hosting', checkedAt: 2026-08-01 }
+  - { field: freeTier, url: 'https://donweb.com/es-ar/hosting', checkedAt: 2026-08-01 }
+  - { field: urls, url: 'https://donweb.com', checkedAt: 2026-08-01 }
 figure:
   emoji: 🧉
   color: rgb(30, 55, 40)
@@ -52,4 +59,6 @@ Shared hosting runs on Ferozo, DonWeb's own control panel rather than cPanel, wi
 
 ## Reservations
 
-Pricing depends entirely on which storefront a visitor lands on — the Argentine site quotes pesos, the international one quotes a very different figure in dollars — so no single entry price is recorded here. SSH availability on shared plans is not stated on the plan pages, daily backups are an add-on rather than standard on the entry tier, and no public status page was found.
+Pricing depends entirely on which storefront a visitor lands on — the Argentine site quotes pesos, the international one quotes a very different figure in dollars — so no single entry price is recorded here. SSH availability on shared plans is not stated on the plan pages, and daily backups are an add-on rather than standard on the entry tier.
+
+No page on the site names the data centres by city or country: the infrastructure page says only "Latin America". The regions field is therefore left empty, even though the company is Argentine and the facilities are described elsewhere as being in Rosario.

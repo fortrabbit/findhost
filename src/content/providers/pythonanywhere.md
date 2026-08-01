@@ -8,6 +8,9 @@ urls:
 category: paas
 description: Browser-based Python hosting with in-browser consoles, scheduled tasks and managed web apps, sold by CPU-seconds, web workers and disk.
 founded: 2011
+hqCountry: GB
+ownership: subsidiary
+parent: Anaconda
 whoManagesOs: provider
 specialisation:
   - django
@@ -34,8 +37,19 @@ deployMethods:
 sshAccess: full
 pricingModel: per-resource
 entryPriceBand: free-tier
+entryPrice: { amount: 10, currency: USD, period: month }
 freeTier: permanent
 contractMinimum: none
+status: active
+checkedAt: 2026-08-01
+sources:
+  - { field: entryPrice, url: 'https://www.pythonanywhere.com/pricing/', checkedAt: 2026-08-01 }
+  - { field: entryPriceBand, url: 'https://www.pythonanywhere.com/pricing/', checkedAt: 2026-08-01 }
+  - { field: freeTier, url: 'https://www.pythonanywhere.com/pricing/', checkedAt: 2026-08-01 }
+  - { field: pricingModel, url: 'https://www.pythonanywhere.com/pricing/', checkedAt: 2026-08-01 }
+  - { field: hqCountry, url: 'https://www.pythonanywhere.com/about/company_details/', checkedAt: 2026-08-01 }
+  - { field: ownership, url: 'https://www.pythonanywhere.com/about/company_details/', checkedAt: 2026-08-01 }
+  - { field: parent, url: 'https://www.pythonanywhere.com/about/company_details/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🐍
   color: rgb(30, 45, 65)
@@ -54,4 +68,4 @@ The unit that matters is the CPU-second, which the company defines precisely aga
 
 ## Reservations
 
-One language, and no pretence otherwise. The free tier restricts outbound network access to an allow-list, which breaks most third-party API work until you pay. Data-centre locations are not published on the pricing page, and the company's ownership is not stated anywhere on it either.
+One language, and no pretence otherwise. The free tier restricts outbound network access to an allow-list, which breaks most third-party API work until you pay. Data-centre locations are not published anywhere on the site — the pricing page names the AWS instance type and stops there. Ownership is disclosed, but on a company-details page rather than anywhere a buyer would pass: PythonAnywhere LLP has belonged to Anaconda since 2022.

@@ -4,6 +4,7 @@ name: DreamHost
 urls:
   home: https://www.dreamhost.com
   pricing: https://www.dreamhost.com/hosting/shared/
+  terms: https://www.dreamhost.com/legal/terms-of-service/
 category: shared
 description: DreamHost is an independent shared hosting company from Los Angeles, founded in 1996, with a long open-source track record.
 founded: 1996
@@ -15,11 +16,14 @@ software:
   - wordpress
 pricingModel: fixed-tier
 entryPriceBand: under-5
+entryPrice: { amount: 2.89, currency: EUR, period: month }
 renewalMultiple: 3.8
 contractMinimum: annual
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-01
 sources:
+  - { field: entryPrice, url: 'https://www.dreamhost.com/hosting/shared/', checkedAt: 2026-08-01 }
+  - { field: urls, url: 'https://www.dreamhost.com/legal/', checkedAt: 2026-08-01 }
   - { field: entryPriceBand, url: 'https://www.dreamhost.com/hosting/shared/', checkedAt: 2026-07-31 }
   - { field: renewalMultiple, url: 'https://www.dreamhost.com/hosting/shared/', checkedAt: 2026-07-31 }
   - { field: contractMinimum, url: 'https://www.dreamhost.com/hosting/shared/', checkedAt: 2026-07-31 }

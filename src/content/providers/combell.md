@@ -39,16 +39,24 @@ pricingModel: fixed-tier
 entryPriceBand: 15-50
 renewalMultiple: 3.3
 freeTier: none
+regions:
+  - BE
+  - NL
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-01
 sources:
   - { field: entryPriceBand, url: 'https://www.combell.com/en/hosting/web-hosting', checkedAt: 2026-07-31 }
   - { field: renewalMultiple, url: 'https://www.combell.com/en/hosting/web-hosting', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://www.combell.com/en/hosting/web-hosting', checkedAt: 2026-07-31 }
+  - { field: regions, url: 'https://www.combell.com/en/about-combell', checkedAt: 2026-08-01 }
+  - { field: founded, url: 'https://www.combell.com/en/about-combell', checkedAt: 2026-08-01 }
+  - { field: parent, url: 'https://www.combell.com/en/about-combell', checkedAt: 2026-08-01 }
+  - { field: supportHours, url: 'https://www.combell.com/en/about-combell', checkedAt: 2026-08-01 }
 supportChannels:
   - email
   - chat
   - phone
+supportHours: 24-7
 apiAvailable: public
 figure:
   emoji: 🧇

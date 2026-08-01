@@ -4,6 +4,7 @@ name: Encore Cloud
 urls:
   home: https://encore.dev
   pricing: https://encore.dev/pricing
+  docs: https://encore.dev/docs
 category: server-management
 description: Backend framework for TypeScript and Go with a control plane that provisions the infrastructure it infers from the code, into the customer's AWS or GCP account.
 whoManagesOs: container
@@ -31,6 +32,12 @@ entryPriceBand: free-tier
 freeTier: permanent
 apiAvailable: public
 cliTool: official
+status: active
+checkedAt: 2026-08-01
+sources:
+  - { field: entryPriceBand, url: 'https://encore.dev/pricing', checkedAt: 2026-08-01 }
+  - { field: freeTier, url: 'https://encore.dev/pricing', checkedAt: 2026-08-01 }
+  - { field: pricingModel, url: 'https://encore.dev/pricing', checkedAt: 2026-08-01 }
 figure:
   emoji: 🧭
   color: rgb(25, 30, 45)

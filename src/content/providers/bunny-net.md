@@ -7,6 +7,7 @@ urls:
   status: https://status.bunny.net/
 category: serverless
 description: Slovenian edge platform selling CDN, storage, video and DNS, with Edge Scripting and Magic Containers running the customer's own code across its network.
+founded: 2015
 whoManagesOs: container
 useCases:
   - static-site
@@ -31,8 +32,28 @@ deployMethods:
   - git-integration
 pricingModel: usage-based
 entryPriceBand: under-5
+entryPrice: { amount: 1, currency: USD, period: month }
 freeTier: none
+regions:
+  - AU
+  - BR
+  - CZ
+  - DE
+  - ES
+  - GB
+  - HK
+  - JP
+  - SE
+  - SG
+  - US
+  - ZA
 apiAvailable: public
+checkedAt: 2026-08-01
+sources:
+  - { field: regions, url: 'https://bunny.net/pricing/storage/', checkedAt: 2026-08-01 }
+  - { field: entryPrice, url: 'https://bunny.net/pricing/', checkedAt: 2026-08-01 }
+  - { field: entryPriceBand, url: 'https://bunny.net/pricing/', checkedAt: 2026-08-01 }
+  - { field: founded, url: 'https://bunny.net/about/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🐰
   color: rgb(50, 25, 45)

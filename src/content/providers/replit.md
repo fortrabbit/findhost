@@ -30,15 +30,20 @@ deployMethods:
   - git-integration
 pricingModel: credit
 entryPriceBand: free-tier
+entryPrice: { amount: 20, currency: USD, period: month }
 freeTier: permanent
 contractMinimum: annual
+regions:
+  - US
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-01
 sources:
   - { field: pricingModel, url: 'https://replit.com/pricing', checkedAt: 2026-07-31 }
   - { field: entryPriceBand, url: 'https://replit.com/pricing', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://replit.com/pricing', checkedAt: 2026-07-31 }
   - { field: contractMinimum, url: 'https://replit.com/pricing', checkedAt: 2026-07-31 }
+  - { field: entryPrice, url: 'https://replit.com/pricing', checkedAt: 2026-08-01 }
+  - { field: regions, url: 'https://docs.replit.com/cloud-services/deployments/about-deployments', checkedAt: 2026-08-01 }
 figure:
   emoji: 🧑‍💻
   color: rgb(240, 90, 40)

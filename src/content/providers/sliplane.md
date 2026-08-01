@@ -4,6 +4,8 @@ name: Sliplane
 urls:
   home: https://sliplane.io
   pricing: https://sliplane.io/pricing
+  terms: https://sliplane.io/terms
+  docs: https://docs.sliplane.io/
 category: paas
 description: German Docker hosting that bills for the server rather than the container, so unlimited services can share one machine, with managed Postgres and S3 storage.
 hqCountry: DE
@@ -30,12 +32,21 @@ deployMethods:
   - docker-image
 pricingModel: fixed-tier
 entryPriceBand: 5-15
+entryPrice: { amount: 9, currency: EUR, period: month }
 freeTier: trial
 regions:
   - DE
   - US
   - FI
   - SG
+checkedAt: 2026-08-01
+sources:
+  - { field: regions, url: 'https://sliplane.io/pricing', checkedAt: 2026-08-01 }
+  - { field: entryPrice, url: 'https://sliplane.io/pricing', checkedAt: 2026-08-01 }
+  - { field: entryPriceBand, url: 'https://sliplane.io/pricing', checkedAt: 2026-08-01 }
+  - { field: freeTier, url: 'https://sliplane.io/pricing', checkedAt: 2026-08-01 }
+  - { field: pricingModel, url: 'https://sliplane.io/pricing', checkedAt: 2026-08-01 }
+  - { field: urls, url: 'https://sliplane.io/terms', checkedAt: 2026-08-01 }
 figure:
   emoji: 🛝
   color: rgb(25, 40, 60)

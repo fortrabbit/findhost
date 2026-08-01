@@ -5,6 +5,7 @@ urls:
   home: https://www.zone.ee
   pricing: https://www.zone.ee/en/web-hosting/prices/
   status: https://status.zone.eu/
+  docs: https://help.zone.eu/en/
 category: shared
 description: Estonian hosting provider and registrar offering shared hosting with PHP, Node.js and Go, plus cloud servers, from Tallinn, Helsinki and Amsterdam.
 founded: 1999
@@ -41,11 +42,26 @@ deployMethods:
 sshAccess: full
 pricingModel: fixed-tier
 entryPriceBand: 5-15
+entryPrice: { amount: 9.95, currency: EUR, period: month }
 freeTier: none
+regions:
+  - EE
+  - FI
+  - NL
 supportChannels:
   - email
   - phone
+  - chat
 apiAvailable: public
+checkedAt: 2026-08-01
+sources:
+  - { field: regions, url: 'https://www.zone.ee/en/about/', checkedAt: 2026-08-01 }
+  - { field: founded, url: 'https://www.zone.ee/en/about/', checkedAt: 2026-08-01 }
+  - { field: hqCountry, url: 'https://www.zone.ee/en/about/', checkedAt: 2026-08-01 }
+  - { field: supportChannels, url: 'https://www.zone.ee/en/about/', checkedAt: 2026-08-01 }
+  - { field: entryPrice, url: 'https://www.zone.ee/en/web-hosting/prices/', checkedAt: 2026-08-01 }
+  - { field: entryPriceBand, url: 'https://www.zone.ee/en/web-hosting/prices/', checkedAt: 2026-08-01 }
+  - { field: urls, url: 'https://help.zone.eu/en/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🛰️
   color: rgb(20, 35, 65)

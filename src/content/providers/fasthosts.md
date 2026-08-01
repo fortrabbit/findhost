@@ -36,6 +36,7 @@ deployMethods:
   - dashboard
 pricingModel: fixed-tier
 entryPriceBand: 5-15
+entryPrice: { amount: 5.75, currency: GBP, period: month }
 renewalMultiple: 5.75
 freeTier: none
 contractMinimum: annual
@@ -43,13 +44,17 @@ supportChannels:
   - email
   - chat
   - phone
+supportHours: 24-7
 social:
   x: https://twitter.com/fasthosts
   facebook: https://www.facebook.com/fasthostsinternet
   linkedin: https://www.linkedin.com/company/fasthosts-internet-ltd
   youtube: https://www.youtube.com/user/fasthostsinternet
-checkedAt: 2026-07-31
+checkedAt: 2026-08-01
 sources:
+  - { field: entryPrice, url: 'https://www.fasthosts.co.uk/web-hosting', checkedAt: 2026-08-01 }
+  - { field: supportHours, url: 'https://www.fasthosts.co.uk/web-hosting', checkedAt: 2026-08-01 }
+  - { field: renewalMultiple, url: 'https://www.fasthosts.co.uk/web-hosting', checkedAt: 2026-08-01 }
   - { field: runtimes, url: 'https://www.fasthosts.co.uk/web-hosting', checkedAt: 2026-07-31 }
   - { field: entryPriceBand, url: 'https://www.fasthosts.co.uk/web-hosting', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://www.fasthosts.co.uk/virtual-private-servers', checkedAt: 2026-07-31 }

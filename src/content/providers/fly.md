@@ -19,6 +19,7 @@ managedDatabases:
   - postgres
 pricingModel: usage-based
 entryPriceBand: under-5
+entryPrice: { amount: 2.02, currency: USD, period: month }
 freeTier: none
 regions:
   - US
@@ -40,8 +41,9 @@ social:
   github: https://github.com/superfly
 cliTool: official
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-01
 sources:
+  - { field: entryPrice, url: 'https://fly.io/docs/about/pricing/', checkedAt: 2026-08-01 }
   - { field: infraContract, url: 'https://fly.io/docs/reference/regions/', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://fly.io/docs/reference/regions/', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://fly.io/docs/about/pricing/', checkedAt: 2026-07-31 }

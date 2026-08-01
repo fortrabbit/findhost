@@ -5,6 +5,7 @@ urls:
   home: https://www.koyeb.com
   pricing: https://www.koyeb.com/pricing
   status: https://status.koyeb.com/
+  docs: https://www.koyeb.com/docs
 category: paas
 description: French platform that deploys containers and repositories across global regions with scale-to-zero, per-second billing, GPU instances and serverless Postgres.
 hqCountry: FR
@@ -37,19 +38,23 @@ deployMethods:
 pricingModel: usage-based
 entryPriceBand: 15-50
 freeTier: none
+entryPrice: { amount: 29, currency: USD, period: month }
 regions:
   - US
   - DE
+  - FR
   - SG
+  - JP
 apiAvailable: public
 cliTool: official
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-01
 sources:
   - { field: entryPriceBand, url: 'https://www.koyeb.com/pricing', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://www.koyeb.com/pricing', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://www.koyeb.com/pricing', checkedAt: 2026-07-31 }
-  - { field: regions, url: 'https://www.koyeb.com/pricing', checkedAt: 2026-07-31 }
+  - { field: entryPrice, url: 'https://www.koyeb.com/pricing', checkedAt: 2026-08-01 }
+  - { field: regions, url: 'https://www.koyeb.com/docs/reference/regions', checkedAt: 2026-08-01 }
 figure:
   emoji: 🛫
   color: rgb(30, 35, 80)
@@ -64,7 +69,7 @@ Koyeb is a Paris-founded platform that takes a git repository or a container ima
 
 Plans are Pro at $29 a month plus compute, Scale at $299 plus compute, and a custom enterprise tier starting at $1,000 a month that adds dedicated infrastructure and access to AWS regions. Billing is "only pay for what you use, by the second", with Postgres storage at $0.50 a month per GB.
 
-The pricing page cites seven regions across the US, the EU and Asia but names only three of them — Washington DC, Frankfurt and Singapore — so those three are what is recorded here.
+The pricing page cites seven regions across the US, the EU and Asia but names only three of them. The regions reference in the documentation names the full set: Washington DC, Frankfurt, Paris, Singapore and Tokyo as core regions, an AWS US East region, and San Francisco in preview for paid plans.
 
 ## Reservations
 

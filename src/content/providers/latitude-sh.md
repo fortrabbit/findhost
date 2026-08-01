@@ -31,10 +31,30 @@ managedDatabases:
   - postgres
 pricingModel: hourly
 freeTier: none
+regions:
+  - US
+  - CA
+  - MX
+  - BR
+  - AR
+  - CL
+  - CO
+  - GB
+  - NL
+  - DE
+  - SG
+  - JP
+  - AU
 apiAvailable: public
 cliTool: official
 iacSupport:
   - terraform
+status: active
+checkedAt: 2026-08-01
+sources:
+  - { field: regions, url: 'https://www.latitude.sh/locations', checkedAt: 2026-08-01 }
+  - { field: pricingModel, url: 'https://www.latitude.sh/pricing', checkedAt: 2026-08-01 }
+  - { field: freeTier, url: 'https://www.latitude.sh/pricing', checkedAt: 2026-08-01 }
 figure:
   emoji: 🛰️
   color: rgb(25, 30, 40)

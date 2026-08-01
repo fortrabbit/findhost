@@ -38,6 +38,7 @@ managedDatabases:
   - kafka
 pricingModel: hourly
 entryPriceBand: under-5
+entryPrice: { amount: 4, currency: USD, period: month }
 contractMinimum: none
 regions:
   - US
@@ -55,8 +56,9 @@ iacSupport:
   - terraform
   - ansible
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-01
 sources:
+  - { field: entryPrice, url: 'https://www.digitalocean.com/pricing/droplets', checkedAt: 2026-08-01 }
   - { field: founded, url: 'https://www.digitalocean.com/about', checkedAt: 2026-07-31 }
   - { field: ownership, url: 'https://investors.digitalocean.com/overview/default.aspx', checkedAt: 2026-07-31 }
   - { field: hqCountry, url: 'https://www.digitalocean.com/company', checkedAt: 2026-07-31 }

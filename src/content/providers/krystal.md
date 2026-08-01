@@ -7,6 +7,7 @@ urls:
   status: https://status.krystal.io/
 category: shared
 description: British host running PHP, Python, Perl and Ruby on cPanel, powered by certified renewable electricity and operated as a certified B Corp.
+founded: 2002
 hqCountry: GB
 ownership: independent
 whoManagesOs: panel-assisted
@@ -37,11 +38,33 @@ sshAccess: full
 managedDatabases:
   - mysql
 pricingModel: fixed-tier
+entryPrice: { amount: 7, currency: GBP, period: month }
 entryPriceBand: 5-15
 freeTier: none
+regions:
+  - GB
+  - NL
+  - US
 energyClaim: annual-matched
+sustainabilityUrl: https://krystal.io/green
 certifications:
   - B Corp
+supportHours: business-hours
+supportTiering: paid-upgrade
+status: active
+checkedAt: 2026-08-01
+sources:
+  - { field: regions, url: 'https://krystal.io/green', checkedAt: 2026-08-01 }
+  - { field: energyClaim, url: 'https://krystal.io/green', checkedAt: 2026-08-01 }
+  - { field: sustainabilityUrl, url: 'https://krystal.io/green', checkedAt: 2026-08-01 }
+  - { field: certifications, url: 'https://krystal.io/green', checkedAt: 2026-08-01 }
+  - { field: founded, url: 'https://www.krystal.io/about', checkedAt: 2026-08-01 }
+  - { field: ownership, url: 'https://www.krystal.io/about', checkedAt: 2026-08-01 }
+  - { field: hqCountry, url: 'https://www.krystal.io/about', checkedAt: 2026-08-01 }
+  - { field: entryPrice, url: 'https://krystal.io/web-hosting', checkedAt: 2026-08-01 }
+  - { field: entryPriceBand, url: 'https://krystal.io/web-hosting', checkedAt: 2026-08-01 }
+  - { field: supportHours, url: 'https://krystal.io/web-hosting', checkedAt: 2026-08-01 }
+  - { field: supportTiering, url: 'https://krystal.io/web-hosting', checkedAt: 2026-08-01 }
 figure:
   emoji: 🌱
   color: rgb(20, 55, 35)

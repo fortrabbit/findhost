@@ -42,6 +42,11 @@ entryPriceBand: free-tier
 freeTier: permanent
 apiAvailable: public
 cliTool: official
+checkedAt: 2026-08-01
+sources:
+  - { field: entryPriceBand, url: 'https://www.cloud66.com/pricing/', checkedAt: 2026-08-01 }
+  - { field: freeTier, url: 'https://www.cloud66.com/pricing/', checkedAt: 2026-08-01 }
+  - { field: pricingModel, url: 'https://www.cloud66.com/pricing/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🛞
   color: rgb(35, 30, 40)

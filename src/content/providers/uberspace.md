@@ -3,6 +3,8 @@ id: uberspace
 name: Uberspace
 urls:
   home: https://uberspace.de
+  pricing: https://uberspace.de/en/product/
+  docs: https://manual.uberspace.de/
 category: shared
 description: Uberspace is a small German hosting service sitting between shared hosting and a VPS, running since 2011, with a shell account and a documented stack.
 hqCountry: DE
@@ -35,9 +37,21 @@ managedDatabases:
   - redis
   - sqlite
   - influxdb
+entryPrice: { amount: 6, currency: EUR, period: month }
+entryPriceBand: 5-15
+freeTier: trial
+contractMinimum: none
+energyClaim: annual-matched
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-01
 sources:
+  - { field: entryPrice, url: 'https://uberspace.de/en/product/', checkedAt: 2026-08-01 }
+  - { field: entryPriceBand, url: 'https://uberspace.de/en/product/', checkedAt: 2026-08-01 }
+  - { field: freeTier, url: 'https://uberspace.de/en/about/', checkedAt: 2026-08-01 }
+  - { field: contractMinimum, url: 'https://uberspace.de/en/about/', checkedAt: 2026-08-01 }
+  - { field: energyClaim, url: 'https://uberspace.de/en/product/', checkedAt: 2026-08-01 }
+  - { field: hqCountry, url: 'https://uberspace.de/en/about/imprint/', checkedAt: 2026-08-01 }
+  - { field: urls, url: 'https://manual.uberspace.de/', checkedAt: 2026-08-01 }
   - { field: runtimes, url: 'https://manual.uberspace.de/', checkedAt: 2026-07-31 }
   - { field: managedDatabases, url: 'https://manual.uberspace.de/', checkedAt: 2026-07-31 }
   - { field: sshAccess, url: 'https://manual.uberspace.de/', checkedAt: 2026-07-31 }

@@ -4,8 +4,12 @@ name: InterServer
 urls:
   home: https://www.interserver.net
   pricing: https://www.interserver.net/webhosting/
+  terms: https://www.interserver.net/terms-of-service.html
+  sla: https://www.interserver.net/service-level-agreement.html
+  docs: https://www.interserver.net/tips/kb/
 category: shared
 description: American host selling one shared plan at a price it undertakes not to raise, on DirectAdmin and CloudLinux, alongside VPS, dedicated servers and colocation.
+founded: 1999
 hqCountry: US
 ownership: independent
 whoManagesOs: panel-assisted
@@ -32,10 +36,24 @@ deployMethods:
   - control-panel
 backupsIncluded: included
 pricingModel: fixed-tier
+entryPrice: { amount: 7, currency: USD, period: month }
 entryPriceBand: 5-15
+renewalMultiple: 1
+contractMinimum: monthly
 freeTier: none
 regions:
   - US
+status: active
+checkedAt: 2026-08-01
+sources:
+  - { field: regions, url: 'https://www.interserver.net/webhosting/', checkedAt: 2026-08-01 }
+  - { field: founded, url: 'https://www.interserver.net/webhosting/', checkedAt: 2026-08-01 }
+  - { field: entryPrice, url: 'https://www.interserver.net/webhosting/', checkedAt: 2026-08-01 }
+  - { field: entryPriceBand, url: 'https://www.interserver.net/webhosting/', checkedAt: 2026-08-01 }
+  - { field: renewalMultiple, url: 'https://www.interserver.net/webhosting/', checkedAt: 2026-08-01 }
+  - { field: contractMinimum, url: 'https://www.interserver.net/webhosting/', checkedAt: 2026-08-01 }
+  - { field: pricingModel, url: 'https://www.interserver.net/webhosting/', checkedAt: 2026-08-01 }
+  - { field: backupsIncluded, url: 'https://www.interserver.net/webhosting/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🔒
   color: rgb(30, 45, 35)

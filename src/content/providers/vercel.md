@@ -4,8 +4,12 @@ name: Vercel
 urls:
   home: https://vercel.com
   pricing: https://vercel.com/docs/plans
+  status: https://www.vercel-status.com/
+  terms: https://vercel.com/legal/terms
+  docs: https://vercel.com/docs
 category: serverless
 description: Vercel is a serverless frontend platform. Its official function runtimes do not include PHP, which is available only through a community runtime.
+ownership: vc-backed
 whoManagesOs: provider
 useCases:
   - saas
@@ -57,8 +61,10 @@ supportChannels:
 supportTiering: paid-upgrade
 cliTool: official
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-01
 sources:
+  - { field: ownership, url: 'https://vercel.com/about', checkedAt: 2026-08-01 }
+  - { field: urls, url: 'https://vercel.com/legal/terms', checkedAt: 2026-08-01 }
   - { field: runtimes, url: 'https://vercel.com/docs/functions/runtimes', checkedAt: 2026-07-31 }
   - { field: persistentStorage, url: 'https://vercel.com/docs/functions/runtimes', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://vercel.com/docs/regions', checkedAt: 2026-07-31 }

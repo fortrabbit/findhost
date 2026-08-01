@@ -4,6 +4,8 @@ name: Loopia
 urls:
   home: https://www.loopia.se
   pricing: https://www.loopia.se/webbhotell/priser/
+  terms: https://www.loopia.se/avtalsvillkor/
+  docs: https://www.loopia.se/support/
 category: shared
 description: Swedish hosting provider and registrar in Västerås offering Linux and Windows shared hosting with SSH, PHP, Python, Perl and ASP.NET.
 founded: 1999
@@ -35,9 +37,28 @@ deployMethods:
   - control-panel
 sshAccess: full
 pricingModel: fixed-tier
+entryPrice: { amount: 89, currency: SEK, period: month }
 entryPriceBand: 5-15
 freeTier: none
+energyClaim: annual-matched
+supportChannels:
+  - email
+  - chat
+supportHours: business-hours
 apiAvailable: public
+status: active
+checkedAt: 2026-08-01
+sources:
+  - { field: entryPrice, url: 'https://www.loopia.se/webbhotell/priser/', checkedAt: 2026-08-01 }
+  - { field: entryPriceBand, url: 'https://www.loopia.se/webbhotell/priser/', checkedAt: 2026-08-01 }
+  - { field: pricingModel, url: 'https://www.loopia.se/webbhotell/priser/', checkedAt: 2026-08-01 }
+  - { field: supportHours, url: 'https://www.loopia.se/webbhotell/priser/', checkedAt: 2026-08-01 }
+  - { field: supportChannels, url: 'https://www.loopia.se/webbhotell/priser/', checkedAt: 2026-08-01 }
+  - { field: energyClaim, url: 'https://www.loopia.se/om-loopia/', checkedAt: 2026-08-01 }
+  - { field: founded, url: 'https://www.loopia.se/om-loopia/', checkedAt: 2026-08-01 }
+  - { field: hqCountry, url: 'https://www.loopia.se/om-loopia/', checkedAt: 2026-08-01 }
+  - { field: parent, url: 'https://www.loopia.se/om-loopia/', checkedAt: 2026-08-01 }
+  - { field: ownership, url: 'https://www.loopia.se/om-loopia/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🪟
   color: rgb(20, 50, 85)

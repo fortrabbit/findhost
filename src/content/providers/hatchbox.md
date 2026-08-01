@@ -36,7 +36,15 @@ deployMethods:
 sshAccess: full
 pricingModel: fixed-tier
 entryPriceBand: 5-15
+entryPrice: { amount: 10, currency: USD, period: month }
 freeTier: trial
+status: active
+checkedAt: 2026-08-01
+sources:
+  - { field: entryPrice, url: 'https://www.hatchbox.io/pricing', checkedAt: 2026-08-01 }
+  - { field: entryPriceBand, url: 'https://www.hatchbox.io/pricing', checkedAt: 2026-08-01 }
+  - { field: pricingModel, url: 'https://www.hatchbox.io/pricing', checkedAt: 2026-08-01 }
+  - { field: freeTier, url: 'https://www.hatchbox.io/pricing', checkedAt: 2026-08-01 }
 figure:
   emoji: 🛤️
   color: rgb(60, 25, 25)

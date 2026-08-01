@@ -23,6 +23,7 @@ managedDatabases:
   - mysql
 pricingModel: fixed-tier
 entryPriceBand: 5-15
+entryPrice: { amount: 2.5, currency: EUR, period: month }
 freeTier: trial
 contractMinimum: monthly
 regions:
@@ -38,6 +39,16 @@ supportTiering: all-plans
 apiAvailable: public
 mcpServer: none
 status: active
+checkedAt: 2026-08-01
+sources:
+  - { field: regions, url: 'https://www.fortrabbit.com/', checkedAt: 2026-08-01 }
+  - { field: hqCountry, url: 'https://www.fortrabbit.com/', checkedAt: 2026-08-01 }
+  - { field: runsOn, url: 'https://www.fortrabbit.com/', checkedAt: 2026-08-01 }
+  - { field: entryPrice, url: 'https://www.fortrabbit.com/pricing', checkedAt: 2026-08-01 }
+  - { field: entryPriceBand, url: 'https://www.fortrabbit.com/pricing', checkedAt: 2026-08-01 }
+  - { field: pricingModel, url: 'https://www.fortrabbit.com/pricing', checkedAt: 2026-08-01 }
+  - { field: freeTier, url: 'https://www.fortrabbit.com/pricing', checkedAt: 2026-08-01 }
+  - { field: contractMinimum, url: 'https://www.fortrabbit.com/pricing', checkedAt: 2026-08-01 }
 publishedByUs: true
 ai: co-authored
 figure:
@@ -50,3 +61,5 @@ figure:
 fortrabbit is a small, independent German company running a managed PHP platform on rented AWS capacity. It is also who publishes FindHost, which is why this record exists and why it carries a permanent marker.
 
 The record is held to the same standard as every other: the same fields, the same sourcing, the same right of reply. If anything here reads more favourably than the evidence supports, that is a bug — open an issue.
+
+Two figures come off the pricing page and both are recorded. €2.50 a month is the smallest setup that can exist; €5 to €10 is what the same page says a small production app with a database costs. The entry price field carries the first, the band carries the second, because the band is defined as the app with everything mandatory included.

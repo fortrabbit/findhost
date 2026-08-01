@@ -4,6 +4,8 @@ name: MyDevil.net
 urls:
   home: https://www.mydevil.net
   pricing: https://www.mydevil.net/
+  terms: https://www.mydevil.net/dokumenty/regulamin-korzystania-z-uslug-mydevil-net/
+  docs: https://pomoc.mydevil.net/
 category: shared
 description: Polish shared hosting running PHP 5.6 to 8.4, Node.js, Python, Django and Rails with SSH on every plan and unlimited sites, mailboxes and databases.
 hqCountry: PL
@@ -45,6 +47,17 @@ entryPriceBand: under-5
 freeTier: none
 regions:
   - PL
+social:
+  facebook: https://www.facebook.com/MyDevil.net
+  x: https://x.com/MyDevilnet
+status: active
+checkedAt: 2026-08-01
+sources:
+  - { field: regions, url: 'https://www.mydevil.net', checkedAt: 2026-08-01 }
+  - { field: hqCountry, url: 'https://www.mydevil.net', checkedAt: 2026-08-01 }
+  - { field: entryPriceBand, url: 'https://www.mydevil.net', checkedAt: 2026-08-01 }
+  - { field: pricingModel, url: 'https://www.mydevil.net', checkedAt: 2026-08-01 }
+  - { field: social, url: 'https://www.mydevil.net', checkedAt: 2026-08-01 }
 figure:
   emoji: 😈
   color: rgb(55, 20, 30)

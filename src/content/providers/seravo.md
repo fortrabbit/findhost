@@ -31,13 +31,25 @@ deployMethods:
 sshAccess: full
 pricingModel: fixed-tier
 entryPriceBand: 15-50
+entryPrice: { amount: 25, currency: EUR, period: month }
 freeTier: none
 backupsIncluded: included
+energyClaim: annual-matched
+sustainabilityUrl: https://seravo.com/features/sustainable/
 supportChannels:
   - email
   - chat
   - phone
 supportHours: 24-7
+status: active
+checkedAt: 2026-08-01
+sources:
+  - { field: entryPrice, url: 'https://seravo.com/plans/', checkedAt: 2026-08-01 }
+  - { field: entryPriceBand, url: 'https://seravo.com/plans/', checkedAt: 2026-08-01 }
+  - { field: pricingModel, url: 'https://seravo.com/plans/', checkedAt: 2026-08-01 }
+  - { field: energyClaim, url: 'https://seravo.com/features/sustainable/', checkedAt: 2026-08-01 }
+  - { field: sustainabilityUrl, url: 'https://seravo.com/features/sustainable/', checkedAt: 2026-08-01 }
+  - { field: hqCountry, url: 'https://seravo.com/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🐧
   color: rgb(20, 45, 60)

@@ -7,6 +7,7 @@ urls:
 category: iaas
 description: Lithuanian provider selling dedicated and virtual servers by the hour, by fixed term or as spot capacity, across seven data-centre locations.
 founded: 2001
+hqCountry: LT
 whoManagesOs: you
 infraContract:
   - owns-metal
@@ -36,6 +37,7 @@ freeTier: none
 regions:
   - NL
   - DE
+  - LT
   - SE
   - US
   - SG
@@ -47,6 +49,10 @@ supportHours: 24-7
 apiAvailable: public
 iacSupport:
   - terraform
+checkedAt: 2026-08-01
+sources:
+  - { field: regions, url: 'https://www.cherryservers.com/locations', checkedAt: 2026-08-01 }
+  - { field: hqCountry, url: 'https://www.cherryservers.com/locations', checkedAt: 2026-08-01 }
 figure:
   emoji: 🍒
   color: rgb(55, 20, 35)

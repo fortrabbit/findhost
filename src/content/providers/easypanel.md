@@ -4,6 +4,7 @@ name: Easypanel
 urls:
   home: https://easypanel.io
   pricing: https://easypanel.io/pricing
+  docs: https://easypanel.io/docs
 category: server-management
 description: Server panel that turns a rented Linux box into a container platform, billed per server, with a free tier capped at three projects.
 whoManagesOs: container
@@ -33,6 +34,12 @@ sshAccess: full
 pricingModel: per-resource
 entryPriceBand: free-tier
 freeTier: permanent
+status: active
+checkedAt: 2026-08-01
+sources:
+  - { field: entryPriceBand, url: 'https://easypanel.io/pricing', checkedAt: 2026-08-01 }
+  - { field: freeTier, url: 'https://easypanel.io/pricing', checkedAt: 2026-08-01 }
+  - { field: pricingModel, url: 'https://easypanel.io/pricing', checkedAt: 2026-08-01 }
 figure:
   emoji: 🎚️
   color: rgb(30, 35, 50)

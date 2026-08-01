@@ -5,6 +5,8 @@ urls:
   home: https://www.netcup.com
   pricing: https://www.netcup.com/de/hosting
   status: https://netcup-status.de
+  terms: https://www.netcup.com/de/agb
+  sla: https://www.netcup.com/de/hosting/qualitaetsgarantien
 category: vps
 description: Karlsruhe-based provider selling low-priced webhosting, VPS and root servers across five data-centre locations, part of the Anexia group.
 founded: 2008
@@ -37,7 +39,9 @@ deployMethods:
   - control-panel
 sshAccess: full
 pricingModel: fixed-tier
+entryPrice: { amount: 2.69, currency: EUR, period: month }
 entryPriceBand: under-5
+renewalMultiple: 1
 freeTier: none
 contractMinimum: none
 regions:
@@ -49,11 +53,23 @@ regions:
 supportChannels:
   - email
   - forum
-checkedAt: 2026-07-31
+social:
+  mastodon: https://netcup.cafe/@netcup
+  x: https://x.com/netcup
+  linkedin: https://www.linkedin.com/company/netcup
+  facebook: https://www.facebook.com/netcup
+status: active
+checkedAt: 2026-08-01
 sources:
   - { field: regions, url: 'https://www.netcup.com/de/server/vps', checkedAt: 2026-07-31 }
   - { field: contractMinimum, url: 'https://www.netcup.com/de/server/vps', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://www.netcup.com/de/server/vps', checkedAt: 2026-07-31 }
+  - { field: entryPrice, url: 'https://www.netcup.com/de/hosting', checkedAt: 2026-08-01 }
+  - { field: entryPriceBand, url: 'https://www.netcup.com/de/hosting', checkedAt: 2026-08-01 }
+  - { field: renewalMultiple, url: 'https://www.netcup.com/de/hosting', checkedAt: 2026-08-01 }
+  - { field: parent, url: 'https://www.netcup.com/de/kontakt/impressum', checkedAt: 2026-08-01 }
+  - { field: hqCountry, url: 'https://www.netcup.com/de/kontakt/impressum', checkedAt: 2026-08-01 }
+  - { field: social, url: 'https://www.netcup.com/de/kontakt/impressum', checkedAt: 2026-08-01 }
 figure:
   emoji: 🪙
   color: rgb(30, 70, 55)

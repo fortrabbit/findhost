@@ -4,6 +4,7 @@ name: xneelo
 urls:
   home: https://xneelo.co.za
   pricing: https://xneelo.co.za/web-hosting/
+  terms: https://xneelo.co.za/legal/terms-of-service/
 category: shared
 description: South African host, formerly Hetzner South Africa, selling shared hosting, managed and self-managed servers and colocation with a choice of ZA or DE servers.
 founded: 1999
@@ -30,10 +31,34 @@ deployMethods:
   - control-panel
 pricingModel: fixed-tier
 entryPriceBand: 5-15
+entryPrice: { amount: 99, currency: ZAR, period: month }
 freeTier: none
 regions:
   - ZA
   - DE
+supportChannels:
+  - phone
+  - chat
+  - email
+supportHours: 24-7
+pue: 1.2
+certifications:
+  - PCI DSS
+social:
+  facebook: https://www.facebook.com/xneeloHosting/
+  linkedin: https://www.linkedin.com/company/xneelo/
+checkedAt: 2026-08-01
+sources:
+  - { field: regions, url: 'https://xneelo.co.za/web-hosting/', checkedAt: 2026-08-01 }
+  - { field: regions, url: 'https://xneelo.co.za/data-centre/', checkedAt: 2026-08-01 }
+  - { field: entryPrice, url: 'https://xneelo.co.za/web-hosting/', checkedAt: 2026-08-01 }
+  - { field: entryPriceBand, url: 'https://xneelo.co.za/web-hosting/', checkedAt: 2026-08-01 }
+  - { field: supportHours, url: 'https://xneelo.co.za/web-hosting/', checkedAt: 2026-08-01 }
+  - { field: supportChannels, url: 'https://xneelo.co.za/web-hosting/', checkedAt: 2026-08-01 }
+  - { field: pue, url: 'https://xneelo.co.za/data-centre/', checkedAt: 2026-08-01 }
+  - { field: certifications, url: 'https://xneelo.co.za/data-centre/', checkedAt: 2026-08-01 }
+  - { field: social, url: 'https://xneelo.co.za', checkedAt: 2026-08-01 }
+  - { field: urls, url: 'https://xneelo.co.za/legal/terms-of-service/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🦓
   color: rgb(40, 40, 45)

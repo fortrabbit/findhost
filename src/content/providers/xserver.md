@@ -27,10 +27,25 @@ deployMethods:
 backupsIncluded: included
 pricingModel: fixed-tier
 entryPriceBand: 5-15
+entryPrice: { amount: 990, currency: JPY, period: month }
 freeTier: trial
 regions:
   - JP
 contractMinimum: annual
+certifications:
+  - ISO 27001
+social:
+  x: https://x.com/xserverjp
+  facebook: https://www.facebook.com/xserver.co.jp/
+checkedAt: 2026-08-01
+sources:
+  - { field: hqCountry, url: 'https://www.xserver.ne.jp/company.php', checkedAt: 2026-08-01 }
+  - { field: certifications, url: 'https://www.xserver.ne.jp/company.php', checkedAt: 2026-08-01 }
+  - { field: entryPrice, url: 'https://www.xserver.ne.jp/price/', checkedAt: 2026-08-01 }
+  - { field: entryPriceBand, url: 'https://www.xserver.ne.jp/price/', checkedAt: 2026-08-01 }
+  - { field: freeTier, url: 'https://www.xserver.ne.jp/price/', checkedAt: 2026-08-01 }
+  - { field: contractMinimum, url: 'https://www.xserver.ne.jp/price/', checkedAt: 2026-08-01 }
+  - { field: social, url: 'https://www.xserver.ne.jp', checkedAt: 2026-08-01 }
 figure:
   emoji: 🎌
   color: rgb(55, 25, 35)

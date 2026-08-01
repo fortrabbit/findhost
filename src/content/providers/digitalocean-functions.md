@@ -20,12 +20,23 @@ persistentStorage: false
 pricingModel: usage-based
 entryPriceBand: free-tier
 freeTier: permanent
+regions:
+  - US
+  - NL
+  - SG
+  - GB
+  - DE
+  - CA
+  - IN
+  - AU
+  - MX
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-01
 sources:
   - { field: pricingModel, url: 'https://docs.digitalocean.com/products/functions/details/pricing/', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://docs.digitalocean.com/products/functions/details/pricing/', checkedAt: 2026-07-31 }
   - { field: entryPriceBand, url: 'https://docs.digitalocean.com/products/functions/details/pricing/', checkedAt: 2026-07-31 }
+  - { field: regions, url: 'https://docs.digitalocean.com/products/functions/details/availability/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🌊
   color: rgb(20, 40, 90)

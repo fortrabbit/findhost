@@ -6,6 +6,7 @@ urls:
   pricing: https://www.papaki.com/en/web-hosting/
 category: shared
 description: Greek registrar and host with over 110,000 customers, selling three shared plans with NVMe storage, automatic backups and SSH above the entry tier.
+founded: 2004
 hqCountry: GR
 ownership: subsidiary
 parent: team.blue
@@ -35,9 +36,19 @@ managedDatabases:
 backupsIncluded: included
 pricingModel: fixed-tier
 entryPriceBand: 5-15
+entryPrice: { amount: 6.9, currency: EUR, period: month }
 freeTier: none
 certifications:
   - ISO 27001
+status: active
+checkedAt: 2026-08-01
+sources:
+  - { field: entryPrice, url: 'https://www.papaki.com/en/web-hosting/', checkedAt: 2026-08-01 }
+  - { field: entryPriceBand, url: 'https://www.papaki.com/en/web-hosting/', checkedAt: 2026-08-01 }
+  - { field: pricingModel, url: 'https://www.papaki.com/en/web-hosting/', checkedAt: 2026-08-01 }
+  - { field: founded, url: 'https://www.papaki.com/en/about-us/', checkedAt: 2026-08-01 }
+  - { field: ownership, url: 'https://www.papaki.com/en/about-us/', checkedAt: 2026-08-01 }
+  - { field: parent, url: 'https://www.papaki.com/en/about-us/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🦆
   color: rgb(35, 50, 30)

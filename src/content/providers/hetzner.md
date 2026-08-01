@@ -42,12 +42,12 @@ supportHours: 24-7
 apiAvailable: public
 cliTool: official
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-01
 sources:
+  - { field: regions, url: 'https://www.hetzner.com/cloud/', checkedAt: 2026-08-01 }
   - { field: founded, url: 'https://www.hetzner.com/unternehmen/ueber-uns/', checkedAt: 2026-07-31 }
   - { field: hqCountry, url: 'https://www.hetzner.com/unternehmen/ueber-uns/', checkedAt: 2026-07-31 }
   - { field: infraContract, url: 'https://www.hetzner.com/unternehmen/ueber-uns/', checkedAt: 2026-07-31 }
-  - { field: regions, url: 'https://www.hetzner.com/cloud/', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://docs.hetzner.com/cloud/billing/faq/', checkedAt: 2026-07-31 }
   - { field: entryPriceBand, url: 'https://docs.hetzner.com/cloud/billing/faq/', checkedAt: 2026-07-31 }
   - { field: contractMinimum, url: 'https://docs.hetzner.com/cloud/billing/faq/', checkedAt: 2026-07-31 }

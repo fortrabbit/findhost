@@ -5,6 +5,8 @@ urls:
   home: https://modal.com
   pricing: https://modal.com/pricing
   status: https://status.modal.com/
+  terms: https://modal.com/legal/terms
+  docs: https://modal.com/docs/guide
 category: serverless
 description: Serverless compute platform for Python, where functions are decorated in code and run in containers on CPU or GPU with per-second billing.
 hqCountry: US
@@ -29,8 +31,24 @@ deployMethods:
 pricingModel: usage-based
 entryPriceBand: free-tier
 freeTier: permanent
+regions:
+  - US
+  - CA
+  - MX
+  - IE
+  - GB
+  - IN
+  - JP
+  - AU
 apiAvailable: public
 cliTool: official
+status: active
+checkedAt: 2026-08-01
+sources:
+  - { field: regions, url: 'https://modal.com/docs/guide/region-selection', checkedAt: 2026-08-01 }
+  - { field: entryPriceBand, url: 'https://modal.com/pricing', checkedAt: 2026-08-01 }
+  - { field: freeTier, url: 'https://modal.com/pricing', checkedAt: 2026-08-01 }
+  - { field: pricingModel, url: 'https://modal.com/pricing', checkedAt: 2026-08-01 }
 figure:
   emoji: 🎛️
   color: rgb(20, 45, 40)

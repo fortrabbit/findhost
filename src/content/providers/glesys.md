@@ -36,8 +36,24 @@ deployMethods:
 sshAccess: full
 pricingModel: per-resource
 entryPriceBand: 5-15
+entryPrice: { amount: 12.73, currency: EUR, period: month }
 freeTier: none
+regions:
+  - SE
+  - FI
+  - NL
+  - DE
+  - GB
+  - NO
 apiAvailable: public
+status: active
+checkedAt: 2026-08-01
+sources:
+  - { field: regions, url: 'https://glesys.com/pricing/', checkedAt: 2026-08-01 }
+  - { field: entryPrice, url: 'https://glesys.com/pricing/', checkedAt: 2026-08-01 }
+  - { field: entryPriceBand, url: 'https://glesys.com/pricing/', checkedAt: 2026-08-01 }
+  - { field: pricingModel, url: 'https://glesys.com/pricing/', checkedAt: 2026-08-01 }
+  - { field: freeTier, url: 'https://glesys.com/pricing/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🧊
   color: rgb(18, 42, 62)

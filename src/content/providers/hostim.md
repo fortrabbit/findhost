@@ -3,8 +3,33 @@ id: hostim
 name: Hostim
 urls:
   home: https://hostim.dev
+  pricing: https://hostim.dev/pricing/
+  terms: https://hostim.dev/docs/legal/terms/
+  docs: https://hostim.dev/docs/
+  status: https://status.hostim.dev
 category: paas
 description: Hostim is a Docker-first PaaS from Germany, in the Railway mold.
+founded: 2025
+hqCountry: DE
+regions:
+  - DE
+entryPrice: { amount: 2.5, currency: EUR, period: month }
+entryPriceBand: under-5
+pricingModel: fixed-tier
+freeTier: trial
+social:
+  github: https://github.com/hostimdev
+status: active
+checkedAt: 2026-08-01
+sources:
+  - { field: regions, url: 'https://hostim.dev', checkedAt: 2026-08-01 }
+  - { field: hqCountry, url: 'https://hostim.dev', checkedAt: 2026-08-01 }
+  - { field: founded, url: 'https://hostim.dev', checkedAt: 2026-08-01 }
+  - { field: social, url: 'https://hostim.dev', checkedAt: 2026-08-01 }
+  - { field: entryPrice, url: 'https://hostim.dev/pricing/', checkedAt: 2026-08-01 }
+  - { field: entryPriceBand, url: 'https://hostim.dev/pricing/', checkedAt: 2026-08-01 }
+  - { field: pricingModel, url: 'https://hostim.dev/pricing/', checkedAt: 2026-08-01 }
+  - { field: freeTier, url: 'https://hostim.dev/pricing/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🐳
   color: rgb(24, 38, 60)

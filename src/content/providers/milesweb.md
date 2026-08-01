@@ -36,8 +36,10 @@ sshAccess: full
 managedDatabases:
   - mysql
 pricingModel: fixed-tier
+entryPrice: { amount: 69, currency: INR, period: month }
 entryPriceBand: under-5
 freeTier: none
+contractMinimum: multi-year
 regions:
   - IN
   - US
@@ -45,6 +47,20 @@ regions:
   - CA
   - AU
   - SG
+supportChannels:
+  - chat
+  - email
+supportHours: 24-7
+status: active
+checkedAt: 2026-08-01
+sources:
+  - { field: regions, url: 'https://www.milesweb.in/hosting/web-hosting', checkedAt: 2026-08-01 }
+  - { field: entryPrice, url: 'https://www.milesweb.in/hosting/web-hosting', checkedAt: 2026-08-01 }
+  - { field: entryPriceBand, url: 'https://www.milesweb.in/hosting/web-hosting', checkedAt: 2026-08-01 }
+  - { field: contractMinimum, url: 'https://www.milesweb.in/hosting/web-hosting', checkedAt: 2026-08-01 }
+  - { field: pricingModel, url: 'https://www.milesweb.in/hosting/web-hosting', checkedAt: 2026-08-01 }
+  - { field: supportHours, url: 'https://www.milesweb.in/hosting/web-hosting', checkedAt: 2026-08-01 }
+  - { field: supportChannels, url: 'https://www.milesweb.in/hosting/web-hosting', checkedAt: 2026-08-01 }
 figure:
   emoji: 🪷
   color: rgb(50, 30, 20)

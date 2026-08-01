@@ -4,6 +4,7 @@ name: World4You
 urls:
   home: https://www.world4you.com
   pricing: https://www.world4you.com/hosting/web-hosting
+  terms: https://www.world4you.com/unternehmen/agb
 category: shared
 description: Austrian hosting provider from Linz, a subsidiary of United Internet, selling shared webhosting, WordPress hosting, email and servers.
 founded: 1998
@@ -33,8 +34,23 @@ sshAccess: full
 pricingModel: fixed-tier
 entryPriceBand: under-5
 freeTier: trial
+contractMinimum: annual
+regions:
+  - AT
 social:
   github: https://github.com/world4youcom
+  facebook: https://www.facebook.com/world4you
+  linkedin: https://www.linkedin.com/company/world4you/
+checkedAt: 2026-08-01
+sources:
+  - { field: regions, url: 'https://www.world4you.com/unternehmen', checkedAt: 2026-08-01 }
+  - { field: founded, url: 'https://www.world4you.com/unternehmen', checkedAt: 2026-08-01 }
+  - { field: hqCountry, url: 'https://www.world4you.com/unternehmen', checkedAt: 2026-08-01 }
+  - { field: parent, url: 'https://www.world4you.com/unternehmen', checkedAt: 2026-08-01 }
+  - { field: contractMinimum, url: 'https://www.world4you.com/hosting/web-hosting', checkedAt: 2026-08-01 }
+  - { field: entryPriceBand, url: 'https://www.world4you.com/hosting/web-hosting', checkedAt: 2026-08-01 }
+  - { field: social, url: 'https://www.world4you.com', checkedAt: 2026-08-01 }
+  - { field: urls, url: 'https://www.world4you.com/unternehmen/agb', checkedAt: 2026-08-01 }
 figure:
   emoji: 🥨
   color: rgb(90, 25, 30)

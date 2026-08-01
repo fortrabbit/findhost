@@ -37,6 +37,12 @@ sshAccess: none
 pricingModel: usage-based
 entryPriceBand: free-tier
 freeTier: permanent
+status: active
+checkedAt: 2026-08-01
+sources:
+  - { field: entryPriceBand, url: 'https://firebase.google.com/pricing', checkedAt: 2026-08-01 }
+  - { field: freeTier, url: 'https://firebase.google.com/pricing', checkedAt: 2026-08-01 }
+  - { field: pricingModel, url: 'https://firebase.google.com/pricing', checkedAt: 2026-08-01 }
 apiAvailable: public
 cliTool: official
 figure:
@@ -57,4 +63,4 @@ There are two plans. Spark costs nothing and requires no payment method. Blaze i
 
 The Blaze plan has no spending ceiling. Free allowances renew monthly and everything past them bills automatically, which has produced well-known surprise invoices when a loop or a crawler found an endpoint — budget alerts exist, but they notify rather than stop.
 
-Regional detail is inconsistent: no-cost storage quotas apply only in three US regions, and everything else follows Google Cloud's regional pricing, which is a different page again. Nothing here offers a shell or a persistent server.
+Regional detail is inconsistent: no-cost storage quotas apply only in three US regions — `us-central1`, `us-west1` and `us-east1` — and everything else follows Google Cloud's regional pricing, which is a different page again. No Firebase page enumerates where Hosting or App Hosting actually run, so no regions are recorded here. Nothing here offers a shell or a persistent server.

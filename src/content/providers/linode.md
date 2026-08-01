@@ -6,6 +6,10 @@ urls:
   pricing: https://www.linode.com/pricing/
 category: vps
 description: Linode is a US VPS provider founded in 2003, acquired by Akamai in 2022 and now sold as Akamai Cloud.
+founded: 2003
+hqCountry: US
+ownership: subsidiary
+parent: Akamai Technologies
 whoManagesOs: you
 audience:
   - developer
@@ -13,6 +17,7 @@ runtimes:
   - any
 sshAccess: full
 pricingModel: hourly
+entryPrice: { amount: 5, currency: USD, period: month }
 entryPriceBand: 5-15
 regions:
   - US
@@ -32,8 +37,11 @@ regions:
   - AU
 apiAvailable: public
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-01
 sources:
+  - { field: entryPrice, url: 'https://api.linode.com/v4/linode/types', checkedAt: 2026-08-01 }
+  - { field: parent, url: 'https://www.linode.com/company/about/', checkedAt: 2026-08-01 }
+  - { field: ownership, url: 'https://www.linode.com/company/about/', checkedAt: 2026-08-01 }
   - { field: regions, url: 'https://api.linode.com/v4/regions', checkedAt: 2026-07-31 }
   - { field: entryPriceBand, url: 'https://api.linode.com/v4/linode/types', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://api.linode.com/v4/linode/types', checkedAt: 2026-07-31 }

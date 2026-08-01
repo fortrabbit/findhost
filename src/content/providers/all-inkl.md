@@ -4,6 +4,7 @@ name: ALL-INKL.COM
 urls:
   home: https://all-inkl.com
   pricing: https://all-inkl.com/webhosting/paketvergleich/
+  terms: https://all-inkl.com/agb/
 category: shared
 description: Owner-run German shared hosting and managed server provider operating from Friedersdorf in Saxony, with data centres in Dresden.
 founded: 2000
@@ -29,18 +30,23 @@ deployMethods:
 sshAccess: limited
 pricingModel: fixed-tier
 entryPriceBand: under-5
+entryPrice: { amount: 4.95, currency: EUR, period: month }
 freeTier: trial
 contractMinimum: none
 regions:
   - DE
-checkedAt: 2026-07-31
+checkedAt: 2026-08-01
 sources:
   - { field: entryPriceBand, url: 'https://www.all-inkl.com/webhosting/', checkedAt: 2026-07-31 }
   - { field: contractMinimum, url: 'https://www.all-inkl.com/webhosting/', checkedAt: 2026-07-31 }
-  - { field: regions, url: 'https://www.all-inkl.com/webhosting/', checkedAt: 2026-07-31 }
+  - { field: regions, url: 'https://all-inkl.com/webhosting/', checkedAt: 2026-08-01 }
+  - { field: entryPrice, url: 'https://all-inkl.com/webhosting/', checkedAt: 2026-08-01 }
+  - { field: urls, url: 'https://all-inkl.com/webhosting/', checkedAt: 2026-08-01 }
+  - { field: supportHours, url: 'https://all-inkl.com/webhosting/', checkedAt: 2026-08-01 }
 supportChannels:
   - phone
   - email
+supportHours: 24-7
 figure:
   emoji: 🧰
   color: rgb(70, 45, 15)

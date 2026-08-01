@@ -26,9 +26,21 @@ deployMethods:
   - control-panel
 backupsIncluded: included
 pricingModel: fixed-tier
+entryPrice: { amount: 9.99, currency: MYR, period: month }
+renewalMultiple: 5
 freeTier: none
+contractMinimum: multi-year
 regions:
   - MY
+status: active
+checkedAt: 2026-08-01
+sources:
+  - { field: entryPrice, url: 'https://www.exabytes.my/web-hosting', checkedAt: 2026-08-01 }
+  - { field: renewalMultiple, url: 'https://www.exabytes.my/web-hosting', checkedAt: 2026-08-01 }
+  - { field: contractMinimum, url: 'https://www.exabytes.my/web-hosting', checkedAt: 2026-08-01 }
+  - { field: regions, url: 'https://www.exabytes.my/web-hosting', checkedAt: 2026-08-01 }
+  - { field: pricingModel, url: 'https://www.exabytes.my/web-hosting', checkedAt: 2026-08-01 }
+  - { field: backupsIncluded, url: 'https://www.exabytes.my/web-hosting', checkedAt: 2026-08-01 }
 figure:
   emoji: 🌺
   color: rgb(50, 35, 20)

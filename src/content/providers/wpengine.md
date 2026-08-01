@@ -4,8 +4,13 @@ name: WP Engine
 urls:
   home: https://wpengine.com
   pricing: https://wpengine.com/plans/
+  status: https://wpenginestatus.com/
+  terms: https://wpengine.com/legal/terms-of-service/
+  docs: https://developers.wpengine.com/
 category: vanity-hosting
 description: WP Engine is one of the largest managed WordPress hosts, founded in 2010 and based in Austin, Texas, with an office in Limerick, Ireland.
+founded: 2010
+hqCountry: US
 whoManagesOs: provider
 useCases:
   - cms
@@ -21,9 +26,18 @@ backupsIncluded: included
 pricingModel: fixed-tier
 entryPriceBand: 15-50
 contractMinimum: annual
+social:
+  x: https://x.com/wpengine
+  facebook: https://www.facebook.com/wpengine
+  linkedin: https://www.linkedin.com/company/wpengine
+  youtube: https://www.youtube.com/wpengine
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-01
 sources:
+  - { field: founded, url: 'https://wpengine.com/about-us/', checkedAt: 2026-08-01 }
+  - { field: hqCountry, url: 'https://wpengine.com/about-us/', checkedAt: 2026-08-01 }
+  - { field: social, url: 'https://wpengine.com', checkedAt: 2026-08-01 }
+  - { field: urls, url: 'https://wpengine.com/legal/terms-of-service/', checkedAt: 2026-08-01 }
   - { field: entryPriceBand, url: 'https://wpengine.com/plans/', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://wpengine.com/plans/', checkedAt: 2026-07-31 }
   - { field: backupsIncluded, url: 'https://wpengine.com/plans/', checkedAt: 2026-07-31 }

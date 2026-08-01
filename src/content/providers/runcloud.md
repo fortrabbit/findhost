@@ -14,8 +14,18 @@ audience:
   - enterprise
 runtimes:
   - php
+freeTier: trial
+runsOn:
+  - digitalocean
+  - linode
+  - vultr
+status: active
+checkedAt: 2026-08-01
 sources:
   - { field: audience, url: 'https://runcloud.io/pricing', checkedAt: 2026-07-31 }
+  - { field: freeTier, url: 'https://runcloud.io/', checkedAt: 2026-08-01 }
+  - { field: runsOn, url: 'https://runcloud.io/', checkedAt: 2026-08-01 }
+  - { field: infraContract, url: 'https://runcloud.io/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🔁
   color: rgb(0, 135, 150)

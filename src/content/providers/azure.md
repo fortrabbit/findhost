@@ -23,9 +23,43 @@ apiAvailable: public
 cliTool: official
 iacSupport:
   - terraform
+regions:
+  - AE
+  - AT
+  - AU
+  - BE
+  - BR
+  - CA
+  - CH
+  - CL
+  - DE
+  - DK
+  - ES
+  - FR
+  - GB
+  - HK
+  - ID
+  - IE
+  - IL
+  - IN
+  - IT
+  - JP
+  - KR
+  - MX
+  - MY
+  - NL
+  - NO
+  - NZ
+  - PL
+  - QA
+  - SE
+  - SG
+  - US
+  - ZA
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-01
 sources:
+  - { field: regions, url: 'https://learn.microsoft.com/en-us/azure/reliability/regions-list', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://azure.microsoft.com/en-us/pricing/details/app-service/linux/', checkedAt: 2026-07-31 }
 figure:
   emoji: ☁️

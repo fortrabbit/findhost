@@ -24,10 +24,16 @@ software:
 runtimes:
   - php
 sshAccess: full
+regions:
+  - US
+  - NL
+  - GB
+  - AU
 supportHours: 24-7
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-01
 sources:
+  - { field: regions, url: 'https://www.liquidweb.com/data-centers/', checkedAt: 2026-08-01 }
   - { field: supportHours, url: 'https://www.liquidweb.com/products/', checkedAt: 2026-07-31 }
   - { field: software, url: 'https://www.liquidweb.com/products/', checkedAt: 2026-07-31 }
 figure:

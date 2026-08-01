@@ -26,9 +26,11 @@ sshAccess: limited
 backupsIncluded: included
 pricingModel: fixed-tier
 entryPriceBand: 15-50
+entryPrice: { amount: 25, currency: USD, period: month }
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-01
 sources:
+  - { field: entryPrice, url: 'https://getflywheel.com/pricing/', checkedAt: 2026-08-01 }
   - { field: entryPriceBand, url: 'https://getflywheel.com/pricing/', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://getflywheel.com/pricing/', checkedAt: 2026-07-31 }
   - { field: backupsIncluded, url: 'https://getflywheel.com/pricing/', checkedAt: 2026-07-31 }

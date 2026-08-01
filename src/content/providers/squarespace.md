@@ -4,6 +4,7 @@ name: Squarespace
 urls:
   home: https://www.squarespace.com
   pricing: https://www.squarespace.com/pricing
+  terms: https://www.squarespace.com/terms-of-service
 category: lcnc
 description: Squarespace is a design-focused website builder that combines templates, hosting, and content tools.
 founded: 2004
@@ -21,11 +22,17 @@ audience:
 sshAccess: none
 freeTier: trial
 contractMinimum: monthly
+social:
+  x: https://x.com/squarespace
+  facebook: https://www.facebook.com/squarespace
+  linkedin: https://www.linkedin.com/company/squarespace/
+  youtube: https://www.youtube.com/squarespace
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-01
 sources:
   - { field: freeTier, url: 'https://www.squarespace.com/pricing', checkedAt: 2026-07-31 }
   - { field: contractMinimum, url: 'https://www.squarespace.com/pricing', checkedAt: 2026-07-31 }
+  - { field: social, url: 'https://www.squarespace.com', checkedAt: 2026-08-01 }
 figure:
   emoji: 🎨
   color: rgb(90, 90, 90)

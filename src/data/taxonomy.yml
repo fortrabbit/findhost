@@ -213,6 +213,32 @@
     - { id: AR, label: Argentina }
     - { id: KE, label: Kenya }
     - { id: NG, label: Nigeria }
+    - { id: BH, label: Bahrain }
+    - { id: QA, label: Qatar }
+    - { id: KW, label: Kuwait }
+    - { id: OM, label: Oman }
+    - { id: CO, label: Colombia }
+    - { id: PE, label: Peru }
+    - { id: UY, label: Uruguay }
+    - { id: EC, label: Ecuador }
+    - { id: CR, label: Costa Rica }
+    - { id: PA, label: Panama }
+    - { id: DO, label: Dominican Republic }
+    - { id: CN, label: China }
+    - { id: EG, label: Egypt }
+    - { id: MA, label: Morocco }
+    - { id: TN, label: Tunisia }
+    - { id: GH, label: Ghana }
+    - { id: MU, label: Mauritius }
+    - { id: NP, label: Nepal }
+    - { id: BD, label: Bangladesh }
+    - { id: LK, label: Sri Lanka }
+    - { id: KZ, label: Kazakhstan }
+    - { id: UA, label: Ukraine }
+    - { id: RS, label: Serbia }
+    - { id: CY, label: Cyprus }
+    - { id: MT, label: Malta }
+    - { id: GE, label: Georgia }
 
 - id: entry-price
   label: Entry price

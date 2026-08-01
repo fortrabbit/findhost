@@ -46,6 +46,8 @@ managedDatabases:
   - kafka
 pricingModel: fixed-tier
 entryPriceBand: 5-15
+entryPrice: { amount: 5, currency: USD, period: month }
+freeTier: none
 regions:
   - US
   - IE
@@ -58,8 +60,10 @@ regions:
   - JP
 cliTool: official
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-01
 sources:
+  - { field: entryPrice, url: 'https://www.heroku.com/pricing', checkedAt: 2026-08-01 }
+  - { field: freeTier, url: 'https://www.heroku.com/pricing', checkedAt: 2026-08-01 }
   - { field: founded, url: 'https://www.heroku.com/about/', checkedAt: 2026-07-31 }
   - { field: ownership, url: 'https://www.heroku.com/about/', checkedAt: 2026-07-31 }
   - { field: parent, url: 'https://www.heroku.com/about/', checkedAt: 2026-07-31 }

@@ -5,8 +5,11 @@ urls:
   home: https://www.netlify.com
   pricing: https://www.netlify.com/pricing/
   status: https://www.netlifystatus.com/
+  terms: https://www.netlify.com/legal/terms-of-use/
+  docs: https://docs.netlify.com/
 category: serverless
 description: Platform that builds sites from a git repository and serves them from a global CDN, with serverless functions, edge functions, blob storage and a database.
+founded: 2014
 hqCountry: US
 ownership: vc-backed
 whoManagesOs: provider
@@ -43,15 +46,32 @@ deployMethods:
 sshAccess: none
 pricingModel: credit
 entryPriceBand: free-tier
+entryPrice: { amount: 9, currency: USD, period: month }
 freeTier: permanent
+regions:
+  - US
+  - CA
+  - IE
+  - GB
+  - DE
+  - BR
+  - JP
+  - SG
+  - AU
 apiAvailable: public
 cliTool: official
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-01
 sources:
   - { field: pricingModel, url: 'https://www.netlify.com/pricing/', checkedAt: 2026-07-31 }
   - { field: entryPriceBand, url: 'https://www.netlify.com/pricing/', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://www.netlify.com/pricing/', checkedAt: 2026-07-31 }
+  - { field: entryPrice, url: 'https://www.netlify.com/pricing/', checkedAt: 2026-08-01 }
+  - { field: regions, url: 'https://docs.netlify.com/build/functions/optional-configuration/', checkedAt: 2026-08-01 }
+  - { field: founded, url: 'https://www.netlify.com/about/', checkedAt: 2026-08-01 }
+  - { field: hqCountry, url: 'https://www.netlify.com/about/', checkedAt: 2026-08-01 }
+  - { field: ownership, url: 'https://www.netlify.com/about/', checkedAt: 2026-08-01 }
+  - { field: urls, url: 'https://www.netlify.com/legal/terms-of-use/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🕸️
   color: rgb(20, 60, 70)

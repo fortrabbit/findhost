@@ -4,6 +4,8 @@ name: SpinupWP
 urls:
   home: https://spinupwp.com
   pricing: https://spinupwp.com/pricing/
+  terms: https://spinupwp.com/terms/
+  docs: https://spinupwp.com/docs/
 category: server-management
 description: SpinupWP is a control panel that configures and manages a WordPress-tuned server stack on an Ubuntu machine the customer brings.
 whoManagesOs: panel-assisted
@@ -32,14 +34,17 @@ deployMethods:
 sshAccess: full
 pricingModel: fixed-tier
 entryPriceBand: 5-15
+entryPrice: { amount: 12, currency: USD, period: month }
 freeTier: trial
 social:
   x: https://twitter.com/spinupwp
   bluesky: https://bsky.app/profile/spinupwp.com
   linkedin: https://ca.linkedin.com/company/spinupwp
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-01
 sources:
+  - { field: entryPrice, url: 'https://spinupwp.com/pricing/', checkedAt: 2026-08-01 }
+  - { field: urls, url: 'https://spinupwp.com/terms/', checkedAt: 2026-08-01 }
   - { field: entryPriceBand, url: 'https://spinupwp.com/pricing/', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://spinupwp.com/pricing/', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://spinupwp.com/pricing/', checkedAt: 2026-07-31 }

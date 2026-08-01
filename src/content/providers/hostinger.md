@@ -4,8 +4,13 @@ name: Hostinger
 urls:
   home: https://www.hostinger.com
   pricing: https://www.hostinger.com/web-hosting
+  terms: https://www.hostinger.com/legal/universal-terms-of-service-agreement
 category: shared
 description: Hostinger is a Lithuanian budget host, one of the largest worldwide, selling shared hosting on long prepayments at introductory rates.
+founded: 2004
+hqCountry: LT
+ownership: independent
+entryPrice: { amount: 2.99, currency: USD, period: month }
 useCases:
   - cms
 audience:
@@ -16,8 +21,12 @@ entryPriceBand: under-5
 renewalMultiple: 3.7
 contractMinimum: multi-year
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-01
 sources:
+  - { field: founded, url: 'https://www.hostinger.com/about', checkedAt: 2026-08-01 }
+  - { field: hqCountry, url: 'https://www.hostinger.com/about', checkedAt: 2026-08-01 }
+  - { field: ownership, url: 'https://www.hostinger.com/about', checkedAt: 2026-08-01 }
+  - { field: entryPrice, url: 'https://www.hostinger.com/', checkedAt: 2026-08-01 }
   - { field: entryPriceBand, url: 'https://www.hostinger.com/web-hosting', checkedAt: 2026-07-31 }
   - { field: renewalMultiple, url: 'https://www.hostinger.com/web-hosting', checkedAt: 2026-07-31 }
   - { field: contractMinimum, url: 'https://www.hostinger.com/web-hosting', checkedAt: 2026-07-31 }

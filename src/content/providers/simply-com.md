@@ -6,7 +6,10 @@ urls:
   pricing: https://www.simply.com/en/hosting/
 category: shared
 description: Danish hosting provider selling three shared suites bundling web space, mail and a website builder, with a documented API third parties automate against.
+founded: 2004
 hqCountry: DK
+ownership: subsidiary
+parent: team.blue
 whoManagesOs: provider
 useCases:
   - cms
@@ -28,9 +31,24 @@ deployMethods:
   - control-panel
 pricingModel: fixed-tier
 entryPriceBand: 5-15
+entryPrice: { amount: 7.45, currency: EUR, period: month }
 renewalMultiple: 15
 freeTier: none
+regions:
+  - DK
 apiAvailable: public
+status: active
+checkedAt: 2026-08-01
+sources:
+  - { field: entryPrice, url: 'https://www.simply.com/en/hosting/', checkedAt: 2026-08-01 }
+  - { field: entryPriceBand, url: 'https://www.simply.com/en/hosting/', checkedAt: 2026-08-01 }
+  - { field: renewalMultiple, url: 'https://www.simply.com/en/hosting/', checkedAt: 2026-08-01 }
+  - { field: pricingModel, url: 'https://www.simply.com/en/hosting/', checkedAt: 2026-08-01 }
+  - { field: regions, url: 'https://www.simply.com/en/about/', checkedAt: 2026-08-01 }
+  - { field: founded, url: 'https://www.simply.com/en/about/', checkedAt: 2026-08-01 }
+  - { field: hqCountry, url: 'https://www.simply.com/en/about/', checkedAt: 2026-08-01 }
+  - { field: ownership, url: 'https://www.simply.com/en/about/', checkedAt: 2026-08-01 }
+  - { field: parent, url: 'https://www.simply.com/en/about/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🧊
   color: rgb(30, 50, 70)
@@ -47,4 +65,4 @@ Its API is the part the wider world has engaged with. There is an asynchronous R
 
 ## Reservations
 
-The discount is the headline and the renewal is the product. The entry suite is advertised at under fifty cents a month for the first year and renews at roughly fifteen times that; the middle tier is worse still. Anyone comparing this against a competitor's standing price is not comparing the same number. Data-centre locations are not stated on the pages that sell the plans.
+The discount is the headline and the renewal is the product. The entry suite is advertised at under fifty cents a month for the first year and renews at €7.45; the middle tier is worse still. Anyone comparing this against a competitor's standing price is not comparing the same number. Data-centre locations are not stated on the pages that sell the plans — the about page says "primarily in Denmark but also across Europe", which names one country and gestures at the rest.

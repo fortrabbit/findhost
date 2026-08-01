@@ -36,7 +36,13 @@ managedDatabases:
 backupsIncluded: included
 pricingModel: fixed-tier
 entryPriceBand: 5-15
+entryPrice: { amount: 306.27, currency: PLN, period: year }
 freeTier: none
+checkedAt: 2026-08-01
+sources:
+  - { field: entryPrice, url: 'https://cyberfolks.pl/hosting/', checkedAt: 2026-08-01 }
+  - { field: entryPriceBand, url: 'https://cyberfolks.pl/hosting/', checkedAt: 2026-08-01 }
+  - { field: hqCountry, url: 'https://cyberfolks.pl/o-nas/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🧑‍🎤
   color: rgb(50, 25, 50)

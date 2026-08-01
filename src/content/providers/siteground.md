@@ -4,6 +4,8 @@ name: SiteGround
 urls:
   home: https://www.siteground.com
   pricing: https://eu.siteground.com/web-hosting.htm
+  terms: https://www.siteground.com/viewtos/terms_of_service
+  docs: https://www.siteground.com/kb/
 category: shared
 description: Independently owned managed hosting running on Google Cloud, aimed at WordPress and WooCommerce, with its own control panel.
 founded: 2004
@@ -36,6 +38,7 @@ deployMethods:
   - git-push
 pricingModel: fixed-tier
 entryPriceBand: 15-50
+entryPrice: { amount: 15.99, currency: EUR, period: month }
 renewalMultiple: 5.3
 freeTier: none
 contractMinimum: annual
@@ -43,15 +46,21 @@ supportChannels:
   - email
   - chat
   - phone
+supportHours: 24-7
 social:
   x: https://twitter.com/siteground
   facebook: https://www.facebook.com/siteground
   youtube: https://www.youtube.com/@siteground
-checkedAt: 2026-07-31
+checkedAt: 2026-08-01
 sources:
   - { field: founded, url: 'https://www.siteground.com/company', checkedAt: 2026-07-31 }
   - { field: runsOn, url: 'https://www.siteground.com/company', checkedAt: 2026-07-31 }
+  - { field: ownership, url: 'https://www.siteground.com/company', checkedAt: 2026-08-01 }
+  - { field: supportHours, url: 'https://www.siteground.com/company', checkedAt: 2026-08-01 }
   - { field: entryPriceBand, url: 'https://eu.siteground.com/web-hosting.htm', checkedAt: 2026-07-31 }
+  - { field: entryPrice, url: 'https://www.siteground.com/web-hosting.htm', checkedAt: 2026-08-01 }
+  - { field: renewalMultiple, url: 'https://www.siteground.com/web-hosting.htm', checkedAt: 2026-08-01 }
+  - { field: urls, url: 'https://www.siteground.com/viewtos/terms_of_service', checkedAt: 2026-08-01 }
   - { field: software, url: 'https://www.siteground.com/kb/', checkedAt: 2026-07-31 }
 status: active
 ai: authored

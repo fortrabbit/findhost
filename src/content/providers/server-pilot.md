@@ -19,10 +19,12 @@ runtimes:
 sshAccess: full
 pricingModel: per-resource
 entryPriceBand: 5-15
+entryPrice: { amount: 5.5, currency: USD, period: month }
 freeTier: trial
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-01
 sources:
+  - { field: entryPrice, url: 'https://serverpilot.io/pricing/', checkedAt: 2026-08-01 }
   - { field: entryPriceBand, url: 'https://serverpilot.io/pricing/', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://serverpilot.io/pricing/', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://serverpilot.io/pricing/', checkedAt: 2026-07-31 }

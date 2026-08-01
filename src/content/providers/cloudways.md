@@ -33,10 +33,12 @@ runsOn:
   - gcp
 pricingModel: hourly
 entryPriceBand: 5-15
+entryPrice: { amount: 11, currency: USD, period: month }
 freeTier: trial
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-01
 sources:
+  - { field: entryPrice, url: 'https://www.cloudways.com/en/pricing.php', checkedAt: 2026-08-01 }
   - { field: runsOn, url: 'https://www.cloudways.com/en/pricing.php', checkedAt: 2026-07-31 }
   - { field: infraContract, url: 'https://www.cloudways.com/en/pricing.php', checkedAt: 2026-07-31 }
   - { field: entryPriceBand, url: 'https://www.cloudways.com/en/pricing.php', checkedAt: 2026-07-31 }

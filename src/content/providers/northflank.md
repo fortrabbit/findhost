@@ -5,6 +5,7 @@ urls:
   home: https://northflank.com
   pricing: https://northflank.com/pricing
   status: https://status.northflank.com/
+  docs: https://northflank.com/docs
 category: paas
 description: British platform running containers, jobs and managed databases on its own cloud, in the customer's cloud account, or on a self-hosted Kubernetes cluster.
 hqCountry: GB
@@ -39,9 +40,27 @@ deployMethods:
   - api
 pricingModel: usage-based
 entryPriceBand: free-tier
+entryPrice: { amount: 2.7, currency: USD, period: month }
 freeTier: permanent
+regions:
+  - US
+  - CA
+  - DE
+  - NL
+  - CH
+  - IN
+  - AU
 apiAvailable: public
 cliTool: official
+status: active
+checkedAt: 2026-08-01
+sources:
+  - { field: entryPrice, url: 'https://northflank.com/pricing', checkedAt: 2026-08-01 }
+  - { field: entryPriceBand, url: 'https://northflank.com/pricing', checkedAt: 2026-08-01 }
+  - { field: pricingModel, url: 'https://northflank.com/pricing', checkedAt: 2026-08-01 }
+  - { field: freeTier, url: 'https://northflank.com/pricing', checkedAt: 2026-08-01 }
+  - { field: regions, url: 'https://northflank.com/docs/v1/application/getting-started/create-a-project', checkedAt: 2026-08-01 }
+  - { field: infraContract, url: 'https://northflank.com/pricing', checkedAt: 2026-08-01 }
 figure:
   emoji: 🧱
   color: rgb(25, 30, 45)
@@ -61,3 +80,5 @@ A free Sandbox tier allows two services, one database and two cron jobs.
 ## Reservations
 
 Bring-your-own-cloud shifts the infrastructure bill to the customer's cloud account, so the Northflank price and the total cost are different numbers, and the six hundred-plus advertised regions are the underlying clouds' regions rather than Northflank's. Volume discounts and dedicated support are enterprise-only and quoted rather than published.
+
+The managed cloud's own region table lists seventeen entries but names a place for only some of them — "Asia East", "Europe West" and "Southamerica East" are compass directions, not locations. The region list recorded here covers only the entries that name a country or a city, so it is shorter than the table.

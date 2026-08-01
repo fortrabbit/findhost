@@ -3,8 +3,24 @@ id: hostgator
 name: HostGator
 urls:
   home: https://www.hostgator.com
+  pricing: https://www.hostgator.com/web-hosting
+  terms: https://www.hostgator.com/tos
+  docs: https://www.hostgator.com/help
 category: shared
 description: HostGator is a low cost provider of shared, reseller, virtual private server, and dedicated web hosting, founded in 2002 in Texas.
+founded: 2002
+hqCountry: US
+ownership: subsidiary
+parent: Newfold Digital
+supportHours: 24-7
+status: active
+checkedAt: 2026-08-01
+sources:
+  - { field: founded, url: 'https://www.hostgator.com/about', checkedAt: 2026-08-01 }
+  - { field: hqCountry, url: 'https://www.hostgator.com/about', checkedAt: 2026-08-01 }
+  - { field: ownership, url: 'https://www.hostgator.com/about', checkedAt: 2026-08-01 }
+  - { field: parent, url: 'https://www.hostgator.com/about', checkedAt: 2026-08-01 }
+  - { field: supportHours, url: 'https://www.hostgator.com/web-hosting', checkedAt: 2026-08-01 }
 figure:
   emoji: 🐊
   color: rgb(167, 136, 92)

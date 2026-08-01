@@ -24,10 +24,39 @@ iacSupport:
   - terraform
   - cloudformation
   - ansible
+regions:
+  - AE
+  - AU
+  - BH
+  - BR
+  - CA
+  - CH
+  - DE
+  - ES
+  - FR
+  - GB
+  - HK
+  - ID
+  - IE
+  - IL
+  - IN
+  - IT
+  - JP
+  - KR
+  - MX
+  - MY
+  - NZ
+  - SE
+  - SG
+  - TH
+  - TW
+  - US
+  - ZA
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-01
 sources:
   - { field: infraContract, url: 'https://aws.amazon.com/about-aws/global-infrastructure/regions_az/', checkedAt: 2026-07-31 }
+  - { field: regions, url: 'https://docs.aws.amazon.com/global-infrastructure/latest/regions/aws-regions.html', checkedAt: 2026-08-01 }
 figure:
   emoji: 📦
   color: "#FF9900"

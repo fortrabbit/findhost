@@ -4,8 +4,10 @@ name: Plesk
 urls:
   home: https://www.plesk.com
   pricing: https://www.plesk.com/pricing/
+  terms: https://www.plesk.com/legal/
 category: server-management
 description: Hosting control panel licensed per server, managing sites, domains, mail, databases and WordPress on Linux and Windows machines the customer supplies.
+hqCountry: CH
 ownership: subsidiary
 parent: WebPros International GmbH
 whoManagesOs: panel-assisted
@@ -41,6 +43,14 @@ managedDatabases:
 pricingModel: fixed-tier
 entryPriceBand: 5-15
 freeTier: trial
+status: active
+checkedAt: 2026-08-01
+sources:
+  - { field: hqCountry, url: 'https://www.plesk.com/legal/', checkedAt: 2026-08-01 }
+  - { field: ownership, url: 'https://www.plesk.com/legal/', checkedAt: 2026-08-01 }
+  - { field: parent, url: 'https://www.plesk.com/legal/', checkedAt: 2026-08-01 }
+  - { field: urls, url: 'https://www.plesk.com/legal/', checkedAt: 2026-08-01 }
+  - { field: entryPriceBand, url: 'https://www.plesk.com/pricing/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🪟
   color: rgb(30, 40, 55)

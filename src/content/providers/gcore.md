@@ -33,6 +33,11 @@ pricingModel: usage-based
 apiAvailable: public
 iacSupport:
   - terraform
+status: active
+checkedAt: 2026-08-01
+sources:
+  - { field: pricingModel, url: 'https://gcore.com/pricing', checkedAt: 2026-08-01 }
+  - { field: category, url: 'https://gcore.com/cloud', checkedAt: 2026-08-01 }
 figure:
   emoji: 🌐
   color: rgb(25, 35, 55)
@@ -49,4 +54,6 @@ Pricing is published in euros and metered by product: the web application firewa
 
 ## Reservations
 
-The pricing page is a set of per-product meters with no assembled plan, and the enterprise DDoS tier starts in the thousands per month, so the published figures describe two very different classes of customer. Regions are not enumerated on it. The company's headquarters is not stated — a Luxembourg telephone number is the only locating detail — and its ownership is not published either, which matters more than usual for a provider whose product is network infrastructure.
+The pricing page is a set of per-product meters with no assembled plan, and the enterprise DDoS tier starts in the thousands per month, so the published figures describe two very different classes of customer. The company's headquarters is not stated — a Luxembourg telephone number is the only locating detail — and its ownership is not published either, which matters more than usual for a provider whose product is network infrastructure.
+
+Where the compute actually runs is not answerable from the site. The cloud page claims "50+ Cloud regions" without naming one, and the network page lists 210-plus points of presence by city without separating the CDN edge from the places a virtual machine can be started. No regions are recorded here as a result.

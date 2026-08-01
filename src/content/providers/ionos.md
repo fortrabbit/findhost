@@ -5,6 +5,8 @@ urls:
   home: https://www.ionos.de
   pricing: https://www.ionos.de/hosting/webhosting
   status: https://www.ionos-status.de/
+  terms: https://www.ionos.de/terms-gtc/terms
+  docs: https://www.ionos.de/hilfe/
 category: shared
 description: Large European hosting group selling shared webhosting, VPS, dedicated and bare-metal servers and an IaaS cloud, listed on the Frankfurt exchange.
 founded: 1988
@@ -51,10 +53,14 @@ regions:
 supportChannels:
   - phone
   - email
+  - chat
+supportHours: 24-7
 apiAvailable: public
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-01
 sources:
+  - { field: supportHours, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-08-01 }
+  - { field: supportChannels, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-08-01 }
   - { field: entryPriceBand, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-07-31 }
   - { field: renewalMultiple, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-07-31 }
   - { field: contractMinimum, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-07-31 }

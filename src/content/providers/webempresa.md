@@ -39,6 +39,21 @@ supportChannels:
   - chat
   - email
 supportHours: 24-7
+energyClaim: annual-matched
+sustainabilityUrl: https://www.webempresa.com/quienes-somos.html
+social:
+  x: https://x.com/webempresa
+  facebook: https://www.facebook.com/webempresa.hosting
+  linkedin: https://www.linkedin.com/company/webempresa-com
+  youtube: https://www.youtube.com/user/webempresa
+checkedAt: 2026-08-01
+sources:
+  - { field: founded, url: 'https://www.webempresa.com/quienes-somos.html', checkedAt: 2026-08-01 }
+  - { field: hqCountry, url: 'https://www.webempresa.com/quienes-somos.html', checkedAt: 2026-08-01 }
+  - { field: parent, url: 'https://www.webempresa.com/quienes-somos.html', checkedAt: 2026-08-01 }
+  - { field: supportHours, url: 'https://www.webempresa.com/quienes-somos.html', checkedAt: 2026-08-01 }
+  - { field: energyClaim, url: 'https://www.webempresa.com/quienes-somos.html', checkedAt: 2026-08-01 }
+  - { field: social, url: 'https://www.webempresa.com', checkedAt: 2026-08-01 }
 figure:
   emoji: 🛡️
   color: rgb(45, 30, 55)

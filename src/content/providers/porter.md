@@ -25,7 +25,16 @@ deployMethods:
   - docker-image
 pricingModel: per-resource
 entryPriceBand: 5-15
+entryPrice: { amount: 6, currency: USD, period: month }
 freeTier: none
+status: active
+checkedAt: 2026-08-01
+sources:
+  - { field: entryPrice, url: 'https://www.porter.run/pricing', checkedAt: 2026-08-01 }
+  - { field: entryPriceBand, url: 'https://www.porter.run/pricing', checkedAt: 2026-08-01 }
+  - { field: pricingModel, url: 'https://www.porter.run/pricing', checkedAt: 2026-08-01 }
+  - { field: freeTier, url: 'https://www.porter.run/pricing', checkedAt: 2026-08-01 }
+  - { field: infraContract, url: 'https://www.porter.run/pricing', checkedAt: 2026-08-01 }
 figure:
   emoji: 🧳
   color: rgb(25, 35, 50)

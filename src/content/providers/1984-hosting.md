@@ -31,9 +31,14 @@ deployMethods:
 pricingModel: fixed-tier
 entryPriceBand: under-5
 freeTier: none
+regions:
+  - IS
 energyClaim: annual-matched
 certifications:
   - ISO 27001
+checkedAt: 2026-08-01
+sources:
+  - { field: regions, url: 'https://1984.hosting/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🌋
   color: rgb(30, 40, 50)

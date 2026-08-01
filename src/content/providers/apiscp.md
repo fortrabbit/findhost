@@ -3,8 +3,31 @@ id: apiscp
 name: ApisCP
 urls:
   home: https://apiscp.com
+  pricing: https://apiscp.com/pricing/
 category: server-management
 description: ApisCP — short for Apis Networks Control Panel, formerly known as apnscp — is a self-hosted hosting platform and control panel by Apis Networks, grown out of a panel the company has run internally…
+whoManagesOs: panel-assisted
+infraContract:
+  - byo-iaas
+runtimes:
+  - php
+  - node
+  - python
+  - ruby
+  - go
+pricingModel: per-server-licence
+entryPriceBand: under-5
+entryPrice: { amount: 30, currency: USD, period: year }
+freeTier: trial
+status: active
+checkedAt: 2026-08-01
+sources:
+  - { field: entryPrice, url: 'https://apiscp.com/pricing/', checkedAt: 2026-08-01 }
+  - { field: entryPriceBand, url: 'https://apiscp.com/pricing/', checkedAt: 2026-08-01 }
+  - { field: pricingModel, url: 'https://apiscp.com/pricing/', checkedAt: 2026-08-01 }
+  - { field: freeTier, url: 'https://apiscp.com/pricing/', checkedAt: 2026-08-01 }
+  - { field: runtimes, url: 'https://apiscp.com/', checkedAt: 2026-08-01 }
+  - { field: infraContract, url: 'https://apiscp.com/pricing/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🎛️
   color: rgb(200, 50, 50)

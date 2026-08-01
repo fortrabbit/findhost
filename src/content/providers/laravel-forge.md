@@ -4,6 +4,7 @@ name: Laravel Forge
 urls:
   home: https://laravel.com/forge
   pricing: https://laravel.com/forge/pricing
+  docs: https://forge.laravel.com/docs
 category: server-management
 description: Laravel Forge is server-management software — it provisions and configures servers, either on a VPS you bring yourself or on its own Laravel VPS product.
 whoManagesOs: panel-assisted
@@ -29,14 +30,16 @@ managedDatabases:
   - postgres
   - redis
 pricingModel: fixed-tier
+entryPrice: { amount: 12, currency: USD, period: month }
 entryPriceBand: 5-15
 freeTier: none
 contractMinimum: monthly
 supportHours: business-hours
 supportTiering: paid-upgrade
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-01
 sources:
+  - { field: entryPrice, url: 'https://laravel.com/forge/pricing', checkedAt: 2026-08-01 }
   - { field: infraContract, url: 'https://laravel.com/forge', checkedAt: 2026-07-31 }
   - { field: whoManagesOs, url: 'https://laravel.com/forge', checkedAt: 2026-07-31 }
   - { field: sshAccess, url: 'https://laravel.com/forge', checkedAt: 2026-07-31 }

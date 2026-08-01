@@ -4,6 +4,7 @@ name: SiteHost
 urls:
   home: https://sitehost.nz
   pricing: https://sitehost.nz/hosting/cloud-containers
+  terms: https://sitehost.nz/about/terms
 category: paas
 description: New Zealand host running its own Auckland data centre, whose Cloud Containers product deploys prebuilt or custom Docker images for PHP, Node, Ruby and .NET apps.
 founded: 2004
@@ -46,6 +47,7 @@ managedDatabases:
   - redis
 pricingModel: fixed-tier
 entryPriceBand: 15-50
+entryPrice: { amount: 35, currency: NZD, period: month }
 freeTier: none
 regions:
   - NZ
@@ -57,11 +59,27 @@ regions:
 supportChannels:
   - phone
   - email
+supportHours: 24-7
 apiAvailable: public
 iacSupport:
   - terraform
 social:
   github: https://github.com/sitehostnz
+  linkedin: https://www.linkedin.com/company/sitehost/
+  facebook: https://www.facebook.com/SiteHost/
+  x: https://twitter.com/sitehostnz
+checkedAt: 2026-08-01
+sources:
+  - { field: regions, url: 'https://sitehost.nz/hosting/cloud-containers', checkedAt: 2026-08-01 }
+  - { field: regions, url: 'https://sitehost.nz/about', checkedAt: 2026-08-01 }
+  - { field: founded, url: 'https://sitehost.nz/about', checkedAt: 2026-08-01 }
+  - { field: hqCountry, url: 'https://sitehost.nz/about', checkedAt: 2026-08-01 }
+  - { field: ownership, url: 'https://sitehost.nz/about', checkedAt: 2026-08-01 }
+  - { field: supportHours, url: 'https://sitehost.nz/about', checkedAt: 2026-08-01 }
+  - { field: entryPrice, url: 'https://sitehost.nz/hosting/cloud-containers', checkedAt: 2026-08-01 }
+  - { field: entryPriceBand, url: 'https://sitehost.nz/hosting/cloud-containers', checkedAt: 2026-08-01 }
+  - { field: social, url: 'https://sitehost.nz', checkedAt: 2026-08-01 }
+  - { field: urls, url: 'https://sitehost.nz/about/terms', checkedAt: 2026-08-01 }
 figure:
   emoji: 🥝
   color: rgb(20, 55, 35)

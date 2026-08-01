@@ -3,8 +3,19 @@ id: wix
 name: Wix
 urls:
   home: https://www.wix.com
+  pricing: https://www.wix.com/plans
+  terms: https://www.wix.com/about/terms-of-use
 category: lcnc
 description: Wix is a hosted website builder with templates and a visual editor for small businesses and personal sites.
+founded: 2006
+ownership: public
+whoManagesOs: provider
+sshAccess: none
+checkedAt: 2026-08-01
+sources:
+  - { field: founded, url: 'https://www.wix.com/about/us', checkedAt: 2026-08-01 }
+  - { field: ownership, url: 'https://investors.wix.com/', checkedAt: 2026-08-01 }
+  - { field: urls, url: 'https://www.wix.com/about/terms-of-use', checkedAt: 2026-08-01 }
 figure:
   emoji: 🧱
   color: rgb(170, 140, 80)

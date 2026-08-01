@@ -9,6 +9,8 @@ category: iaas
 description: French cloud provider selling instances, bare metal, managed Kubernetes, serverless containers and managed databases, with European data residency as the pitch.
 founded: 1999
 hqCountry: FR
+ownership: subsidiary
+parent: iliad Group
 whoManagesOs: you
 infraContract:
   - owns-metal
@@ -40,10 +42,22 @@ managedDatabases:
   - redis
   - mongodb
 pricingModel: hourly
+regions:
+  - FR
+  - NL
+  - PL
 apiAvailable: public
 cliTool: official
 iacSupport:
   - terraform
+status: active
+checkedAt: 2026-08-01
+sources:
+  - { field: regions, url: 'https://www.scaleway.com/en/virtual-instances/', checkedAt: 2026-08-01 }
+  - { field: ownership, url: 'https://www.scaleway.com/en/about-us/', checkedAt: 2026-08-01 }
+  - { field: parent, url: 'https://www.scaleway.com/en/about-us/', checkedAt: 2026-08-01 }
+  - { field: founded, url: 'https://www.scaleway.com/en/about-us/', checkedAt: 2026-08-01 }
+  - { field: infraContract, url: 'https://www.scaleway.com/en/datacenter/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🐿️
   color: rgb(45, 25, 55)
@@ -60,4 +74,4 @@ The commercial argument is jurisdictional: European data centres, GDPR complianc
 
 ## Reservations
 
-The catalogue is very wide and priced per product, so no single entry price describes it and none is recorded here. The pricing page links to a separate availability matrix rather than naming its regions, and the ownership of the company is not disclosed anywhere on it. Serverless products aside, this is infrastructure — the customer owns everything above the operating system.
+The catalogue is very wide and priced per product, so no single entry price describes it and none is recorded here. The pricing page links to a separate availability matrix rather than naming its regions; the three of them — Paris, Amsterdam and Warsaw — are stated on the product pages instead. Ownership is disclosed on the about page rather than beside the prices: Scaleway is a subsidiary of the iliad Group. Serverless products aside, this is infrastructure — the customer owns everything above the operating system.

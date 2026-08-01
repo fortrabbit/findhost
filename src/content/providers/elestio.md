@@ -4,8 +4,12 @@ name: Elestio
 urls:
   home: https://elest.io
   pricing: https://elest.io/pricing
+  status: https://status.elest.io
+  terms: https://elest.io/terms
+  docs: https://docs.elest.io/
 category: server-management
 description: Managed hosting for open-source software on dedicated virtual machines, provisioned into one of nine third-party clouds or the customer's own account.
+hqCountry: IE
 whoManagesOs: provider
 infraContract:
   - resells-iaas
@@ -42,11 +46,34 @@ managedDatabases:
   - redis
 pricingModel: per-resource
 entryPriceBand: 5-15
+entryPrice: { amount: 11, currency: USD, period: month }
 freeTier: none
 supportChannels:
   - email
   - phone
+supportHours: business-hours
 supportTiering: paid-upgrade
+certifications:
+  - ISO 27001
+  - SOC 2
+social:
+  github: https://github.com/elestio
+  linkedin: https://www.linkedin.com/company/elestio
+  youtube: https://www.youtube.com/@elestio
+  x: https://twitter.com/elest_io
+  discord: https://discord.gg/4T4JGaMYrD
+status: active
+checkedAt: 2026-08-01
+sources:
+  - { field: entryPrice, url: 'https://elest.io/pricing', checkedAt: 2026-08-01 }
+  - { field: entryPriceBand, url: 'https://elest.io/pricing', checkedAt: 2026-08-01 }
+  - { field: pricingModel, url: 'https://elest.io/pricing', checkedAt: 2026-08-01 }
+  - { field: supportTiering, url: 'https://elest.io/pricing', checkedAt: 2026-08-01 }
+  - { field: supportHours, url: 'https://elest.io/pricing', checkedAt: 2026-08-01 }
+  - { field: hqCountry, url: 'https://elest.io/', checkedAt: 2026-08-01 }
+  - { field: social, url: 'https://elest.io/', checkedAt: 2026-08-01 }
+  - { field: certifications, url: 'https://elest.io/', checkedAt: 2026-08-01 }
+  - { field: urls, url: 'https://elest.io/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🧑‍🔧
   color: rgb(35, 30, 55)
@@ -61,7 +88,9 @@ Elestio takes an open-source application, puts it on a dedicated virtual machine
 
 The infrastructure is somebody else's, and openly so. Nine providers are supported — Hetzner, DigitalOcean, AWS Lightsail, Vultr, Linode, Scaleway and Netcup among them — across a stated 160-plus regions in forty-plus countries, and workloads can be placed in the customer's own cloud account. That makes it a management layer rather than a host, which is why it sits in the server-management category.
 
-Support is tiered: a free level with seven-day backup retention and three-day response, then fifty and two hundred dollars a month for faster answers and phone access.
+Support is tiered: a free level with seven-day backup retention and three-day response, then fifty and two hundred dollars a month for faster answers and phone access. The response windows on the paid tiers are qualified as applying during business hours, so none of them is a round-the-clock commitment.
+
+The footer names Elestio at a registered address in Dublin, which is the only place the operating jurisdiction is stated.
 
 ## Reservations
 

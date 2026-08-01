@@ -18,14 +18,50 @@ runtimes:
   - any
 sshAccess: full
 pricingModel: usage-based
+regions:
+  - US
+  - CA
+  - MX
+  - BR
+  - CL
+  - AR
+  - BE
+  - FI
+  - FR
+  - DE
+  - IE
+  - IT
+  - NL
+  - PL
+  - ES
+  - SE
+  - CH
+  - GB
+  - IN
+  - JP
+  - SG
+  - KR
+  - TW
+  - TH
+  - AU
+  - NZ
+  - HK
+  - ID
+  - MY
+  - PH
+  - VN
+  - IL
+  - SA
+  - ZA
 apiAvailable: public
 cliTool: official
 iacSupport:
   - terraform
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-01
 sources:
   - { field: infraContract, url: 'https://cloud.google.com/about/locations', checkedAt: 2026-07-31 }
+  - { field: regions, url: 'https://cloud.google.com/about/locations', checkedAt: 2026-08-01 }
 ai: co-authored
 greenWebId: 595
 ---

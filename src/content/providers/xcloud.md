@@ -4,9 +4,12 @@ name: xCloud
 urls:
   home: https://xcloud.host
   pricing: https://xcloud.host/pricing/
+  terms: https://xcloud.host/terms-and-conditions/
+  docs: https://docs.xcloud.host/
 category: server-management
 description: xCloud is a server-management panel launched in 2023 by WPDeveloper. It manages servers a customer brings, and also sells managed servers of its own.
 founded: 2023
+hqCountry: US
 parent: WPDeveloper
 infraContract:
   - byo-iaas
@@ -30,9 +33,19 @@ runtimes:
   - php
 pricingModel: fixed-tier
 entryPriceBand: under-5
+entryPrice: { amount: 3, currency: USD, period: month }
+social:
+  x: https://x.com/xCloud_host
+  facebook: https://www.facebook.com/xCloud.host
+  linkedin: https://www.linkedin.com/company/xcloud.host/
+  youtube: https://www.youtube.com/@xCloud-Hosting
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-01
 sources:
+  - { field: hqCountry, url: 'https://xcloud.host/contact/', checkedAt: 2026-08-01 }
+  - { field: entryPrice, url: 'https://xcloud.host/pricing/', checkedAt: 2026-08-01 }
+  - { field: social, url: 'https://xcloud.host', checkedAt: 2026-08-01 }
+  - { field: urls, url: 'https://xcloud.host/terms-and-conditions/', checkedAt: 2026-08-01 }
   - { field: entryPriceBand, url: 'https://xcloud.host/pricing/', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://xcloud.host/pricing/', checkedAt: 2026-07-31 }
   - { field: infraContract, url: 'https://xcloud.host/pricing/', checkedAt: 2026-07-31 }

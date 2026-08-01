@@ -46,7 +46,19 @@ managedDatabases:
 backupsIncluded: included
 pricingModel: fixed-tier
 entryPriceBand: 5-15
+entryPrice: { amount: 11.5, currency: USD, period: month }
 freeTier: none
+supportChannels:
+  - email
+supportHours: 24-7
+status: active
+checkedAt: 2026-08-01
+sources:
+  - { field: entryPrice, url: 'https://www.opalstack.com/', checkedAt: 2026-08-01 }
+  - { field: entryPriceBand, url: 'https://www.opalstack.com/', checkedAt: 2026-08-01 }
+  - { field: pricingModel, url: 'https://www.opalstack.com/', checkedAt: 2026-08-01 }
+  - { field: supportHours, url: 'https://www.opalstack.com/', checkedAt: 2026-08-01 }
+  - { field: supportChannels, url: 'https://www.opalstack.com/', checkedAt: 2026-08-01 }
 figure:
   emoji: 💠
   color: rgb(30, 50, 60)

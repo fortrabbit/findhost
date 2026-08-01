@@ -3,8 +3,27 @@ id: weebly
 name: Weebly
 urls:
   home: https://www.weebly.com
+  pricing: https://www.weebly.com/pricing
+  terms: https://www.weebly.com/terms-of-service
 category: lcnc
 description: Weebly is a simple website builder that bundles templates, hosting, and basic ecommerce features.
+ownership: subsidiary
+parent: Block, Inc.
+whoManagesOs: provider
+sshAccess: none
+pricingModel: fixed-tier
+freeTier: permanent
+social:
+  x: https://twitter.com/weebly
+  facebook: https://www.facebook.com/weebly
+  linkedin: https://www.linkedin.com/company/weebly
+  youtube: https://www.youtube.com/user/weebly
+checkedAt: 2026-08-01
+sources:
+  - { field: freeTier, url: 'https://www.weebly.com/pricing', checkedAt: 2026-08-01 }
+  - { field: pricingModel, url: 'https://www.weebly.com/pricing', checkedAt: 2026-08-01 }
+  - { field: social, url: 'https://www.weebly.com', checkedAt: 2026-08-01 }
+  - { field: urls, url: 'https://www.weebly.com/terms-of-service', checkedAt: 2026-08-01 }
 figure:
   emoji: 🧰
   color: rgb(120, 100, 70)

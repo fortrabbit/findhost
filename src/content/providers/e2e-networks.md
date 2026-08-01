@@ -4,8 +4,10 @@ name: E2E Networks
 urls:
   home: https://www.e2enetworks.com
   pricing: https://www.e2enetworks.com/pricing
+  docs: https://docs.e2enetworks.com/
 category: iaas
 description: Indian cloud infrastructure provider listed on the National Stock Exchange, selling CPU and GPU compute by the minute with published hourly rates.
+founded: 2009
 hqCountry: IN
 ownership: public
 whoManagesOs: you
@@ -31,6 +33,13 @@ deployMethods:
 sshAccess: full
 pricingModel: hourly
 freeTier: none
+status: active
+checkedAt: 2026-08-01
+sources:
+  - { field: founded, url: 'https://www.e2enetworks.com/about-us', checkedAt: 2026-08-01 }
+  - { field: hqCountry, url: 'https://www.e2enetworks.com/about-us', checkedAt: 2026-08-01 }
+  - { field: pricingModel, url: 'https://www.e2enetworks.com/pricing', checkedAt: 2026-08-01 }
+  - { field: ownership, url: 'https://www.e2enetworks.com/about-us', checkedAt: 2026-08-01 }
 figure:
   emoji: 🇮🇳
   color: rgb(55, 35, 15)
@@ -47,4 +56,6 @@ The catalogue has shifted decisively towards accelerated computing. GPU instance
 
 ## Reservations
 
-This is infrastructure: nothing here builds or runs an application on the customer's behalf, and everything above the operating system is theirs to manage. Volume and enterprise pricing goes through a sales conversation rather than a page. Data-centre regions are not named on the pricing page, so anyone with a latency or residency requirement has to establish it separately.
+This is infrastructure: nothing here builds or runs an application on the customer's behalf, and everything above the operating system is theirs to manage. Volume and enterprise pricing goes through a sales conversation rather than a page.
+
+Data-centre regions are named nowhere the company publishes. The pricing page, the about page and the documentation all omit them, and the "countries served" page lists sixty-three countries of customers rather than of facilities — so anyone with a latency or residency requirement has to establish it separately, and no regions are recorded here.

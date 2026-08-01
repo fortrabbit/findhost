@@ -65,6 +65,13 @@ iacSupport:
   - terraform
 social:
   github: https://github.com/Scalingo
+status: active
+checkedAt: 2026-08-01
+sources:
+  - { field: regions, url: 'https://doc.scalingo.com/platform/internals/regions', checkedAt: 2026-08-01 }
+  - { field: freeTier, url: 'https://scalingo.com/pricing', checkedAt: 2026-08-01 }
+  - { field: pricingModel, url: 'https://scalingo.com/pricing', checkedAt: 2026-08-01 }
+  - { field: infraContract, url: 'https://doc.scalingo.com/platform/internals/regions', checkedAt: 2026-08-01 }
 figure:
   emoji: 🥖
   color: rgb(40, 60, 130)

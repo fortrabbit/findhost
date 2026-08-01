@@ -3,6 +3,7 @@ id: hosting-com
 name: Hosting.com
 urls:
   home: https://www.hosting.com
+  pricing: https://www.hosting.com/web-hosting/
 description: Hosting.com is the shared hosting brand formerly known as A2 Hosting, rebranded in 2025 after World Host Group combined its brands under one name.
 category: shared
 founded: 2003
@@ -14,9 +15,24 @@ useCases:
 software:
   - wordpress
 entryPriceBand: under-5
+supportChannels:
+  - chat
+  - phone
+  - email
+supportHours: 24-7
+runtimes:
+  - php
+  - node
+managedDatabases:
+  - mysql
+  - postgres
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-01
 sources:
+  - { field: supportHours, url: 'https://www.hosting.com/web-hosting/', checkedAt: 2026-08-01 }
+  - { field: supportChannels, url: 'https://www.hosting.com/web-hosting/', checkedAt: 2026-08-01 }
+  - { field: runtimes, url: 'https://www.hosting.com/web-hosting/', checkedAt: 2026-08-01 }
+  - { field: managedDatabases, url: 'https://www.hosting.com/web-hosting/', checkedAt: 2026-08-01 }
   - { field: founded, url: 'https://www.hosting.com/about/', checkedAt: 2026-07-31 }
   - { field: hqCountry, url: 'https://www.hosting.com/about/', checkedAt: 2026-07-31 }
   - { field: ownership, url: 'https://www.hosting.com/about/', checkedAt: 2026-07-31 }
