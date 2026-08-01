@@ -1,35 +1,76 @@
 ---
+import { coins } from '../lib/record';
+
 interface Row {
   id: string;
   name: string;
   description?: string;
   publishedByUs?: boolean;
   greenWebId?: number | null;
+  entryPriceBand?: string;
+  figure?: { emoji: string; color: string; textColor: string };
+  /** Shown only where the list is ordered by it, so the order is visible rather than asserted. */
+  checked?: string;
 }
 
 interface Props {
   providers: Row[];
+  /** Set where the list is an index rather than a register — the map's country sections, say. */
+  namesOnly?: boolean;
 }
 
-const { providers } = Astro.props;
+const { providers, namesOnly = false } = Astro.props;
 ---
 
 <ul class="provider-list">
   {
-    providers.map((provider) => (
-      <li>
-        <a href={`/providers/${provider.id}/`}>{provider.name}</a>
-        {provider.greenWebId && (
-          <span
-            class="green-mark"
-            title="Listed in the Green Web Foundation directory, which verifies the claim against published evidence"
-          >
-            🌿<span class="visually-hidden"> Listed in the Green Web Foundation directory</span>
-          </span>
-        )}
-        {provider.publishedByUs && <span class="self-marker">published by us</span>}
-        {provider.description && <p>{provider.description}</p>}
-      </li>
-    ))
+    providers.map((provider) => {
+      const described = !namesOnly && Boolean(provider.description);
+      const band = coins(provider.entryPriceBand);
+
+      return (
+        <li class={described ? undefined : 'one-line'}>
+          {/* A record without a figure gets its initial, so a gap never looks like a broken row. */}
+          {provider.figure ? (
+            <span
+              class="provider-tile"
+              style={`background:${provider.figure.color};color:${provider.figure.textColor}`}
+              aria-hidden="true"
+            >
+              {provider.figure.emoji}
+            </span>
+          ) : (
+            <span class="provider-tile letter" aria-hidden="true">
+              {provider.name.slice(0, 1).toLowerCase()}
+            </span>
+          )}
+
+          <div class="provider-body">
+            <span class="provider-name">
+              <a href={`/providers/${provider.id}/`}>{provider.name}</a>
+              {provider.greenWebId && (
+                <span
+                  class="green-mark"
+                  title="Listed in the Green Web Foundation directory, which verifies the claim against published evidence"
+                >
+                  🌿<span class="visually-hidden"> Listed in the Green Web Foundation directory</span>
+                </span>
+              )}
+              {provider.publishedByUs && <span class="self-marker">published by us</span>}
+            </span>
+            {described && <p>{provider.description}</p>}
+          </div>
+
+          {
+            (band || provider.checked) && (
+              <span class="provider-meta">
+                {band && <span class="coins">{band}</span>}
+                {provider.checked && <span class="provider-checked">read {provider.checked}</span>}
+              </span>
+            )
+          }
+        </li>
+      );
+    })
   }
 </ul>

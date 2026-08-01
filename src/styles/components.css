@@ -14,18 +14,48 @@
   text-decoration: none;
 }
 
-.site-nav {
+/**
+ * Navigation, at the foot. Set in the display face at reading size because it
+ * is the only route onward from a deep page — small print would be a lie about
+ * how much work it does.
+ */
+.footer-nav {
   display: flex;
-  gap: var(--space-md);
-  font-size: var(--text-sm);
+  flex-wrap: wrap;
+  gap: var(--space-2xs) var(--space-md);
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+}
+
+.footer-nav a {
+  text-decoration: none;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
 }
 
 /* Where you are, marked with weight and a rule rather than a colour. */
-.site-nav a[aria-current='page'] {
+.footer-nav a[aria-current='page'] {
   color: var(--color-ink);
   font-weight: var(--weight-strong);
+  text-decoration: underline;
   text-decoration-thickness: var(--rule-strong);
   text-underline-offset: 0.25em;
+}
+
+.footer-contribute {
+  font-size: var(--text-sm);
+}
+
+.footer-base {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-xs) var(--space-md);
+  padding-top: var(--space-xs);
+  border-top: var(--rule-hairline) solid var(--color-ink);
 }
 
 .wordmark[aria-current='page'] {
@@ -35,7 +65,6 @@
 }
 
 .theme-toggle {
-  margin-left: auto;
   padding: var(--space-3xs) var(--space-xs);
   border: var(--rule-hairline) solid var(--color-ink);
   background: var(--color-page);
@@ -47,6 +76,7 @@
 
 .site-search {
   display: flex;
+  margin-left: auto;
 }
 
 .site-search input {
@@ -57,6 +87,18 @@
   background: var(--color-page);
   font: inherit;
   font-size: var(--text-sm);
+}
+
+/**
+ * The field is the only thing in the header besides the name, and `/` puts the
+ * cursor here from anywhere — so focus has to be unmistakable rather than a
+ * default hairline. The offset keeps the ring clear of the button it abuts.
+ */
+.site-search input:focus-visible {
+  outline: var(--rule-strong) solid var(--color-link);
+  outline-offset: 2px;
+  position: relative;
+  z-index: 1;
 }
 
 /* No grey anywhere, so the placeholder separates from a real value by style, not tone. */
@@ -91,7 +133,7 @@
 /* --- Editorial text --- */
 
 /** Opening paragraph. Big enough to be read instead of skipped past. */
-.lede {
+.lead {
   max-width: var(--measure-prose);
   font-size: var(--text-lg);
   line-height: 1.4;
@@ -110,6 +152,63 @@
 }
 
 /* --- Entry points --- */
+
+/** The two guides, directly under the lead. Set at reading size — they are the ask, not a footnote. */
+.guide-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2xs) var(--space-lg);
+  padding-top: var(--space-xs);
+  font-family: var(--font-display);
+  font-size: var(--text-md);
+}
+
+/**
+ * Four questions, five answers each, side by side. Columns rather than a
+ * wrapping row of links: a reader scanning for their own stack finds it by
+ * position, and the whole block stays shorter than one of the old sections.
+ */
+.picker {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: var(--space-md) var(--space-lg);
+  max-width: none;
+  margin-top: var(--space-lg);
+}
+
+.picker-column > h3 {
+  margin: 0 0 var(--space-3xs);
+  padding-bottom: var(--space-3xs);
+  border-bottom: var(--rule-strong) solid var(--color-ink);
+  font-size: var(--text-sm);
+}
+
+.picker-column ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.picker-column li {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-xs);
+  padding: var(--space-3xs) 0;
+  border-bottom: var(--rule-hairline) solid var(--color-ink);
+}
+
+.picker-all {
+  display: inline-block;
+  padding-top: var(--space-3xs);
+  font-size: var(--text-sm);
+}
+
+/** Coins need saying once, where they are first seen. */
+.coin-key {
+  max-width: var(--measure-prose);
+  padding: var(--space-xs) 0;
+}
 
 /** The first question, answered as links: what do you need to run, and where. */
 .entry-list {
@@ -188,9 +287,24 @@
   list-style: none;
 }
 
+/**
+ * The tile column is sized per row rather than once for the list: a row with a
+ * description is two lines tall and takes the large tile, a bare name is one
+ * line and takes the small one. The tile matches the row, never the reverse.
+ */
 .provider-list > li {
-  padding: var(--space-sm) 0;
+  display: grid;
+  grid-template-columns: 2.7rem 1fr auto;
+  gap: 0 var(--space-sm);
+  align-items: start;
+  padding: var(--space-xs) 0;
   border-top: var(--rule-hairline) solid var(--color-ink);
+}
+
+.provider-list > li.one-line {
+  grid-template-columns: 1.45rem 1fr auto;
+  align-items: center;
+  padding: var(--space-2xs) 0;
 }
 
 /* Close the table, so the list ends rather than trailing off. */
@@ -198,8 +312,58 @@
   border-bottom: var(--rule-hairline) solid var(--color-ink);
 }
 
+/** Colour on the page comes from the records, never from the palette. */
+.provider-tile {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 1;
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.provider-tile.letter {
+  border: var(--rule-hairline) solid var(--color-ink);
+  font-family: var(--font-display);
+  font-size: var(--text-md);
+  font-weight: var(--weight-strong);
+}
+
+.one-line .provider-tile {
+  font-size: 0.85rem;
+}
+
+.one-line .provider-tile.letter {
+  font-size: var(--text-xs);
+}
+
+.provider-body {
+  min-width: 0;
+}
+
+.provider-name {
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+  line-height: var(--leading-tight);
+}
+
+.provider-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-3xs);
+  font-family: var(--font-data);
+  font-size: var(--text-xs);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.provider-checked {
+  white-space: nowrap;
+}
+
 .provider-list p {
-  margin: var(--space-3xs) 0 0;
+  margin: 0;
   font-size: var(--text-sm);
 }
 

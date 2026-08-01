@@ -52,7 +52,3 @@ ai: authored
 Webempresa has sold hosting in Spanish since 1999 and is now part of team.blue, the Belgian-Dutch group that also owns Combell, TransIP and Loopia. It is built around WordPress, with security as the headline: CageFS isolation, Apache with Nginx and Varnish in front, HTTP/2, TLS 1.3 and NVMe storage.
 
 PHP is offered from 8.2 to 8.5 with a gigabyte of memory per process, databases are MariaDB, and SSH is supported. Plans are metered by sites, storage and monthly visits, from a single site with 5 GB up to unlimited sites with 100 GB, and a data centre in either the EU or the United States can be chosen at setup. Support is in Spanish, around the clock.
-
-## Reservations
-
-The pricing table is genuinely confusing: the second tier is cheaper per month than the first while offering more of everything, which only makes sense once the promotional discounts of between 50 and 90 per cent are unpicked — and those discounts apply to the first term rather than to renewals. The entry plan allows one database capped at 500 MB. "EU or USA" is as specific as the data-centre choice gets; no country is named.

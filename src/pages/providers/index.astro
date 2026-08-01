@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import ProviderList from '../../components/ProviderList.astro';
 import { loadFacets } from '../../lib/facets';
 
 const { facets, providers } = await loadFacets();
@@ -15,6 +16,9 @@ const letters = [...new Set(providers.map((provider) => letterOf(provider.name))
 
 const groups = letters.map((letter) => ({
   letter,
+  // The heading already carries a `#` as its anchor link, so the numeric group
+  // says what it holds instead of repeating the glyph.
+  label: letter === '#' ? '0–9' : letter,
   anchor: letter === '#' ? 'other' : letter.toLowerCase(),
   rows: providers.filter((provider) => letterOf(provider.name) === letter),
 }));
@@ -27,7 +31,7 @@ const groups = letters.map((letter) => ({
 >
   <h1>Providers</h1>
 
-  <p class="lede">
+  <p class="lead">
     Every provider that meets the scope test, in alphabetical order. Nothing here is ranked, and nothing is ordered by
     how much we happen to know about it.
   </p>
@@ -49,29 +53,13 @@ const groups = letters.map((letter) => ({
         groups.map((group) => (
           <section class="letter-group" id={group.anchor}>
             <h2>
-              <a class="anchor-link" href={`#${group.anchor}`} aria-label={`Link to ${group.letter}`}>
+              <a class="anchor-link" href={`#${group.anchor}`} aria-label={`Link to ${group.label}`}>
                 #
               </a>
-              {group.letter}
+              {group.label}
             </h2>
 
-            <ul class="provider-list">
-              {group.rows.map((provider) => (
-                <li>
-                  <a href={`/providers/${provider.id}/`}>{provider.name}</a>
-                  {provider.greenWebId && (
-                    <span
-                      class="green-mark"
-                      title="Listed in the Green Web Foundation directory, which verifies the claim against published evidence"
-                    >
-                      🌿<span class="visually-hidden"> Listed in the Green Web Foundation directory</span>
-                    </span>
-                  )}
-                  {provider.publishedByUs && <span class="self-marker">published by us</span>}
-                  {provider.description && <p>{provider.description}</p>}
-                </li>
-              ))}
-            </ul>
+            <ProviderList providers={group.rows} />
           </section>
         ))
       }

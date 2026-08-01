@@ -5,6 +5,8 @@
  * providers.json, so an eleventh facet is a taxonomy entry and nothing here.
  */
 
+import { coins } from '../lib/record';
+
 interface FacetValue {
   id: string;
   label: string;
@@ -25,7 +27,78 @@ interface ProviderRow {
   name: string;
   description?: string;
   publishedByUs?: boolean;
+  greenWebId?: number | null;
+  entryPriceBand?: string;
+  figure?: { emoji: string; color: string; textColor: string };
   facets: Record<string, string | string[]>;
+}
+
+/**
+ * One row, built to the same shape ProviderList.astro renders — the filtered
+ * view and the server-rendered one have to be indistinguishable, or filtering
+ * would quietly change what a row looks like.
+ */
+function row(provider: ProviderRow): HTMLLIElement {
+  const item = document.createElement('li');
+  if (!provider.description) item.className = 'one-line';
+
+  const tile = document.createElement('span');
+  tile.className = provider.figure ? 'provider-tile' : 'provider-tile letter';
+  tile.setAttribute('aria-hidden', 'true');
+  if (provider.figure) {
+    tile.style.background = provider.figure.color;
+    tile.style.color = provider.figure.textColor;
+    tile.textContent = provider.figure.emoji;
+  } else {
+    tile.textContent = provider.name.slice(0, 1).toLowerCase();
+  }
+  item.append(tile);
+
+  const body = document.createElement('div');
+  body.className = 'provider-body';
+
+  const name = document.createElement('span');
+  name.className = 'provider-name';
+
+  const link = document.createElement('a');
+  link.href = `/providers/${provider.id}/`;
+  link.textContent = provider.name;
+  name.append(link);
+
+  if (provider.greenWebId) {
+    const mark = document.createElement('span');
+    mark.className = 'green-mark';
+    mark.title = 'Listed in the Green Web Foundation directory';
+    mark.textContent = '🌿';
+    name.append(mark);
+  }
+
+  if (provider.publishedByUs) {
+    const marker = document.createElement('span');
+    marker.className = 'self-marker';
+    marker.textContent = 'published by us';
+    name.append(marker);
+  }
+
+  body.append(name);
+
+  if (provider.description) {
+    const description = document.createElement('p');
+    description.textContent = provider.description;
+    body.append(description);
+  }
+
+  item.append(body);
+
+  const band = coins(provider.entryPriceBand);
+  if (band) {
+    const price = document.createElement('span');
+    price.className = 'provider-band coins';
+    price.textContent = band;
+    item.append(price);
+  }
+
+  return item;
 }
 
 const filtersEl = document.querySelector<HTMLElement>('[data-find-filters]');
@@ -180,7 +253,7 @@ if (filtersEl && resultsEl && summaryEl) {
         anchorLink.className = 'anchor-link';
         anchorLink.href = `#${anchor}`;
         anchorLink.textContent = '#';
-        heading.append(anchorLink, document.createTextNode(initial));
+        heading.append(anchorLink, document.createTextNode(initial === '#' ? '0–9' : initial));
         section.append(heading);
 
         list = document.createElement('ul');
@@ -189,27 +262,7 @@ if (filtersEl && resultsEl && summaryEl) {
         resultsEl.append(section);
       }
 
-      const item = document.createElement('li');
-
-      const link = document.createElement('a');
-      link.href = `/providers/${provider.id}/`;
-      link.textContent = provider.name;
-      item.append(link);
-
-      if (provider.publishedByUs) {
-        const marker = document.createElement('span');
-        marker.className = 'self-marker';
-        marker.textContent = 'published by us';
-        item.append(marker);
-      }
-
-      if (provider.description) {
-        const description = document.createElement('p');
-        description.textContent = provider.description;
-        item.append(description);
-      }
-
-      list?.append(item);
+      list?.append(row(provider));
     }
 
     const dropped = excluded();

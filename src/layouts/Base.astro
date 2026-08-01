@@ -20,18 +20,27 @@ const fathomSiteId = import.meta.env.PUBLIC_FATHOM_SITE_ID;
 // someone links to from being listed anyway.
 const indexable = import.meta.env.PUBLIC_INDEXABLE === 'true';
 
+// Navigation lives in the footer. The top of the page says where you are; the
+// bottom says where you can go. That makes the footer load-bearing rather than
+// small print, which is the reason it is laid out rather than listed.
 const sections = [
-  { href: '/providers/', label: 'Providers', owns: ['/providers/', '/category/'] },
-  { href: '/map/', label: 'Map', owns: ['/map/', '/regions/'] },
-  { href: '/guide/', label: 'Guide', owns: ['/guide/'] },
-  { href: '/about/', label: 'About', owns: ['/about/'] },
+  { href: '/providers/', label: 'Providers' },
+  { href: '/map/', label: 'Map' },
+  { href: '/guide/why-hosting-is-hard/', label: 'Why hosting is hard' },
+  { href: '/guide/how-to-choose/', label: 'How to choose' },
+  { href: '/about/', label: 'About' },
+  { href: '/policies/', label: 'Policies' },
+  { href: '/rejected/', label: 'Not listed' },
 ];
 
-// A record and a category page both live under Providers, so the nav says where
-// you are rather than only where you clicked.
+const contribute = [
+  { href: 'https://github.com/fortrabbit/findhost', label: 'Add a provider' },
+  { href: 'https://github.com/fortrabbit/findhost/issues', label: 'Corrections' },
+  { href: 'https://github.com/fortrabbit/findhost', label: 'GitHub' },
+];
+
 const path = Astro.url.pathname;
 const canonical = new URL(path, Astro.site ?? Astro.url).href;
-const current = sections.find((section) => section.owns.some((prefix) => path.startsWith(prefix)));
 ---
 
 <!doctype html>
@@ -57,18 +66,6 @@ const current = sections.find((section) => section.owns.some((prefix) => path.st
   <body>
     <header>
       <a href="/" class="wordmark" aria-current={path === '/' ? 'page' : undefined}>FindHost</a>
-      <nav class="site-nav">
-        {
-          sections.map((section) => (
-            <a href={section.href} aria-current={section === current ? 'page' : undefined}>
-              {section.label}
-            </a>
-          ))
-        }
-      </nav>
-      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
-        <span data-theme-label>Dark</span>
-      </button>
 
       <form class="site-search" role="search" action="/search/">
         <input
@@ -88,12 +85,41 @@ const current = sections.find((section) => section.owns.some((prefix) => path.st
     </main>
 
     <footer>
-      <AiDisclosure ai={ai} />
-      <p>
-        Published by fortrabbit, who also appear in the dataset. Code under MIT, data under <a
-          href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a
-        >.
+      <nav class="footer-nav">
+        {
+          sections.map((section) => (
+            <a href={section.href} aria-current={path === section.href ? 'page' : undefined}>
+              {section.label}
+            </a>
+          ))
+        }
+      </nav>
+
+      <p class="footer-contribute">
+        {
+          contribute.map((link, index) => (
+            <>
+              {index > 0 && ' · '}
+              <a href={link.href}>{link.label}</a>
+            </>
+          ))
+        }
       </p>
+
+      <AiDisclosure ai={ai} />
+
+      <div class="footer-base">
+        <p>
+          A pet project by <a href="https://www.fortrabbit.com/about#frank">Frank Lämmer</a>. Published by <a
+            href="/providers/fortrabbit/">fortrabbit</a
+          >, who also appear in the dataset. Code under MIT, data under <a
+            href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a
+          >.
+        </p>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+          <span data-theme-label>Dark</span>
+        </button>
+      </div>
     </footer>
 
     <script is:inline>

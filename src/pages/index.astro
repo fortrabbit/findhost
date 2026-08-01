@@ -5,28 +5,52 @@ import ProviderList from '../components/ProviderList.astro';
 import WorldMap from '../components/WorldMap.astro';
 import { loadFacets } from '../lib/facets';
 
-// Alphabetical, always. The default sort is deterministic and content-independent,
-// and completeness never affects order.
-const records = (await getCollection('providers')).sort((a, b) => a.data.name.localeCompare(b.data.name, 'en'));
-
-const providers = records.map((provider) => ({
-  id: provider.id,
-  name: provider.data.name,
-  description: provider.data.description,
-  publishedByUs: provider.data.publishedByUs,
-  greenWebId: provider.data.greenWebId,
-}));
-
+const records = await getCollection('providers');
 const { facets } = await loadFacets();
 
-// "What do I need to run" is the first question anyone actually asks, so it is
-// the first thing on the page — as links to pages that already exist.
-const runtimes = (facets.find((facet) => facet.id === 'runtimes')?.values ?? []).filter((value) => value.count > 0);
-const software = (facets.find((facet) => facet.id === 'software')?.values ?? []).filter((value) => value.count > 0);
-const categories = (facets.find((facet) => facet.id === 'category')?.values ?? []).filter((value) => value.count > 0);
+const guides = (await getCollection('guide')).sort((a, b) => a.data.order - b.data.order);
+
+/*
+ * Four questions, five answers each. The commonest values are the ones most
+ * people arrive with — that is a fact about the dataset, not a recommendation,
+ * and every line is a real link to a page that already exists.
+ */
+const pick = (facetId: string, heading: string, href: (id: string) => string) => {
+  const facet = facets.find((entry) => entry.id === facetId);
+  const values = (facet?.values ?? []).filter((value) => value.count > 0);
+  const top = [...values].sort((a, b) => b.count - a.count || a.label.localeCompare(b.label, 'en')).slice(0, 5);
+  return { heading, top, total: values.length, href, all: `/${facetId}/` };
+};
+
+const columns = [
+  pick('software', 'Software', (id) => `/software/${id}/`),
+  pick('runtimes', 'Language', (id) => `/runtimes/${id}/`),
+  pick('category', 'Platform', (id) => `/category/${id}/`),
+  pick('regions', 'Place', (id) => `/regions/${id}/`),
+];
 
 const regions = records.flatMap((provider) => provider.data.regions ?? []);
 const placed = records.filter((provider) => provider.data.regions?.length).length;
+
+/*
+ * Ordered by the date we last read a record against its provider. That is a
+ * fact about our work rather than the provider's merit, which is what makes it
+ * a legitimate order for a dataset that refuses to rank.
+ */
+const recentlyUpdated = records
+  .filter((provider) => provider.data.checkedAt)
+  .sort((a, b) => b.data.checkedAt!.getTime() - a.data.checkedAt!.getTime())
+  .slice(0, 5)
+  .map((provider) => ({
+    id: provider.id,
+    name: provider.data.name,
+    description: provider.data.description,
+    publishedByUs: provider.data.publishedByUs,
+    greenWebId: provider.data.greenWebId,
+    entryPriceBand: provider.data.entryPriceBand,
+    figure: provider.data.figure,
+    checked: provider.data.checkedAt!.toISOString().slice(0, 10),
+  }));
 ---
 
 <Base
@@ -36,65 +60,79 @@ const placed = records.filter((provider) => provider.data.regions?.length).lengt
 >
   <h1>Find your next hosting provider</h1>
 
-  <p class="lede">
+  <p class="lead">
     Don't shop hosting by horse power and price only. Understand what really matters. A developer-friendly, opinionated
     field guide to choose the right hosting provider.
   </p>
 
-  <h2>I want to host…</h2>
-
-  {
-    software.length > 0 && (
-      <ul class="entry-list">
-        {software.map((entry) => (
-          <li>
-            <a href={`/software/${entry.id}/`}>{entry.label}</a>
-            <span class="entry-count">{entry.count}</span>
-          </li>
-        ))}
-      </ul>
-    )
-  }
-
-  <h2>…or anything written in…</h2>
-
-  <ul class="entry-list">
-    {
-      runtimes.map((runtime) => (
-        <li>
-          <a href={`/runtimes/${runtime.id}/`}>{runtime.label}</a>
-          <span class="entry-count">{runtime.count}</span>
-        </li>
-      ))
-    }
-  </ul>
-
-  <h2>…on this kind of platform</h2>
-
-  <ul class="entry-list">
-    {
-      categories.map((category) => (
-        <li>
-          <a href={`/category/${category.id}/`}>{category.label}</a>
-          <span class="entry-count">{category.count}</span>
-        </li>
-      ))
-    }
-  </ul>
-
-  <h2>…in a place you choose</h2>
-
-  <WorldMap regions={regions} weighted label="Countries the providers in this dataset operate in" />
-
-  <p class="annotation">
-    {placed} of {providers.length} records say where they operate. <a href="/map/">See the map in full</a>, or <a
-      href="/providers/">combine regions with everything else</a
-    >.
+  <p class="guide-links">
+    {guides.map((guide) => <a href={`/guide/${guide.id}/`}>{guide.data.title}</a>)}
   </p>
 
-  <h2>{providers.length} providers</h2>
+  <div class="picker">
+    {
+      columns.map((column) => (
+        <div class="picker-column">
+          <h3>{column.heading}</h3>
+          <ul>
+            {column.top.map((value) => (
+              <li>
+                <a href={column.href(value.id)}>{value.label}</a>
+                <span class="entry-count">{value.count}</span>
+              </li>
+            ))}
+          </ul>
+          <a class="picker-all" href={column.all}>
+            all {column.total} →
+          </a>
+        </div>
+      ))
+    }
+  </div>
 
-  <p class="annotation">Sorted alphabetically.</p>
+  <p class="annotation">
+    Thirteen facets in all, including who patches the kernel, who owns the metal and whether renewal pricing triples.{
+      ' '
+    }
+    <a href="/providers/">Open the full filter →</a>
+  </p>
 
-  <ProviderList providers={providers} />
+  <WorldMap
+    regions={regions}
+    weighted
+    caption={false}
+    linkPattern="/map/#{lower}"
+    label="Countries the providers in this dataset operate in"
+  />
+
+  <h2>Recently updated</h2>
+
+  <ProviderList providers={recentlyUpdated} />
+
+  <p class="annotation">
+    Ordered by the date each record was last read against the provider — our work, not their merit.{' '}
+    <a href="/providers/">All {records.length}, alphabetically →</a>
+  </p>
+
+  <p class="coin-key">
+    <strong>🪙 is what it costs to start.</strong> One coin is under $5 a month, six is over $500, and the scale counts the
+    cheapest way to run one small production app — never how good it is. The exact figure sits on each record, in the currency
+    the provider actually charges.
+  </p>
+
+  <h2>Who publishes this</h2>
+
+  <p>
+    FindHost is published by <a href="https://www.fortrabbit.com">fortrabbit</a> — a PHP hosting company that appears <a
+      href="/providers/fortrabbit/">in this dataset</a
+    >, with the same fields as everyone else and no say in where it lands. Publishing a directory that lists your own
+    competitors is a conflict of interest, so here is the deal we have written down and bound ourselves to: it may shape
+    how much effort a record gets. It may never shape whether a provider is listed, where it appears, or what its fields
+    say. There are no affiliate links here, and no provider has ever paid to be in, out or higher.{' '}
+    <a href="/policies/">Read the governance policy →</a>
+  </p>
+
+  <p class="annotation">
+    {placed} of {records.length} records say where they operate. <a href="/map/">See the map in full.</a>
+  </p>
 </Base>

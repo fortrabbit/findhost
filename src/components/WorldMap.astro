@@ -10,10 +10,12 @@ interface Props {
   linkPattern?: string;
   /** Let the map use the width of the screen rather than the reading column. */
   full?: boolean;
+  /** Off where the map is a doorway rather than the subject — the home page sends you to /map/ for the detail. */
+  caption?: boolean;
   label: string;
 }
 
-const { regions, weighted = false, linkPattern, full = false, label } = Astro.props;
+const { regions, weighted = false, linkPattern, full = false, caption = true, label } = Astro.props;
 
 const counts = new Map<string, number>();
 for (const code of regions) counts.set(code, (counts.get(code) ?? 0) + 1);
@@ -74,18 +76,20 @@ const unplaced = [...counts.keys()].filter((code) => !countryPoints[code]);
     }
   </svg>
 
-  <figcaption class="annotation">
-    {
-      marks.map((mark, index) => (
-        <>
-          {index > 0 && ' · '}
-          {mark.href ? <a href={mark.href}>{mark.point.label}</a> : mark.point.label}
-        </>
-      ))
-    }
-    {unplaced.length > 0 && ` · no coordinates yet: ${unplaced.join(', ')}`}
-    <br />
-    Dots sit at country level, not at data centres — the dataset records which countries a provider operates in, not where
-    the racks are.
-  </figcaption>
+  {
+    caption && (
+      <figcaption class="annotation">
+        {marks.map((mark, index) => (
+          <>
+            {index > 0 && ' · '}
+            {mark.href ? <a href={mark.href}>{mark.point.label}</a> : mark.point.label}
+          </>
+        ))}
+        {unplaced.length > 0 && ` · no coordinates yet: ${unplaced.join(', ')}`}
+        <br />
+        Dots sit at country level, not at data centres — the dataset records which countries a provider operates in, not
+        where the racks are.
+      </figcaption>
+    )
+  }
 </figure>
