@@ -94,24 +94,10 @@ const canonical = new URL(path, Astro.site ?? Astro.url).href;
         }
       </nav>
 
-      <p class="footer-contribute">
-        {
-          contribute.map((link, index) => (
-            <>
-              {index > 0 && ' · '}
-              <a href={link.href}>{link.label}</a>
-            </>
-          ))
-        }
-      </p>
-
-      <AiDisclosure ai={ai} />
-
       <div class="footer-base">
         <p>
-          A pet project by <a href="https://www.fortrabbit.com/about#frank">Frank Lämmer</a>. Published by <a
-            href="/providers/fortrabbit/">fortrabbit</a
-          >, who also appear in the dataset. Code under MIT, data under <a
+          <AiDisclosure ai={ai} />
+          Published by <a href="/providers/fortrabbit/">fortrabbit</a>. Code under MIT, data under <a
             href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a
           >.
         </p>

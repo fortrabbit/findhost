@@ -54,8 +54,8 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--space-xs) var(--space-md);
-  padding-top: var(--space-xs);
-  border-top: var(--rule-hairline) solid var(--color-ink);
+  /*padding-top: var(--space-xs);
+  border-top: var(--rule-hairline) solid var(--color-ink);*/
 }
 
 .wordmark[aria-current='page'] {
@@ -342,11 +342,16 @@
 /**
  * The tile column is sized per row rather than once for the list: a row with a
  * description is two lines tall and takes the large tile, a bare name is one
- * line and takes the small one. The tile matches the row, never the reverse.
+ * line and takes the small one. The tile matches the row, never the reverse —
+ * both --tile values are the sum of the line boxes beside them, so the tile is
+ * exactly as tall as the text and the two share a top and a bottom edge.
  */
 .provider-list > li {
+  /* 1.09rem × 1.2 name + 0.86rem × 1.38 description */
+  --tile: 2.5rem;
+
   display: grid;
-  grid-template-columns: 2.7rem 1fr auto;
+  grid-template-columns: var(--tile) 1fr auto;
   gap: 0 var(--space-sm);
   align-items: start;
   padding: var(--space-xs) 0;
@@ -354,7 +359,9 @@
 }
 
 .provider-list > li.one-line {
-  grid-template-columns: 1.45rem 1fr auto;
+  /* The name's line box, alone. */
+  --tile: 1.31rem;
+
   align-items: center;
   padding: var(--space-2xs) 0;
 }
@@ -393,7 +400,9 @@
   min-width: 0;
 }
 
+/* Block, not inline: an inline name sits on a line box struck at the body's leading, which adds 7px of air under it. */
 .provider-name {
+  display: block;
   font-family: var(--font-display);
   font-size: var(--text-base);
   line-height: var(--leading-tight);
@@ -424,6 +433,7 @@
   margin: 0;
   overflow: hidden;
   font-size: var(--text-sm);
+  line-height: var(--leading-data);
   text-overflow: ellipsis;
   white-space: nowrap;
 }
