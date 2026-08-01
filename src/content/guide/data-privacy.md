@@ -18,6 +18,14 @@ Two separate questions get collapsed into one. The first is physical: which buil
 
 So a company headquartered in one country and running capacity in another is a different proposition from one native to the region it sells into. Not necessarily a worse one — but a different one, and the difference is invisible on a page that says "EU data centre". That is why the dataset keeps [regions](/regions/) and headquarters country as separate fields, and why [the map](/map/) shows where capacity runs rather than which law applies to it.
 
+## The mechanism, since it is usually left unnamed
+
+The reason the corporate address outranks the data-centre address is that several jurisdictions claim authority over data a company controls, wherever it is stored. The United States CLOUD Act of 2018 is the clearest statement of it: a provider subject to US jurisdiction can be ordered to produce data in its possession, custody or control regardless of the country the disk sits in. Britain's Investigatory Powers Act reaches similarly beyond its borders, and it is a mistake to read this as one country's peculiarity — the pattern is that a company's home law travels with the data.
+
+It cuts the other way too. Article 48 of the GDPR says a foreign court order is not by itself a lawful basis for transferring personal data out of the EU, which sets up a genuine conflict rather than a settled answer: a provider can face two legal systems demanding opposite things, and the customer is not party to how that resolves.
+
+None of this makes an American provider unusable or a European one safe, and this page is not the place to pretend otherwise — it is an explainer, not counsel. What it does mean is that "which country are the servers in" is the easy question, published everywhere and decisive of least, while "which legal system does this company answer to" is the harder one, published rarely and decisive of most. A dataset that recorded only the first would be measuring the wrong thing.
+
 ## The ownership chain decides more than the address does
 
 Ownership is the part that most often goes unmentioned, and it is where residency claims quietly lose their meaning. Holding companies, private-equity majority stakes and acquisitions do not change the brand on the website, the support signature or the data-centre address, and none of them require a public announcement.
@@ -42,4 +50,6 @@ The dataset records the first layer of this and stops there. `runsOn` names the 
 
 It records `hqCountry`, `regions`, `ownership`, `parent`, `gdprDpa` and `certifications`, and links to the terms page each record was read against. Those are inputs to a decision. It does not assess compliance, does not certify anyone, and will not: whether a specific processing activity is lawful depends on the data, the purpose and the contract, none of which are properties of a host. The wider version of that limit is in [policies](/policies/); the rest of the comparison is in [how to choose](/guide/how-to-choose/).
 
-If this page has an effect, it should be more scepticism about a residency claim rather than more confidence in one. "EU-based" is a statement about an address. Who owns the company, whose hardware it runs on and who appears in the sub-processor list are three further questions, all checkable, and all capable of pointing somewhere else entirely.
+If this page has an effect, it should be less confidence in a residency claim and more in the questions behind it. "EU-based" is a statement about an address. Who owns the company, whose hardware it runs on and who appears in the sub-processor list are three further questions, all checkable, and all capable of pointing somewhere else entirely.
+
+That is not a counsel of despair, and it is not an argument that the answers do not matter. They matter a great deal — enough that a buyer with a real requirement should treat a company's jurisdiction and ownership as first-order facts rather than footnotes, and should expect a provider that sells on data protection to publish both without being asked. Plenty do not. The fields are here so that a preference on this can be applied by the reader who holds it, rather than argued for by a site that does not know their circumstances.
