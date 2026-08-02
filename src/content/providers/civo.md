@@ -33,6 +33,14 @@ managedDatabases:
   - postgres
 pricingModel: hourly
 priceFrom: sm
+priceTo: xl
+currencies:
+  - USD
+billingPeriods:
+  - hourly
+  - monthly
+billingTiming: arrears
+exitWithin: a-day
 entryPrice: { amount: 5.43, currency: USD, period: month }
 freeTier: trial
 regions:
@@ -52,6 +60,11 @@ sources:
   - { field: regions, url: 'https://www.civo.com/docs/overview/regions', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://www.civo.com/pricing', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://www.civo.com/pricing', checkedAt: 2026-08-01 }
+  - { field: priceTo, url: 'https://www.civo.com/pricing', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://www.civo.com/legal/terms', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://www.civo.com/docs/account/billing', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://www.civo.com/docs/account/billing', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://www.civo.com/legal/terms', checkedAt: 2026-08-02 }
 figure:
   emoji: ☸️
   color: rgb(20, 40, 55)

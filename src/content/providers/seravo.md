@@ -31,6 +31,14 @@ deployMethods:
 sshAccess: full
 pricingModel: fixed-tier
 priceFrom: md
+priceTo: lg
+currencies:
+  - EUR
+billingPeriods:
+  - monthly
+  - yearly
+billingTiming: advance
+exitWithin: a-quarter
 entryPrice: { amount: 25, currency: EUR, period: month }
 freeTier: none
 backupsIncluded: included
@@ -45,7 +53,12 @@ status: active
 checkedAt: 2026-08-01
 sources:
   - { field: entryPrice, url: 'https://seravo.com/plans/', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://seravo.com/plans/', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://seravo.com/plans/', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://seravo.com/plans/', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://seravo.com/en/terms/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://seravo.com/en/terms/', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://seravo.com/en/terms/', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://seravo.com/en/terms/', checkedAt: 2026-08-02 }
   - { field: pricingModel, url: 'https://seravo.com/plans/', checkedAt: 2026-08-01 }
   - { field: energyClaim, url: 'https://seravo.com/features/sustainable/', checkedAt: 2026-08-01 }
   - { field: sustainabilityUrl, url: 'https://seravo.com/features/sustainable/', checkedAt: 2026-08-01 }

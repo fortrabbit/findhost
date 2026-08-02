@@ -33,6 +33,13 @@ runtimes:
   - php
 pricingModel: fixed-tier
 priceFrom: xs
+priceTo: xl
+currencies:
+  - USD
+billingPeriods:
+  - monthly
+billingTiming: advance
+exitWithin: a-month
 entryPrice: { amount: 3, currency: USD, period: month }
 social:
   x: https://x.com/xCloud_host
@@ -47,6 +54,11 @@ sources:
   - { field: social, url: 'https://xcloud.host', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://xcloud.host/terms-and-conditions/', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://xcloud.host/pricing/', checkedAt: 2026-07-31 }
+  - { field: priceTo, url: 'https://xcloud.host/pricing/', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://xcloud.host/terms-and-conditions/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://xcloud.host/pricing/', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://xcloud.host/terms-and-conditions/', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://xcloud.host/terms-and-conditions/', checkedAt: 2026-08-02 }
   - { field: pricingModel, url: 'https://xcloud.host/pricing/', checkedAt: 2026-07-31 }
   - { field: infraContract, url: 'https://xcloud.host/pricing/', checkedAt: 2026-07-31 }
   - { field: runsOn, url: 'https://xcloud.host/pricing/', checkedAt: 2026-07-31 }

@@ -10,10 +10,25 @@ regions:
   - US
 runsOn:
   - aws
+priceFrom: md
+priceTo: xl
+currencies:
+  - USD
+billingPeriods:
+  - monthly
+  - yearly
+billingTiming: advance
+exitWithin: a-month
 status: active
 checkedAt: 2026-08-01
 sources:
   - { field: regions, url: 'https://manual.bubble.io/help-guides/optimizing-an-application/hosting-and-scaling/how-bubble-hosting-works', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://manual.bubble.io/account-and-marketplace/account-and-billing/pricing-plans', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://manual.bubble.io/account-and-marketplace/account-and-billing/pricing-plans', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://manual.bubble.io/account-and-marketplace/account-and-billing/pricing-plans', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://manual.bubble.io/account-and-marketplace/account-and-billing/pricing-plans', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://manual.bubble.io/account-and-marketplace/account-and-billing/pricing-plans', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://manual.bubble.io/account-and-marketplace/account-and-billing/pricing-plans', checkedAt: 2026-08-02 }
   - { field: runsOn, url: 'https://manual.bubble.io/help-guides/optimizing-an-application/hosting-and-scaling/how-bubble-hosting-works', checkedAt: 2026-08-01 }
 figure:
   emoji: 🫧

@@ -18,6 +18,9 @@ runtimes:
   - any
 sshAccess: full
 pricingModel: usage-based
+billingPeriods:
+  - monthly
+billingTiming: arrears
 regions:
   - US
   - CA
@@ -62,6 +65,8 @@ checkedAt: 2026-08-01
 sources:
   - { field: infraContract, url: 'https://cloud.google.com/about/locations', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://cloud.google.com/about/locations', checkedAt: 2026-08-01 }
+  - { field: billingPeriods, url: 'https://docs.cloud.google.com/billing/docs/how-to/billing-cycle', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://docs.cloud.google.com/billing/docs/how-to/billing-cycle', checkedAt: 2026-08-02 }
 greenWebId: 595
 ---
 

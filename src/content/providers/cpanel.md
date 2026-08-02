@@ -40,6 +40,14 @@ managedDatabases:
   - postgres
 pricingModel: fixed-tier
 priceFrom: md
+priceTo: lg
+currencies:
+  - USD
+billingPeriods:
+  - monthly
+  - yearly
+billingTiming: advance
+exitWithin: a-month
 entryPrice: { amount: 29.99, currency: USD, period: month }
 freeTier: trial
 checkedAt: 2026-08-01
@@ -47,6 +55,11 @@ sources:
   - { field: entryPrice, url: 'https://cpanel.net/pricing/', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://cpanel.net/pricing/', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://cpanel.net/pricing/', checkedAt: 2026-08-01 }
+  - { field: priceTo, url: 'https://cpanel.net/pricing/', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://cpanel.net/pricing/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://cpanel.net/pricing/', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://cpanel.net/pricing/', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://cpanel.net/pricing/', checkedAt: 2026-08-02 }
 figure:
   emoji: 🎛️
   color: rgb(50, 30, 15)

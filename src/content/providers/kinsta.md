@@ -21,6 +21,12 @@ backupsIncluded: included
 pricingModel: fixed-tier
 entryPrice: { amount: 35, currency: USD, period: month }
 priceFrom: md
+priceTo: xl
+currencies:
+  - USD
+billingPeriods:
+  - monthly
+  - yearly
 regions:
   - US
   - CA
@@ -52,7 +58,10 @@ sources:
   - { field: regions, url: 'https://kinsta.com/docs/service-information/data-center-locations/', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-08-01 }
   - { field: founded, url: 'https://kinsta.com/about-us/', checkedAt: 2026-07-31 }
-  - { field: priceFrom, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-08-02 }
   - { field: pricingModel, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-07-31 }
   - { field: backupsIncluded, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-07-31 }
   - { field: software, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-07-31 }

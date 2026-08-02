@@ -15,6 +15,14 @@ regions:
   - DE
 entryPrice: { amount: 2.5, currency: EUR, period: month }
 priceFrom: xs
+priceTo: md
+currencies:
+  - EUR
+billingPeriods:
+  - hourly
+  - monthly
+exitWithin: a-day
+billingTiming: arrears
 pricingModel: fixed-tier
 freeTier: trial
 social:
@@ -27,7 +35,11 @@ sources:
   - { field: founded, url: 'https://hostim.dev', checkedAt: 2026-08-01 }
   - { field: social, url: 'https://hostim.dev', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://hostim.dev/pricing/', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://hostim.dev/pricing/', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://hostim.dev/pricing/', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://hostim.dev/pricing/', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://hostim.dev/pricing/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://hostim.dev/pricing/', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://hostim.dev/pricing/', checkedAt: 2026-08-02 }
   - { field: pricingModel, url: 'https://hostim.dev/pricing/', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://hostim.dev/pricing/', checkedAt: 2026-08-01 }
 figure:

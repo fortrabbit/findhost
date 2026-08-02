@@ -33,7 +33,13 @@ sshAccess: limited
 managedDatabases:
   - mysql
 pricingModel: fixed-tier
-priceFrom: xs
+priceFrom: sm
+priceTo: md
+currencies:
+  - EUR
+billingPeriods:
+  - yearly
+billingTiming: advance
 freeTier: none
 supportChannels:
   - chat
@@ -54,6 +60,11 @@ sources:
   - { field: supportHours, url: 'https://www.webempresa.com/quienes-somos.html', checkedAt: 2026-08-01 }
   - { field: energyClaim, url: 'https://www.webempresa.com/quienes-somos.html', checkedAt: 2026-08-01 }
   - { field: social, url: 'https://www.webempresa.com', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.webempresa.com/hosting-wordpress.html', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://www.webempresa.com/hosting-wordpress.html', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://www.webempresa.com/hosting-wordpress.html', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://www.webempresa.com/hosting-wordpress.html', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://www.webempresa.com/hosting-wordpress.html', checkedAt: 2026-08-02 }
 figure:
   emoji: 🛡️
   color: rgb(45, 30, 55)

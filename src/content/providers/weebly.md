@@ -12,6 +12,11 @@ parent: Block, Inc.
 whoManagesOs: provider
 sshAccess: none
 pricingModel: fixed-tier
+priceFrom: sm
+priceTo: md
+billingPeriods:
+  - monthly
+  - yearly
 freeTier: permanent
 social:
   x: https://twitter.com/weebly
@@ -21,6 +26,9 @@ social:
 checkedAt: 2026-08-01
 sources:
   - { field: freeTier, url: 'https://www.weebly.com/pricing', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.weebly.com/pricing', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://www.weebly.com/pricing', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://www.weebly.com/pricing', checkedAt: 2026-08-02 }
   - { field: pricingModel, url: 'https://www.weebly.com/pricing', checkedAt: 2026-08-01 }
   - { field: social, url: 'https://www.weebly.com', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://www.weebly.com/terms-of-service', checkedAt: 2026-08-01 }

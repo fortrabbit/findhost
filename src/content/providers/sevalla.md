@@ -20,6 +20,13 @@ deployMethods:
   - docker-image
 pricingModel: usage-based
 priceFrom: sm
+priceTo: lg
+currencies:
+  - USD
+billingPeriods:
+  - monthly
+billingTiming: arrears
+exitWithin: a-month
 entryPrice: { amount: 5, currency: USD, period: month }
 freeTier: permanent
 regions:
@@ -43,7 +50,12 @@ regions:
 status: active
 checkedAt: 2026-08-01
 sources:
-  - { field: priceFrom, url: 'https://sevalla.com/pricing/', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://sevalla.com/pricing/', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://docs.sevalla.com/billing/', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://sevalla.com/pricing/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://docs.sevalla.com/billing/', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://docs.sevalla.com/billing/', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://docs.sevalla.com/billing/', checkedAt: 2026-08-02 }
   - { field: pricingModel, url: 'https://sevalla.com/pricing/', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://sevalla.com/pricing/', checkedAt: 2026-07-31 }
   - { field: entryPrice, url: 'https://sevalla.com/pricing/', checkedAt: 2026-08-01 }

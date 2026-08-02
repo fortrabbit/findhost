@@ -77,7 +77,7 @@ const attributeGroups: { label: string; fields: Attribute[] }[] = [
       ['Currencies', 'currencies', data.currencies],
       ['Billed', 'billingPeriods', data.billingPeriods],
       ['Paid', 'billingTiming', data.billingTiming],
-      ['Cancellation', 'cancellation', data.cancellation],
+      ['Getting out', 'exitWithin', data.exitWithin, 'exitWithin'],
       ['Renewal multiple', 'renewalMultiple', data.renewalMultiple],
       ['Free tier', 'freeTier', data.freeTier, 'freeTier'],
       ['Minimum contract', 'contractMinimum', data.contractMinimum],
@@ -184,6 +184,20 @@ const sourceLabel = (field: string) =>
   field.replace(/([A-Z])/g, ' $1').toLowerCase();
 
 const priceLine = priceSentence(data.priceFrom, data.priceTo);
+
+/*
+ * How long the money keeps going out after you decide to leave. It sits in the
+ * strip beside the price because it is the other half of what a price costs —
+ * a cheap plan you cannot leave for a year is not cheap.
+ */
+const exitLabel: Record<string, string> = {
+  'a-day': 'out within a day',
+  'a-month': 'out within a month',
+  'a-quarter': 'out within a quarter',
+  'a-year': 'out within a year',
+  'over-a-year': 'out takes over a year',
+};
+const exitLine = data.exitWithin ? exitLabel[data.exitWithin] : undefined;
 const energyClaim = energy(data.energyClaim);
 const homeFlag = flag(data.hqCountry);
 
@@ -280,11 +294,17 @@ const format = (value: unknown) => {
     {data.description && <p class="lead">{data.description}</p>}
 
     <p class="record-links">
-      <a href={data.urls.home} rel="nofollow">{data.urls.home.replace('https://', '')}</a>
+      {
+        homeFlag && (
+          <span aria-hidden="true" title={countryNames.get(data.hqCountry!) ?? data.hqCountry}>
+            {homeFlag}
+          </span>
+        )
+      }
+      <a style="font-weight: bold;" href={data.urls.home} rel="nofollow">{data.urls.home.replace('https://', '')}</a>
       {
         outgoing.map(([label, url]) => (
           <>
-            {' · '}
             <a href={url} rel="nofollow">
               {label}
             </a>
@@ -294,16 +314,16 @@ const format = (value: unknown) => {
     </p>
 
     {
-      (homeFlag || priceLine || energyClaim) && (
+      (homeFlag || priceLine || exitLine || energyClaim) && (
         <p class="record-strip">
-          {homeFlag && (
-            <span class="strip-item" aria-hidden="true" title={countryNames.get(data.hqCountry!) ?? data.hqCountry}>
-              {homeFlag}
-            </span>
-          )}
           {priceLine && (
             <span class="strip-item">
               <PriceGauge from={data.priceFrom} to={data.priceTo} size="md" />
+            </span>
+          )}
+          {exitLine && (
+            <span class="strip-item">
+              <span aria-hidden="true">🚪</span> {exitLine}
             </span>
           )}
           {energyClaim && (

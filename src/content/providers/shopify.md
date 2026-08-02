@@ -18,12 +18,26 @@ audience:
 sshAccess: none
 pricingModel: fixed-tier
 priceFrom: md
+priceTo: xl
+currencies:
+  - USD
+  - EUR
+billingPeriods:
+  - monthly
+  - yearly
+billingTiming: advance
+exitWithin: a-month
 entryPrice: { amount: 25, currency: EUR, period: month }
 freeTier: trial
 status: active
 checkedAt: 2026-08-01
 sources:
-  - { field: priceFrom, url: 'https://www.shopify.com/pricing', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://www.shopify.com/pricing', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://www.shopify.com/pricing', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://www.shopify.com/legal/terms', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://www.shopify.com/pricing', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://www.shopify.com/legal/terms', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://www.shopify.com/legal/terms', checkedAt: 2026-08-02 }
   - { field: pricingModel, url: 'https://www.shopify.com/pricing', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://www.shopify.com/pricing', checkedAt: 2026-07-31 }
   - { field: entryPrice, url: 'https://www.shopify.com/pricing', checkedAt: 2026-08-01 }

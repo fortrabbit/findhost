@@ -34,6 +34,11 @@ deployMethods:
 sshAccess: full
 pricingModel: fixed-tier
 priceFrom: sm
+priceTo: md
+currencies:
+  - EUR
+billingTiming: advance
+exitWithin: a-year
 renewalMultiple: 9
 contractMinimum: annual
 freeTier: none
@@ -53,6 +58,10 @@ social:
 checkedAt: 2026-08-01
 sources:
   - { field: priceFrom, url: 'https://www.strato.de/webhosting/', checkedAt: 2026-07-31 }
+  - { field: priceTo, url: 'https://www.strato.de/webhosting/', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://www.strato.de/webhosting/', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://www.strato.de/agb/', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://www.strato.de/agb/', checkedAt: 2026-08-02 }
   - { field: renewalMultiple, url: 'https://www.strato.de/webhosting/', checkedAt: 2026-07-31 }
   - { field: contractMinimum, url: 'https://www.strato.de/webhosting/', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://www.strato.de/ueber-uns/nachhaltigkeit/', checkedAt: 2026-08-01 }

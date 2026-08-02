@@ -17,6 +17,16 @@ sshAccess: full
 backupsIncluded: paid-addon
 pricingModel: fixed-tier
 priceFrom: sm
+priceTo: lg
+currencies:
+  - EUR
+  - USD
+  - GBP
+billingPeriods:
+  - monthly
+  - yearly
+billingTiming: advance
+exitWithin: a-quarter
 entryPrice: { amount: 5.50, currency: EUR, period: month }
 contractMinimum: monthly
 regions:
@@ -30,7 +40,12 @@ regions:
 status: active
 checkedAt: 2026-08-01
 sources:
-  - { field: priceFrom, url: 'https://contabo.com/en/vps/', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://contabo.com/en/vps/', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://contabo.com/en/vps/', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://contabo.com/en/legal/terms-and-conditions/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://contabo.com/en/legal/terms-and-conditions/', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://contabo.com/en/legal/terms-and-conditions/', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://contabo.com/en/legal/terms-and-conditions/', checkedAt: 2026-08-02 }
   - { field: entryPrice, url: 'https://contabo.com/en/vps/', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://contabo.com/en/vps/', checkedAt: 2026-07-31 }
   - { field: contractMinimum, url: 'https://contabo.com/en/vps/', checkedAt: 2026-07-31 }

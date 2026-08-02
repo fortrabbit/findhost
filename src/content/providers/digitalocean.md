@@ -38,6 +38,14 @@ managedDatabases:
   - kafka
 pricingModel: hourly
 priceFrom: xs
+priceTo: xl
+currencies:
+  - USD
+billingPeriods:
+  - hourly
+  - monthly
+billingTiming: arrears
+exitWithin: a-day
 entryPrice: { amount: 4, currency: USD, period: month }
 contractMinimum: none
 regions:
@@ -63,6 +71,11 @@ sources:
   - { field: ownership, url: 'https://investors.digitalocean.com/overview/default.aspx', checkedAt: 2026-07-31 }
   - { field: hqCountry, url: 'https://www.digitalocean.com/company', checkedAt: 2026-07-31 }
   - { field: priceFrom, url: 'https://www.digitalocean.com/pricing/droplets', checkedAt: 2026-07-31 }
+  - { field: priceTo, url: 'https://www.digitalocean.com/pricing/droplets', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://www.digitalocean.com/pricing/droplets', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://www.digitalocean.com/pricing/droplets', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://docs.digitalocean.com/platform/billing/', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://www.digitalocean.com/legal/terms-of-service-agreement', checkedAt: 2026-08-02 }
   - { field: pricingModel, url: 'https://www.digitalocean.com/pricing/droplets', checkedAt: 2026-07-31 }
   - { field: contractMinimum, url: 'https://www.digitalocean.com/pricing/droplets', checkedAt: 2026-07-31 }
   - { field: backupsIncluded, url: 'https://www.digitalocean.com/pricing/droplets', checkedAt: 2026-07-31 }

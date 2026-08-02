@@ -13,6 +13,11 @@ runtimes:
 sshAccess: full
 pricingModel: hourly
 priceFrom: xs
+priceTo: xl
+billingPeriods:
+  - hourly
+  - monthly
+exitWithin: a-day
 entryPrice: { amount: 2.5, currency: USD, period: month }
 regions:
   - US
@@ -44,6 +49,8 @@ sources:
   - { field: urls, url: 'https://docs.vultr.com/', checkedAt: 2026-08-01 }
   - { field: regions, url: 'https://api.vultr.com/v2/regions', checkedAt: 2026-07-31 }
   - { field: priceFrom, url: 'https://api.vultr.com/v2/plans', checkedAt: 2026-07-31 }
+  - { field: priceTo, url: 'https://api.vultr.com/v2/plans', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://api.vultr.com/v2/plans', checkedAt: 2026-08-02 }
   - { field: apiAvailable, url: 'https://api.vultr.com/v2/regions', checkedAt: 2026-07-31 }
 figure:
   emoji: 🦅

@@ -35,6 +35,12 @@ deployMethods:
 sshAccess: full
 pricingModel: fixed-tier
 priceFrom: xs
+priceTo: md
+currencies:
+  - EUR
+billingPeriods:
+  - monthly
+exitWithin: a-month
 entryPrice: { amount: 2.15, currency: EUR, period: month }
 freeTier: none
 regions:
@@ -50,6 +56,10 @@ sources:
   - { field: regions, url: 'https://webdock.io/en/pricing', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://webdock.io/en/pricing', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://webdock.io/en/pricing', checkedAt: 2026-08-01 }
+  - { field: priceTo, url: 'https://webdock.io/en/pricing', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://webdock.io/en/pricing', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://webdock.io/en/pricing', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://webdock.io/en/pricing', checkedAt: 2026-08-02 }
   - { field: social, url: 'https://webdock.io/en', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://status.webdock.io/', checkedAt: 2026-08-01 }
 figure:

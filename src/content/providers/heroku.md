@@ -46,6 +46,13 @@ managedDatabases:
   - kafka
 pricingModel: fixed-tier
 priceFrom: sm
+priceTo: xl
+currencies:
+  - USD
+billingPeriods:
+  - monthly
+billingTiming: arrears
+exitWithin: a-month
 entryPrice: { amount: 5, currency: USD, period: month }
 freeTier: none
 regions:
@@ -69,7 +76,12 @@ sources:
   - { field: parent, url: 'https://www.heroku.com/about/', checkedAt: 2026-07-31 }
   - { field: hqCountry, url: 'https://www.heroku.com/about/', checkedAt: 2026-07-31 }
   - { field: runtimes, url: 'https://devcenter.heroku.com/categories/language-support', checkedAt: 2026-07-31 }
-  - { field: priceFrom, url: 'https://devcenter.heroku.com/articles/dyno-types', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://www.heroku.com/pricing', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://www.heroku.com/pricing', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://devcenter.heroku.com/articles/usage-and-billing', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://devcenter.heroku.com/articles/usage-and-billing', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://devcenter.heroku.com/articles/usage-and-billing', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://devcenter.heroku.com/articles/usage-and-billing', checkedAt: 2026-08-02 }
   - { field: pricingModel, url: 'https://devcenter.heroku.com/articles/dyno-types', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://devcenter.heroku.com/articles/regions', checkedAt: 2026-07-31 }
   - { field: deployMethods, url: 'https://devcenter.heroku.com/articles/getting-started-with-php', checkedAt: 2026-07-31 }

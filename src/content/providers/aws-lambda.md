@@ -21,6 +21,12 @@ runtimes:
   - docker
 persistentStorage: false
 pricingModel: usage-based
+priceFrom: xs
+priceTo: lg
+billingPeriods:
+  - monthly
+billingTiming: arrears
+exitWithin: a-month
 freeTier: permanent
 apiAvailable: public
 cliTool: official
@@ -62,7 +68,11 @@ sources:
   - { field: runtimes, url: 'https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://aws.amazon.com/lambda/pricing/', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://aws.amazon.com/lambda/pricing/', checkedAt: 2026-07-31 }
-  - { field: priceFrom, url: 'https://aws.amazon.com/lambda/pricing/', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://aws.amazon.com/lambda/pricing/', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://aws.amazon.com/lambda/pricing/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://aws.amazon.com/lambda/pricing/', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://aws.amazon.com/agreement/', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://aws.amazon.com/agreement/', checkedAt: 2026-08-02 }
 figure:
   emoji: ⚙️
   color: rgb(35, 43, 60)

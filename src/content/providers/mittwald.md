@@ -45,6 +45,14 @@ sshAccess: full
 pricingModel: fixed-tier
 entryPrice: { amount: 13, currency: EUR, period: month }
 priceFrom: sm
+priceTo: md
+currencies:
+  - EUR
+billingPeriods:
+  - monthly
+  - yearly
+billingTiming: advance
+exitWithin: a-quarter
 freeTier: trial
 contractMinimum: monthly
 regions:
@@ -61,7 +69,12 @@ cliTool: official
 status: active
 checkedAt: 2026-08-01
 sources:
-  - { field: priceFrom, url: 'https://www.mittwald.de/hosting', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://www.mittwald.de/webhosting', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://www.mittwald.de/webhosting', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://www.mittwald.de/webhosting', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://www.mittwald.de/agb', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://www.mittwald.de/agb', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://www.mittwald.de/agb', checkedAt: 2026-08-02 }
   - { field: freeTier, url: 'https://www.mittwald.de/hosting', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://www.mittwald.de/webhosting', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://www.mittwald.de/hosting', checkedAt: 2026-07-31 }

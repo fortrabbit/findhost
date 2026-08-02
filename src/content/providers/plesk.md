@@ -43,6 +43,14 @@ managedDatabases:
   - postgres
 pricingModel: fixed-tier
 priceFrom: sm
+priceTo: md
+currencies:
+  - EUR
+  - USD
+billingPeriods:
+  - monthly
+  - yearly
+billingTiming: advance
 freeTier: trial
 status: active
 checkedAt: 2026-08-01
@@ -51,7 +59,11 @@ sources:
   - { field: ownership, url: 'https://www.plesk.com/legal/', checkedAt: 2026-08-01 }
   - { field: parent, url: 'https://www.plesk.com/legal/', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://www.plesk.com/legal/', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://www.plesk.com/pricing/', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.plesk.com/pricing/', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://www.plesk.com/pricing/', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://www.plesk.com/pricing/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://www.plesk.com/pricing/', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://www.plesk.com/pricing/', checkedAt: 2026-08-02 }
 figure:
   emoji: 🪟
   color: rgb(30, 40, 55)

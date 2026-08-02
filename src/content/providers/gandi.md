@@ -37,6 +37,15 @@ managedDatabases:
   - postgres
 pricingModel: fixed-tier
 priceFrom: xs
+priceTo: md
+currencies:
+  - EUR
+  - GBP
+  - USD
+billingPeriods:
+  - monthly
+  - yearly
+billingTiming: advance
 entryPrice: { amount: 2, currency: EUR, period: month }
 freeTier: none
 regions:
@@ -46,7 +55,11 @@ apiAvailable: public
 status: active
 checkedAt: 2026-08-01
 sources:
-  - { field: priceFrom, url: 'https://www.gandi.net/en/simple-hosting', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.gandi.net/en/simple-hosting', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://www.gandi.net/en/simple-hosting', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://www.gandi.net/en/simple-hosting', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://www.gandi.net/en/simple-hosting', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://www.gandi.net/en/simple-hosting', checkedAt: 2026-08-02 }
   - { field: entryPrice, url: 'https://www.gandi.net/en/simple-hosting', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://www.gandi.net/en/simple-hosting', checkedAt: 2026-08-01 }
   - { field: runtimes, url: 'https://www.gandi.net/en/simple-hosting', checkedAt: 2026-08-01 }

@@ -15,6 +15,12 @@ runtimes:
   - any
 sshAccess: full
 priceFrom: xs
+priceTo: md
+billingPeriods:
+  - monthly
+  - yearly
+billingTiming: advance
+exitWithin: a-month
 regions:
   - FR
   - DE
@@ -30,7 +36,23 @@ checkedAt: 2026-08-01
 sources:
   - { field: founded, url: 'https://www.ovhcloud.com/en/about-us/', checkedAt: 2026-07-31 }
   - { field: hqCountry, url: 'https://www.ovhcloud.com/en/about-us/', checkedAt: 2026-07-31 }
-  - { field: priceFrom, url: 'https://www.ovhcloud.com/en/vps/', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://www.ovhcloud.com/en/vps/', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://www.ovhcloud.com/en/vps/', checkedAt: 2026-08-02 }
+  - {
+      field: billingPeriods,
+      url: 'https://docs.ovhcloud.com/en/guides/account-and-service-management/managing-billing-payments-and-services/automatic-renewal',
+      checkedAt: 2026-08-02,
+    }
+  - {
+      field: billingTiming,
+      url: 'https://docs.ovhcloud.com/en/guides/account-and-service-management/managing-billing-payments-and-services/automatic-renewal',
+      checkedAt: 2026-08-02,
+    }
+  - {
+      field: exitWithin,
+      url: 'https://docs.ovhcloud.com/en/guides/account-and-service-management/managing-billing-payments-and-services/automatic-renewal',
+      checkedAt: 2026-08-02,
+    }
   - {
       field: '2021 fire',
       url: 'https://corporate.ovhcloud.com/en/newsroom/news/informations-site-strasbourg/',

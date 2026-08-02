@@ -29,6 +29,13 @@ deployMethods:
   - sftp
 pricingModel: fixed-tier
 priceFrom: md
+priceTo: lg
+currencies:
+  - USD
+billingPeriods:
+  - monthly
+billingTiming: advance
+exitWithin: a-month
 entryPrice: { amount: 25, currency: USD, period: month }
 freeTier: none
 regions:
@@ -39,7 +46,12 @@ status: active
 checkedAt: 2026-08-01
 sources:
   - { field: entryPrice, url: 'https://pressable.com/plans/', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://pressable.com/plans/', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://pressable.com/plans/', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://pressable.com/plans/', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://pressable.com/plans/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://pressable.com/legal/terms-of-service/', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://pressable.com/legal/terms-of-service/', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://pressable.com/legal/terms-of-service/', checkedAt: 2026-08-02 }
   - { field: pricingModel, url: 'https://pressable.com/plans/', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://pressable.com/plans/', checkedAt: 2026-08-01 }
   - { field: regions, url: 'https://pressable.com/knowledgebase/where-are-pressable-data-centers-located/', checkedAt: 2026-08-01 }

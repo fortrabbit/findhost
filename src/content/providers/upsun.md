@@ -32,6 +32,18 @@ runtimes:
   - python
 pricingModel: per-resource
 priceFrom: md
+priceTo: xl
+currencies:
+  - EUR
+  - USD
+  - GBP
+  - CAD
+  - AUD
+billingPeriods:
+  - hourly
+  - monthly
+exitWithin: a-day
+billingTiming: arrears
 freeTier: trial
 regions:
   - IE
@@ -59,6 +71,10 @@ sources:
   - { field: software, url: 'https://developer.upsun.com/docs/get-started/stacks', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://upsun.com/pricing/', checkedAt: 2026-07-31 }
   - { field: priceFrom, url: 'https://upsun.com/pricing/', checkedAt: 2026-07-31 }
+  - { field: priceTo, url: 'https://upsun.com/pricing/', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://upsun.com/pricing/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://upsun.com/pricing/', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://upsun.com/pricing/', checkedAt: 2026-08-02 }
   - { field: freeTier, url: 'https://upsun.com/pricing/', checkedAt: 2026-07-31 }
   - { field: audience, url: 'https://upsun.com/pricing/', checkedAt: 2026-07-31 }
 figure:

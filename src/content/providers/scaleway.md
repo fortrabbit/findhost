@@ -42,6 +42,15 @@ managedDatabases:
   - redis
   - mongodb
 pricingModel: hourly
+priceFrom: xs
+priceTo: xl
+currencies:
+  - EUR
+billingPeriods:
+  - hourly
+  - monthly
+billingTiming: arrears
+exitWithin: a-day
 regions:
   - FR
   - NL
@@ -58,6 +67,12 @@ sources:
   - { field: parent, url: 'https://www.scaleway.com/en/about-us/', checkedAt: 2026-08-01 }
   - { field: founded, url: 'https://www.scaleway.com/en/about-us/', checkedAt: 2026-08-01 }
   - { field: infraContract, url: 'https://www.scaleway.com/en/datacenter/', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.scaleway.com/en/pricing/virtual-instances/', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://www.scaleway.com/en/pricing/virtual-instances/', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://www.scaleway.com/en/pricing/virtual-instances/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://www.scaleway.com/en/pricing/virtual-instances/', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://www.scaleway.com/en/pricing/virtual-instances/', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://www.scaleway.com/en/pricing/virtual-instances/', checkedAt: 2026-08-02 }
 figure:
   emoji: 🐿️
   color: rgb(45, 25, 55)

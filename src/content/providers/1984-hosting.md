@@ -29,7 +29,14 @@ deployMethods:
   - ftp
   - control-panel
 pricingModel: fixed-tier
-priceFrom: xs
+priceFrom: sm
+priceTo: xl
+billingPeriods:
+  - monthly
+  - yearly
+  - multi-year
+billingTiming: advance
+exitWithin: a-quarter
 freeTier: none
 regions:
   - IS
@@ -39,6 +46,11 @@ certifications:
 checkedAt: 2026-08-01
 sources:
   - { field: regions, url: 'https://1984.hosting/', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://1984.hosting/product/pricelist/', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://1984.hosting/product/pricelist/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://1984.hosting/product/pricelist/', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://1984.hosting/tos/', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://1984.hosting/tos/', checkedAt: 2026-08-02 }
 figure:
   emoji: 🌋
   color: rgb(30, 40, 50)

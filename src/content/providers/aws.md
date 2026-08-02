@@ -18,6 +18,13 @@ runtimes:
   - any
 sshAccess: full
 pricingModel: usage-based
+priceFrom: sm
+priceTo: xl
+billingPeriods:
+  - hourly
+  - monthly
+billingTiming: arrears
+exitWithin: a-day
 apiAvailable: public
 cliTool: official
 iacSupport:
@@ -57,6 +64,11 @@ checkedAt: 2026-08-01
 sources:
   - { field: infraContract, url: 'https://aws.amazon.com/about-aws/global-infrastructure/regions_az/', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://docs.aws.amazon.com/global-infrastructure/latest/regions/aws-regions.html', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://aws.amazon.com/ec2/pricing/on-demand/', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://aws.amazon.com/ec2/pricing/on-demand/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://aws.amazon.com/agreement/', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://aws.amazon.com/agreement/', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://aws.amazon.com/agreement/', checkedAt: 2026-08-02 }
 figure:
   emoji: 📦
   color: "#FF9900"

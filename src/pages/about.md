@@ -7,27 +7,34 @@ figure:
   textColor: rgb(120, 70, 0)
   text: Fast, cheap, good — choose any two.
 description: Who publishes this, what the rules are, and how it is made.
-lead: Almost every "best hosting" list is ordered by affiliate commission. Providers that do not run an affiliate program — which is most small and independent ones — are not ranked low on those lists. They are absent from them. Two decades of that has produced a public record in which a handful of conglomerate brands look like the entire market.
+lead: Most "best web hosting lists" are ordered by affiliate commission, making independent hosting providers invisible. This website exists to give developers better choices to select a web host, large or small.
 ---
 
-This exists to make the rest of it visible. Every provider meeting the scope test is listed, whether it is four people in Berlin or a hyperscaler.
 
-## Who publishes it
+## Publisher
 
-**fortrabbit is one of those small providers.** That aim is self-serving, and saying so plainly is the only honest option available: we benefit if small hosting is more visible. So the benefit is put out of our own reach. The bias may act on *effort* — which records get researched first, which facets get built — and never on inclusion, order or field values.
+I am [Frank Lämmer](https://www.franklaemmer.de) and co-founder of a small bootstrapped hosting provider: [fortrabbit](/providers/fortrabbit), which is naturally part here. Mind that the aim is self-serving. If our record reads more favorably than the evidence supports, that's a feature.
 
-fortrabbit appears in the dataset in alphabetical position, with the same fields and a permanent marker. If our record reads more favourably than the evidence supports, that is a bug.
+## Your benefits
+
+A lot of developers don't know much about web hosting. It's a market of lemons. Learn how to judge better. Discover a hosting service that really fit's your requirements.
 
 ## What this is not
 
-- Rank, score or rate. There is no "best for" badge and no star, and the schema rejects any field that implies one — the rules are written down in [policies](/policies/) and enforced by the build.
-- Carry affiliate links. Every provider URL is checked for tracking parameters at build time.
-- Track prices. Price bands only — the guide's own argument is that specs and price are the wrong place to start.
-- Sort by how much we know. Completeness is a fact about our work, never a property of a provider.
+Sometimes, something is best described by what it is not:
 
-<h2 id="ai">How this site is made</h2>
+- Hosting rank, score or rate.
+- Hosting price tracker. Price bands only.
+- Sort by how much we know.
+- Fair. We aim to push smaller, indie providers
 
-Agents gather the facts, working from providers' own public pages, and record the URL and the date for each one. The editorial decisions are human: what the fields mean, which providers are in scope, what a caveat says and whose name is on it. Much of the code is written by AI, and the footer says so on every page. Each page also records in its own frontmatter how much of it a machine wrote, which travels with the data rather than being printed on the page.
+## Origins
+
+The main data dates back to some competitor landscape that I did as part of research for the fortrabbit new platform anno 2023. This was then moved and extended to a hosting guide on the fortrabbit website. But I wondered. This deserves it's own space and should be 
+
+## Credits
+
+Agents gather facts, working from providers' own public pages. The editorial decisions are human: what the fields mean, which providers are in scope, what a caveat says and whose name is on it. Much of the code is written by AI, and the footer says so on every page. Each page also records in its own frontmatter how much of it a machine wrote, which travels with the data rather than being printed on the page.
 
 Two things this does *not* claim. A human has not read every record — a `checkedAt` date means a machine read that provider's pages on that day, and nothing stronger. And a source is a record of what a provider published, not a verification that it is true.
 

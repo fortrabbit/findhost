@@ -24,6 +24,14 @@ software:
 runtimes:
   - php
 sshAccess: full
+priceFrom: sm
+priceTo: xl
+currencies:
+  - USD
+billingPeriods:
+  - hourly
+  - monthly
+exitWithin: a-day
 regions:
   - US
   - NL
@@ -36,6 +44,10 @@ sources:
   - { field: regions, url: 'https://www.liquidweb.com/data-centers/', checkedAt: 2026-08-01 }
   - { field: supportHours, url: 'https://www.liquidweb.com/products/', checkedAt: 2026-07-31 }
   - { field: software, url: 'https://www.liquidweb.com/products/', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://www.liquidweb.com/vps-hosting/', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://www.liquidweb.com/vps-hosting/', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://www.liquidweb.com/vps-hosting/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://www.liquidweb.com/vps-hosting/', checkedAt: 2026-08-02 }
 figure:
   emoji: 💧
   color: rgb(0, 50, 100)

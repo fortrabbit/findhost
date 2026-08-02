@@ -14,6 +14,15 @@ regions:
   - NL
 entryPrice: { amount: 6.71, currency: USD, period: month }
 priceFrom: sm
+priceTo: md
+currencies:
+  - USD
+billingPeriods:
+  - monthly
+  - yearly
+  - multi-year
+billingTiming: advance
+exitWithin: a-month
 pricingModel: fixed-tier
 renewalMultiple: 1.3
 contractMinimum: none
@@ -23,7 +32,12 @@ sources:
   - { field: regions, url: 'https://www.knownhost.com/network', checkedAt: 2026-08-01 }
   - { field: founded, url: 'https://www.knownhost.com/', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://www.knownhost.com/web-hosting', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://www.knownhost.com/web-hosting', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.knownhost.com/web-hosting', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://www.knownhost.com/web-hosting', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://www.knownhost.com/web-hosting', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://www.knownhost.com/web-hosting', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://www.knownhost.com/terms-of-service', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://www.knownhost.com/terms-of-service', checkedAt: 2026-08-02 }
   - { field: renewalMultiple, url: 'https://www.knownhost.com/web-hosting', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://www.knownhost.com/web-hosting', checkedAt: 2026-08-01 }
   - { field: contractMinimum, url: 'https://www.knownhost.com/web-hosting', checkedAt: 2026-08-01 }

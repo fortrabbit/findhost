@@ -19,6 +19,14 @@ managedDatabases:
   - postgres
 pricingModel: usage-based
 priceFrom: xs
+priceTo: lg
+currencies:
+  - USD
+billingPeriods:
+  - hourly
+  - monthly
+billingTiming: arrears
+exitWithin: a-day
 entryPrice: { amount: 2.02, currency: USD, period: month }
 freeTier: none
 regions:
@@ -48,6 +56,11 @@ sources:
   - { field: regions, url: 'https://fly.io/docs/reference/regions/', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://fly.io/docs/about/pricing/', checkedAt: 2026-07-31 }
   - { field: priceFrom, url: 'https://fly.io/docs/about/pricing/', checkedAt: 2026-07-31 }
+  - { field: priceTo, url: 'https://fly.io/docs/about/pricing/', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://fly.io/docs/about/pricing/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://fly.io/docs/about/billing/', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://fly.io/docs/about/billing/', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://fly.io/docs/about/billing/', checkedAt: 2026-08-02 }
   - { field: freeTier, url: 'https://fly.io/docs/about/pricing/', checkedAt: 2026-07-31 }
   - { field: persistentStorage, url: 'https://fly.io/docs/about/pricing/', checkedAt: 2026-07-31 }
   - { field: supportChannels, url: 'https://fly.io/docs/', checkedAt: 2026-07-31 }

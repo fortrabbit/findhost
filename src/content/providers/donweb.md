@@ -36,11 +36,26 @@ deployMethods:
   - ftp
   - control-panel
 pricingModel: fixed-tier
+priceFrom: xs
+priceTo: md
+currencies:
+  - ARS
+  - USD
+billingPeriods:
+  - monthly
+  - yearly
+  - multi-year
+billingTiming: advance
 freeTier: none
 status: active
 checkedAt: 2026-08-01
 sources:
   - { field: pricingModel, url: 'https://donweb.com/es-ar/hosting', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://donweb.com/en-us/hosting', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://donweb.com/en-us/hosting', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://donweb.com/es-ar/hosting', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://donweb.com/en-us/hosting', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://donweb.com/en-us/hosting', checkedAt: 2026-08-02 }
   - { field: freeTier, url: 'https://donweb.com/es-ar/hosting', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://donweb.com', checkedAt: 2026-08-01 }
 figure:

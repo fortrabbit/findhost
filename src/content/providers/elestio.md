@@ -46,6 +46,14 @@ managedDatabases:
   - redis
 pricingModel: per-resource
 priceFrom: sm
+priceTo: lg
+currencies:
+  - USD
+billingPeriods:
+  - monthly
+  - yearly
+billingTiming: advance
+exitWithin: a-month
 entryPrice: { amount: 11, currency: USD, period: month }
 freeTier: none
 supportChannels:
@@ -67,6 +75,11 @@ checkedAt: 2026-08-01
 sources:
   - { field: entryPrice, url: 'https://elest.io/pricing', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://elest.io/pricing', checkedAt: 2026-08-01 }
+  - { field: priceTo, url: 'https://elest.io/pricing', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://elest.io/terms', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://elest.io/terms', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://elest.io/terms', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://elest.io/terms', checkedAt: 2026-08-02 }
   - { field: pricingModel, url: 'https://elest.io/pricing', checkedAt: 2026-08-01 }
   - { field: supportTiering, url: 'https://elest.io/pricing', checkedAt: 2026-08-01 }
   - { field: supportHours, url: 'https://elest.io/pricing', checkedAt: 2026-08-01 }

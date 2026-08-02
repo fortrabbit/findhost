@@ -18,6 +18,14 @@ runtimes:
   - rust
 persistentStorage: false
 pricingModel: usage-based
+priceFrom: xs
+priceTo: lg
+currencies:
+  - EUR
+billingPeriods:
+  - monthly
+billingTiming: arrears
+exitWithin: a-month
 regions:
   - FR
   - NL
@@ -28,6 +36,12 @@ sources:
   - { field: runtimes, url: 'https://www.scaleway.com/en/serverless-functions/', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://www.scaleway.com/en/serverless-functions/', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://www.scaleway.com/en/serverless-functions/', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://www.scaleway.com/en/pricing/serverless/', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://www.scaleway.com/en/pricing/serverless/', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://www.scaleway.com/en/pricing/serverless/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://www.scaleway.com/en/pricing/serverless/', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://www.scaleway.com/en/pricing/serverless/', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://www.scaleway.com/en/pricing/serverless/', checkedAt: 2026-08-02 }
 figure:
   emoji: 🧵
   color: rgb(50, 30, 70)

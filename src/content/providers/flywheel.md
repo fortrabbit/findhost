@@ -26,12 +26,25 @@ sshAccess: limited
 backupsIncluded: included
 pricingModel: fixed-tier
 priceFrom: md
+priceTo: xl
+currencies:
+  - USD
+billingPeriods:
+  - monthly
+  - yearly
+billingTiming: advance
+exitWithin: a-quarter
 entryPrice: { amount: 25, currency: USD, period: month }
 status: active
 checkedAt: 2026-08-01
 sources:
   - { field: entryPrice, url: 'https://getflywheel.com/pricing/', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://getflywheel.com/pricing/', checkedAt: 2026-07-31 }
+  - { field: priceTo, url: 'https://getflywheel.com/pricing/', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://getflywheel.com/pricing/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://getflywheel.com/pricing/', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://wpengine.com/legal/terms-of-service/', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://wpengine.com/legal/terms-of-service/', checkedAt: 2026-08-02 }
   - { field: pricingModel, url: 'https://getflywheel.com/pricing/', checkedAt: 2026-07-31 }
   - { field: backupsIncluded, url: 'https://getflywheel.com/pricing/', checkedAt: 2026-07-31 }
 figure:

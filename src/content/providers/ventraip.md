@@ -31,6 +31,11 @@ deployMethods:
   - control-panel
 pricingModel: fixed-tier
 priceFrom: sm
+priceTo: md
+currencies:
+  - AUD
+billingPeriods:
+  - monthly
 freeTier: none
 regions:
   - AU
@@ -54,6 +59,10 @@ sources:
   - { field: supportHours, url: 'https://ventraip.com.au/about-us/', checkedAt: 2026-08-01 }
   - { field: certifications, url: 'https://ventraip.com.au/about-us/', checkedAt: 2026-08-01 }
   - { field: social, url: 'https://ventraip.com.au', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://ventraip.com.au/web-hosting/', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://ventraip.com.au/web-hosting/custom-hosting/', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://ventraip.com.au/web-hosting/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://ventraip.com.au/web-hosting/', checkedAt: 2026-08-02 }
 figure:
   emoji: 🪃
   color: rgb(65, 30, 20)

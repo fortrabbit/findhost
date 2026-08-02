@@ -29,6 +29,15 @@ persistentStorage: true
 backupsIncluded: paid-addon
 pricingModel: hourly
 priceFrom: xs
+priceTo: lg
+currencies:
+  - EUR
+  - USD
+billingPeriods:
+  - hourly
+  - monthly
+billingTiming: arrears
+exitWithin: a-day
 contractMinimum: none
 regions:
   - DE
@@ -50,6 +59,11 @@ sources:
   - { field: infraContract, url: 'https://www.hetzner.com/unternehmen/ueber-uns/', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://docs.hetzner.com/cloud/billing/faq/', checkedAt: 2026-07-31 }
   - { field: priceFrom, url: 'https://docs.hetzner.com/cloud/billing/faq/', checkedAt: 2026-07-31 }
+  - { field: priceTo, url: 'https://www.hetzner.com/cloud/', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://docs.hetzner.com/cloud/billing/faq/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://docs.hetzner.com/cloud/billing/faq/', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://docs.hetzner.com/cloud/billing/faq/', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://docs.hetzner.com/cloud/billing/faq/', checkedAt: 2026-08-02 }
   - { field: contractMinimum, url: 'https://docs.hetzner.com/cloud/billing/faq/', checkedAt: 2026-07-31 }
   - { field: backupsIncluded, url: 'https://docs.hetzner.com/cloud/billing/faq/', checkedAt: 2026-07-31 }
   - { field: persistentStorage, url: 'https://docs.hetzner.com/cloud/servers/backups-snapshots/faq/', checkedAt: 2026-07-31 }

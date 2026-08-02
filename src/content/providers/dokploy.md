@@ -34,6 +34,14 @@ deployMethods:
 sshAccess: full
 pricingModel: per-resource
 priceFrom: xs
+priceTo: md
+currencies:
+  - USD
+billingPeriods:
+  - monthly
+  - yearly
+billingTiming: advance
+exitWithin: a-month
 entryPrice: { amount: 4.5, currency: USD, period: month }
 freeTier: none
 social:
@@ -44,6 +52,11 @@ checkedAt: 2026-08-01
 sources:
   - { field: entryPrice, url: 'https://dokploy.com/pricing', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://dokploy.com/pricing', checkedAt: 2026-08-01 }
+  - { field: priceTo, url: 'https://dokploy.com/pricing', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://dokploy.com/pricing', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://dokploy.com/terms-of-service', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://dokploy.com/terms-of-service', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://dokploy.com/terms-of-service', checkedAt: 2026-08-02 }
   - { field: pricingModel, url: 'https://dokploy.com/pricing', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://dokploy.com/pricing', checkedAt: 2026-08-01 }
   - { field: hqCountry, url: 'https://dokploy.com/terms-of-service', checkedAt: 2026-08-01 }

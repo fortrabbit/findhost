@@ -20,13 +20,26 @@ runtimes:
 sshAccess: full
 pricingModel: per-resource
 priceFrom: sm
+priceTo: md
+currencies:
+  - USD
+billingPeriods:
+  - hourly
+  - monthly
+billingTiming: arrears
+exitWithin: a-day
 entryPrice: { amount: 5.5, currency: USD, period: month }
 freeTier: trial
 status: active
 checkedAt: 2026-08-01
 sources:
   - { field: entryPrice, url: 'https://serverpilot.io/pricing/', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://serverpilot.io/pricing/', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://serverpilot.io/pricing/', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://serverpilot.io/pricing/', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://serverpilot.io/pricing/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://serverpilot.io/pricing/', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://serverpilot.io/pricing/', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://serverpilot.io/pricing/', checkedAt: 2026-08-02 }
   - { field: pricingModel, url: 'https://serverpilot.io/pricing/', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://serverpilot.io/pricing/', checkedAt: 2026-07-31 }
   - { field: infraContract, url: 'https://serverpilot.io/pricing/', checkedAt: 2026-07-31 }

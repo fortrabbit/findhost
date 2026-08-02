@@ -158,10 +158,23 @@ const providerFields = z
      * of it is a price, so none of it rots the way a figure does.
      */
     currencies: z.array(z.string().length(3)).optional(),
-    billingPeriods: z.array(z.enum(['hourly', 'daily', 'monthly', 'yearly', 'multi-year'])).optional(),
+    billingPeriods: z
+      .array(z.enum(['hourly', 'daily', 'monthly', 'quarterly', 'half-yearly', 'yearly', 'multi-year']))
+      .optional(),
     /** Paid before the month or after it. Arrears means usage you have already run up. */
     billingTiming: z.enum(['advance', 'arrears']).optional(),
-    cancellation: z.enum(['anytime', 'end-of-month', 'end-of-term', 'notice-period']).optional(),
+    /*
+     * How long you can still be billed after deciding to leave, worst case, on
+     * the cheapest ordinary terms.
+     *
+     * This replaced a cancellation-policy enum, which described the paperwork
+     * and answered the wrong question. "Cancel any time" and "no refund for the
+     * paid term" are both true of almost every host at once, and neither tells
+     * you what you actually want to know, which is how long the money keeps
+     * going out. A notice period and a minimum term are the same fact to a
+     * customer — time — so they are recorded as time and they add up.
+     */
+    exitWithin: z.enum(['a-day', 'a-month', 'a-quarter', 'a-year', 'over-a-year']).optional(),
     /*
      * The exact starting figure in the provider's own currency, shown beside the
      * coins so nobody reads a conversion we invented. One number with a date,

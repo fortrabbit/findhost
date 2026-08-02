@@ -39,6 +39,8 @@ persistentStorage: true
 managedDatabases:
   - postgres
   - redis
+billingPeriods:
+  - monthly
 freeTier: permanent
 regions:
   - US
@@ -57,6 +59,7 @@ sources:
   - { field: freeTier, url: 'https://render.com/docs/free', checkedAt: 2026-07-31 }
   - { field: priceFrom, url: 'https://render.com/docs/free', checkedAt: 2026-07-31 }
   - { field: persistentStorage, url: 'https://render.com/docs/free', checkedAt: 2026-07-31 }
+  - { field: billingPeriods, url: 'https://render.com/docs/free', checkedAt: 2026-08-02 }
   - { field: regions, url: 'https://render.com/docs/regions', checkedAt: 2026-07-31 }
   - { field: managedDatabases, url: 'https://render.com/docs/databases', checkedAt: 2026-07-31 }
   - { field: apiAvailable, url: 'https://render.com/docs/api', checkedAt: 2026-07-31 }

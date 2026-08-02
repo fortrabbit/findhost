@@ -37,6 +37,15 @@ backupsIncluded: included
 pricingModel: fixed-tier
 entryPrice: { amount: 7, currency: USD, period: month }
 priceFrom: sm
+priceTo: sm
+currencies:
+  - USD
+billingPeriods:
+  - monthly
+  - yearly
+  - multi-year
+billingTiming: advance
+exitWithin: a-quarter
 renewalMultiple: 1
 contractMinimum: monthly
 freeTier: none
@@ -48,7 +57,12 @@ sources:
   - { field: regions, url: 'https://www.interserver.net/webhosting/', checkedAt: 2026-08-01 }
   - { field: founded, url: 'https://www.interserver.net/webhosting/', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://www.interserver.net/webhosting/', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://www.interserver.net/webhosting/', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.interserver.net/webhosting/', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://www.interserver.net/webhosting/', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://www.interserver.net/webhosting/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://www.interserver.net/webhosting/', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://www.interserver.net/terms-of-service.html', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://www.interserver.net/terms-of-service.html', checkedAt: 2026-08-02 }
   - { field: renewalMultiple, url: 'https://www.interserver.net/webhosting/', checkedAt: 2026-08-01 }
   - { field: contractMinimum, url: 'https://www.interserver.net/webhosting/', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://www.interserver.net/webhosting/', checkedAt: 2026-08-01 }

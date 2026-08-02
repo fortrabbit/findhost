@@ -40,6 +40,13 @@ managedDatabases:
 pricingModel: fixed-tier
 entryPrice: { amount: 7, currency: GBP, period: month }
 priceFrom: sm
+priceTo: lg
+currencies:
+  - GBP
+billingPeriods:
+  - monthly
+  - yearly
+  - multi-year
 freeTier: none
 regions:
   - GB
@@ -62,7 +69,10 @@ sources:
   - { field: ownership, url: 'https://www.krystal.io/about', checkedAt: 2026-08-01 }
   - { field: hqCountry, url: 'https://www.krystal.io/about', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://krystal.io/web-hosting', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://krystal.io/web-hosting', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://krystal.io/web-hosting', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://krystal.io/web-hosting', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://krystal.io/web-hosting', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://krystal.io/web-hosting', checkedAt: 2026-08-02 }
   - { field: supportHours, url: 'https://krystal.io/web-hosting', checkedAt: 2026-08-01 }
   - { field: supportTiering, url: 'https://krystal.io/web-hosting', checkedAt: 2026-08-01 }
 figure:

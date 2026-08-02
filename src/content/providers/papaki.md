@@ -36,6 +36,13 @@ managedDatabases:
 backupsIncluded: included
 pricingModel: fixed-tier
 priceFrom: sm
+priceTo: md
+currencies:
+  - EUR
+billingPeriods:
+  - yearly
+billingTiming: advance
+exitWithin: a-quarter
 entryPrice: { amount: 6.9, currency: EUR, period: month }
 freeTier: none
 certifications:
@@ -44,7 +51,12 @@ status: active
 checkedAt: 2026-08-01
 sources:
   - { field: entryPrice, url: 'https://www.papaki.com/en/web-hosting/', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://www.papaki.com/en/web-hosting/', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.papaki.com/en/web-hosting/', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://www.papaki.com/en/web-hosting/', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://www.papaki.com/en/web-hosting/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://www.papaki.com/oroi-xrisis/', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://www.papaki.com/oroi-xrisis/', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://www.papaki.com/oroi-xrisis/', checkedAt: 2026-08-02 }
   - { field: pricingModel, url: 'https://www.papaki.com/en/web-hosting/', checkedAt: 2026-08-01 }
   - { field: founded, url: 'https://www.papaki.com/en/about-us/', checkedAt: 2026-08-01 }
   - { field: ownership, url: 'https://www.papaki.com/en/about-us/', checkedAt: 2026-08-01 }

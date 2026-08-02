@@ -33,6 +33,9 @@ deployMethods:
   - control-panel
 pricingModel: per-resource
 priceFrom: xs
+priceTo: md
+currencies:
+  - BRL
 entryPrice: { amount: 24, currency: BRL, period: month }
 freeTier: trial
 supportChannels:
@@ -44,6 +47,8 @@ checkedAt: 2026-08-01
 sources:
   - { field: entryPrice, url: 'https://www.umbler.com/br/hospedagem-php', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://www.umbler.com/br/hospedagem-php', checkedAt: 2026-08-01 }
+  - { field: priceTo, url: 'https://www.umbler.com/br/hospedagem-php', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://www.umbler.com/br/hospedagem-php', checkedAt: 2026-08-02 }
   - { field: runtimes, url: 'https://www.umbler.com/br/hospedagem-php', checkedAt: 2026-08-01 }
   - { field: social, url: 'https://www.umbler.com/br', checkedAt: 2026-08-01 }
 figure:

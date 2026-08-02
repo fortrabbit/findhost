@@ -33,6 +33,14 @@ runsOn:
   - gcp
 pricingModel: hourly
 priceFrom: sm
+priceTo: xl
+currencies:
+  - USD
+billingPeriods:
+  - hourly
+  - monthly
+exitWithin: a-day
+billingTiming: arrears
 entryPrice: { amount: 11, currency: USD, period: month }
 freeTier: trial
 status: active
@@ -41,7 +49,11 @@ sources:
   - { field: entryPrice, url: 'https://www.cloudways.com/en/pricing.php', checkedAt: 2026-08-01 }
   - { field: runsOn, url: 'https://www.cloudways.com/en/pricing.php', checkedAt: 2026-07-31 }
   - { field: infraContract, url: 'https://www.cloudways.com/en/pricing.php', checkedAt: 2026-07-31 }
-  - { field: priceFrom, url: 'https://www.cloudways.com/en/pricing.php', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://www.cloudways.com/en/pricing.php', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://www.cloudways.com/en/pricing.php', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://www.cloudways.com/en/pricing.php', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://www.cloudways.com/en/pricing.php', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://www.cloudways.com/en/pricing.php', checkedAt: 2026-08-02 }
   - { field: freeTier, url: 'https://www.cloudways.com/en/pricing.php', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://www.cloudways.com/en/pricing.php', checkedAt: 2026-07-31 }
   - { field: useCases, url: 'https://www.cloudways.com/en/', checkedAt: 2026-07-31 }

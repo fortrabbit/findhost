@@ -17,7 +17,17 @@ audience:
   - beginner
   - smb
 pricingModel: fixed-tier
-priceFrom: xs
+priceFrom: sm
+priceTo: md
+currencies:
+  - USD
+  - EUR
+billingPeriods:
+  - monthly
+  - yearly
+  - multi-year
+billingTiming: advance
+exitWithin: over-a-year
 renewalMultiple: 3.7
 contractMinimum: multi-year
 status: active
@@ -27,7 +37,12 @@ sources:
   - { field: hqCountry, url: 'https://www.hostinger.com/about', checkedAt: 2026-08-01 }
   - { field: ownership, url: 'https://www.hostinger.com/about', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://www.hostinger.com/', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://www.hostinger.com/web-hosting', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://www.hostinger.com/web-hosting', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://www.hostinger.com/web-hosting', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://www.hostinger.com/legal/universal-terms-of-service-agreement', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://www.hostinger.com/web-hosting', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://www.hostinger.com/legal/universal-terms-of-service-agreement', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://www.hostinger.com/legal/universal-terms-of-service-agreement', checkedAt: 2026-08-02 }
   - { field: renewalMultiple, url: 'https://www.hostinger.com/web-hosting', checkedAt: 2026-07-31 }
   - { field: contractMinimum, url: 'https://www.hostinger.com/web-hosting', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://www.hostinger.com/web-hosting', checkedAt: 2026-07-31 }

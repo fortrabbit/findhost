@@ -36,6 +36,14 @@ deployMethods:
   - dashboard
 pricingModel: fixed-tier
 priceFrom: sm
+priceTo: md
+currencies:
+  - GBP
+billingPeriods:
+  - monthly
+  - yearly
+billingTiming: advance
+exitWithin: a-year
 entryPrice: { amount: 5.75, currency: GBP, period: month }
 renewalMultiple: 5.75
 freeTier: none
@@ -56,7 +64,12 @@ sources:
   - { field: supportHours, url: 'https://www.fasthosts.co.uk/web-hosting', checkedAt: 2026-08-01 }
   - { field: renewalMultiple, url: 'https://www.fasthosts.co.uk/web-hosting', checkedAt: 2026-08-01 }
   - { field: runtimes, url: 'https://www.fasthosts.co.uk/web-hosting', checkedAt: 2026-07-31 }
-  - { field: priceFrom, url: 'https://www.fasthosts.co.uk/web-hosting', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://www.fasthosts.co.uk/web-hosting', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://www.fasthosts.co.uk/web-hosting', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://www.fasthosts.co.uk/web-hosting', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://www.fasthosts.co.uk/terms/general-terms-and-conditions', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://www.fasthosts.co.uk/terms/general-terms-and-conditions', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://www.fasthosts.co.uk/terms/general-terms-and-conditions', checkedAt: 2026-08-02 }
   - { field: regions, url: 'https://www.fasthosts.co.uk/virtual-private-servers', checkedAt: 2026-07-31 }
   - { field: parent, url: 'https://www.ionos-group.com/brands/fasthosts.html', checkedAt: 2026-07-31 }
 status: active

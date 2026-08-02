@@ -12,6 +12,13 @@ founded: 2002
 hqCountry: US
 ownership: subsidiary
 parent: Newfold Digital
+currencies:
+  - USD
+billingPeriods:
+  - yearly
+  - multi-year
+billingTiming: advance
+exitWithin: a-year
 supportHours: 24-7
 status: active
 checkedAt: 2026-08-01
@@ -21,6 +28,10 @@ sources:
   - { field: ownership, url: 'https://www.hostgator.com/about', checkedAt: 2026-08-01 }
   - { field: parent, url: 'https://www.hostgator.com/about', checkedAt: 2026-08-01 }
   - { field: supportHours, url: 'https://www.hostgator.com/web-hosting', checkedAt: 2026-08-01 }
+  - { field: currencies, url: 'https://www.hostgator.com/tos', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://www.hostgator.com/web-hosting', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://www.hostgator.com/tos', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://www.hostgator.com/tos', checkedAt: 2026-08-02 }
 figure:
   emoji: 🐊
   color: rgb(167, 136, 92)

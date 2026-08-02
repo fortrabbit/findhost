@@ -20,6 +20,14 @@ runtimes:
 deployMethods:
   - git-integration
   - docker-image
+priceFrom: sm
+priceTo: md
+currencies:
+  - USD
+billingPeriods:
+  - monthly
+  - yearly
+billingTiming: advance
 freeTier: permanent
 apiAvailable: public
 social:
@@ -33,7 +41,11 @@ sources:
   - { field: runtimes, url: 'https://coolify.io/', checkedAt: 2026-07-31 }
   - { field: deployMethods, url: 'https://coolify.io/', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://coolify.io/', checkedAt: 2026-07-31 }
-  - { field: priceFrom, url: 'https://coolify.io/', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://coolify.io/pricing', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://coolify.io/pricing', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://coolify.io/pricing', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://coolify.io/pricing', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://coolify.io/pricing', checkedAt: 2026-08-02 }
   - { field: apiAvailable, url: 'https://coolify.io/', checkedAt: 2026-07-31 }
   - { field: social, url: 'https://coolify.io/', checkedAt: 2026-07-31 }
 figure:

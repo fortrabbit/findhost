@@ -695,7 +695,11 @@
 /* --- The record itself --- */
 
 .record-links {
+  display: flex;
+  gap: var(--space-xs) var(--space-md);
+  flex-wrap: wrap;
   font-size: var(--text-sm);
+  max-width: var(--measure-data);
 }
 
 /**
@@ -875,7 +879,7 @@
 .missing-fields {
   margin-block: var(--space-lg) var(--space-md);
   padding-top: var(--space-xs);
-  border-top: var(--rule-hairline) solid var(--color-ink);
+  /*border-top: var(--rule-hairline) solid var(--color-ink);*/
   font-size: var(--text-sm);
 }
 

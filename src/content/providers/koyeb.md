@@ -37,6 +37,12 @@ deployMethods:
   - api
 pricingModel: usage-based
 priceFrom: md
+priceTo: xl
+currencies:
+  - USD
+billingPeriods:
+  - monthly
+billingTiming: arrears
 freeTier: none
 entryPrice: { amount: 29, currency: USD, period: month }
 regions:
@@ -50,7 +56,11 @@ cliTool: official
 status: active
 checkedAt: 2026-08-01
 sources:
-  - { field: priceFrom, url: 'https://www.koyeb.com/pricing', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://www.koyeb.com/pricing', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://www.koyeb.com/pricing', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://www.koyeb.com/pricing', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://www.koyeb.com/pricing', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://www.koyeb.com/pricing', checkedAt: 2026-08-02 }
   - { field: pricingModel, url: 'https://www.koyeb.com/pricing', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://www.koyeb.com/pricing', checkedAt: 2026-07-31 }
   - { field: entryPrice, url: 'https://www.koyeb.com/pricing', checkedAt: 2026-08-01 }

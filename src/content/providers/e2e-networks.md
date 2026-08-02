@@ -32,6 +32,16 @@ deployMethods:
   - ssh
 sshAccess: full
 pricingModel: hourly
+priceFrom: xl
+priceTo: 2xl
+currencies:
+  - INR
+  - USD
+billingPeriods:
+  - hourly
+  - monthly
+  - yearly
+exitWithin: a-day
 freeTier: none
 status: active
 checkedAt: 2026-08-01
@@ -39,6 +49,10 @@ sources:
   - { field: founded, url: 'https://www.e2enetworks.com/about-us', checkedAt: 2026-08-01 }
   - { field: hqCountry, url: 'https://www.e2enetworks.com/about-us', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://www.e2enetworks.com/pricing', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.e2enetworks.com/us/pricing', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://www.e2enetworks.com/us/pricing', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://www.e2enetworks.com/pricing', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://www.e2enetworks.com/us/pricing', checkedAt: 2026-08-02 }
   - { field: ownership, url: 'https://www.e2enetworks.com/about-us', checkedAt: 2026-08-01 }
 figure:
   emoji: 🇮🇳

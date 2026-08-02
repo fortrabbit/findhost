@@ -11,6 +11,9 @@ whoManagesOs: you
 runtimes:
   - any
 sshAccess: full
+billingPeriods:
+  - hourly
+exitWithin: a-day
 apiAvailable: public
 regions:
   - FI
@@ -31,6 +34,7 @@ checkedAt: 2026-08-01
 sources:
   - { field: regions, url: 'https://status.upcloud.com/', checkedAt: 2026-08-01 }
   - { field: apiAvailable, url: 'https://developers.upcloud.com/1.3/', checkedAt: 2026-08-01 }
+  - { field: billingPeriods, url: 'https://developers.upcloud.com/1.3/4-pricing/', checkedAt: 2026-08-02 }
   - { field: urls, url: 'https://developers.upcloud.com/', checkedAt: 2026-08-01 }
   - { field: social, url: 'https://github.com/UpCloudLtd', checkedAt: 2026-08-01 }
 ---

@@ -36,12 +36,22 @@ managedDatabases:
 backupsIncluded: included
 pricingModel: fixed-tier
 priceFrom: sm
+priceTo: md
+currencies:
+  - PLN
+billingPeriods:
+  - yearly
+billingTiming: advance
 entryPrice: { amount: 306.27, currency: PLN, period: year }
 freeTier: none
 checkedAt: 2026-08-01
 sources:
   - { field: entryPrice, url: 'https://cyberfolks.pl/hosting/', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://cyberfolks.pl/hosting/', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://cyberfolks.pl/hosting/', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://cyberfolks.pl/hosting/', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://cyberfolks.pl/hosting/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://cyberfolks.pl/hosting/', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://cyberfolks.pl/hosting/', checkedAt: 2026-08-02 }
   - { field: hqCountry, url: 'https://cyberfolks.pl/o-nas/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🧑‍🎤

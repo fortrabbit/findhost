@@ -39,6 +39,13 @@ deployMethods:
 sshAccess: full
 pricingModel: fixed-tier
 priceFrom: sm
+priceTo: md
+currencies:
+  - EUR
+billingPeriods:
+  - yearly
+billingTiming: advance
+exitWithin: a-year
 freeTier: none
 regions:
   - FR
@@ -58,6 +65,12 @@ sources:
   - { field: supportHours, url: 'https://www.o2switch.fr/hebergement-illimite/', checkedAt: 2026-08-01 }
   - { field: supportChannels, url: 'https://www.o2switch.fr/hebergement-illimite/', checkedAt: 2026-08-01 }
   - { field: sustainabilityUrl, url: 'https://www.o2switch.fr/green/', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.o2switch.fr/hebergement-illimite/', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://www.o2switch.fr/hebergement-illimite/', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://www.o2switch.fr/cgv/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://www.o2switch.fr/hebergement-illimite/', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://www.o2switch.fr/cgv/', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://www.o2switch.fr/cgv/', checkedAt: 2026-08-02 }
 figure:
   emoji: 🌋
   color: rgb(60, 30, 25)

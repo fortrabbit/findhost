@@ -36,6 +36,15 @@ deployMethods:
 sshAccess: full
 pricingModel: per-resource
 priceFrom: sm
+priceTo: xl
+currencies:
+  - EUR
+  - SEK
+billingPeriods:
+  - hourly
+  - monthly
+billingTiming: advance
+exitWithin: a-day
 entryPrice: { amount: 12.73, currency: EUR, period: month }
 freeTier: none
 regions:
@@ -52,6 +61,11 @@ sources:
   - { field: regions, url: 'https://glesys.com/pricing/', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://glesys.com/pricing/', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://glesys.com/pricing/', checkedAt: 2026-08-01 }
+  - { field: priceTo, url: 'https://glesys.com/pricing/', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://glesys.com/pricing/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://glesys.com/pricing/', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://glesys.com/legal/general-terms-and-conditions/', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://glesys.com/legal/general-terms-and-conditions/', checkedAt: 2026-08-02 }
   - { field: pricingModel, url: 'https://glesys.com/pricing/', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://glesys.com/pricing/', checkedAt: 2026-08-01 }
 figure:

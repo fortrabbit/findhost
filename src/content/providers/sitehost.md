@@ -47,6 +47,13 @@ managedDatabases:
   - redis
 pricingModel: fixed-tier
 priceFrom: md
+priceTo: xl
+currencies:
+  - NZD
+billingPeriods:
+  - monthly
+billingTiming: advance
+exitWithin: a-quarter
 entryPrice: { amount: 35, currency: NZD, period: month }
 freeTier: none
 regions:
@@ -78,6 +85,11 @@ sources:
   - { field: supportHours, url: 'https://sitehost.nz/about', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://sitehost.nz/hosting/cloud-containers', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://sitehost.nz/hosting/cloud-containers', checkedAt: 2026-08-01 }
+  - { field: priceTo, url: 'https://sitehost.nz/hosting/cloud-containers', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://sitehost.nz/about/terms', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://sitehost.nz/about/terms', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://sitehost.nz/about/terms', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://sitehost.nz/about/terms', checkedAt: 2026-08-02 }
   - { field: social, url: 'https://sitehost.nz', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://sitehost.nz/about/terms', checkedAt: 2026-08-01 }
 figure:

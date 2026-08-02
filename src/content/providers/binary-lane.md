@@ -32,6 +32,14 @@ deployMethods:
 sshAccess: full
 pricingModel: hourly
 priceFrom: xs
+priceTo: lg
+currencies:
+  - AUD
+billingPeriods:
+  - hourly
+  - monthly
+billingTiming: arrears
+exitWithin: a-day
 entryPrice: { amount: 4.90, currency: AUD, period: month }
 regions:
   - AU
@@ -42,7 +50,12 @@ apiAvailable: public
 checkedAt: 2026-08-01
 sources:
   - { field: entryPrice, url: 'https://www.binarylane.com.au', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://www.binarylane.com.au', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.binarylane.com.au/vps-hosting/linux-vps', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://www.binarylane.com.au/vps-hosting/linux-vps', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://www.binarylane.com.au/vps-hosting/linux-vps', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://www.binarylane.com.au/terms-of-service', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://www.binarylane.com.au/terms-of-service', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://www.binarylane.com.au/terms-of-service', checkedAt: 2026-08-02 }
 figure:
   emoji: 🦘
   color: rgb(25, 45, 70)

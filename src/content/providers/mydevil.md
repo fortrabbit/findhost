@@ -44,6 +44,12 @@ managedDatabases:
 backupsIncluded: included
 pricingModel: fixed-tier
 priceFrom: xs
+priceTo: md
+currencies:
+  - PLN
+billingPeriods:
+  - monthly
+  - yearly
 freeTier: none
 regions:
   - PL
@@ -55,7 +61,10 @@ checkedAt: 2026-08-01
 sources:
   - { field: regions, url: 'https://www.mydevil.net', checkedAt: 2026-08-01 }
   - { field: hqCountry, url: 'https://www.mydevil.net', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://www.mydevil.net', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.mydevil.net', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://www.mydevil.net', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://www.mydevil.net', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://www.mydevil.net', checkedAt: 2026-08-02 }
   - { field: pricingModel, url: 'https://www.mydevil.net', checkedAt: 2026-08-01 }
   - { field: social, url: 'https://www.mydevil.net', checkedAt: 2026-08-01 }
 figure:

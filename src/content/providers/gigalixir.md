@@ -35,13 +35,22 @@ sshAccess: full
 managedDatabases:
   - postgres
 pricingModel: per-resource
+priceFrom: sm
+priceTo: lg
+currencies:
+  - USD
+billingPeriods:
+  - monthly
 freeTier: permanent
 regions:
   - US
 status: active
 checkedAt: 2026-08-01
 sources:
-  - { field: priceFrom, url: 'https://www.gigalixir.com/pricing/', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.gigalixir.com/pricing/', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://www.gigalixir.com/pricing/', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://www.gigalixir.com/pricing/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://www.gigalixir.com/pricing/', checkedAt: 2026-08-02 }
   - { field: freeTier, url: 'https://www.gigalixir.com/pricing/', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://www.gigalixir.com/pricing/', checkedAt: 2026-08-01 }
   - { field: regions, url: 'https://www.gigalixir.com/pricing/', checkedAt: 2026-08-01 }

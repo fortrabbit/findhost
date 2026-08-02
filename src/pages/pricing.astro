@@ -132,9 +132,10 @@ const examples = ['hetzner', 'aws', 'fortrabbit']
         <dt>Billed</dt>
         <dd>Which periods are offered at all — hourly, daily, monthly, yearly, or a multi-year term.</dd>
 
-        <dt>Cancellation</dt>
+        <dt>Getting out</dt>
         <dd>
-          Whether it stops when asked, at the end of the month, at the end of a paid term, or after a notice period.
+          How long you can still be billed after deciding to leave, worst case. A notice period and a minimum term are
+          the same thing to whoever is paying — time — so they add up rather than competing.
         </dd>
 
         <dt>Currencies</dt>
@@ -146,6 +147,26 @@ const examples = ['hetzner', 'aws', 'fortrabbit']
           below 1 would mean the price falls, which happens to nobody.
         </dd>
       </dl>
+
+      <h2>Getting out is half of what a price costs</h2>
+
+      <p>
+        This used to be recorded as a cancellation policy, with values like "cancel any time" and "runs to the end of
+        the paid term". Almost every host is both of those at once, which is how the phrase survives on so many pricing
+        pages while telling you nothing. What a reader wants is a duration: from the moment you decide to leave, how
+        long does the money keep going out?
+      </p>
+
+      <p>
+        So that is what is recorded. A server billed by the hour stops costing when you stop it — a day. A monthly plan
+        runs to the end of the month you have paid for. Thirty days' notice on a monthly plan is not a month, it is most
+        of a quarter, because the notice and the remaining term are both owed. An annual term is a year, whatever the
+        cancel button says.
+      </p>
+
+      <p>
+        It sits beside the price on every record, because a cheap plan you cannot leave for a year is not a cheap plan.
+      </p>
 
       <h2>What is recorded so far</h2>
 

@@ -36,6 +36,15 @@ deployMethods:
   - git-push
 sshAccess: full
 pricingModel: per-resource
+priceFrom: sm
+priceTo: md
+currencies:
+  - USD
+billingPeriods:
+  - monthly
+  - yearly
+billingTiming: advance
+exitWithin: a-month
 entryPrice: { amount: 10, currency: USD, period: month }
 freeTier: permanent
 contractMinimum: none
@@ -43,7 +52,12 @@ status: active
 checkedAt: 2026-08-01
 sources:
   - { field: entryPrice, url: 'https://www.pythonanywhere.com/pricing/', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://www.pythonanywhere.com/pricing/', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.pythonanywhere.com/pricing/', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://www.pythonanywhere.com/pricing/', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://www.pythonanywhere.com/pricing/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://www.pythonanywhere.com/pricing/', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://www.pythonanywhere.com/terms/', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://www.pythonanywhere.com/terms/', checkedAt: 2026-08-02 }
   - { field: freeTier, url: 'https://www.pythonanywhere.com/pricing/', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://www.pythonanywhere.com/pricing/', checkedAt: 2026-08-01 }
   - { field: hqCountry, url: 'https://www.pythonanywhere.com/about/company_details/', checkedAt: 2026-08-01 }

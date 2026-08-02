@@ -56,6 +56,14 @@ deployMethods:
   - control-panel
 sshAccess: full
 pricingModel: fixed-tier
+priceFrom: sm
+priceTo: xl
+currencies:
+  - EUR
+billingPeriods:
+  - monthly
+  - yearly
+billingTiming: advance
 freeTier: permanent
 regions:
   - FR
@@ -66,7 +74,11 @@ apiAvailable: public
 status: active
 checkedAt: 2026-08-01
 sources:
-  - { field: priceFrom, url: 'https://www.alwaysdata.com/en/pricing/', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.alwaysdata.com/en/offers/plus/', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://www.alwaysdata.com/en/offers/plus/', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://www.alwaysdata.com/en/offers/plus/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://www.alwaysdata.com/en/offers/plus/', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://help.alwaysdata.com/en/admin-billing/billing/', checkedAt: 2026-08-02 }
   - { field: freeTier, url: 'https://www.alwaysdata.com/en/pricing/', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://www.alwaysdata.com/en/pricing/', checkedAt: 2026-07-31 }
 figure:

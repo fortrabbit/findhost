@@ -33,11 +33,25 @@ sshAccess: full
 managedDatabases:
   - mysql
 pricingModel: fixed-tier
+priceFrom: md
+priceTo: xl
+currencies:
+  - USD
+billingPeriods:
+  - monthly
+  - yearly
+billingTiming: advance
+exitWithin: a-month
 freeTier: permanent
 status: active
 checkedAt: 2026-08-01
 sources:
-  - { field: priceFrom, url: 'https://gridpane.com/pricing/', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://gridpane.com/pricing/', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://gridpane.com/pricing/', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://gridpane.com/terms/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://gridpane.com/pricing/', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://gridpane.com/terms/', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://gridpane.com/terms/', checkedAt: 2026-08-02 }
   - { field: freeTier, url: 'https://gridpane.com/pricing/', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://gridpane.com/pricing/', checkedAt: 2026-08-01 }
   - { field: infraContract, url: 'https://gridpane.com/pricing/', checkedAt: 2026-08-01 }

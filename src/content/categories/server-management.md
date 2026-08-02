@@ -1,12 +1,12 @@
 ---
 id: server-management
-title: server management
+title: Server Management
 description: Control panels and provisioning services for servers rented somewhere else. The hosting is a third party's; the software that tames it is the product.
 figure:
   emoji: 🛠️
   color: rgb(20, 60, 120)
   textColor: rgb(235, 245, 255)
-  text: Still your server, still your midnight pager.
+  text: Your server, your midnight pager.
 ---
 
 Server management is the odd category in this dataset: most of the companies in it sell no hosting at all. What they sell is the software layer over a machine rented from somebody else — provisioning, web server and runtime configuration, TLS certificates, deploys, backups, user accounts, and a panel or an API to drive it all. Nearly every record here is [bring your own infrastructure](/hardware/): the account at Hetzner, DigitalOcean or AWS stays with the customer, and the panel connects to it.

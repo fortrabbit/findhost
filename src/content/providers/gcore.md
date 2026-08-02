@@ -30,6 +30,11 @@ deployMethods:
   - cli
 sshAccess: full
 pricingModel: usage-based
+currencies:
+  - EUR
+billingPeriods:
+  - monthly
+billingTiming: arrears
 apiAvailable: public
 iacSupport:
   - terraform
@@ -37,6 +42,9 @@ status: active
 checkedAt: 2026-08-01
 sources:
   - { field: pricingModel, url: 'https://gcore.com/pricing', checkedAt: 2026-08-01 }
+  - { field: currencies, url: 'https://gcore.com/pricing', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://gcore.com/pricing', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://gcore.com/pricing', checkedAt: 2026-08-02 }
   - { field: category, url: 'https://gcore.com/cloud', checkedAt: 2026-08-01 }
 figure:
   emoji: 🌐

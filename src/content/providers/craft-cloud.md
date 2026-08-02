@@ -20,12 +20,25 @@ deployMethods:
   - git-integration
 pricingModel: fixed-tier
 priceFrom: lg
+priceTo: xl
+currencies:
+  - USD
+billingPeriods:
+  - monthly
+  - yearly
+billingTiming: advance
+exitWithin: a-month
 entryPrice: { amount: 120, currency: USD, period: month }
 status: active
 checkedAt: 2026-08-01
 sources:
   - { field: entryPrice, url: 'https://craftcms.com/cloud', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://craftcms.com/cloud', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://craftcms.com/cloud', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://craftcms.com/cloud', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://craftcms.com/cloud', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://craftcms.com/docs/cloud/billing', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://craftcms.com/docs/cloud/billing', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://craftcms.com/docs/cloud/billing', checkedAt: 2026-08-02 }
   - { field: pricingModel, url: 'https://craftcms.com/cloud', checkedAt: 2026-07-31 }
   - { field: deployMethods, url: 'https://craftcms.com/cloud', checkedAt: 2026-07-31 }
   - { field: specialisation, url: 'https://craftcms.com/docs/cloud/', checkedAt: 2026-07-31 }

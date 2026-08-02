@@ -29,6 +29,15 @@ software:
   - statamic
   - craft-cms
 pricingModel: fixed-tier
+priceFrom: sm
+priceTo: md
+currencies:
+  - EUR
+  - USD
+billingPeriods:
+  - monthly
+  - yearly
+billingTiming: advance
 freeTier: permanent
 social:
   x: https://x.com/ploi_deploy
@@ -40,7 +49,11 @@ status: active
 checkedAt: 2026-08-01
 sources:
   - { field: hqCountry, url: 'https://ploi.io/pricing', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://ploi.io/pricing', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://ploi.io/pricing', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://ploi.io/pricing', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://ploi.io/pricing', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://ploi.io/pricing', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://ploi.io/pricing', checkedAt: 2026-08-02 }
   - { field: pricingModel, url: 'https://ploi.io/pricing', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://ploi.io/pricing', checkedAt: 2026-07-31 }
   - { field: infraContract, url: 'https://ploi.io/pricing', checkedAt: 2026-07-31 }

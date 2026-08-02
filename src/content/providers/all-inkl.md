@@ -29,7 +29,15 @@ deployMethods:
   - control-panel
 sshAccess: limited
 pricingModel: fixed-tier
-priceFrom: xs
+priceFrom: sm
+priceTo: xl
+currencies:
+  - EUR
+billingPeriods:
+  - monthly
+  - yearly
+billingTiming: advance
+exitWithin: a-month
 entryPrice: { amount: 4.95, currency: EUR, period: month }
 freeTier: trial
 contractMinimum: none
@@ -37,7 +45,12 @@ regions:
   - DE
 checkedAt: 2026-08-01
 sources:
-  - { field: priceFrom, url: 'https://www.all-inkl.com/webhosting/', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://all-inkl.com/webhosting/paketvergleich/', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://all-inkl.com/server/', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://all-inkl.com/agb/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://all-inkl.com/agb/', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://all-inkl.com/agb/', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://all-inkl.com/agb/', checkedAt: 2026-08-02 }
   - { field: contractMinimum, url: 'https://www.all-inkl.com/webhosting/', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://all-inkl.com/webhosting/', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://all-inkl.com/webhosting/', checkedAt: 2026-08-01 }

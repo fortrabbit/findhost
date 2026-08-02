@@ -33,6 +33,15 @@ deployMethods:
 sshAccess: full
 pricingModel: hourly
 priceFrom: sm
+priceTo: xl
+currencies:
+  - EUR
+billingPeriods:
+  - hourly
+  - monthly
+  - yearly
+  - multi-year
+exitWithin: a-day
 freeTier: none
 regions:
   - NL
@@ -53,6 +62,10 @@ checkedAt: 2026-08-01
 sources:
   - { field: regions, url: 'https://www.cherryservers.com/locations', checkedAt: 2026-08-01 }
   - { field: hqCountry, url: 'https://www.cherryservers.com/locations', checkedAt: 2026-08-01 }
+  - { field: priceTo, url: 'https://www.cherryservers.com/pricing', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://www.cherryservers.com/pricing', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://www.cherryservers.com/terms-of-service', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://www.cherryservers.com/terms-of-service', checkedAt: 2026-08-02 }
 figure:
   emoji: 🍒
   color: rgb(55, 20, 35)

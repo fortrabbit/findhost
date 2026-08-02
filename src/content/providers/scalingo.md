@@ -56,6 +56,12 @@ managedDatabases:
   - elasticsearch
 pricingModel: per-resource
 priceFrom: sm
+currencies:
+  - EUR
+billingPeriods:
+  - monthly
+billingTiming: arrears
+exitWithin: a-month
 freeTier: trial
 regions:
   - FR
@@ -72,6 +78,10 @@ sources:
   - { field: freeTier, url: 'https://scalingo.com/pricing', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://scalingo.com/pricing', checkedAt: 2026-08-01 }
   - { field: infraContract, url: 'https://doc.scalingo.com/platform/internals/regions', checkedAt: 2026-08-01 }
+  - { field: currencies, url: 'https://scalingo.com/general-terms-and-conditions', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://scalingo.com/general-terms-and-conditions', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://scalingo.com/general-terms-and-conditions', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://scalingo.com/general-terms-and-conditions', checkedAt: 2026-08-02 }
 figure:
   emoji: 🥖
   color: rgb(40, 60, 130)

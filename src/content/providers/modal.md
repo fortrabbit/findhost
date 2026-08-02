@@ -29,6 +29,14 @@ deployMethods:
   - cli
   - api
 pricingModel: usage-based
+priceFrom: sm
+priceTo: xl
+currencies:
+  - USD
+billingPeriods:
+  - monthly
+billingTiming: arrears
+exitWithin: a-quarter
 freeTier: permanent
 regions:
   - US
@@ -45,7 +53,12 @@ status: active
 checkedAt: 2026-08-01
 sources:
   - { field: regions, url: 'https://modal.com/docs/guide/region-selection', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://modal.com/pricing', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://modal.com/pricing', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://modal.com/pricing', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://modal.com/pricing', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://modal.com/legal/terms', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://modal.com/legal/terms', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://modal.com/legal/terms', checkedAt: 2026-08-02 }
   - { field: freeTier, url: 'https://modal.com/pricing', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://modal.com/pricing', checkedAt: 2026-08-01 }
 figure:

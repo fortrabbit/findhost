@@ -25,6 +25,11 @@ deployMethods:
   - git-integration
 backupsIncluded: included
 pricingModel: fixed-tier
+billingPeriods:
+  - monthly
+  - yearly
+billingTiming: advance
+exitWithin: a-month
 regions:
   - US
   - GB
@@ -38,6 +43,9 @@ sources:
   - { field: ownership, url: 'https://servd.host/terms', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://servd.host/terms', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://servd.host/pricing', checkedAt: 2026-07-31 }
+  - { field: billingPeriods, url: 'https://servd.host/pricing', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://servd.host/terms', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://servd.host/terms', checkedAt: 2026-08-02 }
   - { field: backupsIncluded, url: 'https://servd.host/pricing', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://servd.host/pricing', checkedAt: 2026-07-31 }
   - { field: deployMethods, url: 'https://servd.host/pricing', checkedAt: 2026-07-31 }

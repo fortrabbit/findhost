@@ -39,6 +39,12 @@ managedDatabases:
   - influxdb
 entryPrice: { amount: 6, currency: EUR, period: month }
 priceFrom: sm
+priceTo: sm
+currencies:
+  - EUR
+billingPeriods:
+  - monthly
+exitWithin: a-month
 freeTier: trial
 contractMinimum: none
 energyClaim: annual-matched
@@ -47,6 +53,10 @@ checkedAt: 2026-08-01
 sources:
   - { field: entryPrice, url: 'https://uberspace.de/en/product/', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://uberspace.de/en/product/', checkedAt: 2026-08-01 }
+  - { field: priceTo, url: 'https://uberspace.de/en/product/', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://uberspace.de/en/product/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://uberspace.de/en/product/', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://uberspace.de/en/about/', checkedAt: 2026-08-02 }
   - { field: freeTier, url: 'https://uberspace.de/en/about/', checkedAt: 2026-08-01 }
   - { field: contractMinimum, url: 'https://uberspace.de/en/about/', checkedAt: 2026-08-01 }
   - { field: energyClaim, url: 'https://uberspace.de/en/product/', checkedAt: 2026-08-01 }

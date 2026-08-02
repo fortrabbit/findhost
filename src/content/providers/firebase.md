@@ -35,11 +35,17 @@ deployMethods:
   - api
 sshAccess: none
 pricingModel: usage-based
+priceFrom: xs
+billingPeriods:
+  - monthly
+billingTiming: arrears
 freeTier: permanent
 status: active
 checkedAt: 2026-08-01
 sources:
-  - { field: priceFrom, url: 'https://firebase.google.com/pricing', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://firebase.google.com/pricing', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://docs.cloud.google.com/billing/docs/how-to/billing-cycle', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://docs.cloud.google.com/billing/docs/how-to/billing-cycle', checkedAt: 2026-08-02 }
   - { field: freeTier, url: 'https://firebase.google.com/pricing', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://firebase.google.com/pricing', checkedAt: 2026-08-01 }
 apiAvailable: public

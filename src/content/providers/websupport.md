@@ -32,6 +32,13 @@ deployMethods:
 backupsIncluded: included
 pricingModel: fixed-tier
 priceFrom: xs
+priceTo: md
+currencies:
+  - EUR
+billingPeriods:
+  - monthly
+  - yearly
+exitWithin: a-quarter
 entryPrice: { amount: 2.99, currency: EUR, period: month }
 freeTier: none
 regions:
@@ -53,7 +60,11 @@ sources:
   - { field: parent, url: 'https://www.websupport.sk/o-nas', checkedAt: 2026-08-01 }
   - { field: supportHours, url: 'https://www.websupport.sk/o-nas', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://www.websupport.sk/webhosting', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://www.websupport.sk/webhosting', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.websupport.sk/cennik', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://www.websupport.sk/cennik', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://www.websupport.sk/cennik', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://www.websupport.sk/cennik', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://www.websupport.sk/obchodne-podmienky/', checkedAt: 2026-08-02 }
   - { field: social, url: 'https://www.websupport.sk', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://www.websupport.sk/podmienky', checkedAt: 2026-08-01 }
 figure:

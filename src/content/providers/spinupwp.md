@@ -35,6 +35,13 @@ deployMethods:
 sshAccess: full
 pricingModel: fixed-tier
 priceFrom: sm
+priceTo: md
+currencies:
+  - USD
+billingPeriods:
+  - monthly
+billingTiming: advance
+exitWithin: a-quarter
 entryPrice: { amount: 12, currency: USD, period: month }
 freeTier: trial
 social:
@@ -47,6 +54,11 @@ sources:
   - { field: entryPrice, url: 'https://spinupwp.com/pricing/', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://spinupwp.com/terms/', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://spinupwp.com/pricing/', checkedAt: 2026-07-31 }
+  - { field: priceTo, url: 'https://spinupwp.com/pricing/', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://spinupwp.com/terms/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://spinupwp.com/terms/', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://spinupwp.com/terms/', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://spinupwp.com/terms/', checkedAt: 2026-08-02 }
   - { field: pricingModel, url: 'https://spinupwp.com/pricing/', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://spinupwp.com/pricing/', checkedAt: 2026-07-31 }
   - { field: infraContract, url: 'https://spinupwp.com/pricing/', checkedAt: 2026-07-31 }

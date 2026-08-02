@@ -44,6 +44,14 @@ deployMethods:
 sshAccess: full
 pricingModel: fixed-tier
 priceFrom: sm
+priceTo: md
+currencies:
+  - EUR
+billingPeriods:
+  - monthly
+  - yearly
+billingTiming: advance
+exitWithin: a-year
 renewalMultiple: 2
 contractMinimum: annual
 freeTier: none
@@ -61,7 +69,12 @@ checkedAt: 2026-08-01
 sources:
   - { field: supportHours, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-08-01 }
   - { field: supportChannels, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://www.ionos.de/terms-gtc/terms', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://www.ionos.de/terms-gtc/terms', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://www.ionos.de/terms-gtc/terms', checkedAt: 2026-08-02 }
   - { field: renewalMultiple, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-07-31 }
   - { field: contractMinimum, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-07-31 }

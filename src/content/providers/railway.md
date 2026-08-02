@@ -30,6 +30,14 @@ managedDatabases:
   - mongodb
   - redis
 pricingModel: usage-based
+priceFrom: sm
+priceTo: lg
+currencies:
+  - USD
+billingPeriods:
+  - monthly
+billingTiming: arrears
+exitWithin: a-month
 freeTier: permanent
 regions:
   - US
@@ -45,7 +53,12 @@ status: active
 checkedAt: 2026-07-31
 sources:
   - { field: pricingModel, url: 'https://docs.railway.com/reference/pricing/plans', checkedAt: 2026-07-31 }
-  - { field: priceFrom, url: 'https://docs.railway.com/reference/pricing/plans', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://docs.railway.com/reference/pricing/plans', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://docs.railway.com/reference/pricing/plans', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://docs.railway.com/reference/pricing/plans', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://docs.railway.com/reference/pricing/plans', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://docs.railway.com/reference/pricing/plans', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://docs.railway.com/reference/pricing/faqs', checkedAt: 2026-08-02 }
   - { field: freeTier, url: 'https://docs.railway.com/reference/pricing/plans', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://docs.railway.com/reference/regions', checkedAt: 2026-07-31 }
   - { field: managedDatabases, url: 'https://docs.railway.com/reference/databases', checkedAt: 2026-07-31 }

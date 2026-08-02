@@ -15,6 +15,9 @@ useCases:
 software:
   - wordpress
 priceFrom: xs
+billingPeriods:
+  - monthly
+  - yearly
 supportChannels:
   - chat
   - phone
@@ -40,6 +43,7 @@ sources:
   - { field: priceFrom, url: 'https://www.hosting.com/', checkedAt: 2026-07-31 }
   - { field: software, url: 'https://www.hosting.com/', checkedAt: 2026-07-31 }
   - { field: useCases, url: 'https://www.hosting.com/', checkedAt: 2026-07-31 }
+  - { field: billingPeriods, url: 'https://www.hosting.com/web-hosting/', checkedAt: 2026-08-02 }
 figure:
   emoji: 🐌
   color: rgb(170, 68, 68)

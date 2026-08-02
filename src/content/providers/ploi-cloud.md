@@ -31,6 +31,13 @@ managedDatabases:
   - mongodb
 pricingModel: per-resource
 priceFrom: sm
+priceTo: lg
+currencies:
+  - EUR
+billingPeriods:
+  - hourly
+  - monthly
+exitWithin: a-day
 freeTier: trial
 regions:
   - NL
@@ -42,7 +49,10 @@ sources:
   - { field: runsOn, url: 'https://ploi.cloud', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://ploi.cloud', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://ploi.cloud', checkedAt: 2026-07-31 }
-  - { field: priceFrom, url: 'https://ploi.cloud', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://ploi.cloud', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://ploi.cloud/pricing/databases', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://ploi.cloud/pricing/databases', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://ploi.cloud/pricing/calculator', checkedAt: 2026-08-02 }
   - { field: freeTier, url: 'https://ploi.cloud', checkedAt: 2026-07-31 }
   - { field: software, url: 'https://ploi.cloud', checkedAt: 2026-07-31 }
   - { field: managedDatabases, url: 'https://ploi.cloud', checkedAt: 2026-07-31 }

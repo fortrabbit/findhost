@@ -30,6 +30,16 @@ sshAccess: full
 managedDatabases:
   - postgres
 pricingModel: hourly
+priceFrom: lg
+priceTo: 2xl
+currencies:
+  - USD
+billingPeriods:
+  - hourly
+  - monthly
+  - yearly
+exitWithin: a-day
+billingTiming: arrears
 freeTier: none
 regions:
   - US
@@ -55,6 +65,11 @@ sources:
   - { field: regions, url: 'https://www.latitude.sh/locations', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://www.latitude.sh/pricing', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://www.latitude.sh/pricing', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.latitude.sh/pricing', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://www.latitude.sh/pricing', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://www.latitude.sh/pricing', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://www.latitude.sh/pricing', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://www.latitude.sh/pricing', checkedAt: 2026-08-02 }
 figure:
   emoji: 🛰️
   color: rgb(25, 30, 40)

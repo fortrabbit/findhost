@@ -45,6 +45,15 @@ managedDatabases:
   - valkey
 pricingModel: hourly
 priceFrom: sm
+priceTo: xl
+currencies:
+  - CHF
+  - EUR
+  - USD
+billingPeriods:
+  - hourly
+  - monthly
+exitWithin: a-day
 entryPrice: { amount: 0.0056, currency: EUR, period: hour }
 freeTier: none
 regions:
@@ -59,6 +68,11 @@ sources:
   - { field: entryPrice, url: 'https://www.exoscale.com/pricing/', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://www.exoscale.com/pricing/', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://www.exoscale.com/pricing/', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.exoscale.com/pricing/', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://www.exoscale.com/pricing/', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://www.exoscale.com/pricing/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://www.exoscale.com/pricing/', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://www.exoscale.com/terms/', checkedAt: 2026-08-02 }
 supportChannels:
   - email
   - chat

@@ -24,6 +24,12 @@ runtimes:
   - php
 persistentStorage: false
 pricingModel: fixed-tier
+priceFrom: sm
+priceTo: md
+currencies:
+  - USD
+billingPeriods:
+  - monthly
 freeTier: permanent
 regions:
   - FR
@@ -40,7 +46,10 @@ sources:
   - { field: regions, url: 'https://docs.wasmer.io/edge/learn/regions', checkedAt: 2026-08-01 }
   - { field: social, url: 'https://wasmer.io', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://docs.wasmer.io/', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://wasmer.io/pricing', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://wasmer.io/pricing', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://wasmer.io/pricing', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://wasmer.io/pricing', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://wasmer.io/pricing', checkedAt: 2026-08-02 }
   - { field: freeTier, url: 'https://wasmer.io/pricing', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://wasmer.io/pricing', checkedAt: 2026-07-31 }
   - { field: software, url: 'https://wasmer.io/pricing', checkedAt: 2026-07-31 }

@@ -22,6 +22,14 @@ runtimes:
 runsOn:
   - aws
 pricingModel: fixed-tier
+priceFrom: md
+priceTo: md
+currencies:
+  - USD
+billingPeriods:
+  - monthly
+  - yearly
+billingTiming: advance
 freeTier: permanent
 persistentStorage: false
 status: active
@@ -30,7 +38,11 @@ sources:
   - { field: runsOn, url: 'https://vapor.laravel.com', checkedAt: 2026-07-31 }
   - { field: infraContract, url: 'https://vapor.laravel.com', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://vapor.laravel.com', checkedAt: 2026-07-31 }
-  - { field: priceFrom, url: 'https://vapor.laravel.com', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://vapor.laravel.com', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://vapor.laravel.com', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://vapor.laravel.com', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://vapor.laravel.com', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://vapor.laravel.com', checkedAt: 2026-08-02 }
   - { field: freeTier, url: 'https://vapor.laravel.com', checkedAt: 2026-07-31 }
 figure:
   emoji: 🌫️

@@ -17,7 +17,21 @@ software:
   - wordpress
   - woocommerce
 pricingModel: fixed-tier
-priceFrom: xs
+priceFrom: sm
+priceTo: md
+currencies:
+  - USD
+  - GBP
+  - EUR
+  - CAD
+  - AUD
+  - INR
+billingPeriods:
+  - monthly
+  - yearly
+  - multi-year
+billingTiming: advance
+exitWithin: over-a-year
 renewalMultiple: 2.5
 contractMinimum: multi-year
 status: active
@@ -27,7 +41,12 @@ sources:
   - { field: hqCountry, url: 'https://www.bluehost.com/about', checkedAt: 2026-08-01 }
   - { field: parent, url: 'https://www.bluehost.com/about', checkedAt: 2026-08-01 }
   - { field: ownership, url: 'https://www.newfold.com/brands', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://www.bluehost.com/hosting/shared', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://www.bluehost.com/hosting/shared', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://www.bluehost.com/hosting/shared', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://www.bluehost.com/terms/user-agreement', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://www.bluehost.com/terms/user-agreement', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://www.bluehost.com/terms/user-agreement', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://www.bluehost.com/terms/user-agreement', checkedAt: 2026-08-02 }
   - { field: renewalMultiple, url: 'https://www.bluehost.com/hosting/shared', checkedAt: 2026-07-31 }
   - { field: contractMinimum, url: 'https://www.bluehost.com/hosting/shared', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://www.bluehost.com/hosting/shared', checkedAt: 2026-07-31 }

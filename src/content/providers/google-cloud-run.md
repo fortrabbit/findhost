@@ -18,6 +18,10 @@ deployMethods:
   - cli
 persistentStorage: false
 pricingModel: usage-based
+priceFrom: xs
+billingPeriods:
+  - monthly
+billingTiming: arrears
 freeTier: permanent
 regions:
   - AU
@@ -59,7 +63,9 @@ sources:
   - { field: regions, url: 'https://docs.cloud.google.com/run/docs/locations', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://cloud.google.com/run/pricing', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://cloud.google.com/run/pricing', checkedAt: 2026-07-31 }
-  - { field: priceFrom, url: 'https://cloud.google.com/run/pricing', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://cloud.google.com/run/pricing', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://docs.cloud.google.com/billing/docs/how-to/billing-cycle', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://docs.cloud.google.com/billing/docs/how-to/billing-cycle', checkedAt: 2026-08-02 }
   - { field: deployMethods, url: 'https://cloud.google.com/run/pricing', checkedAt: 2026-07-31 }
 figure:
   emoji: 🏃

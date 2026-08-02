@@ -38,6 +38,14 @@ managedDatabases:
 pricingModel: fixed-tier
 entryPrice: { amount: 69, currency: INR, period: month }
 priceFrom: xs
+priceTo: sm
+currencies:
+  - INR
+billingPeriods:
+  - monthly
+  - yearly
+  - multi-year
+exitWithin: over-a-year
 freeTier: none
 contractMinimum: multi-year
 regions:
@@ -56,7 +64,10 @@ checkedAt: 2026-08-01
 sources:
   - { field: regions, url: 'https://www.milesweb.in/hosting/web-hosting', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://www.milesweb.in/hosting/web-hosting', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://www.milesweb.in/hosting/web-hosting', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.milesweb.in/hosting/web-hosting', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://www.milesweb.in/hosting/web-hosting', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://www.milesweb.in/hosting/web-hosting', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://www.milesweb.in/hosting/web-hosting', checkedAt: 2026-08-02 }
   - { field: contractMinimum, url: 'https://www.milesweb.in/hosting/web-hosting', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://www.milesweb.in/hosting/web-hosting', checkedAt: 2026-08-01 }
   - { field: supportHours, url: 'https://www.milesweb.in/hosting/web-hosting', checkedAt: 2026-08-01 }

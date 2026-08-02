@@ -37,6 +37,14 @@ deployMethods:
 sshAccess: full
 pricingModel: fixed-tier
 priceFrom: sm
+priceTo: md
+currencies:
+  - USD
+billingPeriods:
+  - monthly
+  - yearly
+billingTiming: advance
+exitWithin: a-month
 entryPrice: { amount: 10, currency: USD, period: month }
 freeTier: trial
 status: active
@@ -44,6 +52,11 @@ checkedAt: 2026-08-01
 sources:
   - { field: entryPrice, url: 'https://www.hatchbox.io/pricing', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://www.hatchbox.io/pricing', checkedAt: 2026-08-01 }
+  - { field: priceTo, url: 'https://www.hatchbox.io/pricing', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://www.hatchbox.io/pricing', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://www.hatchbox.io/pricing', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://www.hatchbox.io/terms', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://www.hatchbox.io/terms', checkedAt: 2026-08-02 }
   - { field: pricingModel, url: 'https://www.hatchbox.io/pricing', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://www.hatchbox.io/pricing', checkedAt: 2026-08-01 }
 figure:

@@ -56,6 +56,15 @@ managedDatabases:
   - clickhouse
   - kafka
 pricingModel: per-resource
+priceFrom: md
+priceTo: lg
+currencies:
+  - USD
+billingPeriods:
+  - hourly
+  - monthly
+exitWithin: a-day
+billingTiming: advance
 freeTier: trial
 regions:
   - CZ
@@ -79,6 +88,11 @@ sources:
   - { field: ownership, url: 'https://docs.zerops.io/company/about', checkedAt: 2026-08-01 }
   - { field: infraContract, url: 'https://docs.zerops.io/company/about', checkedAt: 2026-08-01 }
   - { field: social, url: 'https://zerops.io', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://docs.zerops.io/company/pricing', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://docs.zerops.io/company/pricing', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://docs.zerops.io/company/pricing', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://docs.zerops.io/company/pricing', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://docs.zerops.io/company/pricing', checkedAt: 2026-08-02 }
   - { field: urls, url: 'https://zerops.io/terms', checkedAt: 2026-08-01 }
 figure:
   emoji: 🧊

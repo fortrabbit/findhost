@@ -27,6 +27,14 @@ deployMethods:
 backupsIncluded: included
 pricingModel: fixed-tier
 priceFrom: sm
+priceTo: md
+currencies:
+  - JPY
+billingPeriods:
+  - yearly
+  - multi-year
+exitWithin: a-year
+billingTiming: advance
 entryPrice: { amount: 990, currency: JPY, period: month }
 freeTier: trial
 regions:
@@ -43,6 +51,10 @@ sources:
   - { field: certifications, url: 'https://www.xserver.ne.jp/company.php', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://www.xserver.ne.jp/price/', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://www.xserver.ne.jp/price/', checkedAt: 2026-08-01 }
+  - { field: priceTo, url: 'https://www.xserver.ne.jp/price/', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://www.xserver.ne.jp/price/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://www.xserver.ne.jp/price/', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://www.xserver.ne.jp/price/', checkedAt: 2026-08-02 }
   - { field: freeTier, url: 'https://www.xserver.ne.jp/price/', checkedAt: 2026-08-01 }
   - { field: contractMinimum, url: 'https://www.xserver.ne.jp/price/', checkedAt: 2026-08-01 }
   - { field: social, url: 'https://www.xserver.ne.jp', checkedAt: 2026-08-01 }

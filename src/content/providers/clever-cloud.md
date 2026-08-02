@@ -52,6 +52,13 @@ managedDatabases:
   - mongodb
   - redis
 pricingModel: per-resource
+priceFrom: sm
+priceTo: xl
+currencies:
+  - EUR
+billingPeriods:
+  - monthly
+billingTiming: arrears
 freeTier: trial
 regions:
   - FR
@@ -67,6 +74,12 @@ iacSupport:
   - terraform
 social:
   github: https://github.com/CleverCloud
+sources:
+  - { field: priceFrom, url: 'https://clever.cloud/pricing/', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://clever.cloud/pricing/', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://clever.cloud/pricing/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://www.clever.cloud/developers/doc/billing/payments-invoicing/', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://www.clever.cloud/developers/doc/billing/payments-invoicing/', checkedAt: 2026-08-02 }
 figure:
   emoji: 🐇
   color: rgb(230, 60, 50)

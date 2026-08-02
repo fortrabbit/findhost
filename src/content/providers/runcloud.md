@@ -15,6 +15,11 @@ audience:
   - enterprise
 runtimes:
   - php
+billingPeriods:
+  - monthly
+  - yearly
+billingTiming: advance
+exitWithin: a-month
 freeTier: trial
 runsOn:
   - digitalocean
@@ -27,6 +32,9 @@ sources:
   - { field: freeTier, url: 'https://runcloud.io/', checkedAt: 2026-08-01 }
   - { field: runsOn, url: 'https://runcloud.io/', checkedAt: 2026-08-01 }
   - { field: infraContract, url: 'https://runcloud.io/', checkedAt: 2026-08-01 }
+  - { field: billingPeriods, url: 'https://runcloud.io/docs/updating-your-subscription', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://runcloud.io/docs/updating-your-subscription', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://runcloud.io/docs/cancel-runcloud-subscription', checkedAt: 2026-08-02 }
 figure:
   emoji: 🔁
   color: rgb(0, 135, 150)

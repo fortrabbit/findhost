@@ -15,7 +15,13 @@ useCases:
 software:
   - wordpress
 pricingModel: fixed-tier
-priceFrom: xs
+priceFrom: sm
+priceTo: md
+billingPeriods:
+  - monthly
+  - yearly
+billingTiming: advance
+exitWithin: a-year
 entryPrice: { amount: 2.89, currency: EUR, period: month }
 renewalMultiple: 3.8
 contractMinimum: annual
@@ -24,7 +30,11 @@ checkedAt: 2026-08-01
 sources:
   - { field: entryPrice, url: 'https://www.dreamhost.com/hosting/shared/', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://www.dreamhost.com/legal/', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://www.dreamhost.com/hosting/shared/', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://www.dreamhost.com/hosting/shared/', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://www.dreamhost.com/hosting/shared/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://www.dreamhost.com/hosting/shared/', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://www.dreamhost.com/legal/terms-of-service/', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://www.dreamhost.com/legal/terms-of-service/', checkedAt: 2026-08-02 }
   - { field: renewalMultiple, url: 'https://www.dreamhost.com/hosting/shared/', checkedAt: 2026-07-31 }
   - { field: contractMinimum, url: 'https://www.dreamhost.com/hosting/shared/', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://www.dreamhost.com/hosting/shared/', checkedAt: 2026-07-31 }

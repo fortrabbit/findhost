@@ -39,12 +39,26 @@ deployMethods:
   - api
 sshAccess: full
 pricingModel: fixed-tier
+priceFrom: md
+priceTo: lg
+currencies:
+  - USD
+billingPeriods:
+  - monthly
+  - yearly
+billingTiming: advance
+exitWithin: a-month
 freeTier: permanent
 apiAvailable: public
 cliTool: official
 checkedAt: 2026-08-01
 sources:
-  - { field: priceFrom, url: 'https://www.cloud66.com/pricing/', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.cloud66.com/pricing/', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://www.cloud66.com/pricing/', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://www.cloud66.com/pricing/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://www.cloud66.com/pricing/', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://www.cloud66.com/pricing/', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://www.cloud66.com/pricing/', checkedAt: 2026-08-02 }
   - { field: freeTier, url: 'https://www.cloud66.com/pricing/', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://www.cloud66.com/pricing/', checkedAt: 2026-08-01 }
 figure:

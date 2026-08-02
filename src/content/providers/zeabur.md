@@ -46,6 +46,13 @@ deployMethods:
   - docker-image
   - cli
 pricingModel: fixed-tier
+priceFrom: sm
+priceTo: lg
+currencies:
+  - USD
+billingPeriods:
+  - monthly
+exitWithin: a-month
 freeTier: permanent
 apiAvailable: public
 cliTool: official
@@ -57,6 +64,11 @@ checkedAt: 2026-08-01
 sources:
   - { field: hqCountry, url: 'https://zeabur.com/about', checkedAt: 2026-08-01 }
   - { field: social, url: 'https://zeabur.com', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://zeabur.com/pricing', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://zeabur.com/pricing', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://zeabur.com/docs/legal/terms', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://zeabur.com/pricing', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://zeabur.com/docs/legal/terms', checkedAt: 2026-08-02 }
   - { field: urls, url: 'https://zeabur.com/docs/legal/terms', checkedAt: 2026-08-01 }
 figure:
   emoji: 🧩

@@ -38,6 +38,11 @@ deployMethods:
   - git-push
 pricingModel: fixed-tier
 priceFrom: md
+priceTo: md
+billingPeriods:
+  - yearly
+exitWithin: a-year
+billingTiming: advance
 entryPrice: { amount: 15.99, currency: EUR, period: month }
 renewalMultiple: 5.3
 freeTier: none
@@ -58,6 +63,9 @@ sources:
   - { field: ownership, url: 'https://www.siteground.com/company', checkedAt: 2026-08-01 }
   - { field: supportHours, url: 'https://www.siteground.com/company', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://eu.siteground.com/web-hosting.htm', checkedAt: 2026-07-31 }
+  - { field: priceTo, url: 'https://eu.siteground.com/web-hosting.htm', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://eu.siteground.com/web-hosting.htm', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://eu.siteground.com/web-hosting.htm', checkedAt: 2026-08-02 }
   - { field: entryPrice, url: 'https://www.siteground.com/web-hosting.htm', checkedAt: 2026-08-01 }
   - { field: renewalMultiple, url: 'https://www.siteground.com/web-hosting.htm', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://www.siteground.com/viewtos/terms_of_service', checkedAt: 2026-08-01 }

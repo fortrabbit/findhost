@@ -11,13 +11,27 @@ runtimes:
   - python
   - rust
 pricingModel: usage-based
+priceFrom: sm
+priceTo: lg
+currencies:
+  - USD
+billingPeriods:
+  - monthly
+  - yearly
+billingTiming: advance
+exitWithin: a-month
 freeTier: permanent
 status: active
 checkedAt: 2026-07-31
 sources:
   - { field: runtimes, url: 'https://developers.cloudflare.com/workers/languages/', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://developers.cloudflare.com/workers/platform/pricing/', checkedAt: 2026-07-31 }
-  - { field: priceFrom, url: 'https://developers.cloudflare.com/workers/platform/pricing/', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://developers.cloudflare.com/workers/platform/pricing/', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://developers.cloudflare.com/workers/platform/pricing/', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://developers.cloudflare.com/workers/platform/pricing/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://developers.cloudflare.com/billing/billing-policy/', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://developers.cloudflare.com/billing/billing-policy/', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://developers.cloudflare.com/billing/billing-policy/', checkedAt: 2026-08-02 }
   - { field: freeTier, url: 'https://developers.cloudflare.com/workers/platform/pricing/', checkedAt: 2026-07-31 }
 figure:
   emoji: 🔶

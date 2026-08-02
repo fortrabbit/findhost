@@ -27,6 +27,14 @@ deployMethods:
   - sftp
 pricingModel: fixed-tier
 priceFrom: md
+priceTo: lg
+currencies:
+  - USD
+billingPeriods:
+  - monthly
+  - yearly
+billingTiming: advance
+exitWithin: a-quarter
 entryPrice: { amount: 25, currency: USD, period: month }
 freeTier: none
 supportChannels:
@@ -38,7 +46,12 @@ status: active
 checkedAt: 2026-08-01
 sources:
   - { field: entryPrice, url: 'https://rocket.net/pricing/', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://rocket.net/pricing/', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://rocket.net/pricing/', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://rocket.net/pricing/', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://rocket.net/pricing/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://rocket.net/pricing/', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://rocket.net/terms-of-service/', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://rocket.net/terms-of-service/', checkedAt: 2026-08-02 }
   - { field: pricingModel, url: 'https://rocket.net/pricing/', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://rocket.net/pricing/', checkedAt: 2026-08-01 }
   - { field: supportHours, url: 'https://rocket.net/pricing/', checkedAt: 2026-08-01 }

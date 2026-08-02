@@ -20,6 +20,11 @@ audience:
   - beginner
   - smb
 sshAccess: none
+billingPeriods:
+  - monthly
+  - yearly
+billingTiming: advance
+exitWithin: a-month
 freeTier: trial
 contractMinimum: monthly
 social:
@@ -32,6 +37,9 @@ checkedAt: 2026-08-01
 sources:
   - { field: freeTier, url: 'https://www.squarespace.com/pricing', checkedAt: 2026-07-31 }
   - { field: contractMinimum, url: 'https://www.squarespace.com/pricing', checkedAt: 2026-07-31 }
+  - { field: billingPeriods, url: 'https://www.squarespace.com/terms-of-service', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://www.squarespace.com/terms-of-service', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://www.squarespace.com/terms-of-service', checkedAt: 2026-08-02 }
   - { field: social, url: 'https://www.squarespace.com', checkedAt: 2026-08-01 }
 figure:
   emoji: 🎨

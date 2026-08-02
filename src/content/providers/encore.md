@@ -28,13 +28,27 @@ deployMethods:
   - cli
   - docker-image
 pricingModel: per-resource
+priceFrom: xl
+priceTo: 2xl
+currencies:
+  - USD
+billingPeriods:
+  - monthly
+  - yearly
+billingTiming: arrears
+exitWithin: a-month
 freeTier: permanent
 apiAvailable: public
 cliTool: official
 status: active
 checkedAt: 2026-08-01
 sources:
-  - { field: priceFrom, url: 'https://encore.dev/pricing', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://encore.dev/pricing', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://encore.dev/pricing', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://encore.dev/pricing', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://encore.dev/legal/terms', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://encore.dev/legal/terms', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://encore.dev/legal/terms', checkedAt: 2026-08-02 }
   - { field: freeTier, url: 'https://encore.dev/pricing', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://encore.dev/pricing', checkedAt: 2026-08-01 }
 figure:

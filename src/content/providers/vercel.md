@@ -37,6 +37,13 @@ runtimes:
   - docker
 persistentStorage: false
 pricingModel: credit
+priceFrom: md
+priceTo: xl
+currencies:
+  - USD
+billingPeriods:
+  - monthly
+exitWithin: a-month
 freeTier: permanent
 regions:
   - US
@@ -68,7 +75,11 @@ sources:
   - { field: persistentStorage, url: 'https://vercel.com/docs/functions/runtimes', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://vercel.com/docs/regions', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://vercel.com/docs/plans', checkedAt: 2026-07-31 }
-  - { field: priceFrom, url: 'https://vercel.com/docs/plans', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://vercel.com/docs/plans/pro-plan', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://vercel.com/docs/plans/pro-plan', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://vercel.com/legal/terms', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://vercel.com/docs/plans/pro-plan', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://vercel.com/legal/terms', checkedAt: 2026-08-02 }
   - { field: pricingModel, url: 'https://vercel.com/docs/plans', checkedAt: 2026-07-31 }
   - { field: supportChannels, url: 'https://vercel.com/docs/plans', checkedAt: 2026-07-31 }
   - { field: supportTiering, url: 'https://vercel.com/docs/plans', checkedAt: 2026-07-31 }

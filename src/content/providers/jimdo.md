@@ -9,6 +9,10 @@ urls:
 category: lcnc
 description: Jimdo is a Hamburg website builder that bundles hosting, templates and AI-assisted site creation for the self-employed and small businesses.
 founded: 2007
+billingPeriods:
+  - monthly
+  - yearly
+  - multi-year
 freeTier: permanent
 status: active
 checkedAt: 2026-08-01
@@ -16,6 +20,7 @@ sources:
   - { field: founded, url: 'https://www.jimdo.com/pricing/', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://www.jimdo.com/pricing/', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://www.jimdo.com/pricing/', checkedAt: 2026-08-01 }
+  - { field: billingPeriods, url: 'https://www.jimdo.com/pricing/website/', checkedAt: 2026-08-02 }
 figure:
   emoji: 🪴
   color: rgb(80, 120, 80)

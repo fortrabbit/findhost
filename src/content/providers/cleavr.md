@@ -43,6 +43,14 @@ managedDatabases:
   - postgres
 pricingModel: fixed-tier
 priceFrom: sm
+priceTo: md
+currencies:
+  - USD
+billingPeriods:
+  - monthly
+  - yearly
+billingTiming: advance
+exitWithin: a-month
 entryPrice: { amount: 5.50, currency: USD, period: month }
 freeTier: trial
 checkedAt: 2026-08-01
@@ -50,6 +58,11 @@ sources:
   - { field: entryPrice, url: 'https://cleavr.io/pricing', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://cleavr.io/pricing', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://cleavr.io/pricing', checkedAt: 2026-08-01 }
+  - { field: priceTo, url: 'https://cleavr.io/pricing', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://cleavr.io/pricing', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://cleavr.io/pricing', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://cleavr.io/terms', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://cleavr.io/terms', checkedAt: 2026-08-02 }
 figure:
   emoji: 🔪
   color: rgb(40, 30, 30)

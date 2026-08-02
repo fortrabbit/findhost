@@ -31,6 +31,13 @@ deployMethods:
   - control-panel
 pricingModel: fixed-tier
 priceFrom: sm
+priceTo: md
+currencies:
+  - ZAR
+billingPeriods:
+  - monthly
+billingTiming: advance
+exitWithin: a-quarter
 entryPrice: { amount: 99, currency: ZAR, period: month }
 freeTier: none
 regions:
@@ -52,6 +59,11 @@ sources:
   - { field: regions, url: 'https://xneelo.co.za/data-centre/', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://xneelo.co.za/web-hosting/', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://xneelo.co.za/web-hosting/', checkedAt: 2026-08-01 }
+  - { field: priceTo, url: 'https://xneelo.co.za/web-hosting/', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://xneelo.co.za/web-hosting/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://xneelo.co.za/legal/terms-of-service/', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://xneelo.co.za/legal/terms-of-service/', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://xneelo.co.za/legal/terms-of-service/', checkedAt: 2026-08-02 }
   - { field: supportHours, url: 'https://xneelo.co.za/web-hosting/', checkedAt: 2026-08-01 }
   - { field: supportChannels, url: 'https://xneelo.co.za/web-hosting/', checkedAt: 2026-08-01 }
   - { field: certifications, url: 'https://xneelo.co.za/data-centre/', checkedAt: 2026-08-01 }

@@ -33,11 +33,25 @@ deployMethods:
   - control-panel
 sshAccess: full
 pricingModel: per-resource
+priceFrom: sm
+priceTo: md
+currencies:
+  - USD
+billingPeriods:
+  - monthly
+  - yearly
+billingTiming: advance
+exitWithin: a-month
 freeTier: permanent
 status: active
 checkedAt: 2026-08-01
 sources:
-  - { field: priceFrom, url: 'https://easypanel.io/pricing', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://easypanel.io/pricing', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://easypanel.io/pricing', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://easypanel.io/pricing', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://easypanel.io/pricing', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://easypanel.io/terms', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://easypanel.io/terms', checkedAt: 2026-08-02 }
   - { field: freeTier, url: 'https://easypanel.io/pricing', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://easypanel.io/pricing', checkedAt: 2026-08-01 }
 figure:

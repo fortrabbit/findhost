@@ -32,6 +32,15 @@ deployMethods:
   - docker-image
 pricingModel: fixed-tier
 priceFrom: sm
+priceTo: xl
+currencies:
+  - EUR
+billingPeriods:
+  - hourly
+  - monthly
+  - yearly
+billingTiming: arrears
+exitWithin: a-day
 entryPrice: { amount: 9, currency: EUR, period: month }
 freeTier: trial
 regions:
@@ -44,6 +53,11 @@ sources:
   - { field: regions, url: 'https://sliplane.io/pricing', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://sliplane.io/pricing', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://sliplane.io/pricing', checkedAt: 2026-08-01 }
+  - { field: priceTo, url: 'https://sliplane.io/pricing', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://sliplane.io/pricing', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://sliplane.io/pricing', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://sliplane.io/terms', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://sliplane.io/terms', checkedAt: 2026-08-02 }
   - { field: freeTier, url: 'https://sliplane.io/pricing', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://sliplane.io/pricing', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://sliplane.io/terms', checkedAt: 2026-08-01 }

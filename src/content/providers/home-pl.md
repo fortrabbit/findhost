@@ -34,6 +34,12 @@ sshAccess: limited
 managedDatabases:
   - mysql
   - postgres
+priceFrom: md
+priceTo: md
+currencies:
+  - PLN
+billingPeriods:
+  - yearly
 pricingModel: fixed-tier
 freeTier: none
 regions:
@@ -50,6 +56,10 @@ sources:
   - { field: supportChannels, url: 'https://home.pl/hosting', checkedAt: 2026-08-01 }
   - { field: hqCountry, url: 'https://home.pl/firma/', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://home.pl/hosting', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://home.pl/hosting', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://home.pl/hosting', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://home.pl/hosting', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://home.pl/hosting', checkedAt: 2026-08-02 }
 figure:
   emoji: 🏠
   color: rgb(40, 30, 55)

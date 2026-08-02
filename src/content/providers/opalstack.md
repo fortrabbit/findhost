@@ -46,6 +46,13 @@ managedDatabases:
 backupsIncluded: included
 pricingModel: fixed-tier
 priceFrom: sm
+priceTo: md
+currencies:
+  - USD
+billingPeriods:
+  - monthly
+  - yearly
+billingTiming: advance
 entryPrice: { amount: 11.5, currency: USD, period: month }
 freeTier: none
 supportChannels:
@@ -55,7 +62,11 @@ status: active
 checkedAt: 2026-08-01
 sources:
   - { field: entryPrice, url: 'https://www.opalstack.com/', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://www.opalstack.com/', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.opalstack.com/', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://www.opalstack.com/', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://www.opalstack.com/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://www.opalstack.com/', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://www.opalstack.com/', checkedAt: 2026-08-02 }
   - { field: pricingModel, url: 'https://www.opalstack.com/', checkedAt: 2026-08-01 }
   - { field: supportHours, url: 'https://www.opalstack.com/', checkedAt: 2026-08-01 }
   - { field: supportChannels, url: 'https://www.opalstack.com/', checkedAt: 2026-08-01 }

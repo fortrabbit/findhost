@@ -18,6 +18,13 @@ runtimes:
   - any
 sshAccess: full
 pricingModel: usage-based
+priceFrom: sm
+priceTo: xl
+billingPeriods:
+  - hourly
+  - monthly
+billingTiming: arrears
+exitWithin: a-day
 freeTier: permanent
 apiAvailable: public
 cliTool: official
@@ -61,6 +68,11 @@ checkedAt: 2026-08-01
 sources:
   - { field: regions, url: 'https://learn.microsoft.com/en-us/azure/reliability/regions-list', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://azure.microsoft.com/en-us/pricing/details/app-service/linux/', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://azure.microsoft.com/en-us/pricing/details/app-service/linux/', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://azure.microsoft.com/en-us/pricing/details/app-service/linux/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://azure.microsoft.com/en-us/pricing/purchase-options/pay-as-you-go/', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://azure.microsoft.com/en-us/pricing/purchase-options/pay-as-you-go/', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://azure.microsoft.com/en-us/pricing/purchase-options/pay-as-you-go/', checkedAt: 2026-08-02 }
 figure:
   emoji: ☁️
   color: rgb(29, 108, 255)

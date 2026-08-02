@@ -37,6 +37,14 @@ deployMethods:
 sshAccess: full
 pricingModel: fixed-tier
 priceFrom: md
+priceTo: lg
+currencies:
+  - EUR
+billingPeriods:
+  - monthly
+  - yearly
+billingTiming: advance
+exitWithin: a-quarter
 renewalMultiple: 3.3
 freeTier: none
 regions:
@@ -45,7 +53,12 @@ regions:
 status: active
 checkedAt: 2026-08-01
 sources:
-  - { field: priceFrom, url: 'https://www.combell.com/en/hosting/web-hosting', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://www.combell.com/en/hosting/web-hosting', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://www.combell.com/en/servers/vps-server-hosting', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://www.combell.com/en/about-combell/general-conditions', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://www.combell.com/en/about-combell/general-conditions', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://www.combell.com/en/about-combell/general-conditions', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://www.combell.com/en/about-combell/general-conditions', checkedAt: 2026-08-02 }
   - { field: renewalMultiple, url: 'https://www.combell.com/en/hosting/web-hosting', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://www.combell.com/en/hosting/web-hosting', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://www.combell.com/en/about-combell', checkedAt: 2026-08-01 }

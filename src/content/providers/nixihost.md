@@ -5,6 +5,19 @@ urls:
   home: https://nixihost.com
 category: shared
 description: Independent hosting company from Houston, Texas, selling shared and reseller hosting alongside VPS and dedicated servers.
+priceFrom: sm
+priceTo: md
+billingPeriods:
+  - monthly
+  - yearly
+billingTiming: advance
+exitWithin: a-quarter
+sources:
+  - { field: priceFrom, url: 'https://www.nixihost.com/hosting/shared', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://www.nixihost.com/hosting/shared', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://www.nixihost.com/hosting/vps', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://www.nixihost.com/terms-of-service', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://www.nixihost.com/terms-of-service', checkedAt: 2026-08-02 }
 figure:
   emoji: 👽
   color: rgb(50, 50, 50)

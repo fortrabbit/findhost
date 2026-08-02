@@ -38,6 +38,13 @@ deployMethods:
 sshAccess: full
 pricingModel: fixed-tier
 priceFrom: sm
+priceTo: md
+currencies:
+  - EUR
+billingPeriods:
+  - monthly
+billingTiming: advance
+exitWithin: a-month
 freeTier: none
 regions:
   - NL
@@ -51,6 +58,11 @@ status: active
 checkedAt: 2026-08-01
 sources:
   - { field: priceFrom, url: 'https://www.transip.eu/web-hosting/', checkedAt: 2026-07-31 }
+  - { field: priceTo, url: 'https://www.transip.eu/web-hosting/', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://www.transip.eu/web-hosting/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://www.transip.nl/algemene-voorwaarden/', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://www.transip.nl/algemene-voorwaarden/', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://www.transip.nl/algemene-voorwaarden/', checkedAt: 2026-08-02 }
   - { field: pricingModel, url: 'https://www.transip.eu/web-hosting/', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://www.transip.nl/over-transip/', checkedAt: 2026-08-01 }
   - { field: founded, url: 'https://www.transip.nl/over-transip/', checkedAt: 2026-08-01 }

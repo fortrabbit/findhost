@@ -25,6 +25,18 @@ runtimes:
 backupsIncluded: included
 pricingModel: fixed-tier
 priceFrom: md
+priceTo: xl
+currencies:
+  - USD
+  - GBP
+  - EUR
+  - CAD
+  - AUD
+billingPeriods:
+  - monthly
+  - yearly
+billingTiming: advance
+exitWithin: a-year
 contractMinimum: annual
 social:
   x: https://x.com/wpengine
@@ -39,6 +51,11 @@ sources:
   - { field: social, url: 'https://wpengine.com', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://wpengine.com/legal/terms-of-service/', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://wpengine.com/plans/', checkedAt: 2026-07-31 }
+  - { field: priceTo, url: 'https://wpengine.com/plans/', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://wpengine.com/plans/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://wpengine.com/plans/', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://wpengine.com/legal/terms-of-service/', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://wpengine.com/legal/terms-of-service/', checkedAt: 2026-08-02 }
   - { field: pricingModel, url: 'https://wpengine.com/plans/', checkedAt: 2026-07-31 }
   - { field: backupsIncluded, url: 'https://wpengine.com/plans/', checkedAt: 2026-07-31 }
   - { field: contractMinimum, url: 'https://wpengine.com/plans/', checkedAt: 2026-07-31 }

@@ -18,6 +18,14 @@ runtimes:
   - go
 persistentStorage: false
 pricingModel: usage-based
+priceFrom: xs
+priceTo: md
+currencies:
+  - USD
+billingPeriods:
+  - monthly
+billingTiming: arrears
+exitWithin: a-month
 freeTier: permanent
 regions:
   - US
@@ -34,7 +42,12 @@ checkedAt: 2026-08-01
 sources:
   - { field: pricingModel, url: 'https://docs.digitalocean.com/products/functions/details/pricing/', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://docs.digitalocean.com/products/functions/details/pricing/', checkedAt: 2026-07-31 }
-  - { field: priceFrom, url: 'https://docs.digitalocean.com/products/functions/details/pricing/', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://docs.digitalocean.com/products/functions/details/pricing/', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://docs.digitalocean.com/products/functions/details/pricing/', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://docs.digitalocean.com/products/functions/details/pricing/', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://docs.digitalocean.com/platform/billing/', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://docs.digitalocean.com/platform/billing/', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://www.digitalocean.com/legal/terms-of-service-agreement', checkedAt: 2026-08-02 }
   - { field: regions, url: 'https://docs.digitalocean.com/products/functions/details/availability/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🌊

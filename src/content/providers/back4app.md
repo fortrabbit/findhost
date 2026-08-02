@@ -28,9 +28,25 @@ deployMethods:
   - cli
   - api
 pricingModel: fixed-tier
+priceFrom: md
+priceTo: xl
+currencies:
+  - USD
+billingPeriods:
+  - monthly
+  - yearly
+billingTiming: advance
+exitWithin: a-month
 freeTier: permanent
 apiAvailable: public
 cliTool: official
+sources:
+  - { field: priceFrom, url: 'https://www.back4app.com/pricing/backend-as-a-service', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://www.back4app.com/pricing/backend-as-a-service', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://www.back4app.com/pricing/backend-as-a-service', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://www.back4app.com/pricing/backend-as-a-service', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://www.back4app.com/pricing/backend-as-a-service', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://www.back4app.com/pricing/backend-as-a-service', checkedAt: 2026-08-02 }
 social:
   github: https://github.com/back4app
 figure:

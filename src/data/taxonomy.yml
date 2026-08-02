@@ -252,6 +252,16 @@
     - { id: 2xl, label: $500 to $1, 500 a month }
     - { id: 3xl, label: Over $1, 500 a month }
 
+- id: exit
+  label: Getting out
+  field: exitWithin
+  values:
+    - { id: a-day, label: Within a day }
+    - { id: a-month, label: Within a month }
+    - { id: a-quarter, label: Within a quarter }
+    - { id: a-year, label: Within a year }
+    - { id: over-a-year, label: Longer than a year }
+
 - id: free-tier
   label: Free tier
   field: freeTier

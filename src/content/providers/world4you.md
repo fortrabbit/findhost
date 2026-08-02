@@ -32,7 +32,14 @@ deployMethods:
   - control-panel
 sshAccess: full
 pricingModel: fixed-tier
-priceFrom: xs
+priceFrom: sm
+currencies:
+  - EUR
+billingPeriods:
+  - monthly
+  - yearly
+billingTiming: advance
+exitWithin: a-year
 freeTier: trial
 contractMinimum: annual
 regions:
@@ -48,7 +55,11 @@ sources:
   - { field: hqCountry, url: 'https://www.world4you.com/unternehmen', checkedAt: 2026-08-01 }
   - { field: parent, url: 'https://www.world4you.com/unternehmen', checkedAt: 2026-08-01 }
   - { field: contractMinimum, url: 'https://www.world4you.com/hosting/web-hosting', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://www.world4you.com/hosting/web-hosting', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.world4you.com/hosting/web-hosting', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://www.world4you.com/hosting/web-hosting', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://www.world4you.com/unternehmen/agb', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://www.world4you.com/unternehmen/agb', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://www.world4you.com/unternehmen/agb', checkedAt: 2026-08-02 }
   - { field: social, url: 'https://www.world4you.com', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://www.world4you.com/unternehmen/agb', checkedAt: 2026-08-01 }
 figure:
