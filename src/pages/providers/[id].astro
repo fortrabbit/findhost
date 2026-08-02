@@ -308,6 +308,15 @@ const format = (value: unknown) => {
                 const values = Array.isArray(value) ? value : [value];
                 const note = numberOf.get(key);
 
+                /*
+                 * The taxonomy's label, as every other surface shows it. This was
+                 * the one page rendering the raw id — "paas", "resells-iaas",
+                 * "IE, US" — beside a register that says PaaS, Resells IaaS and
+                 * Ireland everywhere else.
+                 */
+                const labelOf = (entry: unknown) =>
+                  facet?.values.find((option) => option.id === String(entry))?.label ?? String(entry);
+
                 return (
                   <>
                     <dt>{label}</dt>
@@ -316,8 +325,9 @@ const format = (value: unknown) => {
                         ? values.map((entry, index) => (
                             <>
                               {index > 0 && ', '}
-                              <a href={`/${facet.id}/${entry}/`} data-pagefind-filter={facet.id}>
-                                {key === 'entryPriceBand' ? coins(String(entry)) : String(entry)}
+                              {/* An explicit value, so the index keys on the band and not on the coins that render it. */}
+                              <a href={`/${facet.id}/${entry}/`} data-pagefind-filter={`${facet.id}:${labelOf(entry)}`}>
+                                {key === 'entryPriceBand' ? coins(String(entry)) : labelOf(entry)}
                               </a>
                             </>
                           ))

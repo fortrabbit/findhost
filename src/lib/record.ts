@@ -33,10 +33,21 @@ export function flag(country: string | undefined): string | undefined {
  */
 export function price(entry: { amount: number; currency: string; period: string } | undefined): string | undefined {
   if (!entry) return undefined;
+  /*
+   * Two decimal places is right for a monthly plan and wrong for an hourly rate.
+   * Exoscale's cheapest instance is €0.0056 an hour, which rounds to €0.01 — a
+   * figure 79% above the truth, published as a fact, in a dataset whose argument
+   * is that everyone else's prices do not match the invoice. Below a unit the
+   * places grow until two significant digits survive.
+   */
+  const whole = entry.amount % 1 === 0;
+  const places = whole ? 0 : entry.amount >= 1 ? 2 : Math.min(6, Math.ceil(-Math.log10(Math.abs(entry.amount))) + 1);
+
   const money = new Intl.NumberFormat('en', {
     style: 'currency',
     currency: entry.currency,
-    maximumFractionDigits: entry.amount % 1 === 0 ? 0 : 2,
+    minimumFractionDigits: whole ? 0 : 2,
+    maximumFractionDigits: places,
   }).format(entry.amount);
   const per = { month: 'a month', year: 'a year', hour: 'an hour' }[entry.period] ?? 'a month';
   return `from ${money} ${per}`;

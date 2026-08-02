@@ -53,15 +53,16 @@ const unplaced = [...counts.keys()].filter((code) => !countryPoints[code]);
 ---
 
 <figure class:list={['world-map', full && 'full-width', centred && 'world-map-centred']}>
-  <svg viewBox={viewBox} xmlns="http://www.w3.org/2000/svg" role="img" aria-label={label}>
+  {/* A map with links in it is not an image: role=img hides its own countries from a screen reader. */}
+  <svg viewBox={viewBox} xmlns="http://www.w3.org/2000/svg" role={linkPattern ? 'group' : 'img'} aria-label={label}>
+    {/* Full opacity and a smaller dot. Fading ink to 35% is how grey gets made, and there is no grey here. */}
     <path
       d={landPath}
       fill="none"
       stroke="currentColor"
-      stroke-width={spacing * 0.7}
+      stroke-width={spacing * 0.34}
       stroke-linecap="round"
-      stroke-dasharray={`0 ${spacing}`}
-      opacity="0.35"></path>
+      stroke-dasharray={`0 ${spacing}`}></path>
     {
       marks.map((mark) => {
         const dot = (

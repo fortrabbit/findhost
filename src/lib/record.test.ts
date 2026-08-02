@@ -58,6 +58,17 @@ describe('price', () => {
     assert.match(price({ amount: 2.5, currency: 'USD', period: 'month' })!, /\$2\.50 /);
   });
 
+  /*
+   * Two places round Exoscale's €0.0056 an hour up to €0.01 — a figure 79% above
+   * the truth, in a dataset whose whole argument is that other people's prices
+   * do not match the invoice.
+   */
+  it('does not round a sub-cent rate into a different number', () => {
+    assert.match(price({ amount: 0.0056, currency: 'EUR', period: 'hour' })!, /€0\.0056 /);
+    assert.match(price({ amount: 0.008, currency: 'USD', period: 'hour' })!, /\$0\.008 /);
+    assert.match(price({ amount: 0.05, currency: 'USD', period: 'hour' })!, /\$0\.05 /);
+  });
+
   it('names the period it was recorded against', () => {
     assert.match(price({ amount: 120, currency: 'USD', period: 'year' })!, /a year$/);
     assert.match(price({ amount: 0.5, currency: 'USD', period: 'hour' })!, /an hour$/);
