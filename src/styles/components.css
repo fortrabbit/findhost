@@ -15,11 +15,11 @@
 }
 
 /**
- * Navigation, at the foot. Set in the display face at reading size because it
- * is the only route onward from a deep page — small print would be a lie about
- * how much work it does.
+ * Navigation, beside the name. Set in the display face at reading size: it is
+ * the route onward from every page, and small print would be a lie about how
+ * much work it does.
  */
-/*.footer-nav {
+.site-nav {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2xs) var(--space-md);
@@ -27,26 +27,22 @@
   font-size: var(--text-base);
 }
 
-.footer-nav a {
+.site-nav a {
   text-decoration: none;
 }
 
-.footer-nav a:hover {
+.site-nav a:hover {
   text-decoration: underline;
-}*/
+}
 
 /* Where you are, marked with weight and a rule rather than a colour. */
-.footer-nav a[aria-current='page'] {
+.site-nav a[aria-current='page'] {
   color: var(--color-ink);
   font-weight: var(--weight-strong);
   text-decoration: underline;
   text-decoration-thickness: var(--rule-strong);
   text-underline-offset: 0.25em;
 }
-
-/*.footer-contribute {
-  font-size: var(--text-sm);
-}*/
 
 .footer-base {
   display: flex;

@@ -54,5 +54,5 @@ The same rules govern two frontmatter fields, because both are prose:
 - Do not hardcode the domain. Absolute URLs come from `SITE_URL`; this runs on a vanity URL before it runs on its own.
 - `src/content.config.ts` is a governance artifact, not a type definition. Read the comment at the top before changing it.
 - `src/data/taxonomy.yml` is data: an eleventh facet is an entry there and no TypeScript.
-- Every page declares an `ai` value; the footer renders it in the same words fortrabbit.com uses.
+- Every page declares an `ai` value in its frontmatter. It is metadata, not chrome: the footer discloses AI involvement once for the whole site, in the same words fortrabbit.com uses.
 - Comments explain a constraint or an invariant, or they are deleted. Nothing stateful — no "previously did X", no "FR-1234 will replace this".

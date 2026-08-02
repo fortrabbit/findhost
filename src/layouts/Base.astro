@@ -21,22 +21,17 @@ const fathomSiteId = import.meta.env.PUBLIC_FATHOM_SITE_ID;
 // someone links to from being listed anyway.
 const indexable = import.meta.env.PUBLIC_INDEXABLE === 'true' && !hidden;
 
-// Navigation lives in the footer. The top of the page says where you are; the
-// bottom says where you can go. That makes the footer load-bearing rather than
-// small print, which is the reason it is laid out rather than listed.
-// const contribute = [
-//   { href: 'https://github.com/fortrabbit/findhost', label: 'Add a provider' },
-//   { href: 'https://github.com/fortrabbit/findhost/issues', label: 'Corrections' },
-//   { href: 'https://github.com/fortrabbit/findhost', label: 'GitHub' },
-// ];
-
-// const sections = [
-//   { href: '/providers/', label: 'Providers' },
-//   { href: '/map/', label: 'Map' },
-//   { href: '/guide/', label: 'Guide' },
-//   { href: '/about/', label: 'About' },
-//   { href: '/policies/', label: 'Policies' },
-// ];
+/*
+ * Three destinations, in the order a visit tends to go: the register, the
+ * writing about it, and who is behind it. The map and the policies are reached
+ * from the pages that need them rather than from every page — a nav that lists
+ * everything is a nav nobody reads.
+ */
+const sections = [
+  { href: '/providers/', label: 'Providers' },
+  { href: '/guide/', label: 'Guide' },
+  { href: '/about/', label: 'About' },
+];
 
 const path = Astro.url.pathname;
 const canonical = new URL(path, Astro.site ?? Astro.url).href;
@@ -66,6 +61,16 @@ const canonical = new URL(path, Astro.site ?? Astro.url).href;
     <header>
       <a href="/" class="wordmark" aria-current={path === '/' ? 'page' : undefined}>FindHost</a>
 
+      <nav class="site-nav">
+        {
+          sections.map((section) => (
+            <a href={section.href} aria-current={path.startsWith(section.href) ? 'page' : undefined}>
+              {section.label}
+            </a>
+          ))
+        }
+      </nav>
+
       <form class="site-search" role="search" action="/search/">
         <input
           type="search"
@@ -83,27 +88,6 @@ const canonical = new URL(path, Astro.site ?? Astro.url).href;
     </main>
 
     <footer>
-      <!-- <nav class="footer-nav">
-        {
-          sections.map((section) => (
-            <a href={section.href} aria-current={path === section.href ? 'page' : undefined}>
-              {section.label}
-            </a>
-          ))
-        }
-      </nav> -->
-
-      <!-- <p class="footer-contribute">
-        {
-          contribute.map((link, index) => (
-            <>
-              {index > 0 && ' · '}
-              <a href={link.href}>{link.label}</a>
-            </>
-          ))
-        }
-      </p> -->
-
       <div class="footer-base">
         <div>
           <p>

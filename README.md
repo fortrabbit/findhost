@@ -39,7 +39,7 @@ Code under [MIT](./LICENSE-CODE). Data under [CC BY 4.0](./LICENSE-DATA). The da
 
 ## AI disclosure
 
-Agents gather the facts from providers' own public pages, recording a URL and a date for each one; the editorial decisions are human — what the fields mean, who is in scope, what a caveat says and whose name is on it; much of the code is AI-written. Every page carries an `ai` value in its frontmatter and renders it in the footer.
+Agents gather the facts from providers' own public pages, recording a URL and a date for each one; the editorial decisions are human — what the fields mean, who is in scope, what a caveat says and whose name is on it; much of the code is AI-written. The footer says so on every page. Each page also carries an `ai` value in its frontmatter recording how much of *that* page was written by a machine — `none`, `grammar`, `co-authored` or `authored` — which is in the data and in the markdown export rather than on the rendered page.
 
 Two things this does *not* claim. A person has not read every record. And a source records what a provider published, not that it is true.
 

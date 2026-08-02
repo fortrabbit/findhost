@@ -19,14 +19,14 @@ fortrabbit appears in the dataset in alphabetical position, with the same fields
 
 ## What this is not
 
-- Rank, score or rate. There is no "best for" badge and no star, and the schema rejects any field that implies one.
+- Rank, score or rate. There is no "best for" badge and no star, and the schema rejects any field that implies one — the rules are written down in [policies](/policies/) and enforced by the build.
 - Carry affiliate links. Every provider URL is checked for tracking parameters at build time.
 - Track prices. Price bands only — the guide's own argument is that specs and price are the wrong place to start.
 - Sort by how much we know. Completeness is a fact about our work, never a property of a provider.
 
 <h2 id="ai">How this site is made</h2>
 
-Agents gather the facts, working from providers' own public pages, and record the URL and the date for each one. The editorial decisions are human: what the fields mean, which providers are in scope, what a caveat says and whose name is on it. Much of the code is written by AI. Every page carries a disclosure in its footer saying which of those applies to that page.
+Agents gather the facts, working from providers' own public pages, and record the URL and the date for each one. The editorial decisions are human: what the fields mean, which providers are in scope, what a caveat says and whose name is on it. Much of the code is written by AI, and the footer says so on every page. Each page also records in its own frontmatter how much of it a machine wrote, which travels with the data rather than being printed on the page.
 
 Two things this does *not* claim. A human has not read every record — a `checkedAt` date means a machine read that provider's pages on that day, and nothing stronger. And a source is a record of what a provider published, not a verification that it is true.
 

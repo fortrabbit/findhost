@@ -137,7 +137,8 @@ body > header {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-sm) var(--space-lg);
-  align-items: center;
+  /* Baseline, not centre: the name, the nav and the field are all type, and type lines up on its baseline. */
+  align-items: baseline;
   padding-top: var(--space-lg);
   padding-bottom: var(--space-md);
   /* The same weight as the rule over the footer: one page, ruled top and bottom by the same hand. */
