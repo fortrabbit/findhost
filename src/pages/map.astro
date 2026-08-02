@@ -65,17 +65,8 @@ const unknown = providers.length - withRegions.length - notApplicable;
   </ul>
 
   <p class="annotation">
-    Dots sit at country level, not at data centres — the dataset records which countries a provider operates in, not
-    where the racks are. Countries large enough to hold separate hosting regions are drawn at each of them, with the
-    dot's area divided between them.
-  </p>
-
-  <p class="annotation">
     {withRegions.length} of {providers.length} records say where they operate.
-    {
-      unknown > 0 &&
-        ` ${unknown} do not record it yet, so they are absent from this map — which says nothing about where they run.`
-    }
+    {unknown > 0 && ` ${unknown} do not record it yet.`}
     {
       notApplicable > 0 &&
         ` A further ${notApplicable} run on infrastructure you bring yourself, so they have no regions of their own to record.`

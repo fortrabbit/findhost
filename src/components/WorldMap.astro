@@ -106,9 +106,6 @@ const unplaced = [...counts.keys()].filter((code) => !countryPoints[code]);
           </>
         ))}
         {unplaced.length > 0 && ` · no coordinates yet: ${unplaced.join(', ')}`}
-        <br />
-        Dots sit at country level, not at data centres — the dataset records which countries a provider operates in, not
-        where the racks are.
       </figcaption>
     )
   }
