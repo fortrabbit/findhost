@@ -8,7 +8,7 @@ urls:
   terms: https://zerops.io/terms
   docs: https://docs.zerops.io/
 category: paas
-description: Czech developer platform with thirteen native runtimes, billed only for CPU, memory and disk consumed, with no subscription tiers and no per-seat charge.
+description: Czech container platform running applications and managed services on rented infrastructure in Prague, billed by resources consumed rather than by plan tier.
 founded: 2018
 hqCountry: CZ
 ownership: vc-backed
@@ -84,22 +84,16 @@ figure:
   emoji: 🧊
   color: rgb(20, 35, 50)
   textColor: rgb(175, 215, 240)
-  text: Thirteen runtimes, no seat fee.
+  text: Pay for what the app consumes.
 ai: authored
 ---
 
 ## About Zerops
 
-Zerops is operated by Zerops s.r.o. and is unusual on two counts. The first is the breadth of native runtimes for a platform this size — thirteen of them, including Deno, Bun, Elixir and Gleam alongside the expected Node, PHP, Python, Go, .NET, Rust, Java and Ruby, plus Nginx for static sites and Docker for anything else.
+Zerops began in 2018 as an internal project at the Czech hosting company vshosting and was relaunched as an independent, venture-backed company in 2024. It runs on vshosting's infrastructure in Prague, which is the only location it sells.
 
-The second is the pricing structure, or the absence of one. There are no subscription tiers, no feature gates and no per-seat charge; the bill is the CPU, memory and disk actually consumed, which the company claims runs three to five times below comparable platforms. Managed services are equally broad: PostgreSQL, MariaDB, Valkey, KeyDB, Elasticsearch, Typesense, Meilisearch, Qdrant, NATS, Kafka and ClickHouse, with S3-compatible object storage, shared persistent disks, L7 load balancers, firewalls, autoscaling, high-availability configurations and VPN and SSH access.
+Applications are declared as services and shipped through a git integration, the official CLI, the public API or a container image. The runtime images cover the mainstream server languages alongside static sites and arbitrary Docker containers, and full SSH access into a project comes with the platform. Managed databases, search and streaming services are provisioned as further services in the same project. Billing is per resource — the CPU, memory and disk actually consumed — with no subscription tiers and no per-seat charge, and new accounts start on trial credit rather than on a permanently free tier.
 
-New accounts are given credit to start with rather than a permanently free tier.
+## Worth knowing
 
-The company documentation is unusually forthcoming about the layer underneath. Zerops began in 2018 as an internal project at vshosting.eu and was relaunched as an independent startup in June 2024; its servers sit in vshosting's Prague facility, and the docs state plainly that vshosting "is part of Contabo, owned by global investment firm KKR". Backing comes from Presto Ventures and Gi21 Capital.
-
-## Reservations
-
-Consumption-only billing removes the tier ladder but makes the monthly cost something to model rather than read, and a new account starts on credit rather than a permanently free tier.
-
-The ownership chain is worth following for anyone choosing on European independence. The platform is Czech and its servers are in Prague, but the infrastructure beneath belongs to Contabo, which belongs to an American private-equity firm. Zerops publishes this itself, which is more than most do — the point is not concealment, it is that "European platform" and "European ownership all the way down" are different claims.
+The company is Czech and its servers are in Prague, but the infrastructure underneath belongs to vshosting, which Zerops' own documentation describes as part of Contabo, owned by the investment firm KKR. "European platform" and "European ownership all the way down" are different claims.

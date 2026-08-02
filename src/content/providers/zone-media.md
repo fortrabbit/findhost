@@ -7,7 +7,7 @@ urls:
   status: https://status.zone.eu/
   docs: https://help.zone.eu/en/
 category: shared
-description: Estonian hosting provider and registrar offering shared hosting with PHP, Node.js and Go, plus cloud servers, from Tallinn, Helsinki and Amsterdam.
+description: Estonian hosting provider and domain registrar, selling shared hosting and cloud servers from northern European locations.
 founded: 1999
 hqCountry: EE
 ownership: independent
@@ -72,10 +72,6 @@ ai: authored
 
 ## About Zone Media
 
-Zone Media was incorporated in Tallinn in October 1999, employs around fifty people and reports some 60,000 customers, trading internationally as zone.eu and serving Estonian public bodies alongside businesses. Infrastructure runs from Tallinn, Helsinki and Amsterdam on renewable energy.
+Zone Media is an independent Estonian hosting company and domain registrar, incorporated in Tallinn in 1999 and trading internationally as zone.eu. Its infrastructure sits in Estonia, Finland and the Netherlands.
 
-It is one of very few shared hosts that documents genuinely polyglot deployment: PHP from 5.6 to 8.5, Node.js and Go applications on every tier, with community-written guides for Django, Ghost, Jenkins and Gitea in a public repository. SSH is key-only by design, with an IP allow-list on by default and key fingerprints and access logs exposed in the control panel. The status page covers eleven components and states its own reporting threshold.
-
-## Reservations
-
-The entry price is high for shared hosting by regional standards. The very large quoted storage figures should be read against the fair-use terms rather than taken at face value, and the community documentation repository states plainly that it is not backed by the help desk.
+Shared hosting is sold in fixed monthly tiers, with the provider running the operating system and the web stack. Applications can be written in Node.js, Go or Python as well as PHP, and the account reaches them through SSH, FTP and SFTP, a control panel and a public API. SSH is key-based, with an IP allow-list enabled by default and key fingerprints and access logs exposed in the control panel. Alongside the shared plans the company sells cloud servers and domain registration, and support runs by email, phone and chat.
