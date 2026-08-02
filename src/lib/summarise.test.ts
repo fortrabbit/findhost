@@ -10,6 +10,7 @@ const facet = (id: string, field: string, values: string[]): Facet => ({
   multiple: false,
   values: values.map((value) => ({ id: value, label: value, count: 0 })),
   unknown: 0,
+  notApplicable: 0,
 });
 
 const facets: Facet[] = [
@@ -22,6 +23,7 @@ const row = (name: string, fields: Record<string, string | string[]>): ProviderR
   id: name.toLowerCase(),
   name,
   facets: fields,
+  notApplicable: [],
 });
 
 describe('summarise', () => {

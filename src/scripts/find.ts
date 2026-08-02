@@ -20,6 +20,7 @@ interface Facet {
   multiple: boolean;
   values: FacetValue[];
   unknown: number;
+  notApplicable: number;
 }
 
 interface ProviderRow {

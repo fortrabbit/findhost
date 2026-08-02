@@ -13,8 +13,15 @@ export interface Facet {
   field: string;
   multiple: boolean;
   values: FacetValue[];
-  /** Records where this field is absent. Displayed, never silently dropped. */
+  /** Records that do not say. Displayed, never silently dropped. */
   unknown: number;
+  /*
+   * Records where the field is explicitly null, meaning the question does not
+   * apply — a panel that provisions onto your own cloud account operates no
+   * regions of its own. Counting those as missing is the difference between
+   * "64 records do not record this" and the truth, which is 49.
+   */
+  notApplicable: number;
 }
 
 export interface ProviderRow {
@@ -30,6 +37,8 @@ export interface ProviderRow {
   figure?: { emoji: string; color: string; textColor: string; text: string };
   /** Facet fields only, keyed by field name. A missing key means unknown. */
   facets: Record<string, string | string[]>;
+  /** Fields this record sets to null: the question does not apply, which is not the same as not knowing. */
+  notApplicable: string[];
 }
 
 /** Alphabetical, always — see the sort rule in CLAUDE.md. */
@@ -43,10 +52,15 @@ export async function loadFacets(): Promise<{ facets: Facet[]; providers: Provid
     .map((record) => {
       const data = record.data as Record<string, unknown>;
       const facets: Record<string, string | string[]> = {};
+      const notApplicable: string[] = [];
 
       for (const facet of taxonomy) {
         const value = data[facet.data.field];
-        if (value === undefined || value === null) continue;
+        if (value === null) {
+          notApplicable.push(facet.data.field);
+          continue;
+        }
+        if (value === undefined) continue;
         if (Array.isArray(value)) {
           if (value.length) facets[facet.data.field] = value.map(String);
         } else {
@@ -63,12 +77,14 @@ export async function loadFacets(): Promise<{ facets: Facet[]; providers: Provid
         entryPriceBand: record.data.entryPriceBand,
         figure: record.data.figure,
         facets,
+        notApplicable,
       };
     })
     .sort(byName);
 
   const facets: Facet[] = taxonomy.map((facet) => {
-    const known = providers.filter((provider) => provider.facets[facet.data.field] !== undefined);
+    const applicable = providers.filter((provider) => !provider.notApplicable.includes(facet.data.field));
+    const known = applicable.filter((provider) => provider.facets[facet.data.field] !== undefined);
 
     const values = facet.data.values.map((value) => ({
       id: value.id,
@@ -85,7 +101,8 @@ export async function loadFacets(): Promise<{ facets: Facet[]; providers: Provid
       field: facet.data.field,
       multiple: facet.data.multiple,
       values,
-      unknown: providers.length - known.length,
+      unknown: applicable.length - known.length,
+      notApplicable: providers.length - applicable.length,
     };
   });
 

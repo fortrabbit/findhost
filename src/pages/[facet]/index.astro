@@ -34,6 +34,10 @@ const unused = facet.values.filter((value) => value.count === 0);
       facet.unknown > 0 &&
         ` ${facet.unknown} ${facet.unknown === 1 ? 'record does' : 'records do'} not record this field.`
     }
+    {
+      facet.notApplicable > 0 &&
+        ` For a further ${facet.notApplicable} the question does not apply, so there is nothing to record.`
+    }
   </p>
 
   <ul class="stack-list">

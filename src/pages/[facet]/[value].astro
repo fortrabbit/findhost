@@ -77,6 +77,7 @@ const Note = note ? (await render(note)).Content : null;
       facet.unknown > 0 &&
         ` A further ${facet.unknown} ${facet.unknown === 1 ? 'record does' : 'records do'} not record this field, so they cannot appear here either way.`
     }
+    {facet.notApplicable > 0 && ` For ${facet.notApplicable} the question does not apply at all.`}
   </p>
 
   {Note && <Note />}
