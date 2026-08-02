@@ -1,3 +1,4 @@
+import { readdirSync, readFileSync } from 'node:fs';
 import { expect, test } from '@playwright/test';
 
 /*
@@ -7,12 +8,27 @@ import { expect, test } from '@playwright/test';
  * no-JavaScript fallback the whole distribution thesis rests on.
  */
 
+/*
+ * Counted from the records, not written down. The page and this file reach the
+ * number by different routes — frontmatter on disk against rendered rows — so
+ * a record that quietly falls out of the register still fails, and adding one
+ * does not send someone editing assertions until they stop meaning anything.
+ */
+const records = new URL('../src/content/providers/', import.meta.url);
+const hidden = new Set(['draft', 'out-of-scope']);
+
+const listed = readdirSync(records).filter((file) => {
+  if (!file.endsWith('.md')) return false;
+  const status = readFileSync(new URL(file, records), 'utf8').match(/^status: *(\S+)/m)?.[1];
+  return status === undefined || !hidden.has(status);
+}).length;
+
 test.describe('the register', () => {
   test('lists every record, grouped and anchored', async ({ page }) => {
     await page.goto('/providers/');
 
     const rows = page.locator('[data-find-results] .provider-list > li');
-    await expect(rows).toHaveCount(150);
+    await expect(rows).toHaveCount(listed);
 
     /*
      * Anchors are linked from prose and from the map, so they have to exist —
@@ -121,7 +137,7 @@ test.describe('without JavaScript', () => {
 
   test('the register is still the register', async ({ page }) => {
     await page.goto('/providers/');
-    await expect(page.locator('[data-find-results] .provider-list > li')).toHaveCount(150);
+    await expect(page.locator('[data-find-results] .provider-list > li')).toHaveCount(listed);
   });
 
   test('every facet value is reachable as a real link', async ({ page }) => {
@@ -139,9 +155,9 @@ test.describe('without JavaScript', () => {
 
 test.describe('stubs', () => {
   /*
-   * The register is 150 records and the repo holds 178. The 28 hidden ones are
+   * The repo holds more records than the register shows. The hidden ones are
    * reachable, because a decision nobody can see is not a decision — but they
-   * are opt-in, unfiltered and never in the count, or "150 records" stops being
+   * are opt-in, unfiltered and never in the count, or the count stops being
    * true the moment someone ticks a box.
    */
   test.skip(({ javaScriptEnabled }) => javaScriptEnabled === false, 'the toggle is part of the filter view');
@@ -150,14 +166,16 @@ test.describe('stubs', () => {
     await page.goto('/providers/');
 
     const rows = page.locator('[data-find-results] .provider-list > li');
-    await expect(rows).toHaveCount(150);
+    await expect(rows).toHaveCount(listed);
 
     const toggle = page.locator('.find-drafts input[type="checkbox"]');
     await expect(toggle).not.toBeChecked();
 
     await toggle.check();
-    await expect(rows).not.toHaveCount(150);
-    await expect(page.locator('[data-find-summary]')).toHaveText(/^150 records, sorted alphabetically\.$/);
+    await expect(rows).not.toHaveCount(listed);
+    await expect(page.locator('[data-find-summary]')).toHaveText(
+      new RegExp(`^${listed} records, sorted alphabetically\\.$`),
+    );
     await expect(page.getByRole('heading', { name: 'Not in the register' })).toBeVisible();
   });
 });
@@ -165,7 +183,7 @@ test.describe('stubs', () => {
 test.describe('filtering', () => {
   /*
    * The only surface on the site that needs JavaScript, and the reason the rest
-   * is tested twice: losing this leaves a reader with 150 records and every
+   * is tested twice: losing this leaves a reader with the whole register and every
    * facet as a link, which is the whole point of the fallback.
    */
   test.skip(({ javaScriptEnabled }) => javaScriptEnabled === false, 'filtering is the one JavaScript-only surface');
@@ -174,14 +192,14 @@ test.describe('filtering', () => {
     await page.goto('/providers/');
 
     const rows = page.locator('[data-find-results] .provider-list > li');
-    await expect(rows).toHaveCount(150);
+    await expect(rows).toHaveCount(listed);
 
     await page.locator('.find-facet input[type=checkbox]').first().check();
-    await expect(rows).not.toHaveCount(150);
+    await expect(rows).not.toHaveCount(listed);
 
     // Unknowns are declared rather than silently dropped: with most fields
     // optional, a filter that hides them would hide most of the market.
-    await expect(page.locator('[data-find-summary]')).toContainText(/of 150/);
+    await expect(page.locator('[data-find-summary]')).toContainText(new RegExp(`of ${listed}`));
   });
 
   /*
