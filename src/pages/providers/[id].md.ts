@@ -13,7 +13,11 @@ export async function getStaticPaths() {
 }
 
 const label = (value: unknown): string => {
-  if (value === undefined || value === null) return 'unknown';
+  // Explicit null is the schema's way of saying the question does not apply — a
+  // panel that provisions onto your own cloud account operates no regions of its
+  // own. Printing that as "unknown" is the same error the map used to make.
+  if (value === null) return 'not applicable';
+  if (value === undefined) return 'unknown';
   if (Array.isArray(value)) return value.length ? value.map(String).join(', ') : 'unknown';
   if (value instanceof Date) return value.toISOString().slice(0, 10);
   if (typeof value === 'boolean') return value ? 'yes' : 'no';
@@ -48,11 +52,19 @@ export const GET: APIRoute = async ({ props, site }) => {
     ['Environment', ['energyClaim', 'sustainabilityUrl', 'certifications', 'greenWebId']],
   ];
 
+  const hidden = data.status === 'draft' || data.status === 'out-of-scope';
+
   const lines = [
     `# ${data.name}`,
     '',
     data.description ? `${data.description}` : '',
     '',
+    hidden
+      ? data.status === 'out-of-scope'
+        ? `NOT LISTED. This record failed inclusion criterion ${label(data.criterion)} and is not part of the register, not counted and not indexed.`
+        : 'DRAFT. This record is started and not finished, so it is not part of the register, not counted and not indexed.'
+      : '',
+    hidden ? '' : undefined,
     `Source: ${origin}/providers/${provider.id}/`,
     data.checkedAt
       ? `Last checked against the provider: ${label(data.checkedAt)}`
@@ -72,6 +84,22 @@ export const GET: APIRoute = async ({ props, site }) => {
       ...fields.map((field) => `- ${field}: ${label(data[field])}`),
       '',
     ]),
+    /*
+     * The sources, which the HTML has carried as numbered footnotes since the
+     * fields did and this export simply never printed. They are the difference
+     * between this dataset and a generated comparison table, so leaving them out
+     * of the machine-readable copy left out the part that matters most.
+     */
+    ...(Array.isArray(data.sources) && data.sources.length
+      ? [
+          '### Sources',
+          '',
+          ...(data.sources as { field: string; url: string; checkedAt: Date }[]).map(
+            (source) => `- ${source.field}: ${source.url} (read ${label(source.checkedAt)})`,
+          ),
+          '',
+        ]
+      : []),
     ...(data.editorialNote ? ['## Disclosure', '', String(data.editorialNote), ''] : []),
     '## Notes',
     '',
