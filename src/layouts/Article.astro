@@ -1,7 +1,6 @@
 ---
 import Base from './Base.astro';
 import GuideNav from '../components/GuideNav.astro';
-import type { AiLevel } from '../components/AiDisclosure.astro';
 
 /*
  * Every written page: the guide articles, About, Policies. One layout, so a page
@@ -15,7 +14,6 @@ interface Props {
     description?: string;
     lead?: string;
     figure?: { emoji: string; color: string; textColor: string; text: string };
-    ai?: AiLevel;
   };
 }
 
@@ -23,7 +21,7 @@ const { frontmatter } = Astro.props;
 const { figure } = frontmatter;
 ---
 
-<Base title={`${frontmatter.title} — FindHost`} description={frontmatter.description} ai={frontmatter.ai}>
+<Base title={`${frontmatter.title} — FindHost`} description={frontmatter.description}>
   {
     /* Outside the grid: a band that bleeds to both page edges cannot be measured from inside a column. */
     figure && (

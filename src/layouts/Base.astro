@@ -1,5 +1,4 @@
 ---
-import type { AiLevel } from '../components/AiDisclosure.astro';
 import '../styles/tokens.css';
 import '../styles/base.css';
 import '../styles/components.css';
@@ -7,7 +6,6 @@ import '../styles/components.css';
 interface Props {
   title: string;
   description?: string;
-  ai?: AiLevel;
   /** Path to the same page as markdown, announced for readers that prefer text. */
   markdown?: string;
   /** A record kept for reference but not on show: out of the index and out of search, whatever the site-wide flag says. */

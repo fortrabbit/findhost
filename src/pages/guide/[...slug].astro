@@ -12,7 +12,7 @@ const { page } = Astro.props;
 const { Content } = await render(page);
 ---
 
-<Base title={`${page.data.title} — FindHost`} description={page.data.description} ai={page.data.ai}>
+<Base title={`${page.data.title} — FindHost`} description={page.data.description}>
   {
     /* Outside the grid: a band that bleeds to both page edges cannot be measured from inside a column. */
     page.data.figure && (

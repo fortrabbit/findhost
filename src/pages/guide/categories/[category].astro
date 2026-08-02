@@ -31,7 +31,7 @@ const { Content } = await render(explainer);
 const listed = `${count} ${count === 1 ? 'provider' : 'providers'}`;
 ---
 
-<Base title={`${explainer.data.title} — FindHost`} description={explainer.data.description} ai={explainer.data.ai}>
+<Base title={`${explainer.data.title} — FindHost`} description={explainer.data.description}>
   {
     explainer.data.figure && (
       <p
