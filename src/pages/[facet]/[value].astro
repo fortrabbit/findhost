@@ -1,12 +1,18 @@
 ---
 import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
-import ProviderList from '../../components/ProviderList.astro';
+import ProviderRegister from '../../components/ProviderRegister.astro';
 import { facetRoutes, loadFacets } from '../../lib/facets';
 import { summarise } from '../../lib/summarise';
 
-// One static page per facet value in use. These are what a crawler follows and
-// what the no-JS fallback links to — the find view is a convenience on top.
+/*
+ * One static page per facet value in use. These are what a crawler follows and
+ * what the no-JS fallback links to, and they are not a second, thinner design:
+ * the page below is the register itself, narrowed, with the same filters on top
+ * and this value already ticked. /software/wordpress/ and
+ * /providers/?software=wordpress are the same view at two URLs — the first
+ * works without JavaScript, which is why it exists.
+ */
 export async function getStaticPaths() {
   return facetRoutes();
 }
@@ -56,6 +62,15 @@ const lead = summarise(
 
 // A written explainer exists for some values and not others, which is the
 // intended state: filler for all of them would be thin content by definition.
+/* One string, for the reason given in ProviderRegister.astro. */
+const setAside = [
+  facet.unknown > 0 &&
+    `${facet.unknown} ${facet.unknown === 1 ? 'record does' : 'records do'} not record this field, so they cannot appear here either way.`,
+  facet.notApplicable > 0 && `For ${facet.notApplicable} the question does not apply at all.`,
+]
+  .filter(Boolean)
+  .join(' ');
+
 const notes = await getCollection('notes');
 const note = notes.find((entry) => entry.id === `${facet.id}/${value.id}`);
 const Note = note ? (await render(note)).Content : null;
@@ -70,23 +85,13 @@ const Note = note ? (await render(note)).Content : null;
 
   <p class="lead">{lead}</p>
 
-  <p class="annotation">
-    {facet.label}: {value.label} — {matches.length}
-    {matches.length === 1 ? 'record' : 'records'}, sorted alphabetically.
-    {
-      facet.unknown > 0 &&
-        ` A further ${facet.unknown} ${facet.unknown === 1 ? 'record does' : 'records do'} not record this field, so they cannot appear here either way.`
-    }
-    {facet.notApplicable > 0 && ` For ${facet.notApplicable} the question does not apply at all.`}
-  </p>
+  <p class="annotation">{setAside}</p>
 
   {Note && <Note />}
 
-  <ProviderList providers={matches} />
+  <ProviderRegister providers={matches} facets={facets} seed={{ facet: facet.id, value: value.id }} />
 
   <p class="annotation">
-    <a href="/providers/">Combine this with other filters</a> · <a href={`/${facet.id}/`}
-      >every {facet.label.toLowerCase()} value</a
-    >
+    <a href={`/${facet.id}/`}>Every {facet.label.toLowerCase()} value</a>
   </p>
 </Base>

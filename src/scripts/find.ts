@@ -114,6 +114,16 @@ if (filtersEl && resultsEl && summaryEl) {
 
   const selected = new Map<string, Set<string>>();
 
+  /*
+   * A facet value page arrives already narrowed and says so in the markup. That
+   * seeding is what makes /software/wordpress/ and /providers/?software=wordpress
+   * the same view: the first is server-rendered for crawlers and for readers
+   * without JavaScript, the second is what this script produces.
+   */
+  const seedAttr = filtersEl.dataset.findSeed;
+  const seedPath = filtersEl.dataset.findSeedPath;
+  const seed = seedAttr ? { facet: seedAttr.split(':')[0]!, value: seedAttr.slice(seedAttr.indexOf(':') + 1) } : null;
+
   const readUrl = () => {
     const params = new URLSearchParams(location.search);
     selected.clear();
@@ -121,15 +131,32 @@ if (filtersEl && resultsEl && summaryEl) {
       const value = params.get(facet.id);
       if (value) selected.set(facet.id, new Set(value.split(',').filter(Boolean)));
     }
+    if (!selected.size && seed) selected.set(seed.facet, new Set([seed.value]));
   };
 
+  /** True while the selection is exactly what this page's own URL already means. */
+  const atSeed = () =>
+    Boolean(seed) &&
+    selected.size === 1 &&
+    selected.get(seed!.facet)?.size === 1 &&
+    selected.get(seed!.facet)!.has(seed!.value);
+
   const writeUrl = () => {
+    // A page that stands for one value keeps its own URL until the reader
+    // deviates; combining filters is the register's job, so the URL becomes the
+    // register's rather than growing a query string the static page cannot honour.
+    if (atSeed()) {
+      history.replaceState(null, '', seedPath!);
+      return;
+    }
+
     const params = new URLSearchParams();
     for (const [facetId, values] of selected) {
       if (values.size) params.set(facetId, [...values].join(','));
     }
     const query = params.toString();
-    history.replaceState(null, '', query ? `?${query}` : location.pathname);
+    const path = seed ? '/providers/' : location.pathname;
+    history.replaceState(null, '', query ? `${path}?${query}` : path);
   };
 
   const holds = (provider: ProviderRow, field: string, value: string) => {
@@ -308,8 +335,15 @@ if (filtersEl && resultsEl && summaryEl) {
     }
 
     const dropped = excluded();
+
+    // With nothing selected this says exactly what the server rendered. A visitor
+    // with JavaScript should not be told "150 of 150" where a visitor without it
+    // is told "150" — the script is here to narrow the list, not to restate it.
+    const noun = providers.length === 1 ? 'record' : 'records';
     const parts = [
-      `${found.length} of ${providers.length} ${providers.length === 1 ? 'record' : 'records'}, sorted alphabetically.`,
+      activeFacets().length
+        ? `${found.length} of ${providers.length} ${noun}, sorted alphabetically.`
+        : `${providers.length} ${noun}, sorted alphabetically.`,
     ];
     if (dropped.length) {
       parts.push(

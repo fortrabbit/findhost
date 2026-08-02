@@ -1,38 +1,9 @@
 ---
 import Base from '../../layouts/Base.astro';
-import ProviderList from '../../components/ProviderList.astro';
+import ProviderRegister from '../../components/ProviderRegister.astro';
 import { loadFacets } from '../../lib/facets';
 
 const { facets, providers } = await loadFacets();
-
-// One page, not two: the list is the page, and the filters narrow it in place.
-// Grouped by initial so it can be scanned and linked to without JavaScript.
-const letterOf = (name: string) => {
-  const initial = name.replace(/^the /i, '').charAt(0).toUpperCase();
-  return /[A-Z]/.test(initial) ? initial : '#';
-};
-
-const letters = [...new Set(providers.map((provider) => letterOf(provider.name)))].sort();
-
-/*
- * Built here rather than in the template. Astro drops a whitespace-only text
- * node between two expressions, so `{n} {noun}` in markup renders "150records"
- * the moment a formatter puts them on separate lines — which it does whenever
- * the line grows. A string cannot be reflowed into a bug.
- *
- * The wording matches what find.ts writes here once a filter is set, and it
- * states the order, because position is not ranking.
- */
-const summary = `${providers.length} ${providers.length === 1 ? 'record' : 'records'}, sorted alphabetically.`;
-
-const groups = letters.map((letter) => ({
-  letter,
-  // The heading already carries a `#` as its anchor link, so the numeric group
-  // says what it holds instead of repeating the glyph.
-  label: letter === '#' ? '0–9' : letter,
-  anchor: letter === '#' ? 'other' : letter.toLowerCase(),
-  rows: providers.filter((provider) => letterOf(provider.name) === letter),
-}));
 ---
 
 <Base
@@ -45,46 +16,5 @@ const groups = letters.map((letter) => ({
     {groups.map((group) => <a href={`#${group.anchor}`}>{group.letter}</a>)}
   </nav> -->
 
-  <p class="annotation" data-find-summary>{summary}</p>
-
-  <div class="find-filters" data-find-filters></div>
-
-  <div data-find-results>
-    {
-      groups.map((group) => (
-        <section class="letter-group" id={group.anchor}>
-          <h2>
-            <a class="anchor-link" href={`#${group.anchor}`} aria-label={`Link to ${group.label}`}>
-              #
-            </a>
-            {group.label}
-          </h2>
-
-          <ProviderList providers={group.rows} />
-        </section>
-      ))
-    }
-  </div>
-
-  <div data-find-fallback>
-    <p class="annotation">
-      Filtering needs JavaScript; the list above does not. Every facet value also has a page of its own, which is the
-      same list narrowed the same way:
-    </p>
-
-    <ul class="entry-list">
-      {
-        facets.map((facet) => (
-          <li>
-            <a href={`/${facet.id}/`}>{facet.label}</a>
-            <span class="entry-count">{facet.values.filter((value) => value.count > 0).length}</span>
-          </li>
-        ))
-      }
-    </ul>
-  </div>
-
-  <script>
-    import '../../scripts/find.ts';
-  </script>
+  <ProviderRegister providers={providers} facets={facets} />
 </Base>
