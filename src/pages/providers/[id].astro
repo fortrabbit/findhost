@@ -162,6 +162,20 @@ const outgoing = [
 
 const { notes, numberOf } = footnotes(data.sources);
 
+/*
+ * What each source backs, in the words the page uses for it. A source may name a
+ * field that has no row — `social`, `urls`, or `notes` for a claim made in the
+ * prose — so anything unmatched falls back to a readable form of the key rather
+ * than being dropped: a source list that hides its own entries is worse than one
+ * with an unfamiliar word in it.
+ */
+const fieldLabels = new Map(attributeGroups.flatMap((group) => group.fields).map(([label, key]) => [key, label]));
+
+const sourceLabel = (field: string) =>
+  fieldLabels.get(field) ??
+  { notes: 'the notes', urls: 'links', social: 'accounts', entryPrice: 'starting price' }[field] ??
+  field.replace(/([A-Z])/g, ' $1').toLowerCase();
+
 const entryPrice = price(data.entryPrice);
 const entryCoins = coins(data.entryPriceBand);
 const energyClaim = energy(data.energyClaim);
@@ -368,7 +382,7 @@ const format = (value: unknown) => {
           <ol>
             {notes.map((note, index) => (
               <li id={`source-${index + 1}`}>
-                <span class="source-fields">{note.fields.join(', ')}</span> —{' '}
+                <span class="source-fields">{note.fields.map(sourceLabel).join(', ')}</span> —{' '}
                 <a href={note.url} rel="nofollow">
                   {note.url.replace('https://', '')}
                 </a>{' '}
