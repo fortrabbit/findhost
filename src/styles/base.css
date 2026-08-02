@@ -26,9 +26,13 @@ body {
    */
   --gutter: max(var(--space-md), (100vw - var(--measure-page)) / 2);
 
+  /* Column, so a short page still puts its footer on the bottom edge rather than halfway up a tall screen. */
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
   margin: 0;
   overflow-x: clip;
-  padding: 0 0 var(--space-2xl);
+  padding: 0;
   background: var(--color-page);
   color: var(--color-ink);
   font-family: var(--font-text);
@@ -136,10 +140,12 @@ body > header {
   align-items: center;
   padding-top: var(--space-lg);
   padding-bottom: var(--space-md);
-  border-bottom: var(--rule-strong) solid var(--color-ink);
+  /* The same weight as the rule over the footer: one page, ruled top and bottom by the same hand. */
+  border-bottom: var(--rule-heavy) solid var(--color-ink);
 }
 
 body > main {
+  flex: 1;
   padding-top: var(--space-md);
 }
 

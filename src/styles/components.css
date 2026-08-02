@@ -79,43 +79,29 @@
   margin-left: auto;
 }
 
+/*
+ * No submit button. Enter submits, `/` focuses from anywhere, and a mobile
+ * keyboard offers a search key — so the button was an affordance nothing needed
+ * and the one thing the focus ring had to avoid.
+ */
 .site-search input {
   width: 17rem;
   padding: var(--space-2xs) var(--space-xs);
-  border: var(--rule-strong) solid var(--color-ink);
-  border-right: 0;
+  border: var(--rule-hairline) solid var(--color-ink);
   background: var(--color-page);
   font: inherit;
   font-size: var(--text-sm);
 }
 
-/**
- * The field is the only thing in the header besides the name, and `/` puts the
- * cursor here from anywhere — so focus has to be unmistakable rather than a
- * default hairline. The offset keeps the ring clear of the button it abuts.
- */
+/* The field is the only control in the header, so focus is unmistakable rather than a default hairline. */
 .site-search input:focus-visible {
   outline: var(--rule-strong) solid var(--color-link);
   outline-offset: 2px;
-  position: relative;
-  z-index: 1;
 }
 
-/* No grey anywhere, so the placeholder separates from a real value by style, not tone. */
 .site-search input::placeholder {
   color: var(--color-ink);
-  font-style: italic;
   opacity: 1;
-}
-
-.site-search button {
-  padding: var(--space-2xs) var(--space-sm);
-  border: var(--rule-strong) solid var(--color-ink);
-  background: var(--color-ink);
-  color: var(--color-ink-inverse);
-  font: inherit;
-  font-size: var(--text-sm);
-  cursor: pointer;
 }
 
 @media (max-width: 40rem) {

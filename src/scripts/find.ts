@@ -185,20 +185,6 @@ if (filtersEl && resultsEl && summaryEl) {
       ),
     );
 
-  /**
-   * With most fields optional, a filter that silently drops unknowns hides most
-   * of the market. So we say how many records were set aside and why.
-   */
-  const excluded = () =>
-    activeFacets()
-      .map((facet) => ({
-        label: facet.label,
-        count: providers.filter(
-          (provider) => provider.facets[facet.field] === undefined && !provider.notApplicable.includes(facet.field),
-        ).length,
-      }))
-      .filter((entry) => entry.count > 0);
-
   const renderFilters = () => {
     filtersEl.innerHTML = '';
 
@@ -400,8 +386,6 @@ if (filtersEl && resultsEl && summaryEl) {
       resultsEl.append(section);
     }
 
-    const dropped = excluded();
-
     // With nothing selected this says exactly what the server rendered. A visitor
     // with JavaScript should not be told "150 of 150" where a visitor without it
     // is told "150" — the script is here to narrow the list, not to restate it.
@@ -411,11 +395,6 @@ if (filtersEl && resultsEl && summaryEl) {
         ? `${found.length} of ${providers.length} ${noun}, sorted alphabetically.`
         : `${providers.length} ${noun}, sorted alphabetically.`,
     ];
-    if (dropped.length) {
-      parts.push(
-        `Set aside as unknown: ${dropped.map((entry) => `${entry.count} without ${entry.label.toLowerCase()}`).join(', ')}.`,
-      );
-    }
     summaryEl.textContent = parts.join(' ');
   };
 
