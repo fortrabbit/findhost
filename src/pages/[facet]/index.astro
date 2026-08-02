@@ -18,6 +18,16 @@ export async function getStaticPaths() {
 const { facet } = Astro.props;
 const inUse = facet.values.filter((value) => value.count > 0);
 const unused = facet.values.filter((value) => value.count === 0);
+
+/* One string, for the reason given in providers/index.astro. */
+const annotation = [
+  `${inUse.length} ${inUse.length === 1 ? 'value' : 'values'} in use.`,
+  facet.unknown > 0 && `${facet.unknown} ${facet.unknown === 1 ? 'record does' : 'records do'} not record this field.`,
+  facet.notApplicable > 0 &&
+    `For a further ${facet.notApplicable} the question does not apply, so there is nothing to record.`,
+]
+  .filter(Boolean)
+  .join(' ');
 ---
 
 <Base
@@ -27,18 +37,7 @@ const unused = facet.values.filter((value) => value.count === 0);
 >
   <h1>{facet.label}</h1>
 
-  <p class="annotation">
-    {inUse.length}
-    {inUse.length === 1 ? 'value' : 'values'} in use.
-    {
-      facet.unknown > 0 &&
-        ` ${facet.unknown} ${facet.unknown === 1 ? 'record does' : 'records do'} not record this field.`
-    }
-    {
-      facet.notApplicable > 0 &&
-        ` For a further ${facet.notApplicable} the question does not apply, so there is nothing to record.`
-    }
-  </p>
+  <p class="annotation">{annotation}</p>
 
   <ul class="stack-list">
     {

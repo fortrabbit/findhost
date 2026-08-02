@@ -67,6 +67,8 @@ greenWebId: 778
 
 ## About Uberspace
 
-Uberspace is a small service oriented, developer friendly hosting service that might be located somewhere between shared hosting and VPS. It's based in Germany, privacy friendly since 2011. Support is available in German as well as English, and the service has a following in the Kirby CMS community. The name predates the taxi company: 'über' is the German for 'over'.
+Uberspace is a small German hosting service that sits between shared hosting and a virtual server. It has been selling accounts since 2011 and supports customers in German and in English. The name predates the taxi company: "über" is the German for "over".
 
-The manual describes the platform as "targeted at people who want to look behind the scenes, do things we didn't anticipate", and the documented stack is unusually wide for the price segment: PHP, Python, Node.js, Deno, Ruby, Go, Rust, .NET Core, Java, Clojure, Erlang/OTP, Perl, Prolog and C/C++, with MySQL, PostgreSQL, MongoDB, CouchDB, Redis, InfluxDB and SQLite available alongside. Access is over SSH and SFTP, and Uberlab publishes installation guides for applications such as WordPress and Nextcloud.
+An account is a shell account on a shared machine rather than a control panel, and the manual describes the platform as "targeted at people who want to look behind the scenes, do things we didn't anticipate". The documented stack follows from that: PHP, Python, Node.js, Deno, Ruby, Go, Rust, Java, Clojure, Erlang, Perl and C alongside MySQL, PostgreSQL, MongoDB, CouchDB, Redis, InfluxDB and SQLite. Access is over SSH and SFTP, and Uberlab, the company's guide collection, publishes installation walkthroughs for applications such as WordPress and Nextcloud.
+
+Accounts are billed by the month with no minimum term, and a trial period runs before the first invoice.

@@ -32,6 +32,7 @@ interface ProviderRow {
   entryPriceBand?: string;
   figure?: { emoji: string; color: string; textColor: string };
   facets: Record<string, string | string[]>;
+  notApplicable: string[];
 }
 
 /**
@@ -154,7 +155,9 @@ if (filtersEl && resultsEl && summaryEl) {
     activeFacets()
       .map((facet) => ({
         label: facet.label,
-        count: providers.filter((provider) => provider.facets[facet.field] === undefined).length,
+        count: providers.filter(
+          (provider) => provider.facets[facet.field] === undefined && !provider.notApplicable.includes(facet.field),
+        ).length,
       }))
       .filter((entry) => entry.count > 0);
 
@@ -178,9 +181,27 @@ if (filtersEl && resultsEl && summaryEl) {
       heading.textContent = facet.label;
       group.append(heading);
 
-      for (const value of facet.values) {
-        if (!value.count) continue;
+      /*
+       * Commonest first, and anything already ticked ahead of that — a value the
+       * reader chose may sit far down the tail, and a filter that hides its own
+       * selection behind a "more" button is a filter nobody trusts. Ordering
+       * values by how many records hold them is a fact about the dataset;
+       * providers themselves stay alphabetical.
+       */
+      const inUse = facet.values
+        .filter((value) => value.count > 0)
+        .sort((a, b) => {
+          const picked = Number(chosen.has(b.id)) - Number(chosen.has(a.id));
+          return picked || b.count - a.count || a.label.localeCompare(b.label, 'en');
+        });
 
+      // The tail goes in its own container so one button reveals it in place.
+      const shown = 5;
+      const tail = document.createElement('div');
+      tail.className = 'find-tail';
+      tail.hidden = true;
+
+      for (const [index, value] of inUse.entries()) {
         const label = document.createElement('label');
         const input = document.createElement('input');
         input.type = 'checkbox';
@@ -201,7 +222,6 @@ if (filtersEl && resultsEl && summaryEl) {
         count.textContent = String(value.count);
 
         label.append(input, document.createTextNode(` ${value.label} `), count);
-        group.append(label);
 
         // Every facet value is also a page. Filtering narrows this list; the page
         // is where anything worth writing about that value lives.
@@ -212,12 +232,33 @@ if (filtersEl && resultsEl && summaryEl) {
         jump.title = `Open the ${value.label} page`;
         jump.setAttribute('aria-label', `Open the ${value.label} page`);
         label.append(jump);
+
+        (index < shown ? group : tail).append(label);
       }
 
-      if (facet.unknown > 0) {
+      if (inUse.length > shown) {
+        const more = document.createElement('button');
+        more.type = 'button';
+        more.className = 'find-more';
+        more.setAttribute('aria-expanded', 'false');
+        more.textContent = `${inUse.length - shown} more`;
+        more.addEventListener('click', () => {
+          tail.hidden = !tail.hidden;
+          more.setAttribute('aria-expanded', String(!tail.hidden));
+          more.textContent = tail.hidden ? `${inUse.length - shown} more` : 'Fewer';
+        });
+        group.append(tail, more);
+      }
+
+      if (facet.unknown > 0 || facet.notApplicable > 0) {
         const unknown = document.createElement('p');
         unknown.className = 'annotation';
-        unknown.textContent = `${facet.unknown} unknown`;
+        unknown.textContent = [
+          facet.unknown > 0 ? `${facet.unknown} unknown` : '',
+          facet.notApplicable > 0 ? `${facet.notApplicable} n/a` : '',
+        ]
+          .filter(Boolean)
+          .join(' · ');
         group.append(unknown);
       }
 

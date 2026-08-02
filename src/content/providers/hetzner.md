@@ -69,12 +69,8 @@ greenWebId: 131
 
 ## About Hetzner
 
-Hetzner Online GmbH was founded in 1997 and is headquartered in Gunzenhausen, Germany. It runs its own data centre parks in Nuremberg and Falkenstein in Germany and in Helsinki, Finland, and has added capacity in Singapore and the United States.
+Hetzner Online GmbH was founded in 1997 and is headquartered in Gunzenhausen, Germany. It owns and operates its own data centre parks in Germany and Finland, and has added capacity in Singapore and the United States.
 
-The product range covers shared hosting, dedicated servers, colocation, cloud servers, storage and object storage. Cloud servers are billed by the hour against a monthly price cap, and a server deleted mid-month is charged at the hourly rate only, so there is no minimum term. Backups are an opt-in extra priced at 20 per cent of the server price. The infrastructure is managed through a documented REST API and a CLI tool.
+The product range covers shared hosting, dedicated servers, colocation, cloud servers, block storage and object storage. A cloud server arrives as a Linux install with root access and nothing configured on top of it; everything above the operating system is the customer's to set up and to keep running. Billing is hourly against a monthly price cap, and a server deleted part-way through a month is charged only for the hours it ran, so there is no minimum term. Backups are an opt-in extra.
 
-General support runs on a German phone line, Monday to Friday, 08:00 to 18:00 CET. Each data centre publishes a separate 24-hour technical line for hardware faults.
-
-## Reservations
-
-Hetzner sells raw infrastructure. A cloud server arrives as a Linux machine with root access and nothing configured: web server, PHP-FPM, database, TLS certificates, firewall, security patches, OS upgrades and uptime monitoring are all the customer's responsibility. The low hourly price reflects that division of labour, and for a team without someone who does this work regularly the ongoing operational load can outweigh the saving. Liability follows the same line — an unpatched server is the account holder's problem, not the provider's.
+The infrastructure is driven through a documented REST API and an official command-line tool. General support runs on a German phone line during business hours, and each data centre publishes a separate round-the-clock line for hardware faults.

@@ -27,6 +27,21 @@ test.describe('the register', () => {
     await expect(page.locator('[data-find-summary]')).toContainText('alphabetical');
   });
 
+  /*
+   * Astro drops a whitespace-only text node between two expressions, so a count
+   * written as `{n} {noun}` in markup renders "150records" as soon as a
+   * formatter puts the two on separate lines. It shipped on 158 pages once and
+   * came back the next time Prettier reflowed the file, which is why the
+   * strings are built in frontmatter and why this asserts the space.
+   */
+  test('puts a space between a number and the noun it counts', async ({ page }) => {
+    await page.goto('/providers/');
+    await expect(page.locator('[data-find-summary]')).toHaveText(/^\d+ records, sorted alphabetically\.$/);
+
+    await page.goto('/software/');
+    await expect(page.locator('.annotation').first()).toHaveText(/^\d+ values in use\./);
+  });
+
   test('every row carries a tile, so a missing figure never looks broken', async ({ page }) => {
     await page.goto('/providers/');
     const rows = page.locator('[data-find-results] .provider-list > li');

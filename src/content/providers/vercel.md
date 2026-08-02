@@ -82,18 +82,16 @@ figure:
   emoji: 🔺
   color: rgb(20, 20, 24)
   textColor: rgb(220, 220, 230)
-  text: PHP on the frontend cloud.
+  text: The frontend cloud.
 ai: co-authored
 ---
 
 ## About Vercel
 
-Vercel is a serverless platform for frontend frameworks and functions. The official function runtimes are Node.js, Bun, Python, Rust, Go, Ruby, Wasm and Edge; custom OCI container images can also be deployed through Vercel's own container registry. Functions run in a microVM with a read-only filesystem and a writable `/tmp` of up to 500 MB, and are archived after two weeks without an invocation in production, which lengthens the next cold start by at least a second.
+Vercel is a serverless platform for frontend frameworks and functions. Its official function runtimes cover Node.js, Bun, Python, Go, Ruby and Rust, alongside WebAssembly and an edge runtime; custom OCI container images can also be deployed through Vercel's own container registry. The build system detects and configures common frontend frameworks, among them Next.js, SvelteKit, Nuxt, Astro and Remix.
 
-Twenty compute regions sit behind 126 points of presence; functions default to `iad1` in Washington, D.C., and multi-region execution is a Pro and Enterprise feature. Three account plans exist: Hobby is free and permanent but pauses once it exceeds the included allowance; Pro moves to credit-based usage billing with email support and an optional priority upgrade; Enterprise is quoted.
+Functions execute in a microVM with a read-only filesystem and a writable temporary directory, and nothing written there persists. A function runs in one default compute region unless multi-region execution is enabled, which is a paid-plan feature, and functions left uninvoked in production are archived, which lengthens the next cold start.
 
-## Reservations
+## Worth knowing
 
-PHP is not an official runtime. Vercel lists `vercel-php` under "community runtimes recommended by Vercel", which means a package maintained outside the company executing PHP inside Vercel's function model. It is actively maintained and current — but the support behind it is a maintainer's time rather than a platform commitment, and nothing in Vercel's plan terms covers it.
-
-The serverless execution model also constrains what a PHP application can do. There is no persistent filesystem beyond `/tmp`, functions have a maximum duration, and long-running or stateful work has to move somewhere else.
+Account plans run from a permanent free tier through usage-billed paid plans to a quoted enterprise tier. The free tier does not bill overage: it pauses once the included allowance is spent. Paid plans move to credit-based usage billing, so the monthly figure follows consumption rather than a fixed rate. Support is by email, with faster handling available as a paid upgrade.

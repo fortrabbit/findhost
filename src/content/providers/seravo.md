@@ -60,10 +60,10 @@ ai: authored
 
 ## About Seravo
 
-Seravo is a WordPress-only host from Tampere, built by people whose instincts come from Linux distribution work rather than from the hosting industry. The stack is stated plainly — Docker, MariaDB, Nginx, PHP, Redis — and the company's open-source commitments are part of the pitch rather than a footnote.
+Seravo is a WordPress-only host based in Tampere, Finland. The stack is stated plainly — Docker, MariaDB, Nginx, PHP, Redis — and the company's open-source work is part of the pitch rather than a footnote.
 
-The distinctive thing is `Seravo/wordpress`, the project layout its customers develop against. It is a public repository, and Finnish agencies have built their own add-ons, Vagrant boxes and local-development templates on top of it — which means a Seravo site is a normal git project on a developer's machine before it is a hosting account. Every plan includes daily backups, security scanning, monitoring and support from WordPress specialists.
+The distinctive part is `Seravo/wordpress`, the project layout its customers develop against. It is a public repository, and Finnish agencies have built their own add-ons, Vagrant boxes and local-development templates on top of it, which means a Seravo site is an ordinary git project on a developer's machine before it is a hosting account. Deployment is by git push or over SSH, with a command-line tool for routine operations. Every plan includes daily backups, security scanning, monitoring and support from WordPress specialists.
 
-## Reservations
+## Worth knowing
 
-Plans are metered by HTTP requests rather than by CPU or storage, which is an honest measure but an unfamiliar one to size against. Entry pricing is high next to general shared hosting, the top tier is quote-only, and this runs one application and nothing else — there is no path here for anything that is not WordPress. Server locations are not disclosed on the plans page.
+Plans are metered by HTTP requests rather than by CPU, memory or storage. It is a measure that tracks what a site actually serves, but an unfamiliar unit to size a plan against before launch. Server locations are not disclosed on the plans page.

@@ -14,6 +14,17 @@ const letterOf = (name: string) => {
 
 const letters = [...new Set(providers.map((provider) => letterOf(provider.name)))].sort();
 
+/*
+ * Built here rather than in the template. Astro drops a whitespace-only text
+ * node between two expressions, so `{n} {noun}` in markup renders "150records"
+ * the moment a formatter puts them on separate lines — which it does whenever
+ * the line grows. A string cannot be reflowed into a bug.
+ *
+ * The wording matches what find.ts writes here once a filter is set, and it
+ * states the order, because position is not ranking.
+ */
+const summary = `${providers.length} ${providers.length === 1 ? 'record' : 'records'}, sorted alphabetically.`;
+
 const groups = letters.map((letter) => ({
   letter,
   // The heading already carries a `#` as its anchor link, so the numeric group
@@ -34,33 +45,25 @@ const groups = letters.map((letter) => ({
     {groups.map((group) => <a href={`#${group.anchor}`}>{group.letter}</a>)}
   </nav> -->
 
-  {
-    /* Wording matched to what find.ts writes here once a filter is set — and the order is stated, because position is not ranking. */
-  }
-  <p class="annotation" data-find-summary>
-    {providers.length}
-    {providers.length === 1 ? 'record' : 'records'}, sorted alphabetically.
-  </p>
+  <p class="annotation" data-find-summary>{summary}</p>
 
-  <div class="find">
-    <div class="find-filters" data-find-filters></div>
+  <div class="find-filters" data-find-filters></div>
 
-    <div data-find-results>
-      {
-        groups.map((group) => (
-          <section class="letter-group" id={group.anchor}>
-            <h2>
-              <a class="anchor-link" href={`#${group.anchor}`} aria-label={`Link to ${group.label}`}>
-                #
-              </a>
-              {group.label}
-            </h2>
+  <div data-find-results>
+    {
+      groups.map((group) => (
+        <section class="letter-group" id={group.anchor}>
+          <h2>
+            <a class="anchor-link" href={`#${group.anchor}`} aria-label={`Link to ${group.label}`}>
+              #
+            </a>
+            {group.label}
+          </h2>
 
-            <ProviderList providers={group.rows} />
-          </section>
-        ))
-      }
-    </div>
+          <ProviderList providers={group.rows} />
+        </section>
+      ))
+    }
   </div>
 
   <div data-find-fallback>

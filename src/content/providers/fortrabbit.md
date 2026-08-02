@@ -58,8 +58,14 @@ figure:
   text: As secure as Fort Knox, as fast as a rabbit.
 ---
 
-fortrabbit is a small, independent German company running a managed PHP platform on rented AWS capacity. It is also who publishes FindHost, which is why this record exists and why it carries a permanent marker.
+## About fortrabbit
 
-The record is held to the same standard as every other: the same fields, the same sourcing, the same right of reply. If anything here reads more favourably than the evidence supports, that is a bug — open an issue.
+fortrabbit is a small, independent German company running a managed hosting platform for PHP applications. It owns no hardware: the platform is built on rented AWS capacity, in Ireland and in the United States. Applications are deployed by git push, with full SSH access to the running environment and managed MySQL alongside. Plans are fixed tiers rather than metered usage, billed by the month, and a trial is available before an application goes live.
 
-Two figures come off the pricing page and both are recorded. €2.50 a month is the smallest setup that can exist; €5 to €10 is what the same page says a small production app with a database costs. The entry price field carries the first, the band carries the second, because the band is defined as the app with everything mandatory included.
+fortrabbit also publishes FindHost, which is why this record carries a permanent marker saying so. It is held to the same standard as every other record here — the same fields, the same sourcing, the same right of reply. Anything reading more favourably than the evidence supports is a bug; open an issue.
+
+## Worth knowing
+
+The platform runs PHP and nothing else. There is no runtime here for an application written in another language, and the shape of the product follows from that single assumption.
+
+Because the infrastructure is rented rather than owned, the regions and their physical properties are the upstream provider's rather than fortrabbit's.

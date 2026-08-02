@@ -440,26 +440,41 @@
 
 /* --- The find view --- */
 
-.find {
+/*
+ * Filters across the top rather than down one side. A narrow rail forced every
+ * value onto its own wrapped line and gave the register two thirds of a page to
+ * live in; a band of columns fits the same facets in a third of the height and
+ * leaves the list the full measure.
+ */
+/* With JavaScript off nothing fills it, and an empty ruled box is a broken box. */
+.find-filters:empty {
+  display: none;
+}
+
+.find-filters {
   display: grid;
-  grid-template-columns: 15rem minmax(0, 1fr);
-  gap: var(--space-lg);
-  align-items: start;
-}
-
-.find-filters,
-.find > .provider-list {
-  min-width: 0;
-}
-
-@media (max-width: 46rem) {
-  .find {
-    grid-template-columns: 1fr;
-  }
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: var(--space-md) var(--space-lg);
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-md);
+  border-bottom: var(--rule-strong) solid var(--color-ink);
 }
 
 .find-facet {
-  margin: 0 0 var(--space-md);
+  min-width: 0;
+}
+
+/* Hidden until asked for, so a long tail costs no height. */
+.find-more {
+  margin-top: var(--space-3xs);
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--color-link);
+  font: inherit;
+  font-size: var(--text-xs);
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .find-facet-title {

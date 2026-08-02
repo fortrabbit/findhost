@@ -69,14 +69,12 @@ ai: co-authored
 
 ## About Railway
 
-Railway is a language-agnostic deployment platform. Builds run through Railpack, which detects Node, Python, Go, PHP, Java and Ruby without configuration, and can be steered with environment variables or a config file. Databases are provisioned from first-party templates for PostgreSQL, MySQL, MongoDB and Redis.
+Railway is a language-agnostic deployment platform. Builds run through Railpack, its own build system, which detects Node.js, Python, Go, PHP, Java and Ruby without configuration and can be steered with environment variables or a config file; a Dockerfile can be supplied instead. Databases are provisioned from first-party templates for PostgreSQL, MySQL, MongoDB and Redis.
 
-Billing combines a subscription with metered usage: Free at $0 with $1 of monthly credit, Hobby at $5 a month including $5 of resource usage, Pro at $20 a month including $20 of usage. Consumption above the included amount is charged on top. Four regions are documented — California, Virginia, Amsterdam and Singapore.
+Deployment is from a connected git repository or through the official command-line tool. The same tool reaches a GraphQL API, and an `mcp install` command wires Railway access into MCP-compatible AI tooling. Regions are available in North America, Europe and Asia-Pacific.
 
-Tooling is a strong point: an official CLI, a GraphQL API reachable through it, and an `mcp install` command that configures Railway access for MCP-compatible AI tools.
+Billing pairs a monthly subscription with metered usage. Each plan carries an allowance of resource consumption and anything above it is charged on top, so the subscription figure is a floor rather than the bill: what the platform costs depends on the compute, memory, bandwidth and database time an application uses.
 
-## Reservations
+## Worth knowing
 
-Support is tiered sharply. Trial, Free and Hobby accounts get community support through Railway's forum with no guaranteed response; Pro is answered "usually within 72 hours"; guaranteed response times start at the Business Class plan. For a production application, the plan that carries an SLA is some way above the advertised entry price.
-
-Usage-based billing also means the subscription figure is not the bill. What the platform costs depends on how much compute, memory, bandwidth and database time an application consumes.
+Support is tiered by plan. The free and entry plans are answered through a community forum with no guaranteed response; a stated turnaround appears on higher paid plans, and a contractual response time only at the top of the range. The plan carrying that commitment sits several tiers above the free entry point.

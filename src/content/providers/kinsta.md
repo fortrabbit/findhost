@@ -67,12 +67,12 @@ ai: co-authored
 
 ## About Kinsta
 
-Kinsta is a managed WordPress host, founded in 2013. It states it operates 30 data centres and 300 CDN locations. Plans are tiered on monthly visits rather than resources: the entry plan, Single 20GB, is listed at $35 a month with the first month free and $30 a month on annual billing. Backup retention is 14 days.
+Kinsta is a managed WordPress host, founded in 2013. The operating system, web server and application runtime are managed by the provider; the customer works at the level of the WordPress installation. Plans are tiered on monthly visits rather than on CPU, memory or storage, and backups are included on every tier. Sites are served from data centre regions across the Americas, Europe, the Middle East, Africa and Asia-Pacific, fronted by a CDN.
 
-Kinsta used to sell general application, database and static-site hosting alongside WordPress. Those non-WordPress products were split into a separate brand, Sevalla, leaving kinsta.com focused on WordPress alone.
+Kinsta once sold general application, database and static-site hosting alongside WordPress. Those non-WordPress products were moved into a separate brand, Sevalla, leaving kinsta.com selling WordPress hosting alone.
 
-## Reservations
+## Worth knowing
 
-Visit-based pricing means the bill responds to traffic rather than to resource use, and a plan can be outgrown by attention rather than by load. The advertised entry figure is also the annual-billing rate; paying monthly costs more.
+Visit-metered pricing means the bill responds to traffic rather than to resource consumption, so a plan can be outgrown by attention rather than by load. The headline plan figures are annual-billing rates; paying month to month costs more.
 
-Like other managed WordPress hosts, Kinsta maintains a list of plugins that may not be installed — caching, backup and migration plugins that conflict with its own architecture. That is a reasonable engineering decision and a real constraint on what a site can run.
+Kinsta maintains a list of plugins that may not be installed — chiefly caching, backup and migration plugins that duplicate or conflict with its own infrastructure. That is a real limit on what a site can run.
