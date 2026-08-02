@@ -7,7 +7,7 @@ urls:
   terms: https://lolipop.jp/terms/tos/
   docs: https://lolipop.jp/manual/
 category: shared
-description: Japanese rental server from GMO Pepabo, sold in five tiers from about a hundred yen a month, with SSH and LiteSpeed appearing only higher up the ladder.
+description: Japanese rental server from GMO Pepabo, selling shared hosting for personal and small-business sites through its own control panel.
 hqCountry: JP
 ownership: subsidiary
 parent: GMO Pepabo
@@ -61,10 +61,12 @@ ai: authored
 
 ## About Lolipop!
 
-Lolipop is operated by GMO Pepabo and is one of the places a great many Japanese personal and small-business sites begin — the entry Economy plan is around ¥121 a month on a long contract, which is close to free, and still comes with 120 GB of storage and fifty domains.
+Lolipop is a rental-server brand operated by GMO Pepabo, and one of the places a great many Japanese personal and small-business sites begin. The entry tier costs about as little as hosting costs in Japan and still carries generous storage and a large domain allowance.
 
-Five tiers step up from there to Enterprise at ¥2,420 with 1.2 TB. The technical differences between them are real rather than cosmetic: the two upper tiers run Nginx with LiteSpeed and unlimited MySQL 8 databases, the middle ones Nginx with Apache and a database cap, and SSH appears only from the Standard plan upwards. SQLite is available across most of the range.
+The tiers differ on real technical grounds rather than on quota alone. The upper plans run a faster web server stack and lift the database cap, the middle ones are more constrained, and shell access appears only from the middle of the ladder upwards.
 
-## Reservations
+## Worth knowing
 
-Advertised prices assume a thirty-six-month contract; shorter terms cost more. SSH is absent from the two cheapest plans, and PHP versions are not published for most tiers, so what a plan actually runs has to be discovered after purchase. Everything is in Japanese, and there is no English storefront.
+Advertised prices assume a multi-year contract; shorter terms cost more. The runtime versions a plan offers are not published for most tiers, so what a plan actually runs has to be discovered after purchase.
+
+Everything — storefront, control panel and documentation — is in Japanese, and there is no English-language equivalent.

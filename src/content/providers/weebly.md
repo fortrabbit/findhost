@@ -34,4 +34,6 @@ ai: co-authored
 
 ## About Weebly
 
-Weebly is a drag-and-drop site builder focused on ease of use, bundling hosting, templates and basic ecommerce for small businesses. It has been part of Square — now Block — since the 2018 acquisition, and Block's builder development has since centered on Square Online, which grew out of Weebly's technology. Weebly remains available and integrates with Square payments, but it limits code-level customization, and its place next to Square Online is worth weighing when picking a platform for the years ahead.
+Weebly is a drag-and-drop website builder that bundles hosting, templates and basic ecommerce for small businesses. There is a permanent free tier with paid fixed tiers above it, and sites integrate with Square payments.
+
+Weebly has been part of Square, now Block, since its acquisition in 2018. Block's builder development has since centred on Square Online, which grew out of Weebly's own technology, while Weebly remains available under its own name. There is no server access, and customisation stops at what the editor exposes.

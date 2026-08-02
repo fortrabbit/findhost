@@ -69,10 +69,12 @@ ai: authored
 
 ## About Loopia
 
-Loopia was founded in Västerås in 1999 as NetConnect and today manages just over 800,000 domain names. Ownership has moved three times: Visma sold the hosting division to the Danish investor Axcel in 2018, and Axcel sold Loopia Group to team.blue in May 2024.
+Loopia was founded in Västerås in 1999 as NetConnect and is a domain registrar as well as a host, managing several hundred thousand domain names. Ownership has moved repeatedly: Visma sold the hosting division to the Danish investor Axcel in 2018, and Axcel sold Loopia Group to team.blue in 2024.
 
-It is one of the few providers still running a genuine Windows hosting track — ASP.NET on .NET 10 and MS SQL — beside the Linux and PHP one, which publishes versions from 8.2 to 8.5. SSH is included on every package. A public XML-RPC domain API has drawn independent Python libraries, a Terraform provider and an ACME module, none of them company-maintained.
+It is one of the few providers still running a genuine Windows hosting track — ASP.NET and MS SQL — beside the Linux one, which carries PHP with a choice of release. SSH is included on every package. A public XML-RPC domain API has drawn independent client libraries, a Terraform provider and an ACME module, none of them company-maintained.
 
-## Reservations
+## Worth knowing
 
-Introductory pricing is steep in both directions: the first year runs at a fraction of the standing rate, and on the larger business plans the gap is several-fold. Python and Perl are offered through CGI rather than a modern application server, which limits what can realistically be deployed. The specification page does not state where the data centres are.
+Introductory pricing is steep in both directions: the first year runs at a fraction of the standing rate, and on the larger business plans the step up is several-fold.
+
+Python and Perl are offered through CGI rather than a modern application server, which limits what can realistically be deployed there. The specification pages do not state where the data centres are.

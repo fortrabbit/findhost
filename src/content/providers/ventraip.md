@@ -58,16 +58,16 @@ figure:
   emoji: 🪃
   color: rgb(65, 30, 20)
   textColor: rgb(250, 200, 175)
-  text: Registrar first, no lock-in.
+  text: A registrar with cPanel attached.
 ai: authored
 ---
 
 ## About VentraIP
 
-VentraIP was founded in Melbourne in 2008 and is the retail brand of Nexigen Digital Pty Ltd, which holds ISO 27001 certification. The company describes itself as Australia's largest independent registrar, with over a million domains and more than 300,000 customers, and its infrastructure sits in NEXTDC facilities.
+VentraIP was founded in Melbourne in 2008 and is the retail brand of Nexigen Digital Pty Ltd, which holds ISO 27001 certification. The company describes itself as Australia's largest independent domain registrar, and its hosting runs in Australian NEXTDC facilities rather than on hardware it owns.
 
-Hosting is conventional cPanel shared hosting across three tiers. What distinguishes it is the commercial terms rather than the technology: no lock-in contracts, free migration, and a 45-day money-back guarantee where 30 is the norm. Independent developers have written DNS clients and dynamic-DNS tools against its API.
+The hosting itself is conventional cPanel shared hosting, sold alongside WordPress plans and VPS. What sets the offer apart is commercial rather than technical: no minimum contract, free migration and a money-back guarantee. Support runs by phone and chat around the clock.
 
-## Reservations
+## Worth knowing
 
-Advertised prices are half-price introductory rates that double on renewal. PHP versions and SSH availability are not published on the plan pages, and no developer-facing documentation site or public API reference could be found — this is a registrar with hosting attached rather than a platform.
+Advertised prices are introductory rates that rise at renewal. The plan pages publish neither the PHP versions on offer nor whether SSH is included, and no developer documentation or public API reference could be found.

@@ -58,10 +58,6 @@ ai: authored
 
 ## About Cloud 66
 
-Cloud 66 has been building deployment tooling since 2012, originally for Rails and now for containerised applications, native applications on virtual machines, and static sites built with Jekyll, Hugo or Gatsby. It is a CNCF silver member and names Disney, Epic Games and Pixar among its customers.
+Cloud 66 has been building deployment tooling since 2012, originally for Rails and now for containerised applications, native applications on virtual machines, and static sites built with Jekyll, Hugo or Gatsby.
 
-The model is consistent throughout: servers are bought from AWS, Google Cloud or Azure and paid for directly, and Cloud 66 manages what runs on them. Plans are graded by how many servers and static sites they cover — free for one of each, $23 a month for two, $47 for four, $80 for seven, and a custom tier above fifty — with roughly a fifth off for annual billing.
-
-## Reservations
-
-The subscription is the management layer and the cloud bill is separate and larger, so the advertised price describes a fraction of the running cost. Counting servers rather than applications rewards consolidation but penalises anyone who wants isolation between projects. Specific runtime languages are not enumerated on the pricing page, and the people behind the company are not named there.
+The model is consistent throughout: servers are bought from AWS, Google Cloud or Azure and paid for directly, and Cloud 66 manages what runs on them — builds, deployments, certificates, databases and the process supervision around them. Plans are graded by how many servers and static sites they cover rather than by how many applications sit on those servers, with a free tier at the bottom and a negotiated tier at the top.

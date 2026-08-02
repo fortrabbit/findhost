@@ -6,7 +6,7 @@ urls:
   pricing: https://apiscp.com/pricing/
 category: server-management
 regions: null
-description: ApisCP — short for Apis Networks Control Panel, formerly known as apnscp — is a self-hosted hosting platform and control panel by Apis Networks, grown out of a panel the company has run internally…
+description: Self-hosted hosting platform and control panel from Apis Networks, licensed per server and aimed at providers running their own fleet.
 whoManagesOs: panel-assisted
 infraContract:
   - byo-iaas
@@ -39,12 +39,6 @@ ai: co-authored
 
 ## About ApisCP
 
-ApisCP — short for Apis Networks Control Panel, formerly known as apnscp — is a self-hosted hosting platform and control panel by Apis Networks, grown out of a panel the company has run internally since 2002. It is designed for security, performance, and density, and is typically used by hosting providers and experienced system administrators. It automates many aspects of server management but exposes a vast array of configuration options.
+ApisCP — short for Apis Networks Control Panel, formerly known as apnscp — is a self-hosted hosting platform and control panel by Apis Networks, grown out of a panel the company has run internally since 2002. It installs on a server the operator supplies and automates provisioning, account isolation, updates and self-healing, while exposing a large configuration surface underneath. The intended operator is a hosting provider or an experienced administrator rather than someone running a single site.
 
-It is known for its "security first" architecture and its ability to handle high-density hosting environments. The panel core is commercially licensed per server, while its backend modules are published as open source. It supports several runtimes — PHP, Node.js, Python, Ruby, Go — but is particularly strong in the traditional LAMP stack area.
-
-### What ApisCP does well
-
-- **Security**: It has a very strong focus on security isolation and proactive defense.
-- **Customization**: It offers granular control over almost every aspect of the hosting environment.
-- **Automation**: It includes self-healing capabilities and automated updates for the panel and system packages.
+The panel core is commercially licensed per server; the backend modules are published as open source. Runtimes covered are PHP, Node.js, Python, Ruby and Go, and the licence is sold on an annual subscription with a trial ahead of it.

@@ -57,10 +57,10 @@ ai: authored
 
 ## About Sliplane
 
-Sliplane runs Docker containers on servers you rent by the size rather than by the workload — a Starter machine is €9 a month for one vCPU and a gigabyte of memory, and unlimited services can share it with no per-container fee. That inverts the usual platform pricing model, where every additional service adds a line to the bill, and it suits a developer with a dozen small things to run rather than one large one.
+Sliplane runs Docker containers on servers rented by size rather than by workload: an unlimited number of services can share one machine with no per-container fee. That inverts the usual platform pricing model, where every additional service adds a line to the bill.
 
-Deployment is from git or a container image, with one-click presets for PostgreSQL, MySQL, MongoDB, n8n, Langflow and Metabase. Managed PostgreSQL with point-in-time backups and S3-compatible object storage with no egress fees are sold alongside. Regions are Germany, Finland, Singapore and two in the United States, with prices varying by location.
+Deployment is from a git repository or a container image, with one-click templates for common databases and self-hosted tools. Managed PostgreSQL with point-in-time backups and S3-compatible object storage without egress fees are sold alongside. Servers can be placed in Europe, North America or Asia, and the price varies by location.
 
-## Reservations
+## Worth knowing
 
-There is no free tier, only a 48-hour demo server that deletes itself, and managed PostgreSQL has no free option at all. Server-based pricing cuts the other way too: unlimited services on a one-core machine is unlimited in the billing sense only, and capacity planning is back with the customer. The discount structure is layered — monthly billing off the hourly rate, annual off that — so the headline figure depends on the commitment.
+Unlimited services on a small machine is unlimited in the billing sense only — capacity planning stays with the customer. The free option is a short-lived demo server that deletes itself rather than a standing free tier.

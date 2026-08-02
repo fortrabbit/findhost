@@ -6,7 +6,7 @@ urls:
   pricing: https://clever.cloud/pricing/
   status: https://clevercloudstatus.com/
 category: paas
-description: French platform-as-a-service that builds and runs applications from a git push across a dozen runtimes, with managed databases sold as add-ons.
+description: French platform-as-a-service that detects, builds and runs an application from a git push, with managed databases and storage sold as add-ons.
 hqCountry: FR
 whoManagesOs: container
 infraContract:
@@ -71,7 +71,7 @@ figure:
   emoji: 🐇
   color: rgb(230, 60, 50)
   textColor: rgb(255, 235, 230)
-  text: Twelve runtimes, one git push.
+  text: One git push, many runtimes.
 ai: authored
 ---
 
@@ -79,10 +79,10 @@ ai: authored
 
 Clever Cloud is a platform-as-a-service run from Nantes. An application is deployed by pushing to a git remote; the platform detects the stack, builds it and runs it. Runtimes cover Node, Python, Java, PHP, Ruby, Go, Rust, Scala, Elixir, Haskell and .NET, with Docker for anything outside that set, alongside managed PostgreSQL, MySQL, MongoDB, Redis and object storage sold separately as add-ons.
 
-The Paris zone runs on the company's own infrastructure; the other zones — the United Kingdom, Poland, Singapore, Sydney, Montreal and the United Arab Emirates — run on capacity rented from other European providers, which the platform's public zones endpoint discloses. It holds ISO/IEC 27001:2022 and the French HDS health-data certification, and offers a SecNumCloud route through a partner.
+The Paris zone runs on the company's own infrastructure; the other zones run on capacity rented from other European providers, which the platform's public zones endpoint discloses rather than obscures. It holds ISO/IEC 27001 and the French HDS health-data certification, and offers a SecNumCloud route through a partner.
 
-It is one of the very few European platforms carrying a deployment guide inside both the Astro and the Nuxt official documentation, and there is a GitHub Action for it maintained outside the company.
+## Worth knowing
 
-## Reservations
+The pricing page is a JavaScript estimator rather than a rate card. Per-hour rates are readable from the public billing API but not from the page a prospective customer is sent to, so plans cannot be compared there directly.
 
-The pricing page publishes no numbers. It is a JavaScript estimator, and the per-hour rates are only readable from the public billing API — so the page a buyer is sent to cannot be used to compare prices. Billing is per second against prepaid credit rather than a monthly plan, which means the recurring cost has to be modelled rather than read.
+Billing runs per second against prepaid credit rather than as a monthly subscription, which means a recurring cost has to be modelled rather than read off a tier.

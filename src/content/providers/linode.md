@@ -56,12 +56,12 @@ ai: co-authored
 
 ## About Linode
 
-Linode has sold Linux virtual servers to developers since 2003. Akamai acquired the company in 2022 and the product is now marketed as Akamai Cloud. The catalogue has widened accordingly, from plain VPS instances towards broader infrastructure services integrated with Akamai's CDN and edge network.
+Linode has sold Linux virtual servers to developers since 2003. Akamai acquired it in 2022 and the product is now marketed as Akamai Cloud, with the catalogue widening from plain VPS instances towards broader infrastructure services integrated with Akamai's CDN and edge network.
 
-Linode's public API — which needs no credentials to read the catalogue — lists 33 regions across 15 countries and puts the cheapest instance, the 1 GB Nanode, at $5.00 a month or $0.0075 an hour.
+The public API needs no credentials to read the catalogue, so instance types, prices and the region list can be queried directly rather than read off a pricing page — which is where the figures in this record come from.
 
-## Reservations
+## Worth knowing
 
-A Linode is a Linux server, and the responsibility that comes with one. Building and maintaining the web stack — Nginx, PHP-FPM, MySQL, TLS certificates, firewall rules — takes time and expertise, and security patches, operating system upgrades and monitoring are standing work rather than a one-off setup.
+The product's centre of gravity has moved. Marketing, packaging and roadmap now sit inside Akamai's enterprise infrastructure business, a different customer from the independent developer Linode was built around.
 
-The product's centre of gravity has also moved. Marketing, packaging and roadmap now sit inside Akamai's enterprise infrastructure business, which is a different customer from the independent developer the original Linode was built around. The brand's own corporate pages have gone with it: `linode.com/company/about/` redirects to akamai.com and the Linode terms of service return 404, so the company behind the product can now only be read about under another name.
+The corporate pages have gone with it: `linode.com/company/about/` redirects to akamai.com and the Linode terms of service return 404, so the company behind the product can now only be read about under another name.

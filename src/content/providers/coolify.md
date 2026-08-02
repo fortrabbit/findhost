@@ -5,7 +5,7 @@ urls:
   home: https://coolify.io
 category: server-management
 regions: null
-description: Coolify is an open-source, self-hostable PaaS. It runs as a control panel on servers the operator rents and maintains, with a paid cloud-hosted panel as an alternative.
+description: Open-source self-hostable PaaS installed as a control panel on servers the operator rents, with a paid cloud-hosted panel as the alternative.
 whoManagesOs: panel-assisted
 infraContract:
   - byo-iaas
@@ -47,16 +47,14 @@ ai: co-authored
 
 ## About Coolify
 
-Coolify describes itself as "an open-source & self-hostable alternative to Vercel, Heroku, Netlify and Railway". It is built by coolLabs around founder Andras Bacsai in Hungary, and the source is on GitHub.
+Coolify is an open-source, self-hostable platform-as-a-service built by coolLabs around founder Andras Bacsai in Hungary, with the source on GitHub.
 
-The model is bring-your-own-infrastructure. Coolify installs as a control panel on a server the operator provisions — EC2, DigitalOcean, Linode, Hetzner and Raspberry Pi are the named targets — and then handles container orchestration, deployments, Let's Encrypt certificates, S3-compatible database backups, pull-request deployments, a real-time terminal, server monitoring and notifications through Discord, Telegram or email. Deployment comes from a connected GitHub, GitLab, Bitbucket or Gitea repository, or from any Docker-compatible service, and the project states support for any language and framework. There is an API.
+The model is bring-your-own-infrastructure. Coolify installs as a control panel on a server the operator provisions — EC2, DigitalOcean, Linode, Hetzner and Raspberry Pi are the named targets — and then handles container orchestration, deployments, Let's Encrypt certificates, S3-compatible database backups, pull-request deployments, a real-time terminal, server monitoring and notifications through Discord, Telegram or email. Deployment comes from a connected GitHub, GitLab, Bitbucket or Gitea repository, or from any Docker-compatible source, and the project states support for any language and framework. There is a public API.
 
-Two editions exist. The self-hosted panel is free with no feature gates. Coolify Cloud hosts the panel itself for a subscription; its price is not published on the homepage. In both cases the application servers belong to the customer.
+Two editions exist. The self-hosted panel is free with no feature gates; Coolify Cloud hosts the panel itself for a subscription. In both cases the application servers belong to the customer.
 
-## Reservations
+## Worth knowing
 
-Coolify provisions and deploys; it does not take the server off anyone's hands. Once the instance is running, kernel and operating system updates, security patches, disk pressure, log rotation, off-site backups, uptime monitoring and out-of-hours incidents remain the operator's work. Free software on a rented server is not the same as free hosting.
+The panel is itself a component to look after. It consumes resources on the machine it runs on, it has to be kept current, and a failed panel upgrade is an incident like any other.
 
-The panel is itself a component to look after. It consumes resources on the machine it runs on, it has to be kept current, and a failed panel upgrade is an incident like any other. Multi-server setups and Docker Swarm are supported, but there is no managed multi-node orchestration, no automatic failover and no autoscaling — capacity is added by hand.
-
-Running PHP on Coolify means owning a container image: a build configuration or a Dockerfile pinning the PHP version and extensions, an FPM or web server configuration, opcache settings, a supervisor configuration for queue workers and a cron entry for the scheduler. All of it is documented and all of it works; all of it also has to be maintained by whoever owns the repository.
+Multi-server setups and Docker Swarm are supported, but there is no managed multi-node orchestration, no automatic failover and no autoscaling. Capacity is added by hand.

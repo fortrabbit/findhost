@@ -5,7 +5,7 @@ urls:
   home: https://www.divio.com
   pricing: https://www.divio.com/pricing/
 category: paas
-description: Swiss platform that runs Dockerised applications of any stack from git, with a free-trial tier, tiered support response times and a stated cloud-cost calculator.
+description: Divio is a Swiss platform-as-a-service that runs Dockerised applications of any stack, deployed from git.
 founded: 2006
 hqCountry: CH
 ownership: public
@@ -69,12 +69,12 @@ ai: authored
 
 ## About Divio
 
-Divio is a Swiss platform for running containerised web applications. Everything is Docker and git: the same image runs locally and in production, and the platform handles the environments, scaling and maintenance around it. Its roots are in the Django world — django CMS and Wagtail are still named alongside Django, FastAPI and Flask — but the documented stack list now runs to Node, Laravel, Symfony, Spring Boot, ASP.NET Core, Rails, WordPress and Drupal.
+Divio is a Swiss platform for running containerised web applications. Everything is Docker and git: the same image runs locally and in production, and the platform manages the environments, scaling and maintenance around it. Its roots are in the Django world — django CMS and Wagtail are still named alongside Django, FastAPI and Flask — but the documented stack list extends to Node, Laravel, Symfony, Spring Boot, ASP.NET Core, Rails, WordPress and Drupal.
 
-Plans start with a Lite trial tier at a fifth of a CPU core and 256 MB of memory, then a Business tier with paired resources. Support is sold separately as Standard with a three-business-day response or Priority at one business day, and feature tiers named Silver, Gold and Platinum add environments, backup retention and domain coverage. The company publishes a calculator claiming an average annual cost reduction against direct cloud spend.
+Pricing is a grid rather than a ladder: a resource tier, a support tier sold separately with its own response-time commitment, and a feature tier governing environments, backup retention and domain coverage. A trial tier is available, and the platform is ISO 27001 certified.
 
-## Reservations
+## Worth knowing
 
-Three separate axes — resource tier, support tier and feature tier — have to be chosen before a price exists, and the pricing page does not resolve them into a single figure. Cloud providers and regions are described only as "multiple global cloudspaces", with no country named in either the pricing page or the documentation.
+All three pricing axes have to be chosen before a figure exists, and the pricing page does not resolve them into one. Cloud providers and regions are described only as "multiple global cloudspaces", with no country named on the pricing page or in the documentation.
 
-The company page dates the founding to 2006 in Zurich and names the listed entity as Divio Technologies AB on Nasdaq First North Growth Market in Stockholm, which puts the operating identity and the registered one in different countries. Only the Swiss side is recorded here.
+The company page dates the founding to Zurich and names the listed entity as Divio Technologies AB on Nasdaq First North Growth Market in Stockholm, which puts the operating identity and the registered one in different countries.

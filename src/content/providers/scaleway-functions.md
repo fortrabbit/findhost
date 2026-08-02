@@ -5,7 +5,7 @@ urls:
   home: https://www.scaleway.com/en/serverless-functions/
   pricing: https://www.scaleway.com/en/serverless-functions/
 category: serverless
-description: Scaleway Functions is a European function-as-a-service with a native PHP runtime, billed by request and by memory consumed.
+description: European function-as-a-service from Scaleway, running Node, Python, Go, Rust and PHP handlers billed by request and by memory consumed.
 whoManagesOs: provider
 useCases:
   - api
@@ -32,14 +32,12 @@ figure:
   emoji: 🧵
   color: rgb(50, 30, 70)
   textColor: rgb(200, 170, 255)
-  text: EU functions, native PHP.
+  text: Event handlers, billed by the millisecond.
 ai: co-authored
 ---
 
 ## About Scaleway Functions
 
-Scaleway Functions is the French cloud provider's function-as-a-service. The documented runtimes are Node.js, Go, Python, PHP and Rust — as of July 2026, PHP 8.5, Node 24 and 26, Python 3.14, Go 1.25 and 1.26, and Rust 1.96. PHP is a first-class runtime here rather than a custom layer, which is unusual in this segment.
+Scaleway Functions is the French cloud provider's function-as-a-service, sold beside the rest of the [Scaleway](/providers/scaleway/) catalogue and running in the same European regions. Handlers are deployed as source or as a container, and the documented runtimes are Node, Go, Python, Rust and PHP, each maintained by the provider rather than assembled by the customer as a custom layer.
 
-Billing is usage-based: by request and by memory consumed, charged by the millisecond of execution, with a monthly free tier the marketing page describes but does not quantify. Three regions are offered — Paris, Amsterdam and Warsaw.
-
-Like any FaaS, it scales to zero and bills per invocation, and the usual strings attach. Stateless handlers. A throwaway filesystem. External stores for anything that has to persist. It is built for event-driven work, not a full request-response app.
+Billing is usage-based, by request and by memory consumed, charged by the millisecond of execution, with a monthly free allowance the marketing page describes but does not quantify. Functions scale to zero between invocations, and the filesystem is not persistent, so anything that has to survive a request belongs in one of the platform's storage or database products.

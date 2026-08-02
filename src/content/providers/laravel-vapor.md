@@ -6,7 +6,7 @@ urls:
   pricing: https://vapor.laravel.com
   docs: https://docs.vapor.build
 category: serverless
-description: Laravel Vapor is a serverless deployment platform for Laravel, powered by AWS. The subscription is flat; the AWS bill is the customer's own.
+description: Laravel Vapor is a serverless deployment platform for Laravel applications on AWS Lambda, sold as a flat subscription on top of the customer's own AWS bill.
 infraContract:
   - byo-iaas
 whoManagesOs: provider
@@ -43,12 +43,12 @@ ai: co-authored
 
 ## About Laravel Vapor
 
-Vapor is Laravel's own serverless platform, built on Bref and AWS Lambda. It wires up the AWS pieces a serverless Laravel app needs (Lambda, API Gateway, S3, SQS, RDS, CloudFront, certificates) and handles the Laravel conventions raw Bref leaves to you: asset compilation, queues, migrations.
+Vapor is Laravel's own serverless platform, built on Bref and AWS Lambda. It wires up the AWS pieces a serverless Laravel application needs — Lambda, API Gateway, S3, SQS, RDS, CloudFront, certificates — and handles the Laravel conventions that raw Bref leaves to the developer: asset compilation, queues, migrations.
 
-Three tiers are sold: a free Sandbox limited to a single project and ten deployments, Unlimited Monthly at $39 a month, and Unlimited Annual at $399 a year. All three state that the price "does not include your AWS cloud costs" — the customer links their own AWS account and Amazon bills them directly, with Vapor stating it never marks AWS prices up.
+It is sold as a flat subscription, with a limited free sandbox below it. Every tier states that the price does not include AWS costs: the customer links their own AWS account, Amazon bills that account directly, and Vapor states it never marks AWS prices up.
 
-## Reservations
+## Worth knowing
 
-The subscription is not the cost of running the application. Lambda, API Gateway, S3, SQS, RDS and CloudFront are all billed by Amazon against the customer's own account, so the total is two invoices and the larger one is not the one on this page.
+The subscription is not the cost of running the application. Lambda, API Gateway, S3, SQS, RDS and CloudFront are billed by Amazon against the customer's own account, so there are two invoices and the larger one is not the one Vapor prices.
 
-It suits spiky, unpredictable traffic. For the steady default, Laravel now steers people to the non-serverless [Laravel Cloud](/providers/laravel-cloud/) instead.
+Laravel has since launched [Laravel Cloud](/providers/laravel-cloud/), a non-serverless platform from the same company.

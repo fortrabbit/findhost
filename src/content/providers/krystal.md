@@ -69,16 +69,12 @@ figure:
   emoji: 🌱
   color: rgb(20, 55, 35)
   textColor: rgb(180, 235, 190)
-  text: Green claims with a certificate behind them.
+  text: Gemstone plan names, B Corp paperwork.
 ai: authored
 ---
 
 ## About Krystal
 
-Krystal is a British host whose plans are named after gemstones and priced in pounds, from Amethyst at £7 a month for one site on one CPU up to Tanzanite at £97 for nine CPUs and unlimited sites. Annual billing saves a sixth, biennial a quarter.
+Krystal is a British host whose shared plans are named after gemstones and sold in a ladder that steps up on CPU allowance and on the number of sites allowed; the entry plan carries a single site. Billing is monthly, annual or biennial, with a discount for paying further ahead.
 
-Technically it is cPanel hosting with PHP, Python, Perl and Ruby, unlimited MySQL and MariaDB databases, SSH on every tier, and FTP, SFTP and WebDAV file access. What sets it apart is the environmental position and the fact that it is documented rather than asserted: electricity comes from Ecotricity, the company is a certified B Corp, and it participates in 1% For The Planet. Tree planting is reported as a running total rather than a slogan.
-
-## Reservations
-
-Data-centre locations are not stated on the hosting page. The entry plan is capped at one site and ten gigabytes, so the price ladder climbs quickly for anyone with a portfolio. Renewable-energy claims here rest on a supply contract and annual matching, which is a real commitment but not the same as round-the-clock carbon-free power — a distinction worth keeping straight when comparing against providers that claim the stronger version.
+Technically it is cPanel hosting with PHP, Python, Perl and Ruby, unlimited MySQL and MariaDB databases, SSH on every tier, and FTP, SFTP and WebDAV file access. What sets it apart is the environmental position, and the fact that it is documented rather than asserted: electricity is bought on a renewable supply contract, the company is a certified B Corp, and it participates in 1% For The Planet, reporting tree planting as a running total rather than as a slogan.

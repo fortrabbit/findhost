@@ -5,7 +5,7 @@ urls:
   home: https://raiolanetworks.com
   pricing: https://raiolanetworks.com/hosting-web/
 category: shared
-description: Spanish host from Lugo running twelve selectable PHP versions on cPanel, with servers it assembles itself in two Tier III facilities in Madrid.
+description: Spanish shared host from Lugo, running cPanel on servers it assembles itself and operates in Tier III facilities in Madrid.
 hqCountry: ES
 ownership: independent
 whoManagesOs: panel-assisted
@@ -62,10 +62,10 @@ ai: authored
 
 ## About Raiola Networks
 
-Raiola Networks is a hosting company from Lugo in Galicia that assembles its own machines — Dell chassis, Intel processors — and runs them in two Tier III facilities in Madrid with 80 Gbps of external connectivity. That is an unusual level of detail to publish, and an unusual amount of the stack to own at this size.
+Raiola Networks is an independent hosting company from Lugo in Galicia that assembles its own machines and runs them in Tier III facilities in Madrid, publishing the chassis, processors and connectivity behind the plans. That is an unusual amount of the stack to own, and an unusual amount of it to describe, for a host of this size.
 
-Four shared plans run from €8.95 to €29.95 a month, graded by SSD, memory and a CPU allowance expressed as a percentage rather than in cores. Every plan carries unlimited email accounts, subdomains, databases and FTP accounts. Twelve PHP versions are selectable, from 5.6 through to 8.5, which makes it a practical home for an inherited application nobody has updated. Support is by telephone and ticket around the clock.
+The shared range is a short ladder of fixed plans graded by SSD, memory and a CPU allowance quoted as a percentage rather than in cores, with email accounts, subdomains, databases and FTP accounts sold as unmetered. Management is cPanel, a wide span of PHP versions is selectable per site, so older inherited applications still have somewhere to run, and support is by telephone and ticket around the clock. Elastic hosting and VPS products sit above the shared tier.
 
-## Reservations
+## Worth knowing
 
-There is no SSH on shared hosting at all — it begins with the elastic hosting and VPS products — so a developer used to a shell is buying a different tier than the prices above. Everything is in one country and one city, with no second region. The CPU allowance shown as a percentage is hard to compare against providers that quote cores.
+Shared plans come without SSH; a shell begins with the elastic hosting and VPS lines, which are priced separately. Everything runs in one city, so there is no second region to fail over to or to place data in.

@@ -60,16 +60,18 @@ figure:
   emoji: 🏔️
   color: rgb(25, 45, 60)
   textColor: rgb(180, 220, 245)
-  text: The registrar most of Slovakia uses.
+  text: Slovak registrar with its own data centre.
 ai: authored
 ---
 
 ## About WebSupport
 
-WebSupport describes itself as the largest domain registrar in Slovakia and trades across Slovakia, Czechia and Hungary, adding a stated 1,200 customers a month. It belongs to team.blue, which has assembled much of central and northern Europe's hosting market under one owner.
+WebSupport describes itself as the largest domain registrar in Slovakia and trades across Slovakia, Czechia and Hungary. It belongs to team.blue, the group that has assembled much of central and northern Europe's hosting market under one owner.
 
-The offering is deliberately narrow: shared hosting from €2.99 a month on annual billing, aimed at one or more WordPress sites with professional email, and a separate website builder with templates and AI assistance for simple shops. Automatic backups are kept for fourteen days, availability is quoted at 99.99%, and support runs every day of the year. The company operates its own data centre and gives it a page of its own.
+The offering is deliberately narrow: shared hosting aimed at one or more WordPress sites with professional email, and a separate website builder with templates and AI assistance for simple shops. Automatic backups are included and support runs every day of the year. The company operates its own data centre in Bratislava and documents it on a page of its own.
 
-## Reservations
+## Worth knowing
 
-The technical detail a developer needs is not on the pages that sell the product: no PHP version, no SSH answer and no database specification. The data-centre page is the exception: it names both Bratislava facilities plainly, which is more than most hosts of this size manage. Prices are annual-billing rates quoted both with and without VAT, so three different figures describe the same plan.
+The technical detail a developer needs is not on the pages that sell the product: no runtime versions, no answer on SSH and no database specification.
+
+Prices are annual-billing rates quoted both with and without VAT, so more than one figure describes the same plan.

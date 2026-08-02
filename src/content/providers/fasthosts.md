@@ -6,7 +6,7 @@ urls:
   pricing: https://www.fasthosts.co.uk/web-hosting
   status: https://www.fasthosts-status.co.uk/
 category: shared
-description: UK hosting brand of the IONOS group, selling shared PHP hosting, VPS and dedicated servers from UK data centres.
+description: Fasthosts is the UK hosting brand of the IONOS group, selling shared hosting, VPS and dedicated servers from UK data centres.
 hqCountry: GB
 ownership: subsidiary
 parent: IONOS Group SE
@@ -70,12 +70,6 @@ figure:
 
 ## About Fasthosts
 
-Fasthosts sells shared hosting, VPS and dedicated servers to the UK market, with PHP 8.2 and 8.3 and SSH on the Linux plans, and MSSQL alongside MySQL for the Windows line. Shared hosting runs from UK data centres including a Tier IV-certified facility in Worcester; VPS customers choose the UK, Germany, Spain or the United States at setup.
+Fasthosts sells shared hosting, VPS and dedicated servers to the UK market. The Linux plans carry PHP with SSH access, and the Windows line adds MSSQL alongside MySQL. Shared hosting runs from UK data centres including a Tier IV-certified facility in Worcester, while VPS customers pick the UK, Germany, Spain or the United States when the machine is created.
 
-It is not independent. The parent group's own site describes Fasthosts as its hosting and reseller brand in the UK, which places it under IONOS Group SE and in turn under United Internet AG — a relationship the Fasthosts site itself does not state anywhere we could find.
-
-## Reservations
-
-The advertised prices are heavy introductory discounts on long terms. The entry plan is £1 a month for three months against £5.75 afterwards, and the Grow plan is 99p a month for twelve months against £8 — roughly a five- to eightfold step at renewal. VPS carries a twelve-month minimum contract. There is no permanent free tier, only a thirty-day money-back guarantee.
-
-No founding year appears on their own pages; the footer copyright starts at 1998. We could not verify a customer-facing product API or an official CLI on any public page.
+It is not independent. The parent group's own site describes Fasthosts as its hosting and reseller brand in the UK, which places it under IONOS Group SE and in turn under United Internet AG — a relationship the Fasthosts site does not state anywhere itself. Advertised prices are introductory rates on fixed terms, with the standing rate printed alongside and a several-fold step up at renewal.

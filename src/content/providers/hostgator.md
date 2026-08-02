@@ -7,7 +7,7 @@ urls:
   terms: https://www.hostgator.com/tos
   docs: https://www.hostgator.com/help
 category: shared
-description: HostGator is a low cost provider of shared, reseller, virtual private server, and dedicated web hosting, founded in 2002 in Texas.
+description: HostGator is a low-cost American provider of shared, reseller, virtual private server and dedicated web hosting, and one of the Newfold Digital hosting brands.
 founded: 2002
 hqCountry: US
 ownership: subsidiary
@@ -31,8 +31,6 @@ ai: co-authored
 
 ## About HostGator
 
-HostGator is a low cost provider of shared, reseller, virtual private server, and dedicated web hosting, founded in 2002 in Texas. Like Bluehost, it's a hosting brand of Newfold Digital, the portfolio company formerly known as Endurance International Group, which bundles dozens of hosting brands.
+HostGator is a low-cost web host founded in 2002 in Texas, selling shared, reseller, virtual private server and dedicated hosting to a mass-market audience, with support advertised around the clock.
 
-## Reservations
-
-Shared hosting is made for consumers, not professionals. Expect the pattern of the segment: introductory prices that renew higher, missing developer tooling like Git-based deployment, and PHP versions that lag behind current releases.
+It is one of the hosting brands of Newfold Digital, the portfolio company formerly known as Endurance International Group, which owns dozens of hosting names — Bluehost among them — and runs them as separate storefronts on shared operations.

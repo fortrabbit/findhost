@@ -8,7 +8,7 @@ urls:
   terms: https://www.transip.nl/algemene-voorwaarden/
   docs: https://api.transip.nl/rest/docs.html
 category: shared
-description: Dutch registrar and hosting provider selling shared PHP webhosting, VPS, OpenStack cloud and managed Kubernetes from its own Netherlands data centres.
+description: Dutch registrar and hosting provider selling shared webhosting, VPS, OpenStack cloud and managed Kubernetes from its own Netherlands data centres.
 founded: 2003
 hqCountry: NL
 ownership: subsidiary
@@ -67,10 +67,10 @@ ai: authored
 
 ## About TransIP
 
-TransIP has traded from Leiden since 2003 and belongs to team.blue, the Ghent and Amsterdam group that also owns Combell, Hypernode, Loopia and Simply.com. Data stays in two Dutch facilities, Amsterdam and Alblasserdam, and the company makes a point of building its own systems rather than reselling.
+TransIP has traded from Leiden since 2003 and belongs to team.blue, the Belgian-Dutch group that also owns Combell, Hypernode and Simply.com. It keeps data in its own Dutch facilities and builds its own systems rather than reselling another platform.
 
-The three product lines sit at different levels. Shared webhosting is PHP with SFTP and a control panel; the VPS line adds root access and therefore any runtime; and an OpenStack public cloud with managed Kubernetes sits above both. What ties them together is a documented REST API, around which independent developers have built a Terraform provider, a certbot plugin and a lego DNS module — an automation surface unusual for a mass-market registrar.
+The product lines sit at different levels. Shared webhosting runs PHP with SFTP and a control panel; the VPS line adds root access and therefore any runtime; and an OpenStack public cloud with managed Kubernetes sits above both. All of it is reachable through a documented public REST API covering domains, DNS, servers and cloud resources.
 
-## Reservations
+## Worth knowing
 
-The headline webhosting price on the Dutch site is a three-month promotion against a regular rate several times higher. The English-language site lists the same three tiers — Core at €9.99 a month, Pro at €15.99, Max at €29.99 — without a promotional qualifier, so which number a buyer sees depends on which door they come in through. The status page is a single "all systems online" banner rather than a component-level incident history, which makes it hard to reconstruct what happened after the fact.
+The headline webhosting price on the Dutch site is a short promotional rate set against a regular rate several times higher. The English-language site lists the same tiers without a promotional qualifier, so which figure a buyer sees depends on which door they come in through.

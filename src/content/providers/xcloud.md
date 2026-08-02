@@ -60,14 +60,10 @@ ai: co-authored
 
 ## About xCloud
 
-xCloud is a newer entrant in the [server management](/category/server-management/) space, launched in 2023 by WPDeveloper, the Bangladesh-based company behind Essential Addons for Elementor. It targets WordPress, Laravel and general PHP applications. Like other tools in this category, it connects to cloud provider accounts (Vultr, DigitalOcean, Hetzner, Google Cloud and others) to provision and manage servers — and it also sells hosting on its own managed servers, blurring the line between panel and host.
+xCloud is a newer entrant in the [server management](/category/server-management/) space, launched in 2023 by WPDeveloper, the company behind Essential Addons for Elementor. It targets WordPress, Laravel and general PHP applications. Like others in the category it connects to a customer's cloud provider account — DigitalOcean, Vultr, Linode, AWS, Hetzner and bare metal are named — to provision and manage servers, and it also sells hosting on servers it provides itself.
 
-Four price lines are sold at once. Self-managed hosting, where the customer brings the server, is $3 to $5 per server per month. Managed hosting, where xCloud provides and maintains the machine, runs from $5 a month for 1 GB of RAM to $399 for 64 GB across fifteen sizes. A separate agent-hosting line starts at $9.99 for 6 GB, and reseller plans run $25 to $250 a month with white-label options. Named targets for self-managed servers are DigitalOcean, Vultr, Linode, AWS, Hetzner and bare metal.
+The panel covers sites, servers and teams, with automated backups, updates and free TLS certificates, and Laravel tooling including queue workers and Horizon. Several lines are sold side by side: a per-server subscription for machines the customer brings, managed servers in a range of sizes, a separate agent-hosting line, and white-label reseller plans. On the bring-your-own line the subscription buys the panel alone, and the operating system, its patches and its incidents stay with the account holder.
 
-The panel covers sites, servers and teams, with automated backups, updates and free TLS certificates, and Laravel tooling including queue workers and Horizon.
+## Worth knowing
 
-## Reservations
-
-xCloud sits on both sides of the line this dataset draws between a panel and a host: the same company sells the management software and the servers it manages. That is convenient, and it makes the two bills harder to compare with the alternatives to each.
-
-On the self-managed line the ordinary server-management caveat applies — the operating system, its patches and its incidents stay with the account holder, and the $3 to $5 buys the panel only.
+xCloud sits on both sides of the line between a panel and a host: the same company sells the management software and the servers it manages, which makes the two bills harder to compare against the alternatives to each.

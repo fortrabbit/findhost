@@ -6,7 +6,7 @@ urls:
   pricing: https://donweb.com/es-ar/hosting
   status: https://estado.donweb.com/
 category: shared
-description: Argentine hosting and cloud provider running its own Rosario data centres, selling shared PHP hosting, VPS, bare metal and pre-configured application stacks.
+description: DonWeb is an Argentine hosting and cloud provider running its own data centres, selling shared hosting, VPS, bare metal and pre-configured application stacks.
 founded: 2002
 hqCountry: AR
 ownership: independent
@@ -47,18 +47,18 @@ figure:
   emoji: 🧉
   color: rgb(30, 55, 40)
   textColor: rgb(190, 235, 195)
-  text: Four data centres in Rosario.
+  text: Its own metal, in Rosario.
 ai: authored
 ---
 
 ## About DonWeb
 
-DonWeb is the consumer-facing brand of the Rosario company formerly known as Dattatec, founded in 2002 and renamed in 2013. It is one of the few providers in Latin America that builds and owns its facilities rather than renting: the company page lists four purpose-built Rosario data centres commissioned between 2013 and 2023.
+DonWeb is the consumer-facing brand of the Rosario company formerly known as Dattatec, renamed in 2013. It builds and owns its facilities rather than renting capacity, and the company page describes purpose-built data centres in Rosario.
 
-Shared hosting runs on Ferozo, DonWeb's own control panel rather than cPanel, with PHP 8.2 to 8.4 and MySQL 8.4 published as the current versions. The cloud side offers pre-configured stacks for Node.js, Laravel, Strapi, Ghost, Odoo, Moodle and plain Docker. Argentine developer educators have built workshop material around deploying Express and Node applications to it, which is where most of the independent documentation lives.
+Shared hosting runs on Ferozo, DonWeb's own control panel rather than cPanel, with a published version matrix for the runtimes and database each plan carries. The cloud side sells virtual and bare-metal servers alongside pre-configured stacks for Node.js, Laravel, Strapi, Ghost, Odoo, Moodle and plain Docker.
 
-## Reservations
+## Worth knowing
 
-Pricing depends entirely on which storefront a visitor lands on — the Argentine site quotes pesos, the international one quotes a very different figure in dollars — so no single entry price is recorded here. SSH availability on shared plans is not stated on the plan pages, and daily backups are an add-on rather than standard on the entry tier.
+Pricing depends on which storefront a visitor lands on: the Argentine site quotes pesos and the international one quotes a different figure in dollars, so no single entry price is recorded here.
 
-No page on the site names the data centres by city or country: the infrastructure page says only "Latin America". The regions field is therefore left empty, even though the company is Argentine and the facilities are described elsewhere as being in Rosario.
+No page on the site names the data centres by city or country — the infrastructure page says only "Latin America" — so the regions field is left empty even though the company itself is Argentine.

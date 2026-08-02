@@ -88,10 +88,10 @@ ai: authored
 
 Mittwald is a family-owned hosting company in Espelkamp, North Rhine-Westphalia, trading since 2003 and running its own data centre at its headquarters. Everything is hosted in Germany; there is no region to choose.
 
-The product sits closer to a platform than to commodity shared hosting. Projects run in containers and are administered through mStudio, a control plane with a documented v2 REST API, API tokens meant for CI, published client libraries and an official `mw` command-line tool. SSH is available, and the classic tariffs sit alongside container hosting for Node and Docker workloads. PHP 8.2, 8.3 and 8.4 are the documented versions, with older releases available only through a paid extended-support add-on.
+The product sits closer to a platform than to commodity shared hosting. Projects run in containers and are administered through mStudio, a control plane with a documented REST API, API tokens meant for CI, published client libraries and an official `mw` command-line tool. SSH is available, and the classic tariffs sit alongside container hosting for Node and Docker workloads. Current PHP releases are documented; older ones are reachable only through a paid extended-support add-on.
 
 The audience it addresses is agencies and freelancers handling client sites — TYPO3, WordPress, Shopware and Magento are named explicitly, and TYPO3's own installation documentation lists Mittwald as a technology partner with preinstalled packages.
 
-## Reservations
+## Worth knowing
 
-Prices are quoted excluding VAT, which makes them read lower than German competitors that quote gross: webhosting from €13 a month, a vServer from €21, a dedicated server from €169, all net. Entry tariffs start at a level well above commodity hosting, and the single-country footprint means anyone who needs capacity outside Germany needs a second supplier.
+Prices are quoted net of VAT throughout, so the figure on the tariff page is not the figure a private customer pays.

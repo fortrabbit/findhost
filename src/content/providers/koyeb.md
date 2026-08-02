@@ -65,12 +65,10 @@ ai: authored
 
 ## About Koyeb
 
-Koyeb is a Paris-founded platform that takes a git repository or a container image and runs it across seven regions, with automatic HTTPS, scale-to-zero and per-second billing. Alongside ordinary CPU workloads it sells GPU instances by the hour — from an RTX 4000 up to eight-way H200 configurations — and a serverless Postgres with a free allowance, which puts it in front of the machine-learning inference market as much as the web one.
+Koyeb is a Paris-founded platform that takes a Git repository or a container image and runs it across regions in the Americas, Europe and Asia, with automatic HTTPS, scale-to-zero and per-second billing. Alongside ordinary CPU workloads it rents GPU instances by the hour and offers a serverless Postgres, which puts it in front of the machine-learning inference market as much as the web one.
 
-Plans are Pro at $29 a month plus compute, Scale at $299 plus compute, and a custom enterprise tier starting at $1,000 a month that adds dedicated infrastructure and access to AWS regions. Billing is "only pay for what you use, by the second", with Postgres storage at $0.50 a month per GB.
+Plans are a monthly subscription with a usage credit attached, stepping from a single-developer tier through a team tier to a quoted enterprise tier that adds dedicated infrastructure and access to AWS regions. Consumption is billed by the second on top of the subscription.
 
-The pricing page cites seven regions across the US, the EU and Asia but names only three of them. The regions reference in the documentation names the full set: Washington DC, Frankfurt, Paris, Singapore and Tokyo as core regions, an AWS US East region, and San Francisco in preview for paid plans.
+## Worth knowing
 
-## Reservations
-
-The monthly plan fee is separate from consumption, so the entry price is a subscription with a small credit attached rather than the cost of running anything. There is no permanently free plan — the smallest commitment is the Pro subscription — and the uptime commitment only appears from the Scale tier upwards.
+The plan fee is separate from consumption, so the entry price is a subscription with a small credit attached rather than the cost of running anything, and the bill moves with traffic. There is no permanently free plan, and the published uptime commitment applies only from the middle tier upwards.

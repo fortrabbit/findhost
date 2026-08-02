@@ -6,7 +6,7 @@ urls:
   pricing: https://cpanel.net/pricing/
 category: server-management
 regions: null
-description: The hosting control panel most shared hosting runs on, licensed per server and priced by the number of accounts it manages.
+description: Hosting control panel installed on a server the operator supplies, licensed per server and priced by the number of accounts it manages.
 ownership: subsidiary
 parent: WebPros International L.L.C.
 whoManagesOs: panel-assisted
@@ -51,16 +51,12 @@ figure:
   emoji: 🎛️
   color: rgb(50, 30, 15)
   textColor: rgb(250, 210, 165)
-  text: The industry standard, and it knows it.
+  text: Per-server licence, per-account price.
 ai: authored
 ---
 
 ## About cPanel
 
-More shared hosting accounts are administered through cPanel than through anything else, which makes it less a product choice than an interface most of the web has agreed on. It is licensed per server: Solo at about thirty dollars a month for one account, Admin for five, Pro for thirty, Premier for a hundred with additional accounts priced individually, and a WordPress-oriented tier.
+cPanel is the control panel a large share of shared hosting accounts are administered through, which makes it less a product choice than an interface much of the industry has settled on. It hosts nothing itself: the licence installs on a server bought elsewhere and gives end users a web interface for domains, email, databases, files and applications.
 
-Every tier includes the WordPress Toolkit, SSL, email, unlimited websites and migration tooling. The software is a registered trademark of WebPros International, which also owns Plesk.
-
-## Reservations
-
-The 2018 move to per-account pricing under private-equity ownership raised bills across the industry and remains the reason many hosts migrated away — the licensing model is a live commercial risk, not settled background. cPanel hosts nothing itself; the licence sits on top of a server bought elsewhere, and the same owner controls the main alternative.
+Licensing is per server and graded by how many accounts the licence covers, from a single-account tier up to bulk tiers where further accounts are priced individually. Every tier includes the WordPress Toolkit, SSL, email and migration tooling. The move to per-account pricing came in 2018 under new ownership, and the number of accounts on a machine has driven the licence cost directly ever since. The software is a registered trademark of WebPros International, which also owns Plesk, the main alternative.

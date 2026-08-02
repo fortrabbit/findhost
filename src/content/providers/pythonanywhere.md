@@ -60,12 +60,12 @@ ai: authored
 
 ## About PythonAnywhere
 
-PythonAnywhere gives an account a Python environment reachable entirely from a browser: consoles, scheduled tasks, always-on processes and web applications, with nothing to install locally. That property is why it became a fixture in teaching — a classroom needs no working laptops, only tabs.
+PythonAnywhere gives an account a Python environment reachable entirely from a browser: consoles, scheduled tasks, always-on processes and web applications, with nothing to install locally. That property made it a fixture in teaching, where a classroom needs tabs rather than working laptops. The company is British, trades as an LLP, and has belonged to Anaconda since 2022.
 
-The free Beginner plan runs one web app on a subdomain with two restricted consoles. Developer at ten dollars a month adds a custom domain, three web workers, five thousand CPU-seconds a day, five gigabytes of disk and unlimited consoles; a Custom tier scales the same dials up to twenty web apps, a hundred thousand CPU-seconds and five hundred dollars a month. Annual payment costs ten months rather than twelve. Full SSH, unrestricted outbound internet access and free SSL come with every paid plan.
+Billing is per resource rather than per plan, and the dials are web workers, disk and CPU-seconds a day. The CPU-second is the unit that matters: it is defined against a named processor and consumed by consoles, scheduled tasks and always-on processes, but not by the web applications themselves. A permanent free tier runs one web app on a subdomain; paid accounts add custom domains, full SSH, unrestricted outbound network access and certificates.
 
-The unit that matters is the CPU-second, which the company defines precisely against a named processor and which is consumed by consoles, scheduled tasks and always-on processes — but not by web applications.
+## Worth knowing
 
-## Reservations
+The free tier restricts outbound network access to an allow-list, so anything calling a third-party API needs a paid account to work at all.
 
-One language, and no pretence otherwise. The free tier restricts outbound network access to an allow-list, which breaks most third-party API work until you pay. Data-centre locations are not published anywhere on the site — the pricing page names the AWS instance type and stops there. Ownership is disclosed, but on a company-details page rather than anywhere a buyer would pass: PythonAnywhere LLP has belonged to Anaconda since 2022.
+Data-centre locations are published nowhere on the site; the pricing page names the underlying AWS instance type and stops there.

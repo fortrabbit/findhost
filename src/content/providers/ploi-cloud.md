@@ -5,7 +5,7 @@ urls:
   home: https://ploi.cloud
   pricing: https://ploi.cloud
 category: paas
-description: Ploi Cloud is the managed platform built by the team behind the Ploi server-management panel, running on UpCloud infrastructure in three regions.
+description: Managed application platform from the team behind the Ploi server-management panel, running customer apps on rented UpCloud infrastructure.
 infraContract:
   - resells-iaas
 runsOn:
@@ -56,10 +56,6 @@ ai: co-authored
 
 ## About Ploi Cloud
 
-Ploi Cloud is the managed platform from the Dutch team behind [Ploi](/providers/ploi/), the server-management panel. Where Ploi configures a server the customer rents, Ploi Cloud runs the infrastructure itself — on UpCloud's data centres, in Amsterdam, London and Chicago. It describes itself as "the next generation of European cloud hosting" and leads on GDPR compliance.
+Ploi Cloud is the managed platform from the Dutch team behind [Ploi](/providers/ploi/), the server-management panel. Where Ploi configures a server the customer rents, Ploi Cloud rents the infrastructure itself — capacity from UpCloud, in European and North American locations — and runs the operating system, so the customer deploys an application rather than administers a machine. It presents itself as European cloud hosting and leads on GDPR compliance.
 
-Pricing is per resource: €13.88 per GB of memory a month, with CPU cores scaling automatically, and a five-day trial that takes no credit card. Named support covers Laravel, WordPress, Statamic, Craft CMS, general PHP and Node.js, with managed PostgreSQL, MySQL, Redis and MongoDB alongside.
-
-## Reservations
-
-The team's experience with PHP hosting comes from the panel business rather than from operating a platform, and Ploi Cloud is a young product by the standards of the category. There is less operating history behind it than behind the platforms it sits alongside — which is a fact about its age, not a prediction about its reliability.
+Billing is per resource rather than per plan: memory is the metered unit and CPU scales with it, so the bill follows the size of the application. Named support covers PHP applications — Laravel, WordPress, Statamic, Craft CMS — as well as Node, with managed PostgreSQL, MySQL, Redis and MongoDB available alongside. A short trial runs without a credit card.

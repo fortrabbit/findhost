@@ -7,7 +7,7 @@ urls:
   terms: https://home.pl/regulaminy/
   docs: https://pomoc.home.pl/
 category: shared
-description: Polish host running PHP 8.0 to 8.4, Perl and Python on Apache with HTTP/3, with SSH, MySQL on NVMe and PostgreSQL on the higher tiers.
+description: One of Poland's largest hosting companies, selling shared web hosting, mailboxes, databases and domains from servers in Poland.
 hqCountry: PL
 whoManagesOs: provider
 useCases:
@@ -60,10 +60,8 @@ ai: authored
 
 ## About home.pl
 
-home.pl is one of Poland's largest hosting companies, selling four shared tiers from 70 GB to 2 TB with unlimited transfer and mailboxes on all of them. The runtime line-up — PHP 8.0 to 8.4, Perl and Python across every tier — sits on Apache 2.4 with HTTP/3 and QUIC, with MySQL on NVMe throughout and PostgreSQL from the entry plan upwards. SSH and FTP are available, with more SSH capability on the higher tiers. Servers are in Poland behind redundant ten-gigabit links, with a 99% availability commitment.
+home.pl is one of Poland's largest hosting companies. It sells shared hosting in a ladder of tiers that differ mainly in storage, all of them with unlimited transfer and mailboxes, alongside domains and mail products. The runtime line-up covers PHP, Perl and Python on every tier, with MySQL throughout and PostgreSQL from the entry plan upwards. SSH and FTP are both available, with more shell capability higher up the ladder. Servers are in Poland.
 
-## Reservations
+## Worth knowing
 
-The pricing deserves reading twice. First-year rates and renewal rates are published side by side, and the gap is extraordinary: the entry plan is 39.90 złoty for the first year and 678.99 on renewal — seventeen times more — while the second tier is advertised at half the first tier's price and renews higher still. No `entryPriceBand` is recorded here because the two figures describe different products in every practical sense, and picking either one would mislead.
-
-The availability commitment is 99%, which permits more than three days of downtime a year and is weaker than the 99.9% most competitors quote.
+The plan pages print a first-year rate and a renewal rate side by side, and the two are separated by a large multiple — on the entry plan the renewal figure is more than an order of magnitude above the sign-up figure. No `entryPriceBand` is recorded here because the two numbers describe different products in every practical sense, and picking either one would mislead.

@@ -46,10 +46,12 @@ ai: authored
 
 Back4App runs two distinct products under one account. The first is a managed Parse Server: database, authentication, push notifications, Cloud Code and an automatically generated REST and GraphQL API over whatever schema you define. The second, Back4App Containers, connects to a GitHub repository, builds a Dockerfile and runs the resulting image with automatic scaling.
 
-Its significance is largely custodial. Parse was open-sourced when Facebook shut the hosted service down, and Back4App is the commercial platform that kept the ecosystem purchasable. Independent parties — including security vendors publishing end-to-end-encryption samples and Flutter developers publishing BLoC chat applications — build integrations against it.
+Its position is largely custodial. Parse was open-sourced when Facebook shut the hosted service down, and Back4App is the commercial platform that kept the ecosystem purchasable, maintaining the server and the client SDKs around it.
 
-The company states it runs on AWS, GCP, Azure and Alicloud rather than owning infrastructure, and publishes no list of data-centre countries.
+The company states that it runs on AWS, Google Cloud, Azure and Alicloud rather than owning infrastructure, and publishes no list of data-centre countries.
 
-## Reservations
+## Worth knowing
 
-Pricing is per application rather than per account, so a portfolio of small apps multiplies rather than shares a plan. The permanent free tier is genuinely usable at 25,000 requests a month and 250 MB of database, but the first paid step is a per-app charge and the top self-serve tier is several hundred dollars a month. There is no provider-wide status page — the "App Status" feature is a per-app dashboard inside the product, not an incident history.
+Pricing is per application rather than per account, so a portfolio of small apps multiplies the bill rather than sharing one plan. A permanent free tier sits below the paid steps, which are also charged per app.
+
+There is no provider-wide status page. The App Status feature is a per-application dashboard inside the product, not an incident history for the platform.

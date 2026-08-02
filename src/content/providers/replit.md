@@ -6,7 +6,7 @@ urls:
   pricing: https://replit.com/pricing
   status: https://status.replit.com/
 category: paas
-description: Browser-based development environment with deployment attached, now sold primarily around an agent that writes and publishes the application for you.
+description: Browser-based development environment with hosting attached, sold around an AI agent that writes, runs and publishes the application.
 hqCountry: US
 ownership: vc-backed
 whoManagesOs: container
@@ -54,10 +54,10 @@ ai: authored
 
 ## About Replit
 
-Replit began as a browser IDE that could run code in dozens of languages and became a hosting platform by keeping those processes alive and giving them a URL. A built-in database, collaborative editing and one-click publishing make the distance between writing something and putting it online about as short as it gets, which is why it took hold in classrooms first.
+Replit began as a browser IDE that could run code in many languages and became a hosting platform by keeping those processes alive and giving them a URL. A built-in database, collaborative editing and one-click publishing make the distance between writing something and putting it online about as short as it gets, which is part of why it took hold in classrooms first.
 
-Plans are a free Starter "for exploring what's possible", Core at $20 a month billed annually including $25 of monthly credits, Pro at $95 a month billed annually including $100 of credits, and a custom enterprise tier. The headline prices are the annual-billing rates.
+The account is the product: editor, container, database and deployment sit behind one login, and an AI agent that writes and revises the application is built into the same interface. Plans are a permanent free tier plus paid tiers that bundle a monthly credit allowance, with the headline prices quoted at annual billing rates. Deployments run in the United States.
 
-## Reservations
+## Worth knowing
 
-The product's centre of gravity has moved. Pricing is now organised around agent credits, parallel agents and model access rather than around compute, memory or traffic, so what a plan buys is measured in generated code rather than in served requests. Anyone who wants a place to run an application they wrote themselves is buying a bundle mostly composed of something else, and the credit allowance rather than the machine is what will run out.
+Pricing is organised around agent credits, parallel agents and model access rather than around compute, memory or traffic, so what a plan includes is measured in generated code rather than in served requests, and the credit allowance is usually what runs out before the machine does.

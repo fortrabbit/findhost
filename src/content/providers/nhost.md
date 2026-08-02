@@ -49,12 +49,10 @@ ai: authored
 
 ## About Nhost
 
-Nhost assembles a backend from open-source parts — PostgreSQL, Hasura for the GraphQL layer, authentication, file storage and serverless functions — and sells it managed. Nhost Run adds a managed container runtime for services the customer writes themselves, which is what makes it a place code runs rather than only a database with an API in front.
+Nhost assembles a backend from open-source parts — PostgreSQL, Hasura for the GraphQL layer, authentication, file storage and serverless functions — and sells it managed. Nhost Run adds a managed container runtime for services the customer writes themselves, which is what makes it a place code runs rather than only a database with an API in front of it.
 
-Plans are a free Starter with one active project, one gigabyte of database and one of storage; Pro from twenty-five dollars a month with ten gigabytes of database, fifty of storage and automated backups; Team from five hundred and ninety-nine adding SOC 2 Type II and dedicated support; and a custom enterprise tier with SLAs. The stack is open source and can be self-hosted, so the exit is a real one.
+Billing is by fixed plan tier rather than metered usage, with the tier setting database size, storage, backup behaviour and support level. The stack is open source and can be self-hosted, so leaving the managed service does not mean rewriting the application.
 
-The company has taken European recovery-fund financing, which it discloses in its own footer.
+## Worth knowing
 
-## Reservations
-
-Free projects pause after a week of inactivity and are limited to one, so the tier is for something being built rather than something running. Regions are not stated on the pricing page, and the jump from Pro to Team is more than twentyfold for a small team needing a single compliance feature. Runtime detail for Nhost Run is not on the page that sells it.
+The free tier is a single project that pauses after a stretch of inactivity, which makes it a place to build something rather than to run it. Regions are not stated on the pricing page, and the runtime detail for Nhost Run is documented away from the page that sells it.

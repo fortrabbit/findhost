@@ -37,12 +37,12 @@ ai: co-authored
 
 ## About Shopify
 
-Shopify is a hosted ecommerce platform, founded 2006 in Ottawa, that bundles storefront themes, product management, checkout, and payments. For a standard online store it is the fast path from zero to selling. Customization runs through Shopify's own layers — Liquid templates, the app ecosystem, and defined checkout extension points — and store data lives inside the platform, so a store never fully leaves the Shopify ecosystem.
+Shopify is a hosted ecommerce platform, founded in 2006 in Ottawa and listed on the public markets, that bundles storefront themes, product management, checkout and payments into one subscription. Nothing about the servers is the merchant's concern, and there is no shell or filesystem to reach.
 
-Four tiers are listed: Basic at €25 a month on annual billing or €36 monthly, Grow at €66 or €105, Advanced at €289 or €384, and Plus from €2,100. A trial runs three days free, followed by €1 a month for three months.
+Customisation runs through Shopify's own layers — Liquid templates, the app ecosystem and defined checkout extension points — and store data lives inside the platform, so a store is built against Shopify's interfaces rather than against portable ones. Plans are fixed monthly tiers, from a single-store entry plan up to an enterprise tier, with a short trial and an introductory rate before the standing price begins.
 
-## Reservations
+## Worth knowing
 
-The subscription is only part of the cost. Every sale carries a card rate — 1.5% + €0.25 on Basic, falling to 1% + €0.25 on Plus — and using a third-party payment provider instead adds a further fee, 2% on Basic down to 0.2% on Plus. That last charge is a fee for not using Shopify's own payment product, and it is the sharpest lock-in mechanism in the pricing.
+The subscription is only part of the cost. Every sale carries a card processing rate that falls as the plan rises, and choosing a third-party payment provider instead of Shopify's own adds a further per-transaction fee on top.
 
-Paying monthly rather than annually costs roughly 40% more at the entry tier.
+Annual billing is priced well below paying month to month, so the headline figure on the pricing page is the committed-year rate rather than the monthly one.

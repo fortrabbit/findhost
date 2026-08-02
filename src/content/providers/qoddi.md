@@ -5,7 +5,7 @@ urls:
   home: https://qoddi.com
   pricing: https://qoddi.com/pricing/
 category: paas
-description: Managed application platform deploying Node, Java, Go, Ruby, PHP and Python apps with per-second billing, unlimited bandwidth and three free static sites.
+description: Managed application platform deploying Node, Java, Go, Ruby, PHP, Python and Docker workloads with per-second billing and managed databases alongside.
 whoManagesOs: container
 useCases:
   - saas
@@ -55,16 +55,18 @@ figure:
   emoji: 🧮
   color: rgb(25, 45, 50)
   textColor: rgb(180, 230, 235)
-  text: Heroku's shape at a tenth of the ask.
+  text: Many runtimes, billed by the second.
 ai: authored
 ---
 
 ## About Qoddi
 
-Qoddi is a managed application platform positioned explicitly against Heroku, Netlify and Kubernetes, claiming to do the same job at a tenth of the cost. The runtime list is genuinely broad for a platform this size — Node.js, Java, Go, Ruby, PHP and Python, with Django and Laravel called out by name, Docker for anything else, and managed PostgreSQL, MySQL, MongoDB and Redis alongside.
+Qoddi is a managed application platform that builds from a git repository or a container image and runs the result in containers it operates itself. The runtime list is broad for a platform this size — Node, Java, Go, Ruby, PHP and Python, with Django and Laravel called out by name, Docker for anything the buildpacks do not cover, and managed PostgreSQL, MySQL, MongoDB and Redis available beside the application.
 
-Billing is per second. Application tiers run from $6 a month at the smallest to $120, with GPU tiers above that for machine-learning work. Bandwidth is unlimited and team members are not charged for, which removes the two meters that most often make a small platform bill unpredictable. Three static sites are permanently free.
+Billing is per resource and metered by the second, from small application instances up to GPU tiers for machine-learning work. Bandwidth is not metered and team members are not charged for separately, which removes two of the meters that usually make a small platform's bill hard to predict, and a permanent free tier covers static sites.
 
-## Reservations
+## Worth knowing
 
-Regions are not stated anywhere on the pricing page, so where an application would actually run is unknown before signing up. A payment card is required to verify an account even for the free tier, and prepaid cards are refused. The company publishes no founding date, location or ownership. "Tier 1 network" is a claim about connectivity rather than about who operates the hardware, and no data-centre operator is named.
+Regions are not stated anywhere on the pricing page, so where an application would run is unknown before signing up, and no data-centre operator is named — "Tier 1 network" describes connectivity rather than who owns the hardware.
+
+The company publishes no founding date, location or ownership, and a payment card is required to verify an account even on the free tier, with prepaid cards refused.

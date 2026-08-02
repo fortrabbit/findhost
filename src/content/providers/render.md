@@ -6,7 +6,7 @@ urls:
   pricing: https://render.com/pricing
   status: https://status.render.com
 category: paas
-description: Render is a polyglot PaaS with native runtimes for Node, Python, Ruby, Go, Rust and Elixir, a Docker runtime for everything else, and managed Postgres.
+description: Platform-as-a-service that builds services from a git repository, with native runtimes for several languages, a Docker runtime for the rest, and managed Postgres.
 hqCountry: US
 ownership: vc-backed
 whoManagesOs: provider
@@ -69,20 +69,16 @@ figure:
   emoji: 🎨
   color: rgb(72, 209, 204)
   textColor: rgb(10, 50, 10)
-  text: Beautiful UI, complex reality.
+  text: Git push to a managed container.
 ai: co-authored
 ---
 
 ## About Render
 
-Render is a venture-backed platform-as-a-service headquartered in San Francisco, which states it has raised $258M from outside investors. Services deploy from a linked GitHub, GitLab or Bitbucket repository, from a public git URL, or from a prebuilt Docker image, and can be managed through a public REST API and an official CLI.
+Render is a venture-backed platform-as-a-service headquartered in San Francisco. Services deploy from a linked GitHub, GitLab or Bitbucket repository, from a public git URL, or from a prebuilt Docker image, and the whole account can be driven through a public REST API and an official CLI. The provider runs the operating system; SSH exists but reaches into the running service rather than onto a machine.
 
-Native runtimes cover Node.js, Bun, Python, Ruby, Go, Rust and Elixir. Anything outside that set — PHP, .NET, Java — runs through the Docker runtime, which means bringing and maintaining a Dockerfile. Managed data services are Render Postgres and Render Key Value, a Redis-compatible store. Regions are Oregon, Ohio, Virginia, Frankfurt and Singapore.
+Native runtimes cover Node, Bun, Python, Ruby, Go, Rust and Elixir, and anything outside that set runs through the Docker runtime, which means bringing and maintaining a Dockerfile. Managed data services are Render Postgres and a Redis-compatible key-value store, persistent disks can be attached to paid services, and regions span North America, Europe and Asia. A free instance type is permanent rather than a trial, and it spins down after a stretch without inbound traffic and takes about a minute to come back.
 
-A free instance type exists and is permanent rather than a trial: 750 free instance hours a month, spinning down after fifteen minutes without inbound traffic and taking about a minute to spin back up.
+## Worth knowing
 
-## Reservations
-
-The free tier is genuinely limited rather than merely small. Free web services cannot use persistent disks or scale past one instance, filesystem changes are lost on spin-down, free Postgres databases are capped at 1 GB and expire thirty days after creation, and free Key Value instances hold nothing on disk. SSH is unavailable on free instances too.
-
-PHP is not a native runtime. Running it means owning the container image — PHP version, extensions, web server configuration and their upgrades — which moves work back to the customer that a PHP-specific platform would absorb.
+The free tier is limited in kind rather than only in size: free services cannot attach a persistent disk or run more than one instance, filesystem changes are lost when they spin down, free databases are small and expire a set time after creation, and SSH is not available on them.

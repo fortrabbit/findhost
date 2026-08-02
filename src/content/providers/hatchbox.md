@@ -6,7 +6,7 @@ urls:
   pricing: https://www.hatchbox.io/pricing
 category: server-management
 regions: null
-description: Deployment platform for Rails, Ruby and Node applications on servers the customer rents, billed at a flat rate per server rather than per application.
+description: Hatchbox is a deployment platform for Rails, Ruby and Node applications on servers the customer rents, billed per managed server rather than per application.
 founded: 2016
 ownership: independent
 parent: GoRails, LLC
@@ -50,16 +50,16 @@ figure:
   emoji: 🛤️
   color: rgb(60, 25, 25)
   textColor: rgb(250, 195, 190)
-  text: Rails deploys, without the Rails tax.
+  text: Rails deploys, on servers you rent.
 ai: authored
 ---
 
 ## About Hatchbox
 
-Hatchbox is run by GoRails, the Ruby screencast company, and has existed since 2016 — which means the people who taught a generation of developers to deploy Rails also sell the tool for doing it. It reports more than 24,000 applications deployed over two million times.
+Hatchbox is run by GoRails, the Ruby screencast company, so the people who teach Rails deployment also sell the tool for doing it. It provisions and configures servers the customer rents elsewhere, then handles zero-downtime deploys, with no limit on the number of applications or team members per server.
 
-It provisions and configures servers the customer rents elsewhere, then handles zero-downtime deploys, unlimited applications and unlimited team members for a flat ten dollars a month per server. That per-server model is the pitch: a platform charging per application makes a portfolio of small Rails apps expensive, and this does not. Rails, plain Ruby, Node.js and static sites are all supported, and support is answered by people who work on Rails rather than by a chatbot.
+Billing is a flat rate per managed server rather than per application, so a portfolio of small applications on one machine stays at one price. Rails, plain Ruby, Node.js and static sites are the supported targets, and there is a trial before purchase.
 
-## Reservations
+## Worth knowing
 
-The ten dollars buys management, not capacity — the servers are bought from DigitalOcean, Hetzner or wherever else, and that bill is separate and larger. Nothing here owns infrastructure, so uptime, region and jurisdiction are inherited from the underlying provider along with responsibility for choosing it. The specialisation is real: this is Ruby-shaped tooling, and a team not writing Ruby would be buying somebody else's conventions.
+The subscription buys management, not capacity. The servers are rented from DigitalOcean, Hetzner or wherever else and billed separately, and since Hatchbox owns no infrastructure, uptime, region and jurisdiction follow the underlying provider along with the responsibility for choosing it.

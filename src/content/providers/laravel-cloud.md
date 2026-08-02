@@ -54,22 +54,18 @@ figure:
   emoji: 🧺
   color: rgb(173, 150, 74)
   textColor: rgb(101, 71, 0)
-  text: Putting all your eggs in one basket?
+  text: The framework vendor's own platform.
 ai: co-authored
 ---
 
 ## About Laravel Cloud
 
-Laravel Cloud is made by Laravel Holdings Inc. and is the framework vendor's own hosting platform. In 2024 Laravel announced $57M in funding; Laravel Cloud reached general availability in early 2025. It started Laravel-only and has since added Symfony support — other PHP frameworks and plain PHP are not.
+Laravel Cloud is made by Laravel Holdings Inc., the company behind the Laravel framework, and is the framework vendor's own hosting platform. It reached general availability in 2025. It started Laravel-only and has since added Symfony support; other PHP frameworks and plain PHP have no route in.
 
-Applications are imported from a repository and deployed without server configuration. Compute scales to zero when traffic stops and wakes, per the marketing figure, in under 500ms. Data services are a serverless Postgres 17 with its own sleep timer and a Valkey cache. Nine regions are offered: Ohio, Virginia, Central Canada, Ireland, London, Frankfurt, Singapore, Tokyo and Sydney.
+Applications are imported from a repository and deployed without server configuration. Compute scales to zero when traffic stops and wakes on the next request. Data services are a serverless Postgres with its own sleep timer and a Valkey cache. Plans are a subscription with usage credits attached, stepping up to add autoscaling, preview environments and team roles, and a spending limit can be set to pause compute at a ceiling.
 
-Plans are a subscription plus metered usage. Starter is $5 a month including $5 of usage credits, with the first month free; Growth is $20 and adds autoscaling, preview environments and team roles; Business is $200; Enterprise is quoted. Spending limits pause compute at a set ceiling.
+## Worth knowing
 
-## Reservations
+The subscription is not the bill. Compute, database time and bandwidth are metered on top of it, so the monthly figure moves with traffic.
 
-- The subscription is not the bill. Compute, database time and bandwidth are metered on top, so the monthly figure moves with traffic
-- Classic access paths — SSH, SFTP — are not part of the workflow
-- Only Laravel and Symfony applications run there; other PHP code has no route in
-- Scale-to-zero and autoscaling solve problems that many agency and business sites do not have
-- Framework and platform come from the same vendor, which concentrates the dependency
+Classic access paths are absent. There is no SSH or SFTP into a running application, and the Git integration is the only documented way in.

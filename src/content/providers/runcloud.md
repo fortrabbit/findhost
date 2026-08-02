@@ -37,8 +37,6 @@ ai: co-authored
 
 ## About RunCloud
 
-RunCloud is [server management software](/category/server-management/) from Cyberjaya, Malaysia, run as an independent company. It is a control panel for VPS providers — DigitalOcean, Linode, AWS, Vultr and Azure among them: an agent is installed on the server and configures a PHP stack on Nginx or OpenLiteSpeed, with WordPress sites a stated focus. The server is the customer's, and RunCloud configures and operates the software on top of it. Its pricing page describes a range of customers "from early-stage startups to enterprise hosting companies".
+RunCloud is [server management software](/category/server-management/) from Cyberjaya, Malaysia, run as an independent company. An agent is installed on a VPS the customer already rents — the mainstream providers are named as targets — and from there the panel builds and operates a PHP stack on Nginx or OpenLiteSpeed, with WordPress sites a stated focus. Deployments, virtual hosts, certificates, cron jobs, queue workers and database users are all managed through the panel rather than by hand on the box.
 
-## Reservations
-
-The panel does not change who owns the machine. Operating system patches, backups and incident response stay with the account holder, and the subscription covers the management layer only — a split worth being explicit about, because the marketing of every product in this category sits close to the marketing of managed hosting.
+The subscription covers that management layer only: the machine stays on the customer's own account with its own bill, and the split is worth stating because the marketing in this category sits close to the marketing of managed hosting. A trial runs before the paid tiers, and the pricing page describes customers ranging from early-stage startups to enterprise hosting companies.

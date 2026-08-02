@@ -68,10 +68,10 @@ ai: authored
 
 ## About Scaleway
 
-Scaleway is one of the two French clouds of any scale, incorporated as Scaleway SAS with a copyright line running back to 1999 — it began as Dedibox, the dedicated-server brand, and the bare-metal heritage is still the most distinctive part of the catalogue. Dedibox, Elastic Metal, Apple Mac minis and Dedirack colocation sit alongside conventional instances, GPU instances up to H100, object, block and cold storage, managed PostgreSQL, MySQL, Redis, MongoDB and ClickHouse, Kubernetes, serverless containers and functions, transactional email and observability.
+Scaleway is one of the two French clouds of any scale, a subsidiary of the iliad Group with a history running back to Dedibox, the dedicated-server brand — and the bare-metal heritage is still the most distinctive part of the catalogue. Dedicated servers, bare-metal instances, Apple hardware and colocation sit alongside conventional and GPU instances, object, block and cold storage, managed relational and document databases, Kubernetes, serverless containers and functions, transactional email and observability. It owns and operates its own data centres.
 
-The commercial argument is jurisdictional: European data centres, GDPR compliance and HDS certification for health data. Several other platforms in this dataset — Clever Cloud and Scalingo among them — rent capacity from Scaleway rather than owning their own.
+The commercial argument is jurisdictional: European data centres, GDPR compliance and certification for regulated data such as health records. Several other platforms in this dataset, Clever Cloud and Scalingo among them, rent capacity from Scaleway rather than owning their own.
 
-## Reservations
+## Worth knowing
 
-The catalogue is very wide and priced per product, so no single entry price describes it and none is recorded here. The pricing page links to a separate availability matrix rather than naming its regions; the three of them — Paris, Amsterdam and Warsaw — are stated on the product pages instead. Ownership is disclosed on the about page rather than beside the prices: Scaleway is a subsidiary of the iliad Group. Serverless products aside, this is infrastructure — the customer owns everything above the operating system.
+The catalogue is wide and priced per product, so no single entry price describes it and none is recorded here. Regions are not named on the pricing page either; it links to a separate availability matrix, and the locations appear on the individual product pages instead.

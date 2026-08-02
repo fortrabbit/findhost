@@ -75,10 +75,10 @@ ai: authored
 
 ## About IONOS
 
-IONOS trades from Montabaur and Karlsruhe, descends from 1&1, went public on the Frankfurt exchange in February 2023 and remains part of United Internet AG. It reports around 4,300 staff, more than six million customers and 31 geo-redundant data centres in Germany, elsewhere in Europe and the United States. STRATO, listed separately here, belongs to the same group.
+IONOS trades from Montabaur and Karlsruhe, descends from 1&1, went public on the Frankfurt exchange in 2023 and remains part of United Internet AG. It is one of the largest hosting groups in Europe, running its own geo-redundant data centres in Germany, elsewhere in Europe and the United States. STRATO, listed separately here, belongs to the same group.
 
-For a mass-market host the shared line is unusually tolerant of developers: SSH, git version management, WP-CLI and cron are on every tariff, with PHP 8.2 through 8.4 and MariaDB databases. Beyond shared hosting the portfolio runs to VPS, dedicated and bare-metal machines, GPU servers and a separate IaaS cloud with its own documented API and price calculator — so the shared category describes the entry product and not the company.
+For a mass-market host the shared line is unusually tolerant of developers: SSH, Git version management, WP-CLI and cron are on every tariff, with a choice of PHP release and MariaDB databases. Beyond shared hosting the portfolio runs to VPS, dedicated and bare-metal machines, GPU servers and a separate IaaS cloud with its own documented API and price calculator, so the shared category describes the entry product rather than the company.
 
-## Reservations
+## Worth knowing
 
-Advertised pricing is heavily promotional, and IONOS prints both numbers, which makes the size of the step visible. Webhosting Standard is €3 a month for six months and then €6; Plus is €1 a month for twelve months and then €11; Premium €8 then €16; Ultimate €14 then €28. Every plan also carries a €10 setup fee. The multiple recorded here, two, is the entry plan's; Plus is the sharpest at eleven times, and it is the tier the page pushes hardest. The product catalogue is also wide enough that documentation quality varies noticeably between the consumer help centre and the cloud developer docs.
+Advertised pricing is promotional, and IONOS prints both the introductory and the standing rate, which makes the size of the step visible. The multiple recorded here is the entry plan's; the middle tiers step up more steeply than that, and every plan carries a one-off setup fee on top.

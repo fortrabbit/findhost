@@ -8,7 +8,7 @@ urls:
   docs: https://hostim.dev/docs/
   status: https://status.hostim.dev
 category: paas
-description: Hostim is a Docker-first PaaS from Germany, in the Railway mold.
+description: Hostim is a Docker-first platform-as-a-service from Germany, deploying container images, Git repositories and Compose files onto bare metal in the EU.
 founded: 2025
 hqCountry: DE
 regions:
@@ -41,6 +41,6 @@ ai: co-authored
 
 ## About Hostim
 
-Hostim is a Docker-first hosting platform out of Germany, in the same mold as Railway. Deploy a Docker image, a Git repo, or a Docker Compose file, and it runs on bare metal in the EU. No Kubernetes, no YAML to hand-write. Managed MySQL, PostgreSQL, Redis, and persistent volumes are built in, HTTPS and monitoring come automatic, and scaling is a slider in the UI. Pricing is flat and per-project, apps from €2.50/mo, which keeps client handovers clean.
+Hostim is a Docker-first hosting platform out of Germany. Deploy a Docker image, a Git repository or a Docker Compose file and it runs on bare metal in the EU — no Kubernetes, no YAML to hand-write. Managed MySQL, PostgreSQL and Redis and persistent volumes are built in, HTTPS and monitoring come as standard, and scaling is a slider in the interface.
 
-It is polyglot by design, built around containers rather than one language. The framework list leans Node, Python, Java, and Ruby. PHP is not called out, but anything that ships in a container runs, so a PHP app works with a Dockerfile, the same as on any container host.
+Pricing is flat and per-project rather than metered by consumption, which keeps a client handover to a predictable line item. The platform is polyglot by design, built around containers rather than around one language: the framework examples lean towards Node, Python, Java and Ruby, and anything that ships in a container runs the same way.

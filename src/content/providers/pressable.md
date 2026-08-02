@@ -5,7 +5,7 @@ urls:
   home: https://pressable.com
   pricing: https://pressable.com/plans/
 category: vanity-hosting
-description: Managed WordPress hosting owned by Automattic, sold in nine tiers metered by installs, monthly visits and storage, with staging and sandbox sites included.
+description: Managed WordPress hosting owned by Automattic, sold in fixed tiers metered by number of installs, monthly visits and storage.
 ownership: subsidiary
 parent: Automattic
 whoManagesOs: provider
@@ -54,10 +54,12 @@ ai: authored
 
 ## About Pressable
 
-Pressable describes itself as "an Automattic hosting lab", which places it inside the company that also owns WordPress.com, WooCommerce and Jetpack — and makes it the second WordPress host under that roof rather than a competitor to it.
+Pressable describes itself as "an Automattic hosting lab", which places it inside the company that also owns WordPress.com, WooCommerce and Jetpack, and makes it one of several WordPress hosts under that roof rather than a competitor to them. The product is managed WordPress only: the provider runs the operating system and the stack, and the customer works through a control panel and SFTP.
 
-Plans run in nine steps from $25 a month for one install, 30,000 monthly visits and 20 GB of storage up to $675 for a hundred installs and two million visits, with a custom tier above. Every plan includes a matching number of staging and sandbox sites, which is the feature agencies actually buy at this level: somewhere to break a client site safely.
+Plans are a long ladder of fixed tiers, each defined by how many WordPress installs it covers, how many monthly visits it allows and how much storage it includes, rising to a custom tier for large accounts. Every plan carries a matching allowance of staging and sandbox sites, and support is offered around the clock.
 
-## Reservations
+## Worth knowing
 
-The meters are installs, visits and storage, so a single unexpectedly popular site can force a tier change that has nothing to do with how many sites are hosted. PHP versions, SSH availability and server regions are all absent from the plans page, which is a lot of unanswered questions for a page that is asking for a decision. Sitting alongside WordPress.com and WP Cloud under one owner, the practical differences between Automattic's hosting products are not explained anywhere a buyer would find them.
+Because the meters are installs, visits and storage, one unexpectedly popular site can push an account into a higher tier without any change in how many sites it hosts.
+
+Server regions, SSH availability and stack detail are not on the plans page, and the practical differences between Automattic's several hosting products are not laid out anywhere a buyer comparing them would find them.

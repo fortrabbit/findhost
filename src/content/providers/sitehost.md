@@ -6,7 +6,7 @@ urls:
   pricing: https://sitehost.nz/hosting/cloud-containers
   terms: https://sitehost.nz/about/terms
 category: paas
-description: New Zealand host running its own Auckland data centre, whose Cloud Containers product deploys prebuilt or custom Docker images for PHP, Node, Ruby and .NET apps.
+description: New Zealand host that owns its Auckland data centre and sells Cloud Containers, a product that runs prebuilt or custom Docker images.
 founded: 2004
 hqCountry: NZ
 ownership: independent
@@ -84,16 +84,16 @@ figure:
   emoji: 🥝
   color: rgb(20, 55, 35)
   textColor: rgb(185, 235, 195)
-  text: Containers, from an Auckland basement.
+  text: Containers, out of an Auckland data centre.
 ai: authored
 ---
 
 ## About SiteHost
 
-SiteHost was founded in 2004 by the brothers Nathan and Quintin Russ and is still founder-owned, with around fifty staff. It owns and operates its Auckland data centre rather than renting rack space — AKL01 opened in 2018 and was expanded in 2025 — with Sydney added in 2015 and northern-hemisphere hardware from 2024.
+SiteHost was founded in 2004, is still independently owned, and owns and operates its Auckland data centre rather than renting rack space. It has since added hardware in Australia, Asia and the northern hemisphere.
 
-Cloud Containers is the part that makes it a platform rather than a host. Prebuilt stack images cover Nginx and Apache with thirteen PHP versions each, four Node.js versions, Ruby with Puma and .NET Core, plus WordPress and Silverstripe images and a set of database and search containers. Each container gets its own SSH and SFTP user, cron and environment variables; custom Docker images can be pushed through the company's own registry and build pipeline. There is a public API, a Terraform provider, and independent API clients written by New Zealand agencies and individuals.
+Cloud Containers is the part that makes it a platform rather than a host. Prebuilt stack images cover Nginx and Apache with a choice of PHP, Node.js, Ruby and .NET runtimes, plus WordPress and Silverstripe images and a set of database and search containers. Each container gets its own SSH and SFTP user, cron and environment variables; custom Docker images can be pushed through the company's own registry and build pipeline. Containers are sold in unmanaged and managed variants. There is a public API, a Terraform provider, and independent API clients written by New Zealand agencies and individuals.
 
-## Reservations
+## Worth knowing
 
-The gap between unmanaged and managed pricing on the same one-core container is very large — roughly sevenfold — and every figure on the pricing page excludes GST. The published data-centre list is also inconsistent between pages: the containers page names Sydney, Singapore, London, California and Auckland, while the company history describes Frankfurt and California as the 2024 additions.
+Prices on the site are quoted excluding GST, so the figure a New Zealand customer pays is higher than the one shown.

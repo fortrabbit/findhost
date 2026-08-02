@@ -82,18 +82,16 @@ figure:
   emoji: 🎸
   color: rgb(121, 40, 202)
   textColor: rgb(180, 120, 255)
-  text: Old rock stars.
+  text: The original git push to deploy.
 ai: co-authored
 ---
 
 ## About Heroku
 
-Heroku was founded in July 2007 by James Lindenbaum, Adam Wiggins and Orion Henry, and built for hosting Ruby on Rails applications. It popularised `git push` as a deployment interface, and one of its co-founders wrote the twelve-factor app methodology. Salesforce acquired the company in December 2010; Heroku is now described on its own site as a business unit of Salesforce.
+Heroku was founded by James Lindenbaum, Adam Wiggins and Orion Henry and built for hosting Ruby on Rails applications. It popularised `git push` as a deployment interface, and one of its co-founders wrote the twelve-factor app methodology. Salesforce acquired the company in 2010, and Heroku describes itself on its own site as a business unit of Salesforce.
 
-Officially supported languages are Node.js, Ruby, Python, Java, PHP, Go, Scala, Clojure and .NET. Applications deploy over a git remote or the Heroku CLI, and first-party data services cover Postgres, a Redis-compatible key-value store and Apache Kafka. The Common Runtime offers two regions, `us` and `eu`; Private Spaces add named regions in Dublin, Frankfurt, London, Montreal, Mumbai, Oregon, Singapore, Sydney, Tokyo and Virginia. A newer runtime generation named Fir is available inside Private Spaces, while the standard platform runs on Cedar.
+Officially supported languages are Node.js, Ruby, Python, Java, PHP, Go, Scala, Clojure and .NET. Applications deploy over a git remote or the Heroku CLI, and first-party data services cover Postgres, a Redis-compatible key-value store and Apache Kafka. The shared Common Runtime offers a US and an EU region; Private Spaces add named regions across North America, Europe, Asia and Australia on isolated infrastructure.
 
-## Reservations
+## Worth knowing
 
-The free tier is gone. The cheapest entry is the Eco plan, a $5 flat monthly subscription covering a pool of 1,000 dyno hours shared across an account; an Eco web dyno sleeps after thirty minutes without traffic and takes a delay to wake. Eco is also restricted to personal apps — anything inside a Heroku Team or Enterprise Team starts at the $7 Basic dyno. Prices climb steeply from there: Standard dynos are $25 and $50, Performance dynos $250 and up, and Private Spaces start at $125 per dyno before the space itself.
-
-Other platforms now occupy the ground Heroku defined — [Render](/providers/render/), [Fly.io](/providers/fly/) and [Railway](/providers/railway/) all describe themselves in relation to it.
+There is no free tier. The cheapest plan is a flat monthly subscription covering a pool of dyno hours shared across the account, on which a web dyno sleeps after a spell without traffic and takes a moment to wake, and it is restricted to personal applications — anything inside a Heroku Team starts a step higher. The ladder climbs steeply from there, and Private Spaces are priced per dyno on top of the space itself.

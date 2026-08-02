@@ -35,14 +35,12 @@ figure:
   emoji: 🌀
   color: rgb(0, 102, 204)
   textColor: rgb(205, 205, 255)
-  text: Flashy marketing, sluggish reality.
+  text: WordPress hosting at retail scale.
 ai: co-authored
 ---
 
 ## About Bluehost
 
-Bluehost is a classical shared hosting service from the US, founded in 2003. It's a hosting brand of Newfold Digital, the portfolio company (formerly Endurance International Group) that also owns HostGator. WordPress.org has listed Bluehost as a recommended host since 2005, which explains the line-up: shared hosting, managed WordPress, WooCommerce hosting, VPS, and domain registration.
+Bluehost is a classical shared hosting service from the United States, founded in 2003. It is a hosting brand of Newfold Digital, the portfolio company formerly known as Endurance International Group, which also owns HostGator. WordPress.org has listed Bluehost as a recommended host since 2005, and the line-up follows from that: shared hosting, managed WordPress, WooCommerce hosting, VPS and domain registration.
 
-## Reservations
-
-The advertised price is a first-term price on a 36-month prepayment, and Bluehost publishes what it becomes afterwards: Starter is $3.99 a month introductory and $9.99 on renewal, Business $6.99 and $13.99, eCommerce Essentials $14.99 and $21.99. The entry plan therefore renews at about two and a half times the price it was bought at. Technical features developers care about — Git-based deployment, current PHP tooling — are not the focus; the product is built around WordPress site owners. Bluehost is also one of the most heavily affiliate-marketed brands in hosting, which is worth knowing when reading any list that places it near the top.
+Plans are sold as a first-term rate on a multi-year prepayment, with the standing rate published alongside it. The entry plan renews at roughly two and a half times what it was bought at.

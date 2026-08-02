@@ -5,7 +5,7 @@ urls:
   home: https://fly.io
   pricing: https://fly.io/docs/about/pricing/
 category: paas
-description: Fly.io runs Firecracker microVMs on its own servers in 18 regions, deployed from a Dockerfile through the flyctl CLI and billed purely by usage.
+description: Fly.io runs applications as Firecracker microVMs on hardware it operates itself, deployed from a Dockerfile through the flyctl CLI and billed by usage.
 infraContract:
   - owns-metal
 whoManagesOs: container
@@ -65,12 +65,12 @@ ai: co-authored
 
 ## About Fly.io
 
-Fly.io runs applications as Firecracker microVMs — Machines — across 18 regions in 13 countries, on hardware it describes as "servers we run ourselves". Deployment is a CLI operation: `fly deploy` builds the app from an explicitly named image, a `[build]` section in `fly.toml`, or a Dockerfile in the working directory, then starts it on one or more Machines. The docs are blunt about the alternative: "don't use buildpacks if you don't have to; they're brittle, bloated, and prone to change."
+Fly.io runs applications as Firecracker microVMs, which it calls Machines, on hardware it describes as "servers we run ourselves" spread across regions on several continents. Deployment is a CLI operation: `fly deploy` builds the app from an explicitly named image, a `[build]` section in `fly.toml` or a Dockerfile in the working directory, then starts it on one or more Machines.
 
-Billing is usage-based throughout, pro-rated to the second for compute and to the hour for storage. The smallest Machine — one shared CPU, 256 MB — works out at about $2.02 a month. Volumes are $0.15 per GB per month, egress $0.02 per GB in North America and Europe, a dedicated IPv4 address $2 a month, and Managed Postgres is priced separately again. There is no free tier for new customers; the old Hobby allowances are legacy.
+Billing is usage-based throughout, pro-rated to the second for compute and to the hour for storage. Compute, volumes, snapshots, bandwidth, dedicated IPv4 addresses and Managed Postgres are each metered on their own line. There is no free tier for new customers; the older hobby allowances are legacy.
 
-## Reservations
+## Worth knowing
 
-The invoice is assembled from parts. Compute, volumes, snapshots, bandwidth, IP addresses and the database are each metered on their own line, so what an application costs is only knowable after it has run.
+Because the invoice is assembled from those separate meters, what a given application costs is only knowable once it has run.
 
-The platform also stops at the machine boundary. Fly manages Machines; the application stack inside them — language version, extensions, web server configuration and their upgrades — lives in the customer's own Docker image. Global distribution is the reason to accept that; without a real multi-region requirement it is configuration surface carried for nothing.
+The platform stops at the machine boundary. Fly manages Machines; the stack inside them — runtime version, extensions, web server configuration and their upgrades — lives in the customer's own Docker image.

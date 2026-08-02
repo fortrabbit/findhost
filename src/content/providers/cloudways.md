@@ -58,12 +58,10 @@ ai: co-authored
 
 ## About Cloudways
 
-Cloudways is [server management software](/category/server-management/) rather than a hosting service in its own right: it provisions VPS machines on five infrastructure providers — DigitalOcean, Vultr, Linode, AWS and Google Cloud — and puts a control panel over them. The cheapest listed plan is a Micro server on DigitalOcean at $11 a month for 2 GB RAM, 1 vCPU and 50 GB storage. Billing is pay-as-you-go by the hour, invoiced in arrears in the first week of the following month, and a three-day trial runs without a credit card.
+Cloudways is [server management software](/category/server-management/) rather than a hosting service in its own right: it provisions virtual machines on five infrastructure providers — DigitalOcean, Vultr, Linode, AWS and Google Cloud — and puts its own control panel over them. Billing is pay-as-you-go by the hour and invoiced in arrears, with a short trial ahead of it.
 
-Because the servers sit on other providers' hardware, the regions on offer are whatever those providers operate — Cloudways cites 25 data centres for Linode alone — so the geography of a Cloudways account is decided upstream. It was acquired by [DigitalOcean](/providers/digitalocean/) in 2022. WordPress hosting is a separately marketed product line.
+Because the servers sit on other providers' hardware, the locations on offer are whatever those providers operate, so the geography of a Cloudways account is decided upstream. It was acquired by [DigitalOcean](/providers/digitalocean/) in 2022. WordPress hosting is a separately marketed product line.
 
-## Reservations
+## Worth knowing
 
-Server management software carries a responsibility gap. Cloudways manages the software layer while the underlying machine belongs to a different contract, and when a fault falls between the two it is not always obvious who owns it.
-
-The bundled price also hides the split: one figure covers both the panel and the machine, so what the management layer costs on top of the compute is not separable from the invoice.
+The machine and the management layer arrive on one invoice. That is unusual for this category — most panels are billed separately from the server they run on — and it means the cost of the panel itself is not separable from the cost of the compute underneath it.

@@ -6,7 +6,7 @@ urls:
   pricing: https://www.gandi.net/en/simple-hosting
   status: https://status.gandi.net/
 category: shared
-description: French registrar whose Simple Hosting product runs PHP, Python and Node applications in per-customer Linux containers with git or SFTP deploys.
+description: Gandi is a French registrar whose Simple Hosting product runs application code in per-customer Linux containers, deployed by git or SFTP.
 hqCountry: FR
 whoManagesOs: container
 useCases:
@@ -61,10 +61,12 @@ ai: authored
 
 ## About Gandi
 
-Gandi is best known as a domain registrar; Simple Hosting, now also branded Web Hosting, is the side of it that runs application code. Each instance is an isolated Linux container with its own dedicated resources and Varnish caching, deployed by git or SFTP, with a choice of Paris or Bissen in Luxembourg. PHP, Python and Node.js are the documented runtimes on every plan, with MySQL and PostgreSQL alongside. Five tiers are listed: Essential from €2.00 a month, Starter from €3.99, Advanced from €5.32, Pro from €6.65 and Business from €7.98.
+Gandi is best known as a domain registrar; Simple Hosting, now also branded Web Hosting, is the side of it that runs application code. Each instance is an isolated Linux container with dedicated resources and Varnish caching in front, deployed by git or SFTP, placed either in Paris or in Bissen in Luxembourg.
 
-The independent tooling that exists around it is mostly small and mostly old — a Vagrant configuration reproducing the Simple Hosting architecture locally, deployment scripts wiring GitHub to an instance, a working Flarum layout — but it is written by people outside the company, which is the point.
+PHP, Python and Node.js are the documented runtimes across the plan ladder, with MySQL and PostgreSQL available alongside. Plans are fixed tiers, sized by the resources allotted to the container.
 
-## Reservations
+## Worth knowing
 
-The documented PHP range is narrow: the WordPress auto-install page states that only 8.1, 8.2 and 8.3 are supported, and Ruby is absent from the language list entirely. Ordinary interactive SSH could not be confirmed — there is an emergency console, which is not the same thing. Ownership could not be established from any page Gandi operates; the company pages that would say so return 404. The status page shows hosting nodes running at 99.95 to 99.99% while every other Gandi service sits at 100%.
+The documented runtime range is narrow: the WordPress auto-install page names only a short list of supported PHP versions, and Ruby is absent from the language list entirely. Ordinary interactive SSH could not be confirmed — there is an emergency console, which is not the same thing.
+
+Ownership could not be established from any page Gandi operates; the company pages that would state it return 404.

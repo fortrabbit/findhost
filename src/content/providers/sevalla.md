@@ -59,12 +59,12 @@ ai: co-authored
 
 ## About Sevalla
 
-Sevalla is a polyglot cloud hosting platform covering application hosting, database hosting, static sites, and object storage. It's a product of [Kinsta](/providers/kinsta/), the managed WordPress hosting company — since early 2026, Kinsta's application, database, and static-site hosting run under the Sevalla brand. Deployments connect to a Git provider (GitHub, GitLab, Bitbucket) and build via Dockerfile or buildpacks.
+Sevalla is a polyglot cloud hosting platform covering application hosting, database hosting, static sites and object storage. It is the platform side of [Kinsta](/providers/kinsta/), the managed WordPress company, whose application, database and static-site products run under the Sevalla brand. Deployments connect to GitHub, GitLab or Bitbucket and build from a Dockerfile or from buildpacks, with the provider running everything below the container.
 
-Billing is described as "pay for what you run", with no per-seat charge. Application and database hosting each start at $5 a month across 25 data centre locations; object storage is $0.02 per GB per month, powered by Cloudflare R2 in six locations. Static site hosting is free and permanent within stated limits — 1 GB per site, 100 GB of bandwidth, 600 build minutes and 100 sites per account — served from more than 260 edge locations. A trial is offered on the application and database products.
+Billing is described as "pay for what you run", with no per-seat charge and compute, databases, storage and bandwidth metered separately. Object storage sits on Cloudflare R2, static site hosting is permanently free within stated limits, and the application and database products come with a trial. Locations span the Americas, Europe and Asia-Pacific.
 
-## Reservations
+## Worth knowing
 
-The data centre count is on the pricing page but the countries are not — the list of twenty-five cities lives in the documentation, which is not where somebody choosing a plan is looking.
+Usage-based billing makes the advertised entry figure a floor rather than a price: what an application costs depends on what it consumes, across meters that are quoted per component.
 
-Usage-based billing means the $5 entry figure is a floor rather than a price. What an application costs depends on what it consumes, and the components — compute, database, storage, bandwidth — are metered separately.
+The pricing page counts data centres without naming the countries they are in; that list lives in the documentation, away from where a plan is chosen.

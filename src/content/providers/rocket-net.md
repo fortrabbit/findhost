@@ -5,7 +5,7 @@ urls:
   home: https://rocket.net
   pricing: https://rocket.net/pricing/
 category: vanity-hosting
-description: WordPress-only host built on an enterprise CDN, offering PHP 5.6 through 8.4 and a choice of ten server locations across three continents.
+description: Managed WordPress host built on an enterprise content delivery network, with a choice of origin locations across the Americas, Europe and Asia.
 whoManagesOs: provider
 specialisation:
   - wordpress
@@ -53,10 +53,10 @@ ai: authored
 
 ## About Rocket.net
 
-Rocket.net hosts WordPress and nothing else, on infrastructure arranged around an enterprise content delivery network with a stated 330 edge locations and a choice of ten origin locations across the United States, Europe and Asia. The founders describe over twenty years of combined hosting experience, and the commercial promise is explicit: no hidden upsells and no price increase on renewal.
+Rocket.net hosts WordPress and nothing else, on infrastructure arranged around an enterprise content delivery network: the edge network sits in front of every site, and the customer chooses an origin location in the Americas, Europe or Asia. Security, caching and the WordPress stack are all the provider's responsibility, and the interface is a control panel with SFTP beside it.
 
-The ladder is long — four managed tiers from $25 to $166 a month, seven agency tiers reaching $916, and four enterprise tiers up to $2,599 — so an agency can stay on one supplier as a portfolio grows. PHP is offered from 5.6 through 8.4, which is a wider range than most managed WordPress hosts still support and matters for inherited sites. Yearly billing includes two months free, and there is a thirty-day money-back guarantee on everything below enterprise.
+The ladder is long, running from single-site plans through agency tiers to enterprise accounts, so a portfolio can grow without changing supplier. A wide span of PHP versions stays selectable, which matters for inherited sites. Support is staffed around the clock by chat, ticket and telephone, annual billing carries a discount, and the pricing page commits to no upsells and no price increase at renewal.
 
-## Reservations
+## Worth knowing
 
-The first month is a dollar, which makes the introductory figure meaningless as a comparison even though the renewal promise is unusually clear. SSH availability is not mentioned anywhere on the pricing page. One application only: this is not somewhere to put anything that is not WordPress.
+The advertised entry figure is a first-month promotional rate, so the number to compare is the standing plan price rather than the one on the button, even though the renewal commitment beside it is unusually explicit. SSH availability is not mentioned anywhere on the pricing page.

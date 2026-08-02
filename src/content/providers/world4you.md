@@ -61,10 +61,12 @@ ai: authored
 
 ## About World4You
 
-World4You was founded in Austria in 1998 and has been an independently operating Austrian subsidiary of United Internet AG since 2018 — making it a sister company to IONOS and, one step further out, to STRATO. Offices are in Linz and Vienna, and the first company-owned data centre opened in Linz in 2005. It reports around 130,000 customers and roughly 300,000 registered domains.
+World4You was founded in Austria in 1998 and has been an independently operating Austrian subsidiary of United Internet AG since 2018, which makes it a sister company to IONOS and, one step further out, to STRATO. Offices are in Linz and Vienna, and its first company-owned data centre opened in Linz.
 
-All four webhosting tariffs run PHP 8.5 and include SSH, unlimited SSL certificates, automatic backups and monitoring, with WordPress, WooCommerce, Joomla and Drupal available preinstalled. SSH on every plan including the cheapest is not the norm at this price point.
+The webhosting tariffs are conventional shared hosting: current PHP, SSH on every tariff, SSL certificates, automatic backups and monitoring, with WordPress, WooCommerce, Joomla and Drupal available preinstalled. Email and servers are sold alongside.
 
-## Reservations
+## Worth knowing
 
-The tariff table advertises the server location only as "Europe", even though the company's own history page places its data centre in Linz — a customer with a data-location requirement cannot settle it from the sales page. Pricing is also promotional: the site regularly runs a several-month free period, so the standing rates are the ones behind the offer.
+The tariff table gives the server location only as "Europe", even though the company's own history page places its data centre in Linz. A customer with a data-location requirement cannot settle it from the sales page.
+
+Pricing is promotional. The site regularly runs a free introductory period, so the standing rates are the ones behind the offer.

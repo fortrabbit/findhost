@@ -6,7 +6,7 @@ urls:
   pricing: https://www.exoscale.com/pricing/
   status: https://exoscalestatus.com/
 category: iaas
-description: Swiss infrastructure provider offering KVM instances, managed Kubernetes, object and block storage and managed databases across eight European zones.
+description: Exoscale is a Swiss infrastructure provider selling KVM instances, managed Kubernetes, object and block storage and managed databases from European zones.
 founded: 2011
 hqCountry: CH
 ownership: subsidiary
@@ -80,12 +80,10 @@ ai: authored
 
 ## About Exoscale
 
-Exoscale is the trading name of Akenes SA in Lausanne, founded in 2011. Despite the Swiss identity it is a member of A1 Digital, part of the Vienna-listed A1 Telekom Austria Group, so ownership traces to an Austrian telco.
+Exoscale is the trading name of Akenes SA in Lausanne. Despite the Swiss identity it belongs to A1 Digital, part of the Vienna-listed A1 Telekom Austria Group, so ownership traces back to an Austrian telco.
 
-Eight zones span five countries — Geneva and Zurich, Vienna twice, Frankfurt, Munich, Sofia and Zagreb — each fully independent so that a zone failure does not propagate. The catalogue runs to compute instances, dedicated hypervisors, SKS managed Kubernetes, object and block storage, managed PostgreSQL, MySQL, Kafka, OpenSearch, Valkey and Grafana, plus DNS, KMS, IAM and GPU instances. The platform is CloudStack-derived, which is why Apache Libcloud can drive it directly, and there is a community-maintained Ansible collection alongside the official CLI and Terraform provider. Every documentation page is also served as Markdown by appending `index.md` — a small thing that says a lot about who the docs are written for.
+Zones sit in Switzerland, Austria, Germany and Croatia, each one independent so that a zone failure does not propagate. The catalogue covers compute instances, dedicated hypervisors, SKS managed Kubernetes, object and block storage, managed PostgreSQL, MySQL, Kafka, OpenSearch, Valkey and Grafana, plus DNS, KMS, IAM and GPU instances. The platform is CloudStack-derived, which is why Apache Libcloud can drive it directly, and a community-maintained Ansible collection sits alongside the official CLI and Terraform provider. Documentation pages are served as Markdown as well as HTML, by appending `index.md` to the URL.
 
-## Reservations
+## Worth knowing
 
-This is infrastructure, not a platform: nothing here builds an application, and the customer owns everything above the operating-system image. Billing is per second with no fixed monthly plan, so cost prediction requires modelling. There is no free tier beyond the free Kubernetes control plane, and support past the basic tier is a paid monthly subscription on top of usage.
-
-The pricing page enumerates CH-GVA-2, CH-DK-2, AT-VIE-1, AT-VIE-2, DE-FRA-1 and HR-ZAG-1. The Sofia zone named in the marketing copy does not appear on it, so Bulgaria is not recorded here.
+The pricing page and the marketing copy do not agree on the zone list: a Sofia zone named in the copy has no entry on the pricing page, so Bulgaria is not recorded here.

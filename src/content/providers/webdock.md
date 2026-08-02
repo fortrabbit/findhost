@@ -7,7 +7,7 @@ urls:
   status: https://status.webdock.io/
   docs: https://webdock.io/en/docs
 category: vps
-description: Danish VPS provider selling AMD Epyc and Xeon virtual servers with a web control panel, prepared stacks and WordPress plans, from a single Denmark facility.
+description: Danish VPS provider selling virtual servers with a web control panel, prepared stacks and WordPress plans, from a single facility in Denmark.
 hqCountry: DK
 ownership: independent
 whoManagesOs: panel-assisted
@@ -56,18 +56,16 @@ figure:
   emoji: 🇩🇰
   color: rgb(60, 25, 30)
   textColor: rgb(255, 200, 195)
-  text: One country, one data centre, no asterisk.
+  text: One country, one data centre.
 ai: authored
 ---
 
 ## About Webdock
 
-Webdock is a small Danish company in Nørre Aaby selling virtual servers on AMD Epyc and Xeon Platinum hardware with NVMe storage, from €2.15 a month for the entry configuration up to six-core machines, plus prepared WordPress plans and add-on load balancing and web application firewall. It reports being trusted by over five thousand developers.
+Webdock is a small independent Danish company selling virtual servers on AMD Epyc and Xeon hardware with NVMe storage, alongside prepared WordPress plans and add-on load balancing and web application firewall. Billing carries no minimum term, and servers can be resized or cancelled at any point.
 
-The pitch is jurisdictional simplicity. There is one data centre, DK-DC1 in Denmark, and the company states plainly that everything sits under EU jurisdiction — no region picker, no ambiguity about where a backup landed. A web control panel, a mobile app and a public API sit on top of the servers, so it is closer to panel-assisted hosting than to bare infrastructure.
+The pitch is jurisdictional simplicity. There is one data centre, in Denmark, and the company states plainly that everything sits under EU jurisdiction — no region picker, no ambiguity about where a backup landed. A web control panel, a mobile app and a public API sit on top of the servers, which puts it closer to panel-assisted hosting than to bare infrastructure.
 
-Billing has no minimum term; servers can be scaled or cancelled at any point.
+## Worth knowing
 
-## Reservations
-
-One data centre is a clear answer and also a single point of failure, with no second region to fail over to and no option for anyone needing capacity outside Denmark. The two cheapest plans list identical processor, memory and disk specifications at double the price, the difference being the processor generation — which is not obvious from the table.
+One data centre is a clear answer and also a single point of failure. There is no second region to fail over to, and no option for anyone who needs capacity outside Denmark.

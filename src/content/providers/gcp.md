@@ -4,7 +4,7 @@ name: Google Cloud Platform
 urls:
   home: https://cloud.google.com
 category: iaas
-description: Google Cloud Platform is one of the three hyperscalers, running 130 zones across 43 regions on the infrastructure behind Google's own products.
+description: Google Cloud Platform is one of the three hyperscalers, selling compute, storage, data and machine-learning services on the infrastructure behind Google's own products.
 parent: Google
 ownership: subsidiary
 hqCountry: US
@@ -68,12 +68,6 @@ greenWebId: 595
 
 ## About GCP
 
-Google Cloud Platform is the third of the big three hyperscalers, after AWS and Azure. It runs on the same infrastructure Google uses for Search, Gmail and YouTube, and its strengths mirror Google's own: data and analytics (BigQuery), Kubernetes (Google created it, GKE hosts it) and machine learning.
+Google Cloud Platform is the third of the big three hyperscalers, after AWS and Azure. It runs on the same infrastructure Google uses for Search, Gmail and YouTube, and its catalogue reflects Google's own centre of gravity: data and analytics through BigQuery, Kubernetes through GKE, machine learning throughout.
 
-PHP has several entry points on GCP: App Engine ships maintained PHP 8 runtimes, [Cloud Run](/providers/google-cloud-run/) runs PHP as a container, and Compute Engine offers plain VMs. MySQL is another service again, Cloud SQL. Each piece works well — and each is picked, configured, connected and billed on its own. Google states it operates 130 zones across 43 regions on six continents.
-
-## Reservations
-
-As with the other hyperscalers, there is no entry price to quote: billing is usage-based across separately metered services, so what a site costs depends on how it is assembled rather than on a plan. No entry price band is recorded for that reason.
-
-Choosing between App Engine, Cloud Run and Compute Engine is a real architectural decision with different operational obligations attached to each, and it has to be made before the first deployment rather than after.
+Application workloads have several entry points. App Engine takes code and manages the runtime, [Cloud Run](/providers/google-cloud-run/) runs containers, and Compute Engine sells plain virtual machines; databases are separate services again, Cloud SQL among them. Each is picked, configured, connected and billed on its own, so the choice between them is an architectural decision taken before the first deployment. Regions span six continents, and everything is metered by usage rather than sold as a plan, which is why no entry price is recorded here.

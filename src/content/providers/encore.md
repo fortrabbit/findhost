@@ -6,7 +6,7 @@ urls:
   pricing: https://encore.dev/pricing
   docs: https://encore.dev/docs
 category: server-management
-description: Backend framework for TypeScript and Go with a control plane that provisions the infrastructure it infers from the code, into the customer's AWS or GCP account.
+description: Encore Cloud is a backend framework for TypeScript and Go with a control plane that provisions the infrastructure it infers from the code into the customer's own AWS or GCP account.
 whoManagesOs: container
 infraContract:
   - byo-iaas
@@ -48,12 +48,10 @@ ai: authored
 
 ## About Encore Cloud
 
-Encore inverts the usual arrangement. Infrastructure is not configured alongside the application — it is declared inside it, and the platform reads the code to work out which databases, queues, caches and cron jobs need to exist, then provisions them. Local development runs the same topology automatically, and distributed tracing and a service catalogue come from the same source.
+Encore inverts the usual arrangement. Infrastructure is not configured alongside the application, it is declared inside it: the platform reads the code to work out which databases, queues, caches and cron jobs need to exist, then provisions them. Local development runs the same topology automatically, and distributed tracing and a service catalogue come from the same declarations.
 
-TypeScript and Go are the supported languages, both with the full feature set. Production deploys into the customer's own AWS or GCP account, so the cloud relationship and the bill stay with them; two free development environments run on Encore's own infrastructure. The platform generates Docker images specifically so that leaving is possible.
+TypeScript and Go are the supported languages, both with the full feature set. Production deploys into the customer's own AWS or GCP account, so the cloud relationship and the bill for capacity stay with them, while development environments can run on Encore's own infrastructure. The platform generates Docker images so that an application can be taken elsewhere.
 
-Pricing is a per-seat fee from forty-nine dollars a month, plus ninety-nine per cloud environment and $2.50 per provisioned resource.
+## Worth knowing
 
-## Reservations
-
-Three separate meters — seats, environments and individual resources — make the monthly total hard to predict before the architecture is settled, and a service-heavy design is charged for its granularity. The free tier covers development environments only, not production. Because production runs in the customer's cloud account, the Encore invoice and the cost of actually running the application are entirely different numbers.
+Billing runs on three separate meters — seats, cloud environments and individual provisioned resources — so the monthly total is hard to predict before the architecture settles, and a service-heavy design is charged for its granularity. The free tier covers development environments rather than production, and since production runs in the customer's cloud account, the Encore invoice and the cost of running the application are different numbers.

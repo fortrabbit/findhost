@@ -6,7 +6,7 @@ urls:
   pricing: https://www.vultr.com/pricing/
   docs: https://docs.vultr.com/
 category: vps
-description: Vultr is a cloud infrastructure provider offering VPS, bare metal, GPU instances and managed Kubernetes across 33 locations in 20 countries.
+description: Cloud infrastructure provider selling virtual private servers, bare metal, GPU instances, object storage and managed Kubernetes, billed by the hour.
 whoManagesOs: you
 runtimes:
   - any
@@ -55,12 +55,10 @@ ai: co-authored
 
 ## About Vultr
 
-Vultr is a cloud infrastructure provider selling virtual private servers, bare metal, cloud compute instances, managed Kubernetes, object storage and GPU instances. Its public API lists 33 locations across 20 countries, with the largest concentrations in North America, Europe and Asia; high-performance block storage is limited to a subset of those, including London, Frankfurt, Tokyo and Singapore.
+Vultr is a cloud infrastructure provider selling virtual private servers, bare metal, cloud compute instances, managed Kubernetes, object storage and GPU instances. Compute is billed by the hour against a monthly cap, and the whole catalogue — plans, regions, instances — is driven by a public API as well as by the web console.
 
-The same API lists the plan catalogue. The cheapest shared-CPU instance is $2.50 a month for one vCPU and 512 MB, available in Newark and Atlanta and IPv6-only; the equivalent plan with IPv4 is $3.50, and 1 GB of memory is $5. A $0 plan also appears, restricted to Seattle, Frankfurt and Miami.
+Locations span the Americas, Europe, Africa, the Middle East and Asia-Pacific, but not every product is sold in every one; high-performance block storage and the newer instance families are offered in a subset. Vultr supplies the machine and root access and stops there: installing a web server, issuing certificates, patching and monitoring stay with the account holder for as long as the server exists.
 
-## Reservations
+## Worth knowing
 
-Vultr supplies a Linux server and root access, and the managed part ends there. Installing a web server, configuring PHP, issuing certificates, hardening the box, applying operating system patches and monitoring uptime are all the account holder's work, and it recurs for as long as the server exists. The common failure is not a bad first setup but an unattended one — a machine that quietly falls behind on patches while attention goes elsewhere.
-
-The advertised entry price is also a narrow product: the $2.50 plan has no IPv4 address and is offered in two locations only.
+The advertised entry price belongs to a narrow product — an instance with no IPv4 address, offered in only a couple of locations. The comparable plan with an IPv4 address costs more.

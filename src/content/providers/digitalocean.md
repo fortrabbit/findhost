@@ -80,18 +80,12 @@ figure:
   emoji: 🐟
   color: rgb(0, 170, 255)
   textColor: rgb(0, 50, 200)
-  text: Stop wrestling with Linux.
+  text: Virtual machines, billed by the second.
 ai: co-authored
 ---
 
 ## About DigitalOcean
 
-DigitalOcean Holdings, Inc. was founded in 2012 and trades on the New York Stock Exchange as DOCN. It started with a single product — the Droplet, a virtual private server — and has since added block storage, managed databases, managed Kubernetes, object storage, serverless functions and an application platform. It acquired [Cloudways](/providers/cloudways/) in 2022.
+DigitalOcean Holdings, Inc. trades on the New York Stock Exchange as DOCN. It started with a single product — the Droplet, a virtual private server — and has since added block storage, managed databases, managed Kubernetes, object storage, serverless functions and an application platform. It acquired [Cloudways](/providers/cloudways/) in 2022.
 
-Droplets are billed per second against fixed plan rates, with a minimum charge of sixty seconds; the smallest plan is listed at $4.00 a month. Backups are a paid add-on at 20 per cent of the Droplet cost for weekly copies or 30 per cent for daily. Managed database clusters cover PostgreSQL, MySQL, MongoDB, Valkey, OpenSearch and Kafka.
-
-The documented tooling is unusually complete for the segment: a public REST API, the open-source `doctl` CLI, a Terraform provider, Ansible modules and a set of MCP servers for use from MCP-compatible clients.
-
-## Reservations
-
-A Droplet is an unconfigured Linux machine. Setting it up and keeping it patched is a standing commitment that the hourly price does not cover, and the work does not stop after the first deployment. The Droplet price is also only part of the bill — backups, block storage, load balancers and managed databases are metered separately, so the entry figure is not the running cost.
+Droplets are billed per second against fixed plan rates, with a one-minute minimum charge. Backups are a paid add-on priced as a percentage of the Droplet cost, and block storage, load balancers and managed database clusters are metered separately, so a Droplet's plan rate is not the whole bill. The tooling is documented in one place: a public REST API, the open-source `doctl` CLI, a Terraform provider, Ansible modules and a set of MCP servers.

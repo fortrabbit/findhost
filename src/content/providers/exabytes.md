@@ -5,7 +5,7 @@ urls:
   home: https://www.exabytes.my
   pricing: https://www.exabytes.my/web-hosting
 category: shared
-description: Malaysian host offering a choice of cPanel or Plesk on NVMe storage from a Tier 3 data centre in Malaysia, sold on three-year terms.
+description: Exabytes is a Malaysian host selling shared plans on a choice of cPanel or Plesk from its own data centre in Malaysia.
 hqCountry: MY
 whoManagesOs: panel-assisted
 useCases:
@@ -45,18 +45,16 @@ figure:
   emoji: 🌺
   color: rgb(50, 35, 20)
   textColor: rgb(250, 215, 180)
-  text: Three-year prices, one-year nerve.
+  text: cPanel or Plesk, on Malaysian metal.
 ai: authored
 ---
 
 ## About Exabytes
 
-Exabytes is one of the larger hosting names in Malaysia and one of the few in Southeast Asia running its own Tier 3 facility locally rather than reselling capacity in Singapore. It sells two parallel ladders, one on Plesk and one on cPanel, so a customer can pick the panel rather than inherit it — an unusual courtesy.
+Exabytes is a Malaysian hosting company running its own Tier 3 facility in Malaysia rather than reselling capacity elsewhere in the region. It sells two parallel shared-hosting ladders, one on Plesk and one on cPanel, so the control panel is chosen at purchase rather than inherited.
 
-Plans step from 15 GB to 320 GB of NVMe storage with mailbox and website counts rising alongside, free unlimited SSL throughout, and backups weekly on the entry plan and daily above it.
+Plans step up through NVMe storage allowances, with mailbox and website counts rising alongside, SSL certificates included throughout and backups taken weekly on the entry plan and daily above it. The advertised figures assume a three-year term; the standard rate printed next to them is several times higher.
 
-## Reservations
+## Worth knowing
 
-The pricing is the problem. Every advertised figure assumes a thirty-six-month term, and the regular rate alongside it is roughly five times higher — the entry plan is RM9.99 a month on a three-year commitment against RM49.99 standard. No band is recorded here, because neither number describes what a customer would pay for a normal year.
-
-PHP versions, SSH availability and database specifications appear nowhere on the plan pages, and the company publishes no background or founding date on them either.
+The plan pages state neither runtime versions, SSH availability nor database specifications, and carry no company background. Anything beyond storage, mailbox and domain allowances has to be asked for before buying.

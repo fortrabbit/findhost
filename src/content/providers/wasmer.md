@@ -6,7 +6,7 @@ urls:
   pricing: https://wasmer.io/pricing
   docs: https://docs.wasmer.io/
 category: serverless
-description: Wasmer runs PHP compiled to WebAssembly at the edge, on a free-forever Hobby plan or $10 a month.
+description: WebAssembly runtime company whose edge platform runs applications compiled to WASM, PHP among them, close to the visitor.
 whoManagesOs: provider
 useCases:
   - cms
@@ -55,8 +55,12 @@ ai: co-authored
 
 ## About Wasmer
 
-Wasmer is a WebAssembly runtime with an edge platform on top. That edge product runs PHP compiled to WASM next to the visitor, and reportedly runs WordPress, Laravel, and Symfony unmodified, with opcode caching making some pages faster than a normal origin. It sits at the experimental edge of serverless. WebAssembly buys near-instant cold starts, and that is the whole pitch.
+Wasmer is a WebAssembly runtime with an edge platform built on top of it. Applications are compiled to WASM and run next to the visitor, which is what buys the platform its near-instant cold starts. Documented deployment paths cover WordPress and PHP applications such as Laravel, alongside Django and the JavaScript and static-site frameworks Next.js, Nuxt, Hugo and Astro.
 
-Two plans are listed: Hobby, "free forever", with one member, automatic CI/CD, 150 GB of bandwidth, a global CDN and 100 compute hours; and Pro at $10 a month. Enterprise and subhosting are quoted. The hosting options named cover WordPress, PHP, Laravel, Django, Next.js, Nuxt, Hugo, Astro and Vite.
+Plans are fixed tiers. The entry tier is permanently free and includes automatic CI/CD, a global CDN and metered bandwidth and compute hours; paid tiers sit above it, and enterprise and subhosting arrangements are quoted rather than listed. Edge locations are in Europe and North America.
 
-The catch is real, and current. Persistent custom filesystem volumes are still on the way. SQLite writes live in memory, not on disk. Anything stateful needs care. Running production PHP on WASM is a promising thing to watch in 2026. Also a young one. It asks the whole stack to think in WebAssembly.
+## Worth knowing
+
+The storage model is the constraint. Persistent custom filesystem volumes are not yet available and SQLite writes live in memory rather than on disk, so anything stateful needs deliberate handling.
+
+Compiling to WebAssembly is a commitment the whole application has to make, and the platform is young enough that the supported surface is still moving.

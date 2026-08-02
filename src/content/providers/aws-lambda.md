@@ -5,7 +5,7 @@ urls:
   home: https://aws.amazon.com/lambda/
   pricing: https://aws.amazon.com/lambda/pricing/
 category: serverless
-description: AWS Lambda is the function-as-a-service primitive most serverless PHP runs on. PHP is not a managed runtime; it arrives through a custom one.
+description: Amazon's function-as-a-service primitive, running a handler on demand in a short-lived isolated environment and billing per invocation.
 parent: Amazon
 whoManagesOs: provider
 useCases:
@@ -74,14 +74,8 @@ ai: co-authored
 
 ## About AWS Lambda
 
-Lambda is the primitive most serverless PHP ends up running on. It runs a handler on demand in an isolated, short-lived environment and bills per invocation. The hard edges come with it. A 15-minute limit. A 250 MB unzipped package. 512 MB of ephemeral `/tmp` by default. No state between invocations. Lambda is a building block, nothing more. The database, storage, gateway, and session handling are separate services you bolt on.
+Lambda runs a handler on demand in an isolated, short-lived environment and bills per request and per gigabyte-second of execution. It is a building block rather than a platform: the database, object storage, HTTP gateway and session handling are separate AWS services assembled around it. The execution model carries hard edges — a bounded run time per invocation, a limit on deployment package size, a small ephemeral filesystem and no state carried from one invocation to the next.
 
-The managed runtimes AWS lists are Node.js, Python, Java, .NET and Ruby, plus an OS-only runtime for everything else and the option of a container image. PHP is not among them: it runs through a custom runtime, a `bootstrap` executable implementing the Lambda runtime loop. Almost nobody writes that by hand.
+The managed runtimes AWS lists are Node.js, Python, Java, .NET and Ruby, alongside an OS-only runtime for everything else and the option of supplying a container image. Any language outside the managed set arrives through a custom runtime: a `bootstrap` executable implementing the Lambda runtime loop, in practice supplied by a community layer rather than written by hand.
 
-Billing is per request and per GB-second: $0.20 per million requests and $0.0000166667 per GB-second on x86 beyond a monthly free allowance of one million requests and 400,000 GB-seconds. That allowance recurs every month rather than expiring.
-
-## Running PHP on Lambda: Bref
-
-Bref is how it actually gets done. It is open-source software, not a host of its own: the runtimes and layers that turn Lambda into a PHP platform, across PHP 8.2 to 8.5. Three shapes. An FPM runtime for a normal web app behind PHP-FPM. A function runtime for event-driven handlers without FPM. A console runtime for Artisan and Symfony commands.
-
-Deployment runs through the Serverless Framework, on a free v3 fork Bref keeps alive after the upstream tool went paid. The docs are good and the project is widely used. But it is still a layer on AWS, so the app has to adapt to Lambda: sessions moved out, storage treated as throwaway, no persistent database connections.
+A monthly allowance of requests and compute time is included and recurs each month rather than expiring, with usage above it metered.

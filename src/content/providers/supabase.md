@@ -72,10 +72,8 @@ ai: authored
 
 Supabase is a managed PostgreSQL database with the things applications usually need built around it — authentication, row-level security, file storage, realtime subscriptions and vector search — plus Edge Functions, which run the customer's own TypeScript on Deno. It is the functions that make it a place where application code runs rather than only a database service.
 
-Plans are Free, Pro at twenty-five dollars a month, Team at five hundred and ninety-nine, and a custom enterprise tier. The free tier allows two active projects with 500 MB of database, 5 GB of egress, a gigabyte of file storage, 50,000 monthly active users and 500,000 function invocations. Pro raises those substantially and prices overage openly at two dollars per million further invocations.
+Plans are fixed tiers with published quotas for database size, egress, file storage, monthly active users and function invocations, and metered overage above them. The platform is open source and can be self-hosted, which limits lock-in: the same stack runs on a customer's own machines if the commercial relationship ends.
 
-The platform is open source and can be self-hosted, which is a real constraint on lock-in — the same stack runs on a customer's own machines if the commercial relationship ends.
+## Worth knowing
 
-## Reservations
-
-Free projects pause after a week of inactivity, so the tier suits work in progress rather than something quietly serving traffic. Regions are not stated on the pricing page. The step from Pro to Team is a very large one for a small team that needs a single Team-tier feature, and Edge Functions are a Deno runtime rather than a general application server — there is no PHP, Python or Ruby here.
+Projects on the free tier pause after a period of inactivity, which makes that tier suited to work in progress rather than to something quietly serving traffic. Edge Functions are a Deno runtime, not a general-purpose application server.

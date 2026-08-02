@@ -71,14 +71,10 @@ ai: authored
 
 ## About Northflank
 
-Northflank runs services, cron jobs, build pipelines and managed databases from a single console, priced per vCPU-hour and gigabyte-hour with per-second billing and no seat charges. GPUs are available by the hour up to H100 and RTX PRO 6000.
+Northflank runs long-lived services, cron jobs, build pipelines and managed databases from a single console. Compute is billed per vCPU-hour and gigabyte-hour with per-second granularity and no per-seat charge, and GPU instances are rented by the hour alongside the CPU ones. A permanent free sandbox tier covers a small number of services, jobs and one database.
 
-The distinguishing choice is where the work runs. The same platform will use Northflank's own managed cloud, deploy into the customer's AWS, GCP, Azure, Civo, Oracle or CoreWeave account, or drive a self-hosted Kubernetes cluster — which turns the question of who owns the infrastructure into a per-project setting rather than a decision about which vendor to sign with. That is why the record carries two infrastructure contracts rather than one.
+The distinguishing choice is where the work runs. The same platform will use Northflank's own managed cloud, deploy into the customer's account at one of the large public clouds, or drive a self-hosted Kubernetes cluster — which turns the question of who owns the infrastructure into a per-project setting rather than a decision made when signing up. That is why the record carries two infrastructure contracts rather than one.
 
-A free Sandbox tier allows two services, one database and two cron jobs.
+## Worth knowing
 
-## Reservations
-
-Bring-your-own-cloud shifts the infrastructure bill to the customer's cloud account, so the Northflank price and the total cost are different numbers, and the six hundred-plus advertised regions are the underlying clouds' regions rather than Northflank's. Volume discounts and dedicated support are enterprise-only and quoted rather than published.
-
-The managed cloud's own region table lists seventeen entries but names a place for only some of them — "Asia East", "Europe West" and "Southamerica East" are compass directions, not locations. The region list recorded here covers only the entries that name a country or a city, so it is shorter than the table.
+Bring-your-own-cloud shifts the infrastructure bill to the customer's cloud account, so the Northflank price and the total cost are separate numbers. The headline region count belongs to those underlying clouds rather than to Northflank, and its own managed region list names a country or city for only some entries; the regions recorded here are the ones that do.

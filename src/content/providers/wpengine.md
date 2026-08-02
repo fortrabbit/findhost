@@ -8,7 +8,7 @@ urls:
   terms: https://wpengine.com/legal/terms-of-service/
   docs: https://developers.wpengine.com/
 category: vanity-hosting
-description: WP Engine is one of the largest managed WordPress hosts, founded in 2010 and based in Austin, Texas, with an office in Limerick, Ireland.
+description: Managed WordPress host founded in 2010 in Austin, Texas, running customer sites on public cloud infrastructure behind a CDN.
 founded: 2010
 hqCountry: US
 whoManagesOs: provider
@@ -46,14 +46,18 @@ figure:
   emoji: 🚂
   color: rgb(70, 130, 180)
   textColor: rgb(255, 255, 255)
-  text: All aboard the WordPress express!
+  text: WordPress, and nothing but.
 ai: co-authored
 ---
 
 ## About WP Engine
 
-WP Engine is one of the largest managed WordPress hosts, founded in 2010 and based in Austin, Texas, with an office in Limerick, Ireland. It has been majority-owned by the private-equity firm Silver Lake since 2018, and over the years has acquired a large slice of the WordPress ecosystem: [Flywheel](/providers/flywheel/), the Local development app, the Genesis framework, and the Advanced Custom Fields plugin. Sites run on Google Cloud and AWS with a Cloudflare-based CDN and security layer.
+WP Engine is a managed WordPress host founded in 2010 in Austin, Texas, with an office in Limerick, Ireland. It has been majority-owned by the private-equity firm Silver Lake since 2018 and has acquired a large slice of the WordPress ecosystem along the way: [Flywheel](/providers/flywheel/), the Local development app, the Genesis framework and the Advanced Custom Fields plugin. Customer sites run on Google Cloud and AWS behind a Cloudflare-based CDN and security layer.
 
-It is a fully managed, WordPress-only platform: automatic core and PHP updates, server-level caching, daily backups, one-click staging, plus developer tooling like SSH, Git push, and WP-CLI. Plans are metered by monthly visits and by how many sites they include: Startup at €27 a month for one site and about 25,000 visits, Professional €50, Growth €105, Scale €259 and Core Hosting €372, up to 30 sites and roughly 400,000 visits, with extra sites at $20 a month. Backups are daily and on demand, retained "no less than 30 days and no longer than 60 days", and staging and dev environments are one click on every plan. Those prices are annual-billing rates, and WP Engine states that first-year discounts apply to new customers on Essential plans only, with standard renewal pricing after the initial term.
+The platform is WordPress-only and fully managed: core and PHP updates are applied by the provider, caching sits at server level, backups run automatically, and staging and development environments come with every plan. Developer tooling includes SSH, git push and WP-CLI. Plans are fixed tiers metered by monthly visits and by the number of sites included, billed annually.
 
-A disallowed-plugins list blocks caching and backup plugins that conflict with the managed stack. WP Engine has also been in an ongoing legal dispute with Automattic (the company behind WordPress.com) since 2024 over trademark use and WordPress.org access — worth being aware of when betting a business on the platform.
+## Worth knowing
+
+A disallowed-plugins list blocks caching and backup plugins that conflict with the managed stack, so some widely used WordPress plugins cannot be installed.
+
+WP Engine has been in a legal dispute with Automattic, the company behind WordPress.com, since 2024 over trademark use and WordPress.org access.

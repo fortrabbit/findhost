@@ -64,18 +64,16 @@ figure:
   emoji: 📻
   color: rgb(60, 30, 80)
   textColor: rgb(225, 190, 245)
-  text: Germany's default second choice.
+  text: Plain mass-market hosting from Berlin.
 ai: authored
 ---
 
 ## About STRATO
 
-STRATO has sold hosting from Berlin since 1997 and is today a subsidiary of the publicly listed IONOS Group SE, which means the two brands share an owner while running separate price lists and separate support. Around 350 people work there; data centres are described as several high-security sites in Germany and the EU, certified to ISO 27001.
+STRATO has sold hosting from Berlin since 1997 and is a subsidiary of the publicly listed IONOS Group SE, which means the two brands share an owner while running separate price lists and separate support. Its data centres are in Germany and carry ISO 27001, ISO 14001 and ISO 50001 certification.
 
-The offering is deliberately plain. Every tariff carries PHP 8.4 with SSH and SFTP, WordPress, Joomla, TYPO3 and Drupal install in one click, and the tiers step up on storage, databases and included domains rather than on capability. Its DNS API has attracted independent certbot plugins, which is the usual sign that people are automating against a platform whose own tooling stops short.
+The offering is deliberately plain. Shared tariffs come with PHP, SSH and SFTP access and one-click installers for WordPress, Joomla, TYPO3 and Drupal, and the tiers step up on storage, databases and included domains rather than on capability. Virtual and dedicated servers are sold alongside the shared plans.
 
-## Reservations
+## Worth knowing
 
-The advertised entry price is a promotion; the standing rate is several times higher, and that is the figure banded here. All four shared tariffs run on a twelve-month term: Starter is free for one month and then €5, Plus free for one month and then €12, Pro free for one month and then €22. Basic is the one with a genuine introductory rate — €1 a month for twelve months, then €9 — so the renewal multiple recorded here is nine, taken from that plan.
-
-Only one PHP version is documented, so there is no published path for a legacy application. No public status page surfaced.
+The advertised entry price is a promotional rate tied to a twelve-month term. The standing rate that applies afterwards is several times higher, and that higher figure is the one banded here.

@@ -5,7 +5,7 @@ urls:
   home: https://www.ovhcloud.com
   pricing: https://www.ovhcloud.com/en/vps/
 category: vps
-description: OVHcloud — long known as OVH — is a large low cost hosting provider from Roubaix, France, founded in 1999 and listed on Euronext Paris since 2021.
+description: French hosting company selling dedicated servers, VPS, an OpenStack-based public cloud and web hosting from data centres it builds and operates itself.
 founded: 1999
 hqCountry: FR
 infraContract:
@@ -37,19 +37,19 @@ figure:
   emoji: 🧯
   color: rgb(255, 61, 67)
   textColor: rgb(77, 0, 0)
-  text: Some like it hot.
+  text: Builds its own metal, cools it with water.
 ai: co-authored
 greenWebId: 1305
 ---
 
 ## About OVHcloud
 
-OVHcloud — long known as OVH — is a large low cost hosting provider from Roubaix, France, founded in 1999 by Octave Klaba and listed on Euronext Paris since 2021. The traditional business is dedicated servers and VPS, extended by an OpenStack-based public cloud, web hosting and domains. OVHcloud builds its own servers, develops its own water cooling and publishes environmental reports. It hosted Wikileaks in 2010.
+OVHcloud — long known as OVH — was founded in Roubaix, France in 1999 by Octave Klaba and has been listed on Euronext Paris since 2021. The traditional business is dedicated servers and VPS, extended over time into an OpenStack-based public cloud, shared web hosting and domains, sold across Europe, North America and Asia-Pacific.
 
-The company states it runs "more than 400,000 servers spread across over 46 datacentres in 4 continents" and operates in 140 countries. The cheapest VPS, VPS-1, is listed from $4.54 a month.
+The company designs and assembles its own servers, develops its own water cooling, runs its own data centres rather than renting capacity, and publishes environmental reporting on the result. Prices sit at the low end of the market, and the customer manages the operating system on both the VPS and bare-metal lines.
 
-## Reservations
+## Worth knowing
 
-The catalogue is hard to navigate: bare metal, VPS, several cloud product lines and shared hosting, each with its own panel and its own pricing logic. The VPS page names Mumbai, Singapore and Sydney and refers loosely to France and Europe; the data centre page is the one that puts a number on it — 46 data centres in nine countries — and the region list here is read off the cities it names, not off any country list OVHcloud publishes. Dozens of further cities appear on the same page as Local Zones and points of presence rather than as data centres.
+The catalogue is hard to navigate: bare metal, VPS, several cloud product lines and shared hosting, each with its own panel and its own pricing logic. Location naming is inconsistent between them — product pages name cities, the data-centre page counts sites, and further cities appear as local zones and points of presence rather than as data centres; the regions here are read off the cities named, not off a country list OVHcloud publishes.
 
-Reliability has a documented low point — the March 2021 fire destroyed the SBG2 data center in Strasbourg, took large parts of the neighboring buildings offline and permanently erased data of customers who had no off-site backups.
+A fire in March 2021 destroyed the SBG2 data centre in Strasbourg, took neighbouring buildings offline, and permanently erased the data of customers who had no off-site backups.

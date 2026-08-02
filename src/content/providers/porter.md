@@ -5,7 +5,7 @@ urls:
   home: https://www.porter.run
   pricing: https://www.porter.run/pricing
 category: server-management
-description: Management layer that deploys applications from GitHub into the customer's own AWS, Azure or GCP account, priced per gigabyte of memory and per vCPU.
+description: Management layer that deploys applications from GitHub into the customer's own AWS, Azure or GCP account and runs them on Kubernetes underneath.
 ownership: vc-backed
 whoManagesOs: container
 infraContract:
@@ -39,18 +39,16 @@ figure:
   emoji: 🧳
   color: rgb(25, 35, 50)
   textColor: rgb(180, 205, 240)
-  text: Heroku's manners, your AWS bill.
+  text: Platform manners, your cloud account.
 ai: authored
 ---
 
 ## About Porter
 
-Porter gives a team the deployment experience of a platform while the workloads run in their own AWS, Azure or GCP account: deploys from GitHub, unlimited applications, preview environments, autoscaling, monitoring and logging, without anyone needing to operate Kubernetes directly.
+Porter gives a team the deployment experience of a platform while the workloads run in their own AWS, Azure or GCP account: deploys from GitHub, preview environments, autoscaling, monitoring and logging, with Kubernetes underneath that nobody has to operate directly. Larger contracts add role-based access control, single sign-on and an on-premises installation.
 
-Pricing is per resource on top of the cloud bill — six dollars a month per gigabyte of memory and thirteen per vCPU, quoted hourly as well — with volume discounts at enterprise scale, half-price for non-profits, and accelerator deals. Enterprise adds role-based access control, SAML single sign-on and an on-premises installation option.
+Billing is per resource — memory and vCPU consumed — and sits on top of the cloud bill rather than replacing it, with reduced rates for non-profits and at volume. Because the infrastructure belongs to the customer, ending the subscription removes the management layer and leaves the servers running, and availability and jurisdiction are inherited from whichever cloud account is used.
 
-The most useful property is what happens when the relationship ends: because the infrastructure belongs to the customer, stopping payment removes the management layer and leaves the servers running. That is a materially different exit from a platform that holds the machines.
+## Worth knowing
 
-## Reservations
-
-Porter is not a host and owns no infrastructure, so its price is additional to a cloud bill rather than a substitute for one, and availability and jurisdiction are inherited from whichever cloud account is used. There is no free tier. Supported runtimes are not stated on the pricing page.
+Supported runtimes are not stated on the pricing page, and no free tier exists, so evaluating the platform means running it against a real cloud account with real infrastructure charges attached.

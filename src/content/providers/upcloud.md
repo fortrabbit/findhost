@@ -6,7 +6,7 @@ urls:
   status: https://status.upcloud.com/
   docs: https://developers.upcloud.com/
 category: iaas
-description: UpCloud is a European cloud infrastructure provider based in Finland.
+description: Finnish cloud infrastructure provider selling virtual machines, block storage and private networking, driven by a public API.
 whoManagesOs: you
 runtimes:
   - any
@@ -38,4 +38,6 @@ ai: co-authored
 
 ## About UpCloud
 
-UpCloud is a European cloud infrastructure provider based in Finland. They offer scalable virtual machines, block storage, private networking, and access to a global network of data centers. UpCloud is much smaller than hyperscalers like [Google Cloud Platform](/providers/gcp/) and [Amazon Web Services](/providers/aws/), and is more comparable to [Hetzner](/providers/hetzner/). Understand that they don't operate data centers themselves. Their services are well-suited for solo developers and small businesses.
+UpCloud is a Finnish cloud infrastructure provider selling virtual machines, block storage and private networking. The operating system on a machine is the customer's to manage, full SSH access comes with it, and any runtime can be installed.
+
+The platform is driven by a documented public API alongside the web console, and its data centres span the Nordics, the rest of Europe, Asia-Pacific and North America.

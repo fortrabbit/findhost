@@ -6,7 +6,7 @@ urls:
   pricing: https://www.civo.com/pricing
   status: https://status.civo.com/
 category: iaas
-description: Kubernetes-first cloud billing only for worker nodes, with free control planes, no egress charges and GPU instances up to Blackwell.
+description: British Kubernetes-first cloud that charges for worker nodes only, with control planes included and data transfer unmetered.
 hqCountry: GB
 whoManagesOs: you
 useCases:
@@ -62,10 +62,6 @@ ai: authored
 
 ## About Civo
 
-Civo is a British cloud built around Kubernetes rather than one that added it later. Control-plane components are not charged for, the bill covers worker nodes and add-ons only, and data transfer in and out is free and unlimited — three decisions that between them remove most of what makes a managed-Kubernetes invoice hard to predict.
+Civo is a British cloud built around Kubernetes rather than one that added it later. Control-plane components are not charged for, the bill covers worker nodes and add-ons only, and data transfer in and out is unmetered — three decisions that between them remove most of what makes a managed-Kubernetes invoice hard to predict in advance.
 
-Beyond clusters it sells compute instances, S3-compatible object storage, persistent volumes, load balancers, managed PostgreSQL and GPU capacity from L40S through H100 and H200 to Blackwell. Sovereign private-cloud arrangements are offered for the United Kingdom and India. It holds SOC 2, ISO 27001 and Cyber Essentials Plus, and names Red Hat, Mercedes-Benz and Docker among its customers. New accounts get $250 of credit for the first month.
-
-## Reservations
-
-No regions are named on the pricing page, which is a conspicuous gap for a provider whose enterprise pitch includes sovereignty. The introductory credit is a trial rather than a free tier — there is nothing that stays free. As infrastructure, everything above the node is the customer's to run, and the Kubernetes focus means a team not already using it is buying a lot of machinery they will have to learn.
+Beyond clusters it sells compute instances, S3-compatible object storage, persistent volumes, load balancers, managed PostgreSQL and GPU capacity. Sovereign private-cloud arrangements are offered for the United Kingdom and India, and the platform is certified against the usual enterprise audit standards. New accounts start on time-limited credit rather than a standing free allowance.

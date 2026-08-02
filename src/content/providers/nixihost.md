@@ -4,7 +4,7 @@ name: NixiHost
 urls:
   home: https://nixihost.com
 category: shared
-description: NixiHost is a small independent host from Houston, Texas, in business since 2007.
+description: Independent hosting company from Houston, Texas, selling shared and reseller hosting alongside VPS and dedicated servers.
 figure:
   emoji: 👽
   color: rgb(50, 50, 50)
@@ -15,6 +15,6 @@ ai: co-authored
 
 ## About NixiHost
 
-NixiHost is a small independent host from Houston, Texas, in business since 2007. In Reddit's hosting communities it is a recurring recommendation as a reliable alternative to the large hosting conglomerates — NixiHost even runs a dedicated sign-up offer for Redditors. They focus on transparency, avoiding "unlimited" storage gimmicks, and providing solid US-based support. They offer shared hosting, reseller hosting, VPS and dedicated servers.
+NixiHost is a small independent hosting company based in Houston, Texas, in business since 2007 and privately held rather than part of one of the hosting groups. The catalogue is the traditional shared-hosting ladder: shared plans with a control panel, reseller accounts for people hosting clients, and VPS and dedicated servers above them for anyone who outgrows the shared tier.
 
-They are known for a "no-nonsense" approach and pricing without aggressive upsells.
+Support is US-based, and the plans are sold with stated storage allowances rather than an "unlimited" headline.

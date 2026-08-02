@@ -50,12 +50,10 @@ ai: authored
 
 ## About E2E Networks
 
-E2E Networks is registered in New Delhi and listed on India's National Stock Exchange under the ticker E2E — an unusual thing for a cloud provider of its size, and it means the financials behind the infrastructure are a matter of public record rather than a founder's assurance. It holds MeitY empanelment, the Indian government's approval for public-sector cloud purchasing.
+E2E Networks is registered in New Delhi and listed on India's National Stock Exchange under the ticker E2E, which puts the financials behind the infrastructure on public record. It holds MeitY empanelment, the Indian government's approval for public-sector cloud purchasing.
 
-The catalogue has shifted decisively towards accelerated computing. GPU instances are billed per minute with published hourly rates, from an entry-level L4 through H100 and H200 to a B200 with 192 gigabytes of video memory, alongside conventional cloud compute, backup and managed infrastructure. Monthly and annual commitments are available at lower rates.
+The catalogue has shifted towards accelerated computing. GPU instances are billed by the minute against published hourly rates, alongside conventional cloud compute, backup and managed infrastructure. Monthly and annual commitments are offered below the on-demand rate, and volume or enterprise pricing goes through a sales conversation rather than a page.
 
-## Reservations
+## Worth knowing
 
-This is infrastructure: nothing here builds or runs an application on the customer's behalf, and everything above the operating system is theirs to manage. Volume and enterprise pricing goes through a sales conversation rather than a page.
-
-Data-centre regions are named nowhere the company publishes. The pricing page, the about page and the documentation all omit them, and the "countries served" page lists sixty-three countries of customers rather than of facilities — so anyone with a latency or residency requirement has to establish it separately, and no regions are recorded here.
+Data-centre regions are named nowhere the company publishes. The pricing page, the about page and the documentation all omit them, and the "countries served" page counts countries of customers rather than of facilities. Anyone with a latency or residency requirement has to establish it separately, and no regions are recorded here.

@@ -5,7 +5,7 @@ urls:
   home: https://cyberfolks.pl
   pricing: https://cyberfolks.pl/hosting/
 category: shared
-description: Polish host from Poznań running PHP 5.2 to 8.4 per domain plus Node and Python on LiteSpeed and DirectAdmin, with 28 days of daily backups.
+description: Polish shared host from Poznań with a per-domain choice of PHP version alongside Node and Python, running on LiteSpeed with DirectAdmin as the panel.
 hqCountry: PL
 whoManagesOs: panel-assisted
 useCases:
@@ -47,18 +47,16 @@ figure:
   emoji: 🧑‍🎤
   color: rgb(50, 25, 50)
   textColor: rgb(240, 195, 240)
-  text: PHP 5.2 to 8.4, per domain.
+  text: Old PHP and new, per domain.
 ai: authored
 ---
 
 ## About cyber_Folks
 
-cyber_Folks is a Poznań company that has grown largely by taking customers from other Polish hosts, and the specification reflects what those customers were missing. PHP is selectable per domain across an extraordinary span — 5.2 through 8.4 — with Node.js and Python alongside, on LiteSpeed with its cache, HTTP/2 and HTTP/3, and DirectAdmin as the panel.
+cyber_Folks is a Poznań company that has grown largely by taking customers from other Polish hosts, and the specification reflects what those customers came looking for. PHP is selectable per domain across a version range that reaches back to releases most hosts retired long ago, which is what an inherited site built on an old Polish e-commerce stack actually needs. Node.js and Python are available alongside it.
 
-Four plans step up on storage, mailboxes and database count, from 5 GB with five databases to 250 GB with unlimited everything. Daily backups are retained for twenty-eight days, and a web application firewall and mod_security are included.
+The stack is LiteSpeed with its cache, HTTP/2 and HTTP/3, and DirectAdmin as the control panel. Plans step up on storage, mailbox count and database count. Daily backups are retained for several weeks, and a web application firewall and mod_security are included rather than sold on.
 
-Supporting PHP 5.2 in 2026 is a deliberate decision rather than neglect: it is the version an inherited Polish e-commerce site from 2009 actually runs on, and almost nobody else will still serve it.
+## Worth knowing
 
-## Reservations
-
-Advertised prices are three-month promotional rates and the renewal figures are higher. SSH depends on the plan rather than coming as standard. Data-centre locations are not stated anywhere on the hosting page — for a host whose appeal is partly national, that is a strange omission.
+Advertised prices are short promotional rates and the renewal figures are higher, so the entry price recorded here is not what a second term costs.

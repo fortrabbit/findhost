@@ -7,7 +7,7 @@ urls:
   terms: https://www.jimdo.com/info/terms-of-service/
   docs: https://help.jimdo-dolphin.com/hc/en-us
 category: lcnc
-description: Jimdo is a website builder aimed at small businesses that want to publish quickly.
+description: Jimdo is a Hamburg website builder that bundles hosting, templates and AI-assisted site creation for the self-employed and small businesses.
 founded: 2007
 freeTier: permanent
 entryPriceBand: free-tier
@@ -27,6 +27,6 @@ ai: co-authored
 
 ## About Jimdo
 
-Jimdo is a website builder from Hamburg, founded 2007, aimed at self-employed people and small businesses that want an online presence without technical setup. The guided builder bundles hosting, templates, and AI-assisted site creation, plus small-business extras like a logo maker and a legal text generator for the German market. The convenience comes with limited customization and no access to code or backend. Jimdo's mission statement makes the audience explicit:
+Jimdo is a website builder from Hamburg, founded in 2007 and aimed at self-employed people and small businesses that want an online presence without technical setup. The guided builder bundles hosting, templates and AI-assisted site creation, and adds small-business extras such as a logo maker and a generator for the legal texts German sites are required to carry.
 
-> We unleash the power of the self-employed and help them thrive.
+Sites live inside the builder. The underlying code is not exposed, there is no shell or database to administer, and pages are edited through Jimdo's own editor rather than through files that could be moved elsewhere.

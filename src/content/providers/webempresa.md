@@ -5,7 +5,7 @@ urls:
   home: https://www.webempresa.com
   pricing: https://www.webempresa.com/hosting-wordpress.html
 category: shared
-description: Spanish WordPress-oriented host trading since 1999, now part of team.blue, running PHP 8.2 to 8.5 with SSH and a choice of EU or US data centres.
+description: Spanish-language WordPress host trading since 1999, now part of team.blue, with SSH access and a choice of EU or US data centres.
 founded: 1999
 hqCountry: ES
 ownership: subsidiary
@@ -64,6 +64,6 @@ ai: authored
 
 ## About Webempresa
 
-Webempresa has sold hosting in Spanish since 1999 and is now part of team.blue, the Belgian-Dutch group that also owns Combell, TransIP and Loopia. It is built around WordPress, with security as the headline: CageFS isolation, Apache with Nginx and Varnish in front, HTTP/2, TLS 1.3 and NVMe storage.
+Webempresa has sold hosting in Spanish since 1999 and is now part of team.blue, the Belgian-Dutch group that also owns Combell and TransIP. The offer is built around WordPress and WooCommerce, with security as the headline: CageFS isolation, Apache with Nginx and Varnish in front, and NVMe storage.
 
-PHP is offered from 8.2 to 8.5 with a gigabyte of memory per process, databases are MariaDB, and SSH is supported. Plans are metered by sites, storage and monthly visits, from a single site with 5 GB up to unlimited sites with 100 GB, and a data centre in either the EU or the United States can be chosen at setup. Support is in Spanish, around the clock.
+Plans are metered by number of sites, storage and monthly visits, and a data centre in either the EU or the United States is chosen at setup. Current PHP versions are supported, databases are MariaDB, and SSH access is offered in a limited form rather than as a full shell. Support is in Spanish and runs around the clock.

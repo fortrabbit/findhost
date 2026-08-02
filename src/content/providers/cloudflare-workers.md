@@ -5,7 +5,7 @@ urls:
   home: https://workers.cloudflare.com
   pricing: https://developers.cloudflare.com/workers/platform/pricing/
 category: serverless
-description: Cloudflare Workers runs JavaScript, TypeScript, Python and Rust in V8 isolates at the edge. PHP is not among the supported languages.
+description: Cloudflare's edge compute platform, running JavaScript, TypeScript, Python and Rust in V8 isolates on the network that already serves the request.
 whoManagesOs: provider
 runtimes:
   - python
@@ -24,18 +24,16 @@ figure:
   emoji: 🔶
   color: rgb(60, 40, 20)
   textColor: rgb(255, 190, 120)
-  text: PHP at the edge, via WASM.
+  text: Code in isolates, next to the visitor.
 ai: co-authored
 ---
 
 ## About Cloudflare Workers
 
-Cloudflare Workers runs code in V8 isolates on Cloudflare's edge network, close to the visitor and without the cold-start cost of a container. Cloudflare documents first-class support for four languages — JavaScript, TypeScript, Python and Rust — and describes WebAssembly as the route for everything else, naming C, C++, Kotlin and Go as examples.
+Cloudflare Workers runs code in V8 isolates on Cloudflare's network, close to the visitor and without the cold-start cost of a container. Cloudflare documents first-class support for JavaScript, TypeScript, Python and Rust, and describes WebAssembly as the route for everything else, naming C, C++, Kotlin and Go as examples.
 
-Two plans exist. The Free plan comes with every account by default and allows 100,000 requests a day with 10 milliseconds of CPU time per invocation. The Paid plan carries a minimum charge of $5 a month and meters requests and CPU time above the included amounts.
+Two plans exist. The free one comes with every account by default and includes a daily request allowance with a short CPU-time budget per invocation. The paid one carries a monthly minimum and meters requests and CPU time above the included amounts. Storage, queues and databases are separate Cloudflare products a Worker calls into.
 
-## Reservations
+## Worth knowing
 
-PHP is not on Cloudflare's list of supported languages, and there is no first-party route to it. The only path is the community php-wasm project, which compiles PHP to WebAssembly and drives it from JavaScript. That works as a demonstration; it is not a runtime with anyone's support commitment behind it.
-
-The execution model is the deeper constraint. A Worker is scoped to a request, with a CPU-time budget per invocation and no persistent local filesystem — which rules out an application that expects a long-lived process, local file writes or a conventional database connection pool. Workers is designed for edge logic: request rewriting, authentication checks, personalisation ahead of the cache.
+The execution model is the constraint that decides whether an application fits. A Worker is scoped to a single request, with a CPU-time budget per invocation and no persistent local filesystem, so a long-lived process, local file writes and a conventional database connection pool have no place to live. The shape the platform is built for is edge logic: request rewriting, authentication checks, personalisation ahead of the cache.

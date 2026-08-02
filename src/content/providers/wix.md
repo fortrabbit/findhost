@@ -26,4 +26,6 @@ ai: co-authored
 
 ## About Wix
 
-Wix is an all-in-one website builder that bundles hosting, templates, and a visual editor. Founded in 2006 and headquartered in Tel Aviv, the publicly listed company targets users who want to publish quickly without managing code or servers — a good fit for brochure sites and simple online presences. Custom behavior is possible through Velo, Wix's JavaScript development layer, but everything runs inside the Wix platform, and sites cannot be exported to another host.
+Wix is an all-in-one website builder that bundles hosting, templates and a visual editor. It was founded in 2006, is headquartered in Tel Aviv and is publicly listed. Sites are built and published without touching code or servers.
+
+Custom behaviour is possible through Velo, Wix's JavaScript development layer, but everything runs inside the Wix platform: there is no server access, and a site cannot be exported to another host.

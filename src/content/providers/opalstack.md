@@ -63,16 +63,16 @@ figure:
   emoji: 💠
   color: rgb(30, 50, 60)
   textColor: rgb(175, 225, 235)
-  text: Founded by four engineers who had done it before.
+  text: Shared hosting with a shell on every plan.
 ai: authored
 ---
 
 ## About Opalstack
 
-Opalstack was started in 2019 by four career software engineers and remains independent and developer-owned. It reports hosting more than 100,000 domains.
+Opalstack was started in 2019 by a group of software engineers and remains independent and developer-owned.
 
-The product is shared hosting arranged the way developers ask for it: stacks rather than a single fixed environment, with PHP-FPM in several versions, Node.js, Python with Django, Ruby on Rails and static deployment all first-class, and full SSH and SFTP on every plan including the cheapest. One-click installs cover WordPress, WooCommerce, Ghost, Mastodon, Nextcloud, Gitea and n8n — a list that reads more like a self-hosting community's than a hosting company's. Managed MariaDB and PostgreSQL come with automatic backups, and VPS and bare-metal tiers sit above the shared plans for anything that outgrows them.
+The product is shared hosting arranged around stacks rather than one fixed environment: PHP-FPM in several versions, Node, Python with Django, Ruby on Rails and plain static deployment are all first-class, and full SSH and SFTP come with every plan including the cheapest. One-click installers cover the usual CMSes alongside self-hosted software such as Mastodon, Nextcloud, Gitea and n8n. Managed MariaDB and PostgreSQL come with automatic backups, and VPS and bare-metal tiers sit above the shared plans for anything that outgrows them.
 
-## Reservations
+## Worth knowing
 
-Data-centre locations are published nowhere on the site, which matters for latency and for anyone with a residency requirement. The advertised entry price is heavily discounted for the first year against a standing rate several times higher.
+Data-centre locations are published nowhere on the site, which matters for latency and for anyone with a residency requirement. The advertised entry price is a first-year rate against a standing price several times higher, so the renewal cost has to be read separately.

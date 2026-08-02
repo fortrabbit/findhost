@@ -59,10 +59,12 @@ ai: authored
 
 ## About Modal
 
-Modal turns a Python function into a remote container. Decorate it, describe the image and hardware in the same file, and the platform provisions, runs and tears down the machine — with per-second billing and nothing charged while idle. It covers inference, sandboxes, training runs, notebooks and batch processing.
+Modal turns a Python function into a remote container. Decorate it, describe the image and the hardware it needs in the same file, and the platform provisions the machine, runs the code and tears it down again — billed by the second, with nothing charged while idle. The same mechanism covers model inference, sandboxes, training runs, notebooks and batch processing.
 
-Plans are Starter at no monthly fee with thirty dollars of credit a month and up to three seats, Team at two hundred and fifty with a hundred dollars of credit and unlimited seats, and a custom enterprise tier. Compute is billed per second: CPU by the core, memory by the gibibyte, and GPUs from a T4 up to a B300.
+Plans are a free starter tier with a monthly credit allowance and a small seat limit, a paid team tier with a larger allowance and unlimited seats, and a quoted enterprise tier. Compute is metered per second: CPU by the core, memory by the gibibyte, GPUs by the card.
 
-## Reservations
+## Worth knowing
 
-Python is the interface, not one option among several. There is no general web-application runtime here, no PHP or Ruby, and no persistent server — this is a compute platform that happens to serve HTTP, and using it for an ordinary website would be working against the grain. Container and GPU concurrency are capped by plan, so scale is a commercial tier rather than a technical one.
+Python is the interface, not one option among several. There is no general web-application runtime and no long-lived server — this is a compute platform that happens to serve HTTP, and an ordinary website would be working against the grain of it.
+
+Container and GPU concurrency are capped per plan, so scale is a commercial tier as much as a technical one.

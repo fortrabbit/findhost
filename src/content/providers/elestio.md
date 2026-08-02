@@ -8,7 +8,7 @@ urls:
   terms: https://elest.io/terms
   docs: https://docs.elest.io/
 category: server-management
-description: Managed hosting for open-source software on dedicated virtual machines, provisioned into one of nine third-party clouds or the customer's own account.
+description: Elestio is managed hosting for open-source software on dedicated virtual machines, provisioned into a third-party cloud or into the customer's own account.
 hqCountry: IE
 whoManagesOs: provider
 infraContract:
@@ -84,14 +84,10 @@ ai: authored
 
 ## About Elestio
 
-Elestio takes an open-source application, puts it on a dedicated virtual machine, and then keeps it running: automated updates, OS patching, backups, TLS certificates and round-the-clock monitoring, with the customer keeping full access to the machine. More than four hundred applications are on offer, from PostgreSQL, MySQL, Redis and MongoDB through WordPress, n8n and Keycloak to GPU-backed AI tooling.
+Elestio takes an open-source application, puts it on a dedicated virtual machine and then keeps it running: automated updates, OS patching, backups, TLS certificates and monitoring, with the customer keeping full access to the machine. The catalogue runs to several hundred applications, from PostgreSQL, MySQL, Redis and MongoDB through WordPress, n8n and Keycloak to GPU-backed AI tooling.
 
-The infrastructure is somebody else's, and openly so. Nine providers are supported — Hetzner, DigitalOcean, AWS Lightsail, Vultr, Linode, Scaleway and Netcup among them — across a stated 160-plus regions in forty-plus countries, and workloads can be placed in the customer's own cloud account. That makes it a management layer rather than a host, which is why it sits in the server-management category.
+The infrastructure is somebody else's, and openly so: capacity is provisioned into Hetzner, DigitalOcean, AWS Lightsail, Vultr, Linode, Scaleway and Netcup among others, or into the customer's own cloud account. That makes Elestio a management layer rather than a host. Support is tiered, with a free level and paid levels buying faster response and phone access; the response windows are qualified as applying during business hours. The footer names a registered address in Dublin, which is the only place the operating jurisdiction is stated.
 
-Support is tiered: a free level with seven-day backup retention and three-day response, then fifty and two hundred dollars a month for faster answers and phone access. The response windows on the paid tiers are qualified as applying during business hours, so none of them is a round-the-clock commitment.
+## Worth knowing
 
-The footer names Elestio at a registered address in Dublin, which is the only place the operating jurisdiction is stated.
-
-## Reservations
-
-The advertised entry price is the management fee on a small machine; the underlying cloud capacity and any meaningful support tier are separate lines, so the total is a sum rather than a figure. Nothing here owns hardware, which means availability and jurisdiction are inherited from whichever provider is chosen — the choice, and its consequences, stay with the customer.
+The advertised entry price is the management fee on a small machine. The underlying cloud capacity and any paid support tier are separate lines, so the total is a sum rather than a figure, and because Elestio owns no hardware, availability and jurisdiction are inherited from whichever provider the customer picks.

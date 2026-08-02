@@ -53,18 +53,16 @@ figure:
   emoji: 🐋
   color: rgb(20, 40, 55)
   textColor: rgb(170, 220, 245)
-  text: Heroku on hardware you already rent.
+  text: A control plane for servers you already rent.
 ai: authored
 ---
 
 ## About Dokploy
 
-Dokploy is the open-source answer to platform-as-a-service: install it on servers you already have, point it at a git repository or a Docker Compose file, and it handles builds, deployments, databases, webhooks and TLS. Multi-server Docker Swarm clusters are supported, so it scales past the single box most self-hosted panels assume.
+Dokploy is an open-source deployment platform installed on servers the customer already rents. Pointed at a git repository or a Docker Compose file, it handles builds, deployments, databases, webhooks and TLS. Multi-server Docker Swarm clusters are supported, so it is not confined to a single box.
 
-Commercially it is sold by the managed server rather than by the application — $4.50 a month for one on the Hobby plan, $15 for three on Startup, with additional servers at the same unit rate and a fifth off for annual billing. Enterprise and agency arrangements are quoted. The same product is available as a hosted service or installed on-premises, and the software itself remains open source.
+Commercially it is sold by the managed server rather than by the application, with a discount for annual billing and quoted arrangements for enterprise and agency use. The same product runs as a hosted service or installed on the customer's own machines, and the software itself stays open source. The terms of service name Dokploy Technologies, Inc. at a San Francisco address and put the governing law in Delaware, which is the only place the company behind the product is identified.
 
-The terms of service name Dokploy Technologies, Inc. at a San Francisco address and put the governing law in Delaware, which is the only place the company behind the product is identified.
+## Worth knowing
 
-## Reservations
-
-The subscription buys the control plane and nothing else — every server it manages is rented separately, so the Dokploy price and the hosting bill are different numbers, and the smaller of the two is the one advertised. Being self-hostable is a genuine hedge against lock-in, but it also means the customer is on the hook for the operating system, security updates and backups of the machines underneath. Enterprise and agency pricing is not published.
+The subscription buys the control plane alone. Every server it manages is rented separately, so the Dokploy price and the hosting bill are two different numbers, and the operating system, security updates and backups of the machines underneath stay with the customer.

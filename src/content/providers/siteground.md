@@ -73,12 +73,10 @@ figure:
 
 ## About SiteGround
 
-SiteGround has been independently owned since 2004 and runs its service entirely on Google Cloud, with a proprietary Site Tools control panel rather than cPanel. Every shared tier ships SSH and WP-CLI; Git integration and staging start at the middle plan. The company describes itself as a group registered across the USA, UK, Spain, Cyprus and Bulgaria, and names no headquarters, which is why that field is empty here rather than guessed.
+SiteGround has been independently owned since 2004 and runs its service on Google Cloud rather than its own hardware. It replaced cPanel with a proprietary control panel, Site Tools, and sells fixed shared tiers built around WordPress and WooCommerce. SSH and WP-CLI come with every tier; Git integration and staging appear on the higher ones.
 
-Documentation covers PHP and nothing else. There is no public knowledge-base material for Node.js, Python or Ruby, so treat it as a PHP platform until a page says otherwise.
+The company describes itself as a group registered across several countries and names no headquarters, which is why that field is empty here rather than guessed.
 
-## Reservations
+## Worth knowing
 
-The gap between the introductory and the regular price is among the widest in this dataset: the entry plan is €2.99 a month on a twelve-month prepayment against €15.99 afterwards, and the two plans above it follow the same 78–81% first-term discount. There is no monthly billing entry point and no permanent free tier.
-
-Worth knowing about the platform's own changes: a Craft CMS issue thread records SiteGround altering its cache policy unilaterally, after which a customer's entire site — control panel included — was aggressively cached.
+The advertised entry price is a first-term rate on an annual prepayment. The regular rate applies from the first renewal and is several times higher, which is a larger step than most of the shared tier in this dataset.

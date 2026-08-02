@@ -56,12 +56,12 @@ ai: authored
 
 ## About Hugging Face
 
-Hugging Face is best known as the registry where machine-learning models and datasets live, but Spaces makes it a hosting provider as well. A Space is a git repository that the platform builds and runs as a live application, either through one of the supported SDKs — Gradio and Streamlit for Python, or a static site — or from a Dockerfile, which allows anything that fits in a container.
+Hugging Face is best known as the registry where machine-learning models and datasets live, but its Spaces product makes it a hosting provider as well. A Space is a Git repository that the platform builds and runs as a live application, either through one of the supported SDKs — Gradio and Streamlit for Python, or a plain static site — or from a Dockerfile, which admits anything that fits in a container.
 
-Hardware is where the money is. CPU Basic with two vCPUs and sixteen gigabytes is free, as is ZeroGPU with dynamically allocated capacity, and paid tiers rent Nvidia T4, L4, L40S and A100 cards by the hour. Account plans are PRO at nine dollars a month, Team at twenty per user and Enterprise at fifty, adding storage, SSO, audit logs and access controls.
+Hardware is where the money is. A basic CPU tier and a dynamically allocated GPU pool are free; paid tiers rent Nvidia cards by the hour. Account plans step from a personal subscription through team and enterprise tiers, adding storage, SSO, audit logs and access controls. What is free has narrowed: static Spaces remain free for everyone, while Spaces that run compute generally require a paid plan to create.
 
-What is free has narrowed, and the distinction is fine enough to be worth stating exactly. Static Spaces remain free for everyone. Gradio and Docker Spaces run on compute and now require a paid plan to create — PRO for a personal account, Team or Enterprise for an organisation — with one exception: a free personal account in good standing may still run up to two Gradio Spaces on ZeroGPU. The free tier therefore survives for a static site and for a demo, while hosting an arbitrary containerised application starts at nine dollars a month.
+## Worth knowing
 
-## Reservations
+This is not a general web host. Spaces are shaped around demonstrating a model, the Python SDKs assume that shape, and a free Space sleeps when idle.
 
-This is not a general web host and does not pretend to be. Spaces are shaped around demonstrating a model, the Python SDKs assume that shape, and a free Space sleeps when idle. Storage is billed by the terabyte on top of the plan, and GPU rental is charged by the hour whether or not anyone visits — a Space left running on an A100 is an expensive way to host a demo.
+Storage is billed on top of the plan and GPU rental is charged by the hour whether or not anyone visits, so an idle Space on rented hardware still costs money.

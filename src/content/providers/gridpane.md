@@ -5,7 +5,7 @@ urls:
   home: https://gridpane.com
   pricing: https://gridpane.com/pricing/
 category: server-management
-description: WordPress server-management platform for agencies, provisioning and hardening servers on the customer's cloud account, with a free tier up to 25 sites.
+description: GridPane is a WordPress server-management platform for agencies, provisioning and hardening servers on the customer's own cloud account.
 whoManagesOs: provider
 infraContract:
   - byo-iaas
@@ -46,16 +46,16 @@ figure:
   emoji: 🧯
   color: rgb(45, 25, 40)
   textColor: rgb(245, 195, 230)
-  text: For agencies who got tired of managed WordPress.
+  text: WordPress servers, on your own cloud account.
 ai: authored
 ---
 
 ## About GridPane
 
-GridPane provisions and manages WordPress servers on infrastructure the customer owns, aimed squarely at agencies that have outgrown managed WordPress hosting and want the margin back. It handles page and Redis object caching, PHP version management, staging, cloning, git integration, backups and security hardening through its own Fortress plugin, with multitenancy for agencies turning a website service into a software one.
+GridPane provisions and manages WordPress servers on infrastructure the customer owns, built for agencies running many sites at once. It covers page and Redis object caching, PHP version management, staging, cloning, git integration, backups and security hardening through its own Fortress plugin, with multitenancy for running one codebase across many client sites.
 
-The commercial shape is unusual: the Core plan is free forever for up to twenty-five sites, PeakFreq starts at nineteen dollars a month for managed high-frequency servers run in partnership with Vultr, and a bespoke tier starts at two thousand a year.
+Plans are fixed tiers: a permanently free level capped by site count, managed high-frequency servers run in partnership with Vultr, and a bespoke agency arrangement above them.
 
-## Reservations
+## Worth knowing
 
-Cloud provisioning is effectively Vultr-shaped; a customer wanting a different provider is working against the product's grain. The free tier covers the panel only — every server underneath is paid for separately — and the jump from free to the bespoke tier is very wide with little in between. This runs WordPress and nothing else.
+The subscription buys the control plane; every server underneath is rented and paid for separately. Provisioning is shaped around Vultr, so choosing another cloud means working against the grain of the product, and there is little between the free tier and the bespoke one.

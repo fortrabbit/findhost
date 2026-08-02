@@ -5,7 +5,7 @@ urls:
   home: https://azure.microsoft.com
   pricing: https://azure.microsoft.com/en-us/pricing/details/app-service/linux/
 category: iaas
-description: Microsoft Azure is the second-largest cloud infrastructure provider, with PHP reaching it through App Service on Linux.
+description: Microsoft's hyperscale cloud — hundreds of separately metered infrastructure services, with App Service as the managed application layer above them.
 parent: Microsoft
 ownership: subsidiary
 hqCountry: US
@@ -71,14 +71,10 @@ ai: co-authored
 
 ## About Azure
 
-Microsoft Azure is the second-largest cloud infrastructure provider, behind AWS. It spans hundreds of services — virtual machines, storage, networking, databases, AI — and integrates deeply with the rest of the Microsoft ecosystem: Entra ID, Microsoft 365, Visual Studio, .NET. That integration makes it the default cloud in many corporate IT environments.
+Azure is Microsoft's cloud platform, spanning virtual machines, storage, networking, databases and AI services, and integrating with the rest of the Microsoft estate — Entra ID, Microsoft 365, Visual Studio, .NET. That integration is why it is the default cloud in many corporate IT environments.
 
-PHP on Azure usually means App Service, the platform layer on top of the raw infrastructure. App Service runs PHP on Linux only — official PHP support on Windows instances ended with PHP 7.4 — and MySQL is a separate service, Azure Database for MySQL, with its own setup and its own bill.
+App Service is the platform layer above the raw infrastructure: it builds and runs web applications on managed instances, so nobody administers the virtual machine underneath. Databases are separate services with their own configuration and their own line on the bill, which is the pattern across the catalogue — what a site costs follows from how it is assembled rather than from a plan. A standing free App Service plan exists on shared compute.
 
-App Service has a standing Free plan, F1, with shared compute capped at 60 CPU minutes a day, 1 GB of memory and 1 GB of storage.
+## Worth knowing
 
-## Reservations
-
-The free plan is not a production option, and Microsoft says so: it "is intended for trials, experimentation, and learning the service" and carries no SLA. That is why this record has a free tier but no entry price band — the cheapest tier that could carry a small production site is the paid Basic plan, and its price is not rendered on the pricing page without selecting a region and currency first.
-
-The wider hyperscaler caveat applies too: usage-based billing across many separately metered services, so what a site costs follows from how it is assembled.
+Microsoft states that the free plan is intended for trials, experimentation and learning the service, and it carries no service-level agreement. The cheapest tier that can carry a production site is a paid one, and its rate is not rendered on the pricing page until a region and currency are selected.

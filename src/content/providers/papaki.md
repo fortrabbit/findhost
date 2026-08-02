@@ -5,7 +5,7 @@ urls:
   home: https://www.papaki.com
   pricing: https://www.papaki.com/en/web-hosting/
 category: shared
-description: Greek registrar and host with over 110,000 customers, selling three shared plans with NVMe storage, automatic backups and SSH above the entry tier.
+description: Greek domain registrar and shared-hosting provider, part of the European team.blue group.
 founded: 2004
 hqCountry: GR
 ownership: subsidiary
@@ -53,16 +53,16 @@ figure:
   emoji: 🦆
   color: rgb(35, 50, 30)
   textColor: rgb(200, 235, 185)
-  text: Greece's registrar, quietly Belgian.
+  text: Greece's little duck, owned in Belgium.
 ai: authored
 ---
 
 ## About Papaki
 
-Papaki is the dominant domain registrar in Greece — the name means "little duck" — with more than 110,000 customers, ISO 27001 certification and, since its acquisition, a place inside team.blue.
+Papaki is a long-established domain registrar in Greece — the name means "little duck" — and sells shared hosting alongside the registrar business. It has been ISO 27001 certified and, since its acquisition, operates as part of team.blue, the European group that has bought up national registrars and hosts across the continent.
 
-Three shared plans are sold: Starter at €6.90 a month for one site with 7 GB and five databases, Advanced at €7.14 for multiple sites or a shop with 20 GB and twenty databases, and Expert at €20.50 with 40 GB and fifty. All include free SSL, unlimited traffic, mail, NVMe storage and automatic backups, with one-click installation of WordPress, Drupal and Joomla. SSH is available on everything except the entry plan.
+The hosting is a small ladder of fixed plans, separated by storage, number of sites and number of databases. All of them include SSL, mail, NVMe storage, automatic backups and one-click installation of the common CMSes; SSH is available on everything above the entry plan. The provider manages the operating system, and the panel is the primary interface.
 
-## Reservations
+## Worth knowing
 
-The gap between Starter and Advanced is twenty-four cents a month for roughly three times the resources and the addition of SSH, which makes the entry plan hard to justify and suggests the ladder is shaped by marketing rather than by cost. Neither PHP versions nor data-centre locations appear anywhere on the hosting page — for a provider whose appeal is being Greek, not naming the country the servers are in is a notable gap.
+Data-centre locations are not named anywhere on the hosting pages, which is a notable gap for a provider whose appeal is being the local Greek option.

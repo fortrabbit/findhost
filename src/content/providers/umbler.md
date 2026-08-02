@@ -56,10 +56,10 @@ ai: authored
 
 ## About Umbler
 
-Umbler was created in 2015 out of a venture-builder group in Florianópolis and sells hosting in a way that is unusual for the region: credit is topped up in the panel and hourly consumption is deducted from it, closer to a cloud meter than to a monthly plan. Each site runs in its own resource-scoped environment, sized from 512 MB of memory upwards.
+Umbler was founded in Brazil in 2015 and bills hosting in a way that is unusual for the region: account credit is topped up in the panel and hourly consumption is deducted from it, closer to a cloud meter than to a monthly plan. Each site runs in its own resource-scoped environment, and the size of that environment sets the rate.
 
-Deploys are git or SFTP, with one-click installers for WordPress, Laravel, Drupal, Joomla, OpenCart and PrestaShop. Brazilian developers have published continuous-deployment examples wiring CircleCI and other pipelines to it, which is how the platform mostly gets documented outside the company.
+The product is PHP hosting specifically. Deploys go over git or SFTP, there are one-click installers for WordPress, Laravel, Drupal, Joomla and other PHP applications, and support runs through chat.
 
-## Reservations
+## Worth knowing
 
-The PHP hosting page advertises 5.4 through 7.3 as the selectable versions. That is either stale copy or a genuinely old runtime fleet, and either way it is what the provider publishes today — nothing on the page suggests a supported PHP 8. The company's centre of gravity has also moved: Umbler Talk, a WhatsApp customer-service product, is now the headline, with hosting a secondary line.
+The company's centre of gravity has moved. Umbler Talk, a WhatsApp customer-service product, is the headline offering on the site, and hosting is a secondary line.

@@ -5,7 +5,7 @@ urls:
   home: https://www.simply.com
   pricing: https://www.simply.com/en/hosting/
 category: shared
-description: Danish hosting provider selling three shared suites bundling web space, mail and a website builder, with a documented API third parties automate against.
+description: Danish shared hosting provider selling bundles of web space, mail and a website builder, with a documented public API alongside.
 founded: 2004
 hqCountry: DK
 ownership: subsidiary
@@ -53,16 +53,18 @@ figure:
   emoji: 🧊
   color: rgb(30, 50, 70)
   textColor: rgb(190, 220, 245)
-  text: The first year is not the price.
+  text: Web space, mail and a builder, bundled.
 ai: authored
 ---
 
 ## About Simply.com
 
-Simply.com sells Danish shared hosting in three bundles — Basic, Standard and Pro — each combining web space, mailbox storage, a memory allocation and a website designer, with WordPress and WooCommerce alongside. Domains, payment gateway integration and cookie-consent tooling are sold from the same account, which makes it a small-business package rather than a developer platform.
+Simply.com has sold Danish hosting since 2004 and now belongs to team.blue, the European group that has bought up national hosts and registrars across the continent. The shared range is a small ladder of bundles, each combining web space, mailbox storage, a memory allocation and a website designer, with one-click WordPress and WooCommerce on top.
 
-Its API is the part the wider world has engaged with. There is an asynchronous Rust client written outside the company, and an automatic DNS manager that wires Dokploy containers to Simply.com records — both maintained by individuals rather than by the provider.
+Domains, payment-gateway integration and cookie-consent tooling are sold from the same account, which makes it a small-business package rather than a developer platform: the provider runs everything below the site, and files move by FTP or through the control panel. A public API is documented for automating the account.
 
-## Reservations
+## Worth knowing
 
-The discount is the headline and the renewal is the product. The entry suite is advertised at under fifty cents a month for the first year and renews at €7.45; the middle tier is worse still. Anyone comparing this against a competitor's standing price is not comparing the same number. Data-centre locations are not stated on the pages that sell the plans — the about page says "primarily in Denmark but also across Europe", which names one country and gestures at the rest.
+The advertised entry figure is a first-year rate and the standing price is many times higher, so a comparison against a competitor's ordinary price is not comparing like with like.
+
+Data-centre locations are not stated on the pages that sell the plans; the about page says "primarily in Denmark but also across Europe", which names one country and gestures at the rest.

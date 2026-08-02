@@ -8,7 +8,7 @@ urls:
   terms: https://www.mythic-beasts.com/terms/overview
   docs: https://www.mythic-beasts.com/support
 category: shared
-description: British host selling web and email hosting in eleven graded sizes, with multiple PHP versions per site, MySQL as standard and shell access as an add-on.
+description: British host selling web and email hosting in a long ladder of graded sizes, with a choice of PHP release per site and MySQL as standard.
 hqCountry: GB
 ownership: independent
 whoManagesOs: provider
@@ -62,18 +62,18 @@ figure:
   emoji: 🐉
   color: rgb(35, 25, 55)
   textColor: rgb(210, 190, 250)
-  text: Eleven sizes, and you pay for the shell.
+  text: Graded sizes, shell sold separately.
 ai: authored
 ---
 
 ## About Mythic Beasts
 
-Mythic Beasts is a Cambridge company with a long-standing reputation among British engineers, best known outside hosting for running the Raspberry Pi Foundation's infrastructure and for renting out actual Raspberry Pis in a data centre.
+Mythic Beasts is a Cambridge company best known outside hosting for running the Raspberry Pi Foundation's infrastructure and for renting out actual Raspberry Pis in a data centre.
 
-The web hosting line is sold in eleven graded sizes rather than three tiers, from £1 a month for a redirection-only account through to £40 for four hundred gigabytes — which means the plan can be matched to the site rather than the other way round. Every account gets unlimited domains and mailboxes, free Let's Encrypt SSL, and a choice of PHP version per site. MySQL is standard and PostgreSQL is available on request. Servers are in UK data centres, connected by the company's own 10G fibre ring between London, Amsterdam and Cambridge.
+The web hosting line is sold as a long ladder of graded sizes rather than three tiers, from a redirection-only account up to accounts holding hundreds of gigabytes, so a plan can be matched to a site rather than the other way round. Every account gets unlimited domains and mailboxes, free Let's Encrypt certificates, and a choice of PHP release per site. MySQL is standard and PostgreSQL is available on request. Servers are in UK data centres, connected by the company's own fibre ring between London, Amsterdam and Cambridge.
 
-## Reservations
+## Worth knowing
 
-Shell access is not included. SSH is an add-on at £1.50 a month, which is unusual — most hosts either give a shell or withhold it, rather than selling it separately — and it means the advertised entry price is not the price for a developer-usable account.
+Shell access is not included in the hosting price. SSH is a separate paid add-on, so the advertised entry figure is not the figure for a shell-capable account.
 
-PHP is the only documented application runtime. The backup guarantee is honest but modest: restoration to a point no more than 36 hours before a failure, with the company recommending customers arrange their own offsite copies as well.
+The backup guarantee is modest and stated plainly: restoration to a point no more than 36 hours before a failure, with the company recommending that customers keep their own offsite copies as well.

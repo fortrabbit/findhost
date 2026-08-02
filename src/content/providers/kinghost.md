@@ -68,10 +68,10 @@ ai: authored
 
 ## About KingHost
 
-KingHost started in Porto Alegre in 2006, was acquired by Locaweb in 2019 and is now sold alongside it under the listed Brazilian group LWSA. Servers are stated to be in Brazil.
+KingHost started in Porto Alegre in 2006, was acquired by Locaweb in 2019 and is now sold alongside it under the listed Brazilian group LWSA. It offers shared hosting, WordPress plans and VPS, with servers stated to be in Brazil.
 
-What separates it from the rest of the Brazilian shared-hosting field is its documentation. The knowledge base publishes real deployment walkthroughs for Node.js with Socket.IO, Django, Spring Boot, React, Angular and Phalcon, with SSH and a git clone from GitHub, GitLab or Bitbucket as the working path and a panel-assigned port for long-running Node processes. Third parties have built against its reseller API — there is a community WHMCS module, and acme.sh ships a KingHost DNS driver maintained inside that project.
+What separates it from the rest of the Brazilian shared-hosting field is its documentation. The knowledge base publishes real deployment walkthroughs for Node.js with Socket.IO, Django, Spring Boot, React, Angular and Phalcon, with SSH and a Git clone from GitHub, GitLab or Bitbucket as the working path, and a panel-assigned port for long-running Node processes. Third parties have built against its reseller API: there is a community WHMCS module, and acme.sh ships a KingHost DNS driver maintained inside that project.
 
-## Reservations
+## Worth knowing
 
-Parts of the language documentation are visibly stale: the PHP version-switching article still enumerates 5.6, 7.0 and 7.1, so what the panel actually offers has to be checked rather than read. Advertised prices are promotional first-term rates that rise on renewal. The brand shares group infrastructure with Locaweb and the two have had correlated incidents.
+Parts of the language documentation are visibly stale — the version-switching articles still enumerate releases that reached end of life years ago — so what the control panel actually offers has to be checked rather than read.

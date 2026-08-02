@@ -37,4 +37,6 @@ ai: co-authored
 
 ## About Duda
 
-Duda is a hosted website builder aimed squarely at agencies and web professionals who deliver client sites at volume. Founded 2009 in Palo Alto, it built its feature set around that audience: white-label branding, client access controls, team collaboration, and multi-site management from one dashboard. For standardized brochure sites this is an efficient production line — custom server-side code and bespoke backend logic are outside its scope.
+Duda is a hosted website builder for agencies and web professionals who deliver client sites at volume. Its feature set is shaped around that audience: white-label branding, client access controls, team collaboration and multi-site management from a single dashboard.
+
+Templates, editor and hosting are sold together as one product on fixed plan tiers, with a trial before purchase. Brochure sites, campaign pages and storefronts are all built in the same editor.

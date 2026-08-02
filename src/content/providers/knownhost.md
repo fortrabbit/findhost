@@ -7,7 +7,7 @@ urls:
   terms: https://www.knownhost.com/terms-of-service
   docs: https://www.knownhost.com/kb/
 category: shared
-description: KnownHost is a US hosting provider, founded in 2006 and based in Birmingham, Alabama, with data centers across the US and in Amsterdam.
+description: KnownHost is a US provider of shared, reseller, managed VPS, cloud and dedicated hosting, sold with a choice of cPanel, DirectAdmin or Plesk.
 founded: 2006
 regions:
   - US
@@ -31,10 +31,12 @@ figure:
   emoji: 🧠
   color: rgb(0, 80, 150)
   textColor: rgb(255, 255, 255)
-  text: What about DX?
+  text: Managed servers, your choice of panel.
 ai: co-authored
 ---
 
 ## About KnownHost
 
-KnownHost is a US hosting provider, founded in 2006 and based in Birmingham, Alabama, with data centers across the US and in Amsterdam. The range spans shared hosting, reseller hosting, managed VPS, cloud and dedicated servers, with KVM virtualization and a choice of cPanel, DirectAdmin or Plesk. KnownHost has a good reputation for reliability and managed support in the traditional hosting market.
+KnownHost is a US hosting provider founded in 2006 and based in Birmingham, Alabama, with data centres in the United States and in Amsterdam. The range spans shared hosting, reseller hosting, managed VPS, cloud and dedicated servers, built on KVM virtualisation with a choice of cPanel, DirectAdmin or Plesk as the control panel.
+
+The line is sold as managed rather than unmanaged: administration, monitoring and support are part of the VPS and dedicated products, and plans carry no minimum contract term.

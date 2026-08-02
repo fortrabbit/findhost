@@ -68,10 +68,10 @@ ai: authored
 
 ## About o2switch
 
-o2switch is unusual among French hosts in building and running its own data centres rather than renting rack space — two redundant sites in Auvergne, near Clermont-Ferrand, which the company states plainly on its own pages. It has traded since 2009.
+o2switch is unusual among French hosts in building and running its own data centres rather than renting rack space — two redundant sites in Auvergne, near Clermont-Ferrand, which the company states plainly on its own pages. It has traded since 2009 and remains independently owned.
 
-The historic pitch was a single unlimited offer, and that has become three sizes rather than a ladder of tiers: 8, 12 or 24 vCPU, all with unlimited disk, sites, databases, mailboxes and traffic. The stack is cPanel with LiteSpeed, Varnish, Redis and Memcached; PHP runs from 5.2 to 8.4 with several versions available at once and full `php.ini` control; MySQL, MariaDB and PostgreSQL are all present. Documentation is a public Docusaurus site whose source sits on GitHub.
+The historic pitch was a single unlimited offer, and that shape survives: the same all-inclusive product in a few compute sizes rather than a ladder of feature tiers, with disk, sites, databases, mailboxes and traffic all sold as unmetered. The stack is cPanel with LiteSpeed in front and Varnish, Redis and Memcached available, several PHP versions selectable side by side with full `php.ini` control, and MySQL, MariaDB and PostgreSQL all present. Documentation is a public site whose source sits on GitHub.
 
-## Reservations
+## Worth knowing
 
-PHP is the only documented application runtime — Node, Python and Ruby do not appear on the offer page at all. Discounting is aggressive, and the home page leads with the discounted figure: "L'Offre Unique" is fronted at €1.86 a month net, which is the annual-payment promotional rate rather than the recurring one. The list price it renews at is not shown beside it, so no renewal multiple is recorded — and the entry price band here has not been verified against a standing rate. Independent tooling around the platform is thin, amounting to a couple of small community deploy actions.
+The headline figure on the offer page is the promotional annual-payment rate, and the price it renews at is not shown next to it, so the recurring cost has to be looked up separately. Independent tooling around the platform is thin — a couple of small community deploy actions and no vendor CLI.

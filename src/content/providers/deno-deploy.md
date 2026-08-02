@@ -59,8 +59,8 @@ ai: authored
 
 Deno Deploy is the hosting service built by the company that makes the Deno runtime, which gives it an unusual property: the platform and the language runtime are the same project, so what runs locally and what runs in production are the same binary. Node and npm compatibility means most existing JavaScript works, and the framework list covers Fresh, Next.js, Astro, Vue, React and others, with server-side rendering, static generation, incremental regeneration, subprocesses and foreign-function calls all supported.
 
-Plans are Free, Pro at twenty dollars a month, Builder at two hundred for people reselling the platform to their own users, and a custom enterprise tier. The free tier is substantial: a million requests, twenty gigabytes of egress, fifteen hours of CPU time and fifty custom domains a month. Pro raises that to five million requests and forty CPU hours, and prices the overage openly — $2 per million requests and $0.05 per CPU hour beyond the allowance. Builder covers twenty million requests and a hundred thousand active deployments.
+Plans run from a permanent free tier through a paid individual tier to one aimed at customers reselling the platform to their own users, with a negotiated enterprise arrangement above them. Each tier carries an allowance of requests and CPU time, and the rates charged beyond that allowance are published rather than quoted.
 
-## Reservations
+## Worth knowing
 
-Free accounts get community support only, no data-processing agreement and no SOC 2 report — which rules the tier out for anything with a compliance requirement. Regions are not published on either the product or the pricing page. This runs JavaScript and TypeScript and nothing else.
+Free accounts carry community support only, with no data-processing agreement and no SOC 2 report attached to the tier.

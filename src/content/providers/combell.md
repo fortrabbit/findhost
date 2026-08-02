@@ -68,10 +68,8 @@ ai: authored
 
 ## About Combell
 
-Combell was founded in Ghent in 1999 and became the anchor of Combell Group, which merged with TransIP Group in 2019 to form team.blue. Combell alone reports more than 400,000 customers across the Benelux. Data centres are in Belgium and the Netherlands.
+Combell was founded in Ghent in 1999 and became the anchor of Combell Group, which merged with TransIP Group in 2019 to form team.blue. Data centres are in Belgium and the Netherlands, and the company sells across the Benelux.
 
-Shared hosting is PHP-FPM on Percona MySQL with SSH, an "Auto GIT" deployment pipeline and separately sold Node.js hosting. The knowledge base is public and goes further than most hosts of this size — it carries framework-specific instructions, including how to point a domain at Laravel's `public` directory. An HMAC-authenticated API exists, documented mainly for resellers, and independent PHP and Node.js clients for it have been published by Belgian agencies.
+Shared hosting is PHP-FPM on Percona MySQL with shell access, a git-based deployment pipeline and separately sold Node.js hosting. The public knowledge base carries framework-specific instructions rather than generic ones, down to pointing a domain at a Laravel application's `public` directory. An HMAC-authenticated API exists, documented mainly for resellers.
 
-## Reservations
-
-First-year pricing runs at roughly a third of the renewal rate, and Combell prints both figures: Business is €5.99 a month in the first year against €19.49 after, Professional €8.99 against €27.99, Expert €14.99 against €45.99. The entry plan therefore renews at about 3.3 times what it was bought at, and the band recorded here is the standing rate rather than the advertised one. The independent tooling that exists is unofficial API clients rather than any mention in framework documentation, which is a thinner form of ecosystem presence.
+First-year pricing runs at roughly a third of the standing rate and Combell prints both figures, so the band recorded here is the rate a customer pays from the second year on rather than the advertised one.

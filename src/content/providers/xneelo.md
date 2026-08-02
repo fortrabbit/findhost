@@ -69,8 +69,8 @@ ai: authored
 
 xneelo was co-founded in 1999 as Hetzner South Africa by Hans Wencke and Martin Hetzner. It renamed itself in 2019 to end the brand confusion with the unrelated German Hetzner Online ahead of international expansion; there was no change of owner and the founding leadership stayed. The two companies remain entirely separate businesses that once shared a name.
 
-It is one of very few hosts at this level publishing a current PHP range on the plan page itself — 8.2 through 8.5, with a version-management tool and phpMyAdmin. Signup also lets a customer choose German or South African servers, so the footprint is not South-Africa-only. Administration is through konsoleH, the company's own control panel, which is what the independent automation scripts written against it target.
+It sells shared hosting, managed and self-managed servers and colocation, and owns the hardware it runs on. The plan pages name the PHP versions on offer and include a version-management tool and phpMyAdmin. Signup lets a customer choose German or South African servers, so the footprint is not South-Africa-only. Administration goes through konsoleH, the company's own control panel, and the South African data centre carries PCI DSS certification.
 
-## Reservations
+## Worth knowing
 
-The developer surface is thin. There is no public API, no CLI and no infrastructure-as-code tooling; deploys are FTP and control panel, and SSH availability on shared hosting is not stated on the pages that describe it. The homepage references a network status site, but the address as printed does not resolve, so no status URL is recorded here.
+The developer surface is thin. There is no public API, no CLI and no infrastructure-as-code tooling, deploys are by FTP or control panel, and whether shared hosting includes SSH is not stated on the pages that describe it.

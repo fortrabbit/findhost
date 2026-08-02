@@ -5,7 +5,7 @@ urls:
   home: https://www.digitalocean.com/products/functions
   pricing: https://docs.digitalocean.com/products/functions/details/pricing/
 category: serverless
-description: DigitalOcean Functions is a function-as-a-service platform built on Apache OpenWhisk, with PHP among its native runtimes.
+description: DigitalOcean Functions is a function-as-a-service platform built on Apache OpenWhisk, running short-lived handlers in several native language runtimes.
 parent: DigitalOcean
 whoManagesOs: provider
 useCases:
@@ -41,14 +41,12 @@ figure:
   emoji: 🌊
   color: rgb(20, 40, 90)
   textColor: rgb(140, 190, 255)
-  text: Native PHP functions on the ocean.
+  text: Functions on the ocean, asleep until called.
 ai: co-authored
 ---
 
 ## About DigitalOcean Functions
 
-DigitalOcean Functions is a function-as-a-service platform built on Apache OpenWhisk. It has the thing most serverless platforms lack for PHP: a native runtime, sitting next to Node, Python, and Go, with Composer support. So a PHP handler runs with no Bref-style layer bolted onto Lambda.
+DigitalOcean Functions is a function-as-a-service platform built on Apache OpenWhisk, part of the wider DigitalOcean account rather than a standalone product. Handlers run in native runtimes for PHP, Node, Python and Go, each pulling dependencies through its own package manager.
 
-Billing is per GiB-second: each team gets a free monthly allowance of 90,000 GiB-seconds, or 25 GiB-hours, across all its functions, and usage beyond that costs $0.0000185 per GiB-second — $0.07 per GiB-hour.
-
-It scales to zero and bills per use. Good for small event handlers, webhooks, an API endpoint or two. The function rules still bite, though. Handlers are stateless and short-lived, so anything that has to outlive a call lives in a managed database or storage service, never on local disk.
+Billing is per GiB-second of execution. Every team gets a free monthly allowance shared across all of its functions, and usage beyond it is metered. Functions scale to zero between invocations. Handlers are stateless with no local disk that outlives a call, so anything that has to persist belongs in a managed database or an object storage service.

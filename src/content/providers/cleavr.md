@@ -6,7 +6,7 @@ urls:
   pricing: https://cleavr.io/pricing
 category: server-management
 regions: null
-description: Server provisioning and deployment service for PHP and Node applications, driving servers on seven named clouds or any VPS the customer brings.
+description: Server provisioning and deployment service for PHP and Node applications, driving servers rented from major clouds or any VPS the customer brings.
 whoManagesOs: provider
 infraContract:
   - byo-iaas
@@ -62,10 +62,6 @@ ai: authored
 
 Cleavr provisions a server and then keeps deploying to it: web applications, cron jobs, process monitors, environment variables, TLS certificates and deployment logs, with notifications to Slack, Discord, Telegram or email and a GitHub Actions integration for anyone who wants the pipeline elsewhere.
 
-The framework list is unusually explicit for a tool of this kind — Laravel, Nuxt, Next.js, AdonisJS, Alpas, WordPress, Strapi, Directus, Soketi, plain PHP, Node and static HTML — which tells a prospective user whether their stack is a first-class case or an improvisation. Servers can be provisioned on DigitalOcean, Hetzner, AWS, Linode, UpCloud or Vultr, or Cleavr can adopt a VPS from anywhere else.
+The supported frameworks are named explicitly rather than left to a generic build step — Laravel, Nuxt, Next.js, AdonisJS, WordPress, Strapi, Directus, plain PHP, Node and static HTML among them. Servers are provisioned on one of several named clouds, DigitalOcean, Hetzner, AWS, Linode, UpCloud and Vultr among them, or adopted from a VPS bought anywhere else.
 
-Plans are Lite at $5.50 a month for one server, Pro at $15 for unlimited servers with monitoring and backups, and Business at $30 adding team management, with a five-day trial and no card required.
-
-## Reservations
-
-Nothing here is hosting: the subscription manages servers rented elsewhere, and that separate bill is the larger one. Backups and monitoring only appear at the Pro tier, so the entry plan is provisioning and deployment alone. As with every panel of this shape, responsibility for the operating system underneath stays with the customer.
+Plans are graded by how many servers they cover and by whether monitoring and backups are included, with a short trial ahead of them.

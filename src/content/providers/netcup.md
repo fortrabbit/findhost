@@ -7,7 +7,7 @@ urls:
   status: https://netcup-status.de
   terms: https://www.netcup.com/de/agb
 category: vps
-description: Karlsruhe-based provider selling low-priced webhosting, VPS and root servers across five data-centre locations, part of the Anexia group.
+description: Karlsruhe-based provider selling low-priced webhosting, VPS and root servers from European, North American and Asian locations, part of the Anexia group.
 founded: 2008
 hqCountry: DE
 ownership: subsidiary
@@ -79,12 +79,12 @@ ai: authored
 
 ## About netcup
 
-netcup began as a sole proprietorship and became netcup GmbH in Karlsruhe in 2008. It has belonged to the Austrian Anexia group since 2016 and states more than 100,000 customers. Server locations offered are Vienna, Nuremberg, Amsterdam, Manassas in the United States and Singapore, with a "no preference, somewhere in Europe" option for anyone who does not care.
+netcup began as a sole proprietorship and became netcup GmbH in Karlsruhe in 2008. It has belonged to the Austrian Anexia group since 2016. Server locations are offered in Europe, North America and Asia, with a "no preference, somewhere in Europe" option for anyone who does not care where the machine sits.
 
-Price is the defining characteristic: webhosting starts under €3 a month including VAT, and the cheapest VPS — the VPS 500 G12, with 2 vCores, 4 GB of RAM and 128 GB of NVMe — is listed from €5.91 a month including 19% VAT, with the rate held for the whole contract term rather than reverting after an introductory period. A twelve-month term is offered alongside hourly billing with no minimum term at all. Root servers give full control; webhosting runs on Plesk with PHP on every tariff and documented support for Python, cron and PHP extensions.
+Price is the defining characteristic, and so is the fact that it holds: the rate is fixed for the contract term rather than reverting to a higher standing price once an introductory period ends. A twelve-month term is offered alongside hourly billing with no minimum term at all. Root servers give full control of the machine; webhosting runs on Plesk with PHP on every tariff and documented support for Python, cron jobs and PHP extensions.
 
 Support is by ticket and through an active customer forum rather than by phone, which is part of how the pricing works.
 
-## Reservations
+## Worth knowing
 
-Node.js and Ruby appear on the tariff comparison table only from the larger webhosting plans upwards, and neither is covered in the help centre — the advertised support is thinner than the documented support. Windows on a VPS requires installing it yourself under a trial licence.
+Node.js and Ruby appear on the tariff comparison only from the larger webhosting plans upwards, and neither is covered in the help centre, so what is advertised is broader than what is documented. Windows on a VPS has to be installed by the customer under a trial licence.

@@ -6,7 +6,7 @@ urls:
   pricing: https://craftcms.com/cloud
   docs: https://craftcms.com/docs/cloud/
 category: vanity-hosting
-description: Craft Cloud is the serverless hosting platform built by Pixel & Tonic, the makers of Craft CMS, priced per project from $120 a month.
+description: Serverless hosting for Craft CMS built by Pixel & Tonic, the company that makes the CMS, and sold per project rather than per account.
 whoManagesOs: provider
 useCases:
   - cms
@@ -39,12 +39,6 @@ ai: co-authored
 
 ## About Craft Cloud
 
-Craft Cloud is made by Pixel & Tonic, the company behind Craft CMS, and described in its own documentation as "our very own serverless hosting platform… designed from the ground-up to be the best way to launch and scale your Craft project". It launched in 2024.
+Craft Cloud is made by Pixel & Tonic, the company behind Craft CMS, and is described in its own documentation as a serverless hosting platform built specifically for Craft projects. It launched in 2024, so the CMS, the licence and the hosting can all be bought from one company.
 
-Deployment is push-to-deploy from GitHub, Bitbucket or GitLab, with a build pipeline that runs Composer and npm tasks, and a global CDN in front. Three plans are listed: Team at $120 a month per project and Pro at $240 a month per project, both quoted at the annual rate, with Enterprise by request.
-
-## Reservations
-
-The price is per project, and it starts high relative to the segment — a single Craft site on Craft Cloud costs more than several sites on a general-purpose platform. That buys first-party integration with the CMS, which is the whole proposition, but it makes the platform a poor fit for a portfolio of small sites.
-
-Being the vendor's own platform is also a concentration of dependency: the CMS, the licence and the hosting arrive from one company on one invoice. Neither the marketing page nor the documentation index states which infrastructure it runs on or which regions are available.
+Deployment is push-to-deploy from GitHub, Bitbucket or GitLab, with a build pipeline that runs Composer and npm tasks and a CDN in front of the site. Pricing is per project rather than per account, across a small number of tiers with an enterprise arrangement above them. Neither the marketing page nor the documentation index states which infrastructure the platform runs on.

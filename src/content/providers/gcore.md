@@ -6,7 +6,7 @@ urls:
   pricing: https://gcore.com/pricing
   status: https://status.gcore.com/
 category: iaas
-description: Luxembourg-registered edge provider selling CDN, streaming, DDoS protection, virtual machines, bare metal, Kubernetes and serverless functions.
+description: Gcore is an edge and cloud provider selling CDN, streaming, DDoS protection, virtual machines, bare metal, Kubernetes and serverless functions.
 whoManagesOs: you
 useCases:
   - ai-app
@@ -48,12 +48,12 @@ ai: authored
 
 ## About Gcore
 
-Gcore sells the edge and the cloud together: a content delivery network with its own peering and scrubbing centres, video streaming, DNS, DDoS protection and a web application firewall, alongside virtual machines, bare metal, managed Kubernetes, GPU capacity and serverless inference. Function-as-a-Service and container deployment are what put it in this dataset rather than in a list of network vendors — customers' own code runs on the platform.
+Gcore sells the edge and the cloud together: a content delivery network with its own peering and scrubbing centres, video streaming, DNS, DDoS protection and a web application firewall, alongside virtual machines, bare metal, managed Kubernetes, GPU capacity and serverless inference. Functions and container deployment are what place it in this dataset rather than among network vendors, since customers run their own code on the platform.
 
-Pricing is published in euros and metered by product: the web application firewall by the million requests, DDoS protection by the megabit per second of clean traffic. A public looking glass is available for checking the network from outside.
+Pricing is published in euros and metered per product — the web application firewall by request volume, DDoS protection by the amount of clean traffic delivered — rather than assembled into plans. A public looking glass allows the network to be checked from outside.
 
-## Reservations
+## Worth knowing
 
-The pricing page is a set of per-product meters with no assembled plan, and the enterprise DDoS tier starts in the thousands per month, so the published figures describe two very different classes of customer. The company's headquarters is not stated — a Luxembourg telephone number is the only locating detail — and its ownership is not published either, which matters more than usual for a provider whose product is network infrastructure.
+The company's headquarters is not stated on the site. A Luxembourg telephone number is the only locating detail, and ownership is not published either.
 
-Where the compute actually runs is not answerable from the site. The cloud page claims "50+ Cloud regions" without naming one, and the network page lists 210-plus points of presence by city without separating the CDN edge from the places a virtual machine can be started. No regions are recorded here as a result.
+Where the compute runs is not answerable from the site. The cloud page counts regions without naming one, and the network page lists points of presence by city without separating the CDN edge from the places a virtual machine can actually be started, so no regions are recorded here.
