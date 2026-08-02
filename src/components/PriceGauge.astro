@@ -1,0 +1,67 @@
+---
+import { bandIndex, gaugeSlices, priceBands, priceSentence, sliceHeight } from '../lib/price';
+
+interface Props {
+  from?: string;
+  to?: string;
+  /** sm in a list, md on a record, lg where the scale itself is the subject. */
+  size?: 'sm' | 'md' | 'lg';
+  /** Set on the large one, which is read rather than glanced at. */
+  labelled?: boolean;
+}
+
+const { from, to, size = 'sm', labelled = false } = Astro.props;
+
+const start = bandIndex(from);
+const end = bandIndex(to) === -1 ? start : bandIndex(to);
+const sentence = priceSentence(from, to);
+
+/*
+ * A triangle drawn as seven slices, with the bands a provider covers filled in.
+ * Unfilled slices keep their outline: the shape is the whole scale, and what is
+ * shaded is this provider's place on it — a bar that only drew the filled part
+ * would say nothing about how much of the market sits above.
+ */
+const width = 100;
+const height = 30;
+const sliceWidth = width / gaugeSlices;
+const gap = 1.5;
+
+const slices = priceBands.map((band, index) => ({
+  band,
+  index,
+  x: index * sliceWidth,
+  w: sliceWidth - gap,
+  h: sliceHeight(index) * height,
+  covered: start >= 0 && index >= start && index <= end,
+}));
+---
+
+{
+  start >= 0 && (
+    <span class:list={['price-gauge', `price-gauge-${size}`]}>
+      <svg viewBox={`0 0 ${width} ${height}`} role="img" aria-label={sentence} preserveAspectRatio="none">
+        {slices.map((slice) => (
+          <rect
+            x={slice.x}
+            y={height - slice.h}
+            width={slice.w}
+            height={slice.h}
+            fill={slice.covered ? 'currentColor' : 'none'}
+            stroke="currentColor"
+            stroke-width="1"
+            vector-effect="non-scaling-stroke"
+          />
+        ))}
+      </svg>
+
+      {labelled && (
+        <span class="price-gauge-scale" aria-hidden="true">
+          {priceBands.map((band) => (
+            <span>{band.short}</span>
+          ))}
+        </span>
+      )}
+    </span>
+  )
+}

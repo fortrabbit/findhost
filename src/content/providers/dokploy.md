@@ -33,7 +33,7 @@ deployMethods:
   - api
 sshAccess: full
 pricingModel: per-resource
-entryPriceBand: under-5
+priceFrom: xs
 entryPrice: { amount: 4.5, currency: USD, period: month }
 freeTier: none
 social:
@@ -43,7 +43,7 @@ status: active
 checkedAt: 2026-08-01
 sources:
   - { field: entryPrice, url: 'https://dokploy.com/pricing', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://dokploy.com/pricing', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://dokploy.com/pricing', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://dokploy.com/pricing', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://dokploy.com/pricing', checkedAt: 2026-08-01 }
   - { field: hqCountry, url: 'https://dokploy.com/terms-of-service', checkedAt: 2026-08-01 }

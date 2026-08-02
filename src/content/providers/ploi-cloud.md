@@ -30,7 +30,7 @@ managedDatabases:
   - redis
   - mongodb
 pricingModel: per-resource
-entryPriceBand: 5-15
+priceFrom: sm
 freeTier: trial
 regions:
   - NL
@@ -42,7 +42,7 @@ sources:
   - { field: runsOn, url: 'https://ploi.cloud', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://ploi.cloud', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://ploi.cloud', checkedAt: 2026-07-31 }
-  - { field: entryPriceBand, url: 'https://ploi.cloud', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://ploi.cloud', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://ploi.cloud', checkedAt: 2026-07-31 }
   - { field: software, url: 'https://ploi.cloud', checkedAt: 2026-07-31 }
   - { field: managedDatabases, url: 'https://ploi.cloud', checkedAt: 2026-07-31 }

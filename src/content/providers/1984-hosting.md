@@ -29,7 +29,7 @@ deployMethods:
   - ftp
   - control-panel
 pricingModel: fixed-tier
-entryPriceBand: under-5
+priceFrom: xs
 freeTier: none
 regions:
   - IS

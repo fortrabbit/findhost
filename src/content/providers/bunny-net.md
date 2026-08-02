@@ -31,7 +31,7 @@ deployMethods:
   - docker-image
   - git-integration
 pricingModel: usage-based
-entryPriceBand: under-5
+priceFrom: xs
 entryPrice: { amount: 1, currency: USD, period: month }
 freeTier: none
 regions:
@@ -52,7 +52,7 @@ checkedAt: 2026-08-01
 sources:
   - { field: regions, url: 'https://bunny.net/pricing/storage/', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://bunny.net/pricing/', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://bunny.net/pricing/', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://bunny.net/pricing/', checkedAt: 2026-08-01 }
   - { field: founded, url: 'https://bunny.net/about/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🐰

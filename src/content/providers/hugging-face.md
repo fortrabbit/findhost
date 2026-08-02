@@ -32,7 +32,6 @@ deployMethods:
   - docker-image
   - api
 pricingModel: fixed-tier
-entryPriceBand: free-tier
 freeTier: permanent
 persistentStorage: false
 apiAvailable: public
@@ -40,7 +39,7 @@ cliTool: official
 status: active
 checkedAt: 2026-08-01
 sources:
-  - { field: entryPriceBand, url: 'https://huggingface.co/pricing', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://huggingface.co/pricing', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://huggingface.co/pricing', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://huggingface.co/docs/hub/spaces-overview', checkedAt: 2026-08-01 }
   - { field: persistentStorage, url: 'https://huggingface.co/docs/hub/spaces-overview', checkedAt: 2026-08-01 }

@@ -36,7 +36,7 @@ deployMethods:
   - cli
   - api
 pricingModel: usage-based
-entryPriceBand: 15-50
+priceFrom: md
 freeTier: none
 entryPrice: { amount: 29, currency: USD, period: month }
 regions:
@@ -50,7 +50,7 @@ cliTool: official
 status: active
 checkedAt: 2026-08-01
 sources:
-  - { field: entryPriceBand, url: 'https://www.koyeb.com/pricing', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://www.koyeb.com/pricing', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://www.koyeb.com/pricing', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://www.koyeb.com/pricing', checkedAt: 2026-07-31 }
   - { field: entryPrice, url: 'https://www.koyeb.com/pricing', checkedAt: 2026-08-01 }

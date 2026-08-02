@@ -44,7 +44,7 @@ managedDatabases:
   - opensearch
   - valkey
 pricingModel: hourly
-entryPriceBand: 5-15
+priceFrom: sm
 entryPrice: { amount: 0.0056, currency: EUR, period: hour }
 freeTier: none
 regions:

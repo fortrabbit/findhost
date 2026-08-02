@@ -36,7 +36,7 @@ deployMethods:
   - api
 sshAccess: full
 pricingModel: fixed-tier
-entryPriceBand: 15-50
+priceFrom: md
 renewalMultiple: 3.3
 freeTier: none
 regions:
@@ -45,7 +45,7 @@ regions:
 status: active
 checkedAt: 2026-08-01
 sources:
-  - { field: entryPriceBand, url: 'https://www.combell.com/en/hosting/web-hosting', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://www.combell.com/en/hosting/web-hosting', checkedAt: 2026-07-31 }
   - { field: renewalMultiple, url: 'https://www.combell.com/en/hosting/web-hosting', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://www.combell.com/en/hosting/web-hosting', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://www.combell.com/en/about-combell', checkedAt: 2026-08-01 }

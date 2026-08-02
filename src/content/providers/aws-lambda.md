@@ -21,7 +21,6 @@ runtimes:
   - docker
 persistentStorage: false
 pricingModel: usage-based
-entryPriceBand: free-tier
 freeTier: permanent
 apiAvailable: public
 cliTool: official
@@ -63,7 +62,7 @@ sources:
   - { field: runtimes, url: 'https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://aws.amazon.com/lambda/pricing/', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://aws.amazon.com/lambda/pricing/', checkedAt: 2026-07-31 }
-  - { field: entryPriceBand, url: 'https://aws.amazon.com/lambda/pricing/', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://aws.amazon.com/lambda/pricing/', checkedAt: 2026-07-31 }
 figure:
   emoji: ⚙️
   color: rgb(35, 43, 60)

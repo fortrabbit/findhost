@@ -31,7 +31,7 @@ deployMethods:
   - control-panel
 backupsIncluded: included
 pricingModel: fixed-tier
-entryPriceBand: under-5
+priceFrom: xs
 entryPrice: { amount: 2.99, currency: EUR, period: month }
 freeTier: none
 regions:
@@ -53,7 +53,7 @@ sources:
   - { field: parent, url: 'https://www.websupport.sk/o-nas', checkedAt: 2026-08-01 }
   - { field: supportHours, url: 'https://www.websupport.sk/o-nas', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://www.websupport.sk/webhosting', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://www.websupport.sk/webhosting', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.websupport.sk/webhosting', checkedAt: 2026-08-01 }
   - { field: social, url: 'https://www.websupport.sk', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://www.websupport.sk/podmienky', checkedAt: 2026-08-01 }
 figure:

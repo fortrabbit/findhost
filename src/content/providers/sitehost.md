@@ -46,7 +46,7 @@ managedDatabases:
   - mongodb
   - redis
 pricingModel: fixed-tier
-entryPriceBand: 15-50
+priceFrom: md
 entryPrice: { amount: 35, currency: NZD, period: month }
 freeTier: none
 regions:
@@ -77,7 +77,7 @@ sources:
   - { field: ownership, url: 'https://sitehost.nz/about', checkedAt: 2026-08-01 }
   - { field: supportHours, url: 'https://sitehost.nz/about', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://sitehost.nz/hosting/cloud-containers', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://sitehost.nz/hosting/cloud-containers', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://sitehost.nz/hosting/cloud-containers', checkedAt: 2026-08-01 }
   - { field: social, url: 'https://sitehost.nz', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://sitehost.nz/about/terms', checkedAt: 2026-08-01 }
 figure:

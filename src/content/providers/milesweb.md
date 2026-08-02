@@ -37,7 +37,7 @@ managedDatabases:
   - mysql
 pricingModel: fixed-tier
 entryPrice: { amount: 69, currency: INR, period: month }
-entryPriceBand: under-5
+priceFrom: xs
 freeTier: none
 contractMinimum: multi-year
 regions:
@@ -56,7 +56,7 @@ checkedAt: 2026-08-01
 sources:
   - { field: regions, url: 'https://www.milesweb.in/hosting/web-hosting', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://www.milesweb.in/hosting/web-hosting', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://www.milesweb.in/hosting/web-hosting', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.milesweb.in/hosting/web-hosting', checkedAt: 2026-08-01 }
   - { field: contractMinimum, url: 'https://www.milesweb.in/hosting/web-hosting', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://www.milesweb.in/hosting/web-hosting', checkedAt: 2026-08-01 }
   - { field: supportHours, url: 'https://www.milesweb.in/hosting/web-hosting', checkedAt: 2026-08-01 }

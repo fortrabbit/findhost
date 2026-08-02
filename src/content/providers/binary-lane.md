@@ -31,7 +31,7 @@ deployMethods:
   - api
 sshAccess: full
 pricingModel: hourly
-entryPriceBand: under-5
+priceFrom: xs
 entryPrice: { amount: 4.90, currency: AUD, period: month }
 regions:
   - AU
@@ -42,7 +42,7 @@ apiAvailable: public
 checkedAt: 2026-08-01
 sources:
   - { field: entryPrice, url: 'https://www.binarylane.com.au', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://www.binarylane.com.au', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.binarylane.com.au', checkedAt: 2026-08-01 }
 figure:
   emoji: 🦘
   color: rgb(25, 45, 70)

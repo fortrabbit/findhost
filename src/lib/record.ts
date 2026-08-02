@@ -1,26 +1,4 @@
-/*
- * Presentation helpers for a single record. Nothing here computes a judgement —
- * the coin scale is a band rendered without a currency, not a rating, so it
- * never carries colour, never sorts, and cheaper never reads as better.
- */
-
-const coinsPerBand: Record<string, number> = {
-  'under-5': 1,
-  '5-15': 2,
-  '15-50': 3,
-  '50-150': 4,
-  '150-500': 5,
-  'over-500': 6,
-};
-
 /** A free tier is a different kind of answer to "what does it cost", so it says so in words. */
-export function coins(band: string | undefined): string | undefined {
-  if (!band) return undefined;
-  if (band === 'free-tier') return 'free';
-  const count = coinsPerBand[band];
-  return count ? '🪙'.repeat(count) : undefined;
-}
-
 /** Regional indicator pair. Two letters in, one flag out. */
 export function flag(country: string | undefined): string | undefined {
   if (!country || country.length !== 2) return undefined;

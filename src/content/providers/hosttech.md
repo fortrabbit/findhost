@@ -31,7 +31,7 @@ deployMethods:
 sshAccess: limited
 pricingModel: fixed-tier
 entryPrice: { amount: 6.9, currency: CHF, period: month }
-entryPriceBand: 5-15
+priceFrom: sm
 freeTier: none
 regions:
   - CH
@@ -44,7 +44,7 @@ checkedAt: 2026-08-01
 sources:
   - { field: regions, url: 'https://www.hosttech.ch/webhosting', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://www.hosttech.ch/webhosting', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://www.hosttech.ch/webhosting', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.hosttech.ch/webhosting', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://www.hosttech.ch/webhosting', checkedAt: 2026-08-01 }
   - { field: supportHours, url: 'https://www.hosttech.ch/support', checkedAt: 2026-08-02 }
   - { field: supportChannels, url: 'https://www.hosttech.ch/webhosting', checkedAt: 2026-08-01 }

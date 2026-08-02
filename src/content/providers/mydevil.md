@@ -43,7 +43,7 @@ managedDatabases:
   - mongodb
 backupsIncluded: included
 pricingModel: fixed-tier
-entryPriceBand: under-5
+priceFrom: xs
 freeTier: none
 regions:
   - PL
@@ -55,7 +55,7 @@ checkedAt: 2026-08-01
 sources:
   - { field: regions, url: 'https://www.mydevil.net', checkedAt: 2026-08-01 }
   - { field: hqCountry, url: 'https://www.mydevil.net', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://www.mydevil.net', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.mydevil.net', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://www.mydevil.net', checkedAt: 2026-08-01 }
   - { field: social, url: 'https://www.mydevil.net', checkedAt: 2026-08-01 }
 figure:

@@ -37,7 +37,7 @@ deployMethods:
   - api
 sshAccess: full
 pricingModel: fixed-tier
-entryPriceBand: 5-15
+priceFrom: sm
 freeTier: none
 regions:
   - NL
@@ -50,7 +50,7 @@ social:
 status: active
 checkedAt: 2026-08-01
 sources:
-  - { field: entryPriceBand, url: 'https://www.transip.eu/web-hosting/', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://www.transip.eu/web-hosting/', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://www.transip.eu/web-hosting/', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://www.transip.nl/over-transip/', checkedAt: 2026-08-01 }
   - { field: founded, url: 'https://www.transip.nl/over-transip/', checkedAt: 2026-08-01 }

@@ -55,7 +55,7 @@ managedDatabases:
   - redis
   - elasticsearch
 pricingModel: per-resource
-entryPriceBand: 5-15
+priceFrom: sm
 freeTier: trial
 regions:
   - FR

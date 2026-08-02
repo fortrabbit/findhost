@@ -32,7 +32,7 @@ runsOn:
 runtimes:
   - php
 pricingModel: fixed-tier
-entryPriceBand: under-5
+priceFrom: xs
 entryPrice: { amount: 3, currency: USD, period: month }
 social:
   x: https://x.com/xCloud_host
@@ -46,7 +46,7 @@ sources:
   - { field: entryPrice, url: 'https://xcloud.host/pricing/', checkedAt: 2026-08-01 }
   - { field: social, url: 'https://xcloud.host', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://xcloud.host/terms-and-conditions/', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://xcloud.host/pricing/', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://xcloud.host/pricing/', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://xcloud.host/pricing/', checkedAt: 2026-07-31 }
   - { field: infraContract, url: 'https://xcloud.host/pricing/', checkedAt: 2026-07-31 }
   - { field: runsOn, url: 'https://xcloud.host/pricing/', checkedAt: 2026-07-31 }

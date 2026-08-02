@@ -17,13 +17,13 @@ audience:
   - beginner
 sshAccess: none
 pricingModel: fixed-tier
-entryPriceBand: 15-50
+priceFrom: md
 entryPrice: { amount: 25, currency: EUR, period: month }
 freeTier: trial
 status: active
 checkedAt: 2026-08-01
 sources:
-  - { field: entryPriceBand, url: 'https://www.shopify.com/pricing', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://www.shopify.com/pricing', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://www.shopify.com/pricing', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://www.shopify.com/pricing', checkedAt: 2026-07-31 }
   - { field: entryPrice, url: 'https://www.shopify.com/pricing', checkedAt: 2026-08-01 }

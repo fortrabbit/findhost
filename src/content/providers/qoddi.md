@@ -41,14 +41,13 @@ managedDatabases:
   - mongodb
   - redis
 pricingModel: per-resource
-entryPriceBand: free-tier
 entryPrice: { amount: 6, currency: USD, period: month }
 freeTier: permanent
 status: active
 checkedAt: 2026-08-01
 sources:
   - { field: entryPrice, url: 'https://qoddi.com/pricing/', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://qoddi.com/pricing/', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://qoddi.com/pricing/', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://qoddi.com/pricing/', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://qoddi.com/pricing/', checkedAt: 2026-08-01 }
 figure:

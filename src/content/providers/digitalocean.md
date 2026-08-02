@@ -37,7 +37,7 @@ managedDatabases:
   - opensearch
   - kafka
 pricingModel: hourly
-entryPriceBand: under-5
+priceFrom: xs
 entryPrice: { amount: 4, currency: USD, period: month }
 contractMinimum: none
 regions:
@@ -62,7 +62,7 @@ sources:
   - { field: founded, url: 'https://www.digitalocean.com/about', checkedAt: 2026-07-31 }
   - { field: ownership, url: 'https://investors.digitalocean.com/overview/default.aspx', checkedAt: 2026-07-31 }
   - { field: hqCountry, url: 'https://www.digitalocean.com/company', checkedAt: 2026-07-31 }
-  - { field: entryPriceBand, url: 'https://www.digitalocean.com/pricing/droplets', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://www.digitalocean.com/pricing/droplets', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://www.digitalocean.com/pricing/droplets', checkedAt: 2026-07-31 }
   - { field: contractMinimum, url: 'https://www.digitalocean.com/pricing/droplets', checkedAt: 2026-07-31 }
   - { field: backupsIncluded, url: 'https://www.digitalocean.com/pricing/droplets', checkedAt: 2026-07-31 }

@@ -31,7 +31,7 @@ runtimes:
   - node
   - python
 pricingModel: per-resource
-entryPriceBand: 15-50
+priceFrom: md
 freeTier: trial
 regions:
   - IE
@@ -58,7 +58,7 @@ sources:
   - { field: runtimes, url: 'https://developer.upsun.com/docs/get-started/stacks', checkedAt: 2026-07-31 }
   - { field: software, url: 'https://developer.upsun.com/docs/get-started/stacks', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://upsun.com/pricing/', checkedAt: 2026-07-31 }
-  - { field: entryPriceBand, url: 'https://upsun.com/pricing/', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://upsun.com/pricing/', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://upsun.com/pricing/', checkedAt: 2026-07-31 }
   - { field: audience, url: 'https://upsun.com/pricing/', checkedAt: 2026-07-31 }
 figure:

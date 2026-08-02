@@ -40,7 +40,7 @@ sshAccess: limited
 managedDatabases:
   - mysql
 pricingModel: fixed-tier
-entryPriceBand: under-5
+priceFrom: xs
 entryPrice: { amount: 2.75, currency: EUR, period: month }
 renewalMultiple: 1.98
 freeTier: none
@@ -56,7 +56,7 @@ status: active
 checkedAt: 2026-08-01
 sources:
   - { field: entryPrice, url: 'https://dinahosting.com/hosting', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://dinahosting.com/hosting', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://dinahosting.com/hosting', checkedAt: 2026-08-01 }
   - { field: renewalMultiple, url: 'https://dinahosting.com/hosting', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://dinahosting.com/hosting', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://dinahosting.com/hosting', checkedAt: 2026-08-01 }

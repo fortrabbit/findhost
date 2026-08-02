@@ -29,7 +29,7 @@ deployMethods:
   - control-panel
 sshAccess: limited
 pricingModel: fixed-tier
-entryPriceBand: under-5
+priceFrom: xs
 entryPrice: { amount: 4.95, currency: EUR, period: month }
 freeTier: trial
 contractMinimum: none
@@ -37,7 +37,7 @@ regions:
   - DE
 checkedAt: 2026-08-01
 sources:
-  - { field: entryPriceBand, url: 'https://www.all-inkl.com/webhosting/', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://www.all-inkl.com/webhosting/', checkedAt: 2026-07-31 }
   - { field: contractMinimum, url: 'https://www.all-inkl.com/webhosting/', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://all-inkl.com/webhosting/', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://all-inkl.com/webhosting/', checkedAt: 2026-08-01 }

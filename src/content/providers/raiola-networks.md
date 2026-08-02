@@ -32,7 +32,7 @@ sshAccess: none
 managedDatabases:
   - mysql
 pricingModel: fixed-tier
-entryPriceBand: 5-15
+priceFrom: sm
 entryPrice: { amount: 8.95, currency: EUR, period: month }
 freeTier: none
 regions:
@@ -45,7 +45,7 @@ status: active
 checkedAt: 2026-08-01
 sources:
   - { field: entryPrice, url: 'https://raiolanetworks.com/hosting-web/', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://raiolanetworks.com/hosting-web/', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://raiolanetworks.com/hosting-web/', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://raiolanetworks.com/hosting-web/', checkedAt: 2026-08-01 }
   - { field: regions, url: 'https://raiolanetworks.com/hosting-web/', checkedAt: 2026-08-01 }
   - { field: hqCountry, url: 'https://raiolanetworks.com/hosting-web/', checkedAt: 2026-08-01 }

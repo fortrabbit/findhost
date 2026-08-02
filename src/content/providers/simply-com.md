@@ -30,7 +30,7 @@ deployMethods:
   - ftp
   - control-panel
 pricingModel: fixed-tier
-entryPriceBand: 5-15
+priceFrom: sm
 entryPrice: { amount: 7.45, currency: EUR, period: month }
 renewalMultiple: 15
 freeTier: none
@@ -41,7 +41,7 @@ status: active
 checkedAt: 2026-08-01
 sources:
   - { field: entryPrice, url: 'https://www.simply.com/en/hosting/', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://www.simply.com/en/hosting/', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.simply.com/en/hosting/', checkedAt: 2026-08-01 }
   - { field: renewalMultiple, url: 'https://www.simply.com/en/hosting/', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://www.simply.com/en/hosting/', checkedAt: 2026-08-01 }
   - { field: regions, url: 'https://www.simply.com/en/about/', checkedAt: 2026-08-01 }

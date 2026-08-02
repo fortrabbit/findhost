@@ -32,7 +32,7 @@ runsOn:
   - aws
   - gcp
 pricingModel: hourly
-entryPriceBand: 5-15
+priceFrom: sm
 entryPrice: { amount: 11, currency: USD, period: month }
 freeTier: trial
 status: active
@@ -41,7 +41,7 @@ sources:
   - { field: entryPrice, url: 'https://www.cloudways.com/en/pricing.php', checkedAt: 2026-08-01 }
   - { field: runsOn, url: 'https://www.cloudways.com/en/pricing.php', checkedAt: 2026-07-31 }
   - { field: infraContract, url: 'https://www.cloudways.com/en/pricing.php', checkedAt: 2026-07-31 }
-  - { field: entryPriceBand, url: 'https://www.cloudways.com/en/pricing.php', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://www.cloudways.com/en/pricing.php', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://www.cloudways.com/en/pricing.php', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://www.cloudways.com/en/pricing.php', checkedAt: 2026-07-31 }
   - { field: useCases, url: 'https://www.cloudways.com/en/', checkedAt: 2026-07-31 }

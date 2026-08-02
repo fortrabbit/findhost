@@ -33,7 +33,7 @@ deployMethods:
   - control-panel
 sshAccess: full
 pricingModel: fixed-tier
-entryPriceBand: 5-15
+priceFrom: sm
 renewalMultiple: 9
 contractMinimum: annual
 freeTier: none
@@ -52,7 +52,7 @@ social:
   youtube: https://www.youtube.com/user/stratoDE/
 checkedAt: 2026-08-01
 sources:
-  - { field: entryPriceBand, url: 'https://www.strato.de/webhosting/', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://www.strato.de/webhosting/', checkedAt: 2026-07-31 }
   - { field: renewalMultiple, url: 'https://www.strato.de/webhosting/', checkedAt: 2026-07-31 }
   - { field: contractMinimum, url: 'https://www.strato.de/webhosting/', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://www.strato.de/ueber-uns/nachhaltigkeit/', checkedAt: 2026-08-01 }

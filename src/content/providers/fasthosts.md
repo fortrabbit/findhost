@@ -35,7 +35,7 @@ deployMethods:
   - sftp
   - dashboard
 pricingModel: fixed-tier
-entryPriceBand: 5-15
+priceFrom: sm
 entryPrice: { amount: 5.75, currency: GBP, period: month }
 renewalMultiple: 5.75
 freeTier: none
@@ -56,7 +56,7 @@ sources:
   - { field: supportHours, url: 'https://www.fasthosts.co.uk/web-hosting', checkedAt: 2026-08-01 }
   - { field: renewalMultiple, url: 'https://www.fasthosts.co.uk/web-hosting', checkedAt: 2026-08-01 }
   - { field: runtimes, url: 'https://www.fasthosts.co.uk/web-hosting', checkedAt: 2026-07-31 }
-  - { field: entryPriceBand, url: 'https://www.fasthosts.co.uk/web-hosting', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://www.fasthosts.co.uk/web-hosting', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://www.fasthosts.co.uk/virtual-private-servers', checkedAt: 2026-07-31 }
   - { field: parent, url: 'https://www.ionos-group.com/brands/fasthosts.html', checkedAt: 2026-07-31 }
 status: active

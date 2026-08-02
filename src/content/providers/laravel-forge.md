@@ -32,7 +32,7 @@ managedDatabases:
   - redis
 pricingModel: fixed-tier
 entryPrice: { amount: 12, currency: USD, period: month }
-entryPriceBand: 5-15
+priceFrom: sm
 freeTier: none
 contractMinimum: monthly
 supportHours: business-hours
@@ -48,7 +48,7 @@ sources:
   - { field: deployMethods, url: 'https://laravel.com/forge', checkedAt: 2026-07-31 }
   - { field: managedDatabases, url: 'https://laravel.com/forge/pricing', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://laravel.com/forge/pricing', checkedAt: 2026-07-31 }
-  - { field: entryPriceBand, url: 'https://laravel.com/forge/pricing', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://laravel.com/forge/pricing', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://laravel.com/forge/pricing', checkedAt: 2026-07-31 }
   - { field: contractMinimum, url: 'https://laravel.com/forge/pricing', checkedAt: 2026-07-31 }
   - { field: supportTiering, url: 'https://laravel.com/forge/pricing', checkedAt: 2026-07-31 }

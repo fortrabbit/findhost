@@ -39,7 +39,6 @@ persistentStorage: true
 managedDatabases:
   - postgres
   - redis
-entryPriceBand: free-tier
 freeTier: permanent
 regions:
   - US
@@ -56,7 +55,7 @@ sources:
   - { field: deployMethods, url: 'https://render.com/docs/web-services', checkedAt: 2026-07-31 }
   - { field: sshAccess, url: 'https://render.com/docs/ssh', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://render.com/docs/free', checkedAt: 2026-07-31 }
-  - { field: entryPriceBand, url: 'https://render.com/docs/free', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://render.com/docs/free', checkedAt: 2026-07-31 }
   - { field: persistentStorage, url: 'https://render.com/docs/free', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://render.com/docs/regions', checkedAt: 2026-07-31 }
   - { field: managedDatabases, url: 'https://render.com/docs/databases', checkedAt: 2026-07-31 }

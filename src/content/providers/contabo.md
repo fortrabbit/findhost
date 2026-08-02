@@ -16,7 +16,7 @@ runtimes:
 sshAccess: full
 backupsIncluded: paid-addon
 pricingModel: fixed-tier
-entryPriceBand: 5-15
+priceFrom: sm
 entryPrice: { amount: 5.50, currency: EUR, period: month }
 contractMinimum: monthly
 regions:
@@ -30,7 +30,7 @@ regions:
 status: active
 checkedAt: 2026-08-01
 sources:
-  - { field: entryPriceBand, url: 'https://contabo.com/en/vps/', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://contabo.com/en/vps/', checkedAt: 2026-07-31 }
   - { field: entryPrice, url: 'https://contabo.com/en/vps/', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://contabo.com/en/vps/', checkedAt: 2026-07-31 }
   - { field: contractMinimum, url: 'https://contabo.com/en/vps/', checkedAt: 2026-07-31 }

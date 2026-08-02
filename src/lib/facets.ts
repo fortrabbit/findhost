@@ -32,7 +32,8 @@ export interface ProviderRow {
   /** Present when a third party has verified the energy claim. Not a score. */
   greenWebId?: number | null;
   /** Rendered as coins in every list, so no reader is shown a currency they do not use. */
-  entryPriceBand?: string;
+  priceFrom?: string;
+  priceTo?: string;
   /** The record's own emoji and colours — the only colour any list carries. */
   figure?: { emoji: string; color: string; textColor: string; text: string };
   /** Facet fields only, keyed by field name. A missing key means unknown. */
@@ -73,7 +74,8 @@ function toRow(record: { id: string; data: Record<string, unknown> }, taxonomy: 
     description: data.description as string | undefined,
     publishedByUs: data.publishedByUs as boolean | undefined,
     greenWebId: data.greenWebId as number | null | undefined,
-    entryPriceBand: data.entryPriceBand as string | undefined,
+    priceFrom: data.priceFrom as string | undefined,
+    priceTo: data.priceTo as string | undefined,
     figure: data.figure as ProviderRow['figure'],
     facets,
     notApplicable,
@@ -128,7 +130,8 @@ export async function loadFacets(): Promise<{ facets: Facet[]; providers: Provid
         description: record.data.description,
         publishedByUs: record.data.publishedByUs,
         greenWebId: record.data.greenWebId,
-        entryPriceBand: record.data.entryPriceBand,
+        priceFrom: record.data.priceFrom,
+        priceTo: record.data.priceTo,
         figure: record.data.figure,
         facets,
         notApplicable,

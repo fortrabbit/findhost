@@ -38,7 +38,7 @@ deployMethods:
   - control-panel
 sshAccess: full
 pricingModel: fixed-tier
-entryPriceBand: 5-15
+priceFrom: sm
 freeTier: none
 regions:
   - FR

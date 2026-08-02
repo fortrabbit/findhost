@@ -32,7 +32,7 @@ deployMethods:
   - ssh
 sshAccess: full
 pricingModel: hourly
-entryPriceBand: 5-15
+priceFrom: sm
 freeTier: none
 regions:
   - NL

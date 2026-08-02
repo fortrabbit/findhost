@@ -5,7 +5,45 @@
  * providers.json, so an eleventh facet is a taxonomy entry and nothing here.
  */
 
-import { coins } from '../lib/record';
+import { bandIndex, gaugeSlices, priceBands, priceSentence, sliceHeight } from '../lib/price';
+
+/*
+ * The same gauge PriceGauge.astro draws, built in the DOM. Two renderers of one
+ * shape is a drift risk, so both read their geometry from lib/price.ts and this
+ * one is checked against the server-rendered markup by a test.
+ */
+function gauge(from: string | undefined, to: string | undefined): SVGSVGElement | null {
+  const start = bandIndex(from);
+  if (start < 0) return null;
+
+  const end = bandIndex(to) === -1 ? start : bandIndex(to);
+  const width = 100;
+  const height = 30;
+  const sliceWidth = width / gaugeSlices;
+
+  const ns = 'http://www.w3.org/2000/svg';
+  const svg = document.createElementNS(ns, 'svg');
+  svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+  svg.setAttribute('role', 'img');
+  svg.setAttribute('preserveAspectRatio', 'none');
+  svg.setAttribute('aria-label', priceSentence(from, to) ?? '');
+
+  priceBands.forEach((_, index) => {
+    const h = sliceHeight(index) * height;
+    const rect = document.createElementNS(ns, 'rect');
+    rect.setAttribute('x', String(index * sliceWidth));
+    rect.setAttribute('y', String(height - h));
+    rect.setAttribute('width', String(sliceWidth - 1.5));
+    rect.setAttribute('height', String(h));
+    rect.setAttribute('fill', index >= start && index <= end ? 'currentColor' : 'none');
+    rect.setAttribute('stroke', 'currentColor');
+    rect.setAttribute('stroke-width', '1');
+    rect.setAttribute('vector-effect', 'non-scaling-stroke');
+    svg.append(rect);
+  });
+
+  return svg;
+}
 
 interface FacetValue {
   id: string;
@@ -29,7 +67,8 @@ interface ProviderRow {
   description?: string;
   publishedByUs?: boolean;
   greenWebId?: number | null;
-  entryPriceBand?: string;
+  priceFrom?: string;
+  priceTo?: string;
   figure?: { emoji: string; color: string; textColor: string };
   facets: Record<string, string | string[]>;
   notApplicable: string[];
@@ -92,12 +131,15 @@ function row(provider: ProviderRow): HTMLLIElement {
 
   item.append(body);
 
-  const band = coins(provider.entryPriceBand);
-  if (band) {
-    const price = document.createElement('span');
-    price.className = 'provider-band coins';
-    price.textContent = band;
-    item.append(price);
+  const drawn = gauge(provider.priceFrom, provider.priceTo);
+  if (drawn) {
+    const meta = document.createElement('span');
+    meta.className = 'provider-meta';
+    const wrap = document.createElement('span');
+    wrap.className = 'price-gauge price-gauge-sm';
+    wrap.append(drawn);
+    meta.append(wrap);
+    item.append(meta);
   }
 
   return item;

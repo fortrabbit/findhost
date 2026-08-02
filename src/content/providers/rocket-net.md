@@ -26,7 +26,7 @@ deployMethods:
   - control-panel
   - sftp
 pricingModel: fixed-tier
-entryPriceBand: 15-50
+priceFrom: md
 entryPrice: { amount: 25, currency: USD, period: month }
 freeTier: none
 supportChannels:
@@ -38,7 +38,7 @@ status: active
 checkedAt: 2026-08-01
 sources:
   - { field: entryPrice, url: 'https://rocket.net/pricing/', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://rocket.net/pricing/', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://rocket.net/pricing/', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://rocket.net/pricing/', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://rocket.net/pricing/', checkedAt: 2026-08-01 }
   - { field: supportHours, url: 'https://rocket.net/pricing/', checkedAt: 2026-08-01 }

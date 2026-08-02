@@ -33,12 +33,11 @@ deployMethods:
   - control-panel
 sshAccess: full
 pricingModel: per-resource
-entryPriceBand: free-tier
 freeTier: permanent
 status: active
 checkedAt: 2026-08-01
 sources:
-  - { field: entryPriceBand, url: 'https://easypanel.io/pricing', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://easypanel.io/pricing', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://easypanel.io/pricing', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://easypanel.io/pricing', checkedAt: 2026-08-01 }
 figure:

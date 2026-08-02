@@ -36,7 +36,6 @@ deployMethods:
   - git-push
 sshAccess: full
 pricingModel: per-resource
-entryPriceBand: free-tier
 entryPrice: { amount: 10, currency: USD, period: month }
 freeTier: permanent
 contractMinimum: none
@@ -44,7 +43,7 @@ status: active
 checkedAt: 2026-08-01
 sources:
   - { field: entryPrice, url: 'https://www.pythonanywhere.com/pricing/', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://www.pythonanywhere.com/pricing/', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.pythonanywhere.com/pricing/', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://www.pythonanywhere.com/pricing/', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://www.pythonanywhere.com/pricing/', checkedAt: 2026-08-01 }
   - { field: hqCountry, url: 'https://www.pythonanywhere.com/about/company_details/', checkedAt: 2026-08-01 }

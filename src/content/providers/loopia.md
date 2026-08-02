@@ -38,7 +38,7 @@ deployMethods:
 sshAccess: full
 pricingModel: fixed-tier
 entryPrice: { amount: 89, currency: SEK, period: month }
-entryPriceBand: 5-15
+priceFrom: sm
 freeTier: none
 energyClaim: annual-matched
 supportChannels:
@@ -50,7 +50,7 @@ status: active
 checkedAt: 2026-08-01
 sources:
   - { field: entryPrice, url: 'https://www.loopia.se/webbhotell/priser/', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://www.loopia.se/webbhotell/priser/', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.loopia.se/webbhotell/priser/', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://www.loopia.se/webbhotell/priser/', checkedAt: 2026-08-01 }
   - { field: supportHours, url: 'https://www.loopia.se/webbhotell/priser/', checkedAt: 2026-08-01 }
   - { field: supportChannels, url: 'https://www.loopia.se/webbhotell/priser/', checkedAt: 2026-08-01 }

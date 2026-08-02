@@ -17,14 +17,14 @@ runtimes:
   - ruby
   - go
 pricingModel: per-server-licence
-entryPriceBand: under-5
+priceFrom: xs
 entryPrice: { amount: 30, currency: USD, period: year }
 freeTier: trial
 status: active
 checkedAt: 2026-08-01
 sources:
   - { field: entryPrice, url: 'https://apiscp.com/pricing/', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://apiscp.com/pricing/', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://apiscp.com/pricing/', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://apiscp.com/pricing/', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://apiscp.com/pricing/', checkedAt: 2026-08-01 }
   - { field: runtimes, url: 'https://apiscp.com/', checkedAt: 2026-08-01 }

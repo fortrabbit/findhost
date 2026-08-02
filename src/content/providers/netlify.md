@@ -45,7 +45,6 @@ deployMethods:
   - api
 sshAccess: none
 pricingModel: credit
-entryPriceBand: free-tier
 entryPrice: { amount: 9, currency: USD, period: month }
 freeTier: permanent
 regions:
@@ -64,7 +63,7 @@ status: active
 checkedAt: 2026-08-01
 sources:
   - { field: pricingModel, url: 'https://www.netlify.com/pricing/', checkedAt: 2026-07-31 }
-  - { field: entryPriceBand, url: 'https://www.netlify.com/pricing/', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://www.netlify.com/pricing/', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://www.netlify.com/pricing/', checkedAt: 2026-07-31 }
   - { field: entryPrice, url: 'https://www.netlify.com/pricing/', checkedAt: 2026-08-01 }
   - { field: regions, url: 'https://docs.netlify.com/build/functions/optional-configuration/', checkedAt: 2026-08-01 }

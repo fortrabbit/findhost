@@ -19,7 +19,7 @@ deployMethods:
   - git-integration
   - docker-image
 pricingModel: usage-based
-entryPriceBand: 5-15
+priceFrom: sm
 entryPrice: { amount: 5, currency: USD, period: month }
 freeTier: permanent
 regions:
@@ -43,7 +43,7 @@ regions:
 status: active
 checkedAt: 2026-08-01
 sources:
-  - { field: entryPriceBand, url: 'https://sevalla.com/pricing/', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://sevalla.com/pricing/', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://sevalla.com/pricing/', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://sevalla.com/pricing/', checkedAt: 2026-07-31 }
   - { field: entryPrice, url: 'https://sevalla.com/pricing/', checkedAt: 2026-08-01 }

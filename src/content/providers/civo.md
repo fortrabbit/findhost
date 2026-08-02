@@ -32,7 +32,7 @@ sshAccess: full
 managedDatabases:
   - postgres
 pricingModel: hourly
-entryPriceBand: 5-15
+priceFrom: sm
 entryPrice: { amount: 5.43, currency: USD, period: month }
 freeTier: trial
 regions:
@@ -51,7 +51,7 @@ checkedAt: 2026-08-01
 sources:
   - { field: regions, url: 'https://www.civo.com/docs/overview/regions', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://www.civo.com/pricing', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://www.civo.com/pricing', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.civo.com/pricing', checkedAt: 2026-08-01 }
 figure:
   emoji: ☸️
   color: rgb(20, 40, 55)

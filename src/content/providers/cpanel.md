@@ -39,13 +39,13 @@ managedDatabases:
   - mysql
   - postgres
 pricingModel: fixed-tier
-entryPriceBand: 15-50
+priceFrom: md
 entryPrice: { amount: 29.99, currency: USD, period: month }
 freeTier: trial
 checkedAt: 2026-08-01
 sources:
   - { field: entryPrice, url: 'https://cpanel.net/pricing/', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://cpanel.net/pricing/', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://cpanel.net/pricing/', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://cpanel.net/pricing/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🎛️

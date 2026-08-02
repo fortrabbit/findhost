@@ -24,7 +24,7 @@ runtimes:
   - php
 backupsIncluded: included
 pricingModel: fixed-tier
-entryPriceBand: 15-50
+priceFrom: md
 contractMinimum: annual
 social:
   x: https://x.com/wpengine
@@ -38,7 +38,7 @@ sources:
   - { field: hqCountry, url: 'https://wpengine.com/about-us/', checkedAt: 2026-08-01 }
   - { field: social, url: 'https://wpengine.com', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://wpengine.com/legal/terms-of-service/', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://wpengine.com/plans/', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://wpengine.com/plans/', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://wpengine.com/plans/', checkedAt: 2026-07-31 }
   - { field: backupsIncluded, url: 'https://wpengine.com/plans/', checkedAt: 2026-07-31 }
   - { field: contractMinimum, url: 'https://wpengine.com/plans/', checkedAt: 2026-07-31 }

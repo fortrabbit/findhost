@@ -45,7 +45,7 @@ managedDatabases:
   - mongodb
   - redis
 pricingModel: per-resource
-entryPriceBand: 5-15
+priceFrom: sm
 entryPrice: { amount: 11, currency: USD, period: month }
 freeTier: none
 supportChannels:
@@ -66,7 +66,7 @@ status: active
 checkedAt: 2026-08-01
 sources:
   - { field: entryPrice, url: 'https://elest.io/pricing', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://elest.io/pricing', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://elest.io/pricing', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://elest.io/pricing', checkedAt: 2026-08-01 }
   - { field: supportTiering, url: 'https://elest.io/pricing', checkedAt: 2026-08-01 }
   - { field: supportHours, url: 'https://elest.io/pricing', checkedAt: 2026-08-01 }

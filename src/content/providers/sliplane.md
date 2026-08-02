@@ -31,7 +31,7 @@ deployMethods:
   - git-integration
   - docker-image
 pricingModel: fixed-tier
-entryPriceBand: 5-15
+priceFrom: sm
 entryPrice: { amount: 9, currency: EUR, period: month }
 freeTier: trial
 regions:
@@ -43,7 +43,7 @@ checkedAt: 2026-08-01
 sources:
   - { field: regions, url: 'https://sliplane.io/pricing', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://sliplane.io/pricing', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://sliplane.io/pricing', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://sliplane.io/pricing', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://sliplane.io/pricing', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://sliplane.io/pricing', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://sliplane.io/terms', checkedAt: 2026-08-01 }

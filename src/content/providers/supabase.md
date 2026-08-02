@@ -32,7 +32,6 @@ deployMethods:
 managedDatabases:
   - postgres
 pricingModel: fixed-tier
-entryPriceBand: free-tier
 freeTier: permanent
 regions:
   - US

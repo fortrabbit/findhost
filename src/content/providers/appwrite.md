@@ -32,7 +32,6 @@ deployMethods:
   - git-integration
   - api
 pricingModel: fixed-tier
-entryPriceBand: free-tier
 freeTier: permanent
 regions:
   - DE
@@ -45,7 +44,7 @@ cliTool: official
 checkedAt: 2026-08-01
 sources:
   - { field: regions, url: 'https://appwrite.io/docs/products/network/regions', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://appwrite.io/pricing', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://appwrite.io/pricing', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://appwrite.io/pricing', checkedAt: 2026-08-01 }
 figure:
   emoji: 🧰

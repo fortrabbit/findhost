@@ -42,7 +42,7 @@ managedDatabases:
   - mysql
   - postgres
 pricingModel: fixed-tier
-entryPriceBand: 5-15
+priceFrom: sm
 freeTier: trial
 status: active
 checkedAt: 2026-08-01
@@ -51,7 +51,7 @@ sources:
   - { field: ownership, url: 'https://www.plesk.com/legal/', checkedAt: 2026-08-01 }
   - { field: parent, url: 'https://www.plesk.com/legal/', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://www.plesk.com/legal/', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://www.plesk.com/pricing/', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.plesk.com/pricing/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🪟
   color: rgb(30, 40, 55)

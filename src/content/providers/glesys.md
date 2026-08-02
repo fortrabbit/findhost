@@ -35,7 +35,7 @@ deployMethods:
   - ssh
 sshAccess: full
 pricingModel: per-resource
-entryPriceBand: 5-15
+priceFrom: sm
 entryPrice: { amount: 12.73, currency: EUR, period: month }
 freeTier: none
 regions:
@@ -51,7 +51,7 @@ checkedAt: 2026-08-01
 sources:
   - { field: regions, url: 'https://glesys.com/pricing/', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://glesys.com/pricing/', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://glesys.com/pricing/', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://glesys.com/pricing/', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://glesys.com/pricing/', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://glesys.com/pricing/', checkedAt: 2026-08-01 }
 figure:

@@ -19,13 +19,13 @@ runtimes:
 deployMethods:
   - git-integration
 pricingModel: fixed-tier
-entryPriceBand: 50-150
+priceFrom: lg
 entryPrice: { amount: 120, currency: USD, period: month }
 status: active
 checkedAt: 2026-08-01
 sources:
   - { field: entryPrice, url: 'https://craftcms.com/cloud', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://craftcms.com/cloud', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://craftcms.com/cloud', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://craftcms.com/cloud', checkedAt: 2026-07-31 }
   - { field: deployMethods, url: 'https://craftcms.com/cloud', checkedAt: 2026-07-31 }
   - { field: specialisation, url: 'https://craftcms.com/docs/cloud/', checkedAt: 2026-07-31 }

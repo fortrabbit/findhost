@@ -20,7 +20,7 @@ runtimes:
 backupsIncluded: included
 pricingModel: fixed-tier
 entryPrice: { amount: 35, currency: USD, period: month }
-entryPriceBand: 15-50
+priceFrom: md
 regions:
   - US
   - CA
@@ -52,7 +52,7 @@ sources:
   - { field: regions, url: 'https://kinsta.com/docs/service-information/data-center-locations/', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-08-01 }
   - { field: founded, url: 'https://kinsta.com/about-us/', checkedAt: 2026-07-31 }
-  - { field: entryPriceBand, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-07-31 }
   - { field: backupsIncluded, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-07-31 }
   - { field: software, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-07-31 }

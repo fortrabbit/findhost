@@ -39,7 +39,7 @@ managedDatabases:
   - mysql
 pricingModel: fixed-tier
 entryPrice: { amount: 7, currency: GBP, period: month }
-entryPriceBand: 5-15
+priceFrom: sm
 freeTier: none
 regions:
   - GB
@@ -62,7 +62,7 @@ sources:
   - { field: ownership, url: 'https://www.krystal.io/about', checkedAt: 2026-08-01 }
   - { field: hqCountry, url: 'https://www.krystal.io/about', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://krystal.io/web-hosting', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://krystal.io/web-hosting', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://krystal.io/web-hosting', checkedAt: 2026-08-01 }
   - { field: supportHours, url: 'https://krystal.io/web-hosting', checkedAt: 2026-08-01 }
   - { field: supportTiering, url: 'https://krystal.io/web-hosting', checkedAt: 2026-08-01 }
 figure:

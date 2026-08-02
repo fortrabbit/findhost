@@ -30,7 +30,7 @@ deployMethods:
   - ftp
   - control-panel
 pricingModel: fixed-tier
-entryPriceBand: 5-15
+priceFrom: sm
 freeTier: none
 regions:
   - AU

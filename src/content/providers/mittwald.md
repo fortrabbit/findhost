@@ -44,7 +44,7 @@ deployMethods:
 sshAccess: full
 pricingModel: fixed-tier
 entryPrice: { amount: 13, currency: EUR, period: month }
-entryPriceBand: 5-15
+priceFrom: sm
 freeTier: trial
 contractMinimum: monthly
 regions:
@@ -61,7 +61,7 @@ cliTool: official
 status: active
 checkedAt: 2026-08-01
 sources:
-  - { field: entryPriceBand, url: 'https://www.mittwald.de/hosting', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://www.mittwald.de/hosting', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://www.mittwald.de/hosting', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://www.mittwald.de/webhosting', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://www.mittwald.de/hosting', checkedAt: 2026-07-31 }

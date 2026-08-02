@@ -39,7 +39,7 @@ deployMethods:
 sshAccess: limited
 pricingModel: fixed-tier
 entryPrice: { amount: 9.99, currency: BRL, period: month }
-entryPriceBand: under-5
+priceFrom: xs
 freeTier: none
 contractMinimum: monthly
 regions:
@@ -53,7 +53,7 @@ checkedAt: 2026-08-01
 sources:
   - { field: regions, url: 'https://king.host/hospedagem-de-sites', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://king.host/hospedagem-de-sites', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://king.host/hospedagem-de-sites', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://king.host/hospedagem-de-sites', checkedAt: 2026-08-01 }
   - { field: contractMinimum, url: 'https://king.host/hospedagem-de-sites', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://king.host/hospedagem-de-sites', checkedAt: 2026-08-01 }
   - { field: supportHours, url: 'https://king.host/hospedagem-de-sites', checkedAt: 2026-08-01 }

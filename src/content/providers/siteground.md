@@ -37,7 +37,7 @@ deployMethods:
   - dashboard
   - git-push
 pricingModel: fixed-tier
-entryPriceBand: 15-50
+priceFrom: md
 entryPrice: { amount: 15.99, currency: EUR, period: month }
 renewalMultiple: 5.3
 freeTier: none
@@ -57,7 +57,7 @@ sources:
   - { field: runsOn, url: 'https://www.siteground.com/company', checkedAt: 2026-07-31 }
   - { field: ownership, url: 'https://www.siteground.com/company', checkedAt: 2026-08-01 }
   - { field: supportHours, url: 'https://www.siteground.com/company', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://eu.siteground.com/web-hosting.htm', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://eu.siteground.com/web-hosting.htm', checkedAt: 2026-07-31 }
   - { field: entryPrice, url: 'https://www.siteground.com/web-hosting.htm', checkedAt: 2026-08-01 }
   - { field: renewalMultiple, url: 'https://www.siteground.com/web-hosting.htm', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://www.siteground.com/viewtos/terms_of_service', checkedAt: 2026-08-01 }

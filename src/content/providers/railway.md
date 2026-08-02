@@ -30,7 +30,6 @@ managedDatabases:
   - mongodb
   - redis
 pricingModel: usage-based
-entryPriceBand: free-tier
 freeTier: permanent
 regions:
   - US
@@ -46,7 +45,7 @@ status: active
 checkedAt: 2026-07-31
 sources:
   - { field: pricingModel, url: 'https://docs.railway.com/reference/pricing/plans', checkedAt: 2026-07-31 }
-  - { field: entryPriceBand, url: 'https://docs.railway.com/reference/pricing/plans', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://docs.railway.com/reference/pricing/plans', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://docs.railway.com/reference/pricing/plans', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://docs.railway.com/reference/regions', checkedAt: 2026-07-31 }
   - { field: managedDatabases, url: 'https://docs.railway.com/reference/databases', checkedAt: 2026-07-31 }

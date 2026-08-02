@@ -41,7 +41,7 @@ deployMethods:
   - api
 sshAccess: full
 pricingModel: fixed-tier
-entryPriceBand: 5-15
+priceFrom: sm
 entryPrice: { amount: 9.95, currency: EUR, period: month }
 freeTier: none
 regions:
@@ -60,7 +60,7 @@ sources:
   - { field: hqCountry, url: 'https://www.zone.ee/en/about/', checkedAt: 2026-08-01 }
   - { field: supportChannels, url: 'https://www.zone.ee/en/about/', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://www.zone.ee/en/web-hosting/prices/', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://www.zone.ee/en/web-hosting/prices/', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.zone.ee/en/web-hosting/prices/', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://help.zone.eu/en/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🛰️

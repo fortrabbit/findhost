@@ -30,7 +30,7 @@ deployMethods:
   - cli
 sshAccess: full
 pricingModel: fixed-tier
-entryPriceBand: 15-50
+priceFrom: md
 entryPrice: { amount: 25, currency: EUR, period: month }
 freeTier: none
 backupsIncluded: included
@@ -45,7 +45,7 @@ status: active
 checkedAt: 2026-08-01
 sources:
   - { field: entryPrice, url: 'https://seravo.com/plans/', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://seravo.com/plans/', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://seravo.com/plans/', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://seravo.com/plans/', checkedAt: 2026-08-01 }
   - { field: energyClaim, url: 'https://seravo.com/features/sustainable/', checkedAt: 2026-08-01 }
   - { field: sustainabilityUrl, url: 'https://seravo.com/features/sustainable/', checkedAt: 2026-08-01 }

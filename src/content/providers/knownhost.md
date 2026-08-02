@@ -13,7 +13,7 @@ regions:
   - US
   - NL
 entryPrice: { amount: 6.71, currency: USD, period: month }
-entryPriceBand: 5-15
+priceFrom: sm
 pricingModel: fixed-tier
 renewalMultiple: 1.3
 contractMinimum: none
@@ -23,7 +23,7 @@ sources:
   - { field: regions, url: 'https://www.knownhost.com/network', checkedAt: 2026-08-01 }
   - { field: founded, url: 'https://www.knownhost.com/', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://www.knownhost.com/web-hosting', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://www.knownhost.com/web-hosting', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.knownhost.com/web-hosting', checkedAt: 2026-08-01 }
   - { field: renewalMultiple, url: 'https://www.knownhost.com/web-hosting', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://www.knownhost.com/web-hosting', checkedAt: 2026-08-01 }
   - { field: contractMinimum, url: 'https://www.knownhost.com/web-hosting', checkedAt: 2026-08-01 }

@@ -46,7 +46,6 @@ deployMethods:
   - docker-image
   - cli
 pricingModel: fixed-tier
-entryPriceBand: free-tier
 freeTier: permanent
 apiAvailable: public
 cliTool: official

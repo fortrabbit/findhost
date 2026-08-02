@@ -34,7 +34,7 @@ deployMethods:
   - api
 sshAccess: full
 pricingModel: fixed-tier
-entryPriceBand: under-5
+priceFrom: xs
 entryPrice: { amount: 2.15, currency: EUR, period: month }
 freeTier: none
 regions:
@@ -49,7 +49,7 @@ checkedAt: 2026-08-01
 sources:
   - { field: regions, url: 'https://webdock.io/en/pricing', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://webdock.io/en/pricing', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://webdock.io/en/pricing', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://webdock.io/en/pricing', checkedAt: 2026-08-01 }
   - { field: social, url: 'https://webdock.io/en', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://status.webdock.io/', checkedAt: 2026-08-01 }
 figure:

@@ -100,15 +100,6 @@ const providerFields = z
     /*
      * Pricing — bands only. This is not a price tracker.
      *
-     * entryPriceBand is the cheapest way to run one small production app with
-     * every mandatory component included, which is the only reading that
-     * survives per-seat licences and per-project fees charged on top.
-     *
-     * It follows the STANDING price, never the introductory one. Filtering for
-     * "under $5" and being handed a host that costs eleven after three months
-     * is the exact deception this dataset exists to correct, and the teaser is
-     * already recorded in entryPrice.introductory beside the figure it names.
-     *
      * renewalMultiple is renewal ÷ introductory, so 3.3 means a €2.99 offer
      * that renews at €9.99. A value below 1 would mean the price falls, which
      * happens to nobody.
@@ -135,12 +126,35 @@ const providerFields = z
       ])
       .optional(),
     /*
-     * Bands, in US dollars, because the dataset is international and the euro
-     * was quietly making Europe the default reader. Rendered as coins, never as
-     * a currency the reader may not use, and never coloured or sorted — a
-     * six-step scale is close enough to a rating to need the guard.
+     * What it costs to run something here, as a range across seven bands in US
+     * dollars a month — see lib/price.ts for the scale and why it triples.
+     *
+     * Dollars because the dataset is international and the euro was quietly
+     * making Europe the default reader. A range rather than a single figure
+     * because a starting price answers "can I afford to begin" and nothing else:
+     * shared hosting starts and ends within a few pounds of itself, and a
+     * hyperscaler starting at the same number has no ceiling worth naming.
+     *
+     * `priceFrom` is the cheapest way to run one small production app with every
+     * mandatory component included, and it follows the STANDING price, never the
+     * introductory one. `priceTo` is where a typical serious deployment lands,
+     * not the largest invoice the provider could theoretically issue.
+     *
+     * A free tier is not on this scale. `freeTier` records it, because free
+     * describes what a provider gives away and this describes what it charges.
      */
-    entryPriceBand: z.enum(['free-tier', 'under-5', '5-15', '15-50', '50-150', '150-500', 'over-500']).optional(),
+    priceFrom: z.enum(['xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl']).optional(),
+    priceTo: z.enum(['xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl']).optional(),
+
+    /*
+     * How the bill arrives, which is where the unpleasant surprises live. None
+     * of it is a price, so none of it rots the way a figure does.
+     */
+    currencies: z.array(z.string().length(3)).optional(),
+    billingPeriods: z.array(z.enum(['hourly', 'daily', 'monthly', 'yearly', 'multi-year'])).optional(),
+    /** Paid before the month or after it. Arrears means usage you have already run up. */
+    billingTiming: z.enum(['advance', 'arrears']).optional(),
+    cancellation: z.enum(['anytime', 'end-of-month', 'end-of-term', 'notice-period']).optional(),
     /*
      * The exact starting figure in the provider's own currency, shown beside the
      * coins so nobody reads a conversion we invented. One number with a date,

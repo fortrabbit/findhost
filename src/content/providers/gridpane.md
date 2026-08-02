@@ -33,12 +33,11 @@ sshAccess: full
 managedDatabases:
   - mysql
 pricingModel: fixed-tier
-entryPriceBand: free-tier
 freeTier: permanent
 status: active
 checkedAt: 2026-08-01
 sources:
-  - { field: entryPriceBand, url: 'https://gridpane.com/pricing/', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://gridpane.com/pricing/', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://gridpane.com/pricing/', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://gridpane.com/pricing/', checkedAt: 2026-08-01 }
   - { field: infraContract, url: 'https://gridpane.com/pricing/', checkedAt: 2026-08-01 }

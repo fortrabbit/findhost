@@ -32,7 +32,7 @@ deployMethods:
   - control-panel
 sshAccess: full
 pricingModel: fixed-tier
-entryPriceBand: under-5
+priceFrom: xs
 freeTier: trial
 contractMinimum: annual
 regions:
@@ -48,7 +48,7 @@ sources:
   - { field: hqCountry, url: 'https://www.world4you.com/unternehmen', checkedAt: 2026-08-01 }
   - { field: parent, url: 'https://www.world4you.com/unternehmen', checkedAt: 2026-08-01 }
   - { field: contractMinimum, url: 'https://www.world4you.com/hosting/web-hosting', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://www.world4you.com/hosting/web-hosting', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.world4you.com/hosting/web-hosting', checkedAt: 2026-08-01 }
   - { field: social, url: 'https://www.world4you.com', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://www.world4you.com/unternehmen/agb', checkedAt: 2026-08-01 }
 figure:

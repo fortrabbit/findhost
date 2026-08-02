@@ -29,7 +29,6 @@ software:
   - statamic
   - craft-cms
 pricingModel: fixed-tier
-entryPriceBand: free-tier
 freeTier: permanent
 social:
   x: https://x.com/ploi_deploy
@@ -41,7 +40,7 @@ status: active
 checkedAt: 2026-08-01
 sources:
   - { field: hqCountry, url: 'https://ploi.io/pricing', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://ploi.io/pricing', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://ploi.io/pricing', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://ploi.io/pricing', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://ploi.io/pricing', checkedAt: 2026-07-31 }
   - { field: infraContract, url: 'https://ploi.io/pricing', checkedAt: 2026-07-31 }

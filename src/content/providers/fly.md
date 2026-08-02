@@ -18,7 +18,7 @@ persistentStorage: true
 managedDatabases:
   - postgres
 pricingModel: usage-based
-entryPriceBand: under-5
+priceFrom: xs
 entryPrice: { amount: 2.02, currency: USD, period: month }
 freeTier: none
 regions:
@@ -47,7 +47,7 @@ sources:
   - { field: infraContract, url: 'https://fly.io/docs/reference/regions/', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://fly.io/docs/reference/regions/', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://fly.io/docs/about/pricing/', checkedAt: 2026-07-31 }
-  - { field: entryPriceBand, url: 'https://fly.io/docs/about/pricing/', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://fly.io/docs/about/pricing/', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://fly.io/docs/about/pricing/', checkedAt: 2026-07-31 }
   - { field: persistentStorage, url: 'https://fly.io/docs/about/pricing/', checkedAt: 2026-07-31 }
   - { field: supportChannels, url: 'https://fly.io/docs/', checkedAt: 2026-07-31 }

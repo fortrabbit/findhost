@@ -43,7 +43,7 @@ deployMethods:
   - api
 sshAccess: full
 pricingModel: fixed-tier
-entryPriceBand: 5-15
+priceFrom: sm
 renewalMultiple: 2
 contractMinimum: annual
 freeTier: none
@@ -61,7 +61,7 @@ checkedAt: 2026-08-01
 sources:
   - { field: supportHours, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-08-01 }
   - { field: supportChannels, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-07-31 }
   - { field: renewalMultiple, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-07-31 }
   - { field: contractMinimum, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-07-31 }

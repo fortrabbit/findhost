@@ -28,14 +28,13 @@ deployMethods:
   - cli
   - docker-image
 pricingModel: per-resource
-entryPriceBand: free-tier
 freeTier: permanent
 apiAvailable: public
 cliTool: official
 status: active
 checkedAt: 2026-08-01
 sources:
-  - { field: entryPriceBand, url: 'https://encore.dev/pricing', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://encore.dev/pricing', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://encore.dev/pricing', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://encore.dev/pricing', checkedAt: 2026-08-01 }
 figure:

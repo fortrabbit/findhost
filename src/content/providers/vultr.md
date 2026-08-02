@@ -12,7 +12,7 @@ runtimes:
   - any
 sshAccess: full
 pricingModel: hourly
-entryPriceBand: under-5
+priceFrom: xs
 entryPrice: { amount: 2.5, currency: USD, period: month }
 regions:
   - US
@@ -43,7 +43,7 @@ sources:
   - { field: pricingModel, url: 'https://api.vultr.com/v2/plans', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://docs.vultr.com/', checkedAt: 2026-08-01 }
   - { field: regions, url: 'https://api.vultr.com/v2/regions', checkedAt: 2026-07-31 }
-  - { field: entryPriceBand, url: 'https://api.vultr.com/v2/plans', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://api.vultr.com/v2/plans', checkedAt: 2026-07-31 }
   - { field: apiAvailable, url: 'https://api.vultr.com/v2/regions', checkedAt: 2026-07-31 }
 figure:
   emoji: 🦅

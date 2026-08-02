@@ -35,7 +35,7 @@ managedDatabases:
   - mysql
 backupsIncluded: included
 pricingModel: fixed-tier
-entryPriceBand: 5-15
+priceFrom: sm
 entryPrice: { amount: 6.9, currency: EUR, period: month }
 freeTier: none
 certifications:
@@ -44,7 +44,7 @@ status: active
 checkedAt: 2026-08-01
 sources:
   - { field: entryPrice, url: 'https://www.papaki.com/en/web-hosting/', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://www.papaki.com/en/web-hosting/', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.papaki.com/en/web-hosting/', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://www.papaki.com/en/web-hosting/', checkedAt: 2026-08-01 }
   - { field: founded, url: 'https://www.papaki.com/en/about-us/', checkedAt: 2026-08-01 }
   - { field: ownership, url: 'https://www.papaki.com/en/about-us/', checkedAt: 2026-08-01 }

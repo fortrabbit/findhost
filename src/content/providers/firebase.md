@@ -35,12 +35,11 @@ deployMethods:
   - api
 sshAccess: none
 pricingModel: usage-based
-entryPriceBand: free-tier
 freeTier: permanent
 status: active
 checkedAt: 2026-08-01
 sources:
-  - { field: entryPriceBand, url: 'https://firebase.google.com/pricing', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://firebase.google.com/pricing', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://firebase.google.com/pricing', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://firebase.google.com/pricing', checkedAt: 2026-08-01 }
 apiAvailable: public

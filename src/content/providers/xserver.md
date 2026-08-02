@@ -26,7 +26,7 @@ deployMethods:
   - control-panel
 backupsIncluded: included
 pricingModel: fixed-tier
-entryPriceBand: 5-15
+priceFrom: sm
 entryPrice: { amount: 990, currency: JPY, period: month }
 freeTier: trial
 regions:
@@ -42,7 +42,7 @@ sources:
   - { field: hqCountry, url: 'https://www.xserver.ne.jp/company.php', checkedAt: 2026-08-01 }
   - { field: certifications, url: 'https://www.xserver.ne.jp/company.php', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://www.xserver.ne.jp/price/', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://www.xserver.ne.jp/price/', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.xserver.ne.jp/price/', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://www.xserver.ne.jp/price/', checkedAt: 2026-08-01 }
   - { field: contractMinimum, url: 'https://www.xserver.ne.jp/price/', checkedAt: 2026-08-01 }
   - { field: social, url: 'https://www.xserver.ne.jp', checkedAt: 2026-08-01 }

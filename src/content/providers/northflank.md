@@ -39,7 +39,6 @@ deployMethods:
   - cli
   - api
 pricingModel: usage-based
-entryPriceBand: free-tier
 entryPrice: { amount: 2.7, currency: USD, period: month }
 freeTier: permanent
 regions:
@@ -56,7 +55,7 @@ status: active
 checkedAt: 2026-08-01
 sources:
   - { field: entryPrice, url: 'https://northflank.com/pricing', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://northflank.com/pricing', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://northflank.com/pricing', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://northflank.com/pricing', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://northflank.com/pricing', checkedAt: 2026-08-01 }
   - { field: regions, url: 'https://northflank.com/docs/v1/application/getting-started/create-a-project', checkedAt: 2026-08-01 }

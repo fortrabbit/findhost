@@ -45,7 +45,7 @@ managedDatabases:
   - redis
   - kafka
 pricingModel: fixed-tier
-entryPriceBand: 5-15
+priceFrom: sm
 entryPrice: { amount: 5, currency: USD, period: month }
 freeTier: none
 regions:
@@ -69,7 +69,7 @@ sources:
   - { field: parent, url: 'https://www.heroku.com/about/', checkedAt: 2026-07-31 }
   - { field: hqCountry, url: 'https://www.heroku.com/about/', checkedAt: 2026-07-31 }
   - { field: runtimes, url: 'https://devcenter.heroku.com/categories/language-support', checkedAt: 2026-07-31 }
-  - { field: entryPriceBand, url: 'https://devcenter.heroku.com/articles/dyno-types', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://devcenter.heroku.com/articles/dyno-types', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://devcenter.heroku.com/articles/dyno-types', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://devcenter.heroku.com/articles/regions', checkedAt: 2026-07-31 }
   - { field: deployMethods, url: 'https://devcenter.heroku.com/articles/getting-started-with-php', checkedAt: 2026-07-31 }

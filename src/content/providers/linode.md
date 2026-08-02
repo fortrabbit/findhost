@@ -18,7 +18,7 @@ runtimes:
 sshAccess: full
 pricingModel: hourly
 entryPrice: { amount: 5, currency: USD, period: month }
-entryPriceBand: 5-15
+priceFrom: sm
 regions:
   - US
   - CA
@@ -43,7 +43,7 @@ sources:
   - { field: parent, url: 'https://www.linode.com/company/about/', checkedAt: 2026-08-01 }
   - { field: ownership, url: 'https://www.linode.com/company/about/', checkedAt: 2026-08-01 }
   - { field: regions, url: 'https://api.linode.com/v4/regions', checkedAt: 2026-07-31 }
-  - { field: entryPriceBand, url: 'https://api.linode.com/v4/linode/types', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://api.linode.com/v4/linode/types', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://api.linode.com/v4/linode/types', checkedAt: 2026-07-31 }
   - { field: apiAvailable, url: 'https://api.linode.com/v4/regions', checkedAt: 2026-07-31 }
 figure:

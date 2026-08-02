@@ -64,4 +64,4 @@ home.pl is one of Poland's largest hosting companies. It sells shared hosting in
 
 ## Worth knowing
 
-The plan pages print a first-year rate and a renewal rate side by side, and the two are separated by a large multiple — on the entry plan the renewal figure is more than an order of magnitude above the sign-up figure. No `entryPriceBand` is recorded here because the two numbers describe different products in every practical sense, and picking either one would mislead.
+The plan pages print a first-year rate and a renewal rate side by side, and the two are separated by a large multiple — on the entry plan the renewal figure is more than an order of magnitude above the sign-up figure. No starting band is recorded here because the two numbers describe different products in every practical sense, and picking either one would mislead.

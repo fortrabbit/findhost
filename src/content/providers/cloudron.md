@@ -34,11 +34,10 @@ deployMethods:
   - docker-image
 sshAccess: full
 pricingModel: fixed-tier
-entryPriceBand: free-tier
 freeTier: permanent
 checkedAt: 2026-08-01
 sources:
-  - { field: entryPriceBand, url: 'https://www.cloudron.io/pricing.html', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.cloudron.io/pricing.html', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://www.cloudron.io/pricing.html', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://www.cloudron.io/pricing.html', checkedAt: 2026-08-01 }
 figure:

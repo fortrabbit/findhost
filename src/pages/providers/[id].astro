@@ -2,7 +2,9 @@
 import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import { loadFacets } from '../../lib/facets';
-import { coins, energy, flag, footnotes, price } from '../../lib/record';
+import { energy, flag, footnotes, price } from '../../lib/record';
+import { priceSentence } from '../../lib/price';
+import PriceGauge from '../../components/PriceGauge.astro';
 import { isListed } from '../../lib/providers';
 
 export async function getStaticPaths() {
@@ -70,7 +72,12 @@ const attributeGroups: { label: string; fields: Attribute[] }[] = [
     label: 'Pricing',
     fields: [
       ['Pricing model', 'pricingModel', data.pricingModel],
-      ['Entry price', 'entryPriceBand', data.entryPriceBand, 'entryPriceBand'],
+      ['Entry price', 'priceFrom', data.priceFrom, 'priceFrom'],
+      ['Typical ceiling', 'priceTo', data.priceTo],
+      ['Currencies', 'currencies', data.currencies],
+      ['Billed', 'billingPeriods', data.billingPeriods],
+      ['Paid', 'billingTiming', data.billingTiming],
+      ['Cancellation', 'cancellation', data.cancellation],
       ['Renewal multiple', 'renewalMultiple', data.renewalMultiple],
       ['Free tier', 'freeTier', data.freeTier, 'freeTier'],
       ['Minimum contract', 'contractMinimum', data.contractMinimum],
@@ -177,7 +184,7 @@ const sourceLabel = (field: string) =>
   field.replace(/([A-Z])/g, ' $1').toLowerCase();
 
 const entryPrice = price(data.entryPrice);
-const entryCoins = coins(data.entryPriceBand);
+const priceLine = priceSentence(data.priceFrom, data.priceTo);
 const energyClaim = energy(data.energyClaim);
 const homeFlag = flag(data.hqCountry);
 
@@ -288,18 +295,17 @@ const format = (value: unknown) => {
     </p>
 
     {
-      (homeFlag || entryCoins || energyClaim) && (
+      (homeFlag || priceLine || energyClaim) && (
         <p class="record-strip">
           {homeFlag && (
             <span class="strip-item">
               <span aria-hidden="true">{homeFlag}</span> {countryNames.get(data.hqCountry!) ?? data.hqCountry}
             </span>
           )}
-          {/* A bare "free" beside a flag reads as free what — the coins need no such help. */}
-          {entryCoins && (
+          {priceLine && (
             <span class="strip-item">
-              <span class="coins">{entryCoins === 'free' ? 'free tier' : entryCoins}</span>
-              {entryPrice && <span class="strip-detail">{entryPrice}</span>}
+              <PriceGauge from={data.priceFrom} to={data.priceTo} size="md" />
+              <span class="strip-detail">{entryPrice ?? priceLine}</span>
             </span>
           )}
           {energyClaim && (
@@ -341,7 +347,7 @@ const format = (value: unknown) => {
                               {index > 0 && ', '}
                               {/* An explicit value, so the index keys on the band and not on the coins that render it. */}
                               <a href={`/${facet.id}/${entry}/`} data-pagefind-filter={`${facet.id}:${labelOf(entry)}`}>
-                                {key === 'entryPriceBand' ? coins(String(entry)) : labelOf(entry)}
+                                {labelOf(entry)}
                               </a>
                             </>
                           ))

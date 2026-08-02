@@ -33,7 +33,7 @@ sshAccess: limited
 managedDatabases:
   - mysql
 pricingModel: fixed-tier
-entryPriceBand: under-5
+priceFrom: xs
 freeTier: none
 supportChannels:
   - chat

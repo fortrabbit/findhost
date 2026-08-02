@@ -36,7 +36,7 @@ deployMethods:
 backupsIncluded: included
 pricingModel: fixed-tier
 entryPrice: { amount: 7, currency: USD, period: month }
-entryPriceBand: 5-15
+priceFrom: sm
 renewalMultiple: 1
 contractMinimum: monthly
 freeTier: none
@@ -48,7 +48,7 @@ sources:
   - { field: regions, url: 'https://www.interserver.net/webhosting/', checkedAt: 2026-08-01 }
   - { field: founded, url: 'https://www.interserver.net/webhosting/', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://www.interserver.net/webhosting/', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://www.interserver.net/webhosting/', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.interserver.net/webhosting/', checkedAt: 2026-08-01 }
   - { field: renewalMultiple, url: 'https://www.interserver.net/webhosting/', checkedAt: 2026-08-01 }
   - { field: contractMinimum, url: 'https://www.interserver.net/webhosting/', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://www.interserver.net/webhosting/', checkedAt: 2026-08-01 }

@@ -242,15 +242,15 @@
 
 - id: entry-price
   label: Entry price
-  field: entryPriceBand
+  field: priceFrom
   values:
-    - { id: free-tier, label: Free tier }
-    - { id: under-5, label: Under $5 a month }
-    - { id: 5-15, label: $5 to $15 a month }
-    - { id: 15-50, label: $15 to $50 a month }
-    - { id: 50-150, label: $50 to $150 a month }
-    - { id: 150-500, label: $150 to $500 a month }
-    - { id: over-500, label: Over $500 a month }
+    - { id: xs, label: Under $5 a month }
+    - { id: sm, label: $5 to $15 a month }
+    - { id: md, label: $15 to $50 a month }
+    - { id: lg, label: $50 to $150 a month }
+    - { id: xl, label: $150 to $500 a month }
+    - { id: 2xl, label: $500 to $1, 500 a month }
+    - { id: 3xl, label: Over $1, 500 a month }
 
 - id: free-tier
   label: Free tier

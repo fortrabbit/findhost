@@ -22,7 +22,6 @@ runtimes:
 runsOn:
   - aws
 pricingModel: fixed-tier
-entryPriceBand: free-tier
 freeTier: permanent
 persistentStorage: false
 status: active
@@ -31,7 +30,7 @@ sources:
   - { field: runsOn, url: 'https://vapor.laravel.com', checkedAt: 2026-07-31 }
   - { field: infraContract, url: 'https://vapor.laravel.com', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://vapor.laravel.com', checkedAt: 2026-07-31 }
-  - { field: entryPriceBand, url: 'https://vapor.laravel.com', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://vapor.laravel.com', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://vapor.laravel.com', checkedAt: 2026-07-31 }
 figure:
   emoji: 🌫️

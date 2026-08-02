@@ -39,7 +39,7 @@ deployMethods:
 sshAccess: full
 pricingModel: fixed-tier
 entryPrice: { amount: 2.69, currency: EUR, period: month }
-entryPriceBand: under-5
+priceFrom: xs
 renewalMultiple: 1
 freeTier: none
 contractMinimum: none
@@ -64,7 +64,7 @@ sources:
   - { field: contractMinimum, url: 'https://www.netcup.com/de/server/vps', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://www.netcup.com/de/server/vps', checkedAt: 2026-07-31 }
   - { field: entryPrice, url: 'https://www.netcup.com/de/hosting', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://www.netcup.com/de/hosting', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.netcup.com/de/hosting', checkedAt: 2026-08-01 }
   - { field: renewalMultiple, url: 'https://www.netcup.com/de/hosting', checkedAt: 2026-08-01 }
   - { field: parent, url: 'https://www.netcup.com/de/kontakt/impressum', checkedAt: 2026-08-01 }
   - { field: hqCountry, url: 'https://www.netcup.com/de/kontakt/impressum', checkedAt: 2026-08-01 }

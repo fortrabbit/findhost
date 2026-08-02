@@ -56,7 +56,6 @@ deployMethods:
   - control-panel
 sshAccess: full
 pricingModel: fixed-tier
-entryPriceBand: free-tier
 freeTier: permanent
 regions:
   - FR
@@ -67,7 +66,7 @@ apiAvailable: public
 status: active
 checkedAt: 2026-08-01
 sources:
-  - { field: entryPriceBand, url: 'https://www.alwaysdata.com/en/pricing/', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.alwaysdata.com/en/pricing/', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://www.alwaysdata.com/en/pricing/', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://www.alwaysdata.com/en/pricing/', checkedAt: 2026-07-31 }
 figure:

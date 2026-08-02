@@ -29,7 +29,6 @@ deployMethods:
   - control-panel
   - git-integration
 pricingModel: credit
-entryPriceBand: free-tier
 entryPrice: { amount: 20, currency: USD, period: month }
 freeTier: permanent
 contractMinimum: annual
@@ -39,7 +38,7 @@ status: active
 checkedAt: 2026-08-01
 sources:
   - { field: pricingModel, url: 'https://replit.com/pricing', checkedAt: 2026-07-31 }
-  - { field: entryPriceBand, url: 'https://replit.com/pricing', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://replit.com/pricing', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://replit.com/pricing', checkedAt: 2026-07-31 }
   - { field: contractMinimum, url: 'https://replit.com/pricing', checkedAt: 2026-07-31 }
   - { field: entryPrice, url: 'https://replit.com/pricing', checkedAt: 2026-08-01 }

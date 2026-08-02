@@ -256,6 +256,24 @@
   white-space: nowrap;
 }
 
+/** Three gauges of different shapes, side by side, where the shape is the argument. */
+.price-examples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-lg);
+  max-width: none;
+  margin: var(--space-md) 0;
+  padding: 0;
+  list-style: none;
+}
+
+.price-examples > li {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xs);
+  font-size: var(--text-sm);
+}
+
 /* --- The guide --- */
 
 /**
@@ -762,14 +780,47 @@
 }
 
 /**
- * A band rendered without a currency, because the dataset is international and
- * a euro figure on a Japanese host is a conversion nobody asked for. Never
- * coloured, never sorted, never the default order — a six-step scale is close
- * enough to a rating to need saying.
+ * The price range, drawn without a currency: the dataset is international and a
+ * euro figure on a Japanese host is a conversion nobody asked for. The whole
+ * scale is always drawn and the bands a provider covers are filled, so the shape
+ * says how much of the market sits above and below it as well as where it is.
+ *
+ * Never coloured, never sorted, never the default order — a seven-step scale is
+ * close enough to a rating to need saying.
  */
-.coins {
-  letter-spacing: 0.05em;
-  white-space: nowrap;
+.price-gauge {
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--space-3xs);
+  color: var(--color-ink);
+}
+
+.price-gauge svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.price-gauge-sm {
+  width: 3.4rem;
+}
+
+.price-gauge-md {
+  width: 6rem;
+}
+
+.price-gauge-lg {
+  width: 100%;
+  max-width: 26rem;
+}
+
+/* Band names under the large one, where the scale itself is the subject. */
+.price-gauge-scale {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-family: var(--font-data);
+  font-size: var(--text-xs);
+  text-align: left;
 }
 
 /** A fact with no marker is visibly an unsourced assertion. That contrast is the point. */

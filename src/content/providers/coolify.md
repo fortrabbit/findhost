@@ -20,7 +20,6 @@ runtimes:
 deployMethods:
   - git-integration
   - docker-image
-entryPriceBand: free-tier
 freeTier: permanent
 apiAvailable: public
 social:
@@ -34,7 +33,7 @@ sources:
   - { field: runtimes, url: 'https://coolify.io/', checkedAt: 2026-07-31 }
   - { field: deployMethods, url: 'https://coolify.io/', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://coolify.io/', checkedAt: 2026-07-31 }
-  - { field: entryPriceBand, url: 'https://coolify.io/', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://coolify.io/', checkedAt: 2026-07-31 }
   - { field: apiAvailable, url: 'https://coolify.io/', checkedAt: 2026-07-31 }
   - { field: social, url: 'https://coolify.io/', checkedAt: 2026-07-31 }
 figure:

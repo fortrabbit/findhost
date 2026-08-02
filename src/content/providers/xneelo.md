@@ -30,7 +30,7 @@ deployMethods:
   - ftp
   - control-panel
 pricingModel: fixed-tier
-entryPriceBand: 5-15
+priceFrom: sm
 entryPrice: { amount: 99, currency: ZAR, period: month }
 freeTier: none
 regions:
@@ -51,7 +51,7 @@ sources:
   - { field: regions, url: 'https://xneelo.co.za/web-hosting/', checkedAt: 2026-08-01 }
   - { field: regions, url: 'https://xneelo.co.za/data-centre/', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://xneelo.co.za/web-hosting/', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://xneelo.co.za/web-hosting/', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://xneelo.co.za/web-hosting/', checkedAt: 2026-08-01 }
   - { field: supportHours, url: 'https://xneelo.co.za/web-hosting/', checkedAt: 2026-08-01 }
   - { field: supportChannels, url: 'https://xneelo.co.za/web-hosting/', checkedAt: 2026-08-01 }
   - { field: certifications, url: 'https://xneelo.co.za/data-centre/', checkedAt: 2026-08-01 }

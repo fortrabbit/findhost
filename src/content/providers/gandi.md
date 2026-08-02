@@ -36,7 +36,7 @@ managedDatabases:
   - mysql
   - postgres
 pricingModel: fixed-tier
-entryPriceBand: under-5
+priceFrom: xs
 entryPrice: { amount: 2, currency: EUR, period: month }
 freeTier: none
 regions:
@@ -46,7 +46,7 @@ apiAvailable: public
 status: active
 checkedAt: 2026-08-01
 sources:
-  - { field: entryPriceBand, url: 'https://www.gandi.net/en/simple-hosting', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.gandi.net/en/simple-hosting', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://www.gandi.net/en/simple-hosting', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://www.gandi.net/en/simple-hosting', checkedAt: 2026-08-01 }
   - { field: runtimes, url: 'https://www.gandi.net/en/simple-hosting', checkedAt: 2026-08-01 }

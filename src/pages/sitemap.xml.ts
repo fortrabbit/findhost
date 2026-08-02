@@ -21,6 +21,7 @@ export const GET: APIRoute = async ({ site }) => {
     '/map/',
     '/guide/',
     '/about/',
+    '/pricing/',
     '/policies/',
     '/search/',
     ...providers.map((provider) => `/providers/${provider.id}/`),

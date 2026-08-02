@@ -22,7 +22,7 @@ sshAccess: full
 managedDatabases:
   - mysql
 pricingModel: fixed-tier
-entryPriceBand: 5-15
+priceFrom: sm
 entryPrice: { amount: 2.5, currency: EUR, period: month }
 freeTier: trial
 contractMinimum: monthly
@@ -45,7 +45,7 @@ sources:
   - { field: hqCountry, url: 'https://www.fortrabbit.com/', checkedAt: 2026-08-01 }
   - { field: runsOn, url: 'https://www.fortrabbit.com/', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://www.fortrabbit.com/pricing', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://www.fortrabbit.com/pricing', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.fortrabbit.com/pricing', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://www.fortrabbit.com/pricing', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://www.fortrabbit.com/pricing', checkedAt: 2026-08-01 }
   - { field: contractMinimum, url: 'https://www.fortrabbit.com/pricing', checkedAt: 2026-08-01 }

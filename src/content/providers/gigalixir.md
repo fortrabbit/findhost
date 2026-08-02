@@ -35,14 +35,13 @@ sshAccess: full
 managedDatabases:
   - postgres
 pricingModel: per-resource
-entryPriceBand: free-tier
 freeTier: permanent
 regions:
   - US
 status: active
 checkedAt: 2026-08-01
 sources:
-  - { field: entryPriceBand, url: 'https://www.gigalixir.com/pricing/', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.gigalixir.com/pricing/', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://www.gigalixir.com/pricing/', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://www.gigalixir.com/pricing/', checkedAt: 2026-08-01 }
   - { field: regions, url: 'https://www.gigalixir.com/pricing/', checkedAt: 2026-08-01 }

@@ -11,14 +11,13 @@ runtimes:
   - python
   - rust
 pricingModel: usage-based
-entryPriceBand: free-tier
 freeTier: permanent
 status: active
 checkedAt: 2026-07-31
 sources:
   - { field: runtimes, url: 'https://developers.cloudflare.com/workers/languages/', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://developers.cloudflare.com/workers/platform/pricing/', checkedAt: 2026-07-31 }
-  - { field: entryPriceBand, url: 'https://developers.cloudflare.com/workers/platform/pricing/', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://developers.cloudflare.com/workers/platform/pricing/', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://developers.cloudflare.com/workers/platform/pricing/', checkedAt: 2026-07-31 }
 figure:
   emoji: 🔶

@@ -14,7 +14,7 @@ whoManagesOs: you
 runtimes:
   - any
 sshAccess: full
-entryPriceBand: under-5
+priceFrom: xs
 regions:
   - FR
   - DE
@@ -30,7 +30,7 @@ checkedAt: 2026-08-01
 sources:
   - { field: founded, url: 'https://www.ovhcloud.com/en/about-us/', checkedAt: 2026-07-31 }
   - { field: hqCountry, url: 'https://www.ovhcloud.com/en/about-us/', checkedAt: 2026-07-31 }
-  - { field: entryPriceBand, url: 'https://www.ovhcloud.com/en/vps/', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://www.ovhcloud.com/en/vps/', checkedAt: 2026-07-31 }
   - {
       field: '2021 fire',
       url: 'https://corporate.ovhcloud.com/en/newsroom/news/informations-site-strasbourg/',

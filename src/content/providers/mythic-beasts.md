@@ -41,7 +41,7 @@ managedDatabases:
 backupsIncluded: included
 pricingModel: fixed-tier
 entryPrice: { amount: 1, currency: GBP, period: month }
-entryPriceBand: under-5
+priceFrom: xs
 freeTier: none
 contractMinimum: monthly
 regions:
@@ -53,7 +53,7 @@ checkedAt: 2026-08-01
 sources:
   - { field: regions, url: 'https://www.mythic-beasts.com/order/hosting', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://www.mythic-beasts.com/order/hosting', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://www.mythic-beasts.com/order/hosting', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.mythic-beasts.com/order/hosting', checkedAt: 2026-08-01 }
   - { field: contractMinimum, url: 'https://www.mythic-beasts.com/order/hosting', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://www.mythic-beasts.com/order/hosting', checkedAt: 2026-08-01 }
   - { field: ownership, url: 'https://www.mythic-beasts.com/support', checkedAt: 2026-08-01 }

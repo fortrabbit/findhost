@@ -34,7 +34,7 @@ deployMethods:
   - git-push
 sshAccess: full
 pricingModel: fixed-tier
-entryPriceBand: 5-15
+priceFrom: sm
 entryPrice: { amount: 12, currency: USD, period: month }
 freeTier: trial
 social:
@@ -46,7 +46,7 @@ checkedAt: 2026-08-01
 sources:
   - { field: entryPrice, url: 'https://spinupwp.com/pricing/', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://spinupwp.com/terms/', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://spinupwp.com/pricing/', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://spinupwp.com/pricing/', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://spinupwp.com/pricing/', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://spinupwp.com/pricing/', checkedAt: 2026-07-31 }
   - { field: infraContract, url: 'https://spinupwp.com/pricing/', checkedAt: 2026-07-31 }

@@ -23,7 +23,7 @@ managedDatabases:
   - valkey
 pricingModel: usage-based
 entryPrice: { amount: 5, currency: USD, period: month }
-entryPriceBand: 5-15
+priceFrom: sm
 freeTier: trial
 contractMinimum: monthly
 regions:
@@ -43,7 +43,7 @@ sources:
   - { field: regions, url: 'https://laravel.com/cloud/pricing', checkedAt: 2026-08-01 }
   - { field: managedDatabases, url: 'https://laravel.com/cloud/pricing', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://laravel.com/cloud/pricing', checkedAt: 2026-07-31 }
-  - { field: entryPriceBand, url: 'https://laravel.com/cloud/pricing', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://laravel.com/cloud/pricing', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://laravel.com/cloud/pricing', checkedAt: 2026-07-31 }
   - { field: contractMinimum, url: 'https://laravel.com/cloud/pricing', checkedAt: 2026-07-31 }
   - { field: deployMethods, url: 'https://laravel.com/cloud/pricing', checkedAt: 2026-07-31 }

@@ -28,7 +28,7 @@ sshAccess: full
 persistentStorage: true
 backupsIncluded: paid-addon
 pricingModel: hourly
-entryPriceBand: under-5
+priceFrom: xs
 contractMinimum: none
 regions:
   - DE
@@ -49,7 +49,7 @@ sources:
   - { field: hqCountry, url: 'https://www.hetzner.com/unternehmen/ueber-uns/', checkedAt: 2026-07-31 }
   - { field: infraContract, url: 'https://www.hetzner.com/unternehmen/ueber-uns/', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://docs.hetzner.com/cloud/billing/faq/', checkedAt: 2026-07-31 }
-  - { field: entryPriceBand, url: 'https://docs.hetzner.com/cloud/billing/faq/', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://docs.hetzner.com/cloud/billing/faq/', checkedAt: 2026-07-31 }
   - { field: contractMinimum, url: 'https://docs.hetzner.com/cloud/billing/faq/', checkedAt: 2026-07-31 }
   - { field: backupsIncluded, url: 'https://docs.hetzner.com/cloud/billing/faq/', checkedAt: 2026-07-31 }
   - { field: persistentStorage, url: 'https://docs.hetzner.com/cloud/servers/backups-snapshots/faq/', checkedAt: 2026-07-31 }

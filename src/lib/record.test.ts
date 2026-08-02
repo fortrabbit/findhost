@@ -1,37 +1,6 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
-import { coins, energy, flag, footnotes, price } from './record.ts';
-
-describe('coins', () => {
-  it('counts up with the band', () => {
-    assert.equal(coins('under-5'), '🪙');
-    assert.equal(coins('5-15'), '🪙🪙');
-    assert.equal(coins('over-500'), '🪙🪙🪙🪙🪙🪙');
-  });
-
-  // A free tier answers "what does it cost" with a different kind of answer,
-  // and zero coins would be indistinguishable from an unrecorded band.
-  it('says free in words rather than showing nothing', () => {
-    assert.equal(coins('free-tier'), 'free');
-  });
-
-  it('renders nothing for an absent or unknown band', () => {
-    assert.equal(coins(undefined), undefined);
-    assert.equal(coins('made-up'), undefined);
-  });
-
-  // The scale must stay monotonic: if a cheaper band ever printed more coins
-  // than a dearer one, every list on the site would quietly mislead.
-  it('never gives a cheaper band more coins than a dearer one', () => {
-    const bands = ['under-5', '5-15', '15-50', '50-150', '150-500', 'over-500'];
-    const lengths = bands.map((band) => [...coins(band)!].length);
-    assert.deepEqual(
-      lengths,
-      [...lengths].sort((a, b) => a - b),
-    );
-    assert.equal(new Set(lengths).size, bands.length, 'two bands render identically');
-  });
-});
+import { energy, flag, footnotes, price } from './record.ts';
 
 describe('flag', () => {
   it('turns a country code into regional indicators', () => {

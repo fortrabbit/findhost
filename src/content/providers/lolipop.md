@@ -35,7 +35,7 @@ managedDatabases:
   - mysql
 pricingModel: fixed-tier
 entryPrice: { amount: 121, currency: JPY, period: month }
-entryPriceBand: under-5
+priceFrom: xs
 freeTier: trial
 regions:
   - JP
@@ -48,7 +48,7 @@ checkedAt: 2026-08-01
 sources:
   - { field: regions, url: 'https://lolipop.jp/pricing/', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://lolipop.jp/pricing/', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://lolipop.jp/pricing/', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://lolipop.jp/pricing/', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://lolipop.jp/pricing/', checkedAt: 2026-08-01 }
   - { field: supportChannels, url: 'https://lolipop.jp/pricing/', checkedAt: 2026-08-01 }
 figure:

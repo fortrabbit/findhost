@@ -1,5 +1,5 @@
 ---
-import { coins } from '../lib/record';
+import PriceGauge from './PriceGauge.astro';
 
 interface Row {
   id: string;
@@ -7,7 +7,8 @@ interface Row {
   description?: string;
   publishedByUs?: boolean;
   greenWebId?: number | null;
-  entryPriceBand?: string;
+  priceFrom?: string;
+  priceTo?: string;
   figure?: { emoji: string; color: string; textColor: string };
   /** Shown only where the list is ordered by it, so the order is visible rather than asserted. */
   checked?: string;
@@ -26,7 +27,6 @@ const { providers, namesOnly = false } = Astro.props;
   {
     providers.map((provider) => {
       const described = !namesOnly && Boolean(provider.description);
-      const band = coins(provider.entryPriceBand);
 
       return (
         <li class={described ? undefined : 'one-line'}>
@@ -61,9 +61,9 @@ const { providers, namesOnly = false } = Astro.props;
             {described && <p>{provider.description}</p>}
           </div>
 
-          {(band || provider.checked) && (
+          {(provider.priceFrom || provider.checked) && (
             <span class="provider-meta">
-              {band && <span class="coins">{band}</span>}
+              <PriceGauge from={provider.priceFrom} to={provider.priceTo} />
               {provider.checked && <span class="provider-checked">read {provider.checked}</span>}
             </span>
           )}

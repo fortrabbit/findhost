@@ -17,7 +17,7 @@ software:
   - wordpress
   - woocommerce
 pricingModel: fixed-tier
-entryPriceBand: under-5
+priceFrom: xs
 renewalMultiple: 2.5
 contractMinimum: multi-year
 status: active
@@ -27,7 +27,7 @@ sources:
   - { field: hqCountry, url: 'https://www.bluehost.com/about', checkedAt: 2026-08-01 }
   - { field: parent, url: 'https://www.bluehost.com/about', checkedAt: 2026-08-01 }
   - { field: ownership, url: 'https://www.newfold.com/brands', checkedAt: 2026-08-01 }
-  - { field: entryPriceBand, url: 'https://www.bluehost.com/hosting/shared', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://www.bluehost.com/hosting/shared', checkedAt: 2026-07-31 }
   - { field: renewalMultiple, url: 'https://www.bluehost.com/hosting/shared', checkedAt: 2026-07-31 }
   - { field: contractMinimum, url: 'https://www.bluehost.com/hosting/shared', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://www.bluehost.com/hosting/shared', checkedAt: 2026-07-31 }
