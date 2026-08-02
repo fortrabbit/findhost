@@ -27,6 +27,12 @@ const items = guides.map((guide) => ({
         }))
       : [],
 }));
+
+/* The other two written pages. They are read the same way and belong in the same list. */
+const about = [
+  { href: '/about/', label: 'About' },
+  { href: '/policies/', label: 'Policies' },
+];
 ---
 
 <nav class="guide-nav" aria-label="Guide">
@@ -49,6 +55,19 @@ const items = guides.map((guide) => ({
               ))}
             </ul>
           )}
+        </li>
+      ))
+    }
+  </ul>
+
+  <h2>This site</h2>
+  <ul>
+    {
+      about.map((item) => (
+        <li>
+          <a href={item.href} aria-current={current === item.href ? 'page' : undefined}>
+            {item.label}
+          </a>
         </li>
       ))
     }

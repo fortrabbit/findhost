@@ -1,4 +1,5 @@
 ---
+layout: ../layouts/Article.astro
 title: About
 figure:
   emoji: 🫨

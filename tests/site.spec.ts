@@ -14,12 +14,17 @@ test.describe('the register', () => {
     const rows = page.locator('[data-find-results] .provider-list > li');
     await expect(rows).toHaveCount(150);
 
-    // Anchors are linked from prose and from the map, so they have to exist.
-    await expect(page.locator('#other')).toBeVisible();
-    await expect(page.locator('#h')).toBeVisible();
+    /*
+     * Anchors are linked from prose and from the map, so they have to exist —
+     * scoped to the results, because a bare #h also matches whatever a browser
+     * extension injects into the page, and did so intermittently.
+     */
+    const results = page.locator('[data-find-results]');
+    await expect(results.locator('#other')).toBeVisible();
+    await expect(results.locator('#h')).toBeVisible();
 
     // The numeric group says what it holds rather than repeating its own anchor.
-    await expect(page.locator('#other h2')).toContainText('0–9');
+    await expect(results.locator('#other h2')).toContainText('0–9');
   });
 
   test('announces its order, because position is not ranking', async ({ page }) => {

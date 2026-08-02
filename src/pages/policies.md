@@ -1,7 +1,13 @@
 ---
-layout: ../layouts/Markdown.astro
+layout: ../layouts/Article.astro
 title: Policies
 description: Who gets listed, what happens when a provider dies, how corrections work, and what we have given up.
+lead: Rules to be argued with, not principles to admire. Several are enforced by the build rather than by our good intentions.
+figure:
+  emoji: ⚖️
+  color: rgb(24, 32, 48)
+  textColor: rgb(190, 205, 230)
+  text: Every rule here can be checked against the site.
 ---
 
 These are rules to be argued with, not principles to admire. Every one of them is a promise that can be checked against what the site actually does, and several are enforced by the build rather than by our good intentions.
