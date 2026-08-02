@@ -38,7 +38,6 @@
 /* Where you are, marked with weight and a rule rather than a colour. */
 .site-nav a[aria-current='page'] {
   color: var(--color-ink);
-  font-weight: var(--weight-strong);
   text-decoration: underline;
   text-decoration-thickness: var(--rule-strong);
   text-underline-offset: 0.25em;
@@ -140,9 +139,10 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2xs) var(--space-lg);
-  padding-top: var(--space-xs);
-  font-family: var(--font-display);
-  font-size: var(--text-md);
+  /*padding-top: var(--space-xs);*/
+  padding-bottom: var(--space-lg);
+  /*font-family: var(--font-display);*/
+  /*font-size: var(--text-md);*/
 }
 
 /**
@@ -179,7 +179,7 @@
   gap: var(--space-xs);
   padding: var(--space-3xs) 0;
   border-bottom: var(--rule-hairline) solid var(--color-ink);
-  font-size: var(--text-sm);
+  font-size: var(--text-xs);
 }
 
 .picker-all {
@@ -503,6 +503,8 @@
  * scanned down its left edge, and ragged rows defeat that.
  */
 .provider-list p {
+  /* The reading measure belongs to prose, not to a row: 58ch cut this off with half the row still empty. */
+  max-width: none;
   margin: 0;
   overflow: hidden;
   font-size: var(--text-sm);
@@ -763,8 +765,6 @@
   align-items: baseline;
   gap: var(--space-3xs) var(--space-md);
   max-width: none;
-  padding: var(--space-xs) 0;
-  border-bottom: var(--rule-hairline) solid var(--color-ink);
 }
 
 .strip-item {
@@ -782,8 +782,13 @@
 /**
  * The price range, drawn without a currency: the dataset is international and a
  * euro figure on a Japanese host is a conversion nobody asked for. The whole
- * scale is always drawn and the bands a provider covers are filled, so the shape
- * says how much of the market sits above and below it as well as where it is.
+ * scale is always present and the bands a provider covers are solid, so the
+ * shape says how much of the market sits above and below as well as where it is.
+ *
+ * Boxes rather than a drawing. An SVG squashed into a strip nine pixels tall
+ * rendered its own strokes at inconsistent widths; a flex row of blocks is the
+ * same shape with nothing left to a rasteriser, and it takes its sizes from
+ * custom properties so small really is the same shape as large.
  *
  * Never coloured, never sorted, never the default order — a seven-step scale is
  * close enough to a rating to need saying.
@@ -795,32 +800,56 @@
   color: var(--color-ink);
 }
 
-.price-gauge svg {
-  display: block;
-  width: 100%;
-  height: auto;
+.price-gauge-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--gauge-gap);
+  height: var(--gauge-height);
+}
+
+/*
+ * A band this provider does not reach keeps its slot and marks it with a tick on
+ * the baseline. A tick rather than an outline, because an outline at this size
+ * is two borders inside three pixels — which is what made the drawn one ugly.
+ * A covered band carries its height inline.
+ */
+.price-gauge-bar {
+  width: var(--gauge-bar);
+  height: var(--gauge-tick);
+  background: currentColor;
 }
 
 .price-gauge-sm {
-  width: 3.4rem;
+  --gauge-height: 0.65rem;
+  --gauge-bar: 0.14rem;
+  --gauge-gap: 0.08rem;
+  --gauge-tick: 1px;
 }
 
 .price-gauge-md {
-  width: 6rem;
+  --gauge-height: 1.1rem;
+  --gauge-bar: 0.3rem;
+  --gauge-gap: 0.14rem;
+  --gauge-tick: 1px;
 }
 
 .price-gauge-lg {
-  width: 100%;
-  max-width: 26rem;
+  --gauge-height: 5rem;
+  --gauge-bar: 2.4rem;
+  --gauge-gap: var(--space-2xs);
+  --gauge-tick: 2px;
 }
 
 /* Band names under the large one, where the scale itself is the subject. */
 .price-gauge-scale {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  display: flex;
+  gap: var(--gauge-gap);
   font-family: var(--font-data);
   font-size: var(--text-xs);
-  text-align: left;
+}
+
+.price-gauge-scale > span {
+  width: var(--gauge-bar);
 }
 
 /** A fact with no marker is visibly an unsourced assertion. That contrast is the point. */

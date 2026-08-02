@@ -1,5 +1,5 @@
 ---
-import { bandIndex, gaugeSlices, priceBands, priceSentence, sliceHeight } from '../lib/price';
+import { bandIndex, priceBands, priceSentence, sliceHeight } from '../lib/price';
 
 interface Props {
   from?: string;
@@ -17,43 +17,30 @@ const end = bandIndex(to) === -1 ? start : bandIndex(to);
 const sentence = priceSentence(from, to);
 
 /*
- * A triangle drawn as seven slices, with the bands a provider covers filled in.
- * Unfilled slices keep their outline: the shape is the whole scale, and what is
- * shaded is this provider's place on it — a bar that only drew the filled part
- * would say nothing about how much of the market sits above.
+ * Boxes, not a drawing. An SVG scaled to a strip this small rendered its own
+ * strokes at inconsistent widths — a hairline is a hairline, and no amount of
+ * vector-effect makes a 1px stroke survive being squashed to nine pixels tall.
+ *
+ * Every band keeps its slot whether or not this provider covers it, so the
+ * shape says where a provider sits on the scale and how much sits above. The
+ * bands it covers are solid; the rest are a tick on the baseline, which reads
+ * at any size and has no border to render badly.
  */
-const width = 100;
-const height = 30;
-const sliceWidth = width / gaugeSlices;
-const gap = 1.5;
-
-const slices = priceBands.map((band, index) => ({
-  band,
-  index,
-  x: index * sliceWidth,
-  w: sliceWidth - gap,
-  h: sliceHeight(index) * height,
-  covered: start >= 0 && index >= start && index <= end,
-}));
+const bars = priceBands.map((band, index) => {
+  const covered = start >= 0 && index >= start && index <= end;
+  // Only a covered band gets a height; the rest take the tick height from CSS.
+  return { band, covered, style: covered ? `height:${Math.round(sliceHeight(index) * 100)}%` : undefined };
+});
 ---
 
 {
   start >= 0 && (
     <span class:list={['price-gauge', `price-gauge-${size}`]}>
-      <svg viewBox={`0 0 ${width} ${height}`} role="img" aria-label={sentence} preserveAspectRatio="none">
-        {slices.map((slice) => (
-          <rect
-            x={slice.x}
-            y={height - slice.h}
-            width={slice.w}
-            height={slice.h}
-            fill={slice.covered ? 'currentColor' : 'none'}
-            stroke="currentColor"
-            stroke-width="1"
-            vector-effect="non-scaling-stroke"
-          />
+      <span class="price-gauge-bars" role="img" aria-label={sentence}>
+        {bars.map((bar) => (
+          <span class:list={['price-gauge-bar', bar.covered && 'is-covered']} style={bar.style} />
         ))}
-      </svg>
+      </span>
 
       {labelled && (
         <span class="price-gauge-scale" aria-hidden="true">

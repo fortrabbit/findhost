@@ -193,21 +193,20 @@ test.describe('filtering', () => {
   test('draws the same price gauge before and after filtering', async ({ page }) => {
     await page.goto('/providers/');
 
-    const gauge = page.locator('[data-find-results] .provider-list > li').first().locator('.price-gauge svg');
-    const before = await gauge.innerHTML();
+    const shape = async () =>
+      page
+        .locator('[data-find-results] .provider-list > li')
+        .first()
+        .locator('.price-gauge-bar')
+        .evaluateAll((bars) => bars.map((bar) => `${bar.className}|${(bar as HTMLElement).style.height}`));
+
+    const before = await shape();
+    expect(before.length).toBe(7);
 
     await page.locator('.find-facet input[type="checkbox"]').first().check();
     await expect(page.locator('[data-find-summary]')).toContainText(' of ');
 
-    const after = await page
-      .locator('[data-find-results] .provider-list > li')
-      .first()
-      .locator('.price-gauge svg')
-      .innerHTML();
-
-    // Attribute order differs between the two renderers; the geometry must not.
-    const geometry = (markup: string) => (markup.match(/(x|y|width|height|fill)="[^"]*"/g) ?? []).sort().join(' ');
-    expect(geometry(after)).toBe(geometry(before));
+    expect(await shape()).toEqual(before);
   });
 
   test('a filtered row looks exactly like an unfiltered one', async ({ page }) => {

@@ -1,18 +1,10 @@
 ---
-import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import { loadFacets } from '../lib/facets';
 import { loadProviders } from '../lib/providers';
 
 const records = await loadProviders();
 const { facets } = await loadFacets();
-
-/*
- * One guide, and the actionable one. A home page that links every guide it has
- * is a table of contents; the job here is to change how someone arrives at the
- * question, and only "how to choose" tells them what to do about it.
- */
-const guides = (await getCollection('guide')).filter((guide) => guide.id === 'how-to-choose');
 
 /*
  * Four questions, five answers each. The commonest values are the ones most
@@ -39,38 +31,38 @@ const columns = [
   description="Opinionated field guide to choose the right hosting provider."
   ai="co-authored"
 >
-  <h1>Find your next hosting provider</h1>
+  <h1>Find your next web host</h1>
 
   <p class="lead">
     <!-- Don't shop hosting by horse power and price only.  -->
-    This is a developer-friendly hosting guide without the usual affiliate bias.
+    An <a href="/about/" title="About">opinionated</a> hosting guide for developers.
+
+    <p class="guide-links">
+      <a href="/guide/how-to-choose-hosting/">How to choose hosting</a>
+      <a href="/providers/">All {records.length} hosting providers</a>
+    </p>
+
+    <!-- <h2>I want to host…</h2> -->
+
+    <div class="picker">
+      {
+        columns.map((column) => (
+          <div class="picker-column">
+            <h3>{column.heading}</h3>
+            <ul>
+              {column.top.map((value) => (
+                <li>
+                  <a href={column.href(value.id)}>{value.label}</a>
+                  <span class="entry-count">{value.count}</span>
+                </li>
+              ))}
+            </ul>
+            <a class="picker-all" href={column.all}>
+              all {column.total} →
+            </a>
+          </div>
+        ))
+      }
+    </div>
   </p>
-
-  <p class="guide-links">
-    {guides.map((guide) => <a href={`/guide/${guide.id}/`}>{guide.data.title}</a>)}
-  </p>
-
-  <!-- <h2>I want to host…</h2> -->
-
-  <div class="picker">
-    {
-      columns.map((column) => (
-        <div class="picker-column">
-          <h3>{column.heading}</h3>
-          <ul>
-            {column.top.map((value) => (
-              <li>
-                <a href={column.href(value.id)}>{value.label}</a>
-                <span class="entry-count">{value.count}</span>
-              </li>
-            ))}
-          </ul>
-          <a class="picker-all" href={column.all}>
-            all {column.total} →
-          </a>
-        </div>
-      ))
-    }
-  </div>
-  <p class="show-all"><a href="/providers/">Show all {records.length} providers →</a></p>
 </Base>

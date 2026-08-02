@@ -55,8 +55,13 @@ export function priceSentence(from: string | undefined, to: string | undefined):
  */
 export const gaugeSlices = priceBands.length;
 
-/** Height of slice `index` as a fraction of the tallest, never zero or the first band would be invisible. */
+/**
+ * Height of slice `index` as a fraction of the tallest. The floor is well clear
+ * of the tick an uncovered band draws — a record whose whole range is the first
+ * band is common, and it has to read as a bar rather than as a slightly tall
+ * tick.
+ */
 export function sliceHeight(index: number): number {
-  const smallest = 0.18;
+  const smallest = 0.28;
   return smallest + (1 - smallest) * (index / (gaugeSlices - 1));
 }

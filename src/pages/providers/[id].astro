@@ -2,7 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import { loadFacets } from '../../lib/facets';
-import { energy, flag, footnotes, price } from '../../lib/record';
+import { energy, flag, footnotes } from '../../lib/record';
 import { priceSentence } from '../../lib/price';
 import PriceGauge from '../../components/PriceGauge.astro';
 import { isListed } from '../../lib/providers';
@@ -183,7 +183,6 @@ const sourceLabel = (field: string) =>
   { notes: 'the notes', urls: 'links', social: 'accounts', entryPrice: 'starting price' }[field] ??
   field.replace(/([A-Z])/g, ' $1').toLowerCase();
 
-const entryPrice = price(data.entryPrice);
 const priceLine = priceSentence(data.priceFrom, data.priceTo);
 const energyClaim = energy(data.energyClaim);
 const homeFlag = flag(data.hqCountry);
@@ -298,14 +297,13 @@ const format = (value: unknown) => {
       (homeFlag || priceLine || energyClaim) && (
         <p class="record-strip">
           {homeFlag && (
-            <span class="strip-item">
-              <span aria-hidden="true">{homeFlag}</span> {countryNames.get(data.hqCountry!) ?? data.hqCountry}
+            <span class="strip-item" aria-hidden="true" title={countryNames.get(data.hqCountry!) ?? data.hqCountry}>
+              {homeFlag}
             </span>
           )}
           {priceLine && (
             <span class="strip-item">
               <PriceGauge from={data.priceFrom} to={data.priceTo} size="md" />
-              <span class="strip-detail">{entryPrice ?? priceLine}</span>
             </span>
           )}
           {energyClaim && (
