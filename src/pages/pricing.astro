@@ -92,8 +92,16 @@ const examples = ['hetzner', 'aws', 'fortrabbit']
       <p>
         The lower end is the cheapest way to run one small production application with every mandatory component
         included, at the <strong>standing</strong> price rather than an introductory one. Filtering for "under five dollars"
-        and being handed a host that costs eleven after three months is the exact deception this dataset exists to correct.
-        The upper end is where a serious deployment lands, not the largest invoice a provider could theoretically issue.
+        and being handed a host that costs eleven after three months is the exact deception this dataset exists to correct
+        — three records had their band corrected on exactly that during the last pass, and one lost its band altogether because
+        the provider never publishes what the price becomes.
+      </p>
+
+      <p>
+        The upper end depends on what is being sold. Where a provider publishes a ladder of plans, it is the top of that
+        ladder. Where it meters resources with no ladder to end, it is where a serious deployment lands — never the
+        largest invoice a provider could theoretically issue, which for a hyperscaler is a number with no meaning. Where
+        neither can be established, there is no upper end recorded, and the gauge shows only where the provider starts.
       </p>
 
       <h2>Free is not a price</h2>

@@ -137,8 +137,15 @@ const providerFields = z
      *
      * `priceFrom` is the cheapest way to run one small production app with every
      * mandatory component included, and it follows the STANDING price, never the
-     * introductory one. `priceTo` is where a typical serious deployment lands,
-     * not the largest invoice the provider could theoretically issue.
+     * introductory one. Stacking the floor tier of every component into
+     * something nobody would call a production app is the cheaper reading and
+     * the wrong one — including on our own record.
+     *
+     * `priceTo` depends on what is being sold. Where a provider publishes a plan
+     * ladder, it is the top of that ladder. Where it meters resources with no
+     * ladder to end, it is where a serious deployment lands — never the largest
+     * invoice the provider could theoretically issue, which for a hyperscaler is
+     * a number with no meaning. Where neither can be established, absent.
      *
      * A free tier is not on this scale. `freeTier` records it, because free
      * describes what a provider gives away and this describes what it charges.
