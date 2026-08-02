@@ -19,10 +19,10 @@ Server virtualisation became popular in the early 2000s. Traditionally, a server
 
 ### Benefits
 
-VPS hosting offers more control, flexibility, and customisation than [shared hosting](/category/shared/), which makes it a fit for anyone who wants to shape the environment rather than accept one. Resources are allotted per instance rather than shared out among accounts, the software stack is a free choice, and the entry price is low — a small instance is one of the cheapest ways to run something in [somebody else's data centre](/hardware/). Many VPS providers sell other services alongside it, shared hosting among them.
+VPS hosting offers more control, flexibility, and customisation than [shared hosting](/guide/categories/shared/), which makes it a fit for anyone who wants to shape the environment rather than accept one. Resources are allotted per instance rather than shared out among accounts, the software stack is a free choice, and the entry price is low — a small instance is one of the cheapest ways to run something in [somebody else's data centre](/hardware/). Many VPS providers sell other services alongside it, shared hosting among them.
 
 ### Downsides
 
 The empty box has to be filled and then kept full. Operating system updates, security patches, backups, monitoring, mail configuration and the response to a 3am outage are all the customer's job, and none of that work is visible in the monthly price. Skipping it is the common failure: an unattended VPS is an unpatched VPS.
 
-The advertised specs are also softer than they look. Providers oversubscribe physical hosts to varying degrees, so identical vCPU counts can differ in real throughput depending on the neighbours. Where the work of running a server is not wanted, [PaaS](/category/paas/) hands the operating system back to the provider, and [server management](/category/server-management/) panels keep the server while automating most of the routine around it.
+The advertised specs are also softer than they look. Providers oversubscribe physical hosts to varying degrees, so identical vCPU counts can differ in real throughput depending on the neighbours. Where the work of running a server is not wanted, [PaaS](/guide/categories/paas/) hands the operating system back to the provider, and [server management](/guide/categories/server-management/) panels keep the server while automating most of the routine around it.

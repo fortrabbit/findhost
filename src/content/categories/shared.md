@@ -11,4 +11,4 @@ figure:
 
 Shared hosting is a commodity product for end consumers. Many accounts share one machine, and the provider usually runs the data centre and the bare metal itself. Domain and email services are commonly bundled in. Lots of stuff for little money.
 
-The price is paid elsewhere. Developer tools and workflows are mostly absent, software versions run behind, control panels are bloated, and contracts tend to be long, with an introductory rate that jumps on renewal — which is why the dataset records a renewal multiple next to the [entry price band](/entry-price/). It is a product for consumers and hobbyists; [VPS](/category/vps/) and [PaaS](/category/paas/) are the categories next door.
+The price is paid elsewhere. Developer tools and workflows are mostly absent, software versions run behind, control panels are bloated, and contracts tend to be long, with an introductory rate that jumps on renewal — which is why the dataset records a renewal multiple next to the [entry price band](/entry-price/). It is a product for consumers and hobbyists; [VPS](/guide/categories/vps/) and [PaaS](/guide/categories/paas/) are the categories next door.

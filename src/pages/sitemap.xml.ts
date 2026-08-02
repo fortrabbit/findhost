@@ -24,7 +24,7 @@ export const GET: APIRoute = async ({ site }) => {
     '/policies/',
     '/search/',
     ...providers.map((provider) => `/providers/${provider.id}/`),
-    ...categories.map((entry) => `/category/${entry.id}/`),
+    ...categories.map((entry) => `/guide/categories/${entry.id}/`),
     ...guide.map((page) => `/guide/${page.id}/`),
     ...facets.flatMap((facet) => [
       `/${facet.id}/`,

@@ -9,7 +9,7 @@ figure:
   text: White glove, sales call included.
 ---
 
-Managed hosting is one of the blurriest labels in a market full of them. In the loose sense, almost every hosting service is managed: [shared hosting](/category/shared/), [PaaS](/category/paas/) and [serverless](/category/serverless/) all hand the operating system to the provider, which is exactly what [who manages the OS](/os-managed-by/) records. The trade uses the term more narrowly than that, and the narrow meaning is older.
+Managed hosting is one of the blurriest labels in a market full of them. In the loose sense, almost every hosting service is managed: [shared hosting](/guide/categories/shared/), [PaaS](/guide/categories/paas/) and [serverless](/guide/categories/serverless/) all hand the operating system to the provider, which is exactly what [who manages the OS](/os-managed-by/) records. The trade uses the term more narrowly than that, and the narrow meaning is older.
 
 ## A service, not a product
 

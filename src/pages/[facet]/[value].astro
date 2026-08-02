@@ -89,6 +89,17 @@ const Note = note ? (await render(note)).Content : null;
 
   {Note && <Note />}
 
+  {
+    /* A category is described in the guide, so the list says where to read about itself rather than repeating it. */
+    facet.id === 'category' && (
+      <p class="annotation">
+        <a href={`/guide/categories/${value.id}/`}>
+          What {value.label.toLowerCase()} means, and what it asks of a team →
+        </a>
+      </p>
+    )
+  }
+
   <ProviderRegister providers={matches} facets={facets} seed={{ facet: facet.id, value: value.id }} />
 
   <p class="annotation">

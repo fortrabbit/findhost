@@ -11,7 +11,7 @@ figure:
 
 ## About low-code and no-code platforms
 
-Low-code and no-code platforms let people build websites with visual editors instead of writing code. Hosting, templates, updates, and security are bundled, which makes setup fast but also limits control over the runtime. These tools differ from [shared hosting](/category/shared/) or [PaaS](/category/paas/) in that the work happens inside a product rather than in code that is deployed to a server. Portability is limited, and the feature set is defined by the platform.
+Low-code and no-code platforms let people build websites with visual editors instead of writing code. Hosting, templates, updates, and security are bundled, which makes setup fast but also limits control over the runtime. These tools differ from [shared hosting](/guide/categories/shared/) or [PaaS](/guide/categories/paas/) in that the work happens inside a product rather than in code that is deployed to a server. Portability is limited, and the feature set is defined by the platform.
 
 ## Providers in this section
 
