@@ -301,7 +301,7 @@ const format = (value: unknown) => {
       {
         knownGroups.map((group) => (
           <section class="fact-group">
-            <h3>{group.label}</h3>
+            <h2>{group.label}</h2>
             <dl class="fact-list">
               {group.fields.map(([label, key, value, field]) => {
                 const facet = field ? facetByField.get(field) : undefined;

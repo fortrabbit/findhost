@@ -1,5 +1,4 @@
 ---
-import AiDisclosure from '../components/AiDisclosure.astro';
 import type { AiLevel } from '../components/AiDisclosure.astro';
 import '../styles/tokens.css';
 import '../styles/base.css';
@@ -15,7 +14,7 @@ interface Props {
   hidden?: boolean;
 }
 
-const { title, description, ai, markdown, hidden = false } = Astro.props;
+const { title, description, markdown, hidden = false } = Astro.props;
 const fathomSiteId = import.meta.env.PUBLIC_FATHOM_SITE_ID;
 
 // Belt and braces with robots.txt: the file stops the crawl, this stops a URL
@@ -25,19 +24,19 @@ const indexable = import.meta.env.PUBLIC_INDEXABLE === 'true' && !hidden;
 // Navigation lives in the footer. The top of the page says where you are; the
 // bottom says where you can go. That makes the footer load-bearing rather than
 // small print, which is the reason it is laid out rather than listed.
-const contribute = [
-  { href: 'https://github.com/fortrabbit/findhost', label: 'Add a provider' },
-  { href: 'https://github.com/fortrabbit/findhost/issues', label: 'Corrections' },
-  { href: 'https://github.com/fortrabbit/findhost', label: 'GitHub' },
-];
+// const contribute = [
+//   { href: 'https://github.com/fortrabbit/findhost', label: 'Add a provider' },
+//   { href: 'https://github.com/fortrabbit/findhost/issues', label: 'Corrections' },
+//   { href: 'https://github.com/fortrabbit/findhost', label: 'GitHub' },
+// ];
 
-const sections = [
-  { href: '/providers/', label: 'Providers' },
-  { href: '/map/', label: 'Map' },
-  { href: '/guide/', label: 'Guide' },
-  { href: '/about/', label: 'About' },
-  { href: '/policies/', label: 'Policies' },
-];
+// const sections = [
+//   { href: '/providers/', label: 'Providers' },
+//   { href: '/map/', label: 'Map' },
+//   { href: '/guide/', label: 'Guide' },
+//   { href: '/about/', label: 'About' },
+//   { href: '/policies/', label: 'Policies' },
+// ];
 
 const path = Astro.url.pathname;
 const canonical = new URL(path, Astro.site ?? Astro.url).href;
@@ -85,7 +84,7 @@ const canonical = new URL(path, Astro.site ?? Astro.url).href;
     </main>
 
     <footer>
-      <nav class="footer-nav">
+      <!-- <nav class="footer-nav">
         {
           sections.map((section) => (
             <a href={section.href} aria-current={path === section.href ? 'page' : undefined}>
@@ -93,9 +92,9 @@ const canonical = new URL(path, Astro.site ?? Astro.url).href;
             </a>
           ))
         }
-      </nav>
+      </nav> -->
 
-      <p class="footer-contribute">
+      <!-- <p class="footer-contribute">
         {
           contribute.map((link, index) => (
             <>
@@ -104,17 +103,20 @@ const canonical = new URL(path, Astro.site ?? Astro.url).href;
             </>
           ))
         }
-      </p>
+      </p> -->
 
       <div class="footer-base">
-        <p>
-          <AiDisclosure ai={ai} />
-          Written by Frank Lämmer and published by <a href="/providers/fortrabbit/">fortrabbit</a>, which is in the
-          dataset like everyone else. Code under MIT, data under <a href="https://creativecommons.org/licenses/by/4.0/"
-            >CC BY 4.0</a
-          >.
-        </p>
-        <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+        <div>
+          <p>
+            Make with an LLM, curated by Frank Lämmer of <a href="/providers/fortrabbit/">fortrabbit</a>.
+          </p>
+          <p>
+            Code under MIT, data under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
+            Contributions welcome.
+          </p>
+        </div>
+        {/* Hidden until the script that makes it work has run, so it is never a control that does nothing. */}
+        <button class="theme-toggle" type="button" data-theme-toggle hidden>
           <span data-theme-label>Dark</span>
         </button>
       </div>
@@ -134,10 +136,14 @@ const canonical = new URL(path, Astro.site ?? Astro.url).href;
       const dark = () =>
         root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
 
+      /*
+       * An action, not a state. The label names what pressing it will do, so
+       * aria-pressed — which announces what the button currently *is* — would
+       * contradict it: "Dark, pressed" where the page is light.
+       */
       const describe = () => {
         if (!toggle || !label) return;
         label.textContent = dark() ? 'Light' : 'Dark';
-        toggle.setAttribute('aria-pressed', String(dark()));
         toggle.title = `Switch to ${dark() ? 'light' : 'dark'}`;
       };
 
@@ -149,6 +155,7 @@ const canonical = new URL(path, Astro.site ?? Astro.url).href;
       });
 
       describe();
+      if (toggle) toggle.hidden = false;
 
       // `/` focuses search, the way it works everywhere else a developer types.
       const field = document.querySelector<HTMLInputElement>('[data-search-shortcut]');
