@@ -1,38 +1,36 @@
 ---
 import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
-import ProviderList from '../../components/ProviderList.astro';
-import { loadProviders } from '../../lib/providers';
+import ProviderRegister from '../../components/ProviderRegister.astro';
+import { loadFacets } from '../../lib/facets';
 
-// The category page is the guide page: the explainer opens it, the records it
-// describes are listed directly beneath.
+/*
+ * The category page is the facet value page with an explainer on the front. It
+ * has its own route rather than falling out of /[facet]/[value] because the
+ * written introduction is what makes a category more than a filter — everything
+ * below it is the same register every other value page shows.
+ */
 export async function getStaticPaths() {
   const taxonomy = await getCollection('taxonomy');
   const category = taxonomy.find((facet) => facet.data.id === 'category');
-  const providers = await loadProviders();
+  const { facets, providers } = await loadFacets();
   const explainers = await getCollection('categories');
 
   return (category?.data.values ?? [])
     .map((value) => ({
       params: { category: value.id },
       props: {
+        id: value.id,
         label: value.label,
         explainer: explainers.find((entry) => entry.id === value.id),
-        matches: providers
-          .filter((provider) => provider.data.category === value.id)
-          .map((provider) => ({
-            id: provider.id,
-            name: provider.data.name,
-            description: provider.data.description,
-            publishedByUs: provider.data.publishedByUs,
-          }))
-          .sort((a, b) => a.name.localeCompare(b.name, 'en')),
+        facets,
+        matches: providers.filter((provider) => provider.facets.category === value.id),
       },
     }))
     .filter((route) => route.props.matches.length > 0);
 }
 
-const { label, explainer, matches } = Astro.props;
+const { id, label, explainer, facets, matches } = Astro.props;
 const Explainer = explainer ? (await render(explainer)).Content : null;
 ---
 
@@ -56,11 +54,9 @@ const Explainer = explainer ? (await render(explainer)).Content : null;
 
   {Explainer && <Explainer />}
 
-  <h2>{matches.length === 1 ? '1 provider' : `${matches.length} providers`}</h2>
   <p class="annotation">
-    Sorted alphabetically. A primary category is one field of many — several of these also offer what other categories
-    describe.
+    A primary category is one field of many — several of these also offer what other categories describe.
   </p>
 
-  <ProviderList providers={matches} />
+  <ProviderRegister providers={matches} facets={facets} seed={{ facet: 'category', value: id }} />
 </Base>
