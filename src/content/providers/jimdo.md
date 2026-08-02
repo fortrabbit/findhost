@@ -19,7 +19,6 @@ checkedAt: 2026-08-01
 sources:
   - { field: founded, url: 'https://www.jimdo.com/pricing/', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://www.jimdo.com/pricing/', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://www.jimdo.com/pricing/', checkedAt: 2026-08-01 }
   - { field: billingPeriods, url: 'https://www.jimdo.com/pricing/website/', checkedAt: 2026-08-02 }
 figure:
   emoji: 🪴

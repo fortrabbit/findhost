@@ -57,7 +57,6 @@ sources:
   - { field: deployMethods, url: 'https://render.com/docs/web-services', checkedAt: 2026-07-31 }
   - { field: sshAccess, url: 'https://render.com/docs/ssh', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://render.com/docs/free', checkedAt: 2026-07-31 }
-  - { field: priceFrom, url: 'https://render.com/docs/free', checkedAt: 2026-07-31 }
   - { field: persistentStorage, url: 'https://render.com/docs/free', checkedAt: 2026-07-31 }
   - { field: billingPeriods, url: 'https://render.com/docs/free', checkedAt: 2026-08-02 }
   - { field: regions, url: 'https://render.com/docs/regions', checkedAt: 2026-07-31 }

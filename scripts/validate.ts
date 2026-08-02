@@ -31,6 +31,16 @@ const taxonomy = parseYaml(readFileSync(taxonomyFile, 'utf8')) as {
 const files = readdirSync(providersDir).filter((name) => name.endsWith('.md'));
 const seen = new Map<string, string>();
 
+const records = files.map((file) => ({ file, data: frontmatter(readFileSync(join(providersDir, file), 'utf8')) }));
+
+/*
+ * Every key any record uses. A `sources` entry names either one of these — a
+ * field, which gets a numbered marker beside its value — or a claim made in the
+ * prose, which is cited inline. Knowing which is which is what lets the guard
+ * below tell a stale citation from a prose one.
+ */
+const fieldNames = new Set(records.flatMap(({ data }) => (data ? Object.keys(data) : [])));
+
 // Kept apart in the count only. Every guard below runs on a hidden record too —
 // a rejected name is still published, and a field this dataset may never carry
 // is no more acceptable on a page nobody links to.
@@ -40,10 +50,7 @@ let hidden = 0;
 // A ranking field is the one thing this dataset may never grow. CI4, mechanically.
 const forbidden = ['rank', 'ranking', 'score', 'rating', 'boost', 'weight', 'stars', 'position', 'featured'];
 
-for (const file of files) {
-  const path = join(providersDir, file);
-  const data = frontmatter(readFileSync(path, 'utf8'));
-
+for (const { file, data } of records) {
   if (!data) {
     fail(file, 'no frontmatter');
     continue;
@@ -71,6 +78,18 @@ for (const file of files) {
     const value = data[asset];
     if (typeof value === 'string' && !existsSync(join(publicDir, value))) {
       fail(file, `${asset} "${value}" is not in ${publicDir}/`);
+    }
+  }
+
+  /*
+   * A source for a field the record does not carry numbers a footnote nothing
+   * points at, and claims the fact was checked when the page shows no fact. It
+   * happens when a band is pulled and its citation is left behind.
+   */
+  for (const source of (data.sources ?? []) as { field?: string }[]) {
+    const field = String(source.field);
+    if (fieldNames.has(field) && data[field] === undefined) {
+      fail(file, `cites a source for "${field}", which this record does not carry`);
     }
   }
 

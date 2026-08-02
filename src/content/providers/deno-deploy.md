@@ -35,6 +35,8 @@ deployMethods:
   - api
 sshAccess: none
 pricingModel: fixed-tier
+priceFrom: md
+priceTo: xl
 freeTier: permanent
 apiAvailable: public
 cliTool: official
@@ -43,7 +45,8 @@ iacSupport:
 status: active
 checkedAt: 2026-07-31
 sources:
-  - { field: priceFrom, url: 'https://deno.com/deploy/pricing', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://deno.com/deploy/pricing', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://deno.com/deploy/pricing', checkedAt: 2026-08-02 }
   - { field: freeTier, url: 'https://deno.com/deploy/pricing', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://deno.com/deploy/pricing', checkedAt: 2026-07-31 }
 figure:
