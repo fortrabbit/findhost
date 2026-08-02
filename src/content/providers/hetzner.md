@@ -63,7 +63,6 @@ figure:
   color: rgb(200, 160, 60)
   textColor: rgb(50, 20, 20)
   text: IT made in Germany.
-ai: co-authored
 greenWebId: 131
 ---
 

@@ -62,7 +62,6 @@ figure:
   color: "#FF9900"
   textColor: rgb(155, 64, 8)
   text: Everything from A to Z.
-ai: co-authored
 ---
 
 ## About AWS

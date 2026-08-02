@@ -60,7 +60,6 @@ figure:
   color: rgb(100, 180, 220)
   textColor: rgb(75, 75, 112)
   text: Fly high.
-ai: co-authored
 ---
 
 ## About Fly.io

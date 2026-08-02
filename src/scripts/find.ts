@@ -110,7 +110,18 @@ const fallbackEl = document.querySelector<HTMLElement>('[data-find-fallback]');
 
 if (filtersEl && resultsEl && summaryEl) {
   const response = await fetch('/providers.json');
-  const { facets, providers } = (await response.json()) as { facets: Facet[]; providers: ProviderRow[] };
+  const { facets, providers, drafts } = (await response.json()) as {
+    facets: Facet[];
+    providers: ProviderRow[];
+    drafts: ProviderRow[];
+  };
+
+  /*
+   * Hidden records are shown only when asked for, never counted in the register,
+   * and never filtered — a stub has almost no fields, so running it through the
+   * facets would drop it on the first tick and imply we had checked.
+   */
+  let showDrafts = false;
 
   const selected = new Map<string, Set<string>>();
 
@@ -291,6 +302,39 @@ if (filtersEl && resultsEl && summaryEl) {
 
       filtersEl.append(group);
     }
+
+    if (drafts.length) {
+      const group = document.createElement('div');
+      group.className = 'find-facet find-drafts';
+
+      const heading = document.createElement('h2');
+      heading.className = 'find-facet-title';
+      heading.textContent = 'Stubs';
+      group.append(heading);
+
+      const label = document.createElement('label');
+      const input = document.createElement('input');
+      input.type = 'checkbox';
+      input.checked = showDrafts;
+      input.addEventListener('change', () => {
+        showDrafts = input.checked;
+        render();
+      });
+
+      const count = document.createElement('span');
+      count.className = 'find-count';
+      count.textContent = String(drafts.length);
+
+      label.append(input, document.createTextNode(' Show these too '), count);
+      group.append(label);
+
+      const note = document.createElement('p');
+      note.className = 'annotation';
+      note.textContent = 'Started and unfinished, or considered and out of scope. Not counted, not filtered.';
+      group.append(note);
+
+      filtersEl.append(group);
+    }
   };
 
   const letterOf = (name: string) => {
@@ -332,6 +376,28 @@ if (filtersEl && resultsEl && summaryEl) {
       }
 
       list?.append(row(provider));
+    }
+
+    if (showDrafts && drafts.length) {
+      const section = document.createElement('section');
+      section.className = 'letter-group';
+
+      const heading = document.createElement('h2');
+      heading.textContent = 'Not in the register';
+      section.append(heading);
+
+      const note = document.createElement('p');
+      note.className = 'annotation';
+      note.textContent =
+        'Records started and not finished, or considered and failed against a numbered inclusion criterion. They are not part of the count above and the filters do not apply to them.';
+      section.append(note);
+
+      const list = document.createElement('ul');
+      list.className = 'provider-list';
+      for (const draft of drafts) list.append(row(draft));
+      section.append(list);
+
+      resultsEl.append(section);
     }
 
     const dropped = excluded();

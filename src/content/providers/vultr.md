@@ -50,7 +50,6 @@ figure:
   color: rgb(0, 120, 200)
   textColor: rgb(220, 220, 255)
   text: No cage required.
-ai: co-authored
 ---
 
 ## About Vultr

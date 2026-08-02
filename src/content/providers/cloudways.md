@@ -53,7 +53,6 @@ figure:
   color: rgb(45, 110, 210)
   textColor: rgb(240, 245, 255)
   text: Control panel in the clouds.
-ai: co-authored
 ---
 
 ## About Cloudways

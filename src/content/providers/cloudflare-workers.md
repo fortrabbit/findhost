@@ -25,7 +25,6 @@ figure:
   color: rgb(60, 40, 20)
   textColor: rgb(255, 190, 120)
   text: Code in isolates, next to the visitor.
-ai: co-authored
 ---
 
 ## About Cloudflare Workers

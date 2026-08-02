@@ -29,7 +29,6 @@ figure:
   color: rgb(120, 100, 70)
   textColor: rgb(230, 210, 180)
   text: Simple tools, small jobs.
-ai: co-authored
 ---
 
 ## About Weebly

@@ -83,7 +83,6 @@ figure:
   color: rgb(20, 20, 24)
   textColor: rgb(220, 220, 230)
   text: The frontend cloud.
-ai: co-authored
 ---
 
 ## About Vercel

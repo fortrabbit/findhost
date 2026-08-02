@@ -7,7 +7,6 @@ figure:
   color: rgb(140, 90, 70)
   textColor: rgb(220, 230, 255)
   text: Fixed rails.
-ai: co-authored
 ---
 
 ## About low-code and no-code platforms

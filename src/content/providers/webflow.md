@@ -31,7 +31,6 @@ figure:
   color: rgb(40, 70, 110)
   textColor: rgb(170, 210, 240)
   text: Design to publish.
-ai: co-authored
 ---
 
 ## About Webflow

@@ -33,7 +33,6 @@ figure:
   color: rgb(50, 30, 70)
   textColor: rgb(200, 170, 255)
   text: Event handlers, billed by the millisecond.
-ai: co-authored
 ---
 
 ## About Scaleway Functions

@@ -7,7 +7,6 @@ figure:
   color: rgb(250, 200, 30)
   textColor: rgb(40, 40, 0)
   text: Go ahead, ditch your VPS!
-ai: co-authored
 ---
 
 ## What is VPS hosting?

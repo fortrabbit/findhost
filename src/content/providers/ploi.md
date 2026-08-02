@@ -53,7 +53,6 @@ figure:
   color: rgb(90, 55, 160)
   textColor: rgb(205, 200, 235)
   text: Sets up the server, hands you the keys.
-ai: co-authored
 ---
 
 ## About Ploi

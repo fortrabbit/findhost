@@ -51,7 +51,6 @@ figure:
   color: rgb(30, 85, 158)
   textColor: rgb(230, 285, 255)
   text: VPS from US by Akamai.
-ai: co-authored
 ---
 
 ## About Linode

@@ -70,7 +70,6 @@ figure:
   color: rgb(72, 209, 204)
   textColor: rgb(10, 50, 10)
   text: Git push to a managed container.
-ai: co-authored
 ---
 
 ## About Render

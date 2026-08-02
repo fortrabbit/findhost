@@ -22,7 +22,6 @@ figure:
   color: rgb(80, 120, 80)
   textColor: rgb(210, 240, 210)
   text: Small sites.
-ai: co-authored
 ---
 
 ## About Jimdo

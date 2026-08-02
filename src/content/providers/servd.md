@@ -50,7 +50,6 @@ figure:
   color: rgb(180, 120, 120)
   textColor: rgb(100, 50, 10)
   text: One dish on the menu.
-ai: co-authored
 greenWebId: 1530
 ---
 

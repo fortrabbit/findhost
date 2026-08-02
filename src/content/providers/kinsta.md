@@ -62,7 +62,6 @@ figure:
   color: rgb(138, 43, 226)
   textColor: rgb(255, 215, 0)
   text: Even royalty needs alternatives.
-ai: co-authored
 ---
 
 ## About Kinsta

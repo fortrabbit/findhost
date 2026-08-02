@@ -1,16 +1,13 @@
 ---
 title: How to choose a hosting provider
 description: What actually matters when comparing hosts, and which of it this dataset records for you.
-order: 20
-ai: co-authored
+lead: Learn how to pick a web host that matches your needs. Don't go shopping for the wrong reasons.
 figure:
   emoji: 🫨
   color: rgb(255, 200, 0)
   textColor: rgb(120, 70, 0)
   text: Fast, cheap, good — choose any two.
 ---
-
-This page is openly editorial. It cannot name a winner and does not try to; what it does is say which questions are worth asking, and point at the field that answers each one.
 
 ## Match the abstraction level to the team
 
@@ -41,15 +38,15 @@ These are the checkable ones — each is a field, and each links to every provid
 
 Harder to verify from outside, and deliberately not scored here, because a number would imply a precision nobody has: environmental impact, privacy posture, security practice. What a provider publishes on each is worth reading; whether it convinces is a judgement only the reader can make.
 
-## Cross-check with communities, not rating sites
+## Cross-check with communities
 
-Hosting rating sites are largely paid placement. Communities like r/webhosting, or the Discord or forum of the framework in use, surface what actually breaks in practice. Treat them as a sanity check rather than a verdict — including on this site.
+Hosting rating sites, except the one you are on right now are largely crap with paid placement. Communities like r/webhosting, or the Discord or forum of the framework in use, surface what actually breaks in practice.
 
 ## Try before buying
 
 Many providers offer a [free tier or trial](/free-tier/) without a credit card. An afternoon of actually deploying something tells more than a week of comparison tables.
 
-## Think twice about size — in both directions
+## Think twice about size
 
 Large providers have real economies of scale and a baseline of quality that comes with them. They also tend toward bloated catalogues that are hard to navigate, and support that is not personal at any price. One small site is not a priority to them.
 

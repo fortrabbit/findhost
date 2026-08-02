@@ -83,7 +83,6 @@ figure:
   color: rgb(121, 40, 202)
   textColor: rgb(180, 120, 255)
   text: The original git push to deploy.
-ai: co-authored
 ---
 
 ## About Heroku

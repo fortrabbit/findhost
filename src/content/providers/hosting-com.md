@@ -45,7 +45,6 @@ figure:
   color: rgb(170, 68, 68)
   textColor: rgb(255, 255, 255)
   text: A2 Hosting under a new name.
-ai: co-authored
 ---
 
 ## About Hosting.com

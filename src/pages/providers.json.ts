@@ -1,15 +1,19 @@
 import type { APIRoute } from 'astro';
-import { loadFacets } from '../lib/facets';
+import { loadDrafts, loadFacets } from '../lib/facets';
 
 /**
  * The "database": every facet definition and every record's facet fields, emitted
- * as one file the browser fetches. At 61 records this is a fetch and an
+ * as one file the browser fetches. A few hundred records is a fetch and an
  * Array.filter — no server, no query language, no index to keep in sync.
+ *
+ * `drafts` is kept apart from `providers` rather than flagged inside it, so
+ * nothing that counts the register can pick them up by forgetting a filter.
  */
 export const GET: APIRoute = async () => {
   const { facets, providers } = await loadFacets();
+  const drafts = await loadDrafts();
 
-  return new Response(JSON.stringify({ facets, providers }), {
+  return new Response(JSON.stringify({ facets, providers, drafts }), {
     headers: { 'content-type': 'application/json; charset=utf-8' },
   });
 };

@@ -21,7 +21,6 @@ figure:
   color: rgb(170, 140, 80)
   textColor: rgb(60, 40, 10)
   text: Building blocks, no blueprints.
-ai: co-authored
 ---
 
 ## About Wix

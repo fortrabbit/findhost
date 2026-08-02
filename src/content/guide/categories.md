@@ -2,7 +2,6 @@
 title: Web hosting categories
 description: The categories the market sells under — shared, VPS, server management, vanity hosting, serverless, PaaS, IaaS, low-code — and what each one asks of a team.
 order: 30
-ai: co-authored
 figure:
   emoji: 🗂️
   color: rgb(34, 40, 56)

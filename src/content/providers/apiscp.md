@@ -34,7 +34,6 @@ figure:
   color: rgb(200, 50, 50)
   textColor: rgb(255, 230, 230)
   text: Max control, max responsibility.
-ai: co-authored
 ---
 
 ## About ApisCP

@@ -1,6 +1,5 @@
 ---
 title: What to look at when hosting WordPress
-ai: co-authored
 ---
 
 WordPress runs on almost anything with PHP, which is exactly why choosing a host for it is confusing: nearly every provider in this dataset can serve it, and the ones that market themselves at it are not automatically the better answer.

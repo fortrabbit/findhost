@@ -32,7 +32,6 @@ figure:
   color: rgb(70, 90, 110)
   textColor: rgb(200, 220, 235)
   text: Client work, standardized output.
-ai: co-authored
 ---
 
 ## About Duda

@@ -36,7 +36,6 @@ figure:
   color: rgb(140, 30, 180)
   textColor: rgb(245, 235, 255)
   text: Penny prices, DIY everything else.
-ai: co-authored
 ---
 
 ## About Hostinger

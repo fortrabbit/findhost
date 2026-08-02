@@ -26,7 +26,6 @@ figure:
   color: rgb(167, 136, 92)
   textColor: rgb(85, 63, 33)
   text: Don't feed the alligators.
-ai: co-authored
 ---
 
 ## About HostGator

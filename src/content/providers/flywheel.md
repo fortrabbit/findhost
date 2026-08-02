@@ -39,7 +39,6 @@ figure:
   color: rgb(220, 150, 150)
   textColor: rgb(139, 0, 139)
   text: Round and round.
-ai: co-authored
 ---
 
 ## About Flywheel

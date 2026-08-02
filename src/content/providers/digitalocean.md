@@ -81,7 +81,6 @@ figure:
   color: rgb(0, 170, 255)
   textColor: rgb(0, 50, 200)
   text: Virtual machines, billed by the second.
-ai: co-authored
 ---
 
 ## About DigitalOcean

@@ -7,7 +7,6 @@ figure:
   color: rgb(255, 105, 180)
   textColor: rgb(255, 255, 255)
   text: One trick pony.
-ai: co-authored
 ---
 
 Some software makes particular demands on its hosting. A CMS benefits from integrated caching and image delivery, and from having updates applied for it. Standard solutions exist for each of those separately; specialised hosting bundles them and tunes them for the one application it runs.

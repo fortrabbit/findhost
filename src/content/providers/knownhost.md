@@ -32,7 +32,6 @@ figure:
   color: rgb(0, 80, 150)
   textColor: rgb(255, 255, 255)
   text: Managed servers, your choice of panel.
-ai: co-authored
 ---
 
 ## About KnownHost

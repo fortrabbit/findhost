@@ -42,7 +42,6 @@ figure:
   color: rgb(0, 120, 140)
   textColor: rgb(230, 255, 255)
   text: DIY PaaS, DIY ops.
-ai: co-authored
 ---
 
 ## About Coolify

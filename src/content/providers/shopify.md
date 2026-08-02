@@ -32,7 +32,6 @@ figure:
   color: rgb(90, 80, 60)
   textColor: rgb(220, 225, 225)
   text: Store in a box.
-ai: co-authored
 ---
 
 ## About Shopify

@@ -54,7 +54,6 @@ figure:
   color: rgb(25, 118, 210)
   textColor: rgb(100, 180, 255)
   text: General-purpose PaaS.
-ai: co-authored
 ---
 
 ## About Sevalla

@@ -50,7 +50,6 @@ figure:
   color: rgb(103, 126, 208)
   textColor: rgb(235, 237, 255)
   text: PHP at the WASM edge.
-ai: co-authored
 ---
 
 ## About Wasmer

@@ -34,7 +34,6 @@ figure:
   color: rgb(120, 120, 220)
   textColor: rgb(70, 70, 130)
   text: Cloudy with a chance of Craft.
-ai: co-authored
 ---
 
 ## About Craft Cloud

@@ -55,7 +55,6 @@ figure:
   color: rgb(0, 100, 255)
   textColor: rgb(255, 255, 255)
   text: Managed servers, but you are the admin.
-ai: co-authored
 ---
 
 ## About xCloud

@@ -51,7 +51,6 @@ figure:
   color: rgb(255, 140, 0)
   textColor: rgb(255, 220, 140)
   text: Dutch clouds.
-ai: co-authored
 ---
 
 ## About Ploi Cloud

@@ -7,7 +7,6 @@ figure:
   color: rgb(30, 120, 34)
   textColor: rgb(140, 230, 200)
   text: Remember when PaaS was the future?
-ai: co-authored
 ---
 
 Platform as a Service (PaaS) is a cloud computing model that provides a 'platform' for hosting all kinds of applications. It lets developers build, test, and deploy applications without managing the infrastructure underneath. That removes the time and cost of setting up bare metal hosting infrastructure and keeping the servers running (sysops, devops).

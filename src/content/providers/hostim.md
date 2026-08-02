@@ -36,7 +36,6 @@ figure:
   textColor: rgb(150, 200, 255)
   text: Docker apps, no YAML.
 editorialNote: Hostim is run by a former fortrabbit employee. Disclosed because fortrabbit publishes this site; it changes nothing about how the record is written.
-ai: co-authored
 ---
 
 ## About Hostim

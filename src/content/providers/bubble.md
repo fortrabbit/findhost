@@ -20,7 +20,6 @@ figure:
   color: rgb(70, 110, 120)
   textColor: rgb(200, 240, 245)
   text: No code in, no code out.
-ai: co-authored
 ---
 
 ## About Bubble

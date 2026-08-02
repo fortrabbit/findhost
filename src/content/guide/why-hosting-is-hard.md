@@ -2,7 +2,6 @@
 title: Why it's hard to choose hosting
 description: The hosting market hides more than it shows, and the usual sources of advice are paid for.
 order: 10
-ai: co-authored
 figure:
   emoji: 🍋
   color: rgb(255, 250, 0)

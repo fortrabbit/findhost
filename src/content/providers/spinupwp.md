@@ -61,7 +61,6 @@ figure:
   color: rgb(110, 90, 170)
   textColor: rgb(240, 230, 255)
   text: Spinning up servers is only the start.
-ai: co-authored
 ---
 
 ## About SpinupWP

@@ -1,5 +1,5 @@
 import { getCollection } from 'astro:content';
-import { loadProviders } from './providers';
+import { isListed, loadProviders } from './providers';
 
 export interface FacetValue {
   id: string;
@@ -39,10 +39,64 @@ export interface ProviderRow {
   facets: Record<string, string | string[]>;
   /** Fields this record sets to null: the question does not apply, which is not the same as not knowing. */
   notApplicable: string[];
+  /** Only on a hidden row: `draft` or `out-of-scope`. Absent on everything in the register. */
+  status?: string;
 }
 
 /** Alphabetical, always — see the sort rule in CLAUDE.md. */
 const byName = (a: { name: string }, b: { name: string }) => a.name.localeCompare(b.name, 'en');
+
+type Taxonomy = Awaited<ReturnType<typeof getCollection<'taxonomy'>>>;
+
+function toRow(record: { id: string; data: Record<string, unknown> }, taxonomy: Taxonomy): ProviderRow {
+  const data = record.data;
+  const facets: Record<string, string | string[]> = {};
+  const notApplicable: string[] = [];
+
+  for (const facet of taxonomy) {
+    const value = data[facet.data.field];
+    if (value === null) {
+      notApplicable.push(facet.data.field);
+      continue;
+    }
+    if (value === undefined) continue;
+    if (Array.isArray(value)) {
+      if (value.length) facets[facet.data.field] = value.map(String);
+    } else {
+      facets[facet.data.field] = String(value);
+    }
+  }
+
+  return {
+    id: record.id,
+    name: String(data.name),
+    description: data.description as string | undefined,
+    publishedByUs: data.publishedByUs as boolean | undefined,
+    greenWebId: data.greenWebId as number | null | undefined,
+    entryPriceBand: data.entryPriceBand as string | undefined,
+    figure: data.figure as ProviderRow['figure'],
+    facets,
+    notApplicable,
+  };
+}
+
+/*
+ * The hidden records, on their own, for the one place that offers to show them:
+ * a checkbox in the find view. They are deliberately not merged into `providers`
+ * — a stub has almost no fields, so folding it in would move every facet's
+ * unknown count and quietly change what the register claims.
+ */
+export async function loadDrafts(): Promise<ProviderRow[]> {
+  const taxonomy = await getCollection('taxonomy');
+  const records = (await getCollection('providers')).filter((record) => !isListed(record));
+
+  return records
+    .map((record) => ({
+      ...toRow(record as never, taxonomy),
+      status: String(record.data.status),
+    }))
+    .sort(byName);
+}
 
 export async function loadFacets(): Promise<{ facets: Facet[]; providers: ProviderRow[] }> {
   const taxonomy = await getCollection('taxonomy');

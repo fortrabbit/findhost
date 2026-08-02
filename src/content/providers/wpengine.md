@@ -47,7 +47,6 @@ figure:
   color: rgb(70, 130, 180)
   textColor: rgb(255, 255, 255)
   text: WordPress, and nothing but.
-ai: co-authored
 ---
 
 ## About WP Engine

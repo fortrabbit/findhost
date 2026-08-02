@@ -7,7 +7,6 @@ figure:
   color: rgb(0, 187, 87)
   textColor: rgb(0, 87, 20)
   text: Are you really considering shared hosting?
-ai: co-authored
 ---
 
 Shared hosting is a commodity product for end consumers. Many accounts share one machine, and the provider usually runs the data centre and the bare metal itself. Domain and email services are commonly bundled in. Lots of stuff for little money.

@@ -38,7 +38,6 @@ figure:
   color: rgb(40, 44, 60)
   textColor: rgb(255, 170, 160)
   text: Laravel, evaporated to Lambda.
-ai: co-authored
 ---
 
 ## About Laravel Vapor

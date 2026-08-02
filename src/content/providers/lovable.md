@@ -27,7 +27,6 @@ figure:
   color: rgb(160, 80, 80)
   textColor: rgb(240, 190, 215)
   text: Prompt in, React app out.
-ai: co-authored
 ---
 
 ## About Lovable

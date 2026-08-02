@@ -66,7 +66,6 @@ figure:
   color: rgb(29, 108, 255)
   textColor: rgb(130, 200, 255)
   text: Windows in the sky?
-ai: co-authored
 ---
 
 ## About Azure

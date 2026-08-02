@@ -64,7 +64,6 @@ figure:
   color: rgb(105, 105, 105)
   textColor: rgb(255, 255, 255)
   text: All aboard the complexity express.
-ai: co-authored
 ---
 
 ## About Railway

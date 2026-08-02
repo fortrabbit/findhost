@@ -35,7 +35,6 @@ figure:
   color: rgb(10, 120, 170)
   textColor: rgb(225, 245, 255)
   text: Installs the stack, billed per app.
-ai: co-authored
 ---
 
 ## About ServerPilot

@@ -7,7 +7,6 @@ figure:
   color: rgb(28, 34, 52)
   textColor: rgb(150, 200, 255)
   text: Servers invoked on demand.
-ai: co-authored
 ---
 
 'Serverless' is mostly marketing jargon. Every vendor stretches the label over whatever it happens to sell. The servers are still there, but only spun up and down on demand. The bill follows usage, not reserved capacity: pay for what runs, nothing when it doesn't.

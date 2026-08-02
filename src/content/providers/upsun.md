@@ -66,7 +66,6 @@ figure:
   color: rgb(0, 85, 164)
   textColor: rgb(255, 200, 100)
   text: YAML in, environments out.
-ai: co-authored
 ---
 
 ## About Upsun

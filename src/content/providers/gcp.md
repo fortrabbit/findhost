@@ -62,7 +62,6 @@ checkedAt: 2026-08-01
 sources:
   - { field: infraContract, url: 'https://cloud.google.com/about/locations', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://cloud.google.com/about/locations', checkedAt: 2026-08-01 }
-ai: co-authored
 greenWebId: 595
 ---
 

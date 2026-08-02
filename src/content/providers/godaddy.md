@@ -10,7 +10,6 @@ figure:
   color: rgb(255, 162, 0)
   textColor: rgb(107, 0, 0)
   text: Domains first, hosting attached.
-ai: co-authored
 ---
 
 ## About GoDaddy

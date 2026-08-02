@@ -132,6 +132,31 @@ test.describe('without JavaScript', () => {
   });
 });
 
+test.describe('stubs', () => {
+  /*
+   * The register is 150 records and the repo holds 178. The 28 hidden ones are
+   * reachable, because a decision nobody can see is not a decision — but they
+   * are opt-in, unfiltered and never in the count, or "150 records" stops being
+   * true the moment someone ticks a box.
+   */
+  test.skip(({ javaScriptEnabled }) => javaScriptEnabled === false, 'the toggle is part of the filter view');
+
+  test('are off by default, shown on request, and never counted', async ({ page }) => {
+    await page.goto('/providers/');
+
+    const rows = page.locator('[data-find-results] .provider-list > li');
+    await expect(rows).toHaveCount(150);
+
+    const toggle = page.locator('.find-drafts input[type="checkbox"]');
+    await expect(toggle).not.toBeChecked();
+
+    await toggle.check();
+    await expect(rows).not.toHaveCount(150);
+    await expect(page.locator('[data-find-summary]')).toHaveText(/^150 records, sorted alphabetically\.$/);
+    await expect(page.getByRole('heading', { name: 'Not in the register' })).toBeVisible();
+  });
+});
+
 test.describe('filtering', () => {
   /*
    * The only surface on the site that needs JavaScript, and the reason the rest

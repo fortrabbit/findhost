@@ -29,7 +29,6 @@ sources:
   - { field: contractMinimum, url: 'https://www.dreamhost.com/hosting/shared/', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://www.dreamhost.com/hosting/shared/', checkedAt: 2026-07-31 }
   - { field: software, url: 'https://www.dreamhost.com/hosting/shared/', checkedAt: 2026-07-31 }
-ai: co-authored
 ---
 
 ## About DreamHost

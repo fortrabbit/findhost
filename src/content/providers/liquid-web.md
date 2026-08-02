@@ -41,7 +41,6 @@ figure:
   color: rgb(0, 50, 100)
   textColor: rgb(200, 220, 255)
   text: Managed hosting, high touch.
-ai: co-authored
 ---
 
 ## About Liquid Web

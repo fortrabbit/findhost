@@ -1,15 +1,15 @@
 ---
-layout: ../layouts/Markdown.astro
 title: About
+figure:
+  emoji: 🫨
+  color: rgb(255, 200, 0)
+  textColor: rgb(120, 70, 0)
+  text: Fast, cheap, good — choose any two.
 description: Who publishes this, what the rules are, and how it is made.
-ai: co-authored
+lead: Almost every "best hosting" list is ordered by affiliate commission. Providers that do not run an affiliate program — which is most small and independent ones — are not ranked low on those lists. They are absent from them. Two decades of that has produced a public record in which a handful of conglomerate brands look like the entire market.
 ---
 
-## Why this exists
-
-Almost every "best hosting" list is ordered by affiliate commission. Providers that do not run an affiliate programme — which is most small and independent ones — are not ranked low on those lists. They are absent from them. Two decades of that has produced a public record in which a handful of conglomerate brands look like the entire market.
-
-This exists to make the rest of it visible. Every provider meeting the scope test is listed, whether it is four people in Berlin or a hyperscaler, and the fields are chosen so a small independent host can actually be *found*: who owns it, where the data sits, whether a human answers, whether you can leave.
+This exists to make the rest of it visible. Every provider meeting the scope test is listed, whether it is four people in Berlin or a hyperscaler.
 
 ## Who publishes it
 

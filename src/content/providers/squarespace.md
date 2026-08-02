@@ -38,7 +38,6 @@ figure:
   color: rgb(90, 90, 90)
   textColor: rgb(220, 220, 220)
   text: Polished templates, fixed canvas.
-ai: co-authored
 ---
 
 ## About Squarespace

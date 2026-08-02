@@ -7,7 +7,6 @@ figure:
   color: "#607D8B"
   textColor: rgb(255, 211, 78)
   text: Building blocks, not buildings.
-ai: co-authored
 ---
 
 Infrastructure as a Service is a cloud computing model where customers rent computing resources such as servers, storage, and networking equipment. Customers build and run their own virtual data centres in the cloud without buying or maintaining physical hardware. The trade is scale and flexibility against owning the whole stack above the hypervisor: the operating system, the runtime, and everything that keeps them patched.

@@ -2,7 +2,6 @@
 layout: ../layouts/Markdown.astro
 title: Policies
 description: Who gets listed, what happens when a provider dies, how corrections work, and what we have given up.
-ai: co-authored
 ---
 
 These are rules to be argued with, not principles to admire. Every one of them is a promise that can be checked against what the site actually does, and several are enforced by the build rather than by our good intentions.

@@ -10,7 +10,6 @@ figure:
   color: rgb(50, 50, 50)
   textColor: rgb(200, 255, 200)
   text: We come in peace.
-ai: co-authored
 ---
 
 ## About NixiHost

@@ -50,7 +50,6 @@ sources:
   - { field: freeTier, url: 'https://www.fortrabbit.com/pricing', checkedAt: 2026-08-01 }
   - { field: contractMinimum, url: 'https://www.fortrabbit.com/pricing', checkedAt: 2026-08-01 }
 publishedByUs: true
-ai: co-authored
 figure:
   emoji: 🐰
   color: rgb(46, 62, 82)

@@ -36,7 +36,6 @@ figure:
   color: rgb(0, 102, 204)
   textColor: rgb(205, 205, 255)
   text: WordPress hosting at retail scale.
-ai: co-authored
 ---
 
 ## About Bluehost

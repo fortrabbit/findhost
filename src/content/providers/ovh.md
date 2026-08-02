@@ -38,7 +38,6 @@ figure:
   color: rgb(255, 61, 67)
   textColor: rgb(77, 0, 0)
   text: Builds its own metal, cools it with water.
-ai: co-authored
 greenWebId: 1305
 ---
 

@@ -42,7 +42,6 @@ figure:
   color: rgb(20, 40, 90)
   textColor: rgb(140, 190, 255)
   text: Functions on the ocean, asleep until called.
-ai: co-authored
 ---
 
 ## About DigitalOcean Functions

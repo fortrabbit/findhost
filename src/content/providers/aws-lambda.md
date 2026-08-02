@@ -69,7 +69,6 @@ figure:
   color: rgb(35, 43, 60)
   textColor: rgb(255, 178, 102)
   text: The raw serverless primitive.
-ai: co-authored
 ---
 
 ## About AWS Lambda

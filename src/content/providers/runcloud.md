@@ -32,7 +32,6 @@ figure:
   color: rgb(0, 135, 150)
   textColor: rgb(230, 255, 255)
   text: You patch the box, RunCloud runs the panel.
-ai: co-authored
 ---
 
 ## About RunCloud

@@ -60,7 +60,6 @@ figure:
   color: rgb(100, 200, 60)
   textColor: rgb(80, 50, 12)
   text: Pay for VPS, plus VPS software.
-ai: co-authored
 ---
 
 ## About Laravel Forge

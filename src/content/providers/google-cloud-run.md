@@ -67,7 +67,6 @@ figure:
   color: rgb(30, 40, 55)
   textColor: rgb(150, 200, 255)
   text: Containers that scale to zero.
-ai: co-authored
 greenWebId: 595
 ---
 

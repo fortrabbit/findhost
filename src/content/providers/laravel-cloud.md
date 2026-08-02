@@ -55,7 +55,6 @@ figure:
   color: rgb(173, 150, 74)
   textColor: rgb(101, 71, 0)
   text: The framework vendor's own platform.
-ai: co-authored
 ---
 
 ## About Laravel Cloud
