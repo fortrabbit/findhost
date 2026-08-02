@@ -307,6 +307,7 @@ const categories = defineCollection({
     id: z.string(),
     title: z.string(),
     description: z.string().max(200).optional(),
+    lead: z.string().optional(),
     figure: figure.optional(),
     ai: z.enum(['none', 'grammar', 'co-authored', 'authored']).optional(),
   }),
@@ -333,6 +334,8 @@ const guide = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string().max(200).optional(),
+    /** The opening line, set larger than the body. `description` is for search results; this is for the reader. */
+    lead: z.string().optional(),
     order: z.number().int().default(50),
     figure: figure.optional(),
     ai: z.enum(['none', 'grammar', 'co-authored', 'authored']).optional(),

@@ -2,6 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import Base from '../../../layouts/Base.astro';
 import { loadFacets } from '../../../lib/facets';
+import GuideNav from '../../../components/GuideNav.astro';
 
 /*
  * A category is described here and listed at /category/<id>/. Two pages, one
@@ -31,28 +32,29 @@ const listed = `${count} ${count === 1 ? 'provider' : 'providers'}`;
 ---
 
 <Base title={`${explainer.data.title} — FindHost`} description={explainer.data.description} ai={explainer.data.ai}>
-  <article>
-    {
-      explainer.data.figure && (
-        <p
-          class="figure-band full-bleed"
-          style={`background:${explainer.data.figure.color};color:${explainer.data.figure.textColor}`}
-        >
-          <span aria-hidden="true">{explainer.data.figure.emoji}</span> {explainer.data.figure.text}
-        </p>
-      )
-    }
+  {
+    explainer.data.figure && (
+      <p
+        class="figure-band full-bleed"
+        style={`background:${explainer.data.figure.color};color:${explainer.data.figure.textColor}`}
+      >
+        <span aria-hidden="true">{explainer.data.figure.emoji}</span> {explainer.data.figure.text}
+      </p>
+    )
+  }
 
-    <h1>{explainer.data.title}</h1>
+  <div class="guide-layout full-width">
+    <GuideNav current={`/guide/categories/${explainer.id}/`} />
 
-    <Content />
+    <article>
+      <h1>{explainer.data.title}</h1>
+      {explainer.data.lead && <p class="lead">{explainer.data.lead}</p>}
 
-    <p class="show-all">
-      <a href={`/category/${explainer.id}/`}>See the {listed} in this category →</a>
-    </p>
+      <Content />
 
-    <p class="annotation">
-      <a href="/guide/categories/">All eight categories</a> · <a href="/guide/">every guide</a>
-    </p>
-  </article>
+      <p class="show-all">
+        <a href={`/category/${explainer.id}/`}>See the {listed} in this category →</a>
+      </p>
+    </article>
+  </div>
 </Base>

@@ -1,6 +1,7 @@
 ---
 title: Hosting and data privacy
 description: Which privacy questions about a host can be answered from outside, why a region is not a jurisdiction, and which fields record the checkable parts.
+lead: Which privacy questions about a host can be answered from the outside, and which cannot.
 order: 50
 figure:
   emoji: 🛂

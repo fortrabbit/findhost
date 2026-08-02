@@ -1,6 +1,7 @@
 ---
 title: Managed hosting
 description: The service-led corner of the market — bespoke infrastructure designed and run by the provider, priced by conversation rather than by plan.
+lead: The corner of the market priced by conversation rather than by plan, and when that is worth it.
 order: 40
 figure:
   emoji: 🧤
