@@ -1,16 +1,18 @@
 ---
 import ProviderList from './ProviderList.astro';
-import type { Facet, ProviderRow } from '../lib/facets';
+import { facetIndex, type Facet, type ProviderRow } from '../lib/facets';
 
 interface Props {
   providers: ProviderRow[];
   facets: Facet[];
   /*
-   * The facet value this page already stands for. `/software/wordpress/` renders
-   * the register narrowed to WordPress and hands find.ts the same narrowing, so
-   * the page a crawler reads and the page a filter produces are one page.
+   * The facet value this page already stands for. A page that means one value
+   * gets no filters: its URL is the narrowing, so a tick that contradicted it
+   * would leave the heading, the prose and the address bar saying three
+   * different things. It gets a link into the register instead, already ticked,
+   * which is the page where combining values belongs.
    */
-  seed?: { facet: string; value: string };
+  seed?: { facet: string; value: string; label: string };
 }
 
 const { providers, facets, seed } = Astro.props;
@@ -44,13 +46,15 @@ const groups = [...new Set(providers.map((provider) => letterOf(provider.name)))
 
 <p class="annotation" data-find-summary>{summary}</p>
 
-<div
-  class="find-filters full-width"
-  data-find-filters
-  data-find-seed={seed ? `${seed.facet}:${seed.value}` : undefined}
-  data-find-seed-path={seed ? Astro.url.pathname : undefined}
->
-</div>
+{
+  seed ? (
+    <p class="find-onward">
+      <a href={`/providers/?${seed.facet}=${seed.value}`}>Combine {seed.label.toLowerCase()} with other filters →</a>
+    </p>
+  ) : (
+    <div class="find-filters full-width" data-find-filters />
+  )
+}
 
 <div data-find-results>
   {
@@ -69,24 +73,22 @@ const groups = [...new Set(providers.map((provider) => letterOf(provider.name)))
   }
 </div>
 
-<div data-find-fallback>
-  <p class="annotation">
-    Filtering needs JavaScript; the list above does not. Every facet value also has a page of its own, which is the same
-    list narrowed the same way:
-  </p>
+{
+  !seed && (
+    <div data-find-fallback>
+      <p class="annotation">
+        Filtering needs JavaScript; the list above does not. Every facet value also has a page of its own, which is the
+        same list narrowed the same way:
+      </p>
 
-  <ul class="entry-list">
-    {
-      facets.map((facet) => (
-        <li>
-          <a href={`/${facet.id}/`}>{facet.label}</a>
-          <span class="entry-count">{facet.values.filter((value) => value.count > 0).length}</span>
-        </li>
-      ))
-    }
-  </ul>
-</div>
-
-<script>
-  import '../scripts/find.ts';
-</script>
+      <ul class="entry-list">
+        {facets.map((facet) => (
+          <li>
+            <a href={facetIndex(facet.id)}>{facet.label}</a>
+            <span class="entry-count">{facet.values.filter((value) => value.count > 0).length}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}

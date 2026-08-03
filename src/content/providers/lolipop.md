@@ -6,7 +6,7 @@ urls:
   pricing: https://lolipop.jp/pricing/
   terms: https://lolipop.jp/terms/tos/
   docs: https://lolipop.jp/manual/
-category: shared
+category: shared-hosting
 description: Japanese rental server from GMO Pepabo, selling shared hosting for personal and small-business sites through its own control panel.
 hqCountry: JP
 ownership: subsidiary

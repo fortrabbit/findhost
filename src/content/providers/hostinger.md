@@ -5,7 +5,7 @@ urls:
   home: https://www.hostinger.com
   pricing: https://www.hostinger.com/web-hosting
   terms: https://www.hostinger.com/legal/universal-terms-of-service-agreement
-category: shared
+category: shared-hosting
 description: Hostinger is a Lithuanian budget host selling shared, cloud and VPS hosting plus a website builder, all administered through its own hPanel control panel.
 founded: 2004
 hqCountry: LT

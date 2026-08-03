@@ -540,6 +540,14 @@
   min-width: 0;
 }
 
+/* The way from a page that means one value to the register, where values combine. */
+.find-onward {
+  margin: 0 0 var(--space-lg);
+  padding-bottom: var(--space-md);
+  border-bottom: var(--rule-strong) solid var(--color-ink);
+  font-size: var(--text-sm);
+}
+
 /* Hidden until asked for, so a long tail costs no height. */
 .find-more {
   margin-top: var(--space-3xs);

@@ -1,6 +1,5 @@
 ---
-title: PaaS
-description: The middle layer of the cloud cake.
+description: Push code and the platform runs it — the operating system, the web server and the scaling belong to the provider.
 lead: Push code, the platform runs it.
 figure:
   emoji: 🦕
@@ -9,10 +8,8 @@ figure:
   text: Remember when PaaS was the future?
 ---
 
-Platform as a Service (PaaS) is a cloud computing model that provides a 'platform' for hosting all kinds of applications. It lets developers build, test, and deploy applications without managing the infrastructure underneath. That removes the time and cost of setting up bare metal hosting infrastructure and keeping the servers running (sysops, devops).
+Platform as a Service takes code and runs it. The operating system, the web server, the runtime and the scaling belong to the provider; what the customer supplies is an application and a configuration file. Records here answer "the provider does" to [who manages the operating system](/os-managed-by/) and deploy by git push or a pipeline rather than by upload.
 
-In cloud computing acronyms, [IaaS](/category/iaas/) is the ground level, PaaS sits on top of it, and SaaS is the last layer.
+The label carries baggage. Fuelled by Heroku's early success, PaaS was widely predicted to replace classical hosting; instead many of the startups selling it failed, and the term went out of fashion with them. Plenty of services still work exactly this way — most of them now avoid calling themselves a PaaS.
 
-Fuelled by the early success of Heroku, PaaS was widely predicted to replace most classical hosting. That did not happen. Many PaaS startups failed, and the term Platform as a Service carries a bad reputation because of it. Plenty of specialised PaaS-like cloud hosting services exist regardless, though most of them avoid the label.
-
-PaaS is professional, usually language-agnostic, containerised, service-oriented cloud hosting. The boundaries to [VPS](/category/vps/) on one side and [serverless](/category/serverless/) on the other are blurred.
+The boundaries blur on both sides. A [VPS](/category/vps/) with a good [management panel](/category/server-management/) does much of the same job while leaving the server in the customer's name, and [serverless](/category/serverless/) is the same idea billed per request instead of per running instance. [Who manages the operating system](/os-managed-by/) is the field that separates the first pair; whether anything is still running when nobody is looking separates the second.

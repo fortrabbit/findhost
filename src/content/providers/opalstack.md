@@ -4,7 +4,7 @@ name: Opalstack
 urls:
   home: https://www.opalstack.com
   pricing: https://www.opalstack.com/
-category: shared
+category: shared-hosting
 description: Developer-owned US host running PHP-FPM, Node, Python and Ruby stacks with full SSH on every plan, plus VPS and bare-metal tiers.
 founded: 2019
 ownership: independent

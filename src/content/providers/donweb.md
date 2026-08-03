@@ -5,7 +5,7 @@ urls:
   home: https://donweb.com
   pricing: https://donweb.com/es-ar/hosting
   status: https://estado.donweb.com/
-category: shared
+category: shared-hosting
 description: DonWeb is an Argentine hosting and cloud provider running its own data centres, selling shared hosting, VPS, bare metal and pre-configured application stacks.
 founded: 2002
 hqCountry: AR

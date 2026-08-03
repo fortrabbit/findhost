@@ -4,7 +4,7 @@ name: Papaki
 urls:
   home: https://www.papaki.com
   pricing: https://www.papaki.com/en/web-hosting/
-category: shared
+category: shared-hosting
 description: Greek domain registrar and shared-hosting provider, part of the European team.blue group.
 founded: 2004
 hqCountry: GR

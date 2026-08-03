@@ -6,7 +6,7 @@ urls:
   pricing: https://eu.siteground.com/web-hosting.htm
   terms: https://www.siteground.com/viewtos/terms_of_service
   docs: https://www.siteground.com/kb/
-category: shared
+category: shared-hosting
 description: Independently owned managed hosting running on Google Cloud, aimed at WordPress and WooCommerce, with its own control panel.
 founded: 2004
 ownership: independent

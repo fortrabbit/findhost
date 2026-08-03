@@ -5,7 +5,7 @@ urls:
   home: https://www.websupport.sk
   pricing: https://www.websupport.sk/webhosting
   terms: https://www.websupport.sk/podmienky
-category: shared
+category: shared-hosting
 description: Slovakia's largest domain registrar, selling shared hosting and a website builder across Slovakia, Czechia and Hungary from its own data centre.
 hqCountry: SK
 ownership: subsidiary

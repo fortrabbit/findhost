@@ -2,16 +2,17 @@
 import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import ProviderRegister from '../../components/ProviderRegister.astro';
-import { facetRoutes, loadFacets } from '../../lib/facets';
+import { facetIndex, facetRoutes, loadFacets } from '../../lib/facets';
 import { summarise } from '../../lib/summarise';
 
 /*
  * One static page per facet value in use. These are what a crawler follows and
- * what the no-JS fallback links to, and they are not a second, thinner design:
- * the page below is the register itself, narrowed, with the same filters on top
- * and this value already ticked. /software/wordpress/ and
- * /providers/?software=wordpress are the same view at two URLs — the first
- * works without JavaScript, which is why it exists.
+ * what a reader without JavaScript gets: the register narrowed to one value,
+ * with the narrowing in the path rather than in a query string.
+ *
+ * It carries no filters. Ticking a second value here would contradict the URL,
+ * the heading and the prose all at once, so the page links into the register
+ * with this value already set and lets combining happen there.
  */
 export async function getStaticPaths() {
   return facetRoutes();
@@ -102,9 +103,13 @@ const figure = note?.data.figure;
 
   {Note && <Note />}
 
-  <ProviderRegister providers={matches} facets={facets} seed={{ facet: facet.id, value: value.id }} />
+  <ProviderRegister
+    providers={matches}
+    facets={facets}
+    seed={{ facet: facet.id, value: value.id, label: value.label }}
+  />
 
   <p class="annotation">
-    <a href={`/${facet.id}/`}>Every {facet.label.toLowerCase()} value</a>
+    <a href={facetIndex(facet.id)}>Every {facet.label.toLowerCase()} value</a>
   </p>
 </Base>

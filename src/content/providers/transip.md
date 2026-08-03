@@ -7,7 +7,7 @@ urls:
   status: https://www.transnoc.nl/
   terms: https://www.transip.nl/algemene-voorwaarden/
   docs: https://api.transip.nl/rest/docs.html
-category: shared
+category: shared-hosting
 description: Dutch registrar and hosting provider selling shared webhosting, VPS, OpenStack cloud and managed Kubernetes from its own Netherlands data centres.
 founded: 2003
 hqCountry: NL

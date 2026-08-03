@@ -4,7 +4,7 @@ name: Dinahosting
 urls:
   home: https://dinahosting.com
   pricing: https://dinahosting.com/hosting
-category: shared
+category: shared-hosting
 description: Dinahosting is an independent Galician host selling shared hosting, domains and email from its own servers in Spain.
 founded: 2001
 hqCountry: ES

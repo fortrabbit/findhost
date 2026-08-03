@@ -10,7 +10,7 @@ figure:
   text: White glove, sales call included.
 ---
 
-Managed hosting is one of the blurriest labels in a market full of them. In the loose sense, almost every hosting service is managed: [shared hosting](/category/shared/), [PaaS](/category/paas/) and [serverless](/category/serverless/) all hand the operating system to the provider, which is exactly what [who manages the OS](/os-managed-by/) records. The trade uses the term more narrowly than that, and the narrow meaning is older.
+Managed hosting is one of the blurriest labels in a market full of them. In the loose sense, almost every hosting service is managed: [shared hosting](/category/shared-hosting/), [PaaS](/category/paas/) and [serverless](/category/serverless/) all hand the operating system to the provider, which is exactly what [who manages the OS](/os-managed-by/) records. The trade uses the term more narrowly than that, and the narrow meaning is older.
 
 ## A service, not a product
 
@@ -30,4 +30,4 @@ Every category in [the map](/category/) describes a product with checkable prope
 
 ## Check whether the requirement is real
 
-Multiple nines, bespoke architecture and a named account manager are worth their price only when the workload genuinely needs them, and most workloads do not. The standardised categories cover the same ground for a fraction of the cost and can be tested in an afternoon rather than scoped in a meeting. [How to choose](/guide/how-to-choose/) sets out which fields to check before concluding that the requirement really is bespoke.
+Multiple nines, bespoke architecture and a named account manager are worth their price only when the workload genuinely needs them, and most workloads do not. The standardised categories cover the same ground for a fraction of the cost and can be tested in an afternoon rather than scoped in a meeting. [How to choose](/guide/how-to-choose-hosting/) sets out which fields to check before concluding that the requirement really is bespoke.

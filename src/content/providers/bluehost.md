@@ -4,7 +4,7 @@ name: Bluehost
 urls:
   home: https://www.bluehost.com
   pricing: https://www.bluehost.com/hosting/shared
-category: shared
+category: shared-hosting
 description: Bluehost is a US shared hosting brand owned by Newfold Digital, listed by WordPress.org as a recommended host since 2005.
 founded: 2003
 hqCountry: US

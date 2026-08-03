@@ -4,7 +4,7 @@ name: MilesWeb
 urls:
   home: https://www.milesweb.in
   pricing: https://www.milesweb.in/hosting/web-hosting
-category: shared
+category: shared-hosting
 description: Indian host from Nashik selling shared hosting on its own mPanel control panel, with SSH and Git on every plan and a stated renewal-price guarantee.
 founded: 2012
 hqCountry: IN

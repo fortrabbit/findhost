@@ -17,3 +17,8 @@ const { facets, providers } = await loadFacets();
 
   <ProviderRegister providers={providers} facets={facets} />
 </Base>
+
+<!-- The register is the one page that filters, so it is the one page that ships the script. -->
+<script>
+  import '../../scripts/find.ts';
+</script>

@@ -75,7 +75,7 @@
     - { id: paas, label: Platform as a Service }
     - { id: vps, label: Virtual Private Servers }
     - { id: iaas, label: Infrastructure as a Service }
-    - { id: shared, label: Shared hosting }
+    - { id: shared-hosting, label: Shared hosting }
     - { id: serverless, label: Serverless }
     - { id: server-management, label: Server management }
     - { id: vanity-hosting, label: Vanity hosting }

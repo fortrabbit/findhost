@@ -5,7 +5,7 @@ urls:
   home: https://all-inkl.com
   pricing: https://all-inkl.com/webhosting/paketvergleich/
   terms: https://all-inkl.com/agb/
-category: shared
+category: shared-hosting
 description: Owner-run German shared hosting and managed server provider operating from Friedersdorf in Saxony, with data centres in Dresden.
 founded: 2000
 hqCountry: DE

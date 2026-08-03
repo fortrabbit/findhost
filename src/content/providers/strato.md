@@ -5,7 +5,7 @@ urls:
   home: https://www.strato.de
   pricing: https://www.strato.de/hosting/
   terms: https://www.strato.de/agb/
-category: shared
+category: shared-hosting
 description: Berlin-based mass-market webhosting brand owned by IONOS, selling shared hosting, WordPress hosting, virtual and dedicated servers.
 founded: 1997
 hqCountry: DE

@@ -1,6 +1,5 @@
 ---
-title: vanity hosting
-description: Vanity hosting is a service built around one specific piece of software, and nothing else runs on it.
+description: Hosting built around one piece of software and tuned for it, at the cost of being able to run anything else.
 lead: Hosting built around one software ecosystem.
 figure:
   emoji: 🐴
@@ -9,25 +8,8 @@ figure:
   text: One trick pony.
 ---
 
-Some software makes particular demands on its hosting. A CMS benefits from integrated caching and image delivery, and from having updates applied for it. Standard solutions exist for each of those separately; specialised hosting bundles them and tunes them for the one application it runs.
+Some software makes particular demands of its hosting. A CMS benefits from integrated caching and image delivery, and from having its updates applied for it. Standard answers exist for each of those separately; this category bundles them and tunes them for the one application it runs. Vanity hosting is not an industry term — it is one coined here, for a shape of provider the usual vocabulary has no word for.
 
-Vanity hosting is not an official term. It is one coined here, for a shape of provider the usual vocabulary has no word for.
+WordPress attracts the most of it, its market share being enormous and a slow WordPress being easy to produce. Other communities have their own at a smaller scale: Craft CMS, TYPO3, Shopware. Sometimes the arrangement runs the other way and the hosting is the business model — the makers of the software monetise their own user base, which is how [Laravel Cloud](/providers/laravel-cloud/) and [Craft Cloud](/providers/craft-cloud/) came about.
 
-WordPress attracts the most of it, because the market share is enormous and because a slow WordPress is easy to produce: [Flywheel](/providers/flywheel/), [WP Engine](/providers/wpengine/) and [Kinsta](/providers/kinsta/) are the familiar names. Other communities have their own, at a smaller scale: [Servd](/providers/servd/) for Craft CMS, and a handful of German hosts that built their business around TYPO3.
-
-Sometimes the hosting is the business and the free software is the inbound marketing channel: the makers of the software monetise their own user base. [Laravel Cloud](/providers/laravel-cloud/), [Craft Cloud](/providers/craft-cloud/), Symfony Cloud and Shopware Cloud all work that way. The trade for the buyer is the same in both models — a stack tuned for one application, at the cost of being able to run anything else on it, which makes moving away a migration rather than a redeploy.
-
-## Providers covered here
-
-The dataset records the software a provider is built around as a specialisation, distinct from the software it merely documents support for.
-
-| Provider                                | Software  |
-| --------------------------------------- | --------- |
-| [Craft Cloud](/providers/craft-cloud/)  | Craft CMS |
-| [Flywheel](/providers/flywheel/)        | WordPress |
-| [Kinsta](/providers/kinsta/)            | WordPress |
-| [Pressable](/providers/pressable/)      | WordPress |
-| [Rocket.net](/providers/rocket-net/)    | WordPress |
-| [Seravo](/providers/seravo/)            | WordPress |
-| [Servd](/providers/servd/)              | Craft CMS |
-| [WP Engine](/providers/wpengine/)       | WordPress |
+The trade is the same either way. The stack is tuned for one application and cannot run another, so leaving is a migration rather than a redeploy, and plugin or extension restrictions are common where the platform applies updates itself. The dataset records what a provider is built around as a specialisation, separate from the software it merely documents support for — the list below is that first sense.

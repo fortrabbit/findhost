@@ -1,6 +1,5 @@
 ---
-title: LCNC hosting
-description: Low-code and no-code (LCNC) platforms bundle design, hosting, and updates into one product.
+description: Platforms where a site is built in a visual editor or a prompt, with the hosting bundled in and the runtime out of reach.
 lead: Prompt or click a site into existence.
 figure:
   emoji: 🛤️
@@ -9,6 +8,8 @@ figure:
   text: Fixed rails.
 ---
 
-## About low-code and no-code platforms
+Low-code and no-code platforms build a site inside a visual editor, or lately from a prompt, rather than from code deployed to a server. Hosting, templates, updates and security come with the product, which is what makes a site possible in an afternoon and what puts the runtime out of reach.
 
-Low-code and no-code platforms let people build websites with visual editors instead of writing code. Hosting, templates, updates, and security are bundled, which makes setup fast but also limits control over the runtime. These tools differ from [shared hosting](/category/shared/) or [PaaS](/category/paas/) in that the work happens inside a product rather than in code that is deployed to a server. Portability is limited, and the feature set is defined by the platform.
+The difference from [shared hosting](/category/shared-hosting/) or [PaaS](/category/paas/) is not the price or the audience but where the work happens. There is no deploy step, so there is usually no [SSH](/ssh/), no runtime to choose and nothing to record under [runs](/software/) — the platform is the runtime. Most records here answer "the provider does" to [who manages the operating system](/os-managed-by/), because there is no operating system on the customer's side of the line at all.
+
+What that costs is portability. A site built in one of these leaves as content at best and as a screenshot at worst, and the ceiling is whatever the platform has built. This is the newest of the eight categories and the one moving fastest.

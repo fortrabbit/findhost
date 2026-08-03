@@ -7,7 +7,7 @@ urls:
   status: https://status.hosttech.eu
   terms: https://www.hosttech.ch/agb/
   docs: https://support.hosttech.ch/knowledge-base/
-category: shared
+category: shared-hosting
 description: Swiss internet service provider from Richterswil that owns and operates its own data centres in Switzerland.
 founded: 2004
 hqCountry: CH

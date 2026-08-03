@@ -5,7 +5,7 @@ urls:
   home: https://www.fasthosts.co.uk
   pricing: https://www.fasthosts.co.uk/web-hosting
   status: https://www.fasthosts-status.co.uk/
-category: shared
+category: shared-hosting
 description: Fasthosts is the UK hosting brand of the IONOS group, selling shared hosting, VPS and dedicated servers from UK data centres.
 hqCountry: GB
 ownership: subsidiary

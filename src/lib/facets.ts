@@ -134,10 +134,17 @@ export async function loadFacets(): Promise<{ facets: Facet[]; providers: Provid
 }
 
 /**
+ * Where a facet's own index lives. Every facet has one at `/<facet>/` except
+ * `regions`, whose index is the map: it lists the same countries with the same
+ * counts, so a second page of them would be the map with the map taken out.
+ */
+export const facetIndex = (facetId: string) => (facetId === 'regions' ? '/map/' : `/${facetId}/`);
+
+/**
  * Every facet value that at least one record uses — the pages worth generating.
  *
  * `category` is one of them now. It used to have a bespoke route so the
- * explainer could head the list; the explainer lives in the guide instead, and
+ * explainer could head the list; the explainer lives in a note instead, and
  * what is left is a facet value page like every other.
  */
 export async function facetRoutes() {

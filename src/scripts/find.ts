@@ -159,15 +159,11 @@ if (filtersEl && resultsEl && summaryEl) {
   const selected = new Map<string, Set<string>>();
 
   /*
-   * A facet value page arrives already narrowed and says so in the markup. That
-   * seeding is what makes /software/wordpress/ and /providers/?software=wordpress
-   * the same view: the first is server-rendered for crawlers and for readers
-   * without JavaScript, the second is what this script produces.
+   * The query string is the state. A facet value page carries its narrowing in
+   * its path instead and ships no filters at all — it links here with the value
+   * already set, because a tick that contradicted the URL would leave the
+   * heading, the prose and the address bar disagreeing.
    */
-  const seedAttr = filtersEl.dataset.findSeed;
-  const seedPath = filtersEl.dataset.findSeedPath;
-  const seed = seedAttr ? { facet: seedAttr.split(':')[0]!, value: seedAttr.slice(seedAttr.indexOf(':') + 1) } : null;
-
   const readUrl = () => {
     const params = new URLSearchParams(location.search);
     selected.clear();
@@ -175,32 +171,15 @@ if (filtersEl && resultsEl && summaryEl) {
       const value = params.get(facet.id);
       if (value) selected.set(facet.id, new Set(value.split(',').filter(Boolean)));
     }
-    if (!selected.size && seed) selected.set(seed.facet, new Set([seed.value]));
   };
 
-  /** True while the selection is exactly what this page's own URL already means. */
-  const atSeed = () =>
-    Boolean(seed) &&
-    selected.size === 1 &&
-    selected.get(seed!.facet)?.size === 1 &&
-    selected.get(seed!.facet)!.has(seed!.value);
-
   const writeUrl = () => {
-    // A page that stands for one value keeps its own URL until the reader
-    // deviates; combining filters is the register's job, so the URL becomes the
-    // register's rather than growing a query string the static page cannot honour.
-    if (atSeed()) {
-      history.replaceState(null, '', seedPath!);
-      return;
-    }
-
     const params = new URLSearchParams();
     for (const [facetId, values] of selected) {
       if (values.size) params.set(facetId, [...values].join(','));
     }
     const query = params.toString();
-    const path = seed ? '/providers/' : location.pathname;
-    history.replaceState(null, '', query ? `${path}?${query}` : path);
+    history.replaceState(null, '', query ? `${location.pathname}?${query}` : location.pathname);
   };
 
   const holds = (provider: ProviderRow, field: string, value: string) => {
@@ -219,10 +198,11 @@ if (filtersEl && resultsEl && summaryEl) {
     );
 
   /*
-   * `regions` is the one facet with no index of its own: /map/ lists the same
-   * countries with the same counts and is the better page to send a reader to.
+   * The same rule lib/facets.ts states, restated rather than imported: this file
+   * is bundled for the browser and must not pull the content collections in
+   * behind it. `regions` is indexed by the map, not by a page of its own.
    */
-  const indexOf = (facetId: string) => (facetId === 'regions' ? '/map/' : `/${facetId}/`);
+  const facetIndex = (facetId: string) => (facetId === 'regions' ? '/map/' : `/${facetId}/`);
 
   /* Every tick's box, and the tail it sits in when it sits in one. */
   const boxes: { facet: string; value: string; input: HTMLInputElement; reveal?: () => void }[] = [];
@@ -254,13 +234,13 @@ if (filtersEl && resultsEl && summaryEl) {
       heading.id = `facet-${facet.id}`;
 
       const headingLink = document.createElement('a');
-      headingLink.href = indexOf(facet.id);
+      headingLink.href = facetIndex(facet.id);
       headingLink.textContent = facet.label;
       heading.append(headingLink, document.createTextNode(' '));
 
       const headingJump = document.createElement('a');
       headingJump.className = 'find-jump';
-      headingJump.href = indexOf(facet.id);
+      headingJump.href = facetIndex(facet.id);
       headingJump.textContent = '→';
       headingJump.setAttribute('aria-hidden', 'true');
       headingJump.tabIndex = -1;

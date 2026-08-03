@@ -3,7 +3,7 @@ id: godaddy
 name: GoDaddy
 urls:
   home: https://www.godaddy.com
-category: shared
+category: shared-hosting
 description: GoDaddy is a US shared hosting company and the world's largest ICANN-accredited domain registrar, listed on the NYSE as GDDY.
 figure:
   emoji: 🕷️

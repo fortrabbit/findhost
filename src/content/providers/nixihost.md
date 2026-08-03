@@ -3,7 +3,7 @@ id: nixihost
 name: NixiHost
 urls:
   home: https://nixihost.com
-category: shared
+category: shared-hosting
 description: Independent hosting company from Houston, Texas, selling shared and reseller hosting alongside VPS and dedicated servers.
 priceFrom: sm
 priceTo: md

@@ -5,7 +5,7 @@ urls:
   home: https://krystal.io
   pricing: https://krystal.io/web-hosting
   status: https://status.krystal.io/
-category: shared
+category: shared-hosting
 description: British host running PHP, Python, Perl and Ruby on cPanel, powered by certified renewable electricity and operated as a certified B Corp.
 founded: 2002
 hqCountry: GB

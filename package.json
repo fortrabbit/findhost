@@ -18,6 +18,7 @@
     "format": "prettier --check .",
     "format:write": "prettier --write .",
     "linkcheck": "node scripts/linkcheck.mjs",
+    "linkcheck:internal": "node scripts/internal-links.mjs",
     "astro": "astro"
   },
   "dependencies": {

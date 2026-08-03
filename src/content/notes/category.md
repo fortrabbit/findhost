@@ -19,4 +19,4 @@ The premium, hands-on end. Cloud experts take a set of requirements and design, 
 
 ## The label is not the decision
 
-A category narrows the field; it never picks a provider. Two hosts inside the same one can differ on [entry price](/entry-price/), [regions](/regions/), [SSH](/ssh/) and support in ways that matter far more than the shared label, and a [free tier or trial](/free-tier/) settles more ties than any comparison table. [How to choose](/guide/how-to-choose/) covers the fields worth checking once the category is settled.
+A category narrows the field; it never picks a provider. Two hosts inside the same one can differ on [entry price](/entry-price/), [regions](/regions/), [SSH](/ssh/) and support in ways that matter far more than the shared label, and a [free tier or trial](/free-tier/) settles more ties than any comparison table. [How to choose](/guide/how-to-choose-hosting/) covers the fields worth checking once the category is settled.

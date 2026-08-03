@@ -48,7 +48,7 @@ The dataset records the first layer of this and stops there. `runsOn` names the 
 
 ## What this dataset can and cannot say
 
-It records `hqCountry`, `regions`, `ownership`, `parent`, `gdprDpa` and `certifications`, and links to the terms page each record was read against. Those are inputs to a decision. It does not assess compliance, does not certify anyone, and will not: whether a specific processing activity is lawful depends on the data, the purpose and the contract, none of which are properties of a host. The wider version of that limit is in [policies](/policies/); the rest of the comparison is in [how to choose](/guide/how-to-choose/).
+It records `hqCountry`, `regions`, `ownership`, `parent`, `gdprDpa` and `certifications`, and links to the terms page each record was read against. Those are inputs to a decision. It does not assess compliance, does not certify anyone, and will not: whether a specific processing activity is lawful depends on the data, the purpose and the contract, none of which are properties of a host. The wider version of that limit is in [policies](/policies/); the rest of the comparison is in [how to choose](/guide/how-to-choose-hosting/).
 
 If this page has an effect, it should be less confidence in a residency claim and more in the questions behind it. "EU-based" is a statement about an address. Who owns the company, whose hardware it runs on and who appears in the sub-processor list are three further questions, all checkable, and all capable of pointing somewhere else entirely.
 

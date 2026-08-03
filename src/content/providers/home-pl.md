@@ -6,7 +6,7 @@ urls:
   pricing: https://home.pl/hosting
   terms: https://home.pl/regulaminy/
   docs: https://pomoc.home.pl/
-category: shared
+category: shared-hosting
 description: One of Poland's largest hosting companies, selling shared web hosting, mailboxes, databases and domains from servers in Poland.
 hqCountry: PL
 whoManagesOs: provider

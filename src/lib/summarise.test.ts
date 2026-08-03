@@ -14,7 +14,7 @@ const facet = (id: string, field: string, values: string[]): Facet => ({
 });
 
 const facets: Facet[] = [
-  facet('category', 'category', ['paas', 'vps', 'shared', 'serverless']),
+  facet('category', 'category', ['paas', 'vps', 'shared-hosting', 'serverless']),
   facet('regions', 'regions', ['DE', 'US', 'FR']),
   facet('entry-price', 'entryPriceBand', ['free-tier', 'under-5', '5-15']),
 ];
@@ -46,8 +46,12 @@ describe('summarise', () => {
   });
 
   it('says "split across" when it names every category, and "mostly" when it does not', () => {
-    const three = [row('A', { category: 'paas' }), row('B', { category: 'vps' }), row('C', { category: 'shared' })];
-    assert.match(summarise(three, facets, 'runtimes', 'run Rust'), /Split across paas, vps and shared\./);
+    const three = [
+      row('A', { category: 'paas' }),
+      row('B', { category: 'vps' }),
+      row('C', { category: 'shared-hosting' }),
+    ];
+    assert.match(summarise(three, facets, 'runtimes', 'run Rust'), /Split across paas, vps and shared-hosting\./);
 
     const four = [...three, row('D', { category: 'serverless' })];
     assert.match(summarise(four, facets, 'runtimes', 'run Rust'), /Mostly .*, across 4 categories in all\./);
