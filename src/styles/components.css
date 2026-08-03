@@ -718,16 +718,32 @@
  * from the register is already looking, and the sources sit under both columns
  * because they belong to the whole record and not to either half.
  */
+/*
+ * The prose reads on the left, the facts stand beside it on the right. The
+ * markup keeps the facts first, because that is the order the page wants the
+ * moment it stacks — placing the two columns explicitly is what lets one order
+ * serve both.
+ */
 .record-layout {
   display: grid;
-  grid-template-columns: minmax(0, 22rem) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 22rem);
   gap: var(--space-xl);
   align-items: start;
 }
 
+.record-specs {
+  grid-area: 1 / 2;
+}
+
 .record-prose {
+  grid-area: 1 / 1;
   min-width: 0;
   max-width: var(--measure-prose);
+}
+
+/* The column starts here; a heading at the top of it has nothing to be spaced from. */
+.record-prose > :first-child {
+  margin-top: 0;
 }
 
 /* One column below the page measure, facts first: there is no room for two. */
@@ -735,6 +751,11 @@
   .record-layout {
     grid-template-columns: 1fr;
     gap: var(--space-lg);
+  }
+
+  .record-specs,
+  .record-prose {
+    grid-area: auto;
   }
 }
 
