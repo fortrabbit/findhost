@@ -59,7 +59,8 @@ const groups = [...new Set(providers.map((provider) => letterOf(provider.name)))
       <a href={`/providers/?${seed.facet}=${seed.value}`}>Combine {seed.label} with other filters →</a>
     </p>
   ) : (
-    <div class="find-filters full-width" data-find-filters />
+    /* The filter panel, passed in rather than owned: it is markup the register does not need to know about. */
+    <slot />
   )
 }
 

@@ -125,7 +125,7 @@
 # What a provider markets itself for, taken from its own site. A claim it makes,
 # never a judgement about what it is good at.
 - id: useCases
-  label: Built for
+  label: Use cases
   group: Classification
   facet: use-case
   filterOrder: 4
@@ -173,7 +173,7 @@
 # ------------------------------------------------------------- Tech stack
 
 - id: runtimes
-  label: Runtimes
+  label: Stack
   group: Tech stack
   facet: runtimes
   filterOrder: 2
@@ -205,7 +205,7 @@
 # official guide, a maintained buildpack. What the provider says it supports, not
 # how well it runs.
 - id: software
-  label: Runs
+  label: Software
   group: Tech stack
   facet: software
   filterOrder: 1

@@ -1,0 +1,107 @@
+---
+import { facetIndex, type Facet } from '../lib/facets';
+
+interface Props {
+  facets: Facet[];
+  /** How many hidden records exist. Zero means the stubs group is not offered at all. */
+  drafts: number;
+}
+
+const { facets, drafts } = Astro.props;
+
+/*
+ * The filter panel, as markup rather than as DOM built in a loop. find.ts used
+ * to construct every element here, which put the whole design of the panel
+ * inside a script nobody edits for design reasons.
+ *
+ * It is hidden until the script takes it over, because a checkbox that filters
+ * nothing is worse than no checkbox: without JavaScript the fallback below the
+ * register links every value as a page instead.
+ */
+
+/** Values in use, commonest first. The order is fixed here and never re-sorted. */
+const ordered = (facet: Facet) =>
+  facet.values
+    .filter((value) => value.count > 0)
+    .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label, 'en'));
+
+/** How many values show before the "more" button. */
+const shown = 5;
+
+const missing = (facet: Facet) =>
+  [facet.unknown > 0 && `${facet.unknown} unknown`, facet.notApplicable > 0 && `${facet.notApplicable} n/a`]
+    .filter(Boolean)
+    .join(' · ');
+---
+
+<div class="find-filters full-width" data-find-filters hidden>
+  {
+    facets.map((facet) => {
+      const values = ordered(facet);
+      const tail = values.slice(shown);
+
+      return (
+        <div class="find-facet" role="group" aria-labelledby={`facet-${facet.id}`}>
+          <h2 class="find-facet-title" id={`facet-${facet.id}`}>
+            <a href={facetIndex(facet.id)}>{facet.label}</a>{' '}
+            <a class="find-jump" href={facetIndex(facet.id)} aria-hidden="true" tabindex="-1">
+              →
+            </a>
+          </h2>
+
+          {values.slice(0, shown).map((value) => (
+            <label>
+              <input type="checkbox" data-facet={facet.id} value={value.id} />
+              <span class="find-value">{value.label}</span>
+              <span class="find-count">{value.count}</span>
+              <a class="find-jump" href={`/${facet.id}/${value.id}/`} aria-label={`Open the ${value.label} page`}>
+                →
+              </a>
+            </label>
+          ))}
+
+          {tail.length > 0 && (
+            <div class="find-tail" hidden>
+              {tail.map((value) => (
+                <label>
+                  <input type="checkbox" data-facet={facet.id} value={value.id} />
+                  <span class="find-value">{value.label}</span>
+                  <span class="find-count">{value.count}</span>
+                  <a class="find-jump" href={`/${facet.id}/${value.id}/`} aria-label={`Open the ${value.label} page`}>
+                    →
+                  </a>
+                </label>
+              ))}
+            </div>
+          )}
+
+          {/* The button and the tally share a line: both are notes about the list, not entries in it. */}
+          <p class="find-facet-foot">
+            {tail.length > 0 && (
+              <button type="button" class="find-more" aria-expanded="false" data-more={tail.length}>
+                {tail.length} more
+              </button>
+            )}
+            {missing(facet) && <span class="annotation">{missing(facet)}</span>}
+          </p>
+        </div>
+      );
+    })
+  }
+
+  {
+    drafts > 0 && (
+      <div class="find-facet find-drafts">
+        <h2 class="find-facet-title">Stubs</h2>
+
+        <label>
+          <input type="checkbox" data-drafts />
+          <span class="find-value">Show these too</span>
+          <span class="find-count">{drafts}</span>
+        </label>
+
+        <p class="annotation">Started and unfinished, or considered and out of scope. Not counted, not filtered.</p>
+      </div>
+    )
+  }
+</div>

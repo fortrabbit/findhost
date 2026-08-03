@@ -197,181 +197,64 @@ if (filtersEl && resultsEl && summaryEl) {
       ),
     );
 
-  /*
-   * The same rule lib/facets.ts states, restated rather than imported: this file
-   * is bundled for the browser and must not pull the content collections in
-   * behind it. `regions` is indexed by the map, not by a page of its own.
-   */
-  const facetIndex = (facetId: string) => (facetId === 'regions' ? '/map/' : `/${facetId}/`);
-
-  /* Every tick's box, and the tail it sits in when it sits in one. */
-  const boxes: { facet: string; value: string; input: HTMLInputElement; reveal?: () => void }[] = [];
+  /** Per facet group, the way to open its tail — a ticked box the reader cannot see is a filter nobody trusts. */
+  const tails = new Map<HTMLElement, () => void>();
 
   /*
-   * The panel is built once and then only synced. Rebuilding it on every tick
-   * re-sorted the values under the pointer that had just chosen one, closed any
-   * tail the reader had opened and dropped focus to the body. Nothing in it
-   * depends on the selection except which boxes are ticked and whether a tail
-   * holding a ticked box is open, so those are the only two things that move.
+   * The panel is markup now — components/FindFilters.astro — and this attaches
+   * to it. Building it here put the whole design of the filter inside a script
+   * nobody opens for design reasons, and rebuilding it on every tick re-sorted
+   * the values under the pointer that had just chosen one.
+   *
+   * It arrives hidden, because a checkbox that filters nothing is worse than no
+   * checkbox. Taking that off is this script saying it is in charge.
    */
-  const buildFilters = () => {
-    for (const facet of facets) {
-      // A div rather than a fieldset: fieldsets size to their widest content
-      // regardless of the column they sit in, which pushed the filters over the
-      // results. role=group keeps the semantics a fieldset was there for.
-      const group = document.createElement('div');
-      group.className = 'find-facet';
-      group.setAttribute('role', 'group');
-      group.setAttribute('aria-labelledby', `facet-${facet.id}`);
+  const wireFilters = () => {
+    for (const group of filtersEl.querySelectorAll<HTMLElement>('.find-facet')) {
+      const tail = group.querySelector<HTMLElement>('.find-tail');
+      const more = group.querySelector<HTMLButtonElement>('.find-more');
 
-      /*
-       * The heading is the way to the facet's own page, the same arrow each
-       * value carries — the filter narrows this list, the page is where anything
-       * written about the facet lives.
-       */
-      const heading = document.createElement('h2');
-      heading.className = 'find-facet-title';
-      heading.id = `facet-${facet.id}`;
-
-      const headingLink = document.createElement('a');
-      headingLink.href = facetIndex(facet.id);
-      headingLink.textContent = facet.label;
-      heading.append(headingLink, document.createTextNode(' '));
-
-      const headingJump = document.createElement('a');
-      headingJump.className = 'find-jump';
-      headingJump.href = facetIndex(facet.id);
-      headingJump.textContent = '→';
-      headingJump.setAttribute('aria-hidden', 'true');
-      headingJump.tabIndex = -1;
-      heading.append(headingJump);
-
-      group.append(heading);
-
-      /*
-       * Commonest first. Ordering values by how many records hold them is a fact
-       * about the dataset; providers themselves stay alphabetical.
-       */
-      const inUse = facet.values
-        .filter((value) => value.count > 0)
-        .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label, 'en'));
-
-      // The tail goes in its own container so one button reveals it in place.
-      const shown = 5;
-      const tail = document.createElement('div');
-      tail.className = 'find-tail';
-      tail.hidden = true;
-
-      const more = document.createElement('button');
-      more.type = 'button';
-      more.className = 'find-more';
-      more.setAttribute('aria-expanded', 'false');
-      more.textContent = `${inUse.length - shown} more`;
-      more.addEventListener('click', () => {
-        tail.hidden = !tail.hidden;
-        more.setAttribute('aria-expanded', String(!tail.hidden));
-        more.textContent = tail.hidden ? `${inUse.length - shown} more` : 'Fewer';
-      });
-
-      const reveal = () => {
-        if (!tail.hidden) return;
-        tail.hidden = false;
-        more.setAttribute('aria-expanded', 'true');
-        more.textContent = 'Fewer';
-      };
-
-      for (const [index, value] of inUse.entries()) {
-        const label = document.createElement('label');
-        const input = document.createElement('input');
-        input.type = 'checkbox';
-        input.value = value.id;
-        input.addEventListener('change', () => {
-          const next = new Set(selected.get(facet.id) ?? []);
-          if (input.checked) next.add(value.id);
-          else next.delete(value.id);
-          if (next.size) selected.set(facet.id, next);
-          else selected.delete(facet.id);
-          writeUrl();
-          renderResults();
-        });
-
-        const count = document.createElement('span');
-        count.className = 'find-count';
-        count.textContent = String(value.count);
-
-        label.append(input, document.createTextNode(` ${value.label} `), count);
-
-        // Every facet value is also a page. Filtering narrows this list; the page
-        // is where anything worth writing about that value lives.
-        const jump = document.createElement('a');
-        jump.className = 'find-jump';
-        jump.href = `/${facet.id}/${value.id}/`;
-        jump.textContent = '→';
-        jump.title = `Open the ${value.label} page`;
-        jump.setAttribute('aria-label', `Open the ${value.label} page`);
-        label.append(jump);
-
-        const inTail = index >= shown;
-        (inTail ? tail : group).append(label);
-        boxes.push({ facet: facet.id, value: value.id, input, reveal: inTail ? reveal : undefined });
+      if (tail && more) {
+        const count = more.dataset.more;
+        const show = (open: boolean) => {
+          tail.hidden = !open;
+          more.setAttribute('aria-expanded', String(open));
+          more.textContent = open ? 'Fewer' : `${count} more`;
+        };
+        more.addEventListener('click', () => show(Boolean(tail.hidden)));
+        tails.set(group, () => show(true));
       }
-
-      if (inUse.length > shown) group.append(tail, more);
-
-      if (facet.unknown > 0 || facet.notApplicable > 0) {
-        const unknown = document.createElement('p');
-        unknown.className = 'annotation';
-        unknown.textContent = [
-          facet.unknown > 0 ? `${facet.unknown} unknown` : '',
-          facet.notApplicable > 0 ? `${facet.notApplicable} n/a` : '',
-        ]
-          .filter(Boolean)
-          .join(' · ');
-        group.append(unknown);
-      }
-
-      filtersEl.append(group);
     }
 
-    if (drafts.length) {
-      const group = document.createElement('div');
-      group.className = 'find-facet find-drafts';
-
-      const heading = document.createElement('h2');
-      heading.className = 'find-facet-title';
-      heading.textContent = 'Stubs';
-      group.append(heading);
-
-      const label = document.createElement('label');
-      const input = document.createElement('input');
-      input.type = 'checkbox';
-      input.checked = showDrafts;
+    for (const input of filtersEl.querySelectorAll<HTMLInputElement>('input[data-facet]')) {
+      const facetId = input.dataset.facet!;
       input.addEventListener('change', () => {
-        showDrafts = input.checked;
+        const next = new Set(selected.get(facetId) ?? []);
+        if (input.checked) next.add(input.value);
+        else next.delete(input.value);
+        if (next.size) selected.set(facetId, next);
+        else selected.delete(facetId);
+        writeUrl();
         renderResults();
       });
-
-      const count = document.createElement('span');
-      count.className = 'find-count';
-      count.textContent = String(drafts.length);
-
-      label.append(input, document.createTextNode(' Show these too '), count);
-      group.append(label);
-
-      const note = document.createElement('p');
-      note.className = 'annotation';
-      note.textContent = 'Started and unfinished, or considered and out of scope. Not counted, not filtered.';
-      group.append(note);
-
-      filtersEl.append(group);
     }
+
+    const draftsBox = filtersEl.querySelector<HTMLInputElement>('input[data-drafts]');
+    draftsBox?.addEventListener('change', () => {
+      showDrafts = draftsBox.checked;
+      renderResults();
+    });
+
+    filtersEl.hidden = false;
   };
 
-  /* A ticked box the reader cannot see is a filter nobody trusts, so its tail opens. */
   const syncFilters = () => {
-    for (const box of boxes) {
-      box.input.checked = selected.get(box.facet)?.has(box.value) ?? false;
-      if (box.input.checked) box.reveal?.();
+    for (const input of filtersEl.querySelectorAll<HTMLInputElement>('input[data-facet]')) {
+      input.checked = selected.get(input.dataset.facet!)?.has(input.value) ?? false;
+      if (input.checked && input.closest('.find-tail')) {
+        const group = input.closest<HTMLElement>('.find-facet');
+        if (group) tails.get(group)?.();
+      }
     }
   };
 
@@ -457,7 +340,7 @@ if (filtersEl && resultsEl && summaryEl) {
   });
 
   readUrl();
-  buildFilters();
+  wireFilters();
   syncFilters();
   renderResults();
   fallbackEl?.remove();

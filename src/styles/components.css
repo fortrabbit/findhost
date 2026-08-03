@@ -516,8 +516,13 @@
  * live in; a band of columns fits the same facets in a third of the height and
  * leaves the list the full measure.
  */
-/* With JavaScript off nothing fills it, and an empty ruled box is a broken box. */
-.find-filters:empty {
+/*
+ * Server-rendered, and hidden until find.ts takes it over — a checkbox that
+ * filters nothing is worse than no checkbox. `display: grid` below would
+ * otherwise beat the attribute, which is why this is stated rather than left to
+ * the browser default.
+ */
+.find-filters[hidden] {
   display: none;
 }
 
@@ -603,9 +608,27 @@
   font-variant-numeric: tabular-nums;
 }
 
+/* The "more" button and the unknown tally are both notes about the list, so they share its last line. */
+.find-facet-foot {
+  display: flex;
+  gap: var(--space-2xs) var(--space-xs);
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: var(--space-3xs) 0 0;
+}
+
+.find-facet-foot:empty {
+  display: none;
+}
+
 .find-facet .annotation {
   margin: var(--space-2xs) 0 0;
   font-size: var(--text-xs);
+}
+
+.find-facet-foot .annotation {
+  margin: 0;
 }
 
 /* One column wide, the label has the room and the count has nothing to line up with. */

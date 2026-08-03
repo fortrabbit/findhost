@@ -1,9 +1,11 @@
 ---
 import Base from '../../layouts/Base.astro';
 import ProviderRegister from '../../components/ProviderRegister.astro';
-import { loadFacets } from '../../lib/facets';
+import FindFilters from '../../components/FindFilters.astro';
+import { loadDrafts, loadFacets } from '../../lib/facets';
 
 const { facets, providers } = await loadFacets();
+const drafts = await loadDrafts();
 ---
 
 <Base
@@ -15,7 +17,9 @@ const { facets, providers } = await loadFacets();
     {groups.map((group) => <a href={`#${group.anchor}`}>{group.letter}</a>)}
   </nav> -->
 
-  <ProviderRegister providers={providers} facets={facets} />
+  <ProviderRegister providers={providers} facets={facets}>
+    <FindFilters facets={facets} drafts={drafts.length} />
+  </ProviderRegister>
 </Base>
 
 <!-- The register is the one page that filters, so it is the one page that ships the script. -->
