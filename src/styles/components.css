@@ -694,6 +694,33 @@
 
 /* --- The record itself --- */
 
+/**
+ * The facts beside the prose rather than stacked above it. They are scanned and
+ * the prose is read, and a reader who came for one should not have to scroll
+ * past the other to reach it. The aside is on the left, where a reader arriving
+ * from the register is already looking, and the sources sit under both columns
+ * because they belong to the whole record and not to either half.
+ */
+.record-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 22rem) minmax(0, 1fr);
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+.record-prose {
+  min-width: 0;
+  max-width: var(--measure-prose);
+}
+
+/* One column below the page measure, facts first: there is no room for two. */
+@media (max-width: 62rem) {
+  .record-layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+}
+
 .record-links {
   display: flex;
   gap: var(--space-xs) var(--space-md);

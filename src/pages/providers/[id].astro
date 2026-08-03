@@ -195,7 +195,6 @@ const outOfScope =
     : undefined;
 
 const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[data.status] : undefined);
-
 ---
 
 <Base
@@ -288,62 +287,93 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
       )
     }
 
-    <div class="fact-groups full-width">
-      {
-        knownGroups.map((group) => (
-          <section class="fact-group">
-            <h2>{group.label}</h2>
-            <dl class="fact-list">
-              {group.fields.map((field) => {
-                const note = numberOf.get(field.id);
+    <div class="record-layout">
+      <aside class="record-specs">
+        <div class="fact-groups">
+          {
+            knownGroups.map((group) => (
+              <section class="fact-group">
+                <h2>{group.label}</h2>
+                <dl class="fact-list">
+                  {group.fields.map((field) => {
+                    const note = numberOf.get(field.id);
 
-                return (
-                  <>
-                    <dt>{field.label}</dt>
-                    <dd>
-                      {cells(field, valueOf(field.id)).map((cell, index) => (
-                        <>
-                          {index > 0 && ', '}
-                          {/* Facet values must reach the markup even where the design does not show
+                    return (
+                      <>
+                        <dt>{field.label}</dt>
+                        <dd>
+                          {cells(field, valueOf(field.id)).map((cell, index) => (
+                            <>
+                              {index > 0 && ', '}
+                              {/* Facet values must reach the markup even where the design does not show
                               them: Pagefind indexes rendered HTML, so what is absent here cannot be
                               searched later. */}
-                          {cell.href ? (
-                            <a href={cell.href} data-pagefind-filter={cell.filter}>
-                              {cell.text}
+                              {cell.href ? (
+                                <a href={cell.href} data-pagefind-filter={cell.filter}>
+                                  {cell.text}
+                                </a>
+                              ) : (
+                                cell.text
+                              )}
+                            </>
+                          ))}
+                          {note && (
+                            <a class="footnote-ref" href={`#source-${note}`} aria-label={`Source ${note}`}>
+                              {note}
                             </a>
-                          ) : (
-                            cell.text
                           )}
-                        </>
-                      ))}
-                      {note && (
-                        <a class="footnote-ref" href={`#source-${note}`} aria-label={`Source ${note}`}>
-                          {note}
-                        </a>
-                      )}
-                    </dd>
-                  </>
-                );
-              })}
-            </dl>
-          </section>
-        ))
-      }
-    </div>
+                        </dd>
+                      </>
+                    );
+                  })}
+                </dl>
+              </section>
+            ))
+          }
+        </div>
 
-    {
-      missing.length > 0 && (
-        <details class="missing-fields full-width">
-          <summary>
-            {missing.length} of {total} fields not recorded yet
-          </summary>
-          <p class="missing-list">{missing.map((field) => field.label).join(' · ')}</p>
-          <p>
-            <a href="https://github.com/fortrabbit/findhost">Know one of these? Edit this record.</a>
-          </p>
-        </details>
-      )
-    }
+        {
+          missing.length > 0 && (
+            <details class="missing-fields">
+              <summary>
+                {missing.length} of {total} fields not recorded yet
+              </summary>
+              <p class="missing-list">{missing.map((field) => field.label).join(' · ')}</p>
+              <p>
+                <a href="https://github.com/fortrabbit/findhost">Know one of these? Edit this record.</a>
+              </p>
+            </details>
+          )
+        }
+      </aside>
+
+      <div class="record-prose">
+        <Content />
+
+        {
+          data.caveat && (
+            <aside class="caveat">
+              <p>
+                <span aria-hidden="true">{data.caveat.emoji}</span> {data.caveat.text}
+              </p>
+              <p class="caveat-source">
+                A judgement by {data.caveat.by}, {data.caveat.on.toISOString().slice(0, 10)}. Not a filterable field.
+              </p>
+            </aside>
+          )
+        }
+
+        {
+          data.editorialNote && (
+            <aside class="editorial-note">
+              <p>
+                <strong>Disclosure.</strong> {data.editorialNote}
+              </p>
+            </aside>
+          )
+        }
+      </div>
+    </div>
 
     {
       notes.length > 0 && (
@@ -361,31 +391,6 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
             ))}
           </ol>
         </section>
-      )
-    }
-
-    <Content />
-
-    {
-      data.caveat && (
-        <aside class="caveat">
-          <p>
-            <span aria-hidden="true">{data.caveat.emoji}</span> {data.caveat.text}
-          </p>
-          <p class="caveat-source">
-            A judgement by {data.caveat.by}, {data.caveat.on.toISOString().slice(0, 10)}. Not a filterable field.
-          </p>
-        </aside>
-      )
-    }
-
-    {
-      data.editorialNote && (
-        <aside class="editorial-note">
-          <p>
-            <strong>Disclosure.</strong> {data.editorialNote}
-          </p>
-        </aside>
       )
     }
 
