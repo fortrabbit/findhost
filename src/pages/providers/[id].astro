@@ -338,10 +338,7 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
               <summary>
                 {missing.length} of {total} fields not recorded yet
               </summary>
-              <p class="missing-list">{missing.map((field) => field.label).join(' · ')}</p>
-              <p>
-                <a href="https://github.com/fortrabbit/findhost">Know one of these? Edit this record.</a>
-              </p>
+              <p class="missing-list">{missing.map((field) => field.label).join(', ')}</p>
             </details>
           )
         }
@@ -382,11 +379,12 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
           <ol>
             {notes.map((note, index) => (
               <li id={`source-${index + 1}`}>
-                <span class="source-fields">{note.fields.map(sourceLabel).join(', ')}</span> —{' '}
+                <span class="source-fields">{note.fields.map(sourceLabel).join(', ')}</span> -{' '}
+                <span class="source-date">{note.checkedAt.toISOString().slice(0, 10)}</span>
+                <br />
                 <a href={note.url} rel="nofollow">
                   {note.url.replace('https://', '')}
                 </a>{' '}
-                <span class="source-date">read {note.checkedAt.toISOString().slice(0, 10)}</span>
               </li>
             ))}
           </ol>
@@ -395,8 +393,8 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
     }
 
     <p class="annotation">
-      {total - missing.length} of {total} attributes recorded.
-      {data.checkedAt ? ` Last checked ${data.checkedAt.toISOString().slice(0, 10)}. ` : ' Never checked. '}
+      <!-- {total - missing.length} of {total} attributes recorded. -->
+      {data.checkedAt ? ` Last reviewed ${data.checkedAt.toISOString().slice(0, 10)}. ` : ' Never checked. '}
       <br />
       <a href="https://github.com/fortrabbit/findhost">Complete this record.</a>
     </p>

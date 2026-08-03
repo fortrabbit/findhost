@@ -8,7 +8,7 @@ figure:
   text: Remember when PaaS was the future?
 ---
 
-Platform as a Service takes code and runs it. The operating system, the web server, the runtime and the scaling belong to the provider; what the customer supplies is an application and a configuration file. Records here answer "the provider does" to [who manages the operating system](/os-managed-by/) and deploy by git push or a pipeline rather than by upload.
+Platform as a Service takes code and runs it. The operating system, the web server, the runtime and the scaling belong to the provider; what the customer supplies is an application and a configuration file. Records here answer "provider" to [who manages the operating system](/os-managed-by/) and deploy by git push or a pipeline rather than by upload.
 
 The label carries baggage. Fuelled by Heroku's early success, PaaS was widely predicted to replace classical hosting; instead many of the startups selling it failed, and the term went out of fashion with them. Plenty of services still work exactly this way — most of them now avoid calling themselves a PaaS.
 

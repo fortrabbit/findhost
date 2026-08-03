@@ -90,7 +90,8 @@ test.describe('a record', () => {
 
     const target = await marker.getAttribute('href');
     await expect(page.locator(target!)).toBeVisible();
-    await expect(page.locator('.sources li').first()).toContainText('read 20');
+    // The date a source was read, which is the whole claim a citation here makes.
+    await expect(page.locator('.sources li').first().locator('.source-date')).toHaveText(/^\d{4}-\d{2}-\d{2}$/);
   });
 
   test('sends every outbound link with rel=nofollow', async ({ page }) => {

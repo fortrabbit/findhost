@@ -82,15 +82,15 @@
     - { id: lcnc, label: Low-code and no-code }
 
 - id: whoManagesOs
-  label: Who manages the OS
+  label: OS managed by
   group: Classification
   facet: os-managed-by
   filterOrder: 11
   values:
-    - { id: you, label: You do }
-    - { id: panel-assisted, label: 'You do, with a panel' }
-    - { id: provider, label: The provider does }
-    - { id: container, label: 'You own the image, they run the host' }
+    - { id: you, label: 'You' }
+    - { id: panel-assisted, label: 'You, with panel' }
+    - { id: provider, label: 'Provider' }
+    - { id: container, label: 'You, image' }
 
 # More than one can be true at once: a panel that provisions onto your own cloud
 # account may also resell machines of its own.

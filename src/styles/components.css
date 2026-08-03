@@ -586,14 +586,14 @@
 .find-facet label {
   display: flex;
   gap: var(--space-2xs);
-  align-items: baseline;
-  font-size: var(--text-sm);
-  line-height: 1.35;
+  align-items: center;
+  font-size: var(--text-xs);
+  line-height: 1.2;
 }
 
-.find-facet input {
+/*.find-facet input {
   flex: none;
-}
+}*/
 
 /** The page behind the filter, not the filter itself. */
 .find-jump {
@@ -706,10 +706,10 @@
 
 /* --- Where a provider operates --- */
 
-.world-map {
+/*.world-map {
   max-width: var(--measure-data);
   margin-block: var(--space-lg);
-}
+}*/
 
 /* Centred where it opens a page rather than sitting inside a run of text. */
 .world-map-centred {
@@ -838,6 +838,7 @@
   align-items: baseline;
   max-width: none;
   margin: 0;
+  font-family: var(--font-data);
 }
 
 .fact-list > dt {
@@ -849,7 +850,6 @@
 .fact-list > dd {
   margin: 0;
   padding: var(--space-3xs) 0;
-  font-family: var(--font-data);
   font-size: var(--text-xs);
   font-variant-numeric: tabular-nums;
   line-height: var(--leading-data);
@@ -991,27 +991,18 @@
 }
 
 .sources {
-  max-width: var(--measure-data);
+  /*max-width: var(--measure-data);*/
   margin: var(--space-lg) 0;
+  font-family: var(--font-data);
 }
 
 .sources ol {
   margin: 0;
   padding-left: var(--space-md);
-}
-
-.sources li {
-  font-size: var(--text-sm);
-}
-
-.source-fields {
-  font-family: var(--font-data);
   font-size: var(--text-xs);
 }
 
 .source-date {
-  font-family: var(--font-data);
-  font-size: var(--text-xs);
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
