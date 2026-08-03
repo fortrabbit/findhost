@@ -45,7 +45,7 @@ const groups = [...new Set(providers.map((provider) => letterOf(provider.name)))
 <p class="annotation" data-find-summary>{summary}</p>
 
 <div
-  class="find-filters"
+  class="find-filters full-width"
   data-find-filters
   data-find-seed={seed ? `${seed.facet}:${seed.value}` : undefined}
   data-find-seed-path={seed ? Astro.url.pathname : undefined}

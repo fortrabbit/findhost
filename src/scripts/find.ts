@@ -218,12 +218,24 @@ if (filtersEl && resultsEl && summaryEl) {
       ),
     );
 
-  const renderFilters = () => {
-    filtersEl.innerHTML = '';
+  /*
+   * `regions` is the one facet with no index of its own: /map/ lists the same
+   * countries with the same counts and is the better page to send a reader to.
+   */
+  const indexOf = (facetId: string) => (facetId === 'regions' ? '/map/' : `/${facetId}/`);
 
+  /* Every tick's box, and the tail it sits in when it sits in one. */
+  const boxes: { facet: string; value: string; input: HTMLInputElement; reveal?: () => void }[] = [];
+
+  /*
+   * The panel is built once and then only synced. Rebuilding it on every tick
+   * re-sorted the values under the pointer that had just chosen one, closed any
+   * tail the reader had opened and dropped focus to the body. Nothing in it
+   * depends on the selection except which boxes are ticked and whether a tail
+   * holding a ticked box is open, so those are the only two things that move.
+   */
+  const buildFilters = () => {
     for (const facet of facets) {
-      const chosen = selected.get(facet.id) ?? new Set<string>();
-
       // A div rather than a fieldset: fieldsets size to their widest content
       // regardless of the column they sit in, which pushed the filters over the
       // results. role=group keeps the semantics a fieldset was there for.
@@ -232,25 +244,37 @@ if (filtersEl && resultsEl && summaryEl) {
       group.setAttribute('role', 'group');
       group.setAttribute('aria-labelledby', `facet-${facet.id}`);
 
+      /*
+       * The heading is the way to the facet's own page, the same arrow each
+       * value carries — the filter narrows this list, the page is where anything
+       * written about the facet lives.
+       */
       const heading = document.createElement('h2');
       heading.className = 'find-facet-title';
       heading.id = `facet-${facet.id}`;
-      heading.textContent = facet.label;
+
+      const headingLink = document.createElement('a');
+      headingLink.href = indexOf(facet.id);
+      headingLink.textContent = facet.label;
+      heading.append(headingLink, document.createTextNode(' '));
+
+      const headingJump = document.createElement('a');
+      headingJump.className = 'find-jump';
+      headingJump.href = indexOf(facet.id);
+      headingJump.textContent = '→';
+      headingJump.setAttribute('aria-hidden', 'true');
+      headingJump.tabIndex = -1;
+      heading.append(headingJump);
+
       group.append(heading);
 
       /*
-       * Commonest first, and anything already ticked ahead of that — a value the
-       * reader chose may sit far down the tail, and a filter that hides its own
-       * selection behind a "more" button is a filter nobody trusts. Ordering
-       * values by how many records hold them is a fact about the dataset;
-       * providers themselves stay alphabetical.
+       * Commonest first. Ordering values by how many records hold them is a fact
+       * about the dataset; providers themselves stay alphabetical.
        */
       const inUse = facet.values
         .filter((value) => value.count > 0)
-        .sort((a, b) => {
-          const picked = Number(chosen.has(b.id)) - Number(chosen.has(a.id));
-          return picked || b.count - a.count || a.label.localeCompare(b.label, 'en');
-        });
+        .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label, 'en'));
 
       // The tail goes in its own container so one button reveals it in place.
       const shown = 5;
@@ -258,12 +282,29 @@ if (filtersEl && resultsEl && summaryEl) {
       tail.className = 'find-tail';
       tail.hidden = true;
 
+      const more = document.createElement('button');
+      more.type = 'button';
+      more.className = 'find-more';
+      more.setAttribute('aria-expanded', 'false');
+      more.textContent = `${inUse.length - shown} more`;
+      more.addEventListener('click', () => {
+        tail.hidden = !tail.hidden;
+        more.setAttribute('aria-expanded', String(!tail.hidden));
+        more.textContent = tail.hidden ? `${inUse.length - shown} more` : 'Fewer';
+      });
+
+      const reveal = () => {
+        if (!tail.hidden) return;
+        tail.hidden = false;
+        more.setAttribute('aria-expanded', 'true');
+        more.textContent = 'Fewer';
+      };
+
       for (const [index, value] of inUse.entries()) {
         const label = document.createElement('label');
         const input = document.createElement('input');
         input.type = 'checkbox';
         input.value = value.id;
-        input.checked = chosen.has(value.id);
         input.addEventListener('change', () => {
           const next = new Set(selected.get(facet.id) ?? []);
           if (input.checked) next.add(value.id);
@@ -271,7 +312,7 @@ if (filtersEl && resultsEl && summaryEl) {
           if (next.size) selected.set(facet.id, next);
           else selected.delete(facet.id);
           writeUrl();
-          render();
+          renderResults();
         });
 
         const count = document.createElement('span');
@@ -290,22 +331,12 @@ if (filtersEl && resultsEl && summaryEl) {
         jump.setAttribute('aria-label', `Open the ${value.label} page`);
         label.append(jump);
 
-        (index < shown ? group : tail).append(label);
+        const inTail = index >= shown;
+        (inTail ? tail : group).append(label);
+        boxes.push({ facet: facet.id, value: value.id, input, reveal: inTail ? reveal : undefined });
       }
 
-      if (inUse.length > shown) {
-        const more = document.createElement('button');
-        more.type = 'button';
-        more.className = 'find-more';
-        more.setAttribute('aria-expanded', 'false');
-        more.textContent = `${inUse.length - shown} more`;
-        more.addEventListener('click', () => {
-          tail.hidden = !tail.hidden;
-          more.setAttribute('aria-expanded', String(!tail.hidden));
-          more.textContent = tail.hidden ? `${inUse.length - shown} more` : 'Fewer';
-        });
-        group.append(tail, more);
-      }
+      if (inUse.length > shown) group.append(tail, more);
 
       if (facet.unknown > 0 || facet.notApplicable > 0) {
         const unknown = document.createElement('p');
@@ -337,7 +368,7 @@ if (filtersEl && resultsEl && summaryEl) {
       input.checked = showDrafts;
       input.addEventListener('change', () => {
         showDrafts = input.checked;
-        render();
+        renderResults();
       });
 
       const count = document.createElement('span');
@@ -353,6 +384,14 @@ if (filtersEl && resultsEl && summaryEl) {
       group.append(note);
 
       filtersEl.append(group);
+    }
+  };
+
+  /* A ticked box the reader cannot see is a filter nobody trusts, so its tail opens. */
+  const syncFilters = () => {
+    for (const box of boxes) {
+      box.input.checked = selected.get(box.facet)?.has(box.value) ?? false;
+      if (box.input.checked) box.reveal?.();
     }
   };
 
@@ -431,18 +470,16 @@ if (filtersEl && resultsEl && summaryEl) {
     summaryEl.textContent = parts.join(' ');
   };
 
-  const render = () => {
-    renderFilters();
-    renderResults();
-  };
-
   window.addEventListener('popstate', () => {
     readUrl();
-    render();
+    syncFilters();
+    renderResults();
   });
 
   readUrl();
-  render();
+  buildFilters();
+  syncFilters();
+  renderResults();
   fallbackEl?.remove();
 }
 

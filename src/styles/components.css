@@ -521,9 +521,15 @@
   display: none;
 }
 
+/*
+ * As many columns as fit and never more than six: the `100% / 7` floor makes a
+ * seventh column too narrow to be allowed, which is the only way auto-fit takes
+ * an upper bound. Fourteen facets and the stubs land in three rows on a wide
+ * screen and collapse to one column on a phone without a breakpoint.
+ */
 .find-filters {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(max(11rem, 100% / 7 + 0.1%), 1fr));
   gap: var(--space-md) var(--space-lg);
   margin-bottom: var(--space-lg);
   padding-bottom: var(--space-md);
@@ -555,6 +561,15 @@
   font-size: var(--text-md);
 }
 
+.find-facet-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.find-facet-title a:hover {
+  text-decoration: underline;
+}
+
 .find-facet label {
   display: flex;
   gap: var(--space-2xs);
@@ -583,6 +598,13 @@
 .find-facet .annotation {
   margin: var(--space-2xs) 0 0;
   font-size: var(--text-xs);
+}
+
+/* One column wide, the label has the room and the count has nothing to line up with. */
+@media (max-width: 40rem) {
+  .find-count {
+    display: none;
+  }
 }
 
 /* --- The figure pair --- */
