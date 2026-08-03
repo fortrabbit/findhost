@@ -53,8 +53,8 @@ cliTool: official
 iacSupport:
   - terraform
 certifications:
-  - ISO 27001
-  - SOC 2
+  - iso-27001
+  - soc-2
 checkedAt: 2026-08-01
 sources:
   - { field: regions, url: 'https://www.civo.com/docs/overview/regions', checkedAt: 2026-08-01 }

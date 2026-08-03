@@ -45,7 +45,7 @@ supportChannels:
 supportHours: 24-7
 contractMinimum: none
 certifications:
-  - ISO 27001
+  - iso-27001
 social:
   x: https://twitter.com/VentraIP/
   facebook: https://www.facebook.com/ventraip

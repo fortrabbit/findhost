@@ -55,7 +55,7 @@ regions:
 energyClaim: annual-matched
 sustainabilityUrl: https://krystal.io/green
 certifications:
-  - B Corp
+  - b-corp
 supportHours: business-hours
 supportTiering: paid-upgrade
 status: active

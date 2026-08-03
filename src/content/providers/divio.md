@@ -50,7 +50,7 @@ supportChannels:
 supportHours: 24-7
 supportTiering: paid-upgrade
 certifications:
-  - ISO 27001
+  - iso-27001
 status: active
 checkedAt: 2026-08-01
 sources:

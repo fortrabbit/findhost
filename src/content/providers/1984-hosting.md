@@ -42,7 +42,7 @@ regions:
   - IS
 energyClaim: annual-matched
 certifications:
-  - ISO 27001
+  - iso-27001
 checkedAt: 2026-08-01
 sources:
   - { field: regions, url: 'https://1984.hosting/', checkedAt: 2026-08-01 }

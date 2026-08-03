@@ -49,7 +49,7 @@ supportChannels:
   - email
 supportHours: 24-7
 certifications:
-  - PCI DSS
+  - pci-dss
 social:
   facebook: https://www.facebook.com/xneeloHosting/
   linkedin: https://www.linkedin.com/company/xneelo/

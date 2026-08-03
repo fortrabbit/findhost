@@ -47,9 +47,9 @@ regions:
 energyClaim: annual-matched
 sustainabilityUrl: https://www.strato.de/ueber-uns/nachhaltigkeit/
 certifications:
-  - ISO 27001
-  - ISO 14001
-  - ISO 50001
+  - iso-27001
+  - iso-14001
+  - iso-50001
 social:
   x: https://x.com/STRATO_ag
   linkedin: https://de.linkedin.com/company/strato-ag

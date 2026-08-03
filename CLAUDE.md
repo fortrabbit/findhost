@@ -53,6 +53,6 @@ The same rules govern two frontmatter fields, because both are prose:
 
 - Do not hardcode the domain. Absolute URLs come from `SITE_URL`; this runs on a vanity URL before it runs on its own.
 - `src/content.config.ts` is a governance artifact, not a type definition. Read the comment at the top before changing it.
-- `src/data/taxonomy.yml` is data: another facet is an entry there and no TypeScript.
+- `src/data/fields.yml` is the field dictionary, and the only place a field is described. It carries the label, the vocabulary, the record-page group and the facet slug; the zod schema builds its enums from it and the record page builds its rows from it. Another field, another value, another facet: an entry there and no TypeScript. A field with no `group` is validated and never shown; one with no `facet` is shown and never filtered.
 - AI involvement is disclosed once, in the footer, for the whole site. A record's `ai` value says who wrote that description; it is data, and no page renders it.
 - Comments explain a constraint or an invariant, or they are deleted. Nothing stateful — no "previously did X", no "FR-1234 will replace this".

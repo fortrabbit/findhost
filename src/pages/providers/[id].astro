@@ -1,8 +1,8 @@
 ---
 import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
-import { loadFacets } from '../../lib/facets';
-import { energy, flag, footnotes } from '../../lib/record';
+import { fieldGroups, fieldOf, labelOf, type Field } from '../../lib/fields';
+import { energy, flag, footnotes, price } from '../../lib/record';
 import { priceSentence } from '../../lib/price';
 import PriceGauge from '../../components/PriceGauge.astro';
 import { isListed } from '../../lib/providers';
@@ -17,105 +17,21 @@ export async function getStaticPaths() {
 
 const { provider } = Astro.props;
 
-// Facet values must reach the markup even where the design does not show them:
-// Pagefind indexes rendered HTML, so what is absent here cannot be searched later.
-const { facets } = await loadFacets();
-const facetByField = new Map(facets.map((facet) => [facet.field, facet]));
 const { Content } = await render(provider);
 const data = provider.data;
+const valueOf = (field: string) => (data as Record<string, unknown>)[field];
 
-const countryNames = new Map(
-  (facets.find((facet) => facet.id === 'regions')?.values ?? []).map((value) => [value.id, value.label]),
-);
-
-// Fields describing the provider. Meta and provenance are excluded — they
-// describe our work, not the provider, so they do not belong in the denominator.
-type Attribute = [label: string, key: string, value: unknown, facet?: string];
-
-const attributeGroups: { label: string; fields: Attribute[] }[] = [
-  {
-    label: 'Identity',
-    fields: [
-      ['Founded', 'founded', data.founded],
-      ['Headquarters', 'hqCountry', data.hqCountry],
-      ['Ownership', 'ownership', data.ownership, 'ownership'],
-      ['Parent', 'parent', data.parent],
-      ['Status', 'status', data.status],
-    ],
-  },
-  {
-    label: 'Classification',
-    fields: [
-      ['Category', 'category', data.category, 'category'],
-      ['Also offers', 'alsoOffers', data.alsoOffers, 'alsoOffers'],
-      ['Manages the OS', 'whoManagesOs', data.whoManagesOs, 'whoManagesOs'],
-      ['Hardware', 'infraContract', data.infraContract, 'infraContract'],
-      ['Runs on', 'runsOn', data.runsOn],
-      ['Built for', 'useCases', data.useCases, 'useCases'],
-      ['Sold to', 'audience', data.audience, 'audience'],
-    ],
-  },
-  {
-    label: 'Tech stack',
-    fields: [
-      ['Runtimes', 'runtimes', data.runtimes, 'runtimes'],
-      ['Runs', 'software', data.software, 'software'],
-      ['Specialised in', 'specialisation', data.specialisation],
-      ['Deploy methods', 'deployMethods', data.deployMethods],
-      ['SSH access', 'sshAccess', data.sshAccess, 'sshAccess'],
-      ['Managed databases', 'managedDatabases', data.managedDatabases],
-      ['Persistent storage', 'persistentStorage', data.persistentStorage],
-      ['Backups', 'backupsIncluded', data.backupsIncluded],
-    ],
-  },
-  {
-    label: 'Pricing',
-    fields: [
-      ['Pricing model', 'pricingModel', data.pricingModel],
-      ['Entry price', 'priceFrom', data.priceFrom, 'priceFrom'],
-      ['Typical ceiling', 'priceTo', data.priceTo],
-      ['Currencies', 'currencies', data.currencies],
-      ['Billed', 'billingPeriods', data.billingPeriods],
-      ['Paid', 'billingTiming', data.billingTiming],
-      ['Getting out', 'exitWithin', data.exitWithin, 'exitWithin'],
-      ['Renewal multiple', 'renewalMultiple', data.renewalMultiple],
-      ['Free tier', 'freeTier', data.freeTier, 'freeTier'],
-      ['Minimum contract', 'contractMinimum', data.contractMinimum],
-    ],
-  },
-  {
-    label: 'Regions and law',
-    fields: [
-      ['Regions', 'regions', data.regions, 'regions'],
-      ['DPA', 'gdprDpa', data.gdprDpa],
-    ],
-  },
-  {
-    label: 'Environment',
-    fields: [
-      ['Energy claim', 'energyClaim', data.energyClaim],
-      ['Certifications', 'certifications', data.certifications],
-      ['Green Web directory', 'greenWebId', data.greenWebId],
-    ],
-  },
-  {
-    label: 'Support',
-    fields: [
-      ['Channels', 'supportChannels', data.supportChannels],
-      ['Hours', 'supportHours', data.supportHours],
-      ['Tiering', 'supportTiering', data.supportTiering],
-    ],
-  },
-  {
-    label: 'Automation',
-    fields: [
-      ['API', 'apiAvailable', data.apiAvailable],
-      ['CLI', 'cliTool', data.cliTool],
-      ['MCP server', 'mcpServer', data.mcpServer, 'mcpServer'],
-      ['Infrastructure as code', 'iacSupport', data.iacSupport],
-    ],
-  },
-];
+/*
+ * The rows, their order, their labels and the words their values are shown
+ * under all come from src/data/fields.yml. The page used to carry its own list
+ * of them, which is why two thirds of it printed raw ids: a label existed only
+ * where a facet happened to want one.
+ *
+ * Meta and provenance have no entry there and no row here — they describe our
+ * work, not the provider, so they do not belong in the denominator either.
+ */
+const groups = fieldGroups();
+const allFields = groups.flatMap((group) => group.fields);
 
 const held = (value: unknown) => value !== undefined && value !== null && (!Array.isArray(value) || value.length > 0);
 
@@ -125,23 +41,51 @@ const held = (value: unknown) => value !== undefined && value !== null && (!Arra
  * That is neither known nor missing, so it leaves the denominator entirely
  * rather than inflating the gap on records that have no gap.
  */
-const applies = ([, , value]: Attribute) => value !== null;
+const applicable = allFields.filter((field) => valueOf(field.id) !== null);
 
 // Known first. What is missing is named once, together, where it reads as an
 // ask rather than as forty rows of `?`.
-const knownGroups = attributeGroups
-  .map((group) => ({ label: group.label, fields: group.fields.filter(([, , value]) => held(value)) }))
+const knownGroups = groups
+  .map((group) => ({ label: group.label, fields: group.fields.filter((field) => held(valueOf(field.id))) }))
   .filter((group) => group.fields.length > 0);
 
-const applicable = attributeGroups.flatMap((group) => group.fields).filter(applies);
-const missing = applicable.filter(([, , value]) => !held(value));
+const missing = applicable.filter((field) => !held(valueOf(field.id)));
 const total = applicable.length;
+
+/*
+ * One value as the page shows it. A vocabulary field gets the reader's word for
+ * it, and where that vocabulary is also a facet the word is a link to the page
+ * of everything else holding it — which is the same fact the filter panel
+ * offers, arrived at from the other side.
+ */
+interface Cell {
+  text: string;
+  href?: string;
+  filter?: string;
+}
+
+const money = (entry: unknown) => {
+  const paid = entry as { amount: number; currency: string; period: string; introductory?: boolean };
+  const said = price(paid);
+  return said && paid.introductory ? `${said}, introductory` : said;
+};
+
+function cells(field: Field, value: unknown): Cell[] {
+  if (field.render === 'yes-no') return [{ text: value ? 'yes' : 'no' }];
+  if (field.render === 'money') return [{ text: money(value) ?? '' }];
+  if (field.render === 'multiple') return [{ text: `${String(value)}×` }];
+
+  return (Array.isArray(value) ? value : [value]).map((entry) => {
+    const label = labelOf(field.id, entry);
+    if (!field.facet) return { text: label };
+    return { text: label, href: `/${field.facet}/${String(entry)}/`, filter: `${field.facet}:${label}` };
+  });
+}
 
 const linkLabels: Record<string, string> = {
   pricing: 'pricing',
   status: 'status',
   terms: 'terms',
-  sla: 'SLA',
   docs: 'docs',
 };
 
@@ -162,6 +106,7 @@ const outgoing = [
   ...Object.entries(linkLabels)
     .filter(([key]) => data.urls[key as keyof typeof data.urls])
     .map(([key, label]) => [label, data.urls[key as keyof typeof data.urls] as string] as const),
+  ...(data.sustainabilityUrl ? ([['sustainability', data.sustainabilityUrl]] as const) : []),
   ...Object.entries(data.social ?? {})
     .filter(([, url]) => url)
     .map(([key, url]) => [socialLabels[key] ?? key, url as string] as const),
@@ -170,17 +115,24 @@ const outgoing = [
 const { notes, numberOf } = footnotes(data.sources);
 
 /*
- * What each source backs, in the words the page uses for it. A source may name a
- * field that has no row — `social`, `urls`, or `notes` for a claim made in the
- * prose — so anything unmatched falls back to a readable form of the key rather
- * than being dropped: a source list that hides its own entries is worse than one
- * with an unfamiliar word in it.
+ * Sources for what this line holds. `urls`, `social` and `sustainabilityUrl` are
+ * cited like any other fact and have no row to hang a marker on, so the marker
+ * goes where the reader can see what it is about.
  */
-const fieldLabels = new Map(attributeGroups.flatMap((group) => group.fields).map(([label, key]) => [key, label]));
+const linkNotes = [...new Set(['urls', 'social', 'sustainabilityUrl'].map((field) => numberOf.get(field)))].filter(
+  (note): note is number => note !== undefined,
+);
 
+/*
+ * What each source backs, in the words the page uses for it. A source may name
+ * no field at all — a claim made in the prose, cited inline — so anything
+ * unmatched falls back to a readable form of the key rather than being dropped:
+ * a source list that hides its own entries is worse than one with an unfamiliar
+ * word in it.
+ */
 const sourceLabel = (field: string) =>
-  fieldLabels.get(field) ??
-  { notes: 'the notes', urls: 'links', social: 'accounts', entryPrice: 'starting price' }[field] ??
+  fieldOf.get(field)?.label ??
+  { notes: 'the notes', urls: 'links', social: 'accounts', sustainabilityUrl: 'sustainability' }[field] ??
   field.replace(/([A-Z])/g, ' $1').toLowerCase();
 
 const priceLine = priceSentence(data.priceFrom, data.priceTo);
@@ -244,11 +196,6 @@ const outOfScope =
 
 const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[data.status] : undefined);
 
-const format = (value: unknown) => {
-  if (Array.isArray(value)) return value.join(', ');
-  if (typeof value === 'boolean') return value ? 'yes' : 'no';
-  return String(value);
-};
 ---
 
 <Base
@@ -295,7 +242,7 @@ const format = (value: unknown) => {
     <p class="record-links">
       {
         homeFlag && (
-          <span aria-hidden="true" title={countryNames.get(data.hqCountry!) ?? data.hqCountry}>
+          <span aria-hidden="true" title={labelOf('hqCountry', data.hqCountry)}>
             {homeFlag}
           </span>
         )
@@ -308,6 +255,13 @@ const format = (value: unknown) => {
               {label}
             </a>
           </>
+        ))
+      }
+      {
+        linkNotes.map((note) => (
+          <a class="footnote-ref" href={`#source-${note}`} aria-label={`Source ${note}`}>
+            {note}
+          </a>
         ))
       }
     </p>
@@ -340,35 +294,28 @@ const format = (value: unknown) => {
           <section class="fact-group">
             <h2>{group.label}</h2>
             <dl class="fact-list">
-              {group.fields.map(([label, key, value, field]) => {
-                const facet = field ? facetByField.get(field) : undefined;
-                const values = Array.isArray(value) ? value : [value];
-                const note = numberOf.get(key);
-
-                /*
-                 * The taxonomy's label, as every other surface shows it. This was
-                 * the one page rendering the raw id — "paas", "resells-iaas",
-                 * "IE, US" — beside a register that says PaaS, Resells IaaS and
-                 * Ireland everywhere else.
-                 */
-                const labelOf = (entry: unknown) =>
-                  facet?.values.find((option) => option.id === String(entry))?.label ?? String(entry);
+              {group.fields.map((field) => {
+                const note = numberOf.get(field.id);
 
                 return (
                   <>
-                    <dt>{label}</dt>
+                    <dt>{field.label}</dt>
                     <dd>
-                      {facet
-                        ? values.map((entry, index) => (
-                            <>
-                              {index > 0 && ', '}
-                              {/* An explicit value, so the index keys on the band and not on the coins that render it. */}
-                              <a href={`/${facet.id}/${entry}/`} data-pagefind-filter={`${facet.id}:${labelOf(entry)}`}>
-                                {labelOf(entry)}
-                              </a>
-                            </>
-                          ))
-                        : format(value)}
+                      {cells(field, valueOf(field.id)).map((cell, index) => (
+                        <>
+                          {index > 0 && ', '}
+                          {/* Facet values must reach the markup even where the design does not show
+                              them: Pagefind indexes rendered HTML, so what is absent here cannot be
+                              searched later. */}
+                          {cell.href ? (
+                            <a href={cell.href} data-pagefind-filter={cell.filter}>
+                              {cell.text}
+                            </a>
+                          ) : (
+                            cell.text
+                          )}
+                        </>
+                      ))}
                       {note && (
                         <a class="footnote-ref" href={`#source-${note}`} aria-label={`Source ${note}`}>
                           {note}
@@ -390,7 +337,7 @@ const format = (value: unknown) => {
           <summary>
             {missing.length} of {total} fields not recorded yet
           </summary>
-          <p class="missing-list">{missing.map(([label]) => label).join(' · ')}</p>
+          <p class="missing-list">{missing.map((field) => field.label).join(' · ')}</p>
           <p>
             <a href="https://github.com/fortrabbit/findhost">Know one of these? Edit this record.</a>
           </p>

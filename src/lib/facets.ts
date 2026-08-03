@@ -1,5 +1,6 @@
-import { getCollection } from 'astro:content';
+import { facetFields, type Field } from './fields';
 import { isListed, loadProviders } from './providers';
+import { getCollection } from 'astro:content';
 
 export interface FacetValue {
   id: string;
@@ -8,8 +9,10 @@ export interface FacetValue {
 }
 
 export interface Facet {
+  /** The URL segment: /software/kirby/. */
   id: string;
   label: string;
+  /** The record field it reads. */
   field: string;
   multiple: boolean;
   values: FacetValue[];
@@ -47,24 +50,22 @@ export interface ProviderRow {
 /** Alphabetical, always — see the sort rule in CLAUDE.md. */
 const byName = (a: { name: string }, b: { name: string }) => a.name.localeCompare(b.name, 'en');
 
-type Taxonomy = Awaited<ReturnType<typeof getCollection<'taxonomy'>>>;
-
-function toRow(record: { id: string; data: Record<string, unknown> }, taxonomy: Taxonomy): ProviderRow {
+function toRow(record: { id: string; data: Record<string, unknown> }): ProviderRow {
   const data = record.data;
   const facets: Record<string, string | string[]> = {};
   const notApplicable: string[] = [];
 
-  for (const facet of taxonomy) {
-    const value = data[facet.data.field];
+  for (const field of facetFields) {
+    const value = data[field.id];
     if (value === null) {
-      notApplicable.push(facet.data.field);
+      notApplicable.push(field.id);
       continue;
     }
     if (value === undefined) continue;
     if (Array.isArray(value)) {
-      if (value.length) facets[facet.data.field] = value.map(String);
+      if (value.length) facets[field.id] = value.map(String);
     } else {
-      facets[facet.data.field] = String(value);
+      facets[field.id] = String(value);
     }
   }
 
@@ -89,83 +90,47 @@ function toRow(record: { id: string; data: Record<string, unknown> }, taxonomy: 
  * unknown count and quietly change what the register claims.
  */
 export async function loadDrafts(): Promise<ProviderRow[]> {
-  const taxonomy = await getCollection('taxonomy');
   const records = (await getCollection('providers')).filter((record) => !isListed(record));
 
   return records
     .map((record) => ({
-      ...toRow(record as never, taxonomy),
+      ...toRow(record as never),
       status: String(record.data.status),
     }))
     .sort(byName);
 }
 
+function countValues(field: Field, providers: ProviderRow[]): Facet {
+  const applicable = providers.filter((provider) => !provider.notApplicable.includes(field.id));
+  const known = applicable.filter((provider) => provider.facets[field.id] !== undefined);
+
+  const values = field.values.map((value) => ({
+    id: value.id,
+    label: value.label,
+    count: known.filter((provider) => {
+      const held = provider.facets[field.id];
+      return Array.isArray(held) ? held.includes(value.id) : held === value.id;
+    }).length,
+  }));
+
+  return {
+    id: field.facet!,
+    label: field.label,
+    field: field.id,
+    multiple: field.multiple,
+    values,
+    unknown: applicable.length - known.length,
+    notApplicable: providers.length - applicable.length,
+  };
+}
+
 export async function loadFacets(): Promise<{ facets: Facet[]; providers: ProviderRow[] }> {
-  const taxonomy = await getCollection('taxonomy');
   const records = await loadProviders();
+  const providers = records.map((record) => toRow(record as never)).sort(byName);
 
-  const providers: ProviderRow[] = records
-    .map((record) => {
-      const data = record.data as Record<string, unknown>;
-      const facets: Record<string, string | string[]> = {};
-      const notApplicable: string[] = [];
-
-      for (const facet of taxonomy) {
-        const value = data[facet.data.field];
-        if (value === null) {
-          notApplicable.push(facet.data.field);
-          continue;
-        }
-        if (value === undefined) continue;
-        if (Array.isArray(value)) {
-          if (value.length) facets[facet.data.field] = value.map(String);
-        } else {
-          facets[facet.data.field] = String(value);
-        }
-      }
-
-      return {
-        id: record.id,
-        name: record.data.name,
-        description: record.data.description,
-        publishedByUs: record.data.publishedByUs,
-        greenWebId: record.data.greenWebId,
-        priceFrom: record.data.priceFrom,
-        priceTo: record.data.priceTo,
-        figure: record.data.figure,
-        facets,
-        notApplicable,
-      };
-    })
-    .sort(byName);
-
-  const facets: Facet[] = taxonomy.map((facet) => {
-    const applicable = providers.filter((provider) => !provider.notApplicable.includes(facet.data.field));
-    const known = applicable.filter((provider) => provider.facets[facet.data.field] !== undefined);
-
-    const values = facet.data.values.map((value) => ({
-      id: value.id,
-      label: value.label,
-      count: known.filter((provider) => {
-        const held = provider.facets[facet.data.field];
-        return Array.isArray(held) ? held.includes(value.id) : held === value.id;
-      }).length,
-    }));
-
-    return {
-      id: facet.data.id,
-      label: facet.data.label,
-      field: facet.data.field,
-      multiple: facet.data.multiple,
-      values,
-      unknown: applicable.length - known.length,
-      notApplicable: providers.length - applicable.length,
-    };
-  });
-
-  // Taxonomy order, not alphabetical: the file is arranged most-asked first and
-  // the filter panel should read the same way.
-  return { facets, providers };
+  // Dictionary order is the record page's; the panel offers the most-asked
+  // first, which is what `filterOrder` in fields.yml sorts these by.
+  return { facets: facetFields.map((field) => countValues(field, providers)), providers };
 }
 
 /**

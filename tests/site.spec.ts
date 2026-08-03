@@ -95,7 +95,7 @@ test.describe('a record', () => {
 
   test('sends every outbound link with rel=nofollow', async ({ page }) => {
     await page.goto('/providers/hetzner/');
-    for (const link of await page.locator('.record-links a').all()) {
+    for (const link of await page.locator('.record-links a[href^="http"]').all()) {
       await expect(link).toHaveAttribute('rel', 'nofollow');
     }
   });

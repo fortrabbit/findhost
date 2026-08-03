@@ -46,7 +46,7 @@ exitWithin: a-quarter
 entryPrice: { amount: 6.9, currency: EUR, period: month }
 freeTier: none
 certifications:
-  - ISO 27001
+  - iso-27001
 status: active
 checkedAt: 2026-08-01
 sources:

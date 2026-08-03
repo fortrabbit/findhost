@@ -41,7 +41,7 @@ regions:
   - JP
 contractMinimum: annual
 certifications:
-  - ISO 27001
+  - iso-27001
 social:
   x: https://x.com/xserverjp
   facebook: https://www.facebook.com/xserver.co.jp/

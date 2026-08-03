@@ -1,0 +1,675 @@
+# The field dictionary. One entry per field a record may carry, and the only
+# place any of it is written down: the zod schema builds its enums from these
+# vocabularies, the record page builds its rows from `group` and `label`, and the
+# filter panel builds itself from the entries that carry `facet`.
+#
+# - `id`     the frontmatter field name.
+# - `label`  what a reader is shown, on the record page and as a filter heading.
+# - `group`  which section of the record page the field appears in. Absent means
+#            the field is validated but never rendered as a row.
+# - `facet`  the URL segment where the field is filterable — /software/kirby/.
+#            Absent means the field is shown but not filtered.
+# - `values` the vocabulary. Absent means free text, a number or a date.
+# - `valuesFrom` borrows another field's vocabulary rather than repeating it.
+# - `render` how a value is drawn where it is not a label lookup.
+#
+# Group order, and field order within a group, is the order of this file. The
+# filter panel reads in `filterOrder`, which is a separate question: a record is
+# read from the top down, filters are offered most-asked first.
+#
+# A label holding a comma must be quoted. Unquoted, the comma ends the value and
+# the rest becomes a key of its own — which is how two price bands shipped as
+# "$500 to $1" and "Over $1".
+
+# ---------------------------------------------------------------- Identity
+
+- id: founded
+  label: Founded
+  group: Identity
+
+- id: hqCountry
+  label: Headquarters
+  group: Identity
+  valuesFrom: regions
+
+- id: ownership
+  label: Ownership
+  group: Identity
+  facet: ownership
+  filterOrder: 13
+  values:
+    - { id: independent, label: Independent }
+    - { id: vc-backed, label: VC-backed }
+    - { id: pe-owned, label: Private-equity owned }
+    - { id: public, label: Publicly listed }
+    - { id: subsidiary, label: Subsidiary }
+
+- id: parent
+  label: Parent
+  group: Identity
+
+# The sentence a non-active status earns is elsewhere on the record page; this
+# row is the fact behind it.
+- id: status
+  label: Status
+  group: Identity
+  values:
+    - { id: active, label: Active }
+    - { id: acquired, label: 'Acquired, still operating' }
+    - { id: renamed, label: Renamed }
+    - { id: winding-down, label: Winding down }
+    - { id: discontinued, label: Discontinued }
+    - { id: unverifiable, label: Unverifiable }
+    - { id: delisted-on-request, label: Delisted on request }
+    - { id: draft, label: Stub }
+    - { id: out-of-scope, label: Out of scope }
+
+# ---------------------------------------------------------- Classification
+
+- id: category
+  label: Category
+  group: Classification
+  facet: category
+  filterOrder: 3
+  values:
+    - { id: paas, label: Platform as a Service }
+    - { id: vps, label: Virtual Private Servers }
+    - { id: iaas, label: Infrastructure as a Service }
+    - { id: shared, label: Shared hosting }
+    - { id: serverless, label: Serverless }
+    - { id: server-management, label: Server management }
+    - { id: vanity-hosting, label: Vanity hosting }
+    - { id: lcnc, label: Low-code and no-code }
+
+- id: whoManagesOs
+  label: Who manages the OS
+  group: Classification
+  facet: os-managed-by
+  filterOrder: 11
+  values:
+    - { id: you, label: You do }
+    - { id: panel-assisted, label: 'You do, with a panel' }
+    - { id: provider, label: The provider does }
+    - { id: container, label: 'You own the image, they run the host' }
+
+# More than one can be true at once: a panel that provisions onto your own cloud
+# account may also resell machines of its own.
+- id: infraContract
+  label: Whose hardware
+  group: Classification
+  facet: hardware
+  filterOrder: 12
+  multiple: true
+  values:
+    - { id: owns-metal, label: Owns the hardware }
+    - { id: resells-iaas, label: Resells someone else's }
+    - { id: byo-iaas, label: You bring your own }
+
+# Whose infrastructure a reseller sits on. The values are provider ids, so the
+# upstream is usually a record in this dataset too.
+- id: runsOn
+  label: Runs on
+  group: Classification
+  multiple: true
+  values:
+    - { id: aws, label: AWS }
+    - { id: gcp, label: Google Cloud }
+    - { id: digitalocean, label: DigitalOcean }
+    - { id: linode, label: Linode }
+    - { id: vultr, label: Vultr }
+    - { id: hetzner, label: Hetzner }
+    - { id: upcloud, label: UpCloud }
+    - { id: scaleway, label: Scaleway }
+    - { id: vshosting, label: vshosting }
+
+# What a provider markets itself for, taken from its own site. A claim it makes,
+# never a judgement about what it is good at.
+- id: useCases
+  label: Built for
+  group: Classification
+  facet: use-case
+  filterOrder: 4
+  multiple: true
+  values:
+    - { id: cms, label: CMS sites }
+    - { id: headless-cms, label: Headless CMS }
+    - { id: e-commerce, label: Online shops }
+    - { id: saas, label: SaaS products }
+    - { id: api, label: API backends }
+    - { id: dashboard, label: Dashboards and admin panels }
+    - { id: internal-tool, label: Internal tools }
+    - { id: static-site, label: Static sites }
+    - { id: campaign-site, label: Campaign and landing sites }
+    - { id: portfolio, label: Portfolios }
+    - { id: side-project, label: Side projects }
+    - { id: ai-app, label: AI and LLM apps }
+    - { id: background-jobs, label: Background jobs and queues }
+    - { id: data-pipeline, label: Data pipelines }
+    - { id: game-server, label: Game servers }
+    - { id: learning, label: Learning and experiments }
+
+# Who a provider sells to, kept apart from what it is used for: a one-person side
+# project and a government department can want the same CMS and will never want
+# the same contract, support model or invoice.
+- id: audience
+  label: Sold to
+  group: Classification
+  facet: audience
+  filterOrder: 5
+  multiple: true
+  values:
+    - { id: indie-hacker, label: Indie hackers }
+    - { id: freelancer, label: Freelancers }
+    - { id: agency, label: Agencies }
+    - { id: startup, label: Startups }
+    - { id: smb, label: Small and medium businesses }
+    - { id: enterprise, label: Enterprises }
+    - { id: government, label: Government and public sector }
+    - { id: education, label: Education and research }
+    - { id: non-profit, label: Non-profits }
+    - { id: developer, label: Developers }
+    - { id: beginner, label: Beginners }
+
+# ------------------------------------------------------------- Tech stack
+
+- id: runtimes
+  label: Runtimes
+  group: Tech stack
+  facet: runtimes
+  filterOrder: 2
+  multiple: true
+  values:
+    - { id: php, label: PHP }
+    - { id: node, label: Node.js }
+    - { id: python, label: Python }
+    - { id: ruby, label: Ruby }
+    - { id: go, label: Go }
+    - { id: java, label: Java }
+    - { id: dotnet, label: .NET }
+    - { id: elixir, label: Elixir }
+    - { id: rust, label: Rust }
+    - { id: static, label: Static files }
+    - { id: bun, label: Bun }
+    - { id: deno, label: Deno }
+    - { id: scala, label: Scala }
+    - { id: clojure, label: Clojure }
+    - { id: perl, label: Perl }
+    - { id: swift, label: Swift }
+    - { id: gleam, label: Gleam }
+    - { id: lua, label: Lua }
+    - { id: haskell, label: Haskell }
+    - { id: docker, label: Docker }
+    - { id: any, label: Anything }
+
+# Named software a provider documents support for — a one-click installer, an
+# official guide, a maintained buildpack. What the provider says it supports, not
+# how well it runs.
+- id: software
+  label: Runs
+  group: Tech stack
+  facet: software
+  filterOrder: 1
+  multiple: true
+  values:
+    - { id: wordpress, label: WordPress }
+    - { id: woocommerce, label: WooCommerce }
+    - { id: drupal, label: Drupal }
+    - { id: typo3, label: TYPO3 }
+    - { id: joomla, label: Joomla }
+    - { id: craft-cms, label: Craft CMS }
+    - { id: statamic, label: Statamic }
+    - { id: kirby, label: Kirby }
+    - { id: ghost, label: Ghost }
+    - { id: laravel, label: Laravel }
+    - { id: symfony, label: Symfony }
+    - { id: magento, label: Magento }
+    - { id: shopware, label: Shopware }
+    - { id: rails, label: Ruby on Rails }
+    - { id: django, label: Django }
+    - { id: express, label: Express }
+    - { id: nextjs, label: Next.js }
+    - { id: nuxt, label: Nuxt }
+    - { id: astro, label: Astro }
+    - { id: sveltekit, label: SvelteKit }
+    - { id: remix, label: Remix }
+    - { id: gatsby, label: Gatsby }
+    - { id: hugo, label: Hugo }
+    - { id: eleventy, label: Eleventy }
+    - { id: jekyll, label: Jekyll }
+    - { id: strapi, label: Strapi }
+    - { id: directus, label: Directus }
+    - { id: payload, label: Payload }
+    - { id: medusa, label: Medusa }
+    - { id: n8n, label: n8n }
+    - { id: pimcore, label: Pimcore }
+    - { id: expressionengine, label: ExpressionEngine }
+    - { id: nextcloud, label: Nextcloud }
+    - { id: prestashop, label: PrestaShop }
+    - { id: opencart, label: OpenCart }
+    - { id: odoo, label: Odoo }
+    - { id: moodle, label: Moodle }
+    - { id: mastodon, label: Mastodon }
+    - { id: mattermost, label: Mattermost }
+    - { id: gitea, label: Gitea }
+    - { id: keycloak, label: Keycloak }
+    - { id: metabase, label: Metabase }
+    - { id: vaultwarden, label: Vaultwarden }
+    - { id: silverstripe, label: Silverstripe }
+    - { id: umbraco, label: Umbraco }
+    - { id: wagtail, label: Wagtail }
+    - { id: django-cms, label: django CMS }
+    - { id: spring-boot, label: Spring Boot }
+    - { id: flask, label: Flask }
+    - { id: fastapi, label: FastAPI }
+
+# The stronger, rarer claim than `software`: a platform built for one thing, like
+# Servd for Craft or Kinsta for WordPress.
+- id: specialisation
+  label: Specialised in
+  group: Tech stack
+  multiple: true
+  values:
+    - { id: wordpress, label: WordPress }
+    - { id: craft-cms, label: Craft CMS }
+    - { id: laravel, label: Laravel }
+    - { id: rails, label: Ruby on Rails }
+    - { id: django, label: Django }
+    - { id: elixir, label: Elixir }
+
+# `git-integration` is a repository the provider watches; `git-push` is a remote
+# they hand you. Different enough to deploy differently, so they stay apart.
+- id: deployMethods
+  label: Deploy methods
+  group: Tech stack
+  multiple: true
+  values:
+    - { id: git-integration, label: Git integration }
+    - { id: git-push, label: Git push }
+    - { id: cli, label: CLI }
+    - { id: api, label: API }
+    - { id: docker-image, label: Docker image }
+    - { id: control-panel, label: Control panel }
+    - { id: dashboard, label: Dashboard }
+    - { id: ssh, label: SSH }
+    - { id: sftp, label: SFTP }
+    - { id: ftp, label: FTP }
+
+- id: sshAccess
+  label: SSH access
+  group: Tech stack
+  facet: ssh
+  filterOrder: 10
+  values:
+    - { id: full, label: Full }
+    - { id: limited, label: Limited }
+    - { id: none, label: None }
+
+- id: managedDatabases
+  label: Managed databases
+  group: Tech stack
+  multiple: true
+  values:
+    - { id: mysql, label: MySQL }
+    - { id: mariadb, label: MariaDB }
+    - { id: postgres, label: PostgreSQL }
+    - { id: sqlite, label: SQLite }
+    - { id: redis, label: Redis }
+    - { id: valkey, label: Valkey }
+    - { id: mongodb, label: MongoDB }
+    - { id: couchdb, label: CouchDB }
+    - { id: elasticsearch, label: Elasticsearch }
+    - { id: opensearch, label: OpenSearch }
+    - { id: clickhouse, label: ClickHouse }
+    - { id: influxdb, label: InfluxDB }
+    - { id: kafka, label: Kafka }
+
+- id: persistentStorage
+  label: Persistent storage
+  group: Tech stack
+  render: yes-no
+
+- id: backupsIncluded
+  label: Backups
+  group: Tech stack
+  values:
+    - { id: included, label: Included }
+    - { id: paid-addon, label: Paid add-on }
+    - { id: none, label: None }
+
+# --------------------------------------------------------------- Pricing
+
+# How the bill is computed, by what happens at the margin.
+- id: pricingModel
+  label: Pricing model
+  group: Pricing
+  values:
+    - { id: fixed-tier, label: Fixed tier }
+    - { id: plan-plus-overage, label: Plan fee plus overage }
+    - { id: per-resource, label: Per resource provisioned }
+    - { id: usage-based, label: Metered usage }
+    - { id: hourly, label: Per hour }
+    - { id: credit, label: Prepaid credit }
+    - { id: per-server-licence, label: Licence per server }
+
+# Seven bands in US dollars a month — see lib/price.ts for the scale and why it
+# roughly triples.
+- id: priceFrom
+  label: Entry price
+  group: Pricing
+  facet: entry-price
+  filterOrder: 7
+  values:
+    - { id: xs, label: 'Under $5 a month' }
+    - { id: sm, label: '$5 to $15 a month' }
+    - { id: md, label: '$15 to $50 a month' }
+    - { id: lg, label: '$50 to $150 a month' }
+    - { id: xl, label: '$150 to $500 a month' }
+    - { id: 2xl, label: '$500 to $1,500 a month' }
+    - { id: 3xl, label: 'Over $1,500 a month' }
+
+# The exact starting figure in the provider's own currency, beside the band, so
+# nobody reads a conversion we invented.
+- id: entryPrice
+  label: Starting price
+  group: Pricing
+  render: money
+
+- id: priceTo
+  label: Typical ceiling
+  group: Pricing
+  valuesFrom: priceFrom
+
+- id: currencies
+  label: Currencies
+  group: Pricing
+  multiple: true
+  values:
+    - { id: USD, label: USD }
+    - { id: EUR, label: EUR }
+    - { id: GBP, label: GBP }
+    - { id: CHF, label: CHF }
+    - { id: SEK, label: SEK }
+    - { id: DKK, label: DKK }
+    - { id: PLN, label: PLN }
+    - { id: CAD, label: CAD }
+    - { id: AUD, label: AUD }
+    - { id: NZD, label: NZD }
+    - { id: JPY, label: JPY }
+    - { id: INR, label: INR }
+    - { id: MYR, label: MYR }
+    - { id: BRL, label: BRL }
+    - { id: ARS, label: ARS }
+    - { id: ZAR, label: ZAR }
+
+- id: billingPeriods
+  label: Billed
+  group: Pricing
+  multiple: true
+  values:
+    - { id: hourly, label: Hourly }
+    - { id: daily, label: Daily }
+    - { id: monthly, label: Monthly }
+    - { id: quarterly, label: Quarterly }
+    - { id: half-yearly, label: Half-yearly }
+    - { id: yearly, label: Yearly }
+    - { id: multi-year, label: Multi-year }
+
+- id: billingTiming
+  label: Paid
+  group: Pricing
+  values:
+    - { id: advance, label: In advance }
+    - { id: arrears, label: 'In arrears, for usage already run up' }
+
+# How long the money keeps going out after you decide to leave, worst case, on
+# the cheapest ordinary terms. A notice period and a minimum term are the same
+# fact to a customer — time — so they are recorded as time and they add up.
+- id: exitWithin
+  label: Getting out
+  group: Pricing
+  facet: exit
+  filterOrder: 8
+  values:
+    - { id: a-day, label: Within a day }
+    - { id: a-month, label: Within a month }
+    - { id: a-quarter, label: Within a quarter }
+    - { id: a-year, label: Within a year }
+    - { id: over-a-year, label: Longer than a year }
+
+# Renewal ÷ introductory: 3.3 means a €2.99 offer that renews at €9.99.
+- id: renewalMultiple
+  label: Renewal multiple
+  group: Pricing
+  render: multiple
+
+- id: freeTier
+  label: Free tier
+  group: Pricing
+  facet: free-tier
+  filterOrder: 9
+  values:
+    - { id: permanent, label: Permanent }
+    - { id: trial, label: Trial only }
+    - { id: none, label: None }
+
+- id: contractMinimum
+  label: Minimum contract
+  group: Pricing
+  values:
+    - { id: none, label: None }
+    - { id: monthly, label: Monthly }
+    - { id: annual, label: Annual }
+    - { id: multi-year, label: Multi-year }
+
+# -------------------------------------------------------- Regions and law
+
+# Country codes, not regions. EU / US / APAC grouping is derived at build time
+# from these values rather than stored — see lib/map.ts.
+- id: regions
+  label: Regions
+  group: Regions and law
+  facet: regions
+  filterOrder: 6
+  multiple: true
+  values:
+    - { id: DE, label: Germany }
+    - { id: FI, label: Finland }
+    - { id: IE, label: Ireland }
+    - { id: NL, label: Netherlands }
+    - { id: GB, label: United Kingdom }
+    - { id: US, label: United States }
+    - { id: CA, label: Canada }
+    - { id: SG, label: Singapore }
+    - { id: AU, label: Australia }
+    - { id: IN, label: India }
+    - { id: JP, label: Japan }
+    - { id: BR, label: Brazil }
+    - { id: AE, label: United Arab Emirates }
+    - { id: CL, label: Chile }
+    - { id: ES, label: Spain }
+    - { id: FR, label: France }
+    - { id: HK, label: Hong Kong }
+    - { id: IL, label: Israel }
+    - { id: IT, label: Italy }
+    - { id: KR, label: South Korea }
+    - { id: MX, label: Mexico }
+    - { id: PL, label: Poland }
+    - { id: SE, label: Sweden }
+    - { id: ZA, label: South Africa }
+    - { id: CH, label: Switzerland }
+    - { id: AT, label: Austria }
+    - { id: NO, label: Norway }
+    - { id: DK, label: Denmark }
+    - { id: BE, label: Belgium }
+    - { id: CZ, label: Czechia }
+    - { id: RO, label: Romania }
+    - { id: TR, label: Türkiye }
+    - { id: ID, label: Indonesia }
+    - { id: MY, label: Malaysia }
+    - { id: TH, label: Thailand }
+    - { id: NZ, label: New Zealand }
+    - { id: TW, label: Taiwan }
+    - { id: PH, label: Philippines }
+    - { id: VN, label: Vietnam }
+    - { id: PK, label: Pakistan }
+    - { id: SA, label: Saudi Arabia }
+    - { id: RU, label: Russia }
+    - { id: EE, label: Estonia }
+    - { id: LV, label: Latvia }
+    - { id: LT, label: Lithuania }
+    - { id: BG, label: Bulgaria }
+    - { id: HR, label: Croatia }
+    - { id: LU, label: Luxembourg }
+    - { id: PT, label: Portugal }
+    - { id: HU, label: Hungary }
+    - { id: SK, label: Slovakia }
+    - { id: SI, label: Slovenia }
+    - { id: IS, label: Iceland }
+    - { id: GR, label: Greece }
+    - { id: AR, label: Argentina }
+    - { id: KE, label: Kenya }
+    - { id: NG, label: Nigeria }
+    - { id: BH, label: Bahrain }
+    - { id: QA, label: Qatar }
+    - { id: KW, label: Kuwait }
+    - { id: OM, label: Oman }
+    - { id: CO, label: Colombia }
+    - { id: PE, label: Peru }
+    - { id: UY, label: Uruguay }
+    - { id: EC, label: Ecuador }
+    - { id: CR, label: Costa Rica }
+    - { id: PA, label: Panama }
+    - { id: DO, label: Dominican Republic }
+    - { id: CN, label: China }
+    - { id: EG, label: Egypt }
+    - { id: MA, label: Morocco }
+    - { id: TN, label: Tunisia }
+    - { id: GH, label: Ghana }
+    - { id: MU, label: Mauritius }
+    - { id: NP, label: Nepal }
+    - { id: BD, label: Bangladesh }
+    - { id: LK, label: Sri Lanka }
+    - { id: KZ, label: Kazakhstan }
+    - { id: UA, label: Ukraine }
+    - { id: RS, label: Serbia }
+    - { id: CY, label: Cyprus }
+    - { id: MT, label: Malta }
+    - { id: GE, label: Georgia }
+
+- id: gdprDpa
+  label: DPA
+  group: Regions and law
+  values:
+    - { id: standard, label: 'Standard, published' }
+    - { id: on-request, label: On request }
+    - { id: unclear, label: Unclear }
+
+# ----------------------------------------------------------- Environment
+
+# What a provider publishes, never a judgement of it. Offsets, annual matching
+# and 24/7 carbon-free are three different claims marketing blurs into one.
+- id: energyClaim
+  label: Energy claim
+  group: Environment
+  values:
+    - { id: 24-7-cfe, label: 24/7 carbon-free }
+    - { id: annual-matched, label: Annually matched renewables }
+    - { id: offset, label: Offsets purchased }
+    - { id: grid-mix-disclosed, label: Grid mix published }
+    - { id: none-published, label: None published }
+
+- id: certifications
+  label: Certifications
+  group: Environment
+  multiple: true
+  values:
+    - { id: iso-27001, label: ISO 27001 }
+    - { id: iso-14001, label: ISO 14001 }
+    - { id: iso-50001, label: ISO 50001 }
+    - { id: soc-2, label: SOC 2 }
+    - { id: pci-dss, label: PCI DSS }
+    - { id: b-corp, label: B Corp }
+
+# Someone else's verification, linked rather than copied.
+- id: greenWebId
+  label: Green Web directory
+  group: Environment
+
+# --------------------------------------------------------------- Support
+
+# supportHours answers one question: when can you reach a human about a
+# production problem, on the cheapest paid plan.
+- id: supportChannels
+  label: Channels
+  group: Support
+  multiple: true
+  values:
+    - { id: email, label: Email }
+    - { id: chat, label: Chat }
+    - { id: phone, label: Phone }
+    - { id: forum, label: Forum }
+
+- id: supportHours
+  label: Hours
+  group: Support
+  values:
+    - { id: 24-7, label: Around the clock }
+    - { id: business-hours, label: Business hours }
+    - { id: community-only, label: Community only }
+
+- id: supportTiering
+  label: Tiering
+  group: Support
+  values:
+    - { id: all-plans, label: Same on every plan }
+    - { id: paid-upgrade, label: Better on paid plans }
+    - { id: enterprise-only, label: Enterprise only }
+
+# ------------------------------------------------------------ Automation
+
+- id: apiAvailable
+  label: API
+  group: Automation
+  values:
+    - { id: public, label: Public }
+    - { id: partner-only, label: Partners only }
+    - { id: none, label: None }
+
+- id: cliTool
+  label: CLI
+  group: Automation
+  values:
+    - { id: official, label: Official }
+    - { id: third-party, label: Third-party }
+    - { id: none, label: None }
+
+- id: mcpServer
+  label: MCP server
+  group: Automation
+  facet: mcp
+  filterOrder: 14
+  values:
+    - { id: official, label: Official }
+    - { id: community, label: Community }
+    - { id: none, label: None }
+
+- id: iacSupport
+  label: Infrastructure as code
+  group: Automation
+  multiple: true
+  values:
+    - { id: terraform, label: Terraform }
+    - { id: cloudformation, label: CloudFormation }
+    - { id: ansible, label: Ansible }
+
+# ------------------------------------------- Validated but never rendered
+
+# Disclosed once in the footer for the whole site. Per record it says who wrote
+# that description, which is provenance and not a property of the provider.
+- id: ai
+  label: AI involvement
+  values:
+    - { id: none, label: None }
+    - { id: grammar, label: Grammar only }
+    - { id: co-authored, label: Co-authored }
+    - { id: authored, label: Authored }

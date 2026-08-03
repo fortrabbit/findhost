@@ -59,7 +59,7 @@ regions:
   - DE
 energyClaim: annual-matched
 certifications:
-  - ISO 27001
+  - iso-27001
 supportChannels:
   - phone
   - email

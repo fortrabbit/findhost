@@ -62,8 +62,8 @@ supportChannels:
 supportHours: business-hours
 supportTiering: paid-upgrade
 certifications:
-  - ISO 27001
-  - SOC 2
+  - iso-27001
+  - soc-2
 social:
   github: https://github.com/elestio
   linkedin: https://www.linkedin.com/company/elestio

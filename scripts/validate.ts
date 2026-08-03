@@ -7,9 +7,9 @@
 import { readdirSync, readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { parse as parseYaml } from 'yaml';
+import { dictionaryFile, facetFields, fields } from '../src/lib/fields.ts';
 
 const providersDir = 'src/content/providers';
-const taxonomyFile = 'src/data/taxonomy.yml';
 const publicDir = 'public';
 
 const errors: string[] = [];
@@ -21,12 +21,33 @@ const frontmatter = (raw: string) => {
   return parseYaml(match[1]) as Record<string, unknown>;
 };
 
-const taxonomy = parseYaml(readFileSync(taxonomyFile, 'utf8')) as {
-  id: string;
-  field: string;
-  multiple?: boolean;
-  values: { id: string }[];
-}[];
+/*
+ * The dictionary first. Everything downstream — the schema's enums, the record
+ * page's rows, the filter panel — is built from it, so a duplicate entry or a
+ * facet without a vocabulary is a silent hole rather than a loud one.
+ */
+const seenField = new Set<string>();
+const seenFacet = new Set<string>();
+
+for (const field of fields) {
+  if (seenField.has(field.id)) fail(dictionaryFile, `duplicate entry for "${field.id}"`);
+  seenField.add(field.id);
+
+  if (!field.label) fail(dictionaryFile, `"${field.id}" has no label`);
+
+  if (field.facet) {
+    if (seenFacet.has(field.facet)) fail(dictionaryFile, `two fields claim the facet "${field.facet}"`);
+    seenFacet.add(field.facet);
+    if (!field.values.length) fail(dictionaryFile, `"${field.id}" is a facet with no values to filter by`);
+  }
+
+  const values = new Set<string>();
+  for (const value of field.values) {
+    if (values.has(value.id)) fail(dictionaryFile, `"${field.id}" lists "${value.id}" twice`);
+    values.add(value.id);
+    if (!value.label) fail(dictionaryFile, `"${field.id}" value "${value.id}" has no label`);
+  }
+}
 
 const files = readdirSync(providersDir).filter((name) => name.endsWith('.md'));
 const seen = new Map<string, string>();
@@ -93,16 +114,18 @@ for (const { file, data } of records) {
     }
   }
 
-  for (const facet of taxonomy) {
-    const value = data[facet.field];
+  for (const field of fields) {
+    if (!field.values.length) continue;
+
+    const value = data[field.id];
     if (value === undefined || value === null) continue;
 
-    const allowed = new Set(facet.values.map((entry) => String(entry.id)));
+    const allowed = new Set(field.values.map((entry) => entry.id));
     const used = Array.isArray(value) ? value.map(String) : [String(value)];
 
     for (const entry of used) {
       if (!allowed.has(entry)) {
-        fail(file, `${facet.field} "${entry}" is not defined in ${taxonomyFile}`);
+        fail(file, `${field.id} "${entry}" is not defined in ${dictionaryFile}`);
       }
     }
   }
@@ -115,4 +138,6 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`${files.length - hidden} listed records, ${hidden} hidden, ${taxonomy.length} facets, no problems.`);
+console.log(
+  `${files.length - hidden} listed records, ${hidden} hidden, ${fields.length} fields, ${facetFields.length} of them facets, no problems.`,
+);

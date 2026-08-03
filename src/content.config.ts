@@ -1,7 +1,7 @@
 import { defineCollection } from 'astro:content';
-import { file, glob } from 'astro/loaders';
-import { parse as parseYaml } from 'yaml';
+import { glob } from 'astro/loaders';
 import { z } from 'zod';
+import { vocabulary } from './lib/fields';
 
 /**
  * This file is a governance artifact, not a type definition.
@@ -10,6 +10,12 @@ import { z } from 'zod';
  * Everything else is optional, so absent means unknown, renders as `?`, and the
  * build stays green. Nothing here may express a rank, score, boost or weight;
  * scripts/validate.ts asserts that no such field has appeared.
+ *
+ * Every closed vocabulary comes from src/data/fields.yml, which also carries the
+ * label each value is shown under and the section of the record page it appears
+ * in. A field with a `vocabulary()` call here has an entry there; the rest —
+ * identity, provenance, and the display-only pieces — are rendered by markup
+ * written for them and are the schema's alone.
  */
 
 const affiliateParams = /[?&](ref|aff|affiliate|partner|utm_[a-z]+|fpr|via)=/i;
@@ -54,48 +60,45 @@ const providerFields = z
       docs: publicUrl.optional(),
     }),
     /* Required of a listed record — see the superRefine below. A hidden one is allowed to be a stub. */
-    category: z
-      .enum(['paas', 'vps', 'iaas', 'shared', 'serverless', 'server-management', 'vanity-hosting', 'lcnc'])
-      .optional(),
+    category: z.enum(vocabulary('category')).optional(),
 
     // Identity
     description: z.string().max(200).optional(),
     mark: z.string().optional(),
     logo: z.string().optional(),
     founded: z.number().int().optional(),
-    hqCountry: z.string().length(2).optional(),
-    ownership: z.enum(['independent', 'vc-backed', 'pe-owned', 'public', 'subsidiary']).optional(),
+    hqCountry: z.enum(vocabulary('hqCountry')).optional(),
+    ownership: z.enum(vocabulary('ownership')).optional(),
     parent: z.string().optional(),
 
     // Classification
-    alsoOffers: z.array(z.string()).optional(),
-    whoManagesOs: z.enum(['you', 'panel-assisted', 'provider', 'container']).optional(),
+    whoManagesOs: z.enum(vocabulary('whoManagesOs')).optional(),
     /*
      * More than one can be true at once: Laravel Forge provisions onto your own
      * cloud account *and* resells its own VPS, and panels are increasingly doing
      * both. Absent still means unknown — a provider that sells no infrastructure
      * at all is already saying so through `category: server-management`.
      */
-    infraContract: z.array(z.enum(['owns-metal', 'resells-iaas', 'byo-iaas'])).optional(),
-    specialisation: z.array(z.string()).optional(),
+    infraContract: z.array(z.enum(vocabulary('infraContract'))).optional(),
+    specialisation: z.array(z.enum(vocabulary('specialisation'))).optional(),
     /** What a provider positions itself for, in its own words — not our verdict on fit. */
-    useCases: z.array(z.string()).optional(),
+    useCases: z.array(z.enum(vocabulary('useCases'))).optional(),
     /** Who the provider sells to, in its own words. Separate from what it is used for. */
-    audience: z.array(z.string()).optional(),
+    audience: z.array(z.enum(vocabulary('audience'))).optional(),
     /**
      * Named software the provider documents support for. Most people search for
      * "WordPress hosting", not "PHP hosting" — the runtime is the precise
      * question and the software is the one people actually ask.
      */
-    software: z.array(z.string()).optional(),
+    software: z.array(z.enum(vocabulary('software'))).optional(),
 
     // Tech stack
-    runtimes: z.array(z.string()).optional(),
-    deployMethods: z.array(z.string()).optional(),
-    sshAccess: z.enum(['full', 'limited', 'none']).optional(),
-    managedDatabases: z.array(z.string()).optional(),
+    runtimes: z.array(z.enum(vocabulary('runtimes'))).optional(),
+    deployMethods: z.array(z.enum(vocabulary('deployMethods'))).optional(),
+    sshAccess: z.enum(vocabulary('sshAccess')).optional(),
+    managedDatabases: z.array(z.enum(vocabulary('managedDatabases'))).optional(),
     persistentStorage: z.boolean().optional(),
-    backupsIncluded: z.enum(['included', 'paid-addon', 'none']).optional(),
+    backupsIncluded: z.enum(vocabulary('backupsIncluded')).optional(),
 
     /*
      * Pricing — bands only. This is not a price tracker.
@@ -114,17 +117,7 @@ const providerFields = z
      *   credit             prepaid credits drawn down
      *   per-server-licence a licence per server you already own
      */
-    pricingModel: z
-      .enum([
-        'fixed-tier',
-        'plan-plus-overage',
-        'per-resource',
-        'usage-based',
-        'hourly',
-        'credit',
-        'per-server-licence',
-      ])
-      .optional(),
+    pricingModel: z.enum(vocabulary('pricingModel')).optional(),
     /*
      * What it costs to run something here, as a range across seven bands in US
      * dollars a month — see lib/price.ts for the scale and why it triples.
@@ -150,19 +143,17 @@ const providerFields = z
      * A free tier is not on this scale. `freeTier` records it, because free
      * describes what a provider gives away and this describes what it charges.
      */
-    priceFrom: z.enum(['xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl']).optional(),
-    priceTo: z.enum(['xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl']).optional(),
+    priceFrom: z.enum(vocabulary('priceFrom')).optional(),
+    priceTo: z.enum(vocabulary('priceTo')).optional(),
 
     /*
      * How the bill arrives, which is where the unpleasant surprises live. None
      * of it is a price, so none of it rots the way a figure does.
      */
-    currencies: z.array(z.string().length(3)).optional(),
-    billingPeriods: z
-      .array(z.enum(['hourly', 'daily', 'monthly', 'quarterly', 'half-yearly', 'yearly', 'multi-year']))
-      .optional(),
+    currencies: z.array(z.enum(vocabulary('currencies'))).optional(),
+    billingPeriods: z.array(z.enum(vocabulary('billingPeriods'))).optional(),
     /** Paid before the month or after it. Arrears means usage you have already run up. */
-    billingTiming: z.enum(['advance', 'arrears']).optional(),
+    billingTiming: z.enum(vocabulary('billingTiming')).optional(),
     /*
      * How long you can still be billed after deciding to leave, worst case, on
      * the cheapest ordinary terms.
@@ -174,7 +165,7 @@ const providerFields = z
      * going out. A notice period and a minimum term are the same fact to a
      * customer — time — so they are recorded as time and they add up.
      */
-    exitWithin: z.enum(['a-day', 'a-month', 'a-quarter', 'a-year', 'over-a-year']).optional(),
+    exitWithin: z.enum(vocabulary('exitWithin')).optional(),
     /*
      * The exact starting figure in the provider's own currency, shown beside the
      * coins so nobody reads a conversion we invented. One number with a date,
@@ -183,7 +174,7 @@ const providerFields = z
     entryPrice: z
       .object({
         amount: z.number(),
-        currency: z.string().length(3),
+        currency: z.enum(vocabulary('currencies')),
         period: z.enum(['month', 'year', 'hour']).default('month'),
         /*
          * True where the figure is a teaser rather than what the customer keeps
@@ -195,8 +186,8 @@ const providerFields = z
       })
       .optional(),
     renewalMultiple: z.number().nullable().optional(),
-    freeTier: z.enum(['permanent', 'trial', 'none']).optional(),
-    contractMinimum: z.enum(['none', 'monthly', 'annual', 'multi-year']).optional(),
+    freeTier: z.enum(vocabulary('freeTier')).optional(),
+    contractMinimum: z.enum(vocabulary('contractMinimum')).optional(),
 
     /*
      * Regions. Absent means unknown; `null` means the question does not apply —
@@ -204,9 +195,9 @@ const providerFields = z
      * regions of its own, and counting it as missing data makes every "N records
      * do not say" line on the map wrong.
      */
-    regions: z.array(z.string().length(2)).nullable().optional(),
-    runsOn: z.array(z.string()).nullable().optional(),
-    gdprDpa: z.enum(['standard', 'on-request', 'unclear']).optional(),
+    regions: z.array(z.enum(vocabulary('regions'))).nullable().optional(),
+    runsOn: z.array(z.enum(vocabulary('runsOn'))).nullable().optional(),
+    gdprDpa: z.enum(vocabulary('gdprDpa')).optional(),
 
     /*
      * Environmental impact — what a provider publishes, never a judgement of it.
@@ -217,9 +208,9 @@ const providerFields = z
      * about it — o2switch prints "~94% décarbonée, ~6% carbonée (2019)", which
      * is more information than most and fits none of the other values.
      */
-    energyClaim: z.enum(['24-7-cfe', 'annual-matched', 'offset', 'grid-mix-disclosed', 'none-published']).optional(),
+    energyClaim: z.enum(vocabulary('energyClaim')).optional(),
     sustainabilityUrl: publicUrl.optional(),
-    certifications: z.array(z.string()).optional(),
+    certifications: z.array(z.enum(vocabulary('certifications'))).optional(),
     /**
      * Where a provider talks in public. Not a facet — nobody filters by "has a
      * Facebook page" — but a dormant account is checkable, and a company's own
@@ -252,15 +243,15 @@ const providerFields = z
      * supportTiering's job; without that rule every platform reads `24-7` on the
      * strength of a tier almost nobody buys.
      */
-    supportChannels: z.array(z.enum(['email', 'chat', 'phone', 'forum'])).optional(),
-    supportHours: z.enum(['24-7', 'business-hours', 'community-only']).optional(),
-    supportTiering: z.enum(['all-plans', 'paid-upgrade', 'enterprise-only']).optional(),
+    supportChannels: z.array(z.enum(vocabulary('supportChannels'))).optional(),
+    supportHours: z.enum(vocabulary('supportHours')).optional(),
+    supportTiering: z.enum(vocabulary('supportTiering')).optional(),
 
     // Automation & agent support — the axis nobody else records
-    apiAvailable: z.enum(['public', 'partner-only', 'none']).optional(),
-    cliTool: z.enum(['official', 'third-party', 'none']).optional(),
-    mcpServer: z.enum(['official', 'community', 'none']).optional(),
-    iacSupport: z.array(z.string()).optional(),
+    apiAvailable: z.enum(vocabulary('apiAvailable')).optional(),
+    cliTool: z.enum(vocabulary('cliTool')).optional(),
+    mcpServer: z.enum(vocabulary('mcpServer')).optional(),
+    iacSupport: z.array(z.enum(vocabulary('iacSupport'))).optional(),
 
     // Meta & provenance
     checkedAt: z.coerce.date().optional(),
@@ -276,25 +267,13 @@ const providerFields = z
      * with, and neither is listed, counted or indexed. See lib/providers.ts —
      * the filter lives in one place so no page can forget it.
      */
-    status: z
-      .enum([
-        'active',
-        'acquired',
-        'renamed',
-        'winding-down',
-        'discontinued',
-        'unverifiable',
-        'delisted-on-request',
-        'draft',
-        'out-of-scope',
-      ])
-      .optional(),
+    status: z.enum(vocabulary('status')).optional(),
     /** The numbered inclusion criterion an out-of-scope record failed. */
     criterion: z.number().int().min(1).max(6).optional(),
     /** Set where the failure is "we could not find it", not "it does not exist". */
     boundedSearch: z.boolean().optional(),
     editorialNote: z.string().optional(),
-    ai: z.enum(['none', 'grammar', 'co-authored', 'authored']).optional(),
+    ai: z.enum(vocabulary('ai')).optional(),
 
     // Display only — never filterable, never sortable, never counted
     figure: figure.optional(),
@@ -343,7 +322,7 @@ const categories = defineCollection({
     description: z.string().max(200).optional(),
     lead: z.string().optional(),
     figure: figure.optional(),
-    ai: z.enum(['none', 'grammar', 'co-authored', 'authored']).optional(),
+    ai: z.enum(vocabulary('ai')).optional(),
   }),
 });
 
@@ -358,7 +337,7 @@ const notes = defineCollection({
   loader: glob({ base: 'src/content/notes', pattern: '**/*.md' }),
   schema: z.object({
     title: z.string().optional(),
-    ai: z.enum(['none', 'grammar', 'co-authored', 'authored']).optional(),
+    ai: z.enum(vocabulary('ai')).optional(),
   }),
 });
 
@@ -372,20 +351,8 @@ const guide = defineCollection({
     lead: z.string().optional(),
     order: z.number().int().default(50),
     figure: figure.optional(),
-    ai: z.enum(['none', 'grammar', 'co-authored', 'authored']).optional(),
+    ai: z.enum(vocabulary('ai')).optional(),
   }),
 });
 
-/** Facet definitions are data, so adding an eleventh facet touches no TypeScript. */
-const taxonomy = defineCollection({
-  loader: file('src/data/taxonomy.yml', { parser: (text) => parseYaml(text) }),
-  schema: z.object({
-    id: z.string(),
-    label: z.string(),
-    field: z.string(),
-    multiple: z.boolean().default(false),
-    values: z.array(z.object({ id: z.string(), label: z.string() })),
-  }),
-});
-
-export const collections = { providers, categories, guide, notes, taxonomy };
+export const collections = { providers, categories, guide, notes };

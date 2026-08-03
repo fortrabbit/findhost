@@ -2,7 +2,7 @@
  * The find view — the only JavaScript this site ships.
  *
  * It is deliberately generic: everything it knows about the dataset comes from
- * providers.json, so an eleventh facet is a taxonomy entry and nothing here.
+ * providers.json, so an eleventh facet is an entry in fields.yml and nothing here.
  */
 
 import { bandIndex, priceBands, priceSentence, sliceHeight } from '../lib/price';
