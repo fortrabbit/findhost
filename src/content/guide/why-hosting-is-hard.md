@@ -18,7 +18,7 @@ It is genuinely difficult to tell hosting services apart from the outside. That 
 
 ## Blurry categories
 
-Even skilled developers routinely lack a clear picture here, and the vocabulary is part of why. There is [shared hosting](/guide/categories/shared/), [VPS](/guide/categories/vps/) and [IaaS](/guide/categories/iaas/), but vendors blur those lines constantly, and the newer categories are harder still. Is [serverless](/guide/categories/serverless/) really server-less? The dataset answers this with fields rather than adjectives: a primary [category](/category/), [who manages the operating system](/os-managed-by/) and [whose hardware it runs on](/hardware/). Those last two settle most of the argument on their own, because they stay answerable whatever a vendor decides to call the product.
+Even skilled developers routinely lack a clear picture here, and the vocabulary is part of why. There is [shared hosting](/category/shared/), [VPS](/category/vps/) and [IaaS](/category/iaas/), but vendors blur those lines constantly, and the newer categories are harder still. Is [serverless](/category/serverless/) really server-less? The dataset answers this with fields rather than adjectives: a primary [category](/category/), [who manages the operating system](/os-managed-by/) and [whose hardware it runs on](/hardware/). Those last two settle most of the argument on their own, because they stay answerable whatever a vendor decides to call the product.
 
 ## Marketing-driven
 

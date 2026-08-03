@@ -10,7 +10,7 @@ figure:
   text: White glove, sales call included.
 ---
 
-Managed hosting is one of the blurriest labels in a market full of them. In the loose sense, almost every hosting service is managed: [shared hosting](/guide/categories/shared/), [PaaS](/guide/categories/paas/) and [serverless](/guide/categories/serverless/) all hand the operating system to the provider, which is exactly what [who manages the OS](/os-managed-by/) records. The trade uses the term more narrowly than that, and the narrow meaning is older.
+Managed hosting is one of the blurriest labels in a market full of them. In the loose sense, almost every hosting service is managed: [shared hosting](/category/shared/), [PaaS](/category/paas/) and [serverless](/category/serverless/) all hand the operating system to the provider, which is exactly what [who manages the OS](/os-managed-by/) records. The trade uses the term more narrowly than that, and the narrow meaning is older.
 
 ## A service, not a product
 
@@ -26,7 +26,7 @@ Managed hosting providers tend to serve their own region. The model runs on conv
 
 ## Why it is not a category here
 
-Every category in [the map](/guide/categories/) describes a product with checkable properties: a price band, a runtime list, an [SSH](/ssh/) answer, a [free tier](/free-tier/) or the absence of one. Managed hosting has none of those in fixed form, because the deliverable is negotiated per customer — a price band would be a guess and a feature list would be a paraphrase of a sales page. So it lives here as an explainer instead.
+Every category in [the map](/category/) describes a product with checkable properties: a price band, a runtime list, an [SSH](/ssh/) answer, a [free tier](/free-tier/) or the absence of one. Managed hosting has none of those in fixed form, because the deliverable is negotiated per customer — a price band would be a guess and a feature list would be a paraphrase of a sales page. So it lives here as an explainer instead.
 
 ## Check whether the requirement is real
 

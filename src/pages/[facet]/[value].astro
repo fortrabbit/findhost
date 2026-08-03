@@ -60,8 +60,6 @@ const lead = summarise(
   subjects[facet.id] ?? `record ${facet.label.toLowerCase()}: ${value.label}`,
 );
 
-// A written explainer exists for some values and not others, which is the
-// intended state: filler for all of them would be thin content by definition.
 /* One string, for the reason given in ProviderRegister.astro. */
 const setAside = [
   facet.unknown > 0 &&
@@ -71,15 +69,31 @@ const setAside = [
   .filter(Boolean)
   .join(' ');
 
+/*
+ * A written explainer exists for some values and not others, which is the
+ * intended state: filler for all of them would be thin content by definition.
+ * Its title heads the browser tab only — the heading stays the value's own
+ * label, so the page and the filter that leads to it say the same word.
+ */
 const notes = await getCollection('notes');
 const note = notes.find((entry) => entry.id === `${facet.id}/${value.id}`);
 const Note = note ? (await render(note)).Content : null;
+const figure = note?.data.figure;
 ---
 
 <Base
-  title={`${facet.label}: ${value.label} — FindHost`}
-  description={`Providers where ${facet.label.toLowerCase()} is ${value.label.toLowerCase()}.`}
+  title={`${note?.data.title ?? value.label} — FindHost`}
+  description={note?.data.description ??
+    `Providers where ${facet.label.toLowerCase()} is ${value.label.toLowerCase()}.`}
 >
+  {
+    figure && (
+      <p class="figure-band full-bleed" style={`background:${figure.color};color:${figure.textColor}`}>
+        <span aria-hidden="true">{figure.emoji}</span> {figure.text}
+      </p>
+    )
+  }
+
   <h1>{value.label}</h1>
 
   <p class="lead">{lead}</p>
@@ -87,17 +101,6 @@ const Note = note ? (await render(note)).Content : null;
   <p class="annotation">{setAside}</p>
 
   {Note && <Note />}
-
-  {
-    /* A category is described in the guide, so the list says where to read about itself rather than repeating it. */
-    facet.id === 'category' && (
-      <p class="annotation">
-        <a href={`/guide/categories/${value.id}/`}>
-          What {value.label.toLowerCase()} means, and what it asks of a team →
-        </a>
-      </p>
-    )
-  }
 
   <ProviderRegister providers={matches} facets={facets} seed={{ facet: facet.id, value: value.id }} />
 

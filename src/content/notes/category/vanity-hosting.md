@@ -1,7 +1,7 @@
 ---
-id: vanity-hosting
 title: vanity hosting
 description: Vanity hosting is a service built around one specific piece of software, and nothing else runs on it.
+lead: Hosting built around one software ecosystem.
 figure:
   emoji: 🐴
   color: rgb(255, 105, 180)

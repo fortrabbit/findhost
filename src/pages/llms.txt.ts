@@ -1,5 +1,6 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
+import { loadFacets } from '../lib/facets';
 import { loadProviders } from '../lib/providers';
 
 /**
@@ -11,7 +12,16 @@ export const GET: APIRoute = async ({ site }) => {
   const origin = site?.origin ?? '';
   const providers = (await loadProviders()).sort((a, b) => a.data.name.localeCompare(b.data.name, 'en'));
   const guide = (await getCollection('guide')).sort((a, b) => a.data.order - b.data.order);
-  const categories = await getCollection('categories');
+  const { facets } = await loadFacets();
+  const notes = (await getCollection('notes')).sort((a, b) => a.id.localeCompare(b.id, 'en'));
+
+  /* A note is keyed by the path it heads, so its own id is both its URL and the way back to its label. */
+  const headingOf = (id: string) => {
+    const [facetId, valueId] = id.split('/');
+    const facet = facets.find((entry) => entry.id === facetId);
+    if (!valueId) return facet?.label ?? facetId;
+    return facet?.values.find((value) => value.id === valueId)?.label ?? valueId;
+  };
 
   const lines = [
     '# FindHost',
@@ -33,10 +43,10 @@ export const GET: APIRoute = async ({ site }) => {
       `- [${page.data.title}](${origin}/guide/${page.id}/): ${page.data.description ?? ''}`.trimEnd(),
     ),
     '',
-    '## Categories',
+    '## Notes',
     '',
-    ...categories.map((entry) =>
-      `- [${entry.data.title}](${origin}/category/${entry.id}/): ${entry.data.description ?? ''}`.trimEnd(),
+    ...notes.map((entry) =>
+      `- [${entry.data.title ?? headingOf(entry.id)}](${origin}/${entry.id}/): ${entry.data.description ?? ''}`.trimEnd(),
     ),
     '',
     `## Providers (${providers.length})`,

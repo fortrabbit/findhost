@@ -11,7 +11,6 @@ import { loadProviders } from '../lib/providers';
 export const GET: APIRoute = async ({ site }) => {
   const origin = site?.origin ?? '';
   const providers = await loadProviders();
-  const categories = await getCollection('categories');
   const guide = await getCollection('guide');
   const { facets } = await loadFacets();
 
@@ -25,7 +24,6 @@ export const GET: APIRoute = async ({ site }) => {
     '/policies/',
     '/search/',
     ...providers.map((provider) => `/providers/${provider.id}/`),
-    ...categories.map((entry) => `/guide/categories/${entry.id}/`),
     ...guide.map((page) => `/guide/${page.id}/`),
     ...facets.flatMap((facet) => [
       `/${facet.id}/`,

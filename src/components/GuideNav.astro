@@ -9,27 +9,17 @@ interface Props {
 const { current } = Astro.props;
 
 /*
- * Every guide, in reading order, with the eight category pages nested under the
- * one that introduces them. The guide is short enough to list whole: a reader on
- * one article can see the shape of the rest without going back to an index.
+ * Every guide, in reading order. The guide is short enough to list whole: a
+ * reader on one article can see the shape of the rest without going back to an
+ * index.
  */
 const guides = (await getCollection('guide')).sort((a, b) => a.data.order - b.data.order);
-const categories = (await getCollection('categories')).sort((a, b) => a.data.title.localeCompare(b.data.title, 'en'));
 
-const items = guides.map((guide) => ({
-  href: `/guide/${guide.id}/`,
-  label: guide.data.title,
-  children:
-    guide.id === 'categories'
-      ? categories.map((category) => ({
-          href: `/guide/categories/${category.id}/`,
-          label: category.data.title,
-        }))
-      : [],
-}));
+const items = guides.map((guide) => ({ href: `/guide/${guide.id}/`, label: guide.data.title }));
 
-/* The other two written pages. They are read the same way and belong in the same list. */
+/* The written pages that are not guide articles. They are read the same way and belong in the same list. */
 const about = [
+  { href: '/category/', label: 'Hosting categories' },
   { href: '/pricing/', label: 'How prices are recorded' },
   { href: '/about/', label: 'About' },
   { href: '/policies/', label: 'Policies' },
@@ -45,17 +35,6 @@ const about = [
           <a href={item.href} aria-current={current === item.href ? 'page' : undefined}>
             {item.label}
           </a>
-          {item.children.length > 0 && (
-            <ul>
-              {item.children.map((child) => (
-                <li>
-                  <a href={child.href} aria-current={current === child.href ? 'page' : undefined}>
-                    {child.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          )}
         </li>
       ))
     }

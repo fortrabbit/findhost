@@ -195,8 +195,14 @@ const providerFields = z
      * regions of its own, and counting it as missing data makes every "N records
      * do not say" line on the map wrong.
      */
-    regions: z.array(z.enum(vocabulary('regions'))).nullable().optional(),
-    runsOn: z.array(z.enum(vocabulary('runsOn'))).nullable().optional(),
+    regions: z
+      .array(z.enum(vocabulary('regions')))
+      .nullable()
+      .optional(),
+    runsOn: z
+      .array(z.enum(vocabulary('runsOn')))
+      .nullable()
+      .optional(),
     gdprDpa: z.enum(vocabulary('gdprDpa')).optional(),
 
     /*
@@ -313,30 +319,24 @@ const providers = defineCollection({
   schema: providerFields,
 });
 
-/** The explainer that heads each category listing. */
-const categories = defineCollection({
-  loader: glob({ base: 'src/content/categories', pattern: '**/*.md' }),
-  schema: z.object({
-    id: z.string(),
-    title: z.string(),
-    description: z.string().max(200).optional(),
-    lead: z.string().optional(),
-    figure: figure.optional(),
-    ai: z.enum(vocabulary('ai')).optional(),
-  }),
-});
-
 /**
- * An optional explainer for a single facet value, keyed `<facet>/<value>` —
- * `software/wordpress.md`, `runtimes/go.md`. Written only where there is
- * something true and useful to say; a page without one is still a good page,
- * and inventing filler for every value is what the sites this dataset exists to
- * correct do for a living.
+ * An optional explainer for a facet value, keyed `<facet>/<value>` —
+ * `software/wordpress.md`, `category/paas.md` — or for a whole facet, keyed
+ * `<facet>` — `category.md`, which heads /category/.
+ *
+ * Written only where there is something true and useful to say; a value without
+ * one is still a good page, and inventing filler for every value is what the
+ * sites this dataset exists to correct do for a living.
  */
 const notes = defineCollection({
   loader: glob({ base: 'src/content/notes', pattern: '**/*.md' }),
   schema: z.object({
+    /** The browser title. A facet's note also takes the heading; a value's does not, so page and filter agree. */
     title: z.string().optional(),
+    description: z.string().max(200).optional(),
+    /** The opening line, set larger than the body. `description` is for search results; this is for the reader. */
+    lead: z.string().optional(),
+    figure: figure.optional(),
     ai: z.enum(vocabulary('ai')).optional(),
   }),
 });
@@ -355,4 +355,4 @@ const guide = defineCollection({
   }),
 });
 
-export const collections = { providers, categories, guide, notes };
+export const collections = { providers, guide, notes };

@@ -1,7 +1,7 @@
 ---
-id: serverless
 title: serverless
 description: What serverless hosting means for PHP, when it pays off, and where it hurts. A guide to Lambda-style functions, scale-to-zero containers, and the WASM edge.
+lead: Runs on demand, billed per use.
 figure:
   emoji: ⚡
   color: rgb(28, 34, 52)

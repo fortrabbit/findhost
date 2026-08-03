@@ -2,7 +2,6 @@
 title: Web hosting categories
 description: The categories the market sells under — shared, VPS, server management, vanity hosting, serverless, PaaS, IaaS, low-code — and what each one asks of a team.
 lead: Eight labels the market sells under, what each one asks of a team, and where the boundaries blur.
-order: 30
 figure:
   emoji: 🗂️
   color: rgb(34, 40, 56)
@@ -12,16 +11,7 @@ figure:
 
 The hosting market has no clean labels. They shift with the technology, and vendors blur them on purpose — [which is most of why choosing is hard](/guide/why-hosting-is-hard/). This page is the map the dataset uses: what each category is, and what it costs in effort rather than in money.
 
-- **[Shared hosting](/guide/categories/shared/)** — cheap, oversold, thin walls
-- **[VPS](/guide/categories/vps/)** — a virtual machine with root, and a sysadmin job attached
-- **[Server management](/guide/categories/server-management/)** — a panel that provisions and configures a VPS
-- **[Vanity hosting](/guide/categories/vanity-hosting/)** — hosting built around one software ecosystem
-- **[Serverless](/guide/categories/serverless/)** — runs on demand, billed per use
-- **[PaaS](/guide/categories/paas/)** — push code, the platform runs it
-- **[IaaS](/guide/categories/iaas/)** — cloud parts, wired together by the customer
-- **[Low-code and no-code](/guide/categories/lcnc/)** — prompt or click a site into existence
-
-Every record carries exactly one of those eight as its primary category, plus a list of what else it offers, because most providers sell across more than one. Each link above goes to what that category is, what it asks of a team, and the field that tells it apart from the one next door — and from there to the providers in it. Managed hosting is the ninth term in common use and the one that fits no category at all; the section below says why.
+Every record carries exactly one of the eight as its primary category, plus a list of what else it offers, because most providers sell across more than one. Each category has a page of its own: what it is, what it asks of a team, the field that tells it apart from the one next door, and the providers in it. Managed hosting is the ninth term in common use and the one that fits no category at all.
 
 ## Managed hosting
 

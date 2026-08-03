@@ -313,11 +313,6 @@
   list-style: none;
 }
 
-/* The eight categories, indented under the article that introduces them. */
-.guide-nav ul ul {
-  margin-left: var(--space-sm);
-}
-
 .guide-nav li {
   padding: var(--space-3xs) 0;
 }

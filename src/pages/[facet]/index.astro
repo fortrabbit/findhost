@@ -1,4 +1,5 @@
 ---
+import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import { loadFacets } from '../../lib/facets';
 
@@ -28,10 +29,40 @@ const annotation = [
 ]
   .filter(Boolean)
   .join(' ');
+
+/*
+ * A facet may have a written introduction of its own, at notes/<facet>.md, and
+ * each of its values may have one at notes/<facet>/<value>.md. Where a value's
+ * note opens with a lead, the list below carries it as a one-line gloss.
+ */
+const notes = await getCollection('notes');
+const note = notes.find((entry) => entry.id === facet.id);
+const leadOf = new Map(
+  notes
+    .filter((entry) => entry.id.startsWith(`${facet.id}/`) && entry.data.lead)
+    .map((entry) => [entry.id.slice(facet.id.length + 1), entry.data.lead]),
+);
+const Note = note ? (await render(note)).Content : null;
+const figure = note?.data.figure;
 ---
 
-<Base title={`${facet.label} — FindHost`} description={`Every value recorded for ${facet.label.toLowerCase()}.`}>
-  <h1>{facet.label}</h1>
+<Base
+  title={`${note?.data.title ?? facet.label} — FindHost`}
+  description={note?.data.description ?? `Every value recorded for ${facet.label.toLowerCase()}.`}
+>
+  {
+    figure && (
+      <p class="figure-band full-bleed" style={`background:${figure.color};color:${figure.textColor}`}>
+        <span aria-hidden="true">{figure.emoji}</span> {figure.text}
+      </p>
+    )
+  }
+
+  <h1>{note?.data.title ?? facet.label}</h1>
+
+  {note?.data.lead && <p class="lead">{note.data.lead}</p>}
+
+  {Note && <Note />}
 
   <p class="annotation">{annotation}</p>
 
@@ -43,6 +74,7 @@ const annotation = [
           <span class="self-marker">
             {value.count} {value.count === 1 ? 'record' : 'records'}
           </span>
+          {leadOf.has(value.id) && <p>{leadOf.get(value.id)}</p>}
         </li>
       ))
     }
