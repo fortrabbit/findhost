@@ -54,18 +54,25 @@ const subjects: Record<string, string> = {
 };
 
 const { facets } = await loadFacets();
-const lead = summarise(
+const summary = summarise(
   matches,
   facets,
   facet.id,
   subjects[facet.id] ?? `record ${facet.label.toLowerCase()}: ${value.label}`,
 );
 
-/* One string, for the reason given in ProviderRegister.astro. */
-const setAside = [
+/*
+ * The count, what the records have in common and what is missing, in one
+ * annotation. They were three stacked blocks of numbers, two of them opening
+ * with the same total — read as a wall and skipped as one.
+ *
+ * One string, for the reason given in ProviderRegister.astro.
+ */
+const counted = [
+  summary,
   facet.unknown > 0 &&
-    `${facet.unknown} ${facet.unknown === 1 ? 'record does' : 'records do'} not record this field, so they cannot appear here either way.`,
-  facet.notApplicable > 0 && `For ${facet.notApplicable} the question does not apply at all.`,
+    `${facet.unknown} ${facet.unknown === 1 ? 'record does' : 'records do'} not record this field, and cannot appear here either way.`,
+  facet.notApplicable > 0 && `For ${facet.notApplicable} the question does not apply.`,
 ]
   .filter(Boolean)
   .join(' ');
@@ -97,9 +104,7 @@ const figure = note?.data.figure;
 
   <h1>{value.label}</h1>
 
-  <p class="lead">{lead}</p>
-
-  <p class="annotation">{setAside}</p>
+  <p class="annotation">{counted}</p>
 
   {Note && <Note />}
 

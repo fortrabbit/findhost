@@ -44,12 +44,19 @@ const groups = [...new Set(providers.map((provider) => letterOf(provider.name)))
 }));
 ---
 
-<p class="annotation" data-find-summary>{summary}</p>
+{
+  /* A seeded page has already counted itself, in a sentence that says more than this one. */
+  !seed && (
+    <p class="annotation" data-find-summary>
+      {summary}
+    </p>
+  )
+}
 
 {
   seed ? (
     <p class="find-onward">
-      <a href={`/providers/?${seed.facet}=${seed.value}`}>Combine {seed.label.toLowerCase()} with other filters →</a>
+      <a href={`/providers/?${seed.facet}=${seed.value}`}>Combine {seed.label} with other filters →</a>
     </p>
   ) : (
     <div class="find-filters full-width" data-find-filters />

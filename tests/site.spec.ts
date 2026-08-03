@@ -149,7 +149,7 @@ test.describe('without JavaScript', () => {
 
     await page.goto('/runtimes/php/');
     await expect(page.locator('.provider-list > li').first()).toBeVisible();
-    await expect(page.locator('.lead')).toContainText('provider');
+    await expect(page.locator('.annotation').first()).toContainText('provider');
   });
 });
 

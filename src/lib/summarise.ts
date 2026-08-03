@@ -1,13 +1,16 @@
 import type { Facet, ProviderRow } from './facets';
 
 /**
- * A lead paragraph assembled from the records themselves.
+ * Two sentences assembled from the records themselves.
  *
  * Every clause counts something on this page, so it cannot be wrong and it
  * cannot be padding — which is the only way to give a hundred-odd list pages an
  * opening line without becoming the thin-content farm this dataset exists to
  * correct. Where a value deserves real guidance it gets a written note as well;
  * this is the floor, not the ceiling.
+ *
+ * Two sentences and no more. Three facts about a page are read; six are skipped,
+ * and a wall of counted nouns reads as filler however true each number is.
  */
 export function summarise(matches: ProviderRow[], facets: Facet[], facetId: string, subject: string): string {
   const count = matches.length;
@@ -30,43 +33,52 @@ export function summarise(matches: ProviderRow[], facets: Facet[], facetId: stri
       .sort((a, b) => b.count - a.count);
   };
 
-  const sentences = [`${count} ${noun} in the dataset ${subject}.`];
+  /*
+   * Candidates for the second sentence, best first. The page's own facet is
+   * skipped: restating what the heading says is the duplication, not the length.
+   */
+  const clauses: string[] = [];
 
-  // The page's own facet is the one thing not worth restating back to the reader.
   if (facetId !== 'category') {
     const categories = spread('category');
     if (categories.length) {
       const named = categories.slice(0, 3).map((entry) => entry.label.toLowerCase());
-      const rest = categories.length - named.length;
       const joined = named.length > 1 ? `${named.slice(0, -1).join(', ')} and ${named.at(-1)}` : named[0];
-      if (rest > 0) sentences.push(`Mostly ${joined}, across ${categories.length} categories in all.`);
-      else if (named.length > 1) sentences.push(`Split across ${joined}.`);
-      else sentences.push(`All of them ${joined}.`);
+      if (categories.length > named.length) clauses.push(`mostly ${joined}, of ${categories.length} categories in all`);
+      else if (named.length > 1) clauses.push(`split across ${joined}`);
+      else clauses.push(`all of them ${joined}`);
     }
   }
 
-  const tail: string[] = [];
-
   const regions = spread('regions');
   if (regions.length) {
-    if (facetId === 'regions') {
-      const others = regions.length - 1;
-      if (others > 0) tail.push(`they also operate in ${others} other ${others === 1 ? 'country' : 'countries'}`);
-    } else {
-      tail.push(`they operate in ${regions.length} ${regions.length === 1 ? 'country' : 'countries'}`);
-    }
+    const others = facetId === 'regions' ? regions.length - 1 : regions.length;
+    const places = others === 1 ? 'country' : 'countries';
+    if (others > 0)
+      clauses.push(facetId === 'regions' ? `also in ${others} other ${places}` : `across ${others} ${places}`);
   }
 
   if (facetId !== 'entry-price') {
     const price = spread('entry-price');
-    if (price.length) {
-      tail.push(`the commonest entry price is ${price[0]!.label.toLowerCase()} (${price[0]!.count} of them)`);
-    }
+    if (price.length) clauses.push(`commonest entry price ${price[0]!.label.toLowerCase()}`);
   }
 
-  if (tail.length) {
-    sentences.push(`Between them ${tail.join(', and ')}.`);
-  }
+  /*
+   * A second clause only where the first left room for one. Capping by length
+   * rather than by count is what keeps the sentence readable: "mostly a, b and
+   * c, of seven categories in all" has spent the sentence on its own.
+   */
+  const context = clauses
+    .slice(0, 2)
+    .reduce(
+      (held, clause) => (held && held.length + clause.length > 80 ? held : [held, clause].filter(Boolean).join(', ')),
+      '',
+    );
 
-  return sentences.join(' ');
+  return [
+    `${count} ${noun} ${subject}, listed alphabetically.`,
+    context && `${context[0]!.toUpperCase()}${context.slice(1)}.`,
+  ]
+    .filter(Boolean)
+    .join(' ');
 }
