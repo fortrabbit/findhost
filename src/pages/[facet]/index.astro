@@ -71,9 +71,9 @@ const figure = note?.data.figure;
       inUse.map((value) => (
         <li>
           <a href={`/${facet.id}/${value.id}/`}>{value.label}</a>
-          <span>
+          <span class="entry-count">
             {value.count}
-            <!-- {value.count === 1 ? 'record' : 'records'} -->
+            <span class="visually-hidden"> {value.count === 1 ? 'record' : 'records'}</span>
           </span>
           {leadOf.has(value.id) && <p>{leadOf.get(value.id)}</p>}
         </li>

@@ -125,6 +125,12 @@
   font-size: var(--text-sm);
 }
 
+/** fortrabbit's own record, wherever it appears in a list. Permanent, never decorative. */
+.self-marker {
+  margin-left: var(--space-xs);
+  font-size: var(--text-xs);
+}
+
 /* --- Entry points --- */
 
 /** The two guides, directly under the lead. Set at reading size — they are the ask, not a footnote. */
