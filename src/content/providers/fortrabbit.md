@@ -6,7 +6,7 @@ urls:
   pricing: https://www.fortrabbit.com/pricing
   status: https://status.fortrabbit.com
 category: paas
-description: Managed PHP platform for developers, run on rented AWS capacity in Ireland and the US.
+description: Managed hosting platform for developers since 2012, runs on AWS capacity in Ireland and the US.
 founded: 2012
 hqCountry: DE
 ownership: independent
