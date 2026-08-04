@@ -22,6 +22,13 @@ export interface FieldValue {
   short?: string;
   /** Excluded from the register and from every count. Only `status` uses it. */
   hidden?: boolean;
+  /**
+   * Other values of the same field this one cannot be held without. WooCommerce
+   * is WordPress: a record offering the first and not the second is filtered out
+   * of `/software/wordpress/` while being exactly what that page is for.
+   * validate.ts enforces it; nothing fills it in silently.
+   */
+  implies?: string[];
 }
 
 export interface Field {

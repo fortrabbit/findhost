@@ -110,6 +110,17 @@ for (const field of fields) {
       fail(dictionaryFile, `"${field.id}" value "${value.id}" is not a usable URL segment`);
     }
   }
+
+  // An implication naming nothing never fires, which reads in the diff as a rule that holds.
+  const declared = new Set(field.values.map((value) => value.id));
+  for (const value of field.values) {
+    for (const required of value.implies ?? []) {
+      if (required === value.id) fail(dictionaryFile, `"${field.id}" value "${value.id}" implies itself`);
+      else if (!declared.has(required)) {
+        fail(dictionaryFile, `"${field.id}" value "${value.id}" implies "${required}", which the field does not list`);
+      }
+    }
+  }
 }
 
 /*
@@ -270,6 +281,20 @@ for (const { file, data } of records) {
     for (const entry of used) {
       if (!allowed.has(entry)) {
         fail(file, `${field.id} "${entry}" is not defined in ${dictionaryFile}`);
+      }
+    }
+
+    /*
+     * One value that cannot be held without another. A record offering
+     * WooCommerce and not WordPress is missing from the page that exists for
+     * exactly that record, and a filter is only worth ticking if it holds.
+     */
+    for (const entry of field.values) {
+      if (!entry.implies?.length || !used.includes(entry.id)) continue;
+
+      const missing = entry.implies.filter((required) => !used.includes(required));
+      if (missing.length) {
+        fail(file, `${field.id} "${entry.id}" implies ${missing.map((id) => `"${id}"`).join(', ')}, which is not held`);
       }
     }
   }

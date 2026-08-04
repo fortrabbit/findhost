@@ -216,7 +216,7 @@
   multiple: true
   values:
     - { id: wordpress, label: WordPress }
-    - { id: woocommerce, label: WooCommerce }
+    - { id: woocommerce, label: WooCommerce, implies: [wordpress] }
     - { id: drupal, label: Drupal }
     - { id: typo3, label: TYPO3 }
     - { id: joomla, label: Joomla }
