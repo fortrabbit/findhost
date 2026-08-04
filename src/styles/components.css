@@ -9,9 +9,8 @@
 /** An anchor, so it has to opt out of the link colour explicitly. */
 .wordmark {
   color: var(--color-ink);
-  font-family: var(--font-display);
-  font-size: var(--text-md);
-  text-decoration: none;
+  font-size: var(--text-sm);
+  font-weight: bold;
 }
 
 /**
@@ -23,23 +22,27 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2xs) var(--space-md);
-  font-family: var(--font-display);
-  font-size: var(--text-base);
-}
-
-.site-nav a {
-  text-decoration: none;
-}
-
-.site-nav a:hover {
-  text-decoration: underline;
+  font-size: var(--text-sm);
+  text-underline-offset: 0.25em;
 }
 
 /* Where you are, marked with weight and a rule rather than a colour. */
 .site-nav a[aria-current='page'] {
   color: var(--color-ink);
-  text-decoration: underline;
   text-decoration-thickness: var(--rule-strong);
+  /*text-underline-offset: 0.25em;*/
+}
+
+.site-nav a {
+  text-underline-offset: 0.25em;
+}
+
+.wordmark[aria-current='page'] {
+  color: var(--color-ink);
+  text-decoration-thickness: var(--rule-strong);
+}
+
+.wordmark {
   text-underline-offset: 0.25em;
 }
 
@@ -53,11 +56,7 @@
   border-top: var(--rule-hairline) solid var(--color-ink);*/
 }
 
-.wordmark[aria-current='page'] {
-  text-decoration: underline;
-  text-decoration-thickness: var(--rule-strong);
-  text-underline-offset: 0.25em;
-}
+
 
 .theme-toggle {
   padding: var(--space-3xs) var(--space-xs);
@@ -126,12 +125,6 @@
   font-size: var(--text-sm);
 }
 
-/** fortrabbit's own record. Permanent, never decorative. */
-.self-marker {
-  margin-left: var(--space-xs);
-  font-size: var(--text-xs);
-}
-
 /* --- Entry points --- */
 
 /** The two guides, directly under the lead. Set at reading size — they are the ask, not a footnote. */
@@ -139,8 +132,8 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2xs) var(--space-lg);
-  /*padding-top: var(--space-xs);*/
-  padding-bottom: var(--space-lg);
+  padding-top: var(--space-lg);
+  /*padding-bottom: var(--space-lg);*/
   /*font-family: var(--font-display);*/
   /*font-size: var(--text-md);*/
 }
@@ -162,7 +155,7 @@
 .picker-column > h3 {
   margin: 0 0 var(--space-3xs);
   padding-bottom: var(--space-3xs);
-  border-bottom: var(--rule-strong) solid var(--color-ink);
+  border-bottom: var(--rule-hairline) solid var(--color-ink);
   font-size: var(--text-md);
 }
 
@@ -178,14 +171,14 @@
   justify-content: space-between;
   gap: var(--space-xs);
   padding: var(--space-3xs) 0;
-  border-bottom: var(--rule-hairline) solid var(--color-ink);
+  /*border-bottom: var(--rule-hairline) solid var(--color-ink);*/
   font-size: var(--text-xs);
 }
 
 .picker-all {
   display: inline-block;
   padding-top: var(--space-3xs);
-  font-size: var(--text-sm);
+  font-size: var(--text-xs);
 }
 
 /** Every country the dataset covers, beneath the map that shows the same set. */
@@ -387,8 +380,14 @@
 }
 
 .stack-list > li {
-  padding: var(--space-sm) 0;
+  padding: var(--space-xs) 0;
   border-top: var(--rule-hairline) solid var(--color-ink);
+  display: flex;
+  align-items: baseline;
+}
+
+.stack-list > li > span {
+  margin-left: auto;
 }
 
 .stack-list > li:last-child {
@@ -471,7 +470,7 @@
 /* Block, not inline: an inline name sits on a line box struck at the body's leading, which adds 7px of air under it. */
 .provider-name {
   display: block;
-  font-family: var(--font-display);
+  /*font-family: var(--font-display);*/
   font-size: var(--text-base);
   line-height: var(--leading-tight);
 }
@@ -536,9 +535,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(max(11rem, 100% / 7 + 0.1%), 1fr));
   gap: var(--space-md) var(--space-lg);
-  margin-bottom: var(--space-lg);
-  padding-bottom: var(--space-md);
-  border-bottom: var(--rule-strong) solid var(--color-ink);
+  margin-bottom: var(--space-xl);
 }
 
 .find-facet {
@@ -563,9 +560,7 @@
 /* The way from a page that means one value to the register, where values combine. */
 .find-onward {
   margin: 0 0 var(--space-lg);
-  padding-bottom: var(--space-md);
-  border-bottom: var(--rule-strong) solid var(--color-ink);
-  font-size: var(--text-sm);
+  font-size: var(--text-md);
 }
 
 /* Hidden until asked for, so a long tail costs no height. */

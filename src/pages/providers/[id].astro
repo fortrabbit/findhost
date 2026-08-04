@@ -196,8 +196,6 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
     }
 
     <h1>{data.name}</h1>
-    {data.publishedByUs && <p class="annotation">This is us. We publish this site and we appear in its dataset.</p>}
-
     {
       notice && (
         <aside class="editorial-note">
@@ -350,8 +348,8 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
           <ol>
             {notes.map((note, index) => (
               <li id={`source-${index + 1}`}>
-                <span class="source-fields">{note.fields.map(sourceLabel).join(', ')}</span> -{' '}
-                <span class="source-date">{note.checkedAt.toISOString().slice(0, 10)}</span>
+                <span class="source-date">{note.checkedAt.toISOString().slice(0, 10)}</span>:&nbsp;
+                <span class="source-fields">{note.fields.map(sourceLabel).join(', ')}</span>
                 <br />
                 <a href={note.url} rel="nofollow">
                   {note.url.replace('https://', '')}

@@ -43,15 +43,13 @@ Being out of scope is not a criticism. These providers are excluded because the 
 
 A record carries a status: active, acquired, renamed, winding-down, discontinued, unverifiable, or delisted on request. Each one keeps the final known facts and the date they were last true.
 
-**Freshness is displayed, never promised.** A record carries the date it was last read against the provider, and claims carry their own dates in `sources`. Where no date is recorded the site says so rather than inferring one from the file's history — an undated fact is shown undated. Re-verification is best effort: we publish the intended cadence and the dates, so you can see exactly how well we are keeping to it.
+**Freshness is displayed, not promised.** A record carries the date it was last read against the provider, and claims carry their own dates in `sources`. Where no date is recorded the site says so rather than inferring one from the file's history — an undated fact is shown undated. Re-verification is best effort: we publish the intended cadence and the dates, so you can see exactly how well we are keeping to it.
 
 **Cooling-off.** No transition to discontinued or unverifiable takes effect for seven days after a public proposal. A temporary outage or a redesigned website must not knock a provider off the list — least of all one of ours.
 
-**Security.** A documented, unremediated security failure gets a dated, sourced note. Not a removal, not a badge. We are not a rating agency.
-
 ## Corrections and contributions
 
-Every change — including ours — is a pull request with a public diff and a public discussion. The details are in [CONTRIBUTING.md](https://github.com/fortrabbit/findhost/blob/main/CONTRIBUTING.md); the parts that are policy rather than process:
+Changes are tracked in Git and public on GitHub. The details are in [CONTRIBUTING.md](https://github.com/fortrabbit/findhost/blob/main/CONTRIBUTING.md).
 
 - **A sourced factual correction may not be declined because a maintainer disagrees with it.** Adjudication is against the evidence. Where sources conflict, both are recorded and the field is marked disputed.
 - **An unsourced correction is not dropped.** It is applied if a maintainer can confirm it, or recorded as unverified if not. Silently discarding a correction for want of a link is the failure mode this rule exists to prevent.
@@ -62,19 +60,8 @@ Every change — including ours — is a pull request with a public diff and a p
 
 ## Our conflict of interest
 
-fortrabbit publishes this site and appears in its own dataset. Wikipedia's answer to a conflict of interest is that someone else edits the article; we may not have a someone else, so the substitute is mechanism and record rather than promise.
+fortrabbit publishes this site and appears in its own dataset. See [About](/about/) for more details.
 
-Where the bias may act: **effort**. Which records get researched first, which facets get built, which providers a guide page uses to illustrate a category.
+## If you disagree with us
 
-Where it may not act, and how that is enforced:
-
-- **Inclusion.** The scope test is mechanical and the list is complete. A conglomerate brand that meets it is a row, with the same fields and the same care.
-- **Order.** The default sort is alphabetical and content-independent. Nothing sorts by quality, and nothing sorts by how much we know.
-- **Field values.** The same sourcing standard applies to a one-person host and to a hyperscaler.
-- **The schema itself.** The build rejects any field named rank, score, rating, boost or weight, and rejects affiliate parameters in any URL. Those are not promises; they fail the build.
-
-The test to keep applying: **if this dataset is less useful to someone shopping for a hyperscaler than to someone shopping for a one-person host, the bias has leaked out of coverage and into the product.** Fix it as a bug, not as a preference.
-
-## If you are a provider and you disagree with us
-
-The process is public and so is the outcome. You do not need to email anyone or know anyone. Open an issue or a pull request against your own record, say who you are, cite what is wrong, and the discussion happens where everyone can read it. A sourced correction to a factual field will be merged whether or not we like what it says.
+Open an issue with a pull request against your own record, say who you are, cite what is wrong. A sourced correction to a factual field will be merged.

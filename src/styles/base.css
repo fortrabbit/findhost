@@ -104,6 +104,9 @@ figure {
 a {
   color: var(--color-link);
 }
+a:hover {
+  text-decoration-thickness: var(--rule-strong);
+}
 
 a:visited {
   color: var(--color-link-visited);
@@ -136,13 +139,11 @@ hr {
 body > header {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-sm) var(--space-lg);
+  gap: var(--space-sm) var(--space-xl);
   /* Baseline, not centre: the name, the nav and the field are all type, and type lines up on its baseline. */
   align-items: baseline;
   padding-top: var(--space-lg);
   padding-bottom: var(--space-md);
-  /* The same weight as the rule over the footer: one page, ruled top and bottom by the same hand. */
-  border-bottom: var(--rule-heavy) solid var(--color-ink);
 }
 
 body > main {
@@ -162,7 +163,6 @@ body > footer {
   margin-top: var(--space-2xl);
   padding-top: var(--space-md);
   padding-bottom: var(--space-lg);
-  border-top: var(--rule-heavy) solid var(--color-ink);
   font-size: var(--text-sm);
 }
 

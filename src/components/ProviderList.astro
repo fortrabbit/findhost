@@ -1,6 +1,4 @@
 ---
-import PriceGauge from './PriceGauge.astro';
-
 interface Row {
   id: string;
   name: string;
@@ -63,7 +61,6 @@ const { providers, namesOnly = false } = Astro.props;
 
           {(provider.priceFrom || provider.checked) && (
             <span class="provider-meta">
-              <PriceGauge from={provider.priceFrom} to={provider.priceTo} />
               {provider.checked && <span class="provider-checked">read {provider.checked}</span>}
             </span>
           )}

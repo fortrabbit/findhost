@@ -1,5 +1,5 @@
 ---
-title: How to choose a hosting provider
+title: How to choose hosting
 description: What actually matters when comparing hosts, and which of it this dataset records for you.
 lead: Learn how to pick a web host that matches your needs. Don't go shopping for the wrong reasons.
 figure:
@@ -17,9 +17,7 @@ Recorded as the primary [category](/category/), [who manages the OS](/os-managed
 
 ## Don't compare by specs alone
 
-The most common mistake is choosing on compute per euro. Hosting quality is hard to judge from outside, so it collapses into a specs table — but figures on a marketing page mean little without the hardware and the architecture behind them. Two providers quoting the same vCPU count can differ by a factor in real throughput.
-
-This is also why the dataset carries [price bands](/entry-price/) rather than exact prices. A band is enough to stop a comparison mixing €4 and €400, and anything more precise belongs on the provider's own page, where it is current.
+The most common mistake is choosing on compute per coin. Hosting quality is hard to judge from outside, so it collapses into a specs table — but figures on a marketing page mean little without the hardware and the architecture behind them. Two providers quoting the same vCPU count can differ by a factor in real throughput. This is also why the dataset carries [price bands](/entry-price/) rather than exact prices. A band is enough to stop a comparison mixing €4 and €400, and anything more precise belongs on the provider's own page, where it is current.
 
 ## Check the hard facts
 
@@ -48,9 +46,7 @@ Many providers offer a [free tier or trial](/free-tier/) without a credit card. 
 
 ## Think twice about size
 
-Large providers have real economies of scale and a baseline of quality that comes with them. They also tend toward bloated catalogues that are hard to navigate, and support that is not personal at any price. One small site is not a priority to them.
-
-Smaller providers are usually more invested in understanding a particular setup, with a narrower feature set that may fit it better. "Smaller" is not a recommendation either — it is [ownership](/ownership/) and founding year, recorded as fields, to be applied as a preference or ignored entirely.
+Large providers have real economies of scale and a baseline of quality that comes with them. They also tend toward bloated catalogues that are hard to navigate, and support that is not personal at any price. One small site is not a priority to them. Smaller providers are usually more invested in understanding a particular setup, with a narrower feature set that may fit it better. "Smaller" is not a recommendation either — it is [ownership](/ownership/) and founding year, recorded as fields, to be applied as a preference or ignored entirely.
 
 ## Let the developers decide
 

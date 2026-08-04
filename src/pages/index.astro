@@ -33,35 +33,32 @@ const columns = [
   <h1>Find your next web host</h1>
 
   <p class="lead">
-    <!-- Don't shop hosting by horse power and price only.  -->
-    An <a href="/about/" title="About">opinionated</a> hosting guide for developers.
-
-    <p class="guide-links">
-      <a href="/guide/how-to-choose-hosting/">How to choose hosting</a>
-      <a href="/providers/">All {records.length} hosting providers</a>
-    </p>
-
-    <!-- <h2>I want to host…</h2> -->
-
-    <div class="picker">
-      {
-        columns.map((column) => (
-          <div class="picker-column">
-            <h3>{column.heading}</h3>
-            <ul>
-              {column.top.map((value) => (
-                <li>
-                  <a href={column.href(value.id)}>{value.label}</a>
-                  <span class="entry-count">{value.count}</span>
-                </li>
-              ))}
-            </ul>
-            <a class="picker-all" href={column.all}>
-              all {column.total} →
-            </a>
-          </div>
-        ))
-      }
-    </div>
+    An <a href="/about/" title="About">opinionated</a> &nbsp;
+    <a href="/guide/">hosting guide</a> and <a href="/providers/">directory</a> for developers.
+  </p>
+  <div class="picker">
+    {
+      columns.map((column) => (
+        <div class="picker-column">
+          <h3>{column.heading}</h3>
+          <ul>
+            {column.top.map((value) => (
+              <li>
+                <a href={column.href(value.id)}>
+                  <span class="entry-value">{value.label}</span>
+                </a>
+                <span class="entry-count">{value.count}</span>
+              </li>
+            ))}
+          </ul>
+          <a class="picker-all" href={column.all}>
+            See {column.total} →
+          </a>
+        </div>
+      ))
+    }
+  </div>
+  <p class="guide-links">
+    <a href="/providers/">See all {records.length} hosting providers &rarr;</a>
   </p>
 </Base>

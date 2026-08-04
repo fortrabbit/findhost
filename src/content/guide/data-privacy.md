@@ -5,7 +5,7 @@ lead: Which privacy questions about a host can be answered from the outside, and
 order: 50
 figure:
   emoji: 🛂
-  color: rgb(30, 42, 68)
+  color: rgb(30, 42, 198)
   textColor: rgb(198, 210, 236)
   text: A region is not a jurisdiction.
 ---

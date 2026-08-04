@@ -1,5 +1,5 @@
 ---
-title: Why it's hard to choose hosting
+title: Choose a host is hard
 description: The hosting market hides more than it shows, and the usual sources of advice are paid for.
 lead: Comparing hosts is hard for structural reasons, and most of the advice written about it is paid for.
 order: 10

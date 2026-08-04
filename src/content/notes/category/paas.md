@@ -1,11 +1,11 @@
 ---
 description: Push code and the platform runs it — the operating system, the web server and the scaling belong to the provider.
 lead: Push code, the platform runs it.
-figure:
-  emoji: 🦕
-  color: rgb(30, 120, 34)
-  textColor: rgb(140, 230, 200)
-  text: Remember when PaaS was the future?
+# figure:
+#   emoji: 🦕
+#   color: rgb(30, 120, 34)
+#   textColor: rgb(140, 230, 200)
+#   text: Remember when PaaS was the future?
 ---
 
 Platform as a Service takes code and runs it. The operating system, the web server, the runtime and the scaling belong to the provider; what the customer supplies is an application and a configuration file. Records here answer "provider" to [who manages the operating system](/os-managed-by/) and deploy by git push or a pipeline rather than by upload.
