@@ -51,6 +51,7 @@ const subjects: Record<string, string> = {
     }[value.id] ?? value.label.toLowerCase(),
   ownership: `are ${value.label.toLowerCase()}`,
   mcp: `ship ${value.label.toLowerCase()} MCP support`,
+  exit: `can be left ${value.label.toLowerCase()}`,
 };
 
 const { facets } = await loadFacets();

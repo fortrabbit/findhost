@@ -65,10 +65,17 @@ for (const field of fields) {
     fail(dictionaryFile, `"${field.id}" renders as "${field.render}", which is not one of: ${renderModes.join(', ')}`);
   }
 
-  /* A borrowed vocabulary that resolves to nothing leaves the field unvalidated below. */
+  /*
+   * A borrowed vocabulary that resolves to nothing leaves the field unvalidated
+   * below. Checked on this field's own resolved list, not the target's: the
+   * target may itself borrow, and asking it directly answers the wrong question.
+   */
   const borrowed = borrowedFrom.get(field.id);
-  if (borrowed && !fieldOf.get(borrowed)?.values.length) {
-    fail(dictionaryFile, `"${field.id}" borrows values from "${borrowed}", which has none`);
+  if (borrowed && !field.values.length) {
+    const target = fieldOf.has(borrowed)
+      ? `"${borrowed}", which resolves to none`
+      : `"${borrowed}", which is not a field`;
+    fail(dictionaryFile, `"${field.id}" borrows values from ${target}`);
   }
 
   if (field.facet) {
@@ -125,9 +132,16 @@ if (bandsInDictionary.join(' | ') !== bandsInCode.join(' | ')) {
  * behind. A field the schema does not name is stripped from every record by the
  * content loader, with no error and no rendered row.
  */
-const schema = readFileSync(schemaFile, 'utf8');
+const schema = readFileSync(schemaFile, 'utf8')
+  .replace(/\/\*[\s\S]*?\*\//g, '')
+  .replace(/\/\/[^\n]*/g, '');
+
 for (const field of fields) {
-  if (!new RegExp(`\\b${field.id}\\b`).test(schema)) {
+  // A key or a vocabulary() call, not a mention: the schema's comments name
+  // fields it deliberately no longer carries, and `cancellation` in a sentence
+  // about why it was dropped would otherwise vouch for `cancellation` returning.
+  const declared = new RegExp(`(^|\\s)${field.id}:`, 'm').test(schema) || schema.includes(`vocabulary('${field.id}')`);
+  if (!declared) {
     fail(schemaFile, `"${field.id}" is in ${dictionaryFile} but not in the schema, so records carrying it lose it`);
   }
 }
@@ -188,7 +202,14 @@ let hidden = 0;
  * shape: a camelCase word that names no field is a misspelt field, not a claim.
  */
 const citable = new Set([...fields.map((field) => field.id), 'notes', 'urls', 'social', 'sustainabilityUrl']);
-const looksLikeField = (name: string) => /^[a-z][A-Za-z0-9]*$/.test(name);
+
+/*
+ * An interior capital, which no prose claim has and nearly every field id does.
+ * A single lowercase word is left alone deliberately: "outage" is as plausible a
+ * claim as "regions" is a field, and refusing the first to catch the second
+ * would make the guard something contributors work around.
+ */
+const looksLikeField = (name: string) => /^[a-z]+[A-Z][A-Za-z0-9]*$/.test(name);
 
 // A ranking field is the one thing this dataset may never grow. CI4, mechanically.
 const forbidden = ['rank', 'ranking', 'score', 'rating', 'boost', 'weight', 'stars', 'position', 'featured'];
@@ -252,6 +273,27 @@ for (const { file, data } of records) {
       }
     }
   }
+}
+
+/*
+ * A note for a value no record holds. The page it heads is never generated —
+ * facetRoutes only emits values in use — so the note renders nowhere while
+ * llms.txt goes on publishing a link to it. Checked last, because it is the one
+ * dictionary question only the records can answer.
+ */
+for (const key of noteKeys(notesDir)) {
+  const [segment, value] = key.split('/');
+  if (!value) continue;
+
+  const field = fields.find((candidate) => candidate.facet === segment);
+  if (!field) continue;
+
+  const held = records.some(({ data }) => {
+    const carried = data?.[field.id];
+    return Array.isArray(carried) ? carried.map(String).includes(value) : String(carried) === value;
+  });
+
+  if (!held) fail(`${notesDir}/${key}.md`, `no record holds ${field.id} "${value}", so the page it heads is not built`);
 }
 
 if (errors.length) {

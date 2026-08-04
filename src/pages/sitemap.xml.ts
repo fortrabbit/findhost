@@ -15,12 +15,15 @@ import { loadProviders } from '../lib/providers';
  * on offering /pricing/ to crawlers after the page was deleted.
  *
  * Skipped: dynamic routes, which are enumerated from content below; 404, which
- * is not a destination; and the endpoints, which are files rather than pages.
+ * is not a destination; and the endpoints, which are .ts and so never match.
  */
 const staticPages = Object.keys(import.meta.glob('./**/*.{astro,md}'))
-  .filter((path) => !path.includes('[') && !path.includes('404'))
-  .map((path) => path.replace(/^\.\/?/, '').replace(/(index)?\.(astro|md)$/, ''))
-  .map((path) => `/${path}${path.endsWith('/') || !path ? '' : '/'}`)
+  .map((path) => path.replace(/^\.\//, '').replace(/\.(astro|md)$/, ''))
+  // Dynamic routes are enumerated from content below; 404 is not a destination.
+  .filter((path) => !path.includes('[') && path !== '404')
+  // Only a whole `index` segment is the directory itself. `error-index` is a page.
+  .map((path) => path.replace(/(^|\/)index$/, '$1'))
+  .map((path) => `/${path}${path && !path.endsWith('/') ? '/' : ''}`)
   .sort();
 export const GET: APIRoute = async ({ site }) => {
   const origin = site?.origin ?? '';

@@ -9,13 +9,18 @@ Background: `MR-156 FindHost technical implementation plan.md`, `MR-156 FindHost
 ## Commands
 
 ```sh
-pnpm dev            # localhost:4321
-pnpm build          # astro build && pagefind --site dist
-pnpm run check      # astro check
-pnpm run validate   # guards zod cannot express
+pnpm dev                    # localhost:4321
+pnpm build                  # astro build && pagefind --site dist
+pnpm run check              # astro check
+pnpm run test               # unit tests, node --test over src/**/*.test.ts
+pnpm run validate           # guards zod cannot express
+pnpm run linkcheck:internal # every internal link, and the sitemap, against dist
+pnpm run test:e2e           # Playwright, a chromium project and a no-JS one
 ```
 
-CI runs all three on every PR. TypeScript is pinned to 6.x: `astro check` needs the programmatic compiler API, which TS 7's native compiler does not expose yet.
+CI runs `format`, `check`, `test`, `build`, `validate`, `linkcheck:internal` and `test:e2e` on every PR, in that order. `pnpm run linkcheck` — outbound URLs against the live web — runs in a job of its own that is allowed to fail: a third party's outage is not a reason to block a content pull request.
+
+TypeScript is pinned to 6.x: `astro check` needs the programmatic compiler API, which TS 7's native compiler does not expose yet.
 
 ## Rules that are not style preferences
 
@@ -56,3 +61,19 @@ The same rules govern two frontmatter fields, because both are prose:
 - `src/data/fields.yml` is the field dictionary, and the only place a field is described. It carries the label, the vocabulary, the record-page group and the facet slug; the zod schema builds its enums from it and the record page builds its rows from it. Another field, another value, another facet: an entry there and no TypeScript. A field with no `group` is validated and never shown; one with no `facet` is shown and never filtered.
 - AI involvement is disclosed once, in the footer, for the whole site. A record's `ai` value says who wrote that description; it is data, and no page renders it.
 - Comments explain a constraint or an invariant, or they are deleted. Nothing stateful — no "previously did X", no "FR-1234 will replace this".
+- `src/lib/price.ts` must never import `src/lib/fields.ts`. `find.ts` imports price.ts, so price.ts ships to the browser, and fields.ts reads the dictionary off disk — `node:fs` in the client bundle throws on load and the filter panel never unhides. The price bands are duplicated there on purpose and `validate.ts` asserts the two copies agree.
+- Anything Node runs directly — a unit-tested module, a script — imports with the extension: `./fields.ts`. Vite resolves it without; Node does not.
+
+## Changing the data model
+
+Four procedures, because each one has a step that used to be forgotten silently. `pnpm run validate` now catches most of them; the ones it cannot are marked.
+
+**Add a field.** Entry in `src/data/fields.yml`, then the key in `src/content.config.ts` — zod needs it written out, and a field the schema does not name is stripped from every record by the content loader. `validate` fails if you do the first and forget the second. Give it a `group` to have it appear on the record page and in the markdown export; omit `group` to have it validated and never shown.
+
+**Add a value.** One line in the field's `values`. Nothing else — the schema enum, the filter panel, the facet page and the counts all derive from it. Two things `validate` will stop you on: an id that is not a usable URL segment, and a note written for a value no record holds yet. If the value needs a shorter name in the filter column, give it `short:`.
+
+**Add a facet.** `facet:` and a unique `filterOrder:` on the field. `validate` rejects a slug that collides with a real page or that another field already claims. Two things it cannot see: `src/pages/[facet]/[value].astro` has a `subjects` map that phrases each facet's summary sentence in English, and a facet with no entry there falls back to generic prose that is correct but clumsy — add a line. And `regions` is the one facet whose index is `/map/` rather than `/<facet>/`; use `facetIndex()` from `lib/facets.ts` rather than building the path.
+
+**Rename a facet slug or a value id.** Change it in `fields.yml`, sweep every record that carries the old value, add a redirect in `astro.config.mjs`, and rename any note under `src/content/notes/`. `validate` catches the records and the notes; `linkcheck:internal` catches links in prose and the sitemap. Neither catches an old URL someone else has already linked to, which is what the redirect is for.
+
+**Write a note.** `src/content/notes/<facet>/<value>.md` introduces a value, `src/content/notes/<facet>.md` introduces the whole facet. The path is the facet's *slug*, not the field id — eight of them differ. A note's `title` sets the browser tab; on a value page the heading stays the value's own label, so the page and the filter chip that leads to it say the same word.

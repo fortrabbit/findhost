@@ -64,6 +64,9 @@ export const GET: APIRoute = async ({ props, site }) => {
     '',
     ...Object.entries((data.urls ?? {}) as Record<string, string>).map(([slot, url]) => `- ${slot}: ${url}`),
     ...Object.entries((data.social ?? {}) as Record<string, string>).map(([slot, url]) => `- ${slot}: ${url}`),
+    // A link, and so listed with the links — it has no dictionary entry, so the
+    // groups above cannot carry it and dropped it silently when they took over.
+    ...(data.sustainabilityUrl ? [`- sustainability: ${String(data.sustainabilityUrl)}`] : []),
     '',
     ...groups.flatMap((group) => [
       `### ${group.label}`,

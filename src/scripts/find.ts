@@ -103,8 +103,17 @@ function row(provider: ProviderRow): HTMLLIElement {
   if (provider.greenWebId) {
     const mark = document.createElement('span');
     mark.className = 'green-mark';
-    mark.title = 'Listed in the Green Web Foundation directory';
+    mark.title = 'Listed in the Green Web Foundation directory, which verifies the claim against published evidence';
     mark.textContent = '🌿';
+
+    // A leaf is not a word. The server-rendered row spells it out for a screen
+    // reader and the filtered row has to say the same thing, or filtering
+    // quietly removes the only accessible copy of the mark.
+    const spelled = document.createElement('span');
+    spelled.className = 'visually-hidden';
+    spelled.textContent = ' Listed in the Green Web Foundation directory';
+    mark.append(spelled);
+
     name.append(mark);
   }
 
@@ -172,11 +181,13 @@ if (filtersEl && resultsEl && summaryEl) {
       if (!asked) continue;
 
       /*
-       * Only values that still exist. A link written before a value was renamed
-       * — /providers/?category=shared, say — would otherwise filter to nothing
-       * and read as "no such providers" rather than as a dead link.
+       * Only values that still exist AND that some record holds. A link written
+       * before a value was renamed — /providers/?category=shared, say — would
+       * otherwise filter to nothing and read as "no such providers" rather than
+       * as a dead link. A defined-but-unused value is the same trap with a
+       * crueller ending: the panel draws no box for it, so nothing can untick it.
        */
-      const known = new Set(facet.values.map((value) => value.id));
+      const known = new Set(facet.values.filter((value) => value.count > 0).map((value) => value.id));
       const held = asked.split(',').filter((value) => known.has(value));
       if (held.length) selected.set(facet.id, new Set(held));
     }
@@ -296,6 +307,8 @@ if (filtersEl && resultsEl && summaryEl) {
         anchorLink.className = 'anchor-link';
         anchorLink.href = `#${anchor}`;
         anchorLink.textContent = '#';
+        // "#" names nothing aloud, and the server-rendered heading says which letter.
+        anchorLink.setAttribute('aria-label', `Link to ${initial === '#' ? '0–9' : initial}`);
         heading.append(anchorLink, document.createTextNode(initial === '#' ? '0–9' : initial));
         section.append(heading);
 

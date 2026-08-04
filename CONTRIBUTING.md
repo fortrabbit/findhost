@@ -6,7 +6,7 @@ Fixing one provider means editing one file. That is the whole design.
 
 Records live in `src/content/providers/<slug>.md`, one file each, frontmatter and prose together. Edit the file, open a pull request, and the build tells you if something is wrong before a human looks.
 
-**Four fields are required** — `id`, `name`, `url`, `category`. Everything else is optional, and **absent means unknown**: it renders as `?`, and that is a legitimate, designed state. Never guess a value to fill a gap. A record with four fields and two honest paragraphs is worth more than one with thirty invented ones, because accuracy is the only thing this dataset has.
+**Four fields are required** — `id`, `name`, `urls.home`, `category`. Everything else is optional, and **absent means unknown**: it renders as `?`, and that is a legitimate, designed state. Never guess a value to fill a gap. A record with four fields and two honest paragraphs is worth more than one with thirty invented ones, because accuracy is the only thing this dataset has.
 
 **Cite what you change.** Anything not obvious from the provider's homepage should carry a `sources` entry with the URL you read and the date you read it. A provider's own documentation is an acceptable source for facts about its own product.
 

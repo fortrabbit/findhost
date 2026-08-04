@@ -51,19 +51,25 @@ const missing = (facet: Facet) =>
 
           {values.slice(0, shown).map((value) => (
             <label title={value.label}>
-              <input type="checkbox" data-facet={facet.id} value={value.id} />
+              <input type="checkbox" data-facet={facet.id} value={value.id} autocomplete="off" />
               <span class="find-value">{value.short ?? value.label}</span>
-              <span class="find-count">{value.count}</span>
+              <span class="find-count">
+                {value.count}
+                <span class="visually-hidden"> records</span>
+              </span>
             </label>
           ))}
 
           {tail.length > 0 && (
-            <div class="find-tail" hidden>
+            <div class="find-tail" id={`tail-${facet.id}`} hidden>
               {tail.map((value) => (
                 <label title={value.label}>
-                  <input type="checkbox" data-facet={facet.id} value={value.id} />
+                  <input type="checkbox" data-facet={facet.id} value={value.id} autocomplete="off" />
                   <span class="find-value">{value.short ?? value.label}</span>
-                  <span class="find-count">{value.count}</span>
+                  <span class="find-count">
+                    {value.count}
+                    <span class="visually-hidden"> records</span>
+                  </span>
                 </label>
               ))}
             </div>
@@ -73,7 +79,13 @@ const missing = (facet: Facet) =>
           <p class="find-facet-foot">
             {[
               tail.length > 0 && (
-                <button type="button" class="find-more" aria-expanded="false" data-more={tail.length}>
+                <button
+                  type="button"
+                  class="find-more"
+                  aria-expanded="false"
+                  aria-controls={`tail-${facet.id}`}
+                  data-more={tail.length}
+                >
                   {tail.length} more
                 </button>
               ),
@@ -93,9 +105,15 @@ const missing = (facet: Facet) =>
         <h2 class="find-facet-title">Stubs</h2>
 
         <label>
-          <input type="checkbox" data-drafts />
+          {/* autocomplete=off on every box: the panel is static markup now, and a
+              browser restoring a checked state on reload would disagree with the
+              URL, which is the only state this script trusts. */}
+          <input type="checkbox" data-drafts autocomplete="off" />
           <span class="find-value">Show these too</span>
-          <span class="find-count">{drafts}</span>
+          <span class="find-count">
+            {drafts}
+            <span class="visually-hidden"> records</span>
+          </span>
         </label>
 
         <p class="annotation">Started and unfinished, or considered and out of scope. Not counted, not filtered.</p>

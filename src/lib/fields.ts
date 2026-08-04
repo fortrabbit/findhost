@@ -90,20 +90,38 @@ export const reservedSegments = [
 export const dictionaryFile = 'src/data/fields.yml';
 
 const entries = parseYaml(readFileSync(dictionaryFile, 'utf8')) as Entry[];
-const vocabularies = new Map(entries.map((entry) => [entry.id, entry.values ?? []]));
+
+/** What `valuesFrom` each entry declared, kept for validate.ts to check the target resolves. */
+export const borrowedFrom = new Map(
+  entries.filter((entry) => entry.valuesFrom).map((entry) => [entry.id, entry.valuesFrom!]),
+);
+
+const ownValues = new Map(entries.map((entry) => [entry.id, entry.values ?? []]));
+
+/*
+ * Followed to the end rather than one hop: a field borrowing from a field that
+ * itself borrows would otherwise resolve to nothing, and an empty vocabulary is
+ * exactly what validate.ts skips over. `seen` is there so a circular pair
+ * returns empty rather than hanging the build.
+ */
+function resolveValues(id: string, seen = new Set<string>()): FieldValue[] {
+  const own = ownValues.get(id) ?? [];
+  if (own.length || seen.has(id)) return own;
+
+  const from = borrowedFrom.get(id);
+  if (!from) return [];
+
+  seen.add(id);
+  return resolveValues(from, seen);
+}
 
 export const fields: Field[] = entries.map((entry) => ({
   ...entry,
   multiple: entry.multiple ?? false,
-  values: entry.values ?? (entry.valuesFrom ? (vocabularies.get(entry.valuesFrom) ?? []) : []),
+  values: resolveValues(entry.id),
 }));
 
 export const fieldOf = new Map(fields.map((field) => [field.id, field]));
-
-/** What `valuesFrom` each entry declared, kept for validate.ts to check the target exists. */
-export const borrowedFrom = new Map(
-  entries.filter((entry) => entry.valuesFrom).map((entry) => [entry.id, entry.valuesFrom!]),
-);
 
 /**
  * Statuses that keep a record out of the register and out of every count. The
