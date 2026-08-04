@@ -5,40 +5,6 @@
  * providers.json, so an eleventh facet is an entry in fields.yml and nothing here.
  */
 
-import { bandIndex, priceBands, priceSentence, sliceHeight } from '../lib/price';
-
-/*
- * The same gauge PriceGauge.astro draws, built in the DOM. Two renderers of one
- * shape is a drift risk, so both read their geometry from lib/price.ts and this
- * one is checked against the server-rendered markup by a test.
- */
-function gauge(from: string | undefined, to: string | undefined): HTMLElement | null {
-  const start = bandIndex(from);
-  if (start < 0) return null;
-
-  const end = bandIndex(to) === -1 ? start : bandIndex(to);
-
-  const bars = document.createElement('span');
-  bars.className = 'price-gauge-bars';
-  bars.setAttribute('role', 'img');
-  bars.setAttribute('aria-label', priceSentence(from, to) ?? '');
-
-  priceBands.forEach((_, index) => {
-    const bar = document.createElement('span');
-    bar.className = 'price-gauge-bar';
-    if (index >= start && index <= end) {
-      bar.classList.add('is-covered');
-      bar.style.height = `${Math.round(sliceHeight(index) * 100)}%`;
-    }
-    bars.append(bar);
-  });
-
-  const wrap = document.createElement('span');
-  wrap.className = 'price-gauge price-gauge-sm';
-  wrap.append(bars);
-  return wrap;
-}
-
 interface FacetValue {
   id: string;
   label: string;
@@ -61,8 +27,6 @@ interface ProviderRow {
   description?: string;
   publishedByUs?: boolean;
   greenWebId?: number | null;
-  priceFrom?: string;
-  priceTo?: string;
   figure?: { emoji: string; color: string; textColor: string };
   facets: Record<string, string | string[]>;
   notApplicable: string[];
@@ -133,14 +97,6 @@ function row(provider: ProviderRow): HTMLLIElement {
   }
 
   item.append(body);
-
-  const drawn = gauge(provider.priceFrom, provider.priceTo);
-  if (drawn) {
-    const meta = document.createElement('span');
-    meta.className = 'provider-meta';
-    meta.append(drawn);
-    item.append(meta);
-  }
 
   return item;
 }

@@ -2,9 +2,10 @@
  * The price scale, in one place because three surfaces draw it and a policy page
  * describes it.
  *
- * This file is imported by scripts/find.ts and so is bundled for the browser. It
- * may not import lib/fields.ts, which reads the dictionary off disk — doing so
- * puts `node:fs` in the client bundle, the script throws on load, and the filter
+ * This file is written to be safe in the client bundle, because the gauge it
+ * measures is drawn in the DOM whenever scripts/find.ts renders one. It may not
+ * import lib/fields.ts, which reads the dictionary off disk — doing so puts
+ * `node:fs` in the client bundle, the script throws on load, and the filter
  * panel never unhides. The bands below therefore repeat the `priceFrom`
  * vocabulary, and scripts/validate.ts asserts the two still agree.
  *

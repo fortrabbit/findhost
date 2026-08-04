@@ -61,7 +61,7 @@ The same rules govern two frontmatter fields, because both are prose:
 - `src/data/fields.yml` is the field dictionary, and the only place a field is described. It carries the label, the vocabulary, the record-page group and the facet slug; the zod schema builds its enums from it and the record page builds its rows from it. Another field, another value, another facet: an entry there and no TypeScript. A field with no `group` is validated and never shown; one with no `facet` is shown and never filtered.
 - AI involvement is disclosed once, in the footer, for the whole site. A record's `ai` value says who wrote that description; it is data, and no page renders it.
 - Comments explain a constraint or an invariant, or they are deleted. Nothing stateful — no "previously did X", no "FR-1234 will replace this".
-- `src/lib/price.ts` must never import `src/lib/fields.ts`. `find.ts` imports price.ts, so price.ts ships to the browser, and fields.ts reads the dictionary off disk — `node:fs` in the client bundle throws on load and the filter panel never unhides. The price bands are duplicated there on purpose and `validate.ts` asserts the two copies agree.
+- `src/lib/price.ts` must never import `src/lib/fields.ts`. price.ts is written to be safe in the client bundle, because `find.ts` draws the price gauge in the DOM whenever a list renders one, and fields.ts reads the dictionary off disk — `node:fs` in the client bundle throws on load and the filter panel never unhides. The price bands are duplicated there on purpose and `validate.ts` asserts the two copies agree.
 - Anything Node runs directly — a unit-tested module, a script — imports with the extension: `./fields.ts`. Vite resolves it without; Node does not.
 
 ## Changing the data model

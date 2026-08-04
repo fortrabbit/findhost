@@ -210,31 +210,6 @@ test.describe('filtering', () => {
     await expect(page.locator('[data-find-summary]')).toContainText(new RegExp(`of ${listed}`));
   });
 
-  /*
-   * The gauge is drawn twice — once by PriceGauge.astro and once in find.ts —
-   * so a change to one that misses the other would show as a different shape
-   * only after filtering. Both read their geometry from lib/price.ts; this
-   * checks they agree in the output.
-   */
-  test('draws the same price gauge before and after filtering', async ({ page }) => {
-    await page.goto('/providers/');
-
-    const shape = async () =>
-      page
-        .locator('[data-find-results] .provider-list > li')
-        .first()
-        .locator('.price-gauge-bar')
-        .evaluateAll((bars) => bars.map((bar) => `${bar.className}|${(bar as HTMLElement).style.height}`));
-
-    const before = await shape();
-    expect(before.length).toBe(7);
-
-    await page.locator('.find-facet input[type="checkbox"]').first().check();
-    await expect(page.locator('[data-find-summary]')).toContainText(' of ');
-
-    expect(await shape()).toEqual(before);
-  });
-
   test('a filtered row looks exactly like an unfiltered one', async ({ page }) => {
     await page.goto('/providers/');
     await page.locator('.find-facet input[type=checkbox]').first().check();

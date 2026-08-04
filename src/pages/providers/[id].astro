@@ -3,8 +3,6 @@ import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import { fieldGroups, fieldOf, labelOf, type Field } from '../../lib/fields';
 import { energy, flag, footnotes, price } from '../../lib/record';
-import { priceSentence } from '../../lib/price';
-import PriceGauge from '../../components/PriceGauge.astro';
 import { isListed } from '../../lib/providers';
 
 export async function getStaticPaths() {
@@ -135,21 +133,6 @@ const sourceLabel = (field: string) =>
   { notes: 'the notes', urls: 'links', social: 'accounts', sustainabilityUrl: 'sustainability' }[field] ??
   field.replace(/([A-Z])/g, ' $1').toLowerCase();
 
-const priceLine = priceSentence(data.priceFrom, data.priceTo);
-
-/*
- * How long the money keeps going out after you decide to leave. It sits in the
- * strip beside the price because it is the other half of what a price costs —
- * a cheap plan you cannot leave for a year is not cheap.
- */
-const exitLabel: Record<string, string> = {
-  'a-day': 'out within a day',
-  'a-month': 'out within a month',
-  'a-quarter': 'out within a quarter',
-  'a-year': 'out within a year',
-  'over-a-year': 'out takes over a year',
-};
-const exitLine = data.exitWithin ? exitLabel[data.exitWithin] : undefined;
 const energyClaim = energy(data.energyClaim);
 const homeFlag = flag(data.hqCountry);
 
@@ -266,23 +249,11 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
     </p>
 
     {
-      (homeFlag || priceLine || exitLine || energyClaim) && (
+      energyClaim && (
         <p class="record-strip">
-          {priceLine && (
-            <span class="strip-item">
-              <PriceGauge from={data.priceFrom} to={data.priceTo} size="md" />
-            </span>
-          )}
-          {exitLine && (
-            <span class="strip-item">
-              <span aria-hidden="true">🚪</span> {exitLine}
-            </span>
-          )}
-          {energyClaim && (
-            <span class="strip-item">
-              <span aria-hidden="true">🌱</span> {energyClaim}
-            </span>
-          )}
+          <span class="strip-item">
+            <span aria-hidden="true">🌱</span> {energyClaim}
+          </span>
         </p>
       )
     }
