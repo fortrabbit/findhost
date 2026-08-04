@@ -600,6 +600,21 @@
   text-decoration: none;
 }
 
+/*
+ * One row, one line, whatever the label's length. A value that wrapped pushed
+ * every row below it down and made one column taller than the rest of the band,
+ * so a long label is truncated and the full one stays in the row's title.
+ */
+.find-facet label {
+  white-space: nowrap;
+}
+
+.find-value {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 /** A count, not a score — mono so it reads as data. */
 .find-count {
   margin-left: auto;
@@ -608,14 +623,10 @@
   font-variant-numeric: tabular-nums;
 }
 
-/* The "more" button and the unknown tally are both notes about the list, so they share its last line. */
+/* One line of small print under the list: what it is hiding, and what it never knew. */
 .find-facet-foot {
-  display: flex;
-  gap: var(--space-2xs) var(--space-xs);
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: baseline;
   margin: var(--space-3xs) 0 0;
+  font-size: var(--text-xs);
 }
 
 .find-facet-foot:empty {
@@ -625,10 +636,6 @@
 .find-facet .annotation {
   margin: var(--space-2xs) 0 0;
   font-size: var(--text-xs);
-}
-
-.find-facet-foot .annotation {
-  margin: 0;
 }
 
 /* One column wide, the label has the room and the count has nothing to line up with. */

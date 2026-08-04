@@ -9,7 +9,9 @@
 #            the field is validated but never rendered as a row.
 # - `facet`  the URL segment where the field is filterable — /software/kirby/.
 #            Absent means the field is shown but not filtered.
-# - `values` the vocabulary. Absent means free text, a number or a date.
+# - `values` the vocabulary. Absent means free text, a number or a date. A value
+#            may carry `short:` — the filter panel is a narrow column and takes
+#            that; everywhere the value is read as prose takes the full label.
 # - `valuesFrom` borrows another field's vocabulary rather than repeating it.
 # - `render` how a value is drawn where it is not a label lookup.
 #
@@ -74,17 +76,17 @@
   facet: category
   filterOrder: 3
   values:
-    - { id: paas, label: Platform as a Service }
-    - { id: vps, label: Virtual Private Servers }
-    - { id: iaas, label: Infrastructure as a Service }
+    - { id: paas, label: Platform as a Service, short: PaaS }
+    - { id: vps, label: Virtual Private Servers, short: VPS }
+    - { id: iaas, label: Infrastructure as a Service, short: IaaS }
     - { id: shared-hosting, label: Shared hosting }
     - { id: serverless, label: Serverless }
     - { id: server-management, label: Server management }
     - { id: vanity-hosting, label: Vanity hosting }
-    - { id: lcnc, label: Low-code and no-code }
+    - { id: lcnc, label: Low-code and no-code, short: Low-code }
 
 - id: whoManagesOs
-  label: OS managed by
+  label: OS
   group: Classification
   facet: os-managed-by
   filterOrder: 11
@@ -97,15 +99,15 @@
 # More than one can be true at once: a panel that provisions onto your own cloud
 # account may also resell machines of its own.
 - id: infraContract
-  label: Whose hardware
+  label: Metal
   group: Classification
   facet: hardware
   filterOrder: 12
   multiple: true
   values:
-    - { id: owns-metal, label: Owns the hardware }
-    - { id: resells-iaas, label: Resells someone else's }
-    - { id: byo-iaas, label: You bring your own }
+    - { id: owns-metal, label: Owns the hardware, short: Owns }
+    - { id: resells-iaas, label: Resells someone else's, short: Reseller }
+    - { id: byo-iaas, label: You bring your own, short: BYO }
 
 # Whose infrastructure a reseller sits on. The values are provider ids, so the
 # upstream is usually a record in this dataset too.
@@ -138,23 +140,23 @@
     - { id: e-commerce, label: Online shops }
     - { id: saas, label: SaaS products }
     - { id: api, label: API backends }
-    - { id: dashboard, label: Dashboards and admin panels }
+    - { id: dashboard, label: Dashboards and admin panels, short: Dashboards }
     - { id: internal-tool, label: Internal tools }
     - { id: static-site, label: Static sites }
-    - { id: campaign-site, label: Campaign and landing sites }
+    - { id: campaign-site, label: Campaign and landing sites, short: Landing pages }
     - { id: portfolio, label: Portfolios }
     - { id: side-project, label: Side projects }
     - { id: ai-app, label: AI and LLM apps }
-    - { id: background-jobs, label: Background jobs and queues }
+    - { id: background-jobs, label: Background jobs and queues, short: Jobs and queues }
     - { id: data-pipeline, label: Data pipelines }
     - { id: game-server, label: Game servers }
-    - { id: learning, label: Learning and experiments }
+    - { id: learning, label: Learning and experiments, short: Learning }
 
 # Who a provider sells to, kept apart from what it is used for: a one-person side
 # project and a government department can want the same CMS and will never want
 # the same contract, support model or invoice.
 - id: audience
-  label: Sold to
+  label: Audience
   group: Classification
   facet: audience
   filterOrder: 5
@@ -164,10 +166,10 @@
     - { id: freelancer, label: Freelancers }
     - { id: agency, label: Agencies }
     - { id: startup, label: Startups }
-    - { id: smb, label: Small and medium businesses }
+    - { id: smb, label: Small and medium businesses, short: SME }
     - { id: enterprise, label: Enterprises }
-    - { id: government, label: Government and public sector }
-    - { id: education, label: Education and research }
+    - { id: government, label: Government and public sector, short: Public sector }
+    - { id: education, label: Education and research, short: Education }
     - { id: non-profit, label: Non-profits }
     - { id: developer, label: Developers }
     - { id: beginner, label: Beginners }

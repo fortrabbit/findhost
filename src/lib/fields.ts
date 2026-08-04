@@ -18,6 +18,8 @@ import { parse as parseYaml } from 'yaml';
 export interface FieldValue {
   id: string;
   label: string;
+  /** For the filter panel, which is a narrow column. Absent means the label already fits. */
+  short?: string;
   /** Excluded from the register and from every count. Only `status` uses it. */
   hidden?: boolean;
 }

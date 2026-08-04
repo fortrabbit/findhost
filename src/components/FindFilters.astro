@@ -50,39 +50,37 @@ const missing = (facet: Facet) =>
           </h2>
 
           {values.slice(0, shown).map((value) => (
-            <label>
+            <label title={value.label}>
               <input type="checkbox" data-facet={facet.id} value={value.id} />
-              <span class="find-value">{value.label}</span>
+              <span class="find-value">{value.short ?? value.label}</span>
               <span class="find-count">{value.count}</span>
-              <a class="find-jump" href={`/${facet.id}/${value.id}/`} aria-label={`Open the ${value.label} page`}>
-                →
-              </a>
             </label>
           ))}
 
           {tail.length > 0 && (
             <div class="find-tail" hidden>
               {tail.map((value) => (
-                <label>
+                <label title={value.label}>
                   <input type="checkbox" data-facet={facet.id} value={value.id} />
-                  <span class="find-value">{value.label}</span>
+                  <span class="find-value">{value.short ?? value.label}</span>
                   <span class="find-count">{value.count}</span>
-                  <a class="find-jump" href={`/${facet.id}/${value.id}/`} aria-label={`Open the ${value.label} page`}>
-                    →
-                  </a>
                 </label>
               ))}
             </div>
           )}
 
-          {/* The button and the tally share a line: both are notes about the list, not entries in it. */}
+          {/* One line under the list: what it is hiding, and what it never knew. */}
           <p class="find-facet-foot">
-            {tail.length > 0 && (
-              <button type="button" class="find-more" aria-expanded="false" data-more={tail.length}>
-                {tail.length} more
-              </button>
-            )}
-            {missing(facet) && <span class="annotation">{missing(facet)}</span>}
+            {[
+              tail.length > 0 && (
+                <button type="button" class="find-more" aria-expanded="false" data-more={tail.length}>
+                  {tail.length} more
+                </button>
+              ),
+              missing(facet),
+            ]
+              .filter(Boolean)
+              .flatMap((part, index) => (index ? [' · ', part] : [part]))}
           </p>
         </div>
       );

@@ -5,6 +5,8 @@ import { getCollection } from 'astro:content';
 export interface FacetValue {
   id: string;
   label: string;
+  /** The filter panel's version of the label, where the dictionary gives one. */
+  short?: string;
   count: number;
 }
 
@@ -107,6 +109,7 @@ function countValues(field: Field, providers: ProviderRow[]): Facet {
   const values = field.values.map((value) => ({
     id: value.id,
     label: value.label,
+    ...(value.short ? { short: value.short } : {}),
     count: known.filter((provider) => {
       const held = provider.facets[field.id];
       return Array.isArray(held) ? held.includes(value.id) : held === value.id;
