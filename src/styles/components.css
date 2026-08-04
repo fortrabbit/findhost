@@ -131,62 +131,6 @@
   font-size: var(--text-xs);
 }
 
-/* --- Entry points --- */
-
-/** The two guides, directly under the lead. Set at reading size — they are the ask, not a footnote. */
-.guide-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2xs) var(--space-lg);
-  padding-top: var(--space-lg);
-  /*padding-bottom: var(--space-lg);*/
-  /*font-family: var(--font-display);*/
-  /*font-size: var(--text-md);*/
-}
-
-/**
- * Four questions, five answers each, side by side. Columns rather than a
- * wrapping row of links: a reader scanning for their own stack finds it by
- * position, and the whole block stays shorter than one of the old sections.
- */
-.picker {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
-  gap: var(--space-md) var(--space-lg);
-  max-width: none;
-  margin-top: var(--space-lg);
-}
-
-/* The question is the heading; the answers are the list. Sized in that order. */
-.picker-column > h3 {
-  margin: 0 0 var(--space-3xs);
-  padding-bottom: var(--space-3xs);
-  border-bottom: var(--rule-hairline) solid var(--color-ink);
-  font-size: var(--text-md);
-}
-
-.picker-column ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.picker-column li {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: var(--space-xs);
-  padding: var(--space-3xs) 0;
-  /*border-bottom: var(--rule-hairline) solid var(--color-ink);*/
-  font-size: var(--text-xs);
-}
-
-.picker-all {
-  display: inline-block;
-  padding-top: var(--space-3xs);
-  font-size: var(--text-xs);
-}
-
 /** Every country the dataset covers, beneath the map that shows the same set. */
 .country-index {
   display: grid;

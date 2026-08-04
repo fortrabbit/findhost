@@ -1,31 +1,21 @@
 ---
 import Base from '../layouts/Base.astro';
-import { loadFacets } from '../lib/facets';
-import { loadProviders } from '../lib/providers';
+import ProviderRegister from '../components/ProviderRegister.astro';
+import FindFilters from '../components/FindFilters.astro';
+import { loadDrafts, loadFacets } from '../lib/facets';
 
-const records = await loadProviders();
-const { facets } = await loadFacets();
-
-/*
- * Four questions, five answers each. The commonest values are the ones most
- * people arrive with — that is a fact about the dataset, not a recommendation,
- * and every line is a real link to a page that already exists.
- */
-const pick = (facetId: string, heading: string, href: (id: string) => string) => {
-  const facet = facets.find((entry) => entry.id === facetId);
-  const values = (facet?.values ?? []).filter((value) => value.count > 0);
-  const top = [...values].sort((a, b) => b.count - a.count || a.label.localeCompare(b.label, 'en')).slice(0, 5);
-  return { heading, top, total: values.length, href, all: `/${facetId}/` };
-};
-
-const columns = [
-  pick('software', 'Software', (id) => `/software/${id}/`),
-  pick('runtimes', 'Language', (id) => `/runtimes/${id}/`),
-  pick('category', 'Platform', (id) => `/category/${id}/`),
-  pick('regions', 'Region', (id) => `/regions/${id}/`),
-];
+const { facets, providers } = await loadFacets();
+const drafts = await loadDrafts();
 ---
 
+{
+  /*
+   * The register is the homepage. What stood here before was a page of links to
+   * the register, which asked a visitor to choose a way in before seeing that
+   * there was anything to come in to. The filter panel carries the same links —
+   * every facet title is one — and it carries the records with them.
+   */
+}
 <Base
   title="FindHost — a ratings-free dataset of hosting providers"
   description="Opinionated field guide to choose the right hosting provider."
@@ -33,32 +23,15 @@ const columns = [
   <h1>Find your next web host</h1>
 
   <p class="lead">
-    An <a href="/about/" title="About">opinionated</a> &nbsp;
-    <a href="/guide/">hosting guide</a> and <a href="/providers/">directory</a> for developers.
+    An <a href="/about/" title="About">opinionated</a> <a href="/guide/">hosting guide</a> and directory for developers.
   </p>
-  <div class="picker">
-    {
-      columns.map((column) => (
-        <div class="picker-column">
-          <h3>{column.heading}</h3>
-          <ul>
-            {column.top.map((value) => (
-              <li>
-                <a href={column.href(value.id)}>
-                  <span class="entry-value">{value.label}</span>
-                </a>
-                <span class="entry-count">{value.count}</span>
-              </li>
-            ))}
-          </ul>
-          <a class="picker-all" href={column.all}>
-            See {column.total} →
-          </a>
-        </div>
-      ))
-    }
-  </div>
-  <p class="guide-links">
-    <a href="/providers/">See all {records.length} hosting providers &rarr;</a>
-  </p>
+
+  <ProviderRegister providers={providers} facets={facets}>
+    <FindFilters facets={facets} drafts={drafts.length} />
+  </ProviderRegister>
 </Base>
+
+<!-- The register is the one page that filters, so it is the one page that ships the script. -->
+<script>
+  import '../scripts/find.ts';
+</script>

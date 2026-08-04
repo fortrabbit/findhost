@@ -56,7 +56,7 @@ const groups = [...new Set(providers.map((provider) => letterOf(provider.name)))
 {
   seed ? (
     <p class="find-onward">
-      <a href={`/providers/?${seed.facet}=${seed.value}`}>Combine {seed.label} with other filters →</a>
+      <a href={`/?${seed.facet}=${seed.value}`}>Combine {seed.label} with other filters →</a>
     </p>
   ) : (
     /* The filter panel, passed in rather than owned: it is markup the register does not need to know about. */

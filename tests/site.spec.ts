@@ -25,7 +25,7 @@ const listed = readdirSync(records).filter((file) => {
 
 test.describe('the register', () => {
   test('lists every record, grouped and anchored', async ({ page }) => {
-    await page.goto('/providers/');
+    await page.goto('/');
 
     const rows = page.locator('[data-find-results] .provider-list > li');
     await expect(rows).toHaveCount(listed);
@@ -44,7 +44,7 @@ test.describe('the register', () => {
   });
 
   test('announces its order, because position is not ranking', async ({ page }) => {
-    await page.goto('/providers/');
+    await page.goto('/');
     await expect(page.locator('[data-find-summary]')).toContainText('alphabetical');
   });
 
@@ -56,7 +56,7 @@ test.describe('the register', () => {
    * strings are built in frontmatter and why this asserts the space.
    */
   test('puts a space between a number and the noun it counts', async ({ page }) => {
-    await page.goto('/providers/');
+    await page.goto('/');
     await expect(page.locator('[data-find-summary]')).toHaveText(/^\d+ records, sorted alphabetically\.$/);
 
     await page.goto('/software/');
@@ -64,9 +64,26 @@ test.describe('the register', () => {
   });
 
   test('every row carries a tile, so a missing figure never looks broken', async ({ page }) => {
-    await page.goto('/providers/');
+    await page.goto('/');
     const rows = page.locator('[data-find-results] .provider-list > li');
     await expect(page.locator('[data-find-results] .provider-tile')).toHaveCount(await rows.count());
+  });
+
+  /*
+   * The register lived at /providers/ before it was the homepage, and llms.txt
+   * published that address for months. A redirect that quietly stops working
+   * looks from here exactly like one that works, so it is asserted rather than
+   * assumed — and /providers/<id>/ must survive it.
+   */
+  test('keeps the address it used to live at', async ({ page }) => {
+    await page.goto('/providers/');
+    await expect(page).toHaveURL('/');
+    await expect(page.locator('[data-find-results] .provider-list > li')).toHaveCount(listed);
+
+    // Scoped to the article: a bare h1 also matches whatever a browser
+    // extension injects, which is why the anchors above are scoped too.
+    await page.goto('/providers/hetzner/');
+    await expect(page.locator('article h1')).toHaveText('Hetzner');
   });
 });
 
@@ -104,7 +121,7 @@ test.describe('a record', () => {
 
 test.describe('governance, as behaviour rather than policy text', () => {
   test('fortrabbit sits in alphabetical position and is marked', async ({ page }) => {
-    await page.goto('/providers/');
+    await page.goto('/');
 
     const names = await page.locator('[data-find-results] .provider-name a').allInnerTexts();
     const ours = names.findIndex((name) => name === 'fortrabbit');
@@ -125,7 +142,7 @@ test.describe('governance, as behaviour rather than policy text', () => {
   });
 
   test('carries no affiliate parameters anywhere', async ({ page }) => {
-    await page.goto('/providers/');
+    await page.goto('/');
     const hrefs = await page
       .locator('a[href^="http"]')
       .evaluateAll((links) => links.map((link) => (link as HTMLAnchorElement).href));
@@ -144,12 +161,12 @@ test.describe('without JavaScript', () => {
   test.use({ javaScriptEnabled: false });
 
   test('the register is still the register', async ({ page }) => {
-    await page.goto('/providers/');
+    await page.goto('/');
     await expect(page.locator('[data-find-results] .provider-list > li')).toHaveCount(listed);
   });
 
   test('every facet value is reachable as a real link', async ({ page }) => {
-    await page.goto('/providers/');
+    await page.goto('/');
 
     const fallback = page.locator('[data-find-fallback]');
     await expect(fallback).toBeVisible();
@@ -171,7 +188,7 @@ test.describe('stubs', () => {
   test.skip(({ javaScriptEnabled }) => javaScriptEnabled === false, 'the toggle is part of the filter view');
 
   test('are off by default, shown on request, and never counted', async ({ page }) => {
-    await page.goto('/providers/');
+    await page.goto('/');
 
     const rows = page.locator('[data-find-results] .provider-list > li');
     await expect(rows).toHaveCount(listed);
@@ -197,7 +214,7 @@ test.describe('filtering', () => {
   test.skip(({ javaScriptEnabled }) => javaScriptEnabled === false, 'filtering is the one JavaScript-only surface');
 
   test('narrows the list and says how many it dropped', async ({ page }) => {
-    await page.goto('/providers/');
+    await page.goto('/');
 
     const rows = page.locator('[data-find-results] .provider-list > li');
     await expect(rows).toHaveCount(listed);
@@ -211,7 +228,7 @@ test.describe('filtering', () => {
   });
 
   test('a filtered row looks exactly like an unfiltered one', async ({ page }) => {
-    await page.goto('/providers/');
+    await page.goto('/');
     await page.locator('.find-facet input[type=checkbox]').first().check();
 
     const row = page.locator('[data-find-results] .provider-list > li').first();

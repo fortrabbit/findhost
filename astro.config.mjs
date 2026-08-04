@@ -10,7 +10,9 @@ export default defineConfig({
   site,
   trailingSlash: 'always',
   redirects: {
-    '/find': '/providers',
+    // The register is the homepage. /providers/<id>/ is unaffected by both of these.
+    '/find': '/',
+    '/providers': '/',
     '/provider/[id]': '/providers/[id]',
     // The region index is the map. /regions/<code>/ pages are unaffected.
     '/regions': '/map',
