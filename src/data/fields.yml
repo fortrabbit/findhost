@@ -631,30 +631,37 @@
 
 # ------------------------------------------------------------ Automation
 
-- id: apiAvailable
-  label: API
+- id: mcpServer
+  label: MCP
   group: Automation
+  facet: mcp
+  filterGroup: Automation
+  filterOrder: 14
   values:
-    - { id: public, label: Public }
-    - { id: partner-only, label: Partners only }
+    - { id: official, label: Official }
+    - { id: community, label: Community }
     - { id: none, label: None }
 
 - id: cliTool
   label: CLI
   group: Automation
+  facet: cli
+  filterGroup: Automation
+  filterOrder: 15
   values:
     - { id: official, label: Official }
     - { id: third-party, label: Third-party }
     - { id: none, label: None }
 
-- id: mcpServer
-  label: MCP server
+- id: apiAvailable
+  label: API
   group: Automation
-  facet: mcp
-  filterOrder: 14
+  facet: api
+  filterGroup: Automation
+  filterOrder: 16
   values:
-    - { id: official, label: Official }
-    - { id: community, label: Community }
+    - { id: public, label: Public }
+    - { id: partner-only, label: Partners only }
     - { id: none, label: None }
 
 - id: iacSupport

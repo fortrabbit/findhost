@@ -50,7 +50,14 @@ const subjects: Record<string, string> = {
       'byo-iaas': 'run on hardware you bring',
     }[value.id] ?? value.label.toLowerCase(),
   ownership: `are ${value.label.toLowerCase()}`,
-  mcp: `ship ${value.label.toLowerCase()} MCP support`,
+  mcp: { none: 'ship no MCP server' }[value.id] ?? `ship an ${value.label.toLowerCase()} MCP server`,
+  cli: { none: 'ship no command-line tool' }[value.id] ?? `ship ${value.label.toLowerCase()} command-line tooling`,
+  api:
+    {
+      public: 'publish an API anyone with an account can use',
+      'partner-only': 'keep their API to partners',
+      none: 'publish no API',
+    }[value.id] ?? `answer "${value.label.toLowerCase()}" to whether there is an API`,
   exit: `can be left ${value.label.toLowerCase()}`,
 };
 

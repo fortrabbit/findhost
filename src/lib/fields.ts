@@ -39,6 +39,12 @@ export interface Field {
   group?: string;
   /** The URL segment where the field is filterable. Absent means shown but not filtered. */
   facet?: string;
+  /**
+   * A heading in the filter panel shared with the facets either side of it. Three
+   * facets whose values all read "Official / None" need to say what they are
+   * official at. Absent is the normal case: the facet carries its own title.
+   */
+  filterGroup?: string;
   filterOrder?: number;
   multiple: boolean;
   /** How the value is drawn where it is not a label lookup. */

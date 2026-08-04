@@ -1,5 +1,6 @@
 ---
-import { facetIndex, type Facet } from '../lib/facets';
+import FindFacet from './FindFacet.astro';
+import type { Facet } from '../lib/facets';
 
 interface Props {
   facets: Facet[];
@@ -19,84 +20,40 @@ const { facets, drafts } = Astro.props;
  * register links every value as a page instead.
  */
 
-/** Values in use, commonest first. The order is fixed here and never re-sorted. */
-const ordered = (facet: Facet) =>
-  facet.values
-    .filter((value) => value.count > 0)
-    .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label, 'en'));
+/*
+ * Facets that share a `filterGroup` are drawn under one heading. MCP, CLI and
+ * API all offer "Official / None", so three titles in a row would each be
+ * answering a question the reader cannot see. Runs are built from the panel
+ * order rather than gathered, so a group that is not contiguous shows as two
+ * headings — validate.ts rejects that in the dictionary instead of the panel
+ * hiding it.
+ */
+const runs: { label?: string; facets: Facet[] }[] = [];
+for (const facet of facets) {
+  const last = runs.at(-1);
+  if (facet.filterGroup && last?.label === facet.filterGroup) last.facets.push(facet);
+  else runs.push({ label: facet.filterGroup, facets: [facet] });
+}
 
-/** How many values show before the "more" button. */
-const shown = 5;
-
-const missing = (facet: Facet) =>
-  [facet.unknown > 0 && `${facet.unknown} unknown`, facet.notApplicable > 0 && `${facet.notApplicable} n/a`]
-    .filter(Boolean)
-    .join(' · ');
+const slug = (label: string) => label.toLowerCase().replace(/[^a-z0-9]+/g, '-');
 ---
 
 <div class="find-filters full-width" data-find-filters hidden>
   {
-    facets.map((facet) => {
-      const values = ordered(facet);
-      const tail = values.slice(shown);
-
-      return (
-        <div class="find-facet" role="group" aria-labelledby={`facet-${facet.id}`}>
-          <h2 class="find-facet-title" id={`facet-${facet.id}`}>
-            <a href={facetIndex(facet.id)}>{facet.label}</a>{' '}
-            <a class="find-jump" href={facetIndex(facet.id)} aria-hidden="true" tabindex="-1">
-              →
-            </a>
+    runs.map((run) =>
+      run.label ? (
+        <div class="find-facet find-group" role="group" aria-labelledby={`group-${slug(run.label)}`}>
+          <h2 class="find-facet-title" id={`group-${slug(run.label)}`}>
+            {run.label}
           </h2>
-
-          {values.slice(0, shown).map((value) => (
-            <label title={value.label}>
-              <input type="checkbox" data-facet={facet.id} value={value.id} autocomplete="off" />
-              <span class="find-value">{value.short ?? value.label}</span>
-              <span class="find-count">
-                {value.count}
-                <span class="visually-hidden"> records</span>
-              </span>
-            </label>
+          {run.facets.map((facet) => (
+            <FindFacet facet={facet} nested />
           ))}
-
-          {tail.length > 0 && (
-            <div class="find-tail" id={`tail-${facet.id}`} hidden>
-              {tail.map((value) => (
-                <label title={value.label}>
-                  <input type="checkbox" data-facet={facet.id} value={value.id} autocomplete="off" />
-                  <span class="find-value">{value.short ?? value.label}</span>
-                  <span class="find-count">
-                    {value.count}
-                    <span class="visually-hidden"> records</span>
-                  </span>
-                </label>
-              ))}
-            </div>
-          )}
-
-          {/* One line under the list: what it is hiding, and what it never knew. */}
-          <p class="find-facet-foot">
-            {[
-              tail.length > 0 && (
-                <button
-                  type="button"
-                  class="find-more"
-                  aria-expanded="false"
-                  aria-controls={`tail-${facet.id}`}
-                  data-more={tail.length}
-                >
-                  {tail.length} more
-                </button>
-              ),
-              missing(facet),
-            ]
-              .filter(Boolean)
-              .flatMap((part, index) => (index ? [' · ', part] : [part]))}
-          </p>
         </div>
-      );
-    })
+      ) : (
+        run.facets.map((facet) => <FindFacet facet={facet} />)
+      ),
+    )
   }
 
   {

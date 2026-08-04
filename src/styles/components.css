@@ -529,8 +529,8 @@
 /*
  * As many columns as fit and never more than six: the `100% / 7` floor makes a
  * seventh column too narrow to be allowed, which is the only way auto-fit takes
- * an upper bound. Fourteen facets and the stubs land in three rows on a wide
- * screen and collapse to one column on a phone without a breakpoint.
+ * an upper bound. A cell per facet, one for a grouped run and one for the stubs:
+ * three rows on a wide screen, one column on a phone, and no breakpoint.
  */
 .find-filters {
   display: grid;
@@ -543,6 +543,21 @@
 
 .find-facet {
   min-width: 0;
+}
+
+/*
+ * A run of facets under one heading. MCP, CLI and API all answer "Official /
+ * None", so the heading carries the question and each keeps a quiet sub-title
+ * rather than a second rule competing with it.
+ */
+.find-facet-nested + .find-facet-nested {
+  margin-top: var(--space-xs);
+}
+
+.find-facet-nested .find-facet-title {
+  padding: 0;
+  border-bottom: 0;
+  font-size: var(--text-sm);
 }
 
 /* The way from a page that means one value to the register, where values combine. */

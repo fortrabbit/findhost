@@ -16,6 +16,8 @@ export interface Facet {
   label: string;
   /** The record field it reads. */
   field: string;
+  /** A heading shared with the facets next to it in the panel. Absent means it heads itself. */
+  filterGroup?: string;
   multiple: boolean;
   values: FacetValue[];
   /** Records that do not say. Displayed, never silently dropped. */
@@ -115,6 +117,7 @@ function countValues(field: Field, providers: ProviderRow[]): Facet {
     id: field.facet!,
     label: field.label,
     field: field.id,
+    ...(field.filterGroup ? { filterGroup: field.filterGroup } : {}),
     multiple: field.multiple,
     values,
     unknown: applicable.length - known.length,

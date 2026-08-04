@@ -78,6 +78,11 @@ for (const field of fields) {
     fail(dictionaryFile, `"${field.id}" borrows values from ${target}`);
   }
 
+  // Only the panel reads filterGroup, and only facets are in the panel.
+  if (field.filterGroup && !field.facet) {
+    fail(dictionaryFile, `"${field.id}" has a filterGroup but is not a facet, so nothing heads it`);
+  }
+
   if (field.facet) {
     if (seenFacet.has(field.facet)) fail(dictionaryFile, `two fields claim the facet "${field.facet}"`);
     seenFacet.add(field.facet);
@@ -92,6 +97,19 @@ for (const field of fields) {
 
     // Absent, a facet sorts silently last; shared, two facets swap places between builds.
     if (field.filterOrder === undefined) fail(dictionaryFile, `"${field.id}" is a facet with no filterOrder`);
+    else if (field.filterGroup) {
+      /*
+       * The panel groups a run of neighbours, not everything wearing the name, so
+       * a facet sorted away from its group silently gets a second heading with
+       * the same words on it.
+       */
+      const run = facetFields.filter((candidate) => candidate.filterGroup === field.filterGroup);
+      const first = facetFields.indexOf(run[0]);
+      const contiguous = run.every((candidate, offset) => facetFields[first + offset] === candidate);
+      if (!contiguous && field === run[0]) {
+        fail(dictionaryFile, `filterGroup "${field.filterGroup}" is split by filterOrder, so the panel heads it twice`);
+      }
+    }
     else {
       const claimed = seenOrder.get(field.filterOrder);
       if (claimed) fail(dictionaryFile, `"${field.id}" and "${claimed}" both claim filterOrder ${field.filterOrder}`);

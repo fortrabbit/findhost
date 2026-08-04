@@ -1,0 +1,85 @@
+---
+import { facetIndex, type Facet } from '../lib/facets';
+
+interface Props {
+  facet: Facet;
+  /** Set where the facet sits under a shared heading, so its own title steps down a level. */
+  nested?: boolean;
+}
+
+const { facet, nested = false } = Astro.props;
+
+const Title = nested ? 'h3' : 'h2';
+
+/** Values in use, commonest first. The order is fixed here and never re-sorted. */
+const values = facet.values
+  .filter((value) => value.count > 0)
+  .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label, 'en'));
+
+/** How many values show before the "more" button. */
+const shown = 5;
+const tail = values.slice(shown);
+
+const missing = [facet.unknown > 0 && `${facet.unknown} unknown`, facet.notApplicable > 0 && `${facet.notApplicable} n/a`]
+  .filter(Boolean)
+  .join(' · ');
+---
+
+<div class:list={['find-facet', nested && 'find-facet-nested']} role="group" aria-labelledby={`facet-${facet.id}`}>
+  <Title class="find-facet-title" id={`facet-${facet.id}`}>
+    <a href={facetIndex(facet.id)}>{facet.label}</a>{' '}
+    <a class="find-jump" href={facetIndex(facet.id)} aria-hidden="true" tabindex="-1">→</a>
+  </Title>
+
+  {
+    values.slice(0, shown).map((value) => (
+      <label title={value.label}>
+        <input type="checkbox" data-facet={facet.id} value={value.id} autocomplete="off" />
+        <span class="find-value">{value.short ?? value.label}</span>
+        <span class="find-count">
+          {value.count}
+          <span class="visually-hidden"> records</span>
+        </span>
+      </label>
+    ))
+  }
+
+  {
+    tail.length > 0 && (
+      <div class="find-tail" id={`tail-${facet.id}`} hidden>
+        {tail.map((value) => (
+          <label title={value.label}>
+            <input type="checkbox" data-facet={facet.id} value={value.id} autocomplete="off" />
+            <span class="find-value">{value.short ?? value.label}</span>
+            <span class="find-count">
+              {value.count}
+              <span class="visually-hidden"> records</span>
+            </span>
+          </label>
+        ))}
+      </div>
+    )
+  }
+
+  {/* One line under the list: what it is hiding, and what it never knew. */}
+  <p class="find-facet-foot">
+    {
+      [
+        tail.length > 0 && (
+          <button
+            type="button"
+            class="find-more"
+            aria-expanded="false"
+            aria-controls={`tail-${facet.id}`}
+            data-more={tail.length}
+          >
+            {tail.length} more
+          </button>
+        ),
+        missing,
+      ]
+        .filter(Boolean)
+        .flatMap((part, index) => (index ? [' · ', part] : [part]))
+    }
+  </p>
+</div>
