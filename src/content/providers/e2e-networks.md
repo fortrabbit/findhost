@@ -5,7 +5,7 @@ urls:
   home: https://www.e2enetworks.com
   pricing: https://www.e2enetworks.com/pricing
   docs: https://docs.e2enetworks.com/
-category: iaas
+category: vps
 description: Indian cloud infrastructure provider listed on the National Stock Exchange, selling CPU and GPU compute by the minute with published hourly rates.
 founded: 2009
 hqCountry: IN

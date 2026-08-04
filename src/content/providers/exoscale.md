@@ -5,7 +5,7 @@ urls:
   home: https://www.exoscale.com
   pricing: https://www.exoscale.com/pricing/
   status: https://exoscalestatus.com/
-category: iaas
+category: vps
 description: Exoscale is a Swiss infrastructure provider selling KVM instances, managed Kubernetes, object and block storage and managed databases from European zones.
 founded: 2011
 hqCountry: CH
