@@ -113,8 +113,15 @@ test.describe('governance, as behaviour rather than policy text', () => {
     const sorted = [...names].sort((a, b) => a.localeCompare(b, 'en'));
     expect(names).toEqual(sorted);
 
-    await page.goto('/providers/fortrabbit/');
-    await expect(page.locator('.annotation').first()).toContainText('This is us');
+    // The disclosure rides with the row, where a reader meets the name, and with
+    // the machine-readable copy. It is not on the record page: a marker beside
+    // the name is seen by everyone scanning the register, which is where the
+    // conflict of interest could otherwise pass unnoticed.
+    const row = page.locator('.provider-name').filter({ hasText: /^fortrabbit/ });
+    await expect(row.locator('.self-marker')).toHaveText('published by us');
+
+    const record = await page.request.get('/providers/fortrabbit.md');
+    expect(await record.text()).toContain('Published by us');
   });
 
   test('carries no affiliate parameters anywhere', async ({ page }) => {
