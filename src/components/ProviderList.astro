@@ -5,11 +5,7 @@ interface Row {
   description?: string;
   publishedByUs?: boolean;
   greenWebId?: number | null;
-  priceFrom?: string;
-  priceTo?: string;
   figure?: { emoji: string; color: string; textColor: string };
-  /** Shown only where the list is ordered by it, so the order is visible rather than asserted. */
-  checked?: string;
 }
 
 interface Props {
