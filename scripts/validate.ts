@@ -4,12 +4,25 @@
  * Everything here fails loudly with a filename, because the alternative is a
  * malformed contribution merging and rendering wrong.
  */
-import { readdirSync, readFileSync, existsSync } from 'node:fs';
+import { readdirSync, readFileSync, existsSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import { parse as parseYaml } from 'yaml';
-import { dictionaryFile, facetFields, fields } from '../src/lib/fields.ts';
+import {
+  borrowedFrom,
+  dictionaryFile,
+  facetFields,
+  fieldOf,
+  fields,
+  groupNames,
+  hiddenStatuses,
+  renderModes,
+  reservedSegments,
+} from '../src/lib/fields.ts';
+import { priceBands } from '../src/lib/price.ts';
 
 const providersDir = 'src/content/providers';
+const notesDir = 'src/content/notes';
+const schemaFile = 'src/content.config.ts';
 const publicDir = 'public';
 
 const errors: string[] = [];
@@ -28,6 +41,15 @@ const frontmatter = (raw: string) => {
  */
 const seenField = new Set<string>();
 const seenFacet = new Set<string>();
+const seenOrder = new Map<number, string>();
+
+/*
+ * `regions` is the exception to the URL-safety rule below and the only one. Its
+ * values are ISO 3166 codes, which are conventionally uppercase and are used as
+ * such wherever the dataset is read as data — so /regions/DE/ is the URL. Any
+ * new facet takes lowercase ids.
+ */
+const uppercaseIds = new Set(['regions']);
 
 for (const field of fields) {
   if (seenField.has(field.id)) fail(dictionaryFile, `duplicate entry for "${field.id}"`);
@@ -35,10 +57,39 @@ for (const field of fields) {
 
   if (!field.label) fail(dictionaryFile, `"${field.id}" has no label`);
 
+  if (field.group && !groupNames.includes(field.group as (typeof groupNames)[number])) {
+    fail(dictionaryFile, `"${field.id}" is in group "${field.group}", which is not one of: ${groupNames.join(', ')}`);
+  }
+
+  if (field.render && !renderModes.includes(field.render)) {
+    fail(dictionaryFile, `"${field.id}" renders as "${field.render}", which is not one of: ${renderModes.join(', ')}`);
+  }
+
+  /* A borrowed vocabulary that resolves to nothing leaves the field unvalidated below. */
+  const borrowed = borrowedFrom.get(field.id);
+  if (borrowed && !fieldOf.get(borrowed)?.values.length) {
+    fail(dictionaryFile, `"${field.id}" borrows values from "${borrowed}", which has none`);
+  }
+
   if (field.facet) {
     if (seenFacet.has(field.facet)) fail(dictionaryFile, `two fields claim the facet "${field.facet}"`);
     seenFacet.add(field.facet);
+
     if (!field.values.length) fail(dictionaryFile, `"${field.id}" is a facet with no values to filter by`);
+
+    if (!/^[a-z0-9-]+$/.test(field.facet)) fail(dictionaryFile, `facet "${field.facet}" is not a usable URL segment`);
+
+    if (reservedSegments.includes(field.facet)) {
+      fail(dictionaryFile, `facet "${field.facet}" collides with the page already at /${field.facet}/`);
+    }
+
+    // Absent, a facet sorts silently last; shared, two facets swap places between builds.
+    if (field.filterOrder === undefined) fail(dictionaryFile, `"${field.id}" is a facet with no filterOrder`);
+    else {
+      const claimed = seenOrder.get(field.filterOrder);
+      if (claimed) fail(dictionaryFile, `"${field.id}" and "${claimed}" both claim filterOrder ${field.filterOrder}`);
+      seenOrder.set(field.filterOrder, field.id);
+    }
   }
 
   const values = new Set<string>();
@@ -46,6 +97,69 @@ for (const field of fields) {
     if (values.has(value.id)) fail(dictionaryFile, `"${field.id}" lists "${value.id}" twice`);
     values.add(value.id);
     if (!value.label) fail(dictionaryFile, `"${field.id}" value "${value.id}" has no label`);
+
+    // A facet value is a URL segment too, and one that needs escaping is one nobody can type.
+    if (field.facet && !uppercaseIds.has(field.id) && !/^[a-z0-9-]+$/.test(value.id)) {
+      fail(dictionaryFile, `"${field.id}" value "${value.id}" is not a usable URL segment`);
+    }
+  }
+}
+
+/*
+ * The price gauge is the other consumer that cannot read the dictionary: it is
+ * bundled for the browser, and lib/fields.ts reads the file off disk. So the
+ * bands are written twice on purpose, and the second copy is checked here.
+ */
+const bandsInDictionary = (fieldOf.get('priceFrom')?.values ?? []).map((value) => `${value.id}: ${value.label}`);
+const bandsInCode = priceBands.map((band) => `${band.id}: ${band.label}`);
+if (bandsInDictionary.join(' | ') !== bandsInCode.join(' | ')) {
+  fail(
+    'src/lib/price.ts',
+    `the gauge's bands no longer match priceFrom in ${dictionaryFile}\n    dictionary: ${bandsInDictionary.join(', ')}\n    gauge:      ${bandsInCode.join(', ')}`,
+  );
+}
+
+/*
+ * The schema is the one consumer that cannot be derived from the dictionary —
+ * zod needs the field written out — so it is the one that can silently fall
+ * behind. A field the schema does not name is stripped from every record by the
+ * content loader, with no error and no rendered row.
+ */
+const schema = readFileSync(schemaFile, 'utf8');
+for (const field of fields) {
+  if (!new RegExp(`\\b${field.id}\\b`).test(schema)) {
+    fail(schemaFile, `"${field.id}" is in ${dictionaryFile} but not in the schema, so records carrying it lose it`);
+  }
+}
+
+/*
+ * Notes are keyed by the path they head: <facet>.md for a facet, <facet>/<value>.md
+ * for one of its values. Nothing else reads them, so a typo in either segment is
+ * a file that renders nowhere while llms.txt still publishes a link to it.
+ */
+const noteKeys = (dir: string, prefix = ''): string[] =>
+  existsSync(dir)
+    ? readdirSync(dir).flatMap((name) => {
+        const path = join(dir, name);
+        if (statSync(path).isDirectory()) return noteKeys(path, `${prefix}${name}/`);
+        return name.endsWith('.md') ? [`${prefix}${name.replace(/\.md$/, '')}`] : [];
+      })
+    : [];
+
+for (const key of noteKeys(notesDir)) {
+  const [segment, value, ...rest] = key.split('/');
+  const field = fields.find((candidate) => candidate.facet === segment);
+
+  if (!field) {
+    const named = fieldOf.get(segment!);
+    const hint = named?.facet ? ` — that field is filed under "${named.facet}"` : '';
+    fail(`${notesDir}/${key}.md`, `"${segment}" is not a facet${hint}`);
+    continue;
+  }
+
+  if (rest.length) fail(`${notesDir}/${key}.md`, 'a note is <facet>.md or <facet>/<value>.md, never deeper');
+  else if (value && !field.values.some((entry) => entry.id === value)) {
+    fail(`${notesDir}/${key}.md`, `"${value}" is not a value of ${field.id}`);
   }
 }
 
@@ -65,8 +179,16 @@ const fieldNames = new Set(records.flatMap(({ data }) => (data ? Object.keys(dat
 // Kept apart in the count only. Every guard below runs on a hidden record too —
 // a rejected name is still published, and a field this dataset may never carry
 // is no more acceptable on a page nobody links to.
-const hiddenStatuses = new Set(['draft', 'out-of-scope']);
 let hidden = 0;
+
+/*
+ * A `sources` entry cites either a field, which earns a numbered marker beside
+ * its value, or a claim made in the prose, which is named in words — "2021 fire".
+ * Only the first kind can be typo'd into silence, and the two are told apart by
+ * shape: a camelCase word that names no field is a misspelt field, not a claim.
+ */
+const citable = new Set([...fields.map((field) => field.id), 'notes', 'urls', 'social', 'sustainabilityUrl']);
+const looksLikeField = (name: string) => /^[a-z][A-Za-z0-9]*$/.test(name);
 
 // A ranking field is the one thing this dataset may never grow. CI4, mechanically.
 const forbidden = ['rank', 'ranking', 'score', 'rating', 'boost', 'weight', 'stars', 'position', 'featured'];
@@ -109,7 +231,8 @@ for (const { file, data } of records) {
    */
   for (const source of (data.sources ?? []) as { field?: string }[]) {
     const field = String(source.field);
-    if (fieldNames.has(field) && data[field] === undefined) {
+    if (looksLikeField(field) && !citable.has(field)) fail(file, `cites a source for "${field}", which is not a field`);
+    else if (fieldNames.has(field) && data[field] === undefined) {
       fail(file, `cites a source for "${field}", which this record does not carry`);
     }
   }

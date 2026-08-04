@@ -2,6 +2,12 @@
  * The price scale, in one place because three surfaces draw it and a policy page
  * describes it.
  *
+ * This file is imported by scripts/find.ts and so is bundled for the browser. It
+ * may not import lib/fields.ts, which reads the dictionary off disk — doing so
+ * puts `node:fs` in the client bundle, the script throws on load, and the filter
+ * panel never unhides. The bands below therefore repeat the `priceFrom`
+ * vocabulary, and scripts/validate.ts asserts the two still agree.
+ *
  * Seven bands, in US dollars a month. The boundaries roughly triple, which is
  * what puts the variety where the shopping happens: a band covers $5 to $15 at
  * the bottom and $500 to $1500 at the top, so the cheap end gets as much of the
@@ -20,14 +26,12 @@ export const priceBands = [
   { id: 'xl', label: '$150 to $500 a month', short: 'XL' },
   { id: '2xl', label: '$500 to $1,500 a month', short: '2XL' },
   { id: '3xl', label: 'Over $1,500 a month', short: '3XL' },
-] as const;
-
-export type PriceBand = (typeof priceBands)[number]['id'];
+];
 
 export const bandIds = priceBands.map((band) => band.id);
 
 export function bandIndex(id: string | undefined): number {
-  return id === undefined ? -1 : bandIds.indexOf(id as PriceBand);
+  return id === undefined ? -1 : bandIds.indexOf(id);
 }
 
 export function bandLabel(id: string | undefined): string | undefined {

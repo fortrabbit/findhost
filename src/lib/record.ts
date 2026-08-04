@@ -1,4 +1,5 @@
-/** A free tier is a different kind of answer to "what does it cost", so it says so in words. */
+import { labelOf } from './fields.ts';
+
 /** Regional indicator pair. Two letters in, one flag out. */
 export function flag(country: string | undefined): string | undefined {
   if (!country || country.length !== 2) return undefined;
@@ -32,19 +33,14 @@ export function price(entry: { amount: number; currency: string; period: string 
 }
 
 /*
- * Three different claims that marketing blurs into one word. The leaf is the
- * scannable part; the words are the honest part. `none-published` gets no strip
- * entry at all — an absent claim is not a claim about absence.
+ * Four different claims that marketing blurs into one word. The leaf is the
+ * scannable part; the words are the honest part, and they are the dictionary's
+ * own. The one rule that is not a label is the exclusion: `none-published` gets
+ * no strip entry at all, an absent claim being no claim about absence.
  */
-const energyLabels: Record<string, string> = {
-  '24-7-cfe': '24/7 carbon-free',
-  'annual-matched': 'annually matched renewables',
-  offset: 'offsets purchased',
-  'grid-mix-disclosed': 'grid mix published',
-};
-
 export function energy(claim: string | undefined): string | undefined {
-  return claim ? energyLabels[claim] : undefined;
+  if (!claim || claim === 'none-published') return undefined;
+  return labelOf('energyClaim', claim).toLowerCase();
 }
 
 export type Source = { field: string; url: string; checkedAt: Date };

@@ -61,8 +61,10 @@
     - { id: discontinued, label: Discontinued }
     - { id: unverifiable, label: Unverifiable }
     - { id: delisted-on-request, label: Delisted on request }
-    - { id: draft, label: Stub }
-    - { id: out-of-scope, label: Out of scope }
+    # `hidden` keeps a record out of the register and out of every count. It is
+    # the only place that fact is written down.
+    - { id: draft, label: Stub, hidden: true }
+    - { id: out-of-scope, label: Out of scope, hidden: true }
 
 # ---------------------------------------------------------- Classification
 

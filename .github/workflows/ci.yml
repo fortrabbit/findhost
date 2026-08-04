@@ -25,6 +25,10 @@ jobs:
       # Guards zod cannot express: unique ids, taxonomy coverage, and the
       # assertion that no rank, boost or weight field has appeared anywhere.
       - run: pnpm run validate
+      # Every link we publish at ourselves, checked against what we published.
+      # Renaming a route or a facet value is the edit that leaves one behind, and
+      # nothing else in this file would notice.
+      - run: pnpm run linkcheck:internal
       - run: pnpm exec playwright install --with-deps chromium
       - run: pnpm run test:e2e
 

@@ -168,8 +168,17 @@ if (filtersEl && resultsEl && summaryEl) {
     const params = new URLSearchParams(location.search);
     selected.clear();
     for (const facet of facets) {
-      const value = params.get(facet.id);
-      if (value) selected.set(facet.id, new Set(value.split(',').filter(Boolean)));
+      const asked = params.get(facet.id);
+      if (!asked) continue;
+
+      /*
+       * Only values that still exist. A link written before a value was renamed
+       * — /providers/?category=shared, say — would otherwise filter to nothing
+       * and read as "no such providers" rather than as a dead link.
+       */
+      const known = new Set(facet.values.map((value) => value.id));
+      const held = asked.split(',').filter((value) => known.has(value));
+      if (held.length) selected.set(facet.id, new Set(held));
     }
   };
 

@@ -8,7 +8,7 @@
  *
  *   pnpm run build && node scripts/internal-links.mjs
  */
-import { readFileSync, readdirSync, statSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { join, relative } from 'node:path';
 
 const dist = 'dist';
@@ -41,8 +41,21 @@ for (const page of pages) {
   }
 }
 
+/*
+ * The sitemap too, which is the one place a dead route hides from the check
+ * above: no page has to link to a path for the sitemap to offer it to a crawler.
+ * Its entries are absolute, so they are reduced to paths first.
+ */
+const sitemap = join(dist, 'sitemap.xml');
+if (existsSync(sitemap)) {
+  for (const [, loc] of readFileSync(sitemap, 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)) {
+    const target = loc.replace(/^https?:\/\/[^/]+/, '').split(/[#?]/)[0];
+    if (!resolves(target)) broken.push({ page: 'sitemap.xml', href: target });
+  }
+}
+
 if (!broken.length) {
-  console.log(`${pages.length} pages, no broken internal links.`);
+  console.log(`${pages.length} pages and the sitemap, no broken internal links.`);
   process.exit(0);
 }
 

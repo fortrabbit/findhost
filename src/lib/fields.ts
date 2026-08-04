@@ -7,6 +7,10 @@
  * hand. They read this instead. Nothing here may import `astro:content`:
  * content.config.ts builds its enums from this file, and scripts/validate.ts
  * runs it under plain Node.
+ *
+ * A module that Node runs directly — anything with a unit test, or a script —
+ * must import this as `./fields.ts`. Vite resolves the extension for itself;
+ * Node does not, and the failure is a module-not-found at test time.
  */
 import { readFileSync } from 'node:fs';
 import { parse as parseYaml } from 'yaml';
@@ -14,6 +18,8 @@ import { parse as parseYaml } from 'yaml';
 export interface FieldValue {
   id: string;
   label: string;
+  /** Excluded from the register and from every count. Only `status` uses it. */
+  hidden?: boolean;
 }
 
 export interface Field {
@@ -37,6 +43,43 @@ interface Entry extends Omit<Field, 'multiple' | 'values'> {
   valuesFrom?: string;
 }
 
+/** Every value of `render` the record page knows how to draw. validate.ts rejects the rest. */
+export const renderModes = ['yes-no', 'money', 'multiple'] as const;
+
+/**
+ * Sections of the record page, in the order the dictionary lists them. Declared
+ * rather than inferred so a typo in `group:` fails instead of quietly minting a
+ * ninth section on every record.
+ */
+export const groupNames = [
+  'Identity',
+  'Classification',
+  'Tech stack',
+  'Pricing',
+  'Regions and law',
+  'Environment',
+  'Support',
+  'Automation',
+] as const;
+
+/**
+ * Top-level paths a facet may not claim. A facet segment becomes `/<facet>/`, so
+ * one of these would shadow a real page and the collision would only show as a
+ * missing route.
+ */
+export const reservedSegments = [
+  'providers',
+  'guide',
+  'map',
+  'about',
+  'policies',
+  'pricing',
+  'search',
+  'find',
+  'notes',
+  '404',
+];
+
 /*
  * Project-relative, as Astro's own file loader takes it, and not resolved from
  * import.meta.url: the build bundles this module into dist/.prerender/, where a
@@ -54,6 +97,27 @@ export const fields: Field[] = entries.map((entry) => ({
 }));
 
 export const fieldOf = new Map(fields.map((field) => [field.id, field]));
+
+/** What `valuesFrom` each entry declared, kept for validate.ts to check the target exists. */
+export const borrowedFrom = new Map(
+  entries.filter((entry) => entry.valuesFrom).map((entry) => [entry.id, entry.valuesFrom!]),
+);
+
+/**
+ * Statuses that keep a record out of the register and out of every count. The
+ * fact lives on the value in the dictionary, so the four files that used to
+ * re-list these ids cannot disagree about which they are.
+ */
+export const hiddenStatuses = new Set(
+  (fieldOf.get('status')?.values ?? []).filter((value) => value.hidden).map((value) => value.id),
+);
+
+/** Filterable field by URL segment. Throws, because a segment that names nothing is a bug, not an absence. */
+export function facetOf(segment: string): Field {
+  const field = fields.find((candidate) => candidate.facet === segment);
+  if (!field) throw new Error(`"${segment}" is not a facet in ${dictionaryFile}`);
+  return field;
+}
 
 /**
  * A field's value ids, for building a zod enum. Throws rather than returning an

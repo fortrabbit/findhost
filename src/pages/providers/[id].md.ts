@@ -1,5 +1,6 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
+import { fieldGroups, hiddenStatuses } from '../../lib/fields';
 
 /**
  * The record as markdown, for anything that would rather read text than HTML.
@@ -30,43 +31,15 @@ export const GET: APIRoute = async ({ props, site }) => {
   const data = provider.data as Record<string, unknown>;
   const origin = site?.origin ?? '';
 
-  const groups: [string, string[]][] = [
-    ['Identity', ['founded', 'hqCountry', 'ownership', 'parent', 'status']],
-    ['Classification', ['category', 'alsoOffers', 'useCases', 'audience', 'specialisation']],
-    [
-      'Tech',
-      [
-        'runtimes',
-        'software',
-        'deployMethods',
-        'sshAccess',
-        'managedDatabases',
-        'persistentStorage',
-        'backupsIncluded',
-      ],
-    ],
-    ['Infrastructure', ['whoManagesOs', 'infraContract', 'runsOn', 'regions', 'gdprDpa']],
-    [
-      'Pricing',
-      [
-        'priceFrom',
-        'priceTo',
-        'pricingModel',
-        'currencies',
-        'billingPeriods',
-        'billingTiming',
-        'cancellation',
-        'renewalMultiple',
-        'freeTier',
-        'contractMinimum',
-      ],
-    ],
-    ['Support', ['supportChannels', 'supportHours', 'supportTiering']],
-    ['Automation', ['apiAvailable', 'cliTool', 'mcpServer', 'iacSupport']],
-    ['Environment', ['energyClaim', 'sustainabilityUrl', 'certifications', 'greenWebId']],
-  ];
+  /*
+   * The same groups, in the same order, as the HTML record page — both read the
+   * dictionary. This file used to keep its own list, which had drifted: it
+   * printed `alsoOffers` and `cancellation`, gone from the schema, as unknown
+   * facts on every export, and never printed `entryPrice` or `exitWithin` at all.
+   */
+  const groups = fieldGroups();
 
-  const hidden = data.status === 'draft' || data.status === 'out-of-scope';
+  const hidden = hiddenStatuses.has(String(data.status));
 
   const lines = [
     `# ${data.name}`,
@@ -92,10 +65,10 @@ export const GET: APIRoute = async ({ props, site }) => {
     ...Object.entries((data.urls ?? {}) as Record<string, string>).map(([slot, url]) => `- ${slot}: ${url}`),
     ...Object.entries((data.social ?? {}) as Record<string, string>).map(([slot, url]) => `- ${slot}: ${url}`),
     '',
-    ...groups.flatMap(([heading, fields]) => [
-      `### ${heading}`,
+    ...groups.flatMap((group) => [
+      `### ${group.label}`,
       '',
-      ...fields.map((field) => `- ${field}: ${label(data[field])}`),
+      ...group.fields.map((field) => `- ${field.id}: ${label(data[field.id])}`),
       '',
     ]),
     /*

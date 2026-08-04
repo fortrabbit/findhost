@@ -1,15 +1,17 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
+import { hiddenStatuses } from './fields';
 
 /*
- * Two statuses hide a record. `draft` is one we have started and not finished;
- * `out-of-scope` is one considered and failed against a numbered criterion.
+ * Two statuses hide a record, and which two is `hidden: true` in the dictionary
+ * rather than a list repeated here. `draft` is one we have started and not
+ * finished; `out-of-scope` is one considered and failed against a numbered
+ * criterion.
  *
  * Both keep a page — a decision nobody can link to is not a decision, and a
  * name that redirects somewhere else deserves to be findable by the name people
  * still search for. Neither is listed, counted, faceted, indexed or in the
  * sitemap: the dataset is what the register shows.
  */
-const hiddenStatuses = new Set(['draft', 'out-of-scope']);
 
 export type Provider = CollectionEntry<'providers'>;
 
