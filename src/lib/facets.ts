@@ -1,4 +1,4 @@
-import { facetFields, type Field } from './fields';
+import { facetFields, isDerived, type Field } from './fields';
 import { isListed, loadProviders } from './providers';
 import { getCollection } from 'astro:content';
 
@@ -16,8 +16,6 @@ export interface Facet {
   label: string;
   /** The record field it reads. */
   field: string;
-  /** A heading shared with the facets next to it in the panel. Absent means it heads itself. */
-  filterGroup?: string;
   multiple: boolean;
   values: FacetValue[];
   /** Records that do not say. Displayed, never silently dropped. */
@@ -57,6 +55,18 @@ function toRow(record: { id: string; data: Record<string, unknown> }): ProviderR
   const notApplicable: string[] = [];
 
   for (const field of facetFields) {
+    /*
+     * A derived field is computed, not read. Every record gets an answer — the
+     * list of things it documents, empty if none — so the facet has nothing
+     * unknown in it: it asks what is offered, and silence is not a maybe.
+     */
+    if (isDerived(field.id)) {
+      facets[field.id] = field.values
+        .filter((value) => value.when!.includes(String(data[value.from!])))
+        .map((value) => value.id);
+      continue;
+    }
+
     const value = data[field.id];
     if (value === null) {
       notApplicable.push(field.id);
@@ -117,7 +127,6 @@ function countValues(field: Field, providers: ProviderRow[]): Facet {
     id: field.facet!,
     label: field.label,
     field: field.id,
-    ...(field.filterGroup ? { filterGroup: field.filterGroup } : {}),
     multiple: field.multiple,
     values,
     unknown: applicable.length - known.length,

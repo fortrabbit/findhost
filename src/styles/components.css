@@ -492,21 +492,6 @@
   min-width: 0;
 }
 
-/*
- * A run of facets under one heading. MCP, CLI and API all answer "Official /
- * None", so the heading carries the question and each keeps a quiet sub-title
- * rather than a second rule competing with it.
- */
-.find-facet-nested + .find-facet-nested {
-  margin-top: var(--space-xs);
-}
-
-.find-facet-nested .find-facet-title {
-  padding: 0;
-  border-bottom: 0;
-  font-size: var(--text-sm);
-}
-
 /* The way from a page that means one value to the register, where values combine. */
 .find-onward {
   margin: 0 0 var(--space-lg);

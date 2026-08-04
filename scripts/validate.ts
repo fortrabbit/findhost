@@ -13,6 +13,7 @@ import {
   facetFields,
   fieldOf,
   fields,
+  isDerived,
   groupNames,
   hiddenStatuses,
   renderModes,
@@ -78,11 +79,6 @@ for (const field of fields) {
     fail(dictionaryFile, `"${field.id}" borrows values from ${target}`);
   }
 
-  // Only the panel reads filterGroup, and only facets are in the panel.
-  if (field.filterGroup && !field.facet) {
-    fail(dictionaryFile, `"${field.id}" has a filterGroup but is not a facet, so nothing heads it`);
-  }
-
   if (field.facet) {
     if (seenFacet.has(field.facet)) fail(dictionaryFile, `two fields claim the facet "${field.facet}"`);
     seenFacet.add(field.facet);
@@ -97,23 +93,41 @@ for (const field of fields) {
 
     // Absent, a facet sorts silently last; shared, two facets swap places between builds.
     if (field.filterOrder === undefined) fail(dictionaryFile, `"${field.id}" is a facet with no filterOrder`);
-    else if (field.filterGroup) {
-      /*
-       * The panel groups a run of neighbours, not everything wearing the name, so
-       * a facet sorted away from its group silently gets a second heading with
-       * the same words on it.
-       */
-      const run = facetFields.filter((candidate) => candidate.filterGroup === field.filterGroup);
-      const first = facetFields.indexOf(run[0]);
-      const contiguous = run.every((candidate, offset) => facetFields[first + offset] === candidate);
-      if (!contiguous && field === run[0]) {
-        fail(dictionaryFile, `filterGroup "${field.filterGroup}" is split by filterOrder, so the panel heads it twice`);
-      }
-    }
     else {
       const claimed = seenOrder.get(field.filterOrder);
       if (claimed) fail(dictionaryFile, `"${field.id}" and "${claimed}" both claim filterOrder ${field.filterOrder}`);
       seenOrder.set(field.filterOrder, field.id);
+    }
+  }
+
+  /*
+   * A derived field is computed from others, so it is all or nothing: one value
+   * without a `from` would read as unheld on every record, and the box would sit
+   * in the panel counting zero with nothing to say why.
+   */
+  const derivedValues = field.values.filter((value) => value.from);
+  if (derivedValues.length && derivedValues.length !== field.values.length) {
+    fail(dictionaryFile, `"${field.id}" derives some values and not others, so the rest can never be held`);
+  }
+
+  for (const value of derivedValues) {
+    const source = fieldOf.get(value.from!);
+    if (!source) {
+      fail(dictionaryFile, `"${field.id}" value "${value.id}" reads "${value.from}", which is not a field`);
+      continue;
+    }
+
+    if (!value.when?.length) {
+      fail(dictionaryFile, `"${field.id}" value "${value.id}" reads "${value.from}" without saying which values count`);
+      continue;
+    }
+
+    // A `when` naming a value the source does not have matches nothing, for ever.
+    const vocabulary = new Set(source.values.map((entry) => entry.id));
+    for (const wanted of value.when) {
+      if (!vocabulary.has(wanted)) {
+        fail(dictionaryFile, `"${field.id}" value "${value.id}" waits for "${value.from}: ${wanted}", which does not exist`);
+      }
     }
   }
 
@@ -166,6 +180,16 @@ const schema = readFileSync(schemaFile, 'utf8')
   .replace(/\/\/[^\n]*/g, '');
 
 for (const field of fields) {
+  // A derived field is computed from the ones below it and never written down,
+  // so the schema must not name it — a record carrying one would be asserting
+  // by hand what the build works out.
+  if (isDerived(field.id)) {
+    if (new RegExp(`(^|\\s)${field.id}:`, 'm').test(schema)) {
+      fail(schemaFile, `"${field.id}" is derived in ${dictionaryFile}, so no record may carry it`);
+    }
+    continue;
+  }
+
   // A key or a vocabulary() call, not a mention: the schema's comments name
   // fields it deliberately no longer carries, and `cancellation` in a sentence
   // about why it was dropped would otherwise vouch for `cancellation` returning.
@@ -288,7 +312,7 @@ for (const { file, data } of records) {
   }
 
   for (const field of fields) {
-    if (!field.values.length) continue;
+    if (!field.values.length || isDerived(field.id)) continue;
 
     const value = data[field.id];
     if (value === undefined || value === null) continue;

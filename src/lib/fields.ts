@@ -29,6 +29,13 @@ export interface FieldValue {
    * validate.ts enforces it; nothing fills it in silently.
    */
   implies?: string[];
+  /**
+   * The field this value reads, and the values of it that count as a yes. Set on
+   * every value of a derived field and on no other: nothing carries a derived
+   * field in its frontmatter, so it is computed per record rather than recorded.
+   */
+  from?: string;
+  when?: string[];
 }
 
 export interface Field {
@@ -39,12 +46,6 @@ export interface Field {
   group?: string;
   /** The URL segment where the field is filterable. Absent means shown but not filtered. */
   facet?: string;
-  /**
-   * A heading in the filter panel shared with the facets either side of it. Three
-   * facets whose values all read "Official / None" need to say what they are
-   * official at. Absent is the normal case: the facet carries its own title.
-   */
-  filterGroup?: string;
   filterOrder?: number;
   multiple: boolean;
   /** How the value is drawn where it is not a label lookup. */
@@ -135,6 +136,17 @@ export const fields: Field[] = entries.map((entry) => ({
 }));
 
 export const fieldOf = new Map(fields.map((field) => [field.id, field]));
+
+/**
+ * Fields no record carries: every value reads another field instead. They are
+ * computed per record in lib/facets.ts, are never in the zod schema, and are the
+ * one kind of field `validate` does not expect to find in a record.
+ */
+export const derivedFields = fields.filter(
+  (field) => field.values.length > 0 && field.values.every((value) => value.from),
+);
+
+export const isDerived = (id: string) => derivedFields.some((field) => field.id === id);
 
 /**
  * Statuses that keep a record out of the register and out of every count. The

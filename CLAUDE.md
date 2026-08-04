@@ -66,13 +66,15 @@ The same rules govern two frontmatter fields, because both are prose:
 
 ## Changing the data model
 
-Four procedures, because each one has a step that used to be forgotten silently. `pnpm run validate` now catches most of them; the ones it cannot are marked.
+Five procedures, because each one has a step that used to be forgotten silently. `pnpm run validate` now catches most of them; the ones it cannot are marked.
 
 **Add a field.** Entry in `src/data/fields.yml`, then the key in `src/content.config.ts` — zod needs it written out, and a field the schema does not name is stripped from every record by the content loader. `validate` fails if you do the first and forget the second. Give it a `group` to have it appear on the record page and in the markdown export; omit `group` to have it validated and never shown.
 
 **Add a value.** One line in the field's `values`. Nothing else — the schema enum, the filter panel, the facet page and the counts all derive from it. Two things `validate` will stop you on: an id that is not a usable URL segment, and a note written for a value no record holds yet. If the value needs a shorter name in the filter column, give it `short:`. If it cannot honestly be held without another value of the same field — WooCommerce is WordPress — give it `implies: [other-id]` and `validate` holds every record to it.
 
 **Add a facet.** `facet:` and a unique `filterOrder:` on the field. `validate` rejects a slug that collides with a real page or that another field already claims. Two things it cannot see: `src/pages/[facet]/[value].astro` has a `subjects` map that phrases each facet's summary sentence in English, and a facet with no entry there falls back to generic prose that is correct but clumsy — add a line. And `regions` is the one facet whose index is `/map/` rather than `/<facet>/`; use `facetIndex()` from `lib/facets.ts` rather than building the path.
+
+**Add a derived facet.** A facet whose values are computed from other fields rather than recorded. Every value carries `from:` (the field it reads) and `when:` (the values of it that count as a yes) — `automation` is the one that exists, asking whether a provider has an API, a CLI or an MCP server at all, while the three fields behind it keep the detail. It is all or nothing: `validate` rejects a field that derives some values and not others, rejects a `when:` naming a value the source field does not have, and rejects the field appearing in `src/content.config.ts`, because no record may carry by hand what the build works out. A derived facet has no unknowns — every record gets an answer, possibly an empty one — so it shows no "unknown" count under its list.
 
 **Rename a facet slug or a value id.** Change it in `fields.yml`, sweep every record that carries the old value, add a redirect in `astro.config.mjs`, and rename any note under `src/content/notes/`. `validate` catches the records and the notes; `linkcheck:internal` catches links in prose and the sitemap. Neither catches an old URL someone else has already linked to, which is what the redirect is for.
 

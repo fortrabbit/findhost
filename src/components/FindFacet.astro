@@ -3,13 +3,9 @@ import { facetIndex, type Facet } from '../lib/facets';
 
 interface Props {
   facet: Facet;
-  /** Set where the facet sits under a shared heading, so its own title steps down a level. */
-  nested?: boolean;
 }
 
-const { facet, nested = false } = Astro.props;
-
-const Title = nested ? 'h3' : 'h2';
+const { facet } = Astro.props;
 
 /** Values in use, commonest first. The order is fixed here and never re-sorted. */
 const values = facet.values
@@ -20,16 +16,19 @@ const values = facet.values
 const shown = 5;
 const tail = values.slice(shown);
 
-const missing = [facet.unknown > 0 && `${facet.unknown} unknown`, facet.notApplicable > 0 && `${facet.notApplicable} n/a`]
+const missing = [
+  facet.unknown > 0 && `${facet.unknown} unknown`,
+  facet.notApplicable > 0 && `${facet.notApplicable} n/a`,
+]
   .filter(Boolean)
   .join(' · ');
 ---
 
-<div class:list={['find-facet', nested && 'find-facet-nested']} role="group" aria-labelledby={`facet-${facet.id}`}>
-  <Title class="find-facet-title" id={`facet-${facet.id}`}>
+<div class="find-facet" role="group" aria-labelledby={`facet-${facet.id}`}>
+  <h2 class="find-facet-title" id={`facet-${facet.id}`}>
     <a href={facetIndex(facet.id)}>{facet.label}</a>{' '}
     <a class="find-jump" href={facetIndex(facet.id)} aria-hidden="true" tabindex="-1">→</a>
-  </Title>
+  </h2>
 
   {
     values.slice(0, shown).map((value) => (
@@ -61,25 +60,30 @@ const missing = [facet.unknown > 0 && `${facet.unknown} unknown`, facet.notAppli
     )
   }
 
-  {/* One line under the list: what it is hiding, and what it never knew. */}
-  <p class="find-facet-foot">
-    {
-      [
-        tail.length > 0 && (
-          <button
-            type="button"
-            class="find-more"
-            aria-expanded="false"
-            aria-controls={`tail-${facet.id}`}
-            data-more={tail.length}
-          >
-            {tail.length} more
-          </button>
-        ),
-        missing,
-      ]
-        .filter(Boolean)
-        .flatMap((part, index) => (index ? [' · ', part] : [part]))
-    }
-  </p>
+  {
+    /* One line under the list: what it is hiding, and what it never knew. A
+      derived facet has neither, so it gets no line rather than an empty one. */
+  }
+  {
+    (tail.length > 0 || missing) && (
+      <p class="find-facet-foot">
+        {[
+          tail.length > 0 && (
+            <button
+              type="button"
+              class="find-more"
+              aria-expanded="false"
+              aria-controls={`tail-${facet.id}`}
+              data-more={tail.length}
+            >
+              {tail.length} more
+            </button>
+          ),
+          missing,
+        ]
+          .filter(Boolean)
+          .flatMap((part, index) => (index ? [' · ', part] : [part]))}
+      </p>
+    )
+  }
 </div>

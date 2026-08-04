@@ -634,9 +634,6 @@
 - id: mcpServer
   label: MCP
   group: Automation
-  facet: mcp
-  filterGroup: Automation
-  filterOrder: 14
   values:
     - { id: official, label: Official }
     - { id: community, label: Community }
@@ -645,9 +642,6 @@
 - id: cliTool
   label: CLI
   group: Automation
-  facet: cli
-  filterGroup: Automation
-  filterOrder: 15
   values:
     - { id: official, label: Official }
     - { id: third-party, label: Third-party }
@@ -656,13 +650,24 @@
 - id: apiAvailable
   label: API
   group: Automation
-  facet: api
-  filterGroup: Automation
-  filterOrder: 16
   values:
     - { id: public, label: Public }
     - { id: partner-only, label: Partners only }
     - { id: none, label: None }
+
+# Derived, and the only field here that is. No record carries `automation`; each
+# value reads one of the three fields above and asks the single question a filter
+# is for — is there one. The detail stays on the record, where "Official" and
+# "Community" mean different things; in a filter column they are the same answer.
+- id: automation
+  label: Automation
+  facet: automation
+  filterOrder: 14
+  multiple: true
+  values:
+    - { id: api, label: API, from: apiAvailable, when: [public, partner-only] }
+    - { id: cli, label: CLI, from: cliTool, when: [official, third-party] }
+    - { id: mcp, label: MCP, from: mcpServer, when: [official, community] }
 
 - id: iacSupport
   label: Infrastructure as code

@@ -16,6 +16,10 @@ export default defineConfig({
     '/provider/[id]': '/providers/[id]',
     // The region index is the map. /regions/<code>/ pages are unaffected.
     '/regions': '/map',
+    // MCP, CLI and API were three facets before they were three values of one.
+    '/mcp': '/automation/mcp',
+    '/cli': '/automation/cli',
+    '/api': '/automation/api',
     /*
      * The category explainers were guide pages before they were notes on a
      * facet. Written out one by one rather than as `[category]`, because a
