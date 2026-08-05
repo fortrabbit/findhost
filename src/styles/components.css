@@ -413,6 +413,60 @@
   min-width: 0;
 }
 
+/** Headquarters as an ISO code. A flag is a picture of a government; this is data. */
+.provider-country {
+  font-family: var(--font-data);
+  font-size: var(--text-xs);
+  font-variant-numeric: tabular-nums;
+}
+
+/*
+ * The slim view. One markup, two readings: the tile and the description are
+ * hidden rather than left unbuilt, so find.ts rebuilds rows on a filter without
+ * knowing which view is on and the two renderers cannot disagree.
+ */
+.slim .provider-tile,
+.slim .provider-body p {
+  display: none;
+}
+
+.slim .provider-list > li {
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: var(--space-2xs) 0;
+}
+
+/** Two icons, pressed rather than coloured — the state is which list is on, not which is nicer. */
+.list-style {
+  display: flex;
+  gap: var(--space-3xs);
+  justify-content: flex-end;
+  margin-bottom: var(--space-2xs);
+}
+
+.list-style[hidden] {
+  display: none;
+}
+
+.list-style button {
+  display: inline-flex;
+  padding: var(--space-3xs) var(--space-2xs);
+  border: var(--rule-hairline) solid var(--color-ink);
+  background: var(--color-page);
+  color: var(--color-ink);
+  cursor: pointer;
+}
+
+.list-style button[aria-pressed='true'] {
+  background: var(--color-ink);
+  color: var(--color-page);
+}
+
+.list-style svg {
+  width: 1em;
+  height: 1em;
+}
+
 /* Block, not inline: an inline name sits on a line box struck at the body's leading, which adds 7px of air under it. */
 .provider-name {
   display: block;

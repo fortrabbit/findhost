@@ -5,6 +5,8 @@ interface Row {
   description?: string;
   publishedByUs?: boolean;
   greenWebId?: number | null;
+  /** ISO code, shown as text. A flag is a picture of a government, not of where a server is. */
+  country?: string;
   figure?: { emoji: string; color: string; textColor: string };
 }
 
@@ -54,6 +56,8 @@ const { providers, namesOnly = false } = Astro.props;
             </span>
             {described && <p>{provider.description}</p>}
           </div>
+
+          {provider.country && <span class="provider-country">{provider.country}</span>}
         </li>
       );
     })

@@ -1,5 +1,6 @@
 ---
 import ProviderList from './ProviderList.astro';
+import ListStyleToggle from './ListStyleToggle.astro';
 import { facetIndex, type Facet, type ProviderRow } from '../lib/facets';
 
 interface Props {
@@ -53,6 +54,8 @@ const groups = [...new Set(providers.map((provider) => letterOf(provider.name)))
   )
 }
 
+<ListStyleToggle />
+
 {
   seed ? (
     <p class="find-onward">
@@ -70,11 +73,9 @@ const groups = [...new Set(providers.map((provider) => letterOf(provider.name)))
       <section class="letter-group" id={group.anchor}>
         <h2>
           <a class="anchor-link" href={`#${group.anchor}`} aria-label={`Link to ${group.label}`}>
-            #
+            {group.label}
           </a>
-          {group.label}
         </h2>
-
         <ProviderList providers={group.rows} />
       </section>
     ))

@@ -235,4 +235,25 @@ test.describe('filtering', () => {
     await expect(row.locator('.provider-tile')).toBeVisible();
     await expect(row.locator('.provider-name a')).toBeVisible();
   });
+
+  /*
+   * Slim is a class on the results, not a second way to build a row, so a row
+   * rebuilt by a filter has to come back slim without the script knowing which
+   * view is on. That only holds while both renderers emit the same markup —
+   * which is what this asserts, from the far side of a filter.
+   */
+  test('keeps the slim view through a filter', async ({ page }) => {
+    await page.goto('/');
+
+    const row = page.locator('[data-find-results] .provider-list > li').first();
+    await expect(row.locator('.provider-tile')).toBeVisible();
+
+    await page.locator('[data-list-style] button[value=slim]').click();
+    await expect(row.locator('.provider-tile')).toBeHidden();
+    await expect(row.locator('.provider-name a')).toBeVisible();
+
+    await page.locator('.find-facet input[type=checkbox]').first().check();
+    await expect(row.locator('.provider-tile')).toBeHidden();
+    await expect(row.locator('.provider-name a')).toBeVisible();
+  });
 });

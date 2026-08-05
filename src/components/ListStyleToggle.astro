@@ -1,0 +1,29 @@
+---
+import cardText from 'bootstrap-icons/icons/card-text.svg?raw';
+import listUl from 'bootstrap-icons/icons/list-ul.svg?raw';
+
+/*
+ * Two ways to read the same list: with the description and the figure, or as
+ * names. It is one markup either way — the buttons put a class on the results
+ * and the stylesheet hides what the slim view does not want, so find.ts rebuilds
+ * rows without knowing which view is on and the two cannot drift.
+ *
+ * Hidden until the script takes it over, like the filter panel: a control that
+ * does nothing is worse than no control.
+ */
+const styles = [
+  { id: 'extended', label: 'Extended', title: 'Show descriptions', icon: cardText },
+  { id: 'slim', label: 'Slim', title: 'Names only', icon: listUl },
+];
+---
+
+<div class="list-style" role="group" aria-label="List style" data-list-style hidden>
+  {
+    styles.map((style) => (
+      <button type="button" value={style.id} title={style.title} aria-pressed="false">
+        <span class="visually-hidden">{style.label}</span>
+        <Fragment set:html={style.icon} />
+      </button>
+    ))
+  }
+</div>

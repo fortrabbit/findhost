@@ -38,6 +38,8 @@ export interface ProviderRow {
   publishedByUs?: boolean;
   /** Present when a third party has verified the energy claim. Not a score. */
   greenWebId?: number | null;
+  /** Headquarters, as the ISO code a list shows rather than the flag it does not. */
+  country?: string;
   /** The record's own emoji and colours — the only colour any list carries. */
   figure?: { emoji: string; color: string; textColor: string; text: string };
   /** Facet fields only, keyed by field name. A missing key means unknown. */
@@ -88,6 +90,7 @@ function toRow(record: { id: string; data: Record<string, unknown> }): ProviderR
     description: data.description as string | undefined,
     publishedByUs: data.publishedByUs as boolean | undefined,
     greenWebId: data.greenWebId as number | null | undefined,
+    country: data.hqCountry as string | undefined,
     figure: data.figure as ProviderRow['figure'],
     facets,
     notApplicable,

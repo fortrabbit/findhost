@@ -27,6 +27,7 @@ interface ProviderRow {
   description?: string;
   publishedByUs?: boolean;
   greenWebId?: number | null;
+  country?: string;
   figure?: { emoji: string; color: string; textColor: string };
   facets: Record<string, string | string[]>;
   notApplicable: string[];
@@ -98,6 +99,13 @@ function row(provider: ProviderRow): HTMLLIElement {
 
   item.append(body);
 
+  if (provider.country) {
+    const country = document.createElement('span');
+    country.className = 'provider-country';
+    country.textContent = provider.country;
+    item.append(country);
+  }
+
   return item;
 }
 
@@ -105,6 +113,38 @@ const filtersEl = document.querySelector<HTMLElement>('[data-find-filters]');
 const resultsEl = document.querySelector<HTMLElement>('[data-find-results]');
 const summaryEl = document.querySelector<HTMLElement>('[data-find-summary]');
 const fallbackEl = document.querySelector<HTMLElement>('[data-find-fallback]');
+const styleEl = document.querySelector<HTMLElement>('[data-list-style]');
+
+/*
+ * Extended or slim, as a class on the results rather than as a second way to
+ * build a row. Rebuilding the list on a filter keeps whichever view is on,
+ * because the class is on the container the rows are put into and the rows
+ * themselves are identical either way.
+ *
+ * It runs on every page carrying a register, including the facet value pages
+ * that ship no filters at all, so it is wired apart from everything below.
+ */
+if (styleEl && resultsEl) {
+  const stored = localStorage.getItem('list-style');
+  let current = stored === 'slim' ? 'slim' : 'extended';
+
+  const show = (style: string) => {
+    current = style;
+    resultsEl.classList.toggle('slim', style === 'slim');
+    for (const button of styleEl.querySelectorAll<HTMLButtonElement>('button')) {
+      button.setAttribute('aria-pressed', String(button.value === style));
+    }
+    localStorage.setItem('list-style', style);
+  };
+
+  styleEl.addEventListener('click', (event) => {
+    const button = (event.target as HTMLElement).closest<HTMLButtonElement>('button');
+    if (button && button.value !== current) show(button.value);
+  });
+
+  show(current);
+  styleEl.hidden = false;
+}
 
 if (filtersEl && resultsEl && summaryEl) {
   const response = await fetch('/providers.json');
