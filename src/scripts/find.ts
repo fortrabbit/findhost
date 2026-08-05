@@ -298,14 +298,17 @@ if (filtersEl && resultsEl && summaryEl) {
         section.className = 'letter-group';
         section.id = anchor;
 
+        const label = initial === '#' ? '0–9' : initial;
+
+        // The letter is the link. ProviderRegister.astro builds exactly this;
+        // the two headings differ and the register looks like two lists.
         const heading = document.createElement('h2');
         const anchorLink = document.createElement('a');
         anchorLink.className = 'anchor-link';
         anchorLink.href = `#${anchor}`;
-        anchorLink.textContent = '#';
-        // "#" names nothing aloud, and the server-rendered heading says which letter.
-        anchorLink.setAttribute('aria-label', `Link to ${initial === '#' ? '0–9' : initial}`);
-        heading.append(anchorLink, document.createTextNode(initial === '#' ? '0–9' : initial));
+        anchorLink.setAttribute('aria-label', `Link to ${label}`);
+        anchorLink.textContent = label;
+        heading.append(anchorLink);
         section.append(heading);
 
         list = document.createElement('ul');

@@ -238,6 +238,74 @@
   font-size: var(--text-sm);
 }
 
+/* --- The guide --- */
+
+/**
+ * A guide article with the rest of the guide beside it. The whole guide fits in
+ * one list, so a reader on any article can see the shape of the set without
+ * going back to an index. The figure band stays outside this grid: a rule that
+ * bleeds to both page edges cannot be measured from inside a column.
+ */
+.guide-layout {
+  display: grid;
+  grid-template-columns: 13rem minmax(0, 1fr);
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+.guide-layout > article {
+  min-width: 0;
+  max-width: var(--measure-prose);
+}
+
+.guide-nav {
+  position: sticky;
+  top: var(--space-md);
+  font-size: var(--text-sm);
+}
+
+.guide-nav > h2 {
+  margin: var(--space-md) 0 var(--space-2xs);
+  padding-bottom: var(--space-3xs);
+  border-bottom: var(--rule-strong) solid var(--color-ink);
+  font-size: var(--text-md);
+}
+
+.guide-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.guide-nav li {
+  padding: var(--space-3xs) 0;
+}
+
+.guide-nav a {
+  text-decoration: none;
+}
+
+.guide-nav a:hover {
+  text-decoration: underline;
+}
+
+.guide-nav a[aria-current='page'] {
+  color: var(--color-ink);
+  font-weight: var(--weight-strong);
+}
+
+/* One column, nav first: on a narrow screen the list is a table of contents. */
+@media (max-width: 52rem) {
+  .guide-layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .guide-nav {
+    position: static;
+  }
+}
+
 /* --- The alphabet --- */
 
 .alphabet {
@@ -257,23 +325,31 @@
  */
 .letter-group {
   display: flex;
+  margin-top: 0;
+  padding-top: 0;
   align-items: flex-start;
   gap: var(--space-md);
+  border-top: var(--rule-strong) solid var(--color-ink);
 }
 
+/*
+ * The same top padding as a row, so the letter and the first name in its group
+ * share a top edge. Without it the letter sits a row's padding higher than the
+ * thing it labels, which is the misalignment and not the font.
+ */
 .letter-group > h2 {
   position: sticky;
-  top: var(--space-md);
+  top: var(--space-sm);
   flex: 0 0 3.5rem;
-  margin: var(--space-lg) 0 var(--space-2xs);
-  font-size: var(--text-lg);
-  /* "# 0–9" is the widest of them; wrapped, it reads as two headings. */
+  margin: 0;
+  padding-top: var(--space-sm);
+  font-size: var(--text-md);
   white-space: nowrap;
 }
 
-.letter-group:first-child > h2 {
+/*.letter-group:first-child > h2 {
   margin-top: 0;
-}
+}*/
 
 .letter-group > .provider-list {
   flex: 1;
@@ -292,8 +368,8 @@
 }
 
 /** The anchor, shown rather than hidden until hover — it is a link, not a secret. */
+/** The letter is the link now, so it starts at the column's edge and nothing sits before it. */
 .anchor-link {
-  margin-right: var(--space-2xs);
   font-family: var(--font-data);
   font-size: var(--text-sm);
   text-decoration: none;
@@ -351,28 +427,28 @@
  */
 .provider-list > li {
   /* 1.09rem × 1.2 name + 0.86rem × 1.38 description */
-  --tile: 2.5rem;
+  --tile: 2.3rem;
 
   display: grid;
   grid-template-columns: var(--tile) 1fr auto;
   gap: 0 var(--space-sm);
   align-items: start;
-  padding: var(--space-xs) 0;
-  border-top: var(--rule-hairline) solid var(--color-ink);
+  padding: var(--space-sm) 0;
+  /*border-top: var(--rule-hairline) solid var(--color-ink);*/
 }
 
 .provider-list > li.one-line {
   /* The name's line box, alone. */
-  --tile: 1.31rem;
+  --tile: 1.2rem;
 
   align-items: center;
   padding: var(--space-2xs) 0;
 }
 
 /* Close the table, so the list ends rather than trailing off. */
-.provider-list > li:last-child {
+/*.provider-list > li:last-child {
   border-bottom: var(--rule-hairline) solid var(--color-ink);
-}
+}*/
 
 /** Colour on the page comes from the records, never from the palette. */
 .provider-tile {
@@ -629,8 +705,8 @@
   max-width: none;
   margin-block: var(--space-lg);
   padding-block: var(--space-lg);
-  font-family: var(--font-display);
-  font-size: var(--text-xl);
+  /*font-family: var(--font-display);*/
+  font-size: var(--text-lg);
   line-height: var(--leading-tight);
   text-wrap: balance;
 }
@@ -641,7 +717,7 @@
 }
 
 .figure-band span[aria-hidden] {
-  font-size: 2.4em;
+  font-size: 2.1em;
   line-height: 1;
 }
 

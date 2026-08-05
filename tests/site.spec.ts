@@ -227,6 +227,22 @@ test.describe('filtering', () => {
     await expect(page.locator('[data-find-summary]')).toContainText(new RegExp(`of ${listed}`));
   });
 
+  /*
+   * The letter heading is built twice, here and in ProviderRegister.astro, and
+   * they drifted: the server put the letter inside the anchor while the script
+   * still wrote "#" plus a bare text node beside it. Same list, two headings,
+   * two fonts. The heading holds nothing but its own link, so a stray text node
+   * on either side fails.
+   */
+  test('heads a letter group the same way the server does', async ({ page }) => {
+    await page.goto('/');
+    await page.locator('.find-facet input[type=checkbox]').first().check();
+
+    const heading = page.locator('[data-find-results] .letter-group > h2').first();
+    await expect(heading.locator('.anchor-link')).toHaveCount(1);
+    expect((await heading.innerText()).trim()).toBe((await heading.locator('.anchor-link').innerText()).trim());
+  });
+
   test('a filtered row looks exactly like an unfiltered one', async ({ page }) => {
     await page.goto('/');
     await page.locator('.find-facet input[type=checkbox]').first().check();
