@@ -213,9 +213,6 @@ if (filtersEl && resultsEl && summaryEl) {
       ),
     );
 
-  /** Per facet group, the way to open its tail — a ticked box the reader cannot see is a filter nobody trusts. */
-  const tails = new Map<HTMLElement, () => void>();
-
   /*
    * The panel is markup now — components/FindFilters.astro — and this attaches
    * to it. Building it here put the whole design of the filter inside a script
@@ -226,22 +223,6 @@ if (filtersEl && resultsEl && summaryEl) {
    * checkbox. Taking that off is this script saying it is in charge.
    */
   const wireFilters = () => {
-    for (const group of filtersEl.querySelectorAll<HTMLElement>('.find-facet')) {
-      const tail = group.querySelector<HTMLElement>('.find-tail');
-      const more = group.querySelector<HTMLButtonElement>('.find-more');
-
-      if (tail && more) {
-        const count = more.dataset.more;
-        const show = (open: boolean) => {
-          tail.hidden = !open;
-          more.setAttribute('aria-expanded', String(open));
-          more.textContent = open ? 'Fewer' : `${count} more`;
-        };
-        more.addEventListener('click', () => show(Boolean(tail.hidden)));
-        tails.set(group, () => show(true));
-      }
-    }
-
     for (const input of filtersEl.querySelectorAll<HTMLInputElement>('input[data-facet]')) {
       const facetId = input.dataset.facet!;
       input.addEventListener('change', () => {
@@ -264,13 +245,19 @@ if (filtersEl && resultsEl && summaryEl) {
     filtersEl.hidden = false;
   };
 
+  /*
+   * A ticked box the reader cannot see is a filter nobody trusts, and the values
+   * scroll now — so a value arriving ticked from the URL is scrolled to, and one
+   * that sits under the "All filters" disclosure opens it.
+   */
   const syncFilters = () => {
     for (const input of filtersEl.querySelectorAll<HTMLInputElement>('input[data-facet]')) {
       input.checked = selected.get(input.dataset.facet!)?.has(input.value) ?? false;
-      if (input.checked && input.closest('.find-tail')) {
-        const group = input.closest<HTMLElement>('.find-facet');
-        if (group) tails.get(group)?.();
-      }
+      if (!input.checked) continue;
+
+      const hidden = input.closest<HTMLDetailsElement>('details');
+      if (hidden) hidden.open = true;
+      input.closest('.find-row')?.scrollIntoView({ block: 'nearest' });
     }
   };
 

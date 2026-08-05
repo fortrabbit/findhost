@@ -19,30 +19,62 @@ const { facets, drafts } = Astro.props;
  * nothing is worse than no checkbox: without JavaScript the fallback below the
  * register links every value as a page instead.
  */
+
+/*
+ * One row of the facets most people arrive with; the rest behind a disclosure.
+ * `<details>` rather than a button, because it opens with JavaScript off — the
+ * markup is what a crawler reads, and a filter it cannot reach is a filter that
+ * does not exist as far as the index is concerned.
+ *
+ * The order is `filterOrder` in fields.yml, so which six lead is a dictionary
+ * decision rather than a number in a component.
+ */
+const lead = 6;
+const rest = facets.slice(lead);
 ---
 
 <div class="find-filters full-width" data-find-filters hidden>
-  {facets.map((facet) => <FindFacet facet={facet} />)}
+  <div class="find-row-of-facets">
+    {facets.slice(0, lead).map((facet) => <FindFacet facet={facet} />)}
+  </div>
 
   {
-    drafts > 0 && (
-      <div class="find-facet find-drafts">
-        <h2 class="find-facet-title">Stubs</h2>
+    (rest.length > 0 || drafts > 0) && (
+      <details class="find-more-filters">
+        <summary>All filters</summary>
 
-        <label>
-          {/* autocomplete=off on every box: the panel is static markup now, and a
-              browser restoring a checked state on reload would disagree with the
-              URL, which is the only state this script trusts. */}
-          <input type="checkbox" data-drafts autocomplete="off" />
-          <span class="find-value">Show these too</span>
-          <span class="find-count">
-            {drafts}
-            <span class="visually-hidden"> records</span>
-          </span>
-        </label>
+        <div class="find-row-of-facets">
+          {rest.map((facet) => (
+            <FindFacet facet={facet} />
+          ))}
 
-        <p class="annotation">Started and unfinished, or considered and out of scope. Not counted, not filtered.</p>
-      </div>
+          {drafts > 0 && (
+            <div class="find-facet find-drafts">
+              <h2 class="find-facet-title">
+                <span>Stubs</span>
+              </h2>
+
+              <div class="find-values">
+                <div class="find-row">
+                  {/* autocomplete=off on every box: the panel is static markup now, and a
+                      browser restoring a checked state on reload would disagree with the
+                      URL, which is the only state this script trusts. */}
+                  <label>
+                    <input type="checkbox" data-drafts autocomplete="off" />
+                    <span class="find-value">Show these too</span>
+                  </label>
+                  <span class="find-count">
+                    {drafts}
+                    <span class="visually-hidden"> records</span>
+                  </span>
+                </div>
+              </div>
+
+              <p class="find-facet-foot">Started and unfinished, or considered and out of scope. Never counted.</p>
+            </div>
+          )}
+        </div>
+      </details>
     )
   }
 </div>

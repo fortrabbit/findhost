@@ -18,10 +18,6 @@ const values = facet.values
   .filter((value) => value.count > 0)
   .sort((a, b) => (facet.ordered ? 0 : b.count - a.count || a.label.localeCompare(b.label, 'en')));
 
-/** How many values show before the "more" button. */
-const shown = 5;
-const tail = values.slice(shown);
-
 const missing = [
   facet.unknown > 0 && `${facet.unknown} unknown`,
   facet.notApplicable > 0 && `${facet.notApplicable} n/a`,
@@ -31,65 +27,42 @@ const missing = [
 ---
 
 <div class="find-facet" role="group" aria-labelledby={`facet-${facet.id}`}>
+  {/* The count is the link, on both lines: the number says how much is behind it. */}
   <h2 class="find-facet-title" id={`facet-${facet.id}`}>
-    <a href={facetIndex(facet.id)}>{facet.label}</a>{' '}
-    <a class="find-jump" href={facetIndex(facet.id)} aria-hidden="true" tabindex="-1">→</a>
+    <span>{facet.label}</span>
+    <a class="find-jump" href={facetIndex(facet.id)}>
+      {values.length}
+      <span class="visually-hidden"> values, all of them on one page</span>
+    </a>
   </h2>
 
   {
-    values.slice(0, shown).map((value) => (
-      <label title={value.label}>
-        <input type="checkbox" data-facet={facet.id} value={value.id} autocomplete="off" />
-        <span class="find-value">{value.short ?? value.label}</span>
-        <span class="find-count">
-          {value.count}
-          <span class="visually-hidden"> records</span>
-        </span>
-      </label>
-    ))
+    /*
+     * A scroller rather than a "more" button. Every value is in the markup and
+     * reachable by keyboard either way; this costs no click and no second
+     * rendering path, and the panel keeps one height whatever a facet holds.
+     *
+     * The checkbox and the link cannot share a <label> — a link inside one is
+     * both a navigation and a toggle, and a click has to mean one thing.
+     */
   }
-
-  {
-    tail.length > 0 && (
-      <div class="find-tail" id={`tail-${facet.id}`} hidden>
-        {tail.map((value) => (
+  <div class="find-values">
+    {
+      values.map((value) => (
+        <div class="find-row">
           <label title={value.label}>
             <input type="checkbox" data-facet={facet.id} value={value.id} autocomplete="off" />
             <span class="find-value">{value.short ?? value.label}</span>
-            <span class="find-count">
-              {value.count}
-              <span class="visually-hidden"> records</span>
-            </span>
           </label>
-        ))}
-      </div>
-    )
-  }
+          <a class="find-count" href={`/${facet.id}/${value.id}/`}>
+            {value.count}
+            <span class="visually-hidden"> records, listed on their own page</span>
+          </a>
+        </div>
+      ))
+    }
+  </div>
 
-  {
-    /* One line under the list: what it is hiding, and what it never knew. A
-      derived facet has neither, so it gets no line rather than an empty one. */
-  }
-  {
-    (tail.length > 0 || missing) && (
-      <p class="find-facet-foot">
-        {[
-          tail.length > 0 && (
-            <button
-              type="button"
-              class="find-more"
-              aria-expanded="false"
-              aria-controls={`tail-${facet.id}`}
-              data-more={tail.length}
-            >
-              {tail.length} more
-            </button>
-          ),
-          missing,
-        ]
-          .filter(Boolean)
-          .flatMap((part, index) => (index ? [' · ', part] : [part]))}
-      </p>
-    )
-  }
+  {/* Outside the scroller: what the facet never knew does not scroll away. */}
+  {missing && <p class="find-facet-foot">{missing}</p>}
 </div>

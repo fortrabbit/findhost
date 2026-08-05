@@ -38,7 +38,7 @@
   label: Ownership
   group: Identity
   facet: ownership
-  filterOrder: 13
+  filterOrder: 14
   values:
     - { id: independent, label: Independent }
     - { id: vc-backed, label: VC-backed }
@@ -74,7 +74,7 @@
   label: Category
   group: Classification
   facet: categories
-  filterOrder: 3
+  filterOrder: 2
   values:
     - { id: paas, label: Platform as a Service, short: PaaS }
     - { id: vps, label: Virtual Private Servers, short: VPS }
@@ -132,7 +132,7 @@
   label: Use cases
   group: Classification
   facet: use-case
-  filterOrder: 4
+  filterOrder: 6
   multiple: true
   values:
     - { id: cms, label: CMS sites }
@@ -159,7 +159,7 @@
   label: Audience
   group: Classification
   facet: audience
-  filterOrder: 5
+  filterOrder: 8
   multiple: true
   values:
     - { id: indie-hacker, label: Indie hackers }
@@ -180,7 +180,7 @@
   label: Stack
   group: Tech stack
   facet: runtimes
-  filterOrder: 2
+  filterOrder: 5
   multiple: true
   values:
     - { id: php, label: PHP }
@@ -362,7 +362,7 @@
   group: Pricing
   facet: entry-price
   ordered: true
-  filterOrder: 7
+  filterOrder: 4
   values:
     - { id: xs, label: 'Under $5 a month' }
     - { id: sm, label: '$5 to $15 a month' }
@@ -434,7 +434,7 @@
   group: Pricing
   facet: exit
   ordered: true
-  filterOrder: 8
+  filterOrder: 13
   values:
     - { id: a-day, label: Within a day }
     - { id: a-month, label: Within a month }
@@ -475,7 +475,7 @@
   label: Regions
   group: Regions and law
   facet: regions
-  filterOrder: 6
+  filterOrder: 3
   multiple: true
   values:
     - { id: DE, label: Germany }
@@ -664,7 +664,7 @@
 - id: automation
   label: Automation
   facet: automation
-  filterOrder: 14
+  filterOrder: 7
   multiple: true
   values:
     - { id: api, label: API, from: apiAvailable, when: [public, partner-only] }
