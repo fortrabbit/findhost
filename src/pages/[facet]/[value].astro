@@ -37,6 +37,13 @@ const subjects: Record<string, string> = {
       none: 'have no free tier',
     }[value.id] ?? `record a free tier of ${value.label.toLowerCase()}`,
   ssh: `give ${value.label.toLowerCase()} SSH access`,
+  support:
+    {
+      email: 'answer email or a ticket',
+      chat: 'staff a chat',
+      phone: 'publish a phone number',
+      forum: 'run a community forum',
+    }[value.id] ?? `offer support by ${value.label.toLowerCase()}`,
   'os-managed-by':
     {
       you: 'leave the operating system to you',
