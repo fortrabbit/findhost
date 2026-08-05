@@ -70,16 +70,11 @@ test.describe('the register', () => {
   });
 
   /*
-   * The register lived at /providers/ before it was the homepage, and llms.txt
-   * published that address for months. A redirect that quietly stops working
-   * looks from here exactly like one that works, so it is asserted rather than
-   * assumed — and /providers/<id>/ must survive it.
+   * The register moved to the homepage and /providers/ went with it, but the
+   * records did not — /providers/<id>/ is the one path under it that still
+   * resolves, and it is the most-linked address on the site.
    */
-  test('keeps the address it used to live at', async ({ page }) => {
-    await page.goto('/providers/');
-    await expect(page).toHaveURL('/');
-    await expect(page.locator('[data-find-results] .provider-list > li')).toHaveCount(listed);
-
+  test('keeps a record where records live', async ({ page }) => {
     // Scoped to the article: a bare h1 also matches whatever a browser
     // extension injects, which is why the anchors above are scoped too.
     await page.goto('/providers/hetzner/');
