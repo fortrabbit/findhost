@@ -16,7 +16,7 @@ useCases:
   - cms
 runtimes:
   - php
-sshAccess: full
+sshAccess: shell
 pricingModel: per-resource
 priceFrom: sm
 priceTo: md

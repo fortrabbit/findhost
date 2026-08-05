@@ -32,7 +32,7 @@ runtimes:
   - php
 deployMethods:
   - git-push
-sshAccess: full
+sshAccess: shell
 pricingModel: fixed-tier
 priceFrom: sm
 priceTo: md

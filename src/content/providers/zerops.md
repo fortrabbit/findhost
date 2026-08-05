@@ -47,7 +47,7 @@ deployMethods:
   - cli
   - docker-image
   - api
-sshAccess: full
+sshAccess: shell
 managedDatabases:
   - postgres
   - mariadb

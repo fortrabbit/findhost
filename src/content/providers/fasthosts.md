@@ -30,11 +30,11 @@ regions:
   - DE
   - ES
   - US
-sshAccess: full
+sshAccess: shell
 deployMethods:
   - ssh
   - sftp
-  - dashboard
+  - control-panel
 pricingModel: fixed-tier
 priceFrom: sm
 priceTo: md

@@ -48,7 +48,7 @@ deployMethods:
   - cli
   - api
   - docker-image
-sshAccess: limited
+sshAccess: shell
 managedDatabases:
   - postgres
   - mysql

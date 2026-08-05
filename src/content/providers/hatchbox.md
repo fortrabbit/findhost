@@ -34,7 +34,7 @@ runtimes:
 deployMethods:
   - git-integration
   - control-panel
-sshAccess: full
+sshAccess: shell
 pricingModel: fixed-tier
 priceFrom: sm
 priceTo: md

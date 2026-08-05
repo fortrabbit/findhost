@@ -54,7 +54,7 @@ deployMethods:
   - ftp
   - api
   - control-panel
-sshAccess: full
+sshAccess: shell
 pricingModel: fixed-tier
 priceFrom: sm
 priceTo: xl

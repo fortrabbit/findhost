@@ -30,7 +30,7 @@ deployMethods:
   - ftp
   - ssh
   - control-panel
-sshAccess: limited
+sshAccess: shell
 managedDatabases:
   - mysql
 pricingModel: fixed-tier

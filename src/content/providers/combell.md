@@ -35,7 +35,7 @@ deployMethods:
   - ftp
   - control-panel
   - api
-sshAccess: full
+sshAccess: shell
 pricingModel: fixed-tier
 priceFrom: md
 priceTo: lg

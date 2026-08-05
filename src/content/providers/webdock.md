@@ -32,7 +32,7 @@ deployMethods:
   - ssh
   - control-panel
   - api
-sshAccess: full
+sshAccess: shell
 pricingModel: fixed-tier
 priceFrom: xs
 priceTo: md

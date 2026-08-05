@@ -32,7 +32,7 @@ deployMethods:
   - sftp
   - ssh
   - control-panel
-sshAccess: full
+sshAccess: shell
 pricingModel: fixed-tier
 priceFrom: sm
 priceTo: md

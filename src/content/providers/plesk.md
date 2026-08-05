@@ -38,7 +38,7 @@ deployMethods:
   - git-integration
   - ssh
   - ftp
-sshAccess: full
+sshAccess: shell
 managedDatabases:
   - mysql
   - postgres

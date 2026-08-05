@@ -17,7 +17,7 @@ audience:
   - solo
 software:
   - wordpress
-sshAccess: full
+sshAccess: shell
 deployMethods:
   - ftp
   - control-panel

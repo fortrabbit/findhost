@@ -31,7 +31,7 @@ deployMethods:
   - ssh
   - ftp
   - control-panel
-sshAccess: full
+sshAccess: shell
 pricingModel: fixed-tier
 priceFrom: sm
 currencies:

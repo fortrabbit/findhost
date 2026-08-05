@@ -31,7 +31,7 @@ deployMethods:
   - git-integration
   - docker-image
   - api
-sshAccess: full
+sshAccess: shell
 pricingModel: per-resource
 priceFrom: xs
 priceTo: md

@@ -31,7 +31,7 @@ deployMethods:
   - ssh
   - ftp
   - control-panel
-sshAccess: limited
+sshAccess: shell
 managedDatabases:
   - mysql
 backupsIncluded: included

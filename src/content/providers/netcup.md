@@ -36,7 +36,7 @@ deployMethods:
   - ftp
   - ssh
   - control-panel
-sshAccess: full
+sshAccess: shell
 pricingModel: fixed-tier
 entryPrice: { amount: 2.69, currency: EUR, period: month }
 priceFrom: xs

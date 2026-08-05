@@ -31,7 +31,7 @@ deployMethods:
   - control-panel
   - docker-image
   - cli
-sshAccess: full
+sshAccess: shell
 pricingModel: usage-based
 currencies:
   - EUR

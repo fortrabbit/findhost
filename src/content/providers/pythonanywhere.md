@@ -34,7 +34,7 @@ deployMethods:
   - control-panel
   - ssh
   - git-push
-sshAccess: full
+sshAccess: shell
 pricingModel: per-resource
 priceFrom: sm
 priceTo: md

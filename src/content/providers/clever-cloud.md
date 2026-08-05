@@ -46,7 +46,7 @@ deployMethods:
   - cli
   - api
   - control-panel
-sshAccess: limited
+sshAccess: shell
 managedDatabases:
   - postgres
   - mysql

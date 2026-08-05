@@ -36,7 +36,21 @@ const subjects: Record<string, string> = {
       trial: 'offer a free trial rather than a free tier',
       none: 'have no free tier',
     }[value.id] ?? `record a free tier of ${value.label.toLowerCase()}`,
-  ssh: `give ${value.label.toLowerCase()} SSH access`,
+  ssh:
+    {
+      none: 'give no shell at all',
+      shell: 'give a shell',
+      root: 'give root',
+    }[value.id] ?? `give ${value.label.toLowerCase()} SSH access`,
+  deployment:
+    {
+      'git-push': 'deploy by pushing to a remote they host',
+      'git-connect': 'deploy from a repository they connect to',
+      pipeline: 'deploy from a CI pipeline',
+      'container-image': 'deploy a container image',
+      sftp: 'accept an upload over SFTP',
+      'control-panel': 'deploy from a control panel',
+    }[value.id] ?? `deploy by ${value.label.toLowerCase()}`,
   support:
     {
       email: 'answer email or a ticket',

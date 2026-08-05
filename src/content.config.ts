@@ -267,6 +267,8 @@ const providerFields = z
     domainRegistration: z.boolean().optional(),
     dnsHosting: z.boolean().optional(),
     emailHosting: z.boolean().optional(),
+    cdnIncluded: z.boolean().optional(),
+    testDomain: z.boolean().optional(),
 
     // Automation & agent support — the axis nobody else records
     apiAvailable: z.enum(vocabulary('apiAvailable')).optional(),

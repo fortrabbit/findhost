@@ -35,7 +35,7 @@ deployMethods:
   - git-integration
   - docker-image
   - cli
-sshAccess: limited
+sshAccess: shell
 persistentStorage: true
 managedDatabases:
   - postgres

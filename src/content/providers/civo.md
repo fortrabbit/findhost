@@ -29,7 +29,7 @@ deployMethods:
   - cli
   - control-panel
   - docker-image
-sshAccess: full
+sshAccess: shell
 managedDatabases:
   - postgres
 pricingModel: hourly

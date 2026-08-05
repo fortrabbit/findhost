@@ -38,7 +38,7 @@ deployMethods:
   - docker-image
   - cli
   - api
-sshAccess: full
+sshAccess: shell
 pricingModel: fixed-tier
 priceFrom: md
 priceTo: lg

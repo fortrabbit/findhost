@@ -32,7 +32,7 @@ deployMethods:
   - api
   - control-panel
   - ssh
-sshAccess: full
+sshAccess: shell
 pricingModel: hourly
 priceFrom: sm
 priceTo: xl

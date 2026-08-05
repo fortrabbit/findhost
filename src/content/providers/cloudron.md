@@ -32,7 +32,7 @@ deployMethods:
   - control-panel
   - cli
   - docker-image
-sshAccess: full
+sshAccess: shell
 pricingModel: fixed-tier
 priceFrom: md
 priceTo: lg

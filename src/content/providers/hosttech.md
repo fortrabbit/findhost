@@ -29,7 +29,7 @@ deployMethods:
   - ftp
   - ssh
   - git-push
-sshAccess: limited
+sshAccess: shell
 pricingModel: fixed-tier
 entryPrice: { amount: 6.9, currency: CHF, period: month }
 priceFrom: sm

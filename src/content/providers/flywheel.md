@@ -23,7 +23,7 @@ software:
   - wordpress
 runtimes:
   - php
-sshAccess: limited
+sshAccess: shell
 backupsIncluded: included
 pricingModel: fixed-tier
 priceFrom: md

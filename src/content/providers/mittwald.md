@@ -42,7 +42,7 @@ deployMethods:
   - cli
   - api
   - control-panel
-sshAccess: full
+sshAccess: shell
 pricingModel: fixed-tier
 entryPrice: { amount: 13, currency: EUR, period: month }
 priceFrom: sm

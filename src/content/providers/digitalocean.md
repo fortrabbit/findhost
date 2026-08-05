@@ -28,7 +28,7 @@ social:
   discord: https://discord.gg/digitalocean
 runtimes:
   - any
-sshAccess: full
+sshAccess: shell
 persistentStorage: true
 backupsIncluded: paid-addon
 managedDatabases:

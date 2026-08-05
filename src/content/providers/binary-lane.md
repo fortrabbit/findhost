@@ -29,7 +29,7 @@ deployMethods:
   - ssh
   - control-panel
   - api
-sshAccess: full
+sshAccess: shell
 pricingModel: hourly
 priceFrom: xs
 priceTo: lg

@@ -30,7 +30,7 @@ deployMethods:
   - control-panel
   - git-integration
   - ssh
-sshAccess: full
+sshAccess: shell
 managedDatabases:
   - mysql
 pricingModel: fixed-tier

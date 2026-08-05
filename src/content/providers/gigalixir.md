@@ -32,7 +32,7 @@ deployMethods:
   - git-push
   - cli
   - git-integration
-sshAccess: full
+sshAccess: shell
 managedDatabases:
   - postgres
 pricingModel: per-resource

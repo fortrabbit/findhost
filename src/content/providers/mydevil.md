@@ -36,7 +36,7 @@ deployMethods:
   - ssh
   - sftp
   - git-push
-sshAccess: full
+sshAccess: shell
 managedDatabases:
   - mysql
   - postgres

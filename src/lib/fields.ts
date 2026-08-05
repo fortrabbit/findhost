@@ -81,6 +81,7 @@ export const groupNames = [
   'Regions and law',
   'Environment',
   'Support',
+  'Deployment',
   'Included',
   'Automation',
 ] as const;

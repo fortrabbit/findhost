@@ -14,7 +14,7 @@ parent: Akamai Technologies
 whoManagesOs: you
 runtimes:
   - any
-sshAccess: full
+sshAccess: shell
 pricingModel: hourly
 entryPrice: { amount: 5, currency: USD, period: month }
 priceFrom: sm

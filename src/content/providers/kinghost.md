@@ -37,7 +37,7 @@ deployMethods:
   - ftp
   - git-integration
   - control-panel
-sshAccess: limited
+sshAccess: shell
 pricingModel: fixed-tier
 entryPrice: { amount: 9.99, currency: BRL, period: month }
 currencies:

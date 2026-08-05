@@ -32,7 +32,7 @@ deployMethods:
   - git-push
   - ftp
   - control-panel
-sshAccess: full
+sshAccess: shell
 managedDatabases:
   - mysql
 pricingModel: fixed-tier

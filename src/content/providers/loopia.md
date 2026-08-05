@@ -35,7 +35,7 @@ deployMethods:
   - ssh
   - sftp
   - control-panel
-sshAccess: full
+sshAccess: shell
 pricingModel: fixed-tier
 entryPrice: { amount: 89, currency: SEK, period: month }
 priceFrom: md

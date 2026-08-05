@@ -38,7 +38,7 @@
   label: Ownership
   group: Identity
   facet: ownership
-  filterOrder: 16
+  filterOrder: 17
   values:
     - { id: independent, label: Independent }
     - { id: vc-backed, label: VC-backed }
@@ -97,7 +97,7 @@
   label: OS
   group: Classification
   facet: os-managed-by
-  filterOrder: 13
+  filterOrder: 14
   values:
     - { id: you, label: 'You' }
     - { id: provider, label: 'Provider' }
@@ -108,7 +108,7 @@
   label: Metal
   group: Classification
   facet: hardware
-  filterOrder: 14
+  filterOrder: 15
   multiple: true
   values:
     - { id: owns-metal, label: Owns the hardware, short: Owns }
@@ -138,7 +138,7 @@
   label: Use cases
   group: Classification
   facet: use-case
-  filterOrder: 8
+  filterOrder: 9
   multiple: true
   values:
     - { id: cms, label: CMS sites }
@@ -167,7 +167,7 @@
   label: Audience
   group: Classification
   facet: audience
-  filterOrder: 10
+  filterOrder: 11
   multiple: true
   values:
     - { id: solo, label: Solo and freelance, short: Solo }
@@ -285,33 +285,41 @@
     - { id: django, label: Django }
     - { id: elixir, label: Elixir }
 
-# `git-integration` is a repository the provider watches; `git-push` is a remote
-# they hand you. Different enough to deploy differently, so they stay apart.
+# How code gets there — a separate question from what may be done once it has
+# arrived. `git-integration` is a repository the provider watches; `git-push` is
+# a remote they hand you. Different enough to deploy differently, so they stay
+# apart.
 - id: deployMethods
-  label: Deploy methods
-  group: Tech stack
+  label: Deployment
+  group: Deployment
+  facet: deployment
+  filterOrder: 7
   multiple: true
   values:
-    - { id: git-integration, label: Git integration }
+    - { id: git-integration, label: Git integration, short: Git repo }
     - { id: git-push, label: Git push }
+    - { id: pipeline, label: CI pipeline }
     - { id: cli, label: CLI }
     - { id: api, label: API }
-    - { id: docker-image, label: Docker image }
-    - { id: control-panel, label: Control panel }
-    - { id: dashboard, label: Dashboard }
+    - { id: docker-image, label: Docker image, short: Image }
+    - { id: control-panel, label: Control panel, short: Panel }
     - { id: ssh, label: SSH }
     - { id: sftp, label: SFTP }
     - { id: ftp, label: FTP }
 
+# One scale, none through root. "Full" was a judgement — full compared to what?
+# A shell inside a container is complete and has no root behind it. Root is the
+# checkable end of it, so it is the one recorded.
 - id: sshAccess
   label: SSH access
   group: Tech stack
   facet: ssh
-  filterOrder: 12
+  ordered: true
+  filterOrder: 13
   values:
-    - { id: full, label: Full }
-    - { id: limited, label: Limited }
     - { id: none, label: None }
+    - { id: shell, label: Shell }
+    - { id: root, label: Root }
 
 - id: managedDatabases
   label: Managed databases
@@ -439,7 +447,7 @@
   group: Pricing
   facet: exit
   ordered: true
-  filterOrder: 15
+  filterOrder: 16
   values:
     - { id: a-day, label: Within a day }
     - { id: a-month, label: Within a month }
@@ -457,7 +465,7 @@
   label: Free tier
   group: Pricing
   facet: free-tier
-  filterOrder: 11
+  filterOrder: 12
   values:
     - { id: permanent, label: Permanent }
     - { id: trial, label: Trial only }
@@ -664,7 +672,7 @@
 - id: included
   label: Included
   facet: included
-  filterOrder: 7
+  filterOrder: 8
   multiple: true
   values:
     - { id: domains, label: Domains, from: domainRegistration, when: ['true'] }
@@ -704,7 +712,7 @@
 - id: automation
   label: Automation
   facet: automation
-  filterOrder: 9
+  filterOrder: 10
   multiple: true
   values:
     - { id: api, label: API, from: apiAvailable, when: [public, partner-only] }

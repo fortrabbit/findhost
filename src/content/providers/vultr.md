@@ -12,7 +12,7 @@ description: Cloud infrastructure provider selling virtual private servers, bare
 whoManagesOs: you
 runtimes:
   - any
-sshAccess: full
+sshAccess: shell
 pricingModel: hourly
 priceFrom: xs
 priceTo: xl

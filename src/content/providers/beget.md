@@ -15,7 +15,7 @@ software:
 managedDatabases:
   - mysql
   - postgres
-sshAccess: full
+sshAccess: shell
 pricingModel: fixed-tier
 priceFrom: xs
 currencies:

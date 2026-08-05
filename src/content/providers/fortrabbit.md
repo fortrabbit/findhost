@@ -19,7 +19,7 @@ runtimes:
 deployMethods:
   - git-push
   - ssh
-sshAccess: full
+sshAccess: shell
 managedDatabases:
   - mysql
 pricingModel: fixed-tier

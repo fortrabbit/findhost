@@ -13,7 +13,7 @@ infraContract:
 whoManagesOs: you
 runtimes:
   - any
-sshAccess: full
+sshAccess: shell
 persistentStorage: true
 iacSupport:
   - terraform

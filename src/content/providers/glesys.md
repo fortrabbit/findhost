@@ -34,7 +34,7 @@ deployMethods:
   - api
   - control-panel
   - ssh
-sshAccess: full
+sshAccess: shell
 pricingModel: per-resource
 priceFrom: sm
 priceTo: xl

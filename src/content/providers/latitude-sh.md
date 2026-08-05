@@ -27,7 +27,7 @@ deployMethods:
   - api
   - cli
   - control-panel
-sshAccess: full
+sshAccess: shell
 managedDatabases:
   - postgres
 pricingModel: hourly

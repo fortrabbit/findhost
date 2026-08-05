@@ -39,7 +39,7 @@ deployMethods:
   - control-panel
   - docker-image
   - git-integration
-sshAccess: full
+sshAccess: shell
 managedDatabases:
   - postgres
   - mysql

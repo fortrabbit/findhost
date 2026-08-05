@@ -37,7 +37,7 @@ deployMethods:
   - git-integration
   - control-panel
   - ssh
-sshAccess: full
+sshAccess: shell
 managedDatabases:
   - mysql
   - postgres

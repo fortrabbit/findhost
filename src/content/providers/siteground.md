@@ -31,11 +31,11 @@ infraContract:
 runsOn:
   - gcp
 whoManagesOs: provider
-sshAccess: full
+sshAccess: shell
 deployMethods:
   - ssh
   - sftp
-  - dashboard
+  - control-panel
   - git-push
 pricingModel: fixed-tier
 priceFrom: md

@@ -40,7 +40,7 @@ deployMethods:
   - sftp
   - docker-image
   - api
-sshAccess: full
+sshAccess: shell
 managedDatabases:
   - mysql
   - postgres
