@@ -26,6 +26,9 @@ export default defineConfig({
      * dynamic redirect has to name a route that exists and this one crosses
      * from a route that is gone to `/[facet]/[value]/`.
      */
+    // Managed hosting was an explainer for a thing this dataset cannot record:
+    // the deliverable is negotiated per customer, so there is no category to be.
+    '/guide/managed-hosting': '/category',
     '/guide/categories': '/category',
     '/guide/categories/iaas': '/category/iaas',
     '/guide/categories/lcnc': '/category/lcnc',
