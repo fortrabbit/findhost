@@ -184,6 +184,27 @@
   font-variant-numeric: tabular-nums;
 }
 
+/**
+ * Where a provider posts, as marks rather than as eight company names in a row.
+ * Set apart from the record's own links: those are the product, these are not.
+ */
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  align-items: center;
+}
+
+.social-links a {
+  display: inline-flex;
+  color: var(--color-ink);
+}
+
+.social-links svg {
+  width: 1.15em;
+  height: 1.15em;
+}
+
 /** A third party's verification, marked once. Never a score, never sortable. */
 .green-mark {
   margin-left: var(--space-2xs);

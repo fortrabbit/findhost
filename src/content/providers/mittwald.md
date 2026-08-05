@@ -84,7 +84,6 @@ sources:
   - { field: supportChannels, url: 'https://www.mittwald.de/webhosting', checkedAt: 2026-08-01 }
   - { field: energyClaim, url: 'https://www.mittwald.de/webhosting', checkedAt: 2026-08-01 }
   - { field: certifications, url: 'https://www.mittwald.de/webhosting', checkedAt: 2026-08-01 }
-  - { field: social, url: 'https://www.mittwald.de/agb', checkedAt: 2026-08-01 }
 social:
   github: https://github.com/mittwald
   facebook: https://www.facebook.com/mittwald

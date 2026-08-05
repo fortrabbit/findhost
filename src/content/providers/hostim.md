@@ -33,7 +33,6 @@ sources:
   - { field: regions, url: 'https://hostim.dev', checkedAt: 2026-08-01 }
   - { field: hqCountry, url: 'https://hostim.dev', checkedAt: 2026-08-01 }
   - { field: founded, url: 'https://hostim.dev', checkedAt: 2026-08-01 }
-  - { field: social, url: 'https://hostim.dev', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://hostim.dev/pricing/', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://hostim.dev/pricing/', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://hostim.dev/pricing/', checkedAt: 2026-08-02 }

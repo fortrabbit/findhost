@@ -64,7 +64,6 @@ sources:
   - { field: freeTier, url: 'https://fly.io/docs/about/pricing/', checkedAt: 2026-07-31 }
   - { field: persistentStorage, url: 'https://fly.io/docs/about/pricing/', checkedAt: 2026-07-31 }
   - { field: supportChannels, url: 'https://fly.io/docs/', checkedAt: 2026-07-31 }
-  - { field: social, url: 'https://fly.io/docs/', checkedAt: 2026-07-31 }
   - { field: managedDatabases, url: 'https://fly.io/docs/about/pricing/', checkedAt: 2026-07-31 }
   - { field: deployMethods, url: 'https://fly.io/docs/launch/deploy/', checkedAt: 2026-07-31 }
   - { field: cliTool, url: 'https://fly.io/docs/launch/deploy/', checkedAt: 2026-07-31 }

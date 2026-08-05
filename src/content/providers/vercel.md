@@ -87,7 +87,6 @@ sources:
   - { field: audience, url: 'https://vercel.com/docs/plans', checkedAt: 2026-07-31 }
   - { field: software, url: 'https://vercel.com/docs/frameworks', checkedAt: 2026-07-31 }
   - { field: useCases, url: 'https://vercel.com/', checkedAt: 2026-07-31 }
-  - { field: social, url: 'https://vercel.com/', checkedAt: 2026-07-31 }
 figure:
   emoji: 🔺
   color: rgb(20, 20, 24)

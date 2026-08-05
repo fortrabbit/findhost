@@ -50,7 +50,6 @@ sources:
   - { field: priceTo, url: 'https://www.umbler.com/br/hospedagem-php', checkedAt: 2026-08-02 }
   - { field: currencies, url: 'https://www.umbler.com/br/hospedagem-php', checkedAt: 2026-08-02 }
   - { field: runtimes, url: 'https://www.umbler.com/br/hospedagem-php', checkedAt: 2026-08-01 }
-  - { field: social, url: 'https://www.umbler.com/br', checkedAt: 2026-08-01 }
 figure:
   emoji: ⏱️
   color: rgb(25, 45, 75)

@@ -59,7 +59,6 @@ sources:
   - { field: parent, url: 'https://www.webempresa.com/quienes-somos.html', checkedAt: 2026-08-01 }
   - { field: supportHours, url: 'https://www.webempresa.com/quienes-somos.html', checkedAt: 2026-08-01 }
   - { field: energyClaim, url: 'https://www.webempresa.com/quienes-somos.html', checkedAt: 2026-08-01 }
-  - { field: social, url: 'https://www.webempresa.com', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://www.webempresa.com/hosting-wordpress.html', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://www.webempresa.com/hosting-wordpress.html', checkedAt: 2026-08-02 }
   - { field: currencies, url: 'https://www.webempresa.com/hosting-wordpress.html', checkedAt: 2026-08-02 }

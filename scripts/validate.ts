@@ -254,7 +254,7 @@ let hidden = 0;
  * Only the first kind can be typo'd into silence, and the two are told apart by
  * shape: a camelCase word that names no field is a misspelt field, not a claim.
  */
-const citable = new Set([...fields.map((field) => field.id), 'notes', 'urls', 'social', 'sustainabilityUrl']);
+const citable = new Set([...fields.map((field) => field.id), 'notes', 'urls', 'sustainabilityUrl']);
 
 /*
  * An interior capital, which no prose claim has and nearly every field id does.
@@ -305,8 +305,15 @@ for (const { file, data } of records) {
    */
   for (const source of (data.sources ?? []) as { field?: string }[]) {
     const field = String(source.field);
-    if (looksLikeField(field) && !citable.has(field)) fail(file, `cites a source for "${field}", which is not a field`);
-    else if (fieldNames.has(field) && data[field] === undefined) {
+    /*
+     * A social account is its own evidence: the URL either resolves to the
+     * provider's profile or it does not, and a citation saying we looked adds a
+     * numbered footnote to a fact nobody disputes.
+     */
+    if (field === 'social') fail(file, 'cites a source for "social" — a profile link vouches for itself');
+    else if (looksLikeField(field) && !citable.has(field)) {
+      fail(file, `cites a source for "${field}", which is not a field`);
+    } else if (fieldNames.has(field) && data[field] === undefined) {
       fail(file, `cites a source for "${field}", which this record does not carry`);
     }
   }

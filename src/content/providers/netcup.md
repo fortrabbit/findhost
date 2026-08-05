@@ -82,7 +82,6 @@ sources:
   - { field: renewalMultiple, url: 'https://www.netcup.com/de/hosting', checkedAt: 2026-08-01 }
   - { field: parent, url: 'https://www.netcup.com/de/kontakt/impressum', checkedAt: 2026-08-01 }
   - { field: hqCountry, url: 'https://www.netcup.com/de/kontakt/impressum', checkedAt: 2026-08-01 }
-  - { field: social, url: 'https://www.netcup.com/de/kontakt/impressum', checkedAt: 2026-08-01 }
 figure:
   emoji: 🪙
   color: rgb(30, 70, 55)

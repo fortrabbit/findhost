@@ -51,7 +51,6 @@ checkedAt: 2026-08-01
 sources:
   - { field: hqCountry, url: 'https://xcloud.host/contact/', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://xcloud.host/pricing/', checkedAt: 2026-08-01 }
-  - { field: social, url: 'https://xcloud.host', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://xcloud.host/terms-and-conditions/', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://xcloud.host/pricing/', checkedAt: 2026-07-31 }
   - { field: priceTo, url: 'https://xcloud.host/pricing/', checkedAt: 2026-08-02 }

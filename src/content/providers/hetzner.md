@@ -71,7 +71,6 @@ sources:
   - { field: cliTool, url: 'https://www.hetzner.com/cloud/', checkedAt: 2026-07-31 }
   - { field: supportChannels, url: 'https://www.hetzner.com/support/', checkedAt: 2026-07-31 }
   - { field: audience, url: 'https://www.hetzner.com/', checkedAt: 2026-07-31 }
-  - { field: social, url: 'https://www.hetzner.com/', checkedAt: 2026-07-31 }
 figure:
   emoji: 🇩🇪
   color: rgb(200, 160, 60)

@@ -65,7 +65,6 @@ sources:
   - { field: currencies, url: 'https://www.websupport.sk/cennik', checkedAt: 2026-08-02 }
   - { field: billingPeriods, url: 'https://www.websupport.sk/cennik', checkedAt: 2026-08-02 }
   - { field: exitWithin, url: 'https://www.websupport.sk/obchodne-podmienky/', checkedAt: 2026-08-02 }
-  - { field: social, url: 'https://www.websupport.sk', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://www.websupport.sk/podmienky', checkedAt: 2026-08-01 }
 figure:
   emoji: 🏔️

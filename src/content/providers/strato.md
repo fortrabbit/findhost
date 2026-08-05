@@ -67,7 +67,6 @@ sources:
   - { field: regions, url: 'https://www.strato.de/ueber-uns/nachhaltigkeit/', checkedAt: 2026-08-01 }
   - { field: energyClaim, url: 'https://www.strato.de/ueber-uns/nachhaltigkeit/', checkedAt: 2026-08-01 }
   - { field: certifications, url: 'https://www.strato.de/ueber-uns/nachhaltigkeit/', checkedAt: 2026-08-01 }
-  - { field: social, url: 'https://www.strato.de', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://www.strato.de/agb/', checkedAt: 2026-08-01 }
 figure:
   emoji: 📻

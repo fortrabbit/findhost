@@ -70,7 +70,6 @@ sources:
   - { field: billingPeriods, url: 'https://supabase.com/terms', checkedAt: 2026-08-02 }
   - { field: exitWithin, url: 'https://supabase.com/terms', checkedAt: 2026-08-02 }
   - { field: ownership, url: 'https://supabase.com/company', checkedAt: 2026-08-01 }
-  - { field: social, url: 'https://supabase.com', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://supabase.com/docs/company/sla', checkedAt: 2026-08-01 }
 figure:
   emoji: ⚡

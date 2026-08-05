@@ -60,7 +60,6 @@ sources:
   - { field: billingPeriods, url: 'https://www.world4you.com/unternehmen/agb', checkedAt: 2026-08-02 }
   - { field: billingTiming, url: 'https://www.world4you.com/unternehmen/agb', checkedAt: 2026-08-02 }
   - { field: exitWithin, url: 'https://www.world4you.com/unternehmen/agb', checkedAt: 2026-08-02 }
-  - { field: social, url: 'https://www.world4you.com', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://www.world4you.com/unternehmen/agb', checkedAt: 2026-08-01 }
 figure:
   emoji: 🥨

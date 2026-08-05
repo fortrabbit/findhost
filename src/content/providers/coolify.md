@@ -47,7 +47,6 @@ sources:
   - { field: billingPeriods, url: 'https://coolify.io/pricing', checkedAt: 2026-08-02 }
   - { field: billingTiming, url: 'https://coolify.io/pricing', checkedAt: 2026-08-02 }
   - { field: apiAvailable, url: 'https://coolify.io/', checkedAt: 2026-07-31 }
-  - { field: social, url: 'https://coolify.io/', checkedAt: 2026-07-31 }
 figure:
   emoji: 🐋
   color: rgb(0, 120, 140)

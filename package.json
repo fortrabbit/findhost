@@ -30,6 +30,7 @@
     "@astrojs/check": "^0.9.10",
     "@playwright/test": "^1.62.1",
     "@types/node": "^26.1.2",
+    "bootstrap-icons": "^1.13.1",
     "pagefind": "^1.5.2",
     "prettier": "^3.9.6",
     "prettier-plugin-astro": "^0.14.1",

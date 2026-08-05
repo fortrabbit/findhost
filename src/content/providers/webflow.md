@@ -24,7 +24,6 @@ sources:
   - { field: founded, url: 'https://webflow.com/about', checkedAt: 2026-08-01 }
   - { field: ownership, url: 'https://webflow.com/about', checkedAt: 2026-08-01 }
   - { field: apiAvailable, url: 'https://developers.webflow.com/', checkedAt: 2026-08-01 }
-  - { field: social, url: 'https://webflow.com', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://webflow.com/legal/terms', checkedAt: 2026-08-01 }
 figure:
   emoji: 🕸️

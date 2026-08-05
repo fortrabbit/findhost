@@ -87,7 +87,6 @@ sources:
   - { field: hqCountry, url: 'https://docs.zerops.io/company/about', checkedAt: 2026-08-01 }
   - { field: ownership, url: 'https://docs.zerops.io/company/about', checkedAt: 2026-08-01 }
   - { field: infraContract, url: 'https://docs.zerops.io/company/about', checkedAt: 2026-08-01 }
-  - { field: social, url: 'https://zerops.io', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://docs.zerops.io/company/pricing', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://docs.zerops.io/company/pricing', checkedAt: 2026-08-02 }
   - { field: currencies, url: 'https://docs.zerops.io/company/pricing', checkedAt: 2026-08-02 }

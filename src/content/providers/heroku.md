@@ -89,7 +89,6 @@ sources:
   - { field: managedDatabases, url: 'https://elements.heroku.com/addons/heroku-postgresql', checkedAt: 2026-07-31 }
   - { field: useCases, url: 'https://www.heroku.com/', checkedAt: 2026-07-31 }
   - { field: audience, url: 'https://www.heroku.com/', checkedAt: 2026-07-31 }
-  - { field: social, url: 'https://www.heroku.com/', checkedAt: 2026-07-31 }
 figure:
   emoji: 🎸
   color: rgb(121, 40, 202)

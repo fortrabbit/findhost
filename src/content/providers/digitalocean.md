@@ -87,7 +87,6 @@ sources:
   - { field: mcpServer, url: 'https://docs.digitalocean.com/reference/', checkedAt: 2026-07-31 }
   - { field: iacSupport, url: 'https://docs.digitalocean.com/reference/', checkedAt: 2026-07-31 }
   - { field: useCases, url: 'https://www.digitalocean.com/', checkedAt: 2026-07-31 }
-  - { field: social, url: 'https://www.digitalocean.com/', checkedAt: 2026-07-31 }
   - { field: audience, url: 'https://www.digitalocean.com/', checkedAt: 2026-07-31 }
 figure:
   emoji: 🐟

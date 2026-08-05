@@ -27,6 +27,9 @@ importers:
       '@types/node':
         specifier: ^26.1.2
         version: 26.1.2
+      bootstrap-icons:
+        specifier: ^1.13.1
+        version: 1.13.1
       pagefind:
         specifier: ^1.5.2
         version: 1.5.2
@@ -879,6 +882,9 @@ packages:
 
   boolbase@1.0.0:
     resolution: {integrity: sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==}
+
+  bootstrap-icons@1.13.1:
+    resolution: {integrity: sha512-ijombt4v6bv5CLeXvRWKy7CuM3TRTuPEuGaGKvTV5cz65rQSY8RQ2JcHt6b90cBBAC7s8fsf2EkQDldzCoXUjw==}
 
   ccount@2.0.1:
     resolution: {integrity: sha512-eyrF0jiFpY+3drT6383f1qhkbGsLSifNAjA61IUjZjmLCWjItY6LB9ft9YhoDgwfmclB2zhu51Lc7+95b8NRAg==}
@@ -2590,6 +2596,8 @@ snapshots:
   bail@2.0.2: {}
 
   boolbase@1.0.0: {}
+
+  bootstrap-icons@1.13.1: {}
 
   ccount@2.0.1: {}
 

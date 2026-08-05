@@ -4,6 +4,7 @@ import Base from '../../layouts/Base.astro';
 import { fieldGroups, fieldOf, labelOf, type Field } from '../../lib/fields';
 import { energy, flag, footnotes, price } from '../../lib/record';
 import { isListed } from '../../lib/providers';
+import SocialLinks from '../../components/SocialLinks.astro';
 
 export async function getStaticPaths() {
   const providers = await getCollection('providers');
@@ -87,37 +88,24 @@ const linkLabels: Record<string, string> = {
   docs: 'docs',
 };
 
-const socialLabels: Record<string, string> = {
-  x: 'X',
-  bluesky: 'Bluesky',
-  mastodon: 'Mastodon',
-  linkedin: 'LinkedIn',
-  github: 'GitHub',
-  facebook: 'Facebook',
-  youtube: 'YouTube',
-  discord: 'Discord',
-};
-
-// Pages the provider operates and accounts it posts from are all routes off this
-// page to the provider, so they share one line.
+// Pages the provider operates: the product, and the terms it is sold under.
+// Where it posts is a different kind of link and sits on its own line.
 const outgoing = [
   ...Object.entries(linkLabels)
     .filter(([key]) => data.urls[key as keyof typeof data.urls])
     .map(([key, label]) => [label, data.urls[key as keyof typeof data.urls] as string] as const),
   ...(data.sustainabilityUrl ? ([['sustainability', data.sustainabilityUrl]] as const) : []),
-  ...Object.entries(data.social ?? {})
-    .filter(([, url]) => url)
-    .map(([key, url]) => [socialLabels[key] ?? key, url as string] as const),
 ];
 
 const { notes, numberOf } = footnotes(data.sources);
 
 /*
- * Sources for what this line holds. `urls`, `social` and `sustainabilityUrl` are
- * cited like any other fact and have no row to hang a marker on, so the marker
- * goes where the reader can see what it is about.
+ * Sources for what this line holds. `urls` and `sustainabilityUrl` are cited
+ * like any other fact and have no row to hang a marker on, so the marker goes
+ * where the reader can see what it is about. Social accounts are not cited: a
+ * profile link either resolves to the provider or it does not.
  */
-const linkNotes = [...new Set(['urls', 'social', 'sustainabilityUrl'].map((field) => numberOf.get(field)))].filter(
+const linkNotes = [...new Set(['urls', 'sustainabilityUrl'].map((field) => numberOf.get(field)))].filter(
   (note): note is number => note !== undefined,
 );
 
@@ -245,6 +233,8 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
         ))
       }
     </p>
+
+    <SocialLinks social={data.social} />
 
     {
       energyClaim && (

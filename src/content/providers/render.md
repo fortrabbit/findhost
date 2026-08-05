@@ -64,7 +64,6 @@ sources:
   - { field: apiAvailable, url: 'https://render.com/docs/api', checkedAt: 2026-07-31 }
   - { field: cliTool, url: 'https://render.com/docs/api', checkedAt: 2026-07-31 }
   - { field: useCases, url: 'https://render.com/', checkedAt: 2026-07-31 }
-  - { field: social, url: 'https://render.com/', checkedAt: 2026-07-31 }
   - { field: audience, url: 'https://render.com/', checkedAt: 2026-07-31 }
 figure:
   emoji: 🎨

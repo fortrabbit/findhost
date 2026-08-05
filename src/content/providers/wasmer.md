@@ -44,7 +44,6 @@ status: active
 checkedAt: 2026-08-01
 sources:
   - { field: regions, url: 'https://docs.wasmer.io/edge/learn/regions', checkedAt: 2026-08-01 }
-  - { field: social, url: 'https://wasmer.io', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://docs.wasmer.io/', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://wasmer.io/pricing', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://wasmer.io/pricing', checkedAt: 2026-08-02 }

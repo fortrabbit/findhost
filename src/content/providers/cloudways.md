@@ -59,7 +59,6 @@ sources:
   - { field: useCases, url: 'https://www.cloudways.com/en/', checkedAt: 2026-07-31 }
   - { field: audience, url: 'https://www.cloudways.com/en/', checkedAt: 2026-07-31 }
   - { field: software, url: 'https://www.cloudways.com/en/', checkedAt: 2026-07-31 }
-  - { field: social, url: 'https://www.cloudways.com/en/', checkedAt: 2026-07-31 }
 figure:
   emoji: ☁️
   color: rgb(45, 110, 210)

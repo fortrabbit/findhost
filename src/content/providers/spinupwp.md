@@ -67,7 +67,6 @@ sources:
   - { field: deployMethods, url: 'https://spinupwp.com/', checkedAt: 2026-07-31 }
   - { field: software, url: 'https://spinupwp.com/', checkedAt: 2026-07-31 }
   - { field: audience, url: 'https://spinupwp.com/', checkedAt: 2026-07-31 }
-  - { field: social, url: 'https://spinupwp.com/', checkedAt: 2026-07-31 }
 figure:
   emoji: 🌪️
   color: rgb(110, 90, 170)

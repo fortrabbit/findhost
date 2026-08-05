@@ -84,7 +84,6 @@ sources:
   - { field: supportTiering, url: 'https://elest.io/pricing', checkedAt: 2026-08-01 }
   - { field: supportHours, url: 'https://elest.io/pricing', checkedAt: 2026-08-01 }
   - { field: hqCountry, url: 'https://elest.io/', checkedAt: 2026-08-01 }
-  - { field: social, url: 'https://elest.io/', checkedAt: 2026-08-01 }
   - { field: certifications, url: 'https://elest.io/', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://elest.io/', checkedAt: 2026-08-01 }
 figure:

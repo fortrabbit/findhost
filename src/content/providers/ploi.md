@@ -59,7 +59,6 @@ sources:
   - { field: infraContract, url: 'https://ploi.io/pricing', checkedAt: 2026-07-31 }
   - { field: runsOn, url: 'https://ploi.io/', checkedAt: 2026-07-31 }
   - { field: software, url: 'https://ploi.io/', checkedAt: 2026-07-31 }
-  - { field: social, url: 'https://ploi.io/', checkedAt: 2026-07-31 }
 figure:
   emoji: 🪄
   color: rgb(90, 55, 160)

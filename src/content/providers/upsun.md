@@ -65,7 +65,6 @@ status: active
 checkedAt: 2026-08-01
 sources:
   - { field: regions, url: 'https://developer.upsun.com/docs/development/regions', checkedAt: 2026-08-01 }
-  - { field: social, url: 'https://upsun.com', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://status.upsun.com/', checkedAt: 2026-08-01 }
   - { field: runtimes, url: 'https://developer.upsun.com/docs/get-started/stacks', checkedAt: 2026-07-31 }
   - { field: software, url: 'https://developer.upsun.com/docs/get-started/stacks', checkedAt: 2026-07-31 }

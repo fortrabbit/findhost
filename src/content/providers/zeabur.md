@@ -63,7 +63,6 @@ social:
 checkedAt: 2026-08-01
 sources:
   - { field: hqCountry, url: 'https://zeabur.com/about', checkedAt: 2026-08-01 }
-  - { field: social, url: 'https://zeabur.com', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://zeabur.com/pricing', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://zeabur.com/pricing', checkedAt: 2026-08-02 }
   - { field: currencies, url: 'https://zeabur.com/docs/legal/terms', checkedAt: 2026-08-02 }

@@ -90,7 +90,6 @@ sources:
   - { field: billingPeriods, url: 'https://sitehost.nz/about/terms', checkedAt: 2026-08-02 }
   - { field: billingTiming, url: 'https://sitehost.nz/about/terms', checkedAt: 2026-08-02 }
   - { field: exitWithin, url: 'https://sitehost.nz/about/terms', checkedAt: 2026-08-02 }
-  - { field: social, url: 'https://sitehost.nz', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://sitehost.nz/about/terms', checkedAt: 2026-08-01 }
 figure:
   emoji: 🥝

@@ -36,7 +36,6 @@ sources:
   - { field: apiAvailable, url: 'https://developers.upcloud.com/1.3/', checkedAt: 2026-08-01 }
   - { field: billingPeriods, url: 'https://developers.upcloud.com/1.3/4-pricing/', checkedAt: 2026-08-02 }
   - { field: urls, url: 'https://developers.upcloud.com/', checkedAt: 2026-08-01 }
-  - { field: social, url: 'https://github.com/UpCloudLtd', checkedAt: 2026-08-01 }
 ---
 
 ## About UpCloud

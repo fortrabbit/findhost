@@ -40,7 +40,6 @@ sources:
   - { field: billingPeriods, url: 'https://www.squarespace.com/terms-of-service', checkedAt: 2026-08-02 }
   - { field: billingTiming, url: 'https://www.squarespace.com/terms-of-service', checkedAt: 2026-08-02 }
   - { field: exitWithin, url: 'https://www.squarespace.com/terms-of-service', checkedAt: 2026-08-02 }
-  - { field: social, url: 'https://www.squarespace.com', checkedAt: 2026-08-01 }
 figure:
   emoji: 🎨
   color: rgb(90, 90, 90)

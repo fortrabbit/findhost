@@ -67,7 +67,6 @@ sources:
   - { field: regions, url: 'https://www.transip.nl/over-transip/', checkedAt: 2026-08-01 }
   - { field: founded, url: 'https://www.transip.nl/over-transip/', checkedAt: 2026-08-01 }
   - { field: parent, url: 'https://www.transip.nl/over-transip/', checkedAt: 2026-08-01 }
-  - { field: social, url: 'https://www.transip.nl', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://www.transip.nl/algemene-voorwaarden/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🌷

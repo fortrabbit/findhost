@@ -60,7 +60,6 @@ sources:
   - { field: currencies, url: 'https://webdock.io/en/pricing', checkedAt: 2026-08-02 }
   - { field: billingPeriods, url: 'https://webdock.io/en/pricing', checkedAt: 2026-08-02 }
   - { field: exitWithin, url: 'https://webdock.io/en/pricing', checkedAt: 2026-08-02 }
-  - { field: social, url: 'https://webdock.io/en', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://status.webdock.io/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🇩🇰

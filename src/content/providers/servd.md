@@ -52,7 +52,6 @@ sources:
   - { field: whoManagesOs, url: 'https://servd.host/pricing', checkedAt: 2026-07-31 }
   - { field: specialisation, url: 'https://servd.host/', checkedAt: 2026-07-31 }
   - { field: audience, url: 'https://servd.host/', checkedAt: 2026-07-31 }
-  - { field: social, url: 'https://servd.host/', checkedAt: 2026-07-31 }
 figure:
   emoji: 🍽️
   color: rgb(180, 120, 120)

@@ -66,7 +66,6 @@ sources:
   - { field: currencies, url: 'https://www.mydevil.net', checkedAt: 2026-08-02 }
   - { field: billingPeriods, url: 'https://www.mydevil.net', checkedAt: 2026-08-02 }
   - { field: pricingModel, url: 'https://www.mydevil.net', checkedAt: 2026-08-01 }
-  - { field: social, url: 'https://www.mydevil.net', checkedAt: 2026-08-01 }
 figure:
   emoji: 😈
   color: rgb(55, 20, 30)

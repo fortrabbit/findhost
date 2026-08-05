@@ -30,7 +30,6 @@ sources:
   - { field: priceTo, url: 'https://www.weebly.com/pricing', checkedAt: 2026-08-02 }
   - { field: billingPeriods, url: 'https://www.weebly.com/pricing', checkedAt: 2026-08-02 }
   - { field: pricingModel, url: 'https://www.weebly.com/pricing', checkedAt: 2026-08-01 }
-  - { field: social, url: 'https://www.weebly.com', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://www.weebly.com/terms-of-service', checkedAt: 2026-08-01 }
 figure:
   emoji: 🧰

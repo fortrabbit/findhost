@@ -60,7 +60,6 @@ sources:
   - { field: pricingModel, url: 'https://dokploy.com/pricing', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://dokploy.com/pricing', checkedAt: 2026-08-01 }
   - { field: hqCountry, url: 'https://dokploy.com/terms-of-service', checkedAt: 2026-08-01 }
-  - { field: social, url: 'https://dokploy.com', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://dokploy.com', checkedAt: 2026-08-01 }
 figure:
   emoji: 🐋

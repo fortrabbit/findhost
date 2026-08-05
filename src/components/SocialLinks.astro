@@ -1,0 +1,55 @@
+---
+import bluesky from 'bootstrap-icons/icons/bluesky.svg?raw';
+import discord from 'bootstrap-icons/icons/discord.svg?raw';
+import facebook from 'bootstrap-icons/icons/facebook.svg?raw';
+import github from 'bootstrap-icons/icons/github.svg?raw';
+import linkedin from 'bootstrap-icons/icons/linkedin.svg?raw';
+import mastodon from 'bootstrap-icons/icons/mastodon.svg?raw';
+import x from 'bootstrap-icons/icons/twitter-x.svg?raw';
+import youtube from 'bootstrap-icons/icons/youtube.svg?raw';
+
+interface Props {
+  /** The record's `social` block: network key to profile URL. */
+  social?: Record<string, string | undefined>;
+}
+
+const { social } = Astro.props;
+
+/*
+ * Bootstrap Icons, MIT, inlined at build. Marks rather than words because eight
+ * network names in a row read as a list of companies rather than as a way to
+ * reach one — and because these are the only links on the page that are not
+ * about the product.
+ *
+ * The set is closed on purpose: a network with no mark here does not render,
+ * which is a visible gap rather than a silent one. Add the import and a line.
+ */
+const marks: Record<string, { label: string; svg: string }> = {
+  x: { label: 'X', svg: x },
+  bluesky: { label: 'Bluesky', svg: bluesky },
+  mastodon: { label: 'Mastodon', svg: mastodon },
+  linkedin: { label: 'LinkedIn', svg: linkedin },
+  github: { label: 'GitHub', svg: github },
+  facebook: { label: 'Facebook', svg: facebook },
+  youtube: { label: 'YouTube', svg: youtube },
+  discord: { label: 'Discord', svg: discord },
+};
+
+/** Ordered by `marks`, not by the record, so every provider's row reads the same way. */
+const accounts = Object.entries(marks)
+  .map(([key, mark]) => ({ ...mark, url: social?.[key] }))
+  .filter((account): account is { label: string; svg: string; url: string } => Boolean(account.url));
+---
+
+{
+  accounts.length > 0 && (
+    <p class="social-links">
+      {accounts.map((account) => (
+        <a href={account.url} rel="nofollow" title={account.label}>
+          <span class="visually-hidden">{account.label}</span>
+          <Fragment set:html={account.svg} />
+        </a>
+      ))}
+    </p>
+  )
+}
