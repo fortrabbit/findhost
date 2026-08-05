@@ -323,7 +323,16 @@
  * work out where they are — so the column is narrow enough to cost almost
  * nothing and the letter sticks to the top of it.
  */
+/*
+ * The letter and the first row it labels start at the same height, and stay
+ * there in both list styles: one padding value, declared here and read by the
+ * heading and by every row. Flex baseline alignment cannot do this job — in the
+ * extended list the row is a grid whose first item is the figure tile, so the
+ * baseline the list offers is the tile's and the letter follows it downwards.
+ */
 .letter-group {
+  --row-pad: var(--space-sm);
+
   display: flex;
   margin-top: 0;
   padding-top: 0;
@@ -332,18 +341,24 @@
   border-top: var(--rule-strong) solid var(--color-ink);
 }
 
+.slim .letter-group {
+  --row-pad: var(--space-xs);
+}
+
 /*
- * The same top padding as a row, so the letter and the first name in its group
- * share a top edge. Without it the letter sits a row's padding higher than the
- * thing it labels, which is the misalignment and not the font.
+ * The row's padding, the name's size and the name's line box — all three, or
+ * the baselines miss. Two different sizes given the same padding still sit
+ * apart by the difference in their ascents, which is what "nearly aligned"
+ * looks like.
  */
 .letter-group > h2 {
   position: sticky;
   top: var(--space-sm);
   flex: 0 0 3.5rem;
   margin: 0;
-  padding-top: var(--space-sm);
-  font-size: var(--text-md);
+  padding-top: var(--row-pad);
+  font-size: var(--text-base);
+  line-height: var(--leading-tight);
   white-space: nowrap;
 }
 
@@ -368,11 +383,20 @@
 }
 
 /** The anchor, shown rather than hidden until hover — it is a link, not a secret. */
-/** The letter is the link now, so it starts at the column's edge and nothing sits before it. */
+/*
+ * The letter is the link now, so it starts at the column's edge and nothing
+ * sits before it. Set in ink rather than in link colour: it is a heading that
+ * happens to be addressable, and a whole column of blue letters would read as
+ * navigation the reader is meant to use rather than as the alphabet.
+ */
 .anchor-link {
+  color: var(--color-ink);
   font-family: var(--font-data);
-  font-size: var(--text-sm);
   text-decoration: none;
+}
+
+.anchor-link:hover {
+  text-decoration: underline;
 }
 
 /* --- Lists --- */
@@ -433,7 +457,7 @@
   grid-template-columns: var(--tile) 1fr auto;
   gap: 0 var(--space-sm);
   align-items: start;
-  padding: var(--space-sm) 0;
+  padding: var(--row-pad) 0;
   /*border-top: var(--rule-hairline) solid var(--color-ink);*/
 }
 
@@ -499,7 +523,7 @@
 .slim .provider-list > li {
   grid-template-columns: 1fr auto;
   align-items: center;
-  padding: var(--space-2xs) 0;
+  padding: var(--row-pad) 0;
 }
 
 /** Two icons, pressed rather than coloured — the state is which list is on, not which is nicer. */
