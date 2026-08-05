@@ -144,11 +144,11 @@ export async function loadFacets(): Promise<{ facets: Facet[]; providers: Provid
 }
 
 /**
- * Where a facet's own index lives. Every facet has one at `/<facet>/` except
- * `regions`, whose index is the map: it lists the same countries with the same
- * counts, so a second page of them would be the map with the map taken out.
+ * Where a facet's own index lives. One rule for all of them, including
+ * `regions`: its index is written by hand in pages/regions.astro so it can
+ * carry the map, but it answers to the same address as every other.
  */
-export const facetIndex = (facetId: string) => (facetId === 'regions' ? '/map/' : `/${facetId}/`);
+export const facetIndex = (facetId: string) => `/${facetId}/`;
 
 /**
  * Every facet value that at least one record uses — the pages worth generating.

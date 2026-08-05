@@ -36,8 +36,6 @@ export const GET: APIRoute = async ({ site }) => {
     ...providers.map((provider) => `/providers/${provider.id}/`),
     ...guide.map((page) => `/guide/${page.id}/`),
     ...facets.flatMap((facet) => [
-      // facetIndex, not `/${facet.id}/` — regions is indexed by the map, and the
-      // bare path is a redirect stub that should not be offered to a crawler.
       facetIndex(facet.id),
       ...facet.values.filter((value) => value.count > 0).map((value) => `/${facet.id}/${value.id}/`),
     ]),

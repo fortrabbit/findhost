@@ -16,7 +16,7 @@ A data-protection requirement narrows the field of hosts, but rarely along the l
 
 Two separate questions get collapsed into one. The first is physical: which building holds the disk and which country it stands in. The second is legal: which authorities can order the company operating that disk to hand over what is on it, and under what conditions. The answer to the second follows the company and its parents at least as much as it follows the metal, because an order is served on a legal entity rather than on a rack.
 
-So a company headquartered in one country and running capacity in another is a different proposition from one native to the region it sells into. Not necessarily a worse one — but a different one, and the difference is invisible on a page that says "EU data centre". That is why the dataset keeps [regions](/regions/) and headquarters country as separate fields, and why [the map](/map/) shows where capacity runs rather than which law applies to it.
+So a company headquartered in one country and running capacity in another is a different proposition from one native to the region it sells into. Not necessarily a worse one — but a different one, and the difference is invisible on a page that says "EU data centre". That is why the dataset keeps [regions](/regions/) and headquarters country as separate fields, and why the map shows where capacity runs rather than which law applies to it.
 
 ## The mechanism, since it is usually left unnamed
 

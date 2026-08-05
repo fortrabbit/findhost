@@ -86,7 +86,6 @@ export const groupNames = [
 export const reservedSegments = [
   'providers',
   'guide',
-  'map',
   'about',
   'policies',
   'pricing',

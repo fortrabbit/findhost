@@ -34,7 +34,7 @@ export const GET: APIRoute = async ({ site }) => {
     '',
     `- [About, and who publishes this](${origin}/about/)`,
     `- [Every provider, filterable](${origin}/)`,
-    `- [Where providers operate](${origin}/map/)`,
+    `- [Where providers operate](${origin}/regions/)`,
     `- [providers.json, every facet and every record's facet fields](${origin}/providers.json)`,
     '',
     '## Guide',

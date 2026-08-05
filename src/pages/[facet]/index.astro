@@ -7,9 +7,9 @@ export async function getStaticPaths() {
   const { facets } = await loadFacets();
 
   /*
-   * `regions` has no index here. /map/ is the region index and lists the same
-   * countries with the same counts — this page was that page with the map taken
-   * out.
+   * `regions` has an index of its own at the same address, pages/regions.astro,
+   * because it draws a map above the list. Generating it here as well would be
+   * two routes claiming /regions/.
    */
   return facets
     .filter((facet) => facet.id !== 'regions')

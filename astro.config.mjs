@@ -14,8 +14,8 @@ export default defineConfig({
     '/find': '/',
     '/providers': '/',
     '/provider/[id]': '/providers/[id]',
-    // The region index is the map. /regions/<code>/ pages are unaffected.
-    '/regions': '/map',
+    // The map is the region index, so it answers at the facet's own address.
+    '/map': '/regions',
     // MCP, CLI and API were three facets before they were three values of one.
     '/mcp': '/automation/mcp',
     '/cli': '/automation/cli',
