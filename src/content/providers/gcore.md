@@ -5,7 +5,10 @@ urls:
   home: https://gcore.com
   pricing: https://gcore.com/pricing
   status: https://status.gcore.com/
-category: iaas
+category:
+  - vps
+  - bare-metal
+  - serverless
 description: Gcore is an edge and cloud provider selling CDN, streaming, DDoS protection, virtual machines, bare metal, Kubernetes and serverless functions.
 whoManagesOs: you
 useCases:

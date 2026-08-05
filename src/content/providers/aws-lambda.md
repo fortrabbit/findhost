@@ -4,7 +4,8 @@ name: AWS Lambda
 urls:
   home: https://aws.amazon.com/lambda/
   pricing: https://aws.amazon.com/lambda/pricing/
-category: serverless
+category:
+  - serverless
 description: Amazon's function-as-a-service primitive, running a handler on demand in a short-lived isolated environment and billing per invocation.
 parent: Amazon
 whoManagesOs: provider

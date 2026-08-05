@@ -7,7 +7,8 @@ urls:
   status: https://status.modal.com/
   terms: https://modal.com/legal/terms
   docs: https://modal.com/docs/guide
-category: serverless
+category:
+  - serverless
 description: Serverless compute platform for Python, where functions are decorated in code and run in containers on CPU or GPU with per-second billing.
 hqCountry: US
 ownership: vc-backed

@@ -4,7 +4,8 @@ name: Cleavr
 urls:
   home: https://cleavr.io
   pricing: https://cleavr.io/pricing
-category: server-management
+category:
+  - server-management
 regions: null
 description: Server provisioning and deployment service for PHP and Node applications, driving servers rented from major clouds or any VPS the customer brings.
 whoManagesOs: provider

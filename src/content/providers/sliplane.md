@@ -6,7 +6,8 @@ urls:
   pricing: https://sliplane.io/pricing
   terms: https://sliplane.io/terms
   docs: https://docs.sliplane.io/
-category: paas
+category:
+  - paas
 description: German Docker hosting that bills for the server rather than the container, so unlimited services can share one machine, with managed Postgres and S3 storage.
 hqCountry: DE
 whoManagesOs: container

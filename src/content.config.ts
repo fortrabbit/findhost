@@ -59,8 +59,13 @@ const providerFields = z
       terms: publicUrl.optional(),
       docs: publicUrl.optional(),
     }),
-    /* Required of a listed record — see the superRefine below. A hidden one is allowed to be a stub. */
-    category: z.enum(vocabulary('category')).optional(),
+    /*
+     * Required of a listed record — see the superRefine below. A hidden one is
+     * allowed to be a stub. More than one is normal rather than exceptional:
+     * DigitalOcean sells droplets, an app platform and functions, and naming
+     * one of the three made the other two invisible to a filter.
+     */
+    category: z.array(z.enum(vocabulary('category'))).nonempty().optional(),
 
     // Identity
     description: z.string().max(200).optional(),
@@ -297,7 +302,7 @@ const providerFields = z
   .superRefine((record, ctx) => {
     const hidden = record.status === 'draft' || record.status === 'out-of-scope';
 
-    if (!hidden && !record.category) {
+    if (!hidden && !record.category?.length) {
       ctx.addIssue({
         code: 'custom',
         path: ['category'],

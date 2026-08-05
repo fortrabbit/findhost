@@ -5,7 +5,8 @@ urls:
   home: https://www.pythonanywhere.com
   pricing: https://www.pythonanywhere.com/pricing/
   status: https://pythonanywhere.statuspage.io
-category: paas
+category:
+  - paas
 description: Browser-based Python hosting with in-browser consoles, scheduled tasks and managed web apps, sold by CPU-seconds, web workers and disk.
 founded: 2011
 hqCountry: GB

@@ -6,7 +6,8 @@ urls:
   pricing: https://www.interserver.net/webhosting/
   terms: https://www.interserver.net/terms-of-service.html
   docs: https://www.interserver.net/tips/kb/
-category: shared-hosting
+category:
+  - shared-hosting
 description: American host selling one shared plan at a price it undertakes not to raise, on DirectAdmin and CloudLinux, alongside VPS, dedicated servers and colocation.
 founded: 1999
 hqCountry: US

@@ -6,7 +6,8 @@ urls:
   pricing: https://northflank.com/pricing
   status: https://status.northflank.com/
   docs: https://northflank.com/docs
-category: paas
+category:
+  - paas
 description: British platform running containers, jobs and managed databases on its own cloud, in the customer's cloud account, or on a self-hosted Kubernetes cluster.
 hqCountry: GB
 ownership: vc-backed

@@ -5,7 +5,8 @@ urls:
   home: https://render.com
   pricing: https://render.com/pricing
   status: https://status.render.com
-category: paas
+category:
+  - paas
 description: Platform-as-a-service that builds services from a git repository, with native runtimes for several languages, a Docker runtime for the rest, and managed Postgres.
 hqCountry: US
 ownership: vc-backed

@@ -5,7 +5,8 @@ urls:
   home: https://www.world4you.com
   pricing: https://www.world4you.com/hosting/web-hosting
   terms: https://www.world4you.com/unternehmen/agb
-category: shared-hosting
+category:
+  - shared-hosting
 description: Austrian hosting provider from Linz, a subsidiary of United Internet, selling shared webhosting, WordPress hosting, email and servers.
 founded: 1998
 hqCountry: AT

@@ -3,7 +3,9 @@ id: selectel
 name: Selectel
 urls:
   home: https://selectel.ru/en/
-category: vps
+category:
+  - vps
+  - bare-metal
 description: Selectel is a Russian infrastructure company running its own data centres in Saint Petersburg and Moscow, selling dedicated servers, cloud servers and object storage.
 hqCountry: RU
 infraContract:

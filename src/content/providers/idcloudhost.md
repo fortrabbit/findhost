@@ -4,7 +4,8 @@ name: IDCloudHost
 urls:
   home: https://idcloudhost.com
   status: https://status.idcloudhost.com
-category: vps
+category:
+  - vps
 description: IDCloudHost is an Indonesian infrastructure company selling cloud VPS, managed hosting, dedicated servers and object storage from data centres in Jakarta and Singapore.
 regions:
   - ID

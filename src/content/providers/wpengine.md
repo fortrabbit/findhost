@@ -7,7 +7,8 @@ urls:
   status: https://wpenginestatus.com/
   terms: https://wpengine.com/legal/terms-of-service/
   docs: https://developers.wpengine.com/
-category: vanity-hosting
+category:
+  - vanity-hosting
 description: Managed WordPress host founded in 2010 in Austin, Texas, running customer sites on public cloud infrastructure behind a CDN.
 founded: 2010
 hqCountry: US

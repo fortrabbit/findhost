@@ -5,7 +5,8 @@ urls:
   home: https://www.plesk.com
   pricing: https://www.plesk.com/pricing/
   terms: https://www.plesk.com/legal/
-category: server-management
+category:
+  - server-management
 regions: null
 description: Hosting control panel licensed per server, managing sites, domains, mail, databases and WordPress on Linux and Windows machines the customer supplies.
 hqCountry: CH

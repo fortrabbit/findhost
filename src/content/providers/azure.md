@@ -4,7 +4,8 @@ name: Azure
 urls:
   home: https://azure.microsoft.com
   pricing: https://azure.microsoft.com/en-us/pricing/details/app-service/linux/
-category: iaas
+category:
+  - iaas
 description: Microsoft's hyperscale cloud — hundreds of separately metered infrastructure services, with App Service as the managed application layer above them.
 parent: Microsoft
 ownership: subsidiary

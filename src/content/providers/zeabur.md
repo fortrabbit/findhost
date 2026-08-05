@@ -6,7 +6,8 @@ urls:
   pricing: https://zeabur.com/pricing
   terms: https://zeabur.com/docs/legal/terms
   docs: https://zeabur.com/docs
-category: paas
+category:
+  - paas
 description: Container platform that reads a git repository, works out what kind of project it is and deploys it without a configuration file.
 whoManagesOs: container
 useCases:

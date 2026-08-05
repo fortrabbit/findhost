@@ -4,7 +4,8 @@ name: HostPinnacle
 urls:
   home: https://www.hostpinnacle.co.ke
   pricing: https://www.hostpinnacle.co.ke/vps-hosting/
-category: shared-hosting
+category:
+  - shared-hosting
 description: HostPinnacle is a Kenyan host selling cPanel shared hosting alongside self-managed and cPanel-managed VPS from Nairobi.
 hqCountry: KE
 whoManagesOs: panel-assisted

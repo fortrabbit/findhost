@@ -6,7 +6,8 @@ urls:
   pricing: https://upsun.com/pricing/
   status: https://status.upsun.com/
   docs: https://developer.upsun.com/
-category: paas
+category:
+  - paas
 description: Upsun is the PaaS formerly known as Platform.sh. Projects are described in YAML and billed per resource, on top of a per-project and per-user fee.
 whoManagesOs: provider
 useCases:

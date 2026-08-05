@@ -4,7 +4,8 @@ name: Laravel Cloud
 urls:
   home: https://laravel.com/cloud
   pricing: https://laravel.com/cloud/pricing
-category: paas
+category:
+  - paas
 description: Laravel Cloud is the official platform by Laravel Holdings — managed, scale-to-zero hosting for Laravel and Symfony applications, billed by subscription plus usage.
 whoManagesOs: provider
 useCases:

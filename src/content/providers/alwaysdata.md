@@ -5,7 +5,8 @@ urls:
   home: https://www.alwaysdata.com
   pricing: https://www.alwaysdata.com/en/pricing/
   status: https://status.alwaysdata.com/
-category: shared-hosting
+category:
+  - shared-hosting
 description: French managed hosting running a wide set of language runtimes on isolated Debian accounts, with a permanently free tier below the paid plans.
 founded: 2006
 hqCountry: FR

@@ -4,7 +4,8 @@ name: GridPane
 urls:
   home: https://gridpane.com
   pricing: https://gridpane.com/pricing/
-category: server-management
+category:
+  - server-management
 description: GridPane is a WordPress server-management platform for agencies, provisioning and hardening servers on the customer's own cloud account.
 whoManagesOs: provider
 infraContract:

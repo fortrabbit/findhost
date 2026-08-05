@@ -4,7 +4,8 @@ name: Scaleway Functions
 urls:
   home: https://www.scaleway.com/en/serverless-functions/
   pricing: https://www.scaleway.com/en/serverless-functions/
-category: serverless
+category:
+  - serverless
 description: European function-as-a-service from Scaleway, running Node, Python, Go, Rust and PHP handlers billed by request and by memory consumed.
 whoManagesOs: provider
 useCases:

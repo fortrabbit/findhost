@@ -6,7 +6,8 @@ urls:
   pricing: https://webdock.io/en/pricing
   status: https://status.webdock.io/
   docs: https://webdock.io/en/docs
-category: vps
+category:
+  - vps
 description: Danish VPS provider selling virtual servers with a web control panel, prepared stacks and WordPress plans, from a single facility in Denmark.
 hqCountry: DK
 ownership: independent

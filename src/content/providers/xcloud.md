@@ -6,7 +6,8 @@ urls:
   pricing: https://xcloud.host/pricing/
   terms: https://xcloud.host/terms-and-conditions/
   docs: https://docs.xcloud.host/
-category: server-management
+category:
+  - server-management
 description: xCloud is a server-management panel launched in 2023 by WPDeveloper. It manages servers a customer brings, and also sells managed servers of its own.
 founded: 2023
 hqCountry: US

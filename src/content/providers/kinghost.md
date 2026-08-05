@@ -7,7 +7,8 @@ urls:
   status: https://status.kinghost.net.br/
   terms: https://king.host/contratos-e-politicas
   docs: https://king.host/wiki
-category: shared-hosting
+category:
+  - shared-hosting
 description: Brazilian shared, WordPress and VPS hosting brand under LWSA, documenting PHP, Node.js, Python and Java application deployment on shared plans.
 founded: 2006
 hqCountry: BR

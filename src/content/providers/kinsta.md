@@ -5,7 +5,8 @@ urls:
   home: https://kinsta.com
   pricing: https://kinsta.com/wordpress-hosting/
   docs: https://kinsta.com/docs/
-category: vanity-hosting
+category:
+  - vanity-hosting
 description: Kinsta is a managed WordPress host founded in 2013, with plans metered on monthly visits and 14-day backup retention.
 founded: 2013
 whoManagesOs: provider

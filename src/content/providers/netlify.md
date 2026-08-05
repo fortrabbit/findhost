@@ -7,7 +7,8 @@ urls:
   status: https://www.netlifystatus.com/
   terms: https://www.netlify.com/legal/terms-of-use/
   docs: https://docs.netlify.com/
-category: serverless
+category:
+  - serverless
 description: Platform that builds sites from a git repository and serves them from a global CDN, with serverless functions, edge functions, blob storage and a database.
 founded: 2014
 hqCountry: US

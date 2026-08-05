@@ -5,7 +5,9 @@ urls:
   home: https://www.digitalocean.com
   pricing: https://www.digitalocean.com/pricing/droplets
   status: https://status.digitalocean.com
-category: vps
+category:
+  - vps
+  - paas
 description: DigitalOcean is a publicly listed cloud provider best known for Droplets, its VPS product, alongside managed databases, Kubernetes and an app platform.
 founded: 2012
 hqCountry: US

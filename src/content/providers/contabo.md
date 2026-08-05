@@ -4,7 +4,9 @@ name: Contabo
 urls:
   home: https://contabo.com
   pricing: https://contabo.com/en/vps/
-category: vps
+category:
+  - vps
+  - bare-metal
 description: German provider selling virtual and dedicated servers from Munich, with large resource allocations at low fixed monthly rates.
 hqCountry: DE
 whoManagesOs: you

@@ -5,7 +5,8 @@ urls:
   home: https://sitehost.nz
   pricing: https://sitehost.nz/hosting/cloud-containers
   terms: https://sitehost.nz/about/terms
-category: paas
+category:
+  - paas
 description: New Zealand host that owns its Auckland data centre and sells Cloud Containers, a product that runs prebuilt or custom Docker images.
 founded: 2004
 hqCountry: NZ

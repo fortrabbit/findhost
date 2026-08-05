@@ -6,7 +6,8 @@ urls:
   pricing: https://www.hostgator.com/web-hosting
   terms: https://www.hostgator.com/tos
   docs: https://www.hostgator.com/help
-category: shared-hosting
+category:
+  - shared-hosting
 description: HostGator is a low-cost American provider of shared, reseller, virtual private server and dedicated web hosting, and one of the Newfold Digital hosting brands.
 founded: 2002
 hqCountry: US

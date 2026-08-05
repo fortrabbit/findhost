@@ -4,7 +4,8 @@ name: Gigalixir
 urls:
   home: https://www.gigalixir.com
   pricing: https://www.gigalixir.com/pricing/
-category: paas
+category:
+  - paas
 description: Gigalixir is a platform-as-a-service built around Elixir and Phoenix, keeping hot upgrades, remote observer and distributed clustering intact.
 whoManagesOs: container
 specialisation:

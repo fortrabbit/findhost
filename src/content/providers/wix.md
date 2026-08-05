@@ -5,7 +5,8 @@ urls:
   home: https://www.wix.com
   pricing: https://www.wix.com/plans
   terms: https://www.wix.com/about/terms-of-use
-category: lcnc
+category:
+  - lcnc
 description: Wix is a hosted website builder with templates and a visual editor for small businesses and personal sites.
 founded: 2006
 ownership: public

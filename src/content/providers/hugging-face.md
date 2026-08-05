@@ -7,7 +7,8 @@ urls:
   status: https://status.huggingface.co/
   terms: https://huggingface.co/terms-of-service
   docs: https://huggingface.co/docs/hub/spaces-overview
-category: paas
+category:
+  - paas
 description: Machine-learning hub whose Spaces product hosts running applications — Gradio, Streamlit or an arbitrary Dockerfile — on CPU or rented GPU hardware.
 hqCountry: US
 ownership: vc-backed

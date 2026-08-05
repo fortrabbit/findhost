@@ -4,7 +4,8 @@ name: Simply.com
 urls:
   home: https://www.simply.com
   pricing: https://www.simply.com/en/hosting/
-category: shared-hosting
+category:
+  - shared-hosting
 description: Danish shared hosting provider selling bundles of web space, mail and a website builder, with a documented public API alongside.
 founded: 2004
 hqCountry: DK

@@ -4,7 +4,8 @@ name: Fly.io
 urls:
   home: https://fly.io
   pricing: https://fly.io/docs/about/pricing/
-category: paas
+category:
+  - paas
 description: Fly.io runs applications as Firecracker microVMs on hardware it operates itself, deployed from a Dockerfile through the flyctl CLI and billed by usage.
 infraContract:
   - owns-metal

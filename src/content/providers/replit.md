@@ -5,7 +5,8 @@ urls:
   home: https://replit.com
   pricing: https://replit.com/pricing
   status: https://status.replit.com/
-category: paas
+category:
+  - paas
 description: Browser-based development environment with hosting attached, sold around an AI agent that writes, runs and publishes the application.
 hqCountry: US
 ownership: vc-backed

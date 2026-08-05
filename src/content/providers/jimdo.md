@@ -6,7 +6,8 @@ urls:
   pricing: https://www.jimdo.com/pricing/
   terms: https://www.jimdo.com/info/terms-of-service/
   docs: https://help.jimdo-dolphin.com/hc/en-us
-category: lcnc
+category:
+  - lcnc
 description: Jimdo is a Hamburg website builder that bundles hosting, templates and AI-assisted site creation for the self-employed and small businesses.
 founded: 2007
 billingPeriods:

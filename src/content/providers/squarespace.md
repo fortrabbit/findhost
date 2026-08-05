@@ -5,7 +5,8 @@ urls:
   home: https://www.squarespace.com
   pricing: https://www.squarespace.com/pricing
   terms: https://www.squarespace.com/terms-of-service
-category: lcnc
+category:
+  - lcnc
 description: Squarespace is a design-focused website builder that combines templates, hosting, and content tools.
 founded: 2004
 hqCountry: US

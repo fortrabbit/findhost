@@ -7,7 +7,8 @@ urls:
   status: https://status.webflow.com/
   terms: https://webflow.com/legal/terms
   docs: https://developers.webflow.com/
-category: lcnc
+category:
+  - lcnc
 description: Webflow is a visual design platform that hosts sites and provides a built-in CMS.
 founded: 2013
 ownership: vc-backed

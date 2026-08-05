@@ -7,7 +7,8 @@ urls:
   status: https://www.mittwald-status.de/
   terms: https://www.mittwald.de/agb
   docs: https://developer.mittwald.de
-category: paas
+category:
+  - paas
 description: German managed hosting platform with per-project containers, a control plane called mStudio, an official CLI and a public REST API.
 founded: 2003
 hqCountry: DE

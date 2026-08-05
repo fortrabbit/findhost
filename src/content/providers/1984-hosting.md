@@ -4,7 +4,8 @@ name: 1984 Hosting
 urls:
   home: https://1984.hosting
   pricing: https://1984.hosting/
-category: shared-hosting
+category:
+  - shared-hosting
 description: Icelandic host founded on a free-speech and privacy position, running on geothermal and hydroelectric power, selling web hosting, VPS and free anycast DNS.
 founded: 2006
 hqCountry: IS
@@ -53,7 +54,7 @@ sources:
   - { field: exitWithin, url: 'https://1984.hosting/tos/', checkedAt: 2026-08-02 }
 figure:
   emoji: 🌋
-  color: rgb(30, 40, 50)
+  color: rgb(150, 110, 110)
   textColor: rgb(190, 215, 235)
   text: Named after that book by Orwell.
 ai: authored

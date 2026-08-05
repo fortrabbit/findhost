@@ -5,7 +5,8 @@ urls:
   home: https://craftcms.com/cloud
   pricing: https://craftcms.com/cloud
   docs: https://craftcms.com/docs/cloud/
-category: vanity-hosting
+category:
+  - vanity-hosting
 description: Serverless hosting for Craft CMS built by Pixel & Tonic, the company that makes the CMS, and sold per project rather than per account.
 whoManagesOs: provider
 useCases:

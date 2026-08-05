@@ -4,7 +4,8 @@ name: Duda
 urls:
   home: https://www.duda.co
   pricing: https://www.duda.co/pricing
-category: lcnc
+category:
+  - lcnc
 description: Duda is a website builder focused on agencies that manage multiple client sites.
 whoManagesOs: provider
 useCases:

@@ -5,7 +5,8 @@ urls:
   home: https://sevalla.com
   pricing: https://sevalla.com/pricing/
   docs: https://docs.sevalla.com/
-category: paas
+category:
+  - paas
 description: Sevalla is a polyglot cloud hosting platform covering application hosting, database hosting, static sites, and object storage.
 ownership: subsidiary
 parent: Kinsta

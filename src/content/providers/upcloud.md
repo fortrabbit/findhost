@@ -5,7 +5,8 @@ urls:
   home: https://upcloud.com
   status: https://status.upcloud.com/
   docs: https://developers.upcloud.com/
-category: vps
+category:
+  - vps
 description: Finnish cloud infrastructure provider selling virtual machines, block storage and private networking, driven by a public API.
 whoManagesOs: you
 runtimes:

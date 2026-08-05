@@ -5,7 +5,8 @@ urls:
   home: https://www.weebly.com
   pricing: https://www.weebly.com/pricing
   terms: https://www.weebly.com/terms-of-service
-category: lcnc
+category:
+  - lcnc
 description: Weebly is a simple website builder that bundles templates, hosting, and basic ecommerce features.
 ownership: subsidiary
 parent: Block, Inc.

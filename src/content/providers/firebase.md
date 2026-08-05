@@ -5,7 +5,8 @@ urls:
   home: https://firebase.google.com
   pricing: https://firebase.google.com/pricing
   status: https://status.firebase.google.com/
-category: serverless
+category:
+  - serverless
 description: Firebase is Google's application platform, bundling a document database, authentication and storage with hosting that builds framework applications onto Cloud Run.
 ownership: subsidiary
 parent: Alphabet

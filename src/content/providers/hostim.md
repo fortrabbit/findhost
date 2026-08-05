@@ -7,7 +7,8 @@ urls:
   terms: https://hostim.dev/docs/legal/terms/
   docs: https://hostim.dev/docs/
   status: https://status.hostim.dev
-category: paas
+category:
+  - paas
 description: Hostim is a Docker-first platform-as-a-service from Germany, deploying container images, Git repositories and Compose files onto bare metal in the EU.
 founded: 2025
 hqCountry: DE

@@ -5,7 +5,8 @@ urls:
   home: https://encore.dev
   pricing: https://encore.dev/pricing
   docs: https://encore.dev/docs
-category: server-management
+category:
+  - server-management
 description: Encore Cloud is a backend framework for TypeScript and Go with a control plane that provisions the infrastructure it infers from the code into the customer's own AWS or GCP account.
 whoManagesOs: container
 infraContract:

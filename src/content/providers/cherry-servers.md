@@ -4,7 +4,9 @@ name: Cherry Servers
 urls:
   home: https://www.cherryservers.com
   pricing: https://www.cherryservers.com/pricing
-category: iaas
+category:
+  - bare-metal
+  - vps
 description: Lithuanian provider selling dedicated machines and virtual servers on its own hardware, billed by the hour, by fixed term or as spot capacity.
 founded: 2001
 hqCountry: LT

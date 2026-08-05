@@ -4,7 +4,8 @@ name: Cloud 66
 urls:
   home: https://www.cloud66.com
   pricing: https://www.cloud66.com/pricing/
-category: server-management
+category:
+  - server-management
 regions: null
 description: DevOps platform deploying containerised and native applications and static sites onto servers the customer owns on AWS, Google Cloud or Azure.
 founded: 2012

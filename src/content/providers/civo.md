@@ -5,7 +5,8 @@ urls:
   home: https://www.civo.com
   pricing: https://www.civo.com/pricing
   status: https://status.civo.com/
-category: iaas
+category:
+  - vps
 description: British Kubernetes-first cloud that charges for worker nodes only, with control planes included and data transfer unmetered.
 hqCountry: GB
 whoManagesOs: you

@@ -4,7 +4,8 @@ name: cyber_Folks
 urls:
   home: https://cyberfolks.pl
   pricing: https://cyberfolks.pl/hosting/
-category: shared-hosting
+category:
+  - shared-hosting
 description: Polish shared host from Poznań with a per-domain choice of PHP version alongside Node and Python, running on LiteSpeed with DirectAdmin as the panel.
 hqCountry: PL
 whoManagesOs: panel-assisted

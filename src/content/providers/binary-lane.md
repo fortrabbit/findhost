@@ -4,7 +4,8 @@ name: Binary Lane
 urls:
   home: https://www.binarylane.com.au
   pricing: https://www.binarylane.com.au
-category: vps
+category:
+  - vps
 description: Australian VPS provider selling hourly-billed NVMe cloud servers with independently adjustable memory, storage and transfer, and a public API.
 founded: 2009
 hqCountry: AU

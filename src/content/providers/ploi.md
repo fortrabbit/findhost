@@ -4,7 +4,8 @@ name: Ploi
 urls:
   home: https://ploi.io
   pricing: https://ploi.io/pricing
-category: server-management
+category:
+  - server-management
 regions: null
 description: Dutch server-management panel that provisions and maintains PHP application servers on VPS accounts the customer rents elsewhere.
 hqCountry: NL

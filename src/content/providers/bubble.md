@@ -4,7 +4,8 @@ name: Bubble
 urls:
   home: https://bubble.io
   docs: https://manual.bubble.io
-category: lcnc
+category:
+  - lcnc
 description: Bubble is a no-code app builder that combines UI design with database and workflow tools.
 regions:
   - US

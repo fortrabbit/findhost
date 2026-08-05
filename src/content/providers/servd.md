@@ -5,7 +5,8 @@ urls:
   home: https://servd.host
   pricing: https://servd.host/pricing
   terms: https://servd.host/terms
-category: vanity-hosting
+category:
+  - vanity-hosting
 description: Managed hosting platform built specifically for Craft CMS, sold as fixed plans that each host a single Craft installation.
 hqCountry: GB
 ownership: independent

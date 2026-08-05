@@ -70,14 +70,18 @@
 
 # ---------------------------------------------------------- Classification
 
+# More than one can be true, and usually is: a provider selling droplets, an app
+# platform and functions is all three, and picking one meant picking for it.
 - id: category
   label: Category
   group: Classification
   facet: categories
   filterOrder: 2
+  multiple: true
   values:
     - { id: paas, label: Platform as a Service, short: PaaS }
     - { id: vps, label: Virtual Private Servers, short: VPS }
+    - { id: bare-metal, label: Bare metal }
     - { id: iaas, label: Infrastructure as a Service, short: IaaS }
     - { id: shared-hosting, label: Shared hosting }
     - { id: serverless, label: Serverless }

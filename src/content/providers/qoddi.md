@@ -4,7 +4,8 @@ name: Qoddi
 urls:
   home: https://qoddi.com
   pricing: https://qoddi.com/pricing/
-category: paas
+category:
+  - paas
 description: Managed application platform deploying Node, Java, Go, Ruby, PHP, Python and Docker workloads with per-second billing and managed databases alongside.
 whoManagesOs: container
 useCases:

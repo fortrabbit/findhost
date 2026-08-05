@@ -4,7 +4,8 @@ name: Xserver
 urls:
   home: https://www.xserver.ne.jp
   pricing: https://www.xserver.ne.jp/price/
-category: shared-hosting
+category:
+  - shared-hosting
 description: Japanese rental server company selling managed shared hosting, with WordPress tooling, automatic backups and free SSL included across the range.
 hqCountry: JP
 whoManagesOs: provider

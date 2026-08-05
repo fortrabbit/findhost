@@ -7,7 +7,8 @@ urls:
   status: https://www.vercel-status.com/
   terms: https://vercel.com/legal/terms
   docs: https://vercel.com/docs
-category: serverless
+category:
+  - serverless
 description: Vercel is a serverless frontend platform. Its official function runtimes do not include PHP, which is available only through a community runtime.
 ownership: vc-backed
 whoManagesOs: provider

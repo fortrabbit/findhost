@@ -7,7 +7,8 @@ urls:
   status: https://status.mythic-beasts.com
   terms: https://www.mythic-beasts.com/terms/overview
   docs: https://www.mythic-beasts.com/support
-category: shared-hosting
+category:
+  - shared-hosting
 description: British host selling web and email hosting in a long ladder of graded sizes, with a choice of PHP release per site and MySQL as standard.
 hqCountry: GB
 ownership: independent

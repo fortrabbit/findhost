@@ -4,7 +4,8 @@ name: Beget
 urls:
   home: https://beget.com/en
   pricing: https://beget.com/en/hosting
-category: shared-hosting
+category:
+  - shared-hosting
 description: Beget is a Russian hosting company selling shared hosting, VPS, dedicated servers and managed databases, priced in euros on its international storefront.
 hqCountry: RU
 founded: 2007

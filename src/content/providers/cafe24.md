@@ -4,7 +4,8 @@ name: Cafe24
 urls:
   home: https://www.cafe24.com
   pricing: https://hosting.cafe24.com
-category: shared-hosting
+category:
+  - shared-hosting
 description: Cafe24 is a Seoul-based hosting and e-commerce platform company selling shared hosting, managed WordPress VPS and hourly cloud servers alongside its shopping-mall SaaS product.
 hqCountry: KR
 whoManagesOs: panel-assisted

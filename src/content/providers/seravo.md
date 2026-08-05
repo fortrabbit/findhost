@@ -4,7 +4,8 @@ name: Seravo
 urls:
   home: https://seravo.com
   pricing: https://seravo.com/plans/
-category: vanity-hosting
+category:
+  - vanity-hosting
 description: Finnish WordPress-only hosting company whose customers develop against a public, open-source project layout with Vagrant and Docker parity.
 hqCountry: FI
 whoManagesOs: provider

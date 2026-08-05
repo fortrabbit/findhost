@@ -4,7 +4,8 @@ name: Flywheel
 urls:
   home: https://getflywheel.com
   pricing: https://getflywheel.com/pricing/
-category: vanity-hosting
+category:
+  - vanity-hosting
 description: Flywheel is a managed WordPress host built for web designers, freelancers and agencies, now run as a WP Engine brand.
 founded: 2012
 hqCountry: US

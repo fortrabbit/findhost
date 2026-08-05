@@ -4,7 +4,8 @@ name: Shopify
 urls:
   home: https://www.shopify.com
   pricing: https://www.shopify.com/pricing
-category: lcnc
+category:
+  - lcnc
 description: Shopify is a hosted ecommerce platform with a storefront builder and integrated checkout, sold as fixed monthly tiers plus a per-transaction card rate.
 founded: 2006
 hqCountry: CA

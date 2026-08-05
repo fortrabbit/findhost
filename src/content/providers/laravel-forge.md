@@ -5,7 +5,8 @@ urls:
   home: https://laravel.com/forge
   pricing: https://laravel.com/forge/pricing
   docs: https://forge.laravel.com/docs
-category: server-management
+category:
+  - server-management
 regions: null
 description: Laravel Forge is server-management software — it provisions and configures servers, either on a VPS you bring yourself or on its own Laravel VPS product.
 whoManagesOs: panel-assisted

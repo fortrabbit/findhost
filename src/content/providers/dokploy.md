@@ -6,7 +6,8 @@ urls:
   pricing: https://dokploy.com/pricing
   terms: https://dokploy.com/terms-of-service
   docs: https://docs.dokploy.com/docs/core
-category: server-management
+category:
+  - server-management
 regions: null
 description: Open-source deployment platform billed per managed server, run either as a hosted service or installed on the customer's own machines.
 hqCountry: US

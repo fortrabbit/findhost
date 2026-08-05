@@ -5,7 +5,8 @@ urls:
   home: https://www.gandi.net
   pricing: https://www.gandi.net/en/simple-hosting
   status: https://status.gandi.net/
-category: shared-hosting
+category:
+  - shared-hosting
 description: Gandi is a French registrar whose Simple Hosting product runs application code in per-customer Linux containers, deployed by git or SFTP.
 hqCountry: FR
 whoManagesOs: container

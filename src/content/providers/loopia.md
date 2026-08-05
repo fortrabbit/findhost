@@ -6,7 +6,8 @@ urls:
   pricing: https://www.loopia.se/webbhotell/priser/
   terms: https://www.loopia.se/avtalsvillkor/
   docs: https://www.loopia.se/support/
-category: shared-hosting
+category:
+  - shared-hosting
 description: Swedish hosting provider and registrar in Västerås offering Linux and Windows shared hosting with SSH, PHP, Python, Perl and ASP.NET.
 founded: 1999
 hqCountry: SE

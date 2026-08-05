@@ -5,7 +5,8 @@ urls:
   home: https://xneelo.co.za
   pricing: https://xneelo.co.za/web-hosting/
   terms: https://xneelo.co.za/legal/terms-of-service/
-category: shared-hosting
+category:
+  - shared-hosting
 description: South African host, formerly Hetzner South Africa, selling shared hosting, managed and self-managed servers and colocation with a choice of ZA or DE servers.
 founded: 1999
 hqCountry: ZA

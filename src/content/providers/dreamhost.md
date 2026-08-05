@@ -5,7 +5,8 @@ urls:
   home: https://www.dreamhost.com
   pricing: https://www.dreamhost.com/hosting/shared/
   terms: https://www.dreamhost.com/legal/terms-of-service/
-category: shared-hosting
+category:
+  - shared-hosting
 description: DreamHost is an independently owned Los Angeles hosting company selling shared plans, managed WordPress and VPS tiers.
 founded: 1996
 hqCountry: US

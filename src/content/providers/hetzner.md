@@ -5,7 +5,9 @@ urls:
   home: https://www.hetzner.com
   pricing: https://www.hetzner.com/cloud/
   status: https://status.hetzner.com
-category: vps
+category:
+  - vps
+  - bare-metal
 description: Hetzner is an independent German hosting company offering VPS, dedicated servers, cloud and storage infrastructure from its own data centres.
 founded: 1997
 hqCountry: DE

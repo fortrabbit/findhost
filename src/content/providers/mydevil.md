@@ -6,7 +6,8 @@ urls:
   pricing: https://www.mydevil.net/
   terms: https://www.mydevil.net/dokumenty/regulamin-korzystania-z-uslug-mydevil-net/
   docs: https://pomoc.mydevil.net/
-category: shared-hosting
+category:
+  - shared-hosting
 description: Polish shared hosting with SSH on every plan, unlimited sites, mailboxes and databases, and Node.js, Python and Ruby alongside PHP.
 hqCountry: PL
 whoManagesOs: provider

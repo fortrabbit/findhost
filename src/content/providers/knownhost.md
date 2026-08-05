@@ -6,7 +6,8 @@ urls:
   pricing: https://www.knownhost.com/web-hosting
   terms: https://www.knownhost.com/terms-of-service
   docs: https://www.knownhost.com/kb/
-category: shared-hosting
+category:
+  - shared-hosting
 description: KnownHost is a US provider of shared, reseller, managed VPS, cloud and dedicated hosting, sold with a choice of cPanel, DirectAdmin or Plesk.
 founded: 2006
 regions:

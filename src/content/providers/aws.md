@@ -3,7 +3,8 @@ id: aws
 name: Amazon Web Services
 urls:
   home: https://aws.amazon.com
-category: iaas
+category:
+  - iaas
 description: Amazon Web Services is the largest cloud infrastructure provider, spanning 123 Availability Zones in 39 geographic Regions.
 parent: Amazon
 ownership: subsidiary

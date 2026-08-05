@@ -5,7 +5,8 @@ urls:
   home: https://www.hosting.com
   pricing: https://www.hosting.com/web-hosting/
 description: Hosting.com is the American web host formerly known as A2 Hosting, renamed in 2025 when World Host Group consolidated its brands under one name.
-category: shared-hosting
+category:
+  - shared-hosting
 founded: 2003
 hqCountry: US
 ownership: subsidiary

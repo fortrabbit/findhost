@@ -7,7 +7,8 @@ urls:
   status: https://www.ionos-status.de/
   terms: https://www.ionos.de/terms-gtc/terms
   docs: https://www.ionos.de/hilfe/
-category: shared-hosting
+category:
+  - shared-hosting
 description: Large European hosting group selling shared webhosting, VPS, dedicated and bare-metal servers and an IaaS cloud, listed on the Frankfurt exchange.
 founded: 1988
 hqCountry: DE

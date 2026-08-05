@@ -5,7 +5,8 @@ urls:
   home: https://glesys.com
   pricing: https://glesys.com/pricing/
   status: https://www.glesys-status.com/
-category: vps
+category:
+  - vps
 description: GleSYS is a Swedish infrastructure provider selling KVM and VMware servers, bare metal, managed databases, object storage and colocation from Nordic data centres.
 founded: 1999
 hqCountry: SE

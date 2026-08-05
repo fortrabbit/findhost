@@ -6,7 +6,8 @@ urls:
   pricing: https://www.zone.ee/en/web-hosting/prices/
   status: https://status.zone.eu/
   docs: https://help.zone.eu/en/
-category: shared-hosting
+category:
+  - shared-hosting
 description: Estonian hosting provider and domain registrar, selling shared hosting and cloud servers from northern European locations.
 founded: 1999
 hqCountry: EE

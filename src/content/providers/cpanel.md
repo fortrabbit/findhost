@@ -4,7 +4,8 @@ name: cPanel
 urls:
   home: https://cpanel.net
   pricing: https://cpanel.net/pricing/
-category: server-management
+category:
+  - server-management
 regions: null
 description: Hosting control panel installed on a server the operator supplies, licensed per server and priced by the number of accounts it manages.
 ownership: subsidiary

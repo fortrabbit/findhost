@@ -4,7 +4,8 @@ name: ServerPilot
 urls:
   home: https://serverpilot.io
   pricing: https://serverpilot.io/pricing/
-category: server-management
+category:
+  - server-management
 regions: null
 description: ServerPilot installs and maintains a PHP stack on an Ubuntu server the customer brings, billed per server and per application.
 founded: 2012

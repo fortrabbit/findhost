@@ -4,7 +4,8 @@ name: Divio
 urls:
   home: https://www.divio.com
   pricing: https://www.divio.com/pricing/
-category: paas
+category:
+  - paas
 description: Divio is a Swiss platform-as-a-service that runs Dockerised applications of any stack, deployed from git.
 founded: 2006
 hqCountry: CH

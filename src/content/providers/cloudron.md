@@ -4,7 +4,8 @@ name: Cloudron
 urls:
   home: https://www.cloudron.io
   pricing: https://www.cloudron.io/pricing.html
-category: server-management
+category:
+  - server-management
 regions: null
 description: Self-hosting platform that installs and keeps open-source applications updated on the customer's own server, with per-app backups and single sign-on.
 infraContract:

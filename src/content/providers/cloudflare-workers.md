@@ -4,7 +4,8 @@ name: Cloudflare Workers
 urls:
   home: https://workers.cloudflare.com
   pricing: https://developers.cloudflare.com/workers/platform/pricing/
-category: serverless
+category:
+  - serverless
 description: Cloudflare's edge compute platform, running JavaScript, TypeScript, Python and Rust in V8 isolates on the network that already serves the request.
 whoManagesOs: provider
 runtimes:

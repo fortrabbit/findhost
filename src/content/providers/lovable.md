@@ -5,7 +5,8 @@ urls:
   home: https://lovable.dev
   pricing: https://lovable.dev/pricing
   docs: https://docs.lovable.dev
-category: lcnc
+category:
+  - lcnc
 description: Lovable is an AI-assisted low-code no-code platform that generates web app code from natural language prompts and deploys it on its own infrastructure.
 whoManagesOs: provider
 audience:

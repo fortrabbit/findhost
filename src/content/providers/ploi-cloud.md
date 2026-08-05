@@ -4,7 +4,8 @@ name: Ploi Cloud
 urls:
   home: https://ploi.cloud
   pricing: https://ploi.cloud
-category: paas
+category:
+  - paas
 description: Managed application platform from the team behind the Ploi server-management panel, running customer apps on rented UpCloud infrastructure.
 infraContract:
   - resells-iaas

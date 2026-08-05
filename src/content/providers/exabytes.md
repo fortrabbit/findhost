@@ -4,7 +4,8 @@ name: Exabytes
 urls:
   home: https://www.exabytes.my
   pricing: https://www.exabytes.my/web-hosting
-category: shared-hosting
+category:
+  - shared-hosting
 description: Exabytes is a Malaysian host selling shared plans on a choice of cPanel or Plesk from its own data centre in Malaysia.
 hqCountry: MY
 whoManagesOs: panel-assisted

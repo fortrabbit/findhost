@@ -4,7 +4,8 @@ name: Latitude.sh
 urls:
   home: https://www.latitude.sh
   pricing: https://www.latitude.sh/pricing
-category: iaas
+category:
+  - bare-metal
 description: Bare-metal and GPU infrastructure billed hourly with automated provisioning, an API, SDKs, a CLI and Terraform support.
 whoManagesOs: you
 infraContract:

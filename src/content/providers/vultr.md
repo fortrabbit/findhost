@@ -5,7 +5,9 @@ urls:
   home: https://www.vultr.com
   pricing: https://www.vultr.com/pricing/
   docs: https://docs.vultr.com/
-category: vps
+category:
+  - vps
+  - bare-metal
 description: Cloud infrastructure provider selling virtual private servers, bare metal, GPU instances, object storage and managed Kubernetes, billed by the hour.
 whoManagesOs: you
 runtimes:

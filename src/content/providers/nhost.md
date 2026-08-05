@@ -4,7 +4,8 @@ name: Nhost
 urls:
   home: https://nhost.io
   pricing: https://nhost.io/pricing
-category: serverless
+category:
+  - serverless
 description: Open-source backend platform built on PostgreSQL, Hasura GraphQL and serverless functions, with a managed container runtime for the customer's own services.
 whoManagesOs: container
 useCases:

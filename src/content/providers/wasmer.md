@@ -5,7 +5,8 @@ urls:
   home: https://wasmer.io
   pricing: https://wasmer.io/pricing
   docs: https://docs.wasmer.io/
-category: serverless
+category:
+  - serverless
 description: WebAssembly runtime company whose edge platform runs applications compiled to WASM, PHP among them, close to the visitor.
 whoManagesOs: provider
 useCases:

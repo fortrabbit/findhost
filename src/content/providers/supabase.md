@@ -7,7 +7,8 @@ urls:
   status: https://status.supabase.com/
   terms: https://supabase.com/terms
   docs: https://supabase.com/docs
-category: serverless
+category:
+  - serverless
 description: Open-source backend built on PostgreSQL, with authentication, storage, realtime and Edge Functions that run the customer's own TypeScript on Deno.
 hqCountry: US
 ownership: vc-backed

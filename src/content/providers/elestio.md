@@ -7,7 +7,8 @@ urls:
   status: https://status.elest.io
   terms: https://elest.io/terms
   docs: https://docs.elest.io/
-category: server-management
+category:
+  - server-management
 description: Elestio is managed hosting for open-source software on dedicated virtual machines, provisioned into a third-party cloud or into the customer's own account.
 hqCountry: IE
 whoManagesOs: provider

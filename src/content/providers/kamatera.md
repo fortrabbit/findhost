@@ -4,7 +4,8 @@ name: Kamatera
 urls:
   home: https://www.kamatera.com
   pricing: https://www.kamatera.com/pricing/
-category: vps
+category:
+  - vps
 description: Kamatera is a cloud infrastructure company selling hourly-billed cloud servers, block storage, load balancers and firewalls from data centres worldwide.
 whoManagesOs: you
 runtimes:

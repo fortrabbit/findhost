@@ -3,7 +3,8 @@ id: gcp
 name: Google Cloud Platform
 urls:
   home: https://cloud.google.com
-category: iaas
+category:
+  - iaas
 description: Google Cloud Platform is one of the three hyperscalers, selling compute, storage, data and machine-learning services on the infrastructure behind Google's own products.
 parent: Google
 ownership: subsidiary

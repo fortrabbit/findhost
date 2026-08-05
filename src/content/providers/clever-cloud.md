@@ -5,7 +5,8 @@ urls:
   home: https://clever.cloud
   pricing: https://clever.cloud/pricing/
   status: https://clevercloudstatus.com/
-category: paas
+category:
+  - paas
 description: French platform-as-a-service that detects, builds and runs an application from a git push, with managed databases and storage sold as add-ons.
 hqCountry: FR
 whoManagesOs: container

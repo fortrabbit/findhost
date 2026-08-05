@@ -7,7 +7,8 @@ urls:
   status: https://status.zerops.io
   terms: https://zerops.io/terms
   docs: https://docs.zerops.io/
-category: paas
+category:
+  - paas
 description: Czech container platform running applications and managed services on rented infrastructure in Prague, billed by resources consumed rather than by plan tier.
 founded: 2018
 hqCountry: CZ
