@@ -72,8 +72,6 @@ figure:
 ai: authored
 ---
 
-## About Webempresa
-
 Webempresa has sold hosting in Spanish since 1999 and is now part of team.blue, the Belgian-Dutch group that also owns Combell and TransIP. The offer is built around WordPress and WooCommerce, with security as the headline: CageFS isolation, Apache with Nginx and Varnish in front, and NVMe storage.
 
 Plans are metered by number of sites, storage and monthly visits, and a data centre in either the EU or the United States is chosen at setup. Current PHP versions are supported, databases are MariaDB, and SSH access is offered in a limited form rather than as a full shell. Support is in Spanish and runs around the clock.

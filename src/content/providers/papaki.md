@@ -69,8 +69,6 @@ figure:
 ai: authored
 ---
 
-## About Papaki
-
 Papaki is a long-established domain registrar in Greece — the name means "little duck" — and sells shared hosting alongside the registrar business. It has been ISO 27001 certified and, since its acquisition, operates as part of team.blue, the European group that has bought up national registrars and hosts across the continent.
 
 The hosting is a small ladder of fixed plans, separated by storage, number of sites and number of databases. All of them include SSL, mail, NVMe storage, automatic backups and one-click installation of the common CMSes; SSH is available on everything above the entry plan. The provider manages the operating system, and the panel is the primary interface.

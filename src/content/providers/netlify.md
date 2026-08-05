@@ -88,8 +88,6 @@ figure:
 ai: authored
 ---
 
-## About Netlify
-
 Netlify connects to a git repository, runs the framework's build, and serves the result from a CDN. Serverless functions, edge functions, blob storage and a database sit alongside the static output, and the runtime for anything dynamic is JavaScript on the platform's own function primitives. The company did much to establish the pattern, and the deployment documentation of most static-site frameworks still carries a Netlify guide.
 
 Pricing is a monthly plan fee plus metered credits. The plan sets a credit allowance, and deploys, compute, bandwidth, requests and AI inference all draw on the same balance; extra credits are sold in packs. Free, mid and enterprise tiers differ mainly in how large the included allowance is.

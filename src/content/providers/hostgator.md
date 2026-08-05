@@ -39,8 +39,6 @@ figure:
   text: Don't feed the alligators.
 ---
 
-## About HostGator
-
 HostGator is a low-cost web host founded in 2002 in Texas, selling shared, reseller, virtual private server and dedicated hosting to a mass-market audience, with support advertised around the clock.
 
 It is one of the hosting brands of Newfold Digital, the portfolio company formerly known as Endurance International Group, which owns dozens of hosting names — Bluehost among them — and runs them as separate storefronts on shared operations.

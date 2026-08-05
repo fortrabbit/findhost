@@ -63,8 +63,6 @@ figure:
   text: Dutch clouds.
 ---
 
-## About Ploi Cloud
-
 Ploi Cloud is the managed platform from the Dutch team behind [Ploi](/providers/ploi/), the server-management panel. Where Ploi configures a server the customer rents, Ploi Cloud rents the infrastructure itself — capacity from UpCloud, in European and North American locations — and runs the operating system, so the customer deploys an application rather than administers a machine. It presents itself as European cloud hosting and leads on GDPR compliance.
 
 Billing is per resource rather than per plan: memory is the metered unit and CPU scales with it, so the bill follows the size of the application. Named support covers PHP applications — Laravel, WordPress, Statamic, Craft CMS — as well as Node, with managed PostgreSQL, MySQL, Redis and MongoDB available alongside. A short trial runs without a credit card.

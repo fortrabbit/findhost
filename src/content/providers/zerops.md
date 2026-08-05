@@ -101,8 +101,6 @@ figure:
 ai: authored
 ---
 
-## About Zerops
-
 Zerops began in 2018 as an internal project at the Czech hosting company vshosting and was relaunched as an independent, venture-backed company in 2024. It runs on vshosting's infrastructure in Prague, which is the only location it sells.
 
 Applications are declared as services and shipped through a git integration, the official CLI, the public API or a container image. The runtime images cover the mainstream server languages alongside static sites and arbitrary Docker containers, and full SSH access into a project comes with the platform. Managed databases, search and streaming services are provisioned as further services in the same project. Billing is per resource — the CPU, memory and disk actually consumed — with no subscription tiers and no per-seat charge, and new accounts start on trial credit rather than on a permanently free tier.

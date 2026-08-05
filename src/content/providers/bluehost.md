@@ -57,8 +57,6 @@ figure:
   text: WordPress hosting at retail scale.
 ---
 
-## About Bluehost
-
 Bluehost is a classical shared hosting service from the United States, founded in 2003. It is a hosting brand of Newfold Digital, the portfolio company formerly known as Endurance International Group, which also owns HostGator. WordPress.org has listed Bluehost as a recommended host since 2005, and the line-up follows from that: shared hosting, managed WordPress, WooCommerce hosting, VPS and domain registration.
 
 Plans are sold as a first-term rate on a multi-year prepayment, with the standing rate published alongside it. The entry plan renews at roughly two and a half times what it was bought at.

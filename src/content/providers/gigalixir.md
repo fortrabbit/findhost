@@ -62,8 +62,6 @@ figure:
 ai: authored
 ---
 
-## About Gigalixir
-
 Gigalixir is a platform-as-a-service built around the BEAM. Hot upgrades, remote observer, distributed clustering and remote consoles all work here, which the usual container model tends to preclude. Other runtimes deploy as well — Ruby, Python, Node, Go, Java, Rust, PHP and Clojure among them — but the product is shaped around Elixir and Phoenix.
 
 The free tier is permanent rather than a trial: a single small replica with a PostgreSQL database capped by row count rather than by size, custom domains and SSL, and applications that sleep only after a long idle period. Paid usage scales memory and replicas independently, prorated to the second, with SSH and a remote console included. Capacity sits on AWS and Google Cloud rather than on hardware the company owns.

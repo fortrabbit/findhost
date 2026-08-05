@@ -67,8 +67,6 @@ figure:
 ai: authored
 ---
 
-## About Divio
-
 Divio is a Swiss platform for running containerised web applications. Everything is Docker and git: the same image runs locally and in production, and the platform manages the environments, scaling and maintenance around it. Its roots are in the Django world — django CMS and Wagtail are still named alongside Django, FastAPI and Flask — but the documented stack list extends to Node, Laravel, Symfony, Spring Boot, ASP.NET Core, Rails, WordPress and Drupal.
 
 Pricing is a grid rather than a ladder: a resource tier, a support tier sold separately with its own response-time commitment, and a feature tier governing environments, backup retention and domain coverage. A trial tier is available, and the platform is ISO 27001 certified.

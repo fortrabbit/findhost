@@ -71,8 +71,6 @@ figure:
 ai: authored
 ---
 
-## About Seravo
-
 Seravo is a WordPress-only host based in Tampere, Finland. The stack is stated plainly — Docker, MariaDB, Nginx, PHP, Redis — and the company's open-source work is part of the pitch rather than a footnote.
 
 The distinctive part is `Seravo/wordpress`, the project layout its customers develop against. It is a public repository, and Finnish agencies have built their own add-ons, Vagrant boxes and local-development templates on top of it, which means a Seravo site is an ordinary git project on a developer's machine before it is a hosting account. Deployment is by git push or over SSH, with a command-line tool for routine operations. Every plan includes daily backups, security scanning, monitoring and support from WordPress specialists.

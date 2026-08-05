@@ -79,8 +79,6 @@ figure:
 ai: authored
 ---
 
-## About Combell
-
 Combell was founded in Ghent in 1999 and became the anchor of Combell Group, which merged with TransIP Group in 2019 to form team.blue. Data centres are in Belgium and the Netherlands, and the company sells across the Benelux.
 
 Shared hosting is PHP-FPM on Percona MySQL with shell access, a git-based deployment pipeline and separately sold Node.js hosting. The public knowledge base carries framework-specific instructions rather than generic ones, down to pointing a domain at a Laravel application's `public` directory. An HMAC-authenticated API exists, documented mainly for resellers.

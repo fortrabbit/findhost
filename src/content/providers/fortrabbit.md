@@ -70,8 +70,6 @@ figure:
   text: As secure as Fort Knox, as fast as a rabbit.
 ---
 
-## About fortrabbit
-
 fortrabbit is a small, independent German company running a managed hosting platform for PHP applications. It owns no hardware: the platform is built on rented AWS capacity, in Ireland and in the United States. Applications are deployed by git push, with full SSH access to the running environment and managed MySQL alongside. Plans are fixed tiers rather than metered usage, billed by the month, and a trial is available before an application goes live.
 
 fortrabbit also publishes FindHost, which is why this record carries a permanent marker saying so. It is held to the same standard as every other record here — the same fields, the same sourcing, the same right of reply. Anything reading more favourably than the evidence supports is a bug; open an issue.

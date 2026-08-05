@@ -83,8 +83,6 @@ figure:
   text: YAML in, environments out.
 ---
 
-## About Upsun
-
 Upsun is the platform-as-a-service formerly known as Platform.sh, renamed in 2025. It is language-agnostic — PHP, JavaScript and Python are documented, with framework guides for Laravel, Symfony, Django, Express and Next.js, and tutorials for WordPress, Drupal, Magento and Shopware. A project is described in YAML files covering routes, services and application containers, and a branch can be built into a full environment from that description.
 
 There are no named plans. Resources are provisioned per project and billed by the hour, metered per second, on top of a flat per-project fee and a per-user licence. A trial runs without a credit card. Upsun describes its customers as teams running regulated and production workloads in finance, SaaS and higher education.

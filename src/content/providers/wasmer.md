@@ -59,8 +59,6 @@ figure:
   text: PHP at the WASM edge.
 ---
 
-## About Wasmer
-
 Wasmer is a WebAssembly runtime with an edge platform built on top of it. Applications are compiled to WASM and run next to the visitor, which is what buys the platform its near-instant cold starts. Documented deployment paths cover WordPress and PHP applications such as Laravel, alongside Django and the JavaScript and static-site frameworks Next.js, Nuxt, Hugo and Astro.
 
 Plans are fixed tiers. The entry tier is permanently free and includes automatic CI/CD, a global CDN and metered bandwidth and compute hours; paid tiers sit above it, and enterprise and subhosting arrangements are quoted rather than listed. Edge locations are in Europe and North America.

@@ -72,8 +72,6 @@ figure:
 ai: authored
 ---
 
-## About Gandi
-
 Gandi is best known as a domain registrar; Simple Hosting, now also branded Web Hosting, is the side of it that runs application code. Each instance is an isolated Linux container with dedicated resources and Varnish caching in front, deployed by git or SFTP, placed either in Paris or in Bissen in Luxembourg.
 
 PHP, Python and Node.js are the documented runtimes across the plan ladder, with MySQL and PostgreSQL available alongside. Plans are fixed tiers, sized by the resources allotted to the container.

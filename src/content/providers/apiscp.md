@@ -47,8 +47,6 @@ figure:
   text: Max control, max responsibility.
 ---
 
-## About ApisCP
-
 ApisCP — short for Apis Networks Control Panel, formerly known as apnscp — is a self-hosted hosting platform and control panel by Apis Networks, grown out of a panel the company has run internally since 2002. It installs on a server the operator supplies and automates provisioning, account isolation, updates and self-healing, while exposing a large configuration surface underneath. The intended operator is a hosting provider or an experienced administrator rather than someone running a single site.
 
 The panel core is commercially licensed per server; the backend modules are published as open source. Runtimes covered are PHP, Node.js, Python, Ruby and Go, and the licence is sold on an annual subscription with a trial ahead of it.

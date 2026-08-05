@@ -48,8 +48,6 @@ figure:
   text: Store in a box.
 ---
 
-## About Shopify
-
 Shopify is a hosted ecommerce platform, founded in 2006 in Ottawa and listed on the public markets, that bundles storefront themes, product management, checkout and payments into one subscription. Nothing about the servers is the merchant's concern, and there is no shell or filesystem to reach.
 
 Customisation runs through Shopify's own layers — Liquid templates, the app ecosystem and defined checkout extension points — and store data lives inside the platform, so a store is built against Shopify's interfaces rather than against portable ones. Plans are fixed monthly tiers, from a single-store entry plan up to an enterprise tier, with a short trial and an introductory rate before the standing price begins.

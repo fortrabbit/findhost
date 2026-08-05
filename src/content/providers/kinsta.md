@@ -73,8 +73,6 @@ figure:
   text: Even royalty needs alternatives.
 ---
 
-## About Kinsta
-
 Kinsta is a managed WordPress host, founded in 2013. The operating system, web server and application runtime are managed by the provider; the customer works at the level of the WordPress installation. Plans are tiered on monthly visits rather than on CPU, memory or storage, and backups are included on every tier. Sites are served from data centre regions across the Americas, Europe, the Middle East, Africa and Asia-Pacific, fronted by a CDN.
 
 Kinsta once sold general application, database and static-site hosting alongside WordPress. Those non-WordPress products were moved into a separate brand, Sevalla, leaving kinsta.com selling WordPress hosting alone.

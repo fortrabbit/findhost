@@ -64,8 +64,6 @@ figure:
 ai: authored
 ---
 
-## About Pressable
-
 Pressable describes itself as "an Automattic hosting lab", which places it inside the company that also owns WordPress.com, WooCommerce and Jetpack, and makes it one of several WordPress hosts under that roof rather than a competitor to them. The product is managed WordPress only: the provider runs the operating system and the stack, and the customer works through a control panel and SFTP.
 
 Plans are a long ladder of fixed tiers, each defined by how many WordPress installs it covers, how many monthly visits it allows and how much storage it includes, rising to a custom tier for large accounts. Every plan carries a matching allowance of staging and sandbox sites, and support is offered around the clock.

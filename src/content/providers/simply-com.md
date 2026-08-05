@@ -71,8 +71,6 @@ figure:
 ai: authored
 ---
 
-## About Simply.com
-
 Simply.com has sold Danish hosting since 2004 and now belongs to team.blue, the European group that has bought up national hosts and registrars across the continent. The shared range is a small ladder of bundles, each combining web space, mailbox storage, a memory allocation and a website designer, with one-click WordPress and WooCommerce on top.
 
 Domains, payment-gateway integration and cookie-consent tooling are sold from the same account, which makes it a small-business package rather than a developer platform: the provider runs everything below the site, and files move by FTP or through the control panel. A public API is documented for automating the account.

@@ -64,8 +64,6 @@ figure:
 ai: authored
 ---
 
-## About Rocket.net
-
 Rocket.net hosts WordPress and nothing else, on infrastructure arranged around an enterprise content delivery network: the edge network sits in front of every site, and the customer chooses an origin location in the Americas, Europe or Asia. Security, caching and the WordPress stack are all the provider's responsibility, and the interface is a control panel with SFTP beside it.
 
 The ladder is long, running from single-site plans through agency tiers to enterprise accounts, so a portfolio can grow without changing supplier. A wide span of PHP versions stays selectable, which matters for inherited sites. Support is staffed around the clock by chat, ticket and telephone, annual billing carries a discount, and the pricing page commits to no upsells and no price increase at renewal.

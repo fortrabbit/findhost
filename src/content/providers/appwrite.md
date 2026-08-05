@@ -63,8 +63,6 @@ figure:
 ai: authored
 ---
 
-## About Appwrite
-
 Appwrite is an open-source backend platform — databases, authentication, file storage, messaging and functions — sold as a hosted service by the company that maintains it. The functions are what put it in this dataset rather than in a list of managed databases: user code in Node, PHP, Python, Ruby, .NET, Java, Go and several other runtimes executes on the platform and is reachable over HTTP.
 
 Plans run from a permanent free tier through a paid self-serve tier to negotiated enterprise terms. Overage rates above each plan's included usage are published rather than quoted, and budget caps and alerts can be set against them. Because the software is open source, the same stack can also be self-hosted on infrastructure the customer controls.

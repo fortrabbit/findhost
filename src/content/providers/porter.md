@@ -53,8 +53,6 @@ figure:
 ai: authored
 ---
 
-## About Porter
-
 Porter gives a team the deployment experience of a platform while the workloads run in their own AWS, Azure or GCP account: deploys from GitHub, preview environments, autoscaling, monitoring and logging, with Kubernetes underneath that nobody has to operate directly. Larger contracts add role-based access control, single sign-on and an on-premises installation.
 
 Billing is per resource — memory and vCPU consumed — and sits on top of the cloud bill rather than replacing it, with reduced rates for non-profits and at volume. Because the infrastructure belongs to the customer, ending the subscription removes the management layer and leaves the servers running, and availability and jurisdiction are inherited from whichever cloud account is used.

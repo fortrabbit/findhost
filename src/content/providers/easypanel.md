@@ -62,8 +62,6 @@ figure:
 ai: authored
 ---
 
-## About Easypanel
-
 Easypanel installs on a server the customer already rents and gives it the shape of a platform: projects, services, deployments, templates, automatic TLS certificates and custom domains. Builds come from git, from a container image or from one of the prepared templates, with auto-deploy through webhooks. WordPress, databases and volume backups are covered, and Cloudflare Tunnel integration exists for machines with no public address.
 
 Licensing is per server rather than per application. A permanent free tier is capped by project count; the paid tiers add monitoring, database backups, user accounts and access control, clustering and white-labelling, with a discount for annual billing.

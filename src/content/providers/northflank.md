@@ -81,8 +81,6 @@ figure:
 ai: authored
 ---
 
-## About Northflank
-
 Northflank runs long-lived services, cron jobs, build pipelines and managed databases from a single console. Compute is billed per vCPU-hour and gigabyte-hour with per-second granularity and no per-seat charge, and GPU instances are rented by the hour alongside the CPU ones. A permanent free sandbox tier covers a small number of services, jobs and one database.
 
 The distinguishing choice is where the work runs. The same platform will use Northflank's own managed cloud, deploy into the customer's account at one of the large public clouds, or drive a self-hosted Kubernetes cluster — which turns the question of who owns the infrastructure into a per-project setting rather than a decision made when signing up. That is why the record carries two infrastructure contracts rather than one.

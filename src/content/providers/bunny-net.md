@@ -69,8 +69,6 @@ figure:
 ai: authored
 ---
 
-## About Bunny.net
-
 Bunny.net is operated by BunnyWay d.o.o. from Slovenia and began as a content delivery network, priced by the gigabyte with rates that vary by continent. Storage, video delivery, image optimisation, DNS and a security product were built around it.
 
 What puts it in this dataset is the newer half of the catalogue. Edge Scripting deploys and runs applications across the network, Magic Containers runs containers globally, and Bunny Database provides an SQLite-compatible store to go with them. Billing is pay-as-you-go against a monthly minimum rather than a plan.

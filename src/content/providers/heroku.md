@@ -96,8 +96,6 @@ figure:
   text: The original git push to deploy.
 ---
 
-## About Heroku
-
 Heroku was founded by James Lindenbaum, Adam Wiggins and Orion Henry and built for hosting Ruby on Rails applications. It popularised `git push` as a deployment interface, and one of its co-founders wrote the twelve-factor app methodology. Salesforce acquired the company in 2010, and Heroku describes itself on its own site as a business unit of Salesforce.
 
 Officially supported languages are Node.js, Ruby, Python, Java, PHP, Go, Scala, Clojure and .NET. Applications deploy over a git remote or the Heroku CLI, and first-party data services cover Postgres, a Redis-compatible key-value store and Apache Kafka. The shared Common Runtime offers a US and an EU region; Private Spaces add named regions across North America, Europe, Asia and Australia on isolated infrastructure.

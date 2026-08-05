@@ -52,8 +52,6 @@ figure:
 ai: authored
 ---
 
-## About Nhost
-
 Nhost assembles a backend from open-source parts — PostgreSQL, Hasura for the GraphQL layer, authentication, file storage and serverless functions — and sells it managed. Nhost Run adds a managed container runtime for services the customer writes themselves, which is what makes it a place code runs rather than only a database with an API in front of it.
 
 Billing is by fixed plan tier rather than metered usage, with the tier setting database size, storage, backup behaviour and support level. The stack is open source and can be self-hosted, so leaving the managed service does not mean rewriting the application.

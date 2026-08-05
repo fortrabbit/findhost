@@ -60,8 +60,6 @@ figure:
 greenWebId: 1530
 ---
 
-## About Servd
-
 Servd is "Built for Craft CMS" — a managed platform whose infrastructure is arranged around one CMS rather than a general-purpose host that happens to run it. It is operated by a small independent British team that also publishes its own Craft plugin, and the stated audience is developers, teams running medium-sized sites, and agencies handling several projects at once.
 
 Plans are fixed tiers, each covering a single Craft installation and separated by CPU, worker count, asset storage and image bandwidth, with custom arrangements above them. Every plan includes managed infrastructure, git-based deployment, a staging environment, daily backups with retention, a web application firewall, DDoS protection and automatic crash recovery. Regions cover North America, the UK and the EU.

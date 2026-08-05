@@ -47,8 +47,6 @@ figure:
   text: Polished templates, fixed canvas.
 ---
 
-## About Squarespace
-
 Squarespace sells an all-in-one website builder: design-led templates, content management, commerce features and AI-assisted site generation, with hosting bundled into the subscription. It was founded in New York in 2004 and taken private by the investment firm Permira in 2024.
 
 Sites are built and edited entirely inside the template canvas, with no server access. Every site starts with a free trial that takes no credit card, and plans can be upgraded, downgraded or cancelled at any time, with the change taking effect at the end of the billing cycle. Annual billing includes a year of domain registration. The pricing page renders its plan figures client-side and did not serve them to an automated fetch, which is why no entry price is recorded here.

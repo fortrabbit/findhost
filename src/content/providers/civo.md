@@ -73,8 +73,6 @@ figure:
 ai: authored
 ---
 
-## About Civo
-
 Civo is a British cloud built around Kubernetes rather than one that added it later. Control-plane components are not charged for, the bill covers worker nodes and add-ons only, and data transfer in and out is unmetered — three decisions that between them remove most of what makes a managed-Kubernetes invoice hard to predict in advance.
 
 Beyond clusters it sells compute instances, S3-compatible object storage, persistent volumes, load balancers, managed PostgreSQL and GPU capacity. Sovereign private-cloud arrangements are offered for the United Kingdom and India, and the platform is certified against the usual enterprise audit standards. New accounts start on time-limited credit rather than a standing free allowance.

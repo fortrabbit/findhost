@@ -59,8 +59,6 @@ figure:
 ai: authored
 ---
 
-## About 1984 Hosting
-
 1984 Hosting has operated from Iceland since 2006 under the banner "free speech and privacy since 2006". The name is the argument: the company presents itself as an ethical and independent host, accepts Bitcoin and Monero alongside conventional payment, publishes an account of the litigation it has been involved in, and holds ISO 27001 certification.
 
 Iceland is a deliberate choice on two counts. The jurisdiction's data-protection posture is one; the other is that the data centres draw on Iceland's geothermal and hydroelectric generation. The product line is shared web hosting with one-click WordPress installation, virtual servers with root access and DDoS protection, and a free anycast DNS service with automatic DNSSEC and zone history.

@@ -37,8 +37,6 @@ figure:
 ai: authored
 ---
 
-## About HostPinnacle
-
 HostPinnacle is a hosting company based in Nairobi, Kenya, selling shared hosting, WordPress hosting and reseller hosting on cPanel, alongside a separate line of KVM virtual private servers. The VPS line comes in two forms: a self-managed tier with full root access over SSH, and a cPanel-managed tier where the provider handles the panel, security updates and performance tuning. A free `.co.ke` domain is bundled with hosting plans, and prices are published in Kenyan shillings.
 
 Beyond hosting, the company sells bulk SMS, USSD shortcodes and WhatsApp-based messaging APIs aimed at the Kenyan market, which sit alongside the hosting catalogue rather than being part of it.

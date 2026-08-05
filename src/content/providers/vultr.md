@@ -59,8 +59,6 @@ figure:
   text: No cage required.
 ---
 
-## About Vultr
-
 Vultr is a cloud infrastructure provider selling virtual private servers, bare metal, cloud compute instances, managed Kubernetes, object storage and GPU instances. Compute is billed by the hour against a monthly cap, and the whole catalogue — plans, regions, instances — is driven by a public API as well as by the web console.
 
 Locations span the Americas, Europe, Africa, the Middle East and Asia-Pacific, but not every product is sold in every one; high-performance block storage and the newer instance families are offered in a subset. Vultr supplies the machine and root access and stops there: installing a web server, issuing certificates, patching and monitoring stay with the account holder for as long as the server exists.

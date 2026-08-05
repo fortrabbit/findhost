@@ -99,8 +99,6 @@ figure:
 ai: authored
 ---
 
-## About SiteHost
-
 SiteHost was founded in 2004, is still independently owned, and owns and operates its Auckland data centre rather than renting rack space. It has since added hardware in Australia, Asia and the northern hemisphere.
 
 Cloud Containers is the part that makes it a platform rather than a host. Prebuilt stack images cover Nginx and Apache with a choice of PHP, Node.js, Ruby and .NET runtimes, plus WordPress and Silverstripe images and a set of database and search containers. Each container gets its own SSH and SFTP user, cron and environment variables; custom Docker images can be pushed through the company's own registry and build pipeline. Containers are sold in unmanaged and managed variants. There is a public API, a Terraform provider, and independent API clients written by New Zealand agencies and individuals.

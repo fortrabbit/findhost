@@ -66,8 +66,6 @@ figure:
   text: VPS from US by Akamai.
 ---
 
-## About Linode
-
 Linode has sold Linux virtual servers to developers since 2003. Akamai acquired it in 2022 and the product is now marketed as Akamai Cloud, with the catalogue widening from plain VPS instances towards broader infrastructure services integrated with Akamai's CDN and edge network.
 
 The public API needs no credentials to read the catalogue, so instance types, prices and the region list can be queried directly rather than read off a pricing page — which is where the figures in this record come from.

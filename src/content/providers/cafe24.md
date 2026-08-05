@@ -28,8 +28,6 @@ figure:
 ai: authored
 ---
 
-## About Cafe24
-
 Cafe24 is a Seoul-based company registered as a hosting business (business registration 118-81-20586) that grew into one of Korea's largest e-commerce SaaS platforms, running both lines from the same brand. The hosting catalogue, published in Korean won, spans entry shared hosting, managed WordPress hosting, WordPress-specific and general-purpose VPS, and an hourly-billed cloud server product. The shopping-mall product, sold separately, lets a merchant run a store without managing a server.
 
 Because Cafe24's shopping-mall API is public, a body of independent tooling has grown up around it — OAuth client libraries, TypeScript SDKs and backend templates published by outside developers rather than by Cafe24 itself.

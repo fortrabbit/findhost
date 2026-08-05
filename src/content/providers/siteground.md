@@ -79,8 +79,6 @@ figure:
   text: Managed WordPress, rented from Google.
 ---
 
-## About SiteGround
-
 SiteGround has been independently owned since 2004 and runs its service on Google Cloud rather than its own hardware. It replaced cPanel with a proprietary control panel, Site Tools, and sells fixed shared tiers built around WordPress and WooCommerce. SSH and WP-CLI come with every tier; Git integration and staging appear on the higher ones.
 
 The company describes itself as a group registered across several countries and names no headquarters, which is why that field is empty here rather than guessed.

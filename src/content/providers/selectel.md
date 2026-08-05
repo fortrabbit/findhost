@@ -29,8 +29,6 @@ figure:
 ai: authored
 ---
 
-## About Selectel
-
 Selectel is an infrastructure company operating six data centres it describes as its own, split between Saint Petersburg and Moscow with partner facilities in the Leningrad region. It sells dedicated servers, cloud virtual machines, a VMware-based cloud, managed Kubernetes, managed databases and object storage, priced in Russian roubles. The company states 36,000-plus clients and describes itself as having operated for 17 years.
 
 Infrastructure is driven through Selectel's own API, Terraform provider and Go client library, and a separate set of independently written client libraries exist for PHP, Python and .NET against the object storage API specifically — evidence of third-party integration the marketing pages themselves do not claim.

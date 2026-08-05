@@ -69,8 +69,6 @@ figure:
 ai: authored
 ---
 
-## About Sliplane
-
 Sliplane runs Docker containers on servers rented by size rather than by workload: an unlimited number of services can share one machine with no per-container fee. That inverts the usual platform pricing model, where every additional service adds a line to the bill.
 
 Deployment is from a git repository or a container image, with one-click templates for common databases and self-hosted tools. Managed PostgreSQL with point-in-time backups and S3-compatible object storage without egress fees are sold alongside. Servers can be placed in Europe, North America or Asia, and the price varies by location.

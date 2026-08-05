@@ -68,8 +68,6 @@ figure:
   text: Managed servers, but you are the admin.
 ---
 
-## About xCloud
-
 xCloud is a newer entrant in the [server management](/categories/server-management/) space, launched in 2023 by WPDeveloper, the company behind Essential Addons for Elementor. It targets WordPress, Laravel and general PHP applications. Like others in the category it connects to a customer's cloud provider account — DigitalOcean, Vultr, Linode, AWS, Hetzner and bare metal are named — to provision and manage servers, and it also sells hosting on servers it provides itself.
 
 The panel covers sites, servers and teams, with automated backups, updates and free TLS certificates, and Laravel tooling including queue workers and Horizon. Several lines are sold side by side: a per-server subscription for machines the customer brings, managed servers in a range of sizes, a separate agent-hosting line, and white-label reseller plans. On the bring-your-own line the subscription buys the panel alone, and the operating system, its patches and its incidents stay with the account holder.

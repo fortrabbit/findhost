@@ -65,8 +65,6 @@ figure:
 ai: authored
 ---
 
-## About Xserver
-
 Xserver is a Japanese hosting company selling what that market calls a "rental server": shared hosting on fixed monthly tiers, sold in Japanese to a domestic audience. The provider runs the operating system and the web stack, and customers work through a control panel and FTP.
 
 The plans differ in resources rather than in capability — the same WordPress tooling, automatic backups and free SSL certificates come with the whole range. Prices are quoted inclusive of tax and fall as the contract term lengthens, so the headline monthly figure belongs to the longest commitment rather than to a short one.

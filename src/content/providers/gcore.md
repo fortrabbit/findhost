@@ -54,8 +54,6 @@ figure:
 ai: authored
 ---
 
-## About Gcore
-
 Gcore sells the edge and the cloud together: a content delivery network with its own peering and scrubbing centres, video streaming, DNS, DDoS protection and a web application firewall, alongside virtual machines, bare metal, managed Kubernetes, GPU capacity and serverless inference. Functions and container deployment are what place it in this dataset rather than among network vendors, since customers run their own code on the platform.
 
 Pricing is published in euros and metered per product — the web application firewall by request volume, DDoS protection by the amount of clean traffic delivered — rather than assembled into plans. A public looking glass allows the network to be checked from outside.

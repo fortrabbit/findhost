@@ -29,8 +29,6 @@ figure:
   text: Prompt in, React app out.
 ---
 
-## About Lovable
-
 Lovable is an AI builder that turns a natural-language description into a working web application. The model generates React code, and Lovable hosts and publishes the result on its own infrastructure, so building and deploying happen in the same place. It is aimed at people who are not developers — founders, operators, designers — who want something running without assembling a stack.
 
 Usage runs on a credit model. Lovable describes credits as "units Lovable uses to measure and pay for usage across your workspace", and one balance covers generating an application, running the deployed application, and the AI features around both. A free plan grants a daily and monthly credit allowance; paid plans raise it.

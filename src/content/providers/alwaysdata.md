@@ -89,8 +89,6 @@ figure:
 ai: authored
 ---
 
-## About alwaysdata
-
 alwaysdata is a Paris company registered in 2006 that owns its hardware, runs it in Equinix facilities in the Paris region on its own autonomous system, and buys transit from several carriers. Nothing leaves France.
 
 Architecturally it is not conventional shared hosting. Accounts are isolated with cgroups on Debian, each account runs its own HTTP servers and long-lived background processes, and unused capacity is redistributed between accounts rather than hard-capped. Each supported runtime has its own documentation pages, and the PHP interpreter range on offer reaches back to releases most hosts have long retired. The free plan is permanent rather than a trial — the pricing page calls it an offer available for life — with a small storage allowance and mailboxes included, and paid plans sit above it.

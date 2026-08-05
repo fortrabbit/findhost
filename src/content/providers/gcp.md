@@ -70,8 +70,6 @@ sources:
 greenWebId: 595
 ---
 
-## About GCP
-
 Google Cloud Platform is the third of the big three hyperscalers, after AWS and Azure. It runs on the same infrastructure Google uses for Search, Gmail and YouTube, and its catalogue reflects Google's own centre of gravity: data and analytics through BigQuery, Kubernetes through GKE, machine learning throughout.
 
 Application workloads have several entry points. App Engine takes code and manages the runtime, [Cloud Run](/providers/google-cloud-run/) runs containers, and Compute Engine sells plain virtual machines; databases are separate services again, Cloud SQL among them. Each is picked, configured, connected and billed on its own, so the choice between them is an architectural decision taken before the first deployment. Regions span six continents, and everything is metered by usage rather than sold as a plan, which is why no entry price is recorded here.

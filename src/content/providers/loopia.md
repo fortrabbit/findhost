@@ -76,8 +76,6 @@ figure:
 ai: authored
 ---
 
-## About Loopia
-
 Loopia was founded in Västerås in 1999 as NetConnect and is a domain registrar as well as a host, managing several hundred thousand domain names. Ownership has moved repeatedly: Visma sold the hosting division to the Danish investor Axcel in 2018, and Axcel sold Loopia Group to team.blue in 2024.
 
 It is one of the few providers still running a genuine Windows hosting track — ASP.NET and MS SQL — beside the Linux one, which carries PHP with a choice of release. SSH is included on every package. A public XML-RPC domain API has drawn independent client libraries, a Terraform provider and an ACME module, none of them company-maintained.

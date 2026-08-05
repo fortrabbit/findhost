@@ -64,8 +64,6 @@ figure:
 ai: authored
 ---
 
-## About hosttech
-
 hosttech was founded in Richterswil in March 2004 and became a GmbH in 2009. It sells shared web hosting, servers and domains, and unusually for a host of its size it owns its facilities outright rather than renting rack space.
 
 DATAROCK in Nottwil occupies a former Swiss Army military hospital fifteen metres underground; DATAPARK in Wädenswil has run since 2014; a third site in Appenzell is Tier 4 certified and carries a photovoltaic facade. Webhosting runs PHP with configurable settings and Git integration, and the plan pages carry a "swiss hosting" certification asserting that data stays in Switzerland.

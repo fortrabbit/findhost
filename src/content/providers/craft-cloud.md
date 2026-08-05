@@ -49,8 +49,6 @@ figure:
   text: Cloudy with a chance of Craft.
 ---
 
-## About Craft Cloud
-
 Craft Cloud is made by Pixel & Tonic, the company behind Craft CMS, and is described in its own documentation as a serverless hosting platform built specifically for Craft projects. It launched in 2024, so the CMS, the licence and the hosting can all be bought from one company.
 
 Deployment is push-to-deploy from GitHub, Bitbucket or GitLab, with a build pipeline that runs Composer and npm tasks and a CDN in front of the site. Pricing is per project rather than per account, across a small number of tiers with an enterprise arrangement above them. Neither the marketing page nor the documentation index states which infrastructure the platform runs on.

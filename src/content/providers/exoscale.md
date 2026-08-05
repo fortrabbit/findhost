@@ -92,8 +92,6 @@ figure:
 ai: authored
 ---
 
-## About Exoscale
-
 Exoscale is the trading name of Akenes SA in Lausanne. Despite the Swiss identity it belongs to A1 Digital, part of the Vienna-listed A1 Telekom Austria Group, so ownership traces back to an Austrian telco.
 
 Zones sit in Switzerland, Austria, Germany and Croatia, each one independent so that a zone failure does not propagate. The catalogue covers compute instances, dedicated hypervisors, SKS managed Kubernetes, object and block storage, managed PostgreSQL, MySQL, Kafka, OpenSearch, Valkey and Grafana, plus DNS, KMS, IAM and GPU instances. The platform is CloudStack-derived, which is why Apache Libcloud can drive it directly, and a community-maintained Ansible collection sits alongside the official CLI and Terraform provider. Documentation pages are served as Markdown as well as HTML, by appending `index.md` to the URL.

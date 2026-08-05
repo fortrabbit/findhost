@@ -55,8 +55,6 @@ figure:
   text: Managed hosting, high touch.
 ---
 
-## About Liquid Web
-
 Liquid Web is a hosting provider from Lansing, Michigan, trading since 1997 and specialising in managed VPS, dedicated servers, private and public cloud, and WordPress hosting. Support is the positioning: the product is sold as high-touch and fully managed, under the slogan "Most Helpful Humans in Hosting".
 
 The company grew by acquisition — Nexcess, and a portfolio of WordPress software brands including iThemes/SolidWP — and several of those brands have since been folded back into Liquid Web. Since 2023 it has belonged to the private-equity firm One Equity Partners under the CloudOne Digital holding.

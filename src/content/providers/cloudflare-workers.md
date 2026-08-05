@@ -40,8 +40,6 @@ figure:
   text: Code in isolates, next to the visitor.
 ---
 
-## About Cloudflare Workers
-
 Cloudflare Workers runs code in V8 isolates on Cloudflare's network, close to the visitor and without the cold-start cost of a container. Cloudflare documents first-class support for JavaScript, TypeScript, Python and Rust, and describes WebAssembly as the route for everything else, naming C, C++, Kotlin and Go as examples.
 
 Two plans exist. The free one comes with every account by default and includes a daily request allowance with a short CPU-time budget per invocation. The paid one carries a monthly minimum and meters requests and CPU time above the included amounts. Storage, queues and databases are separate Cloudflare products a Worker calls into.

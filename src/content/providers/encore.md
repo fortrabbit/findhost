@@ -59,8 +59,6 @@ figure:
 ai: authored
 ---
 
-## About Encore Cloud
-
 Encore inverts the usual arrangement. Infrastructure is not configured alongside the application, it is declared inside it: the platform reads the code to work out which databases, queues, caches and cron jobs need to exist, then provisions them. Local development runs the same topology automatically, and distributed tracing and a service catalogue come from the same declarations.
 
 TypeScript and Go are the supported languages, both with the full feature set. Production deploys into the customer's own AWS or GCP account, so the cloud relationship and the bill for capacity stay with them, while development environments can run on Encore's own infrastructure. The platform generates Docker images so that an application can be taken elsewhere.

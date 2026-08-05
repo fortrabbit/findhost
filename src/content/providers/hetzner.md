@@ -79,8 +79,6 @@ figure:
 greenWebId: 131
 ---
 
-## About Hetzner
-
 Hetzner Online GmbH was founded in 1997 and is headquartered in Gunzenhausen, Germany. It owns and operates its own data centre parks in Germany and Finland, and has added capacity in Singapore and the United States.
 
 The product range covers shared hosting, dedicated servers, colocation, cloud servers, block storage and object storage. A cloud server arrives as a Linux install with root access and nothing configured on top of it; everything above the operating system is the customer's to set up and to keep running. Billing is hourly against a monthly price cap, and a server deleted part-way through a month is charged only for the hours it ran, so there is no minimum term. Backups are an opt-in extra.

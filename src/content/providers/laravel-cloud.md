@@ -65,8 +65,6 @@ figure:
   text: The framework vendor's own platform.
 ---
 
-## About Laravel Cloud
-
 Laravel Cloud is made by Laravel Holdings Inc., the company behind the Laravel framework, and is the framework vendor's own hosting platform. It reached general availability in 2025. It started Laravel-only and has since added Symfony support; other PHP frameworks and plain PHP have no route in.
 
 Applications are imported from a repository and deployed without server configuration. Compute scales to zero when traffic stops and wakes on the next request. Data services are a serverless Postgres with its own sleep timer and a Valkey cache. Plans are a subscription with usage credits attached, stepping up to add autoscaling, preview environments and team roles, and a spending limit can be set to pause compute at a ceiling.

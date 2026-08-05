@@ -80,8 +80,6 @@ figure:
   text: Windows in the sky?
 ---
 
-## About Azure
-
 Azure is Microsoft's cloud platform, spanning virtual machines, storage, networking, databases and AI services, and integrating with the rest of the Microsoft estate — Entra ID, Microsoft 365, Visual Studio, .NET. That integration is why it is the default cloud in many corporate IT environments.
 
 App Service is the platform layer above the raw infrastructure: it builds and runs web applications on managed instances, so nobody administers the virtual machine underneath. Databases are separate services with their own configuration and their own line on the bill, which is the pattern across the catalogue — what a site costs follows from how it is assembled rather than from a plan. A standing free App Service plan exists on shared compute.

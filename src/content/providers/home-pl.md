@@ -68,8 +68,6 @@ figure:
 ai: authored
 ---
 
-## About home.pl
-
 home.pl is one of Poland's largest hosting companies. It sells shared hosting in a ladder of tiers that differ mainly in storage, all of them with unlimited transfer and mailboxes, alongside domains and mail products. The runtime line-up covers PHP, Perl and Python on every tier, with MySQL throughout and PostgreSQL from the entry plan upwards. SSH and FTP are both available, with more shell capability higher up the ladder. Servers are in Poland.
 
 ## Worth knowing

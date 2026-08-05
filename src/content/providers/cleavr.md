@@ -71,8 +71,6 @@ figure:
 ai: authored
 ---
 
-## About Cleavr
-
 Cleavr provisions a server and then keeps deploying to it: web applications, cron jobs, process monitors, environment variables, TLS certificates and deployment logs, with notifications to Slack, Discord, Telegram or email and a GitHub Actions integration for anyone who wants the pipeline elsewhere.
 
 The supported frameworks are named explicitly rather than left to a generic build step — Laravel, Nuxt, Next.js, AdonisJS, WordPress, Strapi, Directus, plain PHP, Node and static HTML among them. Servers are provisioned on one of several named clouds, DigitalOcean, Hetzner, AWS, Linode, UpCloud and Vultr among them, or adopted from a VPS bought anywhere else.

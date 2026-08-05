@@ -90,8 +90,6 @@ figure:
 ai: authored
 ---
 
-## About netcup
-
 netcup began as a sole proprietorship and became netcup GmbH in Karlsruhe in 2008. It has belonged to the Austrian Anexia group since 2016. Server locations are offered in Europe, North America and Asia, with a "no preference, somewhere in Europe" option for anyone who does not care where the machine sits.
 
 Price is the defining characteristic, and so is the fact that it holds: the rate is fixed for the contract term rather than reverting to a higher standing price once an introductory period ends. A twelve-month term is offered alongside hourly billing with no minimum term at all. Root servers give full control of the machine; webhosting runs on Plesk with PHP on every tariff and documented support for Python, cron jobs and PHP extensions.

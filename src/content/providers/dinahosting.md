@@ -79,8 +79,6 @@ figure:
 ai: authored
 ---
 
-## About Dinahosting
-
 Dinahosting has traded from Santiago de Compostela since 2001 and remains independently owned. It sells shared hosting, domains and email, and publishes the runtimes each plan carries: PHP with per-site version selection, plus Python, Ruby, Node.js and Perl on Linux, and .NET on the Windows plans. SSH is offered above the entry tier and is never root.
 
 Hosting runs on the company's own servers in Spain with Spanish IP addresses, and the company holds a green-hosting accreditation for renewable energy. Support is staffed around the clock by phone, email and chat. The plan ladder is short, topped by a multihosting option that gives an agency separate control panels for separate clients. Advertised prices are first-year promotional rates; the standing rate is roughly double, so the published figure is not what a renewing customer pays.

@@ -90,8 +90,6 @@ figure:
 ai: authored
 ---
 
-## About Scalingo
-
 Scalingo is a platform-as-a-service from Strasbourg built around buildpacks: push to git, the platform detects the stack, and the result runs in containers sized per application. A wide span of languages and frameworks is documented and tracked against current releases, with review apps for branches, managed PostgreSQL, MySQL, MongoDB, Redis and Elasticsearch beside them, and a CLI, public API and Terraform provider for driving the account.
 
 Its distinguishing claim is jurisdiction. Capacity is rented from a French infrastructure operator rather than a hyperscaler, and one of the regions is SecNumCloud-qualified and enabled on request. The company is ISO 27001 certified and sells database plans for regulated health data. French public bodies publish their own tooling for the platform, including a buildpack maintained by a government ministry.

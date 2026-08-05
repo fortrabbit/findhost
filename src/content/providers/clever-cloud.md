@@ -88,8 +88,6 @@ figure:
 ai: authored
 ---
 
-## About Clever Cloud
-
 Clever Cloud is a platform-as-a-service run from Nantes. An application is deployed by pushing to a git remote; the platform detects the stack, builds it and runs it. Runtimes cover Node, Python, Java, PHP, Ruby, Go, Rust, Scala, Elixir, Haskell and .NET, with Docker for anything outside that set, alongside managed PostgreSQL, MySQL, MongoDB, Redis and object storage sold separately as add-ons.
 
 The Paris zone runs on the company's own infrastructure; the other zones run on capacity rented from other European providers, which the platform's public zones endpoint discloses rather than obscures. It holds ISO/IEC 27001 and the French HDS health-data certification, and offers a SecNumCloud route through a partner.

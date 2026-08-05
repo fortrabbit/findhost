@@ -51,8 +51,6 @@ figure:
   text: Laravel, evaporated to Lambda.
 ---
 
-## About Laravel Vapor
-
 Vapor is Laravel's own serverless platform, built on Bref and AWS Lambda. It wires up the AWS pieces a serverless Laravel application needs — Lambda, API Gateway, S3, SQS, RDS, CloudFront, certificates — and handles the Laravel conventions that raw Bref leaves to the developer: asset compilation, queues, migrations.
 
 It is sold as a flat subscription, with a limited free sandbox below it. Every tier states that the price does not include AWS costs: the customer links their own AWS account, Amazon bills that account directly, and Vapor states it never marks AWS prices up.

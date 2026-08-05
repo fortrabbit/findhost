@@ -71,8 +71,6 @@ figure:
 ai: authored
 ---
 
-## About PythonAnywhere
-
 PythonAnywhere gives an account a Python environment reachable entirely from a browser: consoles, scheduled tasks, always-on processes and web applications, with nothing to install locally. That property made it a fixture in teaching, where a classroom needs tabs rather than working laptops. The company is British, trades as an LLP, and has belonged to Anaconda since 2022.
 
 Billing is per resource rather than per plan, and the dials are web workers, disk and CPU-seconds a day. The CPU-second is the unit that matters: it is defined against a named processor and consumed by consoles, scheduled tasks and always-on processes, but not by the web applications themselves. A permanent free tier runs one web app on a subdomain; paid accounts add custom domains, full SSH, unrestricted outbound network access and certificates.

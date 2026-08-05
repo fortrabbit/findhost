@@ -74,8 +74,6 @@ figure:
 ai: authored
 ---
 
-## About MyDevil.net
-
 MyDevil is a Polish shared host whose plans differ only in disk space. Every one of them carries unlimited sites, mailboxes, databases and bandwidth, SSH access, and free Let's Encrypt certificates.
 
 The runtime list is what separates it from ordinary shared hosting: a wide choice of PHP releases selectable per site, plus Node.js, Python with Django, Ruby on Rails and Git. Databases are MySQL, PostgreSQL and MongoDB, a combination rarely offered at this level. Servers are in Poland, backups run daily with a rolling history, and migration is included with an annual plan.

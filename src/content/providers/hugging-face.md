@@ -64,8 +64,6 @@ figure:
 ai: authored
 ---
 
-## About Hugging Face
-
 Hugging Face is best known as the registry where machine-learning models and datasets live, but its Spaces product makes it a hosting provider as well. A Space is a Git repository that the platform builds and runs as a live application, either through one of the supported SDKs — Gradio and Streamlit for Python, or a plain static site — or from a Dockerfile, which admits anything that fits in a container.
 
 Hardware is where the money is. A basic CPU tier and a dynamically allocated GPU pool are free; paid tiers rent Nvidia cards by the hour. Account plans step from a personal subscription through team and enterprise tiers, adding storage, SSO, audit logs and access controls. What is free has narrowed: static Spaces remain free for everyone, while Spaces that run compute generally require a paid plan to create.

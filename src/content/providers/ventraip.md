@@ -70,8 +70,6 @@ figure:
 ai: authored
 ---
 
-## About VentraIP
-
 VentraIP was founded in Melbourne in 2008 and is the retail brand of Nexigen Digital Pty Ltd, which holds ISO 27001 certification. The company describes itself as Australia's largest independent domain registrar, and its hosting runs in Australian NEXTDC facilities rather than on hardware it owns.
 
 The hosting itself is conventional cPanel shared hosting, sold alongside WordPress plans and VPS. What sets the offer apart is commercial rather than technical: no minimum contract, free migration and a money-back guarantee. Support runs by phone and chat around the clock.

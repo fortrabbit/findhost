@@ -80,8 +80,6 @@ figure:
   text: The raw serverless primitive.
 ---
 
-## About AWS Lambda
-
 Lambda runs a handler on demand in an isolated, short-lived environment and bills per request and per gigabyte-second of execution. It is a building block rather than a platform: the database, object storage, HTTP gateway and session handling are separate AWS services assembled around it. The execution model carries hard edges — a bounded run time per invocation, a limit on deployment package size, a small ephemeral filesystem and no state carried from one invocation to the next.
 
 The managed runtimes AWS lists are Node.js, Python, Java, .NET and Ruby, alongside an OS-only runtime for everything else and the option of supplying a container image. Any language outside the managed set arrives through a custom runtime: a `bootstrap` executable implementing the Lambda runtime loop, in practice supplied by a community layer rather than written by hand.

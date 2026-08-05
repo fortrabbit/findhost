@@ -96,8 +96,6 @@ figure:
 ai: authored
 ---
 
-## About Mittwald
-
 Mittwald is a family-owned hosting company in Espelkamp, North Rhine-Westphalia, trading since 2003 and running its own data centre at its headquarters. Everything is hosted in Germany; there is no region to choose.
 
 The product sits closer to a platform than to commodity shared hosting. Projects run in containers and are administered through mStudio, a control plane with a documented REST API, API tokens meant for CI, published client libraries and an official `mw` command-line tool. SSH is available, and the classic tariffs sit alongside container hosting for Node and Docker workloads. Current PHP releases are documented; older ones are reachable only through a paid extended-support add-on.

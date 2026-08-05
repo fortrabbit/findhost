@@ -76,8 +76,6 @@ figure:
 ai: authored
 ---
 
-## About TransIP
-
 TransIP has traded from Leiden since 2003 and belongs to team.blue, the Belgian-Dutch group that also owns Combell, Hypernode and Simply.com. It keeps data in its own Dutch facilities and builds its own systems rather than reselling another platform.
 
 The product lines sit at different levels. Shared webhosting runs PHP with SFTP and a control panel; the VPS line adds root access and therefore any runtime; and an OpenStack public cloud with managed Kubernetes sits above both. All of it is reachable through a documented public REST API covering domains, DNS, servers and cloud resources.

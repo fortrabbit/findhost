@@ -57,8 +57,6 @@ figure:
 ai: authored
 ---
 
-## About Back4App
-
 Back4App runs two distinct products under one account. The first is a managed Parse Server: database, authentication, push notifications, Cloud Code and an automatically generated REST and GraphQL API over whatever schema you define. The second, Back4App Containers, connects to a GitHub repository, builds a Dockerfile and runs the resulting image with automatic scaling.
 
 Its position is largely custodial. Parse was open-sourced when Facebook shut the hosted service down, and Back4App is the commercial platform that kept the ecosystem purchasable, maintaining the server and the client SDKs around it.

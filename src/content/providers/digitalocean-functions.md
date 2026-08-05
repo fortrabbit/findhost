@@ -56,8 +56,6 @@ figure:
   text: Functions on the ocean, asleep until called.
 ---
 
-## About DigitalOcean Functions
-
 DigitalOcean Functions is a function-as-a-service platform built on Apache OpenWhisk, part of the wider DigitalOcean account rather than a standalone product. Handlers run in native runtimes for PHP, Node, Python and Go, each pulling dependencies through its own package manager.
 
 Billing is per GiB-second of execution. Every team gets a free monthly allowance shared across all of its functions, and usage beyond it is metered. Functions scale to zero between invocations. Handlers are stateless with no local disk that outlives a call, so anything that has to persist belongs in a managed database or an object storage service.

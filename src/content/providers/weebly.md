@@ -38,8 +38,6 @@ figure:
   text: Simple tools, small jobs.
 ---
 
-## About Weebly
-
 Weebly is a drag-and-drop website builder that bundles hosting, templates and basic ecommerce for small businesses. There is a permanent free tier with paid fixed tiers above it, and sites integrate with Square payments.
 
 Weebly has been part of Square, now Block, since its acquisition in 2018. Block's builder development has since centred on Square Online, which grew out of Weebly's own technology, while Weebly remains available under its own name. There is no server access, and customisation stops at what the editor exposes.

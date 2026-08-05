@@ -94,8 +94,6 @@ figure:
   text: The frontend cloud.
 ---
 
-## About Vercel
-
 Vercel is a serverless platform for frontend frameworks and functions. Its official function runtimes cover Node.js, Bun, Python, Go, Ruby and Rust, alongside WebAssembly and an edge runtime; custom OCI container images can also be deployed through Vercel's own container registry. The build system detects and configures common frontend frameworks, among them Next.js, SvelteKit, Nuxt, Astro and Remix.
 
 Functions execute in a microVM with a read-only filesystem and a writable temporary directory, and nothing written there persists. A function runs in one default compute region unless multi-region execution is enabled, which is a paid-plan feature, and functions left uninvoked in production are archived, which lengthens the next cold start.

@@ -58,8 +58,6 @@ figure:
 ai: authored
 ---
 
-## About Firebase
-
 Firebase is Google's application platform: a document database, authentication, storage, messaging and analytics, with App Hosting building framework applications onto Cloud Run and Cloud Functions running the customer's own code. It is not a separate cloud so much as a friendlier surface over Google Cloud, and the underlying products — Cloud Build, Artifact Registry, Cloud Logging, Secret Manager — are named openly in the billing.
 
 There are two plans: a free one that needs no payment method and covers part of the platform, and a pay-as-you-go one that unlocks the rest while keeping monthly free allowances inside it. Deployment goes through the Firebase CLI or a git integration, and the platform has a public API.

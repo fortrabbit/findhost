@@ -57,8 +57,6 @@ figure:
 ai: authored
 ---
 
-## About Deno Deploy
-
 Deno Deploy is the hosting service built by the company that makes the Deno runtime, which gives it an unusual property: the platform and the language runtime are the same project, so what runs locally and what runs in production are the same binary. Node and npm compatibility means most existing JavaScript works, and the framework list covers Fresh, Next.js, Astro, Vue, React and others, with server-side rendering, static generation, incremental regeneration, subprocesses and foreign-function calls all supported.
 
 Plans run from a permanent free tier through a paid individual tier to one aimed at customers reselling the platform to their own users, with a negotiated enterprise arrangement above them. Each tier carries an allowance of requests and CPU time, and the rates charged beyond that allowance are published rather than quoted.

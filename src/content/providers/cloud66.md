@@ -69,8 +69,6 @@ figure:
 ai: authored
 ---
 
-## About Cloud 66
-
 Cloud 66 has been building deployment tooling since 2012, originally for Rails and now for containerised applications, native applications on virtual machines, and static sites built with Jekyll, Hugo or Gatsby.
 
 The model is consistent throughout: servers are bought from AWS, Google Cloud or Azure and paid for directly, and Cloud 66 manages what runs on them — builds, deployments, certificates, databases and the process supervision around them. Plans are graded by how many servers and static sites they cover rather than by how many applications sit on those servers, with a free tier at the bottom and a negotiated tier at the top.

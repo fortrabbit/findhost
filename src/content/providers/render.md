@@ -72,8 +72,6 @@ figure:
   text: Git push to a managed container.
 ---
 
-## About Render
-
 Render is a venture-backed platform-as-a-service headquartered in San Francisco. Services deploy from a linked GitHub, GitLab or Bitbucket repository, from a public git URL, or from a prebuilt Docker image, and the whole account can be driven through a public REST API and an official CLI. The provider runs the operating system; SSH exists but reaches into the running service rather than onto a machine.
 
 Native runtimes cover Node, Bun, Python, Ruby, Go, Rust and Elixir, and anything outside that set runs through the Docker runtime, which means bringing and maintaining a Dockerfile. Managed data services are Render Postgres and a Redis-compatible key-value store, persistent disks can be attached to paid services, and regions span North America, Europe and Asia. A free instance type is permanent rather than a trial, and it spins down after a stretch without inbound traffic and takes about a minute to come back.

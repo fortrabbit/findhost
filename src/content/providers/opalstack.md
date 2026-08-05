@@ -78,8 +78,6 @@ figure:
 ai: authored
 ---
 
-## About Opalstack
-
 Opalstack was started in 2019 by a group of software engineers and remains independent and developer-owned.
 
 The product is shared hosting arranged around stacks rather than one fixed environment: PHP-FPM in several versions, Node, Python with Django, Ruby on Rails and plain static deployment are all first-class, and full SSH and SFTP come with every plan including the cheapest. One-click installers cover the usual CMSes alongside self-hosted software such as Mastodon, Nextcloud, Gitea and n8n. Managed MariaDB and PostgreSQL come with automatic backups, and VPS and bare-metal tiers sit above the shared plans for anything that outgrows them.

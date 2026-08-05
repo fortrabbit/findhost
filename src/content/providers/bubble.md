@@ -37,8 +37,6 @@ figure:
   text: No code in, no code out.
 ---
 
-## About Bubble
-
 Bubble is a no-code platform for building full web applications: a visual editor for the interface, a workflow engine for the logic, and an integrated database behind both. Founded in 2012 in New York, it is used for prototypes, internal tools and early-stage products, where a first version ships without an engineering team. Applications are hosted by Bubble itself, on infrastructure it rents from AWS.
 
 ## Worth knowing

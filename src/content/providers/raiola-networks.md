@@ -71,8 +71,6 @@ figure:
 ai: authored
 ---
 
-## About Raiola Networks
-
 Raiola Networks is an independent hosting company from Lugo in Galicia that assembles its own machines and runs them in Tier III facilities in Madrid, publishing the chassis, processors and connectivity behind the plans. That is an unusual amount of the stack to own, and an unusual amount of it to describe, for a host of this size.
 
 The shared range is a short ladder of fixed plans graded by SSD, memory and a CPU allowance quoted as a percentage rather than in cores, with email accounts, subdomains, databases and FTP accounts sold as unmetered. Management is cPanel, a wide span of PHP versions is selectable per site, so older inherited applications still have somewhere to run, and support is by telephone and ticket around the clock. Elastic hosting and VPS products sit above the shared tier.

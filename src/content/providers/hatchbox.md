@@ -67,8 +67,6 @@ figure:
 ai: authored
 ---
 
-## About Hatchbox
-
 Hatchbox is run by GoRails, the Ruby screencast company, so the people who teach Rails deployment also sell the tool for doing it. It provisions and configures servers the customer rents elsewhere, then handles zero-downtime deploys, with no limit on the number of applications or team members per server.
 
 Billing is a flat rate per managed server rather than per application, so a portfolio of small applications on one machine stays at one price. Rails, plain Ruby, Node.js and static sites are the supported targets, and there is a trial before purchase.

@@ -63,8 +63,6 @@ figure:
 ai: authored
 ---
 
-## About GridPane
-
 GridPane provisions and manages WordPress servers on infrastructure the customer owns, built for agencies running many sites at once. It covers page and Redis object caching, PHP version management, staging, cloning, git integration, backups and security hardening through its own Fortress plugin, with multitenancy for running one codebase across many client sites.
 
 Plans are fixed tiers: a permanently free level capped by site count, managed high-frequency servers run in partnership with Vultr, and a bespoke agency arrangement above them.

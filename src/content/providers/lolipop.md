@@ -70,8 +70,6 @@ figure:
 ai: authored
 ---
 
-## About Lolipop!
-
 Lolipop is a rental-server brand operated by GMO Pepabo, and one of the places a great many Japanese personal and small-business sites begin. The entry tier costs about as little as hosting costs in Japan and still carries generous storage and a large domain allowance.
 
 The tiers differ on real technical grounds rather than on quota alone. The upper plans run a faster web server stack and lift the database cap, the middle ones are more constrained, and shell access appears only from the middle of the ladder upwards.

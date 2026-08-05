@@ -79,8 +79,6 @@ figure:
 ai: authored
 ---
 
-## About Zone Media
-
 Zone Media is an independent Estonian hosting company and domain registrar, incorporated in Tallinn in 1999 and trading internationally as zone.eu. Its infrastructure sits in Estonia, Finland and the Netherlands.
 
 Shared hosting is sold in fixed monthly tiers, with the provider running the operating system and the web stack. Applications can be written in Node.js, Go or Python as well as PHP, and the account reaches them through SSH, FTP and SFTP, a control panel and a public API. SSH is key-based, with an IP allow-list enabled by default and key fingerprints and access logs exposed in the control panel. Alongside the shared plans the company sells cloud servers and domain registration, and support runs by email, phone and chat.

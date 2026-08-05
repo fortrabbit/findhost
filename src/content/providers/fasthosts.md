@@ -81,8 +81,6 @@ figure:
   text: A big group's British doorway.
 ---
 
-## About Fasthosts
-
 Fasthosts sells shared hosting, VPS and dedicated servers to the UK market. The Linux plans carry PHP with SSH access, and the Windows line adds MSSQL alongside MySQL. Shared hosting runs from UK data centres including a Tier IV-certified facility in Worcester, while VPS customers pick the UK, Germany, Spain or the United States when the machine is created.
 
 It is not independent. The parent group's own site describes Fasthosts as its hosting and reseller brand in the UK, which places it under IONOS Group SE and in turn under United Internet AG — a relationship the Fasthosts site does not state anywhere itself. Advertised prices are introductory rates on fixed terms, with the standing rate printed alongside and a several-fold step up at renewal.

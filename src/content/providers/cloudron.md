@@ -60,8 +60,6 @@ figure:
 ai: authored
 ---
 
-## About Cloudron
-
 Cloudron addresses the part of self-hosting that outlasts the install: keeping the applications patched afterwards. It runs on a server the customer owns, installs applications from its own catalogue, and then handles updates, per-application backups, a firewall, mail and single sign-on across all of them.
 
 Plans are graded by how many applications are managed, with a small free tier at the bottom and higher tiers adding user groups, a directory server and multiple backup destinations. The company is explicit that it does not resell the applications — the charge is for the management platform — and equally explicit that it has no access to the customer's server. Development has run continuously since 2014.

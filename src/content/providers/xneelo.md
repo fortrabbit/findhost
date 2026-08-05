@@ -76,8 +76,6 @@ figure:
 ai: authored
 ---
 
-## About xneelo
-
 xneelo was co-founded in 1999 as Hetzner South Africa by Hans Wencke and Martin Hetzner. It renamed itself in 2019 to end the brand confusion with the unrelated German Hetzner Online ahead of international expansion; there was no change of owner and the founding leadership stayed. The two companies remain entirely separate businesses that once shared a name.
 
 It sells shared hosting, managed and self-managed servers and colocation, and owns the hardware it runs on. The plan pages name the PHP versions on offer and include a version-management tool and phpMyAdmin. Signup lets a customer choose German or South African servers, so the footprint is not South-Africa-only. Administration goes through konsoleH, the company's own control panel, and the South African data centre carries PCI DSS certification.

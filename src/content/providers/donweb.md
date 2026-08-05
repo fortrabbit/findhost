@@ -66,8 +66,6 @@ figure:
 ai: authored
 ---
 
-## About DonWeb
-
 DonWeb is the consumer-facing brand of the Rosario company formerly known as Dattatec, renamed in 2013. It builds and owns its facilities rather than renting capacity, and the company page describes purpose-built data centres in Rosario.
 
 Shared hosting runs on Ferozo, DonWeb's own control panel rather than cPanel, with a published version matrix for the runtimes and database each plan carries. The cloud side sells virtual and bare-metal servers alongside pre-configured stacks for Node.js, Laravel, Strapi, Ghost, Odoo, Moodle and plain Docker.

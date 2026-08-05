@@ -38,8 +38,6 @@ sources:
   - { field: urls, url: 'https://developers.upcloud.com/', checkedAt: 2026-08-01 }
 ---
 
-## About UpCloud
-
 UpCloud is a Finnish cloud infrastructure provider selling virtual machines, block storage and private networking. The operating system on a machine is the customer's to manage, full SSH access comes with it, and any runtime can be installed.
 
 The platform is driven by a documented public API alongside the web console, and its data centres span the Nordics, the rest of Europe, Asia-Pacific and North America.

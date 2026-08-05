@@ -77,8 +77,6 @@ figure:
 ai: authored
 ---
 
-## About Mythic Beasts
-
 Mythic Beasts is a Cambridge company best known outside hosting for running the Raspberry Pi Foundation's infrastructure and for renting out actual Raspberry Pis in a data centre.
 
 The web hosting line is sold as a long ladder of graded sizes rather than three tiers, from a redirection-only account up to accounts holding hundreds of gigabytes, so a plan can be matched to a site rather than the other way round. Every account gets unlimited domains and mailboxes, free Let's Encrypt certificates, and a choice of PHP release per site. MySQL is standard and PostgreSQL is available on request. Servers are in UK data centres, connected by the company's own fibre ring between London, Amsterdam and Cambridge.

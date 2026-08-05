@@ -72,8 +72,6 @@ figure:
 ai: authored
 ---
 
-## About Plesk
-
 Plesk is one of the two control panels most of the hosting industry is built on, and it is sold as a licence rather than as hosting: the customer brings a server from anywhere and pays per machine for the software that manages it. Editions are separated by how many domains a licence covers and whether it includes reseller features, with the largest edition aimed at hosting companies themselves.
 
 The panel administers sites, domains, mail, databases, certificates and scheduled tasks, and it is the one with the fullest Windows story, covering MSSQL alongside MySQL and PostgreSQL. PHP, Node, Python, Ruby and .NET applications are all managed from the same interface, and a WordPress Toolkit handles installs, staging and updates. Ownership sits with WebPros International GmbH, which also owns cPanel, so the two panels that dominate this market share a parent. The licence is one line of a bill whose larger part is a server bought elsewhere, and the panel inherits whatever availability and jurisdiction that server comes with.

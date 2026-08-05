@@ -38,7 +38,7 @@ TypeScript is pinned to 6.x: `astro check` needs the programmatic compiler API, 
 
 Every record carries two optional prose sections under its frontmatter. They are the only free text in the dataset and the easiest place for it to rot or to editorialise.
 
-- **`## About <name>`** — what the provider is and how it works, in two paragraphs at most. Structural facts only: what it sells, who operates the infrastructure, how the plans are shaped.
+- **The opening, unheaded** — what the provider is and how it works, in two paragraphs at most. Structural facts only: what it sells, who operates the infrastructure, how the plans are shaped. No heading over it: the `<h1>` already says the provider's name, and an "About <name>" above the first line repeated it on every record.
 - **`## Worth knowing`** — constraints a reader would want before choosing, in two short paragraphs at most. Omit the section entirely when there is nothing material; an empty reservation invented to fill a heading is worse than silence.
 - **Up to about 350 words of body.** There is no floor: a short record is a fine record, and padding one to look substantial is worse than leaving it short. The ceiling exists to stop a record turning into an essay, not to ration what is worth saying — a provider with a real history, a real incident or a genuinely awkward product shape may use the room.
 - **Nothing that rots.** No runtime version numbers, no current prices, no counts that move every quarter (regions, points of presence, plan tiers). Describe the shape, not this quarter's figure — `entryPrice` and the fields carry what is numeric, with a date on them.

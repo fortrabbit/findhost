@@ -74,8 +74,6 @@ figure:
   text: Fly high.
 ---
 
-## About Fly.io
-
 Fly.io runs applications as Firecracker microVMs, which it calls Machines, on hardware it describes as "servers we run ourselves" spread across regions on several continents. Deployment is a CLI operation: `fly deploy` builds the app from an explicitly named image, a `[build]` section in `fly.toml` or a Dockerfile in the working directory, then starts it on one or more Machines.
 
 Billing is usage-based throughout, pro-rated to the second for compute and to the hour for storage. Compute, volumes, snapshots, bandwidth, dedicated IPv4 addresses and Managed Postgres are each metered on their own line. There is no free tier for new customers; the older hobby allowances are legacy.

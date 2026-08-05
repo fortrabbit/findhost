@@ -77,8 +77,6 @@ figure:
 ai: authored
 ---
 
-## About Zeabur
-
 Zeabur takes a git repository, works out what kind of project it is and deploys it without a configuration file. Detection covers the mainstream JavaScript, Python, PHP, Go, Rust, Java and .NET frameworks along with the static site generators, and anything the detector does not recognise can ship as a Dockerfile or a prebuilt container image instead.
 
 Applications run as managed containers: the provider owns the operating system and the image, the account holder owns the code and its dependencies. Work goes through the git integration, an official CLI or the web console, with editor and browser extensions alongside them, and templates deploy prebuilt services into the same project. Plans are fixed tiers above a permanent free level, graded by capacity rather than by capability.

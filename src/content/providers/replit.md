@@ -62,8 +62,6 @@ figure:
 ai: authored
 ---
 
-## About Replit
-
 Replit began as a browser IDE that could run code in many languages and became a hosting platform by keeping those processes alive and giving them a URL. A built-in database, collaborative editing and one-click publishing make the distance between writing something and putting it online about as short as it gets, which is part of why it took hold in classrooms first.
 
 The account is the product: editor, container, database and deployment sit behind one login, and an AI agent that writes and revises the application is built into the same interface. Plans are a permanent free tier plus paid tiers that bundle a monthly credit allowance, with the headline prices quoted at annual billing rates. Deployments run in the United States.

@@ -75,8 +75,6 @@ figure:
 ai: authored
 ---
 
-## About InterServer
-
 InterServer is a New Jersey company that owns its data centres and sells one shared hosting plan rather than a ladder of them: unlimited storage, transfer, email and FTP accounts, running DirectAdmin over CloudLinux with a large one-click installer library, weekly backups, an in-house security system and a Cloudflare CDN. Alongside it sit VPS, dedicated servers and colocation.
 
 Its distinguishing commercial promise is a price lock — the rate a customer signs up at is undertaken not to rise on renewal, in a segment where an introductory rate that steps up later is the norm. Longer terms are simple multiples of the monthly rate rather than deeper discounts.

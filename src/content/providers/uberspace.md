@@ -74,8 +74,6 @@ figure:
 greenWebId: 778
 ---
 
-## About Uberspace
-
 Uberspace is a small German hosting service that sits between shared hosting and a virtual server. It has been selling accounts since 2011 and supports customers in German and in English. The name predates the taxi company: "über" is the German for "over".
 
 An account is a shell account on a shared machine rather than a control panel, and the manual describes the platform as "targeted at people who want to look behind the scenes, do things we didn't anticipate". The documented stack follows from that: PHP, Python, Node.js, Deno, Ruby, Go, Rust, Java, Clojure, Erlang, Perl and C alongside MySQL, PostgreSQL, MongoDB, CouchDB, Redis, InfluxDB and SQLite. Access is over SSH and SFTP, and Uberlab, the company's guide collection, publishes installation walkthroughs for applications such as WordPress and Nextcloud.

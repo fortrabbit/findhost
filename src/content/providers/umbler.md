@@ -58,8 +58,6 @@ figure:
 ai: authored
 ---
 
-## About Umbler
-
 Umbler was founded in Brazil in 2015 and bills hosting in a way that is unusual for the region: account credit is topped up in the panel and hourly consumption is deducted from it, closer to a cloud meter than to a monthly plan. Each site runs in its own resource-scoped environment, and the size of that environment sets the rate.
 
 The product is PHP hosting specifically. Deploys go over git or SFTP, there are one-click installers for WordPress, Laravel, Drupal, Joomla and other PHP applications, and support runs through chat.

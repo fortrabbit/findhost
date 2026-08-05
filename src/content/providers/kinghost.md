@@ -72,8 +72,6 @@ figure:
 ai: authored
 ---
 
-## About KingHost
-
 KingHost started in Porto Alegre in 2006, was acquired by Locaweb in 2019 and is now sold alongside it under the listed Brazilian group LWSA. It offers shared hosting, WordPress plans and VPS, with servers stated to be in Brazil.
 
 What separates it from the rest of the Brazilian shared-hosting field is its documentation. The knowledge base publishes real deployment walkthroughs for Node.js with Socket.IO, Django, Spring Boot, React, Angular and Phalcon, with SSH and a Git clone from GitHub, GitLab or Bitbucket as the working path, and a panel-assigned port for long-running Node processes. Third parties have built against its reseller API: there is a community WHMCS module, and acme.sh ships a KingHost DNS driver maintained inside that project.

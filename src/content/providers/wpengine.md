@@ -65,8 +65,6 @@ figure:
   text: WordPress, and nothing but.
 ---
 
-## About WP Engine
-
 WP Engine is a managed WordPress host founded in 2010 in Austin, Texas, with an office in Limerick, Ireland. It has been majority-owned by the private-equity firm Silver Lake since 2018 and has acquired a large slice of the WordPress ecosystem along the way: [Flywheel](/providers/flywheel/), the Local development app, the Genesis framework and the Advanced Custom Fields plugin. Customer sites run on Google Cloud and AWS behind a Cloudflare-based CDN and security layer.
 
 The platform is WordPress-only and fully managed: core and PHP updates are applied by the provider, caching sits at server level, backups run automatically, and staging and development environments come with every plan. Developer tooling includes SSH, git push and WP-CLI. Plans are fixed tiers metered by monthly visits and by the number of sites included, billed annually.

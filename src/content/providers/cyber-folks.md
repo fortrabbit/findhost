@@ -61,8 +61,6 @@ figure:
 ai: authored
 ---
 
-## About cyber_Folks
-
 cyber_Folks is a Poznań company that has grown largely by taking customers from other Polish hosts, and the specification reflects what those customers came looking for. PHP is selectable per domain across a version range that reaches back to releases most hosts retired long ago, which is what an inherited site built on an old Polish e-commerce stack actually needs. Node.js and Python are available alongside it.
 
 The stack is LiteSpeed with its cache, HTTP/2 and HTTP/3, and DirectAdmin as the control panel. Plans step up on storage, mailbox count and database count. Daily backups are retained for several weeks, and a web application firewall and mod_security are included rather than sold on.

@@ -41,8 +41,6 @@ sources:
   - { field: software, url: 'https://www.dreamhost.com/hosting/shared/', checkedAt: 2026-07-31 }
 ---
 
-## About DreamHost
-
 DreamHost is a shared hosting company based in Los Angeles, started by four Harvey Mudd College students and still independently owned, without venture capital behind it. Alongside shared plans it sells managed WordPress hosting under the DreamPress name and VPS tiers, and it backs an uptime guarantee with service credits.
 
 The company has an open-source track record: co-founder Sage Weil created the Ceph storage platform there — later spun out as Inktank and sold to Red Hat — and DreamHost contributed to OpenStack. Plans are sold on an annual term at a first-year rate with the renewal rate printed next to it, and on the entry plan that renewal is several times the introductory figure.

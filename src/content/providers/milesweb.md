@@ -80,8 +80,6 @@ figure:
 ai: authored
 ---
 
-## About MilesWeb
-
 MilesWeb has hosted from Nashik in Maharashtra since 2012 and sells shared, reseller, VPS and dedicated hosting, with server locations offered in India and on several other continents.
 
 Two things stand out for a host at this price level. The first is the specification: a wide range of selectable PHP releases, Node.js applications supported on every tier, and SSH and Git access included as standard rather than sold as an upsell. The second is the commercial promise — renewal at the original rate, rather than the introductory-then-higher pattern common in the segment. Administration runs through mPanel, the company's own dashboard, instead of cPanel or Plesk.

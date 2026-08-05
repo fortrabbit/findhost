@@ -76,8 +76,6 @@ figure:
 ai: authored
 ---
 
-## About STRATO
-
 STRATO has sold hosting from Berlin since 1997 and is a subsidiary of the publicly listed IONOS Group SE, which means the two brands share an owner while running separate price lists and separate support. Its data centres are in Germany and carry ISO 27001, ISO 14001 and ISO 50001 certification.
 
 The offering is deliberately plain. Shared tariffs come with PHP, SSH and SFTP access and one-click installers for WordPress, Joomla, TYPO3 and Drupal, and the tiers step up on storage, databases and included domains rather than on capability. Virtual and dedicated servers are sold alongside the shared plans.

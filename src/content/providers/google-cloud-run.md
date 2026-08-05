@@ -75,8 +75,6 @@ figure:
 greenWebId: 595
 ---
 
-## About Google Cloud Run
-
 Cloud Run is Google's serverless container platform. It runs any container image, scales it to zero when idle, and bills only while a request is in flight — the scale-to-zero end of serverless without the function model. Code arrives as an image pushed to a registry, deployed from the gcloud CLI, the API or Terraform.
 
 Billing is per request, per vCPU-second and per GB-second, against a free allowance that resets monthly. The locations page splits regions into two pricing tiers across most continents. The image itself is the customer's to write and keep current, the surrounding Google Cloud services are wired up separately, and a container that has scaled to zero pays a cold start on the first request after a quiet spell.

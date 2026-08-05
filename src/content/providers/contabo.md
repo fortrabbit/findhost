@@ -60,8 +60,6 @@ figure:
 ai: authored
 ---
 
-## About Contabo
-
 Contabo is a German hosting provider founded in 2003 and headquartered in Munich. The range covers virtual private servers, dedicated servers, object storage and managed Kubernetes, and the virtual servers are the product it is known for: memory, storage and traffic allocations well above what the same money buys elsewhere.
 
 Contracts run on a monthly minimum, with each following term matching the initial one. Snapshots are included and automatic backups are a paid add-on. Locations span Europe, the United Kingdom, the Americas and Asia-Pacific, though the European capacity is listed as the European Union without naming the country it sits in.

@@ -86,8 +86,6 @@ figure:
 ai: authored
 ---
 
-## About IONOS
-
 IONOS trades from Montabaur and Karlsruhe, descends from 1&1, went public on the Frankfurt exchange in 2023 and remains part of United Internet AG. It is one of the largest hosting groups in Europe, running its own geo-redundant data centres in Germany, elsewhere in Europe and the United States. STRATO, listed separately here, belongs to the same group.
 
 For a mass-market host the shared line is unusually tolerant of developers: SSH, Git version management, WP-CLI and cron are on every tariff, with a choice of PHP release and MariaDB databases. Beyond shared hosting the portfolio runs to VPS, dedicated and bare-metal machines, GPU servers and a separate IaaS cloud with its own documented API and price calculator, so the shared category describes the entry product rather than the company.

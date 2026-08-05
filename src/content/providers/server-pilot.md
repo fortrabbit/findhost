@@ -50,8 +50,6 @@ figure:
   text: Installs the stack, billed per app.
 ---
 
-## About ServerPilot
-
 ServerPilot is a [server management service](/categories/server-management/) rather than a hosting service. It sells no servers: the customer connects a fresh Ubuntu machine from any cloud provider, and ServerPilot installs and then maintains the stack on it — Nginx and Apache, several PHP versions side by side, MySQL, a firewall, automatic security updates and certificates. Trading since 2012, it is one of the earliest services in this category.
 
 Billing is per server and per application, metered hourly rather than sold as a subscription, with tiers that differ in the level of monitoring and support attached. A trial runs without a credit card. The FAQ is explicit about the split: "Servers are your servers at any cloud provider. You pay your cloud provider directly for your servers." ServerPilot supports its own panel and the stack it installs, and the cloud provider supports the machine underneath.

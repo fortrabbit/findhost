@@ -94,8 +94,6 @@ figure:
 ai: authored
 ---
 
-## About Elestio
-
 Elestio takes an open-source application, puts it on a dedicated virtual machine and then keeps it running: automated updates, OS patching, backups, TLS certificates and monitoring, with the customer keeping full access to the machine. The catalogue runs to several hundred applications, from PostgreSQL, MySQL, Redis and MongoDB through WordPress, n8n and Keycloak to GPU-backed AI tooling.
 
 The infrastructure is somebody else's, and openly so: capacity is provisioned into Hetzner, DigitalOcean, AWS Lightsail, Vultr, Linode, Scaleway and Netcup among others, or into the customer's own cloud account. That makes Elestio a management layer rather than a host. Support is tiered, with a free level and paid levels buying faster response and phone access; the response windows are qualified as applying during business hours. The footer names a registered address in Dublin, which is the only place the operating jurisdiction is stated.

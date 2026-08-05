@@ -64,8 +64,6 @@ figure:
 ai: authored
 ---
 
-## About Binary Lane
-
 Binary Lane has sold Australian cloud servers since 2009 and operates under Mammoth Media Pty Ltd. Its distinguishing feature is resource granularity: instead of fixed plan shapes, memory, storage and monthly data transfer are chosen and adjusted independently through the panel or the API, billed by the hour with no contract.
 
 Servers sit in NEXTDC facilities across the Australian mainland capitals, with an Equinix site in Singapore for Asia-Pacific latency. Live migration is used to move guests during host maintenance, and automated backups, an external firewall and load balancing are sold as extras. A documented REST API covers the same operations as the panel.

@@ -79,8 +79,6 @@ figure:
 ai: authored
 ---
 
-## About Supabase
-
 Supabase is a managed PostgreSQL database with the things applications usually need built around it — authentication, row-level security, file storage, realtime subscriptions and vector search — plus Edge Functions, which run the customer's own TypeScript on Deno. It is the functions that make it a place where application code runs rather than only a database service.
 
 Plans are fixed tiers with published quotas for database size, egress, file storage, monthly active users and function invocations, and metered overage above them. The platform is open source and can be self-hosted, which limits lock-in: the same stack runs on a customer's own machines if the commercial relationship ends.

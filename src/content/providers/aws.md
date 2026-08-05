@@ -76,8 +76,6 @@ figure:
   text: Everything from A to Z.
 ---
 
-## About AWS
-
 Amazon Web Services is Amazon's cloud infrastructure division, and the infrastructure a good deal of the rest of this dataset is built on: managed platforms and smaller hosts frequently rent AWS capacity rather than owning hardware. Its regions span most major markets, each divided into isolated availability zones.
 
 There is no single front door for a web application here. EC2 provides a plain virtual machine, Elastic Beanstalk wraps one in a deployment workflow, [Lambda](/providers/aws-lambda/) runs functions, and databases, object storage, CDN, certificates and queueing are each a separate service with its own console, its own quotas and its own line on the invoice. Instances remain the customer's to operate: patching, hardening and monitoring sit on their side of the shared responsibility model.

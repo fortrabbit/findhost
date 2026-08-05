@@ -73,8 +73,6 @@ figure:
   text: Pay for VPS, plus VPS software.
 ---
 
-## About Laravel Forge
-
 Laravel Forge is [server management software](/categories/server-management/) built by the Laravel team. It provisions a server and configures the stack on it — Nginx, PHP, MySQL or PostgreSQL, Redis — issues TLS certificates, sets up queue workers and scheduled tasks, and deploys from GitHub, GitLab or Bitbucket. Root access to the machine stays with the customer, and so does responsibility for it.
 
 Two arrangements are possible. An account can be connected to a cloud provider — DigitalOcean, AWS and Hetzner are named — in which case Forge drives that provider's API and the infrastructure is billed separately from the subscription; or a Laravel VPS can be provisioned inside Forge itself, putting machine and management on a single invoice. Laravel is not required: vanilla PHP, WordPress and Statamic are listed as supported, as are Node.js, Nuxt and Next.js.

@@ -78,8 +78,6 @@ figure:
   text: All aboard the complexity express.
 ---
 
-## About Railway
-
 Railway is a language-agnostic deployment platform. Builds run through Railpack, its own build system, which detects Node.js, Python, Go, PHP, Java and Ruby without configuration and can be steered with environment variables or a config file; a Dockerfile can be supplied instead. Databases are provisioned from first-party templates for PostgreSQL, MySQL, MongoDB and Redis.
 
 Deployment is from a connected git repository or through the official command-line tool. The same tool reaches a GraphQL API, and an `mcp install` command wires Railway access into MCP-compatible AI tooling. Regions are available in North America, Europe and Asia-Pacific.

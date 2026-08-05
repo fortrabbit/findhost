@@ -51,8 +51,6 @@ figure:
   text: A2 Hosting under a new name.
 ---
 
-## About Hosting.com
-
 Hosting.com is the company formerly called A2 Hosting, founded in 2003 in Ann Arbor, Michigan. World Host Group combined it with its other brands and retired the A2 Hosting name in 2025 in favour of a single Hosting.com brand. Anyone searching for A2 Hosting is looking at this company: `a2hosting.com` redirects to `hosting.com`, and existing accounts, bookmarks and support contacts followed.
 
 The product range carried over — shared hosting, VPS, dedicated servers, reseller hosting, managed WordPress, domains and SSL — as did the international footprint, with offices on several continents and a customer base built partly through acquisitions such as Kenya Web Experts, EYHost and Rocket.net.

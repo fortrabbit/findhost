@@ -53,8 +53,6 @@ figure:
   text: Penny prices, DIY everything else.
 ---
 
-## About Hostinger
-
 Hostinger started in 2004 in Kaunas, Lithuania, as Hosting Media and took the Hostinger name in 2011. It is now one of the largest budget hosts worldwide, with a line-up covering shared web hosting, cloud hosting, VPS, managed WordPress, email hosting, domains and an AI website builder — all administered through hPanel, its own control panel rather than cPanel.
 
 Shared hosting is sold on a multi-year prepayment at an introductory rate, with the renewal rate printed alongside it on the plan page. The product is shaped for consumers and small businesses: one-click installers, a site builder, and a file-manager and FTP workflow rather than a repository-driven one.

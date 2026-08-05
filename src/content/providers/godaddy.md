@@ -12,8 +12,6 @@ figure:
   text: Domains first, hosting attached.
 ---
 
-## About GoDaddy
-
 GoDaddy is a US company best known as the world's largest ICANN-accredited domain registrar. It is publicly traded on the New York Stock Exchange and headquartered in Tempe, Arizona, and it operates localised storefronts in many countries.
 
 Shared hosting is sold alongside the domain business, usually bought as an addition to a domain already registered there. The plans are packaged for site owners rather than developers, and sit next to a website builder, email and marketing products in the same checkout.

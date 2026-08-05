@@ -46,8 +46,6 @@ figure:
 ai: authored
 ---
 
-## About Beget
-
 Beget is a Russian hosting company, in business since 2007, selling shared hosting plans that step up by storage and site count, alongside VPS, dedicated servers, managed MySQL and PostgreSQL, Kubernetes and S3-compatible storage. Every shared plan includes SSH and SFTP access, a free SSL certificate and automatic CMS installation, which is unusual among budget shared hosts in this dataset that otherwise reserve shell access for VPS tiers. The international storefront at beget.com prices in euros; the `.ru` site prices in roubles for the domestic market.
 
 An official Terraform provider exists, and a wider set of independently written tools sit around it — a certbot DNS plugin, a cert-manager ACME webhook and more than one unofficial API client, none of them published by Beget itself.

@@ -54,8 +54,6 @@ figure:
   text: DIY PaaS, DIY ops.
 ---
 
-## About Coolify
-
 Coolify is an open-source, self-hostable platform-as-a-service built by coolLabs around founder Andras Bacsai in Hungary, with the source on GitHub.
 
 The model is bring-your-own-infrastructure. Coolify installs as a control panel on a server the operator provisions — EC2, DigitalOcean, Linode, Hetzner and Raspberry Pi are the named targets — and then handles container orchestration, deployments, Let's Encrypt certificates, S3-compatible database backups, pull-request deployments, a real-time terminal, server monitoring and notifications through Discord, Telegram or email. Deployment comes from a connected GitHub, GitLab, Bitbucket or Gitea repository, or from any Docker-compatible source, and the project states support for any language and framework. There is a public API.

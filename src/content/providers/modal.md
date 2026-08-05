@@ -69,8 +69,6 @@ figure:
 ai: authored
 ---
 
-## About Modal
-
 Modal turns a Python function into a remote container. Decorate it, describe the image and the hardware it needs in the same file, and the platform provisions the machine, runs the code and tears it down again — billed by the second, with nothing charged while idle. The same mechanism covers model inference, sandboxes, training runs, notebooks and batch processing.
 
 Plans are a free starter tier with a monthly credit allowance and a small seat limit, a paid team tier with a larger allowance and unlimited seats, and a quoted enterprise tier. Compute is metered per second: CPU by the core, memory by the gibibyte, GPUs by the card.

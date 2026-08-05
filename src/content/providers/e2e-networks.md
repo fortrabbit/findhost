@@ -62,8 +62,6 @@ figure:
 ai: authored
 ---
 
-## About E2E Networks
-
 E2E Networks is registered in New Delhi and listed on India's National Stock Exchange under the ticker E2E, which puts the financials behind the infrastructure on public record. It holds MeitY empanelment, the Indian government's approval for public-sector cloud purchasing.
 
 The catalogue has shifted towards accelerated computing. GPU instances are billed by the minute against published hourly rates, alongside conventional cloud compute, backup and managed infrastructure. Monthly and annual commitments are offered below the on-demand rate, and volume or enterprise pricing goes through a sales conversation rather than a page.

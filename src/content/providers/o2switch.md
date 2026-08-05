@@ -79,8 +79,6 @@ figure:
 ai: authored
 ---
 
-## About o2switch
-
 o2switch is unusual among French hosts in building and running its own data centres rather than renting rack space — two redundant sites in Auvergne, near Clermont-Ferrand, which the company states plainly on its own pages. It has traded since 2009 and remains independently owned.
 
 The historic pitch was a single unlimited offer, and that shape survives: the same all-inclusive product in a few compute sizes rather than a ladder of feature tiers, with disk, sites, databases, mailboxes and traffic all sold as unmetered. The stack is cPanel with LiteSpeed in front and Varnish, Redis and Memcached available, several PHP versions selectable side by side with full `php.ini` control, and MySQL, MariaDB and PostgreSQL all present. Documentation is a public site whose source sits on GitHub.

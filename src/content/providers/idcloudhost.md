@@ -21,8 +21,6 @@ figure:
 ai: authored
 ---
 
-## About IDCloudHost
-
 IDCloudHost is an Indonesian infrastructure company. Its status page, the only page of the site this record could confirm past a bot-detection wall, lists cloud VPS with a choice of cPanel or Plesk, dedicated WordPress servers, unmanaged bare-metal servers, colocation, block storage and an S3-style object storage product called IS3, running across four Jakarta zones plus Bogor and a separate Singapore region.
 
 ## Worth knowing

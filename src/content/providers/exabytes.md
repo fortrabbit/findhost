@@ -64,8 +64,6 @@ figure:
 ai: authored
 ---
 
-## About Exabytes
-
 Exabytes is a Malaysian hosting company running its own Tier 3 facility in Malaysia rather than reselling capacity elsewhere in the region. It sells two parallel shared-hosting ladders, one on Plesk and one on cPanel, so the control panel is chosen at purchase rather than inherited.
 
 Plans step up through NVMe storage allowances, with mailbox and website counts rising alongside, SSL certificates included throughout and backups taken weekly on the entry plan and daily above it. The advertised figures assume a three-year term; the standard rate printed next to them is several times higher.

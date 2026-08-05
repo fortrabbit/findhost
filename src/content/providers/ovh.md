@@ -83,8 +83,6 @@ figure:
 greenWebId: 1305
 ---
 
-## About OVHcloud
-
 OVHcloud — long known as OVH — was founded in Roubaix by Octave Klaba and has been listed on Euronext Paris since 2021. The traditional business is dedicated servers and VPS, extended into an OpenStack-based public cloud, shared hosting and domains, sold across Europe, North America and Asia-Pacific.
 
 It designs and assembles its own servers, develops its own water cooling and runs its own data centres rather than renting capacity. Prices sit at the low end of the market, and the customer manages the operating system on both the VPS and bare-metal lines.

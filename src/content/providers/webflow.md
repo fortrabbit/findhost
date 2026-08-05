@@ -32,8 +32,6 @@ figure:
   text: Design to publish.
 ---
 
-## About Webflow
-
 Webflow was founded in San Francisco in 2013 and pairs a visual design tool with hosting and a built-in CMS. The designer produces real HTML and CSS rather than a proprietary layout format, and the CMS handles structured content for marketing sites and blogs. A public developer API covers the CMS and site data, so content can be read and written from outside the editor.
 
 Publishing stays inside the platform. There is no server access and no custom server-side code, and while static exports exist, a CMS-driven site cannot be exported as a working site.

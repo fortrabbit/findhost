@@ -69,8 +69,6 @@ figure:
 ai: authored
 ---
 
-## About Dokploy
-
 Dokploy is an open-source deployment platform installed on servers the customer already rents. Pointed at a git repository or a Docker Compose file, it handles builds, deployments, databases, webhooks and TLS. Multi-server Docker Swarm clusters are supported, so it is not confined to a single box.
 
 Commercially it is sold by the managed server rather than by the application, with a discount for annual billing and quoted arrangements for enterprise and agency use. The same product runs as a hosted service or installed on the customer's own machines, and the software itself stays open source. The terms of service name Dokploy Technologies, Inc. at a San Francisco address and put the governing law in Delaware, which is the only place the company behind the product is identified.

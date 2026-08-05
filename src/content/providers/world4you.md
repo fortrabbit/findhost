@@ -69,8 +69,6 @@ figure:
 ai: authored
 ---
 
-## About World4You
-
 World4You was founded in Austria in 1998 and has been an independently operating Austrian subsidiary of United Internet AG since 2018, which makes it a sister company to IONOS and, one step further out, to STRATO. Offices are in Linz and Vienna, and its first company-owned data centre opened in Linz.
 
 The webhosting tariffs are conventional shared hosting: current PHP, SSH on every tariff, SSL certificates, automatic backups and monitoring, with WordPress, WooCommerce, Joomla and Drupal available preinstalled. Email and servers are sold alongside.

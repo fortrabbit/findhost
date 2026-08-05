@@ -27,8 +27,6 @@ figure:
   text: Small sites.
 ---
 
-## About Jimdo
-
 Jimdo is a website builder from Hamburg, founded in 2007 and aimed at self-employed people and small businesses that want an online presence without technical setup. The guided builder bundles hosting, templates and AI-assisted site creation, and adds small-business extras such as a logo maker and a generator for the legal texts German sites are required to carry.
 
 Sites live inside the builder. The underlying code is not exposed, there is no shell or database to administer, and pages are edited through Jimdo's own editor rather than through files that could be moved elsewhere.

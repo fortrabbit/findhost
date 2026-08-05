@@ -68,8 +68,6 @@ figure:
 ai: authored
 ---
 
-## About ALL-INKL.COM
-
 ALL-INKL.COM trades as Neue Medien Münnich, a privately held company founded in 2000 in Friedersdorf, Saxony, with its servers in Dresden. The line-up is a ladder of shared tariffs alongside managed dedicated servers and a reseller product. There is no minimum contract term, and the standing rate is printed next to any offer rather than replacing it, so nothing reverts to a higher price later. All data is stated to be held exclusively on the company's own servers in Germany.
 
 Administration runs through KAS, the company's own control panel rather than cPanel or Plesk; third-party ACME clients that support it automate certificate issuance against that panel. Capability steps up with the tariff rather than coming uniformly with every plan, shell access among it. Support is by telephone across a wide daily window plus round-the-clock email.

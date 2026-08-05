@@ -74,8 +74,6 @@ figure:
   text: Spinning up servers is only the start.
 ---
 
-## About SpinupWP
-
 SpinupWP is [server management software](/categories/server-management/) built around WordPress. It connects over SSH to an Ubuntu server the customer already owns — [DigitalOcean](/providers/digitalocean/), [Linode](/providers/linode/), [Vultr](/providers/vultr/), [Hetzner](/providers/hetzner/), [AWS](/providers/aws/) and [Google Cloud](/providers/gcp/) are named, alongside any other server provider — and configures a stack of Nginx, PHP-FPM, MySQL and Redis with WP-CLI, Composer and Let's Encrypt certificates. Deployment is push-to-deploy over git, and full SSH access to the machine stays with the customer. Site cloning and staging environments are part of the panel.
 
 The subscription buys the panel alone. The infrastructure bill belongs to whichever provider the server sits on, and the operating system underneath — its patches, its backups, its incidents — remains the account holder's responsibility. SpinupWP was built by Delicious Brains, the makers of WP Migrate; after that plugin business was sold to WP Engine in 2022, SpinupWP became the company's only product.

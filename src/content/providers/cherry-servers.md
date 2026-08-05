@@ -74,8 +74,6 @@ figure:
 ai: authored
 ---
 
-## About Cherry Servers
-
 Cherry Servers has run from Lithuania since 2001 and owns the hardware it rents out. The catalogue is dedicated machines and virtual servers, with elastic block and backup storage, floating IPs, load balancers and public IP subnets alongside them. The same machine can be taken hourly, on a fixed term or as spot capacity, which is a wider set of billing arrangements than the size of the company suggests.
 
 Data centres sit in Europe, North America and Asia. Technical support is included rather than sold as a tier and is staffed around the clock, and the company publishes an availability commitment and a money-back window. The workloads it names as targets are Web3, gaming, AI, streaming and trading, and a long list of payment methods including cryptocurrencies is accepted.

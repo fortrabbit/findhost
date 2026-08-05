@@ -68,8 +68,6 @@ figure:
 ai: authored
 ---
 
-## About cPanel
-
 cPanel is the control panel a large share of shared hosting accounts are administered through, which makes it less a product choice than an interface much of the industry has settled on. It hosts nothing itself: the licence installs on a server bought elsewhere and gives end users a web interface for domains, email, databases, files and applications.
 
 Licensing is per server and graded by how many accounts the licence covers, from a single-account tier up to bulk tiers where further accounts are priced individually. Every tier includes the WordPress Toolkit, SSL, email and migration tooling. The move to per-account pricing came in 2018 under new ownership, and the number of accounts on a machine has driven the licence cost directly ever since. The software is a registered trademark of WebPros International, which also owns Plesk, the main alternative.

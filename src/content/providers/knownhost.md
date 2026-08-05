@@ -48,8 +48,6 @@ figure:
   text: Managed servers, your choice of panel.
 ---
 
-## About KnownHost
-
 KnownHost is a US hosting provider founded in 2006 and based in Birmingham, Alabama, with data centres in the United States and in Amsterdam. The range spans shared hosting, reseller hosting, managed VPS, cloud and dedicated servers, built on KVM virtualisation with a choice of cPanel, DirectAdmin or Plesk as the control panel.
 
 The line is sold as managed rather than unmanaged: administration, monitoring and support are part of the VPS and dedicated products, and plans carry no minimum contract term.
