@@ -296,13 +296,46 @@
   font-size: var(--text-sm);
 }
 
+/*
+ * The letter beside its records rather than above them. The register runs to
+ * 156 rows, and a heading that scrolls away leaves the reader counting rows to
+ * work out where they are — so the column is narrow enough to cost almost
+ * nothing and the letter sticks to the top of it.
+ */
+.letter-group {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+
 .letter-group > h2 {
+  position: sticky;
+  top: var(--space-md);
+  flex: 0 0 3.5rem;
   margin: var(--space-lg) 0 var(--space-2xs);
   font-size: var(--text-lg);
+  /* "# 0–9" is the widest of them; wrapped, it reads as two headings. */
+  white-space: nowrap;
 }
 
 .letter-group:first-child > h2 {
   margin-top: 0;
+}
+
+.letter-group > .provider-list {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Back to stacked where 3.5rem is a tenth of the width rather than a margin. */
+@media (max-width: 40rem) {
+  .letter-group {
+    display: block;
+  }
+
+  .letter-group > h2 {
+    position: static;
+  }
 }
 
 /** The anchor, shown rather than hidden until hover — it is a link, not a secret. */
