@@ -79,6 +79,11 @@ for (const field of fields) {
     fail(dictionaryFile, `"${field.id}" borrows values from ${target}`);
   }
 
+  // Only the panel reads `ordered`, and only facets reach the panel.
+  if (field.ordered && !field.facet) {
+    fail(dictionaryFile, `"${field.id}" is marked ordered but is not a facet, so nothing sorts it`);
+  }
+
   if (field.facet) {
     if (seenFacet.has(field.facet)) fail(dictionaryFile, `two fields claim the facet "${field.facet}"`);
     seenFacet.add(field.facet);

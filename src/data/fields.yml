@@ -361,6 +361,7 @@
   label: Entry price
   group: Pricing
   facet: entry-price
+  ordered: true
   filterOrder: 7
   values:
     - { id: xs, label: 'Under $5 a month' }
@@ -432,6 +433,7 @@
   label: Getting out
   group: Pricing
   facet: exit
+  ordered: true
   filterOrder: 8
   values:
     - { id: a-day, label: Within a day }

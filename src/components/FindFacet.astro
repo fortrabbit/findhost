@@ -7,10 +7,16 @@ interface Props {
 
 const { facet } = Astro.props;
 
-/** Values in use, commonest first. The order is fixed here and never re-sorted. */
+/*
+ * Values in use, commonest first — except where the vocabulary is a scale, and
+ * then in the dictionary's own order. "Under $5" above "$15 to $50" because it
+ * is cheaper reads as a price list; because it is more popular reads as nothing,
+ * and hides which end is which. Either way the order is fixed here and never
+ * re-sorted under the pointer that just chose one.
+ */
 const values = facet.values
   .filter((value) => value.count > 0)
-  .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label, 'en'));
+  .sort((a, b) => (facet.ordered ? 0 : b.count - a.count || a.label.localeCompare(b.label, 'en')));
 
 /** How many values show before the "more" button. */
 const shown = 5;

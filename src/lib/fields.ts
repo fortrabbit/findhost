@@ -46,6 +46,12 @@ export interface Field {
   group?: string;
   /** The URL segment where the field is filterable. Absent means shown but not filtered. */
   facet?: string;
+  /**
+   * The vocabulary is a scale, so the panel keeps the dictionary's order rather
+   * than sorting by count. Price bands and notice periods run low to high; a
+   * list of unrelated names does not run anywhere and sorts by popularity.
+   */
+  ordered?: boolean;
   filterOrder?: number;
   multiple: boolean;
   /** How the value is drawn where it is not a label lookup. */

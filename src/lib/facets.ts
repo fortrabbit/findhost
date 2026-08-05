@@ -16,6 +16,8 @@ export interface Facet {
   label: string;
   /** The record field it reads. */
   field: string;
+  /** The values are a scale, so the panel shows them in dictionary order rather than by count. */
+  ordered?: boolean;
   multiple: boolean;
   values: FacetValue[];
   /** Records that do not say. Displayed, never silently dropped. */
@@ -127,6 +129,7 @@ function countValues(field: Field, providers: ProviderRow[]): Facet {
     id: field.facet!,
     label: field.label,
     field: field.id,
+    ...(field.ordered ? { ordered: true } : {}),
     multiple: field.multiple,
     values,
     unknown: applicable.length - known.length,
