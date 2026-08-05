@@ -61,6 +61,7 @@
 .theme-toggle {
   padding: var(--space-3xs) var(--space-xs);
   border: var(--rule-hairline) solid var(--color-ink);
+  border-radius: var(--radius);
   background: var(--color-page);
   color: var(--color-ink);
   font: inherit;
@@ -82,6 +83,7 @@
   width: 17rem;
   padding: var(--space-2xs) var(--space-xs);
   border: var(--rule-hairline) solid var(--color-ink);
+  border-radius: var(--radius);
   background: var(--color-page);
   font: inherit;
   font-size: var(--text-sm);
@@ -542,6 +544,7 @@
   display: inline-flex;
   padding: var(--space-3xs) var(--space-2xs);
   border: var(--rule-hairline) solid var(--color-ink);
+  border-radius: var(--radius);
   background: var(--color-page);
   color: var(--color-ink);
   cursor: pointer;
@@ -638,12 +641,24 @@
 }
 
 /*
- * A scroller instead of a "more" button. Sized in rows rather than in pixels so
- * every column ends at the same height whatever its longest facet holds, and so
- * a facet with four values is not padded out to match one with forty.
+ * The box goes round the values, not round the whole column: it encloses the
+ * thing that scrolls, so its edge is what the cut-off row is cut off against.
+ *
+ * Four and a half rows tall, always — a height rather than a ceiling, so a facet
+ * with three values keeps the same box as one with forty and the row of columns
+ * is level. The half row is the affordance: a list cut mid-row is visibly a list
+ * with more in it, where a clean edge is just an edge. Rows are given a height
+ * rather than left to the checkbox, which is a replaced element and sizes itself
+ * differently in every browser.
  */
 .find-values {
-  max-height: 8.5rem;
+  --find-row: 1.25rem;
+  --find-rows: 4.5;
+
+  height: calc(var(--find-rows) * var(--find-row));
+  padding: var(--space-2xs);
+  border: var(--rule-hairline) solid var(--color-ink);
+  border-radius: var(--radius);
   overflow-y: auto;
   overscroll-behavior: contain;
 }
@@ -652,6 +667,12 @@
   display: flex;
   gap: var(--space-2xs);
   align-items: center;
+  height: var(--find-row);
+}
+
+/* Its own margins are what made a row taller than the line it holds. */
+.find-row input {
+  margin: 0;
 }
 
 /* The way from a page that means one value to the register, where values combine. */
@@ -666,8 +687,6 @@
   align-items: baseline;
   justify-content: space-between;
   margin: 0 0 var(--space-2xs);
-  padding: 0 0 var(--space-3xs);
-  border-bottom: var(--rule-hairline) solid var(--color-ink);
   font-size: var(--text-sm);
   font-weight: var(--weight-strong);
 }

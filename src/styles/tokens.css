@@ -60,6 +60,9 @@
   --rule-strong: 2px;
   --rule-heavy: 4px;
 
+  /* Enough to take the sharpness off a corner, not enough to read as a pill */
+  --radius: 1px;
+
   /* Measures — prose is read, data is scanned, and they want different widths */
   --measure-prose: 58ch;
   --measure-data: 46rem;
