@@ -12,8 +12,6 @@ infraContract:
 runsOn:
   - upcloud
 whoManagesOs: provider
-audience:
-  - developer
 useCases:
   - cms
   - saas

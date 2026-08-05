@@ -20,10 +20,9 @@ useCases:
   - side-project
   - campaign-site
 audience:
-  - freelancer
+  - solo
   - smb
   - non-profit
-  - indie-hacker
 software:
   - wordpress
   - woocommerce

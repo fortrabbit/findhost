@@ -21,10 +21,9 @@ useCases:
   - side-project
   - static-site
 audience:
-  - freelancer
+  - solo
   - smb
   - agency
-  - indie-hacker
 software:
   - wordpress
   - woocommerce

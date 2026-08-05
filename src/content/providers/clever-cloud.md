@@ -22,7 +22,7 @@ useCases:
   - background-jobs
   - ai-app
 audience:
-  - freelancer
+  - solo
   - agency
   - startup
   - smb

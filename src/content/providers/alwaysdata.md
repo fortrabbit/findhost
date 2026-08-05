@@ -23,8 +23,7 @@ useCases:
   - learning
   - background-jobs
 audience:
-  - indie-hacker
-  - freelancer
+  - solo
   - agency
   - startup
   - smb

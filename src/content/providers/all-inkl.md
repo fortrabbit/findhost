@@ -17,7 +17,7 @@ useCases:
   - portfolio
   - side-project
 audience:
-  - freelancer
+  - solo
   - smb
   - agency
 software:

@@ -12,7 +12,7 @@ whoManagesOs: provider
 useCases:
   - side-project
 audience:
-  - indie-hacker
+  - solo
   - enterprise
 runtimes:
   - node

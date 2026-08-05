@@ -17,8 +17,7 @@ useCases:
   - campaign-site
   - side-project
 audience:
-  - indie-hacker
-  - freelancer
+  - solo
   - non-profit
   - smb
 software:

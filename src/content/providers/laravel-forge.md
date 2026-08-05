@@ -14,7 +14,7 @@ infraContract:
   - byo-iaas
 audience:
   - agency
-  - freelancer
+  - solo
 software:
   - laravel
   - wordpress

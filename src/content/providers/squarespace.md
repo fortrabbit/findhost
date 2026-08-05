@@ -18,7 +18,6 @@ useCases:
   - campaign-site
   - e-commerce
 audience:
-  - beginner
   - smb
 sshAccess: none
 billingPeriods:

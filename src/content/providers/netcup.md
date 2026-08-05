@@ -21,8 +21,7 @@ useCases:
   - game-server
   - learning
 audience:
-  - indie-hacker
-  - freelancer
+  - solo
   - smb
   - agency
 software:

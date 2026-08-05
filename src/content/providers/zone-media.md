@@ -20,10 +20,9 @@ useCases:
   - saas
   - static-site
 audience:
-  - freelancer
+  - solo
   - smb
   - agency
-  - indie-hacker
 software:
   - wordpress
   - laravel

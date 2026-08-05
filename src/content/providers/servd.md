@@ -14,7 +14,6 @@ whoManagesOs: provider
 useCases:
   - cms
 audience:
-  - developer
   - agency
 specialisation:
   - craft-cms

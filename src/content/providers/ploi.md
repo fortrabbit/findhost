@@ -12,8 +12,6 @@ hqCountry: NL
 whoManagesOs: you
 infraContract:
   - byo-iaas
-audience:
-  - developer
 runsOn:
   - digitalocean
   - hetzner

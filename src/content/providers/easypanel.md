@@ -19,8 +19,7 @@ useCases:
   - cms
   - side-project
 audience:
-  - indie-hacker
-  - freelancer
+  - solo
   - agency
   - smb
 software:

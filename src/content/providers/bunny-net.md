@@ -17,8 +17,7 @@ useCases:
   - saas
   - background-jobs
 audience:
-  - indie-hacker
-  - freelancer
+  - solo
   - startup
   - smb
   - enterprise

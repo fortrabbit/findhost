@@ -21,7 +21,7 @@ useCases:
   - e-commerce
 audience:
   - smb
-  - freelancer
+  - solo
   - agency
 software:
   - wordpress

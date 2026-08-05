@@ -16,7 +16,6 @@ infraContract:
 useCases:
   - cms
 audience:
-  - developer
   - agency
 specialisation:
   - wordpress

@@ -18,8 +18,7 @@ useCases:
   - static-site
   - internal-tool
 audience:
-  - freelancer
-  - indie-hacker
+  - solo
   - agency
   - smb
 software:

@@ -19,8 +19,7 @@ useCases:
   - side-project
   - ai-app
 audience:
-  - indie-hacker
-  - freelancer
+  - solo
   - startup
   - smb
 software:

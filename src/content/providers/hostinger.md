@@ -15,7 +15,6 @@ entryPrice: { amount: 2.99, currency: USD, period: month }
 useCases:
   - cms
 audience:
-  - beginner
   - smb
 pricingModel: fixed-tier
 priceFrom: sm

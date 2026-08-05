@@ -20,8 +20,7 @@ useCases:
   - side-project
   - static-site
 audience:
-  - indie-hacker
-  - freelancer
+  - solo
   - smb
   - education
   - non-profit

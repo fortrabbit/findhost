@@ -22,7 +22,7 @@ useCases:
   - side-project
   - api
 audience:
-  - freelancer
+  - solo
   - agency
   - smb
 regions:

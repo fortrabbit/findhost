@@ -22,7 +22,7 @@ useCases:
   - api
   - saas
 audience:
-  - freelancer
+  - solo
   - smb
   - agency
   - startup

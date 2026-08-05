@@ -14,8 +14,7 @@ useCases:
   - e-commerce
 audience:
   - smb
-  - freelancer
-  - beginner
+  - solo
 software:
   - wordpress
 sshAccess: full

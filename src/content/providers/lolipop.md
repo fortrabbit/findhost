@@ -20,8 +20,7 @@ useCases:
   - side-project
   - learning
 audience:
-  - indie-hacker
-  - freelancer
+  - solo
   - smb
 software:
   - wordpress

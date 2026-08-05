@@ -21,8 +21,7 @@ useCases:
   - side-project
   - background-jobs
 audience:
-  - indie-hacker
-  - freelancer
+  - solo
   - agency
   - startup
 runtimes:

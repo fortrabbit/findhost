@@ -17,7 +17,7 @@ useCases:
   - side-project
   - learning
 audience:
-  - indie-hacker
+  - solo
   - startup
   - education
 runtimes:

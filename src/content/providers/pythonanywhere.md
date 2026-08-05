@@ -24,8 +24,7 @@ useCases:
   - side-project
 audience:
   - education
-  - indie-hacker
-  - freelancer
+  - solo
   - startup
 software:
   - django

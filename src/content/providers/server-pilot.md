@@ -12,8 +12,6 @@ founded: 2012
 infraContract:
   - byo-iaas
 whoManagesOs: you
-audience:
-  - developer
 useCases:
   - cms
 runtimes:

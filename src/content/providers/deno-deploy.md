@@ -18,8 +18,7 @@ useCases:
   - side-project
   - headless-cms
 audience:
-  - indie-hacker
-  - freelancer
+  - solo
   - startup
   - education
 software:

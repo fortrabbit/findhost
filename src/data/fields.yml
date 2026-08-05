@@ -158,9 +158,11 @@
     - { id: game-server, label: Game servers }
     - { id: learning, label: Learning and experiments, short: Learning }
 
-# Who a provider sells to, kept apart from what it is used for: a one-person side
-# project and a government department can want the same CMS and will never want
-# the same contract, support model or invoice.
+# Who a provider sells to as a commercial counterparty — one axis, the size and
+# shape of the buyer. Not the job title of the person at the keyboard: a
+# freelancer is the smallest kind of business, and "developer" answers a question
+# `category` already answers, since low-code and vanity hosting are precisely the
+# categories sold to people who are not one.
 - id: audience
   label: Audience
   group: Classification
@@ -168,8 +170,7 @@
   filterOrder: 8
   multiple: true
   values:
-    - { id: indie-hacker, label: Indie hackers }
-    - { id: freelancer, label: Freelancers }
+    - { id: solo, label: Solo and freelance, short: Solo }
     - { id: agency, label: Agencies }
     - { id: startup, label: Startups }
     - { id: smb, label: Small and medium businesses, short: SME }
@@ -177,8 +178,6 @@
     - { id: government, label: Government and public sector, short: Public sector }
     - { id: education, label: Education and research, short: Education }
     - { id: non-profit, label: Non-profits }
-    - { id: developer, label: Developers }
-    - { id: beginner, label: Beginners }
 
 # ------------------------------------------------------------- Tech stack
 

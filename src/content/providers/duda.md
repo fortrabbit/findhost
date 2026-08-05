@@ -14,7 +14,7 @@ useCases:
   - e-commerce
 audience:
   - agency
-  - freelancer
+  - solo
   - smb
 pricingModel: fixed-tier
 priceFrom: md

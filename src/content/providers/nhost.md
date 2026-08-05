@@ -14,7 +14,7 @@ useCases:
   - side-project
   - internal-tool
 audience:
-  - indie-hacker
+  - solo
   - startup
   - smb
   - enterprise

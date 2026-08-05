@@ -22,9 +22,8 @@ useCases:
   - e-commerce
   - side-project
 audience:
-  - freelancer
+  - solo
   - smb
-  - indie-hacker
 software:
   - wordpress
   - joomla

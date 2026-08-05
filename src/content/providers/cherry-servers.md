@@ -24,7 +24,7 @@ audience:
   - startup
   - smb
   - enterprise
-  - indie-hacker
+  - solo
 runtimes:
   - any
   - docker

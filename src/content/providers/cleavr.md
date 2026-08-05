@@ -19,8 +19,7 @@ useCases:
   - static-site
   - background-jobs
 audience:
-  - freelancer
-  - indie-hacker
+  - solo
   - agency
   - smb
 software:

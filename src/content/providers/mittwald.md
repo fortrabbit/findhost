@@ -20,7 +20,7 @@ useCases:
   - api
   - campaign-site
 audience:
-  - freelancer
+  - solo
   - agency
   - smb
 software:

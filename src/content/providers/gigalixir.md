@@ -16,7 +16,7 @@ useCases:
   - background-jobs
   - side-project
 audience:
-  - indie-hacker
+  - solo
   - startup
   - smb
 runtimes:

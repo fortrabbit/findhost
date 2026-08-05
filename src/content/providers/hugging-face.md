@@ -23,7 +23,7 @@ audience:
   - education
   - startup
   - enterprise
-  - indie-hacker
+  - solo
 runtimes:
   - python
   - docker

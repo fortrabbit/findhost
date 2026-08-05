@@ -19,7 +19,7 @@ useCases:
   - campaign-site
   - portfolio
 audience:
-  - freelancer
+  - solo
   - agency
   - smb
   - enterprise

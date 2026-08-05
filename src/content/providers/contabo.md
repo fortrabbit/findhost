@@ -11,7 +11,6 @@ description: German provider selling virtual and dedicated servers from Munich, 
 hqCountry: DE
 whoManagesOs: you
 audience:
-  - developer
   - smb
 runtimes:
   - any

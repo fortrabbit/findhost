@@ -18,7 +18,7 @@ useCases:
   - side-project
   - static-site
 audience:
-  - indie-hacker
+  - solo
   - startup
   - smb
   - enterprise

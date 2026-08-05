@@ -18,7 +18,7 @@ useCases:
   - api
   - saas
 audience:
-  - freelancer
+  - solo
   - agency
   - smb
   - enterprise

@@ -21,7 +21,7 @@ useCases:
   - campaign-site
   - internal-tool
 audience:
-  - freelancer
+  - solo
   - agency
   - smb
   - enterprise

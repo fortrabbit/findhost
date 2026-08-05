@@ -19,8 +19,7 @@ useCases:
   - e-commerce
   - static-site
 audience:
-  - freelancer
-  - indie-hacker
+  - solo
   - agency
   - smb
 software:

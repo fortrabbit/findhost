@@ -15,7 +15,6 @@ useCases:
   - e-commerce
 audience:
   - smb
-  - beginner
 sshAccess: none
 pricingModel: fixed-tier
 priceFrom: md

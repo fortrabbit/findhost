@@ -18,10 +18,9 @@ useCases:
   - portfolio
   - side-project
 audience:
-  - freelancer
+  - solo
   - smb
   - agency
-  - indie-hacker
 software:
   - wordpress
   - woocommerce

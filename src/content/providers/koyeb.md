@@ -19,7 +19,7 @@ useCases:
   - background-jobs
   - data-pipeline
 audience:
-  - indie-hacker
+  - solo
   - startup
   - smb
   - enterprise

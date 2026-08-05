@@ -15,7 +15,7 @@ whoManagesOs: provider
 useCases:
   - cms
 audience:
-  - freelancer
+  - solo
   - agency
 specialisation:
   - wordpress

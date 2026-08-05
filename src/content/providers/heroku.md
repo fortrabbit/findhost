@@ -18,7 +18,6 @@ useCases:
   - e-commerce
   - side-project
 audience:
-  - developer
   - startup
   - smb
   - enterprise

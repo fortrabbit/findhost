@@ -17,8 +17,7 @@ useCases:
   - side-project
   - api
 audience:
-  - indie-hacker
-  - freelancer
+  - solo
   - smb
   - non-profit
 software:

@@ -19,7 +19,7 @@ useCases:
   - campaign-site
 audience:
   - agency
-  - freelancer
+  - solo
   - smb
 software:
   - wordpress

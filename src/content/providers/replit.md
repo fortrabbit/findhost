@@ -19,7 +19,7 @@ useCases:
   - dashboard
 audience:
   - education
-  - indie-hacker
+  - solo
   - startup
   - enterprise
 runtimes:

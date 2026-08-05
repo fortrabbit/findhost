@@ -18,7 +18,7 @@ useCases:
   - campaign-site
   - side-project
 audience:
-  - freelancer
+  - solo
   - agency
   - smb
 software:

@@ -15,7 +15,7 @@ useCases:
   - campaign-site
   - portfolio
 audience:
-  - freelancer
+  - solo
   - smb
   - agency
 software:

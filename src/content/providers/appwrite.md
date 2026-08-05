@@ -16,7 +16,7 @@ useCases:
   - ai-app
   - internal-tool
 audience:
-  - indie-hacker
+  - solo
   - startup
   - smb
   - enterprise

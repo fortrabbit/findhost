@@ -18,7 +18,7 @@ useCases:
   - portfolio
   - e-commerce
 audience:
-  - freelancer
+  - solo
   - smb
   - agency
 software:

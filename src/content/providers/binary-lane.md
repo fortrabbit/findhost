@@ -20,8 +20,7 @@ useCases:
   - side-project
   - internal-tool
 audience:
-  - indie-hacker
-  - freelancer
+  - solo
   - smb
   - agency
 runtimes:

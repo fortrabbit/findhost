@@ -16,7 +16,7 @@ useCases:
   - portfolio
 audience:
   - smb
-  - freelancer
+  - solo
   - agency
 software:
   - wordpress

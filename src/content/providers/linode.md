@@ -12,8 +12,6 @@ hqCountry: US
 ownership: subsidiary
 parent: Akamai Technologies
 whoManagesOs: you
-audience:
-  - developer
 runtimes:
   - any
 sshAccess: full

@@ -13,7 +13,6 @@ useCases:
   - cms
   - e-commerce
 audience:
-  - developer
   - agency
   - smb
 software:

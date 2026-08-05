@@ -17,9 +17,8 @@ useCases:
   - side-project
   - ai-app
 audience:
-  - indie-hacker
+  - solo
   - startup
-  - freelancer
   - smb
 software:
   - astro

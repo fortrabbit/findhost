@@ -22,7 +22,7 @@ useCases:
   - side-project
 audience:
   - smb
-  - freelancer
+  - solo
   - agency
 software:
   - laravel

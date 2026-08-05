@@ -18,7 +18,6 @@ infraContract:
 whoManagesOs: you
 audience:
   - agency
-  - developer
 useCases:
   - cms
 software:
