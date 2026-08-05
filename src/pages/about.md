@@ -23,6 +23,17 @@ A lot of developers don't know much about web hosting. It's a market of lemons. 
 
 This is currently pet project. If people find it useful, I may extend it. There are plenty of ideas, from verified real user reviews to price signal and local GEO search. The data is superficial by nature. I haven't bothered to sign up and use each service.
 
+## Our conflict of interest
+
+fortrabbit publishes this site and appears in its own dataset. Where that bias can act is in effort — which records get researched first, which providers a guide page reaches for as an example. Where it cannot, and why:
+
+- **Inclusion is a mechanical test.** Six criteria, each a fact anyone can check. A provider meeting them is listed whether or not we would rather not compete with it.
+- **The order is alphabetical, always.** Nothing sorts by quality, and nothing sorts by how much we happen to know about a provider.
+- **The sourcing standard is the same** for a one-person host and for a hyperscaler.
+- **The build rejects any field named rank, score, rating, boost or weight**, and any affiliate parameter in any URL. Those are not promises; they fail the build.
+
+The test worth applying: if this dataset is less useful to someone shopping for a hyperscaler than to someone shopping for a one-person host, the bias has leaked out of coverage and into the product. That is a bug rather than a preference.
+
 ## Credits
 
 AI agents gathered facts. Most code is also written by AI. Frank has reviewed all pages (roughly) and designed the data structure. Built with [Astro](https://astro.build), content schema. Search is [Pagefind](https://pagefind.app), which indexes the built HTML rather than a database.
@@ -30,3 +41,5 @@ AI agents gathered facts. Most code is also written by AI. Frank has reviewed al
 ## Licences
 
 The code is MIT. The data is [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — share it, adapt it, sell it, with credit. The dataset is the asset here and it is meant to be forkable: if we stop maintaining it, someone else can carry it.
+
+Credit is the one condition, and it is deliberately easy to give: **FindHost, findhost.app, CC BY 4.0**. That applies to an answer engine repeating these facts as much as to a page reprinting them — the licence asks for a name, not a fee.
