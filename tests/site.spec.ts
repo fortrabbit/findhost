@@ -193,10 +193,6 @@ test.describe('stubs', () => {
     const rows = page.locator('[data-find-results] .provider-list > li');
     await expect(rows).toHaveCount(listed);
 
-    // Stubs are not a lead filter, so they live under the disclosure — which
-    // opens without JavaScript, and has to open before anything can be ticked.
-    await page.locator('.find-more-filters > summary').click();
-
     const toggle = page.locator('.find-drafts input[type="checkbox"]');
     await expect(toggle).not.toBeChecked();
 

@@ -606,34 +606,35 @@
  * an upper bound. A cell per facet, one for a grouped run and one for the stubs:
  * three rows on a wide screen, one column on a phone, and no breakpoint.
  */
-.find-filters {
-  margin-bottom: var(--space-xl);
-}
-
 /*
- * As many columns as fit and never more than six. The lead row and the rest
- * behind the disclosure use the same track sizing, so opening "All filters"
- * continues the grid rather than starting a different one.
+ * As many columns as fit and never more than six: the `100% / 7` floor makes a
+ * seventh column too narrow to be allowed, which is the only way auto-fit takes
+ * an upper bound.
  */
-.find-row-of-facets {
+.find-filters {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(max(11rem, 100% / 7 + 0.1%), 1fr));
   gap: var(--space-md) var(--space-lg);
 }
 
-.find-facet {
-  min-width: 0;
+.find-panel {
+  margin-bottom: var(--space-xl);
 }
 
-/** The facets most people arrive with lead; the rest open without JavaScript. */
-.find-more-filters {
-  margin-top: var(--space-md);
+.find-panel[hidden] {
+  display: none;
 }
 
-.find-more-filters > summary {
+/** A way to put the filters away, not a way to fetch them: it opens closed only once asked. */
+.find-panel > summary {
   margin-bottom: var(--space-md);
   font-size: var(--text-sm);
+  font-weight: var(--weight-strong);
   cursor: pointer;
+}
+
+.find-facet {
+  min-width: 0;
 }
 
 /*
