@@ -38,6 +38,8 @@
   --text-xl: 2rem;
   --text-2xl: 2.6rem;
 
+  /* Display sizes want less air, not the same ratio scaled up with the type */
+  --leading-display: 1.02;
   --leading-tight: 1.2;
   --leading-data: 1.38;
   --leading-body: 1.62;

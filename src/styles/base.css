@@ -77,6 +77,7 @@ h4 {
 h1 {
   margin-top: var(--space-md);
   font-size: var(--text-2xl);
+  line-height: var(--leading-display);
 }
 
 h2 {
