@@ -116,7 +116,8 @@
 
 /** Opening paragraph. Big enough to be read instead of skipped past. */
 .lead {
-  max-width: var(--measure-prose);
+  max-width: var(--measure-data);
+  margin-top: var(--space-lg);
   font-size: var(--text-lg);
   line-height: 1.4;
   text-wrap: pretty;
