@@ -617,7 +617,7 @@
 .find-filters {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(max(11rem, 100% / 7 + 0.1%), 1fr));
-  gap: var(--space-md) var(--space-lg);
+  gap: var(--space-sm) var(--space-md);
 }
 
 .find-panel {
@@ -654,9 +654,11 @@
 .find-values {
   --find-row: 1.25rem;
   --find-rows: 4.5;
+  --find-pad: var(--space-xs);
 
-  height: calc(var(--find-rows) * var(--find-row));
-  padding: var(--space-2xs);
+  /* border-box, so the padding is added back or it eats the half row that shows there is more. */
+  height: calc(var(--find-rows) * var(--find-row) + 2 * var(--find-pad));
+  padding: var(--find-pad);
   border: var(--rule-hairline) solid var(--color-ink);
   border-radius: var(--radius);
   overflow-y: auto;
