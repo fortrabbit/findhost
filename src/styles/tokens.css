@@ -95,3 +95,15 @@
   --color-link: var(--blue-600);
   --color-link-visited: var(--violet-700);
 }
+
+/*
+ * 1px is the thinnest border CSS can promise, and on a display that can draw
+ * half of one it looks like a drawn line rather than a printed rule. Only where
+ * the screen can actually render it — at 1x a half pixel is a rounding error,
+ * and browsers disagree about which way it rounds.
+ */
+@media (min-resolution: 2dppx) {
+  :root {
+    --rule-hairline: 0.5px;
+  }
+}
