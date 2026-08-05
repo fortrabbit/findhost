@@ -28,13 +28,11 @@ const staticPages = Object.keys(import.meta.glob('./**/*.{astro,md}'))
 export const GET: APIRoute = async ({ site }) => {
   const origin = site?.origin ?? '';
   const providers = await loadProviders();
-  const guide = await getCollection('guide');
   const { facets } = await loadFacets();
 
   const routes = [
     ...staticPages,
     ...providers.map((provider) => `/${provider.id}/`),
-    ...guide.map((page) => `/guide/${page.id}/`),
     ...facets.flatMap((facet) => [
       facetIndex(facet.id),
       ...facet.values.filter((value) => value.count > 0).map((value) => `/${facet.id}/${value.id}/`),

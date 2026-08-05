@@ -22,9 +22,10 @@ const drafts = await loadDrafts();
 >
   <h1>Find your next web host</h1>
 
-  <p class="lead">
-    An <a href="/about/" title="About">opinionated</a> <a href="/guide/">hosting guide</a> and directory for developers.
-  </p>
+  <!-- <p class="lead">
+    An <a href="/about/" title="About">opinionated</a>{' '}
+    <a href="/guide/">hosting guide</a>.
+  </p> -->
 
   <ProviderRegister providers={providers} facets={facets}>
     <FindFilters facets={facets} drafts={drafts.length} />

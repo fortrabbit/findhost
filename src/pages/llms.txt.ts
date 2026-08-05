@@ -11,7 +11,6 @@ import { loadProviders } from '../lib/providers';
 export const GET: APIRoute = async ({ site }) => {
   const origin = site?.origin ?? '';
   const providers = (await loadProviders()).sort((a, b) => a.data.name.localeCompare(b.data.name, 'en'));
-  const guide = (await getCollection('guide')).sort((a, b) => a.data.order - b.data.order);
   const { facets } = await loadFacets();
   const notes = (await getCollection('notes')).sort((a, b) => a.id.localeCompare(b.id, 'en'));
 
@@ -34,16 +33,12 @@ export const GET: APIRoute = async ({ site }) => {
     '',
     '## Start here',
     '',
+    `- [How to choose a host](${origin}/guide/)`,
     `- [About, and who publishes this](${origin}/about/)`,
     `- [Every provider, filterable](${origin}/)`,
     `- [Where providers operate](${origin}/regions/)`,
     `- [providers.json, every facet and every record's facet fields](${origin}/providers.json)`,
     '',
-    '## Guide',
-    '',
-    ...guide.map((page) =>
-      `- [${page.data.title}](${origin}/guide/${page.id}/): ${page.data.description ?? ''}`.trimEnd(),
-    ),
     '',
     '## Notes',
     '',

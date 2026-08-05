@@ -25,10 +25,7 @@ const indexable = import.meta.env.PUBLIC_INDEXABLE === 'true' && !hidden;
  * policies are reached from the pages that need them rather than from every
  * page — a nav that lists everything is a nav nobody reads.
  */
-const sections = [
-  { href: '/guide/', label: 'Guide' },
-  { href: '/about/', label: 'About' },
-];
+const sections = [{ href: '/guide/', label: 'Guide' }];
 
 const path = Astro.url.pathname;
 const canonical = new URL(path, Astro.site ?? Astro.url).href;
@@ -88,7 +85,7 @@ const canonical = new URL(path, Astro.site ?? Astro.url).href;
       <div class="footer-base">
         <div>
           <p>
-            Designed and curated by Frank Lämmer of <a href="/fortrabbit/">fortrabbit</a>.
+            Designed and curated by Frank Lämmer of <a href="/fortrabbit/">fortrabbit</a>. <a href="/about/">About</a>.
           </p>
           <p>
             Contributions welcome via <a href="https://github.com/fortrabbit/findhost">GitHub</a>.

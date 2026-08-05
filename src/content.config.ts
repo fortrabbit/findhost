@@ -358,18 +358,4 @@ const notes = defineCollection({
   }),
 });
 
-/** The cross-cutting explainers. Openly editorial, and structurally unable to name a winner. */
-const guide = defineCollection({
-  loader: glob({ base: 'src/content/guide', pattern: '**/*.md' }),
-  schema: z.object({
-    title: z.string(),
-    description: z.string().max(200).optional(),
-    /** The opening line, set larger than the body. `description` is for search results; this is for the reader. */
-    lead: z.string().optional(),
-    order: z.number().int().default(50),
-    figure: figure.optional(),
-    ai: z.enum(vocabulary('ai')).optional(),
-  }),
-});
-
-export const collections = { providers, guide, notes };
+export const collections = { providers, notes };
