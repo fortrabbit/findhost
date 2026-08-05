@@ -429,15 +429,29 @@
   list-style: none;
 }
 
+/*
+ * The name and its count on one line, whatever describes it on the next. A
+ * gloss is a sentence, and given the same line as a right-aligned number it ran
+ * straight into it: the row read as one string with a digit in the middle.
+ */
 .stack-list > li {
   padding: var(--space-xs) 0;
   border-top: var(--rule-hairline) solid var(--color-ink);
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
+  column-gap: var(--space-sm);
 }
 
 .stack-list > li > span {
   margin-left: auto;
+}
+
+.stack-list > li > p {
+  flex-basis: 100%;
+  max-width: var(--measure-prose);
+  margin: var(--space-3xs) 0 0;
+  font-size: var(--text-sm);
 }
 
 .stack-list > li:last-child {
