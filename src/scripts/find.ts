@@ -61,7 +61,7 @@ function row(provider: ProviderRow): HTMLLIElement {
   name.className = 'provider-name';
 
   const link = document.createElement('a');
-  link.href = `/providers/${provider.id}/`;
+  link.href = `/${provider.id}/`;
   link.textContent = provider.name;
   name.append(link);
 
@@ -178,7 +178,7 @@ if (filtersEl && resultsEl && summaryEl) {
 
       /*
        * Only values that still exist AND that some record holds. A link written
-       * before a value was renamed — /providers/?category=shared, say — would
+       * before a value was renamed — /?category=shared, say — would
        * otherwise filter to nothing and read as "no such providers" rather than
        * as a dead link. A defined-but-unused value is the same trap with a
        * crueller ending: the panel draws no box for it, so nothing can untick it.

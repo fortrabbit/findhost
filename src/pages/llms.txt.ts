@@ -53,7 +53,7 @@ export const GET: APIRoute = async ({ site }) => {
     '',
     ...providers.map(
       (provider) =>
-        `- [${provider.data.name}](${origin}/providers/${provider.id}/): ${provider.data.description ?? 'No description recorded yet.'} — record as markdown: ${origin}/providers/${provider.id}.md`,
+        `- [${provider.data.name}](${origin}/${provider.id}/): ${provider.data.description ?? 'No description recorded yet.'} — record as markdown: ${origin}/${provider.id}.md`,
     ),
     '',
   ];

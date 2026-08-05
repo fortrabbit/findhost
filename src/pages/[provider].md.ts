@@ -1,6 +1,6 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
-import { fieldGroups, hiddenStatuses } from '../../lib/fields';
+import { fieldGroups, hiddenStatuses } from '../lib/fields';
 
 /**
  * The record as markdown, for anything that would rather read text than HTML.
@@ -10,7 +10,7 @@ import { fieldGroups, hiddenStatuses } from '../../lib/fields';
  */
 export async function getStaticPaths() {
   const providers = await getCollection('providers');
-  return providers.map((provider) => ({ params: { id: provider.id }, props: { provider } }));
+  return providers.map((provider) => ({ params: { provider: provider.id }, props: { provider } }));
 }
 
 const label = (value: unknown): string => {
@@ -52,7 +52,7 @@ export const GET: APIRoute = async ({ props, site }) => {
         : 'DRAFT. This record is started and not finished, so it is not part of the register, not counted and not indexed.'
       : '',
     hidden ? '' : undefined,
-    `Source: ${origin}/providers/${provider.id}/`,
+    `Source: ${origin}/${provider.id}/`,
     data.checkedAt
       ? `Last checked against the provider: ${label(data.checkedAt)}`
       : 'Never checked against the provider, so no date is claimed.',

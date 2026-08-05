@@ -85,9 +85,11 @@ export const groupNames = [
 ] as const;
 
 /**
- * Top-level paths a facet may not claim. A facet segment becomes `/<facet>/`, so
- * one of these would shadow a real page and the collision would only show as a
- * missing route.
+ * The root is one namespace, shared by every provider record, every facet index
+ * and every written page — `/hetzner/` and `/software/` are siblings. These are
+ * the names already spoken for by a page or a generated file, so neither a
+ * facet nor a record may take one. validate.ts checks both directions; a
+ * collision here is a URL that silently resolves to the wrong thing.
  */
 export const reservedSegments = [
   'providers',
@@ -99,6 +101,12 @@ export const reservedSegments = [
   'find',
   'notes',
   '404',
+  'robots.txt',
+  'sitemap.xml',
+  'llms.txt',
+  'providers.json',
+  'favicon.svg',
+  '_astro',
 ];
 
 /*

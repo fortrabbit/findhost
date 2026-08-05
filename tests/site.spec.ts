@@ -70,21 +70,21 @@ test.describe('the register', () => {
   });
 
   /*
-   * The register moved to the homepage and /providers/ went with it, but the
-   * records did not — /providers/<id>/ is the one path under it that still
-   * resolves, and it is the most-linked address on the site.
+   * Records sit at the root, beside the facet indexes and the written pages.
+   * That is one namespace shared by three kinds of thing, which validate guards
+   * — this is the other half: that a record actually answers there.
    */
-  test('keeps a record where records live', async ({ page }) => {
+  test('serves a record from the root', async ({ page }) => {
     // Scoped to the article: a bare h1 also matches whatever a browser
     // extension injects, which is why the anchors above are scoped too.
-    await page.goto('/providers/hetzner/');
+    await page.goto('/hetzner/');
     await expect(page.locator('article h1')).toHaveText('Hetzner');
   });
 });
 
 test.describe('a record', () => {
   test('shows only what is held, and names the rest', async ({ page }) => {
-    await page.goto('/providers/hetzner/');
+    await page.goto('/hetzner/');
 
     const values = page.locator('.fact-list > dd');
     await expect(values.first()).toBeVisible();
@@ -95,7 +95,7 @@ test.describe('a record', () => {
   });
 
   test('marks sourced facts and links them to their source', async ({ page }) => {
-    await page.goto('/providers/hetzner/');
+    await page.goto('/hetzner/');
 
     const marker = page.locator('.footnote-ref').first();
     await expect(marker).toBeVisible();
@@ -107,7 +107,7 @@ test.describe('a record', () => {
   });
 
   test('sends every outbound link with rel=nofollow', async ({ page }) => {
-    await page.goto('/providers/hetzner/');
+    await page.goto('/hetzner/');
     for (const link of await page.locator('.record-links a[href^="http"]').all()) {
       await expect(link).toHaveAttribute('rel', 'nofollow');
     }
@@ -132,7 +132,7 @@ test.describe('governance, as behaviour rather than policy text', () => {
     const row = page.locator('.provider-name').filter({ hasText: /^fortrabbit/ });
     await expect(row.locator('.self-marker')).toHaveText('published by us');
 
-    const record = await page.request.get('/providers/fortrabbit.md');
+    const record = await page.request.get('/fortrabbit.md');
     expect(await record.text()).toContain('Published by us');
   });
 

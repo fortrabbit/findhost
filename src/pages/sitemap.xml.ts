@@ -33,7 +33,7 @@ export const GET: APIRoute = async ({ site }) => {
 
   const routes = [
     ...staticPages,
-    ...providers.map((provider) => `/providers/${provider.id}/`),
+    ...providers.map((provider) => `/${provider.id}/`),
     ...guide.map((page) => `/guide/${page.id}/`),
     ...facets.flatMap((facet) => [
       facetIndex(facet.id),

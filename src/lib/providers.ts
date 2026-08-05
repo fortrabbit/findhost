@@ -22,7 +22,7 @@ export function isListed(provider: Provider): boolean {
 /**
  * Every page that shows, counts or indexes providers loads them through here,
  * so hiding a record is one field rather than a filter each page has to
- * remember. Only /providers/<id>/ reads the collection whole.
+ * remember. Only /<id>/ reads the collection whole.
  */
 export async function loadProviders(): Promise<Provider[]> {
   return (await getCollection('providers')).filter(isListed);

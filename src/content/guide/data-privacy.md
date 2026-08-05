@@ -30,9 +30,9 @@ None of this makes an American provider unusable or a European one safe, and thi
 
 Ownership is the part that most often goes unmentioned, and it is where residency claims quietly lose their meaning. Holding companies, private-equity majority stakes and acquisitions do not change the brand on the website, the support signature or the data-centre address, and none of them require a public announcement.
 
-[WP Engine](/providers/wpengine/) is the legible version of the mechanism: an American company, majority-owned by a private-equity firm since 2018, with a European office, running customer sites on Google Cloud and AWS. Every step of that is published, so the chain can be followed to the end and weighed.
+[WP Engine](/wpengine/) is the legible version of the mechanism: an American company, majority-owned by a private-equity firm since 2018, with a European office, running customer sites on Google Cloud and AWS. Every step of that is published, so the chain can be followed to the end and weighed.
 
-[Zerops](/providers/zerops/) is the more common version. A Czech platform with Czech capacity, and a jurisdiction that would otherwise be part of the appeal — but the record carries `resells-iaas` under [whose hardware](/hardware/), and neither the platform nor the record names whose infrastructure it is. The layer that actually decides the question is one step below anything the marketing describes. Both are named here because their records show the mechanism, not as verdicts: [ownership](/ownership/) is a field to apply a preference to, never a recommendation this site makes.
+[Zerops](/zerops/) is the more common version. A Czech platform with Czech capacity, and a jurisdiction that would otherwise be part of the appeal — but the record carries `resells-iaas` under [whose hardware](/hardware/), and neither the platform nor the record names whose infrastructure it is. The layer that actually decides the question is one step below anything the marketing describes. Both are named here because their records show the mechanism, not as verdicts: [ownership](/ownership/) is a field to apply a preference to, never a recommendation this site makes.
 
 ## A DPA is table stakes, not a differentiator
 
@@ -44,7 +44,7 @@ That is recorded as `gdprDpa`, with three values: available as standard, availab
 
 A provider can be incorporated and hosted in one country while the mail relay, CDN, object storage for backups, error tracking, analytics and support desk all sit elsewhere. The claim on the marketing page is generally true about the application servers and silent about everything around them — and support tooling in particular tends to hold exactly the personal data the requirement was about.
 
-The dataset records the first layer of this and stops there. `runsOn` names the infrastructure a platform builds on where the platform publishes it, and [whose hardware](/hardware/) separates owning the metal, reselling someone else's and provisioning onto an account the customer brings. [Cloudways](/providers/cloudways/) shows the shape plainly: one control panel over five different infrastructure companies, picked per server at signup, which makes "where does this run" a question with five possible answers before anything else is asked. Past that first layer, the sub-processor list lives on the provider's own site, and reading it is the work.
+The dataset records the first layer of this and stops there. `runsOn` names the infrastructure a platform builds on where the platform publishes it, and [whose hardware](/hardware/) separates owning the metal, reselling someone else's and provisioning onto an account the customer brings. [Cloudways](/cloudways/) shows the shape plainly: one control panel over five different infrastructure companies, picked per server at signup, which makes "where does this run" a question with five possible answers before anything else is asked. Past that first layer, the sub-processor list lives on the provider's own site, and reading it is the work.
 
 ## What this dataset can and cannot say
 

@@ -49,6 +49,6 @@ figure:
   text: Event handlers, billed by the millisecond.
 ---
 
-Scaleway Functions is the French cloud provider's function-as-a-service, sold beside the rest of the [Scaleway](/providers/scaleway/) catalogue and running in the same European regions. Handlers are deployed as source or as a container, and the documented runtimes are Node, Go, Python, Rust and PHP, each maintained by the provider rather than assembled by the customer as a custom layer.
+Scaleway Functions is the French cloud provider's function-as-a-service, sold beside the rest of the [Scaleway](/scaleway/) catalogue and running in the same European regions. Handlers are deployed as source or as a container, and the documented runtimes are Node, Go, Python, Rust and PHP, each maintained by the provider rather than assembled by the customer as a custom layer.
 
 Billing is usage-based, by request and by memory consumed, charged by the millisecond of execution, with a monthly free allowance the marketing page describes but does not quantify. Functions scale to zero between invocations, and the filesystem is not persistent, so anything that has to survive a request belongs in one of the platform's storage or database products.

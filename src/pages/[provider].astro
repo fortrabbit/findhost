@@ -1,16 +1,16 @@
 ---
 import { getCollection, render } from 'astro:content';
-import Base from '../../layouts/Base.astro';
-import { fieldGroups, fieldOf, labelOf, type Field } from '../../lib/fields';
-import { energy, flag, footnotes, price } from '../../lib/record';
-import { isListed } from '../../lib/providers';
-import SocialLinks from '../../components/SocialLinks.astro';
-import PageFigure from '../../components/PageFigure.astro';
+import Base from '../layouts/Base.astro';
+import { fieldGroups, fieldOf, labelOf, type Field } from '../lib/fields';
+import { energy, flag, footnotes, price } from '../lib/record';
+import { isListed } from '../lib/providers';
+import SocialLinks from '../components/SocialLinks.astro';
+import PageFigure from '../components/PageFigure.astro';
 
 export async function getStaticPaths() {
   const providers = await getCollection('providers');
   return providers.map((provider) => ({
-    params: { id: provider.id },
+    params: { provider: provider.id },
     props: { provider },
   }));
 }
@@ -172,7 +172,7 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
 <Base
   title={`${data.name} — FindHost`}
   description={data.description}
-  markdown={`/providers/${provider.id}.md`}
+  markdown={`/${provider.id}.md`}
   hidden={!listed}
 >
   <article>

@@ -68,7 +68,7 @@ figure:
 
 Cloudways is [server management software](/categories/server-management/) rather than a hosting service in its own right: it provisions virtual machines on five infrastructure providers — DigitalOcean, Vultr, Linode, AWS and Google Cloud — and puts its own control panel over them. Billing is pay-as-you-go by the hour and invoiced in arrears, with a short trial ahead of it.
 
-Because the servers sit on other providers' hardware, the locations on offer are whatever those providers operate, so the geography of a Cloudways account is decided upstream. It was acquired by [DigitalOcean](/providers/digitalocean/) in 2022. WordPress hosting is a separately marketed product line.
+Because the servers sit on other providers' hardware, the locations on offer are whatever those providers operate, so the geography of a Cloudways account is decided upstream. It was acquired by [DigitalOcean](/digitalocean/) in 2022. WordPress hosting is a separately marketed product line.
 
 ## Worth knowing
 

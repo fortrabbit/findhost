@@ -59,4 +59,4 @@ It is sold as a flat subscription, with a limited free sandbox below it. Every t
 
 The subscription is not the cost of running the application. Lambda, API Gateway, S3, SQS, RDS and CloudFront are billed by Amazon against the customer's own account, so there are two invoices and the larger one is not the one Vapor prices.
 
-Laravel has since launched [Laravel Cloud](/providers/laravel-cloud/), a non-serverless platform from the same company.
+Laravel has since launched [Laravel Cloud](/laravel-cloud/), a non-serverless platform from the same company.

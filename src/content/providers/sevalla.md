@@ -68,7 +68,7 @@ figure:
   text: General-purpose PaaS.
 ---
 
-Sevalla is a polyglot cloud hosting platform covering application hosting, database hosting, static sites and object storage. It is the platform side of [Kinsta](/providers/kinsta/), the managed WordPress company, whose application, database and static-site products run under the Sevalla brand. Deployments connect to GitHub, GitLab or Bitbucket and build from a Dockerfile or from buildpacks, with the provider running everything below the container.
+Sevalla is a polyglot cloud hosting platform covering application hosting, database hosting, static sites and object storage. It is the platform side of [Kinsta](/kinsta/), the managed WordPress company, whose application, database and static-site products run under the Sevalla brand. Deployments connect to GitHub, GitLab or Bitbucket and build from a Dockerfile or from buildpacks, with the provider running everything below the container.
 
 Billing is described as "pay for what you run", with no per-seat charge and compute, databases, storage and bandwidth metered separately. Object storage sits on Cloudflare R2, static site hosting is permanently free within stated limits, and the application and database products come with a trial. Locations span the Americas, Europe and Asia-Pacific.
 

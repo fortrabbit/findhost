@@ -43,7 +43,7 @@ const { providers, namesOnly = false } = Astro.props;
 
           <div class="provider-body">
             <span class="provider-name">
-              <a href={`/providers/${provider.id}/`}>{provider.name}</a>
+              <a href={`/${provider.id}/`}>{provider.name}</a>
               {provider.greenWebId && (
                 <span
                   class="green-mark"

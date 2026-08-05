@@ -13,7 +13,7 @@ lead: Most "best web hosting lists" are ordered by affiliate commission, making 
 
 ## Publisher
 
-I am [Frank Lämmer](https://www.franklaemmer.de), co-founder of a small bootstrapped hosting provider called [fortrabbit](https://www.fortrabbit.com) which is also [featured here](/providers/fortrabbit). The main data dates back to so competitor research I did for our new hosting platform in 2023. It was ported and extended to a 'hosting guide' on our fortrabbit website. But I found, it deserved it's own space. So, here we are.
+I am [Frank Lämmer](https://www.franklaemmer.de), co-founder of a small bootstrapped hosting provider called [fortrabbit](https://www.fortrabbit.com) which is also [featured here](/fortrabbit). The main data dates back to so competitor research I did for our new hosting platform in 2023. It was ported and extended to a 'hosting guide' on our fortrabbit website. But I found, it deserved it's own space. So, here we are.
 
 ## Your benefits
 

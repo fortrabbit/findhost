@@ -95,6 +95,6 @@ figure:
   text: Virtual machines, billed by the second.
 ---
 
-DigitalOcean Holdings, Inc. trades on the New York Stock Exchange as DOCN. It started with a single product — the Droplet, a virtual private server — and has since added block storage, managed databases, managed Kubernetes, object storage, serverless functions and an application platform. It acquired [Cloudways](/providers/cloudways/) in 2022.
+DigitalOcean Holdings, Inc. trades on the New York Stock Exchange as DOCN. It started with a single product — the Droplet, a virtual private server — and has since added block storage, managed databases, managed Kubernetes, object storage, serverless functions and an application platform. It acquired [Cloudways](/cloudways/) in 2022.
 
 Droplets are billed per second against fixed plan rates, with a one-minute minimum charge. Backups are a paid add-on priced as a percentage of the Droplet cost, and block storage, load balancers and managed database clusters are metered separately, so a Droplet's plan rate is not the whole bill. The tooling is documented in one place: a public REST API, the open-source `doctl` CLI, a Terraform provider, Ansible modules and a set of MCP servers.

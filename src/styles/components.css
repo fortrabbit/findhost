@@ -112,16 +112,6 @@
 
 /* --- Editorial text --- */
 
-/**
- * The page above this one. Present on every page whether or not it names
- * anything: the height it holds is what stops the heading under it jumping
- * between a record and the register.
- */
-.breadcrumb {
-  margin: 0 0 var(--space-2xs);
-  font-size: var(--text-sm);
-}
-
 /** Opening paragraph. Big enough to be read instead of skipped past. */
 .lead {
   max-width: var(--measure-prose);

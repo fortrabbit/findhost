@@ -92,10 +92,6 @@ for (const field of fields) {
 
     if (!/^[a-z0-9-]+$/.test(field.facet)) fail(dictionaryFile, `facet "${field.facet}" is not a usable URL segment`);
 
-    if (reservedSegments.includes(field.facet)) {
-      fail(dictionaryFile, `facet "${field.facet}" collides with the page already at /${field.facet}/`);
-    }
-
     // Absent, a facet sorts silently last; shared, two facets swap places between builds.
     if (field.filterOrder === undefined) fail(dictionaryFile, `"${field.id}" is a facet with no filterOrder`);
     else {
@@ -239,6 +235,32 @@ const files = readdirSync(providersDir).filter((name) => name.endsWith('.md'));
 const seen = new Map<string, string>();
 
 const records = files.map((file) => ({ file, data: frontmatter(readFileSync(join(providersDir, file), 'utf8')) }));
+
+/*
+ * Records live at the root — /hetzner/ — so a provider id, a facet slug and a
+ * page name are all drawing on one namespace. They come from different
+ * vocabularies, brands against common nouns, which is why nothing collides
+ * today; that is a happy accident and not a rule, so it is checked.
+ *
+ * Both directions matter. A facet named after an existing provider and a
+ * provider named after an existing facet are the same bug arriving from
+ * opposite ends, and either one silently resolves a URL to the wrong page.
+ */
+const slugs = files.map((file) => file.replace(/\.md$/, ''));
+const claimed = new Map<string, string>();
+
+for (const segment of reservedSegments) claimed.set(segment, 'a page or a generated file');
+for (const field of facetFields) {
+  const taken = claimed.get(field.facet!);
+  if (taken) fail(dictionaryFile, `facet "${field.facet}" is already ${taken}`);
+  claimed.set(field.facet!, `the facet for "${field.id}"`);
+}
+
+for (const slug of slugs) {
+  const taken = claimed.get(slug);
+  if (taken) fail(`${providersDir}/${slug}.md`, `"${slug}" is already ${taken} — records share the root with both`);
+  else claimed.set(slug, 'a provider record');
+}
 
 /*
  * Every key any record uses. A `sources` entry names either one of these — a
