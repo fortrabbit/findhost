@@ -31,7 +31,6 @@ runtimes:
 deployMethods:
   - ssh
   - control-panel
-  - api
 sshAccess: shell
 pricingModel: fixed-tier
 priceFrom: xs

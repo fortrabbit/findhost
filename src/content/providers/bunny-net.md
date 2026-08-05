@@ -26,8 +26,6 @@ runtimes:
   - docker
   - static
 deployMethods:
-  - api
-  - cli
   - docker-image
   - git-integration
 pricingModel: usage-based

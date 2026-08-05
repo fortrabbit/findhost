@@ -45,8 +45,6 @@ runtimes:
 deployMethods:
   - git-push
   - git-integration
-  - cli
-  - api
   - docker-image
 sshAccess: shell
 managedDatabases:

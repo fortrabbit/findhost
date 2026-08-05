@@ -28,7 +28,6 @@ runtimes:
 deployMethods:
   - git-push
   - ssh
-  - cli
 sshAccess: shell
 pricingModel: fixed-tier
 priceFrom: md

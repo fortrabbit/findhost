@@ -39,7 +39,6 @@ deployMethods:
   - ssh
   - sftp
   - docker-image
-  - api
 sshAccess: shell
 managedDatabases:
   - mysql

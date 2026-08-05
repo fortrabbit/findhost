@@ -33,8 +33,6 @@ runtimes:
   - docker
   - any
 deployMethods:
-  - api
-  - cli
   - control-panel
   - docker-image
 sshAccess: shell

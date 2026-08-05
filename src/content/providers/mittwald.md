@@ -39,8 +39,6 @@ deployMethods:
   - ssh
   - sftp
   - git-push
-  - cli
-  - api
   - control-panel
 sshAccess: shell
 pricingModel: fixed-tier

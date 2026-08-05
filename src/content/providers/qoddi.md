@@ -34,7 +34,6 @@ runtimes:
 deployMethods:
   - git-integration
   - docker-image
-  - cli
 managedDatabases:
   - postgres
   - mysql

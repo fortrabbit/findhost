@@ -30,7 +30,6 @@ runtimes:
   - any
 deployMethods:
   - control-panel
-  - cli
   - docker-image
 sshAccess: shell
 pricingModel: fixed-tier

@@ -28,7 +28,6 @@ runtimes:
 deployMethods:
   - ssh
   - control-panel
-  - api
 sshAccess: shell
 pricingModel: hourly
 priceFrom: xs

@@ -30,7 +30,6 @@ runtimes:
   - php
 deployMethods:
   - git-push
-  - cli
   - git-integration
 sshAccess: shell
 managedDatabases:

@@ -27,10 +27,8 @@ runtimes:
   - docker
   - any
 deployMethods:
-  - api
   - control-panel
   - docker-image
-  - cli
 sshAccess: shell
 pricingModel: usage-based
 currencies:

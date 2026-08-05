@@ -26,7 +26,6 @@ runtimes:
   - go
 deployMethods:
   - git-integration
-  - cli
   - docker-image
 pricingModel: per-resource
 priceFrom: xl

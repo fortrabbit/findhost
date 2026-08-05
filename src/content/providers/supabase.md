@@ -27,9 +27,7 @@ audience:
 runtimes:
   - node
 deployMethods:
-  - cli
   - git-integration
-  - api
 managedDatabases:
   - postgres
 pricingModel: fixed-tier

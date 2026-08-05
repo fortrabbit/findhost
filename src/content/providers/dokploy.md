@@ -30,7 +30,6 @@ runtimes:
 deployMethods:
   - git-integration
   - docker-image
-  - api
 sshAccess: shell
 pricingModel: per-resource
 priceFrom: xs

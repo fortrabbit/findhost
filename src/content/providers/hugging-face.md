@@ -31,7 +31,6 @@ runtimes:
 deployMethods:
   - git-push
   - docker-image
-  - api
 pricingModel: fixed-tier
 priceFrom: md
 priceTo: xl

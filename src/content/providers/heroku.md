@@ -39,7 +39,6 @@ runtimes:
   - dotnet
 deployMethods:
   - git-push
-  - cli
 managedDatabases:
   - postgres
   - redis

@@ -26,9 +26,6 @@ audience:
 runtimes:
   - python
   - docker
-deployMethods:
-  - cli
-  - api
 pricingModel: usage-based
 priceFrom: sm
 priceTo: xl

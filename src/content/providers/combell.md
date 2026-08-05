@@ -34,7 +34,6 @@ deployMethods:
   - ssh
   - ftp
   - control-panel
-  - api
 sshAccess: shell
 pricingModel: fixed-tier
 priceFrom: md

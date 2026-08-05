@@ -22,7 +22,6 @@ runtimes:
   - node
   - docker
 deployMethods:
-  - cli
   - git-integration
   - docker-image
 managedDatabases:

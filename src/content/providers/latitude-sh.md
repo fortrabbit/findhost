@@ -24,8 +24,6 @@ runtimes:
   - any
   - docker
 deployMethods:
-  - api
-  - cli
   - control-panel
 sshAccess: shell
 managedDatabases:

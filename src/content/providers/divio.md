@@ -43,7 +43,6 @@ runtimes:
 deployMethods:
   - git-integration
   - docker-image
-  - cli
 pricingModel: fixed-tier
 freeTier: trial
 supportChannels:

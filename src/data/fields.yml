@@ -286,7 +286,9 @@
     - { id: elixir, label: Elixir }
 
 # How code gets there — a separate question from what may be done once it has
-# arrived. `git-integration` is a repository the provider watches; `git-push` is
+# arrived, and from whether the platform can be driven by something other than a
+# browser. A CLI and an API are `automation`: they create apps and read logs, and
+# triggering a deploy is one thing they happen to do. `git-integration` is a repository the provider watches; `git-push` is
 # a remote they hand you. Different enough to deploy differently, so they stay
 # apart.
 - id: deployMethods
@@ -299,8 +301,6 @@
     - { id: git-integration, label: Git integration, short: Git repo }
     - { id: git-push, label: Git push }
     - { id: pipeline, label: CI pipeline }
-    - { id: cli, label: CLI }
-    - { id: api, label: API }
     - { id: docker-image, label: Docker image, short: Image }
     - { id: control-panel, label: Control panel, short: Panel }
     - { id: ssh, label: SSH }

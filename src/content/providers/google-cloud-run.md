@@ -16,7 +16,6 @@ runtimes:
   - docker
 deployMethods:
   - docker-image
-  - cli
 persistentStorage: false
 pricingModel: usage-based
 priceFrom: xs

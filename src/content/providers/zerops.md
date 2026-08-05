@@ -44,9 +44,7 @@ runtimes:
   - docker
 deployMethods:
   - git-integration
-  - cli
   - docker-image
-  - api
 sshAccess: shell
 managedDatabases:
   - postgres

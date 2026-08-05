@@ -13,7 +13,6 @@ whoManagesOs: you
 runtimes:
   - docker
 deployMethods:
-  - cli
   - docker-image
 persistentStorage: true
 managedDatabases:

@@ -34,8 +34,6 @@ runtimes:
 deployMethods:
   - git-integration
   - docker-image
-  - cli
-  - api
 pricingModel: usage-based
 priceFrom: md
 priceTo: xl

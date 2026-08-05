@@ -31,8 +31,6 @@ runtimes:
   - static
 deployMethods:
   - git-integration
-  - cli
-  - api
 sshAccess: none
 pricingModel: fixed-tier
 priceFrom: md

@@ -36,8 +36,6 @@ runtimes:
 deployMethods:
   - git-integration
   - docker-image
-  - cli
-  - api
 sshAccess: shell
 pricingModel: fixed-tier
 priceFrom: md

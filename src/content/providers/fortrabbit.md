@@ -16,6 +16,17 @@ infraContract:
   - resells-iaas
 runtimes:
   - php
+software:
+  - laravel
+  - symfony
+  - craft-cms
+  - statamic
+  - kirby
+  - wordpress
+  - drupal
+  - typo3
+  - magento
+  - shopware
 deployMethods:
   - git-push
   - ssh
@@ -46,10 +57,14 @@ supportChannels:
 supportHours: business-hours
 supportTiering: all-plans
 apiAvailable: public
-mcpServer: none
+cliTool: official
+mcpServer: official
 status: active
 checkedAt: 2026-08-01
 sources:
+  - { field: software, url: 'https://www.fortrabbit.com/', checkedAt: 2026-08-05 }
+  - { field: cliTool, url: 'https://www.fortrabbit.com/', checkedAt: 2026-08-05 }
+  - { field: mcpServer, url: 'https://www.fortrabbit.com/', checkedAt: 2026-08-05 }
   - { field: regions, url: 'https://www.fortrabbit.com/', checkedAt: 2026-08-01 }
   - { field: hqCountry, url: 'https://www.fortrabbit.com/', checkedAt: 2026-08-01 }
   - { field: runsOn, url: 'https://www.fortrabbit.com/', checkedAt: 2026-08-01 }
@@ -66,7 +81,7 @@ sources:
 publishedByUs: true
 figure:
   emoji: 🐰
-  color: rgb(46, 62, 82)
+  color: rgb(176, 62, 192)
   textColor: rgb(240, 240, 244)
   text: As secure as Fort Knox, as fast as a rabbit.
 ---

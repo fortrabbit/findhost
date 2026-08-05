@@ -28,7 +28,6 @@ runtimes:
   - any
   - docker
 deployMethods:
-  - api
   - control-panel
   - ssh
 sshAccess: shell
