@@ -1,12 +1,11 @@
 ---
 import Base from './Base.astro';
-import GuideNav from '../components/GuideNav.astro';
+import PageFigure from '../components/PageFigure.astro';
 
 /*
  * Every written page: the guide articles, About, Policies. One layout, so a page
- * of prose looks the same wherever it sits and gains the aside nav without
- * anyone remembering to add it. Records and lists are not this — they are
- * scanned, not read.
+ * of prose looks the same wherever it sits. Records and lists are not this —
+ * they are scanned, not read.
  */
 interface Props {
   frontmatter: {
@@ -22,23 +21,11 @@ const { figure } = frontmatter;
 ---
 
 <Base title={`${frontmatter.title} — FindHost`} description={frontmatter.description}>
-  {
-    /* Outside the grid: a band that bleeds to both page edges cannot be measured from inside a column. */
-    figure && (
-      <p class="figure-band full-bleed" style={`background:${figure.color};color:${figure.textColor}`}>
-        <span aria-hidden="true">{figure.emoji}</span> {figure.text}
-      </p>
-    )
-  }
+  <article>
+    <h1>{frontmatter.title}</h1>
+    {frontmatter.lead && <p class="lead">{frontmatter.lead}</p>}
+    <PageFigure figure={figure} />
 
-  <div class="guide-layout full-width">
-    <GuideNav current={Astro.url.pathname} />
-
-    <article>
-      <h1>{frontmatter.title}</h1>
-      {frontmatter.lead && <p class="lead">{frontmatter.lead}</p>}
-
-      <slot />
-    </article>
-  </div>
+    <slot />
+  </article>
 </Base>

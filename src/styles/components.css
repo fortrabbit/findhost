@@ -112,6 +112,16 @@
 
 /* --- Editorial text --- */
 
+/**
+ * The page above this one. Present on every page whether or not it names
+ * anything: the height it holds is what stops the heading under it jumping
+ * between a record and the register.
+ */
+.breadcrumb {
+  margin: 0 0 var(--space-2xs);
+  font-size: var(--text-sm);
+}
+
 /** Opening paragraph. Big enough to be read instead of skipped past. */
 .lead {
   max-width: var(--measure-prose);
@@ -236,74 +246,6 @@
   flex-direction: column;
   gap: var(--space-3xs);
   font-size: var(--text-sm);
-}
-
-/* --- The guide --- */
-
-/**
- * A guide article with the rest of the guide beside it. The whole guide fits in
- * one list, so a reader on any article can see the shape of the set without
- * going back to an index. The figure band stays outside this grid: a rule that
- * bleeds to both page edges cannot be measured from inside a column.
- */
-.guide-layout {
-  display: grid;
-  grid-template-columns: 13rem minmax(0, 1fr);
-  gap: var(--space-xl);
-  align-items: start;
-}
-
-.guide-layout > article {
-  min-width: 0;
-  max-width: var(--measure-prose);
-}
-
-.guide-nav {
-  position: sticky;
-  top: var(--space-md);
-  font-size: var(--text-sm);
-}
-
-.guide-nav > h2 {
-  margin: var(--space-md) 0 var(--space-2xs);
-  padding-bottom: var(--space-3xs);
-  border-bottom: var(--rule-strong) solid var(--color-ink);
-  font-size: var(--text-md);
-}
-
-.guide-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.guide-nav li {
-  padding: var(--space-3xs) 0;
-}
-
-.guide-nav a {
-  text-decoration: none;
-}
-
-.guide-nav a:hover {
-  text-decoration: underline;
-}
-
-.guide-nav a[aria-current='page'] {
-  color: var(--color-ink);
-  font-weight: var(--weight-strong);
-}
-
-/* One column, nav first: on a narrow screen the list is a table of contents. */
-@media (max-width: 52rem) {
-  .guide-layout {
-    grid-template-columns: 1fr;
-    gap: var(--space-lg);
-  }
-
-  .guide-nav {
-    position: static;
-  }
 }
 
 /* --- The alphabet --- */

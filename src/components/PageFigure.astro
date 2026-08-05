@@ -1,0 +1,22 @@
+---
+interface Props {
+  /** A record's or a note's `figure`. Absent renders nothing, which is the common case. */
+  figure?: { emoji: string; color: string; textColor: string; text: string };
+}
+
+const { figure } = Astro.props;
+
+/*
+ * The one place any page carries colour, and it was written out five times —
+ * once per page type, which is how the guide came to draw it above the heading
+ * while everything else drew it below. Same band, same position, one file.
+ */
+---
+
+{
+  figure && (
+    <p class="figure-band full-bleed" style={`background:${figure.color};color:${figure.textColor}`}>
+      <span aria-hidden="true">{figure.emoji}</span> {figure.text}
+    </p>
+  )
+}

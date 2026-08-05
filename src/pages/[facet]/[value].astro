@@ -2,6 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import ProviderRegister from '../../components/ProviderRegister.astro';
+import PageFigure from '../../components/PageFigure.astro';
 import { facetIndex, facetRoutes, loadFacets } from '../../lib/facets';
 import { summarise } from '../../lib/summarise';
 
@@ -100,17 +101,10 @@ const figure = note?.data.figure;
   description={note?.data.description ??
     `Providers where ${facet.label.toLowerCase()} is ${value.label.toLowerCase()}.`}
 >
-  {
-    figure && (
-      <p class="figure-band full-bleed" style={`background:${figure.color};color:${figure.textColor}`}>
-        <span aria-hidden="true">{figure.emoji}</span> {figure.text}
-      </p>
-    )
-  }
-
   <h1>{value.label}</h1>
 
   <p class="annotation">{counted}</p>
+  <PageFigure figure={figure} />
 
   {Note && <Note />}
 

@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
+import PageFigure from '../../components/PageFigure.astro';
 import { loadFacets } from '../../lib/facets';
 
 export async function getStaticPaths() {
@@ -50,17 +51,10 @@ const figure = note?.data.figure;
   title={`${note?.data.title ?? facet.label} — FindHost`}
   description={note?.data.description ?? `Every value recorded for ${facet.label.toLowerCase()}.`}
 >
-  {
-    figure && (
-      <p class="figure-band full-bleed" style={`background:${figure.color};color:${figure.textColor}`}>
-        <span aria-hidden="true">{figure.emoji}</span> {figure.text}
-      </p>
-    )
-  }
-
   <h1>{note?.data.title ?? facet.label}</h1>
 
   {note?.data.lead && <p class="lead">{note.data.lead}</p>}
+  <PageFigure figure={figure} />
 
   {Note && <Note />}
 

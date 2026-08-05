@@ -5,6 +5,7 @@ import { fieldGroups, fieldOf, labelOf, type Field } from '../../lib/fields';
 import { energy, flag, footnotes, price } from '../../lib/record';
 import { isListed } from '../../lib/providers';
 import SocialLinks from '../../components/SocialLinks.astro';
+import PageFigure from '../../components/PageFigure.astro';
 
 export async function getStaticPaths() {
   const providers = await getCollection('providers');
@@ -175,14 +176,6 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
   hidden={!listed}
 >
   <article>
-    {
-      data.figure && (
-        <p class="figure-band full-bleed" style={`background:${data.figure.color};color:${data.figure.textColor}`}>
-          <span aria-hidden="true">{data.figure.emoji}</span> {data.figure.text}
-        </p>
-      )
-    }
-
     <h1>{data.name}</h1>
     {
       notice && (
@@ -198,8 +191,7 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
       stale && (
         <aside class="editorial-note">
           <p>
-            <strong>May be out of date.</strong> Last checked {checkedDaysAgo} days ago. Everything below was true then
-            and has not been confirmed since.
+            <strong>May be out of date.</strong> Last checked {checkedDaysAgo} days ago.
           </p>
         </aside>
       )
@@ -211,7 +203,7 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
       {
         homeFlag && (
           <span aria-hidden="true" title={labelOf('hqCountry', data.hqCountry)}>
-            {homeFlag}
+            {data.hqCountry}
           </span>
         )
       }
@@ -245,6 +237,8 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
         </p>
       )
     }
+
+    <PageFigure figure={data.figure} />
 
     <div class="record-layout">
       <aside class="record-specs">

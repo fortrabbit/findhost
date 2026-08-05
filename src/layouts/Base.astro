@@ -2,6 +2,7 @@
 import '../styles/tokens.css';
 import '../styles/base.css';
 import '../styles/components.css';
+import { facetFields, facetOf } from '../lib/fields';
 
 interface Props {
   title: string;
@@ -32,6 +33,27 @@ const sections = [
 
 const path = Astro.url.pathname;
 const canonical = new URL(path, Astro.site ?? Astro.url).href;
+
+/*
+ * The page above this one, and only that one. It lives here rather than in each
+ * template so the heading under it starts at the same height on every page —
+ * which is the whole point, and why the space is held even where there is no
+ * parent to name.
+ *
+ * A record's parent is the register, and the register is the homepage. Naming
+ * it "Providers" rather than "Home" says what is up there instead of where.
+ */
+const [first, second] = path.split('/').filter(Boolean);
+
+const parent = !second
+  ? undefined
+  : first === 'providers'
+    ? { href: '/', label: 'Providers' }
+    : first === 'guide'
+      ? { href: '/guide/', label: 'Guide' }
+      : facetFields.some((field) => field.facet === first)
+        ? { href: `/${first}/`, label: facetOf(first).label }
+        : undefined;
 ---
 
 <!doctype html>
@@ -81,6 +103,11 @@ const canonical = new URL(path, Astro.site ?? Astro.url).href;
     </header>
 
     <main>
+      {/* Rendered even when empty: the space it holds is what keeps every h1 at one height. */}
+      <p class="breadcrumb">
+        {parent ? <a href={parent.href}>{parent.label}</a> : <span aria-hidden="true">&nbsp;</span>}
+      </p>
+
       <slot />
     </main>
 
