@@ -73,7 +73,7 @@
 - id: category
   label: Category
   group: Classification
-  facet: category
+  facet: categories
   filterOrder: 3
   values:
     - { id: paas, label: Platform as a Service, short: PaaS }

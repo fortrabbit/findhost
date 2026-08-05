@@ -322,7 +322,7 @@ const providers = defineCollection({
 /**
  * An optional explainer for a facet value, keyed `<facet>/<value>` —
  * `software/wordpress.md`, `category/paas.md` — or for a whole facet, keyed
- * `<facet>` — `category.md`, which heads /category/.
+ * `<facet>` — `category.md`, which heads /categories/.
  *
  * Written only where there is something true and useful to say; a value without
  * one is still a good page, and inventing filler for every value is what the

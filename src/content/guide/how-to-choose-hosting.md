@@ -13,7 +13,7 @@ figure:
 
 Time is money. The level of abstraction decides how much of the infrastructure underneath has to be thought about at all, and the right level is the one that matches a team's skills and workflow — not the lowest one available. Abstraction is not a beginners' setting: shipping code instead of configuring servers is worth something at any level. It does cost flexibility, usually in deployment options.
 
-Recorded as the primary [category](/category/), [who manages the OS](/os-managed-by/), [whose hardware it is](/hardware/) and [SSH access](/ssh/).
+Recorded as the primary [category](/categories/), [who manages the OS](/os-managed-by/), [whose hardware it is](/hardware/) and [SSH access](/ssh/).
 
 ## Don't compare by specs alone
 

@@ -37,7 +37,7 @@ describe('summarise', () => {
     assert.match(two, /^2 providers /);
   });
 
-  // On /category/paas/ the reader already knows the category. Restating it is
+  // On /categories/paas/ the reader already knows the category. Restating it is
   // the padding this whole approach exists to avoid.
   it('never restates the page it is on', () => {
     const rows = [row('A', { category: 'paas' }), row('B', { category: 'paas' })];

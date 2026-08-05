@@ -69,6 +69,6 @@ figure:
 
 ## About Ploi
 
-Ploi is [server management software](/category/server-management/) from the Netherlands. It connects to a VPS account the customer already holds, installs and configures the web stack, and then handles deployments, certificates, cron jobs, queue workers and daemons from its own interface. The named targets are the mainstream VPS vendors plus a custom-server option, and the application side leans towards PHP: Laravel is first-class, with one-click installs for WordPress, Statamic, Craft CMS and other PHP software.
+Ploi is [server management software](/categories/server-management/) from the Netherlands. It connects to a VPS account the customer already holds, installs and configures the web stack, and then handles deployments, certificates, cron jobs, queue workers and daemons from its own interface. The named targets are the mainstream VPS vendors plus a custom-server option, and the application side leans towards PHP: Laravel is first-class, with one-click installs for WordPress, Statamic, Craft CMS and other PHP software.
 
 Plans are fixed monthly tiers separated by how many servers and sites a subscription covers, with a permanent free tier at the bottom and a trial of the paid features. The pricing page states plainly that server fees are not included, so the panel subscription and the machine it manages are two separate contracts with separate invoices and separate support. The company also runs [Ploi Cloud](/providers/ploi-cloud/), a managed platform sold separately from the panel.
