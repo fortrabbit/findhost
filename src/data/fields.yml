@@ -38,7 +38,7 @@
   label: Ownership
   group: Identity
   facet: ownership
-  filterOrder: 15
+  filterOrder: 16
   values:
     - { id: independent, label: Independent }
     - { id: vc-backed, label: VC-backed }
@@ -97,7 +97,7 @@
   label: OS
   group: Classification
   facet: os-managed-by
-  filterOrder: 12
+  filterOrder: 13
   values:
     - { id: you, label: 'You' }
     - { id: provider, label: 'Provider' }
@@ -108,7 +108,7 @@
   label: Metal
   group: Classification
   facet: hardware
-  filterOrder: 13
+  filterOrder: 14
   multiple: true
   values:
     - { id: owns-metal, label: Owns the hardware, short: Owns }
@@ -138,7 +138,7 @@
   label: Use cases
   group: Classification
   facet: use-case
-  filterOrder: 7
+  filterOrder: 8
   multiple: true
   values:
     - { id: cms, label: CMS sites }
@@ -167,7 +167,7 @@
   label: Audience
   group: Classification
   facet: audience
-  filterOrder: 9
+  filterOrder: 10
   multiple: true
   values:
     - { id: solo, label: Solo and freelance, short: Solo }
@@ -307,7 +307,7 @@
   label: SSH access
   group: Tech stack
   facet: ssh
-  filterOrder: 11
+  filterOrder: 12
   values:
     - { id: full, label: Full }
     - { id: limited, label: Limited }
@@ -439,7 +439,7 @@
   group: Pricing
   facet: exit
   ordered: true
-  filterOrder: 14
+  filterOrder: 15
   values:
     - { id: a-day, label: Within a day }
     - { id: a-month, label: Within a month }
@@ -457,7 +457,7 @@
   label: Free tier
   group: Pricing
   facet: free-tier
-  filterOrder: 10
+  filterOrder: 11
   values:
     - { id: permanent, label: Permanent }
     - { id: trial, label: Trial only }
@@ -638,6 +638,39 @@
     - { id: paid-upgrade, label: Better on paid plans }
     - { id: enterprise-only, label: Enterprise only }
 
+# ------------------------------------------------------------- Included
+
+# What comes with the hosting and what has to be bought elsewhere. Recorded as
+# three yes/no answers rather than as a list, because a list can only say what is
+# included: absent would mean both "they do not offer it" and "nobody checked",
+# and the whole point of the question is the difference.
+- id: domainRegistration
+  label: Domain registration
+  group: Included
+  render: yes-no
+
+- id: dnsHosting
+  label: DNS hosting
+  group: Included
+  render: yes-no
+
+- id: emailHosting
+  label: Email hosting
+  group: Included
+  render: yes-no
+
+# Derived, like `automation`: the three fields above hold the detail and this
+# asks the one thing a filter is for — does it come with the hosting.
+- id: included
+  label: Included
+  facet: included
+  filterOrder: 7
+  multiple: true
+  values:
+    - { id: domains, label: Domains, from: domainRegistration, when: ['true'] }
+    - { id: dns, label: DNS, from: dnsHosting, when: ['true'] }
+    - { id: email, label: Email, from: emailHosting, when: ['true'] }
+
 # ------------------------------------------------------------ Automation
 
 - id: mcpServer
@@ -671,7 +704,7 @@
 - id: automation
   label: Automation
   facet: automation
-  filterOrder: 8
+  filterOrder: 9
   multiple: true
   values:
     - { id: api, label: API, from: apiAvailable, when: [public, partner-only] }

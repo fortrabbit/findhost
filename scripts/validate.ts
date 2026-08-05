@@ -123,8 +123,13 @@ for (const field of fields) {
       continue;
     }
 
-    // A `when` naming a value the source does not have matches nothing, for ever.
-    const vocabulary = new Set(source.values.map((entry) => entry.id));
+    /*
+     * A `when` naming a value the source does not have matches nothing, for
+     * ever. A yes/no field carries no vocabulary to check against — its two
+     * answers are the render mode rather than a list — so it is checked against
+     * those two instead of skipped.
+     */
+    const vocabulary = source.render === 'yes-no' ? new Set(['true', 'false']) : new Set(source.values.map((entry) => entry.id));
     for (const wanted of value.when) {
       if (!vocabulary.has(wanted)) {
         fail(dictionaryFile, `"${field.id}" value "${value.id}" waits for "${value.from}: ${wanted}", which does not exist`);

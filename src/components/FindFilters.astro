@@ -29,7 +29,13 @@ const { facets, drafts } = Astro.props;
   <summary>Filters</summary>
 
   <div class="find-filters full-width">
-    {facets.map((facet) => <FindFacet facet={facet} />)}
+    {
+      /* A facet no record answers yet is a column of nothing. It appears the
+         moment the data does, without anyone remembering to add it. */
+      facets
+        .filter((facet) => facet.values.some((value) => value.count > 0))
+        .map((facet) => <FindFacet facet={facet} />)
+    }
 
     {
       drafts > 0 && (

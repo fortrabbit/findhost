@@ -258,6 +258,16 @@ const providerFields = z
     supportHours: z.enum(vocabulary('supportHours')).optional(),
     supportTiering: z.enum(vocabulary('supportTiering')).optional(),
 
+    /*
+     * Included — what comes with the hosting and what has to be bought
+     * elsewhere. Three booleans rather than one list, because a list can only
+     * say what is included: absent would mean both "they do not offer it" and
+     * "nobody has checked", and the difference is the whole question.
+     */
+    domainRegistration: z.boolean().optional(),
+    dnsHosting: z.boolean().optional(),
+    emailHosting: z.boolean().optional(),
+
     // Automation & agent support — the axis nobody else records
     apiAvailable: z.enum(vocabulary('apiAvailable')).optional(),
     cliTool: z.enum(vocabulary('cliTool')).optional(),

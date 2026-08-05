@@ -56,6 +56,12 @@ const subjects: Record<string, string> = {
       'byo-iaas': 'run on hardware you bring',
     }[value.id] ?? value.label.toLowerCase(),
   ownership: `are ${value.label.toLowerCase()}`,
+  included:
+    {
+      domains: 'register domains themselves',
+      dns: 'host DNS themselves',
+      email: 'host email themselves',
+    }[value.id] ?? `include ${value.label.toLowerCase()}`,
   automation:
     {
       api: 'publish an API',
