@@ -1,17 +1,26 @@
 import type { APIRoute } from 'astro';
 
 /**
- * Closed to crawlers until launch, so the URL can be shared without the
- * half-built version becoming the version search engines know. Flip it with
- * PUBLIC_INDEXABLE=true in the environment — nothing else needs changing.
+ * Written from the same flag as the noindex tag in Base.astro, so the file and
+ * the markup cannot disagree about whether this site is public. One switch:
+ * PUBLIC_INDEXABLE.
+ *
+ * While it is off, everything is disallowed. That is the stronger of the two
+ * layers and the weaker guarantee — a crawler told not to fetch a page cannot
+ * read the noindex on it, so a URL somebody links to can still be listed
+ * without a description. Nothing links here yet, and the domain is temporary,
+ * which is what makes blocking the fetch the right trade for now. Once the real
+ * domain is live, the noindex tag is what keeps a page out of an index, and
+ * this file goes back to being about crawl budget.
  */
-export const GET: APIRoute = () => {
+export const GET: APIRoute = ({ site }) => {
   const indexable = import.meta.env.PUBLIC_INDEXABLE === 'true';
-  const site = import.meta.env.SITE;
 
-  const body = indexable
-    ? `User-agent: *\nAllow: /\n\nSitemap: ${new URL('/sitemap.xml', site).href}\n`
-    : `# Not ready to be indexed yet. Share the link; the search engines can wait.\nUser-agent: *\nDisallow: /\n`;
+  const lines = indexable
+    ? ['User-agent: *', 'Allow: /', '', `Sitemap: ${site?.origin ?? ''}/sitemap.xml`, '']
+    : ['# Not published yet. The domain is temporary and nothing here is final.', 'User-agent: *', 'Disallow: /', ''];
 
-  return new Response(body, { headers: { 'content-type': 'text/plain; charset=utf-8' } });
+  return new Response(lines.join('\n'), {
+    headers: { 'content-type': 'text/plain; charset=utf-8' },
+  });
 };

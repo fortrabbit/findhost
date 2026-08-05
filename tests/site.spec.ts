@@ -149,6 +149,11 @@ test.describe('governance, as behaviour rather than policy text', () => {
   test('stays out of search engines until the flag says otherwise', async ({ page }) => {
     await page.goto('/');
     await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', /noindex/);
+
+    // Both layers read PUBLIC_INDEXABLE, so they can only ever disagree by
+    // accident — which is exactly the accident that ships unnoticed.
+    const robots = await page.request.get('/robots.txt');
+    expect(await robots.text()).toContain('Disallow: /');
   });
 });
 
