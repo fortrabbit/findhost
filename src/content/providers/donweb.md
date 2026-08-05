@@ -11,7 +11,7 @@ description: DonWeb is an Argentine hosting and cloud provider running its own d
 founded: 2002
 hqCountry: AR
 ownership: independent
-whoManagesOs: panel-assisted
+whoManagesOs: you
 infraContract:
   - owns-metal
 useCases:

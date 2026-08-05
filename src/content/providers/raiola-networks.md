@@ -9,7 +9,7 @@ category:
 description: Spanish shared host from Lugo, running cPanel on servers it assembles itself and operates in Tier III facilities in Madrid.
 hqCountry: ES
 ownership: independent
-whoManagesOs: panel-assisted
+whoManagesOs: you
 infraContract:
   - owns-metal
 useCases:

@@ -9,7 +9,7 @@ urls:
 category:
   - paas
 description: Container platform that reads a git repository, works out what kind of project it is and deploys it without a configuration file.
-whoManagesOs: container
+whoManagesOs: you
 useCases:
   - saas
   - api

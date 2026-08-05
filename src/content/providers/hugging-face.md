@@ -12,7 +12,7 @@ category:
 description: Machine-learning hub whose Spaces product hosts running applications — Gradio, Streamlit or an arbitrary Dockerfile — on CPU or rented GPU hardware.
 hqCountry: US
 ownership: vc-backed
-whoManagesOs: container
+whoManagesOs: you
 useCases:
   - ai-app
   - dashboard

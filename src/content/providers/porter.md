@@ -8,7 +8,7 @@ category:
   - server-management
 description: Management layer that deploys applications from GitHub into the customer's own AWS, Azure or GCP account and runs them on Kubernetes underneath.
 ownership: vc-backed
-whoManagesOs: container
+whoManagesOs: you
 infraContract:
   - byo-iaas
 useCases:

@@ -9,7 +9,7 @@ category:
   - serverless
 description: Slovenian edge platform selling CDN, storage, video and DNS, with Edge Scripting and Magic Containers running the customer's own code across its network.
 founded: 2015
-whoManagesOs: container
+whoManagesOs: you
 useCases:
   - static-site
   - api

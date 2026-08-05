@@ -89,6 +89,10 @@
     - { id: vanity-hosting, label: Vanity hosting }
     - { id: lcnc, label: Low-code and no-code, short: Low-code }
 
+# Two answers, because there are two: somebody applies the security updates or
+# somebody else does. A panel automates that work without moving it, and an image
+# is still yours to rebuild — both are "you" with a tool, which is a fact about
+# the tooling rather than about who is responsible.
 - id: whoManagesOs
   label: OS
   group: Classification
@@ -96,9 +100,7 @@
   filterOrder: 11
   values:
     - { id: you, label: 'You' }
-    - { id: panel-assisted, label: 'You, with panel' }
     - { id: provider, label: 'Provider' }
-    - { id: container, label: 'You, image' }
 
 # More than one can be true at once: a panel that provisions onto your own cloud
 # account may also resell machines of its own.

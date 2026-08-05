@@ -11,7 +11,7 @@ category:
 description: British platform running containers, jobs and managed databases on its own cloud, in the customer's cloud account, or on a self-hosted Kubernetes cluster.
 hqCountry: GB
 ownership: vc-backed
-whoManagesOs: container
+whoManagesOs: you
 infraContract:
   - resells-iaas
   - byo-iaas

@@ -11,7 +11,7 @@ category:
 description: Danish VPS provider selling virtual servers with a web control panel, prepared stacks and WordPress plans, from a single facility in Denmark.
 hqCountry: DK
 ownership: independent
-whoManagesOs: panel-assisted
+whoManagesOs: you
 useCases:
   - cms
   - saas
@@ -72,7 +72,7 @@ ai: authored
 
 Webdock is a small independent Danish company selling virtual servers on AMD Epyc and Xeon hardware with NVMe storage, alongside prepared WordPress plans and add-on load balancing and web application firewall. Billing carries no minimum term, and servers can be resized or cancelled at any point.
 
-The pitch is jurisdictional simplicity. There is one data centre, in Denmark, and the company states plainly that everything sits under EU jurisdiction — no region picker, no ambiguity about where a backup landed. A web control panel, a mobile app and a public API sit on top of the servers, which puts it closer to panel-assisted hosting than to bare infrastructure.
+The pitch is jurisdictional simplicity. There is one data centre, in Denmark, and the company states plainly that everything sits under EU jurisdiction — no region picker, no ambiguity about where a backup landed. A web control panel, a mobile app and a public API sit on top of the servers, which puts it closer to managed hosting than to bare infrastructure.
 
 ## Worth knowing
 

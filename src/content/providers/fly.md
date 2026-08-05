@@ -9,7 +9,7 @@ category:
 description: Fly.io runs applications as Firecracker microVMs on hardware it operates itself, deployed from a Dockerfile through the flyctl CLI and billed by usage.
 infraContract:
   - owns-metal
-whoManagesOs: container
+whoManagesOs: you
 runtimes:
   - docker
 deployMethods:

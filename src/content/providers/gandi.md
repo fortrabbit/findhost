@@ -9,7 +9,7 @@ category:
   - shared-hosting
 description: Gandi is a French registrar whose Simple Hosting product runs application code in per-customer Linux containers, deployed by git or SFTP.
 hqCountry: FR
-whoManagesOs: container
+whoManagesOs: you
 useCases:
   - cms
   - e-commerce

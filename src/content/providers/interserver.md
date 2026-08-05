@@ -12,7 +12,7 @@ description: American host selling one shared plan at a price it undertakes not 
 founded: 1999
 hqCountry: US
 ownership: independent
-whoManagesOs: panel-assisted
+whoManagesOs: you
 infraContract:
   - owns-metal
 useCases:

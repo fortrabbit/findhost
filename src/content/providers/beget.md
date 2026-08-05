@@ -9,7 +9,7 @@ category:
 description: Beget is a Russian hosting company selling shared hosting, VPS, dedicated servers and managed databases, priced in euros on its international storefront.
 hqCountry: RU
 founded: 2007
-whoManagesOs: panel-assisted
+whoManagesOs: you
 software:
   - wordpress
 managedDatabases:

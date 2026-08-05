@@ -10,7 +10,7 @@ description: French shared host selling a single all-inclusive cPanel offer in t
 founded: 2009
 hqCountry: FR
 ownership: independent
-whoManagesOs: panel-assisted
+whoManagesOs: you
 infraContract:
   - owns-metal
 useCases:

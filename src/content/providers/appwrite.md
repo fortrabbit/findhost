@@ -8,7 +8,7 @@ urls:
 category:
   - serverless
 description: Open-source backend platform sold as a hosted service, running user functions alongside managed databases, authentication, storage and messaging.
-whoManagesOs: container
+whoManagesOs: you
 useCases:
   - api
   - saas

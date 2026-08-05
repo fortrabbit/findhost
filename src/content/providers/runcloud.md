@@ -8,7 +8,7 @@ category:
   - server-management
 regions: null
 description: RunCloud is a server management control panel for PHP and WordPress stacks, installed as an agent on a VPS the customer brings.
-whoManagesOs: panel-assisted
+whoManagesOs: you
 infraContract:
   - byo-iaas
 audience:

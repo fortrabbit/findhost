@@ -15,7 +15,7 @@ parent: WPDeveloper
 infraContract:
   - byo-iaas
   - resells-iaas
-whoManagesOs: panel-assisted
+whoManagesOs: you
 audience:
   - agency
   - developer

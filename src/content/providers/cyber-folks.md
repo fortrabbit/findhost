@@ -8,7 +8,7 @@ category:
   - shared-hosting
 description: Polish shared host from Poznań with a per-domain choice of PHP version alongside Node and Python, running on LiteSpeed with DirectAdmin as the panel.
 hqCountry: PL
-whoManagesOs: panel-assisted
+whoManagesOs: you
 useCases:
   - cms
   - e-commerce

@@ -11,7 +11,7 @@ description: New Zealand host that owns its Auckland data centre and sells Cloud
 founded: 2004
 hqCountry: NZ
 ownership: independent
-whoManagesOs: container
+whoManagesOs: you
 infraContract:
   - owns-metal
 useCases:

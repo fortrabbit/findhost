@@ -12,7 +12,7 @@ description: Hosting control panel licensed per server, managing sites, domains,
 hqCountry: CH
 ownership: subsidiary
 parent: WebPros International GmbH
-whoManagesOs: panel-assisted
+whoManagesOs: you
 infraContract:
   - byo-iaas
 useCases:

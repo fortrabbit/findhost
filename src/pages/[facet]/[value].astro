@@ -40,9 +40,7 @@ const subjects: Record<string, string> = {
   'os-managed-by':
     {
       you: 'leave the operating system to you',
-      'panel-assisted': 'give you the operating system with a panel to manage it',
       provider: 'manage the operating system for you',
-      container: 'run the host while you own the image',
     }[value.id] ?? `answer "${value.label.toLowerCase()}" to who manages the operating system`,
   hardware:
     {

@@ -10,7 +10,7 @@ regions: null
 description: Hosting control panel installed on a server the operator supplies, licensed per server and priced by the number of accounts it manages.
 ownership: subsidiary
 parent: WebPros International L.L.C.
-whoManagesOs: panel-assisted
+whoManagesOs: you
 infraContract:
   - byo-iaas
 useCases:
