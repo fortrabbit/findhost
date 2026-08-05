@@ -42,14 +42,21 @@ const accounts = Object.entries(marks)
 ---
 
 {
+  /*
+   * A span, not a paragraph: it joins the record's links as another item in
+   * their wrapping row, so it sits on the same line where there is room and
+   * drops below when there is not.
+   */
+}
+{
   accounts.length > 0 && (
-    <p class="social-links">
+    <span class="social-links">
       {accounts.map((account) => (
         <a href={account.url} rel="nofollow" title={account.label}>
           <span class="visually-hidden">{account.label}</span>
           <Fragment set:html={account.svg} />
         </a>
       ))}
-    </p>
+    </span>
   )
 }

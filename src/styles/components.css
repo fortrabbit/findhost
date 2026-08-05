@@ -186,25 +186,37 @@
   font-variant-numeric: tabular-nums;
 }
 
-/**
+/*
  * Where a provider posts, as marks rather than as eight company names in a row.
- * Set apart from the record's own links: those are the product, these are not.
+ * It joins the record's links as one more item in their row.
+ *
+ * Every mark gets the same bordered square, which is what makes them look like a
+ * set: the glyphs are drawn to different widths and weights — X is a thin
+ * monogram, LinkedIn a filled block, Discord a wide one — so left to themselves
+ * they line up as a ragged row of ink. The box is the alignment; the glyph just
+ * sits in the middle of it.
  */
 .social-links {
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
-  gap: var(--space-xs);
+  gap: var(--space-3xs);
   align-items: center;
 }
 
 .social-links a {
   display: inline-flex;
-  color: var(--color-ink);
+  align-items: center;
+  justify-content: center;
+  width: 1.5em;
+  height: 1.5em;
+  border: var(--rule-hairline) solid currentcolor;
+  border-radius: var(--radius);
+  color: var(--color-link);
 }
 
 .social-links svg {
-  width: 1.15em;
-  height: 1.15em;
+  width: 0.85em;
+  height: 0.85em;
 }
 
 /** A third party's verification, marked once. Never a score, never sortable. */

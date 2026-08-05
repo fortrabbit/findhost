@@ -224,9 +224,8 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
           </a>
         ))
       }
+      <SocialLinks social={data.social} />
     </p>
-
-    <SocialLinks social={data.social} />
 
     {
       energyClaim && (
