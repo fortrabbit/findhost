@@ -37,11 +37,6 @@
   label: Founded
   group: Identity
 
-- id: hqCountry
-  label: Headquarters
-  group: Identity
-  valuesFrom: regions
-
 - id: ownership
   label: Ownership
   group: Identity
@@ -613,6 +608,13 @@
     - { id: CY, label: Cyprus }
     - { id: MT, label: Malta }
     - { id: GE, label: Georgia }
+
+# Where the company is, beside where it runs: an order is served on a legal
+# entity rather than on a rack, so the two answer one question together.
+- id: hqCountry
+  label: Headquarters
+  group: Regions and law
+  valuesFrom: regions
 
 - id: gdprDpa
   label: DPA

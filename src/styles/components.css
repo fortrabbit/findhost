@@ -989,10 +989,22 @@
  * enough that a two-word label wraps, and a row of eight is a table nobody reads.
  */
 .record-extra {
-  grid-template-columns: repeat(auto-fill, minmax(max(14rem, calc((100% - 3 * var(--space-xl)) / 4)), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  gap: var(--space-lg) var(--space-md);
   margin-top: var(--space-xl);
+  margin-bottom: var(--space-2xl);
   padding-top: var(--space-lg);
-  border-top: var(--rule-hairline) solid var(--color-ink);
+}
+
+/*
+ * Four, exactly, once there is room for four. `auto-fill` with a minimum wide
+ * enough to hold "Minimum contract" only ever found three, because the width
+ * that guarantees a readable column is more than a quarter of the page.
+ */
+@media (min-width: 52rem) {
+  .record-extra {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 
 /* Sized like a group label rather than a section head — the level is structural, the size is not. */
@@ -1185,7 +1197,12 @@
   font-family: var(--font-data);
 }
 
+/*
+ * Wider than prose. A source is a date, the fields it backs and a URL — none of
+ * it read as a sentence, and all of it wrapping badly at a measure chosen for one.
+ */
 .sources ol {
+  max-width: var(--measure-page);
   margin: 0;
   padding-left: var(--space-md);
   font-size: var(--text-xs);

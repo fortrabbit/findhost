@@ -91,7 +91,7 @@ sources:
 figure:
   emoji: 🎸
   color: rgb(121, 40, 202)
-  textColor: rgb(180, 120, 255)
+  textColor: rgb(220, 160, 255)
   text: The original git push to deploy.
 ---
 
