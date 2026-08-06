@@ -9,6 +9,11 @@ category:
   - paas
 audience:
   - solo
+useCases:
+  - cms
+  - e-commerce
+  - api
+  - web-app
 social:
   x: https://x.com/fortrabbit
   bluesky: https://bsky.app/profile/fortrabbit.com
@@ -31,6 +36,7 @@ software:
   - statamic
   - kirby
   - wordpress
+  - joomla
   - drupal
   - typo3
   - magento
@@ -40,6 +46,7 @@ deployMethods:
 sshAccess: jailed
 managedDatabases:
   - mysql
+backupsIncluded: included
 pricingModel: fixed-tier
 priceFrom: sm
 priceTo: lg
@@ -52,12 +59,17 @@ billingTiming: arrears
 exitWithin: a-month
 entryPrice: { amount: 2.5, currency: EUR, period: month }
 freeTier: trial
+renewalMultiple: 1
 contractMinimum: monthly
 regions:
   - IE
   - US
 runsOn:
   - aws
+domainRegistration: none
+dnsHosting: none
+emailHosting: none
+testDomain: included
 gdprDpa: standard
 supportChannels:
   - email
@@ -71,6 +83,13 @@ checkedAt: 2026-08-01
 sources:
   - { field: software, url: 'https://www.fortrabbit.com/', checkedAt: 2026-08-05 }
   - { field: audience, url: 'https://www.fortrabbit.com/php-cloud-hosting', checkedAt: 2026-08-06 }
+  - { field: useCases, url: 'https://www.fortrabbit.com/php-cloud-hosting', checkedAt: 2026-08-06 }
+  - { field: testDomain, url: 'https://docs.fortrabbit.com/platform/dns/test-domain', checkedAt: 2026-08-06 }
+  - { field: domainRegistration, url: 'https://docs.fortrabbit.com/platform/dns/external-domains', checkedAt: 2026-08-06 }
+  - { field: dnsHosting, url: 'https://docs.fortrabbit.com/integrations/dns', checkedAt: 2026-08-06 }
+  - { field: emailHosting, url: 'https://docs.fortrabbit.com/integrations/email', checkedAt: 2026-08-06 }
+  - { field: backupsIncluded, url: 'https://docs.fortrabbit.com/platform/backups', checkedAt: 2026-08-06 }
+  - { field: renewalMultiple, url: 'https://www.fortrabbit.com/pricing', checkedAt: 2026-08-06 }
   - { field: cliTool, url: 'https://www.fortrabbit.com/', checkedAt: 2026-08-05 }
   - { field: mcpServer, url: 'https://www.fortrabbit.com/', checkedAt: 2026-08-05 }
   - { field: regions, url: 'https://www.fortrabbit.com/', checkedAt: 2026-08-01 }
