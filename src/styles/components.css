@@ -689,14 +689,11 @@ html.js [data-find-fallback] {
   font-weight: var(--weight-strong);
 }
 
-.find-facet-title a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.find-facet-title a:hover {
-  text-decoration: underline;
-}
+/*
+ * The count in a facet heading is the link to that facet's own page, and it is
+ * drawn as a link: this rule used to take the colour and the underline off it,
+ * which is why it read as part of the heading rather than as a way in.
+ */
 
 .find-facet label {
   display: flex;

@@ -8,7 +8,7 @@ figure:
   text: Your server, your midnight pager.
 ---
 
-Server management is the odd category here: most of the companies in it sell no hosting at all. The product is the software layer over a machine rented from somebody else — provisioning, web server and runtime configuration, certificates, deploys, backups, user accounts, and a panel or an API to drive it. Nearly every record is [bring your own infrastructure](/metal/): the account at the hosting provider stays with the customer and the panel connects to it.
+Server management is an odd category. Most providers in this section sell no hosting at all. The product is a software layer to provision, web server and runtime configuration, certificates, deploys, backups, user accounts, and a panel or an API to drive it. Nearly every record is [bring your own infrastructure](/metal/): the account at the hosting provider stays with the customer and the panel connects to it.
 
 That splits the comparison in two. The bill has two parts, a licence or subscription plus whatever the server costs, so an [entry price band](/entry-price/) in this category prices the panel alone. Responsibility splits the same way: the operating system stays with the customer with a panel to make it manageable, which is why "you, with panel" is the usual answer to [who manages the operating system](/operating-system/) here. A panel automates the routine and can patch unattended. It does not take the pager.
 
