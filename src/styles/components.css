@@ -893,6 +893,20 @@ html.js [data-find-fallback] {
  * moment it stacks — placing the two columns explicitly is what lets one order
  * serve both.
  */
+/*
+ * Where a record has a figure band, the band is the break between the header and
+ * the body. Where it has none, the body started three pixels under the accounts
+ * row — so the break is made here instead, and given back when a band supplies
+ * one of its own.
+ */
+.record-layout {
+  margin-top: var(--space-xl);
+}
+
+.figure-band + .record-layout {
+  margin-top: 0;
+}
+
 .record-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 22rem);
