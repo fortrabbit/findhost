@@ -2,10 +2,11 @@
 import Base from '../layouts/Base.astro';
 import ProviderRegister from '../components/ProviderRegister.astro';
 import FindFilters from '../components/FindFilters.astro';
-import { loadDrafts, loadFacets } from '../lib/facets';
+import { loadDefunct, loadDrafts, loadFacets } from '../lib/facets';
 
 const { facets, providers } = await loadFacets();
 const drafts = await loadDrafts();
+const defunct = await loadDefunct();
 ---
 
 {
@@ -28,7 +29,7 @@ const drafts = await loadDrafts();
   </p> -->
 
   <ProviderRegister providers={providers} facets={facets}>
-    <FindFilters facets={facets} drafts={drafts.length} />
+    <FindFilters facets={facets} drafts={drafts.length} defunct={defunct.length} />
   </ProviderRegister>
 </Base>
 

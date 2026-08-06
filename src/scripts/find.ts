@@ -148,10 +148,11 @@ if (styleEl && resultsEl) {
 
 if (filtersEl && resultsEl && summaryEl) {
   const response = await fetch('/providers.json');
-  const { facets, providers, drafts } = (await response.json()) as {
+  const { facets, providers, drafts, defunct } = (await response.json()) as {
     facets: Facet[];
     providers: ProviderRow[];
     drafts: ProviderRow[];
+    defunct: ProviderRow[];
   };
 
   /*
@@ -160,6 +161,15 @@ if (filtersEl && resultsEl && summaryEl) {
    * facets would drop it on the first tick and imply we had checked.
    */
   let showDrafts = false;
+
+  /*
+   * The ones that have stopped. Kept out of the register for the same reason and
+   * offered back for a different one: a stub is work we have not finished, and a
+   * defunct provider is a finished fact about the market. Both are shown as
+   * themselves rather than filtered, because a dead host answers few fields and
+   * would drop out on the first tick as though it had been checked.
+   */
+  let showDefunct = false;
 
   const selected = new Map<string, Set<string>>();
 
@@ -244,6 +254,12 @@ if (filtersEl && resultsEl && summaryEl) {
       renderResults();
     });
 
+    const defunctBox = filtersEl.querySelector<HTMLInputElement>('input[data-defunct]');
+    defunctBox?.addEventListener('change', () => {
+      showDefunct = defunctBox.checked;
+      renderResults();
+    });
+
     for (const input of filtersEl.querySelectorAll<HTMLInputElement>('input[disabled]')) input.disabled = false;
 
   };
@@ -310,26 +326,44 @@ if (filtersEl && resultsEl && summaryEl) {
       list?.append(row(provider));
     }
 
-    if (showDrafts && drafts.length) {
+    /* An appended group, its own heading, outside the count. Two of them now. */
+    const appendAside = (rows: ProviderRow[], heading: string, explanation: string) => {
+      if (!rows.length) return;
+
       const section = document.createElement('section');
       section.className = 'letter-group';
 
-      const heading = document.createElement('h2');
-      heading.textContent = 'Not in the register';
-      section.append(heading);
+      const title = document.createElement('h2');
+      title.textContent = heading;
+      section.append(title);
 
       const note = document.createElement('p');
       note.className = 'annotation';
-      note.textContent =
-        'Records started and not finished, or considered and failed against a numbered inclusion criterion. They are not part of the count above and the filters do not apply to them.';
+      note.textContent = explanation;
       section.append(note);
 
       const list = document.createElement('ul');
       list.className = 'provider-list';
-      for (const draft of drafts) list.append(row(draft));
+      for (const record of rows) list.append(row(record));
       section.append(list);
 
       resultsEl.append(section);
+    };
+
+    if (showDefunct) {
+      appendAside(
+        defunct,
+        'No longer trading',
+        'Providers that have stopped. They keep their records and their pages, and they are not part of the count above — a register of hosting you can buy today has to mean today.',
+      );
+    }
+
+    if (showDrafts) {
+      appendAside(
+        drafts,
+        'Not in the register',
+        'Records started and not finished, or considered and failed against a numbered inclusion criterion. They are not part of the count above and the filters do not apply to them.',
+      );
     }
 
     // With nothing selected this says exactly what the server rendered. A visitor

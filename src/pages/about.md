@@ -44,7 +44,11 @@ Every provider meeting the scope test, not a selection. Nothing is ranked, score
 5. **Twelve months old.** Publicly purchasable for at least twelve months, evidenced by a dated announcement, changelog entry or archive snapshot.
 6. **Two independent artifacts.** At least two of: an integration guide in a framework's or tool's official documentation; a third-party-maintained package, CLI or driver; a conference talk or tutorial by an author with no disclosed commercial relationship; a public issue-tracker discussion in a major open-source project. Press releases, sponsored posts, affiliate reviews, the provider's own blog and paid placements do not count.
 
-If a provider meets all six and is not listed, that is a bug — open an issue. Everything considered and left out keeps a record of its own, marked out of scope, naming the numbered criterion it failed and the date it was checked. A scope test nobody can audit is not a scope test.
+If a provider meets all six and is not listed, that is a bug — open an issue.
+
+**A provider that has stopped trading is judged on what was true while it traded.** Criteria 2, 3 and 4 ask for things that exist on a live website, so a dead host fails them by being dead rather than by being unfit, and the test as written would quietly delete the history of the market. So: a provider that met the six while it operated stays in the dataset with a `discontinued` status and the date it stopped, evidenced by dated archive snapshots — an archived pricing page is the same evidence as a live one, a year later. Criteria 1, 5 and 6 apply unchanged, since none of them needs the company to still be there. Defunct records are kept out of the register and its counts, because "156 hosting providers" has to mean 156 anybody can buy from today, and a filter puts them back.
+
+Everything considered and left out keeps a record of its own, marked out of scope, naming the numbered criterion it failed and the date it was checked. A scope test nobody can audit is not a scope test.
 
 Being out of scope is not a criticism. It means the dataset cannot describe something usefully: raw infrastructure with no managed runtime, anything priced only by sales conversation, a rebrand with no distinct platform behind it, anything younger than twelve months. Nothing is ever excluded for its price, performance, popularity, country, ownership, opinion of us, or for competing with fortrabbit. Poor quality is not an exclusion criterion — at most it is a sourced fact on the record.
 

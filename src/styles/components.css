@@ -664,6 +664,7 @@ html.js [data-find-fallback] {
   flex-wrap: wrap;
   align-items: baseline;
   gap: var(--space-sm) var(--space-md);
+  margin-bottom: var(--space-lg);
 }
 
 .page-head > h1 {
