@@ -1,11 +1,5 @@
 import { labelOf } from './fields.ts';
 
-/** Regional indicator pair. Two letters in, one flag out. */
-export function flag(country: string | undefined): string | undefined {
-  if (!country || country.length !== 2) return undefined;
-  return String.fromCodePoint(...[...country.toUpperCase()].map((letter) => 0x1f1e6 + letter.charCodeAt(0) - 65));
-}
-
 /*
  * The exact figure in the provider's own currency, so nobody reads a conversion
  * we invented. Intl gives us the right symbol and separators per currency.

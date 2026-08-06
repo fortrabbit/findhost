@@ -654,9 +654,20 @@ html.js [data-find-fallback] {
  * padding sits on main rather than on an empty element here.
  */
 .crumb {
-  margin: 0 0 var(--space-2xs);
+  margin: var(--space-md) 0 var(--space-2xs);
   font-size: var(--text-xs);
   line-height: var(--leading-tight);
+}
+
+/*
+ * The heading's own top margin, moved onto the crumb above it. The crumb belongs
+ * to the title, and separated by a heading's worth of space it read as a second
+ * navigation under the first. Moving rather than removing keeps every H1 on the
+ * same line, with or without one.
+ */
+.crumb + .page-head > h1,
+.crumb + h1 {
+  margin-top: 0;
 }
 
 /**
@@ -1035,16 +1046,6 @@ html.js [data-find-fallback] {
   line-height: 1;
 }
 
-/*
- * A country code, not a flag emoji: a flag is a political claim about a
- * jurisdiction, renders differently on every platform and is unreadable at the
- * size a heading wants. The code is legible, copyable and unambiguous.
- */
-.record-country {
-  font-family: var(--font-data);
-  font-size: var(--text-md);
-  letter-spacing: 0.04em;
-}
 
 .strip-detail {
   font-family: var(--font-data);

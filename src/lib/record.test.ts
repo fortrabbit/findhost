@@ -1,19 +1,6 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
-import { energy, flag, footnotes, price } from './record.ts';
-
-describe('flag', () => {
-  it('turns a country code into regional indicators', () => {
-    assert.equal(flag('DE'), '🇩🇪');
-    assert.equal(flag('de'), '🇩🇪');
-  });
-
-  it('declines anything that is not a two-letter code', () => {
-    assert.equal(flag(undefined), undefined);
-    assert.equal(flag('DEU'), undefined);
-    assert.equal(flag(''), undefined);
-  });
-});
+import { energy, footnotes, price } from './record.ts';
 
 describe('price', () => {
   it('keeps the provider currency rather than converting', () => {

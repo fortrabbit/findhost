@@ -2,7 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import { fieldGroups, fieldOf, labelOf, slugOf, type Field } from '../lib/fields';
-import { energy, flag, footnotes, price } from '../lib/record';
+import { energy, footnotes, price } from '../lib/record';
 import { isListed } from '../lib/providers';
 import { organization } from '../lib/seo';
 import SocialLinks from '../components/SocialLinks.astro';
@@ -151,7 +151,6 @@ const origin = Astro.site?.origin ?? '';
 const social = Object.values(data.social ?? {}).filter((url): url is string => typeof url === 'string');
 
 const energyClaim = energy(data.energyClaim);
-const homeFlag = flag(data.hqCountry);
 
 // The policy page promises staleness is computed from the recorded date rather
 // than from a promise to re-check. This is where that is kept.
@@ -232,13 +231,6 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
           <span class="record-mark" title={energyClaim}>
             <span aria-hidden="true">🌱</span>
             <span class="visually-hidden">{energyClaim}</span>
-          </span>
-        )
-      }
-      {
-        homeFlag && (
-          <span class="record-mark record-country" title={labelOf('hqCountry', data.hqCountry)}>
-            {data.hqCountry}
           </span>
         )
       }
