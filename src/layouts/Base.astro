@@ -10,8 +10,11 @@ interface Props {
   markdown?: string;
   /** A record kept for reference but not on show: out of the index and out of search, whatever the site-wide flag says. */
   hidden?: boolean;
-  /** Structured data for this page, as an object. Emitted verbatim; see lib/seo.ts for the shapes. */
-  schema?: Record<string, unknown>;
+  /**
+   * Structured data for this page. One object, or several where the page makes
+   * more than one claim about itself. Emitted verbatim; shapes in lib/seo.ts.
+   */
+  schema?: Record<string, unknown> | Record<string, unknown>[];
 }
 
 const { title, description, markdown, hidden = false, schema } = Astro.props;

@@ -655,6 +655,20 @@ html.js [data-find-fallback] {
 }
 
 /**
+ * The way up, above the title. Only the parent: the register is what the
+ * wordmark does, and a trail of two links where one would do is a component
+ * pretending the site is deeper than it is.
+ *
+ * The line it takes is reserved for pages without one — see base.css, where the
+ * padding sits on main rather than on an empty element here.
+ */
+.crumb {
+  margin: 0 0 var(--space-2xs);
+  font-size: var(--text-xs);
+  line-height: var(--leading-tight);
+}
+
+/**
  * A title with something beside it: the record's country and energy mark, or a
  * value page's way back to the register. Baseline-aligned, so the small thing
  * sits on the heading's line rather than near it.

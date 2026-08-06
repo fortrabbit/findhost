@@ -152,6 +152,16 @@ body > main {
   padding-top: var(--space-md);
 }
 
+/*
+ * A page with a breadcrumb and a page without start their heading on the same
+ * line: the crumb's line is reserved here rather than with an empty element,
+ * because markup that exists to hold space is markup a screen reader still
+ * announces. Before the figure-band rule below, which overrides both.
+ */
+body > main:not(:has(> .crumb)) {
+  padding-top: calc(var(--space-md) + var(--text-xs) * var(--leading-tight) + var(--space-2xs));
+}
+
 body > main:has(> .figure-band:first-child),
 body > main:has(> article > .figure-band:first-child) {
   padding-top: 0;

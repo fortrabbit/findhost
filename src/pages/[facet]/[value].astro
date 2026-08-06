@@ -131,7 +131,16 @@ const figure = note?.data.figure;
 <Base
   title={`${note?.data.title ?? valueTitle(facet.id, value.label)} — FindHost`}
   description={note?.data.description ?? summary.split('. ')[0].concat('.')}
-  schema={{
+  schema={[
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: facet.label, item: `${origin}${facetIndex(facet.id)}` },
+        { '@type': 'ListItem', position: 2, name: value.label },
+      ],
+    },
+    {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
     name: note?.data.title ?? valueTitle(facet.id, value.label),
@@ -144,8 +153,12 @@ const figure = note?.data.figure;
       url: `${origin}/${provider.id}/`,
       name: provider.name,
     })),
-  }}
+    },
+  ]}
 >
+  {/* The parent, and only the parent — the register is the wordmark's job. */}
+  <p class="crumb"><a href={facetIndex(facet.id)}>{facet.label}</a></p>
+
   <div class="page-head">
     <h1>{value.label}</h1>
     <a class="find-onward" href={`/?${facet.id}=${value.id}`}>Combine filters →</a>
@@ -164,9 +177,6 @@ const figure = note?.data.figure;
     seed={{ facet: facet.id, value: value.id, label: value.label }}
   />
 
-  <p class="annotation">
-    <a href={facetIndex(facet.id)}>Every {facet.label.toLowerCase()} value</a>
-  </p>
 </Base>
 
 {/* For the extended/slim toggle only. This page ships no filters — its URL is the narrowing. */}
