@@ -469,8 +469,6 @@
 - id: freeTier
   label: Free tier
   group: Pricing
-  facet: free-tier
-  filterOrder: 12
   values:
     - { id: permanent, label: Permanent }
     - { id: trial, label: Trial only }
@@ -484,6 +482,28 @@
     - { id: monthly, label: Monthly }
     - { id: annual, label: Annual }
     - { id: multi-year, label: Multi-year }
+
+# Derived, and the reason the free tier no longer has a facet to itself. A free
+# tier is the most advertised thing about a price and among the least useful:
+# what a reader is choosing between is how the money leaves — before the month
+# or after it, metered or fixed, with a floor or without.
+#
+# Every value reads one of the fields above, so nothing is recorded twice and the
+# record page keeps the precise answer. "None" appears nowhere here: it is the
+# absence of a feature, and it stays on the record where it can be read.
+- id: pricingFeatures
+  label: Pricing features
+  facet: pricing
+  filterOrder: 12
+  multiple: true
+  values:
+    - { id: free-tier, label: Free tier, from: freeTier, when: [permanent] }
+    - { id: free-trial, label: Free trial, from: freeTier, when: [trial] }
+    - { id: in-arrears, label: Paid in arrears, short: In arrears, from: billingTiming, when: [arrears] }
+    - { id: upfront, label: Paid upfront, short: Upfront, from: billingTiming, when: [advance] }
+    - { id: usage-based, label: Metered usage, short: Metered, from: pricingModel, when: [usage-based] }
+    - { id: prepaid, label: Prepaid credit, short: Prepaid, from: pricingModel, when: [credit] }
+    - { id: no-minimum, label: No minimum term, short: No minimum, from: contractMinimum, when: [none] }
 
 # -------------------------------------------------------- Regions and law
 

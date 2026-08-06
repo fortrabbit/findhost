@@ -60,11 +60,20 @@ function toRow(record: { id: string; data: Record<string, unknown> }): ProviderR
 
   for (const field of facetFields) {
     /*
-     * A derived field is computed, not read. Every record gets an answer — the
-     * list of things it documents, empty if none — so the facet has nothing
-     * unknown in it: it asks what is offered, and silence is not a maybe.
+     * A derived field is computed, not read. A record that answers at least one
+     * of the source fields gets an answer here — the list of things it
+     * documents, empty if none — because within a field it has been asked, a
+     * silence is a no rather than a maybe.
+     *
+     * A record answering none of them is unknown, and has to be: a provider
+     * nobody has recorded a price for has not thereby been found to bill in
+     * advance. That is the difference between the facet saying "119 records do
+     * not offer this" and the truth, which is that 37 of them were never asked.
      */
     if (isDerived(field.id)) {
+      const asked = field.values.some((value) => data[value.from!] !== undefined && data[value.from!] !== null);
+      if (!asked) continue;
+
       facets[field.id] = field.values
         .filter((value) => value.when!.includes(String(data[value.from!])))
         .map((value) => value.id);

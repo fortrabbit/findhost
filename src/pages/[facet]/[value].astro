@@ -30,12 +30,16 @@ const subjects: Record<string, string> = {
   audience: `sell to ${value.label.toLowerCase()}`,
   regions: `operate in ${value.label}`,
   'entry-price': `start at ${value.label.toLowerCase()}`,
-  'free-tier':
+  pricing:
     {
-      permanent: 'offer a permanent free tier',
-      trial: 'offer a free trial rather than a free tier',
-      none: 'have no free tier',
-    }[value.id] ?? `record a free tier of ${value.label.toLowerCase()}`,
+      'free-tier': 'offer a permanent free tier',
+      'free-trial': 'offer a free trial rather than a free tier',
+      'in-arrears': 'bill in arrears, for usage already run up',
+      upfront: 'take the money before the month it pays for',
+      'usage-based': 'meter usage rather than sell a plan',
+      prepaid: 'run on prepaid credit',
+      'no-minimum': 'hold nobody to a minimum term',
+    }[value.id] ?? `price with ${value.label.toLowerCase()}`,
   ssh:
     {
       jailed: 'give a shell inside the environment, without root',
