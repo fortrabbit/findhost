@@ -66,8 +66,8 @@ sources:
   - { field: exitWithin, url: 'https://www.civo.com/legal/terms', checkedAt: 2026-08-02 }
 figure:
   emoji: ☸️
-  color: rgb(20, 40, 55)
-  textColor: rgb(175, 220, 245)
+  color: rgb(63, 125, 172)
+  textColor: rgb(234, 241, 246)
   text: The control plane is free. Really.
 ai: authored
 ---

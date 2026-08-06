@@ -43,8 +43,8 @@ sources:
   - { field: audience, url: 'https://www.duda.co/pricing', checkedAt: 2026-08-01 }
 figure:
   emoji: 🧑‍💼
-  color: rgb(70, 90, 110)
-  textColor: rgb(200, 220, 235)
+  color: rgb(77, 117, 157)
+  textColor: rgb(234, 240, 245)
   text: Client work, standardized output.
 ---
 

@@ -49,8 +49,8 @@ sources:
   - { field: pricingModel, url: 'https://deno.com/deploy/pricing', checkedAt: 2026-07-31 }
 figure:
   emoji: 🦕
-  color: rgb(15, 15, 20)
-  textColor: rgb(235, 235, 240)
+  color: rgb(77, 77, 157)
+  textColor: rgb(234, 234, 245)
   text: The runtime, hosted by its authors.
 ai: authored
 ---

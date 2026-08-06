@@ -51,8 +51,8 @@ apiAvailable: public
 cliTool: official
 figure:
   emoji: 🔥
-  color: rgb(60, 40, 10)
-  textColor: rgb(255, 215, 150)
+  color: rgb(190, 132, 45)
+  textColor: rgb(246, 241, 234)
   text: A friendlier surface over Google Cloud.
 ai: authored
 ---

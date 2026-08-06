@@ -67,8 +67,8 @@ sources:
   - { field: regions, url: 'https://www.koyeb.com/docs/reference/regions', checkedAt: 2026-08-01 }
 figure:
   emoji: 🛫
-  color: rgb(30, 35, 80)
-  textColor: rgb(185, 195, 255)
+  color: rgb(64, 75, 171)
+  textColor: rgb(234, 235, 246)
   text: Scale to zero, pay by the second.
 ai: authored
 ---

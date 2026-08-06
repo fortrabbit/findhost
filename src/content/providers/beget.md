@@ -41,8 +41,8 @@ sources:
   - { field: iacSupport, url: 'https://github.com/beget/terraform-provider-beget', checkedAt: 2026-08-04 }
 figure:
   emoji: 🇷🇺
-  color: rgb(45, 35, 65)
-  textColor: rgb(225, 210, 240)
+  color: rgb(104, 77, 157)
+  textColor: rgb(238, 234, 245)
   text: Shared hosting with SSH included on every plan.
 ai: authored
 ---

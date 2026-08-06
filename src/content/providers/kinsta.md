@@ -69,8 +69,8 @@ sources:
   - { field: specialisation, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-07-31 }
 figure:
   emoji: 👑
-  color: rgb(138, 43, 226)
-  textColor: rgb(255, 215, 0)
+  color: rgb(120, 45, 190)
+  textColor: rgb(240, 234, 246)
   text: Even royalty needs alternatives.
 ---
 

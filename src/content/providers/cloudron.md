@@ -53,8 +53,8 @@ sources:
   - { field: pricingModel, url: 'https://www.cloudron.io/pricing.html', checkedAt: 2026-08-01 }
 figure:
   emoji: 🏡
-  color: rgb(30, 45, 40)
-  textColor: rgb(185, 230, 210)
+  color: rgb(77, 157, 131)
+  textColor: rgb(234, 245, 241)
   text: Self-hosting for people with other jobs.
 ai: authored
 ---

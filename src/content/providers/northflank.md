@@ -75,8 +75,8 @@ sources:
   - { field: infraContract, url: 'https://northflank.com/pricing', checkedAt: 2026-08-01 }
 figure:
   emoji: 🧱
-  color: rgb(25, 30, 45)
-  textColor: rgb(180, 195, 230)
+  color: rgb(77, 97, 157)
+  textColor: rgb(234, 237, 245)
   text: Your cloud or theirs, same console.
 ai: authored
 ---

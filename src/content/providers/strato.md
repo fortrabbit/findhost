@@ -70,8 +70,8 @@ sources:
   - { field: urls, url: 'https://www.strato.de/agb/', checkedAt: 2026-08-01 }
 figure:
   emoji: 📻
-  color: rgb(60, 30, 80)
-  textColor: rgb(225, 190, 245)
+  color: rgb(128, 64, 171)
+  textColor: rgb(241, 234, 246)
   text: Plain mass-market hosting from Berlin.
 ai: authored
 ---

@@ -70,8 +70,8 @@ sources:
   - { field: supportChannels, url: 'https://www.opalstack.com/', checkedAt: 2026-08-01 }
 figure:
   emoji: 💠
-  color: rgb(30, 50, 60)
-  textColor: rgb(175, 225, 235)
+  color: rgb(77, 131, 157)
+  textColor: rgb(234, 241, 245)
   text: Shared hosting with a shell on every plan.
 ai: authored
 ---

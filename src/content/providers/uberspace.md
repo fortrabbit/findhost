@@ -67,8 +67,8 @@ sources:
   - { field: software, url: 'https://manual.uberspace.de/', checkedAt: 2026-07-31 }
 figure:
   emoji: 🧑‍🚀
-  color: rgb(60, 60, 60)
-  textColor: rgb(200, 200, 200)
+  color: rgb(157, 77, 77)
+  textColor: rgb(245, 234, 234)
   text: Hello Ubernauts!
 greenWebId: 778
 ---

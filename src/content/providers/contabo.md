@@ -55,8 +55,8 @@ sources:
   - { field: hqCountry, url: 'https://contabo.com/en/locations/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🥨
-  color: rgb(240, 200, 80)
-  textColor: rgb(60, 40, 10)
+  color: rgb(190, 154, 45)
+  textColor: rgb(246, 243, 234)
   text: Bulk servers out of Munich.
 ai: authored
 ---

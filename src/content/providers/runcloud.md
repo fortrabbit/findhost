@@ -38,8 +38,8 @@ sources:
   - { field: exitWithin, url: 'https://runcloud.io/docs/cancel-runcloud-subscription', checkedAt: 2026-08-02 }
 figure:
   emoji: 🔁
-  color: rgb(0, 135, 150)
-  textColor: rgb(230, 255, 255)
+  color: rgb(45, 175, 190)
+  textColor: rgb(234, 245, 246)
   text: You patch the box, RunCloud runs the panel.
 ---
 

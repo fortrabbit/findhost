@@ -23,8 +23,8 @@ sources:
   - { field: freeTier, url: 'https://lovable.dev/pricing', checkedAt: 2026-08-01 }
 figure:
   emoji: 🔒
-  color: rgb(160, 80, 80)
-  textColor: rgb(240, 190, 215)
+  color: rgb(157, 77, 77)
+  textColor: rgb(245, 234, 234)
   text: Prompt in, React app out.
 ---
 

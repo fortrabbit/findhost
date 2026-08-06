@@ -52,8 +52,8 @@ sources:
   - { field: exitWithin, url: 'https://1984.hosting/tos/', checkedAt: 2026-08-02 }
 figure:
   emoji: 🌋
-  color: rgb(150, 110, 110)
-  textColor: rgb(190, 215, 235)
+  color: rgb(157, 77, 77)
+  textColor: rgb(245, 234, 234)
   text: Named after that book by Orwell.
 ai: authored
 ---

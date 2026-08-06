@@ -92,8 +92,8 @@ sources:
   - { field: audience, url: 'https://www.digitalocean.com/', checkedAt: 2026-07-31 }
 figure:
   emoji: 🐟
-  color: rgb(0, 170, 255)
-  textColor: rgb(0, 50, 200)
+  color: rgb(45, 142, 190)
+  textColor: rgb(234, 242, 246)
   text: Virtual machines, billed by the second.
 ---
 

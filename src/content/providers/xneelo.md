@@ -71,8 +71,8 @@ sources:
   - { field: urls, url: 'https://xneelo.co.za/legal/terms-of-service/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🦓
-  color: rgb(40, 40, 45)
-  textColor: rgb(235, 235, 235)
+  color: rgb(77, 77, 157)
+  textColor: rgb(234, 234, 245)
   text: The other Hetzner, renamed.
 ai: authored
 ---

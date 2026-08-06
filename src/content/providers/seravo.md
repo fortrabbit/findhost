@@ -63,8 +63,8 @@ sources:
   - { field: hqCountry, url: 'https://seravo.com/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🐧
-  color: rgb(20, 45, 60)
-  textColor: rgb(180, 225, 245)
+  color: rgb(59, 132, 176)
+  textColor: rgb(234, 241, 246)
   text: WordPress, done the Debian way.
 ai: authored
 ---

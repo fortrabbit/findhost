@@ -48,8 +48,8 @@ sources:
   - { field: infraContract, url: 'https://www.porter.run/pricing', checkedAt: 2026-08-01 }
 figure:
   emoji: 🧳
-  color: rgb(25, 35, 50)
-  textColor: rgb(180, 205, 240)
+  color: rgb(77, 109, 157)
+  textColor: rgb(234, 239, 245)
   text: Platform manners, your cloud account.
 ai: authored
 ---

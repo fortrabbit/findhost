@@ -89,8 +89,8 @@ sources:
   - { field: urls, url: 'https://elest.io/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🧑‍🔧
-  color: rgb(35, 30, 55)
-  textColor: rgb(200, 190, 250)
+  color: rgb(93, 77, 157)
+  textColor: rgb(237, 234, 245)
   text: Someone else patches your open source.
 ai: authored
 ---

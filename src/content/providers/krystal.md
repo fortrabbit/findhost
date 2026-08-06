@@ -75,8 +75,8 @@ sources:
   - { field: supportTiering, url: 'https://krystal.io/web-hosting', checkedAt: 2026-08-01 }
 figure:
   emoji: 🌱
-  color: rgb(20, 55, 35)
-  textColor: rgb(180, 235, 190)
+  color: rgb(63, 172, 109)
+  textColor: rgb(234, 246, 239)
   text: Gemstone plan names, B Corp paperwork.
 ai: authored
 ---

@@ -61,8 +61,8 @@ sources:
   - { field: urls, url: 'https://donweb.com', checkedAt: 2026-08-01 }
 figure:
   emoji: 🧉
-  color: rgb(30, 55, 40)
-  textColor: rgb(190, 235, 195)
+  color: rgb(77, 157, 109)
+  textColor: rgb(234, 245, 239)
   text: Its own metal, in Rosario.
 ai: authored
 ---

@@ -85,8 +85,8 @@ social:
   github: https://github.com/exoscale
 figure:
   emoji: 🇨🇭
-  color: rgb(45, 25, 30)
-  textColor: rgb(255, 200, 190)
+  color: rgb(157, 77, 97)
+  textColor: rgb(245, 234, 237)
   text: Swiss face, Austrian owner.
 ai: authored
 ---

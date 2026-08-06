@@ -56,8 +56,8 @@ sources:
   - { field: regions, url: 'https://www.gigalixir.com/pricing/', checkedAt: 2026-08-01 }
 figure:
   emoji: 💧
-  color: rgb(45, 25, 60)
-  textColor: rgb(225, 190, 250)
+  color: rgb(124, 69, 166)
+  textColor: rgb(241, 234, 246)
   text: The one that lets the BEAM be the BEAM.
 ai: authored
 ---

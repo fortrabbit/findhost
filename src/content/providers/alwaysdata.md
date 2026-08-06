@@ -80,8 +80,8 @@ sources:
   - { field: pricingModel, url: 'https://www.alwaysdata.com/en/pricing/', checkedAt: 2026-07-31 }
 figure:
   emoji: 🧬
-  color: rgb(25, 60, 50)
-  textColor: rgb(180, 235, 210)
+  color: rgb(69, 166, 138)
+  textColor: rgb(234, 246, 242)
   text: Shared hosting, many languages.
 ai: authored
 ---

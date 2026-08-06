@@ -81,8 +81,8 @@ sources:
   - { field: billingTiming, url: 'https://www.clever.cloud/developers/doc/billing/payments-invoicing/', checkedAt: 2026-08-02 }
 figure:
   emoji: 🐇
-  color: rgb(230, 60, 50)
-  textColor: rgb(255, 235, 230)
+  color: rgb(190, 53, 45)
+  textColor: rgb(246, 234, 234)
   text: One git push, many runtimes.
 ai: authored
 ---

@@ -28,8 +28,8 @@ sources:
   - { field: urls, url: 'https://webflow.com/legal/terms', checkedAt: 2026-08-01 }
 figure:
   emoji: 🕸️
-  color: rgb(40, 70, 110)
-  textColor: rgb(170, 210, 240)
+  color: rgb(63, 109, 172)
+  textColor: rgb(234, 239, 246)
   text: Design to publish.
 ---
 

@@ -58,8 +58,8 @@ sources:
   - { field: supportChannels, url: 'https://www.hosttech.ch/webhosting', checkedAt: 2026-08-01 }
 figure:
   emoji: ⛰️
-  color: rgb(35, 55, 45)
-  textColor: rgb(195, 230, 205)
+  color: rgb(77, 157, 117)
+  textColor: rgb(234, 245, 240)
   text: A data centre under a mountain.
 ai: authored
 ---

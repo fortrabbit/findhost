@@ -73,8 +73,8 @@ status: active
 ai: authored
 figure:
   emoji: 🏗️
-  color: rgb(60, 110, 90)
-  textColor: rgb(240, 250, 244)
+  color: rgb(77, 157, 125)
+  textColor: rgb(234, 245, 241)
   text: Managed WordPress, rented from Google.
 ---
 

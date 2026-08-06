@@ -42,8 +42,8 @@ sources:
   - { field: exitWithin, url: 'https://www.squarespace.com/terms-of-service', checkedAt: 2026-08-02 }
 figure:
   emoji: 🎨
-  color: rgb(90, 90, 90)
-  textColor: rgb(220, 220, 220)
+  color: rgb(157, 77, 77)
+  textColor: rgb(245, 234, 234)
   text: Polished templates, fixed canvas.
 ---
 

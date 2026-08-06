@@ -68,8 +68,8 @@ sources:
   - { field: exitWithin, url: 'https://www.cherryservers.com/terms-of-service', checkedAt: 2026-08-02 }
 figure:
   emoji: 🍒
-  color: rgb(55, 20, 35)
-  textColor: rgb(255, 190, 205)
+  color: rgb(172, 63, 109)
+  textColor: rgb(246, 234, 239)
   text: Bare metal by the hour, since 2001.
 ai: authored
 ---

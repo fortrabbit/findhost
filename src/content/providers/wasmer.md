@@ -55,8 +55,8 @@ sources:
   - { field: software, url: 'https://wasmer.io/pricing', checkedAt: 2026-07-31 }
 figure:
   emoji: 🧩
-  color: rgb(103, 126, 208)
-  textColor: rgb(235, 237, 255)
+  color: rgb(55, 83, 179)
+  textColor: rgb(234, 236, 246)
   text: PHP at the WASM edge.
 ---
 

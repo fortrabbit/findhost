@@ -74,8 +74,8 @@ sources:
   - { field: audience, url: 'https://www.hetzner.com/', checkedAt: 2026-07-31 }
 figure:
   emoji: 🇩🇪
-  color: rgb(200, 160, 60)
-  textColor: rgb(50, 20, 20)
+  color: rgb(183, 145, 52)
+  textColor: rgb(246, 242, 234)
   text: IT made in Germany.
 greenWebId: 131
 ---

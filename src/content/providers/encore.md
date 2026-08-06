@@ -53,8 +53,8 @@ sources:
   - { field: pricingModel, url: 'https://encore.dev/pricing', checkedAt: 2026-08-01 }
 figure:
   emoji: 🧭
-  color: rgb(25, 30, 45)
-  textColor: rgb(185, 200, 235)
+  color: rgb(77, 97, 157)
+  textColor: rgb(234, 237, 245)
   text: The code declares the infrastructure.
 ai: authored
 ---

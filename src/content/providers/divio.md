@@ -62,8 +62,8 @@ sources:
   - { field: certifications, url: 'https://www.divio.com/pricing/', checkedAt: 2026-08-01 }
 figure:
   emoji: 📦
-  color: rgb(30, 40, 45)
-  textColor: rgb(185, 220, 230)
+  color: rgb(77, 131, 157)
+  textColor: rgb(234, 241, 245)
   text: Docker in, Django usually.
 ai: authored
 ---

@@ -60,8 +60,8 @@ sources:
   - { field: contractMinimum, url: 'https://wpengine.com/plans/', checkedAt: 2026-07-31 }
 figure:
   emoji: 🚂
-  color: rgb(70, 130, 180)
-  textColor: rgb(255, 255, 255)
+  color: rgb(66, 122, 169)
+  textColor: rgb(234, 240, 246)
   text: WordPress, and nothing but.
 ---
 

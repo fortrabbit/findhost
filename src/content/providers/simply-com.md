@@ -64,8 +64,8 @@ sources:
   - { field: parent, url: 'https://www.simply.com/en/about/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🧊
-  color: rgb(30, 50, 70)
-  textColor: rgb(190, 220, 245)
+  color: rgb(70, 117, 164)
+  textColor: rgb(234, 240, 246)
   text: Web space, mail and a builder, bundled.
 ai: authored
 ---

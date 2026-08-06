@@ -61,8 +61,8 @@ sources:
   - { field: billingPeriods, url: 'https://home.pl/hosting', checkedAt: 2026-08-02 }
 figure:
   emoji: 🏠
-  color: rgb(40, 30, 55)
-  textColor: rgb(215, 195, 245)
+  color: rgb(109, 77, 157)
+  textColor: rgb(239, 234, 245)
   text: Read the renewal column first.
 ai: authored
 ---

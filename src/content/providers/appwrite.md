@@ -56,8 +56,8 @@ sources:
   - { field: freeTier, url: 'https://appwrite.io/pricing', checkedAt: 2026-08-01 }
 figure:
   emoji: 🧰
-  color: rgb(60, 20, 45)
-  textColor: rgb(255, 190, 225)
+  color: rgb(176, 59, 132)
+  textColor: rgb(246, 234, 241)
   text: The backend, minus the backend.
 ai: authored
 ---

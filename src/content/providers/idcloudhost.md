@@ -16,8 +16,8 @@ sources:
   - { field: regions, url: 'https://status.idcloudhost.com', checkedAt: 2026-08-04 }
 figure:
   emoji: 🇮🇩
-  color: rgb(30, 55, 45)
-  textColor: rgb(210, 235, 220)
+  color: rgb(77, 157, 125)
+  textColor: rgb(234, 245, 241)
   text: Jakarta and Singapore, tracked component by component.
 ai: authored
 ---

@@ -93,8 +93,8 @@ sources:
   - { field: urls, url: 'https://zerops.io/terms', checkedAt: 2026-08-01 }
 figure:
   emoji: 🧊
-  color: rgb(20, 35, 50)
-  textColor: rgb(175, 215, 240)
+  color: rgb(67, 117, 168)
+  textColor: rgb(234, 240, 246)
   text: Pay for what the app consumes.
 ai: authored
 ---

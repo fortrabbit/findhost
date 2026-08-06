@@ -45,8 +45,8 @@ sources:
   - { field: exitWithin, url: 'https://www.scaleway.com/en/pricing/serverless/', checkedAt: 2026-08-02 }
 figure:
   emoji: 🧵
-  color: rgb(50, 30, 70)
-  textColor: rgb(200, 170, 255)
+  color: rgb(117, 70, 164)
+  textColor: rgb(240, 234, 246)
   text: Event handlers, billed by the millisecond.
 ---
 

@@ -64,8 +64,8 @@ sources:
   - { field: parent, url: 'https://www.pythonanywhere.com/about/company_details/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🐍
-  color: rgb(30, 45, 65)
-  textColor: rgb(180, 220, 250)
+  color: rgb(74, 111, 161)
+  textColor: rgb(234, 239, 245)
   text: A Python box, in a browser tab.
 ai: authored
 ---

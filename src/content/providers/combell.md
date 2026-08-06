@@ -72,8 +72,8 @@ supportHours: 24-7
 apiAvailable: public
 figure:
   emoji: 🧇
-  color: rgb(75, 50, 15)
-  textColor: rgb(245, 215, 165)
+  color: rgb(190, 129, 45)
+  textColor: rgb(246, 241, 234)
   text: Benelux incumbent, framework aware.
 ai: authored
 ---

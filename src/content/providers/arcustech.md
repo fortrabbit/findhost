@@ -8,8 +8,8 @@ category:
 description: US VPS provider selling managed and self-managed NVMe servers, with a long-running focus on Craft CMS, ExpressionEngine and related PHP applications.
 figure:
   emoji: 🇺🇸
-  color: rgb(30, 85, 158)
-  textColor: rgb(230, 285, 255)
+  color: rgb(45, 107, 190)
+  textColor: rgb(234, 239, 246)
   text: VPS from US for Craft CMS.
 ---
 

@@ -62,8 +62,8 @@ sources:
   - { field: urls, url: 'https://www.world4you.com/unternehmen/agb', checkedAt: 2026-08-01 }
 figure:
   emoji: 🥨
-  color: rgb(90, 25, 30)
-  textColor: rgb(250, 205, 195)
+  color: rgb(184, 51, 61)
+  textColor: rgb(246, 234, 235)
   text: Austrian badge, German parent.
 ai: authored
 ---

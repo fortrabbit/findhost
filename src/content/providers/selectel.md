@@ -25,8 +25,8 @@ sources:
   - { field: iacSupport, url: 'https://github.com/selectel/terraform-provider-selectel', checkedAt: 2026-08-04 }
 figure:
   emoji: 🇷🇺
-  color: rgb(35, 45, 70)
-  textColor: rgb(200, 215, 240)
+  color: rgb(77, 100, 157)
+  textColor: rgb(234, 237, 245)
   text: Six data centres of its own, Saint Petersburg and Moscow.
 ai: authored
 ---

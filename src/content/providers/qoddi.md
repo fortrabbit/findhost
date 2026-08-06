@@ -64,8 +64,8 @@ sources:
   - { field: freeTier, url: 'https://qoddi.com/pricing/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🧮
-  color: rgb(25, 45, 50)
-  textColor: rgb(180, 230, 235)
+  color: rgb(77, 141, 157)
+  textColor: rgb(234, 243, 245)
   text: Many runtimes, billed by the second.
 ai: authored
 ---

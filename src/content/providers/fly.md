@@ -69,8 +69,8 @@ sources:
   - { field: cliTool, url: 'https://fly.io/docs/launch/deploy/', checkedAt: 2026-07-31 }
 figure:
   emoji: ✈️
-  color: rgb(100, 180, 220)
-  textColor: rgb(75, 75, 112)
+  color: rgb(45, 142, 190)
+  textColor: rgb(234, 242, 246)
   text: Fly high.
 ---
 

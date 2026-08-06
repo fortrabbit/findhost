@@ -92,8 +92,8 @@ sources:
   - { field: urls, url: 'https://sitehost.nz/about/terms', checkedAt: 2026-08-01 }
 figure:
   emoji: 🥝
-  color: rgb(20, 55, 35)
-  textColor: rgb(185, 235, 195)
+  color: rgb(63, 172, 109)
+  textColor: rgb(234, 246, 239)
   text: Containers, out of an Auckland data centre.
 ai: authored
 ---

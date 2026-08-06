@@ -52,8 +52,8 @@ sources:
   - { field: regions, url: 'https://docs.digitalocean.com/products/functions/details/availability/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🌊
-  color: rgb(20, 40, 90)
-  textColor: rgb(140, 190, 255)
+  color: rgb(45, 86, 190)
+  textColor: rgb(234, 237, 246)
   text: Functions on the ocean, asleep until called.
 ---
 

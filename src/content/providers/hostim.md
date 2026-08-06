@@ -44,8 +44,8 @@ sources:
   - { field: freeTier, url: 'https://hostim.dev/pricing/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🐳
-  color: rgb(24, 38, 60)
-  textColor: rgb(150, 200, 255)
+  color: rgb(67, 106, 168)
+  textColor: rgb(234, 238, 246)
   text: Docker apps, no YAML.
 editorialNote: Hostim is run by a former fortrabbit employee. Disclosed because fortrabbit publishes this site; it changes nothing about how the record is written.
 ---

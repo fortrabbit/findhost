@@ -54,8 +54,8 @@ sources:
   - { field: hqCountry, url: 'https://cyberfolks.pl/o-nas/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🧑‍🎤
-  color: rgb(50, 25, 50)
-  textColor: rgb(240, 195, 240)
+  color: rgb(157, 77, 157)
+  textColor: rgb(245, 234, 245)
   text: Old PHP and new, per domain.
 ai: authored
 ---

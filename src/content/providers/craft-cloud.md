@@ -45,8 +45,8 @@ sources:
   - { field: specialisation, url: 'https://craftcms.com/docs/cloud/', checkedAt: 2026-07-31 }
 figure:
   emoji: ⛅
-  color: rgb(120, 120, 220)
-  textColor: rgb(70, 70, 130)
+  color: rgb(48, 48, 186)
+  textColor: rgb(234, 234, 246)
   text: Cloudy with a chance of Craft.
 ---
 

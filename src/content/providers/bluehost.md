@@ -52,8 +52,8 @@ sources:
   - { field: pricingModel, url: 'https://www.bluehost.com/hosting/shared', checkedAt: 2026-07-31 }
 figure:
   emoji: 🌀
-  color: rgb(0, 102, 204)
-  textColor: rgb(205, 205, 255)
+  color: rgb(45, 117, 190)
+  textColor: rgb(234, 240, 246)
   text: WordPress hosting at retail scale.
 ---
 

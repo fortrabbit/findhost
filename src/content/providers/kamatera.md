@@ -49,8 +49,8 @@ sources:
   - { field: iacSupport, url: 'https://github.com/Kamatera/terraform-provider-kamatera', checkedAt: 2026-08-04 }
 figure:
   emoji: ☁️
-  color: rgb(40, 60, 100)
-  textColor: rgb(210, 225, 250)
+  color: rgb(67, 101, 168)
+  textColor: rgb(234, 238, 246)
   text: Cloud servers billed by the hour, across eighteen data centres.
 ai: authored
 ---

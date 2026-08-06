@@ -49,8 +49,8 @@ sources:
   - { field: category, url: 'https://gcore.com/cloud', checkedAt: 2026-08-01 }
 figure:
   emoji: 🌐
-  color: rgb(25, 35, 55)
-  textColor: rgb(180, 205, 245)
+  color: rgb(73, 103, 161)
+  textColor: rgb(234, 238, 245)
   text: Edge network first, cloud second.
 ai: authored
 ---

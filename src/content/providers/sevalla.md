@@ -64,8 +64,8 @@ sources:
   - { field: parent, url: 'https://sevalla.com/pricing/', checkedAt: 2026-08-01 }
 figure:
   emoji: ⛈️
-  color: rgb(25, 118, 210)
-  textColor: rgb(100, 180, 255)
+  color: rgb(45, 118, 190)
+  textColor: rgb(234, 240, 246)
   text: General-purpose PaaS.
 ---
 

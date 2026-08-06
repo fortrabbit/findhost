@@ -43,8 +43,8 @@ sources:
   - { field: entryPrice, url: 'https://www.shopify.com/pricing', checkedAt: 2026-08-01 }
 figure:
   emoji: 🛒
-  color: rgb(90, 80, 60)
-  textColor: rgb(220, 225, 225)
+  color: rgb(157, 131, 77)
+  textColor: rgb(245, 241, 234)
   text: Store in a box.
 ---
 

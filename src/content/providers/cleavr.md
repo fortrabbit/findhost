@@ -64,8 +64,8 @@ sources:
   - { field: exitWithin, url: 'https://cleavr.io/terms', checkedAt: 2026-08-02 }
 figure:
   emoji: 🔪
-  color: rgb(40, 30, 30)
-  textColor: rgb(240, 205, 200)
+  color: rgb(157, 77, 77)
+  textColor: rgb(245, 234, 234)
   text: Provision, deploy, get out of the way.
 ai: authored
 ---

@@ -71,8 +71,8 @@ sources:
   - { field: billingTiming, url: 'https://www.latitude.sh/pricing', checkedAt: 2026-08-02 }
 figure:
   emoji: 🛰️
-  color: rgb(25, 30, 40)
-  textColor: rgb(185, 200, 225)
+  color: rgb(77, 104, 157)
+  textColor: rgb(234, 238, 245)
   text: Bare metal, by the hour.
 ai: authored
 ---

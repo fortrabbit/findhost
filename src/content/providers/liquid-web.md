@@ -50,8 +50,8 @@ sources:
   - { field: billingPeriods, url: 'https://www.liquidweb.com/vps-hosting/', checkedAt: 2026-08-02 }
 figure:
   emoji: 💧
-  color: rgb(0, 50, 100)
-  textColor: rgb(200, 220, 255)
+  color: rgb(45, 117, 190)
+  textColor: rgb(234, 240, 246)
   text: Managed hosting, high touch.
 ---
 

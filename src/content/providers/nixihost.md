@@ -21,8 +21,8 @@ sources:
   - { field: exitWithin, url: 'https://www.nixihost.com/terms-of-service', checkedAt: 2026-08-02 }
 figure:
   emoji: 👽
-  color: rgb(50, 50, 50)
-  textColor: rgb(200, 255, 200)
+  color: rgb(157, 77, 77)
+  textColor: rgb(245, 234, 234)
   text: We come in peace.
 ---
 

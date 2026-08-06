@@ -65,8 +65,8 @@ sources:
   - { field: billingPeriods, url: 'https://ventraip.com.au/web-hosting/', checkedAt: 2026-08-02 }
 figure:
   emoji: 🪃
-  color: rgb(65, 30, 20)
-  textColor: rgb(250, 200, 175)
+  color: rgb(179, 83, 55)
+  textColor: rgb(246, 236, 234)
   text: A registrar with cPanel attached.
 ai: authored
 ---

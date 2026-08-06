@@ -56,8 +56,8 @@ sources:
   - { field: pricingModel, url: 'https://easypanel.io/pricing', checkedAt: 2026-08-01 }
 figure:
   emoji: 🎚️
-  color: rgb(30, 35, 50)
-  textColor: rgb(190, 200, 240)
+  color: rgb(77, 97, 157)
+  textColor: rgb(234, 237, 245)
   text: A PaaS you install yourself.
 ai: authored
 ---

@@ -76,8 +76,8 @@ sources:
   - { field: exitWithin, url: 'https://azure.microsoft.com/en-us/pricing/purchase-options/pay-as-you-go/', checkedAt: 2026-08-02 }
 figure:
   emoji: ☁️
-  color: rgb(29, 108, 255)
-  textColor: rgb(130, 200, 255)
+  color: rgb(45, 95, 190)
+  textColor: rgb(234, 238, 246)
   text: Windows in the sky?
 ---
 

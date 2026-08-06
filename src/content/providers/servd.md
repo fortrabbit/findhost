@@ -54,8 +54,8 @@ sources:
   - { field: audience, url: 'https://servd.host/', checkedAt: 2026-07-31 }
 figure:
   emoji: 🍽️
-  color: rgb(180, 120, 120)
-  textColor: rgb(100, 50, 10)
+  color: rgb(157, 77, 77)
+  textColor: rgb(245, 234, 234)
   text: One dish on the menu.
 greenWebId: 1530
 ---

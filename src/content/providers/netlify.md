@@ -80,8 +80,8 @@ sources:
   - { field: urls, url: 'https://www.netlify.com/legal/terms-of-use/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🕸️
-  color: rgb(20, 60, 70)
-  textColor: rgb(160, 235, 235)
+  color: rgb(52, 156, 182)
+  textColor: rgb(234, 243, 246)
   text: Git push in, CDN out.
 ai: authored
 ---

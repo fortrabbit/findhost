@@ -62,8 +62,8 @@ sources:
   - { field: urls, url: 'https://dokploy.com', checkedAt: 2026-08-01 }
 figure:
   emoji: 🐋
-  color: rgb(20, 40, 55)
-  textColor: rgb(170, 220, 245)
+  color: rgb(63, 125, 172)
+  textColor: rgb(234, 241, 246)
   text: A control plane for servers you already rent.
 ai: authored
 ---

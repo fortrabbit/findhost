@@ -8,8 +8,8 @@ category:
 description: GoDaddy is a US shared hosting company and the world's largest ICANN-accredited domain registrar, listed on the NYSE as GDDY.
 figure:
   emoji: 🕷️
-  color: rgb(255, 162, 0)
-  textColor: rgb(107, 0, 0)
+  color: rgb(190, 137, 45)
+  textColor: rgb(246, 241, 234)
   text: Domains first, hosting attached.
 ---
 

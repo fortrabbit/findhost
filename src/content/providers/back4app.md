@@ -51,8 +51,8 @@ social:
   github: https://github.com/back4app
 figure:
   emoji: 🅿️
-  color: rgb(30, 40, 60)
-  textColor: rgb(180, 205, 245)
+  color: rgb(77, 104, 157)
+  textColor: rgb(234, 238, 245)
   text: Parse, kept alive commercially.
 ai: authored
 ---

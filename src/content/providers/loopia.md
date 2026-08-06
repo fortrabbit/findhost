@@ -68,8 +68,8 @@ sources:
   - { field: ownership, url: 'https://www.loopia.se/om-loopia/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🪟
-  color: rgb(20, 50, 85)
-  textColor: rgb(180, 220, 250)
+  color: rgb(45, 112, 190)
+  textColor: rgb(234, 239, 246)
   text: Still running ASP.NET, on purpose.
 ai: authored
 ---

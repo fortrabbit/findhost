@@ -53,8 +53,8 @@ sources:
   - { field: runtimes, url: 'https://www.umbler.com/br/hospedagem-php', checkedAt: 2026-08-01 }
 figure:
   emoji: ⏱️
-  color: rgb(25, 45, 75)
-  textColor: rgb(175, 215, 255)
+  color: rgb(59, 106, 176)
+  textColor: rgb(234, 238, 246)
   text: Hosting on a taxi meter.
 ai: authored
 ---

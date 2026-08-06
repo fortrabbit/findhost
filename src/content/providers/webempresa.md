@@ -65,8 +65,8 @@ sources:
   - { field: billingTiming, url: 'https://www.webempresa.com/hosting-wordpress.html', checkedAt: 2026-08-02 }
 figure:
   emoji: 🛡️
-  color: rgb(45, 30, 55)
-  textColor: rgb(225, 195, 245)
+  color: rgb(125, 77, 157)
+  textColor: rgb(241, 234, 245)
   text: Spanish-language support, around the clock.
 ai: authored
 ---

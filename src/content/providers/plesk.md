@@ -66,8 +66,8 @@ sources:
   - { field: billingTiming, url: 'https://www.plesk.com/pricing/', checkedAt: 2026-08-02 }
 figure:
   emoji: 🪟
-  color: rgb(30, 40, 55)
-  textColor: rgb(185, 210, 240)
+  color: rgb(77, 109, 157)
+  textColor: rgb(234, 239, 245)
   text: The panel that also speaks Windows.
 ai: authored
 ---

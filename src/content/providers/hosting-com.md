@@ -47,8 +47,8 @@ sources:
   - { field: billingPeriods, url: 'https://www.hosting.com/web-hosting/', checkedAt: 2026-08-02 }
 figure:
   emoji: 🐌
-  color: rgb(170, 68, 68)
-  textColor: rgb(255, 255, 255)
+  color: rgb(168, 67, 67)
+  textColor: rgb(246, 234, 234)
   text: A2 Hosting under a new name.
 ---
 

@@ -70,8 +70,8 @@ sources:
   - { field: urls, url: 'https://help.zone.eu/en/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🛰️
-  color: rgb(20, 35, 65)
-  textColor: rgb(180, 210, 255)
+  color: rgb(55, 97, 179)
+  textColor: rgb(234, 238, 246)
   text: Shared hosting that speaks Go.
 ai: authored
 ---

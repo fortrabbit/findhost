@@ -69,8 +69,8 @@ sources:
   - { field: backupsIncluded, url: 'https://www.interserver.net/webhosting/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🔒
-  color: rgb(30, 45, 35)
-  textColor: rgb(185, 230, 195)
+  color: rgb(77, 157, 104)
+  textColor: rgb(234, 245, 238)
   text: The price you sign up at is the price.
 ai: authored
 ---

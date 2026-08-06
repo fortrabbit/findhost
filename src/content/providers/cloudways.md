@@ -60,8 +60,8 @@ sources:
   - { field: software, url: 'https://www.cloudways.com/en/', checkedAt: 2026-07-31 }
 figure:
   emoji: ☁️
-  color: rgb(45, 110, 210)
-  textColor: rgb(240, 245, 255)
+  color: rgb(45, 102, 190)
+  textColor: rgb(234, 238, 246)
   text: Control panel in the clouds.
 ---
 

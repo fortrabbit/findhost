@@ -83,8 +83,8 @@ sources:
   - { field: hqCountry, url: 'https://www.netcup.com/de/kontakt/impressum', checkedAt: 2026-08-01 }
 figure:
   emoji: 🪙
-  color: rgb(30, 70, 55)
-  textColor: rgb(190, 235, 200)
+  color: rgb(70, 164, 129)
+  textColor: rgb(234, 246, 241)
   text: Cheap, and the price stays.
 ai: authored
 ---

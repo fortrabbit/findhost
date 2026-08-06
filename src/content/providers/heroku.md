@@ -90,8 +90,8 @@ sources:
   - { field: audience, url: 'https://www.heroku.com/', checkedAt: 2026-07-31 }
 figure:
   emoji: 🎸
-  color: rgb(121, 40, 202)
-  textColor: rgb(220, 160, 255)
+  color: rgb(117, 45, 190)
+  textColor: rgb(240, 234, 246)
   text: The original git push to deploy.
 ---
 

@@ -46,8 +46,8 @@ sources:
   - { field: freeTier, url: 'https://nhost.io/pricing', checkedAt: 2026-08-01 }
 figure:
   emoji: 🧊
-  color: rgb(25, 35, 45)
-  textColor: rgb(180, 210, 230)
+  color: rgb(77, 117, 157)
+  textColor: rgb(234, 240, 245)
   text: Postgres and GraphQL, assembled.
 ai: authored
 ---

@@ -60,8 +60,8 @@ sources:
   - { field: software, url: 'https://ploi.io/', checkedAt: 2026-07-31 }
 figure:
   emoji: 🪄
-  color: rgb(90, 55, 160)
-  textColor: rgb(205, 200, 235)
+  color: rgb(98, 60, 175)
+  textColor: rgb(238, 234, 246)
   text: Sets up the server, hands you the keys.
 ---
 

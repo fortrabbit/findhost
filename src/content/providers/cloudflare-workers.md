@@ -36,8 +36,8 @@ sources:
   - { field: freeTier, url: 'https://developers.cloudflare.com/workers/platform/pricing/', checkedAt: 2026-07-31 }
 figure:
   emoji: 🔶
-  color: rgb(60, 40, 20)
-  textColor: rgb(255, 190, 120)
+  color: rgb(176, 117, 59)
+  textColor: rgb(246, 240, 234)
   text: Code in isolates, next to the visitor.
 ---
 

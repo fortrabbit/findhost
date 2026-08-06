@@ -61,8 +61,8 @@ sources:
   - { field: urls, url: 'https://status.webdock.io/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🇩🇰
-  color: rgb(60, 25, 30)
-  textColor: rgb(255, 200, 195)
+  color: rgb(166, 69, 83)
+  textColor: rgb(246, 234, 235)
   text: One country, one data centre.
 ai: authored
 ---

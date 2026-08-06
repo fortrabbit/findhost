@@ -43,8 +43,8 @@ sources:
   - { field: billingTiming, url: 'https://apiscp.com/pricing/', checkedAt: 2026-08-02 }
 figure:
   emoji: 🎛️
-  color: rgb(200, 50, 50)
-  textColor: rgb(255, 230, 230)
+  color: rgb(188, 47, 47)
+  textColor: rgb(246, 234, 234)
   text: Max control, max responsibility.
 ---
 

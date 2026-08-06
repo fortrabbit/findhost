@@ -50,8 +50,8 @@ sources:
   - { field: backupsIncluded, url: 'https://getflywheel.com/pricing/', checkedAt: 2026-07-31 }
 figure:
   emoji: 🎡
-  color: rgb(220, 150, 150)
-  textColor: rgb(139, 0, 139)
+  color: rgb(176, 59, 59)
+  textColor: rgb(246, 234, 234)
   text: Round and round.
 ---
 

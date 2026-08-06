@@ -66,8 +66,8 @@ sources:
   - { field: regions, url: 'https://www.gandi.net/en/simple-hosting', checkedAt: 2026-08-01 }
 figure:
   emoji: 📮
-  color: rgb(35, 35, 40)
-  textColor: rgb(230, 220, 200)
+  color: rgb(77, 77, 157)
+  textColor: rgb(234, 234, 245)
   text: The registrar that also runs your code.
 ai: authored
 ---

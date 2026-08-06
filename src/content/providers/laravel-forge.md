@@ -69,8 +69,8 @@ sources:
   - { field: audience, url: 'https://laravel.com/forge', checkedAt: 2026-07-31 }
 figure:
   emoji: 💸
-  color: rgb(100, 200, 60)
-  textColor: rgb(80, 50, 12)
+  color: rgb(89, 183, 52)
+  textColor: rgb(237, 246, 234)
   text: Pay for VPS, plus VPS software.
 ---
 

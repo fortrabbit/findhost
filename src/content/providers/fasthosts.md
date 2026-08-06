@@ -76,8 +76,8 @@ status: active
 ai: authored
 figure:
   emoji: 🇬🇧
-  color: rgb(30, 60, 120)
-  textColor: rgb(240, 244, 255)
+  color: rgb(47, 94, 188)
+  textColor: rgb(234, 238, 246)
   text: A big group's British doorway.
 ---
 

@@ -48,8 +48,8 @@ sources:
   - { field: pricingModel, url: 'https://www.hostinger.com/web-hosting', checkedAt: 2026-07-31 }
 figure:
   emoji: 🪙
-  color: rgb(140, 30, 180)
-  textColor: rgb(245, 235, 255)
+  color: rgb(151, 45, 190)
+  textColor: rgb(243, 234, 246)
   text: Penny prices, DIY everything else.
 ---
 

@@ -79,8 +79,8 @@ sources:
   - { field: audience, url: 'https://upsun.com/pricing/', checkedAt: 2026-07-31 }
 figure:
   emoji: ☀️
-  color: rgb(0, 85, 164)
-  textColor: rgb(255, 200, 100)
+  color: rgb(45, 120, 190)
+  textColor: rgb(234, 240, 246)
   text: YAML in, environments out.
 ---
 

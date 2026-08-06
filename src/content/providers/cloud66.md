@@ -62,8 +62,8 @@ sources:
   - { field: pricingModel, url: 'https://www.cloud66.com/pricing/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🛞
-  color: rgb(35, 30, 40)
-  textColor: rgb(210, 200, 230)
+  color: rgb(117, 77, 157)
+  textColor: rgb(240, 234, 245)
   text: Deploy anywhere, own the servers.
 ai: authored
 ---

@@ -71,8 +71,8 @@ sources:
   - { field: urls, url: 'https://zeabur.com/docs/legal/terms', checkedAt: 2026-08-01 }
 figure:
   emoji: 🧩
-  color: rgb(25, 30, 55)
-  textColor: rgb(185, 200, 250)
+  color: rgb(73, 88, 161)
+  textColor: rgb(234, 236, 245)
   text: Point it at a repo, it guesses the rest.
 ai: authored
 ---

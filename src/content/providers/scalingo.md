@@ -83,8 +83,8 @@ sources:
   - { field: exitWithin, url: 'https://scalingo.com/general-terms-and-conditions', checkedAt: 2026-08-02 }
 figure:
   emoji: 🥖
-  color: rgb(40, 60, 130)
-  textColor: rgb(200, 220, 255)
+  color: rgb(55, 83, 179)
+  textColor: rgb(234, 236, 246)
   text: Git push, and it stays in France.
 ai: authored
 ---

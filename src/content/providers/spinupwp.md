@@ -69,8 +69,8 @@ sources:
   - { field: audience, url: 'https://spinupwp.com/', checkedAt: 2026-07-31 }
 figure:
   emoji: 🌪️
-  color: rgb(110, 90, 170)
-  textColor: rgb(240, 230, 255)
+  color: rgb(97, 77, 157)
+  textColor: rgb(237, 234, 245)
   text: Spinning up servers is only the start.
 ---
 

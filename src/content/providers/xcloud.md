@@ -63,8 +63,8 @@ sources:
   - { field: runsOn, url: 'https://xcloud.host/pricing/', checkedAt: 2026-07-31 }
 figure:
   emoji: ⚡
-  color: rgb(0, 100, 255)
-  textColor: rgb(255, 255, 255)
+  color: rgb(45, 102, 190)
+  textColor: rgb(234, 238, 246)
   text: Managed servers, but you are the admin.
 ---
 

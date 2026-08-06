@@ -19,8 +19,8 @@ sources:
   - { field: urls, url: 'https://www.wix.com/about/terms-of-use', checkedAt: 2026-08-01 }
 figure:
   emoji: 🧱
-  color: rgb(170, 140, 80)
-  textColor: rgb(60, 40, 10)
+  color: rgb(160, 131, 75)
+  textColor: rgb(245, 242, 234)
   text: Building blocks, no blueprints.
 ---
 

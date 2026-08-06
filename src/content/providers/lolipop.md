@@ -63,8 +63,8 @@ sources:
   - { field: supportChannels, url: 'https://lolipop.jp/pricing/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🍭
-  color: rgb(60, 25, 45)
-  textColor: rgb(255, 195, 230)
+  color: rgb(166, 69, 124)
+  textColor: rgb(246, 234, 241)
   text: Where a lot of Japanese sites start.
 ai: authored
 ---

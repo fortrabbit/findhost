@@ -57,8 +57,8 @@ sources:
   - { field: regions, url: 'https://docs.replit.com/cloud-services/deployments/about-deployments', checkedAt: 2026-08-01 }
 figure:
   emoji: 🧑‍💻
-  color: rgb(240, 90, 40)
-  textColor: rgb(35, 15, 5)
+  color: rgb(190, 81, 45)
+  textColor: rgb(246, 237, 234)
   text: The IDE that kept the server running.
 ai: authored
 ---

@@ -72,8 +72,8 @@ sources:
   - { field: urls, url: 'https://supabase.com/docs/company/sla', checkedAt: 2026-08-01 }
 figure:
   emoji: ⚡
-  color: rgb(20, 50, 35)
-  textColor: rgb(160, 240, 195)
+  color: rgb(67, 168, 117)
+  textColor: rgb(234, 246, 240)
   text: Postgres, with the rest bolted on.
 ai: authored
 ---

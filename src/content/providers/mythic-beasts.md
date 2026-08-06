@@ -69,8 +69,8 @@ sources:
   - { field: supportChannels, url: 'https://www.mythic-beasts.com/support', checkedAt: 2026-08-01 }
 figure:
   emoji: 🐉
-  color: rgb(35, 25, 55)
-  textColor: rgb(210, 190, 250)
+  color: rgb(103, 73, 161)
+  textColor: rgb(238, 234, 245)
   text: Graded sizes, shell sold separately.
 ai: authored
 ---

@@ -71,8 +71,8 @@ sources:
   - { field: supportHours, url: 'https://dinahosting.com/hosting', checkedAt: 2026-08-01 }
 figure:
   emoji: 🐚
-  color: rgb(25, 45, 55)
-  textColor: rgb(180, 220, 235)
+  color: rgb(73, 132, 161)
+  textColor: rgb(234, 242, 245)
   text: From Santiago, with a shell prompt.
 ai: authored
 ---

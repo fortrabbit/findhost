@@ -57,8 +57,8 @@ sources:
   - { field: managedDatabases, url: 'https://ploi.cloud', checkedAt: 2026-07-31 }
 figure:
   emoji: ☁️
-  color: rgb(255, 140, 0)
-  textColor: rgb(255, 220, 140)
+  color: rgb(190, 124, 45)
+  textColor: rgb(246, 240, 234)
   text: Dutch clouds.
 ---
 

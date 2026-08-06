@@ -61,8 +61,8 @@ sources:
   - { field: useCases, url: 'https://laravel.com/cloud/pricing', checkedAt: 2026-07-31 }
 figure:
   emoji: 🧺
-  color: rgb(173, 150, 74)
-  textColor: rgb(101, 71, 0)
+  color: rgb(164, 142, 70)
+  textColor: rgb(246, 243, 234)
   text: The framework vendor's own platform.
 ---
 

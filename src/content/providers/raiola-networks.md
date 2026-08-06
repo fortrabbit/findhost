@@ -65,8 +65,8 @@ sources:
   - { field: infraContract, url: 'https://raiolanetworks.com/hosting-web/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🔧
-  color: rgb(40, 45, 25)
-  textColor: rgb(220, 235, 175)
+  color: rgb(137, 157, 77)
+  textColor: rgb(242, 245, 234)
   text: They screw the servers together themselves.
 ai: authored
 ---

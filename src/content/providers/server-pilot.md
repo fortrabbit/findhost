@@ -44,8 +44,8 @@ sources:
   - { field: infraContract, url: 'https://serverpilot.io/pricing/', checkedAt: 2026-07-31 }
 figure:
   emoji: ✈️
-  color: rgb(10, 120, 170)
-  textColor: rgb(225, 245, 255)
+  color: rgb(45, 145, 190)
+  textColor: rgb(234, 242, 246)
   text: Installs the stack, billed per app.
 ---
 

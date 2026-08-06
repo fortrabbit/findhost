@@ -76,8 +76,8 @@ sources:
   - { field: exitWithin, url: 'https://aws.amazon.com/agreement/', checkedAt: 2026-08-02 }
 figure:
   emoji: ⚙️
-  color: rgb(35, 43, 60)
-  textColor: rgb(255, 178, 102)
+  color: rgb(77, 103, 157)
+  textColor: rgb(234, 238, 245)
   text: The raw serverless primitive.
 ---
 

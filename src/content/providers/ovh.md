@@ -80,8 +80,8 @@ sources:
   - { field: infraContract, url: 'https://www.ovhcloud.com/en/datacenter/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🧯
-  color: rgb(255, 61, 67)
-  textColor: rgb(77, 0, 0)
+  color: rgb(190, 45, 49)
+  textColor: rgb(246, 234, 234)
   text: Builds its own metal, cools it with water.
 greenWebId: 1305
 ---

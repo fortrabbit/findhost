@@ -72,8 +72,8 @@ sources:
   - { field: exitWithin, url: 'https://www.o2switch.fr/cgv/', checkedAt: 2026-08-02 }
 figure:
   emoji: 🌋
-  color: rgb(60, 30, 25)
-  textColor: rgb(250, 195, 165)
+  color: rgb(166, 83, 69)
+  textColor: rgb(246, 235, 234)
   text: One offer, unlimited, from Auvergne.
 ai: authored
 ---

@@ -58,8 +58,8 @@ sources:
   - { field: deployMethods, url: 'https://huggingface.co/docs/hub/spaces-overview', checkedAt: 2026-08-01 }
 figure:
   emoji: 🤗
-  color: rgb(75, 55, 10)
-  textColor: rgb(255, 225, 150)
+  color: rgb(190, 145, 45)
+  textColor: rgb(246, 242, 234)
   text: A model registry that grew a host.
 ai: authored
 ---

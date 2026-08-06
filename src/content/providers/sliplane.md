@@ -64,8 +64,8 @@ sources:
   - { field: urls, url: 'https://sliplane.io/terms', checkedAt: 2026-08-01 }
 figure:
   emoji: 🛝
-  color: rgb(25, 40, 60)
-  textColor: rgb(175, 215, 250)
+  color: rgb(69, 110, 166)
+  textColor: rgb(234, 239, 246)
   text: Pay for the box, not the container.
 ai: authored
 ---

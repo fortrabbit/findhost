@@ -90,8 +90,8 @@ sources:
   - { field: useCases, url: 'https://vercel.com/', checkedAt: 2026-07-31 }
 figure:
   emoji: 🔺
-  color: rgb(20, 20, 24)
-  textColor: rgb(220, 220, 230)
+  color: rgb(77, 77, 157)
+  textColor: rgb(234, 234, 245)
   text: The frontend cloud.
 ---
 

@@ -47,8 +47,8 @@ sources:
   - { field: freeTier, url: 'https://vapor.laravel.com', checkedAt: 2026-07-31 }
 figure:
   emoji: 🌫️
-  color: rgb(40, 44, 60)
-  textColor: rgb(255, 170, 160)
+  color: rgb(77, 93, 157)
+  textColor: rgb(234, 237, 245)
   text: Laravel, evaporated to Lambda.
 ---
 

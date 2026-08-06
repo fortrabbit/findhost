@@ -69,8 +69,8 @@ sources:
   - { field: deployMethods, url: 'https://cloud.google.com/run/pricing', checkedAt: 2026-07-31 }
 figure:
   emoji: 🏃
-  color: rgb(30, 40, 55)
-  textColor: rgb(150, 200, 255)
+  color: rgb(77, 109, 157)
+  textColor: rgb(234, 239, 245)
   text: Containers that scale to zero.
 greenWebId: 595
 ---

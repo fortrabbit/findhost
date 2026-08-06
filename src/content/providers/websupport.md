@@ -69,8 +69,8 @@ sources:
   - { field: urls, url: 'https://www.websupport.sk/podmienky', checkedAt: 2026-08-01 }
 figure:
   emoji: 🏔️
-  color: rgb(25, 45, 60)
-  textColor: rgb(180, 220, 245)
+  color: rgb(69, 124, 166)
+  textColor: rgb(234, 241, 246)
   text: Slovak registrar with its own data centre.
 ai: authored
 ---

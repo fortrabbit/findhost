@@ -58,8 +58,8 @@ sources:
   - { field: supportChannels, url: 'https://rocket.net/pricing/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🚀
-  color: rgb(25, 30, 60)
-  textColor: rgb(185, 195, 255)
+  color: rgb(69, 83, 166)
+  textColor: rgb(234, 235, 246)
   text: A CDN that grew a WordPress host.
 ai: authored
 ---

@@ -35,8 +35,8 @@ sources:
   - { field: exitWithin, url: 'https://www.hostgator.com/tos', checkedAt: 2026-08-02 }
 figure:
   emoji: 🐊
-  color: rgb(167, 136, 92)
-  textColor: rgb(85, 63, 33)
+  color: rgb(157, 124, 77)
+  textColor: rgb(245, 241, 234)
   text: Don't feed the alligators.
 ---
 

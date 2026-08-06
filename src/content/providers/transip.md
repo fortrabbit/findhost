@@ -67,8 +67,8 @@ sources:
   - { field: urls, url: 'https://www.transip.nl/algemene-voorwaarden/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🌷
-  color: rgb(15, 55, 50)
-  textColor: rgb(175, 230, 215)
+  color: rgb(50, 184, 168)
+  textColor: rgb(234, 246, 244)
   text: Registrar first, cloud second.
 ai: authored
 ---

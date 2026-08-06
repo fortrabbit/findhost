@@ -67,8 +67,8 @@ sources:
   - { field: pricingModel, url: 'https://www.mydevil.net', checkedAt: 2026-08-01 }
 figure:
   emoji: 😈
-  color: rgb(55, 20, 30)
-  textColor: rgb(255, 190, 190)
+  color: rgb(172, 63, 94)
+  textColor: rgb(246, 234, 237)
   text: Shared hosting with a shell on every plan.
 ai: authored
 ---

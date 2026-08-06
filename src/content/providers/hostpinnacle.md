@@ -30,8 +30,8 @@ sources:
   - { field: software, url: 'https://www.hostpinnacle.co.ke', checkedAt: 2026-08-04 }
 figure:
   emoji: 🇰🇪
-  color: rgb(30, 90, 60)
-  textColor: rgb(220, 240, 220)
+  color: rgb(59, 176, 117)
+  textColor: rgb(234, 246, 240)
   text: cPanel hosting out of Nairobi.
 ai: authored
 ---

@@ -67,8 +67,8 @@ sources:
   - { field: audience, url: 'https://render.com/', checkedAt: 2026-07-31 }
 figure:
   emoji: 🎨
-  color: rgb(72, 209, 204)
-  textColor: rgb(10, 50, 10)
+  color: rgb(47, 187, 182)
+  textColor: rgb(234, 246, 245)
   text: Git push to a managed container.
 ---
 

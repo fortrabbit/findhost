@@ -56,8 +56,8 @@ sources:
   - { field: apiAvailable, url: 'https://api.vultr.com/v2/regions', checkedAt: 2026-07-31 }
 figure:
   emoji: 🦅
-  color: rgb(0, 120, 200)
-  textColor: rgb(220, 220, 255)
+  color: rgb(45, 132, 190)
+  textColor: rgb(234, 241, 246)
   text: No cage required.
 ---
 

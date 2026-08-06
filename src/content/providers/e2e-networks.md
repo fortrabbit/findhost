@@ -55,8 +55,8 @@ sources:
   - { field: ownership, url: 'https://www.e2enetworks.com/about-us', checkedAt: 2026-08-01 }
 figure:
   emoji: 🇮🇳
-  color: rgb(55, 35, 15)
-  textColor: rgb(255, 215, 165)
+  color: rgb(184, 117, 50)
+  textColor: rgb(246, 240, 234)
   text: A listed cloud, priced by the minute.
 ai: authored
 ---

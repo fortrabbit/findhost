@@ -62,8 +62,8 @@ sources:
   - { field: exitWithin, url: 'https://cpanel.net/pricing/', checkedAt: 2026-08-02 }
 figure:
   emoji: 🎛️
-  color: rgb(50, 30, 15)
-  textColor: rgb(250, 210, 165)
+  color: rgb(180, 108, 54)
+  textColor: rgb(246, 239, 234)
   text: Per-server licence, per-account price.
 ai: authored
 ---

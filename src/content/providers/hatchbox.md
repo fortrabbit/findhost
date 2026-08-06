@@ -61,8 +61,8 @@ sources:
   - { field: freeTier, url: 'https://www.hatchbox.io/pricing', checkedAt: 2026-08-01 }
 figure:
   emoji: 🛤️
-  color: rgb(60, 25, 25)
-  textColor: rgb(250, 195, 190)
+  color: rgb(166, 69, 69)
+  textColor: rgb(246, 234, 234)
   text: Rails deploys, on servers you rent.
 ai: authored
 ---

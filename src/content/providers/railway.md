@@ -73,8 +73,8 @@ sources:
   - { field: supportTiering, url: 'https://docs.railway.com/reference/support', checkedAt: 2026-07-31 }
 figure:
   emoji: 🚂
-  color: rgb(105, 105, 105)
-  textColor: rgb(255, 255, 255)
+  color: rgb(157, 77, 77)
+  textColor: rgb(245, 234, 234)
   text: All aboard the complexity express.
 ---
 

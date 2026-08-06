@@ -76,8 +76,8 @@ sources:
   - { field: exitWithin, url: 'https://www.scaleway.com/en/pricing/virtual-instances/', checkedAt: 2026-08-02 }
 figure:
   emoji: 🐿️
-  color: rgb(45, 25, 55)
-  textColor: rgb(225, 190, 250)
+  color: rgb(132, 73, 161)
+  textColor: rgb(242, 234, 245)
   text: Dedibox grew up into a cloud.
 ai: authored
 ---

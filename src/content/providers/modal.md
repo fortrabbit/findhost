@@ -61,8 +61,8 @@ sources:
   - { field: pricingModel, url: 'https://modal.com/pricing', checkedAt: 2026-08-01 }
 figure:
   emoji: 🎛️
-  color: rgb(20, 45, 40)
-  textColor: rgb(160, 240, 200)
+  color: rgb(72, 162, 144)
+  textColor: rgb(234, 246, 243)
   text: A decorator, then a GPU.
 ai: authored
 ---

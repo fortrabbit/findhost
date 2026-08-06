@@ -60,8 +60,8 @@ sources:
   - { field: apiAvailable, url: 'https://api.linode.com/v4/regions', checkedAt: 2026-07-31 }
 figure:
   emoji: 🇺🇸
-  color: rgb(30, 85, 158)
-  textColor: rgb(230, 285, 255)
+  color: rgb(45, 107, 190)
+  textColor: rgb(234, 239, 246)
   text: VPS from US by Akamai.
 ---
 

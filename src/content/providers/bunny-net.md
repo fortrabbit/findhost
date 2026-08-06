@@ -61,8 +61,8 @@ sources:
   - { field: founded, url: 'https://bunny.net/about/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🐰
-  color: rgb(50, 25, 45)
-  textColor: rgb(250, 195, 235)
+  color: rgb(157, 77, 141)
+  textColor: rgb(245, 234, 243)
   text: A CDN that started running code.
 ai: authored
 ---

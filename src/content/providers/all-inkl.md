@@ -62,8 +62,8 @@ supportChannels:
 supportHours: 24-7
 figure:
   emoji: 🧰
-  color: rgb(70, 45, 15)
-  textColor: rgb(240, 210, 160)
+  color: rgb(190, 124, 45)
+  textColor: rgb(246, 240, 234)
   text: All inclusive, says the name.
 ai: authored
 ---

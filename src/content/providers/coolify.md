@@ -50,8 +50,8 @@ sources:
   - { field: apiAvailable, url: 'https://coolify.io/', checkedAt: 2026-07-31 }
 figure:
   emoji: 🐋
-  color: rgb(0, 120, 140)
-  textColor: rgb(230, 255, 255)
+  color: rgb(45, 169, 190)
+  textColor: rgb(234, 244, 246)
   text: DIY PaaS, DIY ops.
 ---
 

@@ -109,8 +109,8 @@ sources:
 publishedByUs: true
 figure:
   emoji: 🐰
-  color: rgb(176, 62, 192)
-  textColor: rgb(240, 240, 244)
+  color: rgb(163, 57, 177)
+  textColor: rgb(244, 234, 246)
   text: As secure as Fort Knox, as fast as a rabbit.
 ---
 

@@ -66,8 +66,8 @@ sources:
   - { field: supportChannels, url: 'https://king.host/hospedagem-de-sites', checkedAt: 2026-08-01 }
 figure:
   emoji: 👑
-  color: rgb(70, 25, 55)
-  textColor: rgb(250, 205, 235)
+  color: rgb(173, 62, 136)
+  textColor: rgb(246, 234, 242)
   text: Shared hosting that admits Java exists.
 ai: authored
 ---

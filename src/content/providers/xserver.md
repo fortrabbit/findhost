@@ -60,8 +60,8 @@ sources:
   - { field: contractMinimum, url: 'https://www.xserver.ne.jp/price/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🎌
-  color: rgb(55, 25, 35)
-  textColor: rgb(255, 200, 205)
+  color: rgb(161, 73, 103)
+  textColor: rgb(245, 234, 238)
   text: A rental server, Japanese style.
 ai: authored
 ---

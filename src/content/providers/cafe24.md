@@ -23,8 +23,8 @@ sources:
   - { field: software, url: 'https://hosting.cafe24.com', checkedAt: 2026-08-04 }
 figure:
   emoji: 🇰🇷
-  color: rgb(30, 40, 80)
-  textColor: rgb(210, 220, 245)
+  color: rgb(64, 85, 171)
+  textColor: rgb(234, 236, 246)
   text: Hosting that grew into a shopping-mall platform.
 ai: authored
 ---

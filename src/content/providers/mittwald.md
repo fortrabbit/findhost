@@ -87,8 +87,8 @@ social:
   linkedin: https://de.linkedin.com/company/mittwald
 figure:
   emoji: 🏗️
-  color: rgb(20, 40, 90)
-  textColor: rgb(180, 205, 255)
+  color: rgb(45, 86, 190)
+  textColor: rgb(234, 237, 246)
   text: Agency plumbing, documented.
 ai: authored
 ---

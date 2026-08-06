@@ -23,8 +23,8 @@ sources:
   - { field: billingPeriods, url: 'https://www.jimdo.com/pricing/website/', checkedAt: 2026-08-02 }
 figure:
   emoji: 🪴
-  color: rgb(80, 120, 80)
-  textColor: rgb(210, 240, 210)
+  color: rgb(77, 157, 77)
+  textColor: rgb(234, 245, 234)
   text: Small sites.
 ---
 

@@ -58,8 +58,8 @@ sources:
   - { field: supportHours, url: 'https://pressable.com/knowledgebase/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🅰️
-  color: rgb(30, 45, 60)
-  textColor: rgb(185, 220, 245)
+  color: rgb(77, 117, 157)
+  textColor: rgb(234, 240, 245)
   text: Automattic's other WordPress host.
 ai: authored
 ---

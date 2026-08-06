@@ -33,8 +33,8 @@ sources:
   - { field: runsOn, url: 'https://manual.bubble.io/help-guides/optimizing-an-application/hosting-and-scaling/how-bubble-hosting-works', checkedAt: 2026-08-01 }
 figure:
   emoji: 🫧
-  color: rgb(70, 110, 120)
-  textColor: rgb(200, 240, 245)
+  color: rgb(77, 141, 157)
+  textColor: rgb(234, 243, 245)
   text: No code in, no code out.
 ---
 

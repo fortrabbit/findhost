@@ -34,8 +34,8 @@ sources:
   - { field: urls, url: 'https://www.weebly.com/terms-of-service', checkedAt: 2026-08-01 }
 figure:
   emoji: 🧰
-  color: rgb(120, 100, 70)
-  textColor: rgb(230, 210, 180)
+  color: rgb(157, 125, 77)
+  textColor: rgb(245, 241, 234)
   text: Simple tools, small jobs.
 ---
 
