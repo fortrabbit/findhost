@@ -71,6 +71,7 @@ const subjects: Record<string, string> = {
       'resells-iaas': "resell someone else's hardware",
       'byo-iaas': 'run on hardware you bring',
     }[value.id] ?? value.label.toLowerCase(),
+  currencies: `bill in ${value.label}`,
   ownership: `are ${value.label.toLowerCase()}`,
   included:
     {

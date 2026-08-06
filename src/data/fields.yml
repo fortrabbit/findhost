@@ -38,7 +38,7 @@
   label: Ownership
   group: Identity
   facet: ownership
-  filterOrder: 17
+  filterOrder: 18
   values:
     - { id: independent, label: Independent }
     - { id: vc-backed, label: VC-backed }
@@ -97,7 +97,7 @@
   label: OS
   group: Classification
   facet: os-managed-by
-  filterOrder: 14
+  filterOrder: 15
   values:
     - { id: you, label: 'You' }
     - { id: provider, label: 'Provider' }
@@ -108,7 +108,7 @@
   label: Metal
   group: Classification
   facet: hardware
-  filterOrder: 15
+  filterOrder: 16
   multiple: true
   values:
     - { id: owns-metal, label: Owns the hardware, short: Owns }
@@ -320,7 +320,7 @@
   group: Tech stack
   facet: ssh
   ordered: true
-  filterOrder: 13
+  filterOrder: 14
   values:
     - { id: none, label: None, noFilter: true }
     - { id: jailed, label: Jailed shell, short: Jailed }
@@ -402,9 +402,14 @@
   group: Pricing
   valuesFrom: priceFrom
 
+# Billing currency, which is the other half of how local a provider is: a
+# European buyer charged in dollars carries the conversion and the card fee, and
+# neither shows up on the price page.
 - id: currencies
   label: Currencies
   group: Pricing
+  facet: currencies
+  filterOrder: 13
   multiple: true
   values:
     - { id: USD, label: USD }
@@ -452,7 +457,7 @@
   group: Pricing
   facet: exit
   ordered: true
-  filterOrder: 16
+  filterOrder: 17
   values:
     - { id: a-day, label: Within a day }
     - { id: a-month, label: Within a month }

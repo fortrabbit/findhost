@@ -45,12 +45,13 @@ const seenFacet = new Set<string>();
 const seenOrder = new Map<number, string>();
 
 /*
- * `regions` is the exception to the URL-safety rule below and the only one. Its
- * values are ISO 3166 codes, which are conventionally uppercase and are used as
- * such wherever the dataset is read as data — so /regions/DE/ is the URL. Any
- * new facet takes lowercase ids.
+ * The exceptions to the URL-safety rule below, and the only kind there will be:
+ * fields whose values are ISO codes. 3166 for regions, 4217 for currencies. Both
+ * are conventionally uppercase and are used as such wherever the dataset is read
+ * as data, so /regions/DE/ and /currencies/EUR/ are the URLs. A facet whose
+ * values are words takes lowercase ids.
  */
-const uppercaseIds = new Set(['regions']);
+const uppercaseIds = new Set(['regions', 'currencies']);
 
 for (const field of fields) {
   if (seenField.has(field.id)) fail(dictionaryFile, `duplicate entry for "${field.id}"`);
