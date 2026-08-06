@@ -1,7 +1,7 @@
 import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
 import { z } from 'zod';
-import { vocabulary } from './lib/fields';
+import { asideOf, vocabulary } from './lib/fields';
 
 /**
  * This file is a governance artifact, not a type definition.
@@ -308,19 +308,24 @@ const providerFields = z
     publishedByUs: z.boolean().optional(),
   })
   /*
-   * The required-field rule, which only a listed record has to satisfy. Hiding
-   * a record is how an unfinished one is admitted without lowering the bar for
-   * the ones on show, and an out-of-scope record has to name the criterion it
+   * The required-field rule, which only a record in the register has to satisfy.
+   * Hiding a record is how an unfinished one is admitted without lowering the bar
+   * for the ones on show, and an out-of-scope record has to name the criterion it
    * failed — otherwise "not listed" is an assertion rather than a decision.
+   *
+   * A record beside the register is exempt for a different reason: a company that
+   * owns hosting brands without selling hosting has no category, and demanding
+   * one would mean inventing it.
    */
   .superRefine((record, ctx) => {
     const hidden = record.status === 'draft' || record.status === 'out-of-scope';
+    const beside = asideOf.has(String(record.status));
 
-    if (!hidden && !record.category?.length) {
+    if (!hidden && !beside && !record.category?.length) {
       ctx.addIssue({
         code: 'custom',
         path: ['category'],
-        message: 'Required unless the record is draft or out-of-scope',
+        message: 'Required unless the record is a stub, out of scope, or beside the register',
       });
     }
 

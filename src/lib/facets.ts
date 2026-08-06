@@ -1,5 +1,6 @@
 import { facetFields, isDerived, slugOf, type Field } from './fields';
-import { isListed, loadDefunctProviders, loadProviders } from './providers';
+import { asideGroup, isListed, loadAsideProviders, loadProviders } from './providers';
+import { asideOf } from './fields';
 import { getCollection } from 'astro:content';
 
 export interface FacetValue {
@@ -125,11 +126,27 @@ export async function loadDrafts(): Promise<ProviderRow[]> {
     .sort(byName);
 }
 
-/** The ones that have stopped trading, for the filter that puts them back. */
-export async function loadDefunct(): Promise<ProviderRow[]> {
-  return (await loadDefunctProviders())
-    .map((record) => ({ ...toRow(record as never), status: String(record.data.status) }))
-    .sort(byName);
+export interface Aside {
+  /** The group's id, which is also the checkbox's value. */
+  key: string;
+  /** What the checkbox says. */
+  label: string;
+  rows: ProviderRow[];
+}
+
+/** The groups beside the register, each with the records that belong to it. */
+export async function loadAsides(): Promise<Aside[]> {
+  const groups = new Map<string, Aside>();
+
+  for (const record of await loadAsideProviders()) {
+    const key = asideGroup(record)!;
+    const label = asideOf.get(String(record.data.status))!.label;
+    const group = groups.get(key) ?? { key, label, rows: [] };
+    group.rows.push({ ...toRow(record as never), status: String(record.data.status) });
+    groups.set(key, group);
+  }
+
+  return [...groups.values()].map((group) => ({ ...group, rows: group.rows.sort(byName) }));
 }
 
 function countValues(field: Field, providers: ProviderRow[]): Facet {

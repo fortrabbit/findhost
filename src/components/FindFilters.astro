@@ -1,16 +1,16 @@
 ---
 import FindFacet from './FindFacet.astro';
-import type { Facet } from '../lib/facets';
+import type { Aside, Facet } from '../lib/facets';
 
 interface Props {
   facets: Facet[];
   /** How many hidden records exist. Zero means the row is not offered at all. */
   drafts: number;
-  /** How many have stopped trading. Same rule: no row where there is nothing to show. */
-  defunct: number;
+  /** The groups beside the register, one row each. Same rule: no row where there is nothing to show. */
+  asides: Aside[];
 }
 
-const { facets, drafts, defunct } = Astro.props;
+const { facets, drafts, asides } = Astro.props;
 
 /*
  * The filter panel, as markup rather than as DOM built in a loop. find.ts used
@@ -42,25 +42,25 @@ const { facets, drafts, defunct } = Astro.props;
     }
 
     {
-      (drafts > 0 || defunct > 0) && (
+      (drafts > 0 || asides.length > 0) && (
         <div class="find-facet find-drafts">
           <h2 class="find-facet-title">
             <span>Other</span>
           </h2>
 
           <div class="find-values">
-            {defunct > 0 && (
+            {asides.map((aside) => (
               <div class="find-row">
                 <label>
-                  <input type="checkbox" data-defunct autocomplete="off" disabled />
-                  <span class="find-value">Defunct</span>
+                  <input type="checkbox" data-aside={aside.key} autocomplete="off" disabled />
+                  <span class="find-value">{aside.label}</span>
                 </label>
                 <span class="find-count">
-                  {defunct}
+                  {aside.rows.length}
                   <span class="visually-hidden"> records</span>
                 </span>
               </div>
-            )}
+            ))}
 
             {drafts > 0 && (
               <div class="find-row">
@@ -80,7 +80,8 @@ const { facets, drafts, defunct } = Astro.props;
           </div>
 
           <p class="find-facet-foot">
-            Providers that have stopped trading, and records started or ruled out. None are counted.
+            Providers that stopped, companies that own hosting brands without selling any, and records started or
+            ruled out. None are counted.
           </p>
         </div>
       )

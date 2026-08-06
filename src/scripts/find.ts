@@ -148,11 +148,11 @@ if (styleEl && resultsEl) {
 
 if (filtersEl && resultsEl && summaryEl) {
   const response = await fetch('/providers.json');
-  const { facets, providers, drafts, defunct } = (await response.json()) as {
+  const { facets, providers, drafts, asides } = (await response.json()) as {
     facets: Facet[];
     providers: ProviderRow[];
     drafts: ProviderRow[];
-    defunct: ProviderRow[];
+    asides: { key: string; label: string; rows: ProviderRow[] }[];
   };
 
   /*
@@ -163,13 +163,26 @@ if (filtersEl && resultsEl && summaryEl) {
   let showDrafts = false;
 
   /*
-   * The ones that have stopped. Kept out of the register for the same reason and
-   * offered back for a different one: a stub is work we have not finished, and a
-   * defunct provider is a finished fact about the market. Both are shown as
-   * themselves rather than filtered, because a dead host answers few fields and
-   * would drop out on the first tick as though it had been checked.
+   * The groups beside the register, by key. Kept out of it for the same reason as
+   * a stub and offered back for a different one: a stub is work we have not
+   * finished, while a provider that stopped, or a parent that never sold hosting,
+   * is a finished fact about the market. All of them are shown as themselves
+   * rather than filtered — they answer few fields, and would drop out on the
+   * first tick as though somebody had checked.
    */
-  let showDefunct = false;
+  const shownAsides = new Set<string>();
+
+  /* What each group is called where it is appended, and why it is not counted. */
+  const asideCopy: Record<string, { heading: string; note: string }> = {
+    defunct: {
+      heading: 'No longer trading',
+      note: 'Providers that have stopped. They keep their records and their pages, and they are not part of the count above — a register of hosting you can buy today has to mean today.',
+    },
+    unlisted: {
+      heading: 'Owns hosting brands, sells none',
+      note: 'Companies that own hosting brands without selling hosting under their own name. They have no runtimes, no regions and no price to record, so they are here to be found rather than compared.',
+    },
+  };
 
   const selected = new Map<string, Set<string>>();
 
@@ -254,11 +267,13 @@ if (filtersEl && resultsEl && summaryEl) {
       renderResults();
     });
 
-    const defunctBox = filtersEl.querySelector<HTMLInputElement>('input[data-defunct]');
-    defunctBox?.addEventListener('change', () => {
-      showDefunct = defunctBox.checked;
-      renderResults();
-    });
+    for (const box of filtersEl.querySelectorAll<HTMLInputElement>('input[data-aside]')) {
+      box.addEventListener('change', () => {
+        if (box.checked) shownAsides.add(box.dataset.aside!);
+        else shownAsides.delete(box.dataset.aside!);
+        renderResults();
+      });
+    }
 
     for (const input of filtersEl.querySelectorAll<HTMLInputElement>('input[disabled]')) input.disabled = false;
 
@@ -350,12 +365,10 @@ if (filtersEl && resultsEl && summaryEl) {
       resultsEl.append(section);
     };
 
-    if (showDefunct) {
-      appendAside(
-        defunct,
-        'No longer trading',
-        'Providers that have stopped. They keep their records and their pages, and they are not part of the count above — a register of hosting you can buy today has to mean today.',
-      );
+    for (const aside of asides) {
+      if (!shownAsides.has(aside.key)) continue;
+      const copy = asideCopy[aside.key];
+      appendAside(aside.rows, copy?.heading ?? aside.label, copy?.note ?? 'Not part of the count above.');
     }
 
     if (showDrafts) {

@@ -1,5 +1,5 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
-import { defunctStatuses, hiddenStatuses } from './fields';
+import { asideOf, hiddenStatuses } from './fields';
 
 /*
  * Two statuses hide a record, and which two is `hidden: true` in the dictionary
@@ -20,16 +20,16 @@ export function isListed(provider: Provider): boolean {
 }
 
 /**
- * A provider that has stopped trading. Out of the register and out of its
- * counts, because "156 hosting providers" has to mean 156 a reader could buy
- * from today — and back in through a filter, because what happened to a host
- * people used is one of the more useful things a register can say.
+ * Which group a record sits beside the register in, or nothing if it is in the
+ * register. Out of the count either way — "156 hosting providers" has to mean
+ * 156 a reader could buy from today — and back in through a checkbox, because
+ * what happened to a host people used, and why a name people know is missing,
+ * are both things a register should be able to answer.
  *
- * Unlike a stub it keeps everything else: the page is indexed, in the sitemap
- * and in search.
+ * Unlike a stub these keep everything else: indexed, in the sitemap, in search.
  */
-export function isDefunct(provider: Provider): boolean {
-  return defunctStatuses.has(provider.data.status ?? 'active');
+export function asideGroup(provider: Provider): string | undefined {
+  return asideOf.get(provider.data.status ?? 'active')?.key;
 }
 
 /**
@@ -38,12 +38,12 @@ export function isDefunct(provider: Provider): boolean {
  * remember. Only /<id>/ reads the collection whole.
  */
 export async function loadProviders(): Promise<Provider[]> {
-  return (await getCollection('providers')).filter((provider) => isListed(provider) && !isDefunct(provider));
+  return (await getCollection('providers')).filter((provider) => isListed(provider) && !asideGroup(provider));
 }
 
-/** The ones that have stopped, on their own — the same shape, never merged into the count. */
-export async function loadDefunctProviders(): Promise<Provider[]> {
-  return (await getCollection('providers')).filter((provider) => isListed(provider) && isDefunct(provider));
+/** The ones beside it, grouped — the same shape, never merged into the count. */
+export async function loadAsideProviders(): Promise<Provider[]> {
+  return (await getCollection('providers')).filter((provider) => isListed(provider) && asideGroup(provider));
 }
 
 /** Everything with an indexed page: the register plus the ones that stopped. Never the stubs. */

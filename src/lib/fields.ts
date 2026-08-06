@@ -24,10 +24,11 @@ export interface FieldValue {
   hidden?: boolean;
   /**
    * Out of the register by default and back in through a filter, keeping its
-   * page and its place in the index. Only `status` uses it: a provider that has
-   * stopped trading is not a gap in the data, it is a fact about the market.
+   * page and its place in the index. The value names the group it joins, so
+   * "stopped trading" and "never sold hosting" are two answers rather than one
+   * bucket. Only `status` uses it.
    */
-  defunct?: boolean;
+  aside?: string;
   /**
    * Recorded and shown on the record, but never offered as a filter. The absence
    * answers — no shell, no free tier — are facts worth checking and worth
@@ -190,9 +191,15 @@ export const hiddenStatuses = new Set(
   (fieldOf.get('status')?.values ?? []).filter((value) => value.hidden).map((value) => value.id),
 );
 
-/** Statuses that mean the service has stopped: off the register, still a page. */
-export const defunctStatuses = new Set(
-  (fieldOf.get('status')?.values ?? []).filter((value) => value.defunct).map((value) => value.id),
+/**
+ * Statuses that put a record beside the register rather than in it, each mapped
+ * to the group it joins. Off the count, still a page, offered back one checkbox
+ * at a time.
+ */
+export const asideOf = new Map(
+  (fieldOf.get('status')?.values ?? [])
+    .filter((value) => value.aside)
+    .map((value) => [value.id, { key: value.aside!, label: value.short ?? value.label }]),
 );
 
 /** Filterable field by URL segment. Throws, because a segment that names nothing is a bug, not an absence. */

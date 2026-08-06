@@ -8,6 +8,7 @@ import { readdirSync, readFileSync, existsSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import { parse as parseYaml } from 'yaml';
 import {
+  asideOf,
   borrowedFrom,
   dictionaryFile,
   facetFields,
@@ -299,6 +300,7 @@ const fieldNames = new Set(records.flatMap(({ data }) => (data ? Object.keys(dat
 // a rejected name is still published, and a field this dataset may never carry
 // is no more acceptable on a page nobody links to.
 let hidden = 0;
+let aside = 0;
 
 /*
  * A `sources` entry cites either a field, which earns a numbered marker beside
@@ -328,6 +330,7 @@ for (const { file, data } of records) {
   const slug = file.replace(/\.md$/, '');
 
   if (hiddenStatuses.has(String(data.status))) hidden += 1;
+  else if (asideOf.has(String(data.status))) aside += 1;
 
   if (data.id !== slug) {
     fail(file, `id "${String(data.id)}" does not match the filename — the id is the URL`);
@@ -441,5 +444,5 @@ if (errors.length) {
 }
 
 console.log(
-  `${files.length - hidden} listed records, ${hidden} hidden, ${fields.length} fields, ${facetFields.length} of them facets, no problems.`,
+  `${files.length - hidden - aside} in the register, ${aside} beside it, ${hidden} hidden, ${fields.length} fields, ${facetFields.length} of them facets, no problems.`,
 );

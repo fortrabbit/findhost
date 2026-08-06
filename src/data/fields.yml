@@ -63,12 +63,18 @@
     - { id: acquired, label: 'Acquired, still operating' }
     - { id: renamed, label: Renamed }
     - { id: winding-down, label: Winding down }
-    # `defunct` keeps a record out of the register by default and offers it back
-    # as a filter. Unlike `hidden` the page is indexed: what happened to a host
-    # people used is worth finding.
-    - { id: discontinued, label: Discontinued, defunct: true }
+    # `aside` keeps a record out of the register by default and offers it back
+    # as a filter of its own, one group per value. Unlike `hidden` the page is
+    # indexed: what happened to a host people used is worth finding, and so is
+    # why a name people know is not in the list.
+    - { id: discontinued, label: Discontinued, short: Defunct, aside: defunct }
     - { id: unverifiable, label: Unverifiable }
     - { id: delisted-on-request, label: Delisted on request }
+    # A company that owns hosting brands without selling hosting under its own
+    # name. It has no runtimes, no regions and no price, so it cannot be
+    # described by the fields here — but somebody looking for United Internet
+    # should find out that Ionos is the part that sells hosting.
+    - { id: unlisted, label: 'Owns hosting brands, sells none', short: Unlisted, aside: unlisted }
     # `hidden` keeps a record out of the register and out of every count. It is
     # the only place that fact is written down.
     - { id: draft, label: Stub, hidden: true }
