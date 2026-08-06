@@ -57,7 +57,7 @@ sources:
   - { field: infraContract, url: 'https://gridpane.com/pricing/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🧯
-  color: rgb(45, 25, 40)
+  color: rgb(85, 75, 90)
   textColor: rgb(245, 195, 230)
   text: WordPress servers, on your own cloud account.
 ai: authored

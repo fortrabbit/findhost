@@ -658,10 +658,29 @@ html.js [data-find-fallback] {
   margin: 0;
 }
 
+/**
+ * A title with something beside it: the record's country and energy mark, or a
+ * value page's way back to the register. Baseline-aligned, so the small thing
+ * sits on the heading's line rather than near it.
+ */
+.page-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-sm) var(--space-md);
+}
+
+.page-head > h1 {
+  flex: 1;
+  min-width: 0;
+}
+
 /* The way from a page that means one value to the register, where values combine. */
 .find-onward {
-  margin: 0 0 var(--space-lg);
+  flex: none;
+  margin: 0;
   font-size: var(--text-md);
+  white-space: nowrap;
 }
 
 .find-facet-title {

@@ -131,12 +131,17 @@ const figure = note?.data.figure;
   description={note?.data.description ??
     `Providers where ${facet.label.toLowerCase()} is ${value.label.toLowerCase()}.`}
 >
-  <h1>{value.label}</h1>
+  <div class="page-head">
+    <h1>{value.label}</h1>
+    <a class="find-onward" href={`/?${facet.id}=${value.id}`}>Combine filters →</a>
+  </div>
 
-  <p class="annotation">{counted}</p>
   <PageFigure figure={figure} />
 
   {Note && <Note />}
+
+  {/* What we know about the set, after what a person wrote about it. */}
+  <p class="annotation">{counted}</p>
 
   <ProviderRegister
     providers={matches}
