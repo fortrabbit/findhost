@@ -46,7 +46,6 @@ currencies:
 billingPeriods:
   - hourly
   - monthly
-exitWithin: a-day
 billingTiming: arrears
 entryPrice: { amount: 2.7, currency: USD, period: month }
 freeTier: permanent

@@ -31,7 +31,6 @@ currencies:
 billingPeriods:
   - hourly
   - monthly
-exitWithin: a-day
 regions:
   - US
   - NL

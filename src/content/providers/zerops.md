@@ -61,7 +61,6 @@ currencies:
 billingPeriods:
   - hourly
   - monthly
-exitWithin: a-day
 billingTiming: advance
 freeTier: trial
 regions:

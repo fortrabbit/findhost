@@ -14,7 +14,6 @@ runtimes:
 sshAccess: root
 billingPeriods:
   - hourly
-exitWithin: a-day
 apiAvailable: public
 regions:
   - FI

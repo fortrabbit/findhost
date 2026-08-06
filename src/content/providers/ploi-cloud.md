@@ -36,7 +36,6 @@ currencies:
 billingPeriods:
   - hourly
   - monthly
-exitWithin: a-day
 freeTier: trial
 regions:
   - NL

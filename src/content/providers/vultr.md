@@ -19,7 +19,6 @@ priceTo: xl
 billingPeriods:
   - hourly
   - monthly
-exitWithin: a-day
 entryPrice: { amount: 2.5, currency: USD, period: month }
 regions:
   - US

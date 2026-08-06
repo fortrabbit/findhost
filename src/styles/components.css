@@ -286,7 +286,7 @@
   padding-top: 0;
   align-items: flex-start;
   gap: var(--space-md);
-  border-top: var(--rule-strong) solid var(--color-ink);
+  border-top: var(--rule-hairline) solid var(--color-ink);
 }
 
 .slim .letter-group {
@@ -424,15 +424,6 @@
 
   align-items: center;
   padding: var(--space-2xs) 0;
-}
-
-/*
- * Close the table. Every letter group opens with a rule and nothing closed the
- * last one, so the list trailed off into the page — unnoticeable under 156 rows
- * and the whole of the page on a value with one.
- */
-[data-find-results] {
-  border-bottom: var(--rule-hairline) solid var(--color-ink);
 }
 
 /* The link out of the list is not the last row of it. */

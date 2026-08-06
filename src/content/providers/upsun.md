@@ -43,7 +43,6 @@ currencies:
 billingPeriods:
   - hourly
   - monthly
-exitWithin: a-day
 billingTiming: arrears
 freeTier: trial
 regions:

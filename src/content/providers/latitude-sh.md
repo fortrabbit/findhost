@@ -37,7 +37,6 @@ billingPeriods:
   - hourly
   - monthly
   - yearly
-exitWithin: a-day
 billingTiming: arrears
 freeTier: none
 regions:

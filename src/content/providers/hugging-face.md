@@ -39,7 +39,6 @@ currencies:
 billingPeriods:
   - hourly
   - monthly
-exitWithin: a-day
 freeTier: permanent
 persistentStorage: false
 apiAvailable: public

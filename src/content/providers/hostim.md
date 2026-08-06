@@ -22,7 +22,6 @@ currencies:
 billingPeriods:
   - hourly
   - monthly
-exitWithin: a-day
 billingTiming: arrears
 pricingModel: fixed-tier
 freeTier: trial
