@@ -125,6 +125,7 @@
 
 /** Something true about our data or our process rather than about a provider. */
 .annotation {
+  margin-bottom: var(--space-md);
   font-size: var(--text-sm);
 }
 
@@ -363,37 +364,32 @@
 }
 
 /*
- * The name and its count on one line, whatever describes it on the next. A
- * gloss is a sentence, and given the same line as a right-aligned number it ran
- * straight into it: the row read as one string with a digit in the middle.
+ * Name, then what it means, then how many — the count against the right edge
+ * where a column of them can be compared. Only the name is a link: a gloss and a
+ * number underlined as well would make every row three links to one page.
  */
 .stack-list > li {
-  padding: var(--space-xs) 0;
-  border-top: var(--rule-hairline) solid var(--color-ink);
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  column-gap: var(--space-sm);
+  column-gap: var(--space-md);
+  padding: var(--space-xs) 0;
+  border-top: var(--rule-hairline) solid var(--color-ink);
 }
 
-.stack-list > li > span {
-  margin-left: auto;
-}
-
-.stack-list > li > p {
-  flex-basis: 100%;
+.stack-lead {
+  flex: 1;
+  min-width: 12rem;
   max-width: var(--measure-prose);
-  margin: var(--space-3xs) 0 0;
   font-size: var(--text-sm);
+}
+
+.stack-list > li > .entry-count {
+  margin-left: auto;
 }
 
 .stack-list > li:last-child {
   border-bottom: var(--rule-hairline) solid var(--color-ink);
-}
-
-.stack-list p {
-  margin: var(--space-3xs) 0 0;
-  font-size: var(--text-sm);
 }
 
 .provider-list {
@@ -730,18 +726,18 @@ html.js [data-find-fallback] {
 }
 
 /** A count, not a score — mono so it reads as data, and a link to the page behind it. */
+/*
+ * The count is the link to that value's page, so it is drawn as one — colour and
+ * underline, like every other link on the site. It used to opt out of both and
+ * underline on hover, which made the only way into 181 pages look like a label
+ * until the pointer happened to cross it.
+ */
 .find-count,
 .find-jump {
   margin-left: auto;
   font-family: var(--font-data);
   font-size: var(--text-xs);
   font-variant-numeric: tabular-nums;
-  text-decoration: none;
-}
-
-.find-count:hover,
-.find-jump:hover {
-  text-decoration: underline;
 }
 
 /* One line of small print under the list: what it is hiding, and what it never knew. */

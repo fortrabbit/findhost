@@ -1,5 +1,5 @@
 import { facetFields, isDerived, slugOf, type Field } from './fields';
-import { isListed, loadProviders } from './providers';
+import { isListed, loadDefunctProviders, loadProviders } from './providers';
 import { getCollection } from 'astro:content';
 
 export interface FacetValue {
@@ -122,6 +122,13 @@ export async function loadDrafts(): Promise<ProviderRow[]> {
       ...toRow(record as never),
       status: String(record.data.status),
     }))
+    .sort(byName);
+}
+
+/** The ones that have stopped trading, for the filter that puts them back. */
+export async function loadDefunct(): Promise<ProviderRow[]> {
+  return (await loadDefunctProviders())
+    .map((record) => ({ ...toRow(record as never), status: String(record.data.status) }))
     .sort(byName);
 }
 

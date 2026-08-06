@@ -2,18 +2,28 @@
 layout: ../layouts/Article.astro
 title: About
 figure:
-  emoji: 🫨
-  color: rgb(255, 200, 0)
-  textColor: rgb(120, 70, 0)
-  text: Fast, cheap, good — choose any two.
+  emoji: 🍋
+  color: rgb(255, 250, 0)
+  textColor: rgb(165, 135, 60)
+  text: The web hosting market is a "lemon market" where sellers have more information than buyers.
 description: Who publishes this, what the rules are, and how it is made.
 lead: Most "best web hosting lists" are ordered by affiliate commission, making independent hosting providers invisible. This website exists to give developers better choices to select a web host, large or small.
 ---
 
+The above is quote by David N. Welton. Three things follow from that, and they explain most of what makes choosing hard.
 
 ## Publisher
 
 I am [Frank Lämmer](https://www.franklaemmer.de), co-founder of a small bootstrapped hosting provider called [fortrabbit](https://www.fortrabbit.com) which is also [featured here](/fortrabbit). The main data dates back to some competitor research I did for our new hosting platform in 2023. It was ported and extended to a 'hosting guide' on our fortrabbit website. But I found, it deserved its own space. So, here we are.
+
+## Issues finding a hosting provider
+
+**The vocabulary is blurry on purpose.** Shared hosting, VPS and IaaS are real distinctions that vendors smudge constantly, and the newer words are worse — is [serverless](/categories/serverless/) really server-less? This dataset answers with fields rather than adjectives. [Who manages the operating system](/operating-system/) and [whose hardware it runs on](/metal/) settle most of the argument on their own, because they stay answerable whatever a vendor decides to call the product.
+
+**Margins are thin, so providers compete on marketing.** Consumer hosting is the worst of it, where introductory pricing that triples on renewal is normal rather than exceptional. That is why a renewal multiple is recorded: it is checkable, and no affiliate site will publish it, because their revenue depends on the gap it exposes.
+
+**The advice is bought.** Search for "best web hosting" and nearly everything on the first page is ordered by commission — which means providers without an affiliate program, most of the small and independent ones, are simply absent. Hosting is also more local than English-language comparisons suggest. People in France host in France, and good providers never appear in those lists at all.
+
 
 ## Your benefits
 
@@ -38,15 +48,9 @@ If a provider meets all six and is not listed, that is a bug — open an issue. 
 
 Being out of scope is not a criticism. It means the dataset cannot describe something usefully: raw infrastructure with no managed runtime, anything priced only by sales conversation, a rebrand with no distinct platform behind it, anything younger than twelve months. Nothing is ever excluded for its price, performance, popularity, country, ownership, opinion of us, or for competing with fortrabbit. Poor quality is not an exclusion criterion — at most it is a sourced fact on the record.
 
-## Nothing is deleted
-
-A provider that dies, is acquired or leaves scope keeps its page with a dated status change. Deletion would let us quietly rewrite history, and for a dataset published by a competitor, removal is exactly the power that has to be given up. No change to discontinued or unverifiable takes effect for seven days after a public proposal, so an outage or a redesign cannot knock anyone off the list — least of all one of ours.
-
-Freshness is displayed rather than promised. Records carry the date they were last read, claims carry their own dates, and where no date exists the site says so instead of inferring one.
-
 ## Corrections
 
-Everything is tracked in Git and public on GitHub; the details are in [CONTRIBUTING.md](https://github.com/fortrabbit/findhost/blob/main/CONTRIBUTING.md). Three promises are worth stating here. A sourced factual correction may not be declined because a maintainer disagrees with it — adjudication is against the evidence, and where sources conflict both are recorded. An unsourced correction is not dropped either: it is confirmed or recorded as unverified. And affiliation must be disclosed at the point of contribution, which applies to vendors correcting their own entry as much as to anyone else.
+Everything is tracked in Git and public on GitHub. Three promises are worth stating here. A sourced factual correction may not be declined because a maintainer disagrees with it — adjudication is against the evidence, and where sources conflict both are recorded. An unsourced correction is not dropped either: it is confirmed or recorded as unverified. And affiliation must be disclosed at the point of contribution, which applies to vendors correcting their own entry as much as to anyone else.
 
 Changing the criteria above requires a public proposal open for fourteen days. Pre-committing to the process for changing the rules is the only thing that makes the rules worth anything.
 

@@ -23,6 +23,12 @@ export interface FieldValue {
   /** Excluded from the register and from every count. Only `status` uses it. */
   hidden?: boolean;
   /**
+   * Out of the register by default and back in through a filter, keeping its
+   * page and its place in the index. Only `status` uses it: a provider that has
+   * stopped trading is not a gap in the data, it is a fact about the market.
+   */
+  defunct?: boolean;
+  /**
    * Recorded and shown on the record, but never offered as a filter. The absence
    * answers — no shell, no free tier — are facts worth checking and worth
    * reading, and nobody has ever filtered a register down to the hosts that
@@ -182,6 +188,11 @@ export const isDerived = (id: string) => derivedFields.some((field) => field.id 
  */
 export const hiddenStatuses = new Set(
   (fieldOf.get('status')?.values ?? []).filter((value) => value.hidden).map((value) => value.id),
+);
+
+/** Statuses that mean the service has stopped: off the register, still a page. */
+export const defunctStatuses = new Set(
+  (fieldOf.get('status')?.values ?? []).filter((value) => value.defunct).map((value) => value.id),
 );
 
 /** Filterable field by URL segment. Throws, because a segment that names nothing is a bug, not an absence. */

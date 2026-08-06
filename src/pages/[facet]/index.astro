@@ -27,6 +27,10 @@ const annotation = [
   facet.unknown > 0 && `${facet.unknown} ${facet.unknown === 1 ? 'record does' : 'records do'} not record this field.`,
   facet.notApplicable > 0 &&
     `For a further ${facet.notApplicable} the question does not apply, so there is nothing to record.`,
+  /* The unused values were a second block of small print under the list saying the
+     same kind of thing. One sentence, in the one place the page keeps its counts. */
+  unused.length > 0 &&
+    `Defined but unused so far: ${unused.map((value) => value.label).join(', ')} — a value with no records is a gap in our coverage, not a statement about the market.`,
 ]
   .filter(Boolean)
   .join(' ');
@@ -65,22 +69,14 @@ const figure = note?.data.figure;
       inUse.map((value) => (
         <li>
           <a href={`/${facet.id}/${value.slug}/`}>{value.label}</a>
+          {leadOf.has(value.id) && <span class="stack-lead">{leadOf.get(value.id)}</span>}
           <span class="entry-count">
             {value.count}
             <span class="visually-hidden"> {value.count === 1 ? 'record' : 'records'}</span>
           </span>
-          {leadOf.has(value.id) && <p>{leadOf.get(value.id)}</p>}
         </li>
       ))
     }
   </ul>
 
-  {
-    unused.length > 0 && (
-      <p class="annotation">
-        Defined but unused so far: {unused.map((value) => value.label).join(', ')}. A value with no records is a gap in
-        our coverage, not a statement about the market.
-      </p>
-    )
-  }
 </Base>

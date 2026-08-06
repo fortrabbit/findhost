@@ -1,7 +1,7 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 import { facetIndex, loadFacets } from '../lib/facets';
-import { loadProviders } from '../lib/providers';
+import { loadIndexed } from '../lib/providers';
 
 /**
  * Hand-rolled rather than an integration: the route list is short, entirely
@@ -27,7 +27,7 @@ const staticPages = Object.keys(import.meta.glob('./**/*.{astro,md}'))
   .sort();
 export const GET: APIRoute = async ({ site }) => {
   const origin = site?.origin ?? '';
-  const providers = await loadProviders();
+  const providers = await loadIndexed();
   const { facets } = await loadFacets();
 
   const routes = [

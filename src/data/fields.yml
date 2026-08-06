@@ -63,7 +63,10 @@
     - { id: acquired, label: 'Acquired, still operating' }
     - { id: renamed, label: Renamed }
     - { id: winding-down, label: Winding down }
-    - { id: discontinued, label: Discontinued }
+    # `defunct` keeps a record out of the register by default and offers it back
+    # as a filter. Unlike `hidden` the page is indexed: what happened to a host
+    # people used is worth finding.
+    - { id: discontinued, label: Discontinued, defunct: true }
     - { id: unverifiable, label: Unverifiable }
     - { id: delisted-on-request, label: Delisted on request }
     # `hidden` keeps a record out of the register and out of every count. It is
