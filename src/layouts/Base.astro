@@ -99,7 +99,8 @@ const canonical = new URL(path, Astro.site ?? Astro.url).href;
         </div>
         {/* Hidden until the script that makes it work has run, so it is never a control that does nothing. */}
         <button class="theme-toggle" type="button" data-theme-toggle hidden>
-          <span data-theme-label>Dark</span>
+          <span class="theme-mark" aria-hidden="true">◑</span>
+          <span class="visually-hidden" data-theme-label>Switch theme</span>
         </button>
       </div>
     </footer>
@@ -130,10 +131,16 @@ const canonical = new URL(path, Astro.site ?? Astro.url).href;
        * An action, not a state. The label names what pressing it will do, so
        * aria-pressed — which announces what the button currently *is* — would
        * contradict it: "Dark, pressed" where the page is light.
+       *
+       * The glyph says the other half: which setting is in force. Upright is no
+       * setting at all, meaning the operating system decides; turned one way is
+       * light chosen, the other way dark. `data-setting` carries that to the
+       * stylesheet, which owns the angles and the transition.
        */
       const describe = () => {
         if (!toggle || !label) return;
-        label.textContent = dark() ? 'Light' : 'Dark';
+        toggle.dataset.setting = root.dataset.theme ?? 'system';
+        label.textContent = `Switch to ${dark() ? 'light' : 'dark'}`;
         toggle.title = `Switch to ${dark() ? 'light' : 'dark'}`;
       };
 

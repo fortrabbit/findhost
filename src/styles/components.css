@@ -58,15 +58,45 @@
 
 
 
+/**
+ * A half-filled circle, turned to say which setting is in force: upright for
+ * none, so the operating system decides; a quarter turn one way for light and
+ * the other for dark. The button still names an action — what pressing it will
+ * do — and the glyph carries the state, which is the half a label cannot hold
+ * without saying two things at once.
+ */
 .theme-toggle {
-  padding: var(--space-3xs) var(--space-xs);
+  display: inline-flex;
+  padding: var(--space-3xs) var(--space-2xs);
   border: var(--rule-hairline) solid var(--color-ink);
   border-radius: var(--radius);
   background: var(--color-page);
   color: var(--color-ink);
   font: inherit;
-  font-size: var(--text-xs);
+  line-height: 1;
   cursor: pointer;
+}
+
+.theme-mark {
+  display: inline-block;
+  font-size: var(--text-md);
+  line-height: 1;
+  transition: transform 0.25s ease;
+}
+
+.theme-toggle[data-setting='light'] .theme-mark {
+  transform: rotate(-90deg);
+}
+
+.theme-toggle[data-setting='dark'] .theme-mark {
+  transform: rotate(90deg);
+}
+
+/* A turning glyph is decoration; a reader who asked for stillness gets the angle without the journey. */
+@media (prefers-reduced-motion: reduce) {
+  .theme-mark {
+    transition: none;
+  }
 }
 
 .site-search {
