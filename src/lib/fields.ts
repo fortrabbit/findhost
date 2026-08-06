@@ -59,6 +59,13 @@ export interface Field {
    * list of unrelated names does not run anywhere and sorts by popularity.
    */
   ordered?: boolean;
+  /**
+   * The URL segment comes from the label rather than the id. Only `regions`
+   * needs it: the ids are ISO 3166 codes because that is what the data is read
+   * as everywhere else, but /regions/netherlands/ is the address a reader can
+   * guess and a search engine can read, and /regions/NL/ is not.
+   */
+  slugFromLabel?: boolean;
   filterOrder?: number;
   multiple: boolean;
   /** How the value is drawn where it is not a label lookup. */
@@ -193,6 +200,25 @@ export function vocabulary(id: string): [string, ...string[]] {
   const values = fieldOf.get(id)?.values ?? [];
   if (!values.length) throw new Error(`${id} has no vocabulary in ${dictionaryFile}`);
   return values.map((value) => value.id) as [string, ...string[]];
+}
+
+/**
+ * A value's URL segment. The id unless the field says otherwise — and where it
+ * does, the label with its accents folded, so Türkiye is /turkiye/ rather than a
+ * percent-encoded string nobody can read or type.
+ */
+export function slugOf(field: Field, value: { id: string; label: string }): string {
+  return field.slugFromLabel ? slugify(value.label) : value.id;
+}
+
+/** A readable URL segment from a reader's word for something. */
+export function slugify(text: string): string {
+  return text
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
 }
 
 /** The reader's word for a value. Falls back to the id, which is at least true. */

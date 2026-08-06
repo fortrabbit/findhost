@@ -526,6 +526,7 @@
   label: Regions
   group: Regions and law
   facet: regions
+  slugFromLabel: true
   filterOrder: 3
   multiple: true
   values:

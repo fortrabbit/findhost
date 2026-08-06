@@ -64,7 +64,7 @@ const figure = note?.data.figure;
     {
       inUse.map((value) => (
         <li>
-          <a href={`/${facet.id}/${value.id}/`}>{value.label}</a>
+          <a href={`/${facet.id}/${value.slug}/`}>{value.label}</a>
           <span class="entry-count">
             {value.count}
             <span class="visually-hidden"> {value.count === 1 ? 'record' : 'records'}</span>

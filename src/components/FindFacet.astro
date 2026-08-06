@@ -54,7 +54,7 @@ const missing = [
             <input type="checkbox" data-facet={facet.id} value={value.id} autocomplete="off" />
             <span class="find-value">{value.short ?? value.label}</span>
           </label>
-          <a class="find-count" href={`/${facet.id}/${value.id}/`}>
+          <a class="find-count" href={`/${facet.id}/${value.slug}/`}>
             {value.count}
             <span class="visually-hidden"> records, listed on their own page</span>
           </a>

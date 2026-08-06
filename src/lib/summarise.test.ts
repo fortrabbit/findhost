@@ -8,7 +8,7 @@ const facet = (id: string, field: string, values: string[]): Facet => ({
   label: id,
   field,
   multiple: false,
-  values: values.map((value) => ({ id: value, label: value, count: 0 })),
+  values: values.map((value) => ({ id: value, label: value, slug: value, count: 0 })),
   unknown: 0,
   notApplicable: 0,
 });

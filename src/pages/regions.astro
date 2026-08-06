@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import WorldMap from '../components/WorldMap.astro';
 import { countryPoints } from '../lib/map';
 import { loadProviders } from '../lib/providers';
+import { fieldOf, slugOf } from '../lib/fields';
 
 const providers = await loadProviders();
 
@@ -15,10 +16,13 @@ const regions = withRegions.flatMap((provider) => provider.data.regions ?? []);
  * Each country leads to its own page rather than to an anchor further down
  * this one, so the list exists once.
  */
+const regionField = fieldOf.get('regions')!;
+
 const byCountry = [...new Set(regions)]
   .filter((code) => countryPoints[code])
   .map((code) => ({
     code,
+    slug: slugOf(regionField, { id: code, label: countryPoints[code]!.label }),
     label: countryPoints[code]!.label,
     count: withRegions.filter((provider) => provider.data.regions?.includes(code)).length,
   }))
@@ -46,7 +50,7 @@ const unknown = providers.length - withRegions.length - notApplicable;
     weighted
     full
     caption={false}
-    linkPattern="/regions/{code}/"
+    linkPattern="/regions/{slug}/"
     label="Countries the providers in this dataset operate in"
   />
 
@@ -54,7 +58,7 @@ const unknown = providers.length - withRegions.length - notApplicable;
     {
       byCountry.map((country) => (
         <li>
-          <a href={`/regions/${country.code}/`}>{country.label}</a>
+          <a href={`/regions/${country.slug}/`}>{country.label}</a>
           <span class="entry-count">{country.count}</span>
         </li>
       ))

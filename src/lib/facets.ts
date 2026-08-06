@@ -1,10 +1,12 @@
-import { facetFields, isDerived, type Field } from './fields';
+import { facetFields, isDerived, slugOf, type Field } from './fields';
 import { isListed, loadProviders } from './providers';
 import { getCollection } from 'astro:content';
 
 export interface FacetValue {
   id: string;
   label: string;
+  /** The URL segment. The id for every facet but `regions`, where it is the country name. */
+  slug: string;
   /** The filter panel's version of the label, where the dictionary gives one. */
   short?: string;
   count: number;
@@ -136,6 +138,7 @@ function countValues(field: Field, providers: ProviderRow[]): Facet {
     .map((value) => ({
       id: value.id,
       label: value.label,
+      slug: slugOf(field, value),
       ...(value.short ? { short: value.short } : {}),
       count: known.filter((provider) => {
         const held = provider.facets[field.id];
@@ -185,7 +188,7 @@ export async function facetRoutes() {
     facet.values
       .filter((value) => value.count > 0)
       .map((value) => ({
-        params: { facet: facet.id, value: value.id },
+        params: { facet: facet.id, value: value.slug },
         props: {
           facet,
           value,

@@ -1,7 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
-import { fieldGroups, fieldOf, labelOf, type Field } from '../lib/fields';
+import { fieldGroups, fieldOf, labelOf, slugOf, type Field } from '../lib/fields';
 import { energy, flag, footnotes, price } from '../lib/record';
 import { isListed } from '../lib/providers';
 import SocialLinks from '../components/SocialLinks.astro';
@@ -78,7 +78,8 @@ function cells(field: Field, value: unknown): Cell[] {
   return (Array.isArray(value) ? value : [value]).map((entry) => {
     const label = labelOf(field.id, entry);
     if (!field.facet) return { text: label };
-    return { text: label, href: `/${field.facet}/${String(entry)}/`, filter: `${field.facet}:${label}` };
+    const slug = slugOf(field, { id: String(entry), label });
+    return { text: label, href: `/${field.facet}/${slug}/`, filter: `${field.facet}:${label}` };
   });
 }
 

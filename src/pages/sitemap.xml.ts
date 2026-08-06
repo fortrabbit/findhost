@@ -35,7 +35,7 @@ export const GET: APIRoute = async ({ site }) => {
     ...providers.map((provider) => `/${provider.id}/`),
     ...facets.flatMap((facet) => [
       facetIndex(facet.id),
-      ...facet.values.filter((value) => value.count > 0).map((value) => `/${facet.id}/${value.id}/`),
+      ...facet.values.filter((value) => value.count > 0).map((value) => `/${facet.id}/${value.slug}/`),
     ]),
   ];
 
