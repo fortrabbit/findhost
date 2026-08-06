@@ -80,6 +80,8 @@ figure:
   textColor: rgb(242, 234, 245)
   text: Dedibox grew up into a cloud.
 ai: authored
+gpuCapacity:
+  - instances
 ---
 
 Scaleway is one of the two French clouds of any scale, a subsidiary of the iliad Group with a history running back to Dedibox, the dedicated-server brand — and the bare-metal heritage is still the most distinctive part of the catalogue. Dedicated servers, bare-metal instances, Apple hardware and colocation sit alongside conventional and GPU instances, object, block and cold storage, managed relational and document databases, Kubernetes, serverless containers and functions, transactional email and observability. It owns and operates its own data centres.

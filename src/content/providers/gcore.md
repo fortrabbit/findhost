@@ -53,6 +53,9 @@ figure:
   textColor: rgb(234, 238, 245)
   text: Edge network first, cloud second.
 ai: authored
+gpuCapacity:
+  - instances
+  - inference
 ---
 
 Gcore sells the edge and the cloud together: a content delivery network with its own peering and scrubbing centres, video streaming, DNS, DDoS protection and a web application firewall, alongside virtual machines, bare metal, managed Kubernetes, GPU capacity and serverless inference. Functions and container deployment are what place it in this dataset rather than among network vendors, since customers run their own code on the platform.

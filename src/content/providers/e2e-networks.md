@@ -59,6 +59,8 @@ figure:
   textColor: rgb(246, 240, 234)
   text: A listed cloud, priced by the minute.
 ai: authored
+gpuCapacity:
+  - instances
 ---
 
 E2E Networks is registered in New Delhi and listed on India's National Stock Exchange under the ticker E2E, which puts the financials behind the infrastructure on public record. It holds MeitY empanelment, the Indian government's approval for public-sector cloud purchasing.

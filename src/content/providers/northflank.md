@@ -79,6 +79,8 @@ figure:
   textColor: rgb(234, 237, 245)
   text: Your cloud or theirs, same console.
 ai: authored
+gpuCapacity:
+  - instances
 ---
 
 Northflank runs long-lived services, cron jobs, build pipelines and managed databases from a single console. Compute is billed per vCPU-hour and gigabyte-hour with per-second granularity and no per-seat charge, and GPU instances are rented by the hour alongside the CPU ones. A permanent free sandbox tier covers a small number of services, jobs and one database.

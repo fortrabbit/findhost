@@ -351,6 +351,18 @@
     - { id: influxdb, label: InfluxDB }
     - { id: kafka, label: Kafka }
 
+# Rentable accelerator hardware, and managed inference on top of it. Recorded
+# rather than filtered: 16 records described it in prose, where nothing could
+# count it, and "AI hosting" means three different products — the other two are
+# `automation` (can an agent drive it) and the `ai-app` use case.
+- id: gpuCapacity
+  label: GPU
+  group: Tech stack
+  multiple: true
+  values:
+    - { id: instances, label: Instances }
+    - { id: inference, label: Managed inference, short: Inference }
+
 - id: persistentStorage
   label: Persistent storage
   group: Tech stack

@@ -89,6 +89,8 @@ figure:
   textColor: rgb(245, 234, 237)
   text: Swiss face, Austrian owner.
 ai: authored
+gpuCapacity:
+  - instances
 ---
 
 Exoscale is the trading name of Akenes SA in Lausanne. Despite the Swiss identity it belongs to A1 Digital, part of the Vienna-listed A1 Telekom Austria Group, so ownership traces back to an Austrian telco.

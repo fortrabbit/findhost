@@ -82,6 +82,8 @@ figure:
   textColor: rgb(234, 240, 246)
   text: Mass market, developer tolerant.
 ai: authored
+gpuCapacity:
+  - instances
 ---
 
 IONOS trades from Montabaur and Karlsruhe, descends from 1&1, went public on the Frankfurt exchange in 2023 and remains part of United Internet AG. It is one of the largest hosting groups in Europe, running its own geo-redundant data centres in Germany, elsewhere in Europe and the United States. STRATO, listed separately here, belongs to the same group.

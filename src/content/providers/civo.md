@@ -70,6 +70,8 @@ figure:
   textColor: rgb(234, 241, 246)
   text: The control plane is free. Really.
 ai: authored
+gpuCapacity:
+  - instances
 ---
 
 Civo is a British cloud built around Kubernetes rather than one that added it later. Control-plane components are not charged for, the bill covers worker nodes and add-ons only, and data transfer in and out is unmetered — three decisions that between them remove most of what makes a managed-Kubernetes invoice hard to predict in advance.

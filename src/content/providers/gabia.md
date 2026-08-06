@@ -8,6 +8,8 @@ criterion: 3
 checkedAt: 2026-08-04
 boundedSearch: true
 ai: authored
+gpuCapacity:
+  - instances
 ---
 
 Gabia is a Seoul-based domain, hosting and cloud company — its cloud arm trades separately as gabiacloud.com — selling IDC space, cloud GPU servers, groupware and an "AI API Gateway" alongside traditional hosting.

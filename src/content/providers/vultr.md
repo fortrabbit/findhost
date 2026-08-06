@@ -59,6 +59,8 @@ figure:
   color: rgb(45, 132, 190)
   textColor: rgb(234, 241, 246)
   text: No cage required.
+gpuCapacity:
+  - instances
 ---
 
 Vultr is a cloud infrastructure provider selling virtual private servers, bare metal, cloud compute instances, managed Kubernetes, object storage and GPU instances. Compute is billed by the hour against a monthly cap, and the whole catalogue — plans, regions, instances — is driven by a public API as well as by the web console.

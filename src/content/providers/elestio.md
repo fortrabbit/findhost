@@ -93,6 +93,8 @@ figure:
   textColor: rgb(237, 234, 245)
   text: Someone else patches your open source.
 ai: authored
+gpuCapacity:
+  - instances
 ---
 
 Elestio takes an open-source application, puts it on a dedicated virtual machine and then keeps it running: automated updates, OS patching, backups, TLS certificates and monitoring, with the customer keeping full access to the machine. The catalogue runs to several hundred applications, from PostgreSQL, MySQL, Redis and MongoDB through WordPress, n8n and Keycloak to GPU-backed AI tooling.

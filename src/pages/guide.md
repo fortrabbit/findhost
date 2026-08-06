@@ -34,6 +34,12 @@ Two hosts can quote the same monthly figure and be different commitments, becaus
 
 **A free tier is a marketing instrument** more often than a product decision. It says nothing about what the paid plans cost or how the platform behaves under load, and the free tier and the production tier are frequently different products wearing one name. What it settles is whether the application actually runs, which no comparison table can.
 
+## "AI hosting" means three different things
+
+The phrase covers three unrelated products, and a vendor's page rarely says which one it is selling. **Hosting an agent can operate** is a platform with an API, a CLI and perhaps an MCP server, so an assistant can create an app and read a log — that is [automation](/automation/). **Hosting an application that calls a model** is an ordinary web application with an unusual request shape: a call that takes seconds, a response streamed to the browser, and the expensive part of the bill belonging to somebody else — that is the [AI apps](/use-cases/ai-app/) use case. **Hosting the model itself** needs rented accelerators or a managed inference endpoint, and it is a different market with different economics.
+
+Read the fields rather than the phrase. A platform advertising "agentic infrastructure" is usually selling the first two, and one advertising GPUs is selling the third.
+
 ## How to use this page to find a host
 
 - **Pricing and renewals** — the [entry price band](/entry-price/), the [pricing features](/pricing/) and the renewal multiple

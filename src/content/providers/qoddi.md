@@ -68,6 +68,8 @@ figure:
   textColor: rgb(234, 243, 245)
   text: Many runtimes, billed by the second.
 ai: authored
+gpuCapacity:
+  - instances
 ---
 
 Qoddi is a managed application platform that builds from a git repository or a container image and runs the result in containers it operates itself. The runtime list is broad for a platform this size — Node, Java, Go, Ruby, PHP and Python, with Django and Laravel called out by name, Docker for anything the buildpacks do not cover, and managed PostgreSQL, MySQL, MongoDB and Redis available beside the application.

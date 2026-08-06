@@ -75,6 +75,8 @@ figure:
   textColor: rgb(234, 238, 245)
   text: Bare metal, by the hour.
 ai: authored
+gpuCapacity:
+  - instances
 ---
 
 Latitude.sh sells dedicated hardware the way clouds sell instances: bare-metal servers provisioned automatically and billed by the hour, alongside virtual machines, block, file and object storage, managed PostgreSQL and networking. GPU capacity ranges from single accelerators to multi-GPU cluster nodes.

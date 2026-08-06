@@ -73,6 +73,8 @@ figure:
   textColor: rgb(234, 240, 246)
   text: Compute, storage, nothing else.
 ai: authored
+gpuCapacity:
+  - instances
 ---
 
 GleSYS was formed in Falkenberg and sells infrastructure rather than packaged hosting: compute, storage, managed databases, connectivity and colocation, each priced per resource with hourly and monthly rates published in full. GPU and ARM machines are quoted rather than listed.

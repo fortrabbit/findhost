@@ -102,6 +102,7 @@ const providerFields = z
     deployMethods: z.array(z.enum(vocabulary('deployMethods'))).optional(),
     sshAccess: z.enum(vocabulary('sshAccess')).optional(),
     managedDatabases: z.array(z.enum(vocabulary('managedDatabases'))).optional(),
+    gpuCapacity: z.array(z.enum(vocabulary('gpuCapacity'))).optional(),
     persistentStorage: z.boolean().optional(),
     backupsIncluded: z.enum(vocabulary('backupsIncluded')).optional(),
 
