@@ -7,7 +7,7 @@ urls:
 category:
   - vps
 description: Kamatera is a cloud infrastructure company selling hourly-billed cloud servers, block storage, load balancers and firewalls from data centres worldwide.
-whoManagesOs: you
+whoManagesOs: self-managed
 runtimes:
   - any
 sshAccess: root

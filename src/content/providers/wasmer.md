@@ -8,7 +8,7 @@ urls:
 category:
   - serverless
 description: WebAssembly runtime company whose edge platform runs applications compiled to WASM, PHP among them, close to the visitor.
-whoManagesOs: provider
+whoManagesOs: managed
 useCases:
   - cms
   - api

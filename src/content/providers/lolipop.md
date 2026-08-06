@@ -12,7 +12,7 @@ description: Japanese rental server from GMO Pepabo, selling shared hosting for 
 hqCountry: JP
 ownership: subsidiary
 parent: GMO Pepabo
-whoManagesOs: provider
+whoManagesOs: managed
 useCases:
   - cms
   - portfolio

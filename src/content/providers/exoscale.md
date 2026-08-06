@@ -12,7 +12,7 @@ founded: 2011
 hqCountry: CH
 ownership: subsidiary
 parent: A1 Telekom Austria Group
-whoManagesOs: you
+whoManagesOs: self-managed
 infraContract:
   - owns-metal
 useCases:

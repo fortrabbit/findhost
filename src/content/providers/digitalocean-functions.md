@@ -8,7 +8,7 @@ category:
   - serverless
 description: DigitalOcean Functions is a function-as-a-service platform built on Apache OpenWhisk, running short-lived handlers in several native language runtimes.
 parent: DigitalOcean
-whoManagesOs: provider
+whoManagesOs: managed
 useCases:
   - api
   - background-jobs

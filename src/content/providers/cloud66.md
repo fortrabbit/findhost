@@ -9,7 +9,7 @@ category:
 regions: null
 description: DevOps platform deploying containerised and native applications and static sites onto servers the customer owns on AWS, Google Cloud or Azure.
 founded: 2012
-whoManagesOs: provider
+whoManagesOs: managed
 infraContract:
   - byo-iaas
 useCases:

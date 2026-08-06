@@ -10,7 +10,7 @@ description: Shopify is a hosted ecommerce platform with a storefront builder an
 founded: 2006
 hqCountry: CA
 ownership: public
-whoManagesOs: provider
+whoManagesOs: managed
 useCases:
   - e-commerce
 audience:

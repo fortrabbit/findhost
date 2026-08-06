@@ -11,7 +11,7 @@ description: French managed hosting running a wide set of language runtimes on i
 founded: 2006
 hqCountry: FR
 ownership: independent
-whoManagesOs: provider
+whoManagesOs: managed
 infraContract:
   - owns-metal
 useCases:

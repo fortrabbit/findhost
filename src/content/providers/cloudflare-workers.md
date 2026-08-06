@@ -7,7 +7,7 @@ urls:
 category:
   - serverless
 description: Cloudflare's edge compute platform, running JavaScript, TypeScript, Python and Rust in V8 isolates on the network that already serves the request.
-whoManagesOs: provider
+whoManagesOs: managed
 runtimes:
   - python
   - rust

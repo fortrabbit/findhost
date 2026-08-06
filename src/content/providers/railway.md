@@ -8,7 +8,7 @@ urls:
 category:
   - paas
 description: Railway is a polyglot deployment platform with subscription plus usage billing, four regions and a build system that detects most common languages.
-whoManagesOs: provider
+whoManagesOs: managed
 useCases:
   - side-project
 audience:

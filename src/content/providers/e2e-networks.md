@@ -11,7 +11,7 @@ description: Indian cloud infrastructure provider listed on the National Stock E
 founded: 2009
 hqCountry: IN
 ownership: public
-whoManagesOs: you
+whoManagesOs: self-managed
 useCases:
   - ai-app
   - data-pipeline

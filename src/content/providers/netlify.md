@@ -13,7 +13,7 @@ description: Platform that builds sites from a git repository and serves them fr
 founded: 2014
 hqCountry: US
 ownership: vc-backed
-whoManagesOs: provider
+whoManagesOs: managed
 useCases:
   - static-site
   - headless-cms

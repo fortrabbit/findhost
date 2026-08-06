@@ -14,7 +14,7 @@ founded: 1999
 hqCountry: FR
 ownership: subsidiary
 parent: iliad Group
-whoManagesOs: you
+whoManagesOs: self-managed
 infraContract:
   - owns-metal
 useCases:

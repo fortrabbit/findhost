@@ -8,7 +8,7 @@ category:
   - serverless
 description: Google Cloud Run runs any container image, scales it to zero when idle and bills per request and per resource-second.
 parent: Google
-whoManagesOs: you
+whoManagesOs: self-managed
 useCases:
   - api
   - background-jobs

@@ -7,7 +7,7 @@ urls:
 category:
   - server-management
 description: GridPane is a WordPress server-management platform for agencies, provisioning and hardening servers on the customer's own cloud account.
-whoManagesOs: provider
+whoManagesOs: managed
 infraContract:
   - byo-iaas
   - resells-iaas

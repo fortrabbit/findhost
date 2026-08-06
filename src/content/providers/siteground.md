@@ -30,7 +30,7 @@ infraContract:
   - resells-iaas
 runsOn:
   - gcp
-whoManagesOs: provider
+whoManagesOs: managed
 sshAccess: jailed
 deployMethods:
   - file-transfer

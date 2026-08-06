@@ -13,7 +13,7 @@ founded: 1999
 hqCountry: FR
 infraContract:
   - owns-metal
-whoManagesOs: you
+whoManagesOs: self-managed
 runtimes:
   - any
 sshAccess: root

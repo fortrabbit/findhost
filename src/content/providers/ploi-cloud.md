@@ -11,7 +11,7 @@ infraContract:
   - resells-iaas
 runsOn:
   - upcloud
-whoManagesOs: provider
+whoManagesOs: managed
 useCases:
   - cms
   - web-app

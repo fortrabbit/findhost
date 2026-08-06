@@ -12,7 +12,7 @@ category:
 description: British host selling web and email hosting in a long ladder of graded sizes, with a choice of PHP release per site and MySQL as standard.
 hqCountry: GB
 ownership: independent
-whoManagesOs: provider
+whoManagesOs: managed
 useCases:
   - cms
   - portfolio

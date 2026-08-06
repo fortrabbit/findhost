@@ -12,7 +12,7 @@ category:
 description: Open-source backend built on PostgreSQL, with authentication, storage, realtime and Edge Functions that run the customer's own TypeScript on Deno.
 hqCountry: US
 ownership: vc-backed
-whoManagesOs: provider
+whoManagesOs: managed
 useCases:
   - api
   - web-app

@@ -10,7 +10,7 @@ category:
 description: Lithuanian provider selling dedicated machines and virtual servers on its own hardware, billed by the hour, by fixed term or as spot capacity.
 founded: 2001
 hqCountry: LT
-whoManagesOs: you
+whoManagesOs: self-managed
 infraContract:
   - owns-metal
 useCases:

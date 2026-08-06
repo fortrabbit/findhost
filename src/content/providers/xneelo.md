@@ -11,7 +11,7 @@ description: South African host, formerly Hetzner South Africa, selling shared h
 founded: 1999
 hqCountry: ZA
 ownership: independent
-whoManagesOs: provider
+whoManagesOs: managed
 infraContract:
   - owns-metal
 useCases:

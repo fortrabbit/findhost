@@ -8,7 +8,7 @@ urls:
 category:
   - vanity-hosting
 description: Serverless hosting for Craft CMS built by Pixel & Tonic, the company that makes the CMS, and sold per project rather than per account.
-whoManagesOs: provider
+whoManagesOs: managed
 useCases:
   - cms
 specialisation:

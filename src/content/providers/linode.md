@@ -11,7 +11,7 @@ founded: 2003
 hqCountry: US
 ownership: subsidiary
 parent: Akamai Technologies
-whoManagesOs: you
+whoManagesOs: self-managed
 runtimes:
   - any
 sshAccess: root

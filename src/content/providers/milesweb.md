@@ -9,7 +9,7 @@ category:
 description: Indian host from Nashik selling shared hosting on its own mPanel control panel, with SSH and Git on every plan and a stated renewal-price guarantee.
 founded: 2012
 hqCountry: IN
-whoManagesOs: provider
+whoManagesOs: managed
 useCases:
   - cms
   - e-commerce

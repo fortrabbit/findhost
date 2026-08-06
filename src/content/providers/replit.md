@@ -10,7 +10,7 @@ category:
 description: Browser-based development environment with hosting attached, sold around an AI agent that writes, runs and publishes the application.
 hqCountry: US
 ownership: vc-backed
-whoManagesOs: you
+whoManagesOs: self-managed
 useCases:
   - learning
   - side-project

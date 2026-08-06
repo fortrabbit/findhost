@@ -12,7 +12,7 @@ category:
 description: Managed WordPress host founded in 2010 in Austin, Texas, running customer sites on public cloud infrastructure behind a CDN.
 founded: 2010
 hqCountry: US
-whoManagesOs: provider
+whoManagesOs: managed
 useCases:
   - cms
   - e-commerce

@@ -9,7 +9,7 @@ category:
   - paas
 description: French platform-as-a-service with git-push deploys, buildpacks, managed databases and review apps, running only in French regions.
 hqCountry: FR
-whoManagesOs: you
+whoManagesOs: self-managed
 infraContract:
   - resells-iaas
 useCases:

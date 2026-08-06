@@ -9,7 +9,7 @@ category:
   - vps
   - bare-metal
 description: Cloud infrastructure provider selling virtual private servers, bare metal, GPU instances, object storage and managed Kubernetes, billed by the hour.
-whoManagesOs: you
+whoManagesOs: self-managed
 runtimes:
   - any
 sshAccess: root

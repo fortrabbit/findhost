@@ -11,7 +11,7 @@ founded: 2012
 hqCountry: US
 ownership: subsidiary
 parent: WP Engine
-whoManagesOs: provider
+whoManagesOs: managed
 useCases:
   - cms
 audience:

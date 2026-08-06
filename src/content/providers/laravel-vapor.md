@@ -10,7 +10,7 @@ category:
 description: Laravel Vapor is a serverless deployment platform for Laravel applications on AWS Lambda, sold as a flat subscription on top of the customer's own AWS bill.
 infraContract:
   - byo-iaas
-whoManagesOs: provider
+whoManagesOs: managed
 useCases:
   - web-app
   - api

@@ -10,7 +10,7 @@ category:
   - bare-metal
   - serverless
 description: Gcore is an edge and cloud provider selling CDN, streaming, DDoS protection, virtual machines, bare metal, Kubernetes and serverless functions.
-whoManagesOs: you
+whoManagesOs: self-managed
 useCases:
   - ai-app
   - api

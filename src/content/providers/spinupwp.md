@@ -10,7 +10,7 @@ category:
   - server-management
 regions: null
 description: SpinupWP is a control panel that configures and manages a WordPress-tuned server stack on an Ubuntu machine the customer brings.
-whoManagesOs: you
+whoManagesOs: self-managed
 infraContract:
   - byo-iaas
 useCases:

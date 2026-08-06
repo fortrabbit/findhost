@@ -7,7 +7,7 @@ urls:
 category:
   - serverless
 description: European function-as-a-service from Scaleway, running Node, Python, Go, Rust and PHP handlers billed by request and by memory consumed.
-whoManagesOs: provider
+whoManagesOs: managed
 useCases:
   - api
   - background-jobs

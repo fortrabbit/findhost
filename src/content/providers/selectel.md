@@ -10,7 +10,7 @@ description: Selectel is a Russian infrastructure company running its own data c
 hqCountry: RU
 infraContract:
   - owns-metal
-whoManagesOs: you
+whoManagesOs: self-managed
 runtimes:
   - any
 sshAccess: root

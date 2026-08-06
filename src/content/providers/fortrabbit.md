@@ -19,7 +19,7 @@ description: Managed hosting platform for developers since 2012, runs on AWS cap
 founded: 2012
 hqCountry: DE
 ownership: independent
-whoManagesOs: provider
+whoManagesOs: managed
 infraContract:
   - resells-iaas
 runtimes:

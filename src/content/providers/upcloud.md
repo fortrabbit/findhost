@@ -8,7 +8,7 @@ urls:
 category:
   - vps
 description: Finnish cloud infrastructure provider selling virtual machines, block storage and private networking, driven by a public API.
-whoManagesOs: you
+whoManagesOs: self-managed
 runtimes:
   - any
 sshAccess: root

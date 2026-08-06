@@ -11,7 +11,7 @@ description: Hatchbox is a deployment platform for Rails, Ruby and Node applicat
 founded: 2016
 ownership: independent
 parent: GoRails, LLC
-whoManagesOs: provider
+whoManagesOs: managed
 infraContract:
   - byo-iaas
 specialisation:

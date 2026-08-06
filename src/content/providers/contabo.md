@@ -9,7 +9,7 @@ category:
   - bare-metal
 description: German provider selling virtual and dedicated servers from Munich, with large resource allocations at low fixed monthly rates.
 hqCountry: DE
-whoManagesOs: you
+whoManagesOs: self-managed
 audience:
   - smb
 runtimes:

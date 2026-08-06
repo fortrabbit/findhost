@@ -12,7 +12,7 @@ founded: 2007
 hqCountry: US
 ownership: subsidiary
 parent: Salesforce
-whoManagesOs: provider
+whoManagesOs: managed
 useCases:
   - ai-app
   - e-commerce

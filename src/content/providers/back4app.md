@@ -7,7 +7,7 @@ urls:
 category:
   - serverless
 description: Managed Parse Server backend with an auto-generated REST and GraphQL API, plus a container platform that builds and runs Docker images from GitHub.
-whoManagesOs: you
+whoManagesOs: self-managed
 infraContract:
   - resells-iaas
 useCases:

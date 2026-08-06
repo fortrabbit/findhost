@@ -11,7 +11,7 @@ ownership: subsidiary
 hqCountry: US
 infraContract:
   - owns-metal
-whoManagesOs: you
+whoManagesOs: self-managed
 audience:
   - startup
   - enterprise

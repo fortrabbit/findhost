@@ -9,7 +9,7 @@ category:
   - vps
 description: British Kubernetes-first cloud that charges for worker nodes only, with control planes included and data transfer unmetered.
 hqCountry: GB
-whoManagesOs: you
+whoManagesOs: self-managed
 useCases:
   - web-app
   - api

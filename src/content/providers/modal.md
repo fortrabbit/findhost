@@ -12,7 +12,7 @@ category:
 description: Serverless compute platform for Python, where functions are decorated in code and run in containers on CPU or GPU with per-second billing.
 hqCountry: US
 ownership: vc-backed
-whoManagesOs: you
+whoManagesOs: self-managed
 useCases:
   - ai-app
   - data-pipeline

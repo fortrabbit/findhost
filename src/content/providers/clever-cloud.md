@@ -9,7 +9,7 @@ category:
   - paas
 description: French platform-as-a-service that detects, builds and runs an application from a git push, with managed databases and storage sold as add-ons.
 hqCountry: FR
-whoManagesOs: you
+whoManagesOs: self-managed
 infraContract:
   - owns-metal
   - resells-iaas

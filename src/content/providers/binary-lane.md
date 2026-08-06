@@ -11,7 +11,7 @@ founded: 2009
 hqCountry: AU
 ownership: subsidiary
 parent: Mammoth Media Pty Ltd
-whoManagesOs: you
+whoManagesOs: self-managed
 useCases:
   - web-app
   - api

@@ -10,7 +10,7 @@ description: Divio is a Swiss platform-as-a-service that runs Dockerised applica
 founded: 2006
 hqCountry: CH
 ownership: public
-whoManagesOs: you
+whoManagesOs: self-managed
 useCases:
   - cms
   - web-app

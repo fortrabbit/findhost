@@ -11,7 +11,7 @@ category:
 description: Danish VPS provider selling virtual servers with a web control panel, prepared stacks and WordPress plans, from a single facility in Denmark.
 hqCountry: DK
 ownership: independent
-whoManagesOs: you
+whoManagesOs: self-managed
 useCases:
   - cms
   - web-app

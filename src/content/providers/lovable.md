@@ -8,7 +8,7 @@ urls:
 category:
   - lcnc
 description: Lovable is an AI-assisted low-code no-code platform that generates web app code from natural language prompts and deploys it on its own infrastructure.
-whoManagesOs: provider
+whoManagesOs: managed
 useCases:
   - web-app
   - side-project

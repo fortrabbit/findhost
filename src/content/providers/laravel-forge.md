@@ -9,7 +9,7 @@ category:
   - server-management
 regions: null
 description: Laravel Forge is server-management software — it provisions and configures servers, either on a VPS you bring yourself or on its own Laravel VPS product.
-whoManagesOs: you
+whoManagesOs: self-managed
 infraContract:
   - byo-iaas
 audience:

@@ -8,7 +8,7 @@ category:
   - shared-hosting
 description: Japanese rental server company selling managed shared hosting, with WordPress tooling, automatic backups and free SSL included across the range.
 hqCountry: JP
-whoManagesOs: provider
+whoManagesOs: managed
 useCases:
   - cms
   - e-commerce

@@ -10,7 +10,7 @@ regions: null
 description: Self-hosting platform that installs and keeps open-source applications updated on the customer's own server, with per-app backups and single sign-on.
 infraContract:
   - byo-iaas
-whoManagesOs: you
+whoManagesOs: self-managed
 useCases:
   - internal-tool
   - cms

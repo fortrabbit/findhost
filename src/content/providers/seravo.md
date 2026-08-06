@@ -8,7 +8,7 @@ category:
   - vanity-hosting
 description: Finnish WordPress-only hosting company whose customers develop against a public, open-source project layout with Vagrant and Docker parity.
 hqCountry: FI
-whoManagesOs: provider
+whoManagesOs: managed
 specialisation:
   - wordpress
 useCases:

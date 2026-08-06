@@ -7,7 +7,7 @@ urls:
 category:
   - lcnc
 description: Duda is a website builder focused on agencies that manage multiple client sites.
-whoManagesOs: provider
+whoManagesOs: managed
 useCases:
   - portfolio
   - campaign-site

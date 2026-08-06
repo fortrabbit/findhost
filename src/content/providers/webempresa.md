@@ -11,7 +11,7 @@ founded: 1999
 hqCountry: ES
 ownership: subsidiary
 parent: team.blue
-whoManagesOs: provider
+whoManagesOs: managed
 useCases:
   - cms
   - e-commerce

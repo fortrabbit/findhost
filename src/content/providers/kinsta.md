@@ -9,7 +9,7 @@ category:
   - vanity-hosting
 description: Kinsta is a managed WordPress host founded in 2013, with plans metered on monthly visits and 14-day backup retention.
 founded: 2013
-whoManagesOs: provider
+whoManagesOs: managed
 useCases:
   - cms
 specialisation:

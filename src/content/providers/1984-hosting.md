@@ -10,7 +10,7 @@ description: Icelandic host founded on a free-speech and privacy position, runni
 founded: 2006
 hqCountry: IS
 ownership: independent
-whoManagesOs: provider
+whoManagesOs: managed
 useCases:
   - cms
   - portfolio

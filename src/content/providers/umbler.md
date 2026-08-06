@@ -11,7 +11,7 @@ description: Brazilian host selling per-application PHP hosting billed by the ho
 founded: 2015
 hqCountry: BR
 ownership: independent
-whoManagesOs: provider
+whoManagesOs: managed
 useCases:
   - cms
   - e-commerce

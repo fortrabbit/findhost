@@ -13,7 +13,7 @@ description: Czech container platform running applications and managed services 
 founded: 2018
 hqCountry: CZ
 ownership: vc-backed
-whoManagesOs: you
+whoManagesOs: self-managed
 useCases:
   - web-app
   - api

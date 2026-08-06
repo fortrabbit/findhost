@@ -7,7 +7,7 @@ urls:
 category:
   - bare-metal
 description: Bare-metal and GPU infrastructure billed hourly with automated provisioning, an API, SDKs, a CLI and Terraform support.
-whoManagesOs: you
+whoManagesOs: self-managed
 infraContract:
   - owns-metal
 useCases:

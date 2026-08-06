@@ -12,7 +12,7 @@ founded: 2004
 hqCountry: US
 ownership: pe-owned
 parent: Permira
-whoManagesOs: provider
+whoManagesOs: managed
 useCases:
   - portfolio
   - campaign-site

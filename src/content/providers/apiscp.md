@@ -8,7 +8,7 @@ category:
   - server-management
 regions: null
 description: Self-hosted hosting platform and control panel from Apis Networks, licensed per server and aimed at providers running their own fleet.
-whoManagesOs: you
+whoManagesOs: self-managed
 infraContract:
   - byo-iaas
 runtimes:

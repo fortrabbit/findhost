@@ -9,7 +9,7 @@ category:
   - shared-hosting
 description: Uberspace is a small German hosting service sitting between shared hosting and a VPS, running since 2011, with a shell account and a documented stack.
 hqCountry: DE
-whoManagesOs: provider
+whoManagesOs: managed
 useCases:
   - cms
   - side-project

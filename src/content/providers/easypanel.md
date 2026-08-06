@@ -9,7 +9,7 @@ category:
   - server-management
 regions: null
 description: Easypanel is a server panel that turns a rented Linux box into a container platform, licensed per server rather than per application.
-whoManagesOs: you
+whoManagesOs: self-managed
 infraContract:
   - byo-iaas
 useCases:

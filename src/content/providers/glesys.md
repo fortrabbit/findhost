@@ -12,7 +12,7 @@ founded: 1999
 hqCountry: SE
 ownership: pe-owned
 parent: Cube Infrastructure Managers
-whoManagesOs: you
+whoManagesOs: self-managed
 infraContract:
   - owns-metal
 useCases:

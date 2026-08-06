@@ -11,7 +11,7 @@ category:
   - serverless
 description: Vercel is a serverless frontend platform. Its official function runtimes do not include PHP, which is available only through a community runtime.
 ownership: vc-backed
-whoManagesOs: provider
+whoManagesOs: managed
 useCases:
   - web-app
   - ai-app

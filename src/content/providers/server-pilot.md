@@ -11,7 +11,7 @@ description: ServerPilot installs and maintains a PHP stack on an Ubuntu server 
 founded: 2012
 infraContract:
   - byo-iaas
-whoManagesOs: you
+whoManagesOs: self-managed
 useCases:
   - cms
 runtimes:

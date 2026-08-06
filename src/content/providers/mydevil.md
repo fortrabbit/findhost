@@ -10,7 +10,7 @@ category:
   - shared-hosting
 description: Polish shared hosting with SSH on every plan, unlimited sites, mailboxes and databases, and Node.js, Python and Ruby alongside PHP.
 hqCountry: PL
-whoManagesOs: provider
+whoManagesOs: managed
 useCases:
   - cms
   - api

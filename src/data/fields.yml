@@ -25,7 +25,7 @@
 # /regions/, /runtimes/, /use-cases/, /currencies/. A segment naming the
 # dimension itself stays singular however multiple the field is, because
 # "deployments" and "supports" would name something else — /deployment/,
-# /support/, /pricing/, /ownership/, /shell/, /os/, /hardware/, /exit/.
+# /support/, /pricing/, /ownership/, /shell/, /metal/, /exit/.
 #
 # A label holding a comma must be quoted. Unquoted, the comma ends the value and
 # the rest becomes a key of its own — which is how two price bands shipped as
@@ -97,20 +97,20 @@
 # is still yours to rebuild — both are "you" with a tool, which is a fact about
 # the tooling rather than about who is responsible.
 - id: whoManagesOs
-  label: OS
+  label: Operating system
   group: Classification
-  facet: os
+  facet: operating-system
   filterOrder: 15
   values:
-    - { id: you, label: 'You' }
-    - { id: provider, label: 'Provider' }
+    - { id: managed, label: Managed }
+    - { id: self-managed, label: Self-managed }
 
 # More than one can be true at once: a panel that provisions onto your own cloud
 # account may also resell machines of its own.
 - id: infraContract
-  label: Hardware
+  label: Metal
   group: Classification
-  facet: hardware
+  facet: metal
   filterOrder: 16
   multiple: true
   values:

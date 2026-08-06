@@ -8,7 +8,7 @@ category:
   - serverless
 description: Amazon's function-as-a-service primitive, running a handler on demand in a short-lived isolated environment and billing per invocation.
 parent: Amazon
-whoManagesOs: provider
+whoManagesOs: managed
 useCases:
   - api
   - background-jobs

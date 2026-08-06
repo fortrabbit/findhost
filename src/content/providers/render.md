@@ -10,7 +10,7 @@ category:
 description: Platform-as-a-service that builds services from a git repository, with native runtimes for several languages, a Docker runtime for the rest, and managed Postgres.
 hqCountry: US
 ownership: vc-backed
-whoManagesOs: provider
+whoManagesOs: managed
 useCases:
   - static-site
   - background-jobs

@@ -10,7 +10,7 @@ category:
   - paas
 description: German Docker hosting that bills for the server rather than the container, so unlimited services can share one machine, with managed Postgres and S3 storage.
 hqCountry: DE
-whoManagesOs: you
+whoManagesOs: self-managed
 useCases:
   - web-app
   - api

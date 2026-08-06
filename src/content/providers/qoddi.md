@@ -7,7 +7,7 @@ urls:
 category:
   - paas
 description: Managed application platform deploying Node, Java, Go, Ruby, PHP, Python and Docker workloads with per-second billing and managed databases alongside.
-whoManagesOs: you
+whoManagesOs: self-managed
 useCases:
   - web-app
   - api

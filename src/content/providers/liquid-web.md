@@ -11,7 +11,7 @@ founded: 1997
 hqCountry: US
 ownership: pe-owned
 parent: CloudOne Digital
-whoManagesOs: provider
+whoManagesOs: managed
 audience:
   - smb
   - enterprise

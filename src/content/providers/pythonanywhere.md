@@ -12,7 +12,7 @@ founded: 2011
 hqCountry: GB
 ownership: subsidiary
 parent: Anaconda
-whoManagesOs: provider
+whoManagesOs: managed
 specialisation:
   - django
 useCases:

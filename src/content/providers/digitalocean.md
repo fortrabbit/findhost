@@ -12,7 +12,7 @@ description: DigitalOcean is a publicly listed cloud provider best known for Dro
 founded: 2012
 hqCountry: US
 ownership: public
-whoManagesOs: you
+whoManagesOs: self-managed
 useCases:
   - ai-app
 audience:

@@ -11,7 +11,7 @@ founded: 2008
 hqCountry: AU
 ownership: subsidiary
 parent: Nexigen Digital Pty Ltd
-whoManagesOs: you
+whoManagesOs: self-managed
 infraContract:
   - resells-iaas
 useCases:

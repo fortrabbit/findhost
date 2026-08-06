@@ -40,7 +40,7 @@ const subjects: Record<string, string> = {
       prepaid: 'run on prepaid credit',
       'no-minimum': 'hold nobody to a minimum term',
     }[value.id] ?? `price with ${value.label.toLowerCase()}`,
-  ssh:
+  shell:
     {
       jailed: 'give a shell inside the environment, without root',
       root: 'give root on the machine',
@@ -60,12 +60,12 @@ const subjects: Record<string, string> = {
       phone: 'publish a phone number',
       forum: 'run a community forum',
     }[value.id] ?? `offer support by ${value.label.toLowerCase()}`,
-  os:
+  'operating-system':
     {
-      you: 'leave the operating system to you',
-      provider: 'manage the operating system for you',
+      'self-managed': 'leave the operating system to you',
+      managed: 'manage the operating system for you',
     }[value.id] ?? `answer "${value.label.toLowerCase()}" to who manages the operating system`,
-  hardware:
+  metal:
     {
       'owns-metal': 'own their hardware',
       'resells-iaas': "resell someone else's hardware",

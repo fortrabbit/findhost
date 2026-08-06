@@ -12,7 +12,7 @@ category:
 description: Webflow is a visual design platform that hosts sites and provides a built-in CMS.
 founded: 2013
 ownership: vc-backed
-whoManagesOs: provider
+whoManagesOs: managed
 sshAccess: none
 apiAvailable: public
 social:

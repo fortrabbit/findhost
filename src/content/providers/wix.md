@@ -10,7 +10,7 @@ category:
 description: Wix is a hosted website builder with templates and a visual editor for small businesses and personal sites.
 founded: 2006
 ownership: public
-whoManagesOs: provider
+whoManagesOs: managed
 sshAccess: none
 checkedAt: 2026-08-01
 sources:

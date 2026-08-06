@@ -8,7 +8,7 @@ category:
   - server-management
 regions: null
 description: Server provisioning and deployment service for PHP and Node applications, driving servers rented from major clouds or any VPS the customer brings.
-whoManagesOs: provider
+whoManagesOs: managed
 infraContract:
   - byo-iaas
 useCases:

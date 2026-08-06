@@ -14,7 +14,7 @@ founded: 2006
 hqCountry: BR
 ownership: subsidiary
 parent: LWSA
-whoManagesOs: provider
+whoManagesOs: managed
 useCases:
   - cms
   - campaign-site

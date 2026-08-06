@@ -7,7 +7,7 @@ urls:
 category:
   - vanity-hosting
 description: Managed WordPress host built on an enterprise content delivery network, with a choice of origin locations across the Americas, Europe and Asia.
-whoManagesOs: provider
+whoManagesOs: managed
 specialisation:
   - wordpress
 useCases:

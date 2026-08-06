@@ -11,7 +11,7 @@ category:
 regions: null
 description: Open-source deployment platform billed per managed server, run either as a hosted service or installed on the customer's own machines.
 hqCountry: US
-whoManagesOs: you
+whoManagesOs: self-managed
 infraContract:
   - byo-iaas
 useCases:

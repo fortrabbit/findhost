@@ -10,7 +10,7 @@ description: Dinahosting is an independent Galician host selling shared hosting,
 founded: 2001
 hqCountry: ES
 ownership: independent
-whoManagesOs: provider
+whoManagesOs: managed
 useCases:
   - cms
   - e-commerce

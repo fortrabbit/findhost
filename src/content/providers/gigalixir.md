@@ -7,7 +7,7 @@ urls:
 category:
   - paas
 description: Gigalixir is a platform-as-a-service built around Elixir and Phoenix, keeping hot upgrades, remote observer and distributed clustering intact.
-whoManagesOs: you
+whoManagesOs: self-managed
 specialisation:
   - elixir
 useCases:

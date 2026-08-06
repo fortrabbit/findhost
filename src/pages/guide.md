@@ -12,7 +12,7 @@ figure:
 
 The above is quote by David N. Welton. Three things follow from that, and they explain most of what makes choosing hard.
 
-**The vocabulary is blurry on purpose.** Shared hosting, VPS and IaaS are real distinctions that vendors smudge constantly, and the newer words are worse — is [serverless](/categories/serverless/) really server-less? This dataset answers with fields rather than adjectives. [Who manages the operating system](/os/) and [whose hardware it runs on](/hardware/) settle most of the argument on their own, because they stay answerable whatever a vendor decides to call the product.
+**The vocabulary is blurry on purpose.** Shared hosting, VPS and IaaS are real distinctions that vendors smudge constantly, and the newer words are worse — is [serverless](/categories/serverless/) really server-less? This dataset answers with fields rather than adjectives. [Who manages the operating system](/operating-system/) and [whose hardware it runs on](/metal/) settle most of the argument on their own, because they stay answerable whatever a vendor decides to call the product.
 
 **Margins are thin, so providers compete on marketing.** Consumer hosting is the worst of it, where introductory pricing that triples on renewal is normal rather than exceptional. That is why a renewal multiple is recorded: it is checkable, and no affiliate site will publish it, because their revenue depends on the gap it exposes.
 
@@ -20,7 +20,7 @@ The above is quote by David N. Welton. Three things follow from that, and they e
 
 ## Match the abstraction to the team
 
-The level of abstraction decides how much of the infrastructure underneath has to be thought about, and the right level is the one that matches a team's skills — not the lowest one available. Shipping code instead of configuring servers is worth something at any level of experience; it costs flexibility, usually in deployment options. That is recorded as [category](/categories/), [who manages the OS](/os/), [whose hardware it is](/hardware/) and [SSH access](/shell/).
+The level of abstraction decides how much of the infrastructure underneath has to be thought about, and the right level is the one that matches a team's skills — not the lowest one available. Shipping code instead of configuring servers is worth something at any level of experience; it costs flexibility, usually in deployment options. That is recorded as [category](/categories/), [who manages the OS](/operating-system/), [whose hardware it is](/metal/) and [SSH access](/shell/).
 
 The most common mistake is choosing on compute per coin. Quality is hard to judge from outside, so a comparison collapses into a specs table — but two providers quoting the same vCPU count can differ by a factor in real throughput, because the hardware and the architecture behind the figure are not on the marketing page. This is also why prices here are [bands](/entry-price/) rather than exact figures: a band is enough to stop a comparison mixing $4 and $400, and anything more precise belongs on the provider's own page, where it is current.
 

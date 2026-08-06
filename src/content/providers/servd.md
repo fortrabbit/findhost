@@ -10,7 +10,7 @@ category:
 description: Managed hosting platform built specifically for Craft CMS, sold as fixed plans that each host a single Craft installation.
 hqCountry: GB
 ownership: independent
-whoManagesOs: provider
+whoManagesOs: managed
 useCases:
   - cms
 audience:

@@ -13,7 +13,7 @@ description: German managed hosting platform with per-project containers, a cont
 founded: 2003
 hqCountry: DE
 ownership: independent
-whoManagesOs: provider
+whoManagesOs: managed
 useCases:
   - cms
   - e-commerce

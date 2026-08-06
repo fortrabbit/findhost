@@ -9,7 +9,7 @@ category:
 regions: null
 description: Dutch server-management panel that provisions and maintains PHP application servers on VPS accounts the customer rents elsewhere.
 hqCountry: NL
-whoManagesOs: you
+whoManagesOs: self-managed
 infraContract:
   - byo-iaas
 runsOn:

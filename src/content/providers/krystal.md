@@ -11,7 +11,7 @@ description: British host running PHP, Python, Perl and Ruby on cPanel, powered 
 founded: 2002
 hqCountry: GB
 ownership: independent
-whoManagesOs: you
+whoManagesOs: self-managed
 useCases:
   - cms
   - e-commerce
