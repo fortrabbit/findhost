@@ -395,10 +395,21 @@ for (const key of noteKeys(notesDir)) {
   const field = fields.find((candidate) => candidate.facet === segment);
   if (!field) continue;
 
-  const held = records.some(({ data }) => {
-    const carried = data?.[field.id];
-    return Array.isArray(carried) ? carried.map(String).includes(value) : String(carried) === value;
-  });
+  /*
+   * A derived value is held by nobody literally — no record carries the field —
+   * so it has to be computed the way lib/facets.ts computes it, from the source
+   * field each value reads.
+   */
+  const option = field.values.find((candidate) => candidate.id === value);
+
+  const held = records.some(({ data }) =>
+    option?.from
+      ? option.when!.includes(String(data?.[option.from]))
+      : (() => {
+          const carried = data?.[field.id];
+          return Array.isArray(carried) ? carried.map(String).includes(value) : String(carried) === value;
+        })(),
+  );
 
   if (!held) fail(`${notesDir}/${key}.md`, `no record holds ${field.id} "${value}", so the page it heads is not built`);
 }
