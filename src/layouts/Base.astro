@@ -102,6 +102,14 @@ const canonical = new URL(path, Astro.site ?? Astro.url).href;
       // Before first paint, or the page flashes the wrong theme on the way in.
       const stored = localStorage.getItem('theme');
       if (stored === 'dark' || stored === 'light') document.documentElement.dataset.theme = stored;
+
+      /*
+       * Same reason. The filter panel is static markup and ships visible, so a
+       * crawler reads its links and a reader sees it immediately; the controls
+       * inside it only work once find.ts has run. This says which world we are
+       * in early enough that nothing appears, disappears or moves afterwards.
+       */
+      document.documentElement.classList.add('js');
     </script>
 
     <script>

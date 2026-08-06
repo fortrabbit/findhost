@@ -8,8 +8,10 @@ import listUl from 'bootstrap-icons/icons/list-ul.svg?raw';
  * and the stylesheet hides what the slim view does not want, so find.ts rebuilds
  * rows without knowing which view is on and the two cannot drift.
  *
- * Hidden until the script takes it over, like the filter panel: a control that
- * does nothing is worse than no control.
+ * Absent until the script takes it over, like the panel's checkboxes: a control
+ * that does nothing is worse than no control. That is the `js` class in
+ * Base.astro, set before first paint, rather than an attribute removed after
+ * hydration — the second way makes the list jump once on every page.
  */
 const styles = [
   { id: 'extended', label: 'Extended', title: 'Show descriptions', icon: cardText },
@@ -17,10 +19,10 @@ const styles = [
 ];
 ---
 
-<div class="list-style" role="group" aria-label="List style" data-list-style hidden>
+<div class="list-style" role="group" aria-label="List style" data-list-style>
   {
     styles.map((style) => (
-      <button type="button" value={style.id} title={style.title} aria-pressed="false">
+      <button type="button" value={style.id} title={style.title} aria-pressed="false" disabled>
         <span class="visually-hidden">{style.label}</span>
         <Fragment set:html={style.icon} />
       </button>

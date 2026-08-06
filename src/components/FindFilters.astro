@@ -15,17 +15,19 @@ const { facets, drafts } = Astro.props;
  * to construct every element here, which put the whole design of the panel
  * inside a script nobody edits for design reasons.
  *
- * The whole thing is hidden until the script takes it over, `details` included,
- * because a checkbox that filters nothing is worse than no checkbox — and a
- * disclosure that opens onto nothing is worse still. Without JavaScript the
- * fallback below the register links every value as a page instead.
+ * It ships visible, and it is the register's index: every value here is a real
+ * link to that value's page, which is how a crawler finds 186 of them. Only the
+ * checkboxes need the script, so only the checkboxes wait for it — see the `js`
+ * class set before first paint in Base.astro. Hiding the whole panel until
+ * hydration put those links in display:none and made the panel arrive with a
+ * visible jump.
  *
  * Open by default: every facet shows, and the control is there to put them away
  * rather than to fetch them.
  */
 ---
 
-<details class="find-panel" data-find-filters hidden open>
+<details class="find-panel" data-find-filters open>
   <summary>Filters</summary>
 
   <div class="find-filters full-width">
@@ -50,7 +52,7 @@ const { facets, drafts } = Astro.props;
                   browser restoring a checked state on reload would disagree with the
                   URL, which is the only state this script trusts. */}
               <label>
-                <input type="checkbox" data-drafts autocomplete="off" />
+                <input type="checkbox" data-drafts autocomplete="off" disabled />
                 <span class="find-value">Show these too</span>
               </label>
               <span class="find-count">

@@ -112,7 +112,6 @@ function row(provider: ProviderRow): HTMLLIElement {
 const filtersEl = document.querySelector<HTMLElement>('[data-find-filters]');
 const resultsEl = document.querySelector<HTMLElement>('[data-find-results]');
 const summaryEl = document.querySelector<HTMLElement>('[data-find-summary]');
-const fallbackEl = document.querySelector<HTMLElement>('[data-find-fallback]');
 const styleEl = document.querySelector<HTMLElement>('[data-list-style]');
 
 /*
@@ -137,13 +136,14 @@ if (styleEl && resultsEl) {
     localStorage.setItem('list-style', style);
   };
 
+  for (const button of styleEl.querySelectorAll<HTMLButtonElement>('button[disabled]')) button.disabled = false;
+
   styleEl.addEventListener('click', (event) => {
     const button = (event.target as HTMLElement).closest<HTMLButtonElement>('button');
     if (button && button.value !== current) show(button.value);
   });
 
   show(current);
-  styleEl.hidden = false;
 }
 
 if (filtersEl && resultsEl && summaryEl) {
@@ -219,8 +219,10 @@ if (filtersEl && resultsEl && summaryEl) {
    * nobody opens for design reasons, and rebuilding it on every tick re-sorted
    * the values under the pointer that had just chosen one.
    *
-   * It arrives hidden, because a checkbox that filters nothing is worse than no
-   * checkbox. Taking that off is this script saying it is in charge.
+   * The panel is visible from the first paint and its checkboxes come with it,
+   * inert. Enabling them is this script saying it is in charge: a box that is
+   * clickable before its listener exists is a filter that silently does nothing,
+   * which is the one failure a reader cannot tell from a broken site.
    */
   const wireFilters = () => {
     for (const input of filtersEl.querySelectorAll<HTMLInputElement>('input[data-facet]')) {
@@ -242,7 +244,8 @@ if (filtersEl && resultsEl && summaryEl) {
       renderResults();
     });
 
-    filtersEl.hidden = false;
+    for (const input of filtersEl.querySelectorAll<HTMLInputElement>('input[disabled]')) input.disabled = false;
+
   };
 
   /*
@@ -351,7 +354,6 @@ if (filtersEl && resultsEl && summaryEl) {
   wireFilters();
   syncFilters();
   renderResults();
-  fallbackEl?.remove();
 }
 
 export {};

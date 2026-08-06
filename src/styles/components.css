@@ -496,16 +496,29 @@
   padding: var(--row-pad) 0;
 }
 
+/*
+ * What waits for the script, and what does not. The panel, its values and their
+ * counts are static markup and links — a crawler reads them, and so does a
+ * reader with JavaScript off. The checkboxes and the view toggle do nothing
+ * until find.ts runs, so they are absent until it has, and the `js` class that
+ * says so is set before first paint. Nothing appears late and nothing moves.
+ */
+html:not(.js) .find-row input[type='checkbox'],
+html:not(.js) .list-style {
+  display: none;
+}
+
+/* Where the panel does the job, the list of facet indexes below is a repeat. */
+html.js [data-find-fallback] {
+  display: none;
+}
+
 /** Two icons, pressed rather than coloured — the state is which list is on, not which is nicer. */
 .list-style {
   display: flex;
   gap: var(--space-3xs);
   justify-content: flex-end;
   margin-bottom: var(--space-2xs);
-}
-
-.list-style[hidden] {
-  display: none;
 }
 
 .list-style button {

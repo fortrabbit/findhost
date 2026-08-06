@@ -51,7 +51,7 @@ const missing = [
       values.map((value) => (
         <div class="find-row">
           <label title={value.label}>
-            <input type="checkbox" data-facet={facet.id} value={value.id} autocomplete="off" />
+            <input type="checkbox" data-facet={facet.id} value={value.id} autocomplete="off" disabled />
             <span class="find-value">{value.short ?? value.label}</span>
           </label>
           <a class="find-count" href={`/${facet.id}/${value.slug}/`}>
