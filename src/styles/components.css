@@ -676,7 +676,7 @@ html.js [data-find-fallback] {
 .find-onward {
   flex: none;
   margin: 0;
-  font-size: var(--text-md);
+  font-size: var(--text-sm);
   white-space: nowrap;
 }
 

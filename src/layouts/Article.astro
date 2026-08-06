@@ -1,11 +1,12 @@
 ---
 import Base from './Base.astro';
 import PageFigure from '../components/PageFigure.astro';
+import { organization } from '../lib/seo';
 
 /*
- * Every written page: the guide articles, About, Policies. One layout, so a page
- * of prose looks the same wherever it sits. Records and lists are not this —
- * they are scanned, not read.
+ * Every written page: the guide and About. One layout, so a page of prose looks
+ * the same wherever it sits. Records and lists are not this — they are scanned,
+ * not read.
  */
 interface Props {
   frontmatter: {
@@ -18,9 +19,27 @@ interface Props {
 
 const { frontmatter } = Astro.props;
 const { figure } = frontmatter;
+
+const origin = Astro.site?.origin ?? '';
+const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url).href;
 ---
 
-<Base title={`${frontmatter.title} — FindHost`} description={frontmatter.description}>
+<Base
+  title={`${frontmatter.title} — FindHost`}
+  description={frontmatter.description}
+  schema={{
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: frontmatter.title,
+    ...(frontmatter.description ? { description: frontmatter.description } : {}),
+    url: canonical,
+    mainEntityOfPage: canonical,
+    inLanguage: 'en',
+    publisher: organization(origin),
+    author: organization(origin),
+    license: 'https://creativecommons.org/licenses/by/4.0/',
+  }}
+>
   <article>
     <h1>{frontmatter.title}</h1>
     {frontmatter.lead && <p class="lead">{frontmatter.lead}</p>}

@@ -4,6 +4,7 @@ import Base from '../layouts/Base.astro';
 import { fieldGroups, fieldOf, labelOf, slugOf, type Field } from '../lib/fields';
 import { energy, flag, footnotes, price } from '../lib/record';
 import { isListed } from '../lib/providers';
+import { organization } from '../lib/seo';
 import SocialLinks from '../components/SocialLinks.astro';
 import PageFigure from '../components/PageFigure.astro';
 import FactGroups from '../components/FactGroups.astro';
@@ -144,6 +145,11 @@ const sourceLabel = (field: string) =>
   { notes: 'the notes', urls: 'links', social: 'accounts', sustainabilityUrl: 'sustainability' }[field] ??
   field.replace(/([A-Z])/g, ' $1').toLowerCase();
 
+const origin = Astro.site?.origin ?? '';
+
+/* Accounts, as the identifiers schema.org means by sameAs. */
+const social = Object.values(data.social ?? {}).filter((url): url is string => typeof url === 'string');
+
 const energyClaim = energy(data.energyClaim);
 const homeFlag = flag(data.hqCountry);
 
@@ -196,6 +202,27 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
   description={data.description}
   markdown={`/${provider.id}.md`}
   hidden={!listed}
+  schema={{
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    url: `${origin}/${provider.id}/`,
+    publisher: organization(origin),
+    /*
+     * The provider is the subject of the page, not its author. `about` says that
+     * without claiming the page is theirs, and everything in it is a field on
+     * the record — nothing is asserted here that the page does not show.
+     */
+    about: {
+      '@type': 'Organization',
+      name: data.name,
+      url: data.urls.home,
+      ...(data.founded ? { foundingDate: String(data.founded) } : {}),
+      ...(data.hqCountry
+        ? { address: { '@type': 'PostalAddress', addressCountry: String(data.hqCountry) } }
+        : {}),
+      ...(social.length ? { sameAs: social } : {}),
+    },
+  }}
 >
   <article>
     <div class="record-head">

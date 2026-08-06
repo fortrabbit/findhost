@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
+import { organization, valueTitle } from '../../lib/seo';
 import ProviderRegister from '../../components/ProviderRegister.astro';
 import PageFigure from '../../components/PageFigure.astro';
 import { facetIndex, facetRoutes, loadFacets } from '../../lib/facets';
@@ -120,6 +121,7 @@ const counted = [
  * Its title heads the browser tab only — the heading stays the value's own
  * label, so the page and the filter that leads to it say the same word.
  */
+const origin = Astro.site?.origin ?? '';
 const notes = await getCollection('notes');
 const note = notes.find((entry) => entry.id === `${facet.id}/${value.id}`);
 const Note = note ? (await render(note)).Content : null;
@@ -127,9 +129,22 @@ const figure = note?.data.figure;
 ---
 
 <Base
-  title={`${note?.data.title ?? value.label} — FindHost`}
-  description={note?.data.description ??
-    `Providers where ${facet.label.toLowerCase()} is ${value.label.toLowerCase()}.`}
+  title={`${note?.data.title ?? valueTitle(facet.id, value.label)} — FindHost`}
+  description={note?.data.description ?? summary.split('. ')[0].concat('.')}
+  schema={{
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: note?.data.title ?? valueTitle(facet.id, value.label),
+    numberOfItems: matches.length,
+    isPartOf: organization(origin),
+    itemListOrder: 'https://schema.org/ItemListOrderAscending',
+    itemListElement: matches.map((provider, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      url: `${origin}/${provider.id}/`,
+      name: provider.name,
+    })),
+  }}
 >
   <div class="page-head">
     <h1>{value.label}</h1>

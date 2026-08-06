@@ -10,9 +10,11 @@ interface Props {
   markdown?: string;
   /** A record kept for reference but not on show: out of the index and out of search, whatever the site-wide flag says. */
   hidden?: boolean;
+  /** Structured data for this page, as an object. Emitted verbatim; see lib/seo.ts for the shapes. */
+  schema?: Record<string, unknown>;
 }
 
-const { title, description, markdown, hidden = false } = Astro.props;
+const { title, description, markdown, hidden = false, schema } = Astro.props;
 const fathomSiteId = import.meta.env.PUBLIC_FATHOM_SITE_ID;
 
 // Belt and braces with robots.txt: the file stops the crawl, this stops a URL
@@ -49,6 +51,7 @@ const canonical = new URL(path, Astro.site ?? Astro.url).href;
     <meta property="og:site_name" content="FindHost" />
     {description && <meta property="og:description" content={description} />}
     <meta name="twitter:card" content="summary" />
+    {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} is:inline />}
     {fathomSiteId && <script is:inline src="https://cdn.usefathom.com/script.js" data-site={fathomSiteId} defer />}
   </head>
   <body data-pagefind-ignore={hidden ? 'all' : undefined}>

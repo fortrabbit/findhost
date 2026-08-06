@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import ProviderRegister from '../components/ProviderRegister.astro';
 import FindFilters from '../components/FindFilters.astro';
 import { loadDefunct, loadDrafts, loadFacets } from '../lib/facets';
+import { dataset } from '../lib/seo';
 
 const { facets, providers } = await loadFacets();
 const drafts = await loadDrafts();
@@ -20,6 +21,7 @@ const defunct = await loadDefunct();
 <Base
   title="FindHost — a ratings-free dataset of hosting providers"
   description="Opinionated field guide to choose the right hosting provider."
+  schema={dataset(Astro.site?.origin ?? '', providers.length)}
 >
   <h1>Find your next web host</h1>
 
