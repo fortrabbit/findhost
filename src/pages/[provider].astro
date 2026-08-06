@@ -106,8 +106,10 @@ const linkLabels: Record<string, string> = {
 const outgoing = [
   ...Object.entries(linkLabels)
     .filter(([key]) => data.urls[key as keyof typeof data.urls])
-    .map(([key, label]) => [label, data.urls[key as keyof typeof data.urls] as string] as const),
-  ...(data.sustainabilityUrl ? ([['sustainability', data.sustainabilityUrl]] as const) : []),
+    .map(([key, label]) => ({ label, url: data.urls[key as keyof typeof data.urls] as string, field: 'urls' })),
+  ...(data.sustainabilityUrl
+    ? [{ label: 'sustainability', url: data.sustainabilityUrl, field: 'sustainabilityUrl' }]
+    : []),
 ];
 
 const { notes, numberOf } = footnotes(data.sources);
@@ -124,14 +126,14 @@ const drawn = (groups: { label: string; fields: Field[] }[]) =>
   }));
 
 /*
- * Sources for what this line holds. `urls` and `sustainabilityUrl` are cited
- * like any other fact and have no row to hang a marker on, so the marker goes
- * where the reader can see what it is about. Social accounts are not cited: a
- * profile link either resolves to the provider or it does not.
+ * A marker goes on the link it backs. Collected at the end of the row it was a
+ * number floating after four links, backing whichever one the reader guessed —
+ * and the sustainability claim is the one most worth citing precisely.
+ *
+ * Social accounts are not cited: a profile link either resolves to the provider
+ * or it does not.
  */
-const linkNotes = [...new Set(['urls', 'sustainabilityUrl'].map((field) => numberOf.get(field)))].filter(
-  (note): note is number => note !== undefined,
-);
+const noteFor = (field: string) => numberOf.get(field);
 
 /*
  * What each source backs, in the words the page uses for it. A source may name
@@ -258,21 +260,31 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
     {data.description && <p class="lead">{data.description}</p>}
 
     <p class="record-links">
-      <a class="record-home" href={data.urls.home} rel="nofollow">{data.urls.home.replace('https://', '')}</a>
-      {
-        outgoing.map(([label, url]) => (
-          <>
-            <a href={url} rel="nofollow">
-              {label}
-            </a>
-          </>
-        ))
-      }
-      {
-        linkNotes.map((note) => (
-          <a class="footnote-ref" href={`#source-${note}`} aria-label={`Source ${note}`}>
-            {note}
+      <span class="record-link">
+        <a class="record-home" href={data.urls.home} rel="nofollow">{data.urls.home.replace('https://', '')}</a>
+        {noteFor('urls') && (
+          <a class="footnote-ref" href={`#source-${noteFor('urls')}`} aria-label={`Source ${noteFor('urls')}`}>
+            {noteFor('urls')}
           </a>
+        )}
+      </span>
+      {
+        outgoing.map((link) => (
+          <span class="record-link">
+            <a href={link.url} rel="nofollow">
+              {link.label}
+            </a>
+            {/* `urls` is cited once, on the address; every page under it is the same source. */}
+            {link.field !== 'urls' && noteFor(link.field) && (
+              <a
+                class="footnote-ref"
+                href={`#source-${noteFor(link.field)}`}
+                aria-label={`Source ${noteFor(link.field)}`}
+              >
+                {noteFor(link.field)}
+              </a>
+            )}
+          </span>
         ))
       }
     </p>

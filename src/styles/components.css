@@ -936,6 +936,14 @@ html.js [data-find-fallback] {
   max-width: var(--measure-data);
 }
 
+/* A link and the source backing it, kept on one line so neither wraps alone. */
+.record-link {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--space-3xs);
+  white-space: nowrap;
+}
+
 /* The provider's own address, which is what most readers came for. */
 .record-home {
   font-weight: var(--weight-strong);
@@ -1179,6 +1187,24 @@ html.js [data-find-fallback] {
   margin: 0;
   padding-left: var(--space-md);
   font-size: var(--text-xs);
+}
+
+/*
+ * Where the jump landed. A footnote marker sends a reader into a list of near
+ * identical lines, and without this they have to count. Held rather than
+ * animated away: the mark is the answer to "which one", and it should still be
+ * there when they look back at it.
+ */
+.sources li:target {
+  background: var(--color-landed);
+  box-shadow: 0 0 0 var(--space-2xs) var(--color-landed);
+  border-radius: var(--radius);
+}
+
+/* The row that sent them, marked the same way when it is jumped back to. */
+.record-link:target,
+.fact-list dd:target {
+  background: var(--color-landed);
 }
 
 .source-date {

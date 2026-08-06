@@ -16,6 +16,8 @@
   --blue-300: #89aaff;
   --violet-700: #5b2a97;
   --violet-300: #c7a6ff;
+  --amber-200: #ffe9a3;
+  --amber-800: #5a4200;
 
   /* Semantic colour — two, plus links */
   --color-page: var(--paper);
@@ -23,6 +25,8 @@
   --color-ink-inverse: var(--paper);
   --color-link: var(--blue-600);
   --color-link-visited: var(--violet-700);
+  /* Where a jump landed. The one colour here that marks a moment rather than a role. */
+  --color-landed: var(--amber-200);
 
   /* Typeface roles. All installed faces — no webfont, nothing to load. */
   --font-display: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, Georgia, serif;
@@ -78,6 +82,7 @@
     --color-ink-inverse: var(--pitch);
     --color-link: var(--blue-300);
     --color-link-visited: var(--violet-300);
+    --color-landed: var(--amber-800);
   }
 }
 
@@ -88,6 +93,7 @@
   --color-ink-inverse: var(--pitch);
   --color-link: var(--blue-300);
   --color-link-visited: var(--violet-300);
+  --color-landed: var(--amber-800);
 }
 
 :root[data-theme='light'] {
@@ -96,6 +102,7 @@
   --color-ink-inverse: var(--paper);
   --color-link: var(--blue-600);
   --color-link-visited: var(--violet-700);
+  --color-landed: var(--amber-200);
 }
 
 /*
