@@ -19,6 +19,14 @@
 # filter panel reads in `filterOrder`, which is a separate question: a record is
 # read from the top down, filters are offered most-asked first.
 #
+# `facet`, `label` and the page's H1 say the same word. Number follows what the
+# segment names rather than how many values a record may hold: a segment naming a
+# countable kind takes the plural, because the page lists them — /categories/,
+# /regions/, /runtimes/, /use-cases/, /currencies/. A segment naming the
+# dimension itself stays singular however multiple the field is, because
+# "deployments" and "supports" would name something else — /deployment/,
+# /support/, /pricing/, /ownership/, /shell/, /os/, /hardware/, /exit/.
+#
 # A label holding a comma must be quoted. Unquoted, the comma ends the value and
 # the rest becomes a key of its own — which is how two price bands shipped as
 # "$500 to $1" and "Over $1".
