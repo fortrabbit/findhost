@@ -8,7 +8,7 @@ figure:
   text: Go ahead, ditch your VPS!
 ---
 
-A Virtual Private Server is an empty machine with root access. The provider keeps the hypervisor and the network running; everything above that belongs to the customer, which is why most records here answer "you" to [who manages the operating system](/os-managed-by/) and offer [full SSH access](/ssh/). Resources are allotted per instance rather than shared out among accounts, the software stack is a free choice, and a small instance is one of the cheapest ways to run something in [somebody else's data centre](/hardware/).
+A Virtual Private Server is an empty machine with root access. The provider keeps the hypervisor and the network running; everything above that belongs to the customer, which is why most records here answer "you" to [who manages the operating system](/os/) and offer [full SSH access](/shell/). Resources are allotted per instance rather than shared out among accounts, the software stack is a free choice, and a small instance is one of the cheapest ways to run something in [somebody else's data centre](/hardware/).
 
 The empty box has to be filled and then kept full. Operating system updates, security patches, backups, monitoring, mail configuration and the response to a 3am outage are all the customer's, and none of that work appears in the monthly price. Skipping it is the common failure: an unattended VPS is an unpatched VPS.
 

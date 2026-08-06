@@ -73,7 +73,7 @@
 # More than one can be true, and usually is: a provider selling droplets, an app
 # platform and functions is all three, and picking one meant picking for it.
 - id: category
-  label: Category
+  label: Categories
   group: Classification
   facet: categories
   filterOrder: 2
@@ -96,7 +96,7 @@
 - id: whoManagesOs
   label: OS
   group: Classification
-  facet: os-managed-by
+  facet: os
   filterOrder: 15
   values:
     - { id: you, label: 'You' }
@@ -105,7 +105,7 @@
 # More than one can be true at once: a panel that provisions onto your own cloud
 # account may also resell machines of its own.
 - id: infraContract
-  label: Metal
+  label: Hardware
   group: Classification
   facet: hardware
   filterOrder: 16
@@ -137,7 +137,7 @@
 - id: useCases
   label: Use cases
   group: Classification
-  facet: use-case
+  facet: use-cases
   filterOrder: 9
   multiple: true
   values:
@@ -182,7 +182,7 @@
 # ------------------------------------------------------------- Tech stack
 
 - id: runtimes
-  label: Stack
+  label: Runtimes
   group: Tech stack
   facet: runtimes
   filterOrder: 5
@@ -318,7 +318,7 @@
 - id: sshAccess
   label: Shell
   group: Tech stack
-  facet: ssh
+  facet: shell
   ordered: true
   filterOrder: 14
   values:
@@ -453,7 +453,7 @@
 # the cheapest ordinary terms. A notice period and a minimum term are the same
 # fact to a customer — time — so they are recorded as time and they add up.
 - id: exitWithin
-  label: Getting out
+  label: Exit
   group: Pricing
   facet: exit
   ordered: true
