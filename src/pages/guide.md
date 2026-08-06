@@ -7,16 +7,10 @@ figure:
   emoji: 🍋
   color: rgb(255, 250, 0)
   textColor: rgb(165, 135, 60)
-  text: A market of lemons.
+  text: The web hosting market is a "lemon market" where sellers have more information than buyers.
 ---
 
-## The market hides more than it shows
-
-> The web hosting market is a "lemon market" where sellers have more information than buyers.
->
-> — David N. Welton
-
-Three things follow from that, and they explain most of what makes choosing hard.
+The above is quote by David N. Welton. Three things follow from that, and they explain most of what makes choosing hard.
 
 **The vocabulary is blurry on purpose.** Shared hosting, VPS and IaaS are real distinctions that vendors smudge constantly, and the newer words are worse — is [serverless](/categories/serverless/) really server-less? This dataset answers with fields rather than adjectives. [Who manages the operating system](/os-managed-by/) and [whose hardware it runs on](/hardware/) settle most of the argument on their own, because they stay answerable whatever a vendor decides to call the product.
 

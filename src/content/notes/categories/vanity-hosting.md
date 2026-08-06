@@ -5,7 +5,7 @@ figure:
   emoji: 🐴
   color: rgb(255, 105, 180)
   textColor: rgb(255, 255, 255)
-  text: One trick pony.
+  text: One trick pony. Why not?
 ---
 
 Some software makes particular demands of its hosting. A CMS benefits from integrated caching and image delivery, and from having its updates applied for it. Standard answers exist for each of those separately; this category bundles them and tunes them for the one application it runs. Vanity hosting is not an industry term — it is one coined here, for a shape of provider the usual vocabulary has no word for.

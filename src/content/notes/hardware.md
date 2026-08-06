@@ -1,6 +1,5 @@
 ---
 description: Whether a provider owns the machines, resells someone else's cloud, or runs on infrastructure the customer brings.
-lead: Whose data centre it really is.
 ---
 
 **Owns the hardware** means racks the company is responsible for. **Resells someone else's** means a layer of software over capacity rented from a larger cloud. **You bring your own** means the product is the automation and the infrastructure arrives from the customer's own account. More than one can be true at once, and often is.
