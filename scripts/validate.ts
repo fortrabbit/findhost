@@ -91,6 +91,25 @@ for (const field of fields) {
 
     if (!field.values.length) fail(dictionaryFile, `"${field.id}" is a facet with no values to filter by`);
 
+    /*
+     * A record page may hold more than a facet does; it may never hold less. A
+     * filterable field with no `group` is one a reader can narrow the register
+     * by and then not find on the record it led them to, which reads as the
+     * dataset having lost the fact between two pages.
+     *
+     * A derived field carries no row of its own — nothing records it — so what
+     * has to be shown is the field each of its values reads.
+     */
+    const shown = isDerived(field.id)
+      ? [...new Set(field.values.map((value) => value.from!))].filter((source) => !fieldOf.get(source)?.group)
+      : field.group
+        ? []
+        : [field.id];
+
+    for (const missing of shown) {
+      fail(dictionaryFile, `"${missing}" is filterable through "${field.facet}" but has no group, so no record shows it`);
+    }
+
     if (!/^[a-z0-9-]+$/.test(field.facet)) fail(dictionaryFile, `facet "${field.facet}" is not a usable URL segment`);
 
     // Absent, a facet sorts silently last; shared, two facets swap places between builds.

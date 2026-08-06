@@ -73,6 +73,7 @@ testDomain: included
 gdprDpa: standard
 supportChannels:
   - email
+  - chat
 supportHours: business-hours
 supportTiering: all-plans
 apiAvailable: public
