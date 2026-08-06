@@ -15,12 +15,18 @@ import { expect, test } from '@playwright/test';
  * does not send someone editing assertions until they stop meaning anything.
  */
 const records = new URL('../src/content/providers/', import.meta.url);
-const hidden = new Set(['draft', 'out-of-scope']);
+
+/*
+ * Two ways to be out of the register: hidden, which keeps no place anywhere, and
+ * beside it, which keeps a page and a checkbox. Listed here rather than imported
+ * so the number still arrives by a different route from the page's.
+ */
+const outside = new Set(['draft', 'out-of-scope', 'discontinued', 'unlisted']);
 
 const listed = readdirSync(records).filter((file) => {
   if (!file.endsWith('.md')) return false;
   const status = readFileSync(new URL(file, records), 'utf8').match(/^status: *(\S+)/m)?.[1];
-  return status === undefined || !hidden.has(status);
+  return status === undefined || !outside.has(status);
 }).length;
 
 test.describe('the register', () => {
@@ -193,7 +199,7 @@ test.describe('stubs', () => {
     const rows = page.locator('[data-find-results] .provider-list > li');
     await expect(rows).toHaveCount(listed);
 
-    const toggle = page.locator('.find-drafts input[type="checkbox"]');
+    const toggle = page.locator('input[data-drafts]');
     await expect(toggle).not.toBeChecked();
 
     await toggle.check();
@@ -202,6 +208,25 @@ test.describe('stubs', () => {
       new RegExp(`^${listed} records, sorted alphabetically\\.$`),
     );
     await expect(page.getByRole('heading', { name: 'Not in the register' })).toBeVisible();
+  });
+
+  /*
+   * The same contract for a record beside the register rather than hidden from
+   * it: shown on request, appended under its own heading, never in the count.
+   */
+  test('a group beside the register is offered back without joining the count', async ({ page }) => {
+    await page.goto('/');
+
+    const rows = page.locator('[data-find-results] .provider-list > li');
+    const toggle = page.locator('input[data-aside="unlisted"]');
+    await expect(toggle).not.toBeChecked();
+
+    await toggle.check();
+    await expect(rows).not.toHaveCount(listed);
+    await expect(page.locator('[data-find-summary]')).toHaveText(
+      new RegExp(`^${listed} records, sorted alphabetically\\.$`),
+    );
+    await expect(page.getByRole('heading', { name: 'Owns hosting brands, sells none' })).toBeVisible();
   });
 });
 
