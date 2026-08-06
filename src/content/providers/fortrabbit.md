@@ -56,11 +56,11 @@ currencies:
 billingPeriods:
   - monthly
 billingTiming: arrears
-exitWithin: a-month
+exitWithin: a-day
 entryPrice: { amount: 2.5, currency: EUR, period: month }
 freeTier: trial
 renewalMultiple: 1
-contractMinimum: monthly
+contractMinimum: none
 regions:
   - IE
   - US
