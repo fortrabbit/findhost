@@ -16,7 +16,6 @@ useCases:
   - e-commerce
 software:
   - wordpress
-  - woocommerce
 pricingModel: fixed-tier
 priceFrom: sm
 priceTo: md

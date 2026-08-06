@@ -15,7 +15,6 @@ runtimes:
   - php
 software:
   - wordpress
-  - woocommerce
 useCases:
   - cms
   - e-commerce

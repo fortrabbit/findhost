@@ -23,7 +23,6 @@ audience:
   - smb
 software:
   - wordpress
-  - woocommerce
   - ghost
   - django
   - rails

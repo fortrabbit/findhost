@@ -43,7 +43,7 @@ const { facets, drafts } = Astro.props;
       drafts > 0 && (
         <div class="find-facet find-drafts">
           <h2 class="find-facet-title">
-            <span>Stubs</span>
+            <span>Other</span>
           </h2>
 
           <div class="find-values">
@@ -53,7 +53,7 @@ const { facets, drafts } = Astro.props;
                   URL, which is the only state this script trusts. */}
               <label>
                 <input type="checkbox" data-drafts autocomplete="off" disabled />
-                <span class="find-value">Show these too</span>
+                <span class="find-value">Stubs</span>
               </label>
               <span class="find-count">
                 {drafts}
@@ -62,7 +62,7 @@ const { facets, drafts } = Astro.props;
             </div>
           </div>
 
-          <p class="find-facet-foot">Started and unfinished, or out of scope. Never counted.</p>
+          <p class="find-facet-foot">Records started and unfinished, or out of scope. Never counted.</p>
         </div>
       )
     }

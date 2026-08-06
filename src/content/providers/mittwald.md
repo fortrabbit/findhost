@@ -29,7 +29,6 @@ software:
   - joomla
   - shopware
   - magento
-  - woocommerce
 runtimes:
   - php
   - node

@@ -17,7 +17,6 @@ audience:
   - smb
 software:
   - wordpress
-  - woocommerce
   - laravel
   - magento
 social:

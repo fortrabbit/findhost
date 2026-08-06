@@ -23,7 +23,6 @@ audience:
   - smb
 software:
   - wordpress
-  - woocommerce
 runtimes:
   - php
 deployMethods:

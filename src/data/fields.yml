@@ -88,6 +88,7 @@
     - { id: iaas, label: Infrastructure as a Service, short: IaaS }
     - { id: shared-hosting, label: Shared hosting }
     - { id: serverless, label: Serverless }
+    - { id: caas, label: Containers as a Service, short: CaaS }
     - { id: server-management, label: Server management }
     - { id: vanity-hosting, label: Vanity hosting }
     - { id: lcnc, label: Low-code and no-code, short: Low-code }
@@ -224,7 +225,6 @@
   multiple: true
   values:
     - { id: wordpress, label: WordPress }
-    - { id: woocommerce, label: WooCommerce, implies: [wordpress] }
     - { id: drupal, label: Drupal }
     - { id: typo3, label: TYPO3 }
     - { id: joomla, label: Joomla }

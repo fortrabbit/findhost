@@ -20,7 +20,6 @@ useCases:
   - e-commerce
 software:
   - wordpress
-  - woocommerce
   - magento
 runtimes:
   - php

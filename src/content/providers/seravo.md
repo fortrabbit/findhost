@@ -22,7 +22,6 @@ audience:
   - non-profit
 software:
   - wordpress
-  - woocommerce
 runtimes:
   - php
 deployMethods:

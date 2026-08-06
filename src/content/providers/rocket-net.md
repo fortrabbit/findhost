@@ -20,7 +20,6 @@ audience:
   - enterprise
 software:
   - wordpress
-  - woocommerce
 runtimes:
   - php
 deployMethods:

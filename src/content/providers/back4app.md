@@ -6,6 +6,7 @@ urls:
   pricing: https://www.back4app.com/pricing/backend-as-a-service
 category:
   - serverless
+  - caas
 description: Managed Parse Server backend with an auto-generated REST and GraphQL API, plus a container platform that builds and runs Docker images from GitHub.
 whoManagesOs: self-managed
 infraContract:

@@ -20,7 +20,6 @@ specialisation:
   - wordpress
 software:
   - wordpress
-  - woocommerce
 runtimes:
   - php
 backupsIncluded: included

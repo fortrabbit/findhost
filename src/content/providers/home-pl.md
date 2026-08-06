@@ -23,7 +23,6 @@ audience:
   - agency
 software:
   - wordpress
-  - woocommerce
 runtimes:
   - php
   - python

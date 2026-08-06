@@ -25,7 +25,6 @@ audience:
   - non-profit
 software:
   - wordpress
-  - woocommerce
   - joomla
 runtimes:
   - php

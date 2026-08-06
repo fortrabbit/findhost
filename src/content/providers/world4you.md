@@ -22,7 +22,6 @@ audience:
   - smb
 software:
   - wordpress
-  - woocommerce
   - joomla
   - drupal
 runtimes:

@@ -30,7 +30,6 @@ audience:
 software:
   - wordpress
   - joomla
-  - woocommerce
   - drupal
 runtimes:
   - php

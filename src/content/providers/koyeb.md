@@ -8,6 +8,7 @@ urls:
   docs: https://www.koyeb.com/docs
 category:
   - paas
+  - caas
 description: French platform that deploys containers and repositories across global regions with scale-to-zero, per-second billing, GPU instances and serverless Postgres.
 hqCountry: FR
 ownership: vc-backed
