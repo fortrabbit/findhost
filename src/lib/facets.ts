@@ -118,15 +118,21 @@ function countValues(field: Field, providers: ProviderRow[]): Facet {
   const applicable = providers.filter((provider) => !provider.notApplicable.includes(field.id));
   const known = applicable.filter((provider) => provider.facets[field.id] !== undefined);
 
-  const values = field.values.map((value) => ({
-    id: value.id,
-    label: value.label,
-    ...(value.short ? { short: value.short } : {}),
-    count: known.filter((provider) => {
-      const held = provider.facets[field.id];
-      return Array.isArray(held) ? held.includes(value.id) : held === value.id;
-    }).length,
-  }));
+  /*
+   * A `noFilter` value is still recorded and still shown on the record; it just
+   * never becomes a row here, and so never becomes a page of its own either.
+   */
+  const values = field.values
+    .filter((value) => !value.noFilter)
+    .map((value) => ({
+      id: value.id,
+      label: value.label,
+      ...(value.short ? { short: value.short } : {}),
+      count: known.filter((provider) => {
+        const held = provider.facets[field.id];
+        return Array.isArray(held) ? held.includes(value.id) : held === value.id;
+      }).length,
+    }));
 
   return {
     id: field.facet!,

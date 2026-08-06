@@ -28,10 +28,9 @@ runtimes:
   - php
   - python
 deployMethods:
-  - ssh
-  - ftp
+  - file-transfer
   - control-panel
-sshAccess: shell
+sshAccess: jailed
 managedDatabases:
   - mysql
   - postgres

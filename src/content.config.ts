@@ -260,15 +260,16 @@ const providerFields = z
 
     /*
      * Included — what comes with the hosting and what has to be bought
-     * elsewhere. Three booleans rather than one list, because a list can only
-     * say what is included: absent would mean both "they do not offer it" and
-     * "nobody has checked", and the difference is the whole question.
+     * elsewhere. One field per thing rather than one list, because a list can
+     * only say what is included: absent would mean both "they do not offer it"
+     * and "nobody has checked", and the difference is the whole question. Three
+     * answers rather than two, because "sold separately" is the ordinary case.
      */
-    domainRegistration: z.boolean().optional(),
-    dnsHosting: z.boolean().optional(),
-    emailHosting: z.boolean().optional(),
-    cdnIncluded: z.boolean().optional(),
-    testDomain: z.boolean().optional(),
+    domainRegistration: z.enum(vocabulary('domainRegistration')).optional(),
+    dnsHosting: z.enum(vocabulary('dnsHosting')).optional(),
+    emailHosting: z.enum(vocabulary('emailHosting')).optional(),
+    cdnIncluded: z.enum(vocabulary('cdnIncluded')).optional(),
+    testDomain: z.enum(vocabulary('testDomain')).optional(),
 
     // Automation & agent support — the axis nobody else records
     apiAvailable: z.enum(vocabulary('apiAvailable')).optional(),

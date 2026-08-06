@@ -1,5 +1,5 @@
 ---
-description: What each provider markets itself for — shops, SaaS products, API backends, side projects — taken from its own site.
+description: What each provider markets itself for — shops, web apps, API backends, side projects — taken from its own site.
 lead: What the provider says it is for.
 ---
 

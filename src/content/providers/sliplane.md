@@ -12,7 +12,7 @@ description: German Docker hosting that bills for the server rather than the con
 hqCountry: DE
 whoManagesOs: you
 useCases:
-  - saas
+  - web-app
   - api
   - internal-tool
   - background-jobs

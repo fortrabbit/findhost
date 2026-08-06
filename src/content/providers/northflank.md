@@ -16,7 +16,7 @@ infraContract:
   - resells-iaas
   - byo-iaas
 useCases:
-  - saas
+  - web-app
   - api
   - ai-app
   - background-jobs

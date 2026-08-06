@@ -16,7 +16,7 @@ infraContract:
 whoManagesOs: you
 runtimes:
   - any
-sshAccess: shell
+sshAccess: root
 priceFrom: xs
 priceTo: md
 billingPeriods:

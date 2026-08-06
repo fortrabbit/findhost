@@ -14,7 +14,7 @@ ownership: vc-backed
 whoManagesOs: you
 useCases:
   - api
-  - saas
+  - web-app
   - ai-app
   - background-jobs
   - data-pipeline

@@ -30,7 +30,7 @@ runtimes:
   - static
 deployMethods:
   - git-push
-  - sftp
+  - file-transfer
   - control-panel
 managedDatabases:
   - mysql

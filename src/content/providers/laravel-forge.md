@@ -26,7 +26,7 @@ runtimes:
   - node
 deployMethods:
   - git-integration
-sshAccess: shell
+sshAccess: root
 managedDatabases:
   - mysql
   - postgres

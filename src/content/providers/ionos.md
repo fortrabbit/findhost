@@ -20,7 +20,7 @@ useCases:
   - campaign-site
   - portfolio
   - api
-  - saas
+  - web-app
 audience:
   - solo
   - smb
@@ -37,11 +37,10 @@ runtimes:
   - python
   - static
 deployMethods:
-  - sftp
-  - ssh
+  - file-transfer
   - git-push
   - control-panel
-sshAccess: shell
+sshAccess: jailed
 pricingModel: fixed-tier
 priceFrom: sm
 priceTo: md

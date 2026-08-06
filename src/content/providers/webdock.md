@@ -14,7 +14,7 @@ ownership: independent
 whoManagesOs: you
 useCases:
   - cms
-  - saas
+  - web-app
   - api
   - internal-tool
   - side-project
@@ -29,9 +29,8 @@ runtimes:
   - any
   - docker
 deployMethods:
-  - ssh
   - control-panel
-sshAccess: shell
+sshAccess: root
 pricingModel: fixed-tier
 priceFrom: xs
 priceTo: md

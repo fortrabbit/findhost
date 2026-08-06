@@ -12,7 +12,7 @@ infraContract:
   - resells-iaas
 useCases:
   - api
-  - saas
+  - web-app
   - ai-app
   - side-project
   - learning

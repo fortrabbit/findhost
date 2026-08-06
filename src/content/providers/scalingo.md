@@ -13,7 +13,7 @@ whoManagesOs: you
 infraContract:
   - resells-iaas
 useCases:
-  - saas
+  - web-app
   - api
   - cms
   - dashboard
@@ -46,7 +46,7 @@ deployMethods:
   - git-push
   - git-integration
   - docker-image
-sshAccess: shell
+sshAccess: root
 managedDatabases:
   - postgres
   - mysql

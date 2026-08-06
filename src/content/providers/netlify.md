@@ -20,7 +20,7 @@ useCases:
   - campaign-site
   - portfolio
   - api
-  - saas
+  - web-app
 audience:
   - solo
   - agency

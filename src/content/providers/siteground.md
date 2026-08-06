@@ -31,10 +31,9 @@ infraContract:
 runsOn:
   - gcp
 whoManagesOs: provider
-sshAccess: shell
+sshAccess: jailed
 deployMethods:
-  - ssh
-  - sftp
+  - file-transfer
   - control-panel
   - git-push
 pricingModel: fixed-tier

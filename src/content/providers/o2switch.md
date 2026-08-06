@@ -33,10 +33,9 @@ runtimes:
   - php
   - static
 deployMethods:
-  - ssh
-  - sftp
+  - file-transfer
   - control-panel
-sshAccess: shell
+sshAccess: root
 pricingModel: fixed-tier
 priceFrom: sm
 priceTo: md

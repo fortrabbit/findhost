@@ -14,7 +14,7 @@ runsOn:
 whoManagesOs: provider
 useCases:
   - cms
-  - saas
+  - web-app
 software:
   - laravel
   - wordpress

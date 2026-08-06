@@ -13,7 +13,7 @@ description: Vercel is a serverless frontend platform. Its official function run
 ownership: vc-backed
 whoManagesOs: provider
 useCases:
-  - saas
+  - web-app
   - ai-app
 audience:
   - enterprise

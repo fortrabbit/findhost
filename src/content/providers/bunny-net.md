@@ -14,7 +14,7 @@ useCases:
   - static-site
   - api
   - ai-app
-  - saas
+  - web-app
   - background-jobs
 audience:
   - solo

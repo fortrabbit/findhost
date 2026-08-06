@@ -29,8 +29,7 @@ runtimes:
 deployMethods:
   - control-panel
   - git-integration
-  - ssh
-sshAccess: shell
+sshAccess: jailed
 managedDatabases:
   - mysql
 pricingModel: fixed-tier

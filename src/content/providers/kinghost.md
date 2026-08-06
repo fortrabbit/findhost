@@ -33,11 +33,10 @@ runtimes:
   - python
   - java
 deployMethods:
-  - ssh
-  - ftp
+  - file-transfer
   - git-integration
   - control-panel
-sshAccess: shell
+sshAccess: jailed
 pricingModel: fixed-tier
 entryPrice: { amount: 9.99, currency: BRL, period: month }
 currencies:

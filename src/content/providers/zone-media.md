@@ -17,7 +17,7 @@ useCases:
   - e-commerce
   - api
   - side-project
-  - saas
+  - web-app
   - static-site
 audience:
   - solo
@@ -34,11 +34,9 @@ runtimes:
   - go
   - python
 deployMethods:
-  - ssh
-  - ftp
-  - sftp
+  - file-transfer
   - control-panel
-sshAccess: shell
+sshAccess: jailed
 pricingModel: fixed-tier
 priceFrom: sm
 priceTo: md

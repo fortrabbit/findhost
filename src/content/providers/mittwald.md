@@ -36,11 +36,10 @@ runtimes:
   - docker
   - static
 deployMethods:
-  - ssh
-  - sftp
+  - file-transfer
   - git-push
   - control-panel
-sshAccess: shell
+sshAccess: jailed
 pricingModel: fixed-tier
 entryPrice: { amount: 13, currency: EUR, period: month }
 priceFrom: sm

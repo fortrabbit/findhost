@@ -14,7 +14,7 @@ audience:
   - smb
 runtimes:
   - any
-sshAccess: shell
+sshAccess: root
 backupsIncluded: paid-addon
 pricingModel: fixed-tier
 priceFrom: sm

@@ -15,7 +15,7 @@ whoManagesOs: you
 useCases:
   - ai-app
   - data-pipeline
-  - saas
+  - web-app
   - api
   - background-jobs
 audience:
@@ -29,8 +29,7 @@ runtimes:
   - docker
 deployMethods:
   - control-panel
-  - ssh
-sshAccess: shell
+sshAccess: root
 pricingModel: hourly
 priceFrom: xl
 priceTo: 2xl

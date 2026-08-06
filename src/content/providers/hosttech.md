@@ -26,10 +26,9 @@ software:
 runtimes:
   - php
 deployMethods:
-  - ftp
-  - ssh
+  - file-transfer
   - git-push
-sshAccess: shell
+sshAccess: jailed
 pricingModel: fixed-tier
 entryPrice: { amount: 6.9, currency: CHF, period: month }
 priceFrom: sm

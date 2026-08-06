@@ -32,10 +32,9 @@ runtimes:
   - python
   - dotnet
 deployMethods:
-  - ssh
-  - sftp
+  - file-transfer
   - control-panel
-sshAccess: shell
+sshAccess: jailed
 pricingModel: fixed-tier
 entryPrice: { amount: 89, currency: SEK, period: month }
 priceFrom: md

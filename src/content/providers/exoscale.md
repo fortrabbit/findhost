@@ -16,7 +16,7 @@ whoManagesOs: you
 infraContract:
   - owns-metal
 useCases:
-  - saas
+  - web-app
   - api
   - data-pipeline
   - ai-app
@@ -35,7 +35,7 @@ runtimes:
 deployMethods:
   - control-panel
   - docker-image
-sshAccess: shell
+sshAccess: root
 managedDatabases:
   - postgres
   - mysql

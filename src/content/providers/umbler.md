@@ -30,7 +30,7 @@ runtimes:
   - php
 deployMethods:
   - git-push
-  - sftp
+  - file-transfer
   - control-panel
 pricingModel: per-resource
 priceFrom: xs

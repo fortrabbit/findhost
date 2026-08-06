@@ -23,6 +23,13 @@ export interface FieldValue {
   /** Excluded from the register and from every count. Only `status` uses it. */
   hidden?: boolean;
   /**
+   * Recorded and shown on the record, but never offered as a filter. The absence
+   * answers — no shell, no free tier — are facts worth checking and worth
+   * reading, and nobody has ever filtered a register down to the hosts that
+   * cannot do something.
+   */
+  noFilter?: boolean;
+  /**
    * Other values of the same field this one cannot be held without. WooCommerce
    * is WordPress: a record offering the first and not the second is filtered out
    * of `/software/wordpress/` while being exactly what that page is for.

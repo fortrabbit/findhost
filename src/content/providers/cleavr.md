@@ -13,7 +13,7 @@ infraContract:
   - byo-iaas
 useCases:
   - cms
-  - saas
+  - web-app
   - api
   - headless-cms
   - static-site
@@ -36,8 +36,7 @@ runtimes:
 deployMethods:
   - git-integration
   - control-panel
-  - ssh
-sshAccess: shell
+sshAccess: jailed
 managedDatabases:
   - mysql
   - postgres

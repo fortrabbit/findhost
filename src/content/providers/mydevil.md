@@ -14,7 +14,7 @@ whoManagesOs: provider
 useCases:
   - cms
   - api
-  - saas
+  - web-app
   - side-project
   - e-commerce
   - static-site
@@ -33,10 +33,9 @@ runtimes:
   - python
   - ruby
 deployMethods:
-  - ssh
-  - sftp
+  - file-transfer
   - git-push
-sshAccess: shell
+sshAccess: jailed
 managedDatabases:
   - mysql
   - postgres

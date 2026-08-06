@@ -16,7 +16,7 @@ infraContract:
 useCases:
   - cms
   - api
-  - saas
+  - web-app
   - dashboard
   - static-site
   - background-jobs
@@ -44,7 +44,7 @@ deployMethods:
   - git-push
   - docker-image
   - control-panel
-sshAccess: shell
+sshAccess: root
 managedDatabases:
   - postgres
   - mysql

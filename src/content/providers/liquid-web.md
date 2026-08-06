@@ -24,7 +24,7 @@ software:
   - magento
 runtimes:
   - php
-sshAccess: shell
+sshAccess: root
 priceFrom: sm
 priceTo: xl
 currencies:

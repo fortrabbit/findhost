@@ -27,7 +27,7 @@ runtimes:
   - dotnet
   - java
   - clojure
-sshAccess: shell
+sshAccess: jailed
 managedDatabases:
   - mysql
   - postgres

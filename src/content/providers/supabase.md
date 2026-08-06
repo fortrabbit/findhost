@@ -15,7 +15,7 @@ ownership: vc-backed
 whoManagesOs: provider
 useCases:
   - api
-  - saas
+  - web-app
   - ai-app
   - side-project
   - internal-tool

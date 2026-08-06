@@ -27,7 +27,7 @@ software:
 runtimes:
   - php
 deployMethods:
-  - ftp
+  - file-transfer
   - control-panel
 sshAccess: none
 managedDatabases:

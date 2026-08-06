@@ -14,7 +14,7 @@ whoManagesOs: you
 infraContract:
   - owns-metal
 useCases:
-  - saas
+  - web-app
   - api
   - game-server
   - ai-app
@@ -30,8 +30,7 @@ runtimes:
   - docker
 deployMethods:
   - control-panel
-  - ssh
-sshAccess: shell
+sshAccess: root
 pricingModel: hourly
 priceFrom: sm
 priceTo: xl

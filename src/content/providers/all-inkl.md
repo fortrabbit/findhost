@@ -25,10 +25,9 @@ software:
 runtimes:
   - php
 deployMethods:
-  - ftp
-  - ssh
+  - file-transfer
   - control-panel
-sshAccess: shell
+sshAccess: jailed
 pricingModel: fixed-tier
 priceFrom: sm
 priceTo: xl

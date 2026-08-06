@@ -16,7 +16,7 @@ parent: Anexia
 useCases:
   - cms
   - api
-  - saas
+  - web-app
   - side-project
   - game-server
   - learning
@@ -33,10 +33,9 @@ runtimes:
   - ruby
   - any
 deployMethods:
-  - ftp
-  - ssh
+  - file-transfer
   - control-panel
-sshAccess: shell
+sshAccess: root
 pricingModel: fixed-tier
 entryPrice: { amount: 2.69, currency: EUR, period: month }
 priceFrom: xs

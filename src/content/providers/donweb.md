@@ -34,7 +34,7 @@ runtimes:
   - node
   - docker
 deployMethods:
-  - ftp
+  - file-transfer
   - control-panel
 pricingModel: fixed-tier
 priceFrom: xs

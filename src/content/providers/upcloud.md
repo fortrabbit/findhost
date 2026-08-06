@@ -11,7 +11,7 @@ description: Finnish cloud infrastructure provider selling virtual machines, blo
 whoManagesOs: you
 runtimes:
   - any
-sshAccess: shell
+sshAccess: root
 billingPeriods:
   - hourly
 exitWithin: a-day

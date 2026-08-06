@@ -31,10 +31,8 @@ runtimes:
   - php
   - static
 deployMethods:
-  - sftp
-  - ssh
-  - ftp
-sshAccess: shell
+  - file-transfer
+sshAccess: jailed
 managedDatabases:
   - mysql
   - postgres

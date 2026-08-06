@@ -17,7 +17,7 @@ infraContract:
 specialisation:
   - rails
 useCases:
-  - saas
+  - web-app
   - api
   - background-jobs
   - static-site
@@ -34,7 +34,7 @@ runtimes:
 deployMethods:
   - git-integration
   - control-panel
-sshAccess: shell
+sshAccess: jailed
 pricingModel: fixed-tier
 priceFrom: sm
 priceTo: md

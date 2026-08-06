@@ -17,11 +17,10 @@ audience:
   - solo
 software:
   - wordpress
-sshAccess: shell
+sshAccess: root
 deployMethods:
-  - ftp
+  - file-transfer
   - control-panel
-  - ssh
 status: active
 checkedAt: 2026-08-04
 sources:

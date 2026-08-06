@@ -16,7 +16,7 @@ useCases:
   - cms
   - e-commerce
   - api
-  - saas
+  - web-app
 audience:
   - solo
   - agency
@@ -31,10 +31,9 @@ runtimes:
   - node
 deployMethods:
   - git-push
-  - ssh
-  - ftp
+  - file-transfer
   - control-panel
-sshAccess: shell
+sshAccess: jailed
 pricingModel: fixed-tier
 priceFrom: md
 priceTo: lg

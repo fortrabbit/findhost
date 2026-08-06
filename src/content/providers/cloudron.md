@@ -31,7 +31,7 @@ runtimes:
 deployMethods:
   - control-panel
   - docker-image
-sshAccess: shell
+sshAccess: root
 pricingModel: fixed-tier
 priceFrom: md
 priceTo: lg

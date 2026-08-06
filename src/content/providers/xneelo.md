@@ -28,7 +28,7 @@ software:
 runtimes:
   - php
 deployMethods:
-  - ftp
+  - file-transfer
   - control-panel
 pricingModel: fixed-tier
 priceFrom: sm

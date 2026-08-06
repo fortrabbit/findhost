@@ -17,7 +17,7 @@ infraContract:
 useCases:
   - cms
   - api
-  - saas
+  - web-app
   - side-project
   - static-site
   - learning
@@ -48,12 +48,10 @@ runtimes:
   - rust
   - static
 deployMethods:
-  - ssh
-  - sftp
+  - file-transfer
   - git-push
-  - ftp
   - control-panel
-sshAccess: shell
+sshAccess: jailed
 pricingModel: fixed-tier
 priceFrom: sm
 priceTo: xl

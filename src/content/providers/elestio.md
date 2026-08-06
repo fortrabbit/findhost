@@ -17,7 +17,7 @@ infraContract:
   - byo-iaas
 useCases:
   - internal-tool
-  - saas
+  - web-app
   - api
   - data-pipeline
   - ai-app
@@ -39,7 +39,7 @@ deployMethods:
   - control-panel
   - docker-image
   - git-integration
-sshAccess: shell
+sshAccess: jailed
 managedDatabases:
   - postgres
   - mysql

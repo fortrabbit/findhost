@@ -18,7 +18,7 @@ specialisation:
 useCases:
   - learning
   - api
-  - saas
+  - web-app
   - data-pipeline
   - background-jobs
   - side-project
@@ -32,9 +32,8 @@ runtimes:
   - python
 deployMethods:
   - control-panel
-  - ssh
   - git-push
-sshAccess: shell
+sshAccess: jailed
 pricingModel: per-resource
 priceFrom: sm
 priceTo: md

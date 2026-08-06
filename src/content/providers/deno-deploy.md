@@ -14,7 +14,7 @@ parent: Deno Land Inc.
 useCases:
   - api
   - static-site
-  - saas
+  - web-app
   - side-project
   - headless-cms
 audience:

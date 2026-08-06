@@ -13,7 +13,7 @@ whoManagesOs: provider
 useCases:
   - cms
   - api
-  - saas
+  - web-app
   - side-project
   - static-site
   - internal-tool
@@ -35,11 +35,10 @@ runtimes:
   - ruby
   - static
 deployMethods:
-  - ssh
-  - sftp
+  - file-transfer
   - git-push
   - control-panel
-sshAccess: shell
+sshAccess: jailed
 managedDatabases:
   - mysql
   - postgres

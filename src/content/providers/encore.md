@@ -14,7 +14,7 @@ infraContract:
   - resells-iaas
 useCases:
   - api
-  - saas
+  - web-app
   - background-jobs
   - data-pipeline
 audience:

@@ -15,7 +15,7 @@ hqCountry: CZ
 ownership: vc-backed
 whoManagesOs: you
 useCases:
-  - saas
+  - web-app
   - api
   - background-jobs
   - data-pipeline
@@ -45,7 +45,7 @@ runtimes:
 deployMethods:
   - git-integration
   - docker-image
-sshAccess: shell
+sshAccess: root
 managedDatabases:
   - postgres
   - mariadb

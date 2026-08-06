@@ -11,7 +11,7 @@ description: British Kubernetes-first cloud that charges for worker nodes only, 
 hqCountry: GB
 whoManagesOs: you
 useCases:
-  - saas
+  - web-app
   - api
   - ai-app
   - data-pipeline
@@ -27,7 +27,7 @@ runtimes:
 deployMethods:
   - control-panel
   - docker-image
-sshAccess: shell
+sshAccess: root
 managedDatabases:
   - postgres
 pricingModel: hourly

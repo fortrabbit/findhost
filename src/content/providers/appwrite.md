@@ -11,7 +11,7 @@ description: Open-source backend platform sold as a hosted service, running user
 whoManagesOs: you
 useCases:
   - api
-  - saas
+  - web-app
   - side-project
   - ai-app
   - internal-tool

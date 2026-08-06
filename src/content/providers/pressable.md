@@ -27,7 +27,7 @@ runtimes:
   - php
 deployMethods:
   - control-panel
-  - sftp
+  - file-transfer
 pricingModel: fixed-tier
 priceFrom: md
 priceTo: lg

@@ -11,7 +11,7 @@ whoManagesOs: you
 specialisation:
   - elixir
 useCases:
-  - saas
+  - web-app
   - api
   - background-jobs
   - side-project
@@ -31,7 +31,7 @@ runtimes:
 deployMethods:
   - git-push
   - git-integration
-sshAccess: shell
+sshAccess: root
 managedDatabases:
   - postgres
 pricingModel: per-resource

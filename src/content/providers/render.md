@@ -34,7 +34,7 @@ runtimes:
 deployMethods:
   - git-integration
   - docker-image
-sshAccess: shell
+sshAccess: jailed
 persistentStorage: true
 managedDatabases:
   - postgres

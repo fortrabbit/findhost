@@ -25,7 +25,7 @@ social:
   youtube: https://www.youtube.com/user/HetznerOnline/
 runtimes:
   - any
-sshAccess: shell
+sshAccess: root
 persistentStorage: true
 backupsIncluded: paid-addon
 pricingModel: hourly

@@ -10,7 +10,7 @@ category:
 description: Lovable is an AI-assisted low-code no-code platform that generates web app code from natural language prompts and deploys it on its own infrastructure.
 whoManagesOs: provider
 useCases:
-  - saas
+  - web-app
   - side-project
   - ai-app
 sshAccess: none

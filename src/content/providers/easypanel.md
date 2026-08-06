@@ -13,7 +13,7 @@ whoManagesOs: you
 infraContract:
   - byo-iaas
 useCases:
-  - saas
+  - web-app
   - api
   - internal-tool
   - cms
@@ -31,7 +31,7 @@ deployMethods:
   - git-integration
   - docker-image
   - control-panel
-sshAccess: shell
+sshAccess: root
 pricingModel: per-resource
 priceFrom: sm
 priceTo: md

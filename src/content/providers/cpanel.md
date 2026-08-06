@@ -32,10 +32,9 @@ runtimes:
   - ruby
 deployMethods:
   - control-panel
-  - ssh
-  - ftp
+  - file-transfer
   - git-push
-sshAccess: shell
+sshAccess: root
 managedDatabases:
   - mysql
   - postgres

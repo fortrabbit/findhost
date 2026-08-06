@@ -14,7 +14,7 @@ whoManagesOs: you
 useCases:
   - learning
   - side-project
-  - saas
+  - web-app
   - internal-tool
   - dashboard
 audience:

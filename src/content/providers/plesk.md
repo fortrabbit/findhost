@@ -36,9 +36,8 @@ runtimes:
 deployMethods:
   - control-panel
   - git-integration
-  - ssh
-  - ftp
-sshAccess: shell
+  - file-transfer
+sshAccess: root
 managedDatabases:
   - mysql
   - postgres

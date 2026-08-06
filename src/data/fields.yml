@@ -144,7 +144,7 @@
     - { id: cms, label: CMS sites }
     - { id: headless-cms, label: Headless CMS }
     - { id: e-commerce, label: Online shops }
-    - { id: saas, label: SaaS products }
+    - { id: web-app, label: Web apps }
     - { id: api, label: API backends }
     - { id: dashboard, label: Dashboards and admin panels, short: Dashboards }
     - { id: internal-tool, label: Internal tools }
@@ -285,12 +285,16 @@
     - { id: django, label: Django }
     - { id: elixir, label: Elixir }
 
-# How code gets there — a separate question from what may be done once it has
-# arrived, and from whether the platform can be driven by something other than a
-# browser. A CLI and an API are `automation`: they create apps and read logs, and
-# triggering a deploy is one thing they happen to do. `git-integration` is a repository the provider watches; `git-push` is
-# a remote they hand you. Different enough to deploy differently, so they stay
-# apart.
+# How code gets there, and nothing else. What may be done once it has arrived is
+# `sshAccess`; whether the platform can be driven by something other than a
+# browser is `automation`, where the CLI and the API live because creating an app
+# and reading a log are the same capability as triggering a deploy.
+#
+# `git-integration` is a repository the provider watches, which needs an account
+# somewhere else and a webhook; `git-push` is a remote they hand you, which needs
+# neither. Different workflows with different failure modes, so they stay apart.
+# SFTP and FTP are one value: both are a file upload, and a reader picking a host
+# is asking whether that route exists, not which port it runs on.
 - id: deployMethods
   label: Deployment
   group: Deployment
@@ -298,28 +302,29 @@
   filterOrder: 7
   multiple: true
   values:
-    - { id: git-integration, label: Git integration, short: Git repo }
+    - { id: git-integration, label: Connected repo }
     - { id: git-push, label: Git push }
-    - { id: pipeline, label: CI pipeline }
-    - { id: docker-image, label: Docker image, short: Image }
+    - { id: docker-image, label: Container image, short: Container }
     - { id: control-panel, label: Control panel, short: Panel }
-    - { id: ssh, label: SSH }
-    - { id: sftp, label: SFTP }
-    - { id: ftp, label: FTP }
+    - { id: file-transfer, label: File transfer, short: Upload }
 
-# One scale, none through root. "Full" was a judgement — full compared to what?
-# A shell inside a container is complete and has no root behind it. Root is the
-# checkable end of it, so it is the one recorded.
+# One scale, and the two ends of it are different kinds of shell rather than
+# different amounts of one. A jailed shell is complete inside its container and
+# has no root behind it; root is the machine itself. "Full" was the old middle
+# value and it was a judgement — full compared to what?
+#
+# `none` is a checked fact and belongs on the record, but not in the panel:
+# nobody filters a register looking for hosts they cannot get into.
 - id: sshAccess
-  label: SSH access
+  label: Shell
   group: Tech stack
   facet: ssh
   ordered: true
   filterOrder: 13
   values:
-    - { id: none, label: None }
-    - { id: shell, label: Shell }
-    - { id: root, label: Root }
+    - { id: none, label: None, noFilter: true }
+    - { id: jailed, label: Jailed shell, short: Jailed }
+    - { id: root, label: Root shell, short: Root }
 
 - id: managedDatabases
   label: Managed databases
@@ -648,36 +653,60 @@
 
 # ------------------------------------------------------------- Included
 
-# What comes with the hosting and what has to be bought elsewhere. Recorded as
-# three yes/no answers rather than as a list, because a list can only say what is
+# What comes with the hosting and what has to be bought elsewhere. Recorded one
+# thing at a time rather than as a list, because a list can only say what is
 # included: absent would mean both "they do not offer it" and "nobody checked",
 # and the whole point of the question is the difference.
+#
+# Three answers rather than two. "They sell it, on its own line" is the ordinary
+# case for email and for domains, and a yes/no has nowhere to put it.
 - id: domainRegistration
   label: Domain registration
   group: Included
-  render: yes-no
+  values:
+    - { id: included, label: Included }
+    - { id: paid-addon, label: Paid add-on }
+    - { id: none, label: None }
 
 - id: dnsHosting
   label: DNS hosting
   group: Included
-  render: yes-no
+  valuesFrom: domainRegistration
 
 - id: emailHosting
   label: Email hosting
   group: Included
-  render: yes-no
+  valuesFrom: domainRegistration
 
-# Derived, like `automation`: the three fields above hold the detail and this
-# asks the one thing a filter is for — does it come with the hosting.
+- id: cdnIncluded
+  label: CDN
+  group: Included
+  valuesFrom: domainRegistration
+
+# Two answers, not three: a preview URL is free wherever it exists at all, and
+# nobody sells one on its own.
+- id: testDomain
+  label: Test domain
+  group: Included
+  values:
+    - { id: included, label: Included }
+    - { id: none, label: None }
+
+# Derived, like `automation`: the fields above hold the detail and this asks the
+# one thing a filter is for — does it come with the hosting. A paid add-on is
+# still something to go and buy, which is the errand the reader is trying to
+# avoid, so it does not count as a yes here.
 - id: included
   label: Included
   facet: included
   filterOrder: 8
   multiple: true
   values:
-    - { id: domains, label: Domains, from: domainRegistration, when: ['true'] }
-    - { id: dns, label: DNS, from: dnsHosting, when: ['true'] }
-    - { id: email, label: Email, from: emailHosting, when: ['true'] }
+    - { id: domains, label: Domains, from: domainRegistration, when: [included] }
+    - { id: dns, label: DNS, from: dnsHosting, when: [included] }
+    - { id: email, label: Email, from: emailHosting, when: [included] }
+    - { id: cdn, label: CDN, from: cdnIncluded, when: [included] }
+    - { id: test-domain, label: Test domain, short: Test URL, from: testDomain, when: [included] }
 
 # ------------------------------------------------------------ Automation
 

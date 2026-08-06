@@ -10,7 +10,7 @@ description: Kamatera is a cloud infrastructure company selling hourly-billed cl
 whoManagesOs: you
 runtimes:
   - any
-sshAccess: shell
+sshAccess: root
 persistentStorage: true
 pricingModel: hourly
 priceFrom: xs

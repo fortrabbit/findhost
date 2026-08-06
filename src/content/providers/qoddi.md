@@ -9,7 +9,7 @@ category:
 description: Managed application platform deploying Node, Java, Go, Ruby, PHP, Python and Docker workloads with per-second billing and managed databases alongside.
 whoManagesOs: you
 useCases:
-  - saas
+  - web-app
   - api
   - cms
   - static-site

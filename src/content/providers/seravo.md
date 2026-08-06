@@ -27,8 +27,7 @@ runtimes:
   - php
 deployMethods:
   - git-push
-  - ssh
-sshAccess: shell
+sshAccess: jailed
 pricingModel: fixed-tier
 priceFrom: md
 priceTo: lg

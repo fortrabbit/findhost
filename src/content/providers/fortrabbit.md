@@ -29,8 +29,7 @@ software:
   - shopware
 deployMethods:
   - git-push
-  - ssh
-sshAccess: shell
+sshAccess: jailed
 managedDatabases:
   - mysql
 pricingModel: fixed-tier

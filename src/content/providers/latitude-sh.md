@@ -12,7 +12,7 @@ infraContract:
   - owns-metal
 useCases:
   - ai-app
-  - saas
+  - web-app
   - game-server
   - data-pipeline
   - background-jobs
@@ -25,7 +25,7 @@ runtimes:
   - docker
 deployMethods:
   - control-panel
-sshAccess: shell
+sshAccess: root
 managedDatabases:
   - postgres
 pricingModel: hourly

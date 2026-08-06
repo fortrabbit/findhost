@@ -12,7 +12,7 @@ infraContract:
   - byo-iaas
 whoManagesOs: provider
 useCases:
-  - saas
+  - web-app
   - api
 specialisation:
   - laravel

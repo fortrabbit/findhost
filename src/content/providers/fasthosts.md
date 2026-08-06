@@ -30,10 +30,9 @@ regions:
   - DE
   - ES
   - US
-sshAccess: shell
+sshAccess: jailed
 deployMethods:
-  - ssh
-  - sftp
+  - file-transfer
   - control-panel
 pricingModel: fixed-tier
 priceFrom: sm

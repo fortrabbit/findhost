@@ -10,7 +10,7 @@ description: Open-source backend platform built on PostgreSQL, Hasura GraphQL an
 whoManagesOs: you
 useCases:
   - api
-  - saas
+  - web-app
   - side-project
   - internal-tool
 audience:

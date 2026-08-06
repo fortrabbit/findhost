@@ -13,7 +13,7 @@ ownership: public
 whoManagesOs: you
 useCases:
   - cms
-  - saas
+  - web-app
   - api
   - headless-cms
   - internal-tool

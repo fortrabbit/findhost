@@ -14,7 +14,7 @@ whoManagesOs: you
 useCases:
   - ai-app
   - api
-  - saas
+  - web-app
   - static-site
   - data-pipeline
   - game-server
@@ -29,7 +29,7 @@ runtimes:
 deployMethods:
   - control-panel
   - docker-image
-sshAccess: shell
+sshAccess: root
 pricingModel: usage-based
 currencies:
   - EUR

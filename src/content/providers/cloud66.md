@@ -13,7 +13,7 @@ whoManagesOs: provider
 infraContract:
   - byo-iaas
 useCases:
-  - saas
+  - web-app
   - api
   - static-site
   - background-jobs
@@ -36,7 +36,7 @@ runtimes:
 deployMethods:
   - git-integration
   - docker-image
-sshAccess: shell
+sshAccess: jailed
 pricingModel: fixed-tier
 priceFrom: md
 priceTo: lg

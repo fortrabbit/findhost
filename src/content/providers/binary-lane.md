@@ -13,7 +13,7 @@ ownership: subsidiary
 parent: Mammoth Media Pty Ltd
 whoManagesOs: you
 useCases:
-  - saas
+  - web-app
   - api
   - background-jobs
   - game-server
@@ -26,9 +26,8 @@ audience:
 runtimes:
   - any
 deployMethods:
-  - ssh
   - control-panel
-sshAccess: shell
+sshAccess: root
 pricingModel: hourly
 priceFrom: xs
 priceTo: lg

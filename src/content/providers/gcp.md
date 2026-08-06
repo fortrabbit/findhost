@@ -17,7 +17,7 @@ audience:
   - enterprise
 runtimes:
   - any
-sshAccess: shell
+sshAccess: root
 pricingModel: usage-based
 billingPeriods:
   - monthly

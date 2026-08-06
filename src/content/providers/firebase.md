@@ -13,7 +13,7 @@ parent: Alphabet
 whoManagesOs: provider
 useCases:
   - api
-  - saas
+  - web-app
   - ai-app
   - side-project
   - static-site

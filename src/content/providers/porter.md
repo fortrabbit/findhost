@@ -12,7 +12,7 @@ whoManagesOs: you
 infraContract:
   - byo-iaas
 useCases:
-  - saas
+  - web-app
   - api
   - background-jobs
   - internal-tool

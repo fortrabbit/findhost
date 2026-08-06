@@ -33,11 +33,9 @@ runtimes:
   - node
   - dotnet
 deployMethods:
-  - ssh
-  - sftp
-  - ftp
+  - file-transfer
   - control-panel
-sshAccess: shell
+sshAccess: jailed
 managedDatabases:
   - mysql
 pricingModel: fixed-tier

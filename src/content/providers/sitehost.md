@@ -17,7 +17,7 @@ infraContract:
 useCases:
   - cms
   - e-commerce
-  - saas
+  - web-app
   - api
   - headless-cms
   - background-jobs
@@ -36,10 +36,9 @@ runtimes:
   - docker
 deployMethods:
   - git-push
-  - ssh
-  - sftp
+  - file-transfer
   - docker-image
-sshAccess: shell
+sshAccess: root
 managedDatabases:
   - mysql
   - postgres

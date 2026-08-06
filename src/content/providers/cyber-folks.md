@@ -28,10 +28,9 @@ runtimes:
   - node
   - python
 deployMethods:
-  - ssh
-  - ftp
+  - file-transfer
   - control-panel
-sshAccess: shell
+sshAccess: root
 managedDatabases:
   - mysql
 backupsIncluded: included

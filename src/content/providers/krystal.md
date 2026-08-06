@@ -31,11 +31,9 @@ runtimes:
   - python
   - ruby
 deployMethods:
-  - ssh
-  - sftp
-  - ftp
+  - file-transfer
   - control-panel
-sshAccess: shell
+sshAccess: root
 managedDatabases:
   - mysql
 pricingModel: fixed-tier
