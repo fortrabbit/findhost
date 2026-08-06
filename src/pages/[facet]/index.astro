@@ -55,7 +55,10 @@ const figure = note?.data.figure;
   title={`${note?.data.title ?? facet.label} — FindHost`}
   description={note?.data.description ?? `Every value recorded for ${facet.label.toLowerCase()}.`}
 >
-  <h1>{note?.data.title ?? facet.label}</h1>
+  {/* The same head as a value page, so both start their prose on the same line. */}
+  <div class="page-head">
+    <h1>{note?.data.title ?? facet.label}</h1>
+  </div>
 
   {note?.data.lead && <p class="lead">{note.data.lead}</p>}
   <PageFigure figure={figure} />
