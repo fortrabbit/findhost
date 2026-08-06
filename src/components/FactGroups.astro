@@ -1,0 +1,61 @@
+---
+/**
+ * The recorded facts, grouped. Two sets of these appear on a record — the ones a
+ * customer decides on beside the prose, the rest below it — and they were the
+ * same thirty lines of markup written twice before this existed.
+ *
+ * The rows arrive already resolved. Working out what a value reads as, and which
+ * source backs it, belongs to the page that holds the record; this only draws.
+ */
+export interface Row {
+  label: string;
+  cells: { text: string; href?: string; filter?: string }[];
+  note?: number;
+}
+
+interface Props {
+  groups: { label: string; rows: Row[] }[];
+  class?: string;
+}
+
+const { groups, class: className } = Astro.props;
+---
+
+<div class:list={['fact-groups', className]}>
+  {
+    groups.map((group) => (
+      <section class="fact-group">
+        <h2>{group.label}</h2>
+        <dl class="fact-list">
+          {group.rows.map((row) => (
+            <>
+              <dt>{row.label}</dt>
+              <dd>
+                {row.cells.map((cell, index) => (
+                  <>
+                    {index > 0 && ', '}
+                    {/* Facet values must reach the markup even where the design does not show
+                        them: Pagefind indexes rendered HTML, so what is absent here cannot be
+                        searched later. */}
+                    {cell.href ? (
+                      <a href={cell.href} data-pagefind-filter={cell.filter}>
+                        {cell.text}
+                      </a>
+                    ) : (
+                      cell.text
+                    )}
+                  </>
+                ))}
+                {row.note && (
+                  <a class="footnote-ref" href={`#source-${row.note}`} aria-label={`Source ${row.note}`}>
+                    {row.note}
+                  </a>
+                )}
+              </dd>
+            </>
+          ))}
+        </dl>
+      </section>
+    ))
+  }
+</div>

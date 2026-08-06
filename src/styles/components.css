@@ -953,6 +953,11 @@
   max-width: var(--measure-data);
 }
 
+/* The provider's own address, which is what most readers came for. */
+.record-home {
+  font-weight: var(--weight-strong);
+}
+
 /**
  * Scanned rather than read, so the columns stay narrow and dense — but as many
  * of them fit as the screen allows. `column-width` does that without a single
@@ -976,6 +981,18 @@
 .fact-group {
   display: flow-root;
   margin: 0;
+}
+
+/**
+ * The groups that describe the company rather than the product, below the prose
+ * where the page has its full width. Four columns at most: the fifth is narrow
+ * enough that a two-word label wraps, and a row of eight is a table nobody reads.
+ */
+.record-extra {
+  grid-template-columns: repeat(auto-fill, minmax(max(14rem, calc((100% - 3 * var(--space-xl)) / 4)), 1fr));
+  margin-top: var(--space-xl);
+  padding-top: var(--space-lg);
+  border-top: var(--rule-hairline) solid var(--color-ink);
 }
 
 /* Sized like a group label rather than a section head — the level is structural, the size is not. */
@@ -1011,21 +1028,38 @@
 }
 
 /**
- * Three facts, no labels. Six with little keys read as noise, and category,
- * founding year and the read date all appear elsewhere on the page anyway.
+ * The name, and the two things worth knowing before reading a word of it: where
+ * the company is, and whether it says anything about its energy. Both were a
+ * strip of their own under the title, which is a second heading nobody asked
+ * for. On the title's line they are read in the same glance.
  */
-.record-strip {
+.record-head {
   display: flex;
-  flex-wrap: wrap;
   align-items: baseline;
-  gap: var(--space-3xs) var(--space-md);
-  max-width: none;
+  gap: var(--space-sm);
 }
 
-.strip-item {
-  display: inline-flex;
-  align-items: baseline;
-  gap: var(--space-2xs);
+.record-head > h1 {
+  flex: 1;
+  min-width: 0;
+}
+
+/* The first of them ends the row; the rest sit against it. */
+.record-mark {
+  flex: none;
+  font-size: var(--text-lg);
+  line-height: 1;
+}
+
+/*
+ * A country code, not a flag emoji: a flag is a political claim about a
+ * jurisdiction, renders differently on every platform and is unreadable at the
+ * size a heading wants. The code is legible, copyable and unambiguous.
+ */
+.record-country {
+  font-family: var(--font-data);
+  font-size: var(--text-md);
+  letter-spacing: 0.04em;
 }
 
 .strip-detail {

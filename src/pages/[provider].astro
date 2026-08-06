@@ -6,6 +6,7 @@ import { energy, flag, footnotes, price } from '../lib/record';
 import { isListed } from '../lib/providers';
 import SocialLinks from '../components/SocialLinks.astro';
 import PageFigure from '../components/PageFigure.astro';
+import FactGroups from '../components/FactGroups.astro';
 
 export async function getStaticPaths() {
   const providers = await getCollection('providers');
@@ -48,6 +49,15 @@ const applicable = allFields.filter((field) => valueOf(field.id) !== null);
 const knownGroups = groups
   .map((group) => ({ label: group.label, fields: group.fields.filter((field) => held(valueOf(field.id))) }))
   .filter((group) => group.fields.length > 0);
+
+/*
+ * What a customer decides on stays beside the prose; what describes the company
+ * rather than the product falls below it. Automation is on the near side because
+ * an MCP server and a CLI are what an agent-shaped reader is here for.
+ */
+const asideGroups = ['Pricing', 'Tech stack', 'Classification', 'Automation'];
+const nearGroups = knownGroups.filter((group) => asideGroups.includes(group.label));
+const farGroups = knownGroups.filter((group) => !asideGroups.includes(group.label));
 
 const missing = applicable.filter((field) => !held(valueOf(field.id)));
 const total = applicable.length;
@@ -100,6 +110,17 @@ const outgoing = [
 ];
 
 const { notes, numberOf } = footnotes(data.sources);
+
+/* Groups as the component draws them: labels, resolved cells, and the source behind each row. */
+const drawn = (groups: { label: string; fields: Field[] }[]) =>
+  groups.map((group) => ({
+    label: group.label,
+    rows: group.fields.map((field) => ({
+      label: field.label,
+      cells: cells(field, valueOf(field.id)),
+      note: numberOf.get(field.id),
+    })),
+  }));
 
 /*
  * Sources for what this line holds. `urls` and `sustainabilityUrl` are cited
@@ -177,7 +198,24 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
   hidden={!listed}
 >
   <article>
-    <h1>{data.name}</h1>
+    <div class="record-head">
+      <h1>{data.name}</h1>
+      {
+        energyClaim && (
+          <span class="record-mark" title={energyClaim}>
+            <span aria-hidden="true">🌱</span>
+            <span class="visually-hidden">{energyClaim}</span>
+          </span>
+        )
+      }
+      {
+        homeFlag && (
+          <span class="record-mark record-country" title={labelOf('hqCountry', data.hqCountry)}>
+            {data.hqCountry}
+          </span>
+        )
+      }
+    </div>
     {
       notice && (
         <aside class="editorial-note">
@@ -201,14 +239,7 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
     {data.description && <p class="lead">{data.description}</p>}
 
     <p class="record-links">
-      {
-        homeFlag && (
-          <span aria-hidden="true" title={labelOf('hqCountry', data.hqCountry)}>
-            {data.hqCountry}
-          </span>
-        )
-      }
-      <a style="font-weight: bold;" href={data.urls.home} rel="nofollow">{data.urls.home.replace('https://', '')}</a>
+      <a class="record-home" href={data.urls.home} rel="nofollow">{data.urls.home.replace('https://', '')}</a>
       {
         outgoing.map(([label, url]) => (
           <>
@@ -225,65 +256,15 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
           </a>
         ))
       }
-      <SocialLinks social={data.social} />
     </p>
 
-    {
-      energyClaim && (
-        <p class="record-strip">
-          <span class="strip-item">
-            <span aria-hidden="true">🌱</span> {energyClaim}
-          </span>
-        </p>
-      )
-    }
+    <SocialLinks social={data.social} />
 
     <PageFigure figure={data.figure} />
 
     <div class="record-layout">
       <aside class="record-specs">
-        <div class="fact-groups">
-          {
-            knownGroups.map((group) => (
-              <section class="fact-group">
-                <h2>{group.label}</h2>
-                <dl class="fact-list">
-                  {group.fields.map((field) => {
-                    const note = numberOf.get(field.id);
-
-                    return (
-                      <>
-                        <dt>{field.label}</dt>
-                        <dd>
-                          {cells(field, valueOf(field.id)).map((cell, index) => (
-                            <>
-                              {index > 0 && ', '}
-                              {/* Facet values must reach the markup even where the design does not show
-                              them: Pagefind indexes rendered HTML, so what is absent here cannot be
-                              searched later. */}
-                              {cell.href ? (
-                                <a href={cell.href} data-pagefind-filter={cell.filter}>
-                                  {cell.text}
-                                </a>
-                              ) : (
-                                cell.text
-                              )}
-                            </>
-                          ))}
-                          {note && (
-                            <a class="footnote-ref" href={`#source-${note}`} aria-label={`Source ${note}`}>
-                              {note}
-                            </a>
-                          )}
-                        </dd>
-                      </>
-                    );
-                  })}
-                </dl>
-              </section>
-            ))
-          }
-        </div>
+        <FactGroups groups={drawn(nearGroups)} />
 
         {
           missing.length > 0 && (
@@ -325,6 +306,8 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
       </div>
     </div>
 
+    {farGroups.length > 0 && <FactGroups groups={drawn(farGroups)} class="record-extra" />}
+
     {
       notes.length > 0 && (
         <section class="sources">
@@ -349,7 +332,9 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
       <!-- {total - missing.length} of {total} attributes recorded. -->
       {data.checkedAt ? ` Last reviewed ${data.checkedAt.toISOString().slice(0, 10)}. ` : ' Never checked. '}
       <br />
-      <a href="https://github.com/fortrabbit/findhost">Complete this record.</a>
+      <a href={`https://github.com/fortrabbit/findhost/edit/main/src/content/providers/${provider.id}.md`}>
+        Complete this record.
+      </a>
     </p>
   </article>
 </Base>
