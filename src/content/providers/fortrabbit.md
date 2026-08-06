@@ -9,8 +9,6 @@ category:
   - paas
 audience:
   - solo
-  - agency
-  - startup
 social:
   x: https://x.com/fortrabbit
   bluesky: https://bsky.app/profile/fortrabbit.com
@@ -72,7 +70,7 @@ status: active
 checkedAt: 2026-08-01
 sources:
   - { field: software, url: 'https://www.fortrabbit.com/', checkedAt: 2026-08-05 }
-  - { field: audience, url: 'https://www.fortrabbit.com/company-plans', checkedAt: 2026-08-06 }
+  - { field: audience, url: 'https://www.fortrabbit.com/php-cloud-hosting', checkedAt: 2026-08-06 }
   - { field: cliTool, url: 'https://www.fortrabbit.com/', checkedAt: 2026-08-05 }
   - { field: mcpServer, url: 'https://www.fortrabbit.com/', checkedAt: 2026-08-05 }
   - { field: regions, url: 'https://www.fortrabbit.com/', checkedAt: 2026-08-01 }
