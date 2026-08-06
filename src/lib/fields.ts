@@ -111,7 +111,6 @@ export const reservedSegments = [
   'providers',
   'guide',
   'about',
-  'policies',
   'search',
   'find',
   'notes',

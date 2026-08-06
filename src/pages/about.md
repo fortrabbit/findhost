@@ -13,15 +13,42 @@ lead: Most "best web hosting lists" are ordered by affiliate commission, making 
 
 ## Publisher
 
-I am [Frank Lämmer](https://www.franklaemmer.de), co-founder of a small bootstrapped hosting provider called [fortrabbit](https://www.fortrabbit.com) which is also [featured here](/fortrabbit). The main data dates back to so competitor research I did for our new hosting platform in 2023. It was ported and extended to a 'hosting guide' on our fortrabbit website. But I found, it deserved it's own space. So, here we are.
+I am [Frank Lämmer](https://www.franklaemmer.de), co-founder of a small bootstrapped hosting provider called [fortrabbit](https://www.fortrabbit.com) which is also [featured here](/fortrabbit). The main data dates back to some competitor research I did for our new hosting platform in 2023. It was ported and extended to a 'hosting guide' on our fortrabbit website. But I found, it deserved its own space. So, here we are.
 
 ## Your benefits
 
-A lot of developers don't know much about web hosting. It's a market of lemons. Learn how to judge better. Discover a hosting service that really fit's your requirements. Filter for your preferred stack or what else is important to you. Find alternatives to services that you are already using.
+A lot of developers don't know much about web hosting. It's a market of lemons. Learn how to judge better. Discover a hosting service that really fits your requirements. Filter for your preferred stack or what else is important to you. Find alternatives to services that you are already using.
 
 ## State
 
 This is currently pet project. If people find it useful, I may extend it. There are plenty of ideas, from verified real user reviews to price signal and local GEO search. The data is superficial by nature. I haven't bothered to sign up and use each service.
+
+## Who is listed
+
+Every provider meeting the scope test, not a selection. Nothing is ranked, scored or rated, and we do not decide who deserves a listing. A provider **must** be listed if all six of these are true, and each is a fact any reader can check rather than a judgement we make.
+
+1. **Runs application code.** An application in at least one general-purpose language can be deployed and served over HTTP, per the provider's own public documentation. *Which* languages is a field on the record, not a gate.
+2. **Sold to the public.** Purchasable without a sales call, signed contract or invitation.
+3. **Public pricing.** A price for at least one plan is published without logging in. "Contact us" is not a price.
+4. **Public technical documentation.** Runtime versions, deploy method and included services are documented publicly.
+5. **Twelve months old.** Publicly purchasable for at least twelve months, evidenced by a dated announcement, changelog entry or archive snapshot.
+6. **Two independent artifacts.** At least two of: an integration guide in a framework's or tool's official documentation; a third-party-maintained package, CLI or driver; a conference talk or tutorial by an author with no disclosed commercial relationship; a public issue-tracker discussion in a major open-source project. Press releases, sponsored posts, affiliate reviews, the provider's own blog and paid placements do not count.
+
+If a provider meets all six and is not listed, that is a bug — open an issue. Everything considered and left out keeps a record of its own, marked out of scope, naming the numbered criterion it failed and the date it was checked. A scope test nobody can audit is not a scope test.
+
+Being out of scope is not a criticism. It means the dataset cannot describe something usefully: raw infrastructure with no managed runtime, anything priced only by sales conversation, a rebrand with no distinct platform behind it, anything younger than twelve months. Nothing is ever excluded for its price, performance, popularity, country, ownership, opinion of us, or for competing with fortrabbit. Poor quality is not an exclusion criterion — at most it is a sourced fact on the record.
+
+## Nothing is deleted
+
+A provider that dies, is acquired or leaves scope keeps its page with a dated status change. Deletion would let us quietly rewrite history, and for a dataset published by a competitor, removal is exactly the power that has to be given up. No change to discontinued or unverifiable takes effect for seven days after a public proposal, so an outage or a redesign cannot knock anyone off the list — least of all one of ours.
+
+Freshness is displayed rather than promised. Records carry the date they were last read, claims carry their own dates, and where no date exists the site says so instead of inferring one.
+
+## Corrections
+
+Everything is tracked in Git and public on GitHub; the details are in [CONTRIBUTING.md](https://github.com/fortrabbit/findhost/blob/main/CONTRIBUTING.md). Three promises are worth stating here. A sourced factual correction may not be declined because a maintainer disagrees with it — adjudication is against the evidence, and where sources conflict both are recorded. An unsourced correction is not dropped either: it is confirmed or recorded as unverified. And affiliation must be disclosed at the point of contribution, which applies to vendors correcting their own entry as much as to anyone else.
+
+Changing the criteria above requires a public proposal open for fourteen days. Pre-committing to the process for changing the rules is the only thing that makes the rules worth anything.
 
 ## Our conflict of interest
 

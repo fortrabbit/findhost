@@ -153,7 +153,7 @@ const staleAfterDays = 180;
 const checkedDaysAgo = data.checkedAt ? Math.floor((Date.now() - data.checkedAt.getTime()) / 86_400_000) : undefined;
 const stale = checkedDaysAgo !== undefined && checkedDaysAgo > staleAfterDays;
 
-/* The scope test, in the order /policies/ numbers it. */
+/* The scope test, in the order /about/ numbers it. */
 const criteria: Record<number, string> = {
   1: 'runs application code',
   2: 'sold to the public',
