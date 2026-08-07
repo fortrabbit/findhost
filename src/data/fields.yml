@@ -529,10 +529,10 @@
     - { id: free-tier, label: Free tier, from: freeTier, when: [permanent] }
     - { id: free-trial, label: Free trial, from: freeTier, when: [trial] }
     - { id: in-arrears, label: Paid in arrears, short: In arrears, from: billingTiming, when: [arrears] }
-    - { id: upfront, label: Paid upfront, short: Upfront, from: billingTiming, when: [advance] }
+    - { id: upfront, label: Paid before the month, short: Upfront, from: billingTiming, when: [advance] }
     - { id: usage-based, label: Metered usage, short: Metered, from: pricingModel, when: [usage-based] }
-    - { id: prepaid, label: Prepaid credit, short: Prepaid, from: pricingModel, when: [credit] }
-    - { id: no-minimum, label: No minimum term, short: No minimum, from: contractMinimum, when: [none] }
+    - { id: prepaid, label: Drawn from a credit balance, short: Prepaid, from: pricingModel, when: [credit] }
+    - { id: no-minimum, label: 'No minimum term, leave any time', short: No minimum, from: contractMinimum, when: [none] }
 
 # -------------------------------------------------------- Regions and law
 
