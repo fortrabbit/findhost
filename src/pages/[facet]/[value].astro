@@ -157,11 +157,11 @@ const figure = note?.data.figure;
   ]}
 >
   {/* The parent, and only the parent — the register is the wordmark's job. */}
-  <p class="crumb"><a href={facetIndex(facet.id)}>{facet.label}</a></p>
+  <p class="crumb" data-pagefind-ignore><a href={facetIndex(facet.id)}>{facet.label}</a></p>
 
   <div class="page-head">
     <h1>{value.label}</h1>
-    <a class="find-onward" href={`/?${facet.id}=${value.id}`}>Combine filters →</a>
+    <a class="find-onward" data-pagefind-ignore href={`/?${facet.id}=${value.id}`}>Combine filters →</a>
   </div>
 
   <PageFigure figure={figure} />

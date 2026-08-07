@@ -58,7 +58,7 @@ const canonical = new URL(path, Astro.site ?? Astro.url).href;
     {fathomSiteId && <script is:inline src="https://cdn.usefathom.com/script.js" data-site={fathomSiteId} defer />}
   </head>
   <body data-pagefind-ignore={hidden ? 'all' : undefined}>
-    <header>
+    <header data-pagefind-ignore>
       <a href="/" class="wordmark" aria-current={path === '/' ? 'page' : undefined}>FindHost</a>
 
       <nav class="site-nav">
@@ -87,7 +87,7 @@ const canonical = new URL(path, Astro.site ?? Astro.url).href;
       <slot />
     </main>
 
-    <footer>
+    <footer data-pagefind-ignore>
       <div class="footer-base">
         <div>
           <p>
@@ -104,16 +104,29 @@ const canonical = new URL(path, Astro.site ?? Astro.url).href;
           the `js` class decides that before first paint.
         */}
         <div class="theme-switch" role="group" aria-label="Theme">
+          {/*
+            Drawn rather than typed. ◑ ○ ● are glyphs, and a glyph sits where its
+            font puts it — which is why the half-circle looked centred in one
+            browser and low in another. A circle in a viewBox is in the middle of
+            it everywhere.
+          */}
           <button type="button" data-theme-set="system">
-            <span aria-hidden="true">◑</span>
+            <svg viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M8 2a6 6 0 0 0 0 12z" fill="currentColor" />
+              <circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="1.5" />
+            </svg>
             <span class="visually-hidden">System</span>
           </button>
           <button type="button" data-theme-set="light">
-            <span aria-hidden="true">○</span>
+            <svg viewBox="0 0 16 16" aria-hidden="true">
+              <circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="1.5" />
+            </svg>
             <span class="visually-hidden">Light</span>
           </button>
           <button type="button" data-theme-set="dark">
-            <span aria-hidden="true">●</span>
+            <svg viewBox="0 0 16 16" aria-hidden="true">
+              <circle cx="8" cy="8" r="6" fill="currentColor" />
+            </svg>
             <span class="visually-hidden">Dark</span>
           </button>
         </div>

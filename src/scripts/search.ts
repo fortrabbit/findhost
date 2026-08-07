@@ -6,7 +6,7 @@
  */
 
 interface PagefindResult {
-  data: () => Promise<{ url: string; meta: { title?: string }; excerpt: string }>;
+  data: () => Promise<{ url: string; meta: { title?: string; summary?: string }; excerpt: string }>;
 }
 
 interface Pagefind {
@@ -37,6 +37,25 @@ if (form && input && resultsEl && summaryEl) {
     return pagefind;
   };
 
+  /*
+   * What to show under the title. Pagefind starts its excerpt at the match, so a
+   * hit on a heading gives back the heading — and the result read "Heroku"
+   * twice. The title is stripped off the front where it leads, and where that
+   * leaves nothing the record's own sentence stands in.
+   *
+   * Only the leading copy goes: the same word later in the sentence is context,
+   * and Pagefind has wrapped it in a <mark> worth keeping.
+   */
+  const escape = (text: string) => text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+  const describe = (excerpt: string, title: string, summary?: string) => {
+    const leading = new RegExp(`^(?:<mark>)?\\s*${escape(title)}\\s*(?:</mark>)?[\\s.,:;–—-]*`, 'i');
+    const trimmed = excerpt.replace(leading, '').trim();
+    const words = trimmed.replace(/<[^>]*>/g, '').trim();
+
+    return words ? trimmed : (summary ?? '');
+  };
+
   const run = async (query: string) => {
     resultsEl.innerHTML = '';
 
@@ -56,15 +75,21 @@ if (form && input && resultsEl && summaryEl) {
 
     for (const hit of shown) {
       const item = document.createElement('li');
+      const title = hit.meta.title ?? hit.url;
 
       const link = document.createElement('a');
+      link.className = 'search-title';
       link.href = hit.url;
-      link.textContent = hit.meta.title ?? hit.url;
+      link.textContent = title;
       item.append(link);
 
-      const excerpt = document.createElement('p');
-      excerpt.innerHTML = hit.excerpt;
-      item.append(excerpt);
+      const body = describe(hit.excerpt, title, hit.meta.summary);
+      if (body) {
+        const excerpt = document.createElement('p');
+        excerpt.className = 'search-excerpt';
+        excerpt.innerHTML = body;
+        item.append(excerpt);
+      }
 
       resultsEl.append(item);
     }

@@ -62,7 +62,7 @@ const groups = [...new Set(providers.map((provider) => letterOf(provider.name)))
 {/* Against the list it changes, not against the filters it has nothing to do with. */}
 <ListStyleToggle />
 
-<div data-find-results>
+<div data-pagefind-ignore data-find-results>
   {
     groups.map((group) => (
       <section class="letter-group" id={group.anchor}>

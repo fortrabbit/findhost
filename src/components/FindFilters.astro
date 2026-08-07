@@ -29,7 +29,7 @@ const { facets, drafts, asides } = Astro.props;
  */
 ---
 
-<details class="find-panel" data-find-filters open>
+<details class="find-panel" data-pagefind-ignore data-find-filters open>
   <summary>Filters</summary>
 
   <div class="find-filters full-width">
@@ -78,11 +78,6 @@ const { facets, drafts, asides } = Astro.props;
               </div>
             )}
           </div>
-
-          <p class="find-facet-foot">
-            Providers that stopped, companies that own hosting brands without selling any, and records started or
-            ruled out. None are counted.
-          </p>
         </div>
       )
     }

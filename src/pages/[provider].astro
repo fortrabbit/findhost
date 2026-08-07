@@ -257,7 +257,11 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
       )
     }
 
-    {data.description && <p class="lead">{data.description}</p>}
+    {data.description && (
+      <p class="lead" data-pagefind-meta="summary">
+        {data.description}
+      </p>
+    )}
 
     <p class="record-links">
       <span class="record-link">

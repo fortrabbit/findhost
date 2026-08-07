@@ -6,18 +6,18 @@ import Base from '../layouts/Base.astro';
   <h1>Search</h1>
 
   <p class="lead">
-    Free text across every record and every guide page. To filter by runtime, region or ownership instead,
+    Free text across every record and every guide page. To filter by runtime, region or ownership instead,{' '}
     <a href="/">filter the register</a> — search reads words, the filters read fields.
   </p>
 
-  <form class="site-search" data-search-form>
+  <form class="search-form" role="search" data-search-form>
     <input type="search" name="q" placeholder="Search providers and guide" aria-label="Search" data-search-input />
     <button type="submit">Search</button>
   </form>
 
   <p class="annotation" data-search-summary>Type a word or two.</p>
 
-  <ul class="stack-list" data-search-results></ul>
+  <ul class="search-results" data-search-results></ul>
 
   <script>
     import '../scripts/search.ts';
