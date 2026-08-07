@@ -31,13 +31,25 @@ const resolves = (href) => {
 };
 
 const broken = [];
+const uncanonical = [];
+
+/*
+ * `trailingSlash: 'always'`, so /categories/paas/ is the address and
+ * /categories/paas is not one. Most static hosts redirect the second to the
+ * first, and `astro preview` answers it with a 404 — either way it is a
+ * redirect we should never be spending, because every link here is ours to
+ * write correctly. A path with a dot in its last segment is a file: /x.md,
+ * /providers.json, /favicon.svg.
+ */
+const canonical = (href) => href.endsWith('/') || href.split('/').pop().includes('.');
 
 for (const page of pages) {
   const html = readFileSync(page, 'utf8');
   for (const [, href] of html.matchAll(/(?:href|src)="(\/[^"]*)"/g)) {
     const target = href.split(/[#?]/)[0];
-    if (!target || resolves(target)) continue;
-    broken.push({ page: relative(dist, page), href: target });
+    if (!target) continue;
+    if (!resolves(target)) broken.push({ page: relative(dist, page), href: target });
+    else if (!canonical(target)) uncanonical.push({ page: relative(dist, page), href: target });
   }
 }
 
@@ -54,11 +66,19 @@ if (existsSync(sitemap)) {
   }
 }
 
-if (!broken.length) {
-  console.log(`${pages.length} pages and the sitemap, no broken internal links.`);
+if (!broken.length && !uncanonical.length) {
+  console.log(`${pages.length} pages and the sitemap, no broken internal links, every one canonical.`);
   process.exit(0);
 }
 
-console.log(`${broken.length} broken internal links:\n`);
-for (const { page, href } of broken) console.log(`  ${href}  <-  ${page}`);
+if (broken.length) {
+  console.log(`${broken.length} broken internal links:\n`);
+  for (const { page, href } of broken) console.log(`  ${href}  <-  ${page}`);
+}
+
+if (uncanonical.length) {
+  console.log(`\n${uncanonical.length} links missing their trailing slash:\n`);
+  for (const { page, href } of uncanonical) console.log(`  ${href}  <-  ${page}`);
+}
+
 process.exit(1);

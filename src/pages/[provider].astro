@@ -89,6 +89,15 @@ function cells(field: Field, value: unknown): Cell[] {
   return (Array.isArray(value) ? value : [value]).map((entry) => {
     const label = labelOf(field.id, entry);
     if (!field.facet) return { text: label };
+
+    /*
+     * A `noFilter` value is recorded and shown but never offered as a filter, so
+     * no page is generated for it — "no shell" is a fact about this provider and
+     * not a list anybody wants. Linking it was linking at a 404.
+     */
+    const option = field.values.find((candidate) => candidate.id === String(entry));
+    if (option?.noFilter) return { text: label };
+
     const slug = slugOf(field, { id: String(entry), label });
     return { text: label, href: `/${field.facet}/${slug}/`, filter: `${field.facet}:${label}` };
   });
