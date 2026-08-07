@@ -9,7 +9,7 @@ category:
   - paas
 description: Sevalla is a polyglot cloud hosting platform covering application hosting, database hosting, static sites, and object storage.
 ownership: subsidiary
-parent: Kinsta
+parent: kinsta
 whoManagesOs: self-managed
 useCases:
   - static-site

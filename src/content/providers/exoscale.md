@@ -11,7 +11,7 @@ description: Exoscale is a Swiss infrastructure provider selling KVM instances, 
 founded: 2011
 hqCountry: CH
 ownership: subsidiary
-parent: A1 Telekom Austria Group
+parent: a1-telekom-austria
 whoManagesOs: self-managed
 infraContract:
   - owns-metal

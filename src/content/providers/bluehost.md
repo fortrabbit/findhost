@@ -10,7 +10,7 @@ description: Bluehost is a US shared hosting brand owned by Newfold Digital, lis
 founded: 2003
 hqCountry: US
 ownership: subsidiary
-parent: Newfold Digital
+parent: newfold-digital
 useCases:
   - cms
   - e-commerce

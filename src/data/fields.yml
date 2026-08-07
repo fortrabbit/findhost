@@ -49,9 +49,14 @@
     - { id: public, label: Publicly listed }
     - { id: subsidiary, label: Subsidiary }
 
+# Who owns it, as a reference to that owner's own record rather than as a name
+# typed twice. A parent that sells no hosting under its own name is `unlisted`
+# and still has a page, which is what makes the reverse list — the brands a group
+# owns — a thing the dataset can draw rather than a paragraph somebody wrote.
 - id: parent
   label: Parent
   group: Identity
+  relation: true
 
 # The sentence a non-active status earns is elsewhere on the record page; this
 # row is the fact behind it.
@@ -129,22 +134,24 @@
     - { id: resells-iaas, label: Resells someone else's, short: Reseller }
     - { id: byo-iaas, label: You bring your own, short: BYO }
 
-# Whose infrastructure a reseller sits on. The values are provider ids, so the
-# upstream is usually a record in this dataset too.
+# Whose infrastructure the compute runs on. A relation: the values are record
+# ids, so the upstream is a page in this dataset and the relation reads from
+# both ends. It was a vocabulary of nine names, eight of which were already
+# records — the register copied into a list beside itself.
 - id: runsOn
   label: Runs on
   group: Classification
   multiple: true
-  values:
-    - { id: aws, label: AWS }
-    - { id: gcp, label: Google Cloud }
-    - { id: digitalocean, label: DigitalOcean }
-    - { id: linode, label: Linode }
-    - { id: vultr, label: Vultr }
-    - { id: hetzner, label: Hetzner }
-    - { id: upcloud, label: UpCloud }
-    - { id: scaleway, label: Scaleway }
-    - { id: vshosting, label: vshosting }
+  relation: true
+
+# Whose network sits in front of it. Kept apart from `runsOn` because "the
+# compute runs at AWS" and "the CDN is Cloudflare" are two facts, and one field
+# holding both would answer neither on its own.
+- id: cdnFrom
+  label: CDN from
+  group: Classification
+  multiple: true
+  relation: true
 
 # What a provider markets itself for, taken from its own site. A claim it makes,
 # never a judgement about what it is good at.

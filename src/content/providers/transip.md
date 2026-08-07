@@ -13,7 +13,7 @@ description: Dutch registrar and hosting provider selling shared webhosting, VPS
 founded: 2003
 hqCountry: NL
 ownership: subsidiary
-parent: team.blue
+parent: team-blue
 useCases:
   - cms
   - e-commerce

@@ -10,7 +10,7 @@ description: Linode is a US VPS provider founded in 2003, acquired by Akamai in 
 founded: 2003
 hqCountry: US
 ownership: subsidiary
-parent: Akamai Technologies
+parent: akamai
 whoManagesOs: self-managed
 runtimes:
   - any

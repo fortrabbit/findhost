@@ -6,7 +6,6 @@ urls:
 category:
   - iaas
 description: Amazon Web Services is the largest cloud infrastructure provider, spanning 123 Availability Zones in 39 geographic Regions.
-parent: Amazon
 ownership: subsidiary
 hqCountry: US
 infraContract:

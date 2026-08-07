@@ -7,7 +7,7 @@ urls:
 category:
   - serverless
 description: Amazon's function-as-a-service primitive, running a handler on demand in a short-lived isolated environment and billing per invocation.
-parent: Amazon
+parent: aws
 whoManagesOs: managed
 useCases:
   - api

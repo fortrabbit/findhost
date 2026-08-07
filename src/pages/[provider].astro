@@ -22,6 +22,13 @@ const { provider } = Astro.props;
 
 const { Content } = await render(provider);
 const data = provider.data;
+
+/*
+ * Every record, because a relation is read from both ends: this one names its
+ * parent and its suppliers, and every other one may name this one as theirs.
+ */
+const everyRecord = await getCollection('providers');
+const nameOf = new Map(everyRecord.map((entry) => [String(entry.data.id), entry.data.name]));
 const valueOf = (field: string) => (data as Record<string, unknown>)[field];
 
 /*
@@ -99,6 +106,16 @@ function cells(field: Field, value: unknown): Cell[] {
   if (field.render === 'multiple') return [{ text: `${String(value)}×` }];
 
   return (Array.isArray(value) ? value : [value]).map((entry) => {
+    /*
+     * A relation names another record, so the word shown is that record's name
+     * and the link is its page. Read from this end only; the other end is drawn
+     * below, from the same one line of frontmatter.
+     */
+    if (field.relation) {
+      const id = String(entry);
+      return { text: nameOf.get(id) ?? id, href: `/${id}/` };
+    }
+
     const label = labelOf(field.id, entry);
     if (!field.facet) return { text: label };
 
@@ -144,6 +161,32 @@ const drawn = (groups: { label: string; fields: Field[] }[]) =>
       cells: cells(field, valueOf(field.id)),
       note: numberOf.get(field.id),
     })),
+  }));
+
+/*
+ * The other end of every relation: who names this record as their parent, whose
+ * compute runs here, who puts this network in front of theirs. Nothing is
+ * recorded twice — GoDaddy's record does not list its brands, the brands name
+ * GoDaddy — so the group a company owns is drawn rather than maintained.
+ */
+const backlinks = [
+  { label: 'Owns', field: 'parent' },
+  { label: 'Runs here', field: 'runsOn' },
+  { label: 'CDN for', field: 'cdnFrom' },
+]
+  .map(({ label, field }) => ({
+    label,
+    rows: everyRecord.filter((entry) => {
+      const held = (entry.data as Record<string, unknown>)[field];
+      return Array.isArray(held) ? held.includes(provider.id) : held === provider.id;
+    }),
+  }))
+  .filter((group) => group.rows.length > 0)
+  .map((group) => ({
+    label: group.label,
+    cells: group.rows
+      .sort((a, b) => a.data.name.localeCompare(b.data.name, 'en'))
+      .map((entry) => ({ text: entry.data.name, href: `/${entry.id}/` })),
   }));
 
 /*
@@ -331,6 +374,9 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
         }
 
         <FactGroups groups={drawn(nearGroups)} />
+
+        {/* Facts about this record held on other records, drawn from their side of the relation. */}
+        {backlinks.length > 0 && <FactGroups groups={[{ label: 'Related', rows: backlinks }]} />}
 
         {
           missing.length > 0 && (

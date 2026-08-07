@@ -12,7 +12,7 @@ description: HostGator is a low-cost American provider of shared, reseller, virt
 founded: 2002
 hqCountry: US
 ownership: subsidiary
-parent: Newfold Digital
+parent: newfold-digital
 currencies:
   - USD
 billingPeriods:

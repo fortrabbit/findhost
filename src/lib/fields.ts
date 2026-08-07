@@ -73,6 +73,14 @@ export interface Field {
    * guess and a search engine can read, and /regions/NL/ is not.
    */
   slugFromLabel?: boolean;
+  /**
+   * The values are record ids rather than a vocabulary of their own: the
+   * register is the vocabulary. A relation is drawn as a link to that record and
+   * read back from the other end — the brands a group owns, the platforms that
+   * run on an infrastructure provider — so one line of frontmatter puts a fact
+   * on two pages.
+   */
+  relation?: boolean;
   filterOrder?: number;
   multiple: boolean;
   /** How the value is drawn where it is not a label lookup. */

@@ -9,9 +9,13 @@ urls:
   status: https://status.hostim.dev
 category:
   - paas
+  - caas
 description: Hostim is a Docker-first platform-as-a-service from Germany, deploying container images, Git repositories and Compose files onto bare metal in the EU.
 founded: 2025
 hqCountry: DE
+deployMethods:
+  - git
+  - docker-image
 regions:
   - DE
 entryPrice: { amount: 2.5, currency: EUR, period: month }
@@ -30,6 +34,8 @@ social:
 status: active
 checkedAt: 2026-08-01
 sources:
+  - { field: category, url: 'https://hostim.dev', checkedAt: 2026-08-07 }
+  - { field: deployMethods, url: 'https://hostim.dev', checkedAt: 2026-08-07 }
   - { field: regions, url: 'https://hostim.dev', checkedAt: 2026-08-01 }
   - { field: hqCountry, url: 'https://hostim.dev', checkedAt: 2026-08-01 }
   - { field: founded, url: 'https://hostim.dev', checkedAt: 2026-08-01 }

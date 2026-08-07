@@ -10,7 +10,7 @@ description: Greek domain registrar and shared-hosting provider, part of the Eur
 founded: 2004
 hqCountry: GR
 ownership: subsidiary
-parent: team.blue
+parent: team-blue
 whoManagesOs: managed
 useCases:
   - cms

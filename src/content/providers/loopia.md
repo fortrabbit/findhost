@@ -12,7 +12,7 @@ description: Swedish hosting provider and registrar in Västerås offering Linux
 founded: 1999
 hqCountry: SE
 ownership: subsidiary
-parent: team.blue
+parent: team-blue
 useCases:
   - cms
   - e-commerce

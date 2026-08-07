@@ -11,7 +11,7 @@ description: GleSYS is a Swedish infrastructure provider selling KVM and VMware 
 founded: 1999
 hqCountry: SE
 ownership: pe-owned
-parent: Cube Infrastructure Managers
+parent: cube-infrastructure
 whoManagesOs: self-managed
 infraContract:
   - owns-metal

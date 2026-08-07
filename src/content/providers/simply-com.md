@@ -10,7 +10,7 @@ description: Danish shared hosting provider selling bundles of web space, mail a
 founded: 2004
 hqCountry: DK
 ownership: subsidiary
-parent: team.blue
+parent: team-blue
 whoManagesOs: managed
 useCases:
   - cms

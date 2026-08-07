@@ -12,7 +12,7 @@ description: Karlsruhe-based provider selling low-priced webhosting, VPS and roo
 founded: 2008
 hqCountry: DE
 ownership: subsidiary
-parent: Anexia
+parent: anexia
 useCases:
   - cms
   - api

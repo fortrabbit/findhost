@@ -11,7 +11,7 @@ description: Browser-based Python hosting with in-browser consoles, scheduled ta
 founded: 2011
 hqCountry: GB
 ownership: subsidiary
-parent: Anaconda
+parent: anaconda
 whoManagesOs: managed
 specialisation:
   - django

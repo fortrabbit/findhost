@@ -11,7 +11,7 @@ regions: null
 description: Hosting control panel licensed per server, managing sites, domains, mail, databases and WordPress on Linux and Windows machines the customer supplies.
 hqCountry: CH
 ownership: subsidiary
-parent: WebPros International GmbH
+parent: webpros
 whoManagesOs: self-managed
 infraContract:
   - byo-iaas

@@ -13,7 +13,7 @@ description: Brazilian shared, WordPress and VPS hosting brand under LWSA, docum
 founded: 2006
 hqCountry: BR
 ownership: subsidiary
-parent: LWSA
+parent: locaweb
 whoManagesOs: managed
 useCases:
   - cms

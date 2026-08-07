@@ -13,7 +13,7 @@ description: Large European hosting group selling shared webhosting, VPS, dedica
 founded: 1988
 hqCountry: DE
 ownership: public
-parent: United Internet AG
+parent: united-internet
 useCases:
   - cms
   - e-commerce

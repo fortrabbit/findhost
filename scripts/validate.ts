@@ -310,6 +310,10 @@ for (const slug of slugs) {
  */
 const fieldNames = new Set(records.flatMap(({ data }) => (data ? Object.keys(data) : [])));
 
+/** The vocabulary of every relation field: the register, including the records beside it. */
+const recordIds = new Set(slugs);
+const relationFields = fields.filter((field) => field.relation);
+
 // Kept apart in the count only. Every guard below runs on a hidden record too —
 // a rejected name is still published, and a field this dataset may never carry
 // is no more acceptable on a page nobody links to.
@@ -353,6 +357,24 @@ for (const { file, data } of records) {
   const duplicate = seen.get(String(data.id));
   if (duplicate) fail(file, `duplicate id, already used by ${duplicate}`);
   seen.set(String(data.id), file);
+
+  /*
+   * A relation names another record. Nothing else can check it: zod cannot see
+   * the collection from inside the schema that defines it, and a typo here is
+   * silent — the value renders as a link to a page that does not exist, or as a
+   * parent nobody can follow back.
+   */
+  for (const field of relationFields) {
+    const held = data[field.id];
+    if (held === undefined || held === null) continue;
+
+    for (const target of Array.isArray(held) ? held : [held]) {
+      if (String(target) === slug) fail(file, `"${field.id}" points at its own record`);
+      else if (!recordIds.has(String(target))) {
+        fail(file, `"${field.id}" names "${String(target)}", which is not a record — relations are provider ids`);
+      }
+    }
+  }
 
   for (const key of Object.keys(data)) {
     if (forbidden.includes(key.toLowerCase())) {

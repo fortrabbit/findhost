@@ -11,7 +11,7 @@ description: Squarespace is a design-focused website builder that combines templ
 founded: 2004
 hqCountry: US
 ownership: pe-owned
-parent: Permira
+parent: permira
 whoManagesOs: managed
 useCases:
   - portfolio

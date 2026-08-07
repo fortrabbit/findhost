@@ -9,7 +9,7 @@ category:
   - lcnc
 description: Weebly is a simple website builder that bundles templates, hosting, and basic ecommerce features.
 ownership: subsidiary
-parent: Block, Inc.
+parent: block
 whoManagesOs: managed
 sshAccess: none
 pricingModel: fixed-tier

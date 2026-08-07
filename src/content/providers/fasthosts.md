@@ -10,7 +10,7 @@ category:
 description: Fasthosts is the UK hosting brand of the IONOS group, selling shared hosting, VPS and dedicated servers from UK data centres.
 hqCountry: GB
 ownership: subsidiary
-parent: IONOS Group SE
+parent: ionos-group
 runtimes:
   - php
 software:

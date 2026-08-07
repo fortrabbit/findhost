@@ -10,7 +10,7 @@ category:
 description: Slovakia's largest domain registrar, selling shared hosting and a website builder across Slovakia, Czechia and Hungary from its own data centre.
 hqCountry: SK
 ownership: subsidiary
-parent: team.blue
+parent: team-blue
 whoManagesOs: managed
 infraContract:
   - owns-metal

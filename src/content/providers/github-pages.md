@@ -11,7 +11,7 @@ description: Static sites served from a GitHub repository, built by Actions or f
 founded: 2008
 hqCountry: US
 ownership: subsidiary
-parent: Microsoft
+parent: github
 whoManagesOs: managed
 runtimes:
   - static

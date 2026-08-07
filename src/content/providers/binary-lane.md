@@ -10,7 +10,7 @@ description: Australian VPS provider selling hourly-billed NVMe cloud servers wi
 founded: 2009
 hqCountry: AU
 ownership: subsidiary
-parent: Mammoth Media Pty Ltd
+parent: mammoth
 whoManagesOs: self-managed
 useCases:
   - web-app

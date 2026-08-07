@@ -10,7 +10,7 @@ description: Spanish-language WordPress host trading since 1999, now part of tea
 founded: 1999
 hqCountry: ES
 ownership: subsidiary
-parent: team.blue
+parent: team-blue
 whoManagesOs: managed
 useCases:
   - cms

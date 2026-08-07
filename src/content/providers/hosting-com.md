@@ -10,7 +10,7 @@ category:
 founded: 2003
 hqCountry: US
 ownership: subsidiary
-parent: World Host Group
+parent: world-host-group
 useCases:
   - cms
 software:

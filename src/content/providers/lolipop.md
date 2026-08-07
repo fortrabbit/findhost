@@ -11,7 +11,7 @@ category:
 description: Japanese rental server from GMO Pepabo, selling shared hosting for personal and small-business sites through its own control panel.
 hqCountry: JP
 ownership: subsidiary
-parent: GMO Pepabo
+parent: gmo-pepabo
 whoManagesOs: managed
 useCases:
   - cms

@@ -8,7 +8,7 @@ category:
   - vanity-hosting
 description: Managed WordPress hosting owned by Automattic, sold in fixed tiers metered by number of installs, monthly visits and storage.
 ownership: subsidiary
-parent: Automattic
+parent: automattic
 whoManagesOs: managed
 specialisation:
   - wordpress

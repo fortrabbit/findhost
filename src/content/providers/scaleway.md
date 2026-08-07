@@ -13,7 +13,7 @@ description: French cloud provider selling instances, bare metal, managed Kubern
 founded: 1999
 hqCountry: FR
 ownership: subsidiary
-parent: iliad Group
+parent: iliad
 whoManagesOs: self-managed
 infraContract:
   - owns-metal

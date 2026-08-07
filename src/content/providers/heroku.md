@@ -11,7 +11,7 @@ description: Heroku is a polyglot PaaS — the original "git push to deploy" pla
 founded: 2007
 hqCountry: US
 ownership: subsidiary
-parent: Salesforce
+parent: salesforce
 whoManagesOs: managed
 useCases:
   - ai-app

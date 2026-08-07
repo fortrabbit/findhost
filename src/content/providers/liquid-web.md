@@ -10,7 +10,7 @@ description: Liquid Web is a US hosting provider from 1997 specialising in manag
 founded: 1997
 hqCountry: US
 ownership: pe-owned
-parent: CloudOne Digital
+parent: cloudone-digital
 whoManagesOs: managed
 audience:
   - smb

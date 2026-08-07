@@ -10,7 +10,7 @@ category:
   - static
 description: Firebase is Google's application platform, bundling a document database, authentication and storage with hosting that builds framework applications onto Cloud Run.
 ownership: subsidiary
-parent: Alphabet
+parent: gcp
 whoManagesOs: managed
 useCases:
   - api

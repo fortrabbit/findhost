@@ -11,7 +11,7 @@ description: Belgian hosting provider offering shared PHP and Node.js hosting, V
 founded: 1999
 hqCountry: BE
 ownership: subsidiary
-parent: team.blue
+parent: team-blue
 useCases:
   - cms
   - e-commerce

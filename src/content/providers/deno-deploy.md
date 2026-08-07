@@ -11,7 +11,7 @@ description: Serverless hosting for JavaScript and TypeScript built by the Deno 
 hqCountry: US
 ownership: vc-backed
 whoManagesOs: managed
-parent: Deno Land Inc.
+parent: deno-land
 useCases:
   - api
   - static-site

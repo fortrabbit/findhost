@@ -11,7 +11,7 @@ description: Austrian hosting provider from Linz, a subsidiary of United Interne
 founded: 1998
 hqCountry: AT
 ownership: subsidiary
-parent: United Internet AG
+parent: united-internet
 useCases:
   - cms
   - e-commerce

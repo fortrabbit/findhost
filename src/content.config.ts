@@ -212,10 +212,13 @@ const providerFields = z
       .array(z.enum(vocabulary('regions')))
       .nullable()
       .optional(),
-    runsOn: z
-      .array(z.enum(vocabulary('runsOn')))
-      .nullable()
-      .optional(),
+    /*
+     * Relations. The value is another record's id, checked by scripts/validate.ts
+     * rather than by an enum here — the vocabulary is the register, which zod
+     * cannot see from inside the schema that defines it.
+     */
+    runsOn: z.array(z.string()).nullable().optional(),
+    cdnFrom: z.array(z.string()).nullable().optional(),
     gdprDpa: z.enum(vocabulary('gdprDpa')).optional(),
 
     /*

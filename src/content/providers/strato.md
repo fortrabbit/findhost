@@ -11,7 +11,7 @@ description: Berlin-based mass-market webhosting brand owned by IONOS, selling s
 founded: 1997
 hqCountry: DE
 ownership: subsidiary
-parent: IONOS Group SE
+parent: ionos-group
 useCases:
   - cms
   - campaign-site

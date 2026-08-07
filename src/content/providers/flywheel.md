@@ -10,7 +10,7 @@ description: Flywheel is a managed WordPress host built for web designers, freel
 founded: 2012
 hqCountry: US
 ownership: subsidiary
-parent: WP Engine
+parent: wpengine
 whoManagesOs: managed
 useCases:
   - cms

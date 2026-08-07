@@ -10,7 +10,7 @@ description: Australian domain registrar and hosting provider selling cPanel sha
 founded: 2008
 hqCountry: AU
 ownership: subsidiary
-parent: Nexigen Digital Pty Ltd
+parent: nexigen-digital
 whoManagesOs: self-managed
 infraContract:
   - resells-iaas
