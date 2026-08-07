@@ -10,14 +10,6 @@ figure:
   text: Fast, cheap, good — choose any two.
 ---
 
-The above is quote by David N. Welton. Three things follow from it, and they explain most of what makes choosing hard.
-
-**The vocabulary is blurry on purpose.** Shared hosting, VPS and IaaS are real distinctions that vendors smudge constantly, and the newer words are worse — is [serverless](/categories/serverless/) really server-less? This register answers with fields instead of adjectives: [who manages the operating system](/operating-system/) and [whose hardware it runs on](/metal/) settle most of the argument, because they stay answerable whatever a vendor calls the product.
-
-**Margins are thin, so providers compete on marketing.** Introductory pricing that triples on renewal is normal rather than exceptional, which is why the renewal multiple is recorded: it is checkable, and no affiliate site will publish it, because their revenue depends on the gap it exposes.
-
-**The advice is bought.** Nearly everything on the first page of "best web hosting" is ordered by commission, so providers without an affiliate program — most of the small and independent ones — are simply absent. Hosting is also more local than English-language comparisons suggest.
-
 ## Match your desired abstraction level
 
 The right level of abstraction is the one that matches a team's skills, not the lowest one available. Shipping code instead of configuring servers is worth something at any level of experience, and it costs flexibility, usually in deployment options. That is [category](/categories/), [who manages the OS](/operating-system/), [whose hardware it is](/metal/) and [shell access](/shell/).

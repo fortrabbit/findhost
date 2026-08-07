@@ -59,45 +59,45 @@
 
 
 /**
- * A half-filled circle, turned to say which setting is in force: upright for
- * none, so the operating system decides; a quarter turn one way for light and
- * the other for dark. The button still names an action — what pressing it will
- * do — and the glyph carries the state, which is the half a label cannot hold
- * without saying two things at once.
+ * Three states, shown as three: the operating system's choice, always light,
+ * always dark. A switch between two could not show the third, and once anybody
+ * pressed it the third became unreachable.
+ *
+ * The one in force takes a round outline. Round because these are circles, and
+ * because a ring reads as "this one" without a second colour — which this
+ * palette does not have to give.
  */
-.theme-toggle {
+.theme-switch {
+  display: flex;
+  gap: var(--space-3xs);
+}
+
+.theme-switch button {
   display: inline-flex;
-  padding: var(--space-3xs) var(--space-2xs);
-  border: var(--rule-hairline) solid var(--color-ink);
-  border-radius: var(--radius);
-  background: var(--color-page);
+  align-items: center;
+  justify-content: center;
+  width: 1.9em;
+  height: 1.9em;
+  padding: 0;
+  border: var(--rule-hairline) solid transparent;
+  border-radius: 50%;
+  background: none;
   color: var(--color-ink);
   font: inherit;
+  font-size: var(--text-md);
   line-height: 1;
   cursor: pointer;
 }
 
-.theme-mark {
-  display: inline-block;
-  font-size: var(--text-md);
-  line-height: 1;
-  transition: transform 0.25s ease;
+.theme-switch button[aria-pressed='true'] {
+  border-color: var(--color-ink);
 }
 
-.theme-toggle[data-setting='light'] .theme-mark {
-  transform: rotate(-90deg);
+/* A control that does nothing until the script runs is not drawn until it has. */
+html:not(.js) .theme-switch {
+  display: none;
 }
 
-.theme-toggle[data-setting='dark'] .theme-mark {
-  transform: rotate(90deg);
-}
-
-/* A turning glyph is decoration; a reader who asked for stillness gets the angle without the journey. */
-@media (prefers-reduced-motion: reduce) {
-  .theme-mark {
-    transition: none;
-  }
-}
 
 .site-search {
   display: flex;
@@ -713,9 +713,15 @@ html.js [data-find-fallback] {
   margin-bottom: var(--space-lg);
 }
 
+/*
+ * `flex: 1 1 auto`, not `flex: 1`. With a zero basis the heading shrinks to make
+ * room and the link never wraps, so a long title runs under it — how far under
+ * depends on the font that actually loaded, which is why it looked fine here and
+ * collided elsewhere. Sized from its content, the heading pushes the link onto
+ * its own line the moment there is not room for both.
+ */
 .page-head > h1 {
-  flex: 1;
-  min-width: 0;
+  flex: 1 1 auto;
 }
 
 /* The way from a page that means one value to the register, where values combine. */

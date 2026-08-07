@@ -40,7 +40,7 @@
   --text-md: 1.19rem;
   --text-lg: 1.65rem;
   --text-xl: 2rem;
-  --text-2xl: 3rem;
+  --text-2xl: 4rem;
 
   /* Display sizes want less air, not the same ratio scaled up with the type */
   --leading-display: 1.02;

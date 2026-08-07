@@ -97,11 +97,26 @@ const canonical = new URL(path, Astro.site ?? Astro.url).href;
             Contributions welcome via <a href="https://github.com/fortrabbit/findhost">GitHub</a>.
           </p>
         </div>
-        {/* Hidden until the script that makes it work has run, so it is never a control that does nothing. */}
-        <button class="theme-toggle" type="button" data-theme-toggle hidden>
-          <span class="theme-mark" aria-hidden="true">◑</span>
-          <span class="visually-hidden" data-theme-label>Switch theme</span>
-        </button>
+        {/*
+          Three choices rather than a switch between two, because there are three
+          — and the third, letting the operating system decide, was unreachable
+          the moment anybody pressed the old one. Absent until the script runs;
+          the `js` class decides that before first paint.
+        */}
+        <div class="theme-switch" role="group" aria-label="Theme">
+          <button type="button" data-theme-set="system">
+            <span aria-hidden="true">◑</span>
+            <span class="visually-hidden">System</span>
+          </button>
+          <button type="button" data-theme-set="light">
+            <span aria-hidden="true">○</span>
+            <span class="visually-hidden">Light</span>
+          </button>
+          <button type="button" data-theme-set="dark">
+            <span aria-hidden="true">●</span>
+            <span class="visually-hidden">Dark</span>
+          </button>
+        </div>
       </div>
     </footer>
 
@@ -121,38 +136,40 @@ const canonical = new URL(path, Astro.site ?? Astro.url).href;
 
     <script>
       const root = document.documentElement;
-      const toggle = document.querySelector<HTMLButtonElement>('[data-theme-toggle]');
-      const label = document.querySelector<HTMLElement>('[data-theme-label]');
-
-      const dark = () =>
-        root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+      const choices = document.querySelectorAll<HTMLButtonElement>('[data-theme-set]');
 
       /*
-       * An action, not a state. The label names what pressing it will do, so
-       * aria-pressed — which announces what the button currently *is* — would
-       * contradict it: "Dark, pressed" where the page is light.
-       *
-       * The glyph says the other half: which setting is in force. Upright is no
-       * setting at all, meaning the operating system decides; turned one way is
-       * light chosen, the other way dark. `data-setting` carries that to the
-       * stylesheet, which owns the angles and the transition.
+       * Each button is a state rather than a move, so each says whether it is the
+       * one in force. `aria-pressed` is right here for the reason it was wrong
+       * before: these announce what the theme *is*, not what pressing will do.
        */
       const describe = () => {
-        if (!toggle || !label) return;
-        toggle.dataset.setting = root.dataset.theme ?? 'system';
-        label.textContent = `Switch to ${dark() ? 'light' : 'dark'}`;
-        toggle.title = `Switch to ${dark() ? 'light' : 'dark'}`;
+        const setting = root.dataset.theme ?? 'system';
+        for (const choice of choices) {
+          const mine = choice.dataset.themeSet === setting;
+          choice.setAttribute('aria-pressed', String(mine));
+          choice.title = choice.dataset.themeSet === 'system' ? 'Follow the system' : `Always ${choice.dataset.themeSet}`;
+        }
       };
 
-      toggle?.addEventListener('click', () => {
-        const next = dark() ? 'light' : 'dark';
-        root.dataset.theme = next;
-        localStorage.setItem('theme', next);
-        describe();
-      });
+      for (const choice of choices) {
+        choice.addEventListener('click', () => {
+          const wanted = choice.dataset.themeSet!;
+
+          // System is the absence of a choice, so choosing it removes one.
+          if (wanted === 'system') {
+            delete root.dataset.theme;
+            localStorage.removeItem('theme');
+          } else {
+            root.dataset.theme = wanted;
+            localStorage.setItem('theme', wanted);
+          }
+
+          describe();
+        });
+      }
 
       describe();
-      if (toggle) toggle.hidden = false;
 
       // `/` focuses search, the way it works everywhere else a developer types.
       const field = document.querySelector<HTMLInputElement>('[data-search-shortcut]');
