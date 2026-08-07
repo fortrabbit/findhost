@@ -271,6 +271,8 @@ const providerFields = z
     emailHosting: z.enum(vocabulary('emailHosting')).optional(),
     cdnIncluded: z.enum(vocabulary('cdnIncluded')).optional(),
     testDomain: z.enum(vocabulary('testDomain')).optional(),
+    collaboration: z.enum(vocabulary('collaboration')).optional(),
+    staging: z.enum(vocabulary('staging')).optional(),
 
     // Automation & agent support — the axis nobody else records
     apiAvailable: z.enum(vocabulary('apiAvailable')).optional(),

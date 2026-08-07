@@ -32,7 +32,7 @@ runtimes:
   - docker
   - static
 deployMethods:
-  - git-integration
+  - git
   - docker-image
 managedDatabases:
   - postgres

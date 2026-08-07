@@ -22,7 +22,7 @@ software:
 runtimes:
   - php
 deployMethods:
-  - git-integration
+  - git
 backupsIncluded: included
 pricingModel: fixed-tier
 billingPeriods:

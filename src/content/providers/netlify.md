@@ -40,7 +40,7 @@ runtimes:
   - node
   - static
 deployMethods:
-  - git-integration
+  - git
 sshAccess: none
 pricingModel: credit
 priceFrom: sm

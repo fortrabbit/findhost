@@ -25,7 +25,7 @@ software:
 runtimes:
   - php
 deployMethods:
-  - git-push
+  - git
 sshAccess: jailed
 pricingModel: fixed-tier
 priceFrom: md

@@ -22,7 +22,7 @@ audience:
   - enterprise
   - non-profit
 deployMethods:
-  - git-integration
+  - git
   - docker-image
 pricingModel: per-resource
 priceFrom: sm

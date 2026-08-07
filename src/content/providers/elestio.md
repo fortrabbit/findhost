@@ -38,7 +38,7 @@ runtimes:
 deployMethods:
   - control-panel
   - docker-image
-  - git-integration
+  - git
 sshAccess: jailed
 managedDatabases:
   - postgres

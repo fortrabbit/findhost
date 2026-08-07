@@ -42,7 +42,7 @@ runtimes:
   - dotnet
   - docker
 deployMethods:
-  - git-integration
+  - git
   - docker-image
 pricingModel: fixed-tier
 freeTier: trial

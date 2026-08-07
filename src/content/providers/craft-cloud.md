@@ -18,7 +18,7 @@ software:
 runtimes:
   - php
 deployMethods:
-  - git-integration
+  - git
 pricingModel: fixed-tier
 priceFrom: lg
 priceTo: xl

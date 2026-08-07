@@ -35,7 +35,7 @@ runtimes:
   - static
 deployMethods:
   - file-transfer
-  - git-push
+  - git
   - control-panel
 sshAccess: jailed
 managedDatabases:

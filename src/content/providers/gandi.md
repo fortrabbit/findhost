@@ -29,7 +29,7 @@ runtimes:
   - node
   - static
 deployMethods:
-  - git-push
+  - git
   - file-transfer
   - control-panel
 managedDatabases:

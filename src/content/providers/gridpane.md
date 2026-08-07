@@ -27,7 +27,7 @@ runtimes:
   - php
 deployMethods:
   - control-panel
-  - git-integration
+  - git
 sshAccess: jailed
 managedDatabases:
   - mysql

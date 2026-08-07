@@ -19,7 +19,7 @@ runtimes:
   - any
   - docker
 deployMethods:
-  - git-integration
+  - git
   - docker-image
 priceFrom: sm
 priceTo: md

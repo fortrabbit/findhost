@@ -28,7 +28,7 @@ runtimes:
   - docker
   - any
 deployMethods:
-  - git-integration
+  - git
   - docker-image
 sshAccess: root
 pricingModel: per-resource

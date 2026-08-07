@@ -1,0 +1,5 @@
+---
+description: What comes with the hosting beyond running the code — collaboration, staging, domains, DNS, email, a CDN, a test URL.
+---
+
+A hosting plan is rarely the whole job. Some of this is a second invoice — domains have to be registered somewhere, DNS served by someone, email run on a machine that is not the one serving the site, and most application platforms include none of the three while a shared host often includes all of them. The rest is whether the platform expects more than one person: **collaboration** is recorded because a platform where the account *is* the login is a different product from one where a team, or a client, has a place of their own, and no pricing page says which it is until somebody needs it. **Staging** is the same kind of fact — for a good many providers it is what the next tier up is for. Each is recorded as included, sold as an add-on, or not offered, because "they will sell it separately" is the ordinary answer and a yes-or-no has nowhere to put it. A record showing nothing here is one nobody has checked, not one with seven noes.

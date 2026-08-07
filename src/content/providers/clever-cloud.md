@@ -41,7 +41,7 @@ runtimes:
   - static
   - docker
 deployMethods:
-  - git-push
+  - git
   - docker-image
   - control-panel
 sshAccess: root

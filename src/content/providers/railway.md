@@ -23,7 +23,7 @@ runtimes:
   - ruby
   - docker
 deployMethods:
-  - git-integration
+  - git
 managedDatabases:
   - postgres
   - mysql

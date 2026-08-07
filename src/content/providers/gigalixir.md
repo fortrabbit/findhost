@@ -29,8 +29,7 @@ runtimes:
   - rust
   - php
 deployMethods:
-  - git-push
-  - git-integration
+  - git
 sshAccess: root
 managedDatabases:
   - postgres

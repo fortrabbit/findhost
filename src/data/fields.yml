@@ -302,11 +302,11 @@
 # browser is `automation`, where the CLI and the API live because creating an app
 # and reading a log are the same capability as triggering a deploy.
 #
-# `git-integration` is a repository the provider watches, which needs an account
-# somewhere else and a webhook; `git-push` is a remote they hand you, which needs
-# neither. Different workflows with different failure modes, so they stay apart.
-# SFTP and FTP are one value: both are a file upload, and a reader picking a host
-# is asking whether that route exists, not which port it runs on.
+# Git is one value. A remote the provider hands over and a repository it watches
+# on GitHub are different workflows, but not different answers to the question
+# being asked — which is whether deploying means pushing a commit. Most providers
+# offering either offer both, and we had filed our own record under one of them
+# while shipping the other. SFTP and FTP are one value for the same reason.
 - id: deployMethods
   label: Deployment
   group: Deployment
@@ -314,8 +314,7 @@
   filterOrder: 7
   multiple: true
   values:
-    - { id: git-integration, label: Connected repo }
-    - { id: git-push, label: Git push }
+    - { id: git, label: Git }
     - { id: docker-image, label: Container image, short: Container }
     - { id: control-panel, label: Control panel, short: Panel }
     - { id: file-transfer, label: File transfer, short: Upload }
@@ -719,7 +718,7 @@
 # case for email and for domains, and a yes/no has nowhere to put it.
 - id: domainRegistration
   label: Domain registration
-  group: Included
+  group: Other features
   values:
     - { id: included, label: Included }
     - { id: paid-addon, label: Paid add-on }
@@ -727,38 +726,59 @@
 
 - id: dnsHosting
   label: DNS hosting
-  group: Included
+  group: Other features
   valuesFrom: domainRegistration
 
 - id: emailHosting
   label: Email hosting
-  group: Included
+  group: Other features
   valuesFrom: domainRegistration
 
 - id: cdnIncluded
   label: CDN
-  group: Included
+  group: Other features
   valuesFrom: domainRegistration
 
 # Two answers, not three: a preview URL is free wherever it exists at all, and
 # nobody sells one on its own.
 - id: testDomain
   label: Test domain
-  group: Included
+  group: Other features
   values:
     - { id: included, label: Included }
     - { id: none, label: None }
+
+# Whether more than one person can work on the same hosting, and how far that
+# goes. A platform where the account is the login is a different product from one
+# where a team, or a client, has a place of their own — and it is invisible on
+# every pricing page until somebody needs it.
+- id: collaboration
+  label: Collaboration
+  group: Other features
+  values:
+    - { id: none, label: 'One account, one login' }
+    - { id: team, label: 'Team members' }
+    - { id: clients, label: 'Team members and client access' }
+
+# A place to try the deploy before it is the site. Recorded like the rest of this
+# group, because for a good many providers it is what the next tier up is for.
+- id: staging
+  label: Staging
+  group: Other features
+  valuesFrom: domainRegistration
 
 # Derived, like `automation`: the fields above hold the detail and this asks the
 # one thing a filter is for — does it come with the hosting. A paid add-on is
 # still something to go and buy, which is the errand the reader is trying to
 # avoid, so it does not count as a yes here.
-- id: included
-  label: Included
-  facet: included
+- id: features
+  label: Other features
+  facet: features
   filterOrder: 8
   multiple: true
   values:
+    - { id: collaboration, label: Collaboration, from: collaboration, when: [team, clients] }
+    - { id: staging, label: Staging, from: staging, when: [included] }
     - { id: domains, label: Domains, from: domainRegistration, when: [included] }
     - { id: dns, label: DNS, from: dnsHosting, when: [included] }
     - { id: email, label: Email, from: emailHosting, when: [included] }

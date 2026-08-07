@@ -31,7 +31,7 @@ runtimes:
   - python
   - static
 deployMethods:
-  - git-integration
+  - git
 sshAccess: none
 pricingModel: usage-based
 priceFrom: xs

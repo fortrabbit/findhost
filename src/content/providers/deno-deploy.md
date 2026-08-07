@@ -30,7 +30,7 @@ runtimes:
   - node
   - static
 deployMethods:
-  - git-integration
+  - git
 sshAccess: none
 pricingModel: fixed-tier
 priceFrom: md

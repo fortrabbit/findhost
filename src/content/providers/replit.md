@@ -28,7 +28,7 @@ runtimes:
   - any
 deployMethods:
   - control-panel
-  - git-integration
+  - git
 pricingModel: credit
 priceFrom: md
 priceTo: lg

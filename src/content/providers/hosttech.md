@@ -27,7 +27,7 @@ runtimes:
   - php
 deployMethods:
   - file-transfer
-  - git-push
+  - git
 sshAccess: jailed
 pricingModel: fixed-tier
 entryPrice: { amount: 6.9, currency: CHF, period: month }

@@ -34,7 +34,7 @@ runtimes:
   - ruby
 deployMethods:
   - file-transfer
-  - git-push
+  - git
 sshAccess: jailed
 managedDatabases:
   - mysql

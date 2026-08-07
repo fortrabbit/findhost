@@ -18,7 +18,7 @@ software:
   - laravel
   - symfony
 deployMethods:
-  - git-integration
+  - git
 managedDatabases:
   - postgres
   - valkey

@@ -35,7 +35,7 @@ runtimes:
   - dotnet
   - docker
 deployMethods:
-  - git-push
+  - git
   - file-transfer
   - docker-image
 sshAccess: root

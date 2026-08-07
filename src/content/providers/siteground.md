@@ -34,7 +34,7 @@ sshAccess: jailed
 deployMethods:
   - file-transfer
   - control-panel
-  - git-push
+  - git
 pricingModel: fixed-tier
 priceFrom: md
 priceTo: md

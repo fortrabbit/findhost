@@ -32,7 +32,7 @@ runtimes:
   - python
 deployMethods:
   - control-panel
-  - git-push
+  - git
 sshAccess: jailed
 pricingModel: per-resource
 priceFrom: sm

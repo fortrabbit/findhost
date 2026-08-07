@@ -34,7 +34,7 @@ runtimes:
   - node
   - static
 deployMethods:
-  - git-integration
+  - git
   - docker-image
 sshAccess: jailed
 pricingModel: fixed-tier

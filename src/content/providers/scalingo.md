@@ -43,8 +43,7 @@ runtimes:
   - java
   - docker
 deployMethods:
-  - git-push
-  - git-integration
+  - git
   - docker-image
 sshAccess: root
 managedDatabases:

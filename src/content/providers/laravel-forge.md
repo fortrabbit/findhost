@@ -25,7 +25,7 @@ runtimes:
   - php
   - node
 deployMethods:
-  - git-integration
+  - git
 sshAccess: root
 managedDatabases:
   - mysql

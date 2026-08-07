@@ -35,7 +35,7 @@ runtimes:
   - dotnet
 deployMethods:
   - control-panel
-  - git-integration
+  - git
   - file-transfer
 sshAccess: root
 managedDatabases:

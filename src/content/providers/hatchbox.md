@@ -32,7 +32,7 @@ runtimes:
   - node
   - static
 deployMethods:
-  - git-integration
+  - git
   - control-panel
 sshAccess: jailed
 pricingModel: fixed-tier

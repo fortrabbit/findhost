@@ -103,7 +103,7 @@ export const groupNames = [
   'Environment',
   'Support',
   'Deployment',
-  'Included',
+  'Other features',
   'Automation',
 ] as const;
 

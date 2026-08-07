@@ -27,7 +27,7 @@ runtimes:
   - static
 deployMethods:
   - docker-image
-  - git-integration
+  - git
 pricingModel: usage-based
 priceFrom: xs
 priceTo: lg

@@ -25,7 +25,7 @@ runtimes:
   - node
   - docker
 deployMethods:
-  - git-integration
+  - git
   - docker-image
 pricingModel: fixed-tier
 priceFrom: md

@@ -29,7 +29,7 @@ runtimes:
   - docker
   - static
 deployMethods:
-  - git-push
+  - git
   - docker-image
 pricingModel: fixed-tier
 priceFrom: md

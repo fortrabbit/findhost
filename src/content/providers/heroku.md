@@ -38,7 +38,7 @@ runtimes:
   - clojure
   - dotnet
 deployMethods:
-  - git-push
+  - git
 managedDatabases:
   - postgres
   - redis

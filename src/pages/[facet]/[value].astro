@@ -48,8 +48,7 @@ const subjects: Record<string, string> = {
     }[value.id] ?? `give ${value.label.toLowerCase()}`,
   deployment:
     {
-      'git-push': 'deploy by pushing to a remote they host',
-      'git-integration': 'deploy from a repository they watch',
+      git: 'deploy from a git commit',
       'docker-image': 'deploy a container image',
       'file-transfer': 'accept an upload over SFTP or FTP',
       'control-panel': 'deploy from a control panel',
@@ -74,8 +73,10 @@ const subjects: Record<string, string> = {
     }[value.id] ?? value.label.toLowerCase(),
   currencies: `bill in ${value.label}`,
   ownership: `are ${value.label.toLowerCase()}`,
-  included:
+  features:
     {
+      collaboration: 'let more than one person work on the same hosting',
+      staging: 'give somewhere to try a deploy before it is the site',
       domains: 'include a domain with the hosting',
       dns: 'host DNS themselves, at no extra charge',
       email: 'host email themselves, at no extra charge',

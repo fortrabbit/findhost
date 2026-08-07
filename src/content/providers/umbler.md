@@ -29,7 +29,7 @@ software:
 runtimes:
   - php
 deployMethods:
-  - git-push
+  - git
   - file-transfer
   - control-panel
 pricingModel: per-resource

@@ -30,7 +30,7 @@ runtimes:
   - php
   - node
 deployMethods:
-  - git-push
+  - git
   - file-transfer
   - control-panel
 sshAccess: jailed

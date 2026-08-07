@@ -33,7 +33,7 @@ runtimes:
   - php
   - any
 deployMethods:
-  - git-integration
+  - git
   - docker-image
 pricingModel: usage-based
 priceFrom: md

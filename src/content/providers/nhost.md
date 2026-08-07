@@ -22,7 +22,7 @@ runtimes:
   - node
   - docker
 deployMethods:
-  - git-integration
+  - git
   - docker-image
 managedDatabases:
   - postgres

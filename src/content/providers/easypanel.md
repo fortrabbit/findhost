@@ -28,7 +28,7 @@ runtimes:
   - docker
   - any
 deployMethods:
-  - git-integration
+  - git
   - docker-image
   - control-panel
 sshAccess: root

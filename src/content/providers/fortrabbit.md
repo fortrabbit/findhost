@@ -42,7 +42,7 @@ software:
   - magento
   - shopware
 deployMethods:
-  - git-push
+  - git
 sshAccess: jailed
 managedDatabases:
   - mysql
@@ -70,6 +70,8 @@ domainRegistration: none
 dnsHosting: none
 emailHosting: none
 testDomain: included
+collaboration: clients
+staging: included
 gdprDpa: standard
 supportChannels:
   - email
@@ -86,6 +88,8 @@ sources:
   - { field: audience, url: 'https://www.fortrabbit.com/php-cloud-hosting', checkedAt: 2026-08-06 }
   - { field: useCases, url: 'https://www.fortrabbit.com/php-cloud-hosting', checkedAt: 2026-08-06 }
   - { field: testDomain, url: 'https://docs.fortrabbit.com/platform/dns/test-domain', checkedAt: 2026-08-06 }
+  - { field: collaboration, url: 'https://docs.fortrabbit.com/platform/collaboration', checkedAt: 2026-08-07 }
+  - { field: staging, url: 'https://docs.fortrabbit.com/platform/concepts', checkedAt: 2026-08-07 }
   - { field: domainRegistration, url: 'https://docs.fortrabbit.com/platform/dns/external-domains', checkedAt: 2026-08-06 }
   - { field: dnsHosting, url: 'https://docs.fortrabbit.com/integrations/dns', checkedAt: 2026-08-06 }
   - { field: emailHosting, url: 'https://docs.fortrabbit.com/integrations/email', checkedAt: 2026-08-06 }

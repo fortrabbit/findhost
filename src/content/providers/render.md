@@ -32,7 +32,7 @@ runtimes:
   - elixir
   - docker
 deployMethods:
-  - git-integration
+  - git
   - docker-image
 sshAccess: jailed
 persistentStorage: true

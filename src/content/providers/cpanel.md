@@ -33,7 +33,7 @@ runtimes:
 deployMethods:
   - control-panel
   - file-transfer
-  - git-push
+  - git
 sshAccess: root
 managedDatabases:
   - mysql

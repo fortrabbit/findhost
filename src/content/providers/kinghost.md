@@ -34,7 +34,7 @@ runtimes:
   - java
 deployMethods:
   - file-transfer
-  - git-integration
+  - git
   - control-panel
 sshAccess: jailed
 pricingModel: fixed-tier

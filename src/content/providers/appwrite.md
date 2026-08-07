@@ -29,7 +29,7 @@ runtimes:
   - java
   - go
 deployMethods:
-  - git-integration
+  - git
 pricingModel: fixed-tier
 priceFrom: md
 priceTo: lg

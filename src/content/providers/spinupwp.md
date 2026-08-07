@@ -31,7 +31,7 @@ runsOn:
 runtimes:
   - php
 deployMethods:
-  - git-push
+  - git
 sshAccess: root
 pricingModel: fixed-tier
 priceFrom: sm
