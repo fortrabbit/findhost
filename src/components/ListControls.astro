@@ -1,0 +1,43 @@
+---
+import ListStyleToggle from './ListStyleToggle.astro';
+
+/**
+ * What sits between a list and its heading: which order it is in, and how much
+ * of each row to show.
+ *
+ * The order is two links rather than a control that sorts in the browser. The
+ * ranked order is a page of its own, so it can be linked to, crawled and read
+ * without JavaScript — and the register keeps the address it always had.
+ */
+interface Props {
+  /** Which order this page is already in. Absent means the page offers no choice of order. */
+  sort?: 'alphabetical' | 'signal';
+}
+
+const { sort } = Astro.props;
+
+const orders = [
+  { id: 'alphabetical', label: 'Alphabetically', href: '/' },
+  { id: 'signal', label: 'FindHost Signal', href: '/signal/' },
+];
+---
+
+<div class="list-controls">
+  {
+    sort && (
+      <p class="sort-links" data-pagefind-ignore data-sort-links>
+        {orders.map((order, index) => (
+          <>
+            {index > 0 && ' · '}
+            {/* Always a link: find.ts sorts in place where it runs, and the page is the answer where it does not. */}
+            <a href={order.href} data-sort={order.id} aria-current={order.id === sort ? 'true' : 'false'}>
+              {order.label}
+            </a>
+          </>
+        ))}
+      </p>
+    )
+  }
+
+  <ListStyleToggle />
+</div>

@@ -29,6 +29,81 @@ const listed = readdirSync(records).filter((file) => {
   return status === undefined || !outside.has(status);
 }).length;
 
+test.describe('the one opinionated ordering', () => {
+  /*
+   * The site refuses to rate hosting, and this page ranks it. What keeps the two
+   * compatible is that the ranking is optional, addressed separately, and shows
+   * its whole arithmetic — so these are the three things worth failing a build.
+   */
+  test('re-sorts the register in place, and says so in the URL', async ({ page, javaScriptEnabled }) => {
+    test.skip(javaScriptEnabled === false, 'sorting in place is the one thing here that needs the script');
+    await page.goto('/');
+    const alphabetical = await page.locator('[data-find-results] .provider-name a').allInnerTexts();
+
+    await page.locator('.sort-links a[data-sort="signal"]').click();
+
+    /* In place: same page, same filters, different order. */
+    await expect(page).toHaveURL(/sort=signal/);
+    await expect(page.locator('h1')).toHaveText('Find your next web host');
+
+    const ranked = await page.locator('[data-find-results] .provider-name a').allInnerTexts();
+    expect(ranked.length).toBe(alphabetical.length);
+    expect(ranked).not.toEqual(alphabetical);
+
+    /* A letter heading over a list that is not in letter order would be a label that lies. */
+    await expect(page.locator('[data-find-results] .letter-group')).toHaveCount(0);
+
+    /* And the scores it sorted on descend. */
+    const scores = (await page.locator('[data-find-results] .provider-signal').allInnerTexts()).map(Number);
+    expect(scores).toEqual([...scores].sort((a, b) => b - a));
+
+    await page.locator('.sort-links a[data-sort="alphabetical"]').click();
+    await expect(page).not.toHaveURL(/sort=signal/);
+    expect(await page.locator('[data-find-results] .provider-name a').allInnerTexts()).toEqual(alphabetical);
+  });
+
+  /* Without the script the same link is a page, which is the whole of the answer rather than a degraded one. */
+  test('is a page of its own as well', async ({ page }) => {
+    await page.goto('/');
+    await expect(page.locator('.sort-links a[data-sort="signal"]')).toHaveAttribute('href', '/signal/');
+
+    await page.goto('/signal/');
+    await expect(page.locator('h1')).toHaveText('FindHost Signal');
+
+    const scores = (await page.locator('[data-find-results] .provider-signal').allInnerTexts()).map(Number);
+    expect(scores.length).toBeGreaterThan(100);
+    expect(scores).toEqual([...scores].sort((a, b) => b - a));
+  });
+
+  test('shows a record its own score, broken into what earned it', async ({ page }) => {
+    await page.goto('/fortrabbit/');
+    const group = page.locator('.fact-group', { hasText: 'FindHost Signal' });
+    await expect(group.locator('dt').first()).toHaveText('Total');
+    await expect(group.locator('dd').first()).toHaveText(/^\d+$/);
+  });
+
+  test('publishes every weight it ran on', async ({ page }) => {
+    await page.goto('/signal/');
+
+    /* The table is the algorithm. A ranking whose rules are described rather than rendered can drift from them. */
+    const rows = page.locator('.signal-table tbody tr');
+    expect(await rows.count()).toBeGreaterThan(10);
+    await expect(rows.first().locator('.signal-points')).toHaveText(/^[+\u2212-]/);
+  });
+
+  test('says whose opinion it is, on the page that holds it', async ({ page }) => {
+    await page.goto('/signal/');
+    await expect(page.locator('main')).toContainText('fortrabbit');
+  });
+
+  test('leaves the register alphabetical', async ({ page }) => {
+    await page.goto('/');
+    const names = await page.locator('[data-find-results] .provider-name a').allInnerTexts();
+    const sorted = [...names].sort((a, b) => a.replace(/^the /i, '').localeCompare(b.replace(/^the /i, ''), 'en'));
+    expect(names).toEqual(sorted);
+  });
+});
+
 test.describe('the register', () => {
   test('lists every record, grouped and anchored', async ({ page }) => {
     await page.goto('/');

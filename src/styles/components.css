@@ -1358,3 +1358,72 @@ html.js [data-find-fallback] {
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
+
+/*
+ * Which order the list is in, and how much of each row to show: one row, the
+ * order on the left because it is a decision and the view on the right because
+ * it is a preference.
+ */
+.list-controls {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  gap: var(--space-sm);
+}
+
+.sort-links {
+  margin: 0 auto 0 0;
+  font-size: var(--text-sm);
+}
+
+.list-controls .list-style {
+  margin-bottom: 0;
+}
+
+/** The published algorithm. Narrow on purpose: two columns, one of them a number. */
+.signal-table {
+  width: 100%;
+  max-width: 32rem;
+  margin-bottom: var(--space-md);
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+}
+
+.signal-table th,
+.signal-table td {
+  padding: var(--space-3xs) 0;
+  border-bottom: var(--rule-hairline) solid var(--color-rule);
+  text-align: left;
+}
+
+.signal-points {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/**
+ * Our opinion of a row, beside the one fact about it a list has room for. Set in
+ * the data face at the size of the country code: it is a number we made up, and
+ * it should not outweigh the name it sits next to.
+ */
+.provider-signal {
+  color: var(--color-ink);
+  font-family: var(--font-data);
+  font-size: var(--text-xs);
+  font-variant-numeric: tabular-nums;
+  text-decoration: none;
+}
+
+.provider-signal:hover,
+.provider-signal:focus-visible {
+  color: var(--color-link);
+  text-decoration: underline;
+}
+
+/** The order in force, marked the way the site marks the current page: weight and a thicker rule. */
+.sort-links a[aria-current='true'] {
+  color: var(--color-ink);
+  font-weight: bold;
+  text-decoration-thickness: var(--rule-strong);
+}

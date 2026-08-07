@@ -1,0 +1,121 @@
+---
+import Base from '../layouts/Base.astro';
+import ProviderList from '../components/ProviderList.astro';
+import ListControls from '../components/ListControls.astro';
+import { loadProviders } from '../lib/providers';
+import { organization } from '../lib/seo';
+import { weights, signalOf } from '../lib/signal';
+
+/*
+ * The register in our order rather than in alphabetical order, which is the one
+ * page on this site that expresses a preference. Two things keep it honest, and
+ * both are structural rather than promises.
+ *
+ * The score is computed and never recorded, so scripts/validate.ts can go on
+ * rejecting any field named rank, score, rating, boost or weight. Nobody raises
+ * a provider by editing its record; only by changing a fact that is already
+ * public on its page, or by changing the table below in a commit anybody can
+ * read.
+ *
+ * And the table is the page. It renders the same array the sort ran on, so the
+ * published algorithm cannot drift from the running one.
+ */
+const scored = (await loadProviders())
+  .map((provider) => ({ provider, signal: signalOf(provider.data as Record<string, unknown>) }))
+  .sort((a, b) => b.signal.total - a.signal.total || a.provider.data.name.localeCompare(b.provider.data.name, 'en'));
+
+const rows = scored.map(({ provider, signal }) => ({
+  signal: signal.total,
+  id: provider.id,
+  name: provider.data.name,
+  description: provider.data.description,
+  publishedByUs: provider.data.publishedByUs,
+  greenWebId: provider.data.greenWebId,
+  country: provider.data.hqCountry,
+  figure: provider.data.figure,
+}));
+
+const origin = Astro.site?.origin ?? '';
+---
+
+<Base
+  title="FindHost Signal — FindHost"
+  description="The register in our order instead of alphabetical order, with the whole of the arithmetic published on the same page."
+  schema={{
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'FindHost Signal',
+    numberOfItems: rows.length,
+    isPartOf: organization(origin),
+    itemListOrder: 'https://schema.org/ItemListOrderDescending',
+    itemListElement: rows.map((provider, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      url: `${origin}/${provider.id}/`,
+      name: provider.name,
+    })),
+  }}
+>
+  <div class="page-head">
+    <h1>FindHost Signal</h1>
+  </div>
+
+  <p class="lead">Our taste, as arithmetic, published in full.</p>
+
+  <p>
+    Everywhere else on this site the order is alphabetical and nothing is scored, because a number attached to a
+    hosting provider is usually somebody's commission wearing a lab coat. This page is the exception, and it says whose
+    opinion it is: fortrabbit's, who publish the register and appear in it. It rewards what we think makes a host worth
+    finding — independence, longevity, an API an agent can drive, a price a person can afford — and it will therefore
+    rank fortrabbit well. Read it as an argument, not as a verdict.
+  </p>
+
+  <p>
+    Nothing here is a rating of quality, and no provider can move up it by asking. The score is computed from fields
+    already recorded on the page of each provider, it is never written into a record, and the whole of the arithmetic
+    is the table below. Every record shows its own score broken into the parts that earned it. Disagree with a weight
+    and you are disagreeing with us in public, which is the point.
+  </p>
+
+  <p>
+    The <a href="/">register</a> can be put in this order too, where it keeps its filters. This page is the same
+    ordering as a page of its own, so it can be linked to and read without JavaScript.
+  </p>
+
+  <ListControls sort="signal" />
+
+  <div data-find-results>
+    <ProviderList providers={rows} />
+  </div>
+
+  <h2>The whole of it</h2>
+
+  <p>
+    Points are added for every provider, in this order. A field nobody has recorded yet scores nothing, which means an
+    unfinished record sits lower than a finished one — a fact about our work rather than about the provider.
+  </p>
+
+  <table class="signal-table">
+    <thead>
+      <tr>
+        <th scope="col">What it rewards</th>
+        <th scope="col">Points</th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+        weights.map((weight) => (
+          <tr>
+            <td>{weight.label}</td>
+            <td class="signal-points">{weight.points}</td>
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+</Base>
+
+{/* For the extended/slim toggle only. This page ships no filters — its order is the point. */}
+<script>
+  import '../scripts/find.ts';
+</script>

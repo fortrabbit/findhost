@@ -52,7 +52,7 @@ export const dataset = (origin: string, records: number) => ({
   '@context': 'https://schema.org',
   '@type': 'Dataset',
   name: 'FindHost',
-  description: `Attributes of ${records} hosting providers, recorded field by field. Ratings-free: nothing is ranked, scored or affiliate-linked.`,
+  description: `Attributes of ${records} hosting providers, recorded field by field. Ratings-free: no stars, no editorial score, no affiliate ordering. One page offers an opinionated order, with its arithmetic published.`,
   url: `${origin}/`,
   license: 'https://creativecommons.org/licenses/by/4.0/',
   isAccessibleForFree: true,

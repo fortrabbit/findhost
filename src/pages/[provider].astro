@@ -6,6 +6,7 @@ import { energy, footnotes, price } from '../lib/record';
 import { isListed } from '../lib/providers';
 import { loadFacets } from '../lib/facets';
 import { organization } from '../lib/seo';
+import { signalOf } from '../lib/signal';
 import SocialLinks from '../components/SocialLinks.astro';
 import PageFigure from '../components/PageFigure.astro';
 import FactGroups from '../components/FactGroups.astro';
@@ -162,6 +163,13 @@ const drawn = (groups: { label: string; fields: Field[] }[]) =>
       note: numberOf.get(field.id),
     })),
   }));
+
+/*
+ * Our opinion of this record, and the parts of it that are not zero. Computed
+ * here as everywhere else — it is never a field, so no contributor can raise it
+ * except by recording a fact that is true.
+ */
+const signal = isListed(provider) ? signalOf(data as Record<string, unknown>) : undefined;
 
 /*
  * The other end of every relation: who names this record as their parent, whose
@@ -377,6 +385,31 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
 
         {/* Facts about this record held on other records, drawn from their side of the relation. */}
         {backlinks.length > 0 && <FactGroups groups={[{ label: 'Related', rows: backlinks }]} />}
+
+        {
+          /* Ours rather than the provider's, which is why it names itself and links to its own arithmetic. */
+          signal && (
+            <div class="fact-groups">
+              <section class="fact-group">
+                <h2>
+                  <a href="/signal/">FindHost Signal</a>
+                </h2>
+                <dl class="fact-list">
+                  <dt>Total</dt>
+                  <dd>{signal.total}</dd>
+                  {signal.parts
+                    .filter((part) => part.points !== 0)
+                    .map((part) => (
+                      <>
+                        <dt>{part.label}</dt>
+                        <dd>{part.points > 0 ? `+${part.points}` : String(part.points)}</dd>
+                      </>
+                    ))}
+                </dl>
+              </section>
+            </div>
+          )
+        }
 
         {
           missing.length > 0 && (

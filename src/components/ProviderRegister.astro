@@ -1,6 +1,6 @@
 ---
 import ProviderList from './ProviderList.astro';
-import ListStyleToggle from './ListStyleToggle.astro';
+import ListControls from './ListControls.astro';
 import { facetIndex, type Facet, type ProviderRow } from '../lib/facets';
 
 interface Props {
@@ -93,8 +93,14 @@ const groups = [...new Set(providers.map((provider) => letterOf(provider.name)))
   !seed && !bare && <slot />
 }
 
-{/* Against the list it changes, not against the filters it has nothing to do with. */}
-<ListStyleToggle />
+{
+  /*
+   * Only the register offers a choice of order. A facet page and a group beside
+   * it are already narrowed, and a second order for each would be a second page
+   * for each.
+   */
+}
+<ListControls sort={!seed && !bare ? 'alphabetical' : undefined} />
 
 <div data-pagefind-ignore data-find-results>
   {

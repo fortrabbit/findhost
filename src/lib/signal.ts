@@ -48,9 +48,15 @@ export const weights: Weight[] = [
     score: (d) => (d.ownership === 'vc-backed' ? -5 : 0),
   },
   {
-    label: 'Years in business',
+    /*
+     * Capped, and the cap is the interesting part. Uncapped, this weight decided
+     * the whole ranking: IONOS scored 53 of which 38 was age, and a telco founded
+     * in 1988 sat above everything on the one axis nothing can catch up on. Ten
+     * years is where "they will still be here next year" stops being news.
+     */
+    label: 'Years in business, up to ten',
     points: '+1 each',
-    score: (d) => (typeof d.founded === 'number' ? Math.max(0, 2026 - d.founded) : 0),
+    score: (d) => (typeof d.founded === 'number' ? Math.min(10, Math.max(0, 2026 - d.founded)) : 0),
   },
   {
     label: 'Owns its hardware',
@@ -118,9 +124,19 @@ export const weights: Weight[] = [
     score: (d) => (has(d.category, 'vps') ? -1 : 0),
   },
   {
-    label: 'A stub, or a company that sells no hosting',
-    points: '−10',
-    score: (d) => (d.status === 'draft' || d.status === 'out-of-scope' || d.status === 'unlisted' ? -10 : 0),
+    label: 'Support around the clock',
+    points: '+2',
+    score: (d) => (d.supportHours === '24-7' ? 2 : 0),
+  },
+  {
+    label: 'Support in business hours',
+    points: '+1',
+    score: (d) => (d.supportHours === 'business-hours' ? 1 : 0),
+  },
+  {
+    label: 'Somebody to chat to',
+    points: '+1',
+    score: (d) => (list(d.supportChannels).includes('chat') ? 1 : 0),
   },
 ];
 

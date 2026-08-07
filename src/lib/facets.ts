@@ -1,6 +1,7 @@
 import { facetFields, isDerived, slugOf, type Field } from './fields';
 import { asideGroup, isListed, loadAsideProviders, loadProviders } from './providers';
 import { asideOf } from './fields';
+import { signalOf } from './signal';
 import { getCollection } from 'astro:content';
 
 export interface FacetValue {
@@ -51,6 +52,12 @@ export interface ProviderRow {
   notApplicable: string[];
   /** Only on a hidden row: `draft` or `out-of-scope`. Absent on everything in the register. */
   status?: string;
+  /**
+   * The FindHost Signal total. Computed here so the browser can sort by it
+   * without recomputing the table, and never written to a record — the guard in
+   * scripts/validate.ts still refuses any field that names a score.
+   */
+  signal: number;
 }
 
 /** Alphabetical, always — see the sort rule in CLAUDE.md. */
@@ -106,6 +113,7 @@ function toRow(record: { id: string; data: Record<string, unknown> }): ProviderR
     figure: data.figure as ProviderRow['figure'],
     facets,
     notApplicable,
+    signal: signalOf(data).total,
   };
 }
 

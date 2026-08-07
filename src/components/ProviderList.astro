@@ -8,6 +8,8 @@ interface Row {
   /** ISO code, shown as text. A flag is a picture of a government, not of where a server is. */
   country?: string;
   figure?: { emoji: string; color: string; textColor: string };
+  /** The FindHost Signal total, shown beside the country. Absent where the list is an index. */
+  signal?: number;
 }
 
 interface Props {
@@ -58,6 +60,13 @@ const { providers, namesOnly = false } = Astro.props;
           </div>
 
           {provider.country && <span class="provider-country">{provider.country}</span>}
+
+          {/* Our opinion of the row, next to the one fact about it a list has room for. */}
+          {provider.signal !== undefined && !namesOnly && (
+            <a class="provider-signal" href="/signal/" title="FindHost Signal — our opinionated score, and how it is worked out">
+              {provider.signal}
+            </a>
+          )}
         </li>
       );
     })

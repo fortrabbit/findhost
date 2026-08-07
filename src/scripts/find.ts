@@ -31,6 +31,8 @@ interface ProviderRow {
   figure?: { emoji: string; color: string; textColor: string };
   facets: Record<string, string | string[]>;
   notApplicable: string[];
+  /** Our opinionated total, computed at build time — see src/lib/signal.ts. */
+  signal: number;
 }
 
 /**
@@ -106,6 +108,15 @@ function row(provider: ProviderRow): HTMLLIElement {
     item.append(country);
   }
 
+  if (provider.signal !== undefined) {
+    const signal = document.createElement('a');
+    signal.className = 'provider-signal';
+    signal.href = '/signal/';
+    signal.title = 'FindHost Signal — our opinionated score, and how it is worked out';
+    signal.textContent = String(provider.signal);
+    item.append(signal);
+  }
+
   return item;
 }
 
@@ -175,6 +186,12 @@ if (filtersEl && resultsEl && summaryEl) {
   const selected = new Map<string, Set<string>>();
 
   /*
+   * Which order the list is in. Alphabetical unless asked otherwise, because the
+   * register's default order has to be the one that expresses no opinion.
+   */
+  let sort: 'alphabetical' | 'signal' = 'alphabetical';
+
+  /*
    * The query string is the state. A facet value page carries its narrowing in
    * its path instead and ships no filters at all — it links here with the value
    * already set, because a tick that contradicted the URL would leave the
@@ -182,6 +199,7 @@ if (filtersEl && resultsEl && summaryEl) {
    */
   const readUrl = () => {
     const params = new URLSearchParams(location.search);
+    sort = params.get('sort') === 'signal' ? 'signal' : 'alphabetical';
     selected.clear();
     for (const facet of facets) {
       const asked = params.get(facet.id);
@@ -205,6 +223,7 @@ if (filtersEl && resultsEl && summaryEl) {
     for (const [facetId, values] of selected) {
       if (values.size) params.set(facetId, [...values].join(','));
     }
+    if (sort === 'signal') params.set('sort', 'signal');
     const query = params.toString();
     history.replaceState(null, '', query ? `${location.pathname}?${query}` : location.pathname);
   };
@@ -275,6 +294,16 @@ if (filtersEl && resultsEl && summaryEl) {
     }
   };
 
+  // With nothing selected this says exactly what the server rendered. A visitor
+  // with JavaScript should not be told "150 of 150" where a visitor without it
+  // is told "150" — the script is here to narrow the list, not to restate it.
+  const updateSummary = (found: ProviderRow[]) => {
+    const noun = providers.length === 1 ? 'record' : 'records';
+    summaryEl.textContent = activeFacets().length
+      ? `${found.length} of ${providers.length} ${noun}.`
+      : `${providers.length} ${noun}.`;
+  };
+
   const letterOf = (name: string) => {
     const initial = name.replace(/^the /i, '').charAt(0).toUpperCase();
     return /[A-Z]/.test(initial) ? initial : '#';
@@ -284,6 +313,22 @@ if (filtersEl && resultsEl && summaryEl) {
     const found = matches();
 
     resultsEl.innerHTML = '';
+
+    /*
+     * Ranked, and therefore ungrouped: a letter heading over a list that is not
+     * in letter order is a label that lies. The ranking is one list, which is
+     * also what makes position mean something on it.
+     */
+    if (sort === 'signal') {
+      const list = document.createElement('ul');
+      list.className = 'provider-list';
+      for (const provider of [...found].sort((a, b) => b.signal - a.signal || a.name.localeCompare(b.name, 'en'))) {
+        list.append(row(provider));
+      }
+      resultsEl.append(list);
+      updateSummary(found);
+      return;
+    }
 
     let letter = '';
     let list: HTMLUListElement | null = null;
@@ -321,24 +366,47 @@ if (filtersEl && resultsEl && summaryEl) {
       list?.append(row(provider));
     }
 
-    // With nothing selected this says exactly what the server rendered. A visitor
-    // with JavaScript should not be told "150 of 150" where a visitor without it
-    // is told "150" — the script is here to narrow the list, not to restate it.
-    const noun = providers.length === 1 ? 'record' : 'records';
-    summaryEl.textContent = activeFacets().length
-      ? `${found.length} of ${providers.length} ${noun}.`
-      : `${providers.length} ${noun}.`;
+    updateSummary(found);
   };
+
+  /*
+   * The two orders are links to real pages, so they work with no JavaScript and
+   * can be crawled. Where the script is running they sort the list in place
+   * instead, which is what a reader expects of a control sitting on top of the
+   * list it changes.
+   */
+  const sortEl = document.querySelector<HTMLElement>('[data-sort-links]');
+
+  const syncSort = () => {
+    if (!sortEl) return;
+    for (const link of sortEl.querySelectorAll<HTMLAnchorElement>('a[data-sort]')) {
+      link.setAttribute('aria-current', String(link.dataset.sort === sort));
+    }
+  };
+
+  sortEl?.addEventListener('click', (event) => {
+    const link = (event.target as HTMLElement).closest<HTMLAnchorElement>('a[data-sort]');
+    if (!link) return;
+
+    event.preventDefault();
+    sort = link.dataset.sort === 'signal' ? 'signal' : 'alphabetical';
+    writeUrl();
+    syncSort();
+    renderResults();
+    track(`sort ${sort}`);
+  });
 
   window.addEventListener('popstate', () => {
     readUrl();
     syncFilters();
+    syncSort();
     renderResults();
   });
 
   readUrl();
   wireFilters();
   syncFilters();
+  syncSort();
   renderResults();
 }
 
