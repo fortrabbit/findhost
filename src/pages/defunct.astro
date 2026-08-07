@@ -1,18 +1,5 @@
 ---
-import Base from '../layouts/Base.astro';
-import AsideList from '../components/AsideList.astro';
-import { loadAsides } from '../lib/facets';
-
-const rows = (await loadAsides()).find((group) => group.key === 'defunct')?.rows ?? [];
+import AsidePage from '../components/AsidePage.astro';
 ---
 
-<Base
-  title="No longer trading — FindHost"
-  description="Hosting providers that have stopped. They keep their records and their pages; they are not part of the register."
->
-  <AsideList
-    title="No longer trading"
-    note={`${rows.length} providers that have stopped. A register of hosting you can buy today has to mean today, so they are not in the count — and they keep their records, because what happened to a host people used is one of the more useful things a register can say. A provider that met the test while it traded stays, judged on what was true then.`}
-    rows={rows}
-  />
-</Base>
+<AsidePage group="defunct" />

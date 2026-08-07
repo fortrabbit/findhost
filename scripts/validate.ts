@@ -240,9 +240,23 @@ const noteKeys = (dir: string, prefix = ''): string[] =>
       })
     : [];
 
+/*
+ * The exception to the rule above: the groups beside the register are pages
+ * with prose and no facet behind them, so their notes are filed under `aside/`.
+ * Two come from the dictionary; the stubs are ours.
+ */
+const asideNotes = new Set([...[...asideOf.values()].map((group) => group.key), 'stubs']);
+
 for (const key of noteKeys(notesDir)) {
   const [segment, value, ...rest] = key.split('/');
   const field = fields.find((candidate) => candidate.facet === segment);
+
+  if (segment === 'aside') {
+    if (!value || rest.length || !asideNotes.has(value)) {
+      fail(`${notesDir}/${key}.md`, `an aside note is aside/<group>.md, one of: ${[...asideNotes].join(', ')}`);
+    }
+    continue;
+  }
 
   if (!field) {
     const named = fieldOf.get(segment!);

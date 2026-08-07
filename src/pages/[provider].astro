@@ -4,6 +4,7 @@ import Base from '../layouts/Base.astro';
 import { fieldGroups, fieldOf, labelOf, slugOf, type Field } from '../lib/fields';
 import { energy, footnotes, price } from '../lib/record';
 import { isListed } from '../lib/providers';
+import { loadFacets } from '../lib/facets';
 import { organization } from '../lib/seo';
 import SocialLinks from '../components/SocialLinks.astro';
 import PageFigure from '../components/PageFigure.astro';
@@ -75,6 +76,17 @@ interface Cell {
   filter?: string;
 }
 
+/*
+ * A value page exists only where a record in the register holds the value, so a
+ * record beside the register can hold one nobody listed does — dotCloud ran
+ * Perl and nothing trading today records it. The fact is still shown; it is the
+ * link that would be a 404.
+ */
+const { facets: allFacets } = await loadFacets();
+const hasPage = new Set(
+  allFacets.flatMap((facet) => facet.values.filter((value) => value.count > 0).map((value) => `${facet.field}:${value.id}`)),
+);
+
 const money = (entry: unknown) => {
   const paid = entry as { amount: number; currency: string; period: string; introductory?: boolean };
   const said = price(paid);
@@ -96,7 +108,7 @@ function cells(field: Field, value: unknown): Cell[] {
      * not a list anybody wants. Linking it was linking at a 404.
      */
     const option = field.values.find((candidate) => candidate.id === String(entry));
-    if (option?.noFilter) return { text: label };
+    if (option?.noFilter || !hasPage.has(`${field.id}:${String(entry)}`)) return { text: label };
 
     const slug = slugOf(field, { id: String(entry), label });
     return { text: label, href: `/${field.facet}/${slug}/`, filter: `${field.facet}:${label}` };
@@ -114,8 +126,8 @@ const linkLabels: Record<string, string> = {
 // Where it posts is a different kind of link and sits on its own line.
 const outgoing = [
   ...Object.entries(linkLabels)
-    .filter(([key]) => data.urls[key as keyof typeof data.urls])
-    .map(([key, label]) => ({ label, url: data.urls[key as keyof typeof data.urls] as string, field: 'urls' })),
+    .filter(([key]) => data.urls?.[key as keyof typeof data.urls])
+    .map(([key, label]) => ({ label, url: data.urls![key as keyof typeof data.urls] as string, field: 'urls' })),
   ...(data.sustainabilityUrl
     ? [{ label: 'sustainability', url: data.sustainabilityUrl, field: 'sustainabilityUrl' }]
     : []),
@@ -225,7 +237,7 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
     about: {
       '@type': 'Organization',
       name: data.name,
-      url: data.urls.home,
+      ...(data.urls?.home ? { url: data.urls.home } : {}),
       ...(data.founded ? { foundingDate: String(data.founded) } : {}),
       ...(data.hqCountry
         ? { address: { '@type': 'PostalAddress', addressCountry: String(data.hqCountry) } }
@@ -247,16 +259,6 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
       }
     </div>
     {
-      notice && (
-        <aside class="editorial-note">
-          <p>
-            <strong>Status.</strong> {notice}
-          </p>
-        </aside>
-      )
-    }
-
-    {
       stale && (
         <aside class="editorial-note">
           <p>
@@ -273,14 +275,17 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
     )}
 
     <p class="record-links">
-      <span class="record-link">
-        <a class="record-home" href={data.urls.home} rel="nofollow">{data.urls.home.replace('https://', '')}</a>
-        {noteFor('urls') && (
-          <a class="footnote-ref" href={`#source-${noteFor('urls')}`} aria-label={`Source ${noteFor('urls')}`}>
-            {noteFor('urls')}
-          </a>
-        )}
-      </span>
+      {/* Absent only where the provider has stopped and the domain went with it. */}
+      {data.urls?.home && (
+        <span class="record-link">
+          <a class="record-home" href={data.urls.home} rel="nofollow">{data.urls.home.replace('https://', '')}</a>
+          {noteFor('urls') && (
+            <a class="footnote-ref" href={`#source-${noteFor('urls')}`} aria-label={`Source ${noteFor('urls')}`}>
+              {noteFor('urls')}
+            </a>
+          )}
+        </span>
+      )}
       {
         outgoing.map((link) => (
           <span class="record-link">
@@ -308,6 +313,23 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
 
     <div class="record-layout">
       <aside class="record-specs">
+        {
+          /*
+           * Why this record is not in the register, read as one of the recorded
+           * facts rather than as a boxed warning above the page. It is the first
+           * thing the record answers, and the box gave it a weight the sentence
+           * does not need: being out of scope is a ruling, not an alarm.
+           */
+          notice && (
+            <div class="fact-groups">
+              <section class="fact-group">
+                <h2>Status</h2>
+                <p>{notice}</p>
+              </section>
+            </div>
+          )
+        }
+
         <FactGroups groups={drawn(nearGroups)} />
 
         {

@@ -34,6 +34,8 @@ for (const file of files) {
   const data = parse(raw.match(/^---\n([\s\S]*?)\n---/)[1]);
   if (data.greenWebId !== undefined) continue;
 
+  if (!data.urls?.home) continue;
+
   const domain = host(data.urls.home);
   let result;
 

@@ -1,0 +1,88 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import PageFigure from './PageFigure.astro';
+import ProviderRegister from './ProviderRegister.astro';
+import { asideGroupOf, loadFacets } from '../lib/facets';
+import { organization } from '../lib/seo';
+
+/**
+ * A group that sits beside the register: the ones that stopped trading, the
+ * companies that sell no hosting, the records we have not finished.
+ *
+ * One template for all three, and the writing in a note under
+ * src/content/notes/aside/ — the same arrangement as a facet value page, for
+ * the same reason. Three pages that each carried their own prose in an Astro
+ * file were three places to keep a paragraph, and prose in a template is prose
+ * nobody edits.
+ */
+interface Props {
+  /** Which group: the key is the note, the page and the word the register links. */
+  group: string;
+  /** Kept out of search engines. True of the stubs, which are our working state rather than an answer. */
+  hidden?: boolean;
+}
+
+const { group, hidden } = Astro.props;
+const { key, label, rows } = await asideGroupOf(group);
+const { facets } = await loadFacets();
+
+const notes = await getCollection('notes');
+const note = notes.find((entry) => entry.id === `aside/${key}`);
+const Note = note ? (await render(note)).Content : null;
+
+/*
+ * One string, for the reason given in ProviderRegister.astro — and the same
+ * sentence for every group, because the fact they have in common is the fact
+ * that matters: they are not the register.
+ */
+const counted = `${rows.length} ${rows.length === 1 ? 'record' : 'records'}, kept out of the register and out of its count.`;
+
+const origin = Astro.site?.origin ?? '';
+---
+
+<Base title={`${note?.data.title ?? label} — FindHost`} description={note?.data.description} hidden={hidden} schema={[
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: note?.data.title ?? label,
+    numberOfItems: rows.length,
+    isPartOf: organization(origin),
+    itemListOrder: 'https://schema.org/ItemListOrderAscending',
+    itemListElement: rows.map((provider, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      url: `${origin}/${provider.id}/`,
+      name: provider.name,
+    })),
+  },
+]}>
+  <p class="crumb" data-pagefind-ignore><a href="/">The register</a></p>
+
+  {/* The word that was clicked to get here, so arriving needs no second reading. */}
+  <div class="page-head">
+    <h1>{label}</h1>
+  </div>
+
+  <PageFigure figure={note?.data.figure} />
+
+  {Note && <Note />}
+
+  <p class="annotation">{counted}</p>
+
+  {
+    /* The register's own list, letters and all: one list on the site, however it was narrowed. */
+    rows.length > 0 ? (
+      <ProviderRegister providers={rows} facets={facets} bare />
+    ) : (
+      <p class="annotation">
+        Nothing here yet. The group exists because the dataset can describe it, and it will fill as records are checked.
+      </p>
+    )
+  }
+</Base>
+
+{/* For the extended/slim toggle only. These pages ship no filters — the group is the narrowing. */}
+<script>
+  import '../scripts/find.ts';
+</script>

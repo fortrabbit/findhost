@@ -15,6 +15,13 @@ interface Props {
    */
   seed?: { facet: string; value: string; label: string };
   /*
+   * The page is its own narrowing and has already counted itself, but names no
+   * facet value — the groups beside the register. Same list, same headings, same
+   * toggle; no summary, no panel, no "every facet is also a link" fallback,
+   * because none of those is true of a page the filters do not reach.
+   */
+  bare?: boolean;
+  /*
    * The groups that sit beside the register, named in the line that counts it.
    * They were a column in the filter panel, which put three links that are not
    * filters among fourteen columns that are, under a heading that had to be
@@ -24,7 +31,7 @@ interface Props {
   beside?: { label: string; href: string; count: number }[];
 }
 
-const { providers, facets, seed, beside = [] } = Astro.props;
+const { providers, facets, seed, bare, beside = [] } = Astro.props;
 
 /*
  * Built here rather than in the template. Astro drops a whitespace-only text
@@ -64,7 +71,7 @@ const groups = [...new Set(providers.map((provider) => letterOf(provider.name)))
 
 {
   /* A seeded page has already counted itself, in a sentence that says more than this one. */
-  !seed && (
+  !seed && !bare && (
     <p class="annotation" data-find-summary>
       <span data-find-count>{summary}</span>{' '}
       {besideLinks.length > 0 && (
@@ -83,7 +90,7 @@ const groups = [...new Set(providers.map((provider) => letterOf(provider.name)))
 
 {
   /* The filter panel, passed in rather than owned: it is markup the register does not need to know about. */
-  !seed && <slot />
+  !seed && !bare && <slot />
 }
 
 {/* Against the list it changes, not against the filters it has nothing to do with. */}
@@ -105,7 +112,7 @@ const groups = [...new Set(providers.map((provider) => letterOf(provider.name)))
 </div>
 
 {
-  !seed && (
+  !seed && !bare && (
     <div data-find-fallback>
       <p class="annotation">
         Filtering needs JavaScript; the list above does not. Every facet value also has a page of its own, which is the

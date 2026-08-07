@@ -1,18 +1,5 @@
 ---
-import Base from '../layouts/Base.astro';
-import AsideList from '../components/AsideList.astro';
-import { loadAsides } from '../lib/facets';
-
-const rows = (await loadAsides()).find((group) => group.key === 'unlisted')?.rows ?? [];
+import AsidePage from '../components/AsidePage.astro';
 ---
 
-<Base
-  title="Owns hosting brands, sells none — FindHost"
-  description="Companies that own hosting brands without selling hosting under their own name. Kept for the name, not for comparison."
->
-  <AsideList
-    title="Owns hosting brands, sells none"
-    note={`${rows.length} companies that own hosting brands without selling hosting themselves. Nobody buys from them — you buy from one of their brands — so they have no runtime, no region and no price to record, and they are not in the register or its count. They are here so that somebody searching the name finds out where the hosting actually is.`}
-    rows={rows}
-  />
-</Base>
+<AsidePage group="unlisted" />

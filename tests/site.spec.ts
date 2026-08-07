@@ -212,14 +212,16 @@ test.describe('stubs', () => {
 
     /* The way to them is a link, so it works without scripting and can be crawled. */
     await page.locator('[data-find-summary] a[href="/stubs/"]').first().click();
-    await expect(page.locator('h1')).toHaveText('Stubs and rulings');
+
+    /* The heading is the word that was clicked, so arriving needs no second reading. */
+    await expect(page.locator('h1')).toHaveText('Stubs');
     await expect(page.locator('.provider-list > li').first()).toBeVisible();
   });
 
   test('a group beside the register keeps its own list', async ({ page }) => {
     await page.goto('/unlisted/');
 
-    await expect(page.locator('h1')).toHaveText('Owns hosting brands, sells none');
+    await expect(page.locator('h1')).toHaveText('Unlisted');
 
     /* Exactly the group, not the group appended to everything else. */
     const rows = page.locator('.provider-list > li');

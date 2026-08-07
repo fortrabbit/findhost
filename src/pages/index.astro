@@ -2,18 +2,17 @@
 import Base from '../layouts/Base.astro';
 import ProviderRegister from '../components/ProviderRegister.astro';
 import FindFilters from '../components/FindFilters.astro';
-import { loadAsides, loadDrafts, loadFacets } from '../lib/facets';
+import { asideGroups, loadFacets } from '../lib/facets';
 import { dataset } from '../lib/seo';
 
 const { facets, providers } = await loadFacets();
-const drafts = await loadDrafts();
-const asides = await loadAsides();
 
-// Dictionary order, with the unfinished records last: those are ours, not a fact about hosting.
-const beside = [
-  ...asides.map((aside) => ({ label: aside.label, href: `/${aside.key}/`, count: aside.rows.length })),
-  { label: 'Stubs', href: '/stubs/', count: drafts.length },
-];
+// Named the same way here, on their own pages and in the sitemap: one source, three uses.
+const beside = (await asideGroups()).map((group) => ({
+  label: group.label,
+  href: `/${group.key}/`,
+  count: group.rows.length,
+}));
 ---
 
 {

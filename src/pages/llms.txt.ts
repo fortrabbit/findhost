@@ -12,9 +12,18 @@ export const GET: APIRoute = async ({ site }) => {
   const origin = site?.origin ?? '';
   const providers = (await loadProviders()).sort((a, b) => a.data.name.localeCompare(b.data.name, 'en'));
   const { facets } = await loadFacets();
-  const notes = (await getCollection('notes')).sort((a, b) => a.id.localeCompare(b.id, 'en'));
+  const notes = (await getCollection('notes'))
+    // Our working state, and the one page here that search engines are told to skip.
+    .filter((entry) => entry.id !== 'aside/stubs')
+    .sort((a, b) => a.id.localeCompare(b.id, 'en'));
 
-  /* A note is keyed by the path it heads, so its own id is both its URL and the way back to its label. */
+  /*
+   * A note is keyed by the path it heads, so its own id is both its URL and the
+   * way back to its label — except the groups beside the register, which are
+   * filed under `aside/` and published at the root.
+   */
+  const urlOf = (id: string) => `${origin}/${id.replace(/^aside\//, '')}/`;
+
   const headingOf = (id: string) => {
     const [facetId, valueId] = id.split('/');
     const facet = facets.find((entry) => entry.id === facetId);
@@ -43,7 +52,7 @@ export const GET: APIRoute = async ({ site }) => {
     '## Notes',
     '',
     ...notes.map((entry) =>
-      `- [${entry.data.title ?? headingOf(entry.id)}](${origin}/${entry.id}/): ${entry.data.description ?? ''}`.trimEnd(),
+      `- [${entry.data.title ?? headingOf(entry.id)}](${urlOf(entry.id)}): ${entry.data.description ?? ''}`.trimEnd(),
     ),
     '',
     `## Providers (${providers.length})`,

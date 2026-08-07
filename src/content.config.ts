@@ -51,14 +51,21 @@ const providerFields = z
      * act as citing a terms page. `terms` is the one that earns its keep:
      * promotional versus renewal pricing is flagged by no structured data
      * anywhere, so renewalMultiple can only be read off it by a person.
+     *
+     * Optional in the schema and required by the superRefine, because a provider
+     * that has stopped trading has no home page to give: the domain is parked,
+     * redirected to whoever bought it, or gone. Demanding one would mean citing
+     * an archive as though the company still published it.
      */
-    urls: z.object({
-      home: publicUrl,
-      pricing: publicUrl.optional(),
-      status: publicUrl.optional(),
-      terms: publicUrl.optional(),
-      docs: publicUrl.optional(),
-    }),
+    urls: z
+      .object({
+        home: publicUrl,
+        pricing: publicUrl.optional(),
+        status: publicUrl.optional(),
+        terms: publicUrl.optional(),
+        docs: publicUrl.optional(),
+      })
+      .optional(),
     /*
      * Required of a listed record — see the superRefine below. A hidden one is
      * allowed to be a stub. More than one is normal rather than exceptional:
@@ -329,6 +336,15 @@ const providerFields = z
         path: ['category'],
         message: 'Required unless the record is a stub, out of scope, or beside the register',
       });
+    }
+
+    /*
+     * A provider that has stopped trading is the one case with nothing to link
+     * to: the domain is parked, sold, or redirected to whoever bought the
+     * customers. Every other record has a home page, including a stub.
+     */
+    if (record.status !== 'discontinued' && !record.urls?.home) {
+      ctx.addIssue({ code: 'custom', path: ['urls', 'home'], message: 'Required unless the provider has stopped' });
     }
 
     if (record.status === 'out-of-scope' && !record.criterion) {

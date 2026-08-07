@@ -127,9 +127,9 @@ export async function loadDrafts(): Promise<ProviderRow[]> {
 }
 
 export interface Aside {
-  /** The group's id, which is also the checkbox's value. */
+  /** The group's id, which is also its page: /defunct/, /unlisted/, /stubs/. */
   key: string;
-  /** What the checkbox says. */
+  /** The word the register uses for it, and the heading of its page. */
   label: string;
   rows: ProviderRow[];
 }
@@ -151,6 +151,22 @@ export async function loadAsides(): Promise<Aside[]> {
 
   return [...groups.values()].map((group) => ({ ...group, rows: group.rows.sort(byName) }));
 }
+
+/**
+ * Every group that sits beside the register, addressed the same way: the ones
+ * the dictionary defines, and the records we have not finished. Whoever asks
+ * for one asks for all three the same way, so a page, a link and a count never
+ * disagree about what exists.
+ */
+export async function asideGroups(): Promise<Aside[]> {
+  return [...(await loadAsides()), { key: 'stubs', label: 'Stubs', rows: await loadDrafts() }];
+}
+
+export const asideGroupOf = async (key: string): Promise<Aside> => {
+  const group = (await asideGroups()).find((candidate) => candidate.key === key);
+  if (!group) throw new Error(`No group beside the register called "${key}"`);
+  return group;
+};
 
 function countValues(field: Field, providers: ProviderRow[]): Facet {
   const applicable = providers.filter((provider) => !provider.notApplicable.includes(field.id));
