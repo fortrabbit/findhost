@@ -1,0 +1,19 @@
+---
+import Base from '../layouts/Base.astro';
+import AsideList from '../components/AsideList.astro';
+import { loadDrafts } from '../lib/facets';
+
+const rows = await loadDrafts();
+---
+
+<Base
+  title="Stubs — FindHost"
+  description="Records started and not finished, or considered and ruled out against a numbered criterion. Not part of the register."
+  hidden
+>
+  <AsideList
+    title="Stubs and rulings"
+    note={`${rows.length} records that are not in the register: some started and not finished, some considered and ruled out against a numbered criterion. Each keeps a page, because a decision nobody can link to is not a decision. None is counted, and the filters do not apply to them — a record with three fields would drop out on the first tick as though somebody had checked.`}
+    rows={rows}
+  />
+</Base>

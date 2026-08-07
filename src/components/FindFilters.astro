@@ -42,6 +42,12 @@ const { facets, drafts, asides } = Astro.props;
     }
 
     {
+      /*
+       * Not filters. These are groups beside the register with pages of their
+       * own, so they are links — a tick that appended a second list under the
+       * first answered "show me these" with "here are those, and everything
+       * else", and left the only way to them unlinkable.
+       */
       (drafts > 0 || asides.length > 0) && (
         <div class="find-facet find-drafts">
           <h2 class="find-facet-title">
@@ -51,35 +57,33 @@ const { facets, drafts, asides } = Astro.props;
           <div class="find-values">
             {asides.map((aside) => (
               <div class="find-row">
-                <label>
-                  <input type="checkbox" data-aside={aside.key} autocomplete="off" disabled />
-                  <span class="find-value">{aside.label}</span>
-                </label>
-                <span class="find-count">
+                <a class="find-value" href={`/${aside.key}/`}>
+                  {aside.label}
+                </a>
+                <a class="find-count" href={`/${aside.key}/`}>
                   {aside.rows.length}
                   <span class="visually-hidden"> records</span>
-                </span>
+                </a>
               </div>
             ))}
 
             {drafts > 0 && (
               <div class="find-row">
-                {/* autocomplete=off on every box: the panel is static markup now, and a
-                    browser restoring a checked state on reload would disagree with the
-                    URL, which is the only state this script trusts. */}
-                <label>
-                  <input type="checkbox" data-drafts autocomplete="off" disabled />
-                  <span class="find-value">Stubs</span>
-                </label>
-                <span class="find-count">
+                <a class="find-value" href="/stubs/">
+                  Stubs
+                </a>
+                <a class="find-count" href="/stubs/">
                   {drafts}
                   <span class="visually-hidden"> records</span>
-                </span>
+                </a>
               </div>
             )}
           </div>
+
+          <p class="find-facet-foot">Not in the register and not in its count. Each keeps a page.</p>
         </div>
       )
     }
+
   </div>
 </details>

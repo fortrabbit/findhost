@@ -163,40 +163,9 @@ if (styleEl && resultsEl) {
 
 if (filtersEl && resultsEl && summaryEl) {
   const response = await fetch('/providers.json');
-  const { facets, providers, drafts, asides } = (await response.json()) as {
+  const { facets, providers } = (await response.json()) as {
     facets: Facet[];
     providers: ProviderRow[];
-    drafts: ProviderRow[];
-    asides: { key: string; label: string; rows: ProviderRow[] }[];
-  };
-
-  /*
-   * Hidden records are shown only when asked for, never counted in the register,
-   * and never filtered — a stub has almost no fields, so running it through the
-   * facets would drop it on the first tick and imply we had checked.
-   */
-  let showDrafts = false;
-
-  /*
-   * The groups beside the register, by key. Kept out of it for the same reason as
-   * a stub and offered back for a different one: a stub is work we have not
-   * finished, while a provider that stopped, or a parent that never sold hosting,
-   * is a finished fact about the market. All of them are shown as themselves
-   * rather than filtered — they answer few fields, and would drop out on the
-   * first tick as though somebody had checked.
-   */
-  const shownAsides = new Set<string>();
-
-  /* What each group is called where it is appended, and why it is not counted. */
-  const asideCopy: Record<string, { heading: string; note: string }> = {
-    defunct: {
-      heading: 'No longer trading',
-      note: 'Providers that have stopped. They keep their records and their pages, and they are not part of the count above — a register of hosting you can buy today has to mean today.',
-    },
-    unlisted: {
-      heading: 'Owns hosting brands, sells none',
-      note: 'Companies that own hosting brands without selling hosting under their own name. They have no runtimes, no regions and no price to record, so they are here to be found rather than compared.',
-    },
   };
 
   const selected = new Map<string, Set<string>>();
@@ -282,22 +251,6 @@ if (filtersEl && resultsEl && summaryEl) {
       });
     }
 
-    const draftsBox = filtersEl.querySelector<HTMLInputElement>('input[data-drafts]');
-    draftsBox?.addEventListener('change', () => {
-      showDrafts = draftsBox.checked;
-      if (draftsBox.checked) track('show stubs');
-      renderResults();
-    });
-
-    for (const box of filtersEl.querySelectorAll<HTMLInputElement>('input[data-aside]')) {
-      box.addEventListener('change', () => {
-        if (box.checked) shownAsides.add(box.dataset.aside!);
-        else shownAsides.delete(box.dataset.aside!);
-        if (box.checked) track(`show ${box.dataset.aside}`);
-        renderResults();
-      });
-    }
-
     for (const input of filtersEl.querySelectorAll<HTMLInputElement>('input[disabled]')) input.disabled = false;
 
   };
@@ -362,44 +315,6 @@ if (filtersEl && resultsEl && summaryEl) {
       }
 
       list?.append(row(provider));
-    }
-
-    /* An appended group, its own heading, outside the count. Two of them now. */
-    const appendAside = (rows: ProviderRow[], heading: string, explanation: string) => {
-      if (!rows.length) return;
-
-      const section = document.createElement('section');
-      section.className = 'letter-group';
-
-      const title = document.createElement('h2');
-      title.textContent = heading;
-      section.append(title);
-
-      const note = document.createElement('p');
-      note.className = 'annotation';
-      note.textContent = explanation;
-      section.append(note);
-
-      const list = document.createElement('ul');
-      list.className = 'provider-list';
-      for (const record of rows) list.append(row(record));
-      section.append(list);
-
-      resultsEl.append(section);
-    };
-
-    for (const aside of asides) {
-      if (!shownAsides.has(aside.key)) continue;
-      const copy = asideCopy[aside.key];
-      appendAside(aside.rows, copy?.heading ?? aside.label, copy?.note ?? 'Not part of the count above.');
-    }
-
-    if (showDrafts) {
-      appendAside(
-        drafts,
-        'Not in the register',
-        'Records started and not finished, or considered and failed against a numbered inclusion criterion. They are not part of the count above and the filters do not apply to them.',
-      );
     }
 
     // With nothing selected this says exactly what the server rendered. A visitor

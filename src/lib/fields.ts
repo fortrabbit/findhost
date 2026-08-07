@@ -116,6 +116,9 @@ export const groupNames = [
  */
 export const reservedSegments = [
   'providers',
+  'stubs',
+  'unlisted',
+  'defunct',
   'guide',
   'about',
   'search',

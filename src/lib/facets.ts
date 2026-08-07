@@ -134,16 +134,19 @@ export interface Aside {
   rows: ProviderRow[];
 }
 
-/** The groups beside the register, each with the records that belong to it. */
+/**
+ * The groups beside the register, from the dictionary rather than from the
+ * records — a group with nothing in it yet still has a page and still says so,
+ * which is how "we would list a defunct provider" is visible before there is one.
+ */
 export async function loadAsides(): Promise<Aside[]> {
   const groups = new Map<string, Aside>();
+  for (const { key, label } of asideOf.values()) groups.set(key, { key, label, rows: [] });
 
   for (const record of await loadAsideProviders()) {
-    const key = asideGroup(record)!;
-    const label = asideOf.get(String(record.data.status))!.label;
-    const group = groups.get(key) ?? { key, label, rows: [] };
-    group.rows.push({ ...toRow(record as never), status: String(record.data.status) });
-    groups.set(key, group);
+    groups
+      .get(asideGroup(record)!)!
+      .rows.push({ ...toRow(record as never), status: String(record.data.status) });
   }
 
   return [...groups.values()].map((group) => ({ ...group, rows: group.rows.sort(byName) }));

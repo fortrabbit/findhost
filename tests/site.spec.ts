@@ -193,40 +193,29 @@ test.describe('stubs', () => {
    */
   test.skip(({ javaScriptEnabled }) => javaScriptEnabled === false, 'the toggle is part of the filter view');
 
-  test('are off by default, shown on request, and never counted', async ({ page }) => {
+  test('are not in the register, and have a page of their own', async ({ page }) => {
     await page.goto('/');
 
-    const rows = page.locator('[data-find-results] .provider-list > li');
-    await expect(rows).toHaveCount(listed);
-
-    const toggle = page.locator('input[data-drafts]');
-    await expect(toggle).not.toBeChecked();
-
-    await toggle.check();
-    await expect(rows).not.toHaveCount(listed);
+    await expect(page.locator('[data-find-results] .provider-list > li')).toHaveCount(listed);
     await expect(page.locator('[data-find-summary]')).toHaveText(
       new RegExp(`^${listed} records, sorted alphabetically\\.$`),
     );
-    await expect(page.getByRole('heading', { name: 'Not in the register' })).toBeVisible();
+
+    /* The way to them is a link, so it works without scripting and can be crawled. */
+    await page.locator('.find-drafts a[href="/stubs/"]').first().click();
+    await expect(page.locator('h1')).toHaveText('Stubs and rulings');
+    await expect(page.locator('.provider-list > li').first()).toBeVisible();
   });
 
-  /*
-   * The same contract for a record beside the register rather than hidden from
-   * it: shown on request, appended under its own heading, never in the count.
-   */
-  test('a group beside the register is offered back without joining the count', async ({ page }) => {
-    await page.goto('/');
+  test('a group beside the register keeps its own list', async ({ page }) => {
+    await page.goto('/unlisted/');
 
-    const rows = page.locator('[data-find-results] .provider-list > li');
-    const toggle = page.locator('input[data-aside="unlisted"]');
-    await expect(toggle).not.toBeChecked();
+    await expect(page.locator('h1')).toHaveText('Owns hosting brands, sells none');
 
-    await toggle.check();
+    /* Exactly the group, not the group appended to everything else. */
+    const rows = page.locator('.provider-list > li');
     await expect(rows).not.toHaveCount(listed);
-    await expect(page.locator('[data-find-summary]')).toHaveText(
-      new RegExp(`^${listed} records, sorted alphabetically\\.$`),
-    );
-    await expect(page.getByRole('heading', { name: 'Owns hosting brands, sells none' })).toBeVisible();
+    expect(await rows.count()).toBeGreaterThan(0);
   });
 });
 
