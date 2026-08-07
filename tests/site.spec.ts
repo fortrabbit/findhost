@@ -49,9 +49,15 @@ test.describe('the register', () => {
     await expect(results.locator('#other h2')).toContainText('0–9');
   });
 
-  test('announces its order, because position is not ranking', async ({ page }) => {
-    await page.goto('/');
-    await expect(page.locator('[data-find-summary]')).toContainText('alphabetical');
+  /*
+   * The register itself no longer says it: the letters are the order, and the
+   * sentence sat a filter panel away from the list it described. A list that
+   * names its own subject still says it, and that is where the claim has to
+   * hold, because position is not ranking.
+   */
+  test('announces its order where it is not obvious', async ({ page }) => {
+    await page.goto('/software/wordpress/');
+    await expect(page.locator('.annotation').first()).toContainText('alphabetically');
   });
 
   /*
@@ -63,7 +69,12 @@ test.describe('the register', () => {
    */
   test('puts a space between a number and the noun it counts', async ({ page }) => {
     await page.goto('/');
-    await expect(page.locator('[data-find-summary]')).toHaveText(/^\d+ records, sorted alphabetically\.$/);
+    await expect(page.locator('[data-find-count]')).toHaveText(/^\d+ records\.$/);
+
+    /* Same hazard, same line: each group beside the register is a count and a word. */
+    for (const link of await page.locator('[data-find-summary] a').all()) {
+      await expect(link).toHaveText(/^\d+ [a-z]/);
+    }
 
     await page.goto('/software/');
     await expect(page.locator('.annotation').first()).toHaveText(/^\d+ values in use\./);
@@ -189,20 +200,18 @@ test.describe('stubs', () => {
    * The repo holds more records than the register shows. The hidden ones are
    * reachable, because a decision nobody can see is not a decision — but they
    * are opt-in, unfiltered and never in the count, or the count stops being
-   * true the moment someone ticks a box.
+   * true the moment someone ticks a box. Nothing here needs the script: the way
+   * in is a link in the sentence that counts the register, which is why this
+   * runs with JavaScript off as well.
    */
-  test.skip(({ javaScriptEnabled }) => javaScriptEnabled === false, 'the toggle is part of the filter view');
-
   test('are not in the register, and have a page of their own', async ({ page }) => {
     await page.goto('/');
 
     await expect(page.locator('[data-find-results] .provider-list > li')).toHaveCount(listed);
-    await expect(page.locator('[data-find-summary]')).toHaveText(
-      new RegExp(`^${listed} records, sorted alphabetically\\.$`),
-    );
+    await expect(page.locator('[data-find-count]')).toHaveText(new RegExp(`^${listed} records\\.$`));
 
     /* The way to them is a link, so it works without scripting and can be crawled. */
-    await page.locator('.find-drafts a[href="/stubs/"]').first().click();
+    await page.locator('[data-find-summary] a[href="/stubs/"]').first().click();
     await expect(page.locator('h1')).toHaveText('Stubs and rulings');
     await expect(page.locator('.provider-list > li').first()).toBeVisible();
   });
@@ -239,6 +248,13 @@ test.describe('filtering', () => {
     // Unknowns are declared rather than silently dropped: with most fields
     // optional, a filter that hides them would hide most of the market.
     await expect(page.locator('[data-find-summary]')).toContainText(new RegExp(`of ${listed}`));
+
+    /*
+     * The count and the groups beside the register share a paragraph, and only
+     * the count is a function of the filters. Rewriting the sentence rather
+     * than the number took the links to those groups away with it.
+     */
+    await expect(page.locator('[data-find-summary] a[href="/stubs/"]')).toBeVisible();
   });
 
   /*

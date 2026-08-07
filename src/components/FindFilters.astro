@@ -1,16 +1,12 @@
 ---
 import FindFacet from './FindFacet.astro';
-import type { Aside, Facet } from '../lib/facets';
+import type { Facet } from '../lib/facets';
 
 interface Props {
   facets: Facet[];
-  /** How many hidden records exist. Zero means the row is not offered at all. */
-  drafts: number;
-  /** The groups beside the register, one row each. Same rule: no row where there is nothing to show. */
-  asides: Aside[];
 }
 
-const { facets, drafts, asides } = Astro.props;
+const { facets } = Astro.props;
 
 /*
  * The filter panel, as markup rather than as DOM built in a loop. find.ts used
@@ -40,50 +36,5 @@ const { facets, drafts, asides } = Astro.props;
         .filter((facet) => facet.values.some((value) => value.count > 0))
         .map((facet) => <FindFacet facet={facet} />)
     }
-
-    {
-      /*
-       * Not filters. These are groups beside the register with pages of their
-       * own, so they are links — a tick that appended a second list under the
-       * first answered "show me these" with "here are those, and everything
-       * else", and left the only way to them unlinkable.
-       */
-      (drafts > 0 || asides.length > 0) && (
-        <div class="find-facet find-drafts">
-          <h2 class="find-facet-title">
-            <span>Other</span>
-          </h2>
-
-          <div class="find-values">
-            {asides.map((aside) => (
-              <div class="find-row">
-                <a class="find-value" href={`/${aside.key}/`}>
-                  {aside.label}
-                </a>
-                <a class="find-count" href={`/${aside.key}/`}>
-                  {aside.rows.length}
-                  <span class="visually-hidden"> records</span>
-                </a>
-              </div>
-            ))}
-
-            {drafts > 0 && (
-              <div class="find-row">
-                <a class="find-value" href="/stubs/">
-                  Stubs
-                </a>
-                <a class="find-count" href="/stubs/">
-                  {drafts}
-                  <span class="visually-hidden"> records</span>
-                </a>
-              </div>
-            )}
-          </div>
-
-          <p class="find-facet-foot">Not in the register and not in its count. Each keeps a page.</p>
-        </div>
-      )
-    }
-
   </div>
 </details>

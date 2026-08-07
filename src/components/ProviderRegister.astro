@@ -14,9 +14,17 @@ interface Props {
    * which is the page where combining values belongs.
    */
   seed?: { facet: string; value: string; label: string };
+  /*
+   * The groups that sit beside the register, named in the line that counts it.
+   * They were a column in the filter panel, which put three links that are not
+   * filters among fourteen columns that are, under a heading that had to be
+   * called "Other" because nothing truer fitted. The count and its exceptions
+   * belong in the same sentence.
+   */
+  beside?: { label: string; href: string; count: number }[];
 }
 
-const { providers, facets, seed } = Astro.props;
+const { providers, facets, seed, beside = [] } = Astro.props;
 
 /*
  * Built here rather than in the template. Astro drops a whitespace-only text
@@ -24,16 +32,25 @@ const { providers, facets, seed } = Astro.props;
  * the moment a formatter puts them on separate lines. A string cannot be
  * reflowed into a bug.
  *
- * The wording matches what find.ts writes here once a filter changes, and it
- * states the order, because position is not ranking.
+ * The wording matches what find.ts writes here once a filter changes.
  */
-const summary = `${providers.length} ${providers.length === 1 ? 'record' : 'records'}, sorted alphabetically.`;
+const summary = `${providers.length} ${providers.length === 1 ? 'record' : 'records'}.`;
 
 // Grouped by initial so the register can be scanned and linked to without JavaScript.
 const letterOf = (name: string) => {
   const initial = name.replace(/^the /i, '').charAt(0).toUpperCase();
   return /[A-Z]/.test(initial) ? initial : '#';
 };
+
+/*
+ * Same reason as the summary: the count and the label are one string, and the
+ * separator is decided here rather than by a conditional in the markup.
+ */
+const besideLinks = beside.map((group, index) => ({
+  href: group.href,
+  text: `${group.count} ${group.label.toLowerCase()}`,
+  tail: index < beside.length - 1 ? ', ' : '.',
+}));
 
 const groups = [...new Set(providers.map((provider) => letterOf(provider.name)))].sort().map((letter) => ({
   letter,
@@ -49,7 +66,18 @@ const groups = [...new Set(providers.map((provider) => letterOf(provider.name)))
   /* A seeded page has already counted itself, in a sentence that says more than this one. */
   !seed && (
     <p class="annotation" data-find-summary>
-      {summary}
+      <span data-find-count>{summary}</span>{' '}
+      {besideLinks.length > 0 && (
+        <span>
+          Beside them:{' '}
+          {besideLinks.map((link) => (
+            <>
+              <a href={link.href}>{link.text}</a>
+              {link.tail}
+            </>
+          ))}
+        </span>
+      )}
     </p>
   )
 }

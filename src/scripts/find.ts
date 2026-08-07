@@ -123,7 +123,11 @@ const track = (event: string) => {
 
 const filtersEl = document.querySelector<HTMLElement>('[data-find-filters]');
 const resultsEl = document.querySelector<HTMLElement>('[data-find-results]');
-const summaryEl = document.querySelector<HTMLElement>('[data-find-summary]');
+/*
+ * The count, not the sentence it sits in: the links to the groups beside the
+ * register share that paragraph and do not change when a filter does.
+ */
+const summaryEl = document.querySelector<HTMLElement>('[data-find-count]');
 const styleEl = document.querySelector<HTMLElement>('[data-list-style]');
 
 /*
@@ -321,12 +325,9 @@ if (filtersEl && resultsEl && summaryEl) {
     // with JavaScript should not be told "150 of 150" where a visitor without it
     // is told "150" — the script is here to narrow the list, not to restate it.
     const noun = providers.length === 1 ? 'record' : 'records';
-    const parts = [
-      activeFacets().length
-        ? `${found.length} of ${providers.length} ${noun}, sorted alphabetically.`
-        : `${providers.length} ${noun}, sorted alphabetically.`,
-    ];
-    summaryEl.textContent = parts.join(' ');
+    summaryEl.textContent = activeFacets().length
+      ? `${found.length} of ${providers.length} ${noun}.`
+      : `${providers.length} ${noun}.`;
   };
 
   window.addEventListener('popstate', () => {
