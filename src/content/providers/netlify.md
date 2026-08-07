@@ -9,6 +9,7 @@ urls:
   docs: https://docs.netlify.com/
 category:
   - serverless
+  - static
 description: Platform that builds sites from a git repository and serves them from a global CDN, with serverless functions, edge functions, blob storage and a database.
 founded: 2014
 hqCountry: US

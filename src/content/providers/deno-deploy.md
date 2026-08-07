@@ -6,6 +6,7 @@ urls:
   pricing: https://deno.com/deploy/pricing
 category:
   - serverless
+  - static
 description: Serverless hosting for JavaScript and TypeScript built by the Deno team, running the Deno runtime with Node and npm compatibility.
 hqCountry: US
 ownership: vc-backed

@@ -30,7 +30,7 @@ This is currently pet project. If people find it useful, I may extend it. There 
 
 A web hosting provider should be listed if all six of these are true:
 
-1. **Runs application code.** An application in at least one general-purpose language can be deployed and served over HTTP, per the provider's own public documentation. *Which* languages is a field on the record, not a gate.
+1. **Runs what the customer deploys.** Either an application in a general-purpose language, per the provider's own public documentation, or a site the customer publishes and the provider serves. *Which* languages is a field on the record, not a gate, and static hosting is hosting — the code ran on somebody's laptop instead of on the server, and the reader still has to choose where to put the result. What this still excludes is a service that holds content and hands it back over an API while somebody else serves the site.
 2. **Sold to the public.** Purchasable without a sales call, signed contract or invitation.
 3. **Public pricing.** A price for at least one plan is published without logging in. "Contact us" is not a price.
 4. **Public technical documentation.** Runtime versions, deploy method and included services are documented publicly.

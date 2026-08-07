@@ -97,6 +97,7 @@
     - { id: iaas, label: Infrastructure as a Service, short: IaaS }
     - { id: shared-hosting, label: Shared hosting }
     - { id: serverless, label: Serverless }
+    - { id: static, label: Static hosting }
     - { id: caas, label: Containers as a Service, short: CaaS }
     - { id: server-management, label: Server management }
     - { id: vanity-hosting, label: Vanity hosting }
