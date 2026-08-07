@@ -9,7 +9,7 @@ urls:
   docs: https://vercel.com/docs
 category:
   - serverless
-description: Vercel is a serverless frontend platform. Its official function runtimes do not include PHP, which is available only through a community runtime.
+description: Vercel is a frontend platform for Javascript people. It's formerly known as Zeit and venture backed and high on the AI wave.
 ownership: vc-backed
 whoManagesOs: managed
 useCases:
