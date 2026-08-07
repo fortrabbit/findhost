@@ -3,15 +3,46 @@ id: raidboxes
 name: Raidboxes
 urls:
   home: https://raidboxes.io
-status: out-of-scope
-criterion: 6
-checkedAt: 2026-07-31
-boundedSearch: true
+  pricing: https://raidboxes.io/wordpress-hosting-pricing/
+category:
+  - vanity-hosting
+description: Managed WordPress hosting from Münster, on German servers, with staging and SSH on every plan.
+hqCountry: DE
+ownership: independent
+whoManagesOs: managed
+software:
+  - wordpress
+runtimes:
+  - php
+sshAccess: jailed
+staging: included
+regions:
+  - DE
+entryPrice: { amount: 17, currency: EUR, period: month }
+priceFrom: md
+currencies:
+  - EUR
+billingPeriods:
+  - monthly
+pricingModel: fixed-tier
+useCases:
+  - cms
+  - e-commerce
+audience:
+  - agency
+  - smb
+status: active
+checkedAt: 2026-08-07
+sources:
+  - { field: category, url: 'https://raidboxes.io', checkedAt: 2026-08-07 }
+  - { field: software, url: 'https://raidboxes.io', checkedAt: 2026-08-07 }
+  - { field: sshAccess, url: 'https://raidboxes.io', checkedAt: 2026-08-07 }
+  - { field: staging, url: 'https://raidboxes.io', checkedAt: 2026-08-07 }
+  - { field: regions, url: 'https://raidboxes.io', checkedAt: 2026-08-07 }
+  - { field: entryPrice, url: 'https://raidboxes.io/wordpress-hosting-pricing/', checkedAt: 2026-08-07 }
 ai: authored
 ---
 
-Raidboxes is a Münster-based managed WordPress host, well known in the German agency market and a visible sponsor at German WordCamps.
+Raidboxes is a Münster-based managed WordPress host, well known in the German agency market and a visible sponsor at German WordCamps. Servers are in Germany and run on renewable electricity, which the company states on its own pages.
 
-**Criterion 6 — two independent artifacts — could not be satisfied.** Searched: GitHub repository and code search, the WP-CLI handbook's hosting-companies list, and the acme.sh and lego DNS provider registries. Nothing qualifying surfaced; the repositories carrying the name are recruitment exercises and abandoned test installations.
-
-Managed WordPress hosts are structurally poorly served by this criterion. Their customers are agencies and editors rather than integrators, the platform deliberately removes the surface that people would otherwise write tools against, and the ecosystem presence shows up at meetups and in German-language blog posts rather than in repositories. **A WordPress-project documentation reference, a third-party package, an independent conference talk or an issue-tracker thread would be enough to list it.**
+The plans are shaped for agencies rather than for a first site: staging environments are included from the entry tier upward, SSH access comes with the plan, and WooCommerce and high-traffic variants are sold separately. The entry price is EUR 17 a month at the published rate, with a new-customer discount advertised alongside it.

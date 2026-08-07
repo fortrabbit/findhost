@@ -3,15 +3,51 @@ id: jweiland
 name: jweiland.net
 urls:
   home: https://jweiland.net
-status: out-of-scope
-criterion: 6
-checkedAt: 2026-07-31
-boundedSearch: true
+  docs: https://jweiland.net/hosting/hilfe-support/technik.html
+category:
+  - shared-hosting
+  - vanity-hosting
+description: German shared hosting built around TYPO3, run by people who contribute to the project, with SSH and sixteen PHP versions.
+hqCountry: DE
+ownership: independent
+whoManagesOs: managed
+software:
+  - typo3
+runtimes:
+  - php
+managedDatabases:
+  - mysql
+  - mariadb
+sshAccess: jailed
+regions:
+  - DE
+runsOn:
+  - aws
+priceFrom: md
+currencies:
+  - EUR
+billingPeriods:
+  - quarterly
+pricingModel: fixed-tier
+useCases:
+  - cms
+audience:
+  - smb
+  - agency
+status: active
+checkedAt: 2026-08-07
+sources:
+  - { field: software, url: 'https://jweiland.net', checkedAt: 2026-08-07 }
+  - { field: runtimes, url: 'https://jweiland.net/hosting/hilfe-support/technik.html', checkedAt: 2026-08-07 }
+  - { field: managedDatabases, url: 'https://jweiland.net/hosting/hilfe-support/technik.html', checkedAt: 2026-08-07 }
+  - { field: sshAccess, url: 'https://jweiland.net/hosting/hilfe-support/technik.html', checkedAt: 2026-08-07 }
+  - { field: regions, url: 'https://jweiland.net/hosting/hilfe-support/technik.html', checkedAt: 2026-08-07 }
+  - { field: runsOn, url: 'https://jweiland.net/hosting/hilfe-support/technik.html', checkedAt: 2026-08-07 }
 ai: authored
 ---
 
-jweiland.net is a small German host built specifically around TYPO3, run by people who also contribute extensions to the TYPO3 project itself.
+jweiland.net is a small German host built specifically around TYPO3, run by people who also contribute extensions to the TYPO3 project itself. It states that it hosts more than 36,000 TYPO3 domains.
 
-**Criterion 6 — two independent artifacts — could not be satisfied.** Searched: GitHub repository and code search for the hosting product, and the acme.sh and lego DNS provider registries. The company's TYPO3 extension work is substantial and public, but it is the company's own work, and first-party contributions do not qualify however useful they are.
+The technical documentation is unusually complete for a host this size. Sixteen PHP versions are selectable on the Cloud plans, from 5.1 to 8.4, which matters for a CMS whose long-term-support releases outlive the PHP versions they shipped against. MySQL and MariaDB are offered side by side, SSH comes with every plan rather than with the expensive ones, and the memory limit is adjustable to 2 GB.
 
-This is a case where the criterion and the reality pull apart. A host whose staff are contributors to the framework they host is deeply embedded in that ecosystem by any ordinary reading — but the criterion asks for engagement by people who are not the vendor, and that is what could not be found. **A TYPO3 documentation reference to the platform, a third-party package, an independent talk or an issue-tracker thread would be enough to list it.**
+Two generations run in parallel: Classic Hosting in Cologne on the company's own servers, and Cloud Hosting on AWS in Frankfurt. Plans are billed quarterly.
