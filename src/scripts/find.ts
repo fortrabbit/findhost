@@ -101,11 +101,14 @@ function row(provider: ProviderRow): HTMLLIElement {
 
   item.append(body);
 
+  const meta = document.createElement('span');
+  meta.className = 'provider-meta';
+
   if (provider.country) {
     const country = document.createElement('span');
     country.className = 'provider-country';
     country.textContent = provider.country;
-    item.append(country);
+    meta.append(country);
   }
 
   if (provider.signal !== undefined) {
@@ -114,8 +117,10 @@ function row(provider: ProviderRow): HTMLLIElement {
     signal.href = '/signal/';
     signal.title = 'FindHost Signal — our opinionated score, and how it is worked out';
     signal.textContent = String(provider.signal);
-    item.append(signal);
+    meta.append(signal);
   }
+
+  item.append(meta);
 
   return item;
 }

@@ -463,6 +463,7 @@ html:not(.js) .theme-switch {
 
   display: grid;
   grid-template-columns: var(--tile) 1fr auto;
+  /* Three columns, and the third holds however many facts the row carries. */
   gap: 0 var(--space-sm);
   align-items: start;
   padding: var(--row-pad) 0;
@@ -509,6 +510,13 @@ html:not(.js) .theme-switch {
 
 .provider-body {
   min-width: 0;
+}
+
+/** Where a row's data sits: the country, our score, whatever comes next. */
+.provider-meta {
+  display: flex;
+  gap: var(--space-2xs);
+  align-items: baseline;
 }
 
 /** Headquarters as an ISO code. A flag is a picture of a government; this is data. */
@@ -1360,20 +1368,44 @@ html.js [data-find-fallback] {
 }
 
 /*
- * Which order the list is in, and how much of each row to show: one row, the
- * order on the left because it is a decision and the view on the right because
- * it is a preference.
+ * The list's own header: which order it is in on the left, how much of each row
+ * to show on the right. A rule under it, thick enough to read as the top edge of
+ * the list rather than as one more line inside it.
  */
 .list-controls {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: flex-end;
   gap: var(--space-sm);
+  padding-bottom: var(--space-2xs);
+  border-bottom: var(--rule-strong) solid var(--color-ink);
 }
 
+/* Tabs, not prose: the two orders are a choice between states of one list. */
 .sort-links {
+  display: flex;
+  gap: var(--space-3xs);
   margin: 0 auto 0 0;
+}
+
+.sort-links a {
+  padding: var(--space-3xs) var(--space-2xs);
+  border: var(--rule-hairline) solid transparent;
+  border-radius: var(--radius);
+  color: var(--color-ink);
   font-size: var(--text-sm);
+  text-decoration: none;
+}
+
+.sort-links a:hover {
+  border-color: var(--color-ink);
+}
+
+/* The one in force, filled — the same weight the list-style buttons carry. */
+.sort-links a[aria-current='true'] {
+  border-color: var(--color-ink);
+  background: var(--color-ink);
+  color: var(--color-page);
 }
 
 .list-controls .list-style {
@@ -1421,9 +1453,3 @@ html.js [data-find-fallback] {
   text-decoration: underline;
 }
 
-/** The order in force, marked the way the site marks the current page: weight and a thicker rule. */
-.sort-links a[aria-current='true'] {
-  color: var(--color-ink);
-  font-weight: bold;
-  text-decoration-thickness: var(--rule-strong);
-}

@@ -59,14 +59,19 @@ const { providers, namesOnly = false } = Astro.props;
             {described && <p>{provider.description}</p>}
           </div>
 
-          {provider.country && <span class="provider-country">{provider.country}</span>}
-
-          {/* Our opinion of the row, next to the one fact about it a list has room for. */}
-          {provider.signal !== undefined && !namesOnly && (
-            <a class="provider-signal" href="/signal/" title="FindHost Signal — our opinionated score, and how it is worked out">
-              {provider.signal}
-            </a>
-          )}
+          {/* One column, however many facts are in it: the row is a grid, and a fourth child would wrap. */}
+          <span class="provider-meta">
+            {provider.country && <span class="provider-country">{provider.country}</span>}
+            {provider.signal !== undefined && !namesOnly && (
+              <a
+                class="provider-signal"
+                href="/signal/"
+                title="FindHost Signal — our opinionated score, and how it is worked out"
+              >
+                {provider.signal}
+              </a>
+            )}
+          </span>
         </li>
       );
     })

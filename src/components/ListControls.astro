@@ -17,7 +17,7 @@ interface Props {
 const { sort } = Astro.props;
 
 const orders = [
-  { id: 'alphabetical', label: 'Alphabetically', href: '/' },
+  { id: 'alphabetical', label: 'A–Z', href: '/' },
   { id: 'signal', label: 'FindHost Signal', href: '/signal/' },
 ];
 ---
@@ -26,14 +26,11 @@ const orders = [
   {
     sort && (
       <p class="sort-links" data-pagefind-ignore data-sort-links>
-        {orders.map((order, index) => (
-          <>
-            {index > 0 && ' · '}
-            {/* Always a link: find.ts sorts in place where it runs, and the page is the answer where it does not. */}
-            <a href={order.href} data-sort={order.id} aria-current={order.id === sort ? 'true' : 'false'}>
-              {order.label}
-            </a>
-          </>
+        {/* Always links: find.ts sorts in place where it runs, and the page is the answer where it does not. */}
+        {orders.map((order) => (
+          <a href={order.href} data-sort={order.id} aria-current={order.id === sort ? 'true' : 'false'}>
+            {order.label}
+          </a>
         ))}
       </p>
     )
