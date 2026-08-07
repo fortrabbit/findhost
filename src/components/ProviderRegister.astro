@@ -69,7 +69,6 @@ const groups = [...new Set(providers.map((provider) => letterOf(provider.name)))
       <span data-find-count>{summary}</span>{' '}
       {besideLinks.length > 0 && (
         <span>
-          Beside them:{' '}
           {besideLinks.map((link) => (
             <>
               <a href={link.href}>{link.text}</a>

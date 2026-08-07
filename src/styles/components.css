@@ -164,6 +164,22 @@ html:not(.js) .theme-switch {
   font-size: var(--text-sm);
 }
 
+/*
+ * The groups beside the register are named where the count is, and they read as
+ * an aside rather than as three offers: quiet until pointed at. In link colour
+ * they carried more weight than the 157 records under them.
+ */
+[data-find-summary] a {
+  color: inherit;
+  text-decoration: none;
+}
+
+[data-find-summary] a:hover,
+[data-find-summary] a:focus-visible {
+  color: var(--color-link);
+  text-decoration: underline;
+}
+
 /** fortrabbit's own record, wherever it appears in a list. Permanent, never decorative. */
 .self-marker {
   margin-left: var(--space-xs);
