@@ -98,6 +98,9 @@ if (form && input && resultsEl && summaryEl) {
   form.addEventListener('submit', (event) => {
     event.preventDefault();
     const query = input.value;
+
+    /* That a search happened, never the words. The query is the reader's. */
+    (window as { fathom?: { trackEvent: (name: string) => void } }).fathom?.trackEvent('search');
     history.replaceState(null, '', query ? `?q=${encodeURIComponent(query)}` : location.pathname);
     void run(query);
   });

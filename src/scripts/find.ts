@@ -109,6 +109,18 @@ function row(provider: ProviderRow): HTMLLIElement {
   return item;
 }
 
+/**
+ * What was used, never who used it. Fathom is cookieless and the event is a
+ * facet and a value — "filter software: WordPress" — which says how the panel is
+ * read without saying anything about a reader.
+ *
+ * Optional by construction: the script only loads where a site id is configured,
+ * so this is a no-op everywhere else rather than something to remember to guard.
+ */
+const track = (event: string) => {
+  (window as { fathom?: { trackEvent: (name: string) => void } }).fathom?.trackEvent(event);
+};
+
 const filtersEl = document.querySelector<HTMLElement>('[data-find-filters]');
 const resultsEl = document.querySelector<HTMLElement>('[data-find-results]');
 const summaryEl = document.querySelector<HTMLElement>('[data-find-summary]');
@@ -140,7 +152,10 @@ if (styleEl && resultsEl) {
 
   styleEl.addEventListener('click', (event) => {
     const button = (event.target as HTMLElement).closest<HTMLButtonElement>('button');
-    if (button && button.value !== current) show(button.value);
+    if (button && button.value !== current) {
+      show(button.value);
+      track(`list ${button.value}`);
+    }
   });
 
   show(current);
@@ -254,6 +269,12 @@ if (filtersEl && resultsEl && summaryEl) {
         const next = new Set(selected.get(facetId) ?? []);
         if (input.checked) next.add(input.value);
         else next.delete(input.value);
+
+        /* Only the tick. An untick is a correction, and counting it would read as interest. */
+        if (input.checked) {
+          const label = input.closest('.find-row')?.querySelector('.find-value')?.textContent?.trim();
+          track(`filter ${facetId}: ${label ?? input.value}`);
+        }
         if (next.size) selected.set(facetId, next);
         else selected.delete(facetId);
         writeUrl();
@@ -264,6 +285,7 @@ if (filtersEl && resultsEl && summaryEl) {
     const draftsBox = filtersEl.querySelector<HTMLInputElement>('input[data-drafts]');
     draftsBox?.addEventListener('change', () => {
       showDrafts = draftsBox.checked;
+      if (draftsBox.checked) track('show stubs');
       renderResults();
     });
 
@@ -271,6 +293,7 @@ if (filtersEl && resultsEl && summaryEl) {
       box.addEventListener('change', () => {
         if (box.checked) shownAsides.add(box.dataset.aside!);
         else shownAsides.delete(box.dataset.aside!);
+        if (box.checked) track(`show ${box.dataset.aside}`);
         renderResults();
       });
     }
