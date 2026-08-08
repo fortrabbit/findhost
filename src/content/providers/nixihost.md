@@ -6,19 +6,33 @@ urls:
 category:
   - shared-hosting
 description: Independent hosting company from Houston, Texas, selling shared and reseller hosting alongside VPS and dedicated servers.
+hqCountry: US
+ownership: independent
+runtimes:
+  - php
 priceFrom: sm
 priceTo: md
+entryPrice:
+  amount: 8
+  currency: USD
+  period: month
 billingPeriods:
   - monthly
   - yearly
 billingTiming: advance
 exitWithin: a-quarter
+status: active
+checkedAt: 2026-08-08
 sources:
   - { field: priceFrom, url: 'https://www.nixihost.com/hosting/shared', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://www.nixihost.com/hosting/shared', checkedAt: 2026-08-02 }
   - { field: billingPeriods, url: 'https://www.nixihost.com/hosting/vps', checkedAt: 2026-08-02 }
   - { field: billingTiming, url: 'https://www.nixihost.com/terms-of-service', checkedAt: 2026-08-02 }
   - { field: exitWithin, url: 'https://www.nixihost.com/terms-of-service', checkedAt: 2026-08-02 }
+  - { field: hqCountry, url: 'https://www.nixihost.com', checkedAt: 2026-08-08 }
+  - { field: ownership, url: 'https://www.nixihost.com', checkedAt: 2026-08-08 }
+  - { field: runtimes, url: 'https://www.nixihost.com/hosting/shared', checkedAt: 2026-08-08 }
+  - { field: entryPrice, url: 'https://www.nixihost.com/hosting/shared', checkedAt: 2026-08-08 }
 figure:
   emoji: 👽
   color: rgb(157, 77, 77)

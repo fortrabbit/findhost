@@ -13,6 +13,7 @@ runsOn:
   - aws
 priceFrom: md
 priceTo: xl
+entryPrice: { amount: 29, currency: USD, period: month }
 currencies:
   - USD
 billingPeriods:
@@ -21,7 +22,7 @@ billingPeriods:
 billingTiming: advance
 exitWithin: a-month
 status: active
-checkedAt: 2026-08-01
+checkedAt: 2026-08-08
 sources:
   - { field: regions, url: 'https://manual.bubble.io/help-guides/optimizing-an-application/hosting-and-scaling/how-bubble-hosting-works', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://manual.bubble.io/account-and-marketplace/account-and-billing/pricing-plans', checkedAt: 2026-08-02 }
@@ -31,6 +32,7 @@ sources:
   - { field: billingTiming, url: 'https://manual.bubble.io/account-and-marketplace/account-and-billing/pricing-plans', checkedAt: 2026-08-02 }
   - { field: exitWithin, url: 'https://manual.bubble.io/account-and-marketplace/account-and-billing/pricing-plans', checkedAt: 2026-08-02 }
   - { field: runsOn, url: 'https://manual.bubble.io/help-guides/optimizing-an-application/hosting-and-scaling/how-bubble-hosting-works', checkedAt: 2026-08-01 }
+  - { field: entryPrice, url: 'https://manual.bubble.io/account-and-marketplace/account-and-billing/pricing-plans', checkedAt: 2026-08-08 }
 figure:
   emoji: 🫧
   color: rgb(77, 141, 157)

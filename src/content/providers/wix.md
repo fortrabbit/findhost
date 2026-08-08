@@ -9,14 +9,16 @@ category:
   - lcnc
 description: Wix is a hosted website builder with templates and a visual editor for small businesses and personal sites.
 founded: 2006
+hqCountry: IL
 ownership: public
 whoManagesOs: managed
 sshAccess: none
-checkedAt: 2026-08-01
+checkedAt: 2026-08-08
 sources:
   - { field: founded, url: 'https://www.wix.com/about/us', checkedAt: 2026-08-01 }
   - { field: ownership, url: 'https://investors.wix.com/', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://www.wix.com/about/terms-of-use', checkedAt: 2026-08-01 }
+  - { field: hqCountry, url: 'https://www.wix.com/about/terms-of-use', checkedAt: 2026-08-08 }
 figure:
   emoji: 🧱
   color: rgb(160, 131, 75)
