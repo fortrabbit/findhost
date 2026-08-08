@@ -11,7 +11,7 @@ description: Hostinger is a Lithuanian budget host selling shared, cloud and VPS
 founded: 2004
 hqCountry: LT
 ownership: independent
-entryPrice: { amount: 2.99, currency: USD, period: month }
+entryPrice: { amount: 2.99, currency: USD, period: month, introductory: true }
 useCases:
   - cms
 audience:

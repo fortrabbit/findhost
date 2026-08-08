@@ -45,7 +45,7 @@ currencies:
 billingPeriods:
   - yearly
 billingTiming: advance
-entryPrice: { amount: 2.75, currency: EUR, period: month }
+entryPrice: { amount: 2.75, currency: EUR, period: month, introductory: true }
 renewalMultiple: 1.98
 freeTier: none
 regions:

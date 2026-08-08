@@ -23,7 +23,7 @@ billingPeriods:
   - yearly
 billingTiming: advance
 exitWithin: a-year
-entryPrice: { amount: 2.89, currency: EUR, period: month }
+entryPrice: { amount: 2.89, currency: EUR, period: month, introductory: true }
 renewalMultiple: 3.8
 contractMinimum: annual
 status: active

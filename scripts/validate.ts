@@ -310,6 +310,23 @@ for (const slug of slugs) {
  */
 const fieldNames = new Set(records.flatMap(({ data }) => (data ? Object.keys(data) : [])));
 
+/*
+ * Roughly what a unit of each currency is worth in dollars, for one purpose: to
+ * catch a record whose `entryPrice` contradicts its own `priceFrom` band. The
+ * bands trible in width, so a rate being a year out of date cannot cause a false
+ * failure — and the check below allows a quarter either way on top of that. This
+ * is not a conversion anybody should read a price from, and nothing renders it.
+ */
+const roughlyInDollars: Record<string, number> = {
+  USD: 1, EUR: 1.1, GBP: 1.3, CHF: 1.1, CAD: 0.75, AUD: 0.65, NZD: 0.6,
+  SEK: 0.1, DKK: 0.15, PLN: 0.25, JPY: 0.007, INR: 0.012, MYR: 0.22,
+  BRL: 0.18, ARS: 0.001, ZAR: 0.055, MXN: 0.05, KES: 0.008, VND: 0.00004,
+};
+
+/** The dollar floor of each band, in the order lib/price.ts declares them. */
+const bandFloor: Record<string, number> = { xs: 0, sm: 5, md: 15, lg: 50, xl: 150, '2xl': 500, '3xl': 1500 };
+const bandCeiling: Record<string, number> = { xs: 5, sm: 15, md: 50, lg: 150, xl: 500, '2xl': 1500, '3xl': Infinity };
+
 /** The vocabulary of every relation field: the register, including the records beside it. */
 const recordIds = new Set(slugs);
 const relationFields = fields.filter((field) => field.relation);
@@ -364,6 +381,40 @@ for (const { file, data } of records) {
    * silent — the value renders as a link to a page that does not exist, or as a
    * parent nobody can follow back.
    */
+  /*
+   * The advertised starting price and the band it is filed under have to agree.
+   * They are recorded separately and drift apart silently: one is read off a
+   * pricing page, the other is a judgement about what a small production setup
+   * costs, and when the judgement changes nobody goes back to the number.
+   */
+  const entry = data.entryPrice as
+    | { amount?: number; currency?: string; period?: string; introductory?: boolean }
+    | undefined;
+  const band = data.priceFrom as string | undefined;
+  if (entry?.amount && entry.currency && band && bandFloor[band] !== undefined) {
+    const rate = roughlyInDollars[entry.currency];
+    // Hours are the awkward one: a cent an hour is four euros a month, not a cent.
+    const perMonth: Record<string, number> = { year: 1 / 12, month: 1, hour: 730 };
+    const monthly = entry.amount * (perMonth[String(entry.period)] ?? 1);
+    if (rate) {
+      const dollars = monthly * rate;
+
+      /*
+       * An introductory price is allowed to sit below the band: `priceFrom`
+       * follows the standing price on purpose, and the whole point of recording
+       * both is that the advertised number is not the one that recurs. A
+       * STANDING price below the band is a misfiling, and the reason this check
+       * exists — a record can say "starts at €2.50" and "starts at $5 to $15" at
+       * the same time, on the same page, and nothing noticed.
+       */
+      if (!entry.introductory && dollars < bandFloor[band] * 0.75) {
+        fail(file, `entryPrice is about $${dollars.toFixed(2)} a month, below the "${band}" band it is filed under`);
+      } else if (dollars > bandCeiling[band] * 1.25) {
+        fail(file, `entryPrice is about $${dollars.toFixed(2)} a month, above the "${band}" band it is filed under`);
+      }
+    }
+  }
+
   for (const field of relationFields) {
     const held = data[field.id];
     if (held === undefined || held === null) continue;

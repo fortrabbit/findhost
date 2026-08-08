@@ -49,7 +49,7 @@ managedDatabases:
   - mysql
 backupsIncluded: included
 pricingModel: fixed-tier
-priceFrom: sm
+priceFrom: xs
 priceTo: lg
 currencies:
   - EUR

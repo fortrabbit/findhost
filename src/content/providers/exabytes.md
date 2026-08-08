@@ -37,7 +37,7 @@ billingPeriods:
   - multi-year
 exitWithin: over-a-year
 billingTiming: advance
-entryPrice: { amount: 9.99, currency: MYR, period: month }
+entryPrice: { amount: 9.99, currency: MYR, period: month, introductory: true }
 renewalMultiple: 5
 freeTier: none
 contractMinimum: multi-year

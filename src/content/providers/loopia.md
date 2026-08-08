@@ -36,7 +36,7 @@ deployMethods:
 sshAccess: jailed
 pricingModel: fixed-tier
 entryPrice: { amount: 89, currency: SEK, period: month }
-priceFrom: md
+priceFrom: sm
 priceTo: md
 currencies:
   - SEK
