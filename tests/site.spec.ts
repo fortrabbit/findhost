@@ -50,12 +50,19 @@ test.describe('the one opinionated ordering', () => {
     expect(ranked.length).toBe(alphabetical.length);
     expect(ranked).not.toEqual(alphabetical);
 
-    /* A letter heading over a list that is not in letter order would be a label that lies. */
-    await expect(page.locator('[data-find-results] .letter-group')).toHaveCount(0);
+    /*
+     * The headings change with the order: letters when it is alphabetical, bands
+     * when it is the Signal. A letter over a list that is not in letter order
+     * would be a label that lies, and so would a band over one that is.
+     */
+    await expect(page.locator('[data-find-results] .letter-group h2').first()).not.toHaveText(/^[A-Z0-9–]{1,3}$/);
 
-    /* And the scores it sorted on descend. */
-    const scores = (await page.locator('[data-find-results] .provider-signal').allInnerTexts()).map(Number);
-    expect(scores).toEqual([...scores].sort((a, b) => b - a));
+    /*
+     * Banded, not ranked: scores fall from band to band and are alphabetical
+     * inside one, so the whole column is not sorted and must not be.
+     */
+    const headings = await page.locator('[data-find-results] .letter-group h2').allInnerTexts();
+    expect(headings.length).toBeGreaterThan(1);
 
     await page.locator('.sort-links a[data-sort="alphabetical"]').click();
     await expect(page).not.toHaveURL(/sort=signal/);
@@ -72,7 +79,18 @@ test.describe('the one opinionated ordering', () => {
 
     const scores = (await page.locator('[data-find-results] .provider-signal').allInnerTexts()).map(Number);
     expect(scores.length).toBeGreaterThan(100);
-    expect(scores).toEqual([...scores].sort((a, b) => b - a));
+
+    /*
+     * No first place: the top band holds several providers in alphabetical
+     * order, so the first row is not the highest score on the page.
+     */
+    const top = page.locator('[data-find-results] .letter-group').first();
+    const names = await top.locator('.provider-name a').allInnerTexts();
+    expect(names.length).toBeGreaterThan(1);
+    expect(names).toEqual([...names].sort((a, b) => a.localeCompare(b, 'en')));
+
+    /* And a weight nobody answers is declared rather than quietly scored. */
+    await expect(page.locator('main')).toContainText('asleep');
   });
 
   test('shows a record its own score, broken into what earned it', async ({ page }) => {

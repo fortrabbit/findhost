@@ -1,5 +1,6 @@
 import type { APIRoute } from 'astro';
 import { loadAsides, loadDrafts, loadFacets } from '../lib/facets';
+import { tiers } from '../lib/signal';
 
 /**
  * The "database": every facet definition and every record's facet fields, emitted
@@ -15,7 +16,7 @@ export const GET: APIRoute = async () => {
   const drafts = await loadDrafts();
   const asides = await loadAsides();
 
-  return new Response(JSON.stringify({ facets, providers, drafts, asides }), {
+  return new Response(JSON.stringify({ facets, providers, drafts, asides, tiers }), {
     headers: { 'content-type': 'application/json; charset=utf-8' },
   });
 };

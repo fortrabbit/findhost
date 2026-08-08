@@ -38,3 +38,13 @@ const orders = [
 
   <ListStyleToggle />
 </div>
+
+{
+  /* Said where the order is in force, because a reader arriving on a ranked list deserves to know whose ranking it is. */
+  sort === 'signal' && (
+    <p class="annotation sort-note" data-pagefind-ignore>
+      The FindHost Signal is our opinionated rating engine, trying to give innovative services more visibility.{' '}
+      <a href="/signal/">How it works →</a>
+    </p>
+  )
+}

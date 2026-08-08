@@ -6,7 +6,7 @@ import { energy, footnotes, price } from '../lib/record';
 import { isListed } from '../lib/providers';
 import { loadFacets } from '../lib/facets';
 import { organization } from '../lib/seo';
-import { signalOf } from '../lib/signal';
+import { loadSignal } from '../lib/signal';
 import SocialLinks from '../components/SocialLinks.astro';
 import PageFigure from '../components/PageFigure.astro';
 import FactGroups from '../components/FactGroups.astro';
@@ -92,7 +92,9 @@ interface Cell {
  */
 const { facets: allFacets } = await loadFacets();
 const hasPage = new Set(
-  allFacets.flatMap((facet) => facet.values.filter((value) => value.count > 0).map((value) => `${facet.field}:${value.id}`)),
+  allFacets.flatMap((facet) =>
+    facet.values.filter((value) => value.count > 0).map((value) => `${facet.field}:${value.id}`),
+  ),
 );
 
 const money = (entry: unknown) => {
@@ -169,7 +171,7 @@ const drawn = (groups: { label: string; fields: Field[] }[]) =>
  * here as everywhere else — it is never a field, so no contributor can raise it
  * except by recording a fact that is true.
  */
-const signal = isListed(provider) ? signalOf(data as Record<string, unknown>) : undefined;
+const signal = isListed(provider) ? (await loadSignal()).of(data as Record<string, unknown>) : undefined;
 
 /*
  * The other end of every relation: who names this record as their parent, whose
@@ -243,12 +245,11 @@ const criteria: Record<number, string> = {
 };
 
 const statusNotice: Record<string, string> = {
-  draft:
-    'A stub. Started and not finished, so it is not in the register and not counted — what is here is what has been confirmed, and nothing has been left out on purpose.',
+  draft: 'This is a stub, missing details. It is not in the register and not counted.',
   acquired: 'Acquired, still operating.',
   renamed: 'Renamed. Same service under a new name.',
   'winding-down': 'Winding down: an end of life has been announced.',
-  discontinued: 'Discontinued. The facts below are the last ones known to be true.',
+  discontinued: 'Discontinued. This hosting providers does not operate any more.',
   unverifiable: 'Basic facts can no longer be confirmed from public sources.',
   'delisted-on-request': 'The provider asked to be removed. The record stays; entries are never deleted.',
 };
@@ -290,9 +291,7 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
       name: data.name,
       ...(data.urls?.home ? { url: data.urls.home } : {}),
       ...(data.founded ? { foundingDate: String(data.founded) } : {}),
-      ...(data.hqCountry
-        ? { address: { '@type': 'PostalAddress', addressCountry: String(data.hqCountry) } }
-        : {}),
+      ...(data.hqCountry ? { address: { '@type': 'PostalAddress', addressCountry: String(data.hqCountry) } } : {}),
       ...(social.length ? { sameAs: social } : {}),
     },
   }}
@@ -319,24 +318,30 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
       )
     }
 
-    {data.description && (
-      <p class="lead" data-pagefind-meta="summary">
-        {data.description}
-      </p>
-    )}
+    {
+      data.description && (
+        <p class="lead" data-pagefind-meta="summary">
+          {data.description}
+        </p>
+      )
+    }
 
     <p class="record-links">
       {/* Absent only where the provider has stopped and the domain went with it. */}
-      {data.urls?.home && (
-        <span class="record-link">
-          <a class="record-home" href={data.urls.home} rel="nofollow">{data.urls.home.replace('https://', '')}</a>
-          {noteFor('urls') && (
-            <a class="footnote-ref" href={`#source-${noteFor('urls')}`} aria-label={`Source ${noteFor('urls')}`}>
-              {noteFor('urls')}
+      {
+        data.urls?.home && (
+          <span class="record-link">
+            <a class="record-home" href={data.urls.home} rel="nofollow">
+              {data.urls.home.replace('https://', '')}
             </a>
-          )}
-        </span>
-      )}
+            {noteFor('urls') && (
+              <a class="footnote-ref" href={`#source-${noteFor('urls')}`} aria-label={`Source ${noteFor('urls')}`}>
+                {noteFor('urls')}
+              </a>
+            )}
+          </span>
+        )
+      }
       {
         outgoing.map((link) => (
           <span class="record-link">
@@ -387,9 +392,20 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
         {backlinks.length > 0 && <FactGroups groups={[{ label: 'Related', rows: backlinks }]} />}
 
         {
+          missing.length > 0 && (
+            <details class="missing-fields">
+              <summary>
+                {missing.length} of {total} fields not recorded yet
+              </summary>
+              <p class="missing-list">{missing.map((field) => field.label).join(', ')}</p>
+            </details>
+          )
+        }
+
+        {
           /* Ours rather than the provider's, which is why it names itself and links to its own arithmetic. */
           signal && (
-            <div class="fact-groups">
+            <div class="fact-groups signal-group">
               <section class="fact-group">
                 <h2>
                   <a href="/signal/">FindHost Signal</a>
@@ -408,17 +424,6 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
                 </dl>
               </section>
             </div>
-          )
-        }
-
-        {
-          missing.length > 0 && (
-            <details class="missing-fields">
-              <summary>
-                {missing.length} of {total} fields not recorded yet
-              </summary>
-              <p class="missing-list">{missing.map((field) => field.label).join(', ')}</p>
-            </details>
           )
         }
       </aside>

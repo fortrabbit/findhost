@@ -183,10 +183,21 @@ if (styleEl && resultsEl) {
 
 if (filtersEl && resultsEl && summaryEl) {
   const response = await fetch('/providers.json');
-  const { facets, providers } = (await response.json()) as {
+  const { facets, providers, tiers } = (await response.json()) as {
     facets: Facet[];
     providers: ProviderRow[];
+    tiers: { id: string; floor: number; label: string }[];
   };
+
+  /*
+   * Same rule as the server's: the first band whose floor the score clears.
+   *
+   * The `?? -Infinity` is load-bearing. The last band's floor is -Infinity, and
+   * JSON has no way to write that — JSON.stringify turns it into null, `total >=
+   * null` reads as `total >= 0`, and every provider with a negative score fell
+   * out of the list without an error. Ten of them, silently.
+   */
+  const bandOf = (total: number) => tiers.find((tier) => total >= (tier.floor ?? -Infinity))?.id;
 
   const selected = new Map<string, Set<string>>();
 
@@ -325,12 +336,27 @@ if (filtersEl && resultsEl && summaryEl) {
      * also what makes position mean something on it.
      */
     if (sort === 'signal') {
-      const list = document.createElement('ul');
-      list.className = 'provider-list';
-      for (const provider of [...found].sort((a, b) => b.signal - a.signal || a.name.localeCompare(b.name, 'en'))) {
-        list.append(row(provider));
+      /* The bands and their labels come from lib/signal.ts, through providers.json. */
+      for (const tier of tiers) {
+        const rows = found
+          .filter((provider) => bandOf(provider.signal) === tier.id)
+          .sort((a, b) => a.name.localeCompare(b.name, 'en'));
+        if (!rows.length) continue;
+
+        const section = document.createElement('section');
+        section.className = 'letter-group';
+
+        const heading = document.createElement('h2');
+        heading.textContent = tier.label;
+        section.append(heading);
+
+        const list = document.createElement('ul');
+        list.className = 'provider-list';
+        for (const provider of rows) list.append(row(provider));
+        section.append(list);
+        resultsEl.append(section);
       }
-      resultsEl.append(list);
+
       updateSummary(found);
       return;
     }

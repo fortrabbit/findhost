@@ -1,7 +1,7 @@
 import { facetFields, isDerived, slugOf, type Field } from './fields';
 import { asideGroup, isListed, loadAsideProviders, loadProviders } from './providers';
 import { asideOf } from './fields';
-import { signalOf } from './signal';
+import { loadSignal, type SignalTable } from './signal';
 import { getCollection } from 'astro:content';
 
 export interface FacetValue {
@@ -63,7 +63,7 @@ export interface ProviderRow {
 /** Alphabetical, always — see the sort rule in CLAUDE.md. */
 const byName = (a: { name: string }, b: { name: string }) => a.name.localeCompare(b.name, 'en');
 
-function toRow(record: { id: string; data: Record<string, unknown> }): ProviderRow {
+function toRow(record: { id: string; data: Record<string, unknown> }, signal: SignalTable): ProviderRow {
   const data = record.data;
   const facets: Record<string, string | string[]> = {};
   const notApplicable: string[] = [];
@@ -113,7 +113,7 @@ function toRow(record: { id: string; data: Record<string, unknown> }): ProviderR
     figure: data.figure as ProviderRow['figure'],
     facets,
     notApplicable,
-    signal: signalOf(data).total,
+    signal: signal.of(data).total,
   };
 }
 
@@ -125,10 +125,11 @@ function toRow(record: { id: string; data: Record<string, unknown> }): ProviderR
  */
 export async function loadDrafts(): Promise<ProviderRow[]> {
   const records = (await getCollection('providers')).filter((record) => !isListed(record));
+  const signal = await loadSignal();
 
   return records
     .map((record) => ({
-      ...toRow(record as never),
+      ...toRow(record as never, signal),
       status: String(record.data.status),
     }))
     .sort(byName);
@@ -151,10 +152,11 @@ export async function loadAsides(): Promise<Aside[]> {
   const groups = new Map<string, Aside>();
   for (const { key, label } of asideOf.values()) groups.set(key, { key, label, rows: [] });
 
+  const signal = await loadSignal();
   for (const record of await loadAsideProviders()) {
     groups
       .get(asideGroup(record)!)!
-      .rows.push({ ...toRow(record as never), status: String(record.data.status) });
+      .rows.push({ ...toRow(record as never, signal), status: String(record.data.status) });
   }
 
   return [...groups.values()].map((group) => ({ ...group, rows: group.rows.sort(byName) }));
@@ -211,7 +213,8 @@ function countValues(field: Field, providers: ProviderRow[]): Facet {
 
 export async function loadFacets(): Promise<{ facets: Facet[]; providers: ProviderRow[] }> {
   const records = await loadProviders();
-  const providers = records.map((record) => toRow(record as never)).sort(byName);
+  const signal = await loadSignal();
+  const providers = records.map((record) => toRow(record as never, signal)).sort(byName);
 
   // Dictionary order is the record page's; the panel offers the most-asked
   // first, which is what `filterOrder` in fields.yml sorts these by.

@@ -24,6 +24,11 @@ checkedAt: 2026-08-07
 sources:
   - { field: status, url: 'https://www.theregister.com/off-prem/2016/01/22/dotcloud_dotgone_ex_docker_paas_passes_away_amid_bankruptcy/', checkedAt: 2026-08-07 }
   - { field: description, url: 'https://venturebeat.com/business/dotcloud-the-cloud-service-that-gave-birth-to-docker-is-shutting-down-on-february-29', checkedAt: 2026-08-07 }
+figure:
+  emoji: 🐳
+  color: rgb(13, 105, 141)
+  textColor: rgb(224, 242, 250)
+  text: The hosting sank. The whale swam on.
 ai: authored
 ---
 
@@ -31,4 +36,4 @@ dotCloud was a polyglot platform-as-a-service, launched in 2010 and best remembe
 
 Docker sold dotCloud to Berlin's [cloudControl](/cloudcontrol/) in August 2014. When cloudControl went insolvent eighteen months later, dotCloud went with it — the shutdown notice named the parent's insolvency as the reason and gave customers until 29 February 2016.
 
-The sequence is the part worth keeping. A platform can be sound, widely used and the origin of an industry standard, and still stop because of a balance sheet two owners away from the people running it.
+The sequence had a precedent, and it is in this register: [Loudcloud](/loudcloud/) built Opsware to operate its customers' servers, sold the hosting to EDS in 2002, renamed itself after the tool and went to HP for $1.6 billion. dotCloud built Docker to run its customers' applications, sold the hosting to cloudControl in 2014 and renamed itself after the tool. Both times the software a hosting company wrote to do its own job turned out to be the valuable part, and both times the hosting is what ended.

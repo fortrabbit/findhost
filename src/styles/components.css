@@ -1376,22 +1376,23 @@ html.js [data-find-fallback] {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: var(--space-sm);
-  padding-bottom: var(--space-2xs);
+  gap: var(--space-md);
+  /*padding-bottom: var(--space-2xs);*/
   border-bottom: var(--rule-strong) solid var(--color-ink);
 }
 
 /* Tabs, not prose: the two orders are a choice between states of one list. */
 .sort-links {
   display: flex;
-  gap: var(--space-3xs);
+  gap: var(--space-xs);
   margin: 0 auto 0 0;
 }
 
 .sort-links a {
-  padding: var(--space-3xs) var(--space-2xs);
+  padding: var(--space-2xs) var(--space-sm);
   border: var(--rule-hairline) solid transparent;
-  border-radius: var(--radius);
+  border-bottom: 0;
+  border-radius: var(--radius) var(--radius) 0 0;
   color: var(--color-ink);
   font-size: var(--text-sm);
   text-decoration: none;
@@ -1453,3 +1454,13 @@ html.js [data-find-fallback] {
   text-decoration: underline;
 }
 
+/*
+ * Our opinion of a record, at the foot of the facts about it. Set apart with
+ * space and a rule above rather than a box: it is a different kind of statement
+ * from the rows over it, and boxing it made it look like a warning.
+ */
+.signal-group {
+  margin-top: var(--space-lg);
+  padding-top: var(--space-sm);
+  border-top: var(--rule-hairline) solid var(--color-rule);
+}
