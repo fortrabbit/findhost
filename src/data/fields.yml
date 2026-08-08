@@ -484,6 +484,9 @@
     - { id: KES, label: KES }
     - { id: VND, label: VND }
     - { id: KRW, label: KRW }
+    - { id: IDR, label: IDR }
+    - { id: TRY, label: TRY }
+    - { id: NGN, label: NGN }
 
 - id: billingPeriods
   label: Billed
