@@ -18,13 +18,18 @@ priceTo: md
 billingPeriods:
   - monthly
   - yearly
+billingTiming: advance
 freeTier: permanent
+supportChannels:
+  - email
+  - chat
+  - phone
 social:
   x: https://twitter.com/weebly
   facebook: https://www.facebook.com/weebly
   linkedin: https://www.linkedin.com/company/weebly
   youtube: https://www.youtube.com/user/weebly
-checkedAt: 2026-08-01
+checkedAt: 2026-08-08
 sources:
   - { field: freeTier, url: 'https://www.weebly.com/pricing', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://www.weebly.com/pricing', checkedAt: 2026-08-02 }
@@ -32,6 +37,8 @@ sources:
   - { field: billingPeriods, url: 'https://www.weebly.com/pricing', checkedAt: 2026-08-02 }
   - { field: pricingModel, url: 'https://www.weebly.com/pricing', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://www.weebly.com/terms-of-service', checkedAt: 2026-08-01 }
+  - { field: billingTiming, url: 'https://www.weebly.com', checkedAt: 2026-08-08 }
+  - { field: supportChannels, url: 'https://www.weebly.com', checkedAt: 2026-08-08 }
 figure:
   emoji: 🧰
   color: rgb(157, 125, 77)

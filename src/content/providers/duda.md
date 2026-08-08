@@ -28,8 +28,12 @@ billingTiming: advance
 exitWithin: a-month
 entryPrice: { amount: 25, currency: USD, period: month }
 freeTier: trial
+supportChannels:
+  - chat
+  - email
+  - phone
 status: active
-checkedAt: 2026-08-01
+checkedAt: 2026-08-08
 sources:
   - { field: entryPrice, url: 'https://www.duda.co/pricing', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://www.duda.co/pricing', checkedAt: 2026-08-01 }
@@ -41,6 +45,7 @@ sources:
   - { field: pricingModel, url: 'https://www.duda.co/pricing', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://www.duda.co/pricing', checkedAt: 2026-08-01 }
   - { field: audience, url: 'https://www.duda.co/pricing', checkedAt: 2026-08-01 }
+  - { field: supportChannels, url: 'https://www.duda.co/', checkedAt: 2026-08-08 }
 figure:
   emoji: 🧑‍💼
   color: rgb(77, 117, 157)

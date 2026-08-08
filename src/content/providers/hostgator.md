@@ -20,9 +20,13 @@ billingPeriods:
   - multi-year
 billingTiming: advance
 exitWithin: a-year
+supportChannels:
+  - phone
+  - chat
+  - email
 supportHours: 24-7
 status: active
-checkedAt: 2026-08-01
+checkedAt: 2026-08-08
 sources:
   - { field: founded, url: 'https://www.hostgator.com/about', checkedAt: 2026-08-01 }
   - { field: hqCountry, url: 'https://www.hostgator.com/about', checkedAt: 2026-08-01 }
@@ -33,6 +37,7 @@ sources:
   - { field: billingPeriods, url: 'https://www.hostgator.com/web-hosting', checkedAt: 2026-08-02 }
   - { field: billingTiming, url: 'https://www.hostgator.com/tos', checkedAt: 2026-08-02 }
   - { field: exitWithin, url: 'https://www.hostgator.com/tos', checkedAt: 2026-08-02 }
+  - { field: supportChannels, url: 'https://www.hostgator.com/about', checkedAt: 2026-08-08 }
 figure:
   emoji: 🐊
   color: rgb(157, 124, 77)

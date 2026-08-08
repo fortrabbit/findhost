@@ -483,6 +483,7 @@
     - { id: MXN, label: MXN }
     - { id: KES, label: KES }
     - { id: VND, label: VND }
+    - { id: KRW, label: KRW }
 
 - id: billingPeriods
   label: Billed

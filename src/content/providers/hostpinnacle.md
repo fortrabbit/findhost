@@ -21,13 +21,19 @@ sshAccess: root
 deployMethods:
   - file-transfer
   - control-panel
+supportChannels:
+  - phone
+  - email
+supportHours: 24-7
 status: active
-checkedAt: 2026-08-04
+checkedAt: 2026-08-08
 sources:
   - { field: hqCountry, url: 'https://www.hostpinnacle.co.ke', checkedAt: 2026-08-04 }
   - { field: whoManagesOs, url: 'https://www.hostpinnacle.co.ke', checkedAt: 2026-08-04 }
   - { field: sshAccess, url: 'https://www.hostpinnacle.co.ke/vps-hosting/', checkedAt: 2026-08-04 }
   - { field: software, url: 'https://www.hostpinnacle.co.ke', checkedAt: 2026-08-04 }
+  - { field: supportChannels, url: 'https://www.hostpinnacle.co.ke', checkedAt: 2026-08-08 }
+  - { field: supportHours, url: 'https://www.hostpinnacle.co.ke', checkedAt: 2026-08-08 }
 figure:
   emoji: 🇰🇪
   color: rgb(59, 176, 117)

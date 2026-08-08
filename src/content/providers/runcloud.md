@@ -6,6 +6,7 @@ urls:
   pricing: https://runcloud.io/pricing
 category:
   - server-management
+hqCountry: MY
 regions: null
 description: RunCloud is a server management control panel for PHP and WordPress stacks, installed as an agent on a VPS the customer brings.
 whoManagesOs: self-managed
@@ -27,7 +28,7 @@ runsOn:
   - linode
   - vultr
 status: active
-checkedAt: 2026-08-01
+checkedAt: 2026-08-08
 sources:
   - { field: audience, url: 'https://runcloud.io/pricing', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://runcloud.io/', checkedAt: 2026-08-01 }
@@ -36,6 +37,7 @@ sources:
   - { field: billingPeriods, url: 'https://runcloud.io/docs/updating-your-subscription', checkedAt: 2026-08-02 }
   - { field: billingTiming, url: 'https://runcloud.io/docs/updating-your-subscription', checkedAt: 2026-08-02 }
   - { field: exitWithin, url: 'https://runcloud.io/docs/cancel-runcloud-subscription', checkedAt: 2026-08-02 }
+  - { field: hqCountry, url: 'https://runcloud.io/blog', checkedAt: 2026-08-08 }
 figure:
   emoji: 🔁
   color: rgb(45, 175, 190)

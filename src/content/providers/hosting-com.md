@@ -11,6 +11,7 @@ founded: 2003
 hqCountry: US
 ownership: subsidiary
 parent: world-host-group
+headcount: 250-plus
 useCases:
   - cms
 software:
@@ -31,7 +32,7 @@ managedDatabases:
   - mysql
   - postgres
 status: active
-checkedAt: 2026-08-01
+checkedAt: 2026-08-08
 sources:
   - { field: supportHours, url: 'https://www.hosting.com/web-hosting/', checkedAt: 2026-08-01 }
   - { field: supportChannels, url: 'https://www.hosting.com/web-hosting/', checkedAt: 2026-08-01 }
@@ -45,6 +46,7 @@ sources:
   - { field: software, url: 'https://www.hosting.com/', checkedAt: 2026-07-31 }
   - { field: useCases, url: 'https://www.hosting.com/', checkedAt: 2026-07-31 }
   - { field: billingPeriods, url: 'https://www.hosting.com/web-hosting/', checkedAt: 2026-08-02 }
+  - { field: headcount, url: 'https://www.hosting.com/about/', checkedAt: 2026-08-08 }
 figure:
   emoji: 🐌
   color: rgb(168, 67, 67)

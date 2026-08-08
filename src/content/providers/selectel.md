@@ -17,12 +17,20 @@ sshAccess: root
 persistentStorage: true
 iacSupport:
   - terraform
+founded: 2008
+supportChannels:
+  - email
+  - phone
+supportHours: 24-7
 status: active
-checkedAt: 2026-08-04
+checkedAt: 2026-08-08
 sources:
   - { field: hqCountry, url: 'https://selectel.ru/en/', checkedAt: 2026-08-04 }
   - { field: infraContract, url: 'https://selectel.ru/en/', checkedAt: 2026-08-04 }
   - { field: iacSupport, url: 'https://github.com/selectel/terraform-provider-selectel', checkedAt: 2026-08-04 }
+  - { field: founded, url: 'https://selectel.ru/en/', checkedAt: 2026-08-08 }
+  - { field: supportChannels, url: 'https://selectel.ru/en/', checkedAt: 2026-08-08 }
+  - { field: supportHours, url: 'https://selectel.ru/en/', checkedAt: 2026-08-08 }
 figure:
   emoji: 🇷🇺
   color: rgb(77, 100, 157)
