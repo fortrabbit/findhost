@@ -3,8 +3,37 @@ id: truehost
 name: Truehost
 urls:
   home: https://truehost.co.ke
-status: draft
+category:
+  - shared-hosting
+  - vps
+description: Kenyan-owned host and KENIC-accredited .ke registrar, selling cPanel hosting in shillings with M-Pesa at checkout.
+hqCountry: KE
+ownership: independent
+whoManagesOs: managed
+software:
+  - wordpress
+runtimes:
+  - php
+  - python
+  - node
+deployMethods:
+  - control-panel
+regions:
+  - KE
+currencies:
+  - KES
+pricingModel: fixed-tier
+useCases:
+  - cms
+audience:
+  - smb
+  - solo
+status: active
 checkedAt: 2026-07-31
+sources:
+  - { field: runtimes, url: 'https://truehost.co.ke', checkedAt: 2026-07-31 }
+  - { field: currencies, url: 'https://truehost.co.ke', checkedAt: 2026-07-31 }
+  - { field: software, url: 'https://truehost.co.ke', checkedAt: 2026-07-31 }
 ai: authored
 ---
 

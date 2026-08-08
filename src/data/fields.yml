@@ -480,6 +480,9 @@
     - { id: BRL, label: BRL }
     - { id: ARS, label: ARS }
     - { id: ZAR, label: ZAR }
+    - { id: MXN, label: MXN }
+    - { id: KES, label: KES }
+    - { id: VND, label: VND }
 
 - id: billingPeriods
   label: Billed

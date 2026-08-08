@@ -3,8 +3,33 @@ id: neubox
 name: Neubox
 urls:
   home: https://www.neubox.com
-status: draft
+category:
+  - shared-hosting
+description: Mexican registrar and host since 2004, one of the larger .MX registrars, selling cPanel hosting in pesos with OXXO Pay at checkout.
+founded: 2004
+hqCountry: MX
+ownership: independent
+whoManagesOs: managed
+runtimes:
+  - php
+deployMethods:
+  - control-panel
+regions:
+  - US
+currencies:
+  - MXN
+pricingModel: fixed-tier
+useCases:
+  - cms
+audience:
+  - smb
+  - solo
+status: active
 checkedAt: 2026-07-31
+sources:
+  - { field: founded, url: 'https://www.neubox.com', checkedAt: 2026-07-31 }
+  - { field: currencies, url: 'https://www.neubox.com', checkedAt: 2026-07-31 }
+  - { field: regions, url: 'https://www.neubox.com', checkedAt: 2026-07-31 }
 ai: authored
 ---
 

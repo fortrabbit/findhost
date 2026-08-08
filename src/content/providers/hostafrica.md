@@ -3,8 +3,33 @@ id: hostafrica
 name: HOSTAFRICA
 urls:
   home: https://hostafrica.com
-status: draft
+category:
+  - shared-hosting
+  - vps
+description: Pan-African host with storefronts in five countries, running cPanel and DirectAdmin hosting out of South African facilities.
+hqCountry: ZA
+whoManagesOs: managed
+runtimes:
+  - php
+deployMethods:
+  - control-panel
+sshAccess: jailed
+regions:
+  - ZA
+currencies:
+  - USD
+pricingModel: fixed-tier
+useCases:
+  - cms
+audience:
+  - smb
+  - solo
+status: active
 checkedAt: 2026-07-31
+sources:
+  - { field: category, url: 'https://hostafrica.com', checkedAt: 2026-07-31 }
+  - { field: regions, url: 'https://hostafrica.com', checkedAt: 2026-07-31 }
+  - { field: currencies, url: 'https://hostafrica.com', checkedAt: 2026-07-31 }
 ai: authored
 ---
 

@@ -3,9 +3,47 @@ id: blacknight
 name: Blacknight
 urls:
   home: https://www.blacknight.com
-status: draft
-checkedAt: 2026-07-31
+  pricing: https://www.blacknight.com/hosting/
+category:
+  - shared-hosting
+  - vps
+  - bare-metal
+  - vanity-hosting
+description: Irish host and ICANN-accredited registrar in Carlow, running its own data centres and selling everything from shared hosting to dedicated servers.
+hqCountry: IE
+ownership: independent
+whoManagesOs: managed
+infraContract:
+  - owns-metal
+software:
+  - wordpress
+runtimes:
+  - php
+regions:
+  - IE
+entryPrice: { amount: 4.99, currency: EUR, period: month }
+priceFrom: sm
+priceTo: lg
+currencies:
+  - EUR
+billingPeriods:
+  - monthly
+pricingModel: fixed-tier
+useCases:
+  - cms
+audience:
+  - smb
+  - solo
+status: active
+checkedAt: 2026-08-08
+sources:
+  - { field: category, url: 'https://www.blacknight.com/hosting/', checkedAt: 2026-08-08 }
+  - { field: entryPrice, url: 'https://www.blacknight.com/hosting/', checkedAt: 2026-08-08 }
+  - { field: priceTo, url: 'https://www.blacknight.com/hosting/', checkedAt: 2026-08-08 }
+  - { field: software, url: 'https://www.blacknight.com/hosting/', checkedAt: 2026-08-08 }
 ai: authored
 ---
 
-Blacknight is a Carlow-based Irish host and ICANN-accredited registrar running its own data centres in Carlow and Dublin, with Plesk-based PHP hosting from €5.99 a month. Criteria 1 to 5 pass cleanly.
+Blacknight is a Carlow-based Irish host and ICANN-accredited registrar running its own data centres in Carlow and Dublin, with Plesk-based PHP hosting from €4.99 a month.
+
+Owning the hardware is the unusual part at this size. The ladder runs from shared hosting through managed WordPress and cloud VPS to dedicated servers at €149.99, all quoted excluding VAT, and all of it in Ireland — which makes it one of the few places to buy hosting that is Irish in the operational sense rather than in the billing address.

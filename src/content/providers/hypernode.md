@@ -3,8 +3,38 @@ id: hypernode
 name: Hypernode
 urls:
   home: https://www.hypernode.com
-status: draft
+category:
+  - paas
+description: Dutch platform built for Magento and Shopware, descended from Byte's engineering and now part of team.blue.
+hqCountry: NL
+ownership: subsidiary
+parent: team-blue
+whoManagesOs: managed
+software:
+  - magento
+  - shopware
+runtimes:
+  - php
+deployMethods:
+  - git
+sshAccess: jailed
+regions:
+  - NL
+currencies:
+  - EUR
+useCases:
+  - e-commerce
+audience:
+  - agency
+apiAvailable: public
+cliTool: official
+status: active
 checkedAt: 2026-07-31
+sources:
+  - { field: software, url: 'https://www.hypernode.com', checkedAt: 2026-07-31 }
+  - { field: apiAvailable, url: 'https://www.hypernode.com', checkedAt: 2026-07-31 }
+  - { field: cliTool, url: 'https://www.hypernode.com', checkedAt: 2026-07-31 }
+  - { field: parent, url: 'https://www.hypernode.com', checkedAt: 2026-07-31 }
 ai: authored
 ---
 
