@@ -24,6 +24,7 @@ description: Managed hosting platform for developers since 2012, runs on AWS cap
 founded: 2012
 hqCountry: DE
 ownership: independent
+headcount: '2-10'
 whoManagesOs: managed
 infraContract:
   - resells-iaas
@@ -84,6 +85,7 @@ mcpServer: official
 status: active
 checkedAt: 2026-08-01
 sources:
+  - { field: headcount, url: 'https://www.fortrabbit.com/us/team', checkedAt: 2026-08-08 }
   - { field: software, url: 'https://www.fortrabbit.com/', checkedAt: 2026-08-05 }
   - { field: audience, url: 'https://www.fortrabbit.com/php-cloud-hosting', checkedAt: 2026-08-06 }
   - { field: useCases, url: 'https://www.fortrabbit.com/php-cloud-hosting', checkedAt: 2026-08-06 }

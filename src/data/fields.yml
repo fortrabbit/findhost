@@ -37,6 +37,27 @@
   label: Founded
   group: Identity
 
+# How many people are behind it, in bands, from what the company says about
+# itself — an about page, an imprint, a team page. Bands rather than a number
+# because the number is never current and a range is what anybody actually wants
+# to know: three people or three thousand.
+#
+# Recorded, never scored. It is context for the other fields rather than a merit
+# of its own: a big provider is not thereby a good one and a small one is not
+# thereby honest, and the FindHost Signal deliberately ignores this field.
+- id: headcount
+  label: Headcount
+  group: Identity
+  facet: headcount
+  filterOrder: 19
+  ordered: true
+  values:
+    - { id: solo, label: One person, short: Solo }
+    - { id: '2-10', label: 2 to 10 }
+    - { id: '11-50', label: 11 to 50 }
+    - { id: '51-250', label: 51 to 250 }
+    - { id: '250-plus', label: More than 250, short: '250+' }
+
 - id: ownership
   label: Ownership
   group: Identity
@@ -536,10 +557,16 @@
     - { id: free-tier, label: Free tier, from: freeTier, when: [permanent] }
     - { id: free-trial, label: Free trial, from: freeTier, when: [trial] }
     - { id: in-arrears, label: Paid in arrears, short: In arrears, from: billingTiming, when: [arrears] }
-    - { id: upfront, label: Paid before the month, short: Upfront, from: billingTiming, when: [advance] }
+    - { id: upfront, label: Paid before the period, short: Upfront, from: billingTiming, when: [advance] }
     - { id: usage-based, label: Metered usage, short: Metered, from: pricingModel, when: [usage-based] }
-    - { id: prepaid, label: Drawn from a credit balance, short: Prepaid, from: pricingModel, when: [credit] }
-    - { id: no-minimum, label: 'No minimum term, leave any time', short: No minimum, from: contractMinimum, when: [none] }
+    # Not the opposite of `upfront`, which is why both can be true at once: that
+    # one answers when the money leaves, this one answers how it is held. A
+    # balance topped up in advance and drawn down is a different commitment from
+    # an invoice every month, and the providers that work this way take no card.
+    - { id: prepaid, label: Paid from a credit balance, short: Prepaid, from: pricingModel, when: [credit] }
+    # The term, not the notice. How long the door takes to close is `exit`, and a
+    # provider can hold nobody to a term while still wanting thirty days.
+    - { id: no-minimum, label: No minimum term, short: No minimum, from: contractMinimum, when: [none] }
 
 # -------------------------------------------------------- Regions and law
 

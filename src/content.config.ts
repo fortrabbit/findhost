@@ -81,6 +81,7 @@ const providerFields = z
     founded: z.number().int().optional(),
     hqCountry: z.enum(vocabulary('hqCountry')).optional(),
     ownership: z.enum(vocabulary('ownership')).optional(),
+    headcount: z.enum(vocabulary('headcount')).optional(),
     parent: z.string().optional(),
 
     // Classification
