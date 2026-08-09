@@ -1447,9 +1447,11 @@ html.js [data-find-fallback] {
 }
 
 
-.list-controls .list-style {
-  margin-bottom: 0;
-}
+/*
+ * The toggle keeps its own margin. Zeroing it was for a bar that also held the
+ * order links and needed them on one baseline; with the buttons alone it left
+ * them sitting on the rule.
+ */
 
 
 
