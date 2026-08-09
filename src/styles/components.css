@@ -308,10 +308,10 @@ html:not(.js) .theme-switch {
   align-items: center;
   max-width: none;
   margin-block: 0 var(--space-lg);
-  padding-block: var(--space-sm);
+  padding-block: var(--space-lg);
   background: var(--color-liked);
   color: var(--color-heart);
-  font-size: var(--text-md);
+  font-size: var(--text-sm);
   line-height: var(--leading-tight);
   text-wrap: balance;
 }
