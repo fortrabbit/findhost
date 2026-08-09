@@ -262,7 +262,6 @@ html:not(.js) .theme-switch {
   justify-content: center;
   width: 1.5em;
   height: 1.5em;
-  border: var(--rule-hairline) solid currentcolor;
   border-radius: var(--radius);
   color: var(--color-link);
 }
@@ -283,7 +282,6 @@ html:not(.js) .theme-switch {
   place-items: center;
   width: 1.5em;
   height: 1.5em;
-  border: var(--rule-hairline) solid currentcolor;
   border-radius: var(--radius);
   font-size: var(--text-xs);
   line-height: 1;
