@@ -355,6 +355,23 @@
   facet: deployment
   filterOrder: 7
   multiple: true
+  #
+  # One question, asked four ways: what does the customer hand over, and what
+  # does the platform do with it? A commit that gets built, an image that gets
+  # run, a form that gets submitted, files that get copied.
+  #
+  # The test matters most for the container value, because a container is two
+  # different things in this market and only one of them is a deployment. Where
+  # the image is the deliverable — pushed to a registry, run as it arrives, the
+  # platform never sees the source — that is a handover and it belongs here.
+  # Where the container is the environment the platform gives you, and code
+  # still arrives by git or SSH, it is not: that is what `caas` says as a
+  # category and what `whoManagesOs` says about who patches it.
+  #
+  # A Dockerfile in a git repository that the platform builds is `git`, not this.
+  # Both together is common and not a contradiction: Clever Cloud, Render, Koyeb
+  # and others accept a commit to build or an image to run, and a reader
+  # choosing between the two wants to know that both doors are open.
   values:
     - { id: git, label: Git }
     - { id: docker-image, label: Container image, short: Container }
