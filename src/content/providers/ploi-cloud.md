@@ -43,7 +43,7 @@ regions:
   - GB
   - US
 signalAdjustment:
-  points: 5
+  points: 10
   by: fl
   on: 2026-08-09
   why: A small Dutch team shipping a platform on top of the server tool they already maintain. Independence at this size is a choice the arithmetic reads as an absence.

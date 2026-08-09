@@ -114,9 +114,14 @@ test.describe('the one opinionated ordering', () => {
 
   test('shows a record its own score, broken into what earned it', async ({ page }) => {
     await page.goto('/fortrabbit/');
-    const group = page.locator('.fact-group', { hasText: 'Signal' });
-    await expect(group.locator('dt').first()).toHaveText('Total');
-    await expect(group.locator('dd').first()).toHaveText(/^\d+$/);
+
+    /* The total reads as one figure, with the parts that made it under it. */
+    const group = page.locator('.signal-group');
+    await expect(group.locator('.signal-total')).toHaveText(/^-?\d+$/);
+    expect(await group.locator('.signal-parts > dt').count()).toBeGreaterThan(3);
+
+    /* And a link that says where it goes, rather than a heading that happens to be one. */
+    await expect(group.locator('.signal-onward a')).toHaveText(/how the signal/i);
   });
 
   test('publishes every weight it ran on', async ({ page }) => {

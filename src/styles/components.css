@@ -1167,7 +1167,7 @@ html.js [data-find-fallback] {
 .fact-groups {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
-  gap: var(--space-md) var(--space-xl);
+  gap: var(--space-xl) var(--space-xl);
   align-items: start;
   max-width: none;
 }
@@ -1209,9 +1209,15 @@ html.js [data-find-fallback] {
   font-size: var(--text-md);
 }
 
+/*
+ * Label left, value hard right. The value column was fixed at 7.5rem, which left
+ * a ragged channel down the middle of every group and made a pair read as two
+ * things rather than as one fact. Against the right edge the values line up with
+ * each other and the eye can run down them.
+ */
 .fact-list {
   display: grid;
-  grid-template-columns: 7.5rem 1fr;
+  grid-template-columns: auto minmax(0, 1fr);
   gap: 0 var(--space-sm);
   align-items: baseline;
   max-width: none;
@@ -1231,6 +1237,9 @@ html.js [data-find-fallback] {
   font-size: var(--text-xs);
   font-variant-numeric: tabular-nums;
   line-height: var(--leading-data);
+  text-align: right;
+  /* A list of nine runtimes stays a list rather than becoming a paragraph. */
+  text-wrap: pretty;
 }
 
 /**
@@ -1508,9 +1517,29 @@ html.js [data-find-fallback] {
  * from the rows over it, and boxing it made it look like a warning.
  */
 .signal-group {
-  margin-top: var(--space-lg);
+  margin-top: var(--space-xl);
   padding-top: var(--space-sm);
   border-top: var(--rule-hairline) solid var(--color-rule);
+}
+
+/** The number, at the size of a number that means something. */
+.signal-total {
+  margin: 0 0 var(--space-2xs);
+  font-family: var(--font-data);
+  font-size: var(--text-xl);
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+/* The workings, quieter than the total they add up to. */
+.signal-parts > dt,
+.signal-parts > dd {
+  opacity: 0.75;
+}
+
+.signal-onward {
+  margin: var(--space-2xs) 0 0;
+  font-size: var(--text-xs);
 }
 
 /** Above the list it describes, not floating between the controls and the rows. */

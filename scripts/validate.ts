@@ -430,9 +430,23 @@ for (const { file, data } of records) {
    * the dev server renders the record without it — so the page shows a total
    * that does not add up and nothing says why.
    */
-  const adjustment = data.signalAdjustment as { points?: number } | undefined;
+  /*
+   * Two `signalAdjustment` keys parse as one — YAML keeps the last and drops the
+   * first without complaint, which is how a deliberate +8 disappeared under a
+   * later +10. The frontmatter is read as text here so the duplicate is visible
+   * at all; by the time it reaches a parser it is already gone.
+   */
+  const frontmatterText = readFileSync(join(providersDir, file), 'utf8').match(/^---\r?\n([\s\S]*?)\r?\n---/)?.[1] ?? '';
+  const declared = (frontmatterText.match(/^signalAdjustment:/gm) ?? []).length;
+  if (declared > 1) fail(file, `signalAdjustment is declared ${declared} times — YAML keeps the last and drops the rest`);
+
+  const adjustment = data.signalAdjustment as { points?: number; why?: string } | undefined;
   if (adjustment?.points !== undefined && Math.abs(adjustment.points) > 20) {
     fail(file, `signalAdjustment points ${adjustment.points} is outside ±20 — the record will not build`);
+  }
+
+  if (adjustment?.why !== undefined && adjustment.why.length < 12) {
+    fail(file, `signalAdjustment why is ${adjustment.why.length} characters — twelve is the minimum, and the record will not build`);
   }
 
   for (const field of relationFields) {

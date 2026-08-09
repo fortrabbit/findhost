@@ -309,26 +309,6 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
       }
     </div>
     {
-      /*
-       * Said on our own record, in the loudest thing the page has. It used to be
-       * a quiet marker in every list, which put a claim about us next to a
-       * hundred and seventy-five providers who had not made it, and still left
-       * the one page where it matters saying it in passing.
-       */
-      data.publishedByUs && (
-        <aside class="editorial-note self-disclosure">
-          <p>
-            <strong>We publish this register.</strong> fortrabbit runs FindHost and appears in its own dataset, held to
-            the same fields, the same sourcing and the same right of reply as every other record. Anything here reading
-            more favourably than the evidence supports is a bug —{' '}
-            <a href="https://github.com/fortrabbit/findhost/issues">open an issue</a>. How the ordering treats us is set
-            out on <a href="/signal/">the Signal page</a>.
-          </p>
-        </aside>
-      )
-    }
-
-    {
       stale && (
         <aside class="editorial-note">
           <p>
@@ -423,27 +403,32 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
         }
 
         {
-          /* Ours rather than the provider's, which is why it names itself and links to its own arithmetic. */
+          /*
+           * Ours rather than the provider's, and the only number on the page we
+           * made up — so it reads as one figure with its workings under it,
+           * rather than as one more row in a list of recorded facts.
+           */
           signal && (
-            <div class="fact-groups signal-group">
-              <section class="fact-group">
-                <h2>
-                  <a href="/signal/">Signal</a>
-                </h2>
-                <dl class="fact-list">
-                  <dt>Total</dt>
-                  <dd>{signal.total}</dd>
-                  {signal.parts
-                    .filter((part) => part.points !== 0)
-                    .map((part) => (
-                      <>
-                        <dt>{part.label}</dt>
-                        <dd>{part.points > 0 ? `+${part.points}` : String(part.points)}</dd>
-                      </>
-                    ))}
-                </dl>
-              </section>
-            </div>
+            <section class="fact-group signal-group">
+              <h2>Signal</h2>
+
+              <p class="signal-total">{signal.total}</p>
+
+              <dl class="fact-list signal-parts">
+                {signal.parts
+                  .filter((part) => part.points !== 0)
+                  .map((part) => (
+                    <>
+                      <dt>{part.label}</dt>
+                      <dd>{part.points > 0 ? `+${part.points}` : String(part.points)}</dd>
+                    </>
+                  ))}
+              </dl>
+
+              <p class="signal-onward">
+                <a href="/signal/">How the Signal is worked out →</a>
+              </p>
+            </section>
           )
         }
       </aside>

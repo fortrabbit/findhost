@@ -33,7 +33,7 @@ apiAvailable: public
 social:
   github: https://github.com/hostimdev
 signalAdjustment:
-  points: 7
+  points: 10
   by: fl
   on: 2026-08-09
   why: Docker, Compose or a git repository, on bare metal in the EU, priced in the open by a company one year old. Exactly the kind of new entrant a register like this exists to surface.

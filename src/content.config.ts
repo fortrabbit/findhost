@@ -91,7 +91,7 @@ const providerFields = z
         points: z.number().int().min(-20).max(20),
         by: z.string().min(2),
         on: z.coerce.date(),
-        why: z.string().min(20).max(200),
+        why: z.string().min(12).max(200),
       })
       .optional(),
     headcount: z.enum(vocabulary('headcount')).optional(),
