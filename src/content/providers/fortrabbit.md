@@ -119,7 +119,7 @@ sources:
   - { field: freeTier, url: 'https://www.fortrabbit.com/pricing', checkedAt: 2026-08-01 }
   - { field: contractMinimum, url: 'https://www.fortrabbit.com/pricing', checkedAt: 2026-08-01 }
 favorite: true
-favoriteNote: Ours. We built this register partly to see whether we would like ourselves in it.
+favoriteNote: Ours. PHP, git push, a shell, and a price that holds at renewal.
 publishedByUs: true
 figure:
   emoji: 🐰
