@@ -417,6 +417,31 @@ for (const { file, data } of records) {
     }
   }
 
+  /*
+   * The note sits directly under the figure on the record page, so the two lines
+   * are read together — and a note that echoes the line above it says nothing.
+   * Krystal's figure said "B Corp paperwork" and its note opened "A B Corp
+   * that…", which is the whole failure in one example.
+   */
+  const figureText = String((data.figure as { text?: string } | undefined)?.text ?? '');
+  const note = String(data.favoriteNote ?? '');
+  if (figureText && note) {
+    const common = new Set(
+      'the a an and it is of to in for on that with not its you your as at by or from what who this are be more than one no all any can has have their'.split(' '),
+    );
+    const words = (text: string) =>
+      new Set(
+        text
+          .toLowerCase()
+          .replace(/[^a-z0-9 ]/g, ' ')
+          .split(/\s+/)
+          .filter((word) => word.length > 2 && !common.has(word)),
+      );
+
+    const echoed = [...words(figureText)].filter((word) => words(note).has(word));
+    if (echoed.length) fail(file, `favoriteNote repeats the figure above it: ${echoed.join(', ')}`);
+  }
+
   for (const field of relationFields) {
     const held = data[field.id];
     if (held === undefined || held === null) continue;

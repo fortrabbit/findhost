@@ -57,7 +57,7 @@ certifications:
 supportHours: business-hours
 supportTiering: paid-upgrade
 favorite: true
-favoriteNote: A B Corp that publishes its carbon numbers instead of a badge.
+favoriteNote: Good shared hosting.
 status: active
 checkedAt: 2026-08-01
 sources:
