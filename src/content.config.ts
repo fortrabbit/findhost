@@ -87,6 +87,11 @@ const providerFields = z
      * boolean: the scoring system it replaced implied a precision nobody had.
      */
     favorite: z.boolean().optional(),
+    /*
+     * Why, in our own words, on the record. Short on purpose: it is an opinion
+     * offered beside the facts, not an argument that competes with them.
+     */
+    favoriteNote: z.string().min(12).max(200).optional(),
     parent: z.string().optional(),
 
     // Classification

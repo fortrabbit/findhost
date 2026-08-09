@@ -69,6 +69,12 @@
 - id: favorite
   label: Favorite
 
+# Why we like it, in one sentence, on the record page beside the same heart the
+# list carries. Optional: a heart with no sentence is still a heart, and a
+# sentence is better than a number was.
+- id: favoriteNote
+  label: Favorite note
+
 - id: ownership
   label: Ownership
   group: Identity

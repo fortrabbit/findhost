@@ -281,10 +281,11 @@ html:not(.js) .theme-switch {
 .record-badge {
   display: inline-grid;
   place-items: center;
-  width: 1.5em;
-  height: 1.5em;
+  width: 1.7em;
+  height: 1.7em;
+  border: var(--rule-hairline) solid currentcolor;
   border-radius: var(--radius);
-  font-size: var(--text-sm);
+  font-size: var(--text-md);
   line-height: 1;
 }
 
@@ -294,11 +295,36 @@ html:not(.js) .theme-switch {
   background: var(--color-verified);
 }
 
-/** Ours. The only editorial mark a row carries, and it says so on the about page. */
+/*
+ * The same opinion at reading size: the badge, then the sentence, in the colour
+ * the badge is drawn in. It sits under the links because it is ours rather than
+ * the provider's, and a reader should meet the facts first.
+ */
+.favorite-note {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  margin: var(--space-sm) 0 0;
+  color: var(--color-heart);
+  font-size: var(--text-sm);
+  font-weight: bold;
+  text-wrap: pretty;
+}
+
+/*
+ * Ours. The only editorial mark a row carries, and the one thing in a list that
+ * is an opinion rather than a fact — so it is drawn in its own colour, outlined,
+ * at the end of the row where the eye lands after the name.
+ */
 .favorite-badge {
   margin-left: var(--space-2xs);
   background: var(--color-liked);
   color: var(--color-heart);
+}
+
+/* The row it marks gets the wash too, so the mark is found from anywhere in the line. */
+.provider-list > li:has(.favorite-badge):hover {
+  background: var(--color-liked);
 }
 
 .visually-hidden {

@@ -109,6 +109,7 @@ function row(provider: ProviderRow): HTMLLIElement {
     item.append(heart);
   }
 
+
   return item;
 }
 

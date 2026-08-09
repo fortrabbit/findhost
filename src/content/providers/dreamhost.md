@@ -27,6 +27,7 @@ entryPrice: { amount: 2.89, currency: EUR, period: month, introductory: true }
 renewalMultiple: 3.8
 contractMinimum: annual
 favorite: true
+favoriteNote: We think DreamHost is one of the better shared hosting companies — independently owned, no venture capital, and twenty-eight years of it.
 status: active
 checkedAt: 2026-08-01
 sources:

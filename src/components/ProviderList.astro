@@ -56,13 +56,14 @@ const { providers, namesOnly = false } = Astro.props;
             {described && <p>{provider.description}</p>}
           </div>
 
-          {/* Ours, not the provider's, which is why it is the only mark in the row. */}
+          {/* The row's own column, at the end of the line where the eye lands after the name. */}
           {provider.favorite && (
             <span class="record-badge favorite-badge" title="One we like">
               <span aria-hidden="true">♥</span>
               <span class="visually-hidden">One we like</span>
             </span>
           )}
+
         </li>
       );
     })
