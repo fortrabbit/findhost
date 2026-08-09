@@ -215,10 +215,28 @@ export const weights: Weight[] = [
   },
 ];
 
-/** The number, and what made it, for one record against a given set of weights. */
+export interface Adjustment {
+  points: number;
+  by: string;
+  on: Date;
+  why: string;
+}
+
+/**
+ * The number, and what made it, for one record against a given set of weights.
+ *
+ * The hand adjustment is added last and named as what it is. It exists because
+ * the arithmetic cannot see everything and pretending otherwise would mean
+ * bending a weight until the list looked right, which is the same act with the
+ * evidence removed. Every one of them is printed on /signal/, with who made it,
+ * when, and why.
+ */
 export function signalOf(data: Record<string, any>, active: Weight[] = weights) {
   const parts = active.map((weight) => ({ label: weight.label, points: weight.score(data) }));
-  return { total: parts.reduce((sum, part) => sum + part.points, 0), parts };
+  const adjustment = data.signalAdjustment as Adjustment | undefined;
+  if (adjustment) parts.push({ label: `Hand adjustment by ${adjustment.by}`, points: adjustment.points });
+
+  return { total: parts.reduce((sum, part) => sum + part.points, 0), parts, adjustment };
 }
 
 export interface SignalTable {

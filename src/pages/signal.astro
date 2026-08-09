@@ -44,6 +44,12 @@ const banded = tiers
   }))
   .filter((band) => band.rows.length > 0);
 
+/* Every record a person has put a thumb on, listed in full further down. */
+const adjusted = scored
+  .filter((entry) => entry.provider.data.signalAdjustment)
+  .map((entry) => ({ provider: entry.provider, adjustment: entry.provider.data.signalAdjustment! }))
+  .sort((a, b) => a.provider.data.name.localeCompare(b.provider.data.name, 'en'));
+
 const origin = Astro.site?.origin ?? '';
 ---
 
@@ -73,34 +79,26 @@ const origin = Astro.site?.origin ?? '';
   <p class="lead">Our taste, as arithmetic, published in full.</p>
 
   <p>
-    Everywhere else on this site the order is alphabetical and nothing is scored, because a number attached to a hosting
-    provider is usually somebody's commission wearing a lab coat. This page is the exception, and it says whose opinion
-    it is: fortrabbit's, who publish the register and appear in it. It rewards what we think makes a host worth finding
-    — independence, a platform that can be driven from a script, somewhere to try a deploy before it is the site — and
-    it will therefore treat fortrabbit kindly. Read it as an argument, not as a verdict.
+    The register is alphabetical everywhere else, because a number attached to a hosting provider is usually somebody's
+    commission wearing a lab coat. This page is the exception, and it says whose opinion it is: fortrabbit's, who
+    publish the register and appear in it.
   </p>
 
   <p>
-    Nothing here is a rating of quality, and no provider can move up it by asking. The score is computed from fields
-    already recorded on the page of each provider, it is never written into a record, and the whole of the arithmetic is
-    <a href="#weights">the table below</a>. Every record shows its own score broken into the parts that earned it.
-    Disagree with a weight and you are disagreeing with us in public, which is the point.
-  </p>
-
-  <p>
-    There is no first place. Providers are grouped into bands and listed alphabetically inside them, because the
-    difference between the top two scores is not a fact about hosting — it is a rounding of our own opinions. The
-    <a href="/">register</a> can be put in this order too, where it keeps its filters.
+    There is no first place. Providers are grouped into bands, and the order inside a band is shuffled on every load —
+    the difference between two scores a point apart is not a fact about hosting, and whoever sits at the top of a list
+    gets the clicks. Scores are computed from fields already recorded on each provider's page, never written into a
+    record, and <a href="#weights">the whole of the arithmetic is below</a>.
   </p>
 
   <ListControls sort="signal" />
 
-  <div data-find-results>
+  <div data-find-results data-shuffle-bands>
     {
       banded.map((band) => (
         <section class="letter-group">
           <h2>{band.tier.label}</h2>
-          <ProviderList providers={band.rows} />
+          <ProviderList providers={band.rows} withSignal />
         </section>
       ))
     }
@@ -109,9 +107,8 @@ const origin = Astro.site?.origin ?? '';
   <h2 id="weights">The whole of it</h2>
 
   <p>
-    Points are added for every provider, in this order, and the total is the sum of them. A field nobody has recorded yet
-    scores nothing, which means an unfinished record sits lower than a finished one — a fact about our work rather than
-    about the provider.
+    A field nobody has recorded yet scores nothing, so an unfinished record sits lower than a finished one — a fact
+    about our work rather than about the provider.
   </p>
 
   <table class="signal-table">
@@ -144,11 +141,9 @@ const origin = Astro.site?.origin ?? '';
         </p>
 
         <p>
-          The rule exists because the first version of this page did not have it. It rewarded an MCP server, a staging
-          environment and team access: three fields answered by two or three records out of {signal.asleep[0].of}, and
-          fortrabbit was among those three every time. It put the publisher of this register nine points clear at the
-          top, and what it was measuring was not the hosting. It was which record we had researched most carefully,
-          which was our own. These wake up by themselves as the research fills in.
+          The rule exists because the first version of this page did not have it, and rewarded three fields that two or
+          three records out of {signal.asleep[0].of} answered — fortrabbit among them every time. It was measuring which
+          record we had researched most carefully, which was our own. These wake by themselves as the research fills in.
         </p>
 
         <table class="signal-table">
@@ -165,6 +160,42 @@ const origin = Astro.site?.origin ?? '';
                 <td class="signal-points">
                   {covered} of {of}
                 </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </>
+    )
+  }
+  {
+    adjusted.length > 0 && (
+      <>
+        <h2>Hand adjustments</h2>
+
+        <p>
+          The arithmetic cannot see everything. Rather than quietly bend a weight until the list looked right — the same
+          act with the evidence removed — a person may add or subtract points on one record, and every one of them is
+          here with a name, a date and a reason.
+        </p>
+
+        <table class="signal-table">
+          <thead>
+            <tr>
+              <th scope="col">Provider</th>
+              <th scope="col">Why</th>
+              <th scope="col">Points</th>
+            </tr>
+          </thead>
+          <tbody>
+            {adjusted.map(({ provider, adjustment }) => (
+              <tr>
+                <td>
+                  <a href={`/${provider.id}/`}>{provider.data.name}</a>
+                </td>
+                <td>
+                  {adjustment.why} — {adjustment.by}, {adjustment.on.toISOString().slice(0, 10)}
+                </td>
+                <td class="signal-points">{adjustment.points > 0 ? `+${adjustment.points}` : adjustment.points}</td>
               </tr>
             ))}
           </tbody>

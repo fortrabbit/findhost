@@ -58,6 +58,19 @@
     - { id: '51-250', label: 51 to 250 }
     - { id: '250-plus', label: More than 250, short: '250+' }
 
+# A hand adjustment to the FindHost Signal, and the only one there is.
+#
+# It exists because the arithmetic cannot see everything, and refusing to admit
+# that would mean quietly bending a weight until the list looked right — which is
+# the same act, hidden. So it is a field with a name, a date and a reason
+# attached, published in a table of its own on /signal/, and validate.ts refuses
+# it without all three. A bare number called `boost` is still rejected outright.
+# No group: it is not a fact about the provider, so it gets no row among them.
+# It appears inside the Signal block on the record, and in a table of every
+# adjustment on /signal/.
+- id: signalAdjustment
+  label: Signal adjustment
+
 - id: ownership
   label: Ownership
   group: Identity

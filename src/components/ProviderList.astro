@@ -16,9 +16,15 @@ interface Props {
   providers: Row[];
   /** Set where the list is an index rather than a register — the map's country sections, say. */
   namesOnly?: boolean;
+  /*
+   * Show each row's Signal. Only where the Signal is the order: on an
+   * alphabetical list it is a number with no bearing on the position it sits
+   * next to, which reads as a rating attached to every provider on the site.
+   */
+  withSignal?: boolean;
 }
 
-const { providers, namesOnly = false } = Astro.props;
+const { providers, namesOnly = false, withSignal = false } = Astro.props;
 ---
 
 <ul class="provider-list">
@@ -62,7 +68,7 @@ const { providers, namesOnly = false } = Astro.props;
           {/* One column, however many facts are in it: the row is a grid, and a fourth child would wrap. */}
           <span class="provider-meta">
             {provider.country && <span class="provider-country">{provider.country}</span>}
-            {provider.signal !== undefined && !namesOnly && (
+            {withSignal && provider.signal !== undefined && !namesOnly && (
               <a
                 class="provider-signal"
                 href="/signal/"

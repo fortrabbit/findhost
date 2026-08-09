@@ -40,7 +40,7 @@ interface ProviderRow {
  * view and the server-rendered one have to be indistinguishable, or filtering
  * would quietly change what a row looks like.
  */
-function row(provider: ProviderRow): HTMLLIElement {
+function row(provider: ProviderRow, withSignal = false): HTMLLIElement {
   const item = document.createElement('li');
   if (!provider.description) item.className = 'one-line';
 
@@ -111,7 +111,7 @@ function row(provider: ProviderRow): HTMLLIElement {
     meta.append(country);
   }
 
-  if (provider.signal !== undefined) {
+  if (withSignal && provider.signal !== undefined) {
     const signal = document.createElement('a');
     signal.className = 'provider-signal';
     signal.href = '/signal/';
@@ -136,6 +136,27 @@ function row(provider: ProviderRow): HTMLLIElement {
 const track = (event: string) => {
   (window as { fathom?: { trackEvent: (name: string) => void } }).fathom?.trackEvent(event);
 };
+
+/*
+ * Whoever sits at the top of a list gets the clicks, and the difference between
+ * two Signal scores a point apart is not a fact about hosting. So the order
+ * inside a band is shuffled on every load.
+ *
+ * In the browser only. The server renders each band alphabetically, so the page
+ * is deterministic for a crawler, stable for anybody without the script, and
+ * never cites an order it does not mean.
+ */
+const shuffleEl = document.querySelector<HTMLElement>('[data-shuffle-bands]');
+if (shuffleEl) {
+  for (const list of shuffleEl.querySelectorAll<HTMLUListElement>('.provider-list')) {
+    const rows = [...list.children];
+    for (let index = rows.length - 1; index > 0; index -= 1) {
+      const swap = Math.floor(Math.random() * (index + 1));
+      [rows[index], rows[swap]] = [rows[swap], rows[index]];
+    }
+    list.append(...rows);
+  }
+}
 
 const filtersEl = document.querySelector<HTMLElement>('[data-find-filters]');
 const resultsEl = document.querySelector<HTMLElement>('[data-find-results]');
@@ -352,7 +373,11 @@ if (filtersEl && resultsEl && summaryEl) {
 
         const list = document.createElement('ul');
         list.className = 'provider-list';
-        for (const provider of rows) list.append(row(provider));
+        for (let index = rows.length - 1; index > 0; index -= 1) {
+          const swap = Math.floor(Math.random() * (index + 1));
+          [rows[index], rows[swap]] = [rows[swap], rows[index]];
+        }
+        for (const provider of rows) list.append(row(provider, true));
         section.append(list);
         resultsEl.append(section);
       }

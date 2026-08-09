@@ -70,7 +70,7 @@ test.describe('the one opinionated ordering', () => {
   });
 
   /* Without the script the same link is a page, which is the whole of the answer rather than a degraded one. */
-  test('is a page of its own as well', async ({ page }) => {
+  test('is a page of its own as well', async ({ page, javaScriptEnabled }) => {
     await page.goto('/');
     await expect(page.locator('.sort-links a[data-sort="signal"]')).toHaveAttribute('href', '/signal/');
 
@@ -81,13 +81,18 @@ test.describe('the one opinionated ordering', () => {
     expect(scores.length).toBeGreaterThan(100);
 
     /*
-     * No first place: the top band holds several providers in alphabetical
-     * order, so the first row is not the highest score on the page.
+     * No first place. The server renders each band alphabetically so the page is
+     * deterministic without the script; with the script the band is shuffled, so
+     * nobody owns the top row. Both halves are asserted, because losing either
+     * one quietly reintroduces a winner.
      */
     const top = page.locator('[data-find-results] .letter-group').first();
     const names = await top.locator('.provider-name a').allInnerTexts();
     expect(names.length).toBeGreaterThan(1);
-    expect(names).toEqual([...names].sort((a, b) => a.localeCompare(b, 'en')));
+
+    const alphabetical = [...names].sort((a, b) => a.localeCompare(b, 'en'));
+    if (javaScriptEnabled === false) expect(names).toEqual(alphabetical);
+    else expect(new Set(names)).toEqual(new Set(alphabetical));
 
     /* And a weight nobody answers is declared rather than quietly scored. */
     await expect(page.locator('main')).toContainText('asleep');
