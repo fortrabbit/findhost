@@ -329,6 +329,24 @@ html:not(.js) .theme-switch {
  * extended list the row is a grid whose first item is the figure tile, so the
  * baseline the list offers is the tile's and the letter follows it downwards.
  */
+/*
+ * The row padding belongs to the list, not to the group around it. It was set on
+ * .letter-group, so a list with no letters — the Signal's, which is one list —
+ * inherited nothing and drew its rows with no padding at all.
+ */
+[data-find-results] {
+  --row-pad: var(--space-sm);
+}
+
+[data-find-results].slim {
+  --row-pad: var(--space-xs);
+}
+
+/* An ungrouped list has no letter column to clear, so it starts at the margin. */
+[data-find-results] > .provider-list {
+  border-top: var(--rule-hairline) solid var(--color-ink);
+}
+
 .letter-group {
   --row-pad: var(--space-sm);
 
@@ -1413,10 +1431,9 @@ html.js [data-find-fallback] {
   margin-bottom: 0;
 }
 
-/** The published algorithm. Narrow on purpose: two columns, one of them a number. */
+/** The published algorithm, at the full width of the text it sits in. */
 .signal-table {
   width: 100%;
-  max-width: 32rem;
   margin-bottom: var(--space-md);
   border-collapse: collapse;
   font-size: var(--text-sm);
@@ -1468,4 +1485,10 @@ html.js [data-find-fallback] {
 /** The one disclosure on the site that must not be skimmed past. */
 .self-disclosure {
   border-width: var(--rule-strong);
+}
+
+/** Above the list it describes, not floating between the controls and the rows. */
+.sort-note {
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-md);
 }

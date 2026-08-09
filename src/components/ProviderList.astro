@@ -7,7 +7,7 @@ interface Row {
   /** ISO code, shown as text. A flag is a picture of a government, not of where a server is. */
   country?: string;
   figure?: { emoji: string; color: string; textColor: string };
-  /** The FindHost Signal total, shown beside the country. Absent where the list is an index. */
+  /** The Signal total, shown beside the country. Absent where the list is an index. */
   signal?: number;
 }
 
@@ -70,7 +70,7 @@ const { providers, namesOnly = false, withSignal = false } = Astro.props;
               <a
                 class="provider-signal"
                 href="/signal/"
-                title="FindHost Signal — our opinionated score, and how it is worked out"
+                title="Signal — our opinionated score, and how it is worked out"
               >
                 {provider.signal}
               </a>

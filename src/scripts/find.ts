@@ -107,7 +107,7 @@ function row(provider: ProviderRow, withSignal = false): HTMLLIElement {
     const signal = document.createElement('a');
     signal.className = 'provider-signal';
     signal.href = '/signal/';
-    signal.title = 'FindHost Signal — our opinionated score, and how it is worked out';
+    signal.title = 'Signal — our opinionated score, and how it is worked out';
     signal.textContent = String(provider.signal);
     meta.append(signal);
   }
@@ -375,7 +375,10 @@ if (filtersEl && resultsEl && summaryEl) {
    */
   const sortEl = document.querySelector<HTMLElement>('[data-sort-links]');
 
+  const noteEl = document.querySelector<HTMLElement>('[data-sort-note]');
+
   const syncSort = () => {
+    if (noteEl) noteEl.hidden = sort !== 'signal';
     if (!sortEl) return;
     for (const link of sortEl.querySelectorAll<HTMLAnchorElement>('a[data-sort]')) {
       link.setAttribute('aria-current', String(link.dataset.sort === sort));

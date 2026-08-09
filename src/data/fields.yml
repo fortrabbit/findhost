@@ -44,7 +44,7 @@
 #
 # Recorded, never scored. It is context for the other fields rather than a merit
 # of its own: a big provider is not thereby a good one and a small one is not
-# thereby honest, and the FindHost Signal deliberately ignores this field.
+# thereby honest, and the Signal deliberately ignores this field.
 - id: headcount
   label: Headcount
   group: Identity
@@ -58,7 +58,7 @@
     - { id: '51-250', label: 51 to 250 }
     - { id: '250-plus', label: More than 250, short: '250+' }
 
-# A hand adjustment to the FindHost Signal, and the only one there is.
+# A hand adjustment to the Signal, and the only one there is.
 #
 # It exists because the arithmetic cannot see everything, and refusing to admit
 # that would mean quietly bending a weight until the list looked right — which is

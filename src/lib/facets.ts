@@ -53,7 +53,7 @@ export interface ProviderRow {
   /** Only on a hidden row: `draft` or `out-of-scope`. Absent on everything in the register. */
   status?: string;
   /**
-   * The FindHost Signal total. Computed here so the browser can sort by it
+   * The Signal total. Computed here so the browser can sort by it
    * without recomputing the table, and never written to a record — the guard in
    * scripts/validate.ts still refuses any field that names a score.
    */

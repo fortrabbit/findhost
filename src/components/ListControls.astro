@@ -18,7 +18,7 @@ const { sort } = Astro.props;
 
 const orders = [
   { id: 'alphabetical', label: 'A–Z', href: '/' },
-  { id: 'signal', label: 'FindHost Signal', href: '/signal/' },
+  { id: 'signal', label: 'Signal', href: '/signal/' },
 ];
 ---
 
@@ -40,11 +40,16 @@ const orders = [
 </div>
 
 {
-  /* Said where the order is in force, because a reader arriving on a ranked list deserves to know whose ranking it is. */
-  sort === 'signal' && (
-    <p class="annotation sort-note" data-pagefind-ignore>
-      The FindHost Signal is our opinionated rating engine, trying to give innovative services more visibility.{' '}
-      <a href="/signal/">How it works →</a>
+  /*
+   * Whose ranking it is, said above the list it orders. Rendered on both orders
+   * and hidden on the alphabetical one rather than left out of it: sorting in
+   * place never reloads the page, so a note the server had not printed could
+   * never appear, and the register showed a ranked list with nothing to say who
+   * had ranked it.
+   */
+  sort && (
+    <p class="sort-note" data-pagefind-ignore data-sort-note hidden={sort !== 'signal'}>
+      Opinionated rating to give innovative services more visibility. <a href="/signal/">How it works →</a>
     </p>
   )
 }

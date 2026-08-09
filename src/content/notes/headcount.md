@@ -10,4 +10,4 @@ It matters in both directions, and neither one is better. A company of six answe
 
 Bands rather than a number, because the number is out of date the day it is recorded and nobody needs the precision. The source is the company's own account of itself — an about page, a team page, an imprint — so what is recorded is what a provider is willing to say in public. Where they say nothing, this stays unknown, which is the honest answer and will be the common one.
 
-It is never scored. The [FindHost Signal](/signal/) ignores this field on purpose: a large provider is not thereby a good one, a small one is not thereby honest, and a register that turned company size into points would be picking a side in an argument the reader is better placed to settle.
+It is never scored. The [Signal](/signal/) ignores this field on purpose: a large provider is not thereby a good one, a small one is not thereby honest, and a register that turned company size into points would be picking a side in an argument the reader is better placed to settle.

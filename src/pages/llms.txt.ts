@@ -22,7 +22,7 @@ export const GET: APIRoute = async ({ site }) => {
    * way back to its label — except the groups beside the register, which are
    * filed under `aside/` and published at the root.
    */
-  const urlOf = (id: string) => `${origin}/${id.replace(/^aside\//, '')}/`;
+  const urlOf = (id: string) => `${origin}/${id.replace(/^(aside|page)\//, '')}/`;
 
   const headingOf = (id: string) => {
     const [facetId, valueId] = id.split('/');
@@ -46,7 +46,7 @@ export const GET: APIRoute = async ({ site }) => {
     `- [About, and who publishes this](${origin}/about/)`,
     `- [Every provider, filterable](${origin}/)`,
     `- [Where providers operate](${origin}/regions/)`,
-    `- [FindHost Signal, the one opinionated ordering](${origin}/signal/)`,
+    `- [Signal, the one opinionated ordering](${origin}/signal/)`,
     `- [providers.json, every facet and every record's facet fields](${origin}/providers.json)`,
     '',
     '',

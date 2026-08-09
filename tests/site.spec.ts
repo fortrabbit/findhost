@@ -64,30 +64,33 @@ test.describe('the one opinionated ordering', () => {
     expect(await page.locator('[data-find-results] .provider-name a').allInnerTexts()).toEqual(alphabetical);
   });
 
-  /* Without the script the same link is a page, which is the whole of the answer rather than a degraded one. */
-  test('is a page of its own as well', async ({ page }) => {
+  /* The explainer, not a second copy of the list: one ordering, at one address. */
+  test('explains itself, and publishes the arithmetic rather than describing it', async ({ page }) => {
     await page.goto('/');
     await expect(page.locator('.sort-links a[data-sort="signal"]')).toHaveAttribute('href', '/signal/');
 
     await page.goto('/signal/');
-    await expect(page.locator('h1')).toHaveText('FindHost Signal');
+    await expect(page.locator('h1')).toHaveText('Signal');
 
-    const scores = (await page.locator('[data-find-results] .provider-signal').allInnerTexts()).map(Number);
-    expect(scores.length).toBeGreaterThan(100);
+    /* No list here — it lives on the register, where the filters still work. */
+    await expect(page.locator('.provider-list')).toHaveCount(0);
+    await expect(page.locator('main a[href="/?sort=signal"]')).toBeVisible();
 
-    /* The same order the script produces, so the two cannot disagree. */
-    expect(scores).toEqual([...scores].sort((a, b) => b - a));
-
-    /* Whose opinion it is, said above the list rather than only in the prose. */
-    await expect(page.locator('.sort-note')).toContainText('opinionated');
+    /*
+     * The table is rendered from the weights the ordering runs on. Described
+     * instead of rendered, it would drift the first time somebody forgot.
+     */
+    const rows = page.locator('.signal-table tbody tr');
+    expect(await rows.count()).toBeGreaterThan(10);
+    await expect(rows.first().locator('.signal-points')).toHaveText(/^[+\u2212-]/);
 
     /* And a weight nobody answers is declared rather than quietly scored. */
-    await expect(page.locator('main')).toContainText('asleep');
+    await expect(page.locator('main')).toContainText('Asleep');
   });
 
   test('shows a record its own score, broken into what earned it', async ({ page }) => {
     await page.goto('/fortrabbit/');
-    const group = page.locator('.fact-group', { hasText: 'FindHost Signal' });
+    const group = page.locator('.fact-group', { hasText: 'Signal' });
     await expect(group.locator('dt').first()).toHaveText('Total');
     await expect(group.locator('dd').first()).toHaveText(/^\d+$/);
   });

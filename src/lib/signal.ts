@@ -1,5 +1,5 @@
 /**
- * FindHost Signal — an opinionated ordering, published in full.
+ * Signal — an opinionated ordering of the register, published in full.
  *
  * Three rules make this survivable for a register that otherwise refuses to
  * rank.

@@ -258,6 +258,15 @@ for (const key of noteKeys(notesDir)) {
     continue;
   }
 
+  /* A page that has prose of its own and no facet behind it. Named, so a typo is still a typo. */
+  if (segment === 'page') {
+    const pages = new Set(['signal']);
+    if (!value || rest.length || !pages.has(value)) {
+      fail(`${notesDir}/${key}.md`, `a page note is page/<name>.md, one of: ${[...pages].join(', ')}`);
+    }
+    continue;
+  }
+
   if (!field) {
     const named = fieldOf.get(segment!);
     const hint = named?.facet ? ` — that field is filed under "${named.facet}"` : '';

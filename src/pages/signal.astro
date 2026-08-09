@@ -1,94 +1,59 @@
 ---
+import { getCollection, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
-import ProviderList from '../components/ProviderList.astro';
-import ListControls from '../components/ListControls.astro';
+import PageFigure from '../components/PageFigure.astro';
 import { loadProviders } from '../lib/providers';
 import { organization } from '../lib/seo';
 import { loadSignal, coverageFloor } from '../lib/signal';
 
 /*
- * The register in our order rather than in alphabetical order — the one page on
- * this site that expresses a preference, and so the one that has to argue for
- * itself hardest.
+ * What the Signal is and why, in prose — and the tables, which are generated.
  *
- * A plain ranked list, highest first. Bands and a shuffle were tried and taken
- * out again: they hid the ordering without changing it, which is a worse kind of
- * honesty than showing the number and saying whose it is. Where the arithmetic
- * reads wrong, `signalAdjustment` moves a record in public.
+ * The split is the point. The argument is written by a person and lives in
+ * src/content/notes/page/signal.md, where it can be edited without touching
+ * code. The weights are rendered from the array the ordering actually runs on,
+ * so the published algorithm cannot drift from the running one. Keeping the
+ * table in markdown and updating it whenever the code changes would work exactly
+ * until the first time somebody forgot, and nothing on the page would say so.
+ *
+ * The ranked list is not repeated here. It is the register in another order, it
+ * lives at /?sort=signal where the filters still work, and a second copy would be
+ * a second thing to keep true.
  */
 const signal = await loadSignal();
 
-const scored = (await loadProviders())
-  .map((provider) => ({ provider, total: signal.of(provider.data as Record<string, unknown>).total }))
-  .sort((a, b) => b.total - a.total || a.provider.data.name.localeCompare(b.provider.data.name, 'en'));
+const notes = await getCollection('notes');
+const note = notes.find((entry) => entry.id === 'page/signal');
+const Note = note ? (await render(note)).Content : null;
 
-const row = ({ provider, total }: (typeof scored)[number]) => ({
-  id: provider.id,
-  name: provider.data.name,
-  description: provider.data.description,
-  greenWebId: provider.data.greenWebId,
-  country: provider.data.hqCountry,
-  figure: provider.data.figure,
-  signal: total,
-});
-
-/* Every record a person has put a thumb on, listed in full further down. */
-const adjusted = scored
-  .filter((entry) => entry.provider.data.signalAdjustment)
-  .map((entry) => ({ provider: entry.provider, adjustment: entry.provider.data.signalAdjustment! }))
+const adjusted = (await loadProviders())
+  .filter((provider) => provider.data.signalAdjustment)
+  .map((provider) => ({ provider, adjustment: provider.data.signalAdjustment! }))
   .sort((a, b) => a.provider.data.name.localeCompare(b.provider.data.name, 'en'));
 
 const origin = Astro.site?.origin ?? '';
 ---
 
 <Base
-  title="FindHost Signal — FindHost"
-  description="The register in our order instead of alphabetical order, with the whole of the arithmetic published on the same page."
+  title={`${note?.data.title ?? 'Signal'} — FindHost`}
+  description={note?.data.description}
   schema={{
     '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    name: 'FindHost Signal',
-    numberOfItems: scored.length,
+    '@type': 'WebPage',
+    name: 'Signal',
+    url: `${origin}/signal/`,
     isPartOf: organization(origin),
-    itemListOrder: 'https://schema.org/ItemListOrderDescending',
-    itemListElement: scored.map(({ provider }, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      url: `${origin}/${provider.id}/`,
-      name: provider.data.name,
-    })),
   }}
 >
   <div class="page-head">
-    <h1>FindHost Signal</h1>
+    <h1>Signal</h1>
   </div>
 
-  <p class="lead">Our taste, as arithmetic, published in full.</p>
+  <PageFigure figure={note?.data.figure} />
 
-  <p>
-    The register is alphabetical everywhere else, because a number attached to a hosting provider is usually somebody's
-    commission wearing a lab coat. This page is the exception, and it says whose opinion it is: fortrabbit's, who
-    publish the register and appear in it.
-  </p>
+  {Note && <Note />}
 
-  <p>
-    Scores are computed from fields already recorded on each provider's page, never written into a record, and
-    <a href="#weights">the whole of the arithmetic is below</a>. Where it reads wrong, a person may move a record by
-    hand — with a name, a date and a reason, listed at the foot of this page.
-  </p>
-
-  <ListControls sort="signal" />
-
-  <div data-find-results>
-    <ProviderList providers={scored.map(row)} withSignal />
-  </div>
-
-  <h2 id="weights">The whole of it</h2>
-
-  <p>
-    A field nobody has recorded yet scores nothing, so an unfinished record sits lower than a finished one — a fact
-    about our work rather than about the provider.
-  </p>
+  <h2 id="weights">Every weight</h2>
 
   <table class="signal-table">
     <thead>
@@ -112,23 +77,19 @@ const origin = Astro.site?.origin ?? '';
   {
     signal.asleep.length > 0 && (
       <>
-        <h2>The weights that are asleep</h2>
+        <h2>Asleep</h2>
 
         <p>
           A weight counts only while at least {Math.round(coverageFloor * 100)}% of the register answers the field it
-          reads. These do not, so they score nothing for anybody — including for us.
-        </p>
-
-        <p>
-          The rule exists because the first version of this page did not have it, and rewarded three fields that two or
-          three records out of {signal.asleep[0].of} answered — fortrabbit among them every time. It was measuring which
-          record we had researched most carefully, which was our own. These wake by themselves as the research fills in.
+          reads, so these score nothing for anybody, including for us. The first version of this page had no such rule
+          and rewarded three fields that two or three records answered — fortrabbit among them every time. It was
+          measuring which record we had researched most carefully. These wake by themselves as the research fills in.
         </p>
 
         <table class="signal-table">
           <thead>
             <tr>
-              <th scope="col">Asleep</th>
+              <th scope="col">Weight</th>
               <th scope="col">Answered by</th>
             </tr>
           </thead>
@@ -146,15 +107,16 @@ const origin = Astro.site?.origin ?? '';
       </>
     )
   }
+
   {
     adjusted.length > 0 && (
       <>
         <h2>Hand adjustments</h2>
 
         <p>
-          The arithmetic cannot see everything. Rather than quietly bend a weight until the list looked right — the same
-          act with the evidence removed — a person may add or subtract points on one record, and every one of them is
-          here with a name, a date and a reason.
+          The arithmetic cannot see everything. Rather than quietly bend a weight until the list looks right — the same
+          act with the evidence removed — a person may move one record, and every adjustment is here with a name, a date
+          and a reason.
         </p>
 
         <table class="signal-table">
@@ -183,8 +145,3 @@ const origin = Astro.site?.origin ?? '';
     )
   }
 </Base>
-
-{/* For the extended/slim toggle only. This page ships no filters — its order is the point. */}
-<script>
-  import '../scripts/find.ts';
-</script>
