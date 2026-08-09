@@ -20,7 +20,11 @@ I am [Frank Lämmer](https://www.franklaemmer.de), co-founder of a small bootstr
 
 ## Conflict of interest
 
-I am 100% biased as founder of fortrabbit. It's just a matter if my bias may be useful for you.
+I am 100% biased as founder of fortrabbit. And let's be plain about what this is: a marketing vehicle. fortrabbit pays for it, fortrabbit is [in it](/fortrabbit/), and if it works, some readers end up as our customers. That is the whole business case.
+
+It is also why it is built this way. A register nobody trusts is worthless as marketing too, so the incentives point in the same direction: no affiliate links, no paid placement, no money changing hands for a listing, every claim sourced and dated, and our own record held to the same fields as everyone else's. Where I put a thumb on the scale — the [favorite records](#favorite-records) — it says so, in my name.
+
+The bias is real and permanent. Whether it is useful to you anyway is the only question worth asking, and you can check the answer: everything here is in public git, and the [data is yours to take](/providers.json).
 
 
 ## Your benefits
