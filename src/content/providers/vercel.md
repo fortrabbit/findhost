@@ -67,6 +67,11 @@ supportChannels:
   - email
 supportTiering: paid-upgrade
 cliTool: official
+signalAdjustment:
+  points: 8
+  by: fl
+  on: 2026-08-09
+  why: The framework and the platform are the same company, which is a real risk and worth saying — but nobody has done more to make deploying a front end unremarkable.
 status: active
 checkedAt: 2026-08-01
 sources:

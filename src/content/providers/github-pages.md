@@ -37,6 +37,11 @@ apiAvailable: public
 cliTool: official
 staging: none
 collaboration: team
+signalAdjustment:
+  points: 5
+  by: fl
+  on: 2026-08-09
+  why: Free static hosting with a certificate, on the infrastructure most code already sits on. Millions of first sites started here and it has never had an upsell.
 status: active
 checkedAt: 2026-08-07
 sources:

@@ -26,6 +26,11 @@ exitWithin: a-year
 entryPrice: { amount: 2.89, currency: EUR, period: month, introductory: true }
 renewalMultiple: 3.8
 contractMinimum: annual
+signalAdjustment:
+  points: 7
+  by: fl
+  on: 2026-08-09
+  why: Employee-owned, publishes its privacy positions, and has run the same business for twenty-five years without the renewal traps its neighbours rely on.
 status: active
 checkedAt: 2026-08-01
 sources:

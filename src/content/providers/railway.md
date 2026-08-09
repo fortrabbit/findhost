@@ -49,6 +49,11 @@ supportTiering: paid-upgrade
 apiAvailable: public
 cliTool: official
 mcpServer: official
+signalAdjustment:
+  points: 8
+  by: fl
+  on: 2026-08-09
+  why: Deploys from a repository with no configuration file and prices what is actually consumed, which is rarer than it sounds and harder than it looks.
 status: active
 checkedAt: 2026-07-31
 sources:
@@ -74,8 +79,8 @@ sources:
 figure:
   emoji: 🚂
   color: rgb(157, 77, 77)
-  textColor: rgb(245, 234, 234)
-  text: All aboard the complexity express.
+  textColor: rgb(240, 200, 200)
+  text: Mighty but a but complex.
 ---
 
 Railway is a language-agnostic deployment platform. Builds run through Railpack, its own build system, which detects Node.js, Python, Go, PHP, Java and Ruby without configuration and can be steered with environment variables or a config file; a Dockerfile can be supplied instead. Databases are provisioned from first-party templates for PostgreSQL, MySQL, MongoDB and Redis.

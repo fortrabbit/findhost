@@ -36,6 +36,11 @@ regions:
   - CA
 social:
   x: https://twitter.com/servdhosting
+signalAdjustment:
+  points: 8
+  by: fl
+  on: 2026-08-09
+  why: Built by Craft developers for Craft, with staging, asset handling and backups shaped around one CMS rather than bolted onto a generic panel.
 status: active
 checkedAt: 2026-08-01
 sources:

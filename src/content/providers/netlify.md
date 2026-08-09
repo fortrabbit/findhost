@@ -64,6 +64,11 @@ regions:
   - AU
 apiAvailable: public
 cliTool: official
+signalAdjustment:
+  points: 6
+  by: fl
+  on: 2026-08-09
+  why: Made the deploy-from-a-commit-to-a-CDN pattern ordinary, and still documents its build in public. Venture funding costs it points the platform itself does not deserve.
 status: active
 checkedAt: 2026-08-01
 sources:

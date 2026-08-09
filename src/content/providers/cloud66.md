@@ -51,6 +51,7 @@ freeTier: permanent
 apiAvailable: public
 cliTool: official
 checkedAt: 2026-08-01
+hqCountry: GB
 sources:
   - { field: priceFrom, url: 'https://www.cloud66.com/pricing/', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://www.cloud66.com/pricing/', checkedAt: 2026-08-02 }

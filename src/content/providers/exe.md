@@ -35,6 +35,11 @@ audience:
   - solo
   - startup
 apiAvailable: public
+signalAdjustment:
+  points: 10
+  by: fl
+  on: 2026-08-09
+  why: A pool of capacity instead of a machine, and root instead of a managed abstraction, aimed at agents. Four months old, so the arithmetic can only see a young VPS.
 status: active
 checkedAt: 2026-08-08
 sources:
