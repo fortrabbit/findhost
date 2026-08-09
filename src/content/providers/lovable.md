@@ -16,6 +16,11 @@ useCases:
 sshAccess: none
 pricingModel: credit
 freeTier: permanent
+signalAdjustment:
+  points: 10
+  by: fl
+  on: 2026-08-09
+  why: Describes an app in prose and ships running code you can take away. The category is a year old and the register can only see what it does not have yet.
 status: active
 checkedAt: 2026-08-01
 sources:

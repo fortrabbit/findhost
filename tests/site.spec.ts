@@ -265,15 +265,19 @@ test.describe('governance, as behaviour rather than policy text', () => {
      * as a marker beside the name in every list: a claim about us repeated next
      * to a hundred and seventy-five providers who had made no such claim, while
      * the one page where it matters said it in passing.
+     *
+     * Written in the record's prose rather than drawn by the template, so this
+     * asserts that the page says it — not how it came to. What may not change is
+     * that a reader of our own record learns who publishes the register.
      */
     await page.goto('/fortrabbit/');
-    await expect(page.locator('.self-disclosure')).toContainText('We publish this register');
-    await expect(page.locator('.self-disclosure a').first()).toBeVisible();
+    await expect(page.locator('article')).toContainText(/we publish/i);
 
     await page.goto('/');
 
+    /* Same sentence, one source: the export carries the record's prose. */
     const record = await page.request.get('/fortrabbit.md');
-    expect(await record.text()).toContain('Published by us');
+    expect(await record.text()).toMatch(/we publish/i);
   });
 
   test('carries no affiliate parameters anywhere', async ({ page }) => {

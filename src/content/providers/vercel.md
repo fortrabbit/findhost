@@ -66,6 +66,7 @@ regions:
 supportChannels:
   - email
 supportTiering: paid-upgrade
+apiAvailable: public
 cliTool: official
 signalAdjustment:
   points: 8
@@ -73,8 +74,9 @@ signalAdjustment:
   on: 2026-08-09
   why: The framework and the platform are the same company, which is a real risk and worth saying — but nobody has done more to make deploying a front end unremarkable.
 status: active
-checkedAt: 2026-08-01
+checkedAt: 2026-08-09
 sources:
+  - { field: apiAvailable, url: 'https://vercel.com/docs/rest-api', checkedAt: 2026-08-09 }
   - { field: ownership, url: 'https://vercel.com/about', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://vercel.com/legal/terms', checkedAt: 2026-08-01 }
   - { field: runtimes, url: 'https://vercel.com/docs/functions/runtimes', checkedAt: 2026-07-31 }

@@ -56,7 +56,6 @@ export const GET: APIRoute = async ({ props, site }) => {
     data.checkedAt
       ? `Last checked against the provider: ${label(data.checkedAt)}`
       : 'Never checked against the provider, so no date is claimed.',
-    data.publishedByUs ? 'Published by us: this site is run by fortrabbit, which appears in its own dataset.' : '',
     '',
     '## Record',
     '',

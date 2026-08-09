@@ -1513,11 +1513,6 @@ html.js [data-find-fallback] {
   border-top: var(--rule-hairline) solid var(--color-rule);
 }
 
-/** The one disclosure on the site that must not be skimmed past. */
-.self-disclosure {
-  border-width: var(--rule-strong);
-}
-
 /** Above the list it describes, not floating between the controls and the rows. */
 .sort-note {
   margin-top: var(--space-md);

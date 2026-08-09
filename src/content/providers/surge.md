@@ -20,6 +20,11 @@ audience:
   - solo
 freeTier: permanent
 regions: null
+signalAdjustment:
+  points: 8
+  by: fl
+  on: 2026-08-09
+  why: One command, no dashboard, no build step, unchanged since 2014 and still free for the basics. Nothing here has less between a folder and the web.
 status: active
 checkedAt: 2026-08-09
 cliTool: official
