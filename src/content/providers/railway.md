@@ -50,10 +50,10 @@ apiAvailable: public
 cliTool: official
 mcpServer: official
 signalAdjustment:
-  points: 8
+  points: 20
   by: fl
   on: 2026-08-09
-  why: Deploys from a repository with no configuration file and prices what is actually consumed, which is rarer than it sounds and harder than it looks.
+  why: Deploys from a repository with no configuration file and prices what is actually consumed, which is rarer than it sounds and harder than it looks. Super popular these days.
 status: active
 checkedAt: 2026-07-31
 sources:

@@ -424,6 +424,17 @@ for (const { file, data } of records) {
     }
   }
 
+  /*
+   * The one field where a plausible number is out of range. Astro rejects it as
+   * "data does not match collection schema", which is true and unhelpful, and
+   * the dev server renders the record without it — so the page shows a total
+   * that does not add up and nothing says why.
+   */
+  const adjustment = data.signalAdjustment as { points?: number } | undefined;
+  if (adjustment?.points !== undefined && Math.abs(adjustment.points) > 20) {
+    fail(file, `signalAdjustment points ${adjustment.points} is outside ±20 — the record will not build`);
+  }
+
   for (const field of relationFields) {
     const held = data[field.id];
     if (held === undefined || held === null) continue;
