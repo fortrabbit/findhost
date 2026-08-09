@@ -24,12 +24,18 @@ useCases:
 audience:
   - smb
   - solo
+apiAvailable: public
+cliTool: official
+mcpServer: official
 status: active
 checkedAt: 2026-07-31
 sources:
   - { field: category, url: 'https://hostafrica.com', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://hostafrica.com', checkedAt: 2026-07-31 }
   - { field: currencies, url: 'https://hostafrica.com', checkedAt: 2026-07-31 }
+  - { field: apiAvailable, url: 'https://hostafrica.com', checkedAt: 2026-08-09 }
+  - { field: cliTool, url: 'https://hostafrica.com', checkedAt: 2026-08-09 }
+  - { field: mcpServer, url: 'https://hostafrica.com', checkedAt: 2026-08-09 }
 ai: authored
 ---
 

@@ -128,9 +128,15 @@ test.describe('the one opinionated ordering', () => {
     await expect(rows.first().locator('.signal-points')).toHaveText(/^[+\u2212-]/);
   });
 
+  /*
+   * The page must say that whoever publishes the register appears in the list it
+   * orders. Asserted as the disclosure rather than as the brand name, because
+   * the wording is editorial and lives in markdown — what may not change is that
+   * it is made at all.
+   */
   test('says whose opinion it is, on the page that holds it', async ({ page }) => {
     await page.goto('/signal/');
-    await expect(page.locator('main')).toContainText('fortrabbit');
+    await expect(page.locator('main')).toContainText(/we publish this register|fortrabbit/i);
   });
 
   test('leaves the register alphabetical', async ({ page }) => {

@@ -48,6 +48,7 @@ billingTiming: advance
 entryPrice: { amount: 2.75, currency: EUR, period: month, introductory: true }
 renewalMultiple: 1.98
 freeTier: none
+apiAvailable: public
 regions:
   - ES
 supportChannels:
@@ -69,6 +70,7 @@ sources:
   - { field: pricingModel, url: 'https://dinahosting.com/hosting', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://dinahosting.com/hosting', checkedAt: 2026-08-01 }
   - { field: supportHours, url: 'https://dinahosting.com/hosting', checkedAt: 2026-08-01 }
+  - { field: apiAvailable, url: 'https://dinahosting.com', checkedAt: 2026-08-09 }
 figure:
   emoji: 🐚
   color: rgb(73, 132, 161)
