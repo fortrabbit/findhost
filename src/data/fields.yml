@@ -282,6 +282,7 @@
     - { id: craft-cms, label: Craft CMS }
     - { id: statamic, label: Statamic }
     - { id: kirby, label: Kirby }
+    - { id: grav, label: Grav }
     - { id: ghost, label: Ghost }
     - { id: laravel, label: Laravel }
     - { id: symfony, label: Symfony }
