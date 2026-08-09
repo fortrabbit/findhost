@@ -322,20 +322,26 @@ html:not(.js) .theme-switch {
 }
 
 .favorite-why {
-  display: inline-flex;
+  display: inline-grid;
+  place-items: center;
   flex: none;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
   color: inherit;
-  opacity: 0.65;
+  opacity: 0.6;
 }
 
+/* The ring appears under the pointer: at rest it is a question, not a button. */
 .favorite-why:hover,
 .favorite-why:focus-visible {
+  box-shadow: inset 0 0 0 var(--rule-hairline) currentcolor;
   opacity: 1;
 }
 
 .favorite-why svg {
-  width: 1.2em;
-  height: 1.2em;
+  width: 0.9em;
+  height: 0.9em;
 }
 
 .favorite-note .record-badge {
