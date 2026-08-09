@@ -50,7 +50,7 @@ apiAvailable: public
 cliTool: official
 mcpServer: official
 favorite: true
-favoriteNote: Deploys from a repository with no configuration file and charges for what is actually consumed, which is rarer than it sounds and harder than it looks.
+favoriteNote: No configuration file, and it charges for what actually ran.
 status: active
 checkedAt: 2026-07-31
 sources:

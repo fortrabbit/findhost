@@ -11,7 +11,7 @@ category:
 description: DigitalOcean is a publicly listed cloud provider best known for Droplets, its VPS product, alongside managed databases, Kubernetes and an app platform.
 founded: 2012
 favorite: true
-favoriteNote: Made renting a server understandable to a generation of developers, and still publishes plain prices and unusually good documentation.
+favoriteNote: Taught a generation of developers what a server actually costs.
 hqCountry: US
 ownership: public
 whoManagesOs: self-managed

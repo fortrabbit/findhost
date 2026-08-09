@@ -38,7 +38,7 @@ cliTool: official
 staging: none
 collaboration: team
 favorite: true
-favoriteNote: Free static hosting with a certificate, on the infrastructure most code already sits on. Millions of first sites started here and it has never had an upsell.
+favoriteNote: Free since 2008 and it has never once tried to upsell anybody.
 status: active
 checkedAt: 2026-08-07
 sources:

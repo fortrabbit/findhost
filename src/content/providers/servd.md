@@ -37,7 +37,7 @@ regions:
 social:
   x: https://twitter.com/servdhosting
 favorite: true
-favoriteNote: Built by Craft developers for Craft, with staging, asset handling and backups shaped around one CMS rather than bolted onto a generic panel.
+favoriteNote: Built by Craft developers, for Craft, and for nothing else.
 status: active
 checkedAt: 2026-08-01
 sources:

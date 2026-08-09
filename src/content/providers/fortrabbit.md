@@ -119,7 +119,7 @@ sources:
   - { field: freeTier, url: 'https://www.fortrabbit.com/pricing', checkedAt: 2026-08-01 }
   - { field: contractMinimum, url: 'https://www.fortrabbit.com/pricing', checkedAt: 2026-08-01 }
 favorite: true
-favoriteNote: Ours, and marked as ours everywhere else on this page too. We would not publish a register we would not put ourselves in.
+favoriteNote: Ours. We built this register partly to see whether we would like ourselves in it.
 publishedByUs: true
 figure:
   emoji: 🐰

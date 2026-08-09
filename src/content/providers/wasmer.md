@@ -42,7 +42,7 @@ social:
   x: https://twitter.com/wasmerio
   discord: https://discord.gg/rWkMNStrEW
 favorite: true
-favoriteNote: Runs WebAssembly at the edge and starts in microseconds, which is a different bet from everyone else here rather than a cheaper version of the same one.
+favoriteNote: A different bet from everyone else here, not a cheaper version of the same one.
 status: active
 checkedAt: 2026-08-09
 cliTool: official

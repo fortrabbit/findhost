@@ -57,7 +57,7 @@ certifications:
 supportHours: business-hours
 supportTiering: paid-upgrade
 favorite: true
-favoriteNote: A B Corp on renewable power that publishes its accounts and its carbon numbers, which is the honest end of a category full of the other kind.
+favoriteNote: A B Corp that publishes its carbon numbers instead of a badge.
 status: active
 checkedAt: 2026-08-01
 sources:
