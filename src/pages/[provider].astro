@@ -355,6 +355,10 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
       }
     </p>
 
+    <SocialLinks social={data.social} />
+
+    <PageFigure figure={data.figure} />
+
     {
       /*
        * Ours, said in the same breath as the mark that stands for it. The heart
@@ -362,16 +366,12 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
        * what this is before reading the sentence.
        */
       data.favorite && data.favoriteNote && (
-        <p class="favorite-note">
+        <p class="favorite-note full-bleed">
           <span class="record-badge favorite-badge" aria-hidden="true">♥</span>
           {data.favoriteNote}
         </p>
       )
     }
-
-    <SocialLinks social={data.social} />
-
-    <PageFigure figure={data.figure} />
 
     <div class="record-layout">
       <aside class="record-specs">

@@ -297,21 +297,31 @@ html:not(.js) .theme-switch {
 }
 
 /*
- * The same opinion at reading size: the badge, then the sentence, in the colour
- * the badge is drawn in. It sits under the links because it is ours rather than
- * the provider's, and a reader should meet the facts first.
+ * A band under the provider's own, in the same shape and a size down. The figure
+ * is what the provider says about itself; this is what we say about it, and
+ * putting them in the same form makes the pair read as one exchange rather than
+ * as a caption and an interruption.
  */
 .favorite-note {
   display: flex;
-  /* The badge sits on the first line, not in the middle of a wrapped sentence. */
-  align-items: flex-start;
-  gap: var(--space-2xs);
-  max-width: var(--measure-prose);
-  margin: var(--space-md) 0 0;
+  gap: var(--space-md);
+  align-items: center;
+  max-width: none;
+  margin-block: 0 var(--space-lg);
+  padding-block: var(--space-sm);
+  background: var(--color-liked);
   color: var(--color-heart);
-  font-size: var(--text-sm);
-  font-weight: bold;
-  text-wrap: pretty;
+  font-size: var(--text-md);
+  line-height: var(--leading-tight);
+  text-wrap: balance;
+}
+
+.favorite-note .record-badge {
+  flex: none;
+  width: auto;
+  height: auto;
+  background: none;
+  font-size: 1.6em;
 }
 
 /*
@@ -1020,6 +1030,11 @@ html.js [data-find-fallback] {
 /* When the band opens the page it meets the header rule, with no gap to explain. */
 .figure-band:first-child {
   margin-block-start: 0;
+}
+
+/* The two bands are one exchange, so no white line runs between them. */
+.figure-band:has(+ .favorite-note) {
+  margin-block-end: 0;
 }
 
 .figure-band span[aria-hidden] {
