@@ -4,7 +4,7 @@ import Base from '../layouts/Base.astro';
 import PageFigure from '../components/PageFigure.astro';
 import { loadProviders } from '../lib/providers';
 import { organization } from '../lib/seo';
-import { loadSignal, coverageFloor } from '../lib/signal';
+import { loadSignal } from '../lib/signal';
 
 /*
  * What the Signal is and why, in prose — and the tables, which are generated.
@@ -53,8 +53,6 @@ const origin = Astro.site?.origin ?? '';
 
   {Note && <Note />}
 
-  <h2 id="weights">Every weight</h2>
-
   <table class="signal-table">
     <thead>
       <tr>
@@ -75,73 +73,35 @@ const origin = Astro.site?.origin ?? '';
   </table>
 
   {
-    signal.asleep.length > 0 && (
-      <>
-        <h2>Asleep</h2>
-
-        <p>
-          A weight counts only while at least {Math.round(coverageFloor * 100)}% of the register answers the field it
-          reads, so these score nothing for anybody, including for us. The first version of this page had no such rule
-          and rewarded three fields that two or three records answered — fortrabbit among them every time. It was
-          measuring which record we had researched most carefully. These wake by themselves as the research fills in.
-        </p>
-
-        <table class="signal-table">
-          <thead>
-            <tr>
-              <th scope="col">Weight</th>
-              <th scope="col">Answered by</th>
-            </tr>
-          </thead>
-          <tbody>
-            {signal.asleep.map(({ weight, covered, of }) => (
-              <tr>
-                <td>{weight.label}</td>
-                <td class="signal-points">
-                  {covered} of {of}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </>
-    )
-  }
-
-  {
+    /*
+     * Only where somebody has made one. The dormant weights are not listed at
+     * all any more: a weight scoring nothing for every record is not part of the
+     * running algorithm, and printing it invited a reader to check arithmetic
+     * that was not happening.
+     */
     adjusted.length > 0 && (
-      <>
-        <h2>Hand adjustments</h2>
-
-        <p>
-          The arithmetic cannot see everything. Rather than quietly bend a weight until the list looks right — the same
-          act with the evidence removed — a person may move one record, and every adjustment is here with a name, a date
-          and a reason.
-        </p>
-
-        <table class="signal-table">
-          <thead>
+      <table class="signal-table">
+        <thead>
+          <tr>
+            <th scope="col">Hand adjustment</th>
+            <th scope="col">Why</th>
+            <th scope="col">Points</th>
+          </tr>
+        </thead>
+        <tbody>
+          {adjusted.map(({ provider, adjustment }) => (
             <tr>
-              <th scope="col">Provider</th>
-              <th scope="col">Why</th>
-              <th scope="col">Points</th>
+              <td>
+                <a href={`/${provider.id}/`}>{provider.data.name}</a>
+              </td>
+              <td>
+                {adjustment.why} — {adjustment.by}, {adjustment.on.toISOString().slice(0, 10)}
+              </td>
+              <td class="signal-points">{adjustment.points > 0 ? `+${adjustment.points}` : adjustment.points}</td>
             </tr>
-          </thead>
-          <tbody>
-            {adjusted.map(({ provider, adjustment }) => (
-              <tr>
-                <td>
-                  <a href={`/${provider.id}/`}>{provider.data.name}</a>
-                </td>
-                <td>
-                  {adjustment.why} — {adjustment.by}, {adjustment.on.toISOString().slice(0, 10)}
-                </td>
-                <td class="signal-points">{adjustment.points > 0 ? `+${adjustment.points}` : adjustment.points}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </>
+          ))}
+        </tbody>
+      </table>
     )
   }
 </Base>

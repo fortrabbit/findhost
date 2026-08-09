@@ -84,8 +84,12 @@ test.describe('the one opinionated ordering', () => {
     expect(await rows.count()).toBeGreaterThan(10);
     await expect(rows.first().locator('.signal-points')).toHaveText(/^[+\u2212-]/);
 
-    /* And a weight nobody answers is declared rather than quietly scored. */
-    await expect(page.locator('main')).toContainText('Asleep');
+    /*
+     * Only the weights that count. A weight scoring nothing for every record is
+     * not part of the running algorithm, so it is not printed as though it were.
+     */
+    const printed = await page.locator('.signal-table tbody tr td:first-child').allInnerTexts();
+    expect(printed).not.toContain('An MCP server');
   });
 
   test('shows a record its own score, broken into what earned it', async ({ page }) => {

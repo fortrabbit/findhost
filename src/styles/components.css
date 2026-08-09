@@ -1431,9 +1431,10 @@ html.js [data-find-fallback] {
   margin-bottom: 0;
 }
 
-/** The published algorithm, at the full width of the text it sits in. */
+/** The published algorithm, set to the measure of the prose that introduces it. */
 .signal-table {
   width: 100%;
+  max-width: var(--measure-prose);
   margin-bottom: var(--space-md);
   border-collapse: collapse;
   font-size: var(--text-sm);
