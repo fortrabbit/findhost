@@ -7,6 +7,8 @@ urls:
   docs: https://manual.uberspace.de/
 category:
   - shared-hosting
+founded: 2010
+ownership: independent
 description: Uberspace is a small German hosting service sitting between shared hosting and a VPS, running since 2011, with a shell account and a documented stack.
 hqCountry: DE
 whoManagesOs: managed
@@ -47,9 +49,16 @@ exitWithin: a-month
 freeTier: trial
 contractMinimum: none
 energyClaim: annual-matched
+signalAdjustment:
+  points: 5
+  by: fl
+  on: 2026-08-09
+  why: Sells hosting with no control panel and no contract, and has held that line for fifteen years. Filed as shared hosting, which is the category being wrong about it.
 status: active
-checkedAt: 2026-08-01
+checkedAt: 2026-08-09
 sources:
+  - { field: founded, url: 'https://uberspace.de/en/about/', checkedAt: 2026-08-09 }
+  - { field: ownership, url: 'https://uberspace.de/en/about/', checkedAt: 2026-08-09 }
   - { field: entryPrice, url: 'https://uberspace.de/en/product/', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://uberspace.de/en/product/', checkedAt: 2026-08-01 }
   - { field: priceTo, url: 'https://uberspace.de/en/product/', checkedAt: 2026-08-02 }

@@ -11,6 +11,7 @@ infraContract:
   - resells-iaas
 runsOn:
   - upcloud
+ownership: independent
 whoManagesOs: managed
 useCases:
   - cms
@@ -41,6 +42,11 @@ regions:
   - NL
   - GB
   - US
+signalAdjustment:
+  points: 3
+  by: fl
+  on: 2026-08-09
+  why: A small Dutch team shipping a platform on top of the server tool they already maintain. Independence at this size is a choice the arithmetic reads as an absence.
 status: active
 hqCountry: NL
 checkedAt: 2026-08-09
@@ -48,6 +54,7 @@ apiAvailable: public
 cliTool: official
 mcpServer: official
 sources:
+  - { field: ownership, url: 'https://ploi.cloud', checkedAt: 2026-08-09 }
   - { field: hqCountry, url: 'https://ploi.cloud', checkedAt: 2026-08-09 }
   - { field: runsOn, url: 'https://ploi.cloud', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://ploi.cloud', checkedAt: 2026-07-31 }
