@@ -311,7 +311,7 @@ html:not(.js) .theme-switch {
   padding-block: var(--space-lg);
   background: var(--color-liked);
   color: var(--color-heart);
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   line-height: var(--leading-tight);
   text-wrap: balance;
 }
