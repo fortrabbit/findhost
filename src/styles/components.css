@@ -281,11 +281,11 @@ html:not(.js) .theme-switch {
 .record-badge {
   display: inline-grid;
   place-items: center;
-  width: 1.7em;
-  height: 1.7em;
+  width: 1.5em;
+  height: 1.5em;
   border: var(--rule-hairline) solid currentcolor;
   border-radius: var(--radius);
-  font-size: var(--text-md);
+  font-size: var(--text-xs);
   line-height: 1;
 }
 
@@ -320,11 +320,6 @@ html:not(.js) .theme-switch {
   margin-left: var(--space-2xs);
   background: var(--color-liked);
   color: var(--color-heart);
-}
-
-/* The row it marks gets the wash too, so the mark is found from anywhere in the line. */
-.provider-list > li:has(.favorite-badge):hover {
-  background: var(--color-liked);
 }
 
 .visually-hidden {
