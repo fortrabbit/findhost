@@ -46,6 +46,7 @@ software:
   - typo3
   - magento
   - shopware
+  - silverstripe
 deployMethods:
   - git
 sshAccess: jailed
@@ -90,7 +91,7 @@ status: active
 checkedAt: 2026-08-01
 sources:
   - { field: headcount, url: 'https://www.fortrabbit.com/us/team', checkedAt: 2026-08-08 }
-  - { field: software, url: 'https://docs.fortrabbit.com/guides/more/grav', checkedAt: 2026-08-09 }
+  - { field: software, url: 'https://www.fortrabbit.com/software/grav-cms', checkedAt: 2026-08-09 }
   - { field: software, url: 'https://www.fortrabbit.com/', checkedAt: 2026-08-05 }
   - { field: audience, url: 'https://www.fortrabbit.com/php-cloud-hosting', checkedAt: 2026-08-06 }
   - { field: useCases, url: 'https://www.fortrabbit.com/php-cloud-hosting', checkedAt: 2026-08-06 }
