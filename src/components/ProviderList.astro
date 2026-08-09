@@ -43,15 +43,6 @@ const { providers, namesOnly = false } = Astro.props;
           <div class="provider-body">
             <span class="provider-name">
               <a href={`/${provider.id}/`}>{provider.name}</a>
-              {provider.greenWebId && (
-                <span
-                  class="record-badge green-mark"
-                  title="Listed in the Green Web Foundation directory, which verifies the claim against published evidence"
-                >
-                  <span aria-hidden="true">🌿</span>
-                  <span class="visually-hidden">Listed in the Green Web Foundation directory</span>
-                </span>
-              )}
             </span>
             {described && <p>{provider.description}</p>}
           </div>

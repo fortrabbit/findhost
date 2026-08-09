@@ -90,7 +90,11 @@ function toRow(record: { id: string; data: Record<string, unknown> }): ProviderR
       if (!asked) continue;
 
       facets[field.id] = field.values
-        .filter((value) => held(data[value.from!]).some((answer) => value.when!.includes(answer)))
+        .filter((value) => {
+          const answers = held(data[value.from!]);
+          /* `*` means "recorded at all", for a source with no vocabulary to name. */
+          return value.when!.includes('*') ? answers.length > 0 : answers.some((answer) => value.when!.includes(answer));
+        })
         .map((value) => value.id);
       continue;
     }

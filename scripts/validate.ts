@@ -152,6 +152,7 @@ for (const field of fields) {
      */
     const vocabulary = source.render === 'yes-no' ? new Set(['true', 'false']) : new Set(source.values.map((entry) => entry.id));
     for (const wanted of value.when) {
+      if (wanted === '*') continue;
       if (!vocabulary.has(wanted)) {
         fail(dictionaryFile, `"${field.id}" value "${value.id}" waits for "${value.from}: ${wanted}", which does not exist`);
       }

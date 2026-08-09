@@ -752,6 +752,24 @@
   label: Green Web directory
   group: Environment
 
+# Derived, so nothing is recorded twice: what a provider says about its energy,
+# and whether a third party has checked. The two are different kinds of claim and
+# a reader filtering on either wants them in one column.
+#
+# `green-web` reads a field with no vocabulary — an id in somebody else's
+# directory — so its `when` is `*`, meaning recorded at all.
+- id: environment
+  label: Environment
+  facet: energy
+  filterOrder: 20
+  multiple: true
+  values:
+    - { id: green-web, label: Verified by the Green Web Foundation, short: Verified, from: greenWebId, when: ['*'] }
+    - { id: 24-7-cfe, label: Carbon-free around the clock, short: 24/7 CFE, from: energyClaim, when: [24-7-cfe] }
+    - { id: annual-matched, label: Renewables matched annually, short: Matched, from: energyClaim, when: [annual-matched] }
+    - { id: offset, label: Offset, from: energyClaim, when: [offset] }
+    - { id: grid-mix-disclosed, label: Grid mix disclosed, short: Disclosed, from: energyClaim, when: [grid-mix-disclosed] }
+
 # --------------------------------------------------------------- Support
 
 # supportHours answers one question: when can you reach a human about a

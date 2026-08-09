@@ -263,6 +263,9 @@ html:not(.js) .theme-switch {
   width: 1.5em;
   height: 1.5em;
   border-radius: var(--radius);
+  /* Blue on blue, the same square the record's other marks are drawn in. The box
+     was a hairline border; a wash does the same work without a second line. */
+  background: var(--color-social);
   color: var(--color-link);
 }
 

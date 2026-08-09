@@ -25,7 +25,6 @@ interface ProviderRow {
   id: string;
   name: string;
   description?: string;
-  greenWebId?: number | null;
   favorite?: boolean;
   figure?: { emoji: string; color: string; textColor: string };
   facets: Record<string, string | string[]>;
@@ -63,23 +62,6 @@ function row(provider: ProviderRow): HTMLLIElement {
   link.href = `/${provider.id}/`;
   link.textContent = provider.name;
   name.append(link);
-
-  if (provider.greenWebId) {
-    const mark = document.createElement('span');
-    mark.className = 'green-mark';
-    mark.title = 'Listed in the Green Web Foundation directory, which verifies the claim against published evidence';
-    mark.textContent = '🌿';
-
-    // A leaf is not a word. The server-rendered row spells it out for a screen
-    // reader and the filtered row has to say the same thing, or filtering
-    // quietly removes the only accessible copy of the mark.
-    const spelled = document.createElement('span');
-    spelled.className = 'visually-hidden';
-    spelled.textContent = 'Listed in the Green Web Foundation directory';
-    mark.append(spelled);
-
-    name.append(mark);
-  }
 
   body.append(name);
 
