@@ -309,6 +309,26 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
       }
     </div>
     {
+      /*
+       * Said on our own record, in the loudest thing the page has. It used to be
+       * a quiet marker in every list, which put a claim about us next to a
+       * hundred and seventy-five providers who had not made it, and still left
+       * the one page where it matters saying it in passing.
+       */
+      data.publishedByUs && (
+        <aside class="editorial-note self-disclosure">
+          <p>
+            <strong>We publish this register.</strong> fortrabbit runs FindHost and appears in its own dataset, held to
+            the same fields, the same sourcing and the same right of reply as every other record. Anything here reading
+            more favourably than the evidence supports is a bug —{' '}
+            <a href="https://github.com/fortrabbit/findhost/issues">open an issue</a>. How the ordering treats us is set
+            out on <a href="/signal/">the Signal page</a>.
+          </p>
+        </aside>
+      )
+    }
+
+    {
       stale && (
         <aside class="editorial-note">
           <p>

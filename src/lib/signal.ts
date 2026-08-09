@@ -273,17 +273,3 @@ export async function loadSignal(): Promise<SignalTable> {
   table = { awake, asleep, of: (data) => signalOf(data, awake) };
   return table;
 }
-
-/**
- * Which band a score falls in. Tiers rather than places: a register that refuses
- * to rate hosting should not be crowning anything either. Within a tier the
- * order is alphabetical, so nothing on the page is first.
- */
-export const tiers = [
-  { id: 'high', floor: 20, label: '20 and above' },
-  { id: 'middle', floor: 10, label: '10 to 19' },
-  { id: 'low', floor: 0, label: '0 to 9' },
-  { id: 'negative', floor: -Infinity, label: 'Below zero' },
-];
-
-export const tierOf = (total: number) => tiers.find((tier) => total >= tier.floor)!;

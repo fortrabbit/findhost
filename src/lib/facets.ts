@@ -63,6 +63,16 @@ export interface ProviderRow {
 /** Alphabetical, always — see the sort rule in CLAUDE.md. */
 const byName = (a: { name: string }, b: { name: string }) => a.name.localeCompare(b.name, 'en');
 
+/*
+ * What a record answers for a field, as a list either way. A derived value reads
+ * a source field that may hold one answer or several — `iacSupport: [terraform,
+ * ansible]` is as much an answer to "any infrastructure as code?" as
+ * `apiAvailable: public` is to "an API?" — and stringifying an array to compare
+ * it matched nothing, silently.
+ */
+const held = (value: unknown): string[] =>
+  value === undefined || value === null ? [] : Array.isArray(value) ? value.map(String) : [String(value)];
+
 function toRow(record: { id: string; data: Record<string, unknown> }, signal: SignalTable): ProviderRow {
   const data = record.data;
   const facets: Record<string, string | string[]> = {};
@@ -85,7 +95,7 @@ function toRow(record: { id: string; data: Record<string, unknown> }, signal: Si
       if (!asked) continue;
 
       facets[field.id] = field.values
-        .filter((value) => value.when!.includes(String(data[value.from!])))
+        .filter((value) => held(data[value.from!]).some((answer) => value.when!.includes(answer)))
         .map((value) => value.id);
       continue;
     }

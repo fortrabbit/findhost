@@ -879,6 +879,11 @@
     - { id: api, label: API, from: apiAvailable, when: [public, partner-only] }
     - { id: cli, label: CLI, from: cliTool, when: [official, third-party] }
     - { id: mcp, label: MCP, from: mcpServer, when: [official, community] }
+    # Reads a multi-value field, which is why the derived matcher had to learn
+    # about lists. Terraform is effectively the whole category: of the nineteen
+    # records that answer, nineteen have Terraform, two have CloudFormation and
+    # two have Ansible.
+    - { id: iac, label: Infrastructure as code, short: IaC, from: iacSupport, when: [terraform, cloudformation, ansible] }
 
 - id: iacSupport
   label: Infrastructure as code

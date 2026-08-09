@@ -25,7 +25,6 @@ interface ProviderRow {
   id: string;
   name: string;
   description?: string;
-  publishedByUs?: boolean;
   greenWebId?: number | null;
   country?: string;
   figure?: { emoji: string; color: string; textColor: string };
@@ -84,13 +83,6 @@ function row(provider: ProviderRow, withSignal = false): HTMLLIElement {
     name.append(mark);
   }
 
-  if (provider.publishedByUs) {
-    const marker = document.createElement('span');
-    marker.className = 'self-marker';
-    marker.textContent = 'published by us';
-    name.append(marker);
-  }
-
   body.append(name);
 
   if (provider.description) {
@@ -136,27 +128,6 @@ function row(provider: ProviderRow, withSignal = false): HTMLLIElement {
 const track = (event: string) => {
   (window as { fathom?: { trackEvent: (name: string) => void } }).fathom?.trackEvent(event);
 };
-
-/*
- * Whoever sits at the top of a list gets the clicks, and the difference between
- * two Signal scores a point apart is not a fact about hosting. So the order
- * inside a band is shuffled on every load.
- *
- * In the browser only. The server renders each band alphabetically, so the page
- * is deterministic for a crawler, stable for anybody without the script, and
- * never cites an order it does not mean.
- */
-const shuffleEl = document.querySelector<HTMLElement>('[data-shuffle-bands]');
-if (shuffleEl) {
-  for (const list of shuffleEl.querySelectorAll<HTMLUListElement>('.provider-list')) {
-    const rows = [...list.children];
-    for (let index = rows.length - 1; index > 0; index -= 1) {
-      const swap = Math.floor(Math.random() * (index + 1));
-      [rows[index], rows[swap]] = [rows[swap], rows[index]];
-    }
-    list.append(...rows);
-  }
-}
 
 const filtersEl = document.querySelector<HTMLElement>('[data-find-filters]');
 const resultsEl = document.querySelector<HTMLElement>('[data-find-results]');
@@ -204,21 +175,11 @@ if (styleEl && resultsEl) {
 
 if (filtersEl && resultsEl && summaryEl) {
   const response = await fetch('/providers.json');
-  const { facets, providers, tiers } = (await response.json()) as {
+  const { facets, providers } = (await response.json()) as {
     facets: Facet[];
     providers: ProviderRow[];
-    tiers: { id: string; floor: number; label: string }[];
   };
 
-  /*
-   * Same rule as the server's: the first band whose floor the score clears.
-   *
-   * The `?? -Infinity` is load-bearing. The last band's floor is -Infinity, and
-   * JSON has no way to write that — JSON.stringify turns it into null, `total >=
-   * null` reads as `total >= 0`, and every provider with a negative score fell
-   * out of the list without an error. Ten of them, silently.
-   */
-  const bandOf = (total: number) => tiers.find((tier) => total >= (tier.floor ?? -Infinity))?.id;
 
   const selected = new Map<string, Set<string>>();
 
@@ -357,31 +318,12 @@ if (filtersEl && resultsEl && summaryEl) {
      * also what makes position mean something on it.
      */
     if (sort === 'signal') {
-      /* The bands and their labels come from lib/signal.ts, through providers.json. */
-      for (const tier of tiers) {
-        const rows = found
-          .filter((provider) => bandOf(provider.signal) === tier.id)
-          .sort((a, b) => a.name.localeCompare(b.name, 'en'));
-        if (!rows.length) continue;
-
-        const section = document.createElement('section');
-        section.className = 'letter-group';
-
-        const heading = document.createElement('h2');
-        heading.textContent = tier.label;
-        section.append(heading);
-
-        const list = document.createElement('ul');
-        list.className = 'provider-list';
-        for (let index = rows.length - 1; index > 0; index -= 1) {
-          const swap = Math.floor(Math.random() * (index + 1));
-          [rows[index], rows[swap]] = [rows[swap], rows[index]];
-        }
-        for (const provider of rows) list.append(row(provider, true));
-        section.append(list);
-        resultsEl.append(section);
+      const list = document.createElement('ul');
+      list.className = 'provider-list';
+      for (const provider of [...found].sort((a, b) => b.signal - a.signal || a.name.localeCompare(b.name, 'en'))) {
+        list.append(row(provider, true));
       }
-
+      resultsEl.append(list);
       updateSummary(found);
       return;
     }

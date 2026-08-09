@@ -4,45 +4,33 @@ import ProviderList from '../components/ProviderList.astro';
 import ListControls from '../components/ListControls.astro';
 import { loadProviders } from '../lib/providers';
 import { organization } from '../lib/seo';
-import { loadSignal, tiers, tierOf, coverageFloor } from '../lib/signal';
+import { loadSignal, coverageFloor } from '../lib/signal';
 
 /*
  * The register in our order rather than in alphabetical order — the one page on
  * this site that expresses a preference, and so the one that has to argue for
  * itself hardest.
  *
- * Tiers rather than places. A strict ladder crowns something, and a register
- * that refuses to rate hosting has no business handing out a first place; a band
- * says "these are the ones we would look at" without pretending the difference
- * between the top two means anything. Inside a band the order is alphabetical.
+ * A plain ranked list, highest first. Bands and a shuffle were tried and taken
+ * out again: they hid the ordering without changing it, which is a worse kind of
+ * honesty than showing the number and saying whose it is. Where the arithmetic
+ * reads wrong, `signalAdjustment` moves a record in public.
  */
 const signal = await loadSignal();
 
-const scored = (await loadProviders()).map((provider) => ({
-  provider,
-  total: signal.of(provider.data as Record<string, unknown>).total,
-}));
+const scored = (await loadProviders())
+  .map((provider) => ({ provider, total: signal.of(provider.data as Record<string, unknown>).total }))
+  .sort((a, b) => b.total - a.total || a.provider.data.name.localeCompare(b.provider.data.name, 'en'));
 
 const row = ({ provider, total }: (typeof scored)[number]) => ({
   id: provider.id,
   name: provider.data.name,
   description: provider.data.description,
-  publishedByUs: provider.data.publishedByUs,
   greenWebId: provider.data.greenWebId,
   country: provider.data.hqCountry,
   figure: provider.data.figure,
   signal: total,
 });
-
-const banded = tiers
-  .map((tier) => ({
-    tier,
-    rows: scored
-      .filter((entry) => tierOf(entry.total).id === tier.id)
-      .sort((a, b) => a.provider.data.name.localeCompare(b.provider.data.name, 'en'))
-      .map(row),
-  }))
-  .filter((band) => band.rows.length > 0);
 
 /* Every record a person has put a thumb on, listed in full further down. */
 const adjusted = scored
@@ -62,14 +50,13 @@ const origin = Astro.site?.origin ?? '';
     name: 'FindHost Signal',
     numberOfItems: scored.length,
     isPartOf: organization(origin),
-    itemListOrder: 'https://schema.org/ItemListUnordered',
-    itemListElement: banded.flatMap((band) =>
-      band.rows.map((provider) => ({
-        '@type': 'ListItem',
-        url: `${origin}/${provider.id}/`,
-        name: provider.name,
-      })),
-    ),
+    itemListOrder: 'https://schema.org/ItemListOrderDescending',
+    itemListElement: scored.map(({ provider }, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      url: `${origin}/${provider.id}/`,
+      name: provider.data.name,
+    })),
   }}
 >
   <div class="page-head">
@@ -85,23 +72,15 @@ const origin = Astro.site?.origin ?? '';
   </p>
 
   <p>
-    There is no first place. Providers are grouped into bands, and the order inside a band is shuffled on every load —
-    the difference between two scores a point apart is not a fact about hosting, and whoever sits at the top of a list
-    gets the clicks. Scores are computed from fields already recorded on each provider's page, never written into a
-    record, and <a href="#weights">the whole of the arithmetic is below</a>.
+    Scores are computed from fields already recorded on each provider's page, never written into a record, and
+    <a href="#weights">the whole of the arithmetic is below</a>. Where it reads wrong, a person may move a record by
+    hand — with a name, a date and a reason, listed at the foot of this page.
   </p>
 
   <ListControls sort="signal" />
 
-  <div data-find-results data-shuffle-bands>
-    {
-      banded.map((band) => (
-        <section class="letter-group">
-          <h2>{band.tier.label}</h2>
-          <ProviderList providers={band.rows} withSignal />
-        </section>
-      ))
-    }
+  <div data-find-results>
+    <ProviderList providers={scored.map(row)} withSignal />
   </div>
 
   <h2 id="weights">The whole of it</h2>

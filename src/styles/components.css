@@ -1464,3 +1464,8 @@ html.js [data-find-fallback] {
   padding-top: var(--space-sm);
   border-top: var(--rule-hairline) solid var(--color-rule);
 }
+
+/** The one disclosure on the site that must not be skimmed past. */
+.self-disclosure {
+  border-width: var(--rule-strong);
+}

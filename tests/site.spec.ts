@@ -50,19 +50,14 @@ test.describe('the one opinionated ordering', () => {
     expect(ranked.length).toBe(alphabetical.length);
     expect(ranked).not.toEqual(alphabetical);
 
-    /*
-     * The headings change with the order: letters when it is alphabetical, bands
-     * when it is the Signal. A letter over a list that is not in letter order
-     * would be a label that lies, and so would a band over one that is.
-     */
-    await expect(page.locator('[data-find-results] .letter-group h2').first()).not.toHaveText(/^[A-Z0-9–]{1,3}$/);
+    /* Ranked means ungrouped: a letter heading over a list not in letter order lies. */
+    await expect(page.locator('[data-find-results] .letter-group')).toHaveCount(0);
 
-    /*
-     * Banded, not ranked: scores fall from band to band and are alphabetical
-     * inside one, so the whole column is not sorted and must not be.
-     */
-    const headings = await page.locator('[data-find-results] .letter-group h2').allInnerTexts();
-    expect(headings.length).toBeGreaterThan(1);
+    /* And the scores it sorted on descend. */
+    const scores = (await page.locator('[data-find-results] .provider-signal').allInnerTexts()).map(Number);
+    expect(scores).toEqual([...scores].sort((a, b) => b - a));
+
+
 
     await page.locator('.sort-links a[data-sort="alphabetical"]').click();
     await expect(page).not.toHaveURL(/sort=signal/);
@@ -70,7 +65,7 @@ test.describe('the one opinionated ordering', () => {
   });
 
   /* Without the script the same link is a page, which is the whole of the answer rather than a degraded one. */
-  test('is a page of its own as well', async ({ page, javaScriptEnabled }) => {
+  test('is a page of its own as well', async ({ page }) => {
     await page.goto('/');
     await expect(page.locator('.sort-links a[data-sort="signal"]')).toHaveAttribute('href', '/signal/');
 
@@ -80,19 +75,11 @@ test.describe('the one opinionated ordering', () => {
     const scores = (await page.locator('[data-find-results] .provider-signal').allInnerTexts()).map(Number);
     expect(scores.length).toBeGreaterThan(100);
 
-    /*
-     * No first place. The server renders each band alphabetically so the page is
-     * deterministic without the script; with the script the band is shuffled, so
-     * nobody owns the top row. Both halves are asserted, because losing either
-     * one quietly reintroduces a winner.
-     */
-    const top = page.locator('[data-find-results] .letter-group').first();
-    const names = await top.locator('.provider-name a').allInnerTexts();
-    expect(names.length).toBeGreaterThan(1);
+    /* The same order the script produces, so the two cannot disagree. */
+    expect(scores).toEqual([...scores].sort((a, b) => b - a));
 
-    const alphabetical = [...names].sort((a, b) => a.localeCompare(b, 'en'));
-    if (javaScriptEnabled === false) expect(names).toEqual(alphabetical);
-    else expect(new Set(names)).toEqual(new Set(alphabetical));
+    /* Whose opinion it is, said above the list rather than only in the prose. */
+    await expect(page.locator('.sort-note')).toContainText('opinionated');
 
     /* And a weight nobody answers is declared rather than quietly scored. */
     await expect(page.locator('main')).toContainText('asleep');
@@ -230,7 +217,7 @@ test.describe('a record', () => {
 });
 
 test.describe('governance, as behaviour rather than policy text', () => {
-  test('fortrabbit sits in alphabetical position and is marked', async ({ page }) => {
+  test('fortrabbit sits in alphabetical position and discloses itself', async ({ page }) => {
     await page.goto('/');
 
     const names = await page.locator('[data-find-results] .provider-name a').allInnerTexts();
@@ -240,12 +227,17 @@ test.describe('governance, as behaviour rather than policy text', () => {
     const sorted = [...names].sort((a, b) => a.localeCompare(b, 'en'));
     expect(names).toEqual(sorted);
 
-    // The disclosure rides with the row, where a reader meets the name, and with
-    // the machine-readable copy. It is not on the record page: a marker beside
-    // the name is seen by everyone scanning the register, which is where the
-    // conflict of interest could otherwise pass unnoticed.
-    const row = page.locator('.provider-name').filter({ hasText: /^fortrabbit/ });
-    await expect(row.locator('.self-marker')).toHaveText('published by us');
+    /*
+     * The disclosure is on our own record and in the machine-readable copy, not
+     * as a marker beside the name in every list: a claim about us repeated next
+     * to a hundred and seventy-five providers who had made no such claim, while
+     * the one page where it matters said it in passing.
+     */
+    await page.goto('/fortrabbit/');
+    await expect(page.locator('.self-disclosure')).toContainText('We publish this register');
+    await expect(page.locator('.self-disclosure a').first()).toBeVisible();
+
+    await page.goto('/');
 
     const record = await page.request.get('/fortrabbit.md');
     expect(await record.text()).toContain('Published by us');

@@ -3,7 +3,6 @@ interface Row {
   id: string;
   name: string;
   description?: string;
-  publishedByUs?: boolean;
   greenWebId?: number | null;
   /** ISO code, shown as text. A flag is a picture of a government, not of where a server is. */
   country?: string;
@@ -60,7 +59,6 @@ const { providers, namesOnly = false, withSignal = false } = Astro.props;
                   🌿<span class="visually-hidden"> Listed in the Green Web Foundation directory</span>
                 </span>
               )}
-              {provider.publishedByUs && <span class="self-marker">published by us</span>}
             </span>
             {described && <p>{provider.description}</p>}
           </div>
