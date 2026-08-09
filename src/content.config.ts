@@ -320,7 +320,6 @@ const providerFields = z
     criterion: z.number().int().min(1).max(6).optional(),
     /** Set where the failure is "we could not find it", not "it does not exist". */
     boundedSearch: z.boolean().optional(),
-    editorialNote: z.string().optional(),
     ai: z.enum(vocabulary('ai')).optional(),
 
     // Display only — never filterable, never sortable, never counted

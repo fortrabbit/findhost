@@ -56,9 +56,10 @@ figure:
   color: rgb(67, 106, 168)
   textColor: rgb(234, 238, 246)
   text: Docker apps, no YAML.
-editorialNote: Hostim is run by a former fortrabbit employee. Disclosed because fortrabbit publishes this site; it changes nothing about how the record is written.
 ---
 
 Hostim is a Docker-first hosting platform out of Germany. Deploy a Docker image, a Git repository or a Docker Compose file and it runs on bare metal in the EU — no Kubernetes, no YAML to hand-write. Managed MySQL, PostgreSQL and Redis and persistent volumes are built in, HTTPS and monitoring come as standard, and scaling is a slider in the interface.
 
 Pricing is flat and per-project rather than metered by consumption, which keeps a client handover to a predictable line item. The platform is polyglot by design, built around containers rather than around one language: the framework examples lean towards Node, Python, Java and Ruby, and anything that ships in a container runs the same way.
+
+**Disclosure.** Hostim is run by a former fortrabbit employee. Disclosed because fortrabbit publishes this site; it changes nothing about how the record is written.

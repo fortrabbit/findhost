@@ -89,7 +89,6 @@ export const GET: APIRoute = async ({ props, site }) => {
           '',
         ]
       : []),
-    ...(data.editorialNote ? ['## Disclosure', '', String(data.editorialNote), ''] : []),
     '## Notes',
     '',
     provider.body?.trim() ?? '',
