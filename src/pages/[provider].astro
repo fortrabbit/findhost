@@ -9,6 +9,7 @@ import { organization } from '../lib/seo';
 import SocialLinks from '../components/SocialLinks.astro';
 import PageFigure from '../components/PageFigure.astro';
 import FactGroups from '../components/FactGroups.astro';
+import infoIcon from 'bootstrap-icons/icons/info-circle.svg?raw';
 
 export async function getStaticPaths() {
   const providers = await getCollection('providers');
@@ -368,7 +369,11 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
       data.favorite && data.favoriteNote && (
         <p class="favorite-note full-bleed">
           <span class="record-badge favorite-badge" aria-hidden="true">♥</span>
-          {data.favoriteNote}
+          <span class="favorite-words">{data.favoriteNote}</span>
+          <a class="favorite-why" href="/about/#favorite-records" title="What a heart means here">
+            <Fragment set:html={infoIcon} />
+            <span class="visually-hidden">What a heart means here</span>
+          </a>
         </p>
       )
     }

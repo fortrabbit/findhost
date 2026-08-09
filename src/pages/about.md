@@ -40,6 +40,10 @@ We try to be as open as possible, accepting different kind of solutions to host 
 3. **Public pricing.** A price for at least one plan is published without login. "Contact us" is not a price.
 4. **Public technical documentation.** Runtime versions, deploy method and included services are documented publicly.
 
+## Favorite records
+
+A few records carry a heart and a line saying why. It is the one editorial mark here: ours, not a rating, earned by no measurement. It points at providers doing something that is not obvious, dealing straight, or built for people who write code — a shortcut worth following and an opinion worth disagreeing with. Everything else on a record is a fact with a source.
+
 ## Corrections
 
 Everything is tracked in Git and public on GitHub. Affiliation must be disclosed at the point of contribution, which applies to vendors correcting their own entry as much as to anyone else.

@@ -37,10 +37,6 @@ Two hosts can quote the same monthly figure and be different commitments. The re
 
 Environmental impact, privacy posture and security practice are deliberately not scored: a number would imply a precision nobody has.
 
-## The heart is an opinion
-
-A few records carry a heart and a line saying why. It is the one editorial mark here: ours, not a rating, earned by no measurement. It points at providers doing something that is not obvious, dealing straight, or built for people who write code — a shortcut worth following and an opinion worth disagreeing with. Everything else on a record is a fact with a source.
-
 ## Privacy and data protection
 
 Where the servers sit and who can compel access are separate questions, and collapsing them is the usual mistake. An order is served on a legal entity, not on a rack — the US CLOUD Act says so plainly, and Article 48 of the GDPR pushes back. "EU data center" is a statement about an address; who owns the company, [whose hardware](/metal/) it runs on and who is on the sub-processor list can all point elsewhere. This register records those inputs and does not assess compliance: whether processing is lawful depends on the data, the purpose and the contract, none of which are properties of a host.

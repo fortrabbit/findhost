@@ -308,7 +308,7 @@ html:not(.js) .theme-switch {
   align-items: center;
   max-width: none;
   margin-block: 0 var(--space-lg);
-  padding-block: var(--space-lg);
+  padding-block: var(--space-md);
   background: var(--color-liked);
   color: var(--color-heart);
   font-size: var(--text-base);
@@ -316,12 +316,34 @@ html:not(.js) .theme-switch {
   text-wrap: balance;
 }
 
+/* The sentence takes the room; the question sits at the far end of the band. */
+.favorite-words {
+  flex: 1;
+}
+
+.favorite-why {
+  display: inline-flex;
+  flex: none;
+  color: inherit;
+  opacity: 0.65;
+}
+
+.favorite-why:hover,
+.favorite-why:focus-visible {
+  opacity: 1;
+}
+
+.favorite-why svg {
+  width: 1.2em;
+  height: 1.2em;
+}
+
 .favorite-note .record-badge {
   flex: none;
   width: auto;
   height: auto;
   background: none;
-  font-size: 1.6em;
+  font-size: 1.4em;
 }
 
 /*
@@ -1491,6 +1513,3 @@ html.js [data-find-fallback] {
  * order links and needed them on one baseline; with the buttons alone it left
  * them sitting on the rule.
  */
-
-
-
