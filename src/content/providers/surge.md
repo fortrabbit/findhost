@@ -21,6 +21,7 @@ audience:
 freeTier: permanent
 regions: null
 favorite: true
+favoriteNote: One command, no dashboard, no build step, unchanged since 2014 and still free for the basics. Nothing here puts less between a folder and the web.
 status: active
 checkedAt: 2026-08-09
 cliTool: official

@@ -318,20 +318,6 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
       )
     }
 
-    {
-      /*
-       * Ours, said in the same breath as the mark that stands for it. The heart
-       * is the badge the lists carry, so a reader who has seen one there knows
-       * what this is before reading the sentence.
-       */
-      data.favorite && data.favoriteNote && (
-        <p class="favorite-note">
-          <span class="record-badge favorite-badge" aria-hidden="true">♥</span>
-          {data.favoriteNote}
-        </p>
-      )
-    }
-
     <p class="record-links">
       {/* Absent only where the provider has stopped and the domain went with it. */}
       {
@@ -368,6 +354,20 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
         ))
       }
     </p>
+
+    {
+      /*
+       * Ours, said in the same breath as the mark that stands for it. The heart
+       * is the badge the lists carry, so a reader who has seen one there knows
+       * what this is before reading the sentence.
+       */
+      data.favorite && data.favoriteNote && (
+        <p class="favorite-note">
+          <span class="record-badge favorite-badge" aria-hidden="true">♥</span>
+          {data.favoriteNote}
+        </p>
+      )
+    }
 
     <SocialLinks social={data.social} />
 

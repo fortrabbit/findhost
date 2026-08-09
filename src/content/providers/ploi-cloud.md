@@ -43,6 +43,7 @@ regions:
   - GB
   - US
 favorite: true
+favoriteNote: A small Dutch team shipping a platform on top of the server tool they already maintain. Independence at this size is a choice rather than a stage.
 status: active
 hqCountry: NL
 checkedAt: 2026-08-09

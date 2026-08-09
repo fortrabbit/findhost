@@ -42,6 +42,7 @@ cliTool: official
 iacSupport:
   - terraform
 favorite: true
+favoriteNote: Built by the people who make the runtime, and it shipped the standards-first argument — web APIs, TypeScript without a build step — rather than following it.
 status: active
 checkedAt: 2026-07-31
 sources:

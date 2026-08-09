@@ -33,6 +33,7 @@ apiAvailable: public
 social:
   github: https://github.com/hostimdev
 favorite: true
+favoriteNote: Docker, Compose or a git repository, on bare metal in the EU, priced in the open by a company one year old. The kind of new entrant this register exists to surface.
 status: active
 checkedAt: 2026-08-01
 sources:

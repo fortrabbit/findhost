@@ -17,6 +17,7 @@ sshAccess: none
 pricingModel: credit
 freeTier: permanent
 favorite: true
+favoriteNote: Describes an application in prose and ships running code somebody else could take over. Whether that lasts is the interesting question of the next few years.
 status: active
 checkedAt: 2026-08-01
 sources:

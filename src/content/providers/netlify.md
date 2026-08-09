@@ -65,6 +65,7 @@ regions:
 apiAvailable: public
 cliTool: official
 favorite: true
+favoriteNote: Made deploying from a commit to a CDN ordinary, and still documents how the build works instead of hiding it.
 status: active
 checkedAt: 2026-08-01
 sources:

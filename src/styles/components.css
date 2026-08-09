@@ -300,9 +300,11 @@ html:not(.js) .theme-switch {
  */
 .favorite-note {
   display: flex;
-  align-items: center;
+  /* The badge sits on the first line, not in the middle of a wrapped sentence. */
+  align-items: flex-start;
   gap: var(--space-2xs);
-  margin: var(--space-sm) 0 0;
+  max-width: var(--measure-prose);
+  margin: var(--space-md) 0 0;
   color: var(--color-heart);
   font-size: var(--text-sm);
   font-weight: bold;

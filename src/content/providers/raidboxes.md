@@ -32,6 +32,7 @@ audience:
   - agency
   - smb
 favorite: true
+favoriteNote: Managed WordPress with SSH and staging on the entry plan, German servers, renewable power, and no upsell maze.
 status: active
 checkedAt: 2026-08-07
 sources:

@@ -52,6 +52,7 @@ supportHours: 24-7
 apiAvailable: public
 cliTool: official
 favorite: true
+favoriteNote: Owns its data centres and sets the price floor the European market is measured against. Very little of what it charges is marketing.
 status: active
 checkedAt: 2026-08-01
 sources:

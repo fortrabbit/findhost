@@ -36,6 +36,7 @@ audience:
   - startup
 apiAvailable: public
 favorite: true
+favoriteNote: A pool of capacity instead of a machine, and root instead of a managed abstraction, aimed at agents as much as at people. Early, and worth watching.
 status: active
 checkedAt: 2026-08-08
 sources:

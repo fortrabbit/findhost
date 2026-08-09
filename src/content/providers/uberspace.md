@@ -50,6 +50,7 @@ freeTier: trial
 contractMinimum: none
 energyClaim: annual-matched
 favorite: true
+favoriteNote: Sells hosting with no control panel and no contract, and has held that line for fifteen years. Pay what it is worth to you, genuinely.
 status: active
 checkedAt: 2026-08-09
 sources:
