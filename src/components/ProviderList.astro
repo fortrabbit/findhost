@@ -32,7 +32,7 @@ const { providers, namesOnly = false, withSignal = false } = Astro.props;
       const described = !namesOnly && Boolean(provider.description);
 
       return (
-        <li class={described ? undefined : 'one-line'}>
+        <li class={described ? undefined : 'one-line'} data-signal={provider.signal}>
           {/* A record without a figure gets its initial, so a gap never looks like a broken row. */}
           {provider.figure ? (
             <span

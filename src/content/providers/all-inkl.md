@@ -22,6 +22,7 @@ audience:
   - agency
 software:
   - wordpress
+  - typo3
 runtimes:
   - php
 deployMethods:
@@ -43,8 +44,9 @@ freeTier: trial
 contractMinimum: none
 regions:
   - DE
-checkedAt: 2026-08-01
+checkedAt: 2026-08-09
 sources:
+  - { field: software, url: 'https://www.all-inkl.com/webhosting/software-installer/', checkedAt: 2026-08-09 }
   - { field: priceFrom, url: 'https://all-inkl.com/webhosting/paketvergleich/', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://all-inkl.com/server/', checkedAt: 2026-08-02 }
   - { field: currencies, url: 'https://all-inkl.com/agb/', checkedAt: 2026-08-02 }

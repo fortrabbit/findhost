@@ -95,12 +95,12 @@ const groups = [...new Set(providers.map((provider) => letterOf(provider.name)))
 
 {
   /*
-   * Only the register offers a choice of order. A facet page and a group beside
-   * it are already narrowed, and a second order for each would be a second page
-   * for each.
+   * Every list offers both orders. On the register the script rebuilds the rows
+   * from providers.json; on a narrowed page there is no panel and no fetch, so
+   * it reorders the rows already in the page — see find.ts.
    */
 }
-<ListControls sort={!seed && !bare ? 'alphabetical' : undefined} />
+<ListControls sort="alphabetical" here={seed || bare ? Astro.url.pathname : undefined} />
 
 <div data-pagefind-ignore data-find-results>
   {

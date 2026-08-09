@@ -64,6 +64,26 @@ test.describe('the one opinionated ordering', () => {
     expect(await page.locator('[data-find-results] .provider-name a').allInnerTexts()).toEqual(alphabetical);
   });
 
+  test('offers both orders on a narrowed page, without losing the narrowing', async ({ page, javaScriptEnabled }) => {
+    test.skip(javaScriptEnabled === false, 'reordering in place is the one thing here that needs the script');
+    await page.goto('/use-cases/web-app/');
+
+    const alphabetical = await page.locator('.provider-name a').allInnerTexts();
+    await page.locator('.sort-links a[data-sort="signal"]').click();
+
+    /* Same page, same set, different order — and the letters go, because ranked is not lettered. */
+    await expect(page).toHaveURL(/\/use-cases\/web-app\/\?sort=signal/);
+    await expect(page.locator('.letter-group')).toHaveCount(0);
+
+    const ranked = await page.locator('.provider-name a').allInnerTexts();
+    expect(ranked.length).toBe(alphabetical.length);
+    expect(ranked).not.toEqual(alphabetical);
+
+    /* Back restores the markup captured on load rather than rebuilding it. */
+    await page.locator('.sort-links a[data-sort="alphabetical"]').click();
+    expect(await page.locator('.provider-name a').allInnerTexts()).toEqual(alphabetical);
+  });
+
   /* The explainer, not a second copy of the list: one ordering, at one address. */
   test('explains itself, and publishes the arithmetic rather than describing it', async ({ page }) => {
     await page.goto('/');

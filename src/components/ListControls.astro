@@ -12,14 +12,26 @@ import ListStyleToggle from './ListStyleToggle.astro';
 interface Props {
   /** Which order this page is already in. Absent means the page offers no choice of order. */
   sort?: 'alphabetical' | 'signal';
+  /*
+   * Set on a page that is already a narrowing — a facet value, a group beside
+   * the register. Its two orders are the same list at the same address, so they
+   * are query strings on this page rather than links to the register and to the
+   * Signal, which would throw the narrowing away.
+   */
+  here?: string;
 }
 
-const { sort } = Astro.props;
+const { sort, here } = Astro.props;
 
-const orders = [
-  { id: 'alphabetical', label: 'A–Z', href: '/' },
-  { id: 'signal', label: 'Signal', href: '/signal/' },
-];
+const orders = here
+  ? [
+      { id: 'alphabetical', label: 'A–Z', href: here },
+      { id: 'signal', label: 'Signal', href: `${here}?sort=signal` },
+    ]
+  : [
+      { id: 'alphabetical', label: 'A–Z', href: '/' },
+      { id: 'signal', label: 'Signal', href: '/signal/' },
+    ];
 ---
 
 <div class="list-controls">

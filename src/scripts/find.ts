@@ -42,6 +42,7 @@ interface ProviderRow {
 function row(provider: ProviderRow, withSignal = false): HTMLLIElement {
   const item = document.createElement('li');
   if (!provider.description) item.className = 'one-line';
+  if (provider.signal !== undefined) item.dataset.signal = String(provider.signal);
 
   const tile = document.createElement('span');
   tile.className = provider.figure ? 'provider-tile' : 'provider-tile letter';
@@ -171,6 +172,61 @@ if (styleEl && resultsEl) {
   });
 
   show(current);
+}
+
+/*
+ * The two orders on a page that is already a narrowing — a facet value, a group
+ * beside the register.
+ *
+ * These pages ship no filter panel and fetch nothing, so rather than rebuild the
+ * list they reorder the rows already in it. Ranked means ungrouped, so the
+ * letter headings go and every row joins one list; switching back restores the
+ * markup captured on load, which is cheaper and safer than rebuilding letters.
+ */
+const narrowedEl = document.querySelector<HTMLElement>('[data-find-results]');
+const narrowedLinks = document.querySelector<HTMLElement>('[data-sort-links]');
+
+if (narrowedEl && narrowedLinks && !document.querySelector('[data-find-filters]')) {
+  const lettered = narrowedEl.innerHTML;
+  const noteEl = document.querySelector<HTMLElement>('[data-sort-note]');
+
+  const draw = (order: string) => {
+    if (noteEl) noteEl.hidden = order !== 'signal';
+    for (const link of narrowedLinks.querySelectorAll<HTMLAnchorElement>('a[data-sort]')) {
+      link.setAttribute('aria-current', String(link.dataset.sort === order));
+    }
+
+    if (order !== 'signal') {
+      narrowedEl.innerHTML = lettered;
+      return;
+    }
+
+    const rows = [...narrowedEl.querySelectorAll<HTMLLIElement>('.provider-list > li')];
+    rows.sort((a, b) => {
+      const gap = Number(b.dataset.signal ?? 0) - Number(a.dataset.signal ?? 0);
+      const name = (row: HTMLLIElement) => row.querySelector('.provider-name a')?.textContent ?? '';
+      return gap || name(a).localeCompare(name(b), 'en');
+    });
+
+    const list = document.createElement('ul');
+    list.className = 'provider-list';
+    list.append(...rows);
+    narrowedEl.replaceChildren(list);
+  };
+
+  narrowedLinks.addEventListener('click', (event) => {
+    const link = (event.target as HTMLElement).closest<HTMLAnchorElement>('a[data-sort]');
+    if (!link) return;
+
+    event.preventDefault();
+    const order = link.dataset.sort === 'signal' ? 'signal' : 'alphabetical';
+    const url = order === 'signal' ? `${location.pathname}?sort=signal` : location.pathname;
+    history.replaceState(null, '', url);
+    draw(order);
+    track(`sort ${order}`);
+  });
+
+  draw(new URLSearchParams(location.search).get('sort') === 'signal' ? 'signal' : 'alphabetical');
 }
 
 if (filtersEl && resultsEl && summaryEl) {

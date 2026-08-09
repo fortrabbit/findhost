@@ -64,8 +64,9 @@ supportHours: 24-7
 apiAvailable: public
 cliTool: official
 status: active
-checkedAt: 2026-08-01
+checkedAt: 2026-08-09
 sources:
+  - { field: software, url: 'https://www.mittwald.de/webhosting', checkedAt: 2026-08-09 }
   - { field: priceFrom, url: 'https://www.mittwald.de/webhosting', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://www.mittwald.de/webhosting', checkedAt: 2026-08-02 }
   - { field: currencies, url: 'https://www.mittwald.de/webhosting', checkedAt: 2026-08-02 }
