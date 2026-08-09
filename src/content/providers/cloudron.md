@@ -42,8 +42,10 @@ billingPeriods:
   - yearly
 exitWithin: a-month
 freeTier: permanent
-checkedAt: 2026-08-01
+hqCountry: DE
+checkedAt: 2026-08-09
 sources:
+  - { field: hqCountry, url: 'https://www.cloudron.io/about.html', checkedAt: 2026-08-09 }
   - { field: priceFrom, url: 'https://www.cloudron.io/pricing.html', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://www.cloudron.io/pricing.html', checkedAt: 2026-08-02 }
   - { field: currencies, url: 'https://www.cloudron.io/pricing.html', checkedAt: 2026-08-02 }

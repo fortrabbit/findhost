@@ -32,8 +32,12 @@ regions:
   - NL
   - PL
 status: active
-checkedAt: 2026-07-31
+hqCountry: FR
+checkedAt: 2026-08-09
+apiAvailable: public
+cliTool: official
 sources:
+  - { field: hqCountry, url: 'https://www.scaleway.com/en/about', checkedAt: 2026-08-09 }
   - { field: runtimes, url: 'https://www.scaleway.com/en/serverless-functions/', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://www.scaleway.com/en/serverless-functions/', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://www.scaleway.com/en/serverless-functions/', checkedAt: 2026-07-31 }
@@ -43,6 +47,8 @@ sources:
   - { field: billingPeriods, url: 'https://www.scaleway.com/en/pricing/serverless/', checkedAt: 2026-08-02 }
   - { field: billingTiming, url: 'https://www.scaleway.com/en/pricing/serverless/', checkedAt: 2026-08-02 }
   - { field: exitWithin, url: 'https://www.scaleway.com/en/pricing/serverless/', checkedAt: 2026-08-02 }
+  - { field: apiAvailable, url: 'https://www.scaleway.com/en/serverless-functions/', checkedAt: 2026-08-09 }
+  - { field: cliTool, url: 'https://www.scaleway.com/en/serverless-functions/', checkedAt: 2026-08-09 }
 figure:
   emoji: 🧵
   color: rgb(117, 70, 164)

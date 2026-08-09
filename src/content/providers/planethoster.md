@@ -30,11 +30,15 @@ audience:
   - smb
   - solo
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-09
+apiAvailable: public
+cliTool: official
 sources:
   - { field: regions, url: 'https://www.planethoster.com', checkedAt: 2026-07-31 }
   - { field: runtimes, url: 'https://www.planethoster.com', checkedAt: 2026-07-31 }
   - { field: sshAccess, url: 'https://www.planethoster.com', checkedAt: 2026-07-31 }
+  - { field: apiAvailable, url: 'https://www.planethoster.com', checkedAt: 2026-08-09 }
+  - { field: cliTool, url: 'https://www.planethoster.com', checkedAt: 2026-08-09 }
 ai: authored
 ---
 

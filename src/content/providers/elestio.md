@@ -65,6 +65,8 @@ supportTiering: paid-upgrade
 certifications:
   - iso-27001
   - soc-2
+apiAvailable: public
+cliTool: official
 social:
   github: https://github.com/elestio
   linkedin: https://www.linkedin.com/company/elestio
@@ -87,6 +89,8 @@ sources:
   - { field: hqCountry, url: 'https://elest.io/', checkedAt: 2026-08-01 }
   - { field: certifications, url: 'https://elest.io/', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://elest.io/', checkedAt: 2026-08-01 }
+  - { field: apiAvailable, url: 'https://elest.io', checkedAt: 2026-08-09 }
+  - { field: cliTool, url: 'https://elest.io', checkedAt: 2026-08-09 }
 figure:
   emoji: 🧑‍🔧
   color: rgb(93, 77, 157)

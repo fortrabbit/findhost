@@ -41,8 +41,10 @@ billingPeriods:
 billingTiming: arrears
 freeTier: permanent
 status: active
-checkedAt: 2026-08-01
+hqCountry: US
+checkedAt: 2026-08-09
 sources:
+  - { field: hqCountry, url: 'https://firebase.google.com', checkedAt: 2026-08-09 }
   - { field: priceFrom, url: 'https://firebase.google.com/pricing', checkedAt: 2026-08-02 }
   - { field: billingPeriods, url: 'https://docs.cloud.google.com/billing/docs/how-to/billing-cycle', checkedAt: 2026-08-02 }
   - { field: billingTiming, url: 'https://docs.cloud.google.com/billing/docs/how-to/billing-cycle', checkedAt: 2026-08-02 }

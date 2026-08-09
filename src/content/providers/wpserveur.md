@@ -29,12 +29,14 @@ audience:
   - agency
   - solo
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-09
+cliTool: official
 sources:
   - { field: software, url: 'https://www.wpserveur.net', checkedAt: 2026-07-31 }
   - { field: sshAccess, url: 'https://www.wpserveur.net', checkedAt: 2026-07-31 }
   - { field: deployMethods, url: 'https://www.wpserveur.net', checkedAt: 2026-07-31 }
   - { field: infraContract, url: 'https://www.wpserveur.net', checkedAt: 2026-07-31 }
+  - { field: cliTool, url: 'https://www.wpserveur.net', checkedAt: 2026-08-09 }
 ai: authored
 ---
 

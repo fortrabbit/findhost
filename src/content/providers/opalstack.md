@@ -47,6 +47,7 @@ priceFrom: sm
 priceTo: md
 currencies:
   - USD
+hqCountry: US
 billingPeriods:
   - monthly
   - yearly
@@ -57,8 +58,12 @@ supportChannels:
   - email
 supportHours: 24-7
 status: active
-checkedAt: 2026-08-01
+checkedAt: 2026-08-09
+apiAvailable: public
+cliTool: official
+mcpServer: official
 sources:
+  - { field: hqCountry, url: 'https://www.opalstack.com/', checkedAt: 2026-08-09 }
   - { field: entryPrice, url: 'https://www.opalstack.com/', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://www.opalstack.com/', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://www.opalstack.com/', checkedAt: 2026-08-02 }
@@ -68,6 +73,9 @@ sources:
   - { field: pricingModel, url: 'https://www.opalstack.com/', checkedAt: 2026-08-01 }
   - { field: supportHours, url: 'https://www.opalstack.com/', checkedAt: 2026-08-01 }
   - { field: supportChannels, url: 'https://www.opalstack.com/', checkedAt: 2026-08-01 }
+  - { field: apiAvailable, url: 'https://www.opalstack.com', checkedAt: 2026-08-09 }
+  - { field: cliTool, url: 'https://www.opalstack.com', checkedAt: 2026-08-09 }
+  - { field: mcpServer, url: 'https://www.opalstack.com', checkedAt: 2026-08-09 }
 figure:
   emoji: 💠
   color: rgb(77, 131, 157)

@@ -28,6 +28,8 @@ billingPeriods:
 billingTiming: arrears
 exitWithin: a-month
 freeTier: permanent
+apiAvailable: public
+cliTool: official
 regions:
   - US
   - NL
@@ -50,6 +52,8 @@ sources:
   - { field: billingTiming, url: 'https://docs.digitalocean.com/platform/billing/', checkedAt: 2026-08-02 }
   - { field: exitWithin, url: 'https://www.digitalocean.com/legal/terms-of-service-agreement', checkedAt: 2026-08-02 }
   - { field: regions, url: 'https://docs.digitalocean.com/products/functions/details/availability/', checkedAt: 2026-08-01 }
+  - { field: apiAvailable, url: 'https://www.digitalocean.com/products/functions', checkedAt: 2026-08-09 }
+  - { field: cliTool, url: 'https://www.digitalocean.com/products/functions', checkedAt: 2026-08-09 }
 figure:
   emoji: 🌊
   color: rgb(45, 86, 190)

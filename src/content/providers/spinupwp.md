@@ -49,8 +49,12 @@ social:
   bluesky: https://bsky.app/profile/spinupwp.com
   linkedin: https://ca.linkedin.com/company/spinupwp
 status: active
-checkedAt: 2026-08-01
+hqCountry: CA
+checkedAt: 2026-08-09
+apiAvailable: public
+cliTool: official
 sources:
+  - { field: hqCountry, url: 'https://spinupwp.com/about', checkedAt: 2026-08-09 }
   - { field: entryPrice, url: 'https://spinupwp.com/pricing/', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://spinupwp.com/terms/', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://spinupwp.com/pricing/', checkedAt: 2026-07-31 }
@@ -67,6 +71,8 @@ sources:
   - { field: deployMethods, url: 'https://spinupwp.com/', checkedAt: 2026-07-31 }
   - { field: software, url: 'https://spinupwp.com/', checkedAt: 2026-07-31 }
   - { field: audience, url: 'https://spinupwp.com/', checkedAt: 2026-07-31 }
+  - { field: apiAvailable, url: 'https://spinupwp.com', checkedAt: 2026-08-09 }
+  - { field: cliTool, url: 'https://spinupwp.com', checkedAt: 2026-08-09 }
 figure:
   emoji: 🌪️
   color: rgb(97, 77, 157)

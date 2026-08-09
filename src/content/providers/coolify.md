@@ -35,8 +35,10 @@ social:
   github: https://github.com/coollabsio/coolify
   discord: https://coollabs.io/discord
 status: active
-checkedAt: 2026-07-31
+hqCountry: HU
+checkedAt: 2026-08-09
 sources:
+  - { field: hqCountry, url: 'https://coolify.io/about', checkedAt: 2026-08-09 }
   - { field: infraContract, url: 'https://coolify.io/', checkedAt: 2026-07-31 }
   - { field: runsOn, url: 'https://coolify.io/', checkedAt: 2026-07-31 }
   - { field: runtimes, url: 'https://coolify.io/', checkedAt: 2026-07-31 }

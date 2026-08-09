@@ -15,12 +15,18 @@ pricingModel: fixed-tier
 priceFrom: xs
 billingPeriods:
   - monthly
+billingTiming: advance
+supportChannels:
+  - phone
+  - email
 status: active
-checkedAt: 2026-08-04
+checkedAt: 2026-08-08
 sources:
   - { field: hqCountry, url: 'https://hosting.cafe24.com', checkedAt: 2026-08-04 }
   - { field: priceFrom, url: 'https://hosting.cafe24.com', checkedAt: 2026-08-04 }
   - { field: software, url: 'https://hosting.cafe24.com', checkedAt: 2026-08-04 }
+  - { field: supportChannels, url: 'https://hosting.cafe24.com', checkedAt: 2026-08-08 }
+  - { field: billingTiming, url: 'https://hosting.cafe24.com', checkedAt: 2026-08-08 }
 figure:
   emoji: 🇰🇷
   color: rgb(64, 85, 171)

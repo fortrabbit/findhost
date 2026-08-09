@@ -51,7 +51,9 @@ supportChannels:
   - chat
   - phone
 status: active
-checkedAt: 2026-08-01
+checkedAt: 2026-08-09
+apiAvailable: public
+mcpServer: official
 sources:
   - { field: regions, url: 'https://lolipop.jp/pricing/', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://lolipop.jp/pricing/', checkedAt: 2026-08-01 }
@@ -61,6 +63,8 @@ sources:
   - { field: billingPeriods, url: 'https://lolipop.jp/pricing/', checkedAt: 2026-08-02 }
   - { field: pricingModel, url: 'https://lolipop.jp/pricing/', checkedAt: 2026-08-01 }
   - { field: supportChannels, url: 'https://lolipop.jp/pricing/', checkedAt: 2026-08-01 }
+  - { field: apiAvailable, url: 'https://lolipop.jp', checkedAt: 2026-08-09 }
+  - { field: mcpServer, url: 'https://lolipop.jp', checkedAt: 2026-08-09 }
 figure:
   emoji: 🍭
   color: rgb(166, 69, 124)

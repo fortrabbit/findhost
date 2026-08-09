@@ -43,8 +43,13 @@ regions:
   - NL
 supportHours: 24-7
 status: active
-checkedAt: 2026-08-01
+hqCountry: US
+checkedAt: 2026-08-09
+apiAvailable: public
+cliTool: official
+mcpServer: official
 sources:
+  - { field: hqCountry, url: 'https://pressable.com', checkedAt: 2026-08-09 }
   - { field: entryPrice, url: 'https://pressable.com/plans/', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://pressable.com/plans/', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://pressable.com/plans/', checkedAt: 2026-08-02 }
@@ -56,6 +61,9 @@ sources:
   - { field: freeTier, url: 'https://pressable.com/plans/', checkedAt: 2026-08-01 }
   - { field: regions, url: 'https://pressable.com/knowledgebase/where-are-pressable-data-centers-located/', checkedAt: 2026-08-01 }
   - { field: supportHours, url: 'https://pressable.com/knowledgebase/', checkedAt: 2026-08-01 }
+  - { field: apiAvailable, url: 'https://pressable.com', checkedAt: 2026-08-09 }
+  - { field: cliTool, url: 'https://pressable.com', checkedAt: 2026-08-09 }
+  - { field: mcpServer, url: 'https://pressable.com', checkedAt: 2026-08-09 }
 figure:
   emoji: 🅰️
   color: rgb(77, 117, 157)

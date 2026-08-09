@@ -35,7 +35,10 @@ regions:
   - AU
   - IN
 status: active
-checkedAt: 2026-08-01
+checkedAt: 2026-08-09
+apiAvailable: public
+cliTool: official
+mcpServer: official
 sources:
   - { field: founded, url: 'https://www.ovhcloud.com/en/about-us/', checkedAt: 2026-07-31 }
   - { field: hqCountry, url: 'https://www.ovhcloud.com/en/about-us/', checkedAt: 2026-07-31 }
@@ -78,6 +81,9 @@ sources:
     }
   - { field: regions, url: 'https://www.ovhcloud.com/en/datacenter/', checkedAt: 2026-08-01 }
   - { field: infraContract, url: 'https://www.ovhcloud.com/en/datacenter/', checkedAt: 2026-08-01 }
+  - { field: apiAvailable, url: 'https://www.ovhcloud.com', checkedAt: 2026-08-09 }
+  - { field: cliTool, url: 'https://www.ovhcloud.com', checkedAt: 2026-08-09 }
+  - { field: mcpServer, url: 'https://www.ovhcloud.com', checkedAt: 2026-08-09 }
 figure:
   emoji: 🧯
   color: rgb(190, 45, 49)

@@ -50,8 +50,11 @@ billingTiming: advance
 exitWithin: a-month
 entryPrice: { amount: 29.99, currency: USD, period: month }
 freeTier: trial
-checkedAt: 2026-08-01
+apiAvailable: public
+hqCountry: US
+checkedAt: 2026-08-09
 sources:
+  - { field: hqCountry, url: 'https://cpanel.net', checkedAt: 2026-08-09 }
   - { field: entryPrice, url: 'https://cpanel.net/pricing/', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://cpanel.net/pricing/', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://cpanel.net/pricing/', checkedAt: 2026-08-01 }
@@ -60,6 +63,7 @@ sources:
   - { field: billingPeriods, url: 'https://cpanel.net/pricing/', checkedAt: 2026-08-02 }
   - { field: billingTiming, url: 'https://cpanel.net/pricing/', checkedAt: 2026-08-02 }
   - { field: exitWithin, url: 'https://cpanel.net/pricing/', checkedAt: 2026-08-02 }
+  - { field: apiAvailable, url: 'https://cpanel.net/developers/', checkedAt: 2026-08-09 }
 figure:
   emoji: 🎛️
   color: rgb(180, 108, 54)

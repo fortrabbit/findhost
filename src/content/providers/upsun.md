@@ -62,7 +62,9 @@ social:
   linkedin: https://www.linkedin.com/company/upsundotcom
   youtube: https://www.youtube.com/@upsundotcom
 status: active
-checkedAt: 2026-08-01
+checkedAt: 2026-08-09
+apiAvailable: public
+cliTool: official
 sources:
   - { field: regions, url: 'https://developer.upsun.com/docs/development/regions', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://status.upsun.com/', checkedAt: 2026-08-01 }
@@ -76,6 +78,8 @@ sources:
   - { field: billingTiming, url: 'https://upsun.com/pricing/', checkedAt: 2026-08-02 }
   - { field: freeTier, url: 'https://upsun.com/pricing/', checkedAt: 2026-07-31 }
   - { field: audience, url: 'https://upsun.com/pricing/', checkedAt: 2026-07-31 }
+  - { field: apiAvailable, url: 'https://upsun.com', checkedAt: 2026-08-09 }
+  - { field: cliTool, url: 'https://upsun.com', checkedAt: 2026-08-09 }
 figure:
   emoji: ☀️
   color: rgb(45, 120, 190)

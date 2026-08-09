@@ -23,7 +23,8 @@ supportChannels:
   - phone
 supportHours: 24-7
 status: active
-checkedAt: 2026-08-08
+checkedAt: 2026-08-09
+apiAvailable: public
 sources:
   - { field: hqCountry, url: 'https://selectel.ru/en/', checkedAt: 2026-08-04 }
   - { field: infraContract, url: 'https://selectel.ru/en/', checkedAt: 2026-08-04 }
@@ -31,6 +32,7 @@ sources:
   - { field: founded, url: 'https://selectel.ru/en/', checkedAt: 2026-08-08 }
   - { field: supportChannels, url: 'https://selectel.ru/en/', checkedAt: 2026-08-08 }
   - { field: supportHours, url: 'https://selectel.ru/en/', checkedAt: 2026-08-08 }
+  - { field: apiAvailable, url: 'https://selectel.ru/en/', checkedAt: 2026-08-09 }
 figure:
   emoji: 🇷🇺
   color: rgb(77, 100, 157)

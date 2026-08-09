@@ -41,12 +41,14 @@ freeTier: trial
 regions:
   - JP
 contractMinimum: annual
+status: active
+checkedAt: 2026-08-09
+apiAvailable: public
 certifications:
   - iso-27001
 social:
   x: https://x.com/xserverjp
   facebook: https://www.facebook.com/xserver.co.jp/
-checkedAt: 2026-08-01
 sources:
   - { field: hqCountry, url: 'https://www.xserver.ne.jp/company.php', checkedAt: 2026-08-01 }
   - { field: certifications, url: 'https://www.xserver.ne.jp/company.php', checkedAt: 2026-08-01 }
@@ -58,6 +60,7 @@ sources:
   - { field: billingTiming, url: 'https://www.xserver.ne.jp/price/', checkedAt: 2026-08-02 }
   - { field: freeTier, url: 'https://www.xserver.ne.jp/price/', checkedAt: 2026-08-01 }
   - { field: contractMinimum, url: 'https://www.xserver.ne.jp/price/', checkedAt: 2026-08-01 }
+  - { field: apiAvailable, url: 'https://www.xserver.ne.jp', checkedAt: 2026-08-09 }
 figure:
   emoji: 🎌
   color: rgb(161, 73, 103)

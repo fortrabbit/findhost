@@ -49,8 +49,12 @@ regions:
   - KR
   - AU
 status: active
-checkedAt: 2026-08-01
+hqCountry: US
+checkedAt: 2026-08-09
+apiAvailable: public
+mcpServer: official
 sources:
+  - { field: hqCountry, url: 'https://sevalla.com', checkedAt: 2026-08-09 }
   - { field: priceFrom, url: 'https://sevalla.com/pricing/', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://docs.sevalla.com/billing/', checkedAt: 2026-08-02 }
   - { field: currencies, url: 'https://sevalla.com/pricing/', checkedAt: 2026-08-02 }
@@ -62,6 +66,8 @@ sources:
   - { field: entryPrice, url: 'https://sevalla.com/pricing/', checkedAt: 2026-08-01 }
   - { field: regions, url: 'https://docs.sevalla.com/service-information/data-center-locations', checkedAt: 2026-08-01 }
   - { field: parent, url: 'https://sevalla.com/pricing/', checkedAt: 2026-08-01 }
+  - { field: apiAvailable, url: 'https://sevalla.com', checkedAt: 2026-08-09 }
+  - { field: mcpServer, url: 'https://sevalla.com', checkedAt: 2026-08-09 }
 figure:
   emoji: ⛈️
   color: rgb(45, 118, 190)

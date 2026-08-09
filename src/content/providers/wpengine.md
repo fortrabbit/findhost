@@ -44,7 +44,8 @@ social:
   linkedin: https://www.linkedin.com/company/wpengine
   youtube: https://www.youtube.com/wpengine
 status: active
-checkedAt: 2026-08-01
+checkedAt: 2026-08-09
+apiAvailable: public
 sources:
   - { field: founded, url: 'https://wpengine.com/about-us/', checkedAt: 2026-08-01 }
   - { field: hqCountry, url: 'https://wpengine.com/about-us/', checkedAt: 2026-08-01 }
@@ -58,6 +59,7 @@ sources:
   - { field: pricingModel, url: 'https://wpengine.com/plans/', checkedAt: 2026-07-31 }
   - { field: backupsIncluded, url: 'https://wpengine.com/plans/', checkedAt: 2026-07-31 }
   - { field: contractMinimum, url: 'https://wpengine.com/plans/', checkedAt: 2026-07-31 }
+  - { field: apiAvailable, url: 'https://wpengine.com', checkedAt: 2026-08-09 }
 figure:
   emoji: 🚂
   color: rgb(66, 122, 169)

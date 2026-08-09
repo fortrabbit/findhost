@@ -37,8 +37,9 @@ regions:
   - AU
 iacSupport:
   - terraform
+apiAvailable: public
 status: active
-checkedAt: 2026-08-04
+checkedAt: 2026-08-09
 sources:
   - { field: entryPrice, url: 'https://www.kamatera.com/pricing/', checkedAt: 2026-08-04 }
   - { field: priceFrom, url: 'https://www.kamatera.com/pricing/', checkedAt: 2026-08-04 }
@@ -47,6 +48,7 @@ sources:
   - { field: regions, url: 'https://www.kamatera.com/pricing/', checkedAt: 2026-08-04 }
   - { field: whoManagesOs, url: 'https://www.kamatera.com/pricing/', checkedAt: 2026-08-04 }
   - { field: iacSupport, url: 'https://github.com/Kamatera/terraform-provider-kamatera', checkedAt: 2026-08-04 }
+  - { field: apiAvailable, url: 'https://www.kamatera.com', checkedAt: 2026-08-09 }
 figure:
   emoji: ☁️
   color: rgb(67, 101, 168)

@@ -33,8 +33,10 @@ supportChannels:
   - email
   - phone
 status: active
-checkedAt: 2026-08-08
+hqCountry: IL
+checkedAt: 2026-08-09
 sources:
+  - { field: hqCountry, url: 'https://www.duda.co/about', checkedAt: 2026-08-09 }
   - { field: entryPrice, url: 'https://www.duda.co/pricing', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://www.duda.co/pricing', checkedAt: 2026-08-01 }
   - { field: priceTo, url: 'https://www.duda.co/pricing', checkedAt: 2026-08-02 }

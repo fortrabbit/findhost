@@ -42,9 +42,13 @@ billingPeriods:
 billingTiming: advance
 exitWithin: a-month
 freeTier: permanent
+apiAvailable: public
+cliTool: official
 status: active
-checkedAt: 2026-08-01
+hqCountry: US
+checkedAt: 2026-08-09
 sources:
+  - { field: hqCountry, url: 'https://gridpane.com', checkedAt: 2026-08-09 }
   - { field: priceFrom, url: 'https://gridpane.com/pricing/', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://gridpane.com/pricing/', checkedAt: 2026-08-02 }
   - { field: currencies, url: 'https://gridpane.com/terms/', checkedAt: 2026-08-02 }
@@ -54,6 +58,8 @@ sources:
   - { field: freeTier, url: 'https://gridpane.com/pricing/', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://gridpane.com/pricing/', checkedAt: 2026-08-01 }
   - { field: infraContract, url: 'https://gridpane.com/pricing/', checkedAt: 2026-08-01 }
+  - { field: apiAvailable, url: 'https://gridpane.com', checkedAt: 2026-08-09 }
+  - { field: cliTool, url: 'https://gridpane.com', checkedAt: 2026-08-09 }
 figure:
   emoji: 🧯
   color: rgb(131, 77, 157)

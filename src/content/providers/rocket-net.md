@@ -43,7 +43,8 @@ supportChannels:
   - phone
 supportHours: 24-7
 status: active
-checkedAt: 2026-08-01
+checkedAt: 2026-08-09
+mcpServer: official
 sources:
   - { field: entryPrice, url: 'https://rocket.net/pricing/', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://rocket.net/pricing/', checkedAt: 2026-08-02 }
@@ -56,6 +57,7 @@ sources:
   - { field: freeTier, url: 'https://rocket.net/pricing/', checkedAt: 2026-08-01 }
   - { field: supportHours, url: 'https://rocket.net/pricing/', checkedAt: 2026-08-01 }
   - { field: supportChannels, url: 'https://rocket.net/pricing/', checkedAt: 2026-08-01 }
+  - { field: mcpServer, url: 'https://rocket.net', checkedAt: 2026-08-09 }
 figure:
   emoji: 🚀
   color: rgb(69, 83, 166)

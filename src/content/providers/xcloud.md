@@ -47,7 +47,8 @@ social:
   linkedin: https://www.linkedin.com/company/xcloud.host/
   youtube: https://www.youtube.com/@xCloud-Hosting
 status: active
-checkedAt: 2026-08-01
+checkedAt: 2026-08-09
+apiAvailable: public
 sources:
   - { field: hqCountry, url: 'https://xcloud.host/contact/', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://xcloud.host/pricing/', checkedAt: 2026-08-01 }
@@ -61,6 +62,7 @@ sources:
   - { field: pricingModel, url: 'https://xcloud.host/pricing/', checkedAt: 2026-07-31 }
   - { field: infraContract, url: 'https://xcloud.host/pricing/', checkedAt: 2026-07-31 }
   - { field: runsOn, url: 'https://xcloud.host/pricing/', checkedAt: 2026-07-31 }
+  - { field: apiAvailable, url: 'https://xcloud.host', checkedAt: 2026-08-09 }
 figure:
   emoji: ⚡
   color: rgb(45, 102, 190)

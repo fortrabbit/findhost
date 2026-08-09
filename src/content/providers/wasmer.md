@@ -42,7 +42,8 @@ social:
   x: https://twitter.com/wasmerio
   discord: https://discord.gg/rWkMNStrEW
 status: active
-checkedAt: 2026-08-01
+checkedAt: 2026-08-09
+cliTool: official
 sources:
   - { field: regions, url: 'https://docs.wasmer.io/edge/learn/regions', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://docs.wasmer.io/', checkedAt: 2026-08-01 }
@@ -53,6 +54,7 @@ sources:
   - { field: freeTier, url: 'https://wasmer.io/pricing', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://wasmer.io/pricing', checkedAt: 2026-07-31 }
   - { field: software, url: 'https://wasmer.io/pricing', checkedAt: 2026-07-31 }
+  - { field: cliTool, url: 'https://wasmer.io', checkedAt: 2026-08-09 }
 figure:
   emoji: 🧩
   color: rgb(55, 83, 179)

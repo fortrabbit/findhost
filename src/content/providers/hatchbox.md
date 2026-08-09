@@ -48,8 +48,10 @@ exitWithin: a-month
 entryPrice: { amount: 10, currency: USD, period: month }
 freeTier: trial
 status: active
-checkedAt: 2026-08-01
+hqCountry: US
+checkedAt: 2026-08-09
 sources:
+  - { field: hqCountry, url: 'https://www.hatchbox.io/about', checkedAt: 2026-08-09 }
   - { field: entryPrice, url: 'https://www.hatchbox.io/pricing', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://www.hatchbox.io/pricing', checkedAt: 2026-08-01 }
   - { field: priceTo, url: 'https://www.hatchbox.io/pricing', checkedAt: 2026-08-02 }

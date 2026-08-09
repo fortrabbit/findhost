@@ -30,9 +30,12 @@ billingPeriods:
 billingTiming: advance
 exitWithin: a-month
 entryPrice: { amount: 120, currency: USD, period: month }
+cliTool: official
 status: active
-checkedAt: 2026-08-01
+hqCountry: US
+checkedAt: 2026-08-09
 sources:
+  - { field: hqCountry, url: 'https://craftcms.com/cloud', checkedAt: 2026-08-09 }
   - { field: entryPrice, url: 'https://craftcms.com/cloud', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://craftcms.com/cloud', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://craftcms.com/cloud', checkedAt: 2026-08-02 }
@@ -43,6 +46,7 @@ sources:
   - { field: pricingModel, url: 'https://craftcms.com/cloud', checkedAt: 2026-07-31 }
   - { field: deployMethods, url: 'https://craftcms.com/cloud', checkedAt: 2026-07-31 }
   - { field: specialisation, url: 'https://craftcms.com/docs/cloud/', checkedAt: 2026-07-31 }
+  - { field: cliTool, url: 'https://craftcms.com/cloud', checkedAt: 2026-08-09 }
 figure:
   emoji: ⛅
   color: rgb(48, 48, 186)

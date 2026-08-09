@@ -40,8 +40,10 @@ apiAvailable: public
 iacSupport:
   - terraform
 status: active
-checkedAt: 2026-08-01
+hqCountry: LU
+checkedAt: 2026-08-09
 sources:
+  - { field: hqCountry, url: 'https://gcore.com/about', checkedAt: 2026-08-09 }
   - { field: pricingModel, url: 'https://gcore.com/pricing', checkedAt: 2026-08-01 }
   - { field: currencies, url: 'https://gcore.com/pricing', checkedAt: 2026-08-02 }
   - { field: billingPeriods, url: 'https://gcore.com/pricing', checkedAt: 2026-08-02 }

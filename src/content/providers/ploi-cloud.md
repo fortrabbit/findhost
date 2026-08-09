@@ -42,8 +42,13 @@ regions:
   - GB
   - US
 status: active
-checkedAt: 2026-07-31
+hqCountry: NL
+checkedAt: 2026-08-09
+apiAvailable: public
+cliTool: official
+mcpServer: official
 sources:
+  - { field: hqCountry, url: 'https://ploi.cloud', checkedAt: 2026-08-09 }
   - { field: runsOn, url: 'https://ploi.cloud', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://ploi.cloud', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://ploi.cloud', checkedAt: 2026-07-31 }
@@ -54,6 +59,9 @@ sources:
   - { field: freeTier, url: 'https://ploi.cloud', checkedAt: 2026-07-31 }
   - { field: software, url: 'https://ploi.cloud', checkedAt: 2026-07-31 }
   - { field: managedDatabases, url: 'https://ploi.cloud', checkedAt: 2026-07-31 }
+  - { field: apiAvailable, url: 'https://ploi.cloud', checkedAt: 2026-08-09 }
+  - { field: cliTool, url: 'https://ploi.cloud', checkedAt: 2026-08-09 }
+  - { field: mcpServer, url: 'https://ploi.cloud', checkedAt: 2026-08-09 }
 figure:
   emoji: ☁️
   color: rgb(190, 124, 45)

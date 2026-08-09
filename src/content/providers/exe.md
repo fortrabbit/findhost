@@ -50,14 +50,12 @@ exe.dev sells Ubuntu virtual machines that start in seconds, reached over SSH, w
 
 ## What is actually different
 
-Nothing in the list above is new, which is the first thing to say plainly: a VPS with root and a public address has been purchasable for twenty years and costs less elsewhere. Two things about the shape are unusual.
+Nothing in the list above is new, which is the first thing to say plainly: a VPS with root and a public address has been purchasable for twenty years and costs less elsewhere.
 
-**The unit of purchase is capacity, not a machine.** Twenty dollars a month buys a pool — 2 vCPU, 8 GB of RAM, 100 GB of disk — and up to fifty VMs may be spawned from it. Everywhere else, a second machine is a second bill. Here a machine is closer to a process: make one to try something, destroy it, make eleven more. That changes the behaviour it encourages more than any feature does.
+**The unit of purchase is capacity, not a machine.** Twenty dollars a month buys a pool — 2 vCPU, 8 GB of RAM, 100 GB of disk — and up to fifty VMs may be spawned from it. Everywhere else, a second machine is a second bill. Here a machine is closer to a process: make one to try something, destroy it, make eleven more.
 
 **It refuses the managed abstraction on purpose.** After fifteen years of platforms competing to hide the operating system, this one sells the operating system back, at a moment when the thing typing the commands is increasingly not a person. An agent that can be given a computer, allowed to break it, and handed another one is a better fit for a root shell than for a deploy pipeline it has to be taught.
 
 ## What to be sceptical about
 
-The moat is ergonomics, and ergonomics are copyable. DigitalOcean, Hetzner and Fly.io can all price against a $20 pool, and the per-second sandbox is a product several GPU and agent-infrastructure companies already sell. The comparison being drawn — Heroku's `git push`, DigitalOcean's $5 droplet — is a comparison to two things that defined a decade, which is a large claim for a platform four months old and venture funded, and this register records that funding as a fact worth knowing rather than as praise.
-
-What is worth watching is whether "a computer per idea" turns out to be how people work once an agent is writing most of the code. If it is, the pool is the right unit and this was early. If not, it is a nicer VPS.
+The moat is ergonomics, and ergonomics are copyable. DigitalOcean, Hetzner and Fly.io can all price against a $20 pool, and the per-second sandbox is a product several GPU and agent-infrastructure companies already sell. What is worth watching is whether "a computer per idea" turns out to be how people work once an agent is writing most of the code. If it is, the pool is the right unit and this was early. If not, it is a nicer VPS.

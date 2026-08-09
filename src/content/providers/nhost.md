@@ -36,8 +36,10 @@ freeTier: permanent
 apiAvailable: public
 cliTool: official
 status: active
-checkedAt: 2026-08-01
+hqCountry: PT
+checkedAt: 2026-08-09
 sources:
+  - { field: hqCountry, url: 'https://nhost.io/about', checkedAt: 2026-08-09 }
   - { field: entryPrice, url: 'https://nhost.io/pricing', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://nhost.io/pricing', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://nhost.io/pricing', checkedAt: 2026-08-02 }

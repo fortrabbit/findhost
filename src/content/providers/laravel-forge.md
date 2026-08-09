@@ -46,8 +46,11 @@ contractMinimum: monthly
 supportHours: business-hours
 supportTiering: paid-upgrade
 status: active
-checkedAt: 2026-08-01
+hqCountry: US
+checkedAt: 2026-08-09
+apiAvailable: public
 sources:
+  - { field: hqCountry, url: 'https://laravel.com/forge', checkedAt: 2026-08-09 }
   - { field: entryPrice, url: 'https://laravel.com/forge/pricing', checkedAt: 2026-08-01 }
   - { field: infraContract, url: 'https://laravel.com/forge', checkedAt: 2026-07-31 }
   - { field: whoManagesOs, url: 'https://laravel.com/forge', checkedAt: 2026-07-31 }
@@ -67,6 +70,7 @@ sources:
   - { field: supportHours, url: 'https://laravel.com/forge/pricing', checkedAt: 2026-07-31 }
   - { field: software, url: 'https://laravel.com/forge', checkedAt: 2026-07-31 }
   - { field: audience, url: 'https://laravel.com/forge', checkedAt: 2026-07-31 }
+  - { field: apiAvailable, url: 'https://laravel.com/forge/docs', checkedAt: 2026-08-09 }
 figure:
   emoji: 💸
   color: rgb(89, 183, 52)

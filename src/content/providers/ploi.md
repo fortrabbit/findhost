@@ -45,7 +45,10 @@ social:
   github: https://github.com/ploi
   facebook: https://www.facebook.com/ploideploy
 status: active
-checkedAt: 2026-08-01
+checkedAt: 2026-08-09
+apiAvailable: public
+cliTool: official
+mcpServer: official
 sources:
   - { field: hqCountry, url: 'https://ploi.io/pricing', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://ploi.io/pricing', checkedAt: 2026-08-02 }
@@ -58,6 +61,9 @@ sources:
   - { field: infraContract, url: 'https://ploi.io/pricing', checkedAt: 2026-07-31 }
   - { field: runsOn, url: 'https://ploi.io/', checkedAt: 2026-07-31 }
   - { field: software, url: 'https://ploi.io/', checkedAt: 2026-07-31 }
+  - { field: apiAvailable, url: 'https://ploi.io', checkedAt: 2026-08-09 }
+  - { field: cliTool, url: 'https://ploi.io', checkedAt: 2026-08-09 }
+  - { field: mcpServer, url: 'https://ploi.io', checkedAt: 2026-08-09 }
 figure:
   emoji: 🪄
   color: rgb(98, 60, 175)

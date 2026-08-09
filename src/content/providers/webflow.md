@@ -20,8 +20,10 @@ social:
   facebook: https://www.facebook.com/webflow/
   linkedin: https://www.linkedin.com/company/webflow-inc-
   youtube: https://www.youtube.com/@Webflow
-checkedAt: 2026-08-01
+hqCountry: US
+checkedAt: 2026-08-09
 sources:
+  - { field: hqCountry, url: 'https://webflow.com/about', checkedAt: 2026-08-09 }
   - { field: founded, url: 'https://webflow.com/about', checkedAt: 2026-08-01 }
   - { field: ownership, url: 'https://webflow.com/about', checkedAt: 2026-08-01 }
   - { field: apiAvailable, url: 'https://developers.webflow.com/', checkedAt: 2026-08-01 }

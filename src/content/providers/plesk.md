@@ -53,7 +53,9 @@ billingPeriods:
 billingTiming: advance
 freeTier: trial
 status: active
-checkedAt: 2026-08-01
+checkedAt: 2026-08-09
+apiAvailable: public
+cliTool: official
 sources:
   - { field: hqCountry, url: 'https://www.plesk.com/legal/', checkedAt: 2026-08-01 }
   - { field: ownership, url: 'https://www.plesk.com/legal/', checkedAt: 2026-08-01 }
@@ -64,6 +66,8 @@ sources:
   - { field: currencies, url: 'https://www.plesk.com/pricing/', checkedAt: 2026-08-02 }
   - { field: billingPeriods, url: 'https://www.plesk.com/pricing/', checkedAt: 2026-08-02 }
   - { field: billingTiming, url: 'https://www.plesk.com/pricing/', checkedAt: 2026-08-02 }
+  - { field: apiAvailable, url: 'https://docs.plesk.com/', checkedAt: 2026-08-09 }
+  - { field: cliTool, url: 'https://docs.plesk.com/', checkedAt: 2026-08-09 }
 figure:
   emoji: 🪟
   color: rgb(77, 109, 157)

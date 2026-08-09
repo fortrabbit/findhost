@@ -22,6 +22,7 @@ billingPeriods:
 billingTiming: advance
 exitWithin: a-month
 freeTier: permanent
+cliTool: official
 status: active
 checkedAt: 2026-07-31
 sources:
@@ -34,6 +35,7 @@ sources:
   - { field: billingTiming, url: 'https://developers.cloudflare.com/billing/billing-policy/', checkedAt: 2026-08-02 }
   - { field: exitWithin, url: 'https://developers.cloudflare.com/billing/billing-policy/', checkedAt: 2026-08-02 }
   - { field: freeTier, url: 'https://developers.cloudflare.com/workers/platform/pricing/', checkedAt: 2026-07-31 }
+  - { field: cliTool, url: 'https://developers.cloudflare.com/workers/', checkedAt: 2026-08-09 }
 figure:
   emoji: 🔶
   color: rgb(176, 117, 59)

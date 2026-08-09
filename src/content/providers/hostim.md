@@ -29,6 +29,7 @@ billingPeriods:
 billingTiming: arrears
 pricingModel: fixed-tier
 freeTier: trial
+apiAvailable: public
 social:
   github: https://github.com/hostimdev
 status: active
@@ -47,6 +48,7 @@ sources:
   - { field: billingTiming, url: 'https://hostim.dev/pricing/', checkedAt: 2026-08-02 }
   - { field: pricingModel, url: 'https://hostim.dev/pricing/', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://hostim.dev/pricing/', checkedAt: 2026-08-01 }
+  - { field: apiAvailable, url: 'https://hostim.dev', checkedAt: 2026-08-09 }
 figure:
   emoji: 🐳
   color: rgb(67, 106, 168)

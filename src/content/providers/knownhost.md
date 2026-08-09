@@ -28,8 +28,10 @@ pricingModel: fixed-tier
 renewalMultiple: 1.3
 contractMinimum: none
 status: active
-checkedAt: 2026-08-01
+hqCountry: US
+checkedAt: 2026-08-09
 sources:
+  - { field: hqCountry, url: 'https://www.knownhost.com/contact', checkedAt: 2026-08-09 }
   - { field: regions, url: 'https://www.knownhost.com/network', checkedAt: 2026-08-01 }
   - { field: founded, url: 'https://www.knownhost.com/', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://www.knownhost.com/web-hosting', checkedAt: 2026-08-01 }

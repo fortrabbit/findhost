@@ -21,11 +21,13 @@ audience:
 freeTier: permanent
 regions: null
 status: active
-checkedAt: 2026-08-08
+checkedAt: 2026-08-09
+cliTool: official
 sources:
   - { field: category, url: 'https://surge.sh', checkedAt: 2026-08-08 }
   - { field: freeTier, url: 'https://surge.sh', checkedAt: 2026-08-08 }
   - { field: runtimes, url: 'https://surge.sh', checkedAt: 2026-08-08 }
+  - { field: cliTool, url: 'https://surge.sh', checkedAt: 2026-08-09 }
 ai: authored
 ---
 

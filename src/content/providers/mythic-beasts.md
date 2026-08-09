@@ -54,7 +54,8 @@ regions:
 supportChannels:
   - email
 status: active
-checkedAt: 2026-08-01
+checkedAt: 2026-08-09
+apiAvailable: public
 sources:
   - { field: regions, url: 'https://www.mythic-beasts.com/order/hosting', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://www.mythic-beasts.com/order/hosting', checkedAt: 2026-08-01 }
@@ -67,6 +68,7 @@ sources:
   - { field: pricingModel, url: 'https://www.mythic-beasts.com/order/hosting', checkedAt: 2026-08-01 }
   - { field: ownership, url: 'https://www.mythic-beasts.com/support', checkedAt: 2026-08-01 }
   - { field: supportChannels, url: 'https://www.mythic-beasts.com/support', checkedAt: 2026-08-01 }
+  - { field: apiAvailable, url: 'https://www.mythic-beasts.com', checkedAt: 2026-08-09 }
 figure:
   emoji: 🐉
   color: rgb(103, 73, 161)

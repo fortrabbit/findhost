@@ -29,8 +29,10 @@ social:
   facebook: https://www.facebook.com/weebly
   linkedin: https://www.linkedin.com/company/weebly
   youtube: https://www.youtube.com/user/weebly
-checkedAt: 2026-08-08
+hqCountry: US
+checkedAt: 2026-08-09
 sources:
+  - { field: hqCountry, url: 'https://www.weebly.com/about', checkedAt: 2026-08-09 }
   - { field: freeTier, url: 'https://www.weebly.com/pricing', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://www.weebly.com/pricing', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://www.weebly.com/pricing', checkedAt: 2026-08-02 }

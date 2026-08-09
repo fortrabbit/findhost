@@ -52,8 +52,10 @@ billingTiming: advance
 exitWithin: a-month
 entryPrice: { amount: 5.50, currency: USD, period: month }
 freeTier: trial
-checkedAt: 2026-08-01
+hqCountry: US
+checkedAt: 2026-08-09
 sources:
+  - { field: hqCountry, url: 'https://cleavr.io', checkedAt: 2026-08-09 }
   - { field: entryPrice, url: 'https://cleavr.io/pricing', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://cleavr.io/pricing', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://cleavr.io/pricing', checkedAt: 2026-08-01 }

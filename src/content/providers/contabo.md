@@ -38,6 +38,8 @@ regions:
   - SG
   - JP
   - AU
+apiAvailable: public
+cliTool: official
 status: active
 checkedAt: 2026-08-01
 sources:
@@ -53,6 +55,8 @@ sources:
   - { field: backupsIncluded, url: 'https://contabo.com/en/vps/', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://contabo.com/en/locations/', checkedAt: 2026-08-01 }
   - { field: hqCountry, url: 'https://contabo.com/en/locations/', checkedAt: 2026-08-01 }
+  - { field: apiAvailable, url: 'https://www.contabo.com', checkedAt: 2026-08-09 }
+  - { field: cliTool, url: 'https://www.contabo.com', checkedAt: 2026-08-09 }
 figure:
   emoji: 🥨
   color: rgb(190, 154, 45)

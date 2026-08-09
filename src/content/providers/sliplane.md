@@ -49,7 +49,8 @@ regions:
   - US
   - FI
   - SG
-checkedAt: 2026-08-01
+checkedAt: 2026-08-09
+apiAvailable: public
 sources:
   - { field: regions, url: 'https://sliplane.io/pricing', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://sliplane.io/pricing', checkedAt: 2026-08-01 }
@@ -62,6 +63,7 @@ sources:
   - { field: freeTier, url: 'https://sliplane.io/pricing', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://sliplane.io/pricing', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://sliplane.io/terms', checkedAt: 2026-08-01 }
+  - { field: apiAvailable, url: 'https://sliplane.io', checkedAt: 2026-08-09 }
 figure:
   emoji: 🛝
   color: rgb(69, 110, 166)

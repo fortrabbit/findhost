@@ -41,8 +41,9 @@ billingPeriods:
 billingTiming: arrears
 entryPrice: { amount: 11, currency: USD, period: month }
 freeTier: trial
+apiAvailable: public
 status: active
-checkedAt: 2026-08-01
+checkedAt: 2026-08-09
 sources:
   - { field: entryPrice, url: 'https://www.cloudways.com/en/pricing.php', checkedAt: 2026-08-01 }
   - { field: runsOn, url: 'https://www.cloudways.com/en/pricing.php', checkedAt: 2026-07-31 }
@@ -57,6 +58,7 @@ sources:
   - { field: useCases, url: 'https://www.cloudways.com/en/', checkedAt: 2026-07-31 }
   - { field: audience, url: 'https://www.cloudways.com/en/', checkedAt: 2026-07-31 }
   - { field: software, url: 'https://www.cloudways.com/en/', checkedAt: 2026-07-31 }
+  - { field: apiAvailable, url: 'https://developers.cloudways.com/', checkedAt: 2026-08-09 }
 figure:
   emoji: ☁️
   color: rgb(45, 102, 190)

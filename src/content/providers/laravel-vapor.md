@@ -34,8 +34,11 @@ billingTiming: advance
 freeTier: permanent
 persistentStorage: false
 status: active
-checkedAt: 2026-07-31
+hqCountry: US
+checkedAt: 2026-08-09
+cliTool: official
 sources:
+  - { field: hqCountry, url: 'https://vapor.laravel.com', checkedAt: 2026-08-09 }
   - { field: runsOn, url: 'https://vapor.laravel.com', checkedAt: 2026-07-31 }
   - { field: infraContract, url: 'https://vapor.laravel.com', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://vapor.laravel.com', checkedAt: 2026-07-31 }
@@ -45,6 +48,7 @@ sources:
   - { field: billingPeriods, url: 'https://vapor.laravel.com', checkedAt: 2026-08-02 }
   - { field: billingTiming, url: 'https://vapor.laravel.com', checkedAt: 2026-08-02 }
   - { field: freeTier, url: 'https://vapor.laravel.com', checkedAt: 2026-07-31 }
+  - { field: cliTool, url: 'https://docs.vapor.build/', checkedAt: 2026-08-09 }
 figure:
   emoji: 🌫️
   color: rgb(77, 93, 157)

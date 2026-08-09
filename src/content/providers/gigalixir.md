@@ -43,9 +43,12 @@ billingPeriods:
 freeTier: permanent
 regions:
   - US
+cliTool: official
 status: active
-checkedAt: 2026-08-01
+hqCountry: US
+checkedAt: 2026-08-09
 sources:
+  - { field: hqCountry, url: 'https://www.gigalixir.com/contact', checkedAt: 2026-08-09 }
   - { field: priceFrom, url: 'https://www.gigalixir.com/pricing/', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://www.gigalixir.com/pricing/', checkedAt: 2026-08-02 }
   - { field: currencies, url: 'https://www.gigalixir.com/pricing/', checkedAt: 2026-08-02 }
@@ -53,6 +56,7 @@ sources:
   - { field: freeTier, url: 'https://www.gigalixir.com/pricing/', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://www.gigalixir.com/pricing/', checkedAt: 2026-08-01 }
   - { field: regions, url: 'https://www.gigalixir.com/pricing/', checkedAt: 2026-08-01 }
+  - { field: cliTool, url: 'https://docs.gigalixir.com/', checkedAt: 2026-08-09 }
 figure:
   emoji: 💧
   color: rgb(124, 69, 166)

@@ -32,6 +32,7 @@ billingPeriods:
   - monthly
 freeTier: trial
 contractMinimum: monthly
+apiAvailable: public
 regions:
   - US
   - CA
@@ -43,8 +44,10 @@ regions:
   - AU
 supportTiering: all-plans
 status: active
-checkedAt: 2026-08-01
+hqCountry: US
+checkedAt: 2026-08-09
 sources:
+  - { field: hqCountry, url: 'https://laravel.com/cloud', checkedAt: 2026-08-09 }
   - { field: entryPrice, url: 'https://laravel.com/cloud/pricing', checkedAt: 2026-08-01 }
   - { field: regions, url: 'https://laravel.com/cloud/pricing', checkedAt: 2026-08-01 }
   - { field: managedDatabases, url: 'https://laravel.com/cloud/pricing', checkedAt: 2026-07-31 }
@@ -59,6 +62,7 @@ sources:
   - { field: supportTiering, url: 'https://laravel.com/cloud/pricing', checkedAt: 2026-07-31 }
   - { field: software, url: 'https://laravel.com/cloud/pricing', checkedAt: 2026-07-31 }
   - { field: useCases, url: 'https://laravel.com/cloud/pricing', checkedAt: 2026-07-31 }
+  - { field: apiAvailable, url: 'https://laravel.com/cloud/docs/', checkedAt: 2026-08-09 }
 figure:
   emoji: 🧺
   color: rgb(164, 142, 70)

@@ -46,6 +46,8 @@ deployMethods:
   - docker-image
 pricingModel: fixed-tier
 freeTier: trial
+apiAvailable: public
+cliTool: official
 supportChannels:
   - email
 supportHours: 24-7
@@ -60,6 +62,8 @@ sources:
   - { field: freeTier, url: 'https://www.divio.com/pricing/', checkedAt: 2026-08-01 }
   - { field: supportTiering, url: 'https://www.divio.com/pricing/', checkedAt: 2026-08-01 }
   - { field: certifications, url: 'https://www.divio.com/pricing/', checkedAt: 2026-08-01 }
+  - { field: apiAvailable, url: 'https://divio.com/developers', checkedAt: 2026-08-09 }
+  - { field: cliTool, url: 'https://divio.com/developers', checkedAt: 2026-08-09 }
 figure:
   emoji: 📦
   color: rgb(77, 131, 157)

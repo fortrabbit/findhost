@@ -5,6 +5,9 @@ urls:
   home: https://www.fortrabbit.com
   pricing: https://www.fortrabbit.com/pricing
   status: https://status.fortrabbit.com
+  terms: https://www.fortrabbit.com/legal/contract/terms
+  dpa: https://www.fortrabbit.com/legal/data-protection/data-processing
+  sla: https://www.fortrabbit.com/legal/contract/service-level-agreement
 category:
   - paas
 audience:
@@ -129,3 +132,7 @@ fortrabbit also publishes FindHost, which is why this record carries a permanent
 The platform runs PHP and nothing else. There is no runtime here for an application written in another language, and the shape of the product follows from that single assumption.
 
 Because the infrastructure is rented rather than owned, the regions and their physical properties are the upstream provider's rather than fortrabbit's.
+
+## Conflict of interest
+
+**We publish this FindHost.** fortrabbit runs FindHost and appears in its own dataset. See [about](/about/).

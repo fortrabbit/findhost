@@ -50,11 +50,13 @@ supportChannels:
   - email
   - chat
 supportHours: 24-7
+status: active
+checkedAt: 2026-08-09
+apiAvailable: public
 social:
   facebook: https://www.facebook.com/WebSupport.sk
   linkedin: https://sk.linkedin.com/company/websupportsk
   youtube: https://www.youtube.com/websupport
-checkedAt: 2026-08-01
 sources:
   - { field: regions, url: 'https://www.websupport.sk/datacentrum', checkedAt: 2026-08-01 }
   - { field: energyClaim, url: 'https://www.websupport.sk/o-nas', checkedAt: 2026-08-01 }
@@ -67,6 +69,7 @@ sources:
   - { field: billingPeriods, url: 'https://www.websupport.sk/cennik', checkedAt: 2026-08-02 }
   - { field: exitWithin, url: 'https://www.websupport.sk/obchodne-podmienky/', checkedAt: 2026-08-02 }
   - { field: urls, url: 'https://www.websupport.sk/podmienky', checkedAt: 2026-08-01 }
+  - { field: apiAvailable, url: 'https://www.websupport.sk', checkedAt: 2026-08-09 }
 figure:
   emoji: 🏔️
   color: rgb(69, 124, 166)

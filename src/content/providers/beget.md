@@ -26,6 +26,7 @@ billingPeriods:
 billingTiming: advance
 entryPrice: { amount: 4.59, currency: EUR, period: month }
 freeTier: none
+apiAvailable: public
 iacSupport:
   - terraform
 status: active
@@ -39,6 +40,7 @@ sources:
   - { field: sshAccess, url: 'https://beget.com/en/hosting', checkedAt: 2026-08-04 }
   - { field: managedDatabases, url: 'https://beget.com/en', checkedAt: 2026-08-04 }
   - { field: iacSupport, url: 'https://github.com/beget/terraform-provider-beget', checkedAt: 2026-08-04 }
+  - { field: apiAvailable, url: 'https://beget.com', checkedAt: 2026-08-09 }
 figure:
   emoji: 🇷🇺
   color: rgb(104, 77, 157)
