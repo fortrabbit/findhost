@@ -6,7 +6,6 @@ import { energy, footnotes, price } from '../lib/record';
 import { isListed } from '../lib/providers';
 import { loadFacets } from '../lib/facets';
 import { organization } from '../lib/seo';
-import { loadSignal } from '../lib/signal';
 import SocialLinks from '../components/SocialLinks.astro';
 import PageFigure from '../components/PageFigure.astro';
 import FactGroups from '../components/FactGroups.astro';
@@ -165,13 +164,6 @@ const drawn = (groups: { label: string; fields: Field[] }[]) =>
       note: numberOf.get(field.id),
     })),
   }));
-
-/*
- * Our opinion of this record, and the parts of it that are not zero. Computed
- * here as everywhere else — it is never a field, so no contributor can raise it
- * except by recording a fact that is true.
- */
-const signal = isListed(provider) ? (await loadSignal()).of(data as Record<string, unknown>) : undefined;
 
 /*
  * The other end of every relation: who names this record as their parent, whose
@@ -402,35 +394,6 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
           )
         }
 
-        {
-          /*
-           * Ours rather than the provider's, and the only number on the page we
-           * made up — so it reads as one figure with its workings under it,
-           * rather than as one more row in a list of recorded facts.
-           */
-          signal && (
-            <section class="fact-group signal-group">
-              <h2>Signal</h2>
-
-              <p class="signal-total">{signal.total}</p>
-
-              <dl class="fact-list signal-parts">
-                {signal.parts
-                  .filter((part) => part.points !== 0)
-                  .map((part) => (
-                    <>
-                      <dt>{part.label}</dt>
-                      <dd>{part.points > 0 ? `+${part.points}` : String(part.points)}</dd>
-                    </>
-                  ))}
-              </dl>
-
-              <p class="signal-onward">
-                <a href="/signal/">How the Signal is worked out →</a>
-              </p>
-            </section>
-          )
-        }
       </aside>
 
       <div class="record-prose">

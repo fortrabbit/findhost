@@ -4,26 +4,18 @@ interface Row {
   name: string;
   description?: string;
   greenWebId?: number | null;
-  /** ISO code, shown as text. A flag is a picture of a government, not of where a server is. */
-  country?: string;
   figure?: { emoji: string; color: string; textColor: string };
-  /** The Signal total, shown beside the country. Absent where the list is an index. */
-  signal?: number;
+  /** Ours: we like it. Drawn as a heart, the one editorial mark a row carries. */
+  favorite?: boolean;
 }
 
 interface Props {
   providers: Row[];
   /** Set where the list is an index rather than a register — the map's country sections, say. */
   namesOnly?: boolean;
-  /*
-   * Show each row's Signal. Only where the Signal is the order: on an
-   * alphabetical list it is a number with no bearing on the position it sits
-   * next to, which reads as a rating attached to every provider on the site.
-   */
-  withSignal?: boolean;
 }
 
-const { providers, namesOnly = false, withSignal = false } = Astro.props;
+const { providers, namesOnly = false } = Astro.props;
 ---
 
 <ul class="provider-list">
@@ -32,7 +24,7 @@ const { providers, namesOnly = false, withSignal = false } = Astro.props;
       const described = !namesOnly && Boolean(provider.description);
 
       return (
-        <li class={described ? undefined : 'one-line'} data-signal={provider.signal}>
+        <li class={described ? undefined : 'one-line'}>
           {/* A record without a figure gets its initial, so a gap never looks like a broken row. */}
           {provider.figure ? (
             <span
@@ -53,29 +45,24 @@ const { providers, namesOnly = false, withSignal = false } = Astro.props;
               <a href={`/${provider.id}/`}>{provider.name}</a>
               {provider.greenWebId && (
                 <span
-                  class="green-mark"
+                  class="record-badge green-mark"
                   title="Listed in the Green Web Foundation directory, which verifies the claim against published evidence"
                 >
-                  🌿<span class="visually-hidden"> Listed in the Green Web Foundation directory</span>
+                  <span aria-hidden="true">🌿</span>
+                  <span class="visually-hidden">Listed in the Green Web Foundation directory</span>
                 </span>
               )}
             </span>
             {described && <p>{provider.description}</p>}
           </div>
 
-          {/* One column, however many facts are in it: the row is a grid, and a fourth child would wrap. */}
-          <span class="provider-meta">
-            {provider.country && <span class="provider-country">{provider.country}</span>}
-            {withSignal && provider.signal !== undefined && !namesOnly && (
-              <a
-                class="provider-signal"
-                href="/signal/"
-                title="Signal — our opinionated score, and how it is worked out"
-              >
-                {provider.signal}
-              </a>
-            )}
-          </span>
+          {/* Ours, not the provider's, which is why it is the only mark in the row. */}
+          {provider.favorite && (
+            <span class="record-badge favorite-badge" title="One we like">
+              <span aria-hidden="true">♥</span>
+              <span class="visually-hidden">One we like</span>
+            </span>
+          )}
         </li>
       );
     })

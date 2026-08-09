@@ -29,122 +29,28 @@ const listed = readdirSync(records).filter((file) => {
   return status === undefined || !outside.has(status);
 }).length;
 
-test.describe('the one opinionated ordering', () => {
+test.describe('the one editorial mark', () => {
   /*
-   * The site refuses to rate hosting, and this page ranks it. What keeps the two
-   * compatible is that the ranking is optional, addressed separately, and shows
-   * its whole arithmetic — so these are the three things worth failing a build.
+   * A heart, and nothing else. It replaced a scoring system that computed a
+   * number and then let a person move it by hand — after eighteen adjustments
+   * the arithmetic was decoration, and a boolean says the same thing without
+   * implying a precision nobody had.
    */
-  test('re-sorts the register in place, and says so in the URL', async ({ page, javaScriptEnabled }) => {
-    test.skip(javaScriptEnabled === false, 'sorting in place is the one thing here that needs the script');
+  test('marks the ones we like, and marks nothing else', async ({ page }) => {
     await page.goto('/');
-    const alphabetical = await page.locator('[data-find-results] .provider-name a').allInnerTexts();
 
-    await page.locator('.sort-links a[data-sort="signal"]').click();
+    const hearts = page.locator('[data-find-results] .favorite-badge');
+    expect(await hearts.count()).toBeGreaterThan(5);
 
-    /* In place: same page, same filters, different order. */
-    await expect(page).toHaveURL(/sort=signal/);
-    await expect(page.locator('h1')).toHaveText('Find your next web host');
+    /* Every heart says what it is to a screen reader, not only to a pointer. */
+    await expect(hearts.first()).toContainText(/one we like/i);
 
-    const ranked = await page.locator('[data-find-results] .provider-name a').allInnerTexts();
-    expect(ranked.length).toBe(alphabetical.length);
-    expect(ranked).not.toEqual(alphabetical);
-
-    /* Ranked means ungrouped: a letter heading over a list not in letter order lies. */
-    await expect(page.locator('[data-find-results] .letter-group')).toHaveCount(0);
-
-    /* And the scores it sorted on descend. */
-    const scores = (await page.locator('[data-find-results] .provider-signal').allInnerTexts()).map(Number);
-    expect(scores).toEqual([...scores].sort((a, b) => b - a));
-
-
-
-    await page.locator('.sort-links a[data-sort="alphabetical"]').click();
-    await expect(page).not.toHaveURL(/sort=signal/);
-    expect(await page.locator('[data-find-results] .provider-name a').allInnerTexts()).toEqual(alphabetical);
+    /* And no score anywhere: that is the thing this replaced. */
+    await expect(page.locator('.provider-signal')).toHaveCount(0);
+    await expect(page.locator('.sort-links')).toHaveCount(0);
   });
 
-  test('offers both orders on a narrowed page, without losing the narrowing', async ({ page, javaScriptEnabled }) => {
-    test.skip(javaScriptEnabled === false, 'reordering in place is the one thing here that needs the script');
-    await page.goto('/use-cases/web-app/');
-
-    const alphabetical = await page.locator('.provider-name a').allInnerTexts();
-    await page.locator('.sort-links a[data-sort="signal"]').click();
-
-    /* Same page, same set, different order — and the letters go, because ranked is not lettered. */
-    await expect(page).toHaveURL(/\/use-cases\/web-app\/\?sort=signal/);
-    await expect(page.locator('.letter-group')).toHaveCount(0);
-
-    const ranked = await page.locator('.provider-name a').allInnerTexts();
-    expect(ranked.length).toBe(alphabetical.length);
-    expect(ranked).not.toEqual(alphabetical);
-
-    /* Back restores the markup captured on load rather than rebuilding it. */
-    await page.locator('.sort-links a[data-sort="alphabetical"]').click();
-    expect(await page.locator('.provider-name a').allInnerTexts()).toEqual(alphabetical);
-  });
-
-  /* The explainer, not a second copy of the list: one ordering, at one address. */
-  test('explains itself, and publishes the arithmetic rather than describing it', async ({ page }) => {
-    await page.goto('/');
-    await expect(page.locator('.sort-links a[data-sort="signal"]')).toHaveAttribute('href', '/signal/');
-
-    await page.goto('/signal/');
-    await expect(page.locator('h1')).toHaveText('Signal');
-
-    /* No list here — it lives on the register, where the filters still work. */
-    await expect(page.locator('.provider-list')).toHaveCount(0);
-    await expect(page.locator('main a[href="/?sort=signal"]')).toBeVisible();
-
-    /*
-     * The table is rendered from the weights the ordering runs on. Described
-     * instead of rendered, it would drift the first time somebody forgot.
-     */
-    const rows = page.locator('.signal-table tbody tr');
-    expect(await rows.count()).toBeGreaterThan(10);
-    await expect(rows.first().locator('.signal-points')).toHaveText(/^[+\u2212-]/);
-
-    /*
-     * Only the weights that count. A weight scoring nothing for every record is
-     * not part of the running algorithm, so it is not printed as though it were.
-     */
-    const printed = await page.locator('.signal-table tbody tr td:first-child').allInnerTexts();
-    expect(printed).not.toContain('An MCP server');
-  });
-
-  test('shows a record its own score, broken into what earned it', async ({ page }) => {
-    await page.goto('/fortrabbit/');
-
-    /* The total reads as one figure, with the parts that made it under it. */
-    const group = page.locator('.signal-group');
-    await expect(group.locator('.signal-total')).toHaveText(/^-?\d+$/);
-    expect(await group.locator('.signal-parts > dt').count()).toBeGreaterThan(3);
-
-    /* And a link that says where it goes, rather than a heading that happens to be one. */
-    await expect(group.locator('.signal-onward a')).toHaveText(/how the signal/i);
-  });
-
-  test('publishes every weight it ran on', async ({ page }) => {
-    await page.goto('/signal/');
-
-    /* The table is the algorithm. A ranking whose rules are described rather than rendered can drift from them. */
-    const rows = page.locator('.signal-table tbody tr');
-    expect(await rows.count()).toBeGreaterThan(10);
-    await expect(rows.first().locator('.signal-points')).toHaveText(/^[+\u2212-]/);
-  });
-
-  /*
-   * The page must say that whoever publishes the register appears in the list it
-   * orders. Asserted as the disclosure rather than as the brand name, because
-   * the wording is editorial and lives in markdown — what may not change is that
-   * it is made at all.
-   */
-  test('says whose opinion it is, on the page that holds it', async ({ page }) => {
-    await page.goto('/signal/');
-    await expect(page.locator('main')).toContainText(/we publish this register|fortrabbit/i);
-  });
-
-  test('leaves the register alphabetical', async ({ page }) => {
+  test('the register is alphabetical and offers no other order', async ({ page }) => {
     await page.goto('/');
     const names = await page.locator('[data-find-results] .provider-name a').allInnerTexts();
     const sorted = [...names].sort((a, b) => a.replace(/^the /i, '').localeCompare(b.replace(/^the /i, ''), 'en'));

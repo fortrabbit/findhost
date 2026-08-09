@@ -51,11 +51,7 @@ supportChannels:
 supportHours: 24-7
 apiAvailable: public
 cliTool: official
-signalAdjustment:
-  points: 5
-  by: fl
-  on: 2026-08-09
-  why: Owns its data centres and sets the price floor the European market is measured against. The minus for virtual servers is right by the letter and wrong about this one.
+favorite: true
 status: active
 checkedAt: 2026-08-01
 sources:

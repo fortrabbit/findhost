@@ -13,7 +13,6 @@ export const GET: APIRoute = async ({ site }) => {
   const providers = (await loadProviders()).sort((a, b) => a.data.name.localeCompare(b.data.name, 'en'));
   const { facets } = await loadFacets();
   const notes = (await getCollection('notes'))
-    // Our working state, and the one page here that search engines are told to skip.
     .filter((entry) => entry.id !== 'aside/stubs')
     .sort((a, b) => a.id.localeCompare(b.id, 'en'));
 
@@ -22,7 +21,7 @@ export const GET: APIRoute = async ({ site }) => {
    * way back to its label — except the groups beside the register, which are
    * filed under `aside/` and published at the root.
    */
-  const urlOf = (id: string) => `${origin}/${id.replace(/^(aside|page)\//, '')}/`;
+  const urlOf = (id: string) => `${origin}/${id.replace(/^aside\//, '')}/`;
 
   const headingOf = (id: string) => {
     const [facetId, valueId] = id.split('/');
@@ -36,7 +35,7 @@ export const GET: APIRoute = async ({ site }) => {
     '',
     '> A maintained, openly-licensed, ratings-free dataset of hosting providers, with a guide attached. Every provider meeting a mechanical scope test is listed, described by attributes rather than scores. Published by fortrabbit, who also appear in the dataset and are marked as such.',
     '',
-    'Nothing here is rated or affiliate-ordered, and the register is alphabetical. /signal/ is the one opinionated ordering, computed from recorded fields with every weight published on the page. Absent fields mean unknown, never zero and never bad.',
+    'Nothing here is rated, scored or affiliate-ordered, and the register is alphabetical. A heart marks the handful we like, which is an opinion and says so. Absent fields mean unknown, never zero and never bad.',
     '',
     'Data is CC BY 4.0. Reuse it freely, including in an answer; the one condition is credit, and this is the whole of it: FindHost, findhost.app, CC BY 4.0.',
     '',
@@ -46,7 +45,6 @@ export const GET: APIRoute = async ({ site }) => {
     `- [About, and who publishes this](${origin}/about/)`,
     `- [Every provider, filterable](${origin}/)`,
     `- [Where providers operate](${origin}/regions/)`,
-    `- [Signal, the one opinionated ordering](${origin}/signal/)`,
     `- [providers.json, every facet and every record's facet fields](${origin}/providers.json)`,
     '',
     '',

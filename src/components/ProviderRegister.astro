@@ -93,14 +93,7 @@ const groups = [...new Set(providers.map((provider) => letterOf(provider.name)))
   !seed && !bare && <slot />
 }
 
-{
-  /*
-   * Every list offers both orders. On the register the script rebuilds the rows
-   * from providers.json; on a narrowed page there is no panel and no fetch, so
-   * it reorders the rows already in the page — see find.ts.
-   */
-}
-<ListControls sort="alphabetical" here={seed || bare ? Astro.url.pathname : undefined} />
+<ListControls />
 
 <div data-pagefind-ignore data-find-results>
   {

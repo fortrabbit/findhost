@@ -24,7 +24,9 @@ Two hosts can quote the same monthly figure and be different commitments, becaus
 
 **How leaving works** is the part discovered late. A minimum term, a notice period and a year bought in advance are one fact to a customer — time during which money keeps going out after the decision to stop, recorded as [getting out](/exit/).
 
-**A free tier is a marketing instrument** more often than a product decision. It says nothing about what the paid plans cost or how the platform behaves under load, and the free tier and the production tier are frequently different products wearing one name. What it settles is whether the application actually runs, which no comparison table can.
+**A free tier is a marketing instrument.** It says nothing about what the paid plans cost or how the platform behaves under load, and the free tier.
+
+**Is the host using renewable multipliers?** Common with shared hosting. Yearly contracts, that are extended automatically, which cost much more from the second year on.
 
 ## "AI hosting" means three different things
 

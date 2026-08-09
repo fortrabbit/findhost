@@ -41,11 +41,7 @@ apiAvailable: public
 cliTool: official
 iacSupport:
   - terraform
-signalAdjustment:
-  points: 12
-  by: fl
-  on: 2026-08-09
-  why: Built by the people who make the runtime, and shipped the standards-first argument — web APIs, TypeScript without a build step — rather than following it.
+favorite: true
 status: active
 checkedAt: 2026-07-31
 sources:

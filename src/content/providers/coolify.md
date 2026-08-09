@@ -34,11 +34,7 @@ apiAvailable: public
 social:
   github: https://github.com/coollabsio/coolify
   discord: https://coollabs.io/discord
-signalAdjustment:
-  points: 8
-  by: fl
-  on: 2026-08-09
-  why: Self-hostable and open source, with a paid cloud that does not hold the software hostage. The most credible answer to platform lock-in in this register.
+favorite: true
 status: active
 hqCountry: HU
 checkedAt: 2026-08-09

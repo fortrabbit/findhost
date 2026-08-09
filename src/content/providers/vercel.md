@@ -10,11 +10,7 @@ urls:
 category:
   - serverless
 description: Vercel is a frontend platform for Javascript people. It's formerly known as Zeit and venture backed and high on the AI wave.
-signalAdjustment:
-  points: 10
-  by: fl
-  on: 2026-08-09
-  why: Too popular to ignore.
+favorite: true
 ownership: vc-backed
 whoManagesOs: managed
 useCases:

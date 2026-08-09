@@ -16,11 +16,16 @@ The above is quote by David N. Welton. Three things follow from that, and they e
 
 ## Publisher
 
-I am [Frank Lämmer](https://www.franklaemmer.de), co-founder of a small bootstrapped hosting provider called [fortrabbit](https://www.fortrabbit.com) which is also [featured here](/fortrabbit/). The main data dates back to some competitor research I did for our new hosting platform in 2023. It was ported and extended to a 'hosting guide' on our fortrabbit website. But I found, it deserved its own space. I am doing 1st level customer support for hosting. I see a lot of misconceptions about web hosting. So, here we are.
+I am [Frank Lämmer](https://www.franklaemmer.de), co-founder of a small bootstrapped hosting provider called [fortrabbit](https://www.fortrabbit.com) which is also [featured here](/fortrabbit/). The main data dates back to some competitor research I did for our new hosting platform in 2023. It was ported and extended to a 'hosting guide' on our fortrabbit website. But I found, it deserved its own space. 
+
+## Conflict of interest
+
+I am 100% biased as founder of fortrabbit. It's just a matter if my bias may be useful for you.
+
 
 ## Your benefits
 
-Learn how to judge better. Discover a hosting service that really fits your requirements. Filter for your preferred stack or what else is important to you. Find alternatives to services that you are already using.
+I am doing 1st level customer support for hosting. I see a lot of misconceptions about web hosting. Learn how to judge better. Discover a hosting service that really fits your requirements. Filter for your preferred stack or what else is important to you. Find alternatives to services that you are already using.
 
 ## State
 
@@ -28,18 +33,16 @@ This is currently pet project. If people find it useful, I may extend it. There 
 
 ## Who is listed
 
+We try to be as open as possible, accepting different kind of solutions to host websites.
+
 1. **Runs an application, or serves a site.** Either is hosting: with static output the code ran on a laptop instead of on the server, and somebody still has to choose where the result lives. *Which* languages is a field on the record, not a gate. What this excludes is a service that holds content and hands it back over an API while somebody else serves the site.
-2. **Sold to the public.** Purchasable without a sales call, signed contract or invitation.
-3. **Public pricing.** A price for at least one plan is published without logging in. "Contact us" is not a price.
+2. **Sold to the public.** Purchasable without sales call or invitation.
+3. **Public pricing.** A price for at least one plan is published without login. "Contact us" is not a price.
 4. **Public technical documentation.** Runtime versions, deploy method and included services are documented publicly.
 
 ## Corrections
 
 Everything is tracked in Git and public on GitHub. Affiliation must be disclosed at the point of contribution, which applies to vendors correcting their own entry as much as to anyone else.
-
-## Conflict of interest
-
-I am 100% biased as founder of fortrabbit. It's just a matter if my bias may be useful for you.
 
 ## Credits
 

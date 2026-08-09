@@ -2,66 +2,13 @@
 import ListStyleToggle from './ListStyleToggle.astro';
 
 /**
- * What sits between a list and its heading: which order it is in, and how much
- * of each row to show.
- *
- * The order is two links rather than a control that sorts in the browser. The
- * ranked order is a page of its own, so it can be linked to, crawled and read
- * without JavaScript — and the register keeps the address it always had.
+ * What sits between a list and its heading. One control now — how much of each
+ * row to show — after the Signal ordering was replaced by a heart on the rows
+ * that earn one. A bar with nothing in it but the toggle is still worth keeping:
+ * it is the rule that separates the list from whatever introduced it.
  */
-interface Props {
-  /** Which order this page is already in. Absent means the page offers no choice of order. */
-  sort?: 'alphabetical' | 'signal';
-  /*
-   * Set on a page that is already a narrowing — a facet value, a group beside
-   * the register. Its two orders are the same list at the same address, so they
-   * are query strings on this page rather than links to the register and to the
-   * Signal, which would throw the narrowing away.
-   */
-  here?: string;
-}
-
-const { sort, here } = Astro.props;
-
-const orders = here
-  ? [
-      { id: 'alphabetical', label: 'A–Z', href: here },
-      { id: 'signal', label: 'Signal', href: `${here}?sort=signal` },
-    ]
-  : [
-      { id: 'alphabetical', label: 'A–Z', href: '/' },
-      { id: 'signal', label: 'Signal', href: '/signal/' },
-    ];
 ---
 
 <div class="list-controls">
-  {
-    sort && (
-      <p class="sort-links" data-pagefind-ignore data-sort-links>
-        {/* Always links: find.ts sorts in place where it runs, and the page is the answer where it does not. */}
-        {orders.map((order) => (
-          <a href={order.href} data-sort={order.id} aria-current={order.id === sort ? 'true' : 'false'}>
-            {order.label}
-          </a>
-        ))}
-      </p>
-    )
-  }
-
   <ListStyleToggle />
 </div>
-
-{
-  /*
-   * Whose ranking it is, said above the list it orders. Rendered on both orders
-   * and hidden on the alphabetical one rather than left out of it: sorting in
-   * place never reloads the page, so a note the server had not printed could
-   * never appear, and the register showed a ranked list with nothing to say who
-   * had ranked it.
-   */
-  sort && (
-    <p class="sort-note" data-pagefind-ignore data-sort-note hidden={sort !== 'signal'}>
-      Opinionated rating to give innovative services more visibility. <a href="/signal/">How it works →</a>
-    </p>
-  )
-}

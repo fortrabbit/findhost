@@ -16,6 +16,12 @@
   --blue-300: #89aaff;
   --blue-50: #eef2ff;
   --blue-950: #10183a;
+  --green-50: #e8f5ec;
+  --green-950: #0d2114;
+  --rose-50: #fdeaef;
+  --rose-950: #2a0d15;
+  --rose-500: #c81e4b;
+  --rose-300: #ff8fac;
   --violet-700: #5b2a97;
   --violet-300: #c7a6ff;
   --amber-200: #ffe9a3;
@@ -31,6 +37,9 @@
   --color-landed: var(--amber-200);
   /* The row under the pointer. Barely there on purpose: it marks a target, not a state. */
   --color-hover: var(--blue-50);
+  --color-verified: var(--green-50);
+  --color-liked: var(--rose-50);
+  --color-heart: var(--rose-500);
 
   /* Typeface roles. All installed faces — no webfont, nothing to load. */
   --font-display: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, Georgia, serif;
@@ -88,6 +97,9 @@
     --color-link-visited: var(--violet-300);
     --color-landed: var(--amber-800);
     --color-hover: var(--blue-950);
+    --color-verified: var(--green-950);
+    --color-liked: var(--rose-950);
+    --color-heart: var(--rose-300);
   }
 }
 
@@ -100,10 +112,16 @@
   --color-link-visited: var(--violet-300);
   --color-landed: var(--amber-800);
   --color-hover: var(--blue-950);
+  --color-verified: var(--green-950);
+  --color-liked: var(--rose-950);
+  --color-heart: var(--rose-300);
 }
 
 :root[data-theme='light'] {
   --color-hover: var(--blue-50);
+  --color-verified: var(--green-50);
+  --color-liked: var(--rose-50);
+  --color-heart: var(--rose-500);
   --color-page: var(--paper);
   --color-ink: var(--pitch);
   --color-ink-inverse: var(--paper);

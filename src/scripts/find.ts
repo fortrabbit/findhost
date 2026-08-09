@@ -26,12 +26,10 @@ interface ProviderRow {
   name: string;
   description?: string;
   greenWebId?: number | null;
-  country?: string;
+  favorite?: boolean;
   figure?: { emoji: string; color: string; textColor: string };
   facets: Record<string, string | string[]>;
   notApplicable: string[];
-  /** Our opinionated total, computed at build time — see src/lib/signal.ts. */
-  signal: number;
 }
 
 /**
@@ -39,10 +37,9 @@ interface ProviderRow {
  * view and the server-rendered one have to be indistinguishable, or filtering
  * would quietly change what a row looks like.
  */
-function row(provider: ProviderRow, withSignal = false): HTMLLIElement {
+function row(provider: ProviderRow): HTMLLIElement {
   const item = document.createElement('li');
   if (!provider.description) item.className = 'one-line';
-  if (provider.signal !== undefined) item.dataset.signal = String(provider.signal);
 
   const tile = document.createElement('span');
   tile.className = provider.figure ? 'provider-tile' : 'provider-tile letter';
@@ -78,7 +75,7 @@ function row(provider: ProviderRow, withSignal = false): HTMLLIElement {
     // quietly removes the only accessible copy of the mark.
     const spelled = document.createElement('span');
     spelled.className = 'visually-hidden';
-    spelled.textContent = ' Listed in the Green Web Foundation directory';
+    spelled.textContent = 'Listed in the Green Web Foundation directory';
     mark.append(spelled);
 
     name.append(mark);
@@ -94,26 +91,23 @@ function row(provider: ProviderRow, withSignal = false): HTMLLIElement {
 
   item.append(body);
 
-  const meta = document.createElement('span');
-  meta.className = 'provider-meta';
+  if (provider.favorite) {
+    const heart = document.createElement('span');
+    heart.className = 'record-badge favorite-badge';
+    heart.title = 'One we like';
 
-  if (provider.country) {
-    const country = document.createElement('span');
-    country.className = 'provider-country';
-    country.textContent = provider.country;
-    meta.append(country);
+    const glyph = document.createElement('span');
+    glyph.setAttribute('aria-hidden', 'true');
+    glyph.textContent = '♥';
+    heart.append(glyph);
+
+    const spelled = document.createElement('span');
+    spelled.className = 'visually-hidden';
+    spelled.textContent = 'One we like';
+    heart.append(spelled);
+
+    item.append(heart);
   }
-
-  if (withSignal && provider.signal !== undefined) {
-    const signal = document.createElement('a');
-    signal.className = 'provider-signal';
-    signal.href = '/signal/';
-    signal.title = 'Signal — our opinionated score, and how it is worked out';
-    signal.textContent = String(provider.signal);
-    meta.append(signal);
-  }
-
-  item.append(meta);
 
   return item;
 }
@@ -174,61 +168,6 @@ if (styleEl && resultsEl) {
   show(current);
 }
 
-/*
- * The two orders on a page that is already a narrowing — a facet value, a group
- * beside the register.
- *
- * These pages ship no filter panel and fetch nothing, so rather than rebuild the
- * list they reorder the rows already in it. Ranked means ungrouped, so the
- * letter headings go and every row joins one list; switching back restores the
- * markup captured on load, which is cheaper and safer than rebuilding letters.
- */
-const narrowedEl = document.querySelector<HTMLElement>('[data-find-results]');
-const narrowedLinks = document.querySelector<HTMLElement>('[data-sort-links]');
-
-if (narrowedEl && narrowedLinks && !document.querySelector('[data-find-filters]')) {
-  const lettered = narrowedEl.innerHTML;
-  const noteEl = document.querySelector<HTMLElement>('[data-sort-note]');
-
-  const draw = (order: string) => {
-    if (noteEl) noteEl.hidden = order !== 'signal';
-    for (const link of narrowedLinks.querySelectorAll<HTMLAnchorElement>('a[data-sort]')) {
-      link.setAttribute('aria-current', String(link.dataset.sort === order));
-    }
-
-    if (order !== 'signal') {
-      narrowedEl.innerHTML = lettered;
-      return;
-    }
-
-    const rows = [...narrowedEl.querySelectorAll<HTMLLIElement>('.provider-list > li')];
-    rows.sort((a, b) => {
-      const gap = Number(b.dataset.signal ?? 0) - Number(a.dataset.signal ?? 0);
-      const name = (row: HTMLLIElement) => row.querySelector('.provider-name a')?.textContent ?? '';
-      return gap || name(a).localeCompare(name(b), 'en');
-    });
-
-    const list = document.createElement('ul');
-    list.className = 'provider-list';
-    list.append(...rows);
-    narrowedEl.replaceChildren(list);
-  };
-
-  narrowedLinks.addEventListener('click', (event) => {
-    const link = (event.target as HTMLElement).closest<HTMLAnchorElement>('a[data-sort]');
-    if (!link) return;
-
-    event.preventDefault();
-    const order = link.dataset.sort === 'signal' ? 'signal' : 'alphabetical';
-    const url = order === 'signal' ? `${location.pathname}?sort=signal` : location.pathname;
-    history.replaceState(null, '', url);
-    draw(order);
-    track(`sort ${order}`);
-  });
-
-  draw(new URLSearchParams(location.search).get('sort') === 'signal' ? 'signal' : 'alphabetical');
-}
-
 if (filtersEl && resultsEl && summaryEl) {
   const response = await fetch('/providers.json');
   const { facets, providers } = (await response.json()) as {
@@ -239,11 +178,6 @@ if (filtersEl && resultsEl && summaryEl) {
 
   const selected = new Map<string, Set<string>>();
 
-  /*
-   * Which order the list is in. Alphabetical unless asked otherwise, because the
-   * register's default order has to be the one that expresses no opinion.
-   */
-  let sort: 'alphabetical' | 'signal' = 'alphabetical';
 
   /*
    * The query string is the state. A facet value page carries its narrowing in
@@ -253,7 +187,6 @@ if (filtersEl && resultsEl && summaryEl) {
    */
   const readUrl = () => {
     const params = new URLSearchParams(location.search);
-    sort = params.get('sort') === 'signal' ? 'signal' : 'alphabetical';
     selected.clear();
     for (const facet of facets) {
       const asked = params.get(facet.id);
@@ -277,7 +210,6 @@ if (filtersEl && resultsEl && summaryEl) {
     for (const [facetId, values] of selected) {
       if (values.size) params.set(facetId, [...values].join(','));
     }
-    if (sort === 'signal') params.set('sort', 'signal');
     const query = params.toString();
     history.replaceState(null, '', query ? `${location.pathname}?${query}` : location.pathname);
   };
@@ -368,22 +300,6 @@ if (filtersEl && resultsEl && summaryEl) {
 
     resultsEl.innerHTML = '';
 
-    /*
-     * Ranked, and therefore ungrouped: a letter heading over a list that is not
-     * in letter order is a label that lies. The ranking is one list, which is
-     * also what makes position mean something on it.
-     */
-    if (sort === 'signal') {
-      const list = document.createElement('ul');
-      list.className = 'provider-list';
-      for (const provider of [...found].sort((a, b) => b.signal - a.signal || a.name.localeCompare(b.name, 'en'))) {
-        list.append(row(provider, true));
-      }
-      resultsEl.append(list);
-      updateSummary(found);
-      return;
-    }
-
     let letter = '';
     let list: HTMLUListElement | null = null;
 
@@ -423,47 +339,15 @@ if (filtersEl && resultsEl && summaryEl) {
     updateSummary(found);
   };
 
-  /*
-   * The two orders are links to real pages, so they work with no JavaScript and
-   * can be crawled. Where the script is running they sort the list in place
-   * instead, which is what a reader expects of a control sitting on top of the
-   * list it changes.
-   */
-  const sortEl = document.querySelector<HTMLElement>('[data-sort-links]');
-
-  const noteEl = document.querySelector<HTMLElement>('[data-sort-note]');
-
-  const syncSort = () => {
-    if (noteEl) noteEl.hidden = sort !== 'signal';
-    if (!sortEl) return;
-    for (const link of sortEl.querySelectorAll<HTMLAnchorElement>('a[data-sort]')) {
-      link.setAttribute('aria-current', String(link.dataset.sort === sort));
-    }
-  };
-
-  sortEl?.addEventListener('click', (event) => {
-    const link = (event.target as HTMLElement).closest<HTMLAnchorElement>('a[data-sort]');
-    if (!link) return;
-
-    event.preventDefault();
-    sort = link.dataset.sort === 'signal' ? 'signal' : 'alphabetical';
-    writeUrl();
-    syncSort();
-    renderResults();
-    track(`sort ${sort}`);
-  });
-
   window.addEventListener('popstate', () => {
     readUrl();
     syncFilters();
-    syncSort();
     renderResults();
   });
 
   readUrl();
   wireFilters();
   syncFilters();
-  syncSort();
   renderResults();
 }
 

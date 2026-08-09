@@ -11,11 +11,7 @@ category:
 regions: null
 description: Open-source deployment platform billed per managed server, run either as a hosted service or installed on the customer's own machines.
 hqCountry: US
-signalAdjustment:
-  points: 5
-  by: fl
-  on: 2026-08-09
-  why: Innovative solution.
+favorite: true
 whoManagesOs: self-managed
 infraContract:
   - byo-iaas

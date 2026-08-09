@@ -81,20 +81,12 @@ const providerFields = z
     founded: z.number().int().optional(),
     hqCountry: z.enum(vocabulary('hqCountry')).optional(),
     ownership: z.enum(vocabulary('ownership')).optional(),
-    /*
-     * The one place a person's opinion enters the Signal. Attributed, dated and
-     * reasoned, or it does not parse — an anonymous number here would be the
-     * thing this whole register is an argument against.
-     */
-    signalAdjustment: z
-      .object({
-        points: z.number().int().min(-20).max(20),
-        by: z.string().min(2),
-        on: z.coerce.date(),
-        why: z.string().min(12).max(200),
-      })
-      .optional(),
     headcount: z.enum(vocabulary('headcount')).optional(),
+    /*
+     * We like it. The only editorial mark on a record, and deliberately a
+     * boolean: the scoring system it replaced implied a precision nobody had.
+     */
+    favorite: z.boolean().optional(),
     parent: z.string().optional(),
 
     // Classification

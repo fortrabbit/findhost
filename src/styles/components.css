@@ -272,10 +272,33 @@ html:not(.js) .theme-switch {
   height: 0.85em;
 }
 
-/** A third party's verification, marked once. Never a score, never sortable. */
+/*
+ * A mark on a row: an exact square with a rounded edge, the glyph centred, on a
+ * wash of its own colour. Two of them exist and they are different kinds of
+ * claim, which is why they are the same shape and not the same colour — one is
+ * a third party's verification, the other is our opinion.
+ */
+.record-badge {
+  display: inline-grid;
+  place-items: center;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: var(--radius);
+  font-size: var(--text-sm);
+  line-height: 1;
+}
+
+/** A third party's verification. Never a score, never sortable. */
 .green-mark {
   margin-left: var(--space-2xs);
-  font-size: var(--text-sm);
+  background: var(--color-verified);
+}
+
+/** Ours. The only editorial mark a row carries, and it says so on the about page. */
+.favorite-badge {
+  margin-left: var(--space-2xs);
+  background: var(--color-liked);
+  color: var(--color-heart);
 }
 
 .visually-hidden {
@@ -510,9 +533,8 @@ html:not(.js) .theme-switch {
   text-decoration-thickness: var(--rule-strong);
 }
 
-/* Above the stretched link, or the second link in the row cannot be clicked. */
-.provider-signal,
-.provider-list > li .green-mark {
+/* Above the stretched link, so a badge's tooltip is reachable. */
+.provider-list > li .record-badge {
   position: relative;
   z-index: 1;
 }
@@ -558,20 +580,6 @@ html:not(.js) .theme-switch {
 
 .provider-body {
   min-width: 0;
-}
-
-/** Where a row's data sits: the country, our score, whatever comes next. */
-.provider-meta {
-  display: flex;
-  gap: var(--space-2xs);
-  align-items: baseline;
-}
-
-/** Headquarters as an ISO code. A flag is a picture of a government; this is data. */
-.provider-country {
-  font-family: var(--font-data);
-  font-size: var(--text-xs);
-  font-variant-numeric: tabular-nums;
 }
 
 /*
@@ -1438,113 +1446,10 @@ html.js [data-find-fallback] {
   border-bottom: var(--rule-strong) solid var(--color-ink);
 }
 
-/* Tabs, not prose: the two orders are a choice between states of one list. */
-.sort-links {
-  display: flex;
-  gap: var(--space-xs);
-  margin: 0 auto 0 0;
-}
-
-.sort-links a {
-  padding: var(--space-2xs) var(--space-sm);
-  border: var(--rule-hairline) solid transparent;
-  border-bottom: 0;
-  border-radius: var(--radius) var(--radius) 0 0;
-  color: var(--color-ink);
-  font-size: var(--text-sm);
-  text-decoration: none;
-}
-
-.sort-links a:hover {
-  border-color: var(--color-ink);
-}
-
-/* The one in force, filled — the same weight the list-style buttons carry. */
-.sort-links a[aria-current='true'] {
-  border-color: var(--color-ink);
-  background: var(--color-ink);
-  color: var(--color-page);
-}
 
 .list-controls .list-style {
   margin-bottom: 0;
 }
 
-/** The published algorithm, set to the measure of the prose that introduces it. */
-.signal-table {
-  width: 100%;
-  max-width: var(--measure-prose);
-  margin-bottom: var(--space-md);
-  border-collapse: collapse;
-  font-size: var(--text-sm);
-}
 
-.signal-table th,
-.signal-table td {
-  padding: var(--space-3xs) 0;
-  border-bottom: var(--rule-hairline) solid var(--color-rule);
-  text-align: left;
-}
 
-.signal-points {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-  white-space: nowrap;
-}
-
-/**
- * Our opinion of a row, beside the one fact about it a list has room for. Set in
- * the data face at the size of the country code: it is a number we made up, and
- * it should not outweigh the name it sits next to.
- */
-.provider-signal {
-  color: var(--color-ink);
-  font-family: var(--font-data);
-  font-size: var(--text-xs);
-  font-variant-numeric: tabular-nums;
-  text-decoration: none;
-}
-
-.provider-signal:hover,
-.provider-signal:focus-visible {
-  color: var(--color-link);
-  text-decoration: underline;
-}
-
-/*
- * Our opinion of a record, at the foot of the facts about it. Set apart with
- * space and a rule above rather than a box: it is a different kind of statement
- * from the rows over it, and boxing it made it look like a warning.
- */
-.signal-group {
-  margin-top: var(--space-xl);
-  padding-top: var(--space-sm);
-  border-top: var(--rule-hairline) solid var(--color-rule);
-}
-
-/** The number, at the size of a number that means something. */
-.signal-total {
-  margin: 0 0 var(--space-2xs);
-  font-family: var(--font-data);
-  font-size: var(--text-xl);
-  font-variant-numeric: tabular-nums;
-  line-height: 1;
-}
-
-/* The workings, quieter than the total they add up to. */
-.signal-parts > dt,
-.signal-parts > dd {
-  opacity: 0.75;
-}
-
-.signal-onward {
-  margin: var(--space-2xs) 0 0;
-  font-size: var(--text-xs);
-}
-
-/** Above the list it describes, not floating between the controls and the rows. */
-.sort-note {
-  margin-top: var(--space-md);
-  margin-bottom: var(--space-md);
-  /*font-size: var(--text-sm);*/
-}

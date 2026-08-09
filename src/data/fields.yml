@@ -58,18 +58,16 @@
     - { id: '51-250', label: 51 to 250 }
     - { id: '250-plus', label: More than 250, short: '250+' }
 
-# A hand adjustment to the Signal, and the only one there is.
+# The one editorial mark on a record: we like it. No score, no weight, no
+# arithmetic — a boolean somebody set on purpose, shown as a heart in the list
+# and explained on the about page.
 #
-# It exists because the arithmetic cannot see everything, and refusing to admit
-# that would mean quietly bending a weight until the list looked right — which is
-# the same act, hidden. So it is a field with a name, a date and a reason
-# attached, published in a table of its own on /signal/, and validate.ts refuses
-# it without all three. A bare number called `boost` is still rejected outright.
-# No group: it is not a fact about the provider, so it gets no row among them.
-# It appears inside the Signal block on the record, and in a table of every
-# adjustment on /signal/.
-- id: signalAdjustment
-  label: Signal adjustment
+# It replaced a scoring system. That system computed a number from recorded
+# fields, then let a person move it by hand, and after eighteen hand adjustments
+# the arithmetic was decoration. A boolean says the same thing without the
+# machinery that implied more precision than anybody had.
+- id: favorite
+  label: Favorite
 
 - id: ownership
   label: Ownership

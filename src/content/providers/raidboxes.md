@@ -31,11 +31,7 @@ useCases:
 audience:
   - agency
   - smb
-signalAdjustment:
-  points: 8
-  by: fl
-  on: 2026-08-09
-  why: Managed WordPress with SSH and staging on the entry plan, German servers, renewable power, no upsell maze. Filed as vanity hosting, which reads it as the opposite.
+favorite: true
 status: active
 checkedAt: 2026-08-07
 sources:

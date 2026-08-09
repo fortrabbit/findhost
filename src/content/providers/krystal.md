@@ -56,11 +56,7 @@ certifications:
   - b-corp
 supportHours: business-hours
 supportTiering: paid-upgrade
-signalAdjustment:
-  points: 8
-  by: fl
-  on: 2026-08-09
-  why: A B Corp running on renewable power that publishes its accounts and its carbon numbers, which is the honest end of a category full of the other kind.
+favorite: true
 status: active
 checkedAt: 2026-08-01
 sources:
