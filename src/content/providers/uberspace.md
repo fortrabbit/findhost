@@ -50,7 +50,7 @@ freeTier: trial
 contractMinimum: none
 energyClaim: annual-matched
 signalAdjustment:
-  points: 5
+  points: 8
   by: fl
   on: 2026-08-09
   why: Sells hosting with no control panel and no contract, and has held that line for fifteen years. Filed as shared hosting, which is the category being wrong about it.

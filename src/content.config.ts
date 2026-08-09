@@ -88,7 +88,7 @@ const providerFields = z
      */
     signalAdjustment: z
       .object({
-        points: z.number().int().min(-5).max(5),
+        points: z.number().int().min(-10).max(10),
         by: z.string().min(2),
         on: z.coerce.date(),
         why: z.string().min(20).max(200),

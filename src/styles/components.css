@@ -343,9 +343,9 @@ html:not(.js) .theme-switch {
 }
 
 /* An ungrouped list has no letter column to clear, so it starts at the margin. */
-[data-find-results] > .provider-list {
+/*[data-find-results] > .provider-list {
   border-top: var(--rule-hairline) solid var(--color-ink);
-}
+}*/
 
 .letter-group {
   --row-pad: var(--space-sm);
@@ -479,13 +479,42 @@ html:not(.js) .theme-switch {
   /* 1.09rem × 1.2 name + 0.86rem × 1.38 description */
   --tile: 2.3rem;
 
+  position: relative;
   display: grid;
   grid-template-columns: var(--tile) 1fr auto;
   /* Three columns, and the third holds however many facts the row carries. */
   gap: 0 var(--space-sm);
   align-items: start;
-  padding: var(--row-pad) 0;
-  /*border-top: var(--rule-hairline) solid var(--color-ink);*/
+  padding: var(--row-pad) var(--space-sm);
+  border-radius: var(--radius);
+}
+
+/*
+ * The whole row is the link. Not by wrapping it in an anchor — the row already
+ * holds a second link, and anchors cannot nest — but by stretching the name's
+ * own anchor over the row it names. One link, real link text, and a target the
+ * width of the list.
+ */
+.provider-list > li .provider-name > a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.provider-list > li:hover {
+  background: var(--color-hover);
+}
+
+/* The name answers for the whole row, so pointing anywhere in it thickens the rule. */
+.provider-list > li:hover .provider-name > a {
+  text-decoration-thickness: var(--rule-strong);
+}
+
+/* Above the stretched link, or the second link in the row cannot be clicked. */
+.provider-signal,
+.provider-list > li .green-mark {
+  position: relative;
+  z-index: 1;
 }
 
 .provider-list > li.one-line {
@@ -493,7 +522,8 @@ html:not(.js) .theme-switch {
   --tile: 1.2rem;
 
   align-items: center;
-  padding: var(--space-2xs) 0;
+  /* Vertical only — the horizontal padding is the hover box and belongs to every row. */
+  padding-block: var(--space-2xs);
 }
 
 /* The link out of the list is not the last row of it. */
@@ -557,7 +587,7 @@ html:not(.js) .theme-switch {
 .slim .provider-list > li {
   grid-template-columns: 1fr auto;
   align-items: center;
-  padding: var(--row-pad) 0;
+  padding-block: var(--row-pad);
 }
 
 /*
@@ -1492,4 +1522,5 @@ html.js [data-find-fallback] {
 .sort-note {
   margin-top: var(--space-md);
   margin-bottom: var(--space-md);
+  /*font-size: var(--text-sm);*/
 }

@@ -14,6 +14,8 @@
   --pitch: #000000;
   --blue-600: #1a3fd0;
   --blue-300: #89aaff;
+  --blue-50: #eef2ff;
+  --blue-950: #10183a;
   --violet-700: #5b2a97;
   --violet-300: #c7a6ff;
   --amber-200: #ffe9a3;
@@ -27,6 +29,8 @@
   --color-link-visited: var(--violet-700);
   /* Where a jump landed. The one colour here that marks a moment rather than a role. */
   --color-landed: var(--amber-200);
+  /* The row under the pointer. Barely there on purpose: it marks a target, not a state. */
+  --color-hover: var(--blue-50);
 
   /* Typeface roles. All installed faces — no webfont, nothing to load. */
   --font-display: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, Georgia, serif;
@@ -83,6 +87,7 @@
     --color-link: var(--blue-300);
     --color-link-visited: var(--violet-300);
     --color-landed: var(--amber-800);
+    --color-hover: var(--blue-950);
   }
 }
 
@@ -94,9 +99,11 @@
   --color-link: var(--blue-300);
   --color-link-visited: var(--violet-300);
   --color-landed: var(--amber-800);
+  --color-hover: var(--blue-950);
 }
 
 :root[data-theme='light'] {
+  --color-hover: var(--blue-50);
   --color-page: var(--paper);
   --color-ink: var(--pitch);
   --color-ink-inverse: var(--paper);
