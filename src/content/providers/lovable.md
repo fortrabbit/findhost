@@ -17,7 +17,7 @@ sshAccess: none
 pricingModel: credit
 freeTier: permanent
 favorite: true
-favoriteNote: The code it generates is yours to take somewhere else.
+favoriteNote: Popular among non devs.
 status: active
 checkedAt: 2026-08-01
 sources:

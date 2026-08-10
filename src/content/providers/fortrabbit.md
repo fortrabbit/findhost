@@ -86,9 +86,11 @@ supportTiering: all-plans
 apiAvailable: public
 cliTool: official
 mcpServer: official
+greenWebId: 1315
 status: active
 checkedAt: 2026-08-01
 sources:
+  - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1315', checkedAt: 2026-08-10 }
   - { field: headcount, url: 'https://www.fortrabbit.com/us/team', checkedAt: 2026-08-08 }
   - { field: software, url: 'https://www.fortrabbit.com/software/grav-cms', checkedAt: 2026-08-09 }
   - { field: software, url: 'https://www.fortrabbit.com/php-cloud-hosting', checkedAt: 2026-08-09 }
@@ -119,7 +121,7 @@ sources:
   - { field: freeTier, url: 'https://www.fortrabbit.com/pricing', checkedAt: 2026-08-01 }
   - { field: contractMinimum, url: 'https://www.fortrabbit.com/pricing', checkedAt: 2026-08-01 }
 favorite: true
-favoriteNote: Ours. PHP, git push, a shell, and a price that holds at renewal.
+favoriteNote: Shamelessly favorited our own service. We hope you like it anyhow.
 publishedByUs: true
 figure:
   emoji: 🐰
@@ -129,8 +131,6 @@ figure:
 ---
 
 fortrabbit is a small, independent German company running a managed hosting platform for PHP applications. It owns no hardware: the platform is built on rented AWS capacity, in Ireland and in the United States. Applications are deployed by git push, with full SSH access to the running environment and managed MySQL alongside. Plans are fixed tiers rather than metered usage, billed by the month, and a trial is available before an application goes live.
-
-fortrabbit also publishes FindHost, which is why this record carries a permanent marker saying so. It is held to the same standard as every other record here — the same fields, the same sourcing, the same right of reply. Anything reading more favourably than the evidence supports is a bug; open an issue.
 
 ## Worth knowing
 

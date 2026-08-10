@@ -50,7 +50,7 @@ apiAvailable: public
 cliTool: official
 mcpServer: official
 favorite: true
-favoriteNote: No configuration file, and it charges for what actually ran.
+favoriteNote: No configuration file, and it charges for what actually ran. Popular.
 status: active
 checkedAt: 2026-07-31
 sources:

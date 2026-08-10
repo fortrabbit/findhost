@@ -17,15 +17,13 @@ const beside = (await asideGroups()).map((group) => ({
 
 {
   /*
-   * The register is the homepage. What stood here before was a page of links to
-   * the register, which asked a visitor to choose a way in before seeing that
-   * there was anything to come in to. The filter panel carries the same links —
-   * every facet title is one — and it carries the records with them.
+   * The register is the homepage: the filter panel already carries every facet
+   * link, so a landing page of ways in would only withhold the records.
    */
 }
 <Base
   title="FindHost — a register of web hosting providers"
-  description="Opinionated field guide to choose the right hosting provider."
+  description="Opinionated field guide to choosing a web host."
   schema={dataset(Astro.site?.origin ?? '', providers.length)}
 >
   <h1>Find your next web host</h1>

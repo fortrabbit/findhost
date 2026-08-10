@@ -78,7 +78,7 @@ social:
   discord: https://discord.gg/zeropsio
 checkedAt: 2026-08-01
 favorite: true
-favoriteNote: The whole project in one YAML file, databases and storage included, version-controlled.
+favoriteNote: Interesting newer project.
 sources:
   - { field: regions, url: 'https://docs.zerops.io/company/about', checkedAt: 2026-08-01 }
   - { field: runsOn, url: 'https://docs.zerops.io/company/about', checkedAt: 2026-08-01 }

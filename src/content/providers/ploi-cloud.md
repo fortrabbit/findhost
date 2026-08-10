@@ -43,7 +43,7 @@ regions:
   - GB
   - US
 favorite: true
-favoriteNote: Independence at this size is a choice, not a stage.
+favoriteNote: Independent from NL. We like.
 status: active
 hqCountry: NL
 checkedAt: 2026-08-09

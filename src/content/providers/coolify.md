@@ -35,7 +35,7 @@ social:
   github: https://github.com/coollabsio/coolify
   discord: https://coollabs.io/discord
 favorite: true
-favoriteNote: The paid version does not hold the free one hostage.
+favoriteNote: Popular tool. The paid version does not hold the free one hostage.
 status: active
 hqCountry: HU
 checkedAt: 2026-08-09

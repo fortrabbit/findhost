@@ -52,7 +52,7 @@ supportHours: 24-7
 apiAvailable: public
 cliTool: official
 favorite: true
-favoriteNote: Sets the price floor the rest of Europe gets measured against.
+favoriteNote: Popular VPS.
 status: active
 checkedAt: 2026-08-01
 sources:
