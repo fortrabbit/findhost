@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && pagefind --site dist",
+    "build": "node scripts/deploy-env.mjs && astro build && pagefind --site dist",
     "preview": "astro preview",
     "check": "astro check",
     "validate": "node scripts/validate.ts",
