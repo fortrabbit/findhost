@@ -26,17 +26,6 @@ export function price(entry: { amount: number; currency: string; period: string 
   return `from ${money} ${per}`;
 }
 
-/*
- * Four different claims that marketing blurs into one word. The leaf is the
- * scannable part; the words are the honest part, and they are the dictionary's
- * own. The one rule that is not a label is the exclusion: `none-published` gets
- * no strip entry at all, an absent claim being no claim about absence.
- */
-export function energy(claim: string | undefined): string | undefined {
-  if (!claim || claim === 'none-published') return undefined;
-  return labelOf('energyClaim', claim).toLowerCase();
-}
-
 /**
  * One value as the record page shows it. A vocabulary field gets the reader's
  * word for it, and where that vocabulary is also a facet the word is a link to

@@ -2,7 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import { fieldGroups, fieldOf, type Field } from '../lib/fields';
-import { backlinks, cells, energy, footnotes } from '../lib/record';
+import { backlinks, cells, footnotes } from '../lib/record';
 import { isListed } from '../lib/providers';
 import { loadFacets } from '../lib/facets';
 import { organization } from '../lib/seo';
@@ -148,8 +148,6 @@ const origin = Astro.site?.origin ?? '';
 /* Accounts, as the identifiers schema.org means by sameAs. */
 const social = Object.values(data.social ?? {}).filter((url): url is string => typeof url === 'string');
 
-const energyClaim = energy(data.energyClaim);
-
 // The policy page promises staleness is computed from the recorded date rather
 // than from a promise to re-check. This is where that is kept.
 const staleAfterDays = 180;
@@ -219,17 +217,7 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
   }}
 >
   <article>
-    <div class="record-head">
-      <h1>{data.name}</h1>
-      {
-        energyClaim && (
-          <span class="record-mark" title={energyClaim}>
-            <span aria-hidden="true">🌱</span>
-            <span class="visually-hidden">{energyClaim}</span>
-          </span>
-        )
-      }
-    </div>
+    <h1>{data.name}</h1>
     {
       stale && (
         <aside class="editorial-note">

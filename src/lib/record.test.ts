@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
-import { energy, footnotes, price } from './record.ts';
+import { footnotes, price } from './record.ts';
 
 describe('price', () => {
   it('keeps the provider currency rather than converting', () => {
@@ -28,20 +28,6 @@ describe('price', () => {
   it('names the period it was recorded against', () => {
     assert.match(price({ amount: 120, currency: 'USD', period: 'year' })!, /a year$/);
     assert.match(price({ amount: 0.5, currency: 'USD', period: 'hour' })!, /an hour$/);
-  });
-});
-
-describe('energy', () => {
-  // An absent claim is not a claim about absence, so it renders nothing at all.
-  it('says nothing where nothing was published', () => {
-    assert.equal(energy(undefined), undefined);
-    assert.equal(energy('none-published'), undefined);
-  });
-
-  it('keeps the three claims distinct', () => {
-    const claims = ['24-7-cfe', 'annual-matched', 'offset', 'grid-mix-disclosed'].map(energy);
-    assert.ok(claims.every(Boolean));
-    assert.equal(new Set(claims).size, claims.length, 'two claims read the same');
   });
 });
 

@@ -1220,30 +1220,6 @@ html.js [data-find-fallback] {
   text-wrap: pretty;
 }
 
-/**
- * The name, and the two things worth knowing before reading a word of it: where
- * the company is, and whether it says anything about its energy. Both were a
- * strip of their own under the title, which is a second heading nobody asked
- * for. On the title's line they are read in the same glance.
- */
-.record-head {
-  display: flex;
-  align-items: baseline;
-  gap: var(--space-sm);
-}
-
-.record-head > h1 {
-  flex: 1;
-  min-width: 0;
-}
-
-/* The first of them ends the row; the rest sit against it. */
-.record-mark {
-  flex: none;
-  font-size: var(--text-lg);
-  line-height: 1;
-}
-
 /** A fact with no marker is visibly an unsourced assertion. That contrast is the point. */
 .footnote-ref {
   padding-left: 0.15em;
