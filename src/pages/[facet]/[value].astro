@@ -7,6 +7,7 @@ import PageFigure from '../../components/PageFigure.astro';
 import { facetIndex, facetRoutes, loadFacets } from '../../lib/facets';
 import { fieldOf, subjectOf } from '../../lib/fields';
 import { summarise } from '../../lib/summarise';
+import { valueCardPath } from '../../lib/og';
 
 /*
  * One static page per facet value in use. These are what a crawler follows and
@@ -60,6 +61,8 @@ const figure = note?.data.figure;
 <Base
   title={`${note?.data.title ?? valueTitle(facet.id, value.label)} — FindHost`}
   description={note?.data.description ?? summary.split('. ')[0].concat('.')}
+  image={valueCardPath(facet.id, value.slug)}
+  imageAlt={`A FindHost card: ${matches.length} providers recorded as ${value.label.toLowerCase()}.`}
   schema={[
     {
       '@context': 'https://schema.org',
@@ -70,18 +73,18 @@ const figure = note?.data.figure;
       ],
     },
     {
-    '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    name: note?.data.title ?? valueTitle(facet.id, value.label),
-    numberOfItems: matches.length,
-    isPartOf: organization(origin),
-    itemListOrder: 'https://schema.org/ItemListOrderAscending',
-    itemListElement: matches.map((provider, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      url: `${origin}/${provider.id}/`,
-      name: provider.name,
-    })),
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: note?.data.title ?? valueTitle(facet.id, value.label),
+      numberOfItems: matches.length,
+      isPartOf: organization(origin),
+      itemListOrder: 'https://schema.org/ItemListOrderAscending',
+      itemListElement: matches.map((provider, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        url: `${origin}/${provider.id}/`,
+        name: provider.name,
+      })),
     },
   ]}
 >
@@ -105,7 +108,6 @@ const figure = note?.data.figure;
     facets={facets}
     seed={{ facet: facet.id, value: value.id, label: value.label }}
   />
-
 </Base>
 
 {/* For the extended/slim toggle only. This page ships no filters — its URL is the narrowing. */}

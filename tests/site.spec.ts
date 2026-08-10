@@ -345,3 +345,70 @@ test.describe('filtering', () => {
     await expect(row.locator('.provider-name a')).toBeVisible();
   });
 });
+
+/*
+ * The card a link turns into elsewhere, which is the one part of the site nobody
+ * on the site ever sees. It is drawn at build time by a WebAssembly renderer, so
+ * the failure to guard against is not an ugly card — it is 234 of them silently
+ * not being drawn at all while every page goes on promising one.
+ */
+test.describe('share cards', () => {
+  const png = async (page: import('@playwright/test').Page, path: string) => {
+    const answer = await page.request.get(path);
+    expect(answer.status(), `${path} is served`).toBe(200);
+    expect(answer.headers()['content-type']).toContain('image/png');
+
+    const bytes = await answer.body();
+    expect(bytes.subarray(1, 4).toString(), `${path} is really a PNG`).toBe('PNG');
+
+    // Width and height live in the IHDR chunk, at a fixed offset in every PNG.
+    return { width: bytes.readUInt32BE(16), height: bytes.readUInt32BE(20), bytes: bytes.length };
+  };
+
+  test('a record points at its own card, drawn at the size every network expects', async ({ page }) => {
+    await page.goto('/fortrabbit/');
+
+    const declared = await page.locator('meta[property="og:image"]').getAttribute('content');
+    expect(declared).toBeTruthy();
+    expect(new URL(declared!).pathname).toBe('/og/fortrabbit.png');
+
+    const card = await png(page, '/og/fortrabbit.png');
+    expect(card).toMatchObject({ width: 1200, height: 630 });
+
+    /*
+     * A card that renders but draws nothing still weighs something. Flat white
+     * at this size compresses to a few hundred bytes, so a floor catches the
+     * empty card that a status code and a header cannot.
+     */
+    expect(card.bytes).toBeGreaterThan(10_000);
+  });
+
+  test("every page has one, and pages that are not records share the register's", async ({ page }) => {
+    await png(page, '/og/default.png');
+
+    for (const path of ['/', '/guide/', '/about/']) {
+      await page.goto(path);
+      const declared = await page.locator('meta[property="og:image"]').getAttribute('content');
+      expect(new URL(declared!).pathname, `${path} falls back to the register's card`).toBe('/og/default.png');
+    }
+  });
+
+  /*
+   * A facet value page is the one somebody sends when they mean "the ones that
+   * do X", so it is the likeliest of all of these to be seen as a card. Its own
+   * card sits a level down the path, because /og/<name>.png already belongs to
+   * the records.
+   */
+  test('a facet and one of its values each draw their own', async ({ page }) => {
+    for (const [path, card] of [
+      ['/categories/', '/og/categories/index.png'],
+      ['/categories/paas/', '/og/categories/paas.png'],
+      ['/regions/', '/og/regions/index.png'],
+    ]) {
+      await page.goto(path);
+      const declared = await page.locator('meta[property="og:image"]').getAttribute('content');
+      expect(new URL(declared!).pathname, `${path} draws its own card`).toBe(card);
+      expect(await png(page, card)).toMatchObject({ width: 1200, height: 630 });
+    }
+  });
+});

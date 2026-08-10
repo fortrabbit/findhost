@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import PageFigure from '../../components/PageFigure.astro';
 import { loadFacets } from '../../lib/facets';
+import { facetCardPath } from '../../lib/og';
 
 export async function getStaticPaths() {
   const { facets } = await loadFacets();
@@ -54,6 +55,8 @@ const figure = note?.data.figure;
 <Base
   title={`${note?.data.title ?? facet.label} — FindHost`}
   description={note?.data.description ?? `Every value recorded for ${facet.label.toLowerCase()}.`}
+  image={facetCardPath(facet.id)}
+  imageAlt={`A FindHost card: what the register records for ${facet.label.toLowerCase()}.`}
 >
   {/* The same head as a value page, so both start their prose on the same line. */}
   <div class="page-head">
@@ -81,5 +84,4 @@ const figure = note?.data.figure;
       ))
     }
   </ul>
-
 </Base>

@@ -4,6 +4,7 @@ import WorldMap from '../components/WorldMap.astro';
 import { countryPoints } from '../lib/map';
 import { loadProviders } from '../lib/providers';
 import { fieldOf, slugOf } from '../lib/fields';
+import { facetCardPath } from '../lib/og';
 
 const providers = await loadProviders();
 
@@ -42,6 +43,8 @@ const unknown = providers.length - withRegions.length - notApplicable;
 <Base
   title="Where providers operate — FindHost"
   description="A map of the countries each hosting provider runs in, and a page for every one of them."
+  image={facetCardPath('regions')}
+  imageAlt="A FindHost card: where hosting providers operate."
 >
   <h1>Find a host near you</h1>
 

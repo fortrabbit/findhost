@@ -14,6 +14,10 @@ import { dictionaryFile } from './src/lib/fields.ts';
  */
 const site = process.env.SITE_URL?.trim() || 'http://localhost:4321';
 
+/**
+ * @param {string} why
+ * @returns {never}
+ */
 const wrong = (why) => {
   throw new Error(
     `SITE_URL ${why}: ${JSON.stringify(process.env.SITE_URL)}\n` +

@@ -28,12 +28,16 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
+    "@fontsource/charis-sil": "^5.3.0",
     "@playwright/test": "^1.62.1",
+    "@resvg/resvg-wasm": "^2.6.2",
+    "@twemoji/svg": "^15.0.0",
     "@types/node": "^26.1.2",
     "bootstrap-icons": "^1.13.1",
     "pagefind": "^1.5.2",
     "prettier": "^3.9.6",
     "prettier-plugin-astro": "^0.14.1",
+    "satori": "^0.29.0",
     "typescript": "^6.0.3"
   }
 }

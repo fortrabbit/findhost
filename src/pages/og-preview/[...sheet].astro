@@ -1,0 +1,158 @@
+---
+import { getCollection } from 'astro:content';
+import { cardPath, facetCardPath, valueCardPath } from '../../lib/og';
+import { loadFacets } from '../../lib/facets';
+
+/**
+ * Every share card on one page, because a card is the one thing on this site
+ * nobody working on it ever sees — it exists for a scraper, and the first person
+ * to notice a broken one would otherwise be someone reading a link to it.
+ *
+ * Dev only. `getStaticPaths` returning nothing is how a route says it does not
+ * exist in a build, so this ships to no deploy and needs no robots rule.
+ */
+export function getStaticPaths() {
+  return import.meta.env.PROD ? [] : [{ params: { sheet: undefined } }];
+}
+
+const providers = (await getCollection('providers')).sort((a, b) => a.data.name.localeCompare(b.data.name, 'en'));
+
+/*
+ * What is worth looking at first. A card with no sentence and no colour is the
+ * one that comes out nearly blank, and there is no other way to find those than
+ * to know which records they are.
+ */
+const sheet = providers.map((provider) => ({
+  card: cardPath(provider.id),
+  href: `/${provider.id}/`,
+  name: provider.data.name,
+  thin: !provider.data.description && !provider.body?.trim(),
+}));
+
+const thin = sheet.filter((entry) => entry.thin).length;
+
+/*
+ * The facet cards, which are the ones most likely to be linked from outside: a
+ * page for a value is what somebody sends when they mean "the ones that do X".
+ */
+const { facets } = await loadFacets();
+
+const facetSheet = facets.flatMap((facet) => [
+  { card: facetCardPath(facet.id), href: `/${facet.id}/`, name: facet.label, thin: false },
+  ...facet.values
+    .filter((value) => value.count > 0)
+    .map((value) => ({
+      card: valueCardPath(facet.id, value.slug),
+      href: `/${facet.id}/${value.slug}/`,
+      name: `${facet.label} · ${value.label}`,
+      thin: false,
+    })),
+]);
+
+const total = sheet.length + facetSheet.length + 1;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Share cards — {sheet.length}</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 2rem;
+        background: #f2f2f2;
+        font:
+          14px/1.5 ui-sans-serif,
+          system-ui,
+          sans-serif;
+        color: #000;
+      }
+      h1 {
+        margin: 0 0 0.25rem;
+        font-size: 1.25rem;
+      }
+      h2 {
+        margin: 2.5rem 0 1rem;
+        font-size: 1rem;
+      }
+      p {
+        margin: 0 0 2rem;
+      }
+      .sheet {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 1.75rem;
+      }
+      figure {
+        margin: 0;
+      }
+      /* Checkerboard, so a card that draws nothing is not the colour of the page behind it. */
+      img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 1200 / 630;
+        border: 1px solid #bbb;
+        background: repeating-conic-gradient(#e4e4e4 0% 25%, #fafafa 0% 50%) 50% / 18px 18px;
+      }
+      figcaption {
+        display: flex;
+        justify-content: space-between;
+        gap: 0.5rem;
+        padding-top: 0.4rem;
+      }
+      a {
+        color: #1a3fd0;
+      }
+      mark {
+        background: #ffe9a3;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>{total} share cards</h1>
+    <p>
+      Not in the build — this page exists in <code>astro dev</code> only. {thin} record{thin === 1 ? '' : 's'} have neither
+      a description nor a body, so their cards carry a name and the facts alone.
+    </p>
+
+    <h2>The fallback</h2>
+    <div class="sheet">
+      <figure>
+        <img src="/og/default.png" alt="The fallback card" loading="lazy" />
+        <figcaption><strong>default</strong><span>every page without one of its own</span></figcaption>
+      </figure>
+    </div>
+
+    <h2>Facets and their values — {facetSheet.length}</h2>
+    <div class="sheet">
+      {
+        facetSheet.map((entry) => (
+          <figure>
+            <img src={entry.card} alt={`Share card for ${entry.name}`} loading="lazy" />
+            <figcaption>
+              <a href={entry.href}>{entry.name}</a>
+            </figcaption>
+          </figure>
+        ))
+      }
+    </div>
+
+    <h2>Records — {sheet.length}</h2>
+    <div class="sheet">
+      {
+        sheet.map((entry) => (
+          <figure>
+            <img src={entry.card} alt={`Share card for ${entry.name}`} loading="lazy" />
+            <figcaption>
+              <a href={entry.href}>{entry.name}</a>
+              {entry.thin && <mark>thin</mark>}
+            </figcaption>
+          </figure>
+        ))
+      }
+    </div>
+  </body>
+</html>

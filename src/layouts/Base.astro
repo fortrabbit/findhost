@@ -10,6 +10,10 @@ interface Props {
   markdown?: string;
   /** A record kept for reference but not on show: out of the index and out of search, whatever the site-wide flag says. */
   hidden?: boolean;
+  /** This page's share card, site-root relative. Records draw their own; every other page shares the register's. */
+  image?: string;
+  /** What the card shows, for a reader who is hearing the link rather than seeing it. */
+  imageAlt?: string;
   /**
    * Structured data for this page. One object, or several where the page makes
    * more than one claim about itself. Emitted verbatim; shapes in lib/seo.ts.
@@ -17,7 +21,15 @@ interface Props {
   schema?: Record<string, unknown> | Record<string, unknown>[];
 }
 
-const { title, description, markdown, hidden = false, schema } = Astro.props;
+const {
+  title,
+  description,
+  markdown,
+  hidden = false,
+  image = '/og/default.png',
+  imageAlt = 'A FindHost card: the register of hosting providers.',
+  schema,
+} = Astro.props;
 const fathomSiteId = import.meta.env.PUBLIC_FATHOM_SITE_ID;
 
 // Belt and braces with robots.txt: the file stops the crawl, this stops a URL
@@ -33,7 +45,15 @@ const indexable = import.meta.env.PUBLIC_INDEXABLE === 'true' && !hidden;
 const sections = [{ href: '/guide/', label: 'Guide' }];
 
 const path = Astro.url.pathname;
-const canonical = new URL(path, Astro.site ?? Astro.url).href;
+const origin = Astro.site ?? Astro.url;
+const canonical = new URL(path, origin).href;
+
+/*
+ * Absolute, because a share card is fetched by a machine that has no page to
+ * resolve a relative path against. Dimensions are stated so the preview reserves
+ * the right shape before the image arrives.
+ */
+const card = new URL(image, origin).href;
 ---
 
 <!doctype html>
@@ -53,7 +73,11 @@ const canonical = new URL(path, Astro.site ?? Astro.url).href;
     <meta property="og:url" content={canonical} />
     <meta property="og:site_name" content="FindHost" />
     {description && <meta property="og:description" content={description} />}
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:image" content={card} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={imageAlt} />
+    <meta name="twitter:card" content="summary_large_image" />
     {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} is:inline />}
     {fathomSiteId && <script is:inline src="https://cdn.usefathom.com/script.js" data-site={fathomSiteId} defer />}
   </head>
@@ -97,35 +121,39 @@ const canonical = new URL(path, Astro.site ?? Astro.url).href;
             Contributions welcome via <a href="https://github.com/fortrabbit/findhost">GitHub</a>.
           </p>
         </div>
-        {/*
+        {
+          /*
           Three choices rather than a switch between two, because there are three
           — and the third, letting the operating system decide, was unreachable
           the moment anybody pressed the old one. Absent until the script runs;
           the `js` class decides that before first paint.
-        */}
+        */
+        }
         <div class="theme-switch" role="group" aria-label="Theme">
-          {/*
+          {
+            /*
             Drawn rather than typed. ◑ ○ ● are glyphs, and a glyph sits where its
             font puts it — which is why the half-circle looked centred in one
             browser and low in another. A circle in a viewBox is in the middle of
             it everywhere.
-          */}
+          */
+          }
           <button type="button" data-theme-set="system">
             <svg viewBox="0 0 16 16" aria-hidden="true">
-              <path d="M8 2a6 6 0 0 0 0 12z" fill="currentColor" />
-              <circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="1.5" />
+              <path d="M8 2a6 6 0 0 0 0 12z" fill="currentColor"></path>
+              <circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="1.5"></circle>
             </svg>
             <span class="visually-hidden">System</span>
           </button>
           <button type="button" data-theme-set="light">
             <svg viewBox="0 0 16 16" aria-hidden="true">
-              <circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="1.5" />
+              <circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="1.5"></circle>
             </svg>
             <span class="visually-hidden">Light</span>
           </button>
           <button type="button" data-theme-set="dark">
             <svg viewBox="0 0 16 16" aria-hidden="true">
-              <circle cx="8" cy="8" r="6" fill="currentColor" />
+              <circle cx="8" cy="8" r="6" fill="currentColor"></circle>
             </svg>
             <span class="visually-hidden">Dark</span>
           </button>
@@ -161,7 +189,8 @@ const canonical = new URL(path, Astro.site ?? Astro.url).href;
         for (const choice of choices) {
           const mine = choice.dataset.themeSet === setting;
           choice.setAttribute('aria-pressed', String(mine));
-          choice.title = choice.dataset.themeSet === 'system' ? 'Follow the system' : `Always ${choice.dataset.themeSet}`;
+          choice.title =
+            choice.dataset.themeSet === 'system' ? 'Follow the system' : `Always ${choice.dataset.themeSet}`;
         }
       };
 
