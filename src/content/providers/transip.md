@@ -54,6 +54,7 @@ social:
 status: active
 checkedAt: 2026-08-01
 sources:
+  - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1496', checkedAt: 2026-08-10 }
   - { field: priceFrom, url: 'https://www.transip.eu/web-hosting/', checkedAt: 2026-07-31 }
   - { field: priceTo, url: 'https://www.transip.eu/web-hosting/', checkedAt: 2026-08-02 }
   - { field: currencies, url: 'https://www.transip.eu/web-hosting/', checkedAt: 2026-08-02 }
@@ -71,6 +72,7 @@ figure:
   textColor: rgb(234, 246, 244)
   text: Registrar first, cloud second.
 ai: authored
+greenWebId: 1496
 ---
 
 TransIP has traded from Leiden since 2003 and belongs to team.blue, the Belgian-Dutch group that also owns Combell, Hypernode and Simply.com. It keeps data in its own Dutch facilities and builds its own systems rather than reselling another platform.

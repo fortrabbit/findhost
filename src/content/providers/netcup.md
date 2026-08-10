@@ -68,6 +68,7 @@ social:
 status: active
 checkedAt: 2026-08-01
 sources:
+  - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1475', checkedAt: 2026-08-10 }
   - { field: regions, url: 'https://www.netcup.com/de/server/vps', checkedAt: 2026-07-31 }
   - { field: contractMinimum, url: 'https://www.netcup.com/de/server/vps', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://www.netcup.com/de/server/vps', checkedAt: 2026-07-31 }
@@ -87,6 +88,7 @@ figure:
   textColor: rgb(234, 246, 241)
   text: Cheap, and the price stays.
 ai: authored
+greenWebId: 1475
 ---
 
 netcup began as a sole proprietorship and became netcup GmbH in Karlsruhe in 2008. It has belonged to the Austrian Anexia group since 2016. Server locations are offered in Europe, North America and Asia, with a "no preference, somewhere in Europe" option for anyone who does not care where the machine sits.

@@ -60,6 +60,7 @@ social:
   youtube: https://www.youtube.com/user/fasthostsinternet
 checkedAt: 2026-08-01
 sources:
+  - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1282', checkedAt: 2026-08-10 }
   - { field: entryPrice, url: 'https://www.fasthosts.co.uk/web-hosting', checkedAt: 2026-08-01 }
   - { field: supportHours, url: 'https://www.fasthosts.co.uk/web-hosting', checkedAt: 2026-08-01 }
   - { field: renewalMultiple, url: 'https://www.fasthosts.co.uk/web-hosting', checkedAt: 2026-08-01 }
@@ -79,6 +80,7 @@ figure:
   color: rgb(47, 94, 188)
   textColor: rgb(234, 238, 246)
   text: A big group's British doorway.
+greenWebId: 1282
 ---
 
 Fasthosts sells shared hosting, VPS and dedicated servers to the UK market. The Linux plans carry PHP with SSH access, and the Windows line adds MSSQL alongside MySQL. Shared hosting runs from UK data centres including a Tier IV-certified facility in Worcester, while VPS customers pick the UK, Germany, Spain or the United States when the machine is created.

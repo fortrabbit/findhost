@@ -61,6 +61,7 @@ favoriteNote: Good shared hosting.
 status: active
 checkedAt: 2026-08-01
 sources:
+  - { field: greenWebId, url: 'https://app.greenweb.org/directory/#709', checkedAt: 2026-08-10 }
   - { field: regions, url: 'https://krystal.io/green', checkedAt: 2026-08-01 }
   - { field: energyClaim, url: 'https://krystal.io/green', checkedAt: 2026-08-01 }
   - { field: sustainabilityUrl, url: 'https://krystal.io/green', checkedAt: 2026-08-01 }
@@ -81,6 +82,7 @@ figure:
   textColor: rgb(234, 246, 239)
   text: Gemstone plan names, B Corp paperwork.
 ai: authored
+greenWebId: 709
 ---
 
 Krystal is a British host whose shared plans are named after gemstones and sold in a ladder that steps up on CPU allowance and on the number of sites allowed; the entry plan carries a single site. Billing is monthly, annual or biennial, with a discount for paying further ahead.

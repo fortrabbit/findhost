@@ -781,15 +781,15 @@
 # vocabulary to name — an id in somebody else's database — so its `when` is `*`,
 # meaning recorded at all.
 - id: environment
-  label: Environment
+  label: Green energy
   facet: energy
   filterOrder: 20
   multiple: true
   values:
     - id: green
-      label: Publishes an energy claim
-      short: Green
-      subject: 'publish something checkable about the energy they run on'
+      label: Says it runs on green energy
+      short: Says so, with evidence
+      subject: 'say they run on green energy, and publish something to back it'
       sources:
         - { from: greenWebId, when: ['*'] }
         - { from: energyClaim, when: [24-7-cfe, annual-matched, offset, grid-mix-disclosed] }

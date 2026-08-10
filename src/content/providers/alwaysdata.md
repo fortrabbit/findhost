@@ -71,6 +71,7 @@ apiAvailable: public
 status: active
 checkedAt: 2026-08-01
 sources:
+  - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1242', checkedAt: 2026-08-10 }
   - { field: priceFrom, url: 'https://www.alwaysdata.com/en/offers/plus/', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://www.alwaysdata.com/en/offers/plus/', checkedAt: 2026-08-02 }
   - { field: currencies, url: 'https://www.alwaysdata.com/en/offers/plus/', checkedAt: 2026-08-02 }
@@ -84,6 +85,7 @@ figure:
   textColor: rgb(234, 246, 242)
   text: Shared hosting, many languages.
 ai: authored
+greenWebId: 1242
 ---
 
 alwaysdata is a Paris company registered in 2006 that owns its hardware, runs it in Equinix facilities in the Paris region on its own autonomous system, and buys transit from several carriers. Nothing leaves France.

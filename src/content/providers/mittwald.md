@@ -66,6 +66,7 @@ cliTool: official
 status: active
 checkedAt: 2026-08-09
 sources:
+  - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1383', checkedAt: 2026-08-10 }
   - { field: software, url: 'https://www.mittwald.de/webhosting', checkedAt: 2026-08-09 }
   - { field: priceFrom, url: 'https://www.mittwald.de/webhosting', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://www.mittwald.de/webhosting', checkedAt: 2026-08-02 }
@@ -92,6 +93,7 @@ figure:
   textColor: rgb(234, 237, 246)
   text: Agency plumbing, documented.
 ai: authored
+greenWebId: 1383
 ---
 
 Mittwald is a family-owned hosting company in Espelkamp, North Rhine-Westphalia, trading since 2003 and running its own data centre at its headquarters. Everything is hosted in Germany; there is no region to choose.

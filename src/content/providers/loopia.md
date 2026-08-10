@@ -53,6 +53,7 @@ apiAvailable: public
 status: active
 checkedAt: 2026-08-01
 sources:
+  - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1010', checkedAt: 2026-08-10 }
   - { field: entryPrice, url: 'https://www.loopia.se/webbhotell/priser/', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://www.loopia.se/webbhotell/priser/', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://www.loopia.se/webbhotell/priser/', checkedAt: 2026-08-02 }
@@ -72,6 +73,7 @@ figure:
   textColor: rgb(234, 239, 246)
   text: Still running ASP.NET, on purpose.
 ai: authored
+greenWebId: 1010
 ---
 
 Loopia was founded in Västerås in 1999 as NetConnect and is a domain registrar as well as a host, managing several hundred thousand domain names. Ownership has moved repeatedly: Visma sold the hosting division to the Danish investor Axcel in 2018, and Axcel sold Loopia Group to team.blue in 2024.

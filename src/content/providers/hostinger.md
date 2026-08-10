@@ -33,6 +33,7 @@ contractMinimum: multi-year
 status: active
 checkedAt: 2026-08-01
 sources:
+  - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1250', checkedAt: 2026-08-10 }
   - { field: founded, url: 'https://www.hostinger.com/about', checkedAt: 2026-08-01 }
   - { field: hqCountry, url: 'https://www.hostinger.com/about', checkedAt: 2026-08-01 }
   - { field: ownership, url: 'https://www.hostinger.com/about', checkedAt: 2026-08-01 }
@@ -51,6 +52,7 @@ figure:
   color: rgb(151, 45, 190)
   textColor: rgb(243, 234, 246)
   text: Penny prices, DIY everything else.
+greenWebId: 1250
 ---
 
 Hostinger started in 2004 in Kaunas, Lithuania, as Hosting Media and took the Hostinger name in 2011. It is now one of the largest budget hosts worldwide, with a line-up covering shared web hosting, cloud hosting, VPS, managed WordPress, email hosting, domains and an AI website builder — all administered through hPanel, its own control panel rather than cPanel.

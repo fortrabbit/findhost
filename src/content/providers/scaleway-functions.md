@@ -37,6 +37,7 @@ checkedAt: 2026-08-09
 apiAvailable: public
 cliTool: official
 sources:
+  - { field: greenWebId, url: 'https://app.greenweb.org/directory/#925', checkedAt: 2026-08-10 }
   - { field: hqCountry, url: 'https://www.scaleway.com/en/about', checkedAt: 2026-08-09 }
   - { field: runtimes, url: 'https://www.scaleway.com/en/serverless-functions/', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://www.scaleway.com/en/serverless-functions/', checkedAt: 2026-07-31 }
@@ -54,6 +55,7 @@ figure:
   color: rgb(117, 70, 164)
   textColor: rgb(240, 234, 246)
   text: Event handlers, billed by the millisecond.
+greenWebId: 925
 ---
 
 Scaleway Functions is the French cloud provider's function-as-a-service, sold beside the rest of the [Scaleway](/scaleway/) catalogue and running in the same European regions. Handlers are deployed as source or as a container, and the documented runtimes are Node, Go, Python, Rust and PHP, each maintained by the provider rather than assembled by the customer as a custom layer.

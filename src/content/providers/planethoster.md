@@ -34,12 +34,14 @@ checkedAt: 2026-08-09
 apiAvailable: public
 cliTool: official
 sources:
+  - { field: greenWebId, url: 'https://app.greenweb.org/directory/#749', checkedAt: 2026-08-10 }
   - { field: regions, url: 'https://www.planethoster.com', checkedAt: 2026-07-31 }
   - { field: runtimes, url: 'https://www.planethoster.com', checkedAt: 2026-07-31 }
   - { field: sshAccess, url: 'https://www.planethoster.com', checkedAt: 2026-07-31 }
   - { field: apiAvailable, url: 'https://www.planethoster.com', checkedAt: 2026-08-09 }
   - { field: cliTool, url: 'https://www.planethoster.com', checkedAt: 2026-08-09 }
 ai: authored
+greenWebId: 749
 ---
 
 PlanetHoster is a Franco-Canadian host operating data centres in Paris, Lausanne and Montreal, letting a customer pick the location per project — unusual at its price point. It sells "Web Projects" rather than accounts, on its own N0C panel, with PHP 5.6 to 8.5, Python, Node.js and Ruby documented and a public knowledge base covering SSH, Composer, cron and databases.

@@ -50,6 +50,7 @@ supportHours: 24-7
 status: active
 checkedAt: 2026-08-01
 sources:
+  - { field: greenWebId, url: 'https://app.greenweb.org/directory/#701', checkedAt: 2026-08-10 }
   - { field: entryPrice, url: 'https://seravo.com/plans/', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://seravo.com/plans/', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://seravo.com/plans/', checkedAt: 2026-08-02 }
@@ -67,6 +68,7 @@ figure:
   textColor: rgb(234, 241, 246)
   text: WordPress, done the Debian way.
 ai: authored
+greenWebId: 701
 ---
 
 Seravo is a WordPress-only host based in Tampere, Finland. The stack is stated plainly — Docker, MariaDB, Nginx, PHP, Redis — and the company's open-source work is part of the pitch rather than a footnote.

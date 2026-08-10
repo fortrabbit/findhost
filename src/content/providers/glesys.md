@@ -57,6 +57,7 @@ apiAvailable: public
 status: active
 checkedAt: 2026-08-01
 sources:
+  - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1213', checkedAt: 2026-08-10 }
   - { field: regions, url: 'https://glesys.com/pricing/', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://glesys.com/pricing/', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://glesys.com/pricing/', checkedAt: 2026-08-01 }
@@ -75,6 +76,7 @@ figure:
 ai: authored
 gpuCapacity:
   - instances
+greenWebId: 1213
 ---
 
 GleSYS was formed in Falkenberg and sells infrastructure rather than packaged hosting: compute, storage, managed databases, connectivity and colocation, each priced per resource with hourly and monthly rates published in full. GPU and ARM machines are quoted rather than listed.

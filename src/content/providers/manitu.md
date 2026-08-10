@@ -36,12 +36,14 @@ audience:
 status: active
 checkedAt: 2026-08-08
 sources:
+  - { field: greenWebId, url: 'https://app.greenweb.org/directory/#837', checkedAt: 2026-08-10 }
   - { field: entryPrice, url: 'https://www.manitu.de/webhosting/', checkedAt: 2026-08-08 }
   - { field: runtimes, url: 'https://www.manitu.de/webhosting/', checkedAt: 2026-08-08 }
   - { field: managedDatabases, url: 'https://www.manitu.de/webhosting/', checkedAt: 2026-08-08 }
   - { field: sshAccess, url: 'https://www.manitu.de/webhosting/', checkedAt: 2026-08-08 }
   - { field: infraContract, url: 'https://www.manitu.de/webhosting/', checkedAt: 2026-08-08 }
 ai: authored
+greenWebId: 837
 ---
 
 manitu is an owner-run German host from St. Wendel in the Saarland, long-established and with a reputation for plain dealing in German hosting forums.

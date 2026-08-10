@@ -56,6 +56,7 @@ regions:
 status: active
 checkedAt: 2026-08-01
 sources:
+  - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1226', checkedAt: 2026-08-10 }
   - { field: regions, url: 'https://kinsta.com/docs/service-information/data-center-locations/', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-08-01 }
   - { field: founded, url: 'https://kinsta.com/about-us/', checkedAt: 2026-07-31 }
@@ -72,6 +73,7 @@ figure:
   color: rgb(120, 45, 190)
   textColor: rgb(240, 234, 246)
   text: Even royalty needs alternatives.
+greenWebId: 1226
 ---
 
 Kinsta is a managed WordPress host, founded in 2013. The operating system, web server and application runtime are managed by the provider; the customer works at the level of the WordPress installation. Plans are tiered on monthly visits rather than on CPU, memory or storage, and backups are included on every tier. Sites are served from data centre regions across the Americas, Europe, the Middle East, Africa and Asia-Pacific, fronted by a CDN.

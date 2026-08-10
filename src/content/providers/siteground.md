@@ -57,6 +57,7 @@ social:
   youtube: https://www.youtube.com/@siteground
 checkedAt: 2026-08-01
 sources:
+  - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1203', checkedAt: 2026-08-10 }
   - { field: founded, url: 'https://www.siteground.com/company', checkedAt: 2026-07-31 }
   - { field: runsOn, url: 'https://www.siteground.com/company', checkedAt: 2026-07-31 }
   - { field: ownership, url: 'https://www.siteground.com/company', checkedAt: 2026-08-01 }
@@ -76,6 +77,7 @@ figure:
   color: rgb(77, 157, 125)
   textColor: rgb(234, 245, 241)
   text: Managed WordPress, rented from Google.
+greenWebId: 1203
 ---
 
 SiteGround has been independently owned since 2004 and runs its service on Google Cloud rather than its own hardware. It replaced cPanel with a proprietary control panel, Site Tools, and sells fixed shared tiers built around WordPress and WooCommerce. SSH and WP-CLI come with every tier; Git integration and staging appear on the higher ones.

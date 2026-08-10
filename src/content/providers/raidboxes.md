@@ -36,6 +36,7 @@ favoriteNote: Managed WordPress without the upsell maze.
 status: active
 checkedAt: 2026-08-07
 sources:
+  - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1466', checkedAt: 2026-08-10 }
   - { field: category, url: 'https://raidboxes.io', checkedAt: 2026-08-07 }
   - { field: software, url: 'https://raidboxes.io', checkedAt: 2026-08-07 }
   - { field: sshAccess, url: 'https://raidboxes.io', checkedAt: 2026-08-07 }
@@ -43,6 +44,7 @@ sources:
   - { field: regions, url: 'https://raidboxes.io', checkedAt: 2026-08-07 }
   - { field: entryPrice, url: 'https://raidboxes.io/wordpress-hosting-pricing/', checkedAt: 2026-08-07 }
 ai: authored
+greenWebId: 1466
 ---
 
 Raidboxes is a Münster-based managed WordPress host, well known in the German agency market and a visible sponsor at German WordCamps. Servers are in Germany and run on renewable electricity, which the company states on its own pages.

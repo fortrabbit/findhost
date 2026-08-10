@@ -32,7 +32,7 @@ const missing = [
     <span>{facet.label}</span>
     <a class="find-jump" href={facetIndex(facet.id)}>
       {values.length}
-      <span class="visually-hidden"> values, all of them on one page</span>
+      <span class="visually-hidden">{values.length === 1 ? ' value, on a page of its own' : ' values, all of them on one page'}</span>
     </a>
   </h2>
 

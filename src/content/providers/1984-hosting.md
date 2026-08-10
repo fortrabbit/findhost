@@ -44,6 +44,7 @@ certifications:
   - iso-27001
 checkedAt: 2026-08-01
 sources:
+  - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1205', checkedAt: 2026-08-10 }
   - { field: regions, url: 'https://1984.hosting/', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://1984.hosting/product/pricelist/', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://1984.hosting/product/pricelist/', checkedAt: 2026-08-02 }
@@ -56,6 +57,7 @@ figure:
   textColor: rgb(245, 234, 234)
   text: Named after that book by Orwell.
 ai: authored
+greenWebId: 1205
 ---
 
 1984 Hosting has operated from Iceland since 2006 under the banner "free speech and privacy since 2006". The name is the argument: the company presents itself as an ethical and independent host, accepts Bitcoin and Monero alongside conventional payment, publishes an account of the litigation it has been involved in, and holds ISO 27001 certification.

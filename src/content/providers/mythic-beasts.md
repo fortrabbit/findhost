@@ -57,6 +57,7 @@ status: active
 checkedAt: 2026-08-09
 apiAvailable: public
 sources:
+  - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1333', checkedAt: 2026-08-10 }
   - { field: regions, url: 'https://www.mythic-beasts.com/order/hosting', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://www.mythic-beasts.com/order/hosting', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://www.mythic-beasts.com/order/hosting', checkedAt: 2026-08-02 }
@@ -75,6 +76,7 @@ figure:
   textColor: rgb(238, 234, 245)
   text: Graded sizes, shell sold separately.
 ai: authored
+greenWebId: 1333
 ---
 
 Mythic Beasts is a Cambridge company best known outside hosting for running the Raspberry Pi Foundation's infrastructure and for renting out actual Raspberry Pis in a data centre.

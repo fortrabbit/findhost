@@ -52,6 +52,7 @@ regions:
 status: active
 checkedAt: 2026-08-01
 sources:
+  - { field: greenWebId, url: 'https://app.greenweb.org/directory/#198', checkedAt: 2026-08-10 }
   - { field: priceFrom, url: 'https://www.combell.com/en/hosting/web-hosting', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://www.combell.com/en/servers/vps-server-hosting', checkedAt: 2026-08-02 }
   - { field: currencies, url: 'https://www.combell.com/en/about-combell/general-conditions', checkedAt: 2026-08-02 }
@@ -76,6 +77,7 @@ figure:
   textColor: rgb(246, 241, 234)
   text: Benelux incumbent, framework aware.
 ai: authored
+greenWebId: 198
 ---
 
 Combell was founded in Ghent in 1999 and became the anchor of Combell Group, which merged with TransIP Group in 2019 to form team.blue. Data centres are in Belgium and the Netherlands, and the company sells across the Benelux.

@@ -60,6 +60,7 @@ energyClaim: annual-matched
 status: active
 checkedAt: 2026-08-01
 sources:
+  - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1325', checkedAt: 2026-08-10 }
   - { field: entryPrice, url: 'https://dinahosting.com/hosting', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://dinahosting.com/hosting', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://dinahosting.com/hosting', checkedAt: 2026-08-02 }
@@ -77,6 +78,7 @@ figure:
   textColor: rgb(234, 242, 245)
   text: From Santiago, with a shell prompt.
 ai: authored
+greenWebId: 1325
 ---
 
 Dinahosting has traded from Santiago de Compostela since 2001 and remains independently owned. It sells shared hosting, domains and email, and publishes the runtimes each plan carries: PHP with per-site version selection, plus Python, Ruby, Node.js and Perl on Linux, and .NET on the Windows plans. SSH is offered above the entry tier and is never root.

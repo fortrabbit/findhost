@@ -58,6 +58,7 @@ social:
   linkedin: https://sk.linkedin.com/company/websupportsk
   youtube: https://www.youtube.com/websupport
 sources:
+  - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1463', checkedAt: 2026-08-10 }
   - { field: regions, url: 'https://www.websupport.sk/datacentrum', checkedAt: 2026-08-01 }
   - { field: energyClaim, url: 'https://www.websupport.sk/o-nas', checkedAt: 2026-08-01 }
   - { field: parent, url: 'https://www.websupport.sk/o-nas', checkedAt: 2026-08-01 }
@@ -76,6 +77,7 @@ figure:
   textColor: rgb(234, 241, 246)
   text: Slovak registrar with its own data centre.
 ai: authored
+greenWebId: 1463
 ---
 
 WebSupport describes itself as the largest domain registrar in Slovakia and trades across Slovakia, Czechia and Hungary. It belongs to team.blue, the group that has assembled much of central and northern Europe's hosting market under one owner.

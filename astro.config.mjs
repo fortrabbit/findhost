@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import { dictionaryFile } from './src/lib/fields.ts';
 
 // Canonical origin, deliberately not hardcoded: this runs on a vanity URL before
 // it runs on its own domain, and every absolute URL the build emits comes from here.
@@ -29,4 +30,24 @@ export default defineConfig({
    */
   redirects: {},
   build: { format: 'directory' },
+  vite: {
+    plugins: [
+      /*
+       * The field dictionary is read off disk with readFileSync, because
+       * validate.ts and the unit tests run lib/fields.ts under plain Node. That
+       * leaves Vite with no dependency edge to it: editing src/data/fields.yml
+       * changed nothing in `astro dev` until the server was restarted, so a
+       * facet went on showing values that had been renamed hours earlier.
+       */
+      {
+        name: 'findhost:watch-dictionary',
+        configureServer(server) {
+          server.watcher.add(dictionaryFile);
+          server.watcher.on('change', (path) => {
+            if (path.replaceAll('\\', '/').endsWith(dictionaryFile)) server.restart();
+          });
+        },
+      },
+    ],
+  },
 });
