@@ -50,6 +50,20 @@ export interface FieldValue {
    */
   from?: string;
   when?: string[];
+  /**
+   * Where one question has more than one answer worth reading. "Does this
+   * provider make a green-energy claim?" is answered by its own claim and by a
+   * third party's directory, and a reader filtering on it wants either — so the
+   * value reads both rather than splitting into two boxes that mean the same
+   * thing to everyone but us.
+   */
+  sources?: { from: string; when: string[] }[];
+  /**
+   * How the value page says what its records have in common — "42 providers
+   * *deploy from a git commit*". Set where the field's own template does not
+   * read as English for this value; otherwise the field's is used.
+   */
+  subject?: string;
 }
 
 export interface Field {
@@ -81,6 +95,12 @@ export interface Field {
    * on two pages.
    */
   relation?: boolean;
+  /**
+   * How every value page under this facet phrases what its records have in
+   * common, with `{label}` and `{lower}` standing in for the value's own word.
+   * A value may override it with a `subject` of its own.
+   */
+  subject?: string;
   filterOrder?: number;
   multiple: boolean;
   /** How the value is drawn where it is not a label lookup. */
@@ -187,8 +207,16 @@ export const fieldOf = new Map(fields.map((field) => [field.id, field]));
  * computed per record in lib/facets.ts, are never in the zod schema, and are the
  * one kind of field `validate` does not expect to find in a record.
  */
-export const derivedFields = fields.filter(
-  (field) => field.values.length > 0 && field.values.every((value) => value.from),
+/**
+ * Every field a derived value reads, with the answers that count as a yes. The
+ * single-source form is the common one and stays as it reads; `sources` is for a
+ * value more than one field can answer.
+ */
+export const sourcesOf = (value: FieldValue): { from: string; when: string[] }[] =>
+  value.sources ?? (value.from ? [{ from: value.from, when: value.when ?? [] }] : []);
+
+const derivedFields = fields.filter(
+  (field) => field.values.length > 0 && field.values.every((value) => sourcesOf(value).length > 0),
 );
 
 export const isDerived = (id: string) => derivedFields.some((field) => field.id === id);
@@ -212,13 +240,6 @@ export const asideOf = new Map(
     .filter((value) => value.aside)
     .map((value) => [value.id, { key: value.aside!, label: value.short ?? value.label }]),
 );
-
-/** Filterable field by URL segment. Throws, because a segment that names nothing is a bug, not an absence. */
-export function facetOf(segment: string): Field {
-  const field = fields.find((candidate) => candidate.facet === segment);
-  if (!field) throw new Error(`"${segment}" is not a facet in ${dictionaryFile}`);
-  return field;
-}
 
 /**
  * A field's value ids, for building a zod enum. Throws rather than returning an
@@ -247,6 +268,25 @@ export function slugify(text: string): string {
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-|-$/g, '');
+}
+
+/**
+ * What a value page says its records have in common, as the clause that follows
+ * the count: "42 providers deploy from a git commit, listed alphabetically."
+ *
+ * The value's own wording wins, then the field's template, then a form built
+ * from the labels. It reads out of the dictionary rather than out of the page
+ * template because it is a fact about the field, and a page that phrases its own
+ * facet is where twenty facets' worth of English ends up living in one route.
+ */
+export function subjectOf(field: Field, value: { id: string; label: string }): string {
+  const own = field.values.find((candidate) => candidate.id === value.id)?.subject;
+  if (own) return own;
+
+  const template = field.subject;
+  if (!template) return `record ${field.label.toLowerCase()}: ${value.label}`;
+
+  return template.replaceAll('{label}', value.label).replaceAll('{lower}', value.label.toLowerCase());
 }
 
 /** The reader's word for a value. Falls back to the id, which is at least true. */

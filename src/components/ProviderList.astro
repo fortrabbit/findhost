@@ -24,7 +24,9 @@ const { providers, namesOnly = false } = Astro.props;
       const described = !namesOnly && Boolean(provider.description);
 
       return (
-        <li class={described ? undefined : 'one-line'}>
+        /* The id is how find.ts finds this row again: it filters by hiding what
+           the server already rendered, rather than by building rows of its own. */
+        <li class={described ? undefined : 'one-line'} data-record={provider.id}>
           {/* A record without a figure gets its initial, so a gap never looks like a broken row. */}
           {provider.figure ? (
             <span

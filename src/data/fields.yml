@@ -52,11 +52,11 @@
   filterOrder: 19
   ordered: true
   values:
-    - { id: solo, label: One person, short: Solo }
-    - { id: '2-10', label: 2 to 10 }
-    - { id: '11-50', label: 11 to 50 }
-    - { id: '51-250', label: 51 to 250 }
-    - { id: '250-plus', label: More than 250, short: '250+' }
+    - { id: solo, label: One person, short: Solo, subject: 'are one person' }
+    - { id: '2-10', label: 2 to 10, subject: 'employ between 2 and 10 people' }
+    - { id: '11-50', label: 11 to 50, subject: 'employ between 11 and 50 people' }
+    - { id: '51-250', label: 51 to 250, subject: 'employ between 51 and 250 people' }
+    - { id: '250-plus', label: More than 250, short: '250+', subject: 'employ more than 250 people' }
 
 # The one editorial mark on a record: we like it. No score, no weight, no
 # arithmetic — a boolean somebody set on purpose, shown as a heart in the list
@@ -79,6 +79,7 @@
   label: Ownership
   group: Identity
   facet: ownership
+  subject: 'are {lower}'
   filterOrder: 18
   values:
     - { id: independent, label: Independent }
@@ -131,6 +132,7 @@
   label: Categories
   group: Classification
   facet: categories
+  subject: 'are {lower}'
   filterOrder: 2
   multiple: true
   values:
@@ -154,10 +156,11 @@
   label: Operating system
   group: Classification
   facet: operating-system
+  subject: 'answer "{lower}" to who manages the operating system'
   filterOrder: 15
   values:
-    - { id: managed, label: Managed }
-    - { id: self-managed, label: Self-managed }
+    - { id: managed, label: Managed, subject: 'manage the operating system for you' }
+    - { id: self-managed, label: Self-managed, subject: 'leave the operating system to you' }
 
 # More than one can be true at once: a panel that provisions onto your own cloud
 # account may also resell machines of its own.
@@ -165,12 +168,13 @@
   label: Metal
   group: Classification
   facet: metal
+  subject: '{lower}'
   filterOrder: 16
   multiple: true
   values:
-    - { id: owns-metal, label: Owns the hardware, short: Owns }
-    - { id: resells-iaas, label: Resells someone else's, short: Reseller }
-    - { id: byo-iaas, label: You bring your own, short: BYO }
+    - { id: owns-metal, label: Owns the hardware, short: Owns, subject: 'own their hardware' }
+    - { id: resells-iaas, label: Resells someone else's, short: Reseller, subject: 'resell someone else''s hardware' }
+    - { id: byo-iaas, label: You bring your own, short: BYO, subject: 'run on hardware you bring' }
 
 # Whose infrastructure the compute runs on. A relation: the values are record
 # ids, so the upstream is a page in this dataset and the relation reads from
@@ -197,6 +201,7 @@
   label: Use cases
   group: Classification
   facet: use-cases
+  subject: 'market themselves for {lower}'
   filterOrder: 9
   multiple: true
   values:
@@ -226,6 +231,7 @@
   label: Audience
   group: Classification
   facet: audience
+  subject: 'sell to {lower}'
   filterOrder: 11
   multiple: true
   values:
@@ -244,6 +250,7 @@
   label: Runtimes
   group: Tech stack
   facet: runtimes
+  subject: 'run {label}'
   filterOrder: 5
   multiple: true
   values:
@@ -276,6 +283,7 @@
   label: Software
   group: Tech stack
   facet: software
+  subject: 'document support for {label}'
   filterOrder: 1
   multiple: true
   values:
@@ -358,6 +366,7 @@
   label: Deployment
   group: Deployment
   facet: deployment
+  subject: 'deploy by {lower}'
   filterOrder: 7
   multiple: true
   #
@@ -378,10 +387,10 @@
   # and others accept a commit to build or an image to run, and a reader
   # choosing between the two wants to know that both doors are open.
   values:
-    - { id: git, label: Git }
-    - { id: docker-image, label: Container image, short: Container }
-    - { id: control-panel, label: Control panel, short: Panel }
-    - { id: file-transfer, label: File transfer, short: Upload }
+    - { id: git, label: Git, subject: 'deploy from a git commit' }
+    - { id: docker-image, label: Container image, short: Container, subject: 'deploy a container image' }
+    - { id: control-panel, label: Control panel, short: Panel, subject: 'deploy from a control panel' }
+    - { id: file-transfer, label: File transfer, short: Upload, subject: 'accept an upload over SFTP or FTP' }
 
 # One scale, and the two ends of it are different kinds of shell rather than
 # different amounts of one. A jailed shell is complete inside its container and
@@ -394,12 +403,13 @@
   label: Shell
   group: Tech stack
   facet: shell
+  subject: 'give {lower}'
   ordered: true
   filterOrder: 14
   values:
     - { id: none, label: None, noFilter: true }
-    - { id: jailed, label: Jailed shell, short: Jailed }
-    - { id: root, label: Root shell, short: Root }
+    - { id: jailed, label: Jailed shell, short: Jailed, subject: 'give a shell inside the environment, without root' }
+    - { id: root, label: Root shell, short: Root, subject: 'give root on the machine' }
 
 - id: managedDatabases
   label: Managed databases
@@ -466,6 +476,7 @@
   label: Entry price
   group: Pricing
   facet: entry-price
+  subject: 'start at {lower}'
   ordered: true
   filterOrder: 4
   values:
@@ -496,6 +507,7 @@
   label: Currencies
   group: Pricing
   facet: currencies
+  subject: 'bill in {label}'
   filterOrder: 13
   multiple: true
   values:
@@ -550,6 +562,7 @@
   label: Exit
   group: Pricing
   facet: exit
+  subject: 'can be left {lower}'
   ordered: true
   filterOrder: 17
   values:
@@ -593,22 +606,23 @@
 - id: pricingFeatures
   label: Pricing features
   facet: pricing
+  subject: 'price with {lower}'
   filterOrder: 12
   multiple: true
   values:
-    - { id: free-tier, label: Free tier, from: freeTier, when: [permanent] }
-    - { id: free-trial, label: Free trial, from: freeTier, when: [trial] }
-    - { id: in-arrears, label: Paid in arrears, short: In arrears, from: billingTiming, when: [arrears] }
-    - { id: upfront, label: Paid before the period, short: Upfront, from: billingTiming, when: [advance] }
-    - { id: usage-based, label: Metered usage, short: Metered, from: pricingModel, when: [usage-based] }
+    - { id: free-tier, label: Free tier, from: freeTier, when: [permanent], subject: 'offer a permanent free tier' }
+    - { id: free-trial, label: Free trial, from: freeTier, when: [trial], subject: 'offer a free trial rather than a free tier' }
+    - { id: in-arrears, label: Paid in arrears, short: In arrears, from: billingTiming, when: [arrears], subject: 'bill in arrears, for usage already run up' }
+    - { id: upfront, label: Paid before the period, short: Upfront, from: billingTiming, when: [advance], subject: 'take the money before the month it pays for' }
+    - { id: usage-based, label: Metered usage, short: Metered, from: pricingModel, when: [usage-based], subject: 'meter usage rather than sell a plan' }
     # Not the opposite of `upfront`, which is why both can be true at once: that
     # one answers when the money leaves, this one answers how it is held. A
     # balance topped up in advance and drawn down is a different commitment from
     # an invoice every month, and the providers that work this way take no card.
-    - { id: prepaid, label: Paid from a credit balance, short: Prepaid, from: pricingModel, when: [credit] }
+    - { id: prepaid, label: Paid from a credit balance, short: Prepaid, from: pricingModel, when: [credit], subject: 'run on prepaid credit' }
     # The term, not the notice. How long the door takes to close is `exit`, and a
     # provider can hold nobody to a term while still wanting thirty days.
-    - { id: no-minimum, label: No minimum term, short: No minimum, from: contractMinimum, when: [none] }
+    - { id: no-minimum, label: No minimum term, short: No minimum, from: contractMinimum, when: [none], subject: 'hold nobody to a minimum term' }
 
 # -------------------------------------------------------- Regions and law
 
@@ -618,6 +632,7 @@
   label: Regions
   group: Regions and law
   facet: regions
+  subject: 'operate in {label}'
   slugFromLabel: true
   filterOrder: 3
   multiple: true
@@ -752,23 +767,32 @@
   label: Green Web directory
   group: Environment
 
-# Derived, so nothing is recorded twice: what a provider says about its energy,
-# and whether a third party has checked. The two are different kinds of claim and
-# a reader filtering on either wants them in one column.
+# One filter, not five. "Matched" and "Verified" were two boxes naming our
+# filing rather than a reader's question: nobody arrives wanting annually matched
+# renewables specifically, they arrive wanting the hosts that publish anything at
+# all about the energy they run on.
 #
-# `green-web` reads a field with no vocabulary — an id in somebody else's
-# directory — so its `when` is `*`, meaning recorded at all.
+# Which kind of claim it is stays on the record, in `energyClaim` — the three
+# tiers are the real distinction and dropping them would lose the point of
+# recording any of this. It is a fact to read, not a filter to tick.
+#
+# Two sources, either of which answers: the provider's own published claim, and
+# an id in the Green Web Foundation's directory. That second is a field with no
+# vocabulary to name — an id in somebody else's database — so its `when` is `*`,
+# meaning recorded at all.
 - id: environment
   label: Environment
   facet: energy
   filterOrder: 20
   multiple: true
   values:
-    - { id: green-web, label: Verified by the Green Web Foundation, short: Verified, from: greenWebId, when: ['*'] }
-    - { id: 24-7-cfe, label: Carbon-free around the clock, short: 24/7 CFE, from: energyClaim, when: [24-7-cfe] }
-    - { id: annual-matched, label: Renewables matched annually, short: Matched, from: energyClaim, when: [annual-matched] }
-    - { id: offset, label: Offset, from: energyClaim, when: [offset] }
-    - { id: grid-mix-disclosed, label: Grid mix disclosed, short: Disclosed, from: energyClaim, when: [grid-mix-disclosed] }
+    - id: green
+      label: Publishes an energy claim
+      short: Green
+      subject: 'publish something checkable about the energy they run on'
+      sources:
+        - { from: greenWebId, when: ['*'] }
+        - { from: energyClaim, when: [24-7-cfe, annual-matched, offset, grid-mix-disclosed] }
 
 # --------------------------------------------------------------- Support
 
@@ -778,13 +802,14 @@
   label: Support
   group: Support
   facet: support
+  subject: 'offer support by {lower}'
   filterOrder: 6
   multiple: true
   values:
-    - { id: email, label: Email }
-    - { id: chat, label: Chat }
-    - { id: phone, label: Phone }
-    - { id: forum, label: Forum }
+    - { id: email, label: Email, subject: 'answer email or a ticket' }
+    - { id: chat, label: Chat, subject: 'staff a chat' }
+    - { id: phone, label: Phone, subject: 'publish a phone number' }
+    - { id: forum, label: Forum, subject: 'run a community forum' }
 
 - id: supportHours
   label: Hours
@@ -869,16 +894,17 @@
 - id: features
   label: Other features
   facet: features
+  subject: 'include {lower}'
   filterOrder: 8
   multiple: true
   values:
-    - { id: collaboration, label: Collaboration, from: collaboration, when: [team, clients] }
-    - { id: staging, label: Staging, from: staging, when: [included] }
-    - { id: domains, label: Domains, from: domainRegistration, when: [included] }
-    - { id: dns, label: DNS, from: dnsHosting, when: [included] }
-    - { id: email, label: Email, from: emailHosting, when: [included] }
-    - { id: cdn, label: CDN, from: cdnIncluded, when: [included] }
-    - { id: test-domain, label: Test domain, short: Test URL, from: testDomain, when: [included] }
+    - { id: collaboration, label: Collaboration, from: collaboration, when: [team, clients], subject: 'let more than one person work on the same hosting' }
+    - { id: staging, label: Staging, from: staging, when: [included], subject: 'give somewhere to try a deploy before it is the site' }
+    - { id: domains, label: Domains, from: domainRegistration, when: [included], subject: 'include a domain with the hosting' }
+    - { id: dns, label: DNS, from: dnsHosting, when: [included], subject: 'host DNS themselves, at no extra charge' }
+    - { id: email, label: Email, from: emailHosting, when: [included], subject: 'host email themselves, at no extra charge' }
+    - { id: cdn, label: CDN, from: cdnIncluded, when: [included], subject: 'include a CDN with the hosting' }
+    - { id: test-domain, label: Test domain, short: Test URL, from: testDomain, when: [included], subject: 'hand out a test URL to deploy to' }
 
 # ------------------------------------------------------------ Automation
 
@@ -913,12 +939,13 @@
 - id: automation
   label: Automation
   facet: automation
+  subject: 'offer {label}'
   filterOrder: 10
   multiple: true
   values:
-    - { id: api, label: API, from: apiAvailable, when: [public, partner-only] }
-    - { id: cli, label: CLI, from: cliTool, when: [official, third-party] }
-    - { id: mcp, label: MCP, from: mcpServer, when: [official, community] }
+    - { id: api, label: API, from: apiAvailable, when: [public, partner-only], subject: 'publish an API' }
+    - { id: cli, label: CLI, from: cliTool, when: [official, third-party], subject: 'ship a command-line tool' }
+    - { id: mcp, label: MCP, from: mcpServer, when: [official, community], subject: 'ship an MCP server' }
     # Reads a multi-value field, which is why the derived matcher had to learn
     # about lists. Terraform is effectively the whole category: of the nineteen
     # records that answer, nineteen have Terraform, two have CloudFormation and

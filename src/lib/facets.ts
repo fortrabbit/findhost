@@ -1,130 +1,32 @@
-import { facetFields, isDerived, slugOf, type Field } from './fields';
+import { facetFields } from './fields';
 import { asideGroup, isListed, loadAsideProviders, loadProviders } from './providers';
 import { asideOf } from './fields';
+import { byName, countValues, rowHolds, toRow, type Facet, type ProviderRow } from './rows';
 import { getCollection } from 'astro:content';
 
-export interface FacetValue {
-  id: string;
-  label: string;
-  /** The URL segment. The id for every facet but `regions`, where it is the country name. */
-  slug: string;
-  /** The filter panel's version of the label, where the dictionary gives one. */
-  short?: string;
-  count: number;
-}
-
-export interface Facet {
-  /** The URL segment: /software/kirby/. */
-  id: string;
-  label: string;
-  /** The record field it reads. */
-  field: string;
-  /** The values are a scale, so the panel shows them in dictionary order rather than by count. */
-  ordered?: boolean;
-  multiple: boolean;
-  values: FacetValue[];
-  /** Records that do not say. Displayed, never silently dropped. */
-  unknown: number;
-  /*
-   * Records where the field is explicitly null, meaning the question does not
-   * apply — a panel that provisions onto your own cloud account operates no
-   * regions of its own. Counting those as missing is the difference between
-   * "64 records do not record this" and the truth, which is 49.
-   */
-  notApplicable: number;
-}
-
-export interface ProviderRow {
-  id: string;
-  name: string;
-  description?: string;
-  publishedByUs?: boolean;
-  /** Ours, not the provider's: we like it. Drawn as a heart beside the name. */
-  favorite?: boolean;
-  /** Present when a third party has verified the energy claim. Not a score. */
-  greenWebId?: number | null;
-  /** Headquarters, as the ISO code a list shows rather than the flag it does not. */
-  country?: string;
-  /** The record's own emoji and colours — the only colour any list carries. */
-  figure?: { emoji: string; color: string; textColor: string; text: string };
-  /** Facet fields only, keyed by field name. A missing key means unknown. */
-  facets: Record<string, string | string[]>;
-  /** Fields this record sets to null: the question does not apply, which is not the same as not knowing. */
-  notApplicable: string[];
-  /** Only on a hidden row: `draft` or `out-of-scope`. Absent on everything in the register. */
-  status?: string;
-}
-
-/** Alphabetical, always — see the sort rule in CLAUDE.md. */
-const byName = (a: { name: string }, b: { name: string }) => a.name.localeCompare(b.name, 'en');
+/*
+ * The shapes live in lib/rows.ts, with the functions that build them, and are
+ * re-exported here because this is where every page reaches for them.
+ */
+export type { Facet, FacetValue, ProviderRow } from './rows';
 
 /*
- * What a record answers for a field, as a list either way. A derived value reads
- * a source field that may hold one answer or several — `iacSupport: [terraform,
- * ansible]` is as much an answer to "any infrastructure as code?" as
- * `apiAvailable: public` is to "an API?" — and stringifying an array to compare
- * it matched nothing, silently.
+ * Counted once per build rather than once per page. Every record page, every
+ * facet page and the sitemap ask for the same table, which is a full pass over
+ * the collection each time — a few hundred pages doing identical work.
+ *
+ * Only in a build. `astro dev` recomputes on every request, because a cache that
+ * outlives an edit to a record is a dev server serving yesterday's data, which
+ * is a worse bug than a slow build.
  */
-const held = (value: unknown): string[] =>
-  value === undefined || value === null ? [] : Array.isArray(value) ? value.map(String) : [String(value)];
-
-function toRow(record: { id: string; data: Record<string, unknown> }): ProviderRow {
-  const data = record.data;
-  const facets: Record<string, string | string[]> = {};
-  const notApplicable: string[] = [];
-
-  for (const field of facetFields) {
-    /*
-     * A derived field is computed, not read. A record that answers at least one
-     * of the source fields gets an answer here — the list of things it
-     * documents, empty if none — because within a field it has been asked, a
-     * silence is a no rather than a maybe.
-     *
-     * A record answering none of them is unknown, and has to be: a provider
-     * nobody has recorded a price for has not thereby been found to bill in
-     * advance. That is the difference between the facet saying "119 records do
-     * not offer this" and the truth, which is that 37 of them were never asked.
-     */
-    if (isDerived(field.id)) {
-      const asked = field.values.some((value) => data[value.from!] !== undefined && data[value.from!] !== null);
-      if (!asked) continue;
-
-      facets[field.id] = field.values
-        .filter((value) => {
-          const answers = held(data[value.from!]);
-          /* `*` means "recorded at all", for a source with no vocabulary to name. */
-          return value.when!.includes('*') ? answers.length > 0 : answers.some((answer) => value.when!.includes(answer));
-        })
-        .map((value) => value.id);
-      continue;
-    }
-
-    const value = data[field.id];
-    if (value === null) {
-      notApplicable.push(field.id);
-      continue;
-    }
-    if (value === undefined) continue;
-    if (Array.isArray(value)) {
-      if (value.length) facets[field.id] = value.map(String);
-    } else {
-      facets[field.id] = String(value);
-    }
-  }
-
-  return {
-    id: record.id,
-    name: String(data.name),
-    description: data.description as string | undefined,
-    publishedByUs: data.publishedByUs as boolean | undefined,
-    favorite: data.favorite as boolean | undefined,
-    greenWebId: data.greenWebId as number | null | undefined,
-    country: data.hqCountry as string | undefined,
-    figure: data.figure as ProviderRow['figure'],
-    facets,
-    notApplicable,
+const once = <T>(work: () => Promise<T>): (() => Promise<T>) => {
+  let held: Promise<T> | undefined;
+  return () => {
+    if (!import.meta.env.PROD) return work();
+    held ??= work();
+    return held;
   };
-}
+};
 
 /*
  * The hidden records, on their own, for the one place that offers to show them:
@@ -132,7 +34,7 @@ function toRow(record: { id: string; data: Record<string, unknown> }): ProviderR
  * — a stub has almost no fields, so folding it in would move every facet's
  * unknown count and quietly change what the register claims.
  */
-export async function loadDrafts(): Promise<ProviderRow[]> {
+export const loadDrafts = once(async (): Promise<ProviderRow[]> => {
   const records = (await getCollection('providers')).filter((record) => !isListed(record));
 
   return records
@@ -141,7 +43,7 @@ export async function loadDrafts(): Promise<ProviderRow[]> {
       status: String(record.data.status),
     }))
     .sort(byName);
-}
+});
 
 export interface Aside {
   /** The group's id, which is also its page: /defunct/, /unlisted/, /stubs/. */
@@ -156,7 +58,7 @@ export interface Aside {
  * records — a group with nothing in it yet still has a page and still says so,
  * which is how "we would list a defunct provider" is visible before there is one.
  */
-export async function loadAsides(): Promise<Aside[]> {
+export const loadAsides = once(async (): Promise<Aside[]> => {
   const groups = new Map<string, Aside>();
   for (const { key, label } of asideOf.values()) groups.set(key, { key, label, rows: [] });
 
@@ -167,7 +69,7 @@ export async function loadAsides(): Promise<Aside[]> {
   }
 
   return [...groups.values()].map((group) => ({ ...group, rows: group.rows.sort(byName) }));
-}
+});
 
 /**
  * Every group that sits beside the register, addressed the same way: the ones
@@ -175,9 +77,9 @@ export async function loadAsides(): Promise<Aside[]> {
  * for one asks for all three the same way, so a page, a link and a count never
  * disagree about what exists.
  */
-export async function asideGroups(): Promise<Aside[]> {
+export const asideGroups = once(async (): Promise<Aside[]> => {
   return [...(await loadAsides()), { key: 'stubs', label: 'Stubs', rows: await loadDrafts() }];
-}
+});
 
 export const asideGroupOf = async (key: string): Promise<Aside> => {
   const group = (await asideGroups()).find((candidate) => candidate.key === key);
@@ -185,47 +87,14 @@ export const asideGroupOf = async (key: string): Promise<Aside> => {
   return group;
 };
 
-function countValues(field: Field, providers: ProviderRow[]): Facet {
-  const applicable = providers.filter((provider) => !provider.notApplicable.includes(field.id));
-  const known = applicable.filter((provider) => provider.facets[field.id] !== undefined);
-
-  /*
-   * A `noFilter` value is still recorded and still shown on the record; it just
-   * never becomes a row here, and so never becomes a page of its own either.
-   */
-  const values = field.values
-    .filter((value) => !value.noFilter)
-    .map((value) => ({
-      id: value.id,
-      label: value.label,
-      slug: slugOf(field, value),
-      ...(value.short ? { short: value.short } : {}),
-      count: known.filter((provider) => {
-        const held = provider.facets[field.id];
-        return Array.isArray(held) ? held.includes(value.id) : held === value.id;
-      }).length,
-    }));
-
-  return {
-    id: field.facet!,
-    label: field.label,
-    field: field.id,
-    ...(field.ordered ? { ordered: true } : {}),
-    multiple: field.multiple,
-    values,
-    unknown: applicable.length - known.length,
-    notApplicable: providers.length - applicable.length,
-  };
-}
-
-export async function loadFacets(): Promise<{ facets: Facet[]; providers: ProviderRow[] }> {
+export const loadFacets = once(async (): Promise<{ facets: Facet[]; providers: ProviderRow[] }> => {
   const records = await loadProviders();
   const providers = records.map((record) => toRow(record as never)).sort(byName);
 
   // Dictionary order is the record page's; the panel offers the most-asked
   // first, which is what `filterOrder` in fields.yml sorts these by.
   return { facets: facetFields.map((field) => countValues(field, providers)), providers };
-}
+});
 
 /**
  * Where a facet's own index lives. One rule for all of them, including
@@ -252,10 +121,7 @@ export async function facetRoutes() {
         props: {
           facet,
           value,
-          matches: providers.filter((provider) => {
-            const held = provider.facets[facet.field];
-            return Array.isArray(held) ? held.includes(value.id) : held === value.id;
-          }),
+          matches: providers.filter((provider) => rowHolds(provider, facet.field, value.id)),
         },
       })),
   );

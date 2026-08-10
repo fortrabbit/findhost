@@ -2,11 +2,38 @@
 import FindFacet from './FindFacet.astro';
 import type { Facet } from '../lib/facets';
 
+import type { ProviderRow } from '../lib/facets';
+
 interface Props {
   facets: Facet[];
+  providers: ProviderRow[];
 }
 
-const { facets } = Astro.props;
+const { facets, providers } = Astro.props;
+
+/*
+ * What the script needs to filter, and nothing else: which values each record
+ * holds, and which fields it says do not apply. The names, descriptions and
+ * figures are already on the page — find.ts hides rows rather than building
+ * them — so shipping them again would be sending the register twice.
+ *
+ * Inline rather than fetched. It is a third of what /providers.json weighs, it
+ * arrives with the markup it describes, and the filters work on first paint
+ * instead of after a round trip. /providers.json stays what it is: the whole
+ * dataset, published under CC BY, which is a different job from this one.
+ */
+const index = {
+  facets: facets.map((facet) => ({
+    id: facet.id,
+    field: facet.field,
+    values: facet.values.filter((value) => value.count > 0).map((value) => value.id),
+  })),
+  providers: providers.map((provider) => ({
+    id: provider.id,
+    facets: provider.facets,
+    notApplicable: provider.notApplicable,
+  })),
+};
 
 /*
  * The filter panel, as markup rather than as DOM built in a loop. find.ts used
@@ -37,4 +64,6 @@ const { facets } = Astro.props;
         .map((facet) => <FindFacet facet={facet} />)
     }
   </div>
+
+  <script type="application/json" data-find-index set:html={JSON.stringify(index)} is:inline></script>
 </details>

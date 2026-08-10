@@ -5,6 +5,7 @@ import { organization, valueTitle } from '../../lib/seo';
 import ProviderRegister from '../../components/ProviderRegister.astro';
 import PageFigure from '../../components/PageFigure.astro';
 import { facetIndex, facetRoutes, loadFacets } from '../../lib/facets';
+import { fieldOf, subjectOf } from '../../lib/fields';
 import { summarise } from '../../lib/summarise';
 
 /*
@@ -22,83 +23,10 @@ export async function getStaticPaths() {
 
 const { facet, value, matches } = Astro.props;
 
-// Phrased per facet so the sentence reads as English rather than as a template.
-const subjects: Record<string, string> = {
-  software: `document support for ${value.label}`,
-  runtimes: `run ${value.label}`,
-  categories: `are ${value.label.toLowerCase()}`,
-  'use-cases': `market themselves for ${value.label.toLowerCase()}`,
-  audience: `sell to ${value.label.toLowerCase()}`,
-  regions: `operate in ${value.label}`,
-  'entry-price': `start at ${value.label.toLowerCase()}`,
-  pricing:
-    {
-      'free-tier': 'offer a permanent free tier',
-      'free-trial': 'offer a free trial rather than a free tier',
-      'in-arrears': 'bill in arrears, for usage already run up',
-      upfront: 'take the money before the month it pays for',
-      'usage-based': 'meter usage rather than sell a plan',
-      prepaid: 'run on prepaid credit',
-      'no-minimum': 'hold nobody to a minimum term',
-    }[value.id] ?? `price with ${value.label.toLowerCase()}`,
-  shell:
-    {
-      jailed: 'give a shell inside the environment, without root',
-      root: 'give root on the machine',
-    }[value.id] ?? `give ${value.label.toLowerCase()}`,
-  deployment:
-    {
-      git: 'deploy from a git commit',
-      'docker-image': 'deploy a container image',
-      'file-transfer': 'accept an upload over SFTP or FTP',
-      'control-panel': 'deploy from a control panel',
-    }[value.id] ?? `deploy by ${value.label.toLowerCase()}`,
-  support:
-    {
-      email: 'answer email or a ticket',
-      chat: 'staff a chat',
-      phone: 'publish a phone number',
-      forum: 'run a community forum',
-    }[value.id] ?? `offer support by ${value.label.toLowerCase()}`,
-  'operating-system':
-    {
-      'self-managed': 'leave the operating system to you',
-      managed: 'manage the operating system for you',
-    }[value.id] ?? `answer "${value.label.toLowerCase()}" to who manages the operating system`,
-  metal:
-    {
-      'owns-metal': 'own their hardware',
-      'resells-iaas': "resell someone else's hardware",
-      'byo-iaas': 'run on hardware you bring',
-    }[value.id] ?? value.label.toLowerCase(),
-  currencies: `bill in ${value.label}`,
-  ownership: `are ${value.label.toLowerCase()}`,
-  features:
-    {
-      collaboration: 'let more than one person work on the same hosting',
-      staging: 'give somewhere to try a deploy before it is the site',
-      domains: 'include a domain with the hosting',
-      dns: 'host DNS themselves, at no extra charge',
-      email: 'host email themselves, at no extra charge',
-      cdn: 'include a CDN with the hosting',
-      'test-domain': 'hand out a test URL to deploy to',
-    }[value.id] ?? `include ${value.label.toLowerCase()}`,
-  automation:
-    {
-      api: 'publish an API',
-      cli: 'ship a command-line tool',
-      mcp: 'ship an MCP server',
-    }[value.id] ?? `offer ${value.label}`,
-  exit: `can be left ${value.label.toLowerCase()}`,
-};
-
 const { facets } = await loadFacets();
-const summary = summarise(
-  matches,
-  facets,
-  facet.id,
-  subjects[facet.id] ?? `record ${facet.label.toLowerCase()}: ${value.label}`,
-);
+
+/* Phrased in fields.yml, beside the field it describes — see subjectOf. */
+const summary = summarise(matches, facets, facet.id, subjectOf(fieldOf.get(facet.field)!, value));
 
 /*
  * The count, what the records have in common and what is missing, in one

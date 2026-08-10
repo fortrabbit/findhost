@@ -279,11 +279,17 @@ test.describe('filtering', () => {
   test('narrows the list and says how many it dropped', async ({ page }) => {
     await page.goto('/');
 
-    const rows = page.locator('[data-find-results] .provider-list > li');
-    await expect(rows).toHaveCount(listed);
+    /*
+     * Visible rows, not rows: filtering hides what the server already rendered
+     * rather than rebuilding the list, so the ones that do not match are still
+     * in the document. That is the point — one row renderer, and a filtered row
+     * is the same element as an unfiltered one.
+     */
+    const shown = page.locator('[data-find-results] .provider-list > li:visible');
+    await expect(shown).toHaveCount(listed);
 
     await page.locator('.find-facet input[type=checkbox]').first().check();
-    await expect(rows).not.toHaveCount(listed);
+    await expect(shown).not.toHaveCount(listed);
 
     // Unknowns are declared rather than silently dropped: with most fields
     // optional, a filter that hides them would hide most of the market.
@@ -298,40 +304,36 @@ test.describe('filtering', () => {
   });
 
   /*
-   * The letter heading is built twice, here and in ProviderRegister.astro, and
-   * they drifted: the server put the letter inside the anchor while the script
-   * still wrote "#" plus a bare text node beside it. Same list, two headings,
-   * two fonts. The heading holds nothing but its own link, so a stray text node
-   * on either side fails.
+   * A letter with nothing left under it takes its heading and its rule away.
+   * Left behind, the register grows a row of empty letters as a filter narrows
+   * it — a heading that names a group with no members.
    */
-  test('heads a letter group the same way the server does', async ({ page }) => {
+  test('takes a letter away when nothing under it survives', async ({ page }) => {
     await page.goto('/');
+
+    const headings = page.locator('[data-find-results] .letter-group:visible');
+    const before = await headings.count();
+
     await page.locator('.find-facet input[type=checkbox]').first().check();
+    await expect(headings).not.toHaveCount(before);
 
-    const heading = page.locator('[data-find-results] .letter-group > h2').first();
-    await expect(heading.locator('.anchor-link')).toHaveCount(1);
-    expect((await heading.innerText()).trim()).toBe((await heading.locator('.anchor-link').innerText()).trim());
-  });
-
-  test('a filtered row looks exactly like an unfiltered one', async ({ page }) => {
-    await page.goto('/');
-    await page.locator('.find-facet input[type=checkbox]').first().check();
-
-    const row = page.locator('[data-find-results] .provider-list > li').first();
-    await expect(row.locator('.provider-tile')).toBeVisible();
-    await expect(row.locator('.provider-name a')).toBeVisible();
+    /* Every letter still standing has at least one row under it. */
+    for (const group of await headings.all()) {
+      await expect(group.locator('.provider-list > li:visible').first()).toBeVisible();
+    }
   });
 
   /*
-   * Slim is a class on the results, not a second way to build a row, so a row
-   * rebuilt by a filter has to come back slim without the script knowing which
-   * view is on. That only holds while both renderers emit the same markup —
-   * which is what this asserts, from the far side of a filter.
+   * The register is server-rendered and filtering hides what does not match, so
+   * a filtered row is not a copy that has to be kept looking like the original —
+   * it is the original. This asserts that: the same element, still whole, on the
+   * far side of a filter and of the slim toggle.
    */
-  test('keeps the slim view through a filter', async ({ page }) => {
+  test('a filtered row is the row the server drew', async ({ page }) => {
     await page.goto('/');
 
     const row = page.locator('[data-find-results] .provider-list > li').first();
+    const id = await row.getAttribute('data-record');
     await expect(row.locator('.provider-tile')).toBeVisible();
 
     await page.locator('[data-list-style] button[value=slim]').click();
@@ -339,7 +341,7 @@ test.describe('filtering', () => {
     await expect(row.locator('.provider-name a')).toBeVisible();
 
     await page.locator('.find-facet input[type=checkbox]').first().check();
-    await expect(row.locator('.provider-tile')).toBeHidden();
+    expect(await row.getAttribute('data-record')).toBe(id);
     await expect(row.locator('.provider-name a')).toBeVisible();
   });
 });

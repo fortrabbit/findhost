@@ -30,13 +30,8 @@ const beside = (await asideGroups()).map((group) => ({
 >
   <h1>Find your next web host</h1>
 
-  <!-- <p class="lead">
-    An <a href="/about/" title="About">opinionated</a>{' '}
-    <a href="/guide/">hosting guide</a>.
-  </p> -->
-
   <ProviderRegister providers={providers} facets={facets} beside={beside}>
-    <FindFilters facets={facets} />
+    <FindFilters facets={facets} providers={providers} />
   </ProviderRegister>
 </Base>
 

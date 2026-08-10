@@ -1,5 +1,4 @@
 import type { APIRoute } from 'astro';
-import { getCollection } from 'astro:content';
 import { facetIndex, loadFacets } from '../lib/facets';
 import { loadIndexed } from '../lib/providers';
 

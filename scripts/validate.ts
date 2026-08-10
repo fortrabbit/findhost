@@ -19,6 +19,7 @@ import {
   hiddenStatuses,
   renderModes,
   reservedSegments,
+  sourcesOf,
 } from '../src/lib/fields.ts';
 import { priceBands } from '../src/lib/price.ts';
 
@@ -102,7 +103,9 @@ for (const field of fields) {
      * has to be shown is the field each of its values reads.
      */
     const shown = isDerived(field.id)
-      ? [...new Set(field.values.map((value) => value.from!))].filter((source) => !fieldOf.get(source)?.group)
+      ? [...new Set(field.values.flatMap(sourcesOf).map((source) => source.from))].filter(
+          (source) => !fieldOf.get(source)?.group,
+        )
       : field.group
         ? []
         : [field.id];
@@ -127,34 +130,42 @@ for (const field of fields) {
    * without a `from` would read as unheld on every record, and the box would sit
    * in the panel counting zero with nothing to say why.
    */
-  const derivedValues = field.values.filter((value) => value.from);
+  const derivedValues = field.values.filter((value) => sourcesOf(value).length);
   if (derivedValues.length && derivedValues.length !== field.values.length) {
     fail(dictionaryFile, `"${field.id}" derives some values and not others, so the rest can never be held`);
   }
 
   for (const value of derivedValues) {
-    const source = fieldOf.get(value.from!);
-    if (!source) {
-      fail(dictionaryFile, `"${field.id}" value "${value.id}" reads "${value.from}", which is not a field`);
-      continue;
+    /* Declaring both would leave one of them silently ignored. */
+    if (value.sources && (value.from || value.when)) {
+      fail(dictionaryFile, `"${field.id}" value "${value.id}" declares both "sources" and "from" — one or the other`);
     }
 
-    if (!value.when?.length) {
-      fail(dictionaryFile, `"${field.id}" value "${value.id}" reads "${value.from}" without saying which values count`);
-      continue;
-    }
+    for (const { from, when } of sourcesOf(value)) {
+      const source = fieldOf.get(from);
+      if (!source) {
+        fail(dictionaryFile, `"${field.id}" value "${value.id}" reads "${from}", which is not a field`);
+        continue;
+      }
 
-    /*
-     * A `when` naming a value the source does not have matches nothing, for
-     * ever. A yes/no field carries no vocabulary to check against — its two
-     * answers are the render mode rather than a list — so it is checked against
-     * those two instead of skipped.
-     */
-    const vocabulary = source.render === 'yes-no' ? new Set(['true', 'false']) : new Set(source.values.map((entry) => entry.id));
-    for (const wanted of value.when) {
-      if (wanted === '*') continue;
-      if (!vocabulary.has(wanted)) {
-        fail(dictionaryFile, `"${field.id}" value "${value.id}" waits for "${value.from}: ${wanted}", which does not exist`);
+      if (!when.length) {
+        fail(dictionaryFile, `"${field.id}" value "${value.id}" reads "${from}" without saying which values count`);
+        continue;
+      }
+
+      /*
+       * A `when` naming a value the source does not have matches nothing, for
+       * ever. A yes/no field carries no vocabulary to check against — its two
+       * answers are the render mode rather than a list — so it is checked
+       * against those two instead of skipped.
+       */
+      const vocabulary =
+        source.render === 'yes-no' ? new Set(['true', 'false']) : new Set(source.values.map((entry) => entry.id));
+      for (const wanted of when) {
+        if (wanted === '*') continue;
+        if (!vocabulary.has(wanted)) {
+          fail(dictionaryFile, `"${field.id}" value "${value.id}" waits for "${from}: ${wanted}", which does not exist`);
+        }
       }
     }
   }
@@ -358,6 +369,161 @@ const looksLikeField = (name: string) => /^[a-z]+[A-Z][A-Za-z0-9]*$/.test(name);
 // A ranking field is the one thing this dataset may never grow. CI4, mechanically.
 const forbidden = ['rank', 'ranking', 'score', 'rating', 'boost', 'weight', 'stars', 'position', 'featured'];
 
+/**
+ * The advertised starting price and the band it is filed under have to agree.
+ * They are recorded separately and drift apart silently: one is read off a
+ * pricing page, the other is a judgement about what a small production setup
+ * costs, and when the judgement changes nobody goes back to the number.
+ */
+function checkPriceBand(file: string, data: Record<string, unknown>) {
+  const entry = data.entryPrice as
+    | { amount?: number; currency?: string; period?: string; introductory?: boolean }
+    | undefined;
+  const band = data.priceFrom as string | undefined;
+  if (!entry?.amount || !entry.currency || !band || bandFloor[band] === undefined) return;
+
+  const rate = roughlyInDollars[entry.currency];
+  if (!rate) return;
+
+  // Hours are the awkward one: a cent an hour is four euros a month, not a cent.
+  const perMonth: Record<string, number> = { year: 1 / 12, month: 1, hour: 730 };
+  const dollars = entry.amount * (perMonth[String(entry.period)] ?? 1) * rate;
+
+  /*
+   * An introductory price is allowed to sit below the band: `priceFrom` follows
+   * the standing price on purpose, and the whole point of recording both is that
+   * the advertised number is not the one that recurs. A STANDING price below the
+   * band is a misfiling, and the reason this check exists — a record can say
+   * "starts at EUR 2.50" and "starts at $5 to $15" at the same time, on the same
+   * page, and nothing noticed.
+   */
+  if (!entry.introductory && dollars < bandFloor[band] * 0.75) {
+    fail(file, `entryPrice is about $${dollars.toFixed(2)} a month, below the "${band}" band it is filed under`);
+  } else if (dollars > bandCeiling[band] * 1.25) {
+    fail(file, `entryPrice is about $${dollars.toFixed(2)} a month, above the "${band}" band it is filed under`);
+  }
+}
+
+/**
+ * The note sits directly under the figure on the record page, so the two lines
+ * are read together — and a note that echoes the line above it says nothing.
+ * Krystal's figure said "B Corp paperwork" and its note opened "A B Corp that…",
+ * which is the whole failure in one example.
+ */
+const commonWords = new Set(
+  'the a an and it is of to in for on that with not its you your as at by or from what who this are be more than one no all any can has have their'.split(
+    ' ',
+  ),
+);
+
+const meaningfulWords = (text: string) =>
+  new Set(
+    text
+      .toLowerCase()
+      .replace(/[^a-z0-9 ]/g, ' ')
+      .split(/\s+/)
+      .filter((word) => word.length > 2 && !commonWords.has(word)),
+  );
+
+function checkFavoriteNote(file: string, data: Record<string, unknown>) {
+  const figureText = String((data.figure as { text?: string } | undefined)?.text ?? '');
+  const note = String(data.favoriteNote ?? '');
+  if (!figureText || !note) return;
+
+  const inNote = meaningfulWords(note);
+  const echoed = [...meaningfulWords(figureText)].filter((word) => inNote.has(word));
+  if (echoed.length) fail(file, `favoriteNote repeats the figure above it: ${echoed.join(', ')}`);
+}
+
+/**
+ * A relation names another record. Nothing else can check it: zod cannot see the
+ * collection from inside the schema that defines it, and a typo here is silent —
+ * the value renders as a link to a page that does not exist, or as a parent
+ * nobody can follow back.
+ */
+function checkRelations(file: string, data: Record<string, unknown>, slug: string) {
+  for (const field of relationFields) {
+    const held = data[field.id];
+    if (held === undefined || held === null) continue;
+
+    for (const target of Array.isArray(held) ? held : [held]) {
+      if (String(target) === slug) fail(file, `"${field.id}" points at its own record`);
+      else if (!recordIds.has(String(target))) {
+        fail(file, `"${field.id}" names "${String(target)}", which is not a record — relations are provider ids`);
+      }
+    }
+  }
+}
+
+/**
+ * A source for a field the record does not carry numbers a footnote nothing
+ * points at, and claims the fact was checked when the page shows no fact. It
+ * happens when a band is pulled and its citation is left behind.
+ */
+function checkSources(file: string, data: Record<string, unknown>) {
+  for (const source of (data.sources ?? []) as { field?: string }[]) {
+    const field = String(source.field);
+    /*
+     * A social account is its own evidence: the URL either resolves to the
+     * provider's profile or it does not, and a citation saying we looked adds a
+     * numbered footnote to a fact nobody disputes.
+     */
+    if (field === 'social') fail(file, 'cites a source for "social" — a profile link vouches for itself');
+    else if (looksLikeField(field) && !citable.has(field)) {
+      fail(file, `cites a source for "${field}", which is not a field`);
+    } else if (fieldNames.has(field) && data[field] === undefined) {
+      fail(file, `cites a source for "${field}", which this record does not carry`);
+    }
+  }
+}
+
+/** Every value a record holds has to be one the dictionary defines, with whatever it implies. */
+function checkVocabulary(file: string, data: Record<string, unknown>) {
+  for (const field of fields) {
+    if (!field.values.length || isDerived(field.id)) continue;
+
+    const value = data[field.id];
+    if (value === undefined || value === null) continue;
+
+    const allowed = new Set(field.values.map((entry) => entry.id));
+    const used = Array.isArray(value) ? value.map(String) : [String(value)];
+
+    for (const entry of used) {
+      if (!allowed.has(entry)) fail(file, `${field.id} "${entry}" is not defined in ${dictionaryFile}`);
+    }
+
+    /*
+     * One value that cannot be held without another. A record offering
+     * WooCommerce and not WordPress is missing from the page that exists for
+     * exactly that record, and a filter is only worth ticking if it holds.
+     */
+    for (const entry of field.values) {
+      if (!entry.implies?.length || !used.includes(entry.id)) continue;
+
+      const missing = entry.implies.filter((required) => !used.includes(required));
+      if (missing.length) {
+        fail(file, `${field.id} "${entry.id}" implies ${missing.map((id) => `"${id}"`).join(', ')}, which is not held`);
+      }
+    }
+  }
+}
+
+/** The one thing this dataset may never grow, and the assets a record points at. */
+function checkRecordShape(file: string, data: Record<string, unknown>) {
+  for (const key of Object.keys(data)) {
+    if (forbidden.includes(key.toLowerCase())) {
+      fail(file, `"${key}" is a ranking field — this dataset carries no scores`);
+    }
+  }
+
+  for (const asset of ['mark', 'logo'] as const) {
+    const value = data[asset];
+    if (typeof value === 'string' && !existsSync(join(publicDir, value))) {
+      fail(file, `${asset} "${value}" is not in ${publicDir}/`);
+    }
+  }
+}
+
 for (const { file, data } of records) {
   if (!data) {
     fail(file, 'no frontmatter');
@@ -377,145 +543,12 @@ for (const { file, data } of records) {
   if (duplicate) fail(file, `duplicate id, already used by ${duplicate}`);
   seen.set(String(data.id), file);
 
-  /*
-   * A relation names another record. Nothing else can check it: zod cannot see
-   * the collection from inside the schema that defines it, and a typo here is
-   * silent — the value renders as a link to a page that does not exist, or as a
-   * parent nobody can follow back.
-   */
-  /*
-   * The advertised starting price and the band it is filed under have to agree.
-   * They are recorded separately and drift apart silently: one is read off a
-   * pricing page, the other is a judgement about what a small production setup
-   * costs, and when the judgement changes nobody goes back to the number.
-   */
-  const entry = data.entryPrice as
-    | { amount?: number; currency?: string; period?: string; introductory?: boolean }
-    | undefined;
-  const band = data.priceFrom as string | undefined;
-  if (entry?.amount && entry.currency && band && bandFloor[band] !== undefined) {
-    const rate = roughlyInDollars[entry.currency];
-    // Hours are the awkward one: a cent an hour is four euros a month, not a cent.
-    const perMonth: Record<string, number> = { year: 1 / 12, month: 1, hour: 730 };
-    const monthly = entry.amount * (perMonth[String(entry.period)] ?? 1);
-    if (rate) {
-      const dollars = monthly * rate;
-
-      /*
-       * An introductory price is allowed to sit below the band: `priceFrom`
-       * follows the standing price on purpose, and the whole point of recording
-       * both is that the advertised number is not the one that recurs. A
-       * STANDING price below the band is a misfiling, and the reason this check
-       * exists — a record can say "starts at €2.50" and "starts at $5 to $15" at
-       * the same time, on the same page, and nothing noticed.
-       */
-      if (!entry.introductory && dollars < bandFloor[band] * 0.75) {
-        fail(file, `entryPrice is about $${dollars.toFixed(2)} a month, below the "${band}" band it is filed under`);
-      } else if (dollars > bandCeiling[band] * 1.25) {
-        fail(file, `entryPrice is about $${dollars.toFixed(2)} a month, above the "${band}" band it is filed under`);
-      }
-    }
-  }
-
-  /*
-   * The note sits directly under the figure on the record page, so the two lines
-   * are read together — and a note that echoes the line above it says nothing.
-   * Krystal's figure said "B Corp paperwork" and its note opened "A B Corp
-   * that…", which is the whole failure in one example.
-   */
-  const figureText = String((data.figure as { text?: string } | undefined)?.text ?? '');
-  const note = String(data.favoriteNote ?? '');
-  if (figureText && note) {
-    const common = new Set(
-      'the a an and it is of to in for on that with not its you your as at by or from what who this are be more than one no all any can has have their'.split(' '),
-    );
-    const words = (text: string) =>
-      new Set(
-        text
-          .toLowerCase()
-          .replace(/[^a-z0-9 ]/g, ' ')
-          .split(/\s+/)
-          .filter((word) => word.length > 2 && !common.has(word)),
-      );
-
-    const echoed = [...words(figureText)].filter((word) => words(note).has(word));
-    if (echoed.length) fail(file, `favoriteNote repeats the figure above it: ${echoed.join(', ')}`);
-  }
-
-  for (const field of relationFields) {
-    const held = data[field.id];
-    if (held === undefined || held === null) continue;
-
-    for (const target of Array.isArray(held) ? held : [held]) {
-      if (String(target) === slug) fail(file, `"${field.id}" points at its own record`);
-      else if (!recordIds.has(String(target))) {
-        fail(file, `"${field.id}" names "${String(target)}", which is not a record — relations are provider ids`);
-      }
-    }
-  }
-
-  for (const key of Object.keys(data)) {
-    if (forbidden.includes(key.toLowerCase())) {
-      fail(file, `"${key}" is a ranking field — this dataset carries no scores`);
-    }
-  }
-
-  for (const asset of ['mark', 'logo'] as const) {
-    const value = data[asset];
-    if (typeof value === 'string' && !existsSync(join(publicDir, value))) {
-      fail(file, `${asset} "${value}" is not in ${publicDir}/`);
-    }
-  }
-
-  /*
-   * A source for a field the record does not carry numbers a footnote nothing
-   * points at, and claims the fact was checked when the page shows no fact. It
-   * happens when a band is pulled and its citation is left behind.
-   */
-  for (const source of (data.sources ?? []) as { field?: string }[]) {
-    const field = String(source.field);
-    /*
-     * A social account is its own evidence: the URL either resolves to the
-     * provider's profile or it does not, and a citation saying we looked adds a
-     * numbered footnote to a fact nobody disputes.
-     */
-    if (field === 'social') fail(file, 'cites a source for "social" — a profile link vouches for itself');
-    else if (looksLikeField(field) && !citable.has(field)) {
-      fail(file, `cites a source for "${field}", which is not a field`);
-    } else if (fieldNames.has(field) && data[field] === undefined) {
-      fail(file, `cites a source for "${field}", which this record does not carry`);
-    }
-  }
-
-  for (const field of fields) {
-    if (!field.values.length || isDerived(field.id)) continue;
-
-    const value = data[field.id];
-    if (value === undefined || value === null) continue;
-
-    const allowed = new Set(field.values.map((entry) => entry.id));
-    const used = Array.isArray(value) ? value.map(String) : [String(value)];
-
-    for (const entry of used) {
-      if (!allowed.has(entry)) {
-        fail(file, `${field.id} "${entry}" is not defined in ${dictionaryFile}`);
-      }
-    }
-
-    /*
-     * One value that cannot be held without another. A record offering
-     * WooCommerce and not WordPress is missing from the page that exists for
-     * exactly that record, and a filter is only worth ticking if it holds.
-     */
-    for (const entry of field.values) {
-      if (!entry.implies?.length || !used.includes(entry.id)) continue;
-
-      const missing = entry.implies.filter((required) => !used.includes(required));
-      if (missing.length) {
-        fail(file, `${field.id} "${entry.id}" implies ${missing.map((id) => `"${id}"`).join(', ')}, which is not held`);
-      }
-    }
-  }
+  checkPriceBand(file, data);
+  checkFavoriteNote(file, data);
+  checkRelations(file, data, slug);
+  checkRecordShape(file, data);
+  checkSources(file, data);
+  checkVocabulary(file, data);
 }
 
 /*
@@ -537,10 +570,16 @@ for (const key of noteKeys(notesDir)) {
    * field each value reads.
    */
   const option = field.values.find((candidate) => candidate.id === value);
+  const sources = option ? sourcesOf(option) : [];
 
   const held = records.some(({ data }) =>
-    option?.from
-      ? option.when!.includes(String(data?.[option.from]))
+    sources.length
+      ? sources.some(({ from, when }) => {
+          const carried = data?.[from];
+          if (carried === undefined || carried === null) return false;
+          const answers = Array.isArray(carried) ? carried.map(String) : [String(carried)];
+          return when.includes('*') ? answers.length > 0 : answers.some((answer) => when.includes(answer));
+        })
       : (() => {
           const carried = data?.[field.id];
           return Array.isArray(carried) ? carried.map(String).includes(value) : String(carried) === value;

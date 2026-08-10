@@ -2,97 +2,27 @@
  * The find view — the only JavaScript this site ships.
  *
  * It is deliberately generic: everything it knows about the dataset comes from
- * providers.json, so an eleventh facet is an entry in fields.yml and nothing here.
+ * the index the page inlines, so an eleventh facet is an entry in fields.yml and
+ * nothing here.
+ *
+ * It never builds a row. The register is server-rendered and complete, and
+ * filtering hides what does not match — so there is one row renderer on this
+ * site (ProviderList.astro) rather than two that have to be kept identical, and
+ * a filtered row is the same element as an unfiltered one rather than a copy of
+ * it that has to look the same.
  */
-
-interface FacetValue {
-  id: string;
-  label: string;
-  count: number;
-}
 
 interface Facet {
   id: string;
-  label: string;
   field: string;
-  multiple: boolean;
-  values: FacetValue[];
-  unknown: number;
-  notApplicable: number;
+  /** Only the values some record holds — a box for anything else can never be ticked. */
+  values: string[];
 }
 
 interface ProviderRow {
   id: string;
-  name: string;
-  description?: string;
-  favorite?: boolean;
-  figure?: { emoji: string; color: string; textColor: string };
   facets: Record<string, string | string[]>;
   notApplicable: string[];
-}
-
-/**
- * One row, built to the same shape ProviderList.astro renders — the filtered
- * view and the server-rendered one have to be indistinguishable, or filtering
- * would quietly change what a row looks like.
- */
-function row(provider: ProviderRow): HTMLLIElement {
-  const item = document.createElement('li');
-  if (!provider.description) item.className = 'one-line';
-
-  const tile = document.createElement('span');
-  tile.className = provider.figure ? 'provider-tile' : 'provider-tile letter';
-  tile.setAttribute('aria-hidden', 'true');
-  if (provider.figure) {
-    tile.style.background = provider.figure.color;
-    tile.style.color = provider.figure.textColor;
-    tile.textContent = provider.figure.emoji;
-  } else {
-    tile.textContent = provider.name.slice(0, 1).toLowerCase();
-  }
-  item.append(tile);
-
-  const body = document.createElement('div');
-  body.className = 'provider-body';
-
-  const name = document.createElement('span');
-  name.className = 'provider-name';
-
-  const link = document.createElement('a');
-  link.href = `/${provider.id}/`;
-  link.textContent = provider.name;
-  name.append(link);
-
-  body.append(name);
-
-  if (provider.description) {
-    const description = document.createElement('p');
-    description.textContent = provider.description;
-    body.append(description);
-  }
-
-  item.append(body);
-
-  if (provider.favorite) {
-    const heart = document.createElement('span');
-    heart.className = 'record-badge favorite-badge';
-    heart.title = 'One we like';
-
-    const glyph = document.createElement('span');
-    glyph.setAttribute('aria-hidden', 'true');
-    glyph.textContent = '♥';
-    heart.append(glyph);
-
-    const spelled = document.createElement('span');
-    spelled.className = 'visually-hidden';
-    spelled.textContent = 'One we like';
-    heart.append(spelled);
-
-    item.append(heart);
-  }
-
-
-  return item;
 }
 
 /**
@@ -115,15 +45,13 @@ const resultsEl = document.querySelector<HTMLElement>('[data-find-results]');
  */
 const summaryEl = document.querySelector<HTMLElement>('[data-find-count]');
 const styleEl = document.querySelector<HTMLElement>('[data-list-style]');
+const indexEl = document.querySelector<HTMLScriptElement>('[data-find-index]');
 
 /*
  * Extended or slim, as a class on the results rather than as a second way to
- * build a row. Rebuilding the list on a filter keeps whichever view is on,
- * because the class is on the container the rows are put into and the rows
- * themselves are identical either way.
- *
- * It runs on every page carrying a register, including the facet value pages
- * that ship no filters at all, so it is wired apart from everything below.
+ * build a row. It runs on every page carrying a register, including the facet
+ * value pages that ship no filters at all, so it is wired apart from everything
+ * below.
  */
 if (styleEl && resultsEl) {
   const stored = localStorage.getItem('list-style');
@@ -151,16 +79,21 @@ if (styleEl && resultsEl) {
   show(current);
 }
 
-if (filtersEl && resultsEl && summaryEl) {
-  const response = await fetch('/providers.json');
-  const { facets, providers } = (await response.json()) as {
+if (filtersEl && resultsEl && summaryEl && indexEl) {
+  const { facets, providers } = JSON.parse(indexEl.textContent!) as {
     facets: Facet[];
     providers: ProviderRow[];
   };
 
+  /* Every row the server drew, by the id it carries. Nothing is added or removed. */
+  const rowOf = new Map<string, HTMLElement>();
+  for (const row of resultsEl.querySelectorAll<HTMLElement>('li[data-record]')) {
+    rowOf.set(row.dataset.record!, row);
+  }
+
+  const letterGroups = [...resultsEl.querySelectorAll<HTMLElement>('.letter-group')];
 
   const selected = new Map<string, Set<string>>();
-
 
   /*
    * The query string is the state. A facet value page carries its narrowing in
@@ -177,12 +110,12 @@ if (filtersEl && resultsEl && summaryEl) {
 
       /*
        * Only values that still exist AND that some record holds. A link written
-       * before a value was renamed — /?category=shared, say — would
-       * otherwise filter to nothing and read as "no such providers" rather than
-       * as a dead link. A defined-but-unused value is the same trap with a
-       * crueller ending: the panel draws no box for it, so nothing can untick it.
+       * before a value was renamed — /?category=shared, say — would otherwise
+       * filter to nothing and read as "no such providers" rather than as a dead
+       * link. A defined-but-unused value is the same trap with a crueller
+       * ending: the panel draws no box for it, so nothing can untick it.
        */
-      const known = new Set(facet.values.filter((value) => value.count > 0).map((value) => value.id));
+      const known = new Set(facet.values);
       const held = asked.split(',').filter((value) => known.has(value));
       if (held.length) selected.set(facet.id, new Set(held));
     }
@@ -213,8 +146,8 @@ if (filtersEl && resultsEl && summaryEl) {
     );
 
   /*
-   * The panel is markup now — components/FindFilters.astro — and this attaches
-   * to it. Building it here put the whole design of the filter inside a script
+   * The panel is markup — components/FindFilters.astro — and this attaches to
+   * it. Building it here put the whole design of the filter inside a script
    * nobody opens for design reasons, and rebuilding it on every tick re-sorted
    * the values under the pointer that had just chosen one.
    *
@@ -244,7 +177,6 @@ if (filtersEl && resultsEl && summaryEl) {
     }
 
     for (const input of filtersEl.querySelectorAll<HTMLInputElement>('input[disabled]')) input.disabled = false;
-
   };
 
   /*
@@ -266,60 +198,24 @@ if (filtersEl && resultsEl && summaryEl) {
   // With nothing selected this says exactly what the server rendered. A visitor
   // with JavaScript should not be told "150 of 150" where a visitor without it
   // is told "150" — the script is here to narrow the list, not to restate it.
-  const updateSummary = (found: ProviderRow[]) => {
+  const updateSummary = (found: number) => {
     const noun = providers.length === 1 ? 'record' : 'records';
     summaryEl.textContent = activeFacets().length
-      ? `${found.length} of ${providers.length} ${noun}.`
+      ? `${found} of ${providers.length} ${noun}.`
       : `${providers.length} ${noun}.`;
   };
 
-  const letterOf = (name: string) => {
-    const initial = name.replace(/^the /i, '').charAt(0).toUpperCase();
-    return /[A-Z]/.test(initial) ? initial : '#';
-  };
-
   const renderResults = () => {
-    const found = matches();
+    const found = new Set(matches().map((provider) => provider.id));
 
-    resultsEl.innerHTML = '';
+    for (const [id, row] of rowOf) row.hidden = !found.has(id);
 
-    let letter = '';
-    let list: HTMLUListElement | null = null;
-
-    for (const provider of found) {
-      const initial = letterOf(provider.name);
-
-      if (initial !== letter) {
-        letter = initial;
-        const anchor = initial === '#' ? 'other' : initial.toLowerCase();
-
-        const section = document.createElement('section');
-        section.className = 'letter-group';
-        section.id = anchor;
-
-        const label = initial === '#' ? '0–9' : initial;
-
-        // The letter is the link. ProviderRegister.astro builds exactly this;
-        // the two headings differ and the register looks like two lists.
-        const heading = document.createElement('h2');
-        const anchorLink = document.createElement('a');
-        anchorLink.className = 'anchor-link';
-        anchorLink.href = `#${anchor}`;
-        anchorLink.setAttribute('aria-label', `Link to ${label}`);
-        anchorLink.textContent = label;
-        heading.append(anchorLink);
-        section.append(heading);
-
-        list = document.createElement('ul');
-        list.className = 'provider-list';
-        section.append(list);
-        resultsEl.append(section);
-      }
-
-      list?.append(row(provider));
+    /* A letter with nothing left under it takes its heading and its rule away. */
+    for (const group of letterGroups) {
+      group.hidden = !group.querySelector('li[data-record]:not([hidden])');
     }
 
-    updateSummary(found);
+    updateSummary(found.size);
   };
 
   window.addEventListener('popstate', () => {

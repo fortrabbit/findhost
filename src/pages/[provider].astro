@@ -1,8 +1,8 @@
 ---
 import { getCollection, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
-import { fieldGroups, fieldOf, labelOf, slugOf, type Field } from '../lib/fields';
-import { energy, footnotes, price } from '../lib/record';
+import { fieldGroups, fieldOf, type Field } from '../lib/fields';
+import { backlinks, cells, energy, footnotes } from '../lib/record';
 import { isListed } from '../lib/providers';
 import { loadFacets } from '../lib/facets';
 import { organization } from '../lib/seo';
@@ -65,24 +65,12 @@ const knownGroups = groups
  * rather than the product falls below it. Automation is on the near side because
  * an MCP server and a CLI are what an agent-shaped reader is here for.
  */
-const asideGroups = ['Pricing', 'Tech stack', 'Classification', 'Automation'];
-const nearGroups = knownGroups.filter((group) => asideGroups.includes(group.label));
-const farGroups = knownGroups.filter((group) => !asideGroups.includes(group.label));
+const besideTheProse = ['Pricing', 'Tech stack', 'Classification', 'Automation'];
+const nearGroups = knownGroups.filter((group) => besideTheProse.includes(group.label));
+const farGroups = knownGroups.filter((group) => !besideTheProse.includes(group.label));
 
 const missing = applicable.filter((field) => !held(valueOf(field.id)));
 const total = applicable.length;
-
-/*
- * One value as the page shows it. A vocabulary field gets the reader's word for
- * it, and where that vocabulary is also a facet the word is a link to the page
- * of everything else holding it — which is the same fact the filter panel
- * offers, arrived at from the other side.
- */
-interface Cell {
-  text: string;
-  href?: string;
-  filter?: string;
-}
 
 /*
  * A value page exists only where a record in the register holds the value, so a
@@ -91,49 +79,14 @@ interface Cell {
  * link that would be a 404.
  */
 const { facets: allFacets } = await loadFacets();
-const hasPage = new Set(
-  allFacets.flatMap((facet) =>
-    facet.values.filter((value) => value.count > 0).map((value) => `${facet.field}:${value.id}`),
+const context = {
+  nameOf,
+  hasPage: new Set(
+    allFacets.flatMap((facet) =>
+      facet.values.filter((value) => value.count > 0).map((value) => `${facet.field}:${value.id}`),
+    ),
   ),
-);
-
-const money = (entry: unknown) => {
-  const paid = entry as { amount: number; currency: string; period: string; introductory?: boolean };
-  const said = price(paid);
-  return said && paid.introductory ? `${said}, introductory` : said;
 };
-
-function cells(field: Field, value: unknown): Cell[] {
-  if (field.render === 'yes-no') return [{ text: value ? 'yes' : 'no' }];
-  if (field.render === 'money') return [{ text: money(value) ?? '' }];
-  if (field.render === 'multiple') return [{ text: `${String(value)}×` }];
-
-  return (Array.isArray(value) ? value : [value]).map((entry) => {
-    /*
-     * A relation names another record, so the word shown is that record's name
-     * and the link is its page. Read from this end only; the other end is drawn
-     * below, from the same one line of frontmatter.
-     */
-    if (field.relation) {
-      const id = String(entry);
-      return { text: nameOf.get(id) ?? id, href: `/${id}/` };
-    }
-
-    const label = labelOf(field.id, entry);
-    if (!field.facet) return { text: label };
-
-    /*
-     * A `noFilter` value is recorded and shown but never offered as a filter, so
-     * no page is generated for it — "no shell" is a fact about this provider and
-     * not a list anybody wants. Linking it was linking at a 404.
-     */
-    const option = field.values.find((candidate) => candidate.id === String(entry));
-    if (option?.noFilter || !hasPage.has(`${field.id}:${String(entry)}`)) return { text: label };
-
-    const slug = slugOf(field, { id: String(entry), label });
-    return { text: label, href: `/${field.facet}/${slug}/`, filter: `${field.facet}:${label}` };
-  });
-}
 
 const linkLabels: Record<string, string> = {
   pricing: 'pricing',
@@ -161,36 +114,12 @@ const drawn = (groups: { label: string; fields: Field[] }[]) =>
     label: group.label,
     rows: group.fields.map((field) => ({
       label: field.label,
-      cells: cells(field, valueOf(field.id)),
+      cells: cells(field, valueOf(field.id), context),
       note: numberOf.get(field.id),
     })),
   }));
 
-/*
- * The other end of every relation: who names this record as their parent, whose
- * compute runs here, who puts this network in front of theirs. Nothing is
- * recorded twice — GoDaddy's record does not list its brands, the brands name
- * GoDaddy — so the group a company owns is drawn rather than maintained.
- */
-const backlinks = [
-  { label: 'Owns', field: 'parent' },
-  { label: 'Runs here', field: 'runsOn' },
-  { label: 'CDN for', field: 'cdnFrom' },
-]
-  .map(({ label, field }) => ({
-    label,
-    rows: everyRecord.filter((entry) => {
-      const held = (entry.data as Record<string, unknown>)[field];
-      return Array.isArray(held) ? held.includes(provider.id) : held === provider.id;
-    }),
-  }))
-  .filter((group) => group.rows.length > 0)
-  .map((group) => ({
-    label: group.label,
-    cells: group.rows
-      .sort((a, b) => a.data.name.localeCompare(b.data.name, 'en'))
-      .map((entry) => ({ text: entry.data.name, href: `/${entry.id}/` })),
-  }));
+const related = backlinks(everyRecord as never, provider.id);
 
 /*
  * A marker goes on the link it backs. Collected at the end of the row it was a
@@ -400,7 +329,7 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
         <FactGroups groups={drawn(nearGroups)} />
 
         {/* Facts about this record held on other records, drawn from their side of the relation. */}
-        {backlinks.length > 0 && <FactGroups groups={[{ label: 'Related', rows: backlinks }]} />}
+        {related.length > 0 && <FactGroups groups={[{ label: 'Related', rows: related }]} />}
 
         {
           missing.length > 0 && (
@@ -457,8 +386,7 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
     }
 
     <p class="annotation">
-      <!-- {total - missing.length} of {total} attributes recorded. -->
-      {data.checkedAt ? ` Last reviewed ${data.checkedAt.toISOString().slice(0, 10)}. ` : ' Never checked. '}
+      {data.checkedAt ? `Last reviewed ${data.checkedAt.toISOString().slice(0, 10)}. ` : 'Never checked. '}
       <br />
       <a href={`https://github.com/fortrabbit/findhost/edit/main/src/content/providers/${provider.id}.md`}>
         Complete this record.

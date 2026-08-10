@@ -29,7 +29,7 @@ export const priceBands = [
   { id: '3xl', label: 'Over $1,500 a month', short: '3XL' },
 ];
 
-export const bandIds = priceBands.map((band) => band.id);
+const bandIds = priceBands.map((band) => band.id);
 
 export function bandIndex(id: string | undefined): number {
   return id === undefined ? -1 : bandIds.indexOf(id);

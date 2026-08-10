@@ -1,4 +1,4 @@
-import { labelOf } from './fields.ts';
+import { labelOf, slugOf, type Field } from './fields.ts';
 
 /*
  * The exact figure in the provider's own currency, so nobody reads a conversion
@@ -35,6 +35,100 @@ export function price(entry: { amount: number; currency: string; period: string 
 export function energy(claim: string | undefined): string | undefined {
   if (!claim || claim === 'none-published') return undefined;
   return labelOf('energyClaim', claim).toLowerCase();
+}
+
+/**
+ * One value as the record page shows it. A vocabulary field gets the reader's
+ * word for it, and where that vocabulary is also a facet the word is a link to
+ * the page of everything else holding it — the same fact the filter panel
+ * offers, arrived at from the other side.
+ */
+export interface Cell {
+  text: string;
+  href?: string;
+  filter?: string;
+}
+
+/**
+ * What the page needs to know beyond the field itself: every record's name, so a
+ * relation can be drawn as one, and which facet values have a page, so nothing
+ * links at a 404.
+ */
+export interface RecordContext {
+  nameOf: Map<string, string>;
+  hasPage: Set<string>;
+}
+
+const money = (entry: unknown): string | undefined => {
+  const paid = entry as { amount: number; currency: string; period: string; introductory?: boolean };
+  const said = price(paid);
+  return said && paid.introductory ? `${said}, introductory` : said;
+};
+
+export function cells(field: Field, value: unknown, context: RecordContext): Cell[] {
+  if (field.render === 'yes-no') return [{ text: value ? 'yes' : 'no' }];
+  if (field.render === 'money') return [{ text: money(value) ?? '' }];
+  if (field.render === 'multiple') return [{ text: `${String(value)}×` }];
+
+  return (Array.isArray(value) ? value : [value]).map((entry) => {
+    /*
+     * A relation names another record, so the word shown is that record's name
+     * and the link is its page. Read from this end only; the other end is drawn
+     * by backlinks, from the same one line of frontmatter.
+     */
+    if (field.relation) {
+      const id = String(entry);
+      return { text: context.nameOf.get(id) ?? id, href: `/${id}/` };
+    }
+
+    const label = labelOf(field.id, entry);
+    if (!field.facet) return { text: label };
+
+    /*
+     * A `noFilter` value is recorded and shown but never offered as a filter, so
+     * no page is generated for it — "no shell" is a fact about this provider and
+     * not a list anybody wants. Linking it was linking at a 404.
+     */
+    const option = field.values.find((candidate) => candidate.id === String(entry));
+    if (option?.noFilter || !context.hasPage.has(`${field.id}:${String(entry)}`)) return { text: label };
+
+    const slug = slugOf(field, { id: String(entry), label });
+    return { text: label, href: `/${field.facet}/${slug}/`, filter: `${field.facet}:${label}` };
+  });
+}
+
+/** The relation fields read backwards, and the word each one is drawn under. */
+const backlinkLabels = [
+  { label: 'Owns', field: 'parent' },
+  { label: 'Runs here', field: 'runsOn' },
+  { label: 'CDN for', field: 'cdnFrom' },
+];
+
+/**
+ * The other end of every relation: who names this record as their parent, whose
+ * compute runs here, who puts this network in front of theirs. Nothing is
+ * recorded twice — GoDaddy's record does not list its brands, the brands name
+ * GoDaddy — so the group a company owns is drawn rather than maintained.
+ */
+export function backlinks(
+  everyRecord: { id: string; data: Record<string, unknown> }[],
+  id: string,
+): { label: string; cells: Cell[] }[] {
+  return backlinkLabels
+    .map(({ label, field }) => ({
+      label,
+      rows: everyRecord.filter((entry) => {
+        const held = entry.data[field];
+        return Array.isArray(held) ? held.includes(id) : held === id;
+      }),
+    }))
+    .filter((group) => group.rows.length > 0)
+    .map((group) => ({
+      label: group.label,
+      cells: group.rows
+        .sort((a, b) => String(a.data.name).localeCompare(String(b.data.name), 'en'))
+        .map((entry) => ({ text: String(entry.data.name), href: `/${entry.id}/` })),
+    }));
 }
 
 export type Source = { field: string; url: string; checkedAt: Date };

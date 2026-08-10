@@ -11,6 +11,7 @@
   color: var(--color-ink);
   font-size: var(--text-sm);
   font-weight: bold;
+  text-underline-offset: 0.25em;
 }
 
 /**
@@ -27,22 +28,13 @@
 }
 
 /* Where you are, marked with weight and a rule rather than a colour. */
-.site-nav a[aria-current='page'] {
-  color: var(--color-ink);
-  text-decoration-thickness: var(--rule-strong);
-  /*text-underline-offset: 0.25em;*/
-}
-
-.site-nav a {
-  text-underline-offset: 0.25em;
-}
-
+.site-nav a[aria-current='page'],
 .wordmark[aria-current='page'] {
   color: var(--color-ink);
   text-decoration-thickness: var(--rule-strong);
 }
 
-.wordmark {
+.site-nav a {
   text-underline-offset: 0.25em;
 }
 
@@ -52,11 +44,7 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--space-xs) var(--space-md);
-  /*padding-top: var(--space-xs);
-  border-top: var(--rule-hairline) solid var(--color-ink);*/
 }
-
-
 
 /**
  * Three states, shown as three: the operating system's choice, always light,
@@ -180,12 +168,6 @@ html:not(.js) .theme-switch {
   text-decoration: underline;
 }
 
-/** fortrabbit's own record, wherever it appears in a list. Permanent, never decorative. */
-.self-marker {
-  margin-left: var(--space-xs);
-  font-size: var(--text-xs);
-}
-
 /** Every country the dataset covers, beneath the map that shows the same set. */
 .country-index {
   display: grid;
@@ -205,13 +187,6 @@ html:not(.js) .theme-switch {
   padding: var(--space-3xs) 0;
   border-bottom: var(--rule-hairline) solid var(--color-ink);
   font-size: var(--text-sm);
-}
-
-/** The one link on the page that has to be found without looking for it. */
-.show-all {
-  margin-block: var(--space-lg);
-  font-family: var(--font-display);
-  font-size: var(--text-lg);
 }
 
 /** The first question, answered as links: what do you need to run, and where. */
@@ -276,9 +251,7 @@ html:not(.js) .theme-switch {
 
 /*
  * A mark on a row: an exact square with a rounded edge, the glyph centred, on a
- * wash of its own colour. Two of them exist and they are different kinds of
- * claim, which is why they are the same shape and not the same colour — one is
- * a third party's verification, the other is our opinion.
+ * wash of its own colour.
  */
 .record-badge {
   display: inline-grid;
@@ -288,12 +261,6 @@ html:not(.js) .theme-switch {
   border-radius: var(--radius);
   font-size: var(--text-xs);
   line-height: 1;
-}
-
-/** A third party's verification. Never a score, never sortable. */
-.green-mark {
-  margin-left: var(--space-2xs);
-  background: var(--color-verified);
 }
 
 /*
@@ -372,24 +339,6 @@ html:not(.js) .theme-switch {
   white-space: nowrap;
 }
 
-/** Three gauges of different shapes, side by side, where the shape is the argument. */
-.price-examples {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-lg);
-  max-width: none;
-  margin: var(--space-md) 0;
-  padding: 0;
-  list-style: none;
-}
-
-.price-examples > li {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-3xs);
-  font-size: var(--text-sm);
-}
-
 /* --- The alphabet --- */
 
 .alphabet {
@@ -406,18 +355,12 @@ html:not(.js) .theme-switch {
  * 156 rows, and a heading that scrolls away leaves the reader counting rows to
  * work out where they are — so the column is narrow enough to cost almost
  * nothing and the letter sticks to the top of it.
- */
-/*
+ *
  * The letter and the first row it labels start at the same height, and stay
- * there in both list styles: one padding value, declared here and read by the
- * heading and by every row. Flex baseline alignment cannot do this job — in the
- * extended list the row is a grid whose first item is the figure tile, so the
- * baseline the list offers is the tile's and the letter follows it downwards.
- */
-/*
- * The row padding belongs to the list, not to the group around it. It was set on
- * .letter-group, so a list with no letters — the Signal's, which is one list —
- * inherited nothing and drew its rows with no padding at all.
+ * there in both list styles: one padding value, declared on the list and read by
+ * the heading and by every row. Flex baseline alignment cannot do this job — in
+ * the extended list the row is a grid whose first item is the figure tile, so
+ * the baseline the list offers is the tile's and the letter follows it downwards.
  */
 [data-find-results] {
   --row-pad: var(--space-sm);
@@ -426,11 +369,6 @@ html:not(.js) .theme-switch {
 [data-find-results].slim {
   --row-pad: var(--space-xs);
 }
-
-/* An ungrouped list has no letter column to clear, so it starts at the margin. */
-/*[data-find-results] > .provider-list {
-  border-top: var(--rule-hairline) solid var(--color-ink);
-}*/
 
 .letter-group {
   --row-pad: var(--space-sm);
@@ -464,10 +402,6 @@ html:not(.js) .theme-switch {
   white-space: nowrap;
 }
 
-/*.letter-group:first-child > h2 {
-  margin-top: 0;
-}*/
-
 .letter-group > .provider-list {
   flex: 1;
   min-width: 0;
@@ -484,12 +418,11 @@ html:not(.js) .theme-switch {
   }
 }
 
-/** The anchor, shown rather than hidden until hover — it is a link, not a secret. */
 /*
- * The letter is the link now, so it starts at the column's edge and nothing
- * sits before it. Set in ink rather than in link colour: it is a heading that
- * happens to be addressable, and a whole column of blue letters would read as
- * navigation the reader is meant to use rather than as the alphabet.
+ * The letter is the link, so it starts at the column's edge and nothing sits
+ * before it. Set in ink rather than in link colour: it is a heading that happens
+ * to be addressable, and a whole column of blue letters would read as navigation
+ * the reader is meant to use rather than as the alphabet.
  */
 .anchor-link {
   color: var(--color-ink);
@@ -601,6 +534,17 @@ html:not(.js) .theme-switch {
   z-index: 1;
 }
 
+/*
+ * Filtered out, not removed. `display: grid` on the row and `display: flex` on
+ * the group both beat the browser's own [hidden] rule, so hiding has to be said
+ * here — and it has to be `display`, so a hidden row leaves the accessibility
+ * tree rather than being read out under a heading that is no longer true.
+ */
+.provider-list > li[hidden],
+.letter-group[hidden] {
+  display: none;
+}
+
 .provider-list > li.one-line {
   /* The name's line box, alone. */
   --tile: 1.2rem;
@@ -646,8 +590,8 @@ html:not(.js) .theme-switch {
 
 /*
  * The slim view. One markup, two readings: the tile and the description are
- * hidden rather than left unbuilt, so find.ts rebuilds rows on a filter without
- * knowing which view is on and the two renderers cannot disagree.
+ * hidden rather than left unbuilt, so the style survives a filter without the
+ * script knowing which view is on.
  */
 .slim .provider-tile,
 .slim .provider-body p {
@@ -784,7 +728,6 @@ html.js [data-find-fallback] {
 /* Block, not inline: an inline name sits on a line box struck at the body's leading, which adds 7px of air under it. */
 .provider-name {
   display: block;
-  /*font-family: var(--font-display);*/
   font-size: var(--text-base);
   line-height: var(--leading-tight);
 }
@@ -809,12 +752,6 @@ html.js [data-find-fallback] {
 /* --- The find view --- */
 
 /*
- * Filters across the top rather than down one side. A narrow rail forced every
- * value onto its own wrapped line and gave the register two thirds of a page to
- * live in; a band of columns fits the same facets in a third of the height and
- * leaves the list the full measure.
- */
-/*
  * Server-rendered, and hidden until find.ts takes it over — a checkbox that
  * filters nothing is worse than no checkbox. `display: grid` below would
  * otherwise beat the attribute, which is why this is stated rather than left to
@@ -825,12 +762,10 @@ html.js [data-find-fallback] {
 }
 
 /*
- * As many columns as fit and never more than six: the `100% / 7` floor makes a
- * seventh column too narrow to be allowed, which is the only way auto-fit takes
- * an upper bound. A cell per facet, one for a grouped run and one for the stubs:
- * three rows on a wide screen, one column on a phone, and no breakpoint.
- */
-/*
+ * Filters across the top rather than down one side. A narrow rail forced every
+ * value onto its own wrapped line and gave the register two thirds of a page to
+ * live in; a band of columns fits the same facets in a third of the height.
+ *
  * As many columns as fit and never more than six: the `100% / 7` floor makes a
  * seventh column too narrow to be allowed, which is the only way auto-fit takes
  * an upper bound.
@@ -966,29 +901,16 @@ html.js [data-find-fallback] {
 }
 
 /*
- * The count in a facet heading is the link to that facet's own page, and it is
- * drawn as a link: this rule used to take the colour and the underline off it,
- * which is why it read as part of the heading rather than as a way in.
+ * One row, one line, whatever the label's length. A value that wrapped pushed
+ * every row below it down and made one column taller than the rest of the band,
+ * so a long label is truncated and the full one stays in the row's title.
  */
-
 .find-facet label {
   display: flex;
   gap: var(--space-2xs);
   align-items: center;
   font-size: var(--text-xs);
   line-height: 1.2;
-}
-
-/*.find-facet input {
-  flex: none;
-}*/
-
-/*
- * One row, one line, whatever the label's length. A value that wrapped pushed
- * every row below it down and made one column taller than the rest of the band,
- * so a long label is truncated and the full one stays in the row's title.
- */
-.find-facet label {
   white-space: nowrap;
 }
 
@@ -998,12 +920,10 @@ html.js [data-find-fallback] {
   text-overflow: ellipsis;
 }
 
-/** A count, not a score — mono so it reads as data, and a link to the page behind it. */
 /*
- * The count is the link to that value's page, so it is drawn as one — colour and
- * underline, like every other link on the site. It used to opt out of both and
- * underline on hover, which made the only way into 181 pages look like a label
- * until the pointer happened to cross it.
+ * A count, not a score — mono so it reads as data. It is also the link to that
+ * value's page, so it is drawn as one: colour and underline, like every other
+ * link on the site.
  */
 .find-count,
 .find-jump {
@@ -1049,7 +969,6 @@ html.js [data-find-fallback] {
   max-width: none;
   margin-block: var(--space-lg);
   padding-block: var(--space-lg);
-  /*font-family: var(--font-display);*/
   font-size: var(--text-lg);
   line-height: var(--leading-tight);
   text-wrap: balance;
@@ -1108,11 +1027,6 @@ html.js [data-find-fallback] {
 
 /* --- Where a provider operates --- */
 
-/*.world-map {
-  max-width: var(--measure-data);
-  margin-block: var(--space-lg);
-}*/
-
 /* Centred where it opens a page rather than sitting inside a run of text. */
 .world-map-centred {
   margin-inline: auto;
@@ -1144,38 +1058,29 @@ html.js [data-find-fallback] {
 
 /* --- The record itself --- */
 
-/**
- * The facts beside the prose rather than stacked above it. They are scanned and
+/*
+ * The facts beside the prose rather than stacked above it: they are scanned and
  * the prose is read, and a reader who came for one should not have to scroll
- * past the other to reach it. The aside is on the left, where a reader arriving
- * from the register is already looking, and the sources sit under both columns
- * because they belong to the whole record and not to either half.
- */
-/*
- * The prose reads on the left, the facts stand beside it on the right. The
- * markup keeps the facts first, because that is the order the page wants the
- * moment it stacks — placing the two columns explicitly is what lets one order
- * serve both.
- */
-/*
+ * past the other to reach it. The prose reads on the left, the facts stand on
+ * the right, and the markup keeps the facts first because that is the order the
+ * page wants the moment it stacks — placing the two columns explicitly is what
+ * lets one order serve both.
+ *
  * Where a record has a figure band, the band is the break between the header and
  * the body. Where it has none, the body started three pixels under the accounts
  * row — so the break is made here instead, and given back when a band supplies
  * one of its own.
  */
 .record-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 22rem);
+  gap: var(--space-xl);
+  align-items: start;
   margin-top: var(--space-xl);
 }
 
 .figure-band + .record-layout {
   margin-top: 0;
-}
-
-.record-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 22rem);
-  gap: var(--space-xl);
-  align-items: start;
 }
 
 .record-specs {
@@ -1229,10 +1134,8 @@ html.js [data-find-fallback] {
 
 /**
  * Scanned rather than read, so the columns stay narrow and dense — but as many
- * of them fit as the screen allows. `column-width` does that without a single
- * breakpoint: wide screens get four, a phone gets one.
- */
-/**
+ * of them fit as the screen allows.
+ *
  * A grid, not a multi-column flow. Column flow balances by height, which was
  * fine while every record printed all forty rows — now that only held fields
  * render, group heights vary enough that one column took a single group and
@@ -1341,13 +1244,6 @@ html.js [data-find-fallback] {
   line-height: 1;
 }
 
-
-.strip-detail {
-  font-family: var(--font-data);
-  font-size: var(--text-sm);
-  font-variant-numeric: tabular-nums;
-}
-
 /**
  * The price range, drawn without a currency: the dataset is international and a
  * euro figure on a Japanese host is a conversion nobody asked for. The whole
@@ -1434,17 +1330,16 @@ html.js [data-find-fallback] {
   text-decoration: underline;
 }
 
-/** What is missing is named once, together, where it reads as an ask. */
-/*
- * Its rule closes the table above it, so it has to span exactly what the table
- * spans. `margin-block` rather than the `margin` shorthand deliberately: the
- * shorthand would reset the negative inline margins .full-width relies on, and
+/**
+ * What is missing is named once, together, where it reads as an ask.
+ *
+ * `margin-block` rather than the `margin` shorthand deliberately: the shorthand
+ * would reset the negative inline margins .full-width relies on, and
  * components.css loads last, so it would win and quietly undo the bleed.
  */
 .missing-fields {
   margin-block: var(--space-lg) var(--space-md);
   padding-top: var(--space-xs);
-  /*border-top: var(--rule-hairline) solid var(--color-ink);*/
   font-size: var(--text-sm);
 }
 
@@ -1460,7 +1355,6 @@ html.js [data-find-fallback] {
 }
 
 .sources {
-  /*max-width: var(--measure-data);*/
   margin: var(--space-lg) 0;
   font-family: var(--font-data);
 }
@@ -1500,22 +1394,16 @@ html.js [data-find-fallback] {
 }
 
 /*
- * The list's own header: which order it is in on the left, how much of each row
- * to show on the right. A rule under it, thick enough to read as the top edge of
- * the list rather than as one more line inside it.
+ * The list's own header: how much of each row to show, against the right edge. A
+ * rule under it, thick enough to read as the top edge of the list rather than as
+ * one more line inside it. The toggle keeps its own margin — zeroing it was for
+ * a bar that also held the order links, and with the buttons alone it left them
+ * sitting on the rule.
  */
 .list-controls {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: var(--space-md);
-  /*padding-bottom: var(--space-2xs);*/
   border-bottom: var(--rule-strong) solid var(--color-ink);
 }
-
-
-/*
- * The toggle keeps its own margin. Zeroing it was for a bar that also held the
- * order links and needed them on one baseline; with the buttons alone it left
- * them sitting on the rule.
- */
