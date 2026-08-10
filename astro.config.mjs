@@ -14,15 +14,29 @@ import { dictionaryFile } from './src/lib/fields.ts';
  */
 const site = process.env.SITE_URL?.trim() || 'http://localhost:4321';
 
-try {
-  new URL(site);
-} catch {
+const wrong = (why) => {
   throw new Error(
-    `SITE_URL is not a URL: ${JSON.stringify(process.env.SITE_URL)}\n` +
-      `  It needs the scheme, and no quotes: SITE_URL=https://findhost.app\n` +
+    `SITE_URL ${why}: ${JSON.stringify(process.env.SITE_URL)}\n` +
+      `  Wanted a full origin, unquoted: SITE_URL=https://findhost.app\n` +
       `  Every canonical tag, sitemap entry and JSON-LD block is built from it.`,
   );
+};
+
+let host;
+try {
+  ({ host } = new URL(site));
+} catch {
+  wrong('is not a URL');
 }
+
+/*
+ * A hostname, not merely a parseable one. `https://${SOME_VAR}` is a valid URL
+ * whose host is the literal `${some_var}` — so an unresolved interpolation
+ * builds the whole site against a nonsense origin and says nothing. That is the
+ * failure this file exists to prevent, and it is silent in every other way:
+ * nothing 404s, the deploy succeeds, and the sitemap is quietly worthless.
+ */
+if (!/^[a-z0-9.-]+(:\d+)?$/.test(host)) wrong('has a host that is not a hostname');
 
 // https://astro.build/config
 export default defineConfig({
