@@ -2,9 +2,27 @@
 import { defineConfig } from 'astro/config';
 import { dictionaryFile } from './src/lib/fields.ts';
 
-// Canonical origin, deliberately not hardcoded: this runs on a vanity URL before
-// it runs on its own domain, and every absolute URL the build emits comes from here.
-const site = process.env.SITE_URL || 'http://localhost:4321';
+/*
+ * Canonical origin, deliberately not hardcoded: this runs on a vanity URL before
+ * it runs on its own domain, and every absolute URL the build emits comes from
+ * here — canonical tags, the sitemap, the JSON-LD.
+ *
+ * Checked here rather than left to Astro, which rejects it with "Invalid URL"
+ * and neither names the variable nor prints what it got. The two ways to get
+ * this wrong both look fine in a dashboard field: a bare domain with no scheme,
+ * and a value whose quotes were stored as part of the string.
+ */
+const site = process.env.SITE_URL?.trim() || 'http://localhost:4321';
+
+try {
+  new URL(site);
+} catch {
+  throw new Error(
+    `SITE_URL is not a URL: ${JSON.stringify(process.env.SITE_URL)}\n` +
+      `  It needs the scheme, and no quotes: SITE_URL=https://findhost.app\n` +
+      `  Every canonical tag, sitemap entry and JSON-LD block is built from it.`,
+  );
+}
 
 // https://astro.build/config
 export default defineConfig({
