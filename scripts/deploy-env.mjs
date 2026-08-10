@@ -23,6 +23,18 @@ console.log(`platform    ${process.platform} ${process.arch}`);
 console.log(`cwd         ${process.cwd()}`);
 
 /*
+ * Whether the install kept devDependencies. `pnpm install --prod`, or NODE_ENV
+ * set to production, drops them — and every one of these is needed to *build*
+ * the site rather than to run it, which is a distinction a static site does not
+ * have. If these say missing, that is the answer to why a build step vanished.
+ */
+const { existsSync } = await import('node:fs');
+const installed = ['astro', 'satori', '@resvg/resvg-wasm', 'pagefind', 'prettier']
+  .map((name) => `${name}=${existsSync(`node_modules/${name}`) ? 'yes' : 'MISSING'}`)
+  .join(' ');
+console.log(`packages    ${installed}`);
+
+/*
  * The one we came for, printed whatever it holds — a bare domain, a quoted
  * string and an unresolved ${...} all look identical until something says so.
  */

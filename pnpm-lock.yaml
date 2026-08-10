@@ -8,9 +8,24 @@ importers:
 
   .:
     dependencies:
+      '@fontsource/charis-sil':
+        specifier: ^5.3.0
+        version: 5.3.0
+      '@resvg/resvg-wasm':
+        specifier: ^2.6.2
+        version: 2.6.2
+      '@twemoji/svg':
+        specifier: ^15.0.0
+        version: 15.0.0
       astro:
         specifier: ^7.1.6
         version: 7.1.6(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)(@types/node@26.1.2)(yaml@2.9.0)
+      pagefind:
+        specifier: ^1.5.2
+        version: 1.5.2
+      satori:
+        specifier: ^0.29.0
+        version: 0.29.0
       yaml:
         specifier: ^2.9.0
         version: 2.9.0
@@ -21,36 +36,21 @@ importers:
       '@astrojs/check':
         specifier: ^0.9.10
         version: 0.9.10(prettier-plugin-astro@0.14.1)(prettier@3.9.6)(typescript@6.0.3)
-      '@fontsource/charis-sil':
-        specifier: ^5.3.0
-        version: 5.3.0
       '@playwright/test':
         specifier: ^1.62.1
         version: 1.62.1
-      '@resvg/resvg-wasm':
-        specifier: ^2.6.2
-        version: 2.6.2
-      '@twemoji/svg':
-        specifier: ^15.0.0
-        version: 15.0.0
       '@types/node':
         specifier: ^26.1.2
         version: 26.1.2
       bootstrap-icons:
         specifier: ^1.13.1
         version: 1.13.1
-      pagefind:
-        specifier: ^1.5.2
-        version: 1.5.2
       prettier:
         specifier: ^3.9.6
         version: 3.9.6
       prettier-plugin-astro:
         specifier: ^0.14.1
         version: 0.14.1
-      satori:
-        specifier: ^0.29.0
-        version: 0.29.0
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
