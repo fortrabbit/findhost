@@ -736,13 +736,18 @@
     - { id: on-request, label: On request }
     - { id: unclear, label: Unclear }
 
-# ----------------------------------------------------------- Environment
+# -------------------------------------------- Environment and certification
+
+# These had a section of their own, and a filter column of their own, for three
+# fields — one of which was a list of certifications that were never
+# environmental. Both are folded into Other features now: green energy is one
+# value there, and these are the facts a reader opens the record to check.
 
 # What a provider publishes, never a judgement of it. Offsets, annual matching
 # and 24/7 carbon-free are three different claims marketing blurs into one.
 - id: energyClaim
   label: Energy claim
-  group: Environment
+  group: Other features
   values:
     - { id: 24-7-cfe, label: 24/7 carbon-free }
     - { id: annual-matched, label: Annually matched renewables }
@@ -752,7 +757,7 @@
 
 - id: certifications
   label: Certifications
-  group: Environment
+  group: Other features
   multiple: true
   values:
     - { id: iso-27001, label: ISO 27001 }
@@ -765,34 +770,7 @@
 # Someone else's verification, linked rather than copied.
 - id: greenWebId
   label: Green Web directory
-  group: Environment
-
-# One filter, not five. "Matched" and "Verified" were two boxes naming our
-# filing rather than a reader's question: nobody arrives wanting annually matched
-# renewables specifically, they arrive wanting the hosts that publish anything at
-# all about the energy they run on.
-#
-# Which kind of claim it is stays on the record, in `energyClaim` — the three
-# tiers are the real distinction and dropping them would lose the point of
-# recording any of this. It is a fact to read, not a filter to tick.
-#
-# Two sources, either of which answers: the provider's own published claim, and
-# an id in the Green Web Foundation's directory. That second is a field with no
-# vocabulary to name — an id in somebody else's database — so its `when` is `*`,
-# meaning recorded at all.
-- id: environment
-  label: Green energy
-  facet: energy
-  filterOrder: 20
-  multiple: true
-  values:
-    - id: green
-      label: Says it runs on green energy
-      short: Says so, with evidence
-      subject: 'say they run on green energy, and publish something to back it'
-      sources:
-        - { from: greenWebId, when: ['*'] }
-        - { from: energyClaim, when: [24-7-cfe, annual-matched, offset, grid-mix-disclosed] }
+  group: Other features
 
 # --------------------------------------------------------------- Support
 
@@ -905,6 +883,16 @@
     - { id: email, label: Email, from: emailHosting, when: [included], subject: 'host email themselves, at no extra charge' }
     - { id: cdn, label: CDN, from: cdnIncluded, when: [included], subject: 'include a CDN with the hosting' }
     - { id: test-domain, label: Test domain, short: Test URL, from: testDomain, when: [included], subject: 'hand out a test URL to deploy to' }
+    # Two sources, either of which answers: the provider's own published claim,
+    # and an id in the Green Web Foundation's directory. That second is a field
+    # with no vocabulary to name — an id in somebody else's database — so its
+    # `when` is `*`, meaning recorded at all.
+    - id: green
+      label: Green energy
+      subject: 'say they run on green energy, and publish something to back it'
+      sources:
+        - { from: greenWebId, when: ['*'] }
+        - { from: energyClaim, when: [24-7-cfe, annual-matched, offset, grid-mix-disclosed] }
 
 # ------------------------------------------------------------ Automation
 

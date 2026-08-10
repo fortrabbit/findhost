@@ -128,7 +128,6 @@ export const groupNames = [
   'Tech stack',
   'Pricing',
   'Regions and law',
-  'Environment',
   'Support',
   'Deployment',
   'Other features',

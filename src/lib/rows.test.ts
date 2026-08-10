@@ -61,25 +61,25 @@ describe('toRow', () => {
     /* `*` means recorded at all, for a source with no vocabulary to name. */
     it('takes any value at all where the source has no vocabulary', () => {
       const row = toRow(record('a', { greenWebId: 595 }));
-      assert.deepEqual(row.facets.environment, ['green']);
+      assert.deepEqual(row.facets.features, ['green']);
     });
 
     /*
      * One question, two fields that can answer it. Either alone is a yes, which
-     * is what lets "publishes an energy claim" be one filter rather than the
-     * five that named our filing instead of a reader's question.
+     * is what lets green energy be one value rather than the five that named our
+     * filing instead of a reader's question.
      */
     it('holds a value either of its sources answers', () => {
       const own = toRow(record('a', { energyClaim: 'annual-matched' }));
-      assert.deepEqual(own.facets.environment, ['green']);
+      assert.deepEqual(own.facets.features, ['green']);
 
       const both = toRow(record('b', { energyClaim: 'annual-matched', greenWebId: 595 }));
-      assert.deepEqual(both.facets.environment, ['green']);
+      assert.deepEqual(both.facets.features, ['green']);
     });
 
     it('is asked but unheld where a source is recorded as the value that does not count', () => {
       const row = toRow(record('a', { energyClaim: 'none-published' }));
-      assert.deepEqual(row.facets.environment, []);
+      assert.deepEqual(row.facets.features, []);
     });
   });
 });
