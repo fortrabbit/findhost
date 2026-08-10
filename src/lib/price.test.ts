@@ -1,11 +1,11 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
-import { bandIndex, bandLabel, gaugeSlices, priceBands, priceSentence, sliceHeight } from './price.ts';
+import { fieldOf } from './fields.ts';
+import { priceBands } from './price.ts';
 
-describe('the scale', () => {
+describe('the price scale', () => {
   it('has seven bands and no free one', () => {
     assert.equal(priceBands.length, 7);
-    assert.equal(gaugeSlices, 7);
     // Free is what a provider gives away; this records what it charges.
     assert.equal(
       priceBands.some((band) => /free/i.test(band.label)),
@@ -13,46 +13,33 @@ describe('the scale', () => {
     );
   });
 
-  it('orders from cheap to expensive, because the gauge fills left to right', () => {
-    const indexes = ['xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl'].map(bandIndex);
-    assert.deepEqual(indexes, [0, 1, 2, 3, 4, 5, 6]);
+  it('runs cheap to expensive, which is what makes it a scale', () => {
+    assert.deepEqual(
+      priceBands.map((band) => band.id),
+      ['xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl'],
+    );
   });
 
-  it('does not recognise the bands it replaced', () => {
-    // The old ids were free-tier, under-5, 5-15 and so on. A record still
-    // carrying one must fail the schema rather than render as an empty gauge.
-    assert.equal(bandIndex('under-5'), -1);
-    assert.equal(bandIndex('free-tier'), -1);
-    assert.equal(bandLabel('5-15'), undefined);
-  });
-});
-
-describe('sliceHeight', () => {
-  it('rises across the scale and never reaches zero', () => {
-    const heights = Array.from({ length: gaugeSlices }, (_, index) => sliceHeight(index));
-
-    assert.ok(heights[0]! > 0, 'the first band has to be visible');
-    assert.equal(heights.at(-1), 1);
-
-    for (let index = 1; index < heights.length; index += 1) {
-      assert.ok(heights[index]! > heights[index - 1]!, `band ${index} must be taller than ${index - 1}`);
+  /*
+   * The ids were once free-tier, under-5, 5-15 and so on. A record still
+   * carrying one has to fail the schema rather than file itself under nothing.
+   */
+  it('does not recognise the ids it replaced', () => {
+    for (const old of ['free-tier', 'under-5', '5-15']) {
+      assert.ok(!priceBands.some((band) => band.id === old), `${old} should be gone`);
     }
   });
-});
 
-describe('priceSentence', () => {
-  it('says both ends of a range', () => {
-    assert.equal(priceSentence('xs', 'lg'), 'From under $5 a month up to $50 to $150 a month');
-  });
-
-  it('says so when only the start is known, rather than implying a ceiling', () => {
-    assert.equal(priceSentence('sm', undefined), 'Starts $5 to $15 a month');
-    assert.equal(priceSentence('sm', 'sm'), 'Starts $5 to $15 a month');
-  });
-
-  /* An absent band means unknown, so there is nothing to announce. */
-  it('is absent when the band is', () => {
-    assert.equal(priceSentence(undefined, undefined), undefined);
-    assert.equal(priceSentence(undefined, 'lg'), undefined);
+  /*
+   * validate.ts asserts this too, on every build — repeated here because that
+   * check is the reason the bands are written out twice, and a test that fails
+   * in a second is a faster way to find out than a build that does.
+   */
+  it('says the same thing as the dictionary', () => {
+    const dictionary = (fieldOf.get('priceFrom')?.values ?? []).map((value) => `${value.id}: ${value.label}`);
+    assert.deepEqual(
+      priceBands.map((band) => `${band.id}: ${band.label}`),
+      dictionary,
+    );
   });
 });
