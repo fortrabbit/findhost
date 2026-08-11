@@ -40,7 +40,7 @@ figure:
   emoji: 🔶
   color: rgb(176, 117, 59)
   textColor: rgb(246, 240, 234)
-  text: Code in isolates, next to the visitor.
+  text: Code next to the visitor.
 ---
 
 Cloudflare Workers runs code in V8 isolates on Cloudflare's network, close to the visitor and without the cold-start cost of a container. Cloudflare documents first-class support for JavaScript, TypeScript, Python and Rust, and describes WebAssembly as the route for everything else, naming C, C++, Kotlin and Go as examples.
