@@ -91,7 +91,6 @@ html:not(.js) .theme-switch {
   display: none;
 }
 
-
 .site-search {
   display: flex;
   margin-left: auto;
@@ -379,6 +378,24 @@ html:not(.js) .theme-switch {
   align-items: flex-start;
   gap: var(--space-md);
   border-top: var(--rule-hairline) solid var(--color-ink);
+}
+
+/*
+ * A letter is the unit worth isolating, on a page that holds every record and
+ * paginates none of them. Filtering sets `hidden` on every row that does not
+ * match; without a boundary each of those is a document-wide reflow, and with
+ * one the work stops at the letter.
+ *
+ * Containment only. `content-visibility: auto` would also skip rendering the
+ * groups below the fold, and measured ~30% off first paint for doing it — but
+ * skipped content has no rendered text, so `innerText` over the register comes
+ * back empty for every row not on screen. Crawlers read the HTML and Pagefind
+ * indexes at build time, so neither would notice; an agent that reads the page
+ * by rendering it would find nothing. On a register whose whole argument is
+ * being legible to machines, that is the wrong half of the trade.
+ */
+.letter-group {
+  contain: layout style paint;
 }
 
 .slim .letter-group {
