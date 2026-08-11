@@ -18,7 +18,7 @@ All six inclusion criteria must be true, and each is a fact you can check rather
 
 If a provider meets all six and is not listed, that is a bug. If one fails, the record still goes in `src/content/providers/` with `status: out-of-scope` and the numbered `criterion` it failed, so the decision keeps a page and can be argued with.
 
-A record is hidden from the register, every count, the search index and the sitemap by exactly two statuses: `out-of-scope`, and `draft` for one that is started and not finished. Only a listed record has to carry a `category`; a hidden one is allowed to be a stub. Nothing is ever deleted.
+`status` decides where a record ends up, and there are three places. Most are listed. `discontinued` and `unlisted` — a provider that stopped trading, and a company that owns hosting brands without selling hosting itself — put a record *beside* the register: out of the list by default, offered back as a group of its own, page still indexed and searchable, because what happened to a host people used is worth finding, and so is why a familiar name is not in the list. `out-of-scope` and `draft` hide one from the register, every count, the search index and the sitemap, while keeping its page. Only a listed record has to carry a `category`; a hidden one is allowed to be a stub. Nothing is ever deleted.
 
 ## What will never be merged
 
@@ -33,9 +33,14 @@ If you work for a provider, or are paid by one, say so in the pull request. You 
 ```sh
 pnpm install
 pnpm dev              # localhost:4321
-pnpm build            # astro build && pagefind --site dist
+pnpm build            # astro build, then the search index
 pnpm run check        # types
 pnpm run validate     # the guards the schema cannot express
+pnpm run test:e2e     # Playwright, with and without JavaScript
 ```
 
-CI runs the last three on every pull request. There are no per-PR previews yet; `pnpm dev` is the preview.
+CI runs all of those on every pull request, plus formatting, unit tests and an internal link check. There are no per-PR previews yet; `pnpm dev` is the preview.
+
+## Licence of what you contribute
+
+Prose and record data go out under [CC BY 4.0](./LICENSE-DATA), code under [MIT](./LICENSE-CODE). Opening a pull request means you are content for your contribution to carry those terms, and that you have the right to give it — do not paste text from a provider's site, a competitor's comparison table, or anywhere else you did not write. Cite those instead.

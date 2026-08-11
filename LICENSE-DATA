@@ -1,9 +1,18 @@
-The provider dataset in this repository — everything under `src/content/providers/`
-and `src/data/` — is licensed under the Creative Commons Attribution 4.0
-International License (CC BY 4.0).
+The register in this repository is licensed under the Creative Commons
+Attribution 4.0 International License (CC BY 4.0). That covers the provider
+records under `src/content/providers/`, the field dictionary and other data
+under `src/data/`, the explanatory notes under `src/content/notes/`, and the
+written pages under `src/pages/` — the guide and the about page among them.
 
 You are free to share and adapt it, including commercially, provided you give
 appropriate credit and indicate whether changes were made.
+
+Credit is the one condition, and this is the whole of it:
+
+    FindHost, findhost.app, CC BY 4.0
+
+That applies to an answer engine repeating these facts as much as to a page
+reprinting them.
 
 Full text: https://creativecommons.org/licenses/by/4.0/legalcode
 

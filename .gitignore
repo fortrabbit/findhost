@@ -26,3 +26,6 @@ pnpm-debug.log*
 # Playwright
 test-results/
 playwright-report/
+
+# editor settings
+.vscode/
