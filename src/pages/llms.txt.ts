@@ -46,6 +46,15 @@ export const GET: APIRoute = async ({ site }) => {
     `- [Every provider, filterable](${origin}/)`,
     `- [Where providers operate](${origin}/regions/)`,
     `- [providers.json, every facet and every record's facet fields](${origin}/providers.json)`,
+    `- [providers.csv, the same records as one table](${origin}/providers.csv)`,
+    `- [llms-full.txt, the whole register as one document](${origin}/llms-full.txt)`,
+    `- [feed.xml, records ordered by the date they were last checked](${origin}/feed.xml)`,
+    '',
+    /*
+     * The rule, said once, rather than a second URL beside two hundred links. A
+     * retrieval step that knows it does not need the index to carry both forms.
+     */
+    'Every page has a markdown copy at the same address with `.md` appended: a record at /hetzner.md, a facet value at /categories/paas.md, a whole facet at /categories/index.md.',
     '',
     '',
     '## Notes',

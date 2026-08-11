@@ -43,25 +43,64 @@ export const organization = (origin: string) => ({
   parentOrganization: { '@type': 'Organization', name: 'fortrabbit GmbH', url: 'https://www.fortrabbit.com' },
 });
 
+export const licenceUrl = 'https://creativecommons.org/licenses/by/4.0/';
+
+/**
+ * The whole of the condition, written once. Reuse is the point, so the ask has
+ * to be short enough to paste and identical everywhere it appears — a credit
+ * line that varies between the page, the download and the markdown export is a
+ * credit line nobody can comply with exactly.
+ */
+export const credit = 'FindHost, findhost.app, CC BY 4.0';
+
+/** The footer every machine-readable export ends on. */
+export const attribution = [
+  `Data licensed CC BY 4.0 (${licenceUrl}). Attributes are recorded, never scored; absent means unknown.`,
+  `Credit, in full: ${credit}`,
+];
+
 /**
  * The register as a dataset, which is what it is: openly licensed, downloadable
- * whole, and meant to be reused with credit. The licence and the distribution
- * are the two fields that make this worth emitting at all.
+ * whole, and meant to be reused with credit.
+ *
+ * `variableMeasured` is the field dictionary, which is the property schema.org
+ * has for exactly this and the thing a machine needs to know before deciding the
+ * data answers its question. `dateModified` is the newest `checkedAt` in the
+ * register: freshness is the claim this dataset can make and an affiliate table
+ * cannot, so it is worth stating in a form nobody has to read prose to find.
  */
-export const dataset = (origin: string, records: number) => ({
+export const dataset = (
+  origin: string,
+  records: number,
+  options: { fields?: { id: string; label: string; group?: string }[]; modified?: Date } = {},
+) => ({
   '@context': 'https://schema.org',
   '@type': 'Dataset',
   name: 'FindHost',
   description: `Attributes of ${records} hosting providers, recorded field by field. Ratings-free: no stars, no score, no affiliate ordering. A heart marks the handful we like, which is an opinion and says so.`,
   url: `${origin}/`,
-  license: 'https://creativecommons.org/licenses/by/4.0/',
+  license: licenceUrl,
   isAccessibleForFree: true,
   creator: organization(origin),
+  ...(options.modified ? { dateModified: options.modified.toISOString().slice(0, 10) } : {}),
+  ...(options.fields?.length
+    ? {
+        variableMeasured: options.fields
+          .filter((field) => field.group)
+          .map((field) => ({ '@type': 'PropertyValue', propertyID: field.id, name: field.label })),
+      }
+    : {}),
   distribution: [
     {
       '@type': 'DataDownload',
       encodingFormat: 'application/json',
       contentUrl: `${origin}/providers.json`,
+    },
+    /* CSV as well as JSON, because the tools that consume open datasets ask for it first. */
+    {
+      '@type': 'DataDownload',
+      encodingFormat: 'text/csv',
+      contentUrl: `${origin}/providers.csv`,
     },
   ],
 });

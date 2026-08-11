@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 import { fieldGroups, hiddenStatuses } from '../lib/fields';
+import { attribution } from '../lib/seo';
 
 /**
  * The record as markdown, for anything that would rather read text than HTML.
@@ -95,7 +96,7 @@ export const GET: APIRoute = async ({ props, site }) => {
     '',
     '---',
     '',
-    'Data licensed CC BY 4.0. Attributes are recorded, never scored; absent means unknown.',
+    ...attribution,
     '',
   ];
 

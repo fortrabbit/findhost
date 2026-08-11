@@ -146,8 +146,16 @@ const sourceLabel = (field: string) =>
 
 const origin = Astro.site?.origin ?? '';
 
-/* Accounts, as the identifiers schema.org means by sameAs. */
-const social = Object.values(data.social ?? {}).filter((url): url is string => typeof url === 'string');
+/*
+ * Accounts, as the identifiers schema.org means by sameAs — plus the Wikidata
+ * item where one is recorded. A social handle says the company is present
+ * somewhere; the Wikidata id says which company it is, which is the part that
+ * lets anything else resolve this record against what it already knows.
+ */
+const social = [
+  ...(data.wikidata ? [`https://www.wikidata.org/wiki/${data.wikidata}`] : []),
+  ...Object.values(data.social ?? {}).filter((url): url is string => typeof url === 'string'),
+];
 
 // The policy page promises staleness is computed from the recorded date rather
 // than from a promise to re-check. This is where that is kept.
@@ -204,6 +212,9 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
     '@type': 'WebPage',
     url: `${origin}/${provider.id}/`,
     publisher: organization(origin),
+    /* The date somebody read the provider's own pages — the only one we stand behind. */
+    ...(data.checkedAt ? { dateModified: new Date(data.checkedAt).toISOString().slice(0, 10) } : {}),
+    license: 'https://creativecommons.org/licenses/by/4.0/',
     /*
      * The provider is the subject of the page, not its author. `about` says that
      * without claiming the page is theirs, and everything in it is a field on
@@ -288,7 +299,9 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
        */
       data.favorite && data.favoriteNote && (
         <p class="favorite-note full-bleed">
-          <span class="record-badge favorite-badge" aria-hidden="true">♥</span>
+          <span class="record-badge favorite-badge" aria-hidden="true">
+            ♥
+          </span>
           <span class="favorite-words">{data.favoriteNote}</span>
           <a class="favorite-why" href="/about/#favorite-records" title="What a heart means here">
             <Fragment set:html={infoIcon} />
@@ -332,7 +345,6 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
             </details>
           )
         }
-
       </aside>
 
       <div class="record-prose">
@@ -350,7 +362,6 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
             </aside>
           )
         }
-
       </div>
     </div>
 

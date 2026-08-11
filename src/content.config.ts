@@ -72,7 +72,10 @@ const providerFields = z
      * DigitalOcean sells droplets, an app platform and functions, and naming
      * one of the three made the other two invisible to a filter.
      */
-    category: z.array(z.enum(vocabulary('category'))).nonempty().optional(),
+    category: z
+      .array(z.enum(vocabulary('category')))
+      .nonempty()
+      .optional(),
 
     // Identity
     description: z.string().max(200).optional(),
@@ -264,6 +267,13 @@ const providerFields = z
 
     /** Green Web Foundation directory id — someone else's verification, linked rather than copied. */
     greenWebId: z.number().int().nullable().optional(),
+
+    /** Wikidata item id. Shape is enforced because a malformed one links nowhere and looks fine. */
+    wikidata: z
+      .string()
+      .regex(/^Q\d+$/, 'a Wikidata id looks like Q123456')
+      .nullable()
+      .optional(),
 
     /*
      * Support. supportHours answers one question only: when can you reach a

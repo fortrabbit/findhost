@@ -67,6 +67,9 @@ const card = new URL(image, origin).href;
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     {markdown && <link rel="alternate" type="text/markdown" href={markdown} />}
     <link rel="canonical" href={canonical} />
+    {/* The permission, in the head, where something that is not reading the prose can find it. */}
+    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/" />
+    <link rel="alternate" type="application/atom+xml" title="FindHost — recently checked" href="/feed.xml" />
 
     <meta property="og:title" content={title} />
     <meta property="og:type" content="website" />

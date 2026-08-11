@@ -3,9 +3,23 @@ import Base from '../layouts/Base.astro';
 import ProviderRegister from '../components/ProviderRegister.astro';
 import FindFilters from '../components/FindFilters.astro';
 import { asideGroups, loadFacets } from '../lib/facets';
+import { loadIndexed } from '../lib/providers';
+import { fields } from '../lib/fields';
 import { dataset } from '../lib/seo';
 
 const { facets, providers } = await loadFacets();
+
+/*
+ * The newest date anybody read a provider's own pages, which is what the Dataset
+ * markup reports as `dateModified`. Freshness is the claim this register can
+ * make and a commission-ordered table cannot, so it is stated where a machine
+ * finds it without reading prose.
+ */
+const checkedDates = (await loadIndexed())
+  .map((provider) => provider.data.checkedAt)
+  .filter(Boolean)
+  .map((date) => new Date(date as string | Date));
+const lastChecked = checkedDates.length ? new Date(Math.max(...checkedDates.map(Number))) : undefined;
 
 // Named the same way here, on their own pages and in the sitemap: one source, three uses.
 const beside = (await asideGroups()).map((group) => ({
@@ -24,7 +38,7 @@ const beside = (await asideGroups()).map((group) => ({
 <Base
   title="FindHost — a register of web hosting providers"
   description="Opinionated field guide to choosing a web host."
-  schema={dataset(Astro.site?.origin ?? '', providers.length)}
+  schema={dataset(Astro.site?.origin ?? '', providers.length, { fields, modified: lastChecked })}
 >
   <h1>Find your next web host</h1>
 

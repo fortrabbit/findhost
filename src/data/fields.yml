@@ -772,6 +772,14 @@
   label: Green Web directory
   group: Other features
 
+# Which company this is, rather than what it sells. A name is ambiguous and a
+# homepage moves; a Wikidata item is the handle Wikipedia, an answer engine and
+# every other dataset already use, so recording it is how a record here joins up
+# with a record anywhere else. Emitted as schema.org sameAs on the record page.
+- id: wikidata
+  label: Wikidata
+  group: Classification
+
 # --------------------------------------------------------------- Support
 
 # supportHours answers one question: when can you reach a human about a
