@@ -1,8 +1,8 @@
 # FindHost
 
-An openly-licensed register of web hosting providers, described by attributes and never scored, ranked or affiliate-linked. Published by fortrabbit, who are in the register too and marked as such.
+An openly-licensed register of web hosting providers, opinionated, described by attributes. Published by fortrabbit, who are in the register too.
 
-Not indexed yet: `robots.txt` disallows everything and every page carries `noindex` until `PUBLIC_INDEXABLE` says otherwise.
+## Run locally
 
 ```sh
 pnpm install
