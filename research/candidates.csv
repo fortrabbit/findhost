@@ -1,0 +1,270 @@
+id,name,domain,country,categories,prio,note
+infomaniak,Infomaniak,infomaniak.com,CH,shared-hosting;paas;iaas,1,Large independent Swiss host with own datacentres and strong sustainability claims
+aruba-it,Aruba.it,aruba.it,IT,shared-hosting;vps;iaas,1,Largest Italian host and registrar with own DCs; Italy is a total gap
+sakura-internet,Sakura Internet,sakura.ad.jp,JP,vps;shared-hosting;iaas,1,Major Japanese provider with public pricing and deep docs
+leaseweb,Leaseweb,leaseweb.com,NL,iaas;bare-metal;vps,1,Large Dutch IaaS and bare metal with public pricing
+pantheon,Pantheon,pantheon.io,US,paas,1,WordPress and Drupal PaaS; notable gap next to WP Engine and Kinsta
+namecheap,Namecheap,namecheap.com,US,shared-hosting;vps,1,Very widely used registrar plus hosting
+servebolt,Servebolt,servebolt.com,NO,paas,1,Norwegian performance host aimed at agencies
+alibaba-cloud,Alibaba Cloud,alibabacloud.com,CN,iaas;paas;serverless,1,Major global IaaS entirely missing
+stackit,STACKIT,stackit.de,DE,iaas;paas,1,Schwarz Group cloud; German sovereign-cloud angle
+nearlyfreespeech,NearlyFreeSpeech.NET,nearlyfreespeech.net,US,shared-hosting,1,Pay-as-you-go, developer favourite, unusual pricing model
+directadmin,DirectAdmin,directadmin.com,US,server-management,1,Third major control panel next to cPanel and Plesk
+cyberpanel,CyberPanel,cyberpanel.net,US,server-management,1,OpenLiteSpeed panel with free and paid tiers
+hestiacp,Hestia Control Panel,hestiacp.com,NL,server-management,1,Open-source panel, free, public docs
+cloudpanel,CloudPanel,cloudpanel.io,DE,server-management,1,Free panel by MGT Commerce
+enhance,Enhance,enhance.com,US,server-management,2,Multi-server hosting panel aimed at hosts
+aapanel,aaPanel,aapanel.com,CN,server-management,2,Widely used free panel
+ispconfig,ISPConfig,ispconfig.org,DE,server-management,2,Long-running open-source panel
+virtualmin,Virtualmin,virtualmin.com,US,server-management,2,Webmin-based panel, free and pro tiers
+froxlor,Froxlor,froxlor.org,DE,server-management,3,Open-source panel, small but German
+serveravatar,ServerAvatar,serveravatar.com,IN,server-management,2,Panel in the RunCloud and Ploi bracket
+moss,Moss,moss.sh,ES,server-management,X,VERIFY - moss.sh no longer resolves (NXDOMAIN), likely defunct
+framer,Framer,framer.com,NL,lcnc;static,1,Design-to-site builder, Dutch, public pricing
+carrd,Carrd,carrd.co,US,lcnc;vanity-hosting,2,One-page site builder, very cheap tier
+softr,Softr,softr.io,DE,lcnc,2,No-code app builder on Airtable
+glide,Glide,glideapps.com,US,lcnc,3,No-code app builder
+base44,Base44,base44.com,IL,lcnc,2,AI app builder, acquired by Wix
+neocities,Neocities,neocities.org,US,vanity-hosting;static,1,Free static hosting, the GeoCities successor
+codeberg-pages,Codeberg Pages,codeberg.page,DE,static;vanity-hosting,2,Free static hosting from a German non-profit
+gitlab-pages,GitLab Pages,gitlab.com,US,static,2,Counterpart to the GitHub Pages record already held
+bearblog,Bear Blog,bearblog.dev,ZA,vanity-hosting,3,Minimal blog host, free and paid tier
+micro-blog,Micro.blog,micro.blog,US,vanity-hosting,3,Hosted blogging and social
+val-town,Val Town,val.town,US,serverless,2,Serverless functions in the browser
+fermyon,Fermyon,fermyon.com,US,serverless,X,DROP - acquired by Akamai, fermyon.com now redirects to akamai.com/products/akamai-functions; a fact for the existing akamai draft instead
+convex,Convex,convex.dev,US,serverless;paas,3,Backend platform, near the Supabase and Nhost bracket
+pockethost,PocketHost,pockethost.io,US,paas,3,Hosted PocketBase
+hosteurope,Host Europe,hosteurope.de,DE,shared-hosting;vps,2,Long-running German host, GoDaddy-owned
+alfahosting,Alfahosting,alfahosting.de,DE,shared-hosting;vps,2,German host with public pricing
+goneo,goneo,goneo.de,DE,shared-hosting,3,Small German host
+variomedia,Variomedia,variomedia.de,DE,shared-hosting,2,German host with a green-power angle
+lima-city,lima-city,lima-city.de,DE,shared-hosting,3,German host with a free tier
+plusserver,plusserver,plusserver.com,DE,iaas;bare-metal,3,German managed cloud; check public pricing
+open-telekom-cloud,Open Telekom Cloud,open-telekom-cloud.com,DE,iaas,3,Deutsche Telekom OpenStack cloud
+nine-ch,nine,nine.ch,CH,paas;iaas,2,Swiss managed hosting with public pricing; connection times out from here, verify manually
+cyon,cyon,cyon.ch,CH,shared-hosting,2,Swiss host popular with agencies
+hostpoint,Hostpoint,hostpoint.ch,CH,shared-hosting,2,Largest Swiss shared host
+metanet,Metanet,metanet.ch,CH,shared-hosting,3,Swiss host
+easyname,easyname,easyname.com,AT,shared-hosting,2,Austrian host and registrar
+edis,EDIS,edis.at,AT,vps;bare-metal,3,Austrian VPS with many locations
+binero,Binero,binero.se,SE,shared-hosting;iaas,2,Swedish host with a sustainability angle
+oderland,Oderland,oderland.se,SE,shared-hosting;vps,2,Swedish host
+domeneshop,Domeneshop,domene.shop,NO,shared-hosting,2,Norwegian registrar and host
+pro-isp,PRO ISP,proisp.no,NO,shared-hosting,3,Norwegian host
+curanet,Curanet,curanet.dk,DK,shared-hosting,3,Danish host group
+louhi,Louhi,louhi.fi,FI,shared-hosting;vps,3,Finnish host
+planeetta,Planeetta,planeetta.fi,FI,shared-hosting,3,Finnish host
+advania,Advania,advania.is,IS,iaas,3,Icelandic and Nordic IT provider; check public pricing
+vimexx,Vimexx,vimexx.nl,NL,shared-hosting,2,Dutch budget host with public pricing
+hostnet,Hostnet,hostnet.nl,NL,shared-hosting,3,Dutch host and registrar
+argeweb,Argeweb,argeweb.nl,NL,shared-hosting,3,Dutch host
+yourhosting,Yourhosting,yourhosting.nl,NL,shared-hosting,3,Dutch host
+versio,Versio,versio.nl,NL,shared-hosting;vps,3,Dutch host and registrar
+neostrada,Neostrada,neostrada.nl,NL,shared-hosting,3,Dutch host; apex TLS cert expired, www works
+cloud86,Cloud86,cloud86.nl,NL,shared-hosting;vps,3,Dutch host aimed at developers
+openprovider,Openprovider,openprovider.com,NL,shared-hosting,3,Reseller-focused; check criterion 2
+serverius,Serverius,serverius.net,NL,iaas;bare-metal,3,Dutch DC operator; check public pricing
+bytemark,Bytemark,bytemark.co.uk,GB,vps,2,UK VPS provider, iomart-owned
+katapult,Katapult,katapult.io,GB,vps,2,Krystal's VPS platform, public pricing
+tsohost,Tsohost,tsohost.com,GB,shared-hosting,3,UK host
+brixly,Brixly,brixly.uk,GB,shared-hosting;vps,3,UK host aimed at agencies
+names-co-uk,Names.co.uk,names.co.uk,GB,shared-hosting,3,UK registrar and host
+memset,Memset,memset.com,GB,vps;iaas,3,UK provider; check whether still trading
+register365,Register365,register365.com,IE,shared-hosting,3,Irish host and registrar
+seeweb,Seeweb,seeweb.it,IT,iaas;vps,2,Italian cloud, DHH-owned, green angle
+netsons,Netsons,netsons.com,IT,shared-hosting;vps,2,Italian host with public pricing
+keliweb,Keliweb,keliweb.it,IT,shared-hosting;vps,3,Italian host
+serverplan,Serverplan,serverplan.com,IT,shared-hosting;vps,3,Italian host
+shellrent,Shellrent,shellrent.com,IT,shared-hosting;vps,3,Italian host
+supporthost,SupportHost,supporthost.com,IT,shared-hosting,3,Italian host
+register-it,Register.it,register.it,IT,shared-hosting,3,Italian registrar and host, team.blue-owned
+arsys,Arsys,arsys.es,ES,shared-hosting;vps,2,Spanish host, United Internet-owned
+cdmon,CDmon,cdmon.com,ES,shared-hosting,2,Spanish host and registrar
+sered,Sered,sered.net,ES,shared-hosting;vps,3,Spanish host
+nominalia,Nominalia,nominalia.com,ES,shared-hosting,3,Spanish registrar and host
+ptisp,PTisp,ptisp.pt,PT,shared-hosting;vps,3,Portuguese host
+amen,Amen,amen.pt,PT,shared-hosting,3,Portuguese host, team.blue-owned
+top-host,Top.Host,top.host,GR,shared-hosting,3,Greek host
+pointer,Pointer,pointer.gr,GR,shared-hosting,3,Greek host and registrar
+natro,Natro,natro.com,TR,shared-hosting,3,Turkish host and registrar
+turhost,Turhost,turhost.com,TR,shared-hosting,3,Turkish host
+wedos,WEDOS,wedos.com,CZ,shared-hosting;vps,2,Czech host, own DC, unusual cooling
+forpsi,FORPSI,forpsi.com,CZ,shared-hosting;vps,3,Czech host
+active24,ACTIVE 24,active24.cz,CZ,shared-hosting,3,Czech host, team.blue-owned
+zoner,Zoner,zoner.fi,CZ,shared-hosting,3,Czech and Finnish host
+master-internet,Master Internet,master.cz,CZ,shared-hosting;iaas,3,Czech host with own DC
+nazwa-pl,nazwa.pl,nazwa.pl,PL,shared-hosting,2,Large Polish host and registrar
+zenbox,Zenbox,zenbox.pl,PL,shared-hosting,2,Polish host popular with developers
+dhosting,dhosting,dhosting.pl,PL,shared-hosting,3,Polish host
+lh-pl,LH.pl,lh.pl,PL,shared-hosting,3,Polish host
+seohost,SeoHost,seohost.pl,PL,shared-hosting,3,Polish host
+timeweb,Timeweb,timeweb.com,RU,shared-hosting;vps;iaas,2,Large Russian host with public pricing
+reg-ru,REG.RU,reg.ru,RU,shared-hosting;vps,3,Large Russian registrar and host
+firstvds,FirstVDS,firstvds.ru,RU,vps,3,Russian VPS provider
+mirohost,MiroHost,mirohost.net,UA,shared-hosting,3,Ukrainian host
+tucha,Tucha,tucha.ua,UA,iaas;vps,3,Ukrainian cloud
+veebimajutus,Veebimajutus,veebimajutus.ee,EE,shared-hosting,3,Estonian host
+interneto-vizija,Interneto vizija,iv.lt,LT,shared-hosting;vps,3,Lithuanian host
+conoha,ConoHa,conoha.jp,JP,vps,2,GMO VPS brand with public pricing
+heteml,heteml,heteml.jp,JP,shared-hosting,3,Japanese host, GMO Pepabo-owned
+kagoya,KAGOYA,kagoya.jp,JP,shared-hosting;vps,3,Japanese host
+value-domain,Value-Domain,value-domain.com,JP,shared-hosting,3,Japanese registrar and host
+idcf-cloud,IDCF Cloud,idcfcloud.com,JP,iaas;vps,3,Japanese cloud
+naver-cloud,Naver Cloud,ncloud.com,KR,iaas;paas,2,Major Korean cloud
+nhn-cloud,NHN Cloud,nhncloud.com,KR,iaas;paas,3,Korean cloud
+kt-cloud,KT Cloud,ktcloud.com,KR,iaas,3,Korean telco cloud
+tencent-cloud,Tencent Cloud,tencentcloud.com,CN,iaas;paas,2,Major Chinese cloud with an international arm
+huawei-cloud,Huawei Cloud,huaweicloud.com,CN,iaas;paas,3,Major Chinese cloud with an international arm
+umbrellar,Umbrellar,umbrellar.com,NZ,iaas;shared-hosting,3,New Zealand cloud
+voyager,Voyager,voyager.nz,NZ,shared-hosting,3,New Zealand ISP and host
+crucial,Crucial,crucial.com.au,AU,shared-hosting;vps,2,Australian host
+digitalpacific,Digital Pacific,digitalpacific.com.au,AU,shared-hosting;vps,3,Australian host with a green angle
+panthur,Panthur,panthur.com.au,AU,shared-hosting;vps,3,Australian host
+shinjiru,Shinjiru,shinjiru.com,MY,shared-hosting;vps,3,Malaysian host
+serverfreak,ServerFreak,serverfreak.com,MY,shared-hosting,3,Malaysian host
+rumahweb,Rumahweb,rumahweb.com,ID,shared-hosting,2,Indonesian host
+dewaweb,Dewaweb,dewaweb.com,ID,shared-hosting;vps,2,Indonesian host
+biznet-gio,Biznet Gio,biznetgio.com,ID,iaas;vps,3,Indonesian cloud
+vietnix,Vietnix,vietnix.vn,VN,shared-hosting;vps,3,Vietnamese host
+tinohost,TinoHost,tino.org,VN,shared-hosting;vps,3,Vietnamese host
+viettel-idc,Viettel IDC,viettelidc.com.vn,VN,iaas;vps,3,Vietnamese telco cloud
+bigrock,BigRock,bigrock.in,IN,shared-hosting,3,Indian host, Newfold-owned
+resellerclub,ResellerClub,resellerclub.com,IN,shared-hosting,3,Reseller-focused; check criterion 2
+hostitsmart,Host IT Smart,hostitsmart.com,IN,shared-hosting;vps,3,Indian host
+web4africa,Web4Africa,web4africa.com,NG,shared-hosting;vps,2,Pan-African host with public pricing
+whogohost,WhoGoHost,whogohost.com,NG,shared-hosting,2,Nigerian host
+domainking,DomainKing.NG,domainking.ng,NG,shared-hosting,3,Nigerian host
+uol-host,UOL Host,uolhost.uol.com.br,BR,shared-hosting;vps,3,Brazilian host
+hostdime,HostDime,hostdime.com,US,bare-metal;iaas,2,Own datacentres in several countries
+colombiahosting,ColombiaHosting,colombiahosting.com.co,CO,shared-hosting,3,Colombian host
+akky,Akky,akky.mx,MX,shared-hosting,3,Mexican registrar and host
+scala-hosting,Scala Hosting,scalahosting.com,US,shared-hosting;vps,2,Own SPanel control panel
+fastcomet,FastComet,fastcomet.com,US,shared-hosting;vps,2,Shared host with public pricing
+greengeeks,GreenGeeks,greengeeks.com,US,shared-hosting;vps,2,Shared host with a green claim to check
+chemicloud,ChemiCloud,chemicloud.com,US,shared-hosting,3,Shared host
+namehero,NameHero,namehero.com,US,shared-hosting;vps,3,Shared host
+inmotion,InMotion Hosting,inmotionhosting.com,US,shared-hosting;vps,2,Long-running US host
+hostwinds,Hostwinds,hostwinds.com,US,vps;shared-hosting,3,US host
+racknerd,RackNerd,racknerd.com,US,vps,3,Budget VPS, very cheap tiers
+buyvm,BuyVM,buyvm.net,CA,vps,3,Budget VPS run by Frantech
+nexcess,Nexcess,nexcess.net,US,paas;shared-hosting,2,Liquid Web's managed application arm
+convesio,Convesio,convesio.com,US,paas,3,Containerised WordPress host
+cloudzy,Cloudzy,cloudzy.com,US,vps,3,VPS provider
+hostman,Hostman,hostman.com,US,paas;vps,2,PaaS with public pricing
+amezmo,Amezmo,amezmo.com,US,paas,3,Laravel-focused PaaS
+acquia,Acquia,acquia.com,US,paas,3,Drupal PaaS; check whether pricing is public
+hurricane-electric,Hurricane Electric,he.net,US,iaas;bare-metal,3,Network operator with hosting; check public pricing
+alphimedia,Alphimedia,alphimedia.com,BR,shared-hosting;vps,2,SSD NVMe hosting with cPanel and reseller options
+bravulink,Bravulink,bravulink.com.br,BR,shared-hosting;vps;paas,2,Founded 2008; shared hosting WordPress reseller VPS
+homehost,Homehost,homehost.com.br,BR,shared-hosting;vps,2,Founded 2004; SSD NVMe shared and cloud hosting
+hostoo,Hostoo,hostoo.io,BR,paas;shared-hosting,2,Cloud hosting PHP MySQL SSH GIT white-label reseller
+targethost,TargetHost,targethost.com.br,BR,shared-hosting;vps,2,Founded 2003; Linux Windows hosting cloud KVM VPS
+hospedando,Hospedando,hospedando.com.mx,MX,shared-hosting;vps;paas,2,cPanel shared WordPress builder and VPS cloud
+hosting-mexico,Hosting-Mexico,hosting-mexico.net,MX,shared-hosting;vps,2,20000+ websites hosted; cPanel shared and VPS
+planetahosting,Planeta Hosting,planetahosting.com.co,CO,shared-hosting;vps,1,Multi-country presence Colombia Chile Peru Brazil
+conexcol,Conexcol,conexcol.net.co,CO,shared-hosting;vps;paas,2,Cloud cluster hosting cPanel unlimited resources
+infranetworking,InfraNetworking,infranetworking.com,CO,shared-hosting;vps;paas,1,20 countries 5000+ clients; multiple hosting tiers
+hosting-cl,Hosting.cl,hosting.cl,CL,shared-hosting;vps;bare-metal,2,Chile leader SSD LiteSpeed 99.99% uptime
+tecnoinver,Tecnoinver,tecnoinver.cl,CL,vps;bare-metal,2,17 years; Tier III IV datacenters 11000 companies
+hostingnic,HostingNIC,hostingnic.cl,CL,shared-hosting;vps;bare-metal,2,25 years experience; Linux ASP.NET Windows hosting
+tecnoweb,TecnoWeb,tecnoweb.net,CL,shared-hosting;vps;paas,2,Founded 2002; Linux Windows Java hosting LiteSpeed
+v2networks,V2Networks,v2networks.cl,CL,shared-hosting;vps;paas,2,Founded 2015; 10000+ clients cloud servers
+hostingperu,Hosting Perú,hostingperu.com.pe,PE,shared-hosting;vps;paas,2,SSD NVMe cloud hosting VPS WordPress
+dominiosperu,Dominios Perú,dominiosperu.com.pe,PE,shared-hosting;vps,2,Fastest-growing Peru provider; 99.9% uptime
+neothek,Neothek,neothek.com,PE,shared-hosting;vps;paas,1,20+ countries Latin America and Spain; multi-language
+wnpower,WNPower,wnpower.com,AR,shared-hosting;vps;paas,2,Cloud VPS SSD NVMe WordPress reseller hosting
+hosting-en-la-web,Hosting en la Web,hostingenlaweb.com,UY,shared-hosting;vps;bare-metal,2,19 years Uruguay; DNSROU group
+myhosting,MyHosting,myhosting.uy,UY,shared-hosting,3,Affordable annual hosting plans Uruguay
+hosting506,Hosting506,hosting506.com,CR,shared-hosting;vps;paas,2,Costa Rica with datacenters USA UK; cloud hosting
+ticodesign,TicoDesign,ticodesign.com,CR,shared-hosting,3,17+ years experience Costa Rica web hosting
+cr-servers,CR Servers,crservers.com,CR,vps;bare-metal,2,VPS colocation in Costa Rica; TIER III datacenter
+grupo-host,Grupo Host,grupohost.cr,CR,shared-hosting,3,15 years hosting Costa Rica web applications
+hosting-507,507 Hosting,507hosting.com,PA,shared-hosting;vps,2,Panama since 2009; economical shared and VPS hosting
+host-gt,Host.gt,host.gt,GT,shared-hosting;paas,2,Guatemala shared hosting with SSD and website builder
+dylanhost,DylanHost,dylanhost.net,GT,shared-hosting,3,Professional hosting free domain free SSL Guatemala
+enmiguate,En Mi Guatemala,enmiguate.com,GT,shared-hosting,3,20+ years 1500+ websites Guatemala hosting
+cweb,CWEB,cweb.gt,GT,shared-hosting,3,Guatemala hosting WordPress integration
+guatemala-networks,Guatemala Networks,guatemalanetworks.com,GT,shared-hosting,3,Guatemala networks government hospitals hosting
+latinoamericahosting,Latinoamérica Hosting,latinoamericahosting.com.pe,PE,shared-hosting;vps,2,Reseller hosting Peru; cloud infrastructure
+wire-os,WIROOS,wiroos.com,VE,shared-hosting;vps,2,Multi-country Venezuela Ecuador Bolivia Costa Rica
+venehosting,VeneHosting,venehosting.com,VE,shared-hosting,3,Venezuela hosting in bolívares; 24x7 support
+truehost-ng,Truehost,truehost.com.ng,NG,shared-hosting;vps;bare-metal,B,BOUNDARY - Nigerian arm of the truehost already in the register; likely one provider not two
+gigalayer,GigaLayer,gigalayer.co.uk,GB,shared-hosting;vps;bare-metal,X,VERIFY - gigalayer.com redirects to gigalayer.co.uk so the NG headquarters claim is doubtful
+wehostafrica,WehostAfrica,wehostafrica.com,NG,shared-hosting;vps,1,Multi-country Africa presence Nigeria-based
+nindohost-ng,Nindohost Nigeria,nindohost.ng,NG,shared-hosting;vps;bare-metal;serverless,2,18+ years experience 3 continents
+zesha,Zesha,zesha.tz,TZ,shared-hosting;vps,2,Tanzania TCRA accredited registrar 6000+ domains
+netpoa,NetPoa,netpoa.com,TZ,shared-hosting;vps;bare-metal,2,Tanzanian-owned 1000+ domains 99.9% uptime
+duhosting,DuHosting,duhosting.tz,TZ,shared-hosting;vps;serverless,2,Tanzania TCRA accredited 12+ years 10000+ clients
+elitehost,Elitehost,elitehost.co.za,ZA,shared-hosting;vps;bare-metal,2,South Africa since 2005 private company
+webhosting-ug,Bulamu Web Hosting,webhosting.ug,UG,shared-hosting;vps,2,Uganda by Ugandans 69000 UGX/year 99.9% SLA
+webhosting256,Webhosting256,webhosting256.com,UG,shared-hosting;vps;bare-metal,2,Uganda east Africa since 2011 24x7 support
+marmasco,Marmasco,marmasco.com,ZW,shared-hosting;vps;bare-metal,2,Zimbabwe leader vps domain registration
+mamphost,Mamphost,mamphost.com,ZM,shared-hosting;vps;bare-metal,2,Zambia 99.9% uptime 4-star Trustpilot
+hahucloud,HahuCloud,hahucloud.com,ET,shared-hosting;vps;bare-metal,1,Ethiopia since 2017 DigitalOcean partner
+yegara,Yegara,yegara.com,ET,shared-hosting;vps,1,Ethiopia unlimited hosting 99.99% uptime
+gojohost,Gojo Host,gojohost.net,ET,shared-hosting;vps,2,Ethiopia addis ababa aws/do/gcp partner
+hostino,Hostino,hostino.ma,MA,shared-hosting;vps,1,Morocco 25 MAD/month tangier/rabat/casablanca
+nindohost-ma,Nindohost Morocco,nindohost.ma,MA,shared-hosting;vps;paas,2,Morocco 18 years local datacenter 39 dh/month
+capconnect,Cap Connect,capconnect.com,MA,shared-hosting;vps;bare-metal,2,Morocco since 2009 ANRT accredited tangier-based
+hostwega,HosTwega,hostwega.com,EG,shared-hosting;vps,2,Egypt since 2016 alexandria-based 30-day guarantee
+elryad,ElRyad,elryad.com,SA,shared-hosting;vps;bare-metal,2,Saudi Arabia since 2003 riyadh
+massarcloud,MassarCloud,massarcloud.sa,SA,shared-hosting;vps,2,Saudi arabia local datacenter
+aeserver,AEserver,aeserver.com,AE,shared-hosting;vps;bare-metal,1,UAE accredited .ae registrar dubai since 2005
+buzinessware,Buzinessware,buzinessware.com,AE,shared-hosting;vps;bare-metal,1,UAE dubai since 2002 local support arabic
+azym,Azym Technologies,azym.com,QA,shared-hosting;vps;bare-metal,2,Qatar doha enterprise cloud hosting
+webhostlb,WebHostLB,webhostlb.net,LB,shared-hosting;paas,2,Lebanon beirut-based wordpress hosting
+koein,Koein,koein.com,LB,shared-hosting;vps,2,Lebanon since 1999 99.999% uptime multi-country
+yadonia,Yadonia Group,yadonia.com,JO,shared-hosting;vps;bare-metal,2,Jordan amman since 2000
+haleserver,HaleServer,haleserver.com,JO,shared-hosting;vps;bare-metal,2,Jordan irbid 2014 litespeed ssd
+isimtescil,IsimTescil,isimtescil.net,TR,shared-hosting;vps;bare-metal,2,Turkey 1998-founded 570000 domains iso9001
+hqserv,HQserv,hqserv.co.il,IL,shared-hosting;vps;bare-metal,2,Israel ashdod since 2008 99.98% uptime
+domainesia,DomaiNesia,domainesia.com,ID,shared-hosting;iaas;vps;bare-metal,2,Indonesian provider with 200k+ customers and NVMe SSD across all plans
+hosting-ph,Hosting.ph,hosting.ph,PH,shared-hosting;vps;bare-metal,2,Filipino company since 2006 serving SMEs with PHP domain support
+web.com.ph,Web.com.ph,web.com.ph,PH,shared-hosting;vps;iaas;bare-metal,2,Filipino IT infrastructure provider since 2006 with cloud IaaS option
+serverbd,ServerBD,serverbd.net,BD,shared-hosting;iaas;vps;bare-metal,2,Bangladesh top-ranked provider founded 2012 with BDIX peering for local speed
+hosterpk,HosterPK,hosterpk.com,PK,shared-hosting;vps;bare-metal,2,Pakistan-based hosting with 50k+ customers and Pakistani rupee pricing
+webhoster-pk,WebHoster.pk,webhoster.pk,PK,shared-hosting;vps,2,Pakistan hosting provider with NVMe SSD and ultra-fast performance claims
+prabhuhost,Prabhu Host,prabhuhost.com,NP,shared-hosting;iaas;vps;paas,2,Nepal hosting with Node.js and Python support plus local payment methods
+webhostnepal,Web Host Nepal,webhostnepal.com,NP,shared-hosting;vps;iaas;bare-metal,2,Nepal provider since 2009 with 5000+ hosted websites and multi-location option
+provider-lk,Provider.lk,provider.lk,LK,shared-hosting;vps;bare-metal,2,Sri Lanka official .LK domain agent since 2009 with 10k+ websites
+lankahost,LankaHost,lankahost.lk,LK,shared-hosting,2,Sri Lanka hosting since 2006 serving 6000+ customers with WordPress options
+netkl,NetKL,netkl.com,MY,shared-hosting;vps;bare-metal,X,DROP - domain does not respond on any variant and the "largest in Malaysia" claim is unsupported
+vodien,Vodien,vodien.com,SG,shared-hosting;vps;server-management,1,Singapore hosting since 2002 with 210k+ users across Asia-Pacific region
+oryon,Oryon Networks,oryon.net,SG,shared-hosting;vps;iaas,2,Singapore hosting since 1998 with cPanel and competitive domain pricing
+bizflycloud,BizFly Cloud,bizflycloud.vn,VN,iaas;vps,2,Vietnam cloud provider owned by VCCorp with 20+ cloud services and public documentation
+shwehosting,Shwe Web Hosting,shwehosting.com,MM,shared-hosting;vps;bare-metal,3,Myanmar hosting provider with 24/7 monitoring and Myanmar kyat pricing option
+adalo,Adalo,adalo.com,US,lcnc,B,BOUNDARY - builds native mobile apps not sites so rule 1 is doubtful
+appsmith,Appsmith,appsmith.com,IN,lcnc,B,BOUNDARY - internal-tools builder rather than site or app hosting
+azure-static-web-apps,Azure Static Web Apps,staticwebapps.azure.com,US,static,2,Microsoft managed static hosting with serverless API support
+blot,Blot,blot.im,GB,vanity-hosting;static,1,Folder-to-website blogging platform
+bravo-studio,Bravo Studio,bravostudio.app,US,lcnc,B,BOUNDARY - builds native mobile apps not sites so rule 1 is doubtful
+cargo,Cargo,cargo.site,US,lcnc;vanity-hosting,2,Website builder for designers and creative portfolios
+caprover,CapRover,caprover.com,US,caas,2,Self-hosted PaaS with web UI for app deployment
+cloudflare-pages,Cloudflare Pages,pages.cloudflare.com,US,static;serverless,B,BOUNDARY - same provider as the existing cloudflare-workers record; probably a fact there rather than its own record
+directual,Directual,directual.com,BG,lcnc,2,No-code platform for business apps and AI agents
+dokku,Dokku,dokku.com,US,caas,2,Self-hosted lightweight PaaS alternative to Heroku
+draftbit,Draftbit,draftbit.com,US,lcnc,2,Low-code React Native mobile app builder
+filebase,Filebase,filebase.com,US,static,2,S3-compatible Web3 object storage with IPFS and Filecoin
+fleek,Fleek,fleek.sh,US,static,2,Web3 hosting on IPFS and decentralized networks
+flutterflow,FlutterFlow,flutterflow.io,US,lcnc,B,BOUNDARY - builds native mobile apps not sites so rule 1 is doubtful
+4everland,4EVERLAND,4everland.org,CN,static,2,Web3 cloud computing platform with decentralized storage
+giant-swarm,Giant Swarm,giantswarm.io,DE,caas,2,Managed Kubernetes and container operations platform
+landbot,Landbot,landbot.com,ES,lcnc,2,No-code AI chatbot and lead qualification builder
+openfaas,OpenFaaS,openfaas.com,GB,serverless,2,Open-source serverless functions framework on Kubernetes
+piku,Piku,piku.io,PT,caas,3,Minimal self-hosted PaaS via systemd without Docker
+plasmic,Plasmic,plasmic.app,US,lcnc,2,Visual builder for React with drag-and-drop editor
+replicate,Replicate,replicate.com,US,serverless,B,BOUNDARY - AI model inference not site hosting; consistent only if hugging-face stays listed
+retool,Retool,retool.com,US,lcnc,B,BOUNDARY - internal-tools builder rather than site or app hosting; same call as the out-of-scope contentful
+sanity,Sanity,sanity.io,NO,lcnc,2,Headless CMS with real-time collaboration and content operations
+spheron,Spheron,spheron.network,??,static,3,Web3 hosting platform on IPFS with edge delivery
+spline,Spline,spline.design,US,lcnc;vanity-hosting,2,3D design tool with interactive publishing and hosting
+stormkit,StormKit,stormkit.io,??,static;serverless,2,Self-hosted alternative to Vercel and Netlify
+strapi,Strapi,strapi.io,FR,caas,2,Open-source headless CMS with optional Strapi Cloud
+teleporthq,TeleportHQ,teleporthq.io,RO,lcnc,2,Low-code platform with code export to multiple frameworks
+transloadit,Transloadit,transloadit.com,NL,serverless,2,File upload processing and manipulation API
+typedream,Typedream,typedream.com,??,lcnc,2,AI-powered website builder for token projects and creators
+voog,Voog,voog.com,EE,lcnc,2,Multilingual website builder with unified content management
+webnode,Webnode,webnode.com,CZ,lcnc,2,Easy website builder for small business and personal sites
+webstudio,Webstudio,webstudio.is,IS,lcnc;static,2,Open-source visual page builder backed by Cloudflare
+write-as,Write.as,write.as,US,vanity-hosting;static,2,Minimalist blogging and writing platform
+wunderbucket,Wunderbucket,wunderbucket.com,US,static,3,Static hosting platform for designers and developers
