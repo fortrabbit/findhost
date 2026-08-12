@@ -171,10 +171,10 @@
     # A company doing both carries both: a registrar that also sells shared
     # hosting is `[shared-hosting, registrar]`, which is why these are values of
     # a multiple field and not a collection of their own.
-    - { id: registrar, label: Domain registrar, short: Registrar }
-    - { id: mail, label: Business email }
-    - { id: dbaas, label: Database as a Service, short: DBaaS }
-    - { id: git-hosting, label: Git hosting }
+    - { id: registrar, label: Domain registrar, short: Registrar, subject: 'register domain names' }
+    - { id: mail, label: Business email, subject: 'run mailboxes on a domain' }
+    - { id: dbaas, label: Database as a Service, short: DBaaS, subject: 'sell a managed database as the product' }
+    - { id: git-hosting, label: Git hosting, subject: 'host git repositories' }
 
 # Two answers, because there are two: somebody applies the security updates or
 # somebody else does. A panel automates that work without moving it, and an image

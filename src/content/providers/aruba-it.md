@@ -11,6 +11,7 @@ category:
   - iaas
   - bare-metal
   - caas
+  - registrar
 description: An Italian provider that owns its data centers and sells registrar services, hosting, servers and a public cloud.
 hqCountry: IT
 ownership: independent

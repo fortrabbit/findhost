@@ -7,6 +7,7 @@ urls:
   status: https://status.gandi.net/
 category:
   - shared-hosting
+  - registrar
 description: Gandi is a French registrar whose Simple Hosting product runs application code in per-customer Linux containers, deployed by git or SFTP.
 hqCountry: FR
 whoManagesOs: self-managed

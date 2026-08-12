@@ -9,6 +9,7 @@ category:
   - vps
   - bare-metal
   - vanity-hosting
+  - registrar
 description: Irish host and ICANN-accredited registrar in Carlow, running its own data centres and selling everything from shared hosting to dedicated servers.
 hqCountry: IE
 ownership: independent

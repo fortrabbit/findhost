@@ -118,11 +118,27 @@ const providerFields = z
      */
     software: z.array(z.enum(vocabulary('software'))).optional(),
 
-    // Tech stack
-    runtimes: z.array(z.enum(vocabulary('runtimes'))).optional(),
-    deployMethods: z.array(z.enum(vocabulary('deployMethods'))).optional(),
-    sshAccess: z.enum(vocabulary('sshAccess')).optional(),
-    managedDatabases: z.array(z.enum(vocabulary('managedDatabases'))).optional(),
+    /*
+     * Tech stack. Nullable, the way `regions` already is, because a record can
+     * be in the register without being a host: a control panel has no regions,
+     * and a registrar or a mail host runs no code of the customer's at all.
+     * `null` reads as "the question does not apply" and is counted apart from
+     * unknown — the difference between a field nobody filled in and one that
+     * could never have had an answer.
+     */
+    runtimes: z
+      .array(z.enum(vocabulary('runtimes')))
+      .nullable()
+      .optional(),
+    deployMethods: z
+      .array(z.enum(vocabulary('deployMethods')))
+      .nullable()
+      .optional(),
+    sshAccess: z.enum(vocabulary('sshAccess')).nullable().optional(),
+    managedDatabases: z
+      .array(z.enum(vocabulary('managedDatabases')))
+      .nullable()
+      .optional(),
     gpuCapacity: z.array(z.enum(vocabulary('gpuCapacity'))).optional(),
     persistentStorage: z.boolean().optional(),
     backupsIncluded: z.enum(vocabulary('backupsIncluded')).optional(),

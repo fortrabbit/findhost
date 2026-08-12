@@ -8,6 +8,7 @@ category:
   - shared-hosting
   - vps
   - vanity-hosting
+  - registrar
 description: Danish mass-market host selling shared hosting, managed WordPress, email and domains across most of Europe.
 hqCountry: DK
 ownership: pe-owned
