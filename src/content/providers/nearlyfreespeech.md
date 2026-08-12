@@ -10,7 +10,9 @@ category:
 hqCountry: US
 ownership: independent
 founded: 2002
-description: Pay-as-you-go shared hosting platform supporting 25+ programming languages and frameworks.
+favorite: true
+favoriteNote: So simple, so cool. What a name. Around forever.
+description: Shared hosting metered by what a site consumes rather than sold by the plan.
 runtimes:
   - php
   - python
