@@ -33,6 +33,8 @@ This is currently pet project. I may extend it. There are plenty of ideas, from 
 
 ## Who is listed
 
+There are thousands of web hosting providers out there, WHTop claims to have 29k hosting providers recorded. This webhost list here is far from being complete. It just gives you some options for different flavors in different locations. I picked the providers that are most visible to me. Criteria:
+
 1. **Runs an app, or serves a site.** 
 2. **Sold to the public.** Purchasable without sales call or invitation.
 3. **Public pricing.** A price for at least one plan is published without login.

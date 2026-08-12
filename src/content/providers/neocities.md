@@ -10,7 +10,9 @@ category:
 hqCountry: US
 ownership: independent
 founded: 2013
-description: Free static site hosting funded by supporters and donations, emphasizing creator control and no corporate surveillance.
+favorite: true
+favoriteNote: The web needs to be more quirky!
+description: Free static site hosting for personal pages, funded by supporters rather than by advertising.
 runtimes:
   - static
 deployMethods:
