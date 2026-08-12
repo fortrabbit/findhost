@@ -71,14 +71,45 @@
 # fields, then let a person move it by hand, and after eighteen hand adjustments
 # the arithmetic was decoration. A boolean says the same thing without the
 # machinery that implied more precision than anybody had.
+#
+# It carries a `group` so it shows as a row rather than only as a heart, which
+# `picks` below requires of anything it derives from: a reader who filters on it
+# has to be able to find the fact on the record.
 - id: favorite
   label: Favorite
+  group: Identity
+  render: yes-no
 
 # Why we like it, in one sentence, on the record page beside the same heart the
 # list carries. Optional: a heart with no sentence is still a heart, and a
 # sentence is better than a number was.
 - id: favoriteNote
   label: Favorite note
+
+# The heart, as something to filter on. Derived rather than recorded, so no
+# record carries it and there is one place the mark is set.
+#
+# A single-value facet, and it stays that way: the opposite box would be "the
+# ones we did not pick", which is a verdict on two hundred companies that nobody
+# passed. Absence here means nobody chose it, and that is all it means.
+#
+# This is the closest the register comes to the line it draws against ranking,
+# and it stays on the right side of that line for three reasons: the bias is
+# disclosed on /about/, the mark is a boolean rather than a score, and the order
+# of what comes back is alphabetical whether the box is ticked or not.
+- id: picks
+  label: Favorites
+  facet: favorites
+  subject: 'are {lower}'
+  filterOrder: 20
+  values:
+    - {
+        id: favorite,
+        label: Favorite,
+        from: favorite,
+        when: ['true'],
+        subject: 'we like, for a reason each record gives',
+      }
 
 - id: ownership
   label: Ownership
