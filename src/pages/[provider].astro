@@ -41,6 +41,13 @@ const valueOf = (field: string) => (data as Record<string, unknown>)[field];
  * a reader a host has no email on that basis would be inventing the answer —
  * which is why this shows on few records today and more as they are filled in.
  * The category must be in use too, or the link points at a page never built.
+ *
+ * Databases are not here, and cannot be until the dictionary can say it.
+ * `managedDatabases` is a list of engines, so it answers "which" and has no way
+ * to answer "none": absent means nobody looked, and a great many platforms do
+ * run a database — fortrabbit's own record names MySQL. Pairing a host with a
+ * database service needs a three-value field of its own, like the ones domains
+ * and email already have.
  */
 const soldBy = new Set(
   everyRecord.filter(isListed).flatMap((entry) => (entry.data.category as string[] | undefined) ?? []),
@@ -48,7 +55,6 @@ const soldBy = new Set(
 const alsoNeeded = [
   { field: 'domainRegistration', need: 'A domain to point at it', category: 'registrar' },
   { field: 'emailHosting', need: 'Mailboxes on that domain', category: 'mail' },
-  { field: 'managedDatabases', need: 'A database to keep the data', category: 'dbaas' },
 ].filter((pair) => valueOf(pair.field) === 'none' && soldBy.has(pair.category));
 
 /*
