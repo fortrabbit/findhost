@@ -9,7 +9,7 @@ urls:
   docs: https://api.transip.nl/rest/docs.html
 category:
   - shared-hosting
-  - registrar
+  - domains-dns
 description: Dutch registrar and hosting provider selling shared webhosting, VPS, OpenStack cloud and managed Kubernetes from its own Netherlands data centres.
 founded: 2003
 hqCountry: NL

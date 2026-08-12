@@ -8,7 +8,7 @@ urls:
   docs: https://help.zone.eu/en/
 category:
   - shared-hosting
-  - registrar
+  - domains-dns
 description: Estonian hosting provider and domain registrar, selling shared hosting and cloud servers from northern European locations.
 founded: 1999
 hqCountry: EE

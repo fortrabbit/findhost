@@ -5,7 +5,7 @@ urls:
   home: https://porkbun.com
   docs: https://kb.porkbun.com
 category:
-  - registrar
+  - domains-dns
   - shared-hosting
   - static
 description: An ICANN-accredited registrar in Oregon that also sells static, PHP and cPanel hosting, and mailboxes by the inbox.

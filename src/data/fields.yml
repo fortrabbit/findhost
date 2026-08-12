@@ -169,9 +169,20 @@
     # the question does not apply rather than nobody checked.
     #
     # A company doing both carries both: a registrar that also sells shared
-    # hosting is `[shared-hosting, registrar]`, which is why these are values of
-    # a multiple field and not a collection of their own.
-    - { id: registrar, label: Domain registrar, short: Registrar, subject: 'register domain names' }
+    # hosting is `[shared-hosting, domains-dns]`, which is why these are values
+    # of a multiple field and not a collection of their own.
+    #
+    # These say who sells the thing as a business. Whether it arrives *with* the
+    # hosting is a different question and a different field — `features` reads
+    # `domainRegistration` and the rest for that, and only counts `included`.
+    # A host throwing in a free domain is not thereby in the domain business,
+    # and a registrar is not thereby giving one away.
+    #
+    # Names and DNS are one category because they are one purchase: every
+    # registrar runs nameservers, and the operators who sell DNS on its own sell
+    # registration beside it. Splitting them would make two lists of the same
+    # companies.
+    - { id: domains-dns, label: Domains and DNS, short: Domains, subject: 'sell domain names or run DNS' }
     - { id: mail, label: Business email, subject: 'run mailboxes on a domain' }
     - { id: dbaas, label: Database as a Service, short: DBaaS, subject: 'sell a managed database as the product' }
     - { id: git-hosting, label: Git hosting, subject: 'host git repositories' }
@@ -979,22 +990,43 @@
         when: [included],
         subject: 'give somewhere to try a deploy before it is the site',
       }
+    # These four name the same things as the `domains-dns` and `mail`
+    # categories, and mean something else: not who sells it, but who hands it
+    # over with the hosting at no extra charge. The labels say "included" for
+    # that reason — a page headed "Domains" beside a category headed "Domains
+    # and DNS" read as the same list twice, and they share two records of twenty.
     - {
         id: domains,
-        label: Domains,
+        label: Domain included,
+        short: Domains,
         from: domainRegistration,
         when: [included],
         subject: 'include a domain with the hosting',
       }
-    - { id: dns, label: DNS, from: dnsHosting, when: [included], subject: 'host DNS themselves, at no extra charge' }
+    - {
+        id: dns,
+        label: DNS included,
+        short: DNS,
+        from: dnsHosting,
+        when: [included],
+        subject: 'host DNS themselves, at no extra charge',
+      }
     - {
         id: email,
-        label: Email,
+        label: Email included,
+        short: Email,
         from: emailHosting,
         when: [included],
         subject: 'host email themselves, at no extra charge',
       }
-    - { id: cdn, label: CDN, from: cdnIncluded, when: [included], subject: 'include a CDN with the hosting' }
+    - {
+        id: cdn,
+        label: CDN included,
+        short: CDN,
+        from: cdnIncluded,
+        when: [included],
+        subject: 'include a CDN with the hosting',
+      }
     - {
         id: test-domain,
         label: Test domain,

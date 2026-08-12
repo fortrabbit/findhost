@@ -6,7 +6,7 @@ urls:
 category:
   - shared-hosting
   - vps
-  - registrar
+  - domains-dns
 description: Kenyan-owned host and KENIC-accredited .ke registrar, selling cPanel hosting in shillings with M-Pesa at checkout.
 hqCountry: KE
 ownership: independent

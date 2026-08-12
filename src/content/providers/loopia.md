@@ -8,7 +8,7 @@ urls:
   docs: https://www.loopia.se/support/
 category:
   - shared-hosting
-  - registrar
+  - domains-dns
 description: Swedish hosting provider and registrar in Västerås offering Linux and Windows shared hosting with SSH, PHP, Python, Perl and ASP.NET.
 founded: 1999
 hqCountry: SE

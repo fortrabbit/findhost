@@ -7,7 +7,7 @@ urls:
   terms: https://www.websupport.sk/podmienky
 category:
   - shared-hosting
-  - registrar
+  - domains-dns
 description: Slovakia's largest domain registrar, selling shared hosting and a website builder across Slovakia, Czechia and Hungary from its own data centre.
 hqCountry: SK
 ownership: subsidiary

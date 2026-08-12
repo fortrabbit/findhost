@@ -6,7 +6,7 @@ urls:
   pricing: https://ventraip.com.au/web-hosting/
 category:
   - shared-hosting
-  - registrar
+  - domains-dns
 description: Australian domain registrar and hosting provider selling cPanel shared hosting, WordPress hosting and VPS, operated by Nexigen Digital.
 founded: 2008
 hqCountry: AU

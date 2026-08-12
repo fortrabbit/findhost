@@ -5,7 +5,7 @@ urls:
   home: https://www.neubox.com
 category:
   - shared-hosting
-  - registrar
+  - domains-dns
 description: Mexican registrar and host since 2004, one of the larger .MX registrars, selling cPanel hosting in pesos with OXXO Pay at checkout.
 founded: 2004
 hqCountry: MX

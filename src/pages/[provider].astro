@@ -53,7 +53,7 @@ const soldBy = new Set(
   everyRecord.filter(isListed).flatMap((entry) => (entry.data.category as string[] | undefined) ?? []),
 );
 const alsoNeeded = [
-  { field: 'domainRegistration', need: 'A domain to point at it', category: 'registrar' },
+  { field: 'domainRegistration', need: 'A domain to point at it', category: 'domains-dns' },
   { field: 'emailHosting', need: 'Mailboxes on that domain', category: 'mail' },
 ].filter((pair) => valueOf(pair.field) === 'none' && soldBy.has(pair.category));
 

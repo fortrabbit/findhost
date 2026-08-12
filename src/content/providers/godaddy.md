@@ -6,7 +6,7 @@ urls:
 category:
   - shared-hosting
   - vanity-hosting
-  - registrar
+  - domains-dns
 description: GoDaddy is a US shared hosting company and the world's largest ICANN-accredited domain registrar, listed on the NYSE as GDDY.
 founded: 1997
 hqCountry: US

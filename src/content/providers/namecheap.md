@@ -7,7 +7,7 @@ urls:
 category:
   - shared-hosting
   - vps
-  - registrar
+  - domains-dns
 description: A US domain registrar that also sells shared hosting and virtual servers.
 hqCountry: US
 status: active
