@@ -2,16 +2,24 @@
 id: acquia
 name: Acquia
 urls:
-  home: https://acquia.com
+  home: https://www.acquia.com
+  pricing: https://www.acquia.com/pricing
 category:
   - paas
-description: A PaaS provider in the United States.
+description: A Drupal platform sold through sales conversations rather than published prices.
 hqCountry: US
-status: draft
+status: out-of-scope
+criterion: 3
 checkedAt: 2026-08-12
+sources:
+  - { field: status, url: 'https://www.acquia.com/pricing', checkedAt: 2026-08-12 }
 ai: authored
 ---
 
-Acquia sells PaaS in the United States.
+Acquia was founded by Drupal's creator and sells a managed platform for running Drupal, which makes it one of the better-known names in that part of the market.
 
-**Listed as a stub because only the name and the domain have been checked.** The domain resolved and answered when this record was made, and nothing else here is recorded yet. Whether it meets the four criteria — sold to the public, a price published without login, technical documentation in the open — is still an open question, and every field stays unknown until somebody reads the provider's own pages.
+**Criterion 3 — public pricing — fails.** The pricing page publishes no figure for any plan. Every route from it is a "Learn More" link or a demo request form, and a price arrives only after a conversation with sales, which also puts criterion 2 in doubt.
+
+Being well known in Drupal does not carry a record past a criterion the register applies to everyone. **If Acquia publishes a price for any plan without a login, this reverses.**
+
+Drupal itself is open source and runs on any provider here with PHP and a database.
