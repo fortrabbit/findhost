@@ -38,8 +38,9 @@ apiAvailable: public
 favorite: true
 favoriteNote: Betting that a machine should cost about what a process costs.
 status: active
-checkedAt: 2026-08-08
+checkedAt: 2026-08-12
 sources:
+  - { field: collaboration, url: 'https://exe.dev/', checkedAt: 2026-08-12 }
   - { field: entryPrice, url: 'https://exe.dev/pricing', checkedAt: 2026-08-08 }
   - { field: pricingModel, url: 'https://exe.dev/pricing', checkedAt: 2026-08-08 }
   - { field: sshAccess, url: 'https://exe.dev', checkedAt: 2026-08-08 }
@@ -51,6 +52,7 @@ figure:
   textColor: rgb(240, 249, 255)
   text: Capacity pool, not individual-unit billing.
 ai: authored
+collaboration: team
 ---
 
 exe.dev sells Ubuntu virtual machines that start in seconds, reached over SSH, with root, `apt`, `systemd`, Docker, a persistent disk and an HTTPS address. It launched in April 2026 and raised a $25 million Series A shortly after. Its own headline is "computers for developers and agents".

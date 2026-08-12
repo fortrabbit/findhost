@@ -70,6 +70,7 @@ iacSupport:
 status: active
 checkedAt: 2026-08-12
 sources:
+  - { field: domainRegistration, url: 'https://docs.digitalocean.com/products/networking/dns/', checkedAt: 2026-08-12 }
   - { field: entryPrice, url: 'https://www.digitalocean.com/pricing/droplets', checkedAt: 2026-08-01 }
   - { field: founded, url: 'https://www.digitalocean.com/about', checkedAt: 2026-07-31 }
   - { field: ownership, url: 'https://investors.digitalocean.com/overview/default.aspx', checkedAt: 2026-07-31 }
@@ -97,6 +98,7 @@ figure:
   color: rgb(45, 142, 190)
   textColor: rgb(234, 242, 246)
   text: Virtual machines, billed by the second.
+domainRegistration: none
 ---
 
 DigitalOcean Holdings, Inc. trades on the New York Stock Exchange as DOCN. It started with a single product — the Droplet, a virtual private server — and has since added block storage, managed databases, managed Kubernetes, object storage, serverless functions and an application platform. It acquired [Cloudways](/cloudways/) in 2022.

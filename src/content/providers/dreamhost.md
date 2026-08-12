@@ -28,8 +28,12 @@ renewalMultiple: 3.8
 contractMinimum: annual
 favorite: true
 favoriteNote: Honest renewal pricing with no upsell tactics.
+domainRegistration: included
+emailHosting: included
+cdnIncluded: included
+staging: included
 status: active
-checkedAt: 2026-08-01
+checkedAt: 2026-08-12
 sources:
   - { field: entryPrice, url: 'https://www.dreamhost.com/hosting/shared/', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://www.dreamhost.com/legal/', checkedAt: 2026-08-01 }
@@ -42,6 +46,10 @@ sources:
   - { field: contractMinimum, url: 'https://www.dreamhost.com/hosting/shared/', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://www.dreamhost.com/hosting/shared/', checkedAt: 2026-07-31 }
   - { field: software, url: 'https://www.dreamhost.com/hosting/shared/', checkedAt: 2026-07-31 }
+  - { field: domainRegistration, url: 'https://www.dreamhost.com/hosting/shared/', checkedAt: 2026-08-12 }
+  - { field: emailHosting, url: 'https://www.dreamhost.com/hosting/shared/', checkedAt: 2026-08-12 }
+  - { field: cdnIncluded, url: 'https://www.dreamhost.com/hosting/shared/', checkedAt: 2026-08-12 }
+  - { field: staging, url: 'https://www.dreamhost.com/hosting/shared/', checkedAt: 2026-08-12 }
 figure:
   emoji: 🌙
   color: rgb(185, 144, 67)

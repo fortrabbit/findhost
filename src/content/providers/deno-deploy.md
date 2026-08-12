@@ -41,15 +41,19 @@ apiAvailable: public
 cliTool: official
 iacSupport:
   - terraform
+testDomain: included
+collaboration: team
 favorite: true
 favoriteNote: Shipped the standards-first argument rather than waiting for it.
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-12
 sources:
   - { field: priceFrom, url: 'https://deno.com/deploy/pricing', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://deno.com/deploy/pricing', checkedAt: 2026-08-02 }
   - { field: freeTier, url: 'https://deno.com/deploy/pricing', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://deno.com/deploy/pricing', checkedAt: 2026-07-31 }
+  - { field: testDomain, url: 'https://deno.com/deploy', checkedAt: 2026-08-12 }
+  - { field: collaboration, url: 'https://deno.com/deploy', checkedAt: 2026-08-12 }
 figure:
   emoji: 🦕
   color: rgb(77, 77, 157)

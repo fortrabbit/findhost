@@ -47,6 +47,9 @@ billingPeriods:
   - monthly
 billingTiming: arrears
 exitWithin: a-day
+domainRegistration: included
+dnsHosting: included
+emailHosting: included
 status: active
 checkedAt: 2026-08-12
 sources:
@@ -63,6 +66,9 @@ sources:
   - { field: useCases, url: 'https://nearlyfreespeech.net', checkedAt: 2026-08-12 }
   - { field: pricingModel, url: 'https://nearlyfreespeech.net/about', checkedAt: 2026-08-12 }
   - { field: billingTiming, url: 'https://nearlyfreespeech.net', checkedAt: 2026-08-12 }
+  - { field: domainRegistration, url: 'https://www.nearlyfreespeech.net/services/hosting', checkedAt: 2026-08-12 }
+  - { field: dnsHosting, url: 'https://www.nearlyfreespeech.net/services/hosting', checkedAt: 2026-08-12 }
+  - { field: emailHosting, url: 'https://www.nearlyfreespeech.net/services/hosting', checkedAt: 2026-08-12 }
 figure:
   emoji: 💸
   color: rgb(80, 160, 150)

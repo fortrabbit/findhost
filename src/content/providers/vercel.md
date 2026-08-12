@@ -70,8 +70,14 @@ supportChannels:
 supportTiering: paid-upgrade
 apiAvailable: public
 cliTool: official
+domainRegistration: paid-addon
+dnsHosting: included
+cdnIncluded: included
+staging: included
+testDomain: included
+collaboration: team
 status: active
-checkedAt: 2026-08-09
+checkedAt: 2026-08-12
 sources:
   - { field: apiAvailable, url: 'https://vercel.com/docs/rest-api', checkedAt: 2026-08-09 }
   - { field: ownership, url: 'https://vercel.com/about', checkedAt: 2026-08-01 }
@@ -92,6 +98,12 @@ sources:
   - { field: audience, url: 'https://vercel.com/docs/plans', checkedAt: 2026-07-31 }
   - { field: software, url: 'https://vercel.com/docs/frameworks', checkedAt: 2026-07-31 }
   - { field: useCases, url: 'https://vercel.com/', checkedAt: 2026-07-31 }
+  - { field: domainRegistration, url: 'https://vercel.com/docs/domains/working-with-domains', checkedAt: 2026-08-12 }
+  - { field: dnsHosting, url: 'https://vercel.com/docs/domains', checkedAt: 2026-08-12 }
+  - { field: cdnIncluded, url: 'https://vercel.com/docs', checkedAt: 2026-08-12 }
+  - { field: staging, url: 'https://vercel.com/docs/deployments/environments', checkedAt: 2026-08-12 }
+  - { field: testDomain, url: 'https://vercel.com/docs/deployments/generated-urls', checkedAt: 2026-08-12 }
+  - { field: collaboration, url: 'https://vercel.com/docs/accounts', checkedAt: 2026-08-12 }
 figure:
   emoji: 🔺
   color: rgb(77, 77, 157)

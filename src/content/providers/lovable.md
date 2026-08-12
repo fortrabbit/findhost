@@ -19,10 +19,12 @@ freeTier: permanent
 favorite: true
 favoriteNote: Popular among non devs.
 status: active
-checkedAt: 2026-08-01
+checkedAt: 2026-08-12
+collaboration: team
 sources:
   - { field: pricingModel, url: 'https://lovable.dev/pricing', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://lovable.dev/pricing', checkedAt: 2026-08-01 }
+  - { field: collaboration, url: 'https://docs.lovable.dev', checkedAt: 2026-08-12 }
 figure:
   emoji: 🔒
   color: rgb(157, 77, 77)

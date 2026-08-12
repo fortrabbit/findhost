@@ -31,6 +31,8 @@ billingPeriods:
 billingTiming: advance
 freeTier: permanent
 apiAvailable: public
+collaboration: team
+staging: included
 social:
   github: https://github.com/coollabsio/coolify
   discord: https://coollabs.io/discord
@@ -38,7 +40,7 @@ favorite: true
 favoriteNote: Popular tool. The paid version does not hold the free one hostage.
 status: active
 hqCountry: HU
-checkedAt: 2026-08-09
+checkedAt: 2026-08-12
 sources:
   - { field: hqCountry, url: 'https://coolify.io/about', checkedAt: 2026-08-09 }
   - { field: infraContract, url: 'https://coolify.io/', checkedAt: 2026-07-31 }
@@ -52,6 +54,8 @@ sources:
   - { field: billingPeriods, url: 'https://coolify.io/pricing', checkedAt: 2026-08-02 }
   - { field: billingTiming, url: 'https://coolify.io/pricing', checkedAt: 2026-08-02 }
   - { field: apiAvailable, url: 'https://coolify.io/', checkedAt: 2026-07-31 }
+  - { field: collaboration, url: 'https://coolify.io', checkedAt: 2026-08-12 }
+  - { field: staging, url: 'https://coolify.io', checkedAt: 2026-08-12 }
 figure:
   emoji: 🐋
   color: rgb(45, 169, 190)

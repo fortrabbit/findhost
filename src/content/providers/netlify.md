@@ -64,10 +64,14 @@ regions:
   - AU
 apiAvailable: public
 cliTool: official
+dnsHosting: included
+cdnIncluded: included
+staging: included
+collaboration: team
 favorite: true
 favoriteNote: Made deploying from a commit ordinary. Everyone else copied it.
 status: active
-checkedAt: 2026-08-01
+checkedAt: 2026-08-12
 sources:
   - { field: pricingModel, url: 'https://www.netlify.com/pricing/', checkedAt: 2026-07-31 }
   - { field: priceFrom, url: 'https://www.netlify.com/pricing/', checkedAt: 2026-08-02 }
@@ -81,6 +85,10 @@ sources:
   - { field: hqCountry, url: 'https://www.netlify.com/about/', checkedAt: 2026-08-01 }
   - { field: ownership, url: 'https://www.netlify.com/about/', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://www.netlify.com/legal/terms-of-use/', checkedAt: 2026-08-01 }
+  - { field: dnsHosting, url: 'https://docs.netlify.com/', checkedAt: 2026-08-12 }
+  - { field: cdnIncluded, url: 'https://www.netlify.com/pricing/', checkedAt: 2026-08-12 }
+  - { field: staging, url: 'https://www.netlify.com/pricing/', checkedAt: 2026-08-12 }
+  - { field: collaboration, url: 'https://www.netlify.com/pricing/', checkedAt: 2026-08-12 }
 figure:
   emoji: 🕸️
   color: rgb(52, 96, 52)

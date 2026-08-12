@@ -48,11 +48,12 @@ freeTier: none
 apiAvailable: public
 cliTool: official
 mcpServer: official
+collaboration: team
 social:
   github: https://github.com/dokploy/dokploy
   x: https://x.com/getdokploy
 status: active
-checkedAt: 2026-08-01
+checkedAt: 2026-08-12
 sources:
   - { field: entryPrice, url: 'https://dokploy.com/pricing', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://dokploy.com/pricing', checkedAt: 2026-08-01 }
@@ -68,6 +69,7 @@ sources:
   - { field: apiAvailable, url: 'https://dokploy.com', checkedAt: 2026-08-09 }
   - { field: cliTool, url: 'https://dokploy.com', checkedAt: 2026-08-09 }
   - { field: mcpServer, url: 'https://dokploy.com', checkedAt: 2026-08-09 }
+  - { field: collaboration, url: 'https://dokploy.com', checkedAt: 2026-08-12 }
 figure:
   emoji: 🐋
   color: rgb(63, 125, 172)

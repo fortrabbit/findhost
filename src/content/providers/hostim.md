@@ -35,7 +35,10 @@ social:
 favorite: true
 favoriteNote: A year old, priced in the open, and already doing the hard part.
 status: active
-checkedAt: 2026-08-01
+checkedAt: 2026-08-12
+domainRegistration: none
+dnsHosting: none
+collaboration: team
 sources:
   - { field: category, url: 'https://hostim.dev', checkedAt: 2026-08-07 }
   - { field: deployMethods, url: 'https://hostim.dev', checkedAt: 2026-08-07 }
@@ -51,6 +54,9 @@ sources:
   - { field: pricingModel, url: 'https://hostim.dev/pricing/', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://hostim.dev/pricing/', checkedAt: 2026-08-01 }
   - { field: apiAvailable, url: 'https://hostim.dev', checkedAt: 2026-08-09 }
+  - { field: domainRegistration, url: 'https://hostim.dev/docs/networking/domains/', checkedAt: 2026-08-12 }
+  - { field: dnsHosting, url: 'https://hostim.dev/docs/networking/domains/', checkedAt: 2026-08-12 }
+  - { field: collaboration, url: 'https://hostim.dev/docs/getting-started/collaborators/', checkedAt: 2026-08-12 }
 figure:
   emoji: 🐳
   color: rgb(67, 106, 168)

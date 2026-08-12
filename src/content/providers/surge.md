@@ -20,16 +20,24 @@ audience:
   - solo
 freeTier: permanent
 regions: null
+domainRegistration: none
+dnsHosting: none
+cdnIncluded: included
+collaboration: team
 favorite: true
 favoriteNote: Nothing here puts less between a folder and the web.
 status: active
-checkedAt: 2026-08-09
+checkedAt: 2026-08-12
 cliTool: official
 sources:
   - { field: category, url: 'https://surge.sh', checkedAt: 2026-08-08 }
   - { field: freeTier, url: 'https://surge.sh', checkedAt: 2026-08-08 }
   - { field: runtimes, url: 'https://surge.sh', checkedAt: 2026-08-08 }
   - { field: cliTool, url: 'https://surge.sh', checkedAt: 2026-08-09 }
+  - { field: domainRegistration, url: 'https://surge.sh', checkedAt: 2026-08-12 }
+  - { field: dnsHosting, url: 'https://surge.sh', checkedAt: 2026-08-12 }
+  - { field: cdnIncluded, url: 'https://surge.sh', checkedAt: 2026-08-12 }
+  - { field: collaboration, url: 'https://surge.sh', checkedAt: 2026-08-12 }
 figure:
   emoji: 🌐
   color: rgb(52, 168, 219)

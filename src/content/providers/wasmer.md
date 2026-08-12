@@ -37,6 +37,8 @@ regions:
   - DE
   - CA
   - US
+cdnIncluded: included
+collaboration: team
 social:
   github: https://github.com/wasmerio
   x: https://twitter.com/wasmerio
@@ -44,7 +46,7 @@ social:
 favorite: true
 favoriteNote: A different bet from everyone else here, not a cheaper version of the same one.
 status: active
-checkedAt: 2026-08-09
+checkedAt: 2026-08-12
 cliTool: official
 sources:
   - { field: regions, url: 'https://docs.wasmer.io/edge/learn/regions', checkedAt: 2026-08-01 }
@@ -57,6 +59,8 @@ sources:
   - { field: pricingModel, url: 'https://wasmer.io/pricing', checkedAt: 2026-07-31 }
   - { field: software, url: 'https://wasmer.io/pricing', checkedAt: 2026-07-31 }
   - { field: cliTool, url: 'https://wasmer.io', checkedAt: 2026-08-09 }
+  - { field: cdnIncluded, url: 'https://wasmer.io/pricing', checkedAt: 2026-08-12 }
+  - { field: collaboration, url: 'https://wasmer.io/pricing', checkedAt: 2026-08-12 }
 figure:
   emoji: 🧩
   color: rgb(55, 83, 179)
