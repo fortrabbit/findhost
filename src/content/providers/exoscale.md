@@ -55,13 +55,15 @@ billingPeriods:
 exitWithin: a-day
 entryPrice: { amount: 0.0056, currency: EUR, period: hour }
 freeTier: none
+dnsHosting: included
+cdnIncluded: included
 regions:
   - CH
   - AT
   - DE
   - HR
 status: active
-checkedAt: 2026-08-01
+checkedAt: 2026-08-12
 sources:
   - { field: regions, url: 'https://www.exoscale.com/pricing/', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://www.exoscale.com/pricing/', checkedAt: 2026-08-01 }
@@ -72,6 +74,8 @@ sources:
   - { field: currencies, url: 'https://www.exoscale.com/pricing/', checkedAt: 2026-08-02 }
   - { field: billingPeriods, url: 'https://www.exoscale.com/pricing/', checkedAt: 2026-08-02 }
   - { field: exitWithin, url: 'https://www.exoscale.com/terms/', checkedAt: 2026-08-02 }
+  - { field: dnsHosting, url: 'https://www.exoscale.com/pricing/', checkedAt: 2026-08-12 }
+  - { field: cdnIncluded, url: 'https://www.exoscale.com/pricing/', checkedAt: 2026-08-12 }
 supportChannels:
   - email
   - chat

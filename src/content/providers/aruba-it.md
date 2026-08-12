@@ -53,6 +53,8 @@ supportChannels:
   - chat
 supportTiering: all-plans
 status: active
+domainRegistration: paid-addon
+emailHosting: included
 checkedAt: 2026-08-12
 figure:
   emoji: 🇮🇹
@@ -72,6 +74,8 @@ sources:
   - { field: currencies, url: 'https://www.arubacloud.com/vps.aspx', checkedAt: 2026-08-12 }
   - { field: regions, url: 'https://www.arubacloud.com/public-cloud.aspx', checkedAt: 2026-08-12 }
   - { field: certifications, url: 'https://www.arubacloud.com', checkedAt: 2026-08-12 }
+  - { field: domainRegistration, url: 'https://www.aruba.it/en/', checkedAt: 2026-08-12 }
+  - { field: emailHosting, url: 'https://www.aruba.it/en/', checkedAt: 2026-08-12 }
 ai: authored
 ---
 

@@ -73,12 +73,16 @@ iacSupport:
   - terraform
 social:
   github: https://github.com/CleverCloud
+collaboration: team
+status: active
+checkedAt: 2026-08-12
 sources:
   - { field: priceFrom, url: 'https://clever.cloud/pricing/', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://clever.cloud/pricing/', checkedAt: 2026-08-02 }
   - { field: currencies, url: 'https://clever.cloud/pricing/', checkedAt: 2026-08-02 }
   - { field: billingPeriods, url: 'https://www.clever.cloud/developers/doc/billing/payments-invoicing/', checkedAt: 2026-08-02 }
   - { field: billingTiming, url: 'https://www.clever.cloud/developers/doc/billing/payments-invoicing/', checkedAt: 2026-08-02 }
+  - { field: collaboration, url: 'https://www.clever.cloud/developers/doc/account/', checkedAt: 2026-08-12 }
 figure:
   emoji: 🐇
   color: rgb(190, 53, 45)

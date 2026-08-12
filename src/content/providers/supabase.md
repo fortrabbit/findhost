@@ -60,7 +60,10 @@ cliTool: official
 social:
   github: https://github.com/supabase
   x: https://twitter.com/supabase
-checkedAt: 2026-08-01
+cdnIncluded: included
+staging: included
+collaboration: team
+checkedAt: 2026-08-12
 sources:
   - { field: regions, url: 'https://supabase.com/docs/guides/platform/regions', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://supabase.com/pricing', checkedAt: 2026-08-02 }
@@ -70,6 +73,9 @@ sources:
   - { field: exitWithin, url: 'https://supabase.com/terms', checkedAt: 2026-08-02 }
   - { field: ownership, url: 'https://supabase.com/company', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://supabase.com/docs/company/sla', checkedAt: 2026-08-01 }
+  - { field: cdnIncluded, url: 'https://supabase.com/pricing', checkedAt: 2026-08-12 }
+  - { field: staging, url: 'https://supabase.com/docs/guides/cli/managing-environments', checkedAt: 2026-08-12 }
+  - { field: collaboration, url: 'https://supabase.com/pricing', checkedAt: 2026-08-12 }
 figure:
   emoji: ⚡
   color: rgb(67, 168, 117)

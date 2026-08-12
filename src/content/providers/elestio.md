@@ -57,6 +57,7 @@ billingTiming: advance
 exitWithin: a-month
 entryPrice: { amount: 11, currency: USD, period: month }
 freeTier: none
+dnsHosting: included
 supportChannels:
   - email
   - phone
@@ -74,7 +75,7 @@ social:
   x: https://twitter.com/elest_io
   discord: https://discord.gg/4T4JGaMYrD
 status: active
-checkedAt: 2026-08-01
+checkedAt: 2026-08-12
 sources:
   - { field: entryPrice, url: 'https://elest.io/pricing', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://elest.io/pricing', checkedAt: 2026-08-01 }
@@ -91,6 +92,7 @@ sources:
   - { field: urls, url: 'https://elest.io/', checkedAt: 2026-08-01 }
   - { field: apiAvailable, url: 'https://elest.io', checkedAt: 2026-08-09 }
   - { field: cliTool, url: 'https://elest.io', checkedAt: 2026-08-09 }
+  - { field: dnsHosting, url: 'https://elest.io/pricing', checkedAt: 2026-08-12 }
 figure:
   emoji: 🧑‍🔧
   color: rgb(93, 77, 157)

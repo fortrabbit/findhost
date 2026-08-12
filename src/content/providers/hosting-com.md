@@ -32,7 +32,12 @@ managedDatabases:
   - mysql
   - postgres
 status: active
-checkedAt: 2026-08-08
+domainRegistration: included
+emailHosting: included
+staging: included
+testDomain: included
+collaboration: team
+checkedAt: 2026-08-12
 sources:
   - { field: supportHours, url: 'https://www.hosting.com/web-hosting/', checkedAt: 2026-08-01 }
   - { field: supportChannels, url: 'https://www.hosting.com/web-hosting/', checkedAt: 2026-08-01 }
@@ -47,6 +52,11 @@ sources:
   - { field: useCases, url: 'https://www.hosting.com/', checkedAt: 2026-07-31 }
   - { field: billingPeriods, url: 'https://www.hosting.com/web-hosting/', checkedAt: 2026-08-02 }
   - { field: headcount, url: 'https://www.hosting.com/about/', checkedAt: 2026-08-08 }
+  - { field: domainRegistration, url: 'https://www.hosting.com', checkedAt: 2026-08-12 }
+  - { field: emailHosting, url: 'https://www.hosting.com', checkedAt: 2026-08-12 }
+  - { field: staging, url: 'https://www.hosting.com', checkedAt: 2026-08-12 }
+  - { field: testDomain, url: 'https://www.hosting.com', checkedAt: 2026-08-12 }
+  - { field: collaboration, url: 'https://www.hosting.com', checkedAt: 2026-08-12 }
 figure:
   emoji: 🐌
   color: rgb(168, 67, 67)

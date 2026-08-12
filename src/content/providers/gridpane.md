@@ -46,7 +46,8 @@ apiAvailable: public
 cliTool: official
 status: active
 hqCountry: US
-checkedAt: 2026-08-09
+staging: included
+checkedAt: 2026-08-12
 sources:
   - { field: hqCountry, url: 'https://gridpane.com', checkedAt: 2026-08-09 }
   - { field: priceFrom, url: 'https://gridpane.com/pricing/', checkedAt: 2026-08-02 }
@@ -60,6 +61,7 @@ sources:
   - { field: infraContract, url: 'https://gridpane.com/pricing/', checkedAt: 2026-08-01 }
   - { field: apiAvailable, url: 'https://gridpane.com', checkedAt: 2026-08-09 }
   - { field: cliTool, url: 'https://gridpane.com', checkedAt: 2026-08-09 }
+  - { field: staging, url: 'https://gridpane.com/pricing/', checkedAt: 2026-08-12 }
 figure:
   emoji: 🧯
   color: rgb(131, 77, 157)

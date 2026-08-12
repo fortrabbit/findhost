@@ -56,7 +56,8 @@ social:
   facebook: https://www.facebook.com/MyDevil.net
   x: https://x.com/MyDevilnet
 status: active
-checkedAt: 2026-08-01
+emailHosting: included
+checkedAt: 2026-08-12
 sources:
   - { field: regions, url: 'https://www.mydevil.net', checkedAt: 2026-08-01 }
   - { field: hqCountry, url: 'https://www.mydevil.net', checkedAt: 2026-08-01 }
@@ -65,6 +66,7 @@ sources:
   - { field: currencies, url: 'https://www.mydevil.net', checkedAt: 2026-08-02 }
   - { field: billingPeriods, url: 'https://www.mydevil.net', checkedAt: 2026-08-02 }
   - { field: pricingModel, url: 'https://www.mydevil.net', checkedAt: 2026-08-01 }
+  - { field: emailHosting, url: 'https://www.mydevil.net', checkedAt: 2026-08-12 }
 figure:
   emoji: 😈
   color: rgb(172, 63, 94)

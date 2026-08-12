@@ -76,7 +76,11 @@ social:
   x: https://x.com/zeropsio
   linkedin: https://www.linkedin.com/company/zerops/
   discord: https://discord.gg/zeropsio
-checkedAt: 2026-08-01
+dnsHosting: included
+cdnIncluded: included
+staging: included
+collaboration: clients
+checkedAt: 2026-08-12
 favorite: true
 favoriteNote: Interesting newer project.
 sources:
@@ -92,6 +96,10 @@ sources:
   - { field: billingPeriods, url: 'https://docs.zerops.io/company/pricing', checkedAt: 2026-08-02 }
   - { field: billingTiming, url: 'https://docs.zerops.io/company/pricing', checkedAt: 2026-08-02 }
   - { field: urls, url: 'https://zerops.io/terms', checkedAt: 2026-08-01 }
+  - { field: dnsHosting, url: 'https://docs.zerops.io/features/networking/dns', checkedAt: 2026-08-12 }
+  - { field: cdnIncluded, url: 'https://docs.zerops.io/features/cdn', checkedAt: 2026-08-12 }
+  - { field: staging, url: 'https://docs.zerops.io/features/environments', checkedAt: 2026-08-12 }
+  - { field: collaboration, url: 'https://docs.zerops.io/features/rbac', checkedAt: 2026-08-12 }
 figure:
   emoji: 🧊
   color: rgb(67, 117, 168)

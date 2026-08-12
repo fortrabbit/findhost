@@ -25,12 +25,18 @@ freeTier: permanent
 supportChannels:
   - forum
 status: active
+dnsHosting: included
+emailHosting: included
+collaboration: team
 checkedAt: 2026-08-12
 sources:
   - { field: runtimes, url: 'https://hestiacp.com/docs/', checkedAt: 2026-08-12 }
   - { field: managedDatabases, url: 'https://hestiacp.com/docs/', checkedAt: 2026-08-12 }
   - { field: freeTier, url: 'https://hestiacp.com', checkedAt: 2026-08-12 }
   - { field: supportChannels, url: 'https://hestiacp.com', checkedAt: 2026-08-12 }
+  - { field: dnsHosting, url: 'https://hestiacp.com/docs/', checkedAt: 2026-08-12 }
+  - { field: emailHosting, url: 'https://hestiacp.com/docs/', checkedAt: 2026-08-12 }
+  - { field: collaboration, url: 'https://hestiacp.com/docs/', checkedAt: 2026-08-12 }
 figure:
   emoji: 📊
   color: rgb(52, 73, 94)

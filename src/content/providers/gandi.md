@@ -48,12 +48,15 @@ billingPeriods:
 billingTiming: advance
 entryPrice: { amount: 2, currency: EUR, period: month }
 freeTier: none
+domainRegistration: included
+dnsHosting: included
+emailHosting: included
 regions:
   - FR
   - LU
 apiAvailable: public
 status: active
-checkedAt: 2026-08-01
+checkedAt: 2026-08-12
 sources:
   - { field: priceFrom, url: 'https://www.gandi.net/en/simple-hosting', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://www.gandi.net/en/simple-hosting', checkedAt: 2026-08-02 }
@@ -64,6 +67,9 @@ sources:
   - { field: pricingModel, url: 'https://www.gandi.net/en/simple-hosting', checkedAt: 2026-08-01 }
   - { field: runtimes, url: 'https://www.gandi.net/en/simple-hosting', checkedAt: 2026-08-01 }
   - { field: regions, url: 'https://www.gandi.net/en/simple-hosting', checkedAt: 2026-08-01 }
+  - { field: domainRegistration, url: 'https://www.gandi.net/en/simple-hosting', checkedAt: 2026-08-12 }
+  - { field: dnsHosting, url: 'https://www.gandi.net/en/simple-hosting', checkedAt: 2026-08-12 }
+  - { field: emailHosting, url: 'https://www.gandi.net/en/simple-hosting', checkedAt: 2026-08-12 }
 figure:
   emoji: 📮
   color: rgb(77, 77, 157)

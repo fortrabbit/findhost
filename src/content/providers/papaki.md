@@ -48,9 +48,15 @@ freeTier: none
 certifications:
   - iso-27001
 status: active
-checkedAt: 2026-08-01
+domainRegistration: included
+dnsHosting: included
+emailHosting: included
+checkedAt: 2026-08-12
 sources:
   - { field: entryPrice, url: 'https://www.papaki.com/en/web-hosting/', checkedAt: 2026-08-01 }
+  - { field: domainRegistration, url: 'https://www.papaki.com/en/web-hosting/', checkedAt: 2026-08-12 }
+  - { field: dnsHosting, url: 'https://www.papaki.com/en/web-hosting/', checkedAt: 2026-08-12 }
+  - { field: emailHosting, url: 'https://www.papaki.com/en/web-hosting/', checkedAt: 2026-08-12 }
   - { field: priceFrom, url: 'https://www.papaki.com/en/web-hosting/', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://www.papaki.com/en/web-hosting/', checkedAt: 2026-08-02 }
   - { field: currencies, url: 'https://www.papaki.com/en/web-hosting/', checkedAt: 2026-08-02 }

@@ -34,7 +34,9 @@ audience:
   - smb
   - solo
 status: active
-checkedAt: 2026-08-08
+domainRegistration: paid-addon
+emailHosting: included
+checkedAt: 2026-08-12
 figure:
   emoji: 🇳🇱
   color: rgb(230, 85, 48)
@@ -46,6 +48,8 @@ sources:
   - { field: sshAccess, url: 'https://www.antagonist.nl/webhosting/', checkedAt: 2026-08-08 }
   - { field: regions, url: 'https://www.antagonist.nl/webhosting/', checkedAt: 2026-08-08 }
   - { field: entryPrice, url: 'https://www.antagonist.nl/webhosting/', checkedAt: 2026-08-08 }
+  - { field: domainRegistration, url: 'https://www.antagonist.nl', checkedAt: 2026-08-12 }
+  - { field: emailHosting, url: 'https://www.antagonist.nl', checkedAt: 2026-08-12 }
 ai: authored
 ---
 

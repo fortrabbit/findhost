@@ -49,9 +49,15 @@ supportChannels:
   - email
 supportHours: 24-7
 status: active
-checkedAt: 2026-08-01
+checkedAt: 2026-08-12
+domainRegistration: paid-addon
+dnsHosting: included
+emailHosting: included
 sources:
   - { field: entryPrice, url: 'https://raiolanetworks.com/hosting-web/', checkedAt: 2026-08-01 }
+  - { field: domainRegistration, url: 'https://raiolanetworks.com/hosting-web/', checkedAt: 2026-08-12 }
+  - { field: dnsHosting, url: 'https://raiolanetworks.com/hosting-web/', checkedAt: 2026-08-12 }
+  - { field: emailHosting, url: 'https://raiolanetworks.com/hosting-web/', checkedAt: 2026-08-12 }
   - { field: priceFrom, url: 'https://raiolanetworks.com/hosting-web/', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://raiolanetworks.com/hosting-web/', checkedAt: 2026-08-02 }
   - { field: currencies, url: 'https://raiolanetworks.com/metodos-de-pago/', checkedAt: 2026-08-02 }

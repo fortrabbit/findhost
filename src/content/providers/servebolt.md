@@ -51,6 +51,8 @@ currencies:
 billingPeriods:
   - monthly
 gdprDpa: standard
+cdnIncluded: included
+staging: included
 status: active
 checkedAt: 2026-08-12
 figure:
@@ -76,6 +78,8 @@ sources:
   - { field: currencies, url: 'https://servebolt.com/pricing', checkedAt: 2026-08-12 }
   - { field: billingPeriods, url: 'https://servebolt.com/pricing', checkedAt: 2026-08-12 }
   - { field: gdprDpa, url: 'https://servebolt.com/legal', checkedAt: 2026-08-12 }
+  - { field: cdnIncluded, url: 'https://servebolt.com/pricing', checkedAt: 2026-08-12 }
+  - { field: staging, url: 'https://servebolt.com/pricing', checkedAt: 2026-08-12 }
 ai: authored
 ---
 

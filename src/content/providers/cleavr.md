@@ -53,7 +53,11 @@ exitWithin: a-month
 entryPrice: { amount: 5.50, currency: USD, period: month }
 freeTier: trial
 hqCountry: US
-checkedAt: 2026-08-09
+dnsHosting: included
+staging: included
+testDomain: included
+collaboration: team
+checkedAt: 2026-08-12
 sources:
   - { field: hqCountry, url: 'https://cleavr.io', checkedAt: 2026-08-09 }
   - { field: entryPrice, url: 'https://cleavr.io/pricing', checkedAt: 2026-08-01 }
@@ -64,6 +68,10 @@ sources:
   - { field: billingPeriods, url: 'https://cleavr.io/pricing', checkedAt: 2026-08-02 }
   - { field: billingTiming, url: 'https://cleavr.io/terms', checkedAt: 2026-08-02 }
   - { field: exitWithin, url: 'https://cleavr.io/terms', checkedAt: 2026-08-02 }
+  - { field: dnsHosting, url: 'https://cleavr.io/features/', checkedAt: 2026-08-12 }
+  - { field: staging, url: 'https://cleavr.io/features/', checkedAt: 2026-08-12 }
+  - { field: testDomain, url: 'https://cleavr.io/features/', checkedAt: 2026-08-12 }
+  - { field: collaboration, url: 'https://cleavr.io/pricing/', checkedAt: 2026-08-12 }
 figure:
   emoji: 🔪
   color: rgb(157, 77, 77)

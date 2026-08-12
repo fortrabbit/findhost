@@ -48,7 +48,9 @@ supportChannels:
   - email
 supportHours: 24-7
 status: active
-checkedAt: 2026-08-01
+emailHosting: included
+domainRegistration: paid-addon
+checkedAt: 2026-08-12
 sources:
   - { field: regions, url: 'https://home.pl/hosting', checkedAt: 2026-08-01 }
   - { field: supportHours, url: 'https://home.pl/hosting', checkedAt: 2026-08-01 }
@@ -59,6 +61,8 @@ sources:
   - { field: priceTo, url: 'https://home.pl/hosting', checkedAt: 2026-08-02 }
   - { field: currencies, url: 'https://home.pl/hosting', checkedAt: 2026-08-02 }
   - { field: billingPeriods, url: 'https://home.pl/hosting', checkedAt: 2026-08-02 }
+  - { field: emailHosting, url: 'https://home.pl/hosting', checkedAt: 2026-08-12 }
+  - { field: domainRegistration, url: 'https://home.pl/domeny/', checkedAt: 2026-08-12 }
 figure:
   emoji: 🏠
   color: rgb(109, 77, 157)

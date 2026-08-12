@@ -46,9 +46,15 @@ billingPeriods:
   - monthly
 gdprDpa: standard
 status: active
+cdnIncluded: included
+staging: included
+collaboration: team
 checkedAt: 2026-08-12
 sources:
   - { field: category, url: 'https://pantheon.io', checkedAt: 2026-08-12 }
+  - { field: cdnIncluded, url: 'https://pantheon.io', checkedAt: 2026-08-12 }
+  - { field: staging, url: 'https://pantheon.io', checkedAt: 2026-08-12 }
+  - { field: collaboration, url: 'https://pantheon.io', checkedAt: 2026-08-12 }
   - { field: hqCountry, url: 'https://pantheon.pactsafe.io/legal.html', checkedAt: 2026-08-12 }
   - { field: ownership, url: 'https://pantheon.io', checkedAt: 2026-08-12 }
   - { field: runtimes, url: 'https://docs.pantheon.io/release-notes', checkedAt: 2026-08-12 }

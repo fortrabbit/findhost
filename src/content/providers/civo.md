@@ -54,7 +54,7 @@ iacSupport:
 certifications:
   - iso-27001
   - soc-2
-checkedAt: 2026-08-01
+checkedAt: 2026-08-12
 sources:
   - { field: regions, url: 'https://www.civo.com/docs/overview/regions', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://www.civo.com/pricing', checkedAt: 2026-08-01 }
@@ -64,6 +64,7 @@ sources:
   - { field: billingPeriods, url: 'https://www.civo.com/docs/account/billing', checkedAt: 2026-08-02 }
   - { field: billingTiming, url: 'https://www.civo.com/docs/account/billing', checkedAt: 2026-08-02 }
   - { field: exitWithin, url: 'https://www.civo.com/legal/terms', checkedAt: 2026-08-02 }
+  - { field: collaboration, url: 'https://www.civo.com/docs/account/teams', checkedAt: 2026-08-12 }
 figure:
   emoji: ☸️
   color: rgb(63, 125, 172)
@@ -72,6 +73,7 @@ figure:
 ai: authored
 gpuCapacity:
   - instances
+collaboration: team
 ---
 
 Civo is a British cloud built around Kubernetes rather than one that added it later. Control-plane components are not charged for, the bill covers worker nodes and add-ons only, and data transfer in and out is unmetered — three decisions that between them remove most of what makes a managed-Kubernetes invoice hard to predict in advance.

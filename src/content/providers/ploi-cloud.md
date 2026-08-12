@@ -46,12 +46,16 @@ favorite: true
 favoriteNote: Independent from NL. We like.
 status: active
 hqCountry: NL
-checkedAt: 2026-08-09
+checkedAt: 2026-08-12
 apiAvailable: public
 cliTool: official
 mcpServer: official
+staging: included
+collaboration: team
 sources:
   - { field: ownership, url: 'https://ploi.cloud', checkedAt: 2026-08-09 }
+  - { field: staging, url: 'https://ploi.io/features', checkedAt: 2026-08-12 }
+  - { field: collaboration, url: 'https://ploi.io/features', checkedAt: 2026-08-12 }
   - { field: hqCountry, url: 'https://ploi.cloud', checkedAt: 2026-08-09 }
   - { field: runsOn, url: 'https://ploi.cloud', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://ploi.cloud', checkedAt: 2026-07-31 }

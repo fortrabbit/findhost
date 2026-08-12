@@ -36,7 +36,9 @@ audience:
   - smb
   - solo
 status: active
-checkedAt: 2026-08-08
+domainRegistration: paid-addon
+emailHosting: paid-addon
+checkedAt: 2026-08-12
 figure:
   emoji: 🇿🇦
   color: rgb(152, 125, 53)
@@ -47,6 +49,8 @@ sources:
   - { field: entryPrice, url: 'https://www.afrihost.com', checkedAt: 2026-08-08 }
   - { field: priceTo, url: 'https://www.afrihost.com', checkedAt: 2026-08-08 }
   - { field: currencies, url: 'https://www.afrihost.com', checkedAt: 2026-08-08 }
+  - { field: domainRegistration, url: 'https://www.afrihost.com/domains/', checkedAt: 2026-08-12 }
+  - { field: emailHosting, url: 'https://www.afrihost.com', checkedAt: 2026-08-12 }
 ai: authored
 ---
 

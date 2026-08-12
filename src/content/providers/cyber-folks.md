@@ -43,7 +43,11 @@ billingPeriods:
 billingTiming: advance
 entryPrice: { amount: 306.27, currency: PLN, period: year }
 freeTier: none
-checkedAt: 2026-08-01
+domainRegistration: included
+dnsHosting: included
+emailHosting: included
+cdnIncluded: paid-addon
+checkedAt: 2026-08-12
 sources:
   - { field: entryPrice, url: 'https://cyberfolks.pl/hosting/', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://cyberfolks.pl/hosting/', checkedAt: 2026-08-02 }
@@ -52,6 +56,10 @@ sources:
   - { field: billingPeriods, url: 'https://cyberfolks.pl/hosting/', checkedAt: 2026-08-02 }
   - { field: billingTiming, url: 'https://cyberfolks.pl/hosting/', checkedAt: 2026-08-02 }
   - { field: hqCountry, url: 'https://cyberfolks.pl/o-nas/', checkedAt: 2026-08-01 }
+  - { field: domainRegistration, url: 'https://cyberfolks.pl/hosting/', checkedAt: 2026-08-12 }
+  - { field: dnsHosting, url: 'https://cyberfolks.pl/hosting/', checkedAt: 2026-08-12 }
+  - { field: emailHosting, url: 'https://cyberfolks.pl/hosting/', checkedAt: 2026-08-12 }
+  - { field: cdnIncluded, url: 'https://cyberfolks.pl/hosting/', checkedAt: 2026-08-12 }
 figure:
   emoji: 🧑‍🎤
   color: rgb(157, 77, 157)

@@ -74,7 +74,9 @@ social:
   linkedin: https://www.linkedin.com/company/sitehost/
   facebook: https://www.facebook.com/SiteHost/
   x: https://twitter.com/sitehostnz
-checkedAt: 2026-08-01
+domainRegistration: paid-addon
+emailHosting: paid-addon
+checkedAt: 2026-08-12
 sources:
   - { field: regions, url: 'https://sitehost.nz/hosting/cloud-containers', checkedAt: 2026-08-01 }
   - { field: regions, url: 'https://sitehost.nz/about', checkedAt: 2026-08-01 }
@@ -90,6 +92,8 @@ sources:
   - { field: billingTiming, url: 'https://sitehost.nz/about/terms', checkedAt: 2026-08-02 }
   - { field: exitWithin, url: 'https://sitehost.nz/about/terms', checkedAt: 2026-08-02 }
   - { field: urls, url: 'https://sitehost.nz/about/terms', checkedAt: 2026-08-01 }
+  - { field: domainRegistration, url: 'https://sitehost.nz/about', checkedAt: 2026-08-12 }
+  - { field: emailHosting, url: 'https://sitehost.nz/about', checkedAt: 2026-08-12 }
 figure:
   emoji: 🥝
   color: rgb(63, 172, 109)

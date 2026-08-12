@@ -30,7 +30,10 @@ apiAvailable: public
 iacSupport:
   - terraform
 status: active
-checkedAt: 2026-08-04
+domainRegistration: paid-addon
+emailHosting: included
+cdnIncluded: paid-addon
+checkedAt: 2026-08-12
 sources:
   - { field: hqCountry, url: 'https://beget.com/en/hosting', checkedAt: 2026-08-04 }
   - { field: founded, url: 'https://beget.com/en/hosting', checkedAt: 2026-08-04 }
@@ -41,6 +44,9 @@ sources:
   - { field: managedDatabases, url: 'https://beget.com/en', checkedAt: 2026-08-04 }
   - { field: iacSupport, url: 'https://github.com/beget/terraform-provider-beget', checkedAt: 2026-08-04 }
   - { field: apiAvailable, url: 'https://beget.com', checkedAt: 2026-08-09 }
+  - { field: domainRegistration, url: 'https://beget.com/en/hosting', checkedAt: 2026-08-12 }
+  - { field: emailHosting, url: 'https://beget.com/en/hosting', checkedAt: 2026-08-12 }
+  - { field: cdnIncluded, url: 'https://beget.com/en', checkedAt: 2026-08-12 }
 figure:
   emoji: 🇷🇺
   color: rgb(104, 77, 157)

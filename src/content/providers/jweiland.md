@@ -35,7 +35,9 @@ audience:
   - smb
   - agency
 status: active
-checkedAt: 2026-08-07
+emailHosting: included
+cdnIncluded: included
+checkedAt: 2026-08-12
 sources:
   - { field: software, url: 'https://jweiland.net', checkedAt: 2026-08-07 }
   - { field: runtimes, url: 'https://jweiland.net/hosting/hilfe-support/technik.html', checkedAt: 2026-08-07 }
@@ -43,6 +45,8 @@ sources:
   - { field: sshAccess, url: 'https://jweiland.net/hosting/hilfe-support/technik.html', checkedAt: 2026-08-07 }
   - { field: regions, url: 'https://jweiland.net/hosting/hilfe-support/technik.html', checkedAt: 2026-08-07 }
   - { field: runsOn, url: 'https://jweiland.net/hosting/hilfe-support/technik.html', checkedAt: 2026-08-07 }
+  - { field: emailHosting, url: 'https://jweiland.net', checkedAt: 2026-08-12 }
+  - { field: cdnIncluded, url: 'https://jweiland.net', checkedAt: 2026-08-12 }
 figure:
   emoji: 🔧
   color: rgb(70, 140, 110)

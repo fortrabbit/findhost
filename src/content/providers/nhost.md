@@ -37,7 +37,10 @@ apiAvailable: public
 cliTool: official
 status: active
 hqCountry: PT
-checkedAt: 2026-08-09
+cdnIncluded: included
+domainRegistration: paid-addon
+collaboration: team
+checkedAt: 2026-08-12
 sources:
   - { field: hqCountry, url: 'https://nhost.io/about', checkedAt: 2026-08-09 }
   - { field: entryPrice, url: 'https://nhost.io/pricing', checkedAt: 2026-08-01 }
@@ -46,6 +49,9 @@ sources:
   - { field: billingPeriods, url: 'https://nhost.io/pricing', checkedAt: 2026-08-02 }
   - { field: pricingModel, url: 'https://nhost.io/pricing', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://nhost.io/pricing', checkedAt: 2026-08-01 }
+  - { field: cdnIncluded, url: 'https://nhost.io/pricing', checkedAt: 2026-08-12 }
+  - { field: domainRegistration, url: 'https://nhost.io/pricing', checkedAt: 2026-08-12 }
+  - { field: collaboration, url: 'https://nhost.io/pricing', checkedAt: 2026-08-12 }
 figure:
   emoji: 🧊
   color: rgb(77, 117, 157)

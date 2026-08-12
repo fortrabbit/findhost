@@ -58,8 +58,10 @@ supportChannels:
   - email
 supportHours: 24-7
 status: active
-checkedAt: 2026-08-09
+checkedAt: 2026-08-12
 apiAvailable: public
+dnsHosting: included
+emailHosting: included
 cliTool: official
 mcpServer: official
 sources:
@@ -76,6 +78,8 @@ sources:
   - { field: apiAvailable, url: 'https://www.opalstack.com', checkedAt: 2026-08-09 }
   - { field: cliTool, url: 'https://www.opalstack.com', checkedAt: 2026-08-09 }
   - { field: mcpServer, url: 'https://www.opalstack.com', checkedAt: 2026-08-09 }
+  - { field: dnsHosting, url: 'https://www.opalstack.com/', checkedAt: 2026-08-12 }
+  - { field: emailHosting, url: 'https://www.opalstack.com/', checkedAt: 2026-08-12 }
 figure:
   emoji: 💠
   color: rgb(77, 131, 157)

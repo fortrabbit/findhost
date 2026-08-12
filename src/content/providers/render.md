@@ -49,9 +49,15 @@ regions:
 apiAvailable: public
 cliTool: official
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-12
+staging: included
+testDomain: included
+collaboration: team
 sources:
   - { field: hqCountry, url: 'https://render.com/about', checkedAt: 2026-07-31 }
+  - { field: staging, url: 'https://render.com/docs/web-services', checkedAt: 2026-08-12 }
+  - { field: testDomain, url: 'https://render.com/docs/web-services', checkedAt: 2026-08-12 }
+  - { field: collaboration, url: 'https://render.com/docs/teams', checkedAt: 2026-08-12 }
   - { field: ownership, url: 'https://render.com/about', checkedAt: 2026-07-31 }
   - { field: runtimes, url: 'https://render.com/docs/language-support', checkedAt: 2026-07-31 }
   - { field: deployMethods, url: 'https://render.com/docs/web-services', checkedAt: 2026-07-31 }

@@ -58,7 +58,7 @@ supportChannels:
   - email
 supportHours: 24-7
 status: active
-checkedAt: 2026-08-01
+checkedAt: 2026-08-12
 sources:
   - { field: regions, url: 'https://www.milesweb.in/hosting/web-hosting', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://www.milesweb.in/hosting/web-hosting', checkedAt: 2026-08-01 }

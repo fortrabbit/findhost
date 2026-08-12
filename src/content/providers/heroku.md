@@ -66,7 +66,10 @@ regions:
   - JP
 cliTool: official
 status: active
-checkedAt: 2026-08-01
+staging: included
+testDomain: included
+collaboration: team
+checkedAt: 2026-08-12
 sources:
   - { field: entryPrice, url: 'https://www.heroku.com/pricing', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://www.heroku.com/pricing', checkedAt: 2026-08-01 }
@@ -88,6 +91,9 @@ sources:
   - { field: managedDatabases, url: 'https://elements.heroku.com/addons/heroku-postgresql', checkedAt: 2026-07-31 }
   - { field: useCases, url: 'https://www.heroku.com/', checkedAt: 2026-07-31 }
   - { field: audience, url: 'https://www.heroku.com/', checkedAt: 2026-07-31 }
+  - { field: staging, url: 'https://devcenter.heroku.com/articles/pipelines', checkedAt: 2026-08-12 }
+  - { field: testDomain, url: 'https://devcenter.heroku.com/articles/pipelines', checkedAt: 2026-08-12 }
+  - { field: collaboration, url: 'https://heroku.com/teams', checkedAt: 2026-08-12 }
 figure:
   emoji: 🎸
   color: rgb(117, 45, 190)

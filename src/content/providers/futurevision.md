@@ -36,8 +36,10 @@ useCases:
   - portfolio
 audience:
   - solo
+dnsHosting: paid-addon
+cdnIncluded: paid-addon
 status: active
-checkedAt: 2026-08-09
+checkedAt: 2026-08-12
 sources:
   - { field: category, url: 'https://futurevision.host', checkedAt: 2026-08-09 }
   - { field: software, url: 'https://futurevision.host', checkedAt: 2026-08-09 }
@@ -45,6 +47,8 @@ sources:
   - { field: priceTo, url: 'https://futurevision.host', checkedAt: 2026-08-09 }
   - { field: freeTier, url: 'https://futurevision.host', checkedAt: 2026-08-09 }
   - { field: deployMethods, url: 'https://futurevision.host', checkedAt: 2026-08-09 }
+  - { field: dnsHosting, url: 'https://futurevision.host', checkedAt: 2026-08-12 }
+  - { field: cdnIncluded, url: 'https://futurevision.host', checkedAt: 2026-08-12 }
 figure:
   emoji: 🔮
   color: rgb(124, 58, 156)

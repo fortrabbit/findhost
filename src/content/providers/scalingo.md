@@ -70,7 +70,10 @@ iacSupport:
 social:
   github: https://github.com/Scalingo
 status: active
-checkedAt: 2026-08-01
+staging: included
+testDomain: included
+collaboration: team
+checkedAt: 2026-08-12
 sources:
   - { field: regions, url: 'https://doc.scalingo.com/platform/internals/regions', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://scalingo.com/pricing', checkedAt: 2026-08-01 }
@@ -80,6 +83,9 @@ sources:
   - { field: billingPeriods, url: 'https://scalingo.com/general-terms-and-conditions', checkedAt: 2026-08-02 }
   - { field: billingTiming, url: 'https://scalingo.com/general-terms-and-conditions', checkedAt: 2026-08-02 }
   - { field: exitWithin, url: 'https://scalingo.com/general-terms-and-conditions', checkedAt: 2026-08-02 }
+  - { field: staging, url: 'https://doc.scalingo.com/', checkedAt: 2026-08-12 }
+  - { field: testDomain, url: 'https://doc.scalingo.com/', checkedAt: 2026-08-12 }
+  - { field: collaboration, url: 'https://doc.scalingo.com/', checkedAt: 2026-08-12 }
 figure:
   emoji: 🥖
   color: rgb(55, 83, 179)

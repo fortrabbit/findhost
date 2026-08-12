@@ -51,9 +51,13 @@ supportChannels:
   - chat
   - phone
 status: active
-checkedAt: 2026-08-09
+checkedAt: 2026-08-12
 apiAvailable: public
 mcpServer: official
+domainRegistration: included
+dnsHosting: included
+emailHosting: included
+cdnIncluded: included
 sources:
   - { field: regions, url: 'https://lolipop.jp/pricing/', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://lolipop.jp/pricing/', checkedAt: 2026-08-01 }
@@ -65,6 +69,10 @@ sources:
   - { field: supportChannels, url: 'https://lolipop.jp/pricing/', checkedAt: 2026-08-01 }
   - { field: apiAvailable, url: 'https://lolipop.jp', checkedAt: 2026-08-09 }
   - { field: mcpServer, url: 'https://lolipop.jp', checkedAt: 2026-08-09 }
+  - { field: domainRegistration, url: 'https://lolipop.jp/pricing/', checkedAt: 2026-08-12 }
+  - { field: dnsHosting, url: 'https://lolipop.jp/pricing/', checkedAt: 2026-08-12 }
+  - { field: emailHosting, url: 'https://lolipop.jp/pricing/', checkedAt: 2026-08-12 }
+  - { field: cdnIncluded, url: 'https://lolipop.jp', checkedAt: 2026-08-12 }
 figure:
   emoji: 🍭
   color: rgb(166, 69, 124)

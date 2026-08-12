@@ -46,7 +46,7 @@ regions:
 cliTool: official
 status: active
 hqCountry: US
-checkedAt: 2026-08-09
+checkedAt: 2026-08-12
 sources:
   - { field: hqCountry, url: 'https://www.gigalixir.com/contact', checkedAt: 2026-08-09 }
   - { field: priceFrom, url: 'https://www.gigalixir.com/pricing/', checkedAt: 2026-08-02 }

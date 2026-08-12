@@ -58,7 +58,7 @@ cliTool: official
 iacSupport:
   - terraform
 status: active
-checkedAt: 2026-08-01
+checkedAt: 2026-08-12
 sources:
   - { field: regions, url: 'https://www.latitude.sh/locations', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://www.latitude.sh/pricing', checkedAt: 2026-08-01 }

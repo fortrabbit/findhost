@@ -49,7 +49,7 @@ social:
   github: https://github.com/superfly
 cliTool: official
 status: active
-checkedAt: 2026-08-01
+checkedAt: 2026-08-12
 sources:
   - { field: entryPrice, url: 'https://fly.io/docs/about/pricing/', checkedAt: 2026-08-01 }
   - { field: infraContract, url: 'https://fly.io/docs/reference/regions/', checkedAt: 2026-07-31 }

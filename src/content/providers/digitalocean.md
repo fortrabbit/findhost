@@ -68,7 +68,7 @@ iacSupport:
   - terraform
   - ansible
 status: active
-checkedAt: 2026-08-01
+checkedAt: 2026-08-12
 sources:
   - { field: entryPrice, url: 'https://www.digitalocean.com/pricing/droplets', checkedAt: 2026-08-01 }
   - { field: founded, url: 'https://www.digitalocean.com/about', checkedAt: 2026-07-31 }

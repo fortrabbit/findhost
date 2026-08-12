@@ -47,7 +47,10 @@ supportHours: business-hours
 supportTiering: paid-upgrade
 status: active
 hqCountry: US
-checkedAt: 2026-08-09
+testDomain: included
+staging: included
+collaboration: team
+checkedAt: 2026-08-12
 apiAvailable: public
 sources:
   - { field: hqCountry, url: 'https://laravel.com/forge', checkedAt: 2026-08-09 }
@@ -71,6 +74,9 @@ sources:
   - { field: software, url: 'https://laravel.com/forge', checkedAt: 2026-07-31 }
   - { field: audience, url: 'https://laravel.com/forge', checkedAt: 2026-07-31 }
   - { field: apiAvailable, url: 'https://laravel.com/forge/docs', checkedAt: 2026-08-09 }
+  - { field: testDomain, url: 'https://laravel.com/forge', checkedAt: 2026-08-12 }
+  - { field: staging, url: 'https://laravel.com/forge', checkedAt: 2026-08-12 }
+  - { field: collaboration, url: 'https://laravel.com/forge', checkedAt: 2026-08-12 }
 figure:
   emoji: 💸
   color: rgb(89, 183, 52)

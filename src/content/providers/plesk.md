@@ -53,11 +53,19 @@ billingPeriods:
 billingTiming: advance
 freeTier: trial
 status: active
-checkedAt: 2026-08-09
+checkedAt: 2026-08-12
 apiAvailable: public
 cliTool: official
+dnsHosting: included
+emailHosting: included
+staging: included
+collaboration: team
 sources:
   - { field: hqCountry, url: 'https://www.plesk.com/legal/', checkedAt: 2026-08-01 }
+  - { field: dnsHosting, url: 'https://www.plesk.com/features/', checkedAt: 2026-08-12 }
+  - { field: emailHosting, url: 'https://www.plesk.com/features/', checkedAt: 2026-08-12 }
+  - { field: staging, url: 'https://www.plesk.com/features/', checkedAt: 2026-08-12 }
+  - { field: collaboration, url: 'https://www.plesk.com/features/', checkedAt: 2026-08-12 }
   - { field: ownership, url: 'https://www.plesk.com/legal/', checkedAt: 2026-08-01 }
   - { field: parent, url: 'https://www.plesk.com/legal/', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://www.plesk.com/legal/', checkedAt: 2026-08-01 }

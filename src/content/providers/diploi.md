@@ -39,8 +39,11 @@ pricingModel: hourly
 freeTier: trial
 apiAvailable: none
 cliTool: official
+cdnIncluded: included
+staging: included
+collaboration: team
 status: active
-checkedAt: 2026-08-09
+checkedAt: 2026-08-12
 sources:
   - { field: category, url: 'https://diploi.com/', checkedAt: 2026-08-09 }
   - { field: hqCountry, url: 'https://diploi.com/', checkedAt: 2026-08-09 }
@@ -52,6 +55,9 @@ sources:
   - { field: entryPrice, url: 'https://diploi.com/pricing', checkedAt: 2026-08-09 }
   - { field: pricingModel, url: 'https://diploi.com/pricing', checkedAt: 2026-08-09 }
   - { field: freeTier, url: 'https://diploi.com/pricing', checkedAt: 2026-08-09 }
+  - { field: cdnIncluded, url: 'https://diploi.com/pricing', checkedAt: 2026-08-12 }
+  - { field: staging, url: 'https://diploi.com/pricing', checkedAt: 2026-08-12 }
+  - { field: collaboration, url: 'https://diploi.com/pricing', checkedAt: 2026-08-12 }
 figure:
   emoji: 💻
   color: rgb(59, 130, 246)
