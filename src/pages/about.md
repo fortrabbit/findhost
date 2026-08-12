@@ -35,10 +35,14 @@ This is currently pet project. I may extend it. There are plenty of ideas, from 
 
 There are thousands of web hosting providers out there, WHTop claims to have 29k hosting providers recorded. This webhost list here is far from being complete. It just gives you some options for different flavors in different locations. I picked the providers that are most visible to me. Criteria:
 
-1. **Runs an app, or serves a site.** 
+1. **Runs an app, or serves a site.** Either limb counts. Running an app means the customer deploys server-side code of their own — a project they change, usually a shell to change it from. A managed instance of one product they cannot alter is software as a service, not hosting. Serving a site counts on its own: a static host runs nothing, and somebody still has to choose one.
 2. **Sold to the public.** Purchasable without sales call or invitation.
 3. **Public pricing.** A price for at least one plan is published without login.
-4. **Public technical documentation.** 
+4. **Public technical documentation.** Documentation a developer could work from, not a billing FAQ.
+5. **Twelve months old.** Purchasable for at least a year.
+6. **Two independent artifacts.** A framework's own deployment guide, a third-party package or CLI, an unaffiliated talk or tutorial, an issue-tracker thread. Press releases, sponsored posts, affiliate reviews and the provider's own blog do not count.
+
+Failing one of these is not a criticism, and most rulings reverse the moment the missing evidence appears. A record that fails names the number it failed on.
 
 ## Favorite records with a ♥️
 
