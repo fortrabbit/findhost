@@ -15,7 +15,7 @@ The above is quote by David N. Welton.
 
 ## Publisher
 
-I am [Frank Lämmer](https://www.franklaemmer.de), co-founder of a small bootstrapped hosting provider, [fortrabbit](https://www.fortrabbit.com) which is also [featured here](/fortrabbit/). Note the bias and the self promotion.
+I am [Frank Lämmer](https://www.franklaemmer.de), co-founder of a small bootstrapped hosting provider, [fortrabbit](https://www.fortrabbit.com) which is also [featured here](/fortrabbit/). Note the bias and the shameless self promotion.
 
 ## Project motivation
 
@@ -35,7 +35,7 @@ This is currently pet project. I may extend it. There are plenty of ideas, from 
 
 There are thousands of web hosting providers out there, WHTop claims to have 29k hosting providers recorded. This webhost list here is far from being complete. It just gives you some options for different flavors in different locations. I picked the providers that are most visible to me. Criteria:
 
-1. **Runs an app, serves a site, or sells one of the things a site needs.** Running an app means the customer deploys server-side code of their own — a project they change, usually a shell to change it from. A managed instance of one product they cannot alter is software as a service, not hosting. Serving a site counts on its own: a static host runs nothing, and somebody still has to choose one. The third limb is newer and narrower — a [domain registrar](/categories/domains-dns/), a mail host, a database service — because a site is rarely one invoice, and a register that only named the part running the code left the rest of the bill unexplained.
+1. **Runs an app, serves a site, or sells one of the things a site needs.** Code the customer deploys and can change — a managed instance of one product they cannot alter is software as a service, not hosting. Static hosting counts too. So do the other invoices: a [registrar](/categories/domains-dns/), a mail host, a database service.
 2. **Sold to the public.** Purchasable without sales call or invitation.
 3. **Public pricing.** A price for at least one plan is published without login.
 4. **Public technical documentation.** Documentation a developer could work from, not a billing FAQ.
