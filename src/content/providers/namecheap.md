@@ -11,13 +11,6 @@ description: A US domain registrar that also sells shared hosting and virtual se
 hqCountry: US
 status: active
 checkedAt: 2026-08-12
-caveat:
-  emoji: 🚧
-  color: rgb(60, 60, 70)
-  textColor: rgb(235, 235, 240)
-  text: Thinner than the records around it, because the site refuses to be read by anything but a browser.
-  by: Frank Lämmer
-  on: 2026-08-12
 sources:
   - { field: docs, url: 'https://www.namecheap.com/support/knowledgebase/', checkedAt: 2026-08-12 }
 figure:
