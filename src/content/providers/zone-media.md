@@ -57,7 +57,10 @@ supportChannels:
   - phone
   - chat
 apiAvailable: public
-checkedAt: 2026-08-01
+domainRegistration: paid-addon
+dnsHosting: included
+emailHosting: included
+checkedAt: 2026-08-12
 sources:
   - { field: regions, url: 'https://www.zone.ee/en/about/', checkedAt: 2026-08-01 }
   - { field: founded, url: 'https://www.zone.ee/en/about/', checkedAt: 2026-08-01 }
@@ -69,6 +72,9 @@ sources:
   - { field: currencies, url: 'https://www.zone.ee/en/web-hosting/prices/', checkedAt: 2026-08-02 }
   - { field: billingPeriods, url: 'https://www.zone.ee/en/web-hosting/prices/', checkedAt: 2026-08-02 }
   - { field: urls, url: 'https://help.zone.eu/en/', checkedAt: 2026-08-01 }
+  - { field: domainRegistration, url: 'https://www.zone.ee/en/web-hosting/prices/', checkedAt: 2026-08-12 }
+  - { field: dnsHosting, url: 'https://www.zone.ee/en/web-hosting/prices/', checkedAt: 2026-08-12 }
+  - { field: emailHosting, url: 'https://www.zone.ee/en/web-hosting/prices/', checkedAt: 2026-08-12 }
 figure:
   emoji: 🛰️
   color: rgb(55, 97, 179)

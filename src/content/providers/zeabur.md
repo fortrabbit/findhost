@@ -61,8 +61,12 @@ hqCountry: US
 social:
   github: https://github.com/zeabur
   x: https://x.com/zeaburapp
-checkedAt: 2026-08-01
+testDomain: included
+collaboration: team
+checkedAt: 2026-08-12
 sources:
+  - { field: testDomain, url: 'https://zeabur.com/docs/deploy/networking/public-networking', checkedAt: 2026-08-12 }
+  - { field: collaboration, url: 'https://zeabur.com/docs/operations/team/invite-member', checkedAt: 2026-08-12 }
   - { field: hqCountry, url: 'https://zeabur.com/about', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://zeabur.com/pricing', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://zeabur.com/pricing', checkedAt: 2026-08-02 }

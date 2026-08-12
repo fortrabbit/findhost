@@ -49,9 +49,13 @@ regions:
   - US
   - FI
   - SG
-checkedAt: 2026-08-09
+testDomain: included
+collaboration: team
 apiAvailable: public
+checkedAt: 2026-08-12
 sources:
+  - { field: testDomain, url: 'https://sliplane.io/pricing', checkedAt: 2026-08-12 }
+  - { field: collaboration, url: 'https://sliplane.io/pricing', checkedAt: 2026-08-12 }
   - { field: regions, url: 'https://sliplane.io/pricing', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://sliplane.io/pricing', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://sliplane.io/pricing', checkedAt: 2026-08-01 }

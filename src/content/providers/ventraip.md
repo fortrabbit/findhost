@@ -48,11 +48,14 @@ supportHours: 24-7
 contractMinimum: none
 certifications:
   - iso-27001
+domainRegistration: paid-addon
+dnsHosting: included
+emailHosting: included
 social:
   x: https://twitter.com/VentraIP/
   facebook: https://www.facebook.com/ventraip
   youtube: https://www.youtube.com/c/VentraIPAU/videos
-checkedAt: 2026-08-01
+checkedAt: 2026-08-12
 sources:
   - { field: founded, url: 'https://ventraip.com.au/about-us/', checkedAt: 2026-08-01 }
   - { field: hqCountry, url: 'https://ventraip.com.au/about-us/', checkedAt: 2026-08-01 }
@@ -64,6 +67,9 @@ sources:
   - { field: priceTo, url: 'https://ventraip.com.au/web-hosting/custom-hosting/', checkedAt: 2026-08-02 }
   - { field: currencies, url: 'https://ventraip.com.au/web-hosting/', checkedAt: 2026-08-02 }
   - { field: billingPeriods, url: 'https://ventraip.com.au/web-hosting/', checkedAt: 2026-08-02 }
+  - { field: domainRegistration, url: 'https://ventraip.com.au/domain-names/', checkedAt: 2026-08-12 }
+  - { field: dnsHosting, url: 'https://ventraip.com.au/domain-names/', checkedAt: 2026-08-12 }
+  - { field: emailHosting, url: 'https://ventraip.com.au/domain-names/', checkedAt: 2026-08-12 }
 figure:
   emoji: 🪃
   color: rgb(179, 83, 55)

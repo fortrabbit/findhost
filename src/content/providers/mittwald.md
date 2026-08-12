@@ -64,7 +64,9 @@ supportHours: 24-7
 apiAvailable: public
 cliTool: official
 status: active
-checkedAt: 2026-08-09
+staging: included
+collaboration: clients
+checkedAt: 2026-08-12
 sources:
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1383', checkedAt: 2026-08-10 }
   - { field: software, url: 'https://www.mittwald.de/webhosting', checkedAt: 2026-08-09 }
@@ -83,6 +85,8 @@ sources:
   - { field: supportChannels, url: 'https://www.mittwald.de/webhosting', checkedAt: 2026-08-01 }
   - { field: energyClaim, url: 'https://www.mittwald.de/webhosting', checkedAt: 2026-08-01 }
   - { field: certifications, url: 'https://www.mittwald.de/webhosting', checkedAt: 2026-08-01 }
+  - { field: staging, url: 'https://www.mittwald.de/webhosting', checkedAt: 2026-08-12 }
+  - { field: collaboration, url: 'https://www.mittwald.de/webhosting', checkedAt: 2026-08-12 }
 social:
   github: https://github.com/mittwald
   facebook: https://www.facebook.com/mittwald

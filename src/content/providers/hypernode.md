@@ -29,12 +29,14 @@ audience:
 apiAvailable: public
 cliTool: official
 status: active
-checkedAt: 2026-07-31
+staging: included
+checkedAt: 2026-08-12
 sources:
   - { field: software, url: 'https://www.hypernode.com', checkedAt: 2026-07-31 }
   - { field: apiAvailable, url: 'https://www.hypernode.com', checkedAt: 2026-07-31 }
   - { field: cliTool, url: 'https://www.hypernode.com', checkedAt: 2026-07-31 }
   - { field: parent, url: 'https://www.hypernode.com', checkedAt: 2026-07-31 }
+  - { field: staging, url: 'https://docs.hypernode.com/', checkedAt: 2026-08-12 }
 figure:
   emoji: 🛒
   color: rgb(78, 102, 164)

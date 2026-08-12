@@ -50,10 +50,14 @@ regions:
   - AU
 status: active
 hqCountry: US
-checkedAt: 2026-08-09
+testDomain: included
+staging: included
 apiAvailable: public
 mcpServer: official
+checkedAt: 2026-08-12
 sources:
+  - { field: testDomain, url: 'https://docs.sevalla.com/applications/domains/', checkedAt: 2026-08-12 }
+  - { field: staging, url: 'https://sevalla.com/pricing/', checkedAt: 2026-08-12 }
   - { field: hqCountry, url: 'https://sevalla.com', checkedAt: 2026-08-09 }
   - { field: priceFrom, url: 'https://sevalla.com/pricing/', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://docs.sevalla.com/billing/', checkedAt: 2026-08-02 }

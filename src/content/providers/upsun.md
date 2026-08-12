@@ -62,10 +62,14 @@ social:
   linkedin: https://www.linkedin.com/company/upsundotcom
   youtube: https://www.youtube.com/@upsundotcom
 status: active
-checkedAt: 2026-08-09
+staging: included
+collaboration: team
 apiAvailable: public
 cliTool: official
+checkedAt: 2026-08-12
 sources:
+  - { field: staging, url: 'https://upsun.com/pricing/', checkedAt: 2026-08-12 }
+  - { field: collaboration, url: 'https://upsun.com/pricing/', checkedAt: 2026-08-12 }
   - { field: regions, url: 'https://developer.upsun.com/docs/development/regions', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://status.upsun.com/', checkedAt: 2026-08-01 }
   - { field: runtimes, url: 'https://developer.upsun.com/docs/get-started/stacks', checkedAt: 2026-07-31 }

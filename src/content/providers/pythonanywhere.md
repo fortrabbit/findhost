@@ -48,8 +48,10 @@ entryPrice: { amount: 10, currency: USD, period: month }
 freeTier: permanent
 contractMinimum: none
 status: active
-checkedAt: 2026-08-01
+testDomain: included
+checkedAt: 2026-08-12
 sources:
+  - { field: testDomain, url: 'https://www.pythonanywhere.com/pricing/', checkedAt: 2026-08-12 }
   - { field: entryPrice, url: 'https://www.pythonanywhere.com/pricing/', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://www.pythonanywhere.com/pricing/', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://www.pythonanywhere.com/pricing/', checkedAt: 2026-08-02 }

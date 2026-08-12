@@ -51,6 +51,8 @@ cliTool: official
 status: active
 checkedAt: 2026-08-12
 sources:
+  - { field: testDomain, url: 'https://fly.io/docs/networking/custom-domain/', checkedAt: 2026-08-12 }
+  - { field: collaboration, url: 'https://fly.io/docs/security/', checkedAt: 2026-08-12 }
   - { field: entryPrice, url: 'https://fly.io/docs/about/pricing/', checkedAt: 2026-08-01 }
   - { field: infraContract, url: 'https://fly.io/docs/reference/regions/', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://fly.io/docs/reference/regions/', checkedAt: 2026-07-31 }
@@ -72,6 +74,8 @@ figure:
   color: rgb(45, 142, 190)
   textColor: rgb(234, 242, 246)
   text: Fly high.
+testDomain: included
+collaboration: team
 ---
 
 Fly.io runs applications as Firecracker microVMs, which it calls Machines, on hardware it describes as "servers we run ourselves" spread across regions on several continents. Deployment is a CLI operation: `fly deploy` builds the app from an explicitly named image, a `[build]` section in `fly.toml` or a Dockerfile in the working directory, then starts it on one or more Machines.

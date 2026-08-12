@@ -54,7 +54,8 @@ regions:
 apiAvailable: public
 cliTool: official
 status: active
-checkedAt: 2026-08-01
+collaboration: team
+checkedAt: 2026-08-12
 sources:
   - { field: priceFrom, url: 'https://www.koyeb.com/pricing', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://www.koyeb.com/pricing', checkedAt: 2026-08-02 }
@@ -65,6 +66,7 @@ sources:
   - { field: freeTier, url: 'https://www.koyeb.com/pricing', checkedAt: 2026-07-31 }
   - { field: entryPrice, url: 'https://www.koyeb.com/pricing', checkedAt: 2026-08-01 }
   - { field: regions, url: 'https://www.koyeb.com/docs/reference/regions', checkedAt: 2026-08-01 }
+  - { field: collaboration, url: 'https://www.koyeb.com', checkedAt: 2026-08-12 }
 figure:
   emoji: 🛫
   color: rgb(64, 75, 171)

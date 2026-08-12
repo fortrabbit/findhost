@@ -36,7 +36,9 @@ audience:
   - smb
   - solo
 status: active
-checkedAt: 2026-08-08
+checkedAt: 2026-08-12
+domainRegistration: paid-addon
+dnsHosting: included
 figure:
   emoji: 🇮🇪
   color: rgb(16, 126, 67)
@@ -47,6 +49,8 @@ sources:
   - { field: entryPrice, url: 'https://www.blacknight.com/hosting/', checkedAt: 2026-08-08 }
   - { field: priceTo, url: 'https://www.blacknight.com/hosting/', checkedAt: 2026-08-08 }
   - { field: software, url: 'https://www.blacknight.com/hosting/', checkedAt: 2026-08-08 }
+  - { field: domainRegistration, url: 'https://www.blacknight.com/domains/', checkedAt: 2026-08-12 }
+  - { field: dnsHosting, url: 'https://www.blacknight.com/domains/', checkedAt: 2026-08-12 }
 ai: authored
 ---
 

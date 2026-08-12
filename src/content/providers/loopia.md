@@ -52,7 +52,10 @@ supportChannels:
 supportHours: business-hours
 apiAvailable: public
 status: active
-checkedAt: 2026-08-01
+checkedAt: 2026-08-12
+domainRegistration: paid-addon
+dnsHosting: included
+emailHosting: included
 sources:
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1010', checkedAt: 2026-08-10 }
   - { field: entryPrice, url: 'https://www.loopia.se/webbhotell/priser/', checkedAt: 2026-08-01 }
@@ -68,6 +71,9 @@ sources:
   - { field: hqCountry, url: 'https://www.loopia.se/om-loopia/', checkedAt: 2026-08-01 }
   - { field: parent, url: 'https://www.loopia.se/om-loopia/', checkedAt: 2026-08-01 }
   - { field: ownership, url: 'https://www.loopia.se/om-loopia/', checkedAt: 2026-08-01 }
+  - { field: domainRegistration, url: 'https://www.loopia.se/om-loopia/', checkedAt: 2026-08-12 }
+  - { field: dnsHosting, url: 'https://www.loopia.se/om-loopia/', checkedAt: 2026-08-12 }
+  - { field: emailHosting, url: 'https://www.loopia.se/om-loopia/', checkedAt: 2026-08-12 }
 figure:
   emoji: 🪟
   color: rgb(45, 112, 190)

@@ -51,8 +51,11 @@ supportChannels:
   - email
   - chat
 supportHours: 24-7
+domainRegistration: paid-addon
+dnsHosting: included
+emailHosting: included
 status: active
-checkedAt: 2026-08-09
+checkedAt: 2026-08-12
 apiAvailable: public
 social:
   facebook: https://www.facebook.com/WebSupport.sk
@@ -72,6 +75,9 @@ sources:
   - { field: exitWithin, url: 'https://www.websupport.sk/obchodne-podmienky/', checkedAt: 2026-08-02 }
   - { field: urls, url: 'https://www.websupport.sk/podmienky', checkedAt: 2026-08-01 }
   - { field: apiAvailable, url: 'https://www.websupport.sk', checkedAt: 2026-08-09 }
+  - { field: domainRegistration, url: 'https://www.websupport.sk/domeny', checkedAt: 2026-08-12 }
+  - { field: dnsHosting, url: 'https://www.websupport.sk/cennik', checkedAt: 2026-08-12 }
+  - { field: emailHosting, url: 'https://www.websupport.sk/webhosting', checkedAt: 2026-08-12 }
 figure:
   emoji: 🏔️
   color: rgb(69, 124, 166)

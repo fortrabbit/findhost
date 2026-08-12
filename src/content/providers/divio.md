@@ -55,8 +55,9 @@ supportTiering: paid-upgrade
 certifications:
   - iso-27001
 status: active
-checkedAt: 2026-08-01
+checkedAt: 2026-08-12
 sources:
+  - { field: staging, url: 'https://www.divio.com/pricing', checkedAt: 2026-08-12 }
   - { field: founded, url: 'https://www.divio.com/company/', checkedAt: 2026-08-01 }
   - { field: ownership, url: 'https://www.divio.com/company/', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://www.divio.com/pricing/', checkedAt: 2026-08-01 }
@@ -69,6 +70,7 @@ figure:
   color: rgb(77, 131, 157)
   textColor: rgb(234, 241, 245)
   text: Docker in, Django usually.
+staging: included
 ai: authored
 ---
 

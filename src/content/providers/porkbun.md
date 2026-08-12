@@ -14,11 +14,13 @@ domainRegistration: paid-addon
 emailHosting: paid-addon
 status: active
 checkedAt: 2026-08-12
+dnsHosting: included
 sources:
   - { field: category, url: 'https://porkbun.com/', checkedAt: 2026-08-12 }
   - { field: hqCountry, url: 'https://porkbun.com/', checkedAt: 2026-08-12 }
   - { field: domainRegistration, url: 'https://porkbun.com/', checkedAt: 2026-08-12 }
   - { field: emailHosting, url: 'https://porkbun.com/', checkedAt: 2026-08-12 }
+  - { field: dnsHosting, url: 'https://porkbun.com/', checkedAt: 2026-08-12 }
 figure:
   emoji: 🐷
   color: rgb(160, 70, 100)

@@ -39,7 +39,9 @@ checkedAt: 2026-08-12
 domainRegistration: none
 dnsHosting: none
 collaboration: team
+testDomain: included
 sources:
+  - { field: testDomain, url: 'https://hostim.dev/docs/networking/domains/', checkedAt: 2026-08-12 }
   - { field: category, url: 'https://hostim.dev', checkedAt: 2026-08-07 }
   - { field: deployMethods, url: 'https://hostim.dev', checkedAt: 2026-08-07 }
   - { field: regions, url: 'https://hostim.dev', checkedAt: 2026-08-01 }

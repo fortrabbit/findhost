@@ -29,12 +29,18 @@ useCases:
 audience:
   - smb
   - solo
+domainRegistration: paid-addon
+dnsHosting: included
+emailHosting: included
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-12
 sources:
   - { field: runtimes, url: 'https://truehost.co.ke', checkedAt: 2026-07-31 }
   - { field: currencies, url: 'https://truehost.co.ke', checkedAt: 2026-07-31 }
   - { field: software, url: 'https://truehost.co.ke', checkedAt: 2026-07-31 }
+  - { field: domainRegistration, url: 'https://truehost.co.ke/domain-names/', checkedAt: 2026-08-12 }
+  - { field: dnsHosting, url: 'https://truehost.co.ke/web-hosting/', checkedAt: 2026-08-12 }
+  - { field: emailHosting, url: 'https://truehost.co.ke/web-hosting/', checkedAt: 2026-08-12 }
 figure:
   emoji: 🇰🇪
   color: rgb(34, 139, 34)

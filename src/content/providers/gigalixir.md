@@ -48,6 +48,8 @@ status: active
 hqCountry: US
 checkedAt: 2026-08-12
 sources:
+  - { field: testDomain, url: 'https://docs.gigalixir.com/app', checkedAt: 2026-08-12 }
+  - { field: collaboration, url: 'https://docs.gigalixir.com/teams', checkedAt: 2026-08-12 }
   - { field: hqCountry, url: 'https://www.gigalixir.com/contact', checkedAt: 2026-08-09 }
   - { field: priceFrom, url: 'https://www.gigalixir.com/pricing/', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://www.gigalixir.com/pricing/', checkedAt: 2026-08-02 }
@@ -62,6 +64,8 @@ figure:
   color: rgb(124, 69, 166)
   textColor: rgb(241, 234, 246)
   text: The one that lets the BEAM be the BEAM.
+testDomain: included
+collaboration: team
 ai: authored
 ---
 

@@ -44,7 +44,9 @@ persistentStorage: false
 apiAvailable: public
 cliTool: official
 status: active
-checkedAt: 2026-08-01
+testDomain: included
+collaboration: team
+checkedAt: 2026-08-12
 sources:
   - { field: priceFrom, url: 'https://huggingface.co/pricing', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://huggingface.co/pricing', checkedAt: 2026-08-02 }
@@ -55,6 +57,8 @@ sources:
   - { field: persistentStorage, url: 'https://huggingface.co/docs/hub/spaces-overview', checkedAt: 2026-08-01 }
   - { field: runtimes, url: 'https://huggingface.co/docs/hub/spaces-overview', checkedAt: 2026-08-01 }
   - { field: deployMethods, url: 'https://huggingface.co/docs/hub/spaces-overview', checkedAt: 2026-08-01 }
+  - { field: testDomain, url: 'https://huggingface.co/docs/hub/spaces-overview', checkedAt: 2026-08-12 }
+  - { field: collaboration, url: 'https://huggingface.co/docs/hub/spaces-overview', checkedAt: 2026-08-12 }
 figure:
   emoji: 🤗
   color: rgb(190, 145, 45)

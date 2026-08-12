@@ -47,13 +47,16 @@ freeTier: none
 regions:
   - NL
 apiAvailable: public
+domainRegistration: paid-addon
+dnsHosting: included
+emailHosting: paid-addon
 social:
   x: https://twitter.com/TransIP
   linkedin: https://nl.linkedin.com/company/transip
   facebook: https://www.facebook.com/transipNL
   youtube: https://youtube.com/TransIP
 status: active
-checkedAt: 2026-08-01
+checkedAt: 2026-08-12
 sources:
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1496', checkedAt: 2026-08-10 }
   - { field: priceFrom, url: 'https://www.transip.eu/web-hosting/', checkedAt: 2026-07-31 }
@@ -67,6 +70,9 @@ sources:
   - { field: founded, url: 'https://www.transip.nl/over-transip/', checkedAt: 2026-08-01 }
   - { field: parent, url: 'https://www.transip.nl/over-transip/', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://www.transip.nl/algemene-voorwaarden/', checkedAt: 2026-08-01 }
+  - { field: domainRegistration, url: 'https://www.transip.nl/', checkedAt: 2026-08-12 }
+  - { field: dnsHosting, url: 'https://api.transip.nl/rest/docs.html', checkedAt: 2026-08-12 }
+  - { field: emailHosting, url: 'https://www.transip.nl/email/', checkedAt: 2026-08-12 }
 figure:
   emoji: 🌷
   color: rgb(50, 184, 168)

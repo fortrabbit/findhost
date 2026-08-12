@@ -45,7 +45,10 @@ regions:
 supportTiering: all-plans
 status: active
 hqCountry: US
-checkedAt: 2026-08-09
+testDomain: included
+staging: included
+collaboration: team
+checkedAt: 2026-08-12
 sources:
   - { field: hqCountry, url: 'https://laravel.com/cloud', checkedAt: 2026-08-09 }
   - { field: entryPrice, url: 'https://laravel.com/cloud/pricing', checkedAt: 2026-08-01 }
@@ -63,6 +66,9 @@ sources:
   - { field: software, url: 'https://laravel.com/cloud/pricing', checkedAt: 2026-07-31 }
   - { field: useCases, url: 'https://laravel.com/cloud/pricing', checkedAt: 2026-07-31 }
   - { field: apiAvailable, url: 'https://laravel.com/cloud/docs/', checkedAt: 2026-08-09 }
+  - { field: testDomain, url: 'https://laravel.com/cloud', checkedAt: 2026-08-12 }
+  - { field: staging, url: 'https://laravel.com/cloud', checkedAt: 2026-08-12 }
+  - { field: collaboration, url: 'https://laravel.com/cloud', checkedAt: 2026-08-12 }
 figure:
   emoji: 🧺
   color: rgb(164, 142, 70)

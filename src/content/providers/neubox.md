@@ -26,11 +26,15 @@ audience:
   - smb
   - solo
 status: active
-checkedAt: 2026-07-31
+checkedAt: 2026-08-12
+domainRegistration: included
+dnsHosting: included
 sources:
   - { field: founded, url: 'https://www.neubox.com', checkedAt: 2026-07-31 }
   - { field: currencies, url: 'https://www.neubox.com', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://www.neubox.com', checkedAt: 2026-07-31 }
+  - { field: domainRegistration, url: 'https://www.neubox.com/hosting', checkedAt: 2026-08-12 }
+  - { field: dnsHosting, url: 'https://www.neubox.com/hosting', checkedAt: 2026-08-12 }
 figure:
   emoji: 🇲🇽
   color: rgb(200, 110, 70)

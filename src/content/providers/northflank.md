@@ -60,7 +60,9 @@ regions:
 apiAvailable: public
 cliTool: official
 status: active
-checkedAt: 2026-08-01
+staging: included
+collaboration: team
+checkedAt: 2026-08-12
 sources:
   - { field: entryPrice, url: 'https://northflank.com/pricing', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://northflank.com/pricing', checkedAt: 2026-08-02 }
@@ -72,6 +74,8 @@ sources:
   - { field: freeTier, url: 'https://northflank.com/pricing', checkedAt: 2026-08-01 }
   - { field: regions, url: 'https://northflank.com/docs/v1/application/getting-started/create-a-project', checkedAt: 2026-08-01 }
   - { field: infraContract, url: 'https://northflank.com/pricing', checkedAt: 2026-08-01 }
+  - { field: staging, url: 'https://northflank.com', checkedAt: 2026-08-12 }
+  - { field: collaboration, url: 'https://northflank.com/docs', checkedAt: 2026-08-12 }
 figure:
   emoji: 🧱
   color: rgb(77, 97, 157)
