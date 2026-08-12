@@ -3,14 +3,42 @@ id: hestiacp
 name: Hestia Control Panel
 urls:
   home: https://hestiacp.com
+  docs: https://hestiacp.com/docs/
 category:
   - server-management
-hqCountry: NL
-status: draft
+description: Open source control panel for managing web servers, email, DNS and databases.
+whoManagesOs: self-managed
+infraContract:
+  - byo-iaas
+runtimes:
+  - php
+managedDatabases:
+  - mariadb
+  - mysql
+  - postgres
+deployMethods:
+  - control-panel
+  - file-transfer
+sshAccess: root
+pricingModel: fixed-tier
+freeTier: permanent
+supportChannels:
+  - forum
+status: active
 checkedAt: 2026-08-12
+sources:
+  - { field: runtimes, url: 'https://hestiacp.com/docs/', checkedAt: 2026-08-12 }
+  - { field: managedDatabases, url: 'https://hestiacp.com/docs/', checkedAt: 2026-08-12 }
+  - { field: freeTier, url: 'https://hestiacp.com', checkedAt: 2026-08-12 }
+  - { field: supportChannels, url: 'https://hestiacp.com', checkedAt: 2026-08-12 }
+figure:
+  emoji: 📊
+  color: rgb(52, 73, 94)
+  textColor: rgb(236, 240, 241)
+  text: Lightweight, GPLv3 licensed, community supported.
 ai: authored
 ---
 
-Hestia Control Panel sells server management in the Netherlands.
+Hestia is a lightweight, open source control panel released under the GPLv3 licence for managing web servers, domains, email accounts, DNS zones and databases. It installs on a Linux server you supply and provides a web interface for administration. The software supports Apache and Nginx web servers with multiple PHP versions, MariaDB, MySQL and PostgreSQL databases, and email services via Exim and Dovecot.
 
-**Listed as a stub because only the name and the domain have been checked.** The domain resolved and answered when this record was made, and nothing else here is recorded yet. Whether it meets the four criteria — sold to the public, a price published without login, technical documentation in the open — is still an open question, and every field stays unknown until somebody reads the provider's own pages.
+Development is community-driven and welcoming to contributions. The project does not charge for the software itself and relies on voluntary donations to sustain operations. Support is provided through a public forum where users and developers engage with questions and issues.

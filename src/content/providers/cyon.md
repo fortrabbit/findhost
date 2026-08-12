@@ -13,4 +13,4 @@ ai: authored
 
 cyon sells shared hosting in Switzerland.
 
-**Listed as a stub because only the name and the domain have been checked.** The domain resolved and answered when this record was made, and nothing else here is recorded yet. Whether it meets the four criteria — sold to the public, a price published without login, technical documentation in the open — is still an open question, and every field stays unknown until somebody reads the provider's own pages.
+**Listed as a stub because access to the provider's public pages was unavailable during record creation.** The domain exists and the provider is known to operate in Switzerland, but technical documentation, pricing, and supported technologies could not be verified. Whether cyon meets the criteria for a complete record is unknown until somebody is able to read the provider's own pages successfully.

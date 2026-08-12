@@ -5,12 +5,19 @@ urls:
   home: https://katapult.io
 category:
   - vps
+  - iaas
+description: Krystal's cloud platform, formerly sold under its own name and now folded into the parent brand.
 hqCountry: GB
-status: draft
+status: out-of-scope
+criterion: 2
 checkedAt: 2026-08-12
+sources:
+  - { field: status, url: 'https://krystal.io/cloud', checkedAt: 2026-08-12 }
 ai: authored
 ---
 
-Katapult sells VPS in the United Kingdom.
+Katapult was the name Krystal gave to its own cloud platform, selling virtual machines on infrastructure the company built and runs itself rather than reselling.
 
-**Listed as a stub because only the name and the domain have been checked.** The domain resolved and answered when this record was made, and nothing else here is recorded yet. Whether it meets the four criteria — sold to the public, a price published without login, technical documentation in the open — is still an open question, and every field stays unknown until somebody reads the provider's own pages.
+**Criterion 2 — sold to the public — fails, because the brand no longer sells anything.** katapult.io redirects to krystal.io/cloud, and that page carries the name Krystal Cloud throughout with no mention of Katapult at all. There is no distinct pricing, no distinct documentation and no separate signup left under the Katapult name, which makes this a rebrand rather than a provider that stopped trading.
+
+The platform itself continues, and is recorded on [Krystal](/krystal/).

@@ -2,16 +2,17 @@
 id: wedos
 name: WEDOS
 urls:
-  home: https://wedos.com
+  home: https://www.wedos.com
 category:
   - shared-hosting
   - vps
-hqCountry: CZ
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 ---
 
-WEDOS sells shared hosting and VPS in Czechia.
+WEDOS is a Czech provider that built its own data center in Hluboká nad Vltavou and became known domestically for low-cost shared hosting and virtual servers.
 
-**Listed as a stub because only the name and the domain have been checked.** The domain resolved and answered when this record was made, and nothing else here is recorded yet. Whether it meets the four criteria — sold to the public, a price published without login, technical documentation in the open — is still an open question, and every field stays unknown until somebody reads the provider's own pages.
+**Listed as a stub because the company appears to have split, and which half is the provider is unresolved.** The `.com` site now presents a group selling anycast DNS, DDoS mitigation and uptime monitoring to enterprises, governments and other hosting companies, describes itself as having started in web hosting, and publishes no prices. The Czech consumer site redirects to a differently named domain that refuses anonymous requests, so whether shared hosting is still sold to end customers could not be established either way. Headquarters is the same question: the group site reads as Luxembourg, the operation has always been Czech.
+
+The categories above are what the company has historically sold, not a confirmed reading of what it sells now. Resolving this needs a person who can open the Czech site, and the answer decides whether this is one record, two, or an out-of-scope note about a company that left the market.

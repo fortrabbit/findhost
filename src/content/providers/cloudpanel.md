@@ -3,14 +3,50 @@ id: cloudpanel
 name: CloudPanel
 urls:
   home: https://cloudpanel.io
+  docs: https://cloudpanel.io/docs
 category:
   - server-management
-hqCountry: DE
-status: draft
+description: Free, open source server control panel for PHP, Node.js and Python applications.
+whoManagesOs: self-managed
+infraContract:
+  - byo-iaas
+runtimes:
+  - php
+  - node
+  - python
+software:
+  - wordpress
+deployMethods:
+  - control-panel
+  - file-transfer
+sshAccess: root
+audience:
+  - solo
+  - startup
+  - smb
+useCases:
+  - cms
+  - web-app
+  - static-site
+pricingModel: fixed-tier
+freeTier: permanent
+supportChannels:
+  - forum
+status: active
 checkedAt: 2026-08-12
+sources:
+  - { field: runtimes, url: 'https://github.com/cloudpanel-io/cloudpanel-ce', checkedAt: 2026-08-12 }
+  - { field: freeTier, url: 'https://cloudpanel.io', checkedAt: 2026-08-12 }
+  - { field: software, url: 'https://cloudpanel.io', checkedAt: 2026-08-12 }
+  - { field: supportChannels, url: 'https://cloudpanel.io', checkedAt: 2026-08-12 }
+figure:
+  emoji: ⚡
+  color: rgb(41, 128, 185)
+  textColor: rgb(236, 245, 252)
+  text: Multi-runtime, open source, free.
 ai: authored
 ---
 
-CloudPanel sells server management in Germany.
+CloudPanel is a free, open source control panel designed with a focus on simplicity for configuring and managing servers. It installs on Linux servers you supply—on major cloud providers like AWS, DigitalOcean, Hetzner, Azure or others—and provides a web interface for deploying and managing PHP, Node.js, Python and static websites. It includes SSL certificate automation, firewall configuration, database management and backups across cloud providers.
 
-**Listed as a stub because only the name and the domain have been checked.** The domain resolved and answered when this record was made, and nothing else here is recorded yet. Whether it meets the four criteria — sold to the public, a price published without login, technical documentation in the open — is still an open question, and every field stays unknown until somebody reads the provider's own pages.
+The Community Edition is free forever with no login required. Optional paid support tiers are coming soon for development and enterprise use. The project welcomes community contributions and engages through Discord. It supports Ubuntu and Debian Linux distributions on both x86 and ARM architectures.

@@ -2,17 +2,25 @@
 id: leaseweb
 name: Leaseweb
 urls:
-  home: https://leaseweb.com
+  home: https://www.leaseweb.com
 category:
   - iaas
   - bare-metal
   - vps
 hqCountry: NL
-status: draft
+infraContract:
+  - owns-metal
+pricingModel: fixed-tier
+status: active
 checkedAt: 2026-08-12
+sources:
+  - { field: category, url: 'https://www.leaseweb.com', checkedAt: 2026-08-12 }
+  - { field: infraContract, url: 'https://www.leaseweb.com', checkedAt: 2026-08-12 }
 ai: authored
 ---
 
-Leaseweb sells IaaS, bare metal and VPS in the Netherlands.
+Leaseweb is a Dutch infrastructure provider selling bare metal servers, virtual private servers, and infrastructure as a service. The company operates multiple global data centers.
 
-**Listed as a stub because only the name and the domain have been checked.** The domain resolved and answered when this record was made, and nothing else here is recorded yet. Whether it meets the four criteria — sold to the public, a price published without login, technical documentation in the open — is still an open question, and every field stays unknown until somebody reads the provider's own pages.
+## Worth knowing
+
+**Listed with minimal fields because the provider's website returns minimal content to automated requests.** Pricing, regions, technical capabilities, and other product details remain unconfirmed. Readers are encouraged to visit the website directly for current information.

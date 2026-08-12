@@ -3,15 +3,65 @@ id: neocities
 name: Neocities
 urls:
   home: https://neocities.org
+  terms: https://neocities.org/terms
 category:
-  - vanity-hosting
   - static
+  - vanity-hosting
 hqCountry: US
-status: draft
+ownership: independent
+founded: 2013
+description: Free static site hosting funded by supporters and donations, emphasizing creator control and no corporate surveillance.
+runtimes:
+  - static
+deployMethods:
+  - control-panel
+  - file-transfer
+testDomain: included
+domainRegistration: paid-addon
+dnsHosting: paid-addon
+pricingModel: credit
+freeTier: permanent
+billingPeriods:
+  - monthly
+entryPrice: { amount: 0, currency: USD, period: month }
+currencies:
+  - USD
+collaboration: none
+audience:
+  - solo
+useCases:
+  - portfolio
+  - static-site
+  - side-project
+  - campaign-site
+supportChannels:
+  - forum
+supportHours: community-only
+status: active
 checkedAt: 2026-08-12
+sources:
+  - { field: category, url: 'https://neocities.org', checkedAt: 2026-08-12 }
+  - { field: hqCountry, url: 'https://neocities.org', checkedAt: 2026-08-12 }
+  - { field: ownership, url: 'https://neocities.org', checkedAt: 2026-08-12 }
+  - { field: founded, url: 'https://neocities.org', checkedAt: 2026-08-12 }
+  - { field: runtimes, url: 'https://neocities.org', checkedAt: 2026-08-12 }
+  - { field: deployMethods, url: 'https://neocities.org', checkedAt: 2026-08-12 }
+  - { field: testDomain, url: 'https://neocities.org', checkedAt: 2026-08-12 }
+  - { field: domainRegistration, url: 'https://neocities.org', checkedAt: 2026-08-12 }
+  - { field: freeTier, url: 'https://neocities.org', checkedAt: 2026-08-12 }
+  - { field: entryPrice, url: 'https://neocities.org/supporter', checkedAt: 2026-08-12 }
+  - { field: billingPeriods, url: 'https://neocities.org/supporter', checkedAt: 2026-08-12 }
+  - { field: audience, url: 'https://neocities.org', checkedAt: 2026-08-12 }
+  - { field: useCases, url: 'https://neocities.org', checkedAt: 2026-08-12 }
 ai: authored
 ---
 
-Neocities sells vanity hosting and static hosting in the United States.
+Neocities hosts static personal sites, and is the declared successor to GeoCities. The free tier is the product rather than a trial of it; a paid Supporter tier raises the storage and bandwidth allowances and funds the rest. Sites are published by uploading files through the browser or over SFTP, there is an in-browser HTML editor, and a command-line tool and public API cover the same ground for anyone who would rather not click.
 
-**Listed as a stub because only the name and the domain have been checked.** The domain resolved and answered when this record was made, and nothing else here is recorded yet. Whether it meets the four criteria — sold to the public, a price published without login, technical documentation in the open — is still an open question, and every field stays unknown until somebody reads the provider's own pages.
+The company takes no investment and sells no advertising, and states that it does not sell user data to AI companies.
+
+## Worth knowing
+
+Neocities runs static sites only—HTML, CSS, and JavaScript. There is no server-side runtime, no databases, and no dynamic backend capability. This is the entire shape of the product.
+
+Support is community-only; no staff support is available on any tier. Custom domains are available as a separate paid add-on rather than included in either tier.

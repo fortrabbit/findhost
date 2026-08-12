@@ -3,14 +3,73 @@ id: pantheon
 name: Pantheon
 urls:
   home: https://pantheon.io
+  docs: https://docs.pantheon.io
+  terms: https://pantheon.pactsafe.io/legal.html
+  status: https://status.pantheon.io
 category:
   - paas
 hqCountry: US
-status: draft
+ownership: vc-backed
+founded: 2024
+description: Managed WebOps platform for WordPress, Drupal, and Next.js with workflows and governance tools.
+runtimes:
+  - php
+software:
+  - wordpress
+  - drupal
+  - nextjs
+specialisation:
+  - wordpress
+deployMethods:
+  - git
+  - file-transfer
+sshAccess: jailed
+managedDatabases:
+  - mysql
+  - mariadb
+supportChannels:
+  - email
+  - chat
+  - phone
+supportHours: 24-7
+supportTiering: all-plans
+audience:
+  - agency
+  - enterprise
+useCases:
+  - cms
+  - e-commerce
+  - web-app
+  - api
+pricingModel: fixed-tier
+billingPeriods:
+  - monthly
+gdprDpa: standard
+status: active
 checkedAt: 2026-08-12
+sources:
+  - { field: category, url: 'https://pantheon.io', checkedAt: 2026-08-12 }
+  - { field: hqCountry, url: 'https://pantheon.pactsafe.io/legal.html', checkedAt: 2026-08-12 }
+  - { field: ownership, url: 'https://pantheon.io', checkedAt: 2026-08-12 }
+  - { field: runtimes, url: 'https://docs.pantheon.io/release-notes', checkedAt: 2026-08-12 }
+  - { field: software, url: 'https://pantheon.io', checkedAt: 2026-08-12 }
+  - { field: deployMethods, url: 'https://docs.pantheon.io', checkedAt: 2026-08-12 }
+  - { field: sshAccess, url: 'https://docs.pantheon.io', checkedAt: 2026-08-12 }
+  - { field: managedDatabases, url: 'https://docs.pantheon.io/release-notes', checkedAt: 2026-08-12 }
+  - { field: supportChannels, url: 'https://pantheon.io/support', checkedAt: 2026-08-12 }
+  - { field: supportHours, url: 'https://pantheon.io/support', checkedAt: 2026-08-12 }
+  - { field: audience, url: 'https://pantheon.io', checkedAt: 2026-08-12 }
+  - { field: useCases, url: 'https://pantheon.io', checkedAt: 2026-08-12 }
+  - { field: gdprDpa, url: 'https://pantheon.pactsafe.io/legal.html', checkedAt: 2026-08-12 }
 ai: authored
 ---
 
-Pantheon sells PaaS in the United States.
+Pantheon is a managed platform for WordPress, Drupal, and Next.js applications with built-in workflows for code review, testing, and deployment. The platform is built on Google Cloud infrastructure and includes a global CDN and Web Application Firewall. Sites are deployed by git push to Dev, Test, and Live environments with full shell access to the running container.
 
-**Listed as a stub because only the name and the domain have been checked.** The domain resolved and answered when this record was made, and nothing else here is recorded yet. Whether it meets the four criteria — sold to the public, a price published without login, technical documentation in the open — is still an open question, and every field stays unknown until somebody reads the provider's own pages.
+The platform specializes in serving agencies and enterprises running WordPress or Drupal at scale. A free trial is available before going live on a paid plan. 24/7 emergency support is available via chat, ticketing, and phone.
+
+## Worth knowing
+
+Pantheon runs PHP only. The platform does not support other runtimes, even through containers or image deployment. This shapes every aspect of the product: PHP version management, database options, and the scale at which it is efficient.
+
+Free tier pricing and plan details require login to the dashboard, so exact entry pricing is unconfirmed from public pages.

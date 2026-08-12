@@ -2,17 +2,79 @@
 id: aruba-it
 name: Aruba.it
 urls:
-  home: https://aruba.it
+  home: https://www.arubacloud.com
+  pricing: https://www.arubacloud.com/pricing
+  terms: https://www.arubacloud.com/terms-conditions
 category:
   - shared-hosting
   - vps
   - iaas
+  - bare-metal
+  - caas
 hqCountry: IT
-status: draft
+ownership: independent
+infraContract:
+  - owns-metal
+whoManagesOs: self-managed
+runtimes:
+  - docker
+  - any
+deployMethods:
+  - control-panel
+sshAccess: root
+managedDatabases:
+  - postgres
+  - mysql
+  - mariadb
+  - mongodb
+  - redis
+pricingModel: per-resource
+priceFrom: xs
+entryPrice: { amount: 1.99, currency: EUR, period: month }
+currencies:
+  - EUR
+billingPeriods:
+  - monthly
+freeTier: none
+regions:
+  - IT
+audience:
+  - smb
+  - enterprise
+useCases:
+  - web-app
+  - api
+  - internal-tool
+certifications:
+  - iso-27001
+supportChannels:
+  - email
+  - chat
+supportTiering: all-plans
+status: active
 checkedAt: 2026-08-12
+sources:
+  - { field: category, url: 'https://www.arubacloud.com', checkedAt: 2026-08-12 }
+  - { field: hqCountry, url: 'https://www.arubacloud.com/terms-conditions', checkedAt: 2026-08-12 }
+  - { field: infraContract, url: 'https://www.arubacloud.com', checkedAt: 2026-08-12 }
+  - { field: whoManagesOs, url: 'https://www.arubacloud.com/vps.aspx', checkedAt: 2026-08-12 }
+  - { field: sshAccess, url: 'https://www.arubacloud.com/vps.aspx', checkedAt: 2026-08-12 }
+  - { field: managedDatabases, url: 'https://www.arubacloud.com/cloud-databases.aspx', checkedAt: 2026-08-12 }
+  - { field: pricingModel, url: 'https://www.arubacloud.com/public-cloud.aspx', checkedAt: 2026-08-12 }
+  - { field: priceFrom, url: 'https://www.arubacloud.com/vps.aspx', checkedAt: 2026-08-12 }
+  - { field: entryPrice, url: 'https://www.arubacloud.com/vps.aspx', checkedAt: 2026-08-12 }
+  - { field: currencies, url: 'https://www.arubacloud.com/vps.aspx', checkedAt: 2026-08-12 }
+  - { field: regions, url: 'https://www.arubacloud.com/public-cloud.aspx', checkedAt: 2026-08-12 }
+  - { field: certifications, url: 'https://www.arubacloud.com', checkedAt: 2026-08-12 }
 ai: authored
 ---
 
-Aruba.it sells shared hosting, VPS and IaaS in Italy.
+Aruba is an Italian provider that owns and runs its own data centers, and sells across most of the market at once: registrar services, shared hosting, virtual and bare metal servers, and a public cloud. Billing is per resource rather than by plan tier, in euros and by the month.
 
-**Listed as a stub because only the name and the domain have been checked.** The domain resolved and answered when this record was made, and nothing else here is recorded yet. Whether it meets the four criteria — sold to the public, a price published without login, technical documentation in the open — is still an open question, and every field stays unknown until somebody reads the provider's own pages.
+The cloud line covers Linux and Windows virtual servers, bare metal, managed Kubernetes, managed databases, object and block storage, and GPU instances.
+
+## Worth knowing
+
+The infrastructure is Italian-owned and Italian-operated, which is the reason most of its customers give for choosing it, and the company holds the national qualification required to sell to Italian public administration.
+
+Per-resource billing has no plan ceiling, so cost tracks usage in both directions.

@@ -2,15 +2,18 @@
 id: bytemark
 name: Bytemark
 urls:
-  home: https://bytemark.co.uk
+  home: https://www.bytemark.co.uk
 category:
   - vps
+description: A UK virtual server provider, acquired by Hosting UK and no longer selling under its own name.
 hqCountry: GB
-status: draft
+status: acquired
 checkedAt: 2026-08-12
+sources:
+  - { field: status, url: 'https://hostinguk.net/bytemark/', checkedAt: 2026-08-12 }
 ai: authored
 ---
 
-Bytemark sells VPS in the United Kingdom.
+Bytemark was a UK provider of virtual private servers, running them on infrastructure it called BigV, and one of the longer-standing independent hosts in the country before it was bought.
 
-**Listed as a stub because only the name and the domain have been checked.** The domain resolved and answered when this record was made, and nothing else here is recorded yet. Whether it meets the four criteria — sold to the public, a price published without login, technical documentation in the open — is still an open question, and every field stays unknown until somebody reads the provider's own pages.
+The buyer is Hosting UK, a division of Easyspace Ltd, which has imported Bytemark accounts into its own systems and moved domains and billing across. New services are sold under the Hosting UK name rather than Bytemark's, and support runs through the buyer's portal. Customers still billing through bytemark.co.uk can reach their services through the Bytemark panel, which remains up for them.

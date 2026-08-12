@@ -2,17 +2,34 @@
 id: infomaniak
 name: Infomaniak
 urls:
-  home: https://infomaniak.com
+  home: https://www.infomaniak.com
+  status: https://infomaniakstatus.com
 category:
   - shared-hosting
   - paas
   - iaas
+  - vps
 hqCountry: CH
-status: draft
+deployMethods:
+  - control-panel
+pricingModel: fixed-tier
+freeTier: none
+supportChannels:
+  - email
+  - chat
+supportHours: 24-7
+supportTiering: all-plans
+status: active
 checkedAt: 2026-08-12
+sources:
+  - { field: category, url: 'https://infomaniakstatus.com/', checkedAt: 2026-08-12 }
+  - { field: supportChannels, url: 'https://infomaniakstatus.com/', checkedAt: 2026-08-12 }
+  - { field: supportHours, url: 'https://infomaniakstatus.com/', checkedAt: 2026-08-12 }
 ai: authored
 ---
 
-Infomaniak sells shared hosting, PaaS and IaaS in Switzerland.
+Infomaniak is a Swiss hosting and cloud provider offering shared hosting, VPS, and dedicated servers alongside public cloud infrastructure and database services. The company operates multiple data centers in Europe and bills on fixed-tier plans from shared hosting through to enterprise cloud services.
 
-**Listed as a stub because only the name and the domain have been checked.** The domain resolved and answered when this record was made, and nothing else here is recorded yet. Whether it meets the four criteria — sold to the public, a price published without login, technical documentation in the open — is still an open question, and every field stays unknown until somebody reads the provider's own pages.
+## Worth knowing
+
+Comprehensive 24/7 support and premium support tiers are available. The company publishes a detailed status page for service monitoring and maintains separate status dashboards for different service families.

@@ -3,16 +3,59 @@ id: sakura-internet
 name: Sakura Internet
 urls:
   home: https://sakura.ad.jp
+  pricing: https://sakura.ad.jp/pricing
 category:
-  - vps
   - shared-hosting
+  - vps
   - iaas
+  - bare-metal
 hqCountry: JP
-status: draft
+infraContract:
+  - owns-metal
+whoManagesOs: self-managed
+runtimes:
+  - docker
+  - any
+deployMethods:
+  - control-panel
+sshAccess: root
+pricingModel: fixed-tier
+freeTier: none
+regions:
+  - JP
+audience:
+  - solo
+  - smb
+  - enterprise
+useCases:
+  - cms
+  - web-app
+  - learning
+certifications:
+  - iso-27001
+  - pci-dss
+supportChannels:
+  - email
+  - chat
+  - forum
+supportHours: 24-7
+supportTiering: all-plans
+status: active
 checkedAt: 2026-08-12
+sources:
+  - { field: category, url: 'https://sakura.ad.jp/', checkedAt: 2026-08-12 }
+  - { field: infraContract, url: 'https://sakura.ad.jp/', checkedAt: 2026-08-12 }
+  - { field: whoManagesOs, url: 'https://help.sakura.ad.jp', checkedAt: 2026-08-12 }
+  - { field: sshAccess, url: 'https://sakura.ad.jp/', checkedAt: 2026-08-12 }
+  - { field: regions, url: 'https://sakura.ad.jp/', checkedAt: 2026-08-12 }
+  - { field: certifications, url: 'https://sakura.ad.jp/', checkedAt: 2026-08-12 }
+  - { field: supportChannels, url: 'https://help.sakura.ad.jp', checkedAt: 2026-08-12 }
+  - { field: supportHours, url: 'https://help.sakura.ad.jp', checkedAt: 2026-08-12 }
 ai: authored
 ---
 
-Sakura Internet sells VPS, shared hosting and IaaS in Japan.
+Sakura Internet is a Japanese cloud and infrastructure provider offering shared hosting, virtual private servers, and dedicated servers. The rental server product is a managed hosting platform marketed for WordPress sites. VPS and dedicated servers offer root access for self-managed infrastructure. The company also operates Sakura Cloud for scalable infrastructure and specializes in domestic AI and GPU computing through its Koukaryoku platform.
 
-**Listed as a stub because only the name and the domain have been checked.** The domain resolved and answered when this record was made, and nothing else here is recorded yet. Whether it meets the four criteria — sold to the public, a price published without login, technical documentation in the open — is still an open question, and every field stays unknown until somebody reads the provider's own pages.
+## Worth knowing
+
+All infrastructure is Japanese, with emphasis on data sovereignty and domestic technology. The company holds Privacy Mark, ISO 27001, and PCI DSS certifications and offers government-focused support programs. Sakura Cloud infrastructure is self-managed, while rental servers are fully managed hosting.

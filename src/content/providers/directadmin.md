@@ -3,14 +3,65 @@ id: directadmin
 name: DirectAdmin
 urls:
   home: https://directadmin.com
+  pricing: https://directadmin.com/pricing.html
 category:
   - server-management
-hqCountry: US
-status: draft
+description: Web hosting control panel installed on a server you supply, licensed per server with per-account pricing options.
+hqCountry: CA
+founded: 2003
+whoManagesOs: self-managed
+infraContract:
+  - byo-iaas
+runtimes:
+  - php
+software:
+  - wordpress
+deployMethods:
+  - control-panel
+  - file-transfer
+sshAccess: root
+audience:
+  - solo
+  - agency
+  - smb
+  - enterprise
+useCases:
+  - cms
+  - e-commerce
+  - campaign-site
+  - portfolio
+pricingModel: fixed-tier
+priceFrom: sm
+currencies:
+  - USD
+billingPeriods:
+  - monthly
+billingTiming: advance
+exitWithin: a-month
+freeTier: trial
+supportChannels:
+  - email
+  - forum
+status: active
 checkedAt: 2026-08-12
+sources:
+  - { field: hqCountry, url: 'https://directadmin.com/pricing.html', checkedAt: 2026-08-12 }
+  - { field: founded, url: 'https://directadmin.com', checkedAt: 2026-08-12 }
+  - { field: priceFrom, url: 'https://directadmin.com/pricing.html', checkedAt: 2026-08-12 }
+  - { field: currencies, url: 'https://directadmin.com/pricing.html', checkedAt: 2026-08-12 }
+  - { field: billingPeriods, url: 'https://directadmin.com/pricing.html', checkedAt: 2026-08-12 }
+  - { field: billingTiming, url: 'https://directadmin.com/pricing.html', checkedAt: 2026-08-12 }
+  - { field: exitWithin, url: 'https://directadmin.com/pricing.html', checkedAt: 2026-08-12 }
+  - { field: freeTier, url: 'https://directadmin.com/pricing.html', checkedAt: 2026-08-12 }
+  - { field: supportChannels, url: 'https://directadmin.com/pricing.html', checkedAt: 2026-08-12 }
+figure:
+  emoji: 🎛️
+  color: rgb(41, 98, 155)
+  textColor: rgb(232, 240, 248)
+  text: Per-server licence, per-account pricing.
 ai: authored
 ---
 
-DirectAdmin sells server management in the United States.
+DirectAdmin is a control panel installed on a server you supply—most commonly a VPS or dedicated machine—and manages websites, domains, email accounts, databases and application deployments through a web interface. The licence is tied to the server and priced by the number of user accounts it manages, from a single-account tier up to unlimited. Users can manage WordPress installations, handle SSL certificates, configure DNS and manage backups through the control panel.
 
-**Listed as a stub because only the name and the domain have been checked.** The domain resolved and answered when this record was made, and nothing else here is recorded yet. Whether it meets the four criteria — sold to the public, a price published without login, technical documentation in the open — is still an open question, and every field stays unknown until somebody reads the provider's own pages.
+The software runs on Linux and has been developed by JBMC Software in Edmonton since 2003. Support is available by email and through an active community forum, with direct support included on paid tiers. The company operates during North American business hours.

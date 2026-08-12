@@ -2,7 +2,7 @@
 id: hosteurope
 name: Host Europe
 urls:
-  home: https://hosteurope.de
+  home: https://www.hosteurope.de
 category:
   - shared-hosting
   - vps
@@ -12,6 +12,6 @@ checkedAt: 2026-08-12
 ai: authored
 ---
 
-Host Europe sells shared hosting and VPS in Germany.
+Host Europe is a German hosting brand, long one of the larger sellers of shared hosting and virtual servers in the German-speaking market, and part of the consolidation that moved most of that market into a handful of groups.
 
-**Listed as a stub because only the name and the domain have been checked.** The domain resolved and answered when this record was made, and nothing else here is recorded yet. Whether it meets the four criteria — sold to the public, a price published without login, technical documentation in the open — is still an open question, and every field stays unknown until somebody reads the provider's own pages.
+**Listed as a stub because the site would not answer.** hosteurope.de returns a page with no content to an ordinary request — a shell that renders only in a browser — so nothing about the current product range, pricing or ownership could be read from the source that counts. What the brand sells today, and under whose name, is unresolved.
