@@ -18,6 +18,11 @@ regions:
   - BG
 status: active
 checkedAt: 2026-08-12
+figure:
+  emoji: 🇮🇹
+  color: rgb(46, 130, 90)
+  textColor: rgb(238, 248, 242)
+  text: Italian cloud, part of the DHH group.
 sources:
   - { field: founded, url: 'https://seeweb.it/en/', checkedAt: 2026-08-12 }
   - { field: hqCountry, url: 'https://seeweb.it/en/', checkedAt: 2026-08-12 }

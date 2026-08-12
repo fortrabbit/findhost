@@ -5,6 +5,11 @@ urls:
   home: https://newfold.com
 status: unlisted
 checkedAt: 2026-08-07
+figure:
+  emoji: 🏢
+  color: rgb(80, 140, 190)
+  textColor: rgb(242, 247, 252)
+  text: Holding company for Bluehost and HostGator.
 ai: authored
 ---
 

@@ -43,6 +43,11 @@ sources:
   - { field: staging, url: 'https://raidboxes.io', checkedAt: 2026-08-07 }
   - { field: regions, url: 'https://raidboxes.io', checkedAt: 2026-08-07 }
   - { field: entryPrice, url: 'https://raidboxes.io/wordpress-hosting-pricing/', checkedAt: 2026-08-07 }
+figure:
+  emoji: 🇩🇪
+  color: rgb(180, 140, 80)
+  textColor: rgb(245, 241, 235)
+  text: German hosting built for agencies.
 ai: authored
 greenWebId: 1466
 ---

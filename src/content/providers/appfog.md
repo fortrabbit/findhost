@@ -20,6 +20,11 @@ deployMethods:
   - git
 status: discontinued
 checkedAt: 2026-08-07
+figure:
+  emoji: 💨
+  color: rgb(120, 130, 140)
+  textColor: rgb(242, 244, 245)
+  text: First PHP PaaS, CenturyLink acquired, closed.
 sources:
   - { field: description, url: 'https://techcrunch.com/2013/06/13/centurylink-acquring-appfog-to-move-into-platform-as-a-service-market/', checkedAt: 2026-08-07 }
   - { field: ownership, url: 'https://www.datacenterknowledge.com/archives/2013/06/14/centurylink-savvis-acquires-paas-provider-appfog', checkedAt: 2026-08-07 }

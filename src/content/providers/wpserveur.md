@@ -37,6 +37,11 @@ sources:
   - { field: deployMethods, url: 'https://www.wpserveur.net', checkedAt: 2026-07-31 }
   - { field: infraContract, url: 'https://www.wpserveur.net', checkedAt: 2026-07-31 }
   - { field: cliTool, url: 'https://www.wpserveur.net', checkedAt: 2026-08-09 }
+figure:
+  emoji: 🇫🇷
+  color: rgb(55, 115, 200)
+  textColor: rgb(236, 245, 252)
+  text: French WordPress host, git and SSH.
 ai: authored
 ---
 

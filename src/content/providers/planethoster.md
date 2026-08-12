@@ -40,6 +40,11 @@ sources:
   - { field: sshAccess, url: 'https://www.planethoster.com', checkedAt: 2026-07-31 }
   - { field: apiAvailable, url: 'https://www.planethoster.com', checkedAt: 2026-08-09 }
   - { field: cliTool, url: 'https://www.planethoster.com', checkedAt: 2026-08-09 }
+figure:
+  emoji: 🌍
+  color: rgb(80, 140, 100)
+  textColor: rgb(238, 244, 240)
+  text: Franco-Canadian hosting, pick your data centre.
 ai: authored
 greenWebId: 749
 ---

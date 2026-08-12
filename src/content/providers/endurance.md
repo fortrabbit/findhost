@@ -5,6 +5,11 @@ urls:
   home: https://www.endurance.com
 status: unlisted
 checkedAt: 2026-08-06
+figure:
+  emoji: 🏢
+  color: rgb(110, 105, 100)
+  textColor: rgb(245, 244, 243)
+  text: Holds Bluehost, HostGator, and others.
 ai: authored
 ---
 

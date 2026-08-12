@@ -5,6 +5,11 @@ urls:
   home: https://wpdeveloper.com
 status: unlisted
 checkedAt: 2026-08-07
+figure:
+  emoji: 💜
+  color: rgb(0, 128, 180)
+  textColor: rgb(228, 242, 250)
+  text: WordPress plugins, xCloud hosting division.
 ai: authored
 ---
 

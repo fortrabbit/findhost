@@ -11,6 +11,11 @@ status: acquired
 checkedAt: 2026-08-12
 sources:
   - { field: status, url: 'https://hostinguk.net/bytemark/', checkedAt: 2026-08-12 }
+figure:
+  emoji: 🇬🇧
+  color: rgb(28, 64, 138)
+  textColor: rgb(245, 244, 240)
+  text: UK VPS provider, infrastructure lives on.
 ai: authored
 ---
 

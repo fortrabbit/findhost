@@ -39,6 +39,11 @@ sources:
   - { field: testDomain, url: 'https://framer.com/pricing', checkedAt: 2026-08-12 }
   - { field: apiAvailable, url: 'https://developers.framer.com/', checkedAt: 2026-08-12 }
   - { field: category, url: 'https://framer.com/', checkedAt: 2026-08-12 }
+figure:
+  emoji: 🎨
+  color: rgb(87, 34, 255)
+  textColor: rgb(245, 240, 255)
+  text: What you design publishes directly.
 ai: authored
 ---
 

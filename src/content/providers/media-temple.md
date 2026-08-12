@@ -10,6 +10,11 @@ status: discontinued
 checkedAt: 2026-08-07
 sources:
   - { field: status, url: 'https://wptavern.com/godaddy-retires-media-temple-brand', checkedAt: 2026-08-07 }
+figure:
+  emoji: 🎬
+  color: rgb(110, 110, 120)
+  textColor: rgb(242, 242, 248)
+  text: Developer host acquired, then retired by GoDaddy.
 ai: authored
 ---
 

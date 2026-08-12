@@ -30,6 +30,11 @@ sources:
   - { field: ownership, url: 'https://www.locaweb.com.br', checkedAt: 2026-07-31 }
   - { field: sshAccess, url: 'https://www.locaweb.com.br', checkedAt: 2026-07-31 }
   - { field: currencies, url: 'https://www.locaweb.com.br', checkedAt: 2026-07-31 }
+figure:
+  emoji: 🇧🇷
+  color: rgb(190, 130, 50)
+  textColor: rgb(250, 242, 230)
+  text: Anchor brand of a Brazilian public company.
 ai: authored
 ---
 

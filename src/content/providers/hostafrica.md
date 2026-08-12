@@ -36,6 +36,11 @@ sources:
   - { field: apiAvailable, url: 'https://hostafrica.com', checkedAt: 2026-08-09 }
   - { field: cliTool, url: 'https://hostafrica.com', checkedAt: 2026-08-09 }
   - { field: mcpServer, url: 'https://hostafrica.com', checkedAt: 2026-08-09 }
+figure:
+  emoji: 🌍
+  color: rgb(76, 110, 43)
+  textColor: rgb(245, 250, 242)
+  text: Pan-African host with datacenters in South Africa.
 ai: authored
 ---
 

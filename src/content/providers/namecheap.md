@@ -20,6 +20,11 @@ caveat:
   on: 2026-08-12
 sources:
   - { field: docs, url: 'https://www.namecheap.com/support/knowledgebase/', checkedAt: 2026-08-12 }
+figure:
+  emoji: 🔑
+  color: rgb(60, 120, 180)
+  textColor: rgb(240, 244, 250)
+  text: Domain registrar with hosting bundled.
 ai: authored
 ---
 

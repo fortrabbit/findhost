@@ -5,6 +5,11 @@ urls:
   home: https://block.xyz
 status: unlisted
 checkedAt: 2026-08-07
+figure:
+  emoji: 🧱
+  color: rgb(45, 47, 51)
+  textColor: rgb(240, 242, 245)
+  text: Payments company, Weebly website builder owner.
 ai: authored
 ---
 

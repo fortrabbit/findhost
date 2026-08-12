@@ -21,6 +21,11 @@ checkedAt: 2026-08-07
 sources:
   - { field: description, url: 'https://www.sitepoint.com/introducing-pagoda-box-paas-just-php/', checkedAt: 2026-08-07 }
   - { field: status, url: 'https://blog.cloud66.com/paas-graveyard-why-platforms-keep-dying', checkedAt: 2026-08-07 }
+figure:
+  emoji: 📦
+  color: rgb(160, 110, 60)
+  textColor: rgb(244, 239, 233)
+  text: PHP platform-as-a-service, acquired and retired.
 ai: authored
 ---
 

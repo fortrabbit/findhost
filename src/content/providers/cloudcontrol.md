@@ -23,6 +23,11 @@ checkedAt: 2026-08-07
 sources:
   - { field: status, url: 'https://www.exoscale.com/static/files/press/20160411_Swiss_Exoscale_Acquires_German_PaaS_Provider_cloudControl.pdf', checkedAt: 2026-08-07 }
   - { field: description, url: 'https://en.wikipedia.org/wiki/CloudControl', checkedAt: 2026-08-07 }
+figure:
+  emoji: 🇩🇪
+  color: rgb(53, 92, 141)
+  textColor: rgb(242, 243, 246)
+  text: Berlin PaaS pioneer, now discontinued.
 ai: authored
 ---
 

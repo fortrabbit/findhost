@@ -61,6 +61,11 @@ sources:
   - { field: audience, url: 'https://pantheon.io', checkedAt: 2026-08-12 }
   - { field: useCases, url: 'https://pantheon.io', checkedAt: 2026-08-12 }
   - { field: gdprDpa, url: 'https://pantheon.pactsafe.io/legal.html', checkedAt: 2026-08-12 }
+figure:
+  emoji: 🏛️
+  color: rgb(100, 115, 145)
+  textColor: rgb(238, 240, 245)
+  text: Managed WordPress and Drupal platform.
 ai: authored
 ---
 

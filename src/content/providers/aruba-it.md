@@ -53,6 +53,11 @@ supportChannels:
 supportTiering: all-plans
 status: active
 checkedAt: 2026-08-12
+figure:
+  emoji: 🇮🇹
+  color: rgb(57, 130, 59)
+  textColor: rgb(242, 248, 242)
+  text: Italian independent, owns its infrastructure.
 sources:
   - { field: category, url: 'https://www.arubacloud.com', checkedAt: 2026-08-12 }
   - { field: hqCountry, url: 'https://www.arubacloud.com/terms-conditions', checkedAt: 2026-08-12 }

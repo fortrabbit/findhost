@@ -21,6 +21,11 @@ checkedAt: 2026-08-08
 sources:
   - { field: status, url: 'https://www.netlify.com/blog/gatsby-cloud-evolution/', checkedAt: 2026-08-08 }
   - { field: parent, url: 'https://www.netlify.com/press/netlify-acquires-gatsby-inc-to-accelerate-adoption-of-composable-web-architectures/', checkedAt: 2026-08-08 }
+figure:
+  emoji: ⚡
+  color: rgb(108, 44, 155)
+  textColor: rgb(246, 242, 250)
+  text: Gatsby's own platform, sunset by Netlify.
 ai: authored
 ---
 

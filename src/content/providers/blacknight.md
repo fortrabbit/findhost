@@ -36,6 +36,11 @@ audience:
   - solo
 status: active
 checkedAt: 2026-08-08
+figure:
+  emoji: 🇮🇪
+  color: rgb(16, 126, 67)
+  textColor: rgb(241, 248, 244)
+  text: Irish independent, owns its data centres.
 sources:
   - { field: category, url: 'https://www.blacknight.com/hosting/', checkedAt: 2026-08-08 }
   - { field: entryPrice, url: 'https://www.blacknight.com/hosting/', checkedAt: 2026-08-08 }

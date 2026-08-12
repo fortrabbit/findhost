@@ -74,6 +74,11 @@ apiAvailable: public
 cliTool: official
 status: active
 checkedAt: 2026-08-12
+figure:
+  emoji: ☁️
+  color: rgb(243, 95, 48)
+  textColor: rgb(245, 237, 230)
+  text: Alibaba's multi-region global cloud platform.
 sources:
   - { field: founded, url: 'https://alibabacloud.com', checkedAt: 2026-08-12 }
   - { field: hqCountry, url: 'https://alibabacloud.com', checkedAt: 2026-08-12 }

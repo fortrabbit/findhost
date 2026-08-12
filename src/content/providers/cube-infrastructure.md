@@ -5,6 +5,11 @@ urls:
   home: https://www.cubeinfrastructure.com
 status: unlisted
 checkedAt: 2026-08-07
+figure:
+  emoji: 🏗️
+  color: rgb(118, 130, 140)
+  textColor: rgb(242, 244, 245)
+  text: Infrastructure investor, owner of GleSYS.
 ai: authored
 ---
 

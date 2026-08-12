@@ -68,6 +68,11 @@ cdnIncluded: none
 staging: paid-addon
 status: active
 checkedAt: 2026-08-12
+figure:
+  emoji: 🇪🇸
+  color: rgb(198, 44, 45)
+  textColor: rgb(245, 239, 234)
+  text: Spanish host since 1996, IONOS subsidiary.
 sources:
   - { field: founded, url: 'https://www.arsys.es/empresa', checkedAt: 2026-08-12 }
   - { field: hqCountry, url: 'https://www.arsys.es/legal', checkedAt: 2026-08-12 }

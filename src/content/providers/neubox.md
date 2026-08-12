@@ -30,6 +30,11 @@ sources:
   - { field: founded, url: 'https://www.neubox.com', checkedAt: 2026-07-31 }
   - { field: currencies, url: 'https://www.neubox.com', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://www.neubox.com', checkedAt: 2026-07-31 }
+figure:
+  emoji: 🇲🇽
+  color: rgb(200, 110, 70)
+  textColor: rgb(250, 240, 230)
+  text: Mexican registrar and host, .MX specialist.
 ai: authored
 ---
 

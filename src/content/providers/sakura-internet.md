@@ -51,6 +51,11 @@ sources:
   - { field: certifications, url: 'https://sakura.ad.jp/', checkedAt: 2026-08-12 }
   - { field: supportChannels, url: 'https://help.sakura.ad.jp', checkedAt: 2026-08-12 }
   - { field: supportHours, url: 'https://help.sakura.ad.jp', checkedAt: 2026-08-12 }
+figure:
+  emoji: 🌸
+  color: rgb(220, 120, 160)
+  textColor: rgb(246, 238, 243)
+  text: Japanese infrastructure, from shared to dedicated.
 ai: authored
 ---
 

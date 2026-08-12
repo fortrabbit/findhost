@@ -27,7 +27,7 @@ entryPrice: { amount: 2.89, currency: EUR, period: month, introductory: true }
 renewalMultiple: 3.8
 contractMinimum: annual
 favorite: true
-favoriteNote: Twenty-eight years, no venture capital, and no renewal traps.
+favoriteNote: Honest renewal pricing with no upsell tactics.
 status: active
 checkedAt: 2026-08-01
 sources:
@@ -42,6 +42,11 @@ sources:
   - { field: contractMinimum, url: 'https://www.dreamhost.com/hosting/shared/', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://www.dreamhost.com/hosting/shared/', checkedAt: 2026-07-31 }
   - { field: software, url: 'https://www.dreamhost.com/hosting/shared/', checkedAt: 2026-07-31 }
+figure:
+  emoji: 🌙
+  color: rgb(185, 144, 67)
+  textColor: rgb(246, 243, 235)
+  text: Established 1996, still independently run.
 ---
 
 DreamHost is a shared hosting company based in Los Angeles, started by four Harvey Mudd College students and still independently owned, without venture capital behind it. Alongside shared plans it sells managed WordPress hosting under the DreamPress name and VPS tiers, and it backs an uptime guarantee with service credits.

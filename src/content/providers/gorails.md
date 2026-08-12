@@ -5,6 +5,11 @@ urls:
   home: https://gorails.com
 status: unlisted
 checkedAt: 2026-08-07
+figure:
+  emoji: 💎
+  color: rgb(204, 52, 45)
+  textColor: rgb(250, 240, 238)
+  text: Rails education company and owner of the Hatchbox platform.
 ai: authored
 ---
 

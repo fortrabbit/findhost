@@ -38,7 +38,7 @@ cliTool: official
 staging: none
 collaboration: team
 favorite: true
-favoriteNote: Free since 2008 and it has never once tried to upsell anybody.
+favoriteNote: The free tier that has never become a trap.
 status: active
 checkedAt: 2026-08-07
 sources:
@@ -47,6 +47,11 @@ sources:
   - { field: deployMethods, url: 'https://docs.github.com/en/pages', checkedAt: 2026-08-07 }
   - { field: freeTier, url: 'https://github.com/pricing', checkedAt: 2026-08-07 }
   - { field: software, url: 'https://docs.github.com/en/pages', checkedAt: 2026-08-07 }
+figure:
+  emoji: 📄
+  color: rgb(36, 41, 46)
+  textColor: rgb(245, 245, 245)
+  text: Static sites served direct from a git repository.
 ai: authored
 ---
 

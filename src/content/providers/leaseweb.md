@@ -16,6 +16,11 @@ checkedAt: 2026-08-12
 sources:
   - { field: category, url: 'https://www.leaseweb.com', checkedAt: 2026-08-12 }
   - { field: infraContract, url: 'https://www.leaseweb.com', checkedAt: 2026-08-12 }
+figure:
+  emoji: 🔩
+  color: rgb(40, 100, 170)
+  textColor: rgb(235, 242, 250)
+  text: Dutch bare metal infrastructure provider.
 ai: authored
 ---
 

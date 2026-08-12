@@ -61,6 +61,11 @@ sources:
   - { field: useCases, url: 'https://nearlyfreespeech.net', checkedAt: 2026-08-12 }
   - { field: pricingModel, url: 'https://nearlyfreespeech.net/about', checkedAt: 2026-08-12 }
   - { field: billingTiming, url: 'https://nearlyfreespeech.net', checkedAt: 2026-08-12 }
+figure:
+  emoji: 💸
+  color: rgb(80, 160, 150)
+  textColor: rgb(242, 250, 248)
+  text: Shared hosting metered by consumption.
 ai: authored
 ---
 

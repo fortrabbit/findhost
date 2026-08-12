@@ -30,6 +30,11 @@ sources:
   - { field: freeTier, url: 'https://surge.sh', checkedAt: 2026-08-08 }
   - { field: runtimes, url: 'https://surge.sh', checkedAt: 2026-08-08 }
   - { field: cliTool, url: 'https://surge.sh', checkedAt: 2026-08-09 }
+figure:
+  emoji: 🌐
+  color: rgb(52, 168, 219)
+  textColor: rgb(230, 244, 251)
+  text: Static files published from a command.
 ai: authored
 ---
 

@@ -25,6 +25,11 @@ sources:
   - { field: category, url: 'https://infomaniakstatus.com/', checkedAt: 2026-08-12 }
   - { field: supportChannels, url: 'https://infomaniakstatus.com/', checkedAt: 2026-08-12 }
   - { field: supportHours, url: 'https://infomaniakstatus.com/', checkedAt: 2026-08-12 }
+figure:
+  emoji: ☁️
+  color: rgb(0, 51, 102)
+  textColor: rgb(240, 247, 255)
+  text: Swiss hosting and cloud provider with European data centres.
 ai: authored
 ---
 

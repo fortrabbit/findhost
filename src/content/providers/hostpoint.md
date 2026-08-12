@@ -71,6 +71,11 @@ sources:
   - { field: supportHours, url: 'https://www.hostpoint.ch/managed-flex-server', checkedAt: 2026-08-12 }
   - { field: regions, url: 'https://www.hostpoint.ch/', checkedAt: 2026-08-12 }
   - { field: certifications, url: 'https://www.hostpoint.ch/managed-flex-server', checkedAt: 2026-08-12 }
+figure:
+  emoji: 🇨🇭
+  color: rgb(187, 0, 24)
+  textColor: rgb(250, 242, 242)
+  text: Swiss hosting operator with all infrastructure in Switzerland.
 ai: authored
 ---
 

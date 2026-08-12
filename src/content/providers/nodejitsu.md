@@ -19,6 +19,11 @@ checkedAt: 2026-08-07
 sources:
   - { field: status, url: 'https://en.wikipedia.org/wiki/Nodejitsu', checkedAt: 2026-08-07 }
   - { field: ownership, url: 'https://venturebeat.com/dev/why-godaddys-nodejitsu-deal-is-great-for-node-js/', checkedAt: 2026-08-07 }
+figure:
+  emoji: 🚀
+  color: rgb(104, 187, 64)
+  textColor: rgb(242, 246, 235)
+  text: The Node.js platform, shutdown by GoDaddy.
 ai: authored
 ---
 

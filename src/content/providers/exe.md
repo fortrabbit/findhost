@@ -45,6 +45,11 @@ sources:
   - { field: sshAccess, url: 'https://exe.dev', checkedAt: 2026-08-08 }
   - { field: category, url: 'https://exe.dev', checkedAt: 2026-08-08 }
   - { field: apiAvailable, url: 'https://exe.dev', checkedAt: 2026-08-08 }
+figure:
+  emoji: ⚡
+  color: rgb(14, 165, 233)
+  textColor: rgb(240, 249, 255)
+  text: Capacity pool, not individual-unit billing.
 ai: authored
 ---
 

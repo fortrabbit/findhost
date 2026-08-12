@@ -5,6 +5,11 @@ urls:
   home: https://www.ionos-group.com
 status: unlisted
 checkedAt: 2026-08-07
+figure:
+  emoji: 🏛️
+  color: rgb(160, 120, 70)
+  textColor: rgb(248, 242, 235)
+  text: Holding many European hosting brands.
 ai: authored
 ---
 

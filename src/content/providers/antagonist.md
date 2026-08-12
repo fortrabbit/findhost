@@ -35,6 +35,11 @@ audience:
   - solo
 status: active
 checkedAt: 2026-08-08
+figure:
+  emoji: 🇳🇱
+  color: rgb(230, 85, 48)
+  textColor: rgb(245, 239, 235)
+  text: Dutch indie hoster, Enschede-based.
 sources:
   - { field: category, url: 'https://www.antagonist.nl/webhosting/', checkedAt: 2026-08-08 }
   - { field: runtimes, url: 'https://www.antagonist.nl/webhosting/', checkedAt: 2026-08-08 }

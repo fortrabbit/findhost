@@ -25,6 +25,11 @@ checkedAt: 2026-08-08
 sources:
   - { field: status, url: 'https://blog.glitch.com/post/changes-are-coming-to-glitch', checkedAt: 2026-08-08 }
   - { field: description, url: 'https://www.theregister.com/2025/05/23/glitch_app_hosting_gone/', checkedAt: 2026-08-08 }
+figure:
+  emoji: ✨
+  color: rgb(255, 0, 127)
+  textColor: rgb(255, 240, 250)
+  text: Browser editor for Node apps with live preview; service ended 2025.
 ai: authored
 ---
 

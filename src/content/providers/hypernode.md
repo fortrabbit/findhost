@@ -35,6 +35,11 @@ sources:
   - { field: apiAvailable, url: 'https://www.hypernode.com', checkedAt: 2026-07-31 }
   - { field: cliTool, url: 'https://www.hypernode.com', checkedAt: 2026-07-31 }
   - { field: parent, url: 'https://www.hypernode.com', checkedAt: 2026-07-31 }
+figure:
+  emoji: 🛒
+  color: rgb(78, 102, 164)
+  textColor: rgb(243, 247, 252)
+  text: Magento and Shopware platform descended from Byte.
 ai: authored
 ---
 

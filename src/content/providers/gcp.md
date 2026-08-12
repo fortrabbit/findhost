@@ -68,6 +68,11 @@ sources:
   - { field: billingPeriods, url: 'https://docs.cloud.google.com/billing/docs/how-to/billing-cycle', checkedAt: 2026-08-02 }
   - { field: billingTiming, url: 'https://docs.cloud.google.com/billing/docs/how-to/billing-cycle', checkedAt: 2026-08-02 }
 greenWebId: 595
+figure:
+  emoji: 🌐
+  color: rgb(66, 133, 244)
+  textColor: rgb(242, 245, 250)
+  text: Hyperscaler selling compute and data services on Google's infrastructure.
 ---
 
 Google Cloud Platform is the third of the big three hyperscalers, after AWS and Azure. It runs on the same infrastructure Google uses for Search, Gmail and YouTube, and its catalogue reflects Google's own centre of gravity: data and analytics through BigQuery, Kubernetes through GKE, machine learning throughout.

@@ -45,6 +45,11 @@ sources:
   - { field: priceTo, url: 'https://futurevision.host', checkedAt: 2026-08-09 }
   - { field: freeTier, url: 'https://futurevision.host', checkedAt: 2026-08-09 }
   - { field: deployMethods, url: 'https://futurevision.host', checkedAt: 2026-08-09 }
+figure:
+  emoji: 🔮
+  color: rgb(124, 58, 156)
+  textColor: rgb(245, 241, 248)
+  text: Grav CMS host, files not databases.
 ai: authored
 ---
 

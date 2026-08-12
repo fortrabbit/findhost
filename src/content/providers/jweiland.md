@@ -43,6 +43,11 @@ sources:
   - { field: sshAccess, url: 'https://jweiland.net/hosting/hilfe-support/technik.html', checkedAt: 2026-08-07 }
   - { field: regions, url: 'https://jweiland.net/hosting/hilfe-support/technik.html', checkedAt: 2026-08-07 }
   - { field: runsOn, url: 'https://jweiland.net/hosting/hilfe-support/technik.html', checkedAt: 2026-08-07 }
+figure:
+  emoji: 🔧
+  color: rgb(70, 140, 110)
+  textColor: rgb(235, 248, 243)
+  text: TYPO3 hosting built by CMS contributors.
 ai: authored
 ---
 

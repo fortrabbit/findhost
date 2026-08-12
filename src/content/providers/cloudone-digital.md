@@ -5,6 +5,11 @@ urls:
   home: https://cloudonedigital.com
 status: unlisted
 checkedAt: 2026-08-07
+figure:
+  emoji: 🏢
+  color: rgb(91, 99, 110)
+  textColor: rgb(243, 244, 245)
+  text: Holding company for Liquid Web.
 ai: authored
 ---
 

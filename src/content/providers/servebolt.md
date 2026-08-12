@@ -53,6 +53,11 @@ billingPeriods:
 gdprDpa: standard
 status: active
 checkedAt: 2026-08-12
+figure:
+  emoji: ⚡
+  color: rgb(38, 96, 150)
+  textColor: rgb(236, 244, 250)
+  text: Norwegian host sold on page speed.
 sources:
   - { field: category, url: 'https://servebolt.com', checkedAt: 2026-08-12 }
   - { field: hqCountry, url: 'https://servebolt.com', checkedAt: 2026-08-12 }

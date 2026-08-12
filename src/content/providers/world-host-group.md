@@ -5,6 +5,11 @@ urls:
   home: https://worldhostgroup.com
 status: unlisted
 checkedAt: 2026-08-07
+figure:
+  emoji: 🌍
+  color: rgb(120, 130, 150)
+  textColor: rgb(242, 244, 248)
+  text: Acquired hosting brands, separately branded.
 ai: authored
 ---
 

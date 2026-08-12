@@ -64,6 +64,11 @@ sources:
   - { field: billingPeriods, url: 'https://www.nazwa.pl', checkedAt: 2026-08-12 }
   - { field: domainRegistration, url: 'https://www.nazwa.pl', checkedAt: 2026-08-12 }
   - { field: emailHosting, url: 'https://www.nazwa.pl', checkedAt: 2026-08-12 }
+figure:
+  emoji: 🇵🇱
+  color: rgb(190, 90, 80)
+  textColor: rgb(250, 235, 233)
+  text: Polish-born cloud host, global footprint.
 ai: authored
 ---
 

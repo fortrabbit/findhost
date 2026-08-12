@@ -34,6 +34,11 @@ sources:
   - { field: founded, url: 'https://www.ikoula.com', checkedAt: 2026-07-31 }
   - { field: infraContract, url: 'https://www.ikoula.com', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://www.ikoula.com', checkedAt: 2026-07-31 }
+figure:
+  emoji: 🇫🇷
+  color: rgb(0, 85, 164)
+  textColor: rgb(240, 248, 255)
+  text: Independent French host since 1998, operates own data centres.
 ai: authored
 greenWebId: 900
 ---

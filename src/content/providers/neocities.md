@@ -53,6 +53,11 @@ sources:
   - { field: billingPeriods, url: 'https://neocities.org/supporter', checkedAt: 2026-08-12 }
   - { field: audience, url: 'https://neocities.org', checkedAt: 2026-08-12 }
   - { field: useCases, url: 'https://neocities.org', checkedAt: 2026-08-12 }
+figure:
+  emoji: 💜
+  color: rgb(160, 100, 200)
+  textColor: rgb(245, 235, 250)
+  text: Free static sites, no corporate layer.
 ai: authored
 ---
 

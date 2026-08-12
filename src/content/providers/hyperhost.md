@@ -33,6 +33,11 @@ sources:
   - { field: category, url: 'https://hyperhost.ua/en/', checkedAt: 2026-07-31 }
   - { field: founded, url: 'https://hyperhost.ua/en/', checkedAt: 2026-07-31 }
   - { field: currencies, url: 'https://hyperhost.ua/en/', checkedAt: 2026-07-31 }
+figure:
+  emoji: 🇺🇦
+  color: rgb(0, 87, 183)
+  textColor: rgb(240, 248, 255)
+  text: Ukrainian host trading since 2008 from Kyiv.
 ai: authored
 ---
 

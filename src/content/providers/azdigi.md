@@ -31,6 +31,11 @@ audience:
   - solo
 status: active
 checkedAt: 2026-08-08
+figure:
+  emoji: 🇻🇳
+  color: rgb(206, 17, 38)
+  textColor: rgb(244, 236, 232)
+  text: Vietnamese host in Ho Chi Minh City.
 sources:
   - { field: category, url: 'https://azdigi.com/en/', checkedAt: 2026-08-08 }
   - { field: regions, url: 'https://azdigi.com/en/', checkedAt: 2026-08-08 }

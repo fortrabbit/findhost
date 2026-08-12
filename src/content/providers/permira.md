@@ -5,6 +5,11 @@ urls:
   home: https://www.permira.com
 status: unlisted
 checkedAt: 2026-08-07
+figure:
+  emoji: 💼
+  color: rgb(45, 60, 110)
+  textColor: rgb(235, 237, 245)
+  text: Private-equity firm, owns hosting companies.
 ai: authored
 ---
 

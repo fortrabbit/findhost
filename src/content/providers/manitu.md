@@ -42,6 +42,11 @@ sources:
   - { field: managedDatabases, url: 'https://www.manitu.de/webhosting/', checkedAt: 2026-08-08 }
   - { field: sshAccess, url: 'https://www.manitu.de/webhosting/', checkedAt: 2026-08-08 }
   - { field: infraContract, url: 'https://www.manitu.de/webhosting/', checkedAt: 2026-08-08 }
+figure:
+  emoji: 🌱
+  color: rgb(90, 150, 100)
+  textColor: rgb(240, 250, 244)
+  text: Owner-run German host on green power.
 ai: authored
 greenWebId: 837
 ---

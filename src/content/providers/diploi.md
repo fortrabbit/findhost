@@ -52,6 +52,11 @@ sources:
   - { field: entryPrice, url: 'https://diploi.com/pricing', checkedAt: 2026-08-09 }
   - { field: pricingModel, url: 'https://diploi.com/pricing', checkedAt: 2026-08-09 }
   - { field: freeTier, url: 'https://diploi.com/pricing', checkedAt: 2026-08-09 }
+figure:
+  emoji: 💻
+  color: rgb(59, 130, 246)
+  textColor: rgb(240, 248, 255)
+  text: Development environment and hosting, hourly billing.
 ai: authored
 ---
 

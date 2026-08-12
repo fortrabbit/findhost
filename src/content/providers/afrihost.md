@@ -37,6 +37,11 @@ audience:
   - solo
 status: active
 checkedAt: 2026-08-08
+figure:
+  emoji: 🇿🇦
+  color: rgb(152, 125, 53)
+  textColor: rgb(244, 240, 230)
+  text: South African ISP that also sells hosting.
 sources:
   - { field: category, url: 'https://www.afrihost.com', checkedAt: 2026-08-08 }
   - { field: entryPrice, url: 'https://www.afrihost.com', checkedAt: 2026-08-08 }

@@ -36,6 +36,11 @@ sources:
   - { field: category, url: 'https://www.one.com/en-gb/plans-pricing/', checkedAt: 2026-08-08 }
   - { field: software, url: 'https://www.one.com/en-gb/plans-pricing/', checkedAt: 2026-08-08 }
   - { field: currencies, url: 'https://www.one.com/en-gb/plans-pricing/', checkedAt: 2026-08-08 }
+figure:
+  emoji: 🇩🇰
+  color: rgb(196, 30, 58)
+  textColor: rgb(245, 234, 235)
+  text: European shared hosting and domain registrar.
 ai: authored
 ---
 
