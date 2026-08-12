@@ -40,17 +40,22 @@
 # How many people are behind it, in bands, from what the company says about
 # itself — an about page, an imprint, a team page. Bands rather than a number
 # because the number is never current and a range is what anybody actually wants
-# to know: three people or three thousand.
+# to know: three people or three thousand. Six people means support from whoever
+# wrote the platform, and no company at all if two of them leave; six hundred
+# means a rota, an escalation path, and a reply from someone who has never seen
+# the code.
 #
 # Recorded, never scored. It is context for the other fields rather than a merit
 # of its own: a big provider is not thereby a good one and a small one is not
 # thereby honest, and the Signal deliberately ignores this field.
+#
+# Shown and deliberately not filtered. Three records of two hundred answer it,
+# so the panel offered two checkboxes above the words "195 unknown" — a filter
+# that hides almost the whole register whichever box is ticked. The field earns
+# its place on a record; it does not earn a column.
 - id: headcount
   label: Headcount
   group: Identity
-  facet: headcount
-  filterOrder: 19
-  ordered: true
   values:
     - { id: solo, label: One person, short: Solo, subject: 'are one person' }
     - { id: '2-10', label: 2 to 10, subject: 'employ between 2 and 10 people' }
@@ -80,7 +85,7 @@
   group: Identity
   facet: ownership
   subject: 'are {lower}'
-  filterOrder: 18
+  filterOrder: 19
   values:
     - { id: independent, label: Independent }
     - { id: vc-backed, label: VC-backed }
@@ -157,7 +162,7 @@
   group: Classification
   facet: operating-system
   subject: 'answer "{lower}" to who manages the operating system'
-  filterOrder: 15
+  filterOrder: 16
   values:
     - { id: managed, label: Managed, subject: 'manage the operating system for you' }
     - { id: self-managed, label: Self-managed, subject: 'leave the operating system to you' }
@@ -169,11 +174,11 @@
   group: Classification
   facet: metal
   subject: '{lower}'
-  filterOrder: 16
+  filterOrder: 17
   multiple: true
   values:
     - { id: owns-metal, label: Owns the hardware, short: Owns, subject: 'own their hardware' }
-    - { id: resells-iaas, label: Resells someone else's, short: Reseller, subject: 'resell someone else''s hardware' }
+    - { id: resells-iaas, label: Resells someone else's, short: Reseller, subject: "resell someone else's hardware" }
     - { id: byo-iaas, label: You bring your own, short: BYO, subject: 'run on hardware you bring' }
 
 # Whose infrastructure the compute runs on. A relation: the values are record
@@ -202,7 +207,7 @@
   group: Classification
   facet: use-cases
   subject: 'market themselves for {lower}'
-  filterOrder: 9
+  filterOrder: 10
   multiple: true
   values:
     - { id: cms, label: CMS sites }
@@ -232,7 +237,7 @@
   group: Classification
   facet: audience
   subject: 'sell to {lower}'
-  filterOrder: 11
+  filterOrder: 12
   multiple: true
   values:
     - { id: solo, label: Solo and freelance, short: Solo }
@@ -367,7 +372,7 @@
   group: Deployment
   facet: deployment
   subject: 'deploy by {lower}'
-  filterOrder: 7
+  filterOrder: 8
   multiple: true
   #
   # One question, asked four ways: what does the customer hand over, and what
@@ -405,15 +410,27 @@
   facet: shell
   subject: 'give {lower}'
   ordered: true
-  filterOrder: 14
+  filterOrder: 15
   values:
     - { id: none, label: None, noFilter: true }
     - { id: jailed, label: Jailed shell, short: Jailed, subject: 'give a shell inside the environment, without root' }
     - { id: root, label: Root shell, short: Root, subject: 'give root on the machine' }
 
+# Which engines the provider runs and keeps patched, as against which ones a
+# customer may install for themselves — the second is a property of the shell,
+# not of the provider. Filed beside `runtimes` in the panel because it is the
+# same question about the other half of the stack: an application platform that
+# runs no database is one invoice short of a working setup.
+#
+# Kafka and the two search engines are not databases, and are here because the
+# question a reader is asking is the same one — is this a thing the provider
+# operates, or a thing to go and buy somewhere else.
 - id: managedDatabases
   label: Managed databases
   group: Tech stack
+  facet: databases
+  subject: 'offer managed {label}'
+  filterOrder: 6
   multiple: true
   values:
     - { id: mysql, label: MySQL }
@@ -508,7 +525,7 @@
   group: Pricing
   facet: currencies
   subject: 'bill in {label}'
-  filterOrder: 13
+  filterOrder: 14
   multiple: true
   values:
     - { id: USD, label: USD }
@@ -564,7 +581,7 @@
   facet: exit
   subject: 'can be left {lower}'
   ordered: true
-  filterOrder: 17
+  filterOrder: 18
   values:
     - { id: a-day, label: Within a day }
     - { id: a-month, label: Within a month }
@@ -607,22 +624,63 @@
   label: Pricing features
   facet: pricing
   subject: 'price with {lower}'
-  filterOrder: 12
+  filterOrder: 13
   multiple: true
   values:
     - { id: free-tier, label: Free tier, from: freeTier, when: [permanent], subject: 'offer a permanent free tier' }
-    - { id: free-trial, label: Free trial, from: freeTier, when: [trial], subject: 'offer a free trial rather than a free tier' }
-    - { id: in-arrears, label: Paid in arrears, short: In arrears, from: billingTiming, when: [arrears], subject: 'bill in arrears, for usage already run up' }
-    - { id: upfront, label: Paid before the period, short: Upfront, from: billingTiming, when: [advance], subject: 'take the money before the month it pays for' }
-    - { id: usage-based, label: Metered usage, short: Metered, from: pricingModel, when: [usage-based], subject: 'meter usage rather than sell a plan' }
+    - {
+        id: free-trial,
+        label: Free trial,
+        from: freeTier,
+        when: [trial],
+        subject: 'offer a free trial rather than a free tier',
+      }
+    - {
+        id: in-arrears,
+        label: Paid in arrears,
+        short: In arrears,
+        from: billingTiming,
+        when: [arrears],
+        subject: 'bill in arrears, for usage already run up',
+      }
+    - {
+        id: upfront,
+        label: Paid before the period,
+        short: Upfront,
+        from: billingTiming,
+        when: [advance],
+        subject: 'take the money before the month it pays for',
+      }
+    - {
+        id: usage-based,
+        label: Metered usage,
+        short: Metered,
+        from: pricingModel,
+        when: [usage-based],
+        subject: 'meter usage rather than sell a plan',
+      }
     # Not the opposite of `upfront`, which is why both can be true at once: that
     # one answers when the money leaves, this one answers how it is held. A
     # balance topped up in advance and drawn down is a different commitment from
     # an invoice every month, and the providers that work this way take no card.
-    - { id: prepaid, label: Paid from a credit balance, short: Prepaid, from: pricingModel, when: [credit], subject: 'run on prepaid credit' }
+    - {
+        id: prepaid,
+        label: Paid from a credit balance,
+        short: Prepaid,
+        from: pricingModel,
+        when: [credit],
+        subject: 'run on prepaid credit',
+      }
     # The term, not the notice. How long the door takes to close is `exit`, and a
     # provider can hold nobody to a term while still wanting thirty days.
-    - { id: no-minimum, label: No minimum term, short: No minimum, from: contractMinimum, when: [none], subject: 'hold nobody to a minimum term' }
+    - {
+        id: no-minimum,
+        label: No minimum term,
+        short: No minimum,
+        from: contractMinimum,
+        when: [none],
+        subject: 'hold nobody to a minimum term',
+      }
 
 # -------------------------------------------------------- Regions and law
 
@@ -789,7 +847,7 @@
   group: Support
   facet: support
   subject: 'offer support by {lower}'
-  filterOrder: 6
+  filterOrder: 7
   multiple: true
   values:
     - { id: email, label: Email, subject: 'answer email or a ticket' }
@@ -881,16 +939,47 @@
   label: Other features
   facet: features
   subject: 'include {lower}'
-  filterOrder: 8
+  filterOrder: 9
   multiple: true
   values:
-    - { id: collaboration, label: Collaboration, from: collaboration, when: [team, clients], subject: 'let more than one person work on the same hosting' }
-    - { id: staging, label: Staging, from: staging, when: [included], subject: 'give somewhere to try a deploy before it is the site' }
-    - { id: domains, label: Domains, from: domainRegistration, when: [included], subject: 'include a domain with the hosting' }
+    - {
+        id: collaboration,
+        label: Collaboration,
+        from: collaboration,
+        when: [team, clients],
+        subject: 'let more than one person work on the same hosting',
+      }
+    - {
+        id: staging,
+        label: Staging,
+        from: staging,
+        when: [included],
+        subject: 'give somewhere to try a deploy before it is the site',
+      }
+    - {
+        id: domains,
+        label: Domains,
+        from: domainRegistration,
+        when: [included],
+        subject: 'include a domain with the hosting',
+      }
     - { id: dns, label: DNS, from: dnsHosting, when: [included], subject: 'host DNS themselves, at no extra charge' }
-    - { id: email, label: Email, from: emailHosting, when: [included], subject: 'host email themselves, at no extra charge' }
+    - {
+        id: email,
+        label: Email,
+        from: emailHosting,
+        when: [included],
+        subject: 'host email themselves, at no extra charge',
+      }
     - { id: cdn, label: CDN, from: cdnIncluded, when: [included], subject: 'include a CDN with the hosting' }
-    - { id: test-domain, label: Test domain, short: Test URL, from: testDomain, when: [included], subject: 'hand out a test URL to deploy to' }
+    - {
+        id: test-domain,
+        label: Test domain,
+        short: Test URL,
+        from: testDomain,
+        when: [included],
+        subject: 'hand out a test URL to deploy to',
+      }
     # Two sources, either of which answers: the provider's own published claim,
     # and an id in the Green Web Foundation's directory. That second is a field
     # with no vocabulary to name — an id in somebody else's database — so its
@@ -936,7 +1025,7 @@
   label: Automation
   facet: automation
   subject: 'offer {label}'
-  filterOrder: 10
+  filterOrder: 11
   multiple: true
   values:
     - { id: api, label: API, from: apiAvailable, when: [public, partner-only], subject: 'publish an API' }
@@ -946,7 +1035,13 @@
     # about lists. Terraform is effectively the whole category: of the nineteen
     # records that answer, nineteen have Terraform, two have CloudFormation and
     # two have Ansible.
-    - { id: iac, label: Infrastructure as code, short: IaC, from: iacSupport, when: [terraform, cloudformation, ansible] }
+    - {
+        id: iac,
+        label: Infrastructure as code,
+        short: IaC,
+        from: iacSupport,
+        when: [terraform, cloudformation, ansible],
+      }
 
 - id: iacSupport
   label: Infrastructure as code
