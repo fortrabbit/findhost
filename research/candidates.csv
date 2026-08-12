@@ -269,4 +269,3 @@ webstudio,Webstudio,webstudio.is,IS,lcnc;static,2,Open-source visual page builde
 write-as,Write.as,write.as,US,vanity-hosting;static,2,Minimalist blogging and writing platform
 wunderbucket,Wunderbucket,wunderbucket.com,US,static,3,Static hosting platform for designers and developers
 porkbun,Porkbun,porkbun.com,US,shared-hosting;static,1,Registrar that also sells shared cPanel hosting and static hosting and Easy PHP so not the pure registrar it looked like
-neon,Neon,neon.com,US,serverless;paas,2,Postgres platform that now also sells Functions and object storage; assess against the listed supabase and nhost; Databricks-owned since 2025
