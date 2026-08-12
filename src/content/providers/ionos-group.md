@@ -3,6 +3,7 @@ id: ionos-group
 name: IONOS Group SE
 urls:
   home: https://www.ionos-group.com
+description: The listed holding company beneath which the IONOS brands sit, including Fasthosts and STRATO.
 status: unlisted
 checkedAt: 2026-08-07
 figure:

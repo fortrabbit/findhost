@@ -7,6 +7,7 @@ category:
   - shared-hosting
   - vps
   - bare-metal
+description: A shared hosting, VPS and bare metal provider in the Philippines.
 hqCountry: PH
 status: draft
 checkedAt: 2026-08-12

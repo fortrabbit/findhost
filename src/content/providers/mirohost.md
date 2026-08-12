@@ -5,6 +5,7 @@ urls:
   home: https://mirohost.net
 category:
   - shared-hosting
+description: A shared hosting provider in Ukraine.
 hqCountry: UA
 status: draft
 checkedAt: 2026-08-12

@@ -5,6 +5,7 @@ urls:
   home: https://metanet.ch
 category:
   - shared-hosting
+description: A shared hosting provider in Switzerland.
 hqCountry: CH
 status: draft
 checkedAt: 2026-08-12

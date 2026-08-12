@@ -6,6 +6,7 @@ urls:
 category:
   - vanity-hosting
   - static
+description: A vanity hosting and static hosting provider in the United States.
 hqCountry: US
 status: draft
 checkedAt: 2026-08-12

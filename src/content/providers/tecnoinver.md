@@ -6,6 +6,7 @@ urls:
 category:
   - vps
   - bare-metal
+description: A VPS and bare metal provider in Chile.
 hqCountry: CL
 status: draft
 checkedAt: 2026-08-12

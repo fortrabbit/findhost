@@ -5,6 +5,7 @@ urls:
   home: https://argeweb.nl
 category:
   - shared-hosting
+description: A shared hosting provider in the Netherlands.
 hqCountry: NL
 status: draft
 checkedAt: 2026-08-12

@@ -5,6 +5,7 @@ urls:
   home: https://colombiahosting.com.co
 category:
   - shared-hosting
+description: A shared hosting provider in Colombia.
 hqCountry: CO
 status: draft
 checkedAt: 2026-08-12

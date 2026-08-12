@@ -5,6 +5,7 @@ urls:
   home: https://bigrock.in
 category:
   - shared-hosting
+description: A shared hosting provider in India.
 hqCountry: IN
 status: draft
 checkedAt: 2026-08-12

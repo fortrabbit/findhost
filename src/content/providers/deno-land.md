@@ -3,6 +3,7 @@ id: deno-land
 name: Deno Land Inc.
 urls:
   home: https://deno.com
+description: The company behind the Deno runtime, which also operates Deno Deploy.
 status: unlisted
 checkedAt: 2026-08-07
 figure:

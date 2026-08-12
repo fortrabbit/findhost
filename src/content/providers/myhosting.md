@@ -5,6 +5,7 @@ urls:
   home: https://myhosting.uy
 category:
   - shared-hosting
+description: A shared hosting provider in Uruguay.
 hqCountry: UY
 status: draft
 checkedAt: 2026-08-12

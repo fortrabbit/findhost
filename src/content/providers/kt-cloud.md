@@ -5,6 +5,7 @@ urls:
   home: https://ktcloud.com
 category:
   - iaas
+description: A IaaS provider in South Korea.
 hqCountry: KR
 status: draft
 checkedAt: 2026-08-12

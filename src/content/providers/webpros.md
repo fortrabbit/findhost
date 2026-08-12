@@ -3,6 +3,7 @@ id: webpros
 name: WebPros
 urls:
   home: https://www.webpros.com
+description: The owner of cPanel and Plesk, which sells no hosting itself.
 status: unlisted
 checkedAt: 2026-08-07
 figure:

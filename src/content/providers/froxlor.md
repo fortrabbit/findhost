@@ -5,6 +5,7 @@ urls:
   home: https://froxlor.org
 category:
   - server-management
+description: Server management software in Germany.
 hqCountry: DE
 status: draft
 checkedAt: 2026-08-12

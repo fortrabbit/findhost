@@ -5,6 +5,7 @@ urls:
   home: https://variomedia.de
 category:
   - shared-hosting
+description: A shared hosting provider in Germany.
 hqCountry: DE
 status: draft
 checkedAt: 2026-08-12

@@ -5,6 +5,7 @@ urls:
   home: https://active24.cz
 category:
   - shared-hosting
+description: A shared hosting provider in Czechia.
 hqCountry: CZ
 status: draft
 checkedAt: 2026-08-12

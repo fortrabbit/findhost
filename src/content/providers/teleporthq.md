@@ -5,6 +5,7 @@ urls:
   home: https://teleporthq.io
 category:
   - lcnc
+description: A low-code and no-code site builder in Romania.
 hqCountry: RO
 status: draft
 checkedAt: 2026-08-12

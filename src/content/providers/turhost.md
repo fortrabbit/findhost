@@ -5,6 +5,7 @@ urls:
   home: https://turhost.com
 category:
   - shared-hosting
+description: A shared hosting provider in Türkiye.
 hqCountry: TR
 status: draft
 checkedAt: 2026-08-12

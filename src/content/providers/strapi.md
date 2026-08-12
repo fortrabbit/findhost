@@ -5,6 +5,7 @@ urls:
   home: https://strapi.io
 category:
   - caas
+description: A CaaS provider in France.
 hqCountry: FR
 status: draft
 checkedAt: 2026-08-12

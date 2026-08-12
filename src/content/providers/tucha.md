@@ -6,6 +6,7 @@ urls:
 category:
   - iaas
   - vps
+description: A IaaS and VPS provider in Ukraine.
 hqCountry: UA
 status: draft
 checkedAt: 2026-08-12

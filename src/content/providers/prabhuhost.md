@@ -8,6 +8,7 @@ category:
   - iaas
   - vps
   - paas
+description: A shared hosting, IaaS, VPS and PaaS provider in Nepal.
 hqCountry: NP
 status: draft
 checkedAt: 2026-08-12

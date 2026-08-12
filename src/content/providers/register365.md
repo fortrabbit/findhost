@@ -5,6 +5,7 @@ urls:
   home: https://register365.com
 category:
   - shared-hosting
+description: A shared hosting provider in Ireland.
 hqCountry: IE
 status: draft
 checkedAt: 2026-08-12

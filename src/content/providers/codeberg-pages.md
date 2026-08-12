@@ -6,6 +6,7 @@ urls:
 category:
   - static
   - vanity-hosting
+description: A static hosting and vanity hosting provider in Germany.
 hqCountry: DE
 status: draft
 checkedAt: 2026-08-12

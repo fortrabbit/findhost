@@ -5,6 +5,7 @@ urls:
   home: https://bearblog.dev
 category:
   - vanity-hosting
+description: A host for personal sites in South Africa.
 hqCountry: ZA
 status: draft
 checkedAt: 2026-08-12

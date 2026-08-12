@@ -5,6 +5,7 @@ urls:
   home: https://www.voog.com
 category:
   - lcnc
+description: A low-code and no-code site builder in Estonia.
 hqCountry: EE
 status: draft
 checkedAt: 2026-08-12

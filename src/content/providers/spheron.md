@@ -5,6 +5,7 @@ urls:
   home: https://www.spheron.network
 category:
   - static
+description: A static hosting provider.
 status: draft
 checkedAt: 2026-08-12
 ai: authored

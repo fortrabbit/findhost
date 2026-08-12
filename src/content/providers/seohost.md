@@ -5,6 +5,7 @@ urls:
   home: https://seohost.pl
 category:
   - shared-hosting
+description: A shared hosting provider in Poland.
 hqCountry: PL
 status: draft
 checkedAt: 2026-08-12

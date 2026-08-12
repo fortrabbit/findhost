@@ -9,6 +9,7 @@ category:
   - paas
   - iaas
   - vps
+description: A Swiss hosting and cloud provider selling shared hosting, servers and public cloud infrastructure.
 hqCountry: CH
 deployMethods:
   - control-panel

@@ -6,6 +6,7 @@ urls:
 category:
   - vanity-hosting
   - static
+description: A vanity hosting and static hosting provider in the United Kingdom.
 hqCountry: GB
 status: draft
 checkedAt: 2026-08-12

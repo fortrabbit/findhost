@@ -6,6 +6,7 @@ urls:
 category:
   - bare-metal
   - iaas
+description: A bare metal and IaaS provider in the United States.
 hqCountry: US
 status: draft
 checkedAt: 2026-08-12

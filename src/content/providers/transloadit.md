@@ -5,6 +5,7 @@ urls:
   home: https://transloadit.com
 category:
   - serverless
+description: A serverless provider in the Netherlands.
 hqCountry: NL
 status: draft
 checkedAt: 2026-08-12

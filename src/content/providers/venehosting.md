@@ -5,6 +5,7 @@ urls:
   home: https://www.venehosting.com
 category:
   - shared-hosting
+description: A shared hosting provider in Venezuela.
 status: draft
 checkedAt: 2026-08-12
 ai: authored

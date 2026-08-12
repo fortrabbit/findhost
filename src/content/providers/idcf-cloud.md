@@ -6,6 +6,7 @@ urls:
 category:
   - iaas
   - vps
+description: A IaaS and VPS provider in Japan.
 hqCountry: JP
 status: draft
 checkedAt: 2026-08-12

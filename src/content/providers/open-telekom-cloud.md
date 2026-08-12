@@ -5,6 +5,7 @@ urls:
   home: https://open-telekom-cloud.com
 category:
   - iaas
+description: A IaaS provider in Germany.
 hqCountry: DE
 status: draft
 checkedAt: 2026-08-12

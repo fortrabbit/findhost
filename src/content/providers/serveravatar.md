@@ -5,6 +5,7 @@ urls:
   home: https://serveravatar.com
 category:
   - server-management
+description: Server management software in India.
 hqCountry: IN
 status: draft
 checkedAt: 2026-08-12

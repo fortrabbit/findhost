@@ -3,6 +3,7 @@ id: block
 name: Block, Inc.
 urls:
   home: https://block.xyz
+description: The payments company formerly called Square, and the owner of Weebly.
 status: unlisted
 checkedAt: 2026-08-07
 figure:

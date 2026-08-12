@@ -5,6 +5,7 @@ urls:
   home: https://planeetta.fi
 category:
   - shared-hosting
+description: A shared hosting provider in Finland.
 hqCountry: FI
 status: draft
 checkedAt: 2026-08-12

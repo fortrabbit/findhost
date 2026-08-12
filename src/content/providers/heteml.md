@@ -5,6 +5,7 @@ urls:
   home: https://heteml.jp
 category:
   - shared-hosting
+description: A shared hosting provider in Japan.
 hqCountry: JP
 status: draft
 checkedAt: 2026-08-12

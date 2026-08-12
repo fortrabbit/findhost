@@ -5,6 +5,7 @@ urls:
   home: https://micro.blog
 category:
   - vanity-hosting
+description: A host for personal sites in the United States.
 hqCountry: US
 status: draft
 checkedAt: 2026-08-12

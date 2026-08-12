@@ -5,6 +5,7 @@ urls:
   home: https://advania.is
 category:
   - iaas
+description: A IaaS provider in Iceland.
 hqCountry: IS
 status: draft
 checkedAt: 2026-08-12

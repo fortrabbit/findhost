@@ -6,6 +6,7 @@ urls:
 category:
   - lcnc
   - vanity-hosting
+description: A low-code and vanity hosting provider in the United States.
 hqCountry: US
 status: draft
 checkedAt: 2026-08-12

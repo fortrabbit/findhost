@@ -6,6 +6,7 @@ urls:
 category:
   - iaas
   - bare-metal
+description: A IaaS and bare metal provider in the Netherlands.
 hqCountry: NL
 status: draft
 checkedAt: 2026-08-12

@@ -5,6 +5,7 @@ urls:
   home: https://easyname.com
 category:
   - shared-hosting
+description: A shared hosting provider in Austria.
 hqCountry: AT
 status: draft
 checkedAt: 2026-08-12

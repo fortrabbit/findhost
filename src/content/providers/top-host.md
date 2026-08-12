@@ -5,6 +5,7 @@ urls:
   home: https://top.host
 category:
   - shared-hosting
+description: A shared hosting provider in Greece.
 hqCountry: GR
 status: draft
 checkedAt: 2026-08-12

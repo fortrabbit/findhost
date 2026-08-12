@@ -5,6 +5,7 @@ urls:
   home: https://cloudzy.com
 category:
   - vps
+description: A VPS provider in the United States.
 hqCountry: US
 status: draft
 checkedAt: 2026-08-12

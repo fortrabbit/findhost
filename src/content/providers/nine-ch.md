@@ -6,6 +6,7 @@ urls:
 category:
   - paas
   - iaas
+description: A PaaS and IaaS provider in Switzerland.
 hqCountry: CH
 status: draft
 checkedAt: 2026-08-12

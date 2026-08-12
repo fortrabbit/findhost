@@ -3,6 +3,7 @@ id: permira
 name: Permira
 urls:
   home: https://www.permira.com
+description: A private-equity firm that owns a hosting company recorded here, and sells no hosting itself.
 status: unlisted
 checkedAt: 2026-08-07
 figure:

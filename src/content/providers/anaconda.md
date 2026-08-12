@@ -3,6 +3,7 @@ id: anaconda
 name: Anaconda
 urls:
   home: https://www.anaconda.com
+description: A Python tooling company and the owner of PythonAnywhere.
 status: unlisted
 checkedAt: 2026-08-07
 figure:

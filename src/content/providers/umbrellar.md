@@ -6,6 +6,7 @@ urls:
 category:
   - iaas
   - shared-hosting
+description: A IaaS and shared hosting provider in New Zealand.
 hqCountry: NZ
 status: draft
 checkedAt: 2026-08-12

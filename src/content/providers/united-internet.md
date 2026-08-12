@@ -3,6 +3,7 @@ id: united-internet
 name: United Internet
 urls:
   home: https://www.united-internet.de
+description: The German group behind Ionos, 1&1, Fasthosts, Arsys, home.pl and Strato.
 status: unlisted
 checkedAt: 2026-08-06
 figure:

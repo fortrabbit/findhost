@@ -3,6 +3,7 @@ id: endurance
 name: Endurance International Group
 urls:
   home: https://www.endurance.com
+description: The group that assembled Bluehost, HostGator and iPage before becoming Newfold Digital.
 status: unlisted
 checkedAt: 2026-08-06
 figure:

@@ -5,6 +5,7 @@ urls:
   home: https://www.giantswarm.io
 category:
   - caas
+description: A CaaS provider in Germany.
 hqCountry: DE
 status: draft
 checkedAt: 2026-08-12

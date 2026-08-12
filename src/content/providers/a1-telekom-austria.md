@@ -3,6 +3,7 @@ id: a1-telekom-austria
 name: A1 Telekom Austria Group
 urls:
   home: https://www.a1.group
+description: An Austrian telecoms group and the owner of Exoscale.
 status: unlisted
 checkedAt: 2026-08-07
 figure:

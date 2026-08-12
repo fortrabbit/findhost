@@ -7,6 +7,7 @@ category:
   - iaas
   - bare-metal
   - vps
+description: A Dutch infrastructure provider selling bare metal, virtual servers and infrastructure as a service.
 hqCountry: NL
 infraContract:
   - owns-metal

@@ -5,6 +5,7 @@ urls:
   home: https://enhance.com
 category:
   - server-management
+description: Server management software in the United States.
 hqCountry: US
 status: draft
 checkedAt: 2026-08-12

@@ -5,6 +5,7 @@ urls:
   home: https://dylanhost.net
 category:
   - shared-hosting
+description: A shared hosting provider in Guatemala.
 status: draft
 checkedAt: 2026-08-12
 ai: authored

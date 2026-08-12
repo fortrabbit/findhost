@@ -5,6 +5,7 @@ urls:
   home: https://rumahweb.com
 category:
   - shared-hosting
+description: A shared hosting provider in Indonesia.
 hqCountry: ID
 status: draft
 checkedAt: 2026-08-12

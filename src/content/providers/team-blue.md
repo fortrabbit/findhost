@@ -3,6 +3,7 @@ id: team-blue
 name: team.blue
 urls:
   home: https://team.blue
+description: A European group assembled by acquisition, holding hosting and domain brands across a dozen countries.
 status: unlisted
 checkedAt: 2026-08-07
 figure:

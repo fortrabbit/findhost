@@ -5,6 +5,7 @@ urls:
   home: https://staticwebapps.azure.com
 category:
   - static
+description: A static hosting provider in the United States.
 hqCountry: US
 status: draft
 checkedAt: 2026-08-12

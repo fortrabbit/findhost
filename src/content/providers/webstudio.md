@@ -6,6 +6,7 @@ urls:
 category:
   - lcnc
   - static
+description: A low-code and static hosting provider in Iceland.
 hqCountry: IS
 status: draft
 checkedAt: 2026-08-12

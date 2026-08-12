@@ -5,6 +5,7 @@ urls:
   home: https://firstvds.ru
 category:
   - vps
+description: A VPS provider in Russia.
 hqCountry: RU
 status: draft
 checkedAt: 2026-08-12

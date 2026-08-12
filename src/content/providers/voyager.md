@@ -5,6 +5,7 @@ urls:
   home: https://voyager.nz
 category:
   - shared-hosting
+description: A shared hosting provider in New Zealand.
 hqCountry: NZ
 status: draft
 checkedAt: 2026-08-12

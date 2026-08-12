@@ -5,6 +5,7 @@ urls:
   home: https://serverfreak.com
 category:
   - shared-hosting
+description: A shared hosting provider in Malaysia.
 hqCountry: MY
 status: draft
 checkedAt: 2026-08-12

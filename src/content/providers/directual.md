@@ -5,6 +5,7 @@ urls:
   home: https://www.directual.com
 category:
   - lcnc
+description: A low-code and no-code site builder in Bulgaria.
 hqCountry: BG
 status: draft
 checkedAt: 2026-08-12

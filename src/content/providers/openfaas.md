@@ -5,6 +5,7 @@ urls:
   home: https://www.openfaas.com
 category:
   - serverless
+description: A serverless provider in the United Kingdom.
 hqCountry: GB
 status: draft
 checkedAt: 2026-08-12

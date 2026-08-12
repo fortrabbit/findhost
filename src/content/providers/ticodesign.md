@@ -5,6 +5,7 @@ urls:
   home: https://www.ticodesign.com
 category:
   - shared-hosting
+description: A shared hosting provider in Costa Rica.
 hqCountry: CR
 status: draft
 checkedAt: 2026-08-12

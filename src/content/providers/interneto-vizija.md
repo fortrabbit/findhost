@@ -6,6 +6,7 @@ urls:
 category:
   - shared-hosting
   - vps
+description: A shared hosting and VPS provider in Lithuania.
 hqCountry: LT
 status: draft
 checkedAt: 2026-08-12

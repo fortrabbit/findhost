@@ -7,6 +7,7 @@ category:
   - shared-hosting
   - vps
   - server-management
+description: A shared hosting, VPS and server management provider in Singapore.
 hqCountry: SG
 status: draft
 checkedAt: 2026-08-12

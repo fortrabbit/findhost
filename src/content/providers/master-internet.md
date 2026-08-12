@@ -6,6 +6,7 @@ urls:
 category:
   - shared-hosting
   - iaas
+description: A shared hosting and IaaS provider in Czechia.
 hqCountry: CZ
 status: draft
 checkedAt: 2026-08-12

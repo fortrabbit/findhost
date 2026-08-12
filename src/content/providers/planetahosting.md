@@ -6,6 +6,7 @@ urls:
 category:
   - shared-hosting
   - vps
+description: A shared hosting and VPS provider in Colombia.
 hqCountry: CO
 status: draft
 checkedAt: 2026-08-12

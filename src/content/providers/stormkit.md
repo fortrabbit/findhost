@@ -6,6 +6,7 @@ urls:
 category:
   - static
   - serverless
+description: A static hosting and serverless provider.
 status: draft
 checkedAt: 2026-08-12
 ai: authored

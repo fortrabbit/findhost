@@ -3,6 +3,7 @@ id: wpdeveloper
 name: WPDeveloper
 urls:
   home: https://wpdeveloper.com
+description: A WordPress plugin company and the owner of xCloud.
 status: unlisted
 checkedAt: 2026-08-07
 figure:

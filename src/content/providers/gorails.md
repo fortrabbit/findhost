@@ -3,6 +3,7 @@ id: gorails
 name: GoRails, LLC
 urls:
   home: https://gorails.com
+description: A Ruby on Rails education company and the owner of Hatchbox.
 status: unlisted
 checkedAt: 2026-08-07
 figure:

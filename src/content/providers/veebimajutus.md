@@ -5,6 +5,7 @@ urls:
   home: https://veebimajutus.ee
 category:
   - shared-hosting
+description: A shared hosting provider in Estonia.
 hqCountry: EE
 status: draft
 checkedAt: 2026-08-12

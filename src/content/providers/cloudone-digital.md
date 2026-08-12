@@ -3,6 +3,7 @@ id: cloudone-digital
 name: CloudOne Digital
 urls:
   home: https://cloudonedigital.com
+description: The holding company that acquired Liquid Web.
 status: unlisted
 checkedAt: 2026-08-07
 figure:

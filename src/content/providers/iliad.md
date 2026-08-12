@@ -3,6 +3,7 @@ id: iliad
 name: iliad Group
 urls:
   home: https://www.iliad.fr
+description: The French telecoms group behind Free, and the owner of Scaleway.
 status: unlisted
 checkedAt: 2026-08-07
 figure:

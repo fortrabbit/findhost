@@ -6,6 +6,7 @@ urls:
 category:
   - shared-hosting
   - iaas
+description: A shared hosting and IaaS provider in Sweden.
 hqCountry: SE
 status: draft
 checkedAt: 2026-08-12

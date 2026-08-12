@@ -5,6 +5,7 @@ urls:
   home: https://base44.com
 category:
   - lcnc
+description: A low-code and no-code site builder in Israel.
 hqCountry: IL
 status: draft
 checkedAt: 2026-08-12

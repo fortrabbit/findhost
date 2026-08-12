@@ -5,6 +5,7 @@ urls:
   home: https://aapanel.com
 category:
   - server-management
+description: Server management software in China.
 hqCountry: CN
 status: draft
 checkedAt: 2026-08-12

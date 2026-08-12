@@ -6,6 +6,7 @@ urls:
 category:
   - vps
   - iaas
+description: A VPS and IaaS provider in the United Kingdom.
 hqCountry: GB
 status: draft
 checkedAt: 2026-08-12

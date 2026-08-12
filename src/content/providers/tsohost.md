@@ -5,6 +5,7 @@ urls:
   home: https://tsohost.com
 category:
   - shared-hosting
+description: A shared hosting provider in the United Kingdom.
 hqCountry: GB
 status: draft
 checkedAt: 2026-08-12

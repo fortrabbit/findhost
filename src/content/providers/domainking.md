@@ -5,6 +5,7 @@ urls:
   home: https://domainking.ng
 category:
   - shared-hosting
+description: A shared hosting provider in Nigeria.
 hqCountry: NG
 status: draft
 checkedAt: 2026-08-12

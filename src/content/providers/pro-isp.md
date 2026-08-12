@@ -5,6 +5,7 @@ urls:
   home: https://proisp.no
 category:
   - shared-hosting
+description: A shared hosting provider in Norway.
 hqCountry: NO
 status: draft
 checkedAt: 2026-08-12

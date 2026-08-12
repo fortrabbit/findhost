@@ -6,6 +6,7 @@ urls:
 category:
   - iaas
   - paas
+description: A IaaS and PaaS provider in China.
 hqCountry: CN
 status: draft
 checkedAt: 2026-08-12

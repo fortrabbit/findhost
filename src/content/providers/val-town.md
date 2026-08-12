@@ -5,6 +5,7 @@ urls:
   home: https://val.town
 category:
   - serverless
+description: A serverless provider in the United States.
 hqCountry: US
 status: draft
 checkedAt: 2026-08-12

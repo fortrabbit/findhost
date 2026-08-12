@@ -8,6 +8,7 @@ category:
   - vps
   - iaas
   - bare-metal
+description: A shared hosting, VPS, IaaS and bare metal provider in Nepal.
 hqCountry: NP
 status: draft
 checkedAt: 2026-08-12

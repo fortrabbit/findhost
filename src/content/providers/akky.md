@@ -5,6 +5,7 @@ urls:
   home: https://akky.mx
 category:
   - shared-hosting
+description: A shared hosting provider in Mexico.
 hqCountry: MX
 status: draft
 checkedAt: 2026-08-12

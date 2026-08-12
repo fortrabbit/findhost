@@ -5,6 +5,7 @@ urls:
   home: https://cdmon.com
 category:
   - shared-hosting
+description: A shared hosting provider in Spain.
 hqCountry: ES
 status: draft
 checkedAt: 2026-08-12

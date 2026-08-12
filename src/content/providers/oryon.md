@@ -7,6 +7,7 @@ category:
   - shared-hosting
   - vps
   - iaas
+description: A shared hosting, VPS and IaaS provider in Singapore.
 hqCountry: SG
 status: draft
 checkedAt: 2026-08-12

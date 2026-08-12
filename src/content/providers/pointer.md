@@ -5,6 +5,7 @@ urls:
   home: https://pointer.gr
 category:
   - shared-hosting
+description: A shared hosting provider in Greece.
 hqCountry: GR
 status: draft
 checkedAt: 2026-08-12

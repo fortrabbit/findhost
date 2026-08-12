@@ -5,6 +5,7 @@ urls:
   home: https://register.it
 category:
   - shared-hosting
+description: A shared hosting provider in Italy.
 hqCountry: IT
 status: draft
 checkedAt: 2026-08-12

@@ -5,6 +5,7 @@ urls:
   home: https://www.4everland.org
 category:
   - static
+description: A static hosting provider in China.
 hqCountry: CN
 status: draft
 checkedAt: 2026-08-12

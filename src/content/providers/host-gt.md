@@ -6,6 +6,7 @@ urls:
 category:
   - shared-hosting
   - paas
+description: A shared hosting and PaaS provider in Guatemala.
 status: draft
 checkedAt: 2026-08-12
 ai: authored

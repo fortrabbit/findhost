@@ -9,6 +9,7 @@ category:
   - vps
   - iaas
   - bare-metal
+description: A Japanese cloud and infrastructure provider selling shared hosting, virtual servers and dedicated machines.
 hqCountry: JP
 infraContract:
   - owns-metal

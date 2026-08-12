@@ -5,6 +5,7 @@ urls:
   home: https://buyvm.net
 category:
   - vps
+description: A VPS provider in Canada.
 hqCountry: CA
 status: draft
 checkedAt: 2026-08-12

@@ -8,6 +8,7 @@ category:
   - vps
   - bare-metal
   - serverless
+description: A shared hosting, VPS, bare metal and serverless provider in Nigeria.
 hqCountry: NG
 status: draft
 checkedAt: 2026-08-12

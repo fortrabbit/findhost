@@ -7,6 +7,7 @@ category:
   - shared-hosting
   - vps
   - paas
+description: A shared hosting, VPS and PaaS provider in Brazil.
 hqCountry: BR
 status: draft
 checkedAt: 2026-08-12

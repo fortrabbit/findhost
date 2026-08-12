@@ -5,6 +5,7 @@ urls:
   home: https://www.sanity.io
 category:
   - lcnc
+description: A low-code and no-code site builder in Norway.
 hqCountry: NO
 status: draft
 checkedAt: 2026-08-12

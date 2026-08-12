@@ -5,6 +5,7 @@ urls:
   home: https://conoha.jp
 category:
   - vps
+description: A VPS provider in Japan.
 hqCountry: JP
 status: draft
 checkedAt: 2026-08-12

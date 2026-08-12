@@ -5,6 +5,7 @@ urls:
   home: https://www.webnode.com
 category:
   - lcnc
+description: A low-code and no-code site builder in Czechia.
 hqCountry: CZ
 status: draft
 checkedAt: 2026-08-12

@@ -3,6 +3,7 @@ id: gmo-pepabo
 name: GMO Pepabo
 urls:
   home: https://pepabo.com
+description: A Japanese internet company whose hosting reaches customers as Lolipop and other brands.
 status: unlisted
 checkedAt: 2026-08-07
 figure:

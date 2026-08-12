@@ -5,6 +5,7 @@ urls:
   home: https://lankahost.lk
 category:
   - shared-hosting
+description: A shared hosting provider in Sri Lanka.
 hqCountry: LK
 status: draft
 checkedAt: 2026-08-12

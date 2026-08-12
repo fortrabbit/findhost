@@ -6,6 +6,7 @@ urls:
 category:
   - paas
   - vps
+description: A PaaS and VPS provider in the United States.
 hqCountry: US
 status: draft
 checkedAt: 2026-08-12

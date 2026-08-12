@@ -3,6 +3,7 @@ id: newfold-digital
 name: Newfold Digital
 urls:
   home: https://newfold.com
+description: The holding company for Bluehost, HostGator and Network Solutions.
 status: unlisted
 checkedAt: 2026-08-07
 figure:

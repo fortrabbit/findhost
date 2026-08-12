@@ -5,6 +5,7 @@ urls:
   home: https://typedream.com
 category:
   - lcnc
+description: A low-code and no-code site builder.
 status: draft
 checkedAt: 2026-08-12
 ai: authored

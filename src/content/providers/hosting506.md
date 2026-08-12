@@ -7,6 +7,7 @@ category:
   - shared-hosting
   - vps
   - paas
+description: A shared hosting, VPS and PaaS provider in Costa Rica.
 hqCountry: CR
 status: draft
 checkedAt: 2026-08-12

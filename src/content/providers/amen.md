@@ -5,6 +5,7 @@ urls:
   home: https://amen.pt
 category:
   - shared-hosting
+description: A shared hosting provider in Portugal.
 hqCountry: PT
 status: draft
 checkedAt: 2026-08-12

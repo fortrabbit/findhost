@@ -5,6 +5,7 @@ urls:
   home: https://www.plasmic.app
 category:
   - lcnc
+description: A low-code and no-code site builder in the United States.
 hqCountry: US
 status: draft
 checkedAt: 2026-08-12

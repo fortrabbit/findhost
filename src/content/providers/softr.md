@@ -5,6 +5,7 @@ urls:
   home: https://softr.io
 category:
   - lcnc
+description: A low-code and no-code site builder in Germany.
 hqCountry: DE
 status: draft
 checkedAt: 2026-08-12

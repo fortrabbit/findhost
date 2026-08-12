@@ -6,6 +6,7 @@ urls:
 category:
   - shared-hosting
   - vps
+description: A shared hosting and VPS provider in the United Kingdom.
 hqCountry: GB
 status: draft
 checkedAt: 2026-08-12

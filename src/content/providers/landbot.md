@@ -5,6 +5,7 @@ urls:
   home: https://landbot.com
 category:
   - lcnc
+description: A low-code and no-code site builder in Spain.
 hqCountry: ES
 status: draft
 checkedAt: 2026-08-12

@@ -3,6 +3,7 @@ id: alphabet
 name: Alphabet
 urls:
   home: https://abc.xyz
+description: Google's holding company, which sells no hosting under its own name.
 status: unlisted
 checkedAt: 2026-08-07
 figure:

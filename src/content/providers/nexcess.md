@@ -6,6 +6,7 @@ urls:
 category:
   - paas
   - shared-hosting
+description: A PaaS and shared hosting provider in the United States.
 hqCountry: US
 status: draft
 checkedAt: 2026-08-12

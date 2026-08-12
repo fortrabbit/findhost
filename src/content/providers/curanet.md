@@ -5,6 +5,7 @@ urls:
   home: https://curanet.dk
 category:
   - shared-hosting
+description: A shared hosting provider in Denmark.
 hqCountry: DK
 status: draft
 checkedAt: 2026-08-12

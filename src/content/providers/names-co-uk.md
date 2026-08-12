@@ -5,6 +5,7 @@ urls:
   home: https://names.co.uk
 category:
   - shared-hosting
+description: A shared hosting provider in the United Kingdom.
 hqCountry: GB
 status: draft
 checkedAt: 2026-08-12

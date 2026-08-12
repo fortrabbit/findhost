@@ -3,6 +3,7 @@ id: salesforce
 name: Salesforce
 urls:
   home: https://www.salesforce.com
+description: A software company that owns Heroku and sells no hosting under its own name.
 status: unlisted
 checkedAt: 2026-08-07
 figure:

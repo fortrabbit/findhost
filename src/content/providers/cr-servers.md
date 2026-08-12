@@ -6,6 +6,7 @@ urls:
 category:
   - vps
   - bare-metal
+description: A VPS and bare metal provider in Costa Rica.
 hqCountry: CR
 status: draft
 checkedAt: 2026-08-12
