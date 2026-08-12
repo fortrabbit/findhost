@@ -473,12 +473,37 @@ html:not(.js) .theme-switch {
  * number underlined as well would make every row three links to one page.
  */
 .stack-list > li {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
   column-gap: var(--space-md);
-  padding: var(--space-xs) 0;
+  /* Horizontal padding is bled back out, so the row highlights wider than the
+   * text while the text stays aligned with the prose above it. */
+  padding: var(--space-xs) var(--space-sm);
+  margin-inline: calc(var(--space-sm) * -1);
   border-top: var(--rule-hairline) solid var(--color-ink);
+}
+
+/*
+ * The whole row is the link, the same way a provider row is: the name's own
+ * anchor stretched over the row rather than an anchor wrapped around it. The
+ * gloss and the count stay unlinked — three links to one page is what the
+ * markup was avoiding — and the target is the width of the list.
+ */
+.stack-list > li > a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.stack-list > li:hover {
+  background: var(--color-hover);
+}
+
+/* The name answers for the whole row, so pointing anywhere in it thickens the rule. */
+.stack-list > li:hover > a {
+  text-decoration-thickness: var(--rule-strong);
 }
 
 .stack-lead {
