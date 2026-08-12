@@ -3,4 +3,4 @@ description: Hosting where more than one person can work on the same account, an
 lead: More than one person, without sharing a password.
 ---
 
-A platform where the account *is* the login is a different product from one where a team has places of their own, and no pricing page says which it is until somebody needs it. Agencies feel it first: handing a finished site to a client means either transferring an account or sharing a password. Recorded in three answers — nobody, a team, or clients as a separate notion.
+With old school hosting providers the account is the login. You share it with colleagues and clients. Newer hosting platforms offer collaboration features with dedicated logins for different users and sometimes access controls. This just shows you if collaboration features exist. They are not alike, some are advanced, with flows to invite coworkers, hand over projects to clients.
