@@ -34,6 +34,24 @@ const nameOf = new Map(everyRecord.map((entry) => [String(entry.data.id), entry.
 const valueOf = (field: string) => (data as Record<string, unknown>)[field];
 
 /*
+ * The other invoices. A provider recording `none` for one of these has said it
+ * does not sell the thing, so the register can name who does.
+ *
+ * Only on an explicit `none`. An absent field means nobody checked, and telling
+ * a reader a host has no email on that basis would be inventing the answer —
+ * which is why this shows on few records today and more as they are filled in.
+ * The category must be in use too, or the link points at a page never built.
+ */
+const soldBy = new Set(
+  everyRecord.filter(isListed).flatMap((entry) => (entry.data.category as string[] | undefined) ?? []),
+);
+const alsoNeeded = [
+  { field: 'domainRegistration', need: 'A domain to point at it', category: 'registrar' },
+  { field: 'emailHosting', need: 'Mailboxes on that domain', category: 'mail' },
+  { field: 'managedDatabases', need: 'A database to keep the data', category: 'dbaas' },
+].filter((pair) => valueOf(pair.field) === 'none' && soldBy.has(pair.category));
+
+/*
  * The rows, their order, their labels and the words their values are shown
  * under all come from src/data/fields.yml. The page used to carry its own list
  * of them, which is why two thirds of it printed raw ids: a label existed only
@@ -334,6 +352,22 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
 
         {/* Facts about this record held on other records, drawn from their side of the relation. */}
         {related.length > 0 && <FactGroups groups={[{ label: 'Related', rows: related }]} />}
+
+        {/* What this one says it does not sell, and where the register keeps the companies that do. */}
+        {
+          alsoNeeded.length > 0 && (
+            <section class="fact-group">
+              <h2>Also needed</h2>
+              <ul class="also-needed">
+                {alsoNeeded.map((pair) => (
+                  <li>
+                    {pair.need} — <a href={`/categories/${pair.category}/`}>who sells it</a>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )
+        }
 
         {
           missing.length > 0 && (
