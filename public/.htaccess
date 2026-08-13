@@ -3,6 +3,10 @@
 AddType text/markdown .md
 AddCharset UTF-8 .md
 
+# Without this the platform's own error document answers instead, and a
+# mistyped URL reads as a site that was never deployed.
+ErrorDocument 404 /404.html
+
 # Nothing was compressed: the homepage went out at 274 KB, and so did every
 # markdown twin and the whole JSON and CSV export. Listed by type rather than by
 # extension so pagefind's index chunks, which are compressed binaries already
