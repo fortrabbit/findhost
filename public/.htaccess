@@ -2,3 +2,11 @@
 # page arrives untyped and a browser offers to download it.
 AddType text/markdown .md
 AddCharset UTF-8 .md
+
+# Nothing was compressed: the homepage went out at 274 KB, and so did every
+# markdown twin and the whole JSON and CSV export. Listed by type rather than by
+# extension so pagefind's index chunks, which are compressed binaries already
+# and carry no type, are left alone.
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/markdown text/csv text/javascript application/javascript application/json application/xml application/rss+xml image/svg+xml
+</IfModule>
