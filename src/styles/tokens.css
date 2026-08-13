@@ -88,11 +88,11 @@
   :root {
     --color-page: var(--pitch);
     --color-ink: var(--paper);
-      --color-link: var(--blue-300);
+    --color-link: var(--blue-300);
     --color-link-visited: var(--violet-300);
     --color-landed: var(--amber-800);
     --color-hover: var(--blue-950);
-      --color-liked: var(--rose-950);
+    --color-liked: var(--rose-950);
     --color-heart: var(--rose-300);
     --color-social: var(--blue-950);
   }

@@ -111,7 +111,10 @@ for (const field of fields) {
         : [field.id];
 
     for (const missing of shown) {
-      fail(dictionaryFile, `"${missing}" is filterable through "${field.facet}" but has no group, so no record shows it`);
+      fail(
+        dictionaryFile,
+        `"${missing}" is filterable through "${field.facet}" but has no group, so no record shows it`,
+      );
     }
 
     if (!/^[a-z0-9-]+$/.test(field.facet)) fail(dictionaryFile, `facet "${field.facet}" is not a usable URL segment`);
@@ -164,7 +167,10 @@ for (const field of fields) {
       for (const wanted of when) {
         if (wanted === '*') continue;
         if (!vocabulary.has(wanted)) {
-          fail(dictionaryFile, `"${field.id}" value "${value.id}" waits for "${from}: ${wanted}", which does not exist`);
+          fail(
+            dictionaryFile,
+            `"${field.id}" value "${value.id}" waits for "${from}: ${wanted}", which does not exist`,
+          );
         }
       }
     }
@@ -270,7 +276,6 @@ for (const key of noteKeys(notesDir)) {
     continue;
   }
 
-
   if (!field) {
     const named = fieldOf.get(segment!);
     const hint = named?.facet ? ` — that field is filed under "${named.facet}"` : '';
@@ -331,9 +336,25 @@ const fieldNames = new Set(records.flatMap(({ data }) => (data ? Object.keys(dat
  * is not a conversion anybody should read a price from, and nothing renders it.
  */
 const roughlyInDollars: Record<string, number> = {
-  USD: 1, EUR: 1.1, GBP: 1.3, CHF: 1.1, CAD: 0.75, AUD: 0.65, NZD: 0.6,
-  SEK: 0.1, DKK: 0.15, PLN: 0.25, JPY: 0.007, INR: 0.012, MYR: 0.22,
-  BRL: 0.18, ARS: 0.001, ZAR: 0.055, MXN: 0.05, KES: 0.008, VND: 0.00004,
+  USD: 1,
+  EUR: 1.1,
+  GBP: 1.3,
+  CHF: 1.1,
+  CAD: 0.75,
+  AUD: 0.65,
+  NZD: 0.6,
+  SEK: 0.1,
+  DKK: 0.15,
+  PLN: 0.25,
+  JPY: 0.007,
+  INR: 0.012,
+  MYR: 0.22,
+  BRL: 0.18,
+  ARS: 0.001,
+  ZAR: 0.055,
+  MXN: 0.05,
+  KES: 0.008,
+  VND: 0.00004,
 };
 
 /** The dollar floor of each band, in the order lib/price.ts declares them. */
@@ -377,8 +398,7 @@ const forbidden = ['rank', 'ranking', 'score', 'rating', 'boost', 'weight', 'sta
  */
 function checkPriceBand(file: string, data: Record<string, unknown>) {
   const entry = data.entryPrice as
-    | { amount?: number; currency?: string; period?: string; introductory?: boolean }
-    | undefined;
+    { amount?: number; currency?: string; period?: string; introductory?: boolean } | undefined;
   const band = data.priceFrom as string | undefined;
   if (!entry?.amount || !entry.currency || !band || bandFloor[band] === undefined) return;
 

@@ -63,9 +63,7 @@ export const loadAsides = once(async (): Promise<Aside[]> => {
   for (const { key, label } of asideOf.values()) groups.set(key, { key, label, rows: [] });
 
   for (const record of await loadAsideProviders()) {
-    groups
-      .get(asideGroup(record)!)!
-      .rows.push({ ...toRow(record as never), status: String(record.data.status) });
+    groups.get(asideGroup(record)!)!.rows.push({ ...toRow(record as never), status: String(record.data.status) });
   }
 
   return [...groups.values()].map((group) => ({ ...group, rows: group.rows.sort(byName) }));

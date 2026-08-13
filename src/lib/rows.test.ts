@@ -88,9 +88,7 @@ describe('countValues', () => {
   const category = fieldOf.get('category')!;
 
   const rows = (...answers: (string | null | undefined)[]): ProviderRow[] =>
-    answers.map((answer, index) =>
-      toRow(record(`r${index}`, answer === undefined ? {} : { category: answer })),
-    );
+    answers.map((answer, index) => toRow(record(`r${index}`, answer === undefined ? {} : { category: answer })));
 
   it('counts each value against the records that hold it', () => {
     const facet = countValues(category, rows('paas', 'paas', 'iaas'));

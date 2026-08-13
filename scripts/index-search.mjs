@@ -32,7 +32,9 @@ console.error(`  exit status   ${run.status}`);
 if (run.signal) console.error(`  signal        ${run.signal}`);
 if (run.error) console.error(`  spawn error   ${run.error.message}`);
 console.error(`  platform      ${process.platform} ${process.arch}`);
-console.error(`  binary on PATH ${existsSync('node_modules/.bin/pagefind') ? 'yes' : 'no'} (node_modules/.bin/pagefind)`);
+console.error(
+  `  binary on PATH ${existsSync('node_modules/.bin/pagefind') ? 'yes' : 'no'} (node_modules/.bin/pagefind)`,
+);
 console.error(`  @pagefind/*   ${platforms.length ? platforms.join(', ') : 'none installed'}`);
 console.error('');
 console.error('If no platform package is installed, the optional dependency for this');

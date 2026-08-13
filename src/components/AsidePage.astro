@@ -41,22 +41,27 @@ const counted = `${rows.length} ${rows.length === 1 ? 'record' : 'records'}, kep
 const origin = Astro.site?.origin ?? '';
 ---
 
-<Base title={`${note?.data.title ?? label} — FindHost`} description={note?.data.description} hidden={hidden} schema={[
-  {
-    '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    name: note?.data.title ?? label,
-    numberOfItems: rows.length,
-    isPartOf: organization(origin),
-    itemListOrder: 'https://schema.org/ItemListOrderAscending',
-    itemListElement: rows.map((provider, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      url: `${origin}/${provider.id}/`,
-      name: provider.name,
-    })),
-  },
-]}>
+<Base
+  title={`${note?.data.title ?? label} — FindHost`}
+  description={note?.data.description}
+  hidden={hidden}
+  schema={[
+    {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: note?.data.title ?? label,
+      numberOfItems: rows.length,
+      isPartOf: organization(origin),
+      itemListOrder: 'https://schema.org/ItemListOrderAscending',
+      itemListElement: rows.map((provider, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        url: `${origin}/${provider.id}/`,
+        name: provider.name,
+      })),
+    },
+  ]}
+>
   {/* The word that was clicked to get here, so arriving needs no second reading. */}
   <div class="page-head">
     <h1>{label}</h1>
