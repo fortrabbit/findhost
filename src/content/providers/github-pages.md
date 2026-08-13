@@ -55,7 +55,7 @@ figure:
 ai: authored
 ---
 
-GitHub Pages serves a static site straight from a repository: push to a branch, or let an Actions workflow build first, and the output is published on a github.io subdomain or a custom domain with a certificate GitHub obtains. Jekyll is built in, which is why so much of the documentation web runs on it. GitHub is a Microsoft subsidiary, which `ownership` records; there is no separate record for the company, because the hosting is this product.
+GitHub Pages serves a static site straight from a repository: push to a branch, or let an Actions workflow build first, and the output is published on a github.io subdomain or a custom domain with a certificate GitHub obtains. Jekyll is built in, which is why so much of the documentation web runs on it. GitHub is a Microsoft subsidiary, which `ownership` records; the forge that holds the repository is [a record of its own](/github/), because serving a built site and keeping the source are two different purchases.
 
 It is hosting in the sense this register cares about — somebody has to choose where a built site lives — and it is unusual in being free for public repositories with no plan to compare. What it does not do is run anything: no server-side code, no database, no shell, and no way to answer a request with something computed. A site that outgrows that is looking at the [serverless](/categories/serverless/) and [PaaS](/categories/paas/) records rather than at a bigger plan here.
 
