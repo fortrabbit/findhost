@@ -11,3 +11,6 @@ playwright-report
 
 # A generated dot matrix. Formatting it would make the diff unreadable forever.
 src/lib/world-bitmap.ts
+
+# Apache config, which prettier has no parser for.
+public/.htaccess

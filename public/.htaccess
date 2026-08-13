@@ -1,0 +1,4 @@
+# Apache serves .md with no Content-Type at all, so the markdown twin of every
+# page arrives untyped and a browser offers to download it.
+AddType text/markdown .md
+AddCharset UTF-8 .md
