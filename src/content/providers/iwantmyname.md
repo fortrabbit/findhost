@@ -7,6 +7,8 @@ urls:
 category:
   - domains-dns
 description: A small registrar with DNS management and one-click setup for the services a domain usually points at.
+favorite: true
+favoriteNote: Dedication for domains.
 runtimes: null
 deployMethods: null
 sshAccess: null
