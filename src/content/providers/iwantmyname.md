@@ -32,7 +32,7 @@ figure:
   emoji: 🏷️
   color: rgb(120, 80, 140)
   textColor: rgb(245, 238, 249)
-  text: A registrar that stayed small.
+  text: A domain registrar that stayed small.
 ai: authored
 ---
 
@@ -42,4 +42,4 @@ iwantmyname is a small registrar, trading since 2008, selling names across sever
 
 No price is recorded here, and not for want of looking: the domain prices load into the page after a search rather than being printed on it, so nothing could be read directly. Prices are quoted in five currencies.
 
-Nothing of a customer's runs here. It sells the name and answers for it, and the site lives on a [host](/categories/paas/) somewhere else.
+iwantmyname sells domain name registration, the site lives on a [PaaS host](/categories/paas/) or somewhere else.
