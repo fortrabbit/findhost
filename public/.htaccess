@@ -7,6 +7,16 @@ AddCharset UTF-8 .md
 # mistyped URL reads as a site that was never deployed.
 ErrorDocument 404 /404.html
 
+# No HSTS on purpose: it is the one header here that cannot be taken back
+# within its max-age. Referrer-Policy earns its place — every record links out
+# to a provider, and the default hands each of them the full referring URL.
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "DENY"
+  Header always set Permissions-Policy "geolocation=(), camera=(), microphone=()"
+</IfModule>
+
 # Nothing was compressed: the homepage went out at 274 KB, and so did every
 # markdown twin and the whole JSON and CSV export. Listed by type rather than by
 # extension so pagefind's index chunks, which are compressed binaries already
