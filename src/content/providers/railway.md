@@ -81,7 +81,7 @@ figure:
   emoji: 🚂
   color: rgb(157, 77, 77)
   textColor: rgb(240, 200, 200)
-  text: Mighty but a but complex.
+  text: Mighty but a bit complex.
 ---
 
 Railway is a language-agnostic deployment platform. Builds run through Railpack, its own build system, which detects Node.js, Python, Go, PHP, Java and Ruby without configuration and can be steered with environment variables or a config file; a Dockerfile can be supplied instead. Databases are provisioned from first-party templates for PostgreSQL, MySQL, MongoDB and Redis.
