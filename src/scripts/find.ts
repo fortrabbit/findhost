@@ -27,8 +27,13 @@ interface ProviderRow {
 
 /**
  * What was used, never who used it. Fathom is cookieless and the event is a
- * facet and a value — "filter software: WordPress" — which says how the panel is
- * read without saying anything about a reader.
+ * facet — "filter software" — which says how the panel is read without saying
+ * anything about a reader.
+ *
+ * The facet, not the value it was set to: one event per facet is a dozen names a
+ * person can read, where facet-and-value was 228 of them, each with one hit. Two
+ * words, no punctuation — Fathom's own advice is to avoid special characters in
+ * an event name, and a name cannot be renamed once it has been fired.
  *
  * Optional by construction: the script only loads where a site id is configured,
  * so this is a no-op everywhere else rather than something to remember to guard.
@@ -165,10 +170,7 @@ if (filtersEl && resultsEl && summaryEl && indexEl) {
         else next.delete(input.value);
 
         /* Only the tick. An untick is a correction, and counting it would read as interest. */
-        if (input.checked) {
-          const label = input.closest('.find-row')?.querySelector('.find-value')?.textContent?.trim();
-          track(`filter ${facetId}: ${label ?? input.value}`);
-        }
+        if (input.checked) track(`filter ${facetId}`);
         if (next.size) selected.set(facetId, next);
         else selected.delete(facetId);
         writeUrl();
