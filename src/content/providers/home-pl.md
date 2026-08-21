@@ -10,6 +10,7 @@ category:
   - shared-hosting
 description: One of Poland's largest hosting companies, selling shared web hosting, mailboxes, databases and domains from servers in Poland.
 hqCountry: PL
+ownership: subsidiary
 whoManagesOs: managed
 useCases:
   - cms
@@ -63,6 +64,7 @@ sources:
   - { field: billingPeriods, url: 'https://home.pl/hosting', checkedAt: 2026-08-02 }
   - { field: emailHosting, url: 'https://home.pl/hosting', checkedAt: 2026-08-12 }
   - { field: domainRegistration, url: 'https://home.pl/domeny/', checkedAt: 2026-08-12 }
+  - { field: ownership, url: 'https://www.ionos-group.com/brands/homepl.html', checkedAt: 2026-08-21 }
 figure:
   emoji: 🏠
   color: rgb(109, 77, 157)

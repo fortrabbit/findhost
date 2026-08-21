@@ -47,6 +47,7 @@ supportHours: business-hours
 supportTiering: paid-upgrade
 status: active
 hqCountry: US
+ownership: vc-backed
 testDomain: included
 staging: included
 collaboration: team
@@ -77,6 +78,7 @@ sources:
   - { field: testDomain, url: 'https://laravel.com/forge', checkedAt: 2026-08-12 }
   - { field: staging, url: 'https://laravel.com/forge', checkedAt: 2026-08-12 }
   - { field: collaboration, url: 'https://laravel.com/forge', checkedAt: 2026-08-12 }
+  - { field: ownership, url: 'https://laravel.com/blog/accel-invests-57m-into-laravel', checkedAt: 2026-08-21 }
 figure:
   emoji: 💸
   color: rgb(89, 183, 52)

@@ -8,6 +8,7 @@ category:
   - shared-hosting
 description: A Dutch host running on wind power, selling VPS, web hosting and domains, with privacy as a stated position rather than a feature list.
 hqCountry: NL
+ownership: subsidiary
 regions:
   - NL
 energyClaim: annual-matched
@@ -17,6 +18,7 @@ sources:
   - { field: category, url: 'https://greenhost.net', checkedAt: 2026-08-14 }
   - { field: hqCountry, url: 'https://greenhost.net', checkedAt: 2026-08-14 }
   - { field: energyClaim, url: 'https://greenhost.net', checkedAt: 2026-08-14 }
+  - { field: ownership, url: 'https://press.thesharinggroup.com/245134-greenhost-sluit-zich-aan-bij-the-sharing-group-voor-ontwikkeling-duurzame-europese-cloudhosting/', checkedAt: 2026-08-21 }
 figure:
   emoji: 🌬️
   color: rgb(20, 80, 60)

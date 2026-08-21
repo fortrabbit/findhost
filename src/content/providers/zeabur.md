@@ -58,6 +58,7 @@ freeTier: permanent
 apiAvailable: public
 cliTool: official
 hqCountry: US
+ownership: vc-backed
 social:
   github: https://github.com/zeabur
   x: https://x.com/zeaburapp
@@ -74,6 +75,7 @@ sources:
   - { field: billingPeriods, url: 'https://zeabur.com/pricing', checkedAt: 2026-08-02 }
   - { field: exitWithin, url: 'https://zeabur.com/docs/legal/terms', checkedAt: 2026-08-02 }
   - { field: urls, url: 'https://zeabur.com/docs/legal/terms', checkedAt: 2026-08-01 }
+  - { field: ownership, url: 'https://zeabur.com/blogs/our-2m-seed-round', checkedAt: 2026-08-21 }
 figure:
   emoji: 🧩
   color: rgb(73, 88, 161)

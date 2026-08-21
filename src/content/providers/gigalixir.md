@@ -46,6 +46,7 @@ regions:
 cliTool: official
 status: active
 hqCountry: US
+ownership: independent
 checkedAt: 2026-08-12
 sources:
   - { field: testDomain, url: 'https://docs.gigalixir.com/app', checkedAt: 2026-08-12 }
@@ -59,6 +60,7 @@ sources:
   - { field: pricingModel, url: 'https://www.gigalixir.com/pricing/', checkedAt: 2026-08-01 }
   - { field: regions, url: 'https://www.gigalixir.com/pricing/', checkedAt: 2026-08-01 }
   - { field: cliTool, url: 'https://docs.gigalixir.com/', checkedAt: 2026-08-09 }
+  - { field: ownership, url: 'https://www.gigalixir.com/blog/new-owners-gigalixir/', checkedAt: 2026-08-21 }
 figure:
   emoji: 💧
   color: rgb(124, 69, 166)

@@ -7,6 +7,7 @@ urls:
 category:
   - serverless
 description: DigitalOcean Functions is a function-as-a-service platform built on Apache OpenWhisk, running short-lived handlers in several native language runtimes.
+ownership: subsidiary
 parent: digitalocean
 whoManagesOs: managed
 useCases:
@@ -54,6 +55,7 @@ sources:
   - { field: regions, url: 'https://docs.digitalocean.com/products/functions/details/availability/', checkedAt: 2026-08-01 }
   - { field: apiAvailable, url: 'https://www.digitalocean.com/products/functions', checkedAt: 2026-08-09 }
   - { field: cliTool, url: 'https://www.digitalocean.com/products/functions', checkedAt: 2026-08-09 }
+  - { field: ownership, url: 'https://www.digitalocean.com/about', checkedAt: 2026-08-21 }
 figure:
   emoji: 🌊
   color: rgb(45, 86, 190)

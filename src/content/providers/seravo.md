@@ -8,6 +8,7 @@ category:
   - vanity-hosting
 description: Finnish WordPress-only hosting company whose customers develop against a public, open-source project layout with Vagrant and Docker parity.
 hqCountry: FI
+ownership: subsidiary
 whoManagesOs: managed
 specialisation:
   - wordpress
@@ -62,6 +63,7 @@ sources:
   - { field: energyClaim, url: 'https://seravo.com/features/sustainable/', checkedAt: 2026-08-01 }
   - { field: sustainabilityUrl, url: 'https://seravo.com/features/sustainable/', checkedAt: 2026-08-01 }
   - { field: hqCountry, url: 'https://seravo.com/', checkedAt: 2026-08-01 }
+  - { field: ownership, url: 'https://www.privateequitywire.co.uk/perwyn-backed-miss-group-acquires-finnish-web-hosting-firm-seravo/', checkedAt: 2026-08-21 }
 figure:
   emoji: 🐧
   color: rgb(59, 132, 176)

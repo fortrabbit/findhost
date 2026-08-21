@@ -7,6 +7,7 @@ urls:
 category:
   - paas
 description: Fly.io runs applications as Firecracker microVMs on hardware it operates itself, deployed from a Dockerfile through the flyctl CLI and billed by usage.
+ownership: vc-backed
 infraContract:
   - owns-metal
 whoManagesOs: self-managed
@@ -69,6 +70,7 @@ sources:
   - { field: managedDatabases, url: 'https://fly.io/docs/about/pricing/', checkedAt: 2026-07-31 }
   - { field: deployMethods, url: 'https://fly.io/docs/launch/deploy/', checkedAt: 2026-07-31 }
   - { field: cliTool, url: 'https://fly.io/docs/launch/deploy/', checkedAt: 2026-07-31 }
+  - { field: ownership, url: 'https://fly.io/blog/we-raised-a-bunch-of-money/', checkedAt: 2026-08-21 }
 figure:
   emoji: ✈️
   color: rgb(45, 142, 190)

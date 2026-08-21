@@ -8,6 +8,7 @@ urls:
 category:
   - dbaas
 description: A managed database service selling MySQL through Vitess and Postgres, priced per cluster.
+ownership: vc-backed
 runtimes: null
 deployMethods: null
 sshAccess: null
@@ -33,6 +34,7 @@ sources:
   - { field: priceFrom, url: 'https://planetscale.com/pricing', checkedAt: 2026-08-12 }
   - { field: freeTier, url: 'https://planetscale.com/pricing', checkedAt: 2026-08-12 }
   - { field: runsOn, url: 'https://planetscale.com/pricing', checkedAt: 2026-08-12 }
+  - { field: ownership, url: 'https://planetscale.com/blog/ga', checkedAt: 2026-08-21 }
 figure:
   emoji: 🪐
   color: rgb(38, 58, 96)

@@ -7,6 +7,7 @@ urls:
 category:
   - server-management
 description: Open source control panel for managing web servers, email, DNS and databases.
+ownership: independent
 whoManagesOs: self-managed
 infraContract:
   - byo-iaas
@@ -37,6 +38,7 @@ sources:
   - { field: dnsHosting, url: 'https://hestiacp.com/docs/', checkedAt: 2026-08-12 }
   - { field: emailHosting, url: 'https://hestiacp.com/docs/', checkedAt: 2026-08-12 }
   - { field: collaboration, url: 'https://hestiacp.com/docs/', checkedAt: 2026-08-12 }
+  - { field: ownership, url: 'https://hestiacp.com/team.html', checkedAt: 2026-08-21 }
 figure:
   emoji: 📊
   color: rgb(52, 73, 94)

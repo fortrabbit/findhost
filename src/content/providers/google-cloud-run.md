@@ -7,6 +7,7 @@ urls:
 category:
   - serverless
 description: Google Cloud Run runs any container image, scales it to zero when idle and bills per request and per resource-second.
+ownership: subsidiary
 parent: gcp
 whoManagesOs: self-managed
 useCases:
@@ -67,6 +68,7 @@ sources:
   - { field: billingPeriods, url: 'https://docs.cloud.google.com/billing/docs/how-to/billing-cycle', checkedAt: 2026-08-02 }
   - { field: billingTiming, url: 'https://docs.cloud.google.com/billing/docs/how-to/billing-cycle', checkedAt: 2026-08-02 }
   - { field: deployMethods, url: 'https://cloud.google.com/run/pricing', checkedAt: 2026-07-31 }
+  - { field: ownership, url: 'https://cloud.google.com/terms/services', checkedAt: 2026-08-21 }
 figure:
   emoji: 🏃
   color: rgb(77, 109, 157)

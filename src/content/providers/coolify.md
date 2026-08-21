@@ -40,6 +40,7 @@ favorite: true
 favoriteNote: Popular tool. The paid version does not hold the free one hostage.
 status: active
 hqCountry: HU
+ownership: independent
 checkedAt: 2026-08-12
 sources:
   - { field: hqCountry, url: 'https://coolify.io/about', checkedAt: 2026-08-09 }
@@ -56,6 +57,7 @@ sources:
   - { field: apiAvailable, url: 'https://coolify.io/', checkedAt: 2026-07-31 }
   - { field: collaboration, url: 'https://coolify.io', checkedAt: 2026-08-12 }
   - { field: staging, url: 'https://coolify.io', checkedAt: 2026-08-12 }
+  - { field: ownership, url: 'https://coolify.io/philosophy', checkedAt: 2026-08-21 }
 figure:
   emoji: 🐋
   color: rgb(45, 169, 190)

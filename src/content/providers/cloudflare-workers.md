@@ -7,6 +7,7 @@ urls:
 category:
   - serverless
 description: Cloudflare's edge compute platform, running JavaScript, TypeScript, Python and Rust in V8 isolates on the network that already serves the request.
+ownership: subsidiary
 whoManagesOs: managed
 runtimes:
   - python
@@ -36,6 +37,7 @@ sources:
   - { field: exitWithin, url: 'https://developers.cloudflare.com/billing/billing-policy/', checkedAt: 2026-08-02 }
   - { field: freeTier, url: 'https://developers.cloudflare.com/workers/platform/pricing/', checkedAt: 2026-07-31 }
   - { field: cliTool, url: 'https://developers.cloudflare.com/workers/', checkedAt: 2026-08-09 }
+  - { field: ownership, url: 'https://www.cloudflare.com/about-overview/', checkedAt: 2026-08-21 }
 figure:
   emoji: 🔶
   color: rgb(176, 117, 59)

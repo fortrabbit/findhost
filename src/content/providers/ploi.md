@@ -9,6 +9,7 @@ category:
 regions: null
 description: Dutch server-management panel that provisions and maintains PHP application servers on VPS accounts the customer rents elsewhere.
 hqCountry: NL
+ownership: independent
 whoManagesOs: self-managed
 infraContract:
   - byo-iaas
@@ -64,6 +65,7 @@ sources:
   - { field: apiAvailable, url: 'https://ploi.io', checkedAt: 2026-08-09 }
   - { field: cliTool, url: 'https://ploi.io', checkedAt: 2026-08-09 }
   - { field: mcpServer, url: 'https://ploi.io', checkedAt: 2026-08-09 }
+  - { field: ownership, url: 'https://ploi.io/about', checkedAt: 2026-08-21 }
 figure:
   emoji: 🪄
   color: rgb(98, 60, 175)

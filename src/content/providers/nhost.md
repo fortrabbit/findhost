@@ -37,6 +37,7 @@ apiAvailable: public
 cliTool: official
 status: active
 hqCountry: PT
+ownership: vc-backed
 cdnIncluded: included
 domainRegistration: paid-addon
 collaboration: team
@@ -52,6 +53,7 @@ sources:
   - { field: cdnIncluded, url: 'https://nhost.io/pricing', checkedAt: 2026-08-12 }
   - { field: domainRegistration, url: 'https://nhost.io/pricing', checkedAt: 2026-08-12 }
   - { field: collaboration, url: 'https://nhost.io/pricing', checkedAt: 2026-08-12 }
+  - { field: ownership, url: 'https://nhost.io/blog/nhost-raises-3m-dollar-in-seed-funding', checkedAt: 2026-08-21 }
 figure:
   emoji: 🧊
   color: rgb(77, 117, 157)

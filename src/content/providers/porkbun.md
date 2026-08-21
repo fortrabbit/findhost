@@ -10,6 +10,7 @@ category:
   - static
 description: An ICANN-accredited registrar in Oregon that also sells static, PHP and cPanel hosting, and mailboxes by the inbox.
 hqCountry: US
+ownership: subsidiary
 domainRegistration: paid-addon
 emailHosting: paid-addon
 status: active
@@ -21,6 +22,7 @@ sources:
   - { field: domainRegistration, url: 'https://porkbun.com/', checkedAt: 2026-08-12 }
   - { field: emailHosting, url: 'https://porkbun.com/', checkedAt: 2026-08-12 }
   - { field: dnsHosting, url: 'https://porkbun.com/', checkedAt: 2026-08-12 }
+  - { field: ownership, url: 'https://porkbun.com/about', checkedAt: 2026-08-21 }
 figure:
   emoji: 🐷
   color: rgb(160, 70, 100)

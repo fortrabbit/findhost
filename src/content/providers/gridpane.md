@@ -46,6 +46,7 @@ apiAvailable: public
 cliTool: official
 status: active
 hqCountry: US
+ownership: vc-backed
 staging: included
 checkedAt: 2026-08-12
 sources:
@@ -62,6 +63,7 @@ sources:
   - { field: apiAvailable, url: 'https://gridpane.com', checkedAt: 2026-08-09 }
   - { field: cliTool, url: 'https://gridpane.com', checkedAt: 2026-08-09 }
   - { field: staging, url: 'https://gridpane.com/pricing/', checkedAt: 2026-08-12 }
+  - { field: ownership, url: 'https://gridpane.com/blog/automattic-invests-in-gridpane/', checkedAt: 2026-08-21 }
 figure:
   emoji: 🧯
   color: rgb(131, 77, 157)

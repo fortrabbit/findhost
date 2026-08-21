@@ -7,6 +7,7 @@ urls:
 category:
   - server-management
 description: Open source server control panel built on OpenLiteSpeed for PHP and WordPress hosting.
+ownership: independent
 whoManagesOs: self-managed
 infraContract:
   - byo-iaas
@@ -40,6 +41,7 @@ sources:
   - { field: supportChannels, url: 'https://cyberpanel.net', checkedAt: 2026-08-12 }
   - { field: runtimes, url: 'https://cyberpanel.net/features', checkedAt: 2026-08-12 }
   - { field: software, url: 'https://cyberpanel.net', checkedAt: 2026-08-12 }
+  - { field: ownership, url: 'https://cyberpanel.net/about-us', checkedAt: 2026-08-21 }
 figure:
   emoji: 🚀
   color: rgb(34, 139, 34)

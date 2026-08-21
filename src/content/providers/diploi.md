@@ -8,6 +8,7 @@ category:
   - paas
 description: Finnish platform that puts a cloud development environment and the hosting for the same application in one place, billed by the hour it runs.
 hqCountry: FI
+ownership: vc-backed
 whoManagesOs: managed
 runtimes:
   - node
@@ -58,6 +59,7 @@ sources:
   - { field: cdnIncluded, url: 'https://diploi.com/pricing', checkedAt: 2026-08-12 }
   - { field: staging, url: 'https://diploi.com/pricing', checkedAt: 2026-08-12 }
   - { field: collaboration, url: 'https://diploi.com/pricing', checkedAt: 2026-08-12 }
+  - { field: ownership, url: 'https://fiban.org/news/fibanfunded-diploi-funding-round-startup/', checkedAt: 2026-08-21 }
 figure:
   emoji: 💻
   color: rgb(59, 130, 246)

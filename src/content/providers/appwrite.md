@@ -8,6 +8,7 @@ urls:
 category:
   - serverless
 description: Open-source backend platform sold as a hosted service, running user functions alongside managed databases, authentication, storage and messaging.
+ownership: vc-backed
 whoManagesOs: self-managed
 useCases:
   - api
@@ -54,6 +55,7 @@ sources:
   - { field: currencies, url: 'https://appwrite.io/pricing', checkedAt: 2026-08-02 }
   - { field: billingPeriods, url: 'https://appwrite.io/pricing', checkedAt: 2026-08-02 }
   - { field: freeTier, url: 'https://appwrite.io/pricing', checkedAt: 2026-08-01 }
+  - { field: ownership, url: 'https://appwrite.io/blog/post/oss-journey-blog', checkedAt: 2026-08-21 }
 figure:
   emoji: 🧰
   color: rgb(176, 59, 132)

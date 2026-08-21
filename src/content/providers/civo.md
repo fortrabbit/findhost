@@ -9,6 +9,7 @@ category:
   - vps
 description: British Kubernetes-first cloud that charges for worker nodes only, with control planes included and data transfer unmetered.
 hqCountry: GB
+ownership: vc-backed
 whoManagesOs: self-managed
 useCases:
   - web-app
@@ -65,6 +66,7 @@ sources:
   - { field: billingTiming, url: 'https://www.civo.com/docs/account/billing', checkedAt: 2026-08-02 }
   - { field: exitWithin, url: 'https://www.civo.com/legal/terms', checkedAt: 2026-08-02 }
   - { field: collaboration, url: 'https://www.civo.com/docs/account/teams', checkedAt: 2026-08-12 }
+  - { field: ownership, url: 'https://www.civo.com/blog/thg-ingenuity-investment', checkedAt: 2026-08-21 }
 figure:
   emoji: ☸️
   color: rgb(63, 125, 172)

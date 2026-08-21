@@ -15,6 +15,7 @@ sshAccess: null
 domainRegistration: paid-addon
 dnsHosting: included
 founded: 2008
+ownership: subsidiary
 currencies:
   - USD
   - EUR
@@ -28,6 +29,7 @@ sources:
   - { field: founded, url: 'https://iwantmyname.com/', checkedAt: 2026-08-12 }
   - { field: currencies, url: 'https://iwantmyname.com/', checkedAt: 2026-08-12 }
   - { field: dnsHosting, url: 'https://iwantmyname.com/', checkedAt: 2026-08-12 }
+  - { field: ownership, url: 'https://iwantmyname.com/about', checkedAt: 2026-08-21 }
 figure:
   emoji: 🏷️
   color: rgb(120, 80, 140)

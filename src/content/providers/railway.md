@@ -8,6 +8,7 @@ urls:
 category:
   - paas
 description: Railway is a polyglot deployment platform with subscription plus usage billing, four regions and a build system that detects most common languages.
+ownership: vc-backed
 whoManagesOs: managed
 useCases:
   - side-project
@@ -77,6 +78,7 @@ sources:
   - { field: mcpServer, url: 'https://docs.railway.com/guides/cli', checkedAt: 2026-07-31 }
   - { field: supportChannels, url: 'https://docs.railway.com/reference/support', checkedAt: 2026-07-31 }
   - { field: supportTiering, url: 'https://docs.railway.com/reference/support', checkedAt: 2026-07-31 }
+  - { field: ownership, url: 'https://blog.railway.com/p/series-b', checkedAt: 2026-08-21 }
 figure:
   emoji: 🚂
   color: rgb(157, 77, 77)

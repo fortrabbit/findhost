@@ -8,6 +8,7 @@ urls:
 category:
   - dbaas
 description: A distributed SQL database for time-series and high-cardinality data, sold as a managed service and open source.
+ownership: vc-backed
 runtimes: null
 deployMethods: null
 sshAccess: null
@@ -28,6 +29,7 @@ sources:
   - { field: pricingModel, url: 'https://cratedb.com/pricing', checkedAt: 2026-08-12 }
   - { field: freeTier, url: 'https://cratedb.com/pricing', checkedAt: 2026-08-12 }
   - { field: runsOn, url: 'https://cratedb.com/pricing', checkedAt: 2026-08-12 }
+  - { field: ownership, url: 'https://cratedb.com/company/investors', checkedAt: 2026-08-21 }
 figure:
   emoji: 📦
   color: rgb(40, 90, 100)

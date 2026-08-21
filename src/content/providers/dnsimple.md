@@ -8,6 +8,7 @@ urls:
 category:
   - domains-dns
 description: Domain registration, DNS hosting and certificates sold together, priced per zone and per query.
+ownership: independent
 runtimes: null
 deployMethods: null
 sshAccess: null
@@ -24,6 +25,7 @@ sources:
   - { field: currencies, url: 'https://dnsimple.com/pricing', checkedAt: 2026-08-12 }
   - { field: domainRegistration, url: 'https://dnsimple.com/pricing', checkedAt: 2026-08-12 }
   - { field: dnsHosting, url: 'https://dnsimple.com/pricing', checkedAt: 2026-08-12 }
+  - { field: ownership, url: 'https://dnsimple.com/with/microconf', checkedAt: 2026-08-21 }
 figure:
   emoji: 🧭
   color: rgb(36, 84, 120)

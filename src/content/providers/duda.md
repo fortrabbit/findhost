@@ -34,6 +34,7 @@ supportChannels:
   - phone
 status: active
 hqCountry: IL
+ownership: vc-backed
 checkedAt: 2026-08-09
 sources:
   - { field: hqCountry, url: 'https://www.duda.co/about', checkedAt: 2026-08-09 }
@@ -48,6 +49,7 @@ sources:
   - { field: freeTier, url: 'https://www.duda.co/pricing', checkedAt: 2026-08-01 }
   - { field: audience, url: 'https://www.duda.co/pricing', checkedAt: 2026-08-01 }
   - { field: supportChannels, url: 'https://www.duda.co/', checkedAt: 2026-08-08 }
+  - { field: ownership, url: 'https://blog.duda.co/duda-announces-growth-funding-50-million-series-d', checkedAt: 2026-08-21 }
 figure:
   emoji: 🧑‍💼
   color: rgb(77, 117, 157)

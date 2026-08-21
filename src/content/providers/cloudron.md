@@ -43,6 +43,7 @@ billingPeriods:
 exitWithin: a-month
 freeTier: permanent
 hqCountry: DE
+ownership: independent
 checkedAt: 2026-08-09
 sources:
   - { field: hqCountry, url: 'https://www.cloudron.io/about.html', checkedAt: 2026-08-09 }
@@ -53,6 +54,7 @@ sources:
   - { field: exitWithin, url: 'https://www.cloudron.io/legal/terms.html', checkedAt: 2026-08-02 }
   - { field: freeTier, url: 'https://www.cloudron.io/pricing.html', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://www.cloudron.io/pricing.html', checkedAt: 2026-08-01 }
+  - { field: ownership, url: 'https://forum.cloudron.io/topic/2196/who-is-building-running-a-business-on-top-of-cloudron-what-s-your-model', checkedAt: 2026-08-21 }
 figure:
   emoji: 🏡
   color: rgb(77, 157, 131)

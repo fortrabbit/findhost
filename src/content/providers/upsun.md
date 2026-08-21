@@ -9,6 +9,7 @@ urls:
 category:
   - paas
 description: Upsun is the PaaS formerly known as Platform.sh. Projects are described in YAML and billed per resource, on top of a per-project and per-user fee.
+ownership: vc-backed
 whoManagesOs: managed
 useCases:
   - cms
@@ -84,6 +85,7 @@ sources:
   - { field: audience, url: 'https://upsun.com/pricing/', checkedAt: 2026-07-31 }
   - { field: apiAvailable, url: 'https://upsun.com', checkedAt: 2026-08-09 }
   - { field: cliTool, url: 'https://upsun.com', checkedAt: 2026-08-09 }
+  - { field: ownership, url: 'https://upsun.com/blog/securing-series-d-financing/', checkedAt: 2026-08-21 }
 figure:
   emoji: ☀️
   color: rgb(45, 120, 190)

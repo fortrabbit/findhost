@@ -8,6 +8,7 @@ urls:
 category:
   - mail
 description: Email, calendar and contacts on a customer's own domain, sold per mailbox with a choice of data residency.
+ownership: independent
 runtimes: null
 deployMethods: null
 sshAccess: null
@@ -31,6 +32,7 @@ sources:
   - { field: currencies, url: 'https://www.fastmail.com/pricing/', checkedAt: 2026-08-12 }
   - { field: billingPeriods, url: 'https://www.fastmail.com/pricing/', checkedAt: 2026-08-12 }
   - { field: freeTier, url: 'https://www.fastmail.com/pricing/', checkedAt: 2026-08-12 }
+  - { field: ownership, url: 'https://www.fastmail.com/company/values/', checkedAt: 2026-08-21 }
 figure:
   emoji: ✉️
   color: rgb(46, 76, 140)

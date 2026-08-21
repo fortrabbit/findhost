@@ -8,6 +8,7 @@ urls:
 category:
   - serverless
 description: WebAssembly runtime company whose edge platform runs applications compiled to WASM, PHP among them, close to the visitor.
+ownership: vc-backed
 whoManagesOs: managed
 useCases:
   - cms
@@ -61,6 +62,7 @@ sources:
   - { field: cliTool, url: 'https://wasmer.io', checkedAt: 2026-08-09 }
   - { field: cdnIncluded, url: 'https://wasmer.io/pricing', checkedAt: 2026-08-12 }
   - { field: collaboration, url: 'https://wasmer.io/pricing', checkedAt: 2026-08-12 }
+  - { field: ownership, url: 'https://www.ycombinator.com/companies/wasmer', checkedAt: 2026-08-21 }
 figure:
   emoji: 🧩
   color: rgb(55, 83, 179)

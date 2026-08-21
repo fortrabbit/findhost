@@ -7,6 +7,7 @@ urls:
 category:
   - server-management
 description: Cloudways provisions and manages servers on other people's infrastructure — DigitalOcean, Vultr, Linode, AWS and Google Cloud — through its own control panel.
+ownership: subsidiary
 infraContract:
   - resells-iaas
 useCases:
@@ -59,6 +60,7 @@ sources:
   - { field: audience, url: 'https://www.cloudways.com/en/', checkedAt: 2026-07-31 }
   - { field: software, url: 'https://www.cloudways.com/en/', checkedAt: 2026-07-31 }
   - { field: apiAvailable, url: 'https://developers.cloudways.com/', checkedAt: 2026-08-09 }
+  - { field: ownership, url: 'https://www.digitalocean.com/about', checkedAt: 2026-08-21 }
 figure:
   emoji: ☁️
   color: rgb(45, 102, 190)

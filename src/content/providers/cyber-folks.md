@@ -8,6 +8,7 @@ category:
   - shared-hosting
 description: Polish shared host from Poznań with a per-domain choice of PHP version alongside Node and Python, running on LiteSpeed with DirectAdmin as the panel.
 hqCountry: PL
+ownership: public
 whoManagesOs: self-managed
 useCases:
   - cms
@@ -60,6 +61,7 @@ sources:
   - { field: dnsHosting, url: 'https://cyberfolks.pl/hosting/', checkedAt: 2026-08-12 }
   - { field: emailHosting, url: 'https://cyberfolks.pl/hosting/', checkedAt: 2026-08-12 }
   - { field: cdnIncluded, url: 'https://cyberfolks.pl/hosting/', checkedAt: 2026-08-12 }
+  - { field: ownership, url: 'https://investors.cyberfolks.pl/akcje-i-akcjonariat/', checkedAt: 2026-08-21 }
 figure:
   emoji: 🧑‍🎤
   color: rgb(157, 77, 157)

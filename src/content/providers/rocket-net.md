@@ -7,6 +7,7 @@ urls:
 category:
   - vanity-hosting
 description: Managed WordPress host built on an enterprise content delivery network, with a choice of origin locations across the Americas, Europe and Asia.
+ownership: subsidiary
 whoManagesOs: managed
 specialisation:
   - wordpress
@@ -58,6 +59,7 @@ sources:
   - { field: supportHours, url: 'https://rocket.net/pricing/', checkedAt: 2026-08-01 }
   - { field: supportChannels, url: 'https://rocket.net/pricing/', checkedAt: 2026-08-01 }
   - { field: mcpServer, url: 'https://rocket.net', checkedAt: 2026-08-09 }
+  - { field: ownership, url: 'https://hosting.com/about/mergers-and-acquisitions/', checkedAt: 2026-08-21 }
 figure:
   emoji: 🚀
   color: rgb(69, 83, 166)

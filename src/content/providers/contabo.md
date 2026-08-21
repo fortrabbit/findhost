@@ -9,6 +9,7 @@ category:
   - bare-metal
 description: German provider selling virtual and dedicated servers from Munich, with large resource allocations at low fixed monthly rates.
 hqCountry: DE
+ownership: pe-owned
 whoManagesOs: self-managed
 audience:
   - smb
@@ -57,6 +58,7 @@ sources:
   - { field: hqCountry, url: 'https://contabo.com/en/locations/', checkedAt: 2026-08-01 }
   - { field: apiAvailable, url: 'https://www.contabo.com', checkedAt: 2026-08-09 }
   - { field: cliTool, url: 'https://www.contabo.com', checkedAt: 2026-08-09 }
+  - { field: ownership, url: 'https://www.oakleycapital.com/latest-news/oakley-capital-agrees-sale-of-contabo-and-follow-on-investment/', checkedAt: 2026-08-21 }
 figure:
   emoji: 🥨
   color: rgb(190, 154, 45)

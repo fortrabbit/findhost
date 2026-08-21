@@ -35,6 +35,7 @@ freeTier: permanent
 persistentStorage: false
 status: active
 hqCountry: US
+ownership: vc-backed
 checkedAt: 2026-08-09
 cliTool: official
 sources:
@@ -49,6 +50,7 @@ sources:
   - { field: billingTiming, url: 'https://vapor.laravel.com', checkedAt: 2026-08-02 }
   - { field: freeTier, url: 'https://vapor.laravel.com', checkedAt: 2026-07-31 }
   - { field: cliTool, url: 'https://docs.vapor.build/', checkedAt: 2026-08-09 }
+  - { field: ownership, url: 'https://laravel.com/blog/accel-invests-57m-into-laravel', checkedAt: 2026-08-21 }
 figure:
   emoji: 🌫️
   color: rgb(77, 93, 157)

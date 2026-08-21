@@ -8,6 +8,7 @@ category:
   - shared-hosting
 description: Cafe24 is a Seoul-based hosting and e-commerce platform company selling shared hosting, managed WordPress VPS and hourly cloud servers alongside its shopping-mall SaaS product.
 hqCountry: KR
+ownership: public
 whoManagesOs: self-managed
 software:
   - wordpress
@@ -27,6 +28,7 @@ sources:
   - { field: software, url: 'https://hosting.cafe24.com', checkedAt: 2026-08-04 }
   - { field: supportChannels, url: 'https://hosting.cafe24.com', checkedAt: 2026-08-08 }
   - { field: billingTiming, url: 'https://hosting.cafe24.com', checkedAt: 2026-08-08 }
+  - { field: ownership, url: 'https://news.cafe24.com/global/cafe24-begins-ipo-procedures-as-1st-venture-firm-under-tesla-policy/', checkedAt: 2026-08-21 }
 figure:
   emoji: 🇰🇷
   color: rgb(64, 85, 171)

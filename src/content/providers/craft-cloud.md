@@ -33,6 +33,7 @@ entryPrice: { amount: 120, currency: USD, period: month }
 cliTool: official
 status: active
 hqCountry: US
+ownership: independent
 checkedAt: 2026-08-09
 sources:
   - { field: hqCountry, url: 'https://craftcms.com/cloud', checkedAt: 2026-08-09 }
@@ -47,6 +48,7 @@ sources:
   - { field: deployMethods, url: 'https://craftcms.com/cloud', checkedAt: 2026-07-31 }
   - { field: specialisation, url: 'https://craftcms.com/docs/cloud/', checkedAt: 2026-07-31 }
   - { field: cliTool, url: 'https://craftcms.com/cloud', checkedAt: 2026-08-09 }
+  - { field: ownership, url: 'https://brandonkelly.io/15-years', checkedAt: 2026-08-21 }
 figure:
   emoji: ⛅
   color: rgb(48, 48, 186)

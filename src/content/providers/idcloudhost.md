@@ -7,6 +7,7 @@ urls:
 category:
   - vps
 description: IDCloudHost is an Indonesian infrastructure company selling cloud VPS, managed hosting, dedicated servers and object storage from data centres in Jakarta and Singapore.
+ownership: vc-backed
 regions:
   - ID
   - SG
@@ -14,6 +15,7 @@ status: active
 checkedAt: 2026-08-04
 sources:
   - { field: regions, url: 'https://status.idcloudhost.com', checkedAt: 2026-08-04 }
+  - { field: ownership, url: 'https://init-6.fund/news/4', checkedAt: 2026-08-21 }
 figure:
   emoji: 🇮🇩
   color: rgb(77, 157, 125)

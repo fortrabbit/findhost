@@ -8,6 +8,7 @@ urls:
 category:
   - vps
 description: Finnish cloud infrastructure provider selling virtual machines, block storage and private networking, driven by a public API.
+ownership: vc-backed
 whoManagesOs: self-managed
 runtimes:
   - any
@@ -39,6 +40,7 @@ sources:
   - { field: billingPeriods, url: 'https://developers.upcloud.com/1.3/4-pricing/', checkedAt: 2026-08-02 }
   - { field: urls, url: 'https://developers.upcloud.com/', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://developers.upcloud.com/1.3/4-pricing/', checkedAt: 2026-08-08 }
+  - { field: ownership, url: 'https://tech.eu/2020/01/21/helsinki-based-upcloud-raises-e18-million-to-rapidly-grow-its-team-and-cloud-computing-services/', checkedAt: 2026-08-21 }
 greenWebId: 1416
 figure:
   emoji: ☁️

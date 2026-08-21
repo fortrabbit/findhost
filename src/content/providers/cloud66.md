@@ -52,6 +52,7 @@ apiAvailable: public
 cliTool: official
 checkedAt: 2026-08-01
 hqCountry: GB
+ownership: vc-backed
 sources:
   - { field: priceFrom, url: 'https://www.cloud66.com/pricing/', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://www.cloud66.com/pricing/', checkedAt: 2026-08-02 }
@@ -61,6 +62,7 @@ sources:
   - { field: exitWithin, url: 'https://www.cloud66.com/pricing/', checkedAt: 2026-08-02 }
   - { field: freeTier, url: 'https://www.cloud66.com/pricing/', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://www.cloud66.com/pricing/', checkedAt: 2026-08-01 }
+  - { field: ownership, url: 'https://tech.eu/news/fresh-funding-code-cloud-startup-cloud-66-hopes-become-europes-heroku-better/', checkedAt: 2026-08-21 }
 figure:
   emoji: 🛞
   color: rgb(117, 77, 157)

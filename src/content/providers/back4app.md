@@ -41,6 +41,7 @@ freeTier: permanent
 apiAvailable: public
 cliTool: official
 hqCountry: US
+ownership: vc-backed
 checkedAt: 2026-08-09
 sources:
   - { field: hqCountry, url: 'https://www.back4app.com/about', checkedAt: 2026-08-09 }
@@ -50,6 +51,7 @@ sources:
   - { field: billingPeriods, url: 'https://www.back4app.com/pricing/backend-as-a-service', checkedAt: 2026-08-02 }
   - { field: billingTiming, url: 'https://www.back4app.com/pricing/backend-as-a-service', checkedAt: 2026-08-02 }
   - { field: exitWithin, url: 'https://www.back4app.com/pricing/backend-as-a-service', checkedAt: 2026-08-02 }
+  - { field: ownership, url: 'https://www.back4app.com/about', checkedAt: 2026-08-21 }
 social:
   github: https://github.com/back4app
 figure:

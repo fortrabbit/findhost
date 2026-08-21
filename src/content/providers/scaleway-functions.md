@@ -33,6 +33,7 @@ regions:
   - PL
 status: active
 hqCountry: FR
+ownership: subsidiary
 checkedAt: 2026-08-09
 apiAvailable: public
 cliTool: official
@@ -50,6 +51,7 @@ sources:
   - { field: exitWithin, url: 'https://www.scaleway.com/en/pricing/serverless/', checkedAt: 2026-08-02 }
   - { field: apiAvailable, url: 'https://www.scaleway.com/en/serverless-functions/', checkedAt: 2026-08-09 }
   - { field: cliTool, url: 'https://www.scaleway.com/en/serverless-functions/', checkedAt: 2026-08-09 }
+  - { field: ownership, url: 'https://www.scaleway.com/en/about-us/', checkedAt: 2026-08-21 }
 figure:
   emoji: 🧵
   color: rgb(117, 70, 164)

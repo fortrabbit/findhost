@@ -11,6 +11,7 @@ category:
   - vps
 description: A Swiss hosting and cloud provider selling shared hosting, servers and public cloud infrastructure.
 hqCountry: CH
+ownership: independent
 deployMethods:
   - control-panel
 pricingModel: fixed-tier
@@ -26,6 +27,7 @@ sources:
   - { field: category, url: 'https://infomaniakstatus.com/', checkedAt: 2026-08-12 }
   - { field: supportChannels, url: 'https://infomaniakstatus.com/', checkedAt: 2026-08-12 }
   - { field: supportHours, url: 'https://infomaniakstatus.com/', checkedAt: 2026-08-12 }
+  - { field: ownership, url: 'https://news.infomaniak.com/en/infomaniak-foundation-sovereign-cloud/', checkedAt: 2026-08-21 }
 figure:
   emoji: ☁️
   color: rgb(0, 51, 102)

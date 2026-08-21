@@ -9,6 +9,7 @@ category:
   - git-hosting
 description: A git forge with issues, CI and a container registry, sold per user, and the same software available to run on your own machines.
 hqCountry: US
+ownership: public
 runtimes: null
 deployMethods: null
 sshAccess: null
@@ -30,6 +31,7 @@ sources:
   - { field: collaboration, url: 'https://about.gitlab.com/pricing/', checkedAt: 2026-08-13 }
   - { field: apiAvailable, url: 'https://docs.gitlab.com', checkedAt: 2026-08-13 }
   - { field: cliTool, url: 'https://docs.gitlab.com', checkedAt: 2026-08-13 }
+  - { field: ownership, url: 'https://www.sec.gov/Archives/edgar/data/1653482/000162828026018731/0001628280-26-018731-index.htm', checkedAt: 2026-08-21 }
 figure:
   emoji: 🦊
   color: rgb(84, 33, 15)

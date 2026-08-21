@@ -8,6 +8,7 @@ urls:
 category:
   - git-hosting
 description: A deliberately minimal git and Mercurial forge with mailing lists, tickets and CI, paid by a flat monthly tier the customer picks.
+ownership: independent
 runtimes: null
 deployMethods: null
 sshAccess: null
@@ -22,6 +23,7 @@ sources:
   - { field: category, url: 'https://sourcehut.org/pricing/', checkedAt: 2026-08-13 }
   - { field: pricingModel, url: 'https://sourcehut.org/pricing/', checkedAt: 2026-08-13 }
   - { field: currencies, url: 'https://sourcehut.org/pricing/', checkedAt: 2026-08-13 }
+  - { field: ownership, url: 'https://sourcehut.org/blog/2019-10-23-srht-puts-users-first/', checkedAt: 2026-08-21 }
 figure:
   emoji: ⌨️
   color: rgb(38, 38, 38)

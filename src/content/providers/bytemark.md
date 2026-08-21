@@ -7,10 +7,12 @@ category:
   - vps
 description: A UK virtual server provider, acquired by Hosting UK and no longer selling under its own name.
 hqCountry: GB
+ownership: subsidiary
 status: acquired
 checkedAt: 2026-08-12
 sources:
   - { field: status, url: 'https://hostinguk.net/bytemark/', checkedAt: 2026-08-12 }
+  - { field: ownership, url: 'https://hostinguk.net/bytemark/', checkedAt: 2026-08-21 }
 figure:
   emoji: 🇬🇧
   color: rgb(28, 64, 138)

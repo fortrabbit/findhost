@@ -9,6 +9,7 @@ category:
   - vps
   - bare-metal
 description: Cloud infrastructure provider selling virtual private servers, bare metal, GPU instances, object storage and managed Kubernetes, billed by the hour.
+ownership: vc-backed
 whoManagesOs: self-managed
 runtimes:
   - any
@@ -53,6 +54,7 @@ sources:
   - { field: priceTo, url: 'https://api.vultr.com/v2/plans', checkedAt: 2026-08-02 }
   - { field: billingPeriods, url: 'https://api.vultr.com/v2/plans', checkedAt: 2026-08-02 }
   - { field: apiAvailable, url: 'https://api.vultr.com/v2/regions', checkedAt: 2026-07-31 }
+  - { field: ownership, url: 'https://blogs.vultr.com/financing2024', checkedAt: 2026-08-21 }
 figure:
   emoji: 🦅
   color: rgb(45, 132, 190)

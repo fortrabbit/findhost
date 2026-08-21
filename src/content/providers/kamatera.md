@@ -7,6 +7,7 @@ urls:
 category:
   - vps
 description: Kamatera is a cloud infrastructure company selling hourly-billed cloud servers, block storage, load balancers and firewalls from data centres worldwide.
+ownership: subsidiary
 whoManagesOs: self-managed
 runtimes:
   - any
@@ -49,6 +50,7 @@ sources:
   - { field: whoManagesOs, url: 'https://www.kamatera.com/pricing/', checkedAt: 2026-08-04 }
   - { field: iacSupport, url: 'https://github.com/Kamatera/terraform-provider-kamatera', checkedAt: 2026-08-04 }
   - { field: apiAvailable, url: 'https://www.kamatera.com', checkedAt: 2026-08-09 }
+  - { field: ownership, url: 'https://www.kamatera.com/about-us/', checkedAt: 2026-08-21 }
 figure:
   emoji: ☁️
   color: rgb(67, 101, 168)

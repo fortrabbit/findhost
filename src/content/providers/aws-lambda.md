@@ -7,6 +7,7 @@ urls:
 category:
   - serverless
 description: Amazon's function-as-a-service primitive, running a handler on demand in a short-lived isolated environment and billing per invocation.
+ownership: subsidiary
 parent: aws
 whoManagesOs: managed
 useCases:
@@ -74,6 +75,7 @@ sources:
   - { field: billingPeriods, url: 'https://aws.amazon.com/lambda/pricing/', checkedAt: 2026-08-02 }
   - { field: billingTiming, url: 'https://aws.amazon.com/agreement/', checkedAt: 2026-08-02 }
   - { field: exitWithin, url: 'https://aws.amazon.com/agreement/', checkedAt: 2026-08-02 }
+  - { field: ownership, url: 'https://aws.amazon.com/about-aws/', checkedAt: 2026-08-21 }
 figure:
   emoji: ⚙️
   color: rgb(77, 103, 157)

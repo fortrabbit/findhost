@@ -7,6 +7,7 @@ urls:
 category:
   - bare-metal
 description: Bare-metal and GPU infrastructure billed hourly with automated provisioning, an API, SDKs, a CLI and Terraform support.
+ownership: subsidiary
 whoManagesOs: self-managed
 infraContract:
   - owns-metal
@@ -68,6 +69,7 @@ sources:
   - { field: currencies, url: 'https://www.latitude.sh/pricing', checkedAt: 2026-08-02 }
   - { field: billingPeriods, url: 'https://www.latitude.sh/pricing', checkedAt: 2026-08-02 }
   - { field: billingTiming, url: 'https://www.latitude.sh/pricing', checkedAt: 2026-08-02 }
+  - { field: ownership, url: 'https://www.megaport.com/blog/megaport-and-latitude-bringing-compute-and-connectivity-together/', checkedAt: 2026-08-21 }
 figure:
   emoji: 🛰️
   color: rgb(77, 104, 157)

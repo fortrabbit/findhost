@@ -11,6 +11,7 @@ category:
 description: French hosting company selling dedicated servers, VPS, an OpenStack-based public cloud and web hosting from data centres it builds and operates itself.
 founded: 1999
 hqCountry: FR
+ownership: public
 infraContract:
   - owns-metal
 whoManagesOs: self-managed
@@ -84,6 +85,11 @@ sources:
   - { field: apiAvailable, url: 'https://www.ovhcloud.com', checkedAt: 2026-08-09 }
   - { field: cliTool, url: 'https://www.ovhcloud.com', checkedAt: 2026-08-09 }
   - { field: mcpServer, url: 'https://www.ovhcloud.com', checkedAt: 2026-08-09 }
+  - {
+      field: ownership,
+      url: 'https://www.euronext.com/en/about/media/euronext-press-releases/ovhcloud-lists-euronext-paris',
+      checkedAt: 2026-08-21,
+    }
 figure:
   emoji: 🧯
   color: rgb(190, 45, 49)

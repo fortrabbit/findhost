@@ -8,6 +8,7 @@ category:
   - server-management
 regions: null
 description: Self-hosted hosting platform and control panel from Apis Networks, licensed per server and aimed at providers running their own fleet.
+ownership: independent
 whoManagesOs: self-managed
 infraContract:
   - byo-iaas
@@ -41,6 +42,7 @@ sources:
   - { field: currencies, url: 'https://apiscp.com/pricing/', checkedAt: 2026-08-02 }
   - { field: billingPeriods, url: 'https://apiscp.com/pricing/', checkedAt: 2026-08-02 }
   - { field: billingTiming, url: 'https://apiscp.com/pricing/', checkedAt: 2026-08-02 }
+  - { field: ownership, url: 'https://hostineer.com/company/about-us', checkedAt: 2026-08-21 }
 figure:
   emoji: 🎛️
   color: rgb(188, 47, 47)

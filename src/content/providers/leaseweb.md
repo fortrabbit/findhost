@@ -9,6 +9,7 @@ category:
   - vps
 description: A Dutch infrastructure provider selling bare metal, virtual servers and infrastructure as a service.
 hqCountry: NL
+ownership: subsidiary
 infraContract:
   - owns-metal
 pricingModel: fixed-tier
@@ -17,6 +18,7 @@ checkedAt: 2026-08-12
 sources:
   - { field: category, url: 'https://www.leaseweb.com', checkedAt: 2026-08-12 }
   - { field: infraContract, url: 'https://www.leaseweb.com', checkedAt: 2026-08-12 }
+  - { field: ownership, url: 'https://ocom.com/brands/', checkedAt: 2026-08-21 }
 figure:
   emoji: 🔩
   color: rgb(40, 100, 170)

@@ -11,6 +11,7 @@ category:
   - bare-metal
 description: A Japanese cloud and infrastructure provider selling shared hosting, virtual servers and dedicated machines.
 hqCountry: JP
+ownership: public
 infraContract:
   - owns-metal
 whoManagesOs: self-managed
@@ -52,6 +53,7 @@ sources:
   - { field: certifications, url: 'https://sakura.ad.jp/', checkedAt: 2026-08-12 }
   - { field: supportChannels, url: 'https://help.sakura.ad.jp', checkedAt: 2026-08-12 }
   - { field: supportHours, url: 'https://help.sakura.ad.jp', checkedAt: 2026-08-12 }
+  - { field: ownership, url: 'https://www.sakura.ad.jp/corporate/en/ir/', checkedAt: 2026-08-21 }
 figure:
   emoji: 🌸
   color: rgb(220, 120, 160)

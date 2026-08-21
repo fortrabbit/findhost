@@ -12,6 +12,7 @@ runtimes: null
 deployMethods: null
 sshAccess: null
 hqCountry: CH
+ownership: independent
 freeTier: trial
 emailHosting: included
 status: active
@@ -20,6 +21,7 @@ sources:
   - { field: category, url: 'https://proton.me/business/mail/pricing', checkedAt: 2026-08-12 }
   - { field: hqCountry, url: 'https://proton.me/business/mail/pricing', checkedAt: 2026-08-12 }
   - { field: freeTier, url: 'https://proton.me/business/mail/pricing', checkedAt: 2026-08-12 }
+  - { field: ownership, url: 'https://proton.me/blog/proton-non-profit-foundation', checkedAt: 2026-08-21 }
 figure:
   emoji: 🔒
   color: rgb(90, 60, 150)

@@ -11,6 +11,7 @@ category:
 description: Jimdo is a Hamburg website builder that bundles hosting, templates and AI-assisted site creation for the self-employed and small businesses.
 founded: 2007
 hqCountry: DE
+ownership: independent
 billingPeriods:
   - monthly
   - yearly
@@ -23,6 +24,7 @@ sources:
   - { field: freeTier, url: 'https://www.jimdo.com/pricing/', checkedAt: 2026-08-01 }
   - { field: billingPeriods, url: 'https://www.jimdo.com/pricing/website/', checkedAt: 2026-08-02 }
   - { field: hqCountry, url: 'https://www.jimdo.com', checkedAt: 2026-08-08 }
+  - { field: ownership, url: 'https://www.noerr.com/en/press/noerr-advises-jimdo-on-exit-of-spectrum-equity-and-global-founders-capital', checkedAt: 2026-08-21 }
 figure:
   emoji: 🪴
   color: rgb(77, 157, 77)

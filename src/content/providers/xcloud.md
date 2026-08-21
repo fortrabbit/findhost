@@ -11,6 +11,7 @@ category:
 description: xCloud is a server-management panel launched in 2023 by WPDeveloper. It manages servers a customer brings, and also sells managed servers of its own.
 founded: 2023
 hqCountry: US
+ownership: subsidiary
 parent: wpdeveloper
 infraContract:
   - byo-iaas
@@ -63,6 +64,7 @@ sources:
   - { field: infraContract, url: 'https://xcloud.host/pricing/', checkedAt: 2026-07-31 }
   - { field: runsOn, url: 'https://xcloud.host/pricing/', checkedAt: 2026-07-31 }
   - { field: apiAvailable, url: 'https://xcloud.host', checkedAt: 2026-08-09 }
+  - { field: ownership, url: 'https://startise.com/brands/', checkedAt: 2026-08-21 }
 figure:
   emoji: ⚡
   color: rgb(45, 102, 190)

@@ -7,6 +7,7 @@ urls:
 category:
   - lcnc
 description: Bubble is a no-code app builder that combines UI design with database and workflow tools.
+ownership: vc-backed
 regions:
   - US
 runsOn:
@@ -33,6 +34,7 @@ sources:
   - { field: exitWithin, url: 'https://manual.bubble.io/account-and-marketplace/account-and-billing/pricing-plans', checkedAt: 2026-08-02 }
   - { field: runsOn, url: 'https://manual.bubble.io/help-guides/optimizing-an-application/hosting-and-scaling/how-bubble-hosting-works', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://manual.bubble.io/account-and-marketplace/account-and-billing/pricing-plans', checkedAt: 2026-08-08 }
+  - { field: ownership, url: 'https://bubble.io/blog/bubble-series-a-100m/', checkedAt: 2026-08-21 }
 figure:
   emoji: 🫧
   color: rgb(77, 141, 157)

@@ -9,6 +9,7 @@ category:
 description: A Swiss platform that turns a git push into a running application, on infrastructure held entirely in Switzerland and under Swiss law.
 parent: nine-ch
 hqCountry: CH
+ownership: subsidiary
 regions:
   - CH
 deployMethods:
@@ -31,6 +32,7 @@ sources:
   - { field: deployMethods, url: 'https://deplo.io/en', checkedAt: 2026-08-14 }
   - { field: runtimes, url: 'https://deplo.io/en', checkedAt: 2026-08-14 }
   - { field: certifications, url: 'https://deplo.io/en', checkedAt: 2026-08-14 }
+  - { field: ownership, url: 'https://deplo.io/en', checkedAt: 2026-08-21 }
 figure:
   emoji: 🏔️
   color: rgb(24, 60, 92)

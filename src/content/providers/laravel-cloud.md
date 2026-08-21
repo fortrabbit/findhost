@@ -45,6 +45,7 @@ regions:
 supportTiering: all-plans
 status: active
 hqCountry: US
+ownership: vc-backed
 testDomain: included
 staging: included
 collaboration: team
@@ -69,6 +70,7 @@ sources:
   - { field: testDomain, url: 'https://laravel.com/cloud', checkedAt: 2026-08-12 }
   - { field: staging, url: 'https://laravel.com/cloud', checkedAt: 2026-08-12 }
   - { field: collaboration, url: 'https://laravel.com/cloud', checkedAt: 2026-08-12 }
+  - { field: ownership, url: 'https://laravel.com/blog/accel-invests-57m-into-laravel', checkedAt: 2026-08-21 }
 figure:
   emoji: 🧺
   color: rgb(164, 142, 70)

@@ -12,6 +12,7 @@ category:
 description: Swiss internet service provider from Richterswil that owns and operates its own data centres in Switzerland.
 founded: 2004
 hqCountry: CH
+ownership: independent
 useCases:
   - cms
   - campaign-site
@@ -57,6 +58,7 @@ sources:
   - { field: pricingModel, url: 'https://www.hosttech.ch/webhosting', checkedAt: 2026-08-01 }
   - { field: supportHours, url: 'https://www.hosttech.ch/support', checkedAt: 2026-08-02 }
   - { field: supportChannels, url: 'https://www.hosttech.ch/webhosting', checkedAt: 2026-08-01 }
+  - { field: ownership, url: 'https://www.hosttech.at/impressum/', checkedAt: 2026-08-21 }
 figure:
   emoji: ⛰️
   color: rgb(77, 157, 117)

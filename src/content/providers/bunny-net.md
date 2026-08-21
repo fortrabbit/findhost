@@ -52,6 +52,7 @@ regions:
   - ZA
 apiAvailable: public
 hqCountry: SI
+ownership: vc-backed
 checkedAt: 2026-08-09
 sources:
   - { field: hqCountry, url: 'https://bunny.net', checkedAt: 2026-08-09 }
@@ -62,6 +63,7 @@ sources:
   - { field: billingPeriods, url: 'https://bunny.net/pricing/', checkedAt: 2026-08-02 }
   - { field: billingTiming, url: 'https://bunny.net/tos/', checkedAt: 2026-08-02 }
   - { field: founded, url: 'https://bunny.net/about/', checkedAt: 2026-08-01 }
+  - { field: ownership, url: 'https://bunny.net/blog/series-a-funding-announcement/', checkedAt: 2026-08-21 }
 figure:
   emoji: 🐰
   color: rgb(157, 77, 141)

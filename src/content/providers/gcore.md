@@ -41,6 +41,7 @@ iacSupport:
   - terraform
 status: active
 hqCountry: LU
+ownership: vc-backed
 checkedAt: 2026-08-09
 sources:
   - { field: hqCountry, url: 'https://gcore.com/about', checkedAt: 2026-08-09 }
@@ -49,6 +50,7 @@ sources:
   - { field: billingPeriods, url: 'https://gcore.com/pricing', checkedAt: 2026-08-02 }
   - { field: billingTiming, url: 'https://gcore.com/pricing', checkedAt: 2026-08-02 }
   - { field: category, url: 'https://gcore.com/cloud', checkedAt: 2026-08-01 }
+  - { field: ownership, url: 'https://gcore.com/press-releases/gcore-raises-60-million-in-series-a-funding-to-drive-ai-innovation-and-global-expansion', checkedAt: 2026-08-21 }
 figure:
   emoji: 🌐
   color: rgb(73, 103, 161)

@@ -11,6 +11,7 @@ category:
 description: Hetzner is an independent German hosting company offering VPS, dedicated servers, cloud and storage infrastructure from its own data centres.
 founded: 1997
 hqCountry: DE
+ownership: independent
 whoManagesOs: self-managed
 infraContract:
   - owns-metal
@@ -74,6 +75,7 @@ sources:
   - { field: cliTool, url: 'https://www.hetzner.com/cloud/', checkedAt: 2026-07-31 }
   - { field: supportChannels, url: 'https://www.hetzner.com/support/', checkedAt: 2026-07-31 }
   - { field: audience, url: 'https://www.hetzner.com/', checkedAt: 2026-07-31 }
+  - { field: ownership, url: 'https://career.hetzner.com/en/unsere-story/', checkedAt: 2026-08-21 }
 figure:
   emoji: 🇩🇪
   color: rgb(183, 145, 52)

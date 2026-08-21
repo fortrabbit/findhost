@@ -11,6 +11,7 @@ category:
   - caas
 description: German Docker hosting that bills for the server rather than the container, so unlimited services can share one machine, with managed Postgres and S3 storage.
 hqCountry: DE
+ownership: independent
 whoManagesOs: self-managed
 useCases:
   - web-app
@@ -68,6 +69,7 @@ sources:
   - { field: pricingModel, url: 'https://sliplane.io/pricing', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://sliplane.io/terms', checkedAt: 2026-08-01 }
   - { field: apiAvailable, url: 'https://sliplane.io', checkedAt: 2026-08-09 }
+  - { field: ownership, url: 'https://sliplane.io/legal', checkedAt: 2026-08-21 }
 figure:
   emoji: 🛝
   color: rgb(69, 110, 166)

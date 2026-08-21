@@ -50,6 +50,7 @@ social:
   linkedin: https://ca.linkedin.com/company/spinupwp
 status: active
 hqCountry: CA
+ownership: independent
 checkedAt: 2026-08-09
 apiAvailable: public
 cliTool: official
@@ -73,6 +74,7 @@ sources:
   - { field: audience, url: 'https://spinupwp.com/', checkedAt: 2026-07-31 }
   - { field: apiAvailable, url: 'https://spinupwp.com', checkedAt: 2026-08-09 }
   - { field: cliTool, url: 'https://spinupwp.com', checkedAt: 2026-08-09 }
+  - { field: ownership, url: 'https://spinupwp.com/about/', checkedAt: 2026-08-21 }
 figure:
   emoji: 🌪️
   color: rgb(97, 77, 157)

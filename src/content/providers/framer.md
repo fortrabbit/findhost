@@ -9,6 +9,7 @@ category:
   - lcnc
   - static
 description: A visual website builder that hosts and publishes what it designs, with a built-in content model.
+ownership: vc-backed
 whoManagesOs: managed
 deployMethods:
   - control-panel
@@ -39,6 +40,7 @@ sources:
   - { field: testDomain, url: 'https://framer.com/pricing', checkedAt: 2026-08-12 }
   - { field: apiAvailable, url: 'https://developers.framer.com/', checkedAt: 2026-08-12 }
   - { field: category, url: 'https://framer.com/', checkedAt: 2026-08-12 }
+  - { field: ownership, url: 'https://www.framer.com/blog/series-d/', checkedAt: 2026-08-21 }
 figure:
   emoji: 🎨
   color: rgb(87, 34, 255)

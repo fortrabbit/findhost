@@ -9,6 +9,7 @@ category:
   - paas
 description: French platform-as-a-service with git-push deploys, buildpacks, managed databases and review apps, running only in French regions.
 hqCountry: FR
+ownership: vc-backed
 whoManagesOs: self-managed
 infraContract:
   - resells-iaas
@@ -86,6 +87,7 @@ sources:
   - { field: staging, url: 'https://doc.scalingo.com/', checkedAt: 2026-08-12 }
   - { field: testDomain, url: 'https://doc.scalingo.com/', checkedAt: 2026-08-12 }
   - { field: collaboration, url: 'https://doc.scalingo.com/', checkedAt: 2026-08-12 }
+  - { field: ownership, url: 'https://scalingo.com/press-releases/scalingo-fundraising-announcement-2024', checkedAt: 2026-08-21 }
 figure:
   emoji: 🥖
   color: rgb(55, 83, 179)

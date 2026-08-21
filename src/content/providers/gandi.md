@@ -10,6 +10,7 @@ category:
   - domains-dns
 description: Gandi is a French registrar whose Simple Hosting product runs application code in per-customer Linux containers, deployed by git or SFTP.
 hqCountry: FR
+ownership: subsidiary
 whoManagesOs: self-managed
 useCases:
   - cms
@@ -71,6 +72,7 @@ sources:
   - { field: domainRegistration, url: 'https://www.gandi.net/en/simple-hosting', checkedAt: 2026-08-12 }
   - { field: dnsHosting, url: 'https://www.gandi.net/en/simple-hosting', checkedAt: 2026-08-12 }
   - { field: emailHosting, url: 'https://www.gandi.net/en/simple-hosting', checkedAt: 2026-08-12 }
+  - { field: ownership, url: 'https://your.online/brands', checkedAt: 2026-08-21 }
 figure:
   emoji: 📮
   color: rgb(77, 77, 157)

@@ -10,6 +10,7 @@ category:
   - shared-hosting
 description: Polish shared hosting with SSH on every plan, unlimited sites, mailboxes and databases, and Node.js, Python and Ruby alongside PHP.
 hqCountry: PL
+ownership: independent
 whoManagesOs: managed
 useCases:
   - cms
@@ -67,6 +68,11 @@ sources:
   - { field: billingPeriods, url: 'https://www.mydevil.net', checkedAt: 2026-08-02 }
   - { field: pricingModel, url: 'https://www.mydevil.net', checkedAt: 2026-08-01 }
   - { field: emailHosting, url: 'https://www.mydevil.net', checkedAt: 2026-08-12 }
+  - {
+      field: ownership,
+      url: 'https://www.mydevil.net/dokumenty/regulamin-korzystania-z-uslug-mydevil-net/',
+      checkedAt: 2026-08-21,
+    }
 figure:
   emoji: 😈
   color: rgb(172, 63, 94)

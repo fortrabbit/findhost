@@ -10,10 +10,16 @@ category:
   - domains-dns
 description: A US domain registrar that also sells shared hosting and virtual servers.
 hqCountry: US
+ownership: pe-owned
 status: active
 checkedAt: 2026-08-12
 sources:
   - { field: docs, url: 'https://www.namecheap.com/support/knowledgebase/', checkedAt: 2026-08-12 }
+  - {
+      field: ownership,
+      url: 'https://domainnamewire.com/2025/09/12/private-equity-firm-is-buying-namecheap-in-deal-that-values-company-at-1-5-billion/',
+      checkedAt: 2026-08-21,
+    }
 figure:
   emoji: 🔑
   color: rgb(60, 120, 180)
