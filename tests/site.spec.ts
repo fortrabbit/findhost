@@ -412,3 +412,33 @@ test.describe('share cards', () => {
     }
   });
 });
+
+test.describe('search', () => {
+  /*
+   * The other JavaScript-only surface, and the one that reaches for a module
+   * nothing in the bundle can see: Pagefind writes /pagefind/pagefind.js after
+   * astro build, so the import is inline and unbundled. Two ways to break it
+   * have already happened — an eval a content security policy would refuse, and
+   * a preload placeholder the bundler left unresolved — and both failed by
+   * showing the "only built for the deployed site" message on a site where it
+   * had been built.
+   */
+  test.skip(({ javaScriptEnabled }) => javaScriptEnabled === false, 'search is the other JavaScript-only surface');
+
+  test('answers a query typed into the form', async ({ page }) => {
+    await page.goto('/search/');
+
+    await page.locator('[data-search-input]').fill('hetzner');
+    await page.locator('.search-form button[type=submit]').click();
+
+    await expect(page.locator('[data-search-summary]')).toContainText(/pages? match/);
+    expect(await page.locator('[data-search-results] > li').count()).toBeGreaterThan(0);
+  });
+
+  test('answers a query arriving in the URL, which is what a shared link is', async ({ page }) => {
+    await page.goto('/search/?q=hetzner');
+
+    await expect(page.locator('[data-search-summary]')).toContainText(/pages? match/);
+    await expect(page.locator('[data-search-results] a').first()).toBeVisible();
+  });
+});

@@ -39,3 +39,24 @@ ErrorDocument 404 /404.html
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/plain text/css text/markdown text/csv text/javascript application/javascript application/json application/xml application/rss+xml image/svg+xml
 </IfModule>
+
+# Brotli where the module is there, gzip where it is not. Both filters on the
+# same body would compress it twice, so the one that runs second is turned off
+# for the requests the first will handle — inside the IfModule, because without
+# mod_brotli every browser sends `br` anyway and this would leave the site
+# uncompressed for all of them.
+<IfModule mod_brotli.c>
+  AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/css text/markdown text/csv text/javascript application/javascript application/json application/xml application/rss+xml image/svg+xml
+  SetEnvIfNoCase Accept-Encoding br no-gzip
+</IfModule>
+
+# The surface is small enough to name in full: our own files, plus Fathom.
+# `unsafe-inline` is unavoidable rather than lazy — the theme runs before first
+# paint so it cannot be a request, the record figures carry their own colours as
+# attributes, and the JSON-LD block differs on every page, so no fixed hash
+# covers them. What the policy is actually for is the rest: no plugins, no
+# framing, no form posting anywhere but here, and no base tag rewriting every
+# relative link on the page.
+<IfModule mod_headers.c>
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' https://cdn.usefathom.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://cdn.usefathom.com; form-action 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none'"
+</IfModule>

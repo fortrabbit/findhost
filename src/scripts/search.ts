@@ -22,18 +22,20 @@ const summaryEl = document.querySelector<HTMLElement>('[data-search-summary]');
 if (form && input && resultsEl && summaryEl) {
   let pagefind: Pagefind | null = null;
 
+  /*
+   * The import itself is in search.astro, inline, out of the bundler's reach —
+   * the reason is written there. This waits on what it left behind.
+   */
   const load = async () => {
     if (pagefind) return pagefind;
-    try {
-      // Hidden from the bundler on purpose: the module does not exist until
-      // Pagefind runs after the build, and Vite's own dynamic-import helper
-      // leaves an unresolved __VITE_PRELOAD__ behind if it tries to handle it.
-      const importModule = new Function('path', 'return import(path)') as (path: string) => Promise<unknown>;
-      pagefind = (await importModule('/pagefind/pagefind.js')) as Pagefind;
-    } catch {
+
+    pagefind = ((await (window as { pagefind?: Promise<unknown> }).pagefind) as Pagefind | null) ?? null;
+
+    if (!pagefind) {
       summaryEl.textContent =
         'The search index is only built for the deployed site. Run `pnpm build` to try it locally.';
     }
+
     return pagefind;
   };
 
@@ -108,7 +110,14 @@ if (form && input && resultsEl && summaryEl) {
   const initial = new URLSearchParams(location.search).get('q');
   if (initial) {
     input.value = initial;
-    void run(initial);
+
+    /*
+     * After the parse, because the module holding Pagefind is an inline script
+     * further down the page and this one is hoisted into the head. Both are
+     * deferred, so both have run by the time this event fires; running the
+     * query here instead would ask for a module that had not been reached yet.
+     */
+    document.addEventListener('DOMContentLoaded', () => void run(initial));
   }
 }
 

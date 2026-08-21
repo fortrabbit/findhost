@@ -19,6 +19,27 @@ import Base from '../layouts/Base.astro';
 
   <ul class="search-results" data-search-results></ul>
 
+  {
+    /*
+     * The one import the bundler must not touch. `/pagefind/pagefind.js` is
+     * written by Pagefind after `astro build`, so nothing exists at that path
+     * while the bundle is being made — and Vite, unable to resolve it, wraps
+     * the call in its preload helper and leaves a literal `__VITE_PRELOAD__`
+     * behind, which throws the moment a reader searches.
+     *
+     * `is:inline` keeps Vite out of it. It used to be a `new Function` in
+     * search.ts for the same reason, which was the site's only eval and the one
+     * thing a content security policy could not be written around.
+     *
+     * A promise rather than a module: search.ts waits for it, and a miss —
+     * which is every local build before Pagefind has run — resolves to null
+     * and says so on the page.
+     */
+  }
+  <script is:inline type="module">
+    window.pagefind = import('/pagefind/pagefind.js').catch(() => null);
+  </script>
+
   <script>
     import '../scripts/search.ts';
   </script>
