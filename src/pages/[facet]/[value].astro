@@ -6,7 +6,7 @@ import ProviderRegister from '../../components/ProviderRegister.astro';
 import PageFigure from '../../components/PageFigure.astro';
 import { facetIndex, facetRoutes, loadFacets } from '../../lib/facets';
 import { fieldOf, subjectOf } from '../../lib/fields';
-import { summarise } from '../../lib/summarise';
+import { firstSentence, summarise } from '../../lib/summarise';
 import { valueCardPath } from '../../lib/og';
 
 /*
@@ -60,7 +60,7 @@ const figure = note?.data.figure;
 
 <Base
   title={`${note?.data.title ?? valueTitle(facet.id, value.label)} — FindHost`}
-  description={note?.data.description ?? summary.split('. ')[0].concat('.')}
+  description={note?.data.description ?? firstSentence(summary)}
   image={valueCardPath(facet.id, value.slug)}
   imageAlt={`A FindHost card: ${matches.length} providers recorded as ${value.label.toLowerCase()}.`}
   schema={[

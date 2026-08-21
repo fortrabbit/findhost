@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
 import type { Facet, ProviderRow } from './facets.ts';
-import { summarise } from './summarise.ts';
+import { firstSentence, summarise } from './summarise.ts';
 
 const facet = (id: string, field: string, values: string[]): Facet => ({
   id,
@@ -96,5 +96,35 @@ describe('summarise', () => {
       assert.doesNotMatch(summary, /,\./, id);
       assert.match(summary, /\.$/, id);
     }
+  });
+});
+
+describe('firstSentence', () => {
+  it('takes the opening sentence and leaves its period alone', () => {
+    assert.equal(
+      firstSentence('42 providers run Rust, listed alphabetically. All of them paas.'),
+      '42 providers run Rust, listed alphabetically.',
+    );
+  });
+
+  // The bug this exists to stop: .concat('.') on a string that already ended in
+  // one, shipped as "listed alphabetically.." in a live meta description.
+  it('does not double the period when there is only one sentence', () => {
+    assert.equal(
+      firstSentence('1 provider operates in Kenya, listed alphabetically.'),
+      '1 provider operates in Kenya, listed alphabetically.',
+    );
+  });
+
+  // Node.js, Next.js and .NET are all real labels, so a period is not a sentence.
+  it('is not fooled by a period inside a label', () => {
+    assert.equal(
+      firstSentence('5 providers run Node.js, listed alphabetically.'),
+      '5 providers run Node.js, listed alphabetically.',
+    );
+    assert.equal(
+      firstSentence('1 provider runs .NET, listed alphabetically. All of them vps.'),
+      '1 provider runs .NET, listed alphabetically.',
+    );
   });
 });

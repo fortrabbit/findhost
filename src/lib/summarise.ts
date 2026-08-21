@@ -82,3 +82,17 @@ export function summarise(matches: ProviderRow[], facets: Facet[], facetId: stri
     .filter(Boolean)
     .join(' ');
 }
+
+/**
+ * The opening sentence, for the meta description — the second says who else is
+ * on the page, which a search result has no room for.
+ *
+ * It splits on a period *and a space*, because a label may carry a period of its
+ * own: "5 providers run Node.js, listed alphabetically" has three full stops and
+ * one sentence. Re-terminating only where the split actually happened is what
+ * keeps a one-sentence summary from ending in two.
+ */
+export function firstSentence(summary: string): string {
+  const [first = summary] = summary.split('. ');
+  return first.endsWith('.') ? first : `${first}.`;
+}
