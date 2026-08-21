@@ -6,6 +6,8 @@ urls:
 category:
   - vps
 description: A small British VPS host selling unmanaged Linux servers with root, IPv6 and no small print, run by the person who answers the support mail.
+favorite: true
+favoriteNote: Independent, tiny, and not trying to become anything else.
 hqCountry: GB
 regions:
   - GB
