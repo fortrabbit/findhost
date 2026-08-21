@@ -63,6 +63,10 @@ ErrorDocument 404 "FindHost own 404 — diagnostic, see MR-266"
 # covers them. What the policy is actually for is the rest: no plugins, no
 # framing, no form posting anywhere but here, and no base tag rewriting every
 # relative link on the page.
+#
+# Fathom is in `img-src` as well as `script-src`, because it reports a
+# pageview by loading an image rather than by fetching: without it the script
+# still runs, the beacon is refused, and analytics go quietly to zero.
 <IfModule mod_headers.c>
-  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' https://cdn.usefathom.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://cdn.usefathom.com; form-action 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none'"
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' https://cdn.usefathom.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://cdn.usefathom.com; font-src 'self'; connect-src 'self' https://cdn.usefathom.com; form-action 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none'"
 </IfModule>
