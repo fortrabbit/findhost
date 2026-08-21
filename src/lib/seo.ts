@@ -33,6 +33,33 @@ const patterns: Record<string, (label: string) => string> = {
 
 export const valueTitle = (facet: string, label: string) => patterns[facet]?.(label) ?? label;
 
+/** Roughly what a result shows of a title before it truncates. */
+const titleBudget = 60;
+
+const suffix = ' — FindHost';
+
+/**
+ * A record titled with a fact rather than with a name and a brand. "Hetzner —
+ * FindHost" spends a third of the budget saying nothing about Hetzner, and the
+ * categories are both the first thing the page shows and the words somebody
+ * types.
+ *
+ * Given in dictionary order rather than the record's, so two records holding
+ * the same categories title the same way, and only as many as fit — a title
+ * cut off mid-word is worse than a shorter one. A record with no category, or
+ * whose first one will not fit, keeps the plain form.
+ */
+export const recordTitle = (name: string, categories: string[]) => {
+  const room = titleBudget - name.length - suffix.length;
+
+  const fact = categories.reduce((kept, label) => {
+    const next = kept ? `${kept}, ${label}` : label;
+    return ` — ${next}`.length <= room ? next : kept;
+  }, '');
+
+  return `${name}${fact ? ` — ${fact}` : ''}${suffix}`;
+};
+
 /** The publisher, named the same way wherever it appears. */
 export const organization = (origin: string) => ({
   '@type': 'Organization',

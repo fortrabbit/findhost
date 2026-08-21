@@ -5,7 +5,7 @@ import { fieldGroups, fieldOf, type Field } from '../lib/fields';
 import { backlinks, cells, footnotes } from '../lib/record';
 import { isListed } from '../lib/providers';
 import { loadFacets } from '../lib/facets';
-import { organization } from '../lib/seo';
+import { organization, recordTitle } from '../lib/seo';
 import { cardPath } from '../lib/og';
 import SocialLinks from '../components/SocialLinks.astro';
 import PageFigure from '../components/PageFigure.astro';
@@ -222,10 +222,19 @@ const outOfScope =
     : undefined;
 
 const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[data.status] : undefined);
+
+/*
+ * The categories this record holds, in dictionary order and in the filter
+ * column's shorter wording where it has one — the title is the narrowest place
+ * either appears.
+ */
+const categoryLabels = (fieldOf.get('category')?.values ?? [])
+  .filter((value) => (data.category ?? []).includes(value.id as never))
+  .map((value) => value.short ?? value.label);
 ---
 
 <Base
-  title={`${data.name} — FindHost`}
+  title={recordTitle(data.name, categoryLabels)}
   description={data.description}
   markdown={`/${provider.id}.md`}
   hidden={!listed}
