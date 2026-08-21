@@ -9,7 +9,8 @@ category:
 description: French shared host selling a single all-inclusive cPanel offer in three sizes, running in its own data centres in Auvergne.
 founded: 2009
 hqCountry: FR
-ownership: independent
+ownership: subsidiary
+parent: your-online
 whoManagesOs: self-managed
 infraContract:
   - owns-metal
@@ -58,6 +59,8 @@ cliTool: none
 status: active
 checkedAt: 2026-08-01
 sources:
+  - { field: parent, url: 'https://your.online/brands', checkedAt: 2026-08-21 }
+  - { field: ownership, url: 'https://your.online/brands', checkedAt: 2026-08-21 }
   - { field: infraContract, url: 'https://www.o2switch.fr/', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://www.o2switch.fr/', checkedAt: 2026-07-31 }
   - { field: hqCountry, url: 'https://www.o2switch.fr/', checkedAt: 2026-07-31 }
@@ -78,7 +81,7 @@ figure:
 ai: authored
 ---
 
-o2switch is unusual among French hosts in building and running its own data centres rather than renting rack space — two redundant sites in Auvergne, near Clermont-Ferrand, which the company states plainly on its own pages. It has traded since 2009 and remains independently owned.
+o2switch is unusual among French hosts in building and running its own data centres rather than renting rack space — two redundant sites in Auvergne, near Clermont-Ferrand, which the company states plainly on its own pages. It has traded since 2009 and is a brand of the Dutch group [Your.Online](/your-online/).
 
 The historic pitch was a single unlimited offer, and that shape survives: the same all-inclusive product in a few compute sizes rather than a ladder of feature tiers, with disk, sites, databases, mailboxes and traffic all sold as unmetered. The stack is cPanel with LiteSpeed in front and Varnish, Redis and Memcached available, several PHP versions selectable side by side with full `php.ini` control, and MySQL, MariaDB and PostgreSQL all present. Documentation is a public site whose source sits on GitHub.
 

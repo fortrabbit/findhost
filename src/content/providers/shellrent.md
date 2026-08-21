@@ -8,8 +8,13 @@ category:
   - vps
 description: A shared hosting and VPS provider in Italy.
 hqCountry: IT
+ownership: subsidiary
+parent: your-online
 status: draft
 checkedAt: 2026-08-12
+sources:
+  - { field: parent, url: 'https://your.online/brands', checkedAt: 2026-08-21 }
+  - { field: ownership, url: 'https://your.online/brands', checkedAt: 2026-08-21 }
 ai: authored
 ---
 

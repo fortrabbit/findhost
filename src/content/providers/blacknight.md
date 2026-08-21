@@ -12,7 +12,8 @@ category:
   - domains-dns
 description: Irish host and ICANN-accredited registrar in Carlow, running its own data centres and selling everything from shared hosting to dedicated servers.
 hqCountry: IE
-ownership: independent
+ownership: subsidiary
+parent: your-online
 whoManagesOs: managed
 infraContract:
   - owns-metal
@@ -43,8 +44,10 @@ figure:
   emoji: 🇮🇪
   color: rgb(16, 126, 67)
   textColor: rgb(241, 248, 244)
-  text: Irish independent, owns its data centres.
+  text: Owns the data centres its customers sit in.
 sources:
+  - { field: parent, url: 'https://your.online/brands', checkedAt: 2026-08-21 }
+  - { field: ownership, url: 'https://blacknight.blog/the-next-chapter-for-blacknight.html', checkedAt: 2026-08-21 }
   - { field: category, url: 'https://www.blacknight.com/hosting/', checkedAt: 2026-08-08 }
   - { field: entryPrice, url: 'https://www.blacknight.com/hosting/', checkedAt: 2026-08-08 }
   - { field: priceTo, url: 'https://www.blacknight.com/hosting/', checkedAt: 2026-08-08 }

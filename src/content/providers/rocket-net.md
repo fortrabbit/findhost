@@ -8,6 +8,7 @@ category:
   - vanity-hosting
 description: Managed WordPress host built on an enterprise content delivery network, with a choice of origin locations across the Americas, Europe and Asia.
 ownership: subsidiary
+parent: hosting-com
 whoManagesOs: managed
 specialisation:
   - wordpress
@@ -47,6 +48,7 @@ status: active
 checkedAt: 2026-08-09
 mcpServer: official
 sources:
+  - { field: parent, url: 'https://hosting.com/about/mergers-and-acquisitions/', checkedAt: 2026-08-21 }
   - { field: entryPrice, url: 'https://rocket.net/pricing/', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://rocket.net/pricing/', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://rocket.net/pricing/', checkedAt: 2026-08-02 }

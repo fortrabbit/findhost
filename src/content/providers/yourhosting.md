@@ -7,8 +7,13 @@ category:
   - shared-hosting
 description: A shared hosting provider in the Netherlands.
 hqCountry: NL
+ownership: subsidiary
+parent: your-online
 status: draft
 checkedAt: 2026-08-12
+sources:
+  - { field: parent, url: 'https://your.online/brands', checkedAt: 2026-08-21 }
+  - { field: ownership, url: 'https://your.online/brands', checkedAt: 2026-08-21 }
 ai: authored
 ---
 

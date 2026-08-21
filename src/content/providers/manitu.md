@@ -5,9 +5,10 @@ urls:
   home: https://www.manitu.de
 category:
   - shared-hosting
-description: Owner-run German host from St. Wendel, in its own data centre since 2002, on renewable power since 2008.
+description: German host from St. Wendel, in its own data centre since 2002, on renewable power since 2008.
 hqCountry: DE
-ownership: independent
+ownership: subsidiary
+parent: your-online
 whoManagesOs: managed
 infraContract:
   - owns-metal
@@ -36,6 +37,8 @@ audience:
 status: active
 checkedAt: 2026-08-08
 sources:
+  - { field: parent, url: 'https://your.online/brands', checkedAt: 2026-08-21 }
+  - { field: ownership, url: 'https://your.online/brands', checkedAt: 2026-08-21 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#837', checkedAt: 2026-08-10 }
   - { field: entryPrice, url: 'https://www.manitu.de/webhosting/', checkedAt: 2026-08-08 }
   - { field: runtimes, url: 'https://www.manitu.de/webhosting/', checkedAt: 2026-08-08 }
@@ -51,7 +54,7 @@ ai: authored
 greenWebId: 837
 ---
 
-manitu is an owner-run German host from St. Wendel in the Saarland, long-established and with a reputation for plain dealing in German hosting forums.
+manitu is a German host from St. Wendel in the Saarland, long-established and with a reputation for plain dealing in German hosting forums. Founded in 1997, it is now a brand of the Dutch group [Your.Online](/your-online/).
 
 It owns the building. manitu has run its own data centre in St. Wendel since 2002, on its own hardware with its own staff, and on renewable electricity since February 2008 — a combination almost nobody at shared-hosting prices can claim, and the reason the record carries owns-metal rather than the reseller mark most of its neighbours have.
 

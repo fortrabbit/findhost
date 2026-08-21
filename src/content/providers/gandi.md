@@ -11,6 +11,7 @@ category:
 description: Gandi is a French registrar whose Simple Hosting product runs application code in per-customer Linux containers, deployed by git or SFTP.
 hqCountry: FR
 ownership: subsidiary
+parent: your-online
 whoManagesOs: self-managed
 useCases:
   - cms
@@ -60,6 +61,8 @@ apiAvailable: public
 status: active
 checkedAt: 2026-08-12
 sources:
+  - { field: parent, url: 'https://your.online/brands', checkedAt: 2026-08-21 }
+  - { field: ownership, url: 'https://your.online/brands', checkedAt: 2026-08-21 }
   - { field: priceFrom, url: 'https://www.gandi.net/en/simple-hosting', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://www.gandi.net/en/simple-hosting', checkedAt: 2026-08-02 }
   - { field: currencies, url: 'https://www.gandi.net/en/simple-hosting', checkedAt: 2026-08-02 }
@@ -88,5 +91,3 @@ PHP, Python and Node.js are the documented runtimes across the plan ladder, with
 ## Worth knowing
 
 The documented runtime range is narrow: the WordPress auto-install page names only a short list of supported PHP versions, and Ruby is absent from the language list entirely. Ordinary interactive SSH could not be confirmed — there is an emergency console, which is not the same thing.
-
-Ownership could not be established from any page Gandi operates; the company pages that would state it return 404.
