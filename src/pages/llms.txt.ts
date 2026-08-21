@@ -54,7 +54,13 @@ export const GET: APIRoute = async ({ site }) => {
      * The rule, said once, rather than a second URL beside two hundred links. A
      * retrieval step that knows it does not need the index to carry both forms.
      */
-    'Every page has a markdown copy at the same address with `.md` appended: a record at /hetzner.md, a facet value at /categories/paas.md, a whole facet at /categories/index.md.',
+    /*
+     * Named precisely, because the sentence is a promise a fetcher will act on.
+     * It used to say "every page", which was true of the four generated kinds and
+     * false of the three list pages beside the register — a 404 for anything that
+     * believed it.
+     */
+    'A record, a facet value, a whole facet and the two written pages each have a markdown copy at the same address with `.md` appended: /hetzner.md, /categories/paas.md, /categories/index.md, /guide.md, /about.md.',
     '',
     '',
     '## Notes',
