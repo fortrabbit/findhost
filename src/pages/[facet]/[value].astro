@@ -27,7 +27,7 @@ const { facet, value, matches } = Astro.props;
 const { facets } = await loadFacets();
 
 /* Phrased in fields.yml, beside the field it describes — see subjectOf. */
-const summary = summarise(matches, facets, facet.id, subjectOf(fieldOf.get(facet.field)!, value));
+const summary = summarise(matches, facets, facet.id, subjectOf(fieldOf.get(facet.field)!, value, matches.length));
 
 /*
  * The count, what the records have in common and what is missing, in one
