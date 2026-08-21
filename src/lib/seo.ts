@@ -46,6 +46,33 @@ export const organization = (origin: string) => ({
 export const licenceUrl = 'https://creativecommons.org/licenses/by/4.0/';
 
 /**
+ * The site as an entity, and the one action it offers: the search at /search/,
+ * which is a plain GET form and works without JavaScript like everything else.
+ *
+ * It rides in the same block as the Dataset so the bare `@id` here resolves
+ * against the publisher object written out there — split across two script tags
+ * it would be a reference to nothing.
+ */
+export const website = (origin: string) => ({
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${origin}/#website`,
+  url: `${origin}/`,
+  name: 'FindHost',
+  inLanguage: 'en',
+  license: licenceUrl,
+  publisher: { '@id': `${origin}/#publisher` },
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: `${origin}/search/?q={search_term_string}`,
+    },
+    'query-input': 'required name=search_term_string',
+  },
+});
+
+/**
  * The whole of the condition, written once. Reuse is the point, so the ask has
  * to be short enough to paste and identical everywhere it appears — a credit
  * line that varies between the page, the download and the markdown export is a
