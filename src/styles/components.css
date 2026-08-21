@@ -61,6 +61,7 @@
 }
 
 .theme-switch button {
+  position: relative;
   display: grid;
   place-items: center;
   width: 1.6em;
@@ -231,6 +232,7 @@ html:not(.js) .theme-switch {
 }
 
 .social-links a {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -850,7 +852,9 @@ html.js [data-find-fallback] {
  * differently in every browser.
  */
 .find-values {
-  --find-row: 1.25rem;
+  /* 24px: the smallest a row can be and still be a target, which is what a row
+     of checkboxes is. It was 1.25rem, sized off the line rather than the finger. */
+  --find-row: 1.5rem;
   --find-rows: 4.5;
   --find-pad: var(--space-xs);
 
@@ -1351,4 +1355,22 @@ html.js [data-find-fallback] {
   justify-content: flex-end;
   gap: var(--space-md);
   border-bottom: var(--rule-strong) solid var(--color-ink);
+}
+
+/*
+ * The tap target, not the mark. Both of these are drawn at the size of the text
+ * beside them — 22px and 26px — which is right for the page and short of the
+ * 24px a finger needs. The overlay grows what can be pressed without moving what
+ * is seen, so the drawn size stays a typographic decision and the hit area stops
+ * being one.
+ */
+.theme-switch button::after,
+.social-links a::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: max(100%, 24px);
+  height: max(100%, 24px);
+  translate: -50% -50%;
 }
