@@ -82,4 +82,6 @@ gpuCapacity:
 
 Latitude.sh sells dedicated hardware the way clouds sell instances: bare-metal servers provisioned automatically and billed by the hour, alongside virtual machines, block, file and object storage, managed PostgreSQL and networking. GPU capacity ranges from single accelerators to multi-GPU cluster nodes.
 
+[Megaport](https://www.megaport.com/blog/megaport-and-latitude-bringing-compute-and-connectivity-together/), the Australian network-as-a-service company, completed its acquisition of Latitude.sh in November 2025 and states an intention to combine the two into one platform selling compute and network together. The product and the name continue for now.
+
 Hourly bare metal is the distinctive part. Dedicated hardware is normally a monthly commitment, and being able to take a machine for an afternoon changes what it is useful for — the markets the company names are AI, gaming, crypto and video streaming rather than websites. Reserved pricing lowers the rate in exchange for a monthly or yearly commitment. Tooling is complete for infrastructure of this kind: a public API, SDKs, an official CLI and a Terraform provider, so machines can be created and destroyed from code rather than from a ticket.

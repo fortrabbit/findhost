@@ -29,6 +29,8 @@ ai: authored
 
 Greenhost sells virtual servers, web hosting and domain names from Amsterdam, and has built its identity on where the electricity comes from: Dutch wind, claimed as the supply rather than as offsets bought afterwards. The company has been making that argument for longer than most of the market has been making it at all.
 
+Since December 2024 it has been part of [The Sharing Group](https://press.thesharinggroup.com/245134-greenhost-sluit-zich-aan-bij-the-sharing-group-voor-ontwikkeling-duurzame-europese-cloudhosting/), a Dutch group that announced the takeover as a step toward sustainable European cloud hosting. Greenhost continues under its own name.
+
 ## Worth knowing
 
 Privacy is stated as a position, not sold as an add-on. That reads differently from the anonymity-first hosts, which market the same idea to a different buyer.

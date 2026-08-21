@@ -52,4 +52,4 @@ ai: authored
 
 CyberPanel is an open source control panel that runs on the OpenLiteSpeed web server and installs on a VPS or dedicated server you supply. It focuses on PHP and WordPress hosting, offering one-click WordPress deployment, SSL certificate management, file and domain administration, email services, database management and automated backups. The core software is free forever with no trial period or credit card required.
 
-The project is maintained by a community of developers and offers support through a forum, email and chat channels. Optional paid add-ons include an Apache compatibility module and premium management tools. The project serves over 500,000 active servers globally and requires installation on a fresh Linux system.
+The project is maintained by a community of developers and offers support through a forum, email and chat channels. Optional paid add-ons include an Apache compatibility module and premium management tools. It installs onto a fresh Linux system rather than alongside an existing stack.

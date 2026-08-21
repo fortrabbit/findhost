@@ -38,7 +38,7 @@ audience:
   - solo
 dnsHosting: paid-addon
 cdnIncluded: paid-addon
-status: active
+status: unverifiable
 checkedAt: 2026-08-12
 sources:
   - { field: category, url: 'https://futurevision.host', checkedAt: 2026-08-09 }
@@ -49,6 +49,7 @@ sources:
   - { field: deployMethods, url: 'https://futurevision.host', checkedAt: 2026-08-09 }
   - { field: dnsHosting, url: 'https://futurevision.host', checkedAt: 2026-08-12 }
   - { field: cdnIncluded, url: 'https://futurevision.host', checkedAt: 2026-08-12 }
+  - { field: status, url: 'https://futurevision.host', checkedAt: 2026-08-21 }
 figure:
   emoji: 🔮
   color: rgb(124, 58, 156)
@@ -62,3 +63,7 @@ FutureVision sells hosting built around [Grav](https://getgrav.org), the flat-fi
 It is one of very few hosts anywhere that names Grav as the product rather than as an item in a one-click installer, which is the reason it is worth recording: a flat-file CMS has no database to manage and a host that understands that can sell something genuinely simpler.
 
 Neither a company address nor a server location is published, so both stay unknown here. The only geographic hint on the site is a maintenance window quoted in Australian Eastern time.
+
+## Worth knowing
+
+**The site is not answering.** On 21 August 2026 futurevision.host returned a DirectAdmin "Suspended Domain" page rather than the host's own, so nothing above can be confirmed against the provider's pages any more — the plans, the free tier and the price recorded here were last read on 12 August 2026 and may no longer be on offer. Whether this is a lapsed bill or the end of the business is not something the site says.

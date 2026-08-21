@@ -28,4 +28,4 @@ IDCloudHost is an Indonesian infrastructure company. Its status page, the only p
 
 ## Worth knowing
 
-Pricing, ownership, founding date and runtime documentation could not be established: the marketing site (idcloudhost.com) returns a Cloudflare challenge to automated requests, so every field here traces only to the status subdomain. A future check from a browser session would substantially extend this record.
+Pricing, founding date and runtime documentation could not be established: the marketing site (idcloudhost.com) returns a Cloudflare challenge to automated requests, so every field here except ownership traces to the status subdomain. A future check from a browser session would substantially extend this record.
