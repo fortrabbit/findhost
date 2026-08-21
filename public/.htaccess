@@ -17,6 +17,21 @@ ErrorDocument 404 /404.html
   Header always set Permissions-Policy "geolocation=(), camera=(), microphone=()"
 </IfModule>
 
+# Nothing was cached either: every asset carried an ETag and no lifetime, so a
+# reader moving between records revalidated the same stylesheet on every page.
+# The hashed ones can be cached outright — a new build writes a new filename, so
+# the URL cannot go stale — while HTML is left to revalidate, because a record
+# corrected today has to be the record served today.
+# Matched on the build hash in the name rather than on the extension, because
+# /providers.json and pagefind-entry.json keep their URLs across builds and
+# freezing either would serve a stale register and a search index that no longer
+# matches it. Only a filename that changes when its contents do is cached here.
+<IfModule mod_headers.c>
+  <FilesMatch "\.[A-Za-z0-9_-]{8}\.(css|js)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
+
 # Nothing was compressed: the homepage went out at 274 KB, and so did every
 # markdown twin and the whole JSON and CSV export. Listed by type rather than by
 # extension so pagefind's index chunks, which are compressed binaries already
