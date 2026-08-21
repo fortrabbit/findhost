@@ -3,9 +3,15 @@
 AddType text/markdown .md
 AddCharset UTF-8 .md
 
-# Without this the platform's own error document answers instead, and a
-# mistyped URL reads as a site that was never deployed.
-ErrorDocument 404 /404.html
+# TEMPORARY DIAGNOSTIC — MR-266. Revert to `ErrorDocument 404 /404.html`.
+#
+# A miss returns fortrabbit's own error page, not ours, and carries none of the
+# headers or compression this file sets on every 200 — so the question is
+# whether the directive is being read at all. An inline string answers it: if a
+# miss shows this text, the directive fires and only the path was wrong; if it
+# still shows the platform page, nothing in this file is consulted for a 404
+# and no `.htaccess` change can fix it.
+ErrorDocument 404 "FindHost own 404 — diagnostic, see MR-266"
 
 # No HSTS on purpose: it is the one header here that cannot be taken back
 # within its max-age. Referrer-Policy earns its place — every record links out
