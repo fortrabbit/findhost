@@ -29,6 +29,10 @@ const { facets } = await loadFacets();
 /* Phrased in fields.yml, beside the field it describes — see subjectOf. */
 const summary = summarise(matches, facets, facet.id, subjectOf(fieldOf.get(facet.field)!, value, matches.length));
 
+/* The most recent `checkedAt` on this page, for the schema's dateModified. */
+const checkedDates = matches.map((row) => row.checkedAt).filter((date): date is Date => date instanceof Date);
+const newestChecked = checkedDates.length ? new Date(Math.max(...checkedDates.map((date) => date.getTime()))) : null;
+
 /*
  * The count, what the records have in common and what is missing, in one
  * annotation. They were three stacked blocks of numbers, two of them opening
@@ -74,17 +78,29 @@ const figure = note?.data.figure;
     },
     {
       '@context': 'https://schema.org',
-      '@type': 'ItemList',
+      '@type': 'CollectionPage',
+      url: `${origin}${facetIndex(facet.id)}${value.slug}/`,
       name: note?.data.title ?? valueTitle(facet.id, value.label),
-      numberOfItems: matches.length,
-      isPartOf: organization(origin),
-      itemListOrder: 'https://schema.org/ItemListOrderAscending',
-      itemListElement: matches.map((provider, index) => ({
-        '@type': 'ListItem',
-        position: index + 1,
-        url: `${origin}/${provider.id}/`,
-        name: provider.name,
-      })),
+      inLanguage: 'en',
+      publisher: organization(origin),
+      license: 'https://creativecommons.org/licenses/by/4.0/',
+      /*
+       * The newest date any record on this page was read against the provider's
+       * own pages. A page is as current as its most recent claim, and where no
+       * record on it carries one the property is absent rather than invented.
+       */
+      ...(newestChecked ? { dateModified: newestChecked.toISOString().slice(0, 10) } : {}),
+      mainEntity: {
+        '@type': 'ItemList',
+        numberOfItems: matches.length,
+        itemListOrder: 'https://schema.org/ItemListOrderAscending',
+        itemListElement: matches.map((provider, index) => ({
+          '@type': 'ListItem',
+          position: index + 1,
+          url: `${origin}/${provider.id}/`,
+          name: provider.name,
+        })),
+      },
     },
   ]}
 >

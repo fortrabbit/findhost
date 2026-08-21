@@ -47,6 +47,8 @@ export interface ProviderRow {
   publishedByUs?: boolean;
   /** Ours, not the provider's: we like it. Drawn as a heart beside the name. */
   favorite?: boolean;
+  /** When this record was last read against the provider's own pages. Absent means nobody has. */
+  checkedAt?: Date;
   /** Present when a third party has verified the energy claim. Not a score. */
   greenWebId?: number | null;
   /** Headquarters, as the ISO code a list shows rather than the flag it does not. */
@@ -127,6 +129,7 @@ export function toRow(record: { id: string; data: Record<string, unknown> }): Pr
     description: data.description as string | undefined,
     publishedByUs: data.publishedByUs as boolean | undefined,
     favorite: data.favorite as boolean | undefined,
+    checkedAt: data.checkedAt as Date | undefined,
     greenWebId: data.greenWebId as number | null | undefined,
     country: data.hqCountry as string | undefined,
     figure: data.figure as ProviderRow['figure'],
