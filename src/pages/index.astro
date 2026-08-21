@@ -5,7 +5,7 @@ import FindFilters from '../components/FindFilters.astro';
 import { asideGroups, loadFacets } from '../lib/facets';
 import { loadIndexed } from '../lib/providers';
 import { fields } from '../lib/fields';
-import { dataset } from '../lib/seo';
+import { dataset, website } from '../lib/seo';
 
 const { facets, providers } = await loadFacets();
 
@@ -38,7 +38,10 @@ const beside = (await asideGroups()).map((group) => ({
 <Base
   title="FindHost — a register of web hosting providers"
   description="Opinionated field guide to choosing a web host."
-  schema={dataset(Astro.site?.origin ?? '', providers.length, { fields, modified: lastChecked })}
+  schema={[
+    dataset(Astro.site?.origin ?? '', providers.length, { fields, modified: lastChecked }),
+    website(Astro.site?.origin ?? ''),
+  ]}
 >
   <h1>Find your next web host</h1>
 

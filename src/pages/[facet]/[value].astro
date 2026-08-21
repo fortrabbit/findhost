@@ -6,7 +6,7 @@ import ProviderRegister from '../../components/ProviderRegister.astro';
 import PageFigure from '../../components/PageFigure.astro';
 import { facetIndex, facetRoutes, loadFacets } from '../../lib/facets';
 import { fieldOf, subjectOf } from '../../lib/fields';
-import { summarise } from '../../lib/summarise';
+import { firstSentence, summarise } from '../../lib/summarise';
 import { valueCardPath } from '../../lib/og';
 
 /*
@@ -27,7 +27,11 @@ const { facet, value, matches } = Astro.props;
 const { facets } = await loadFacets();
 
 /* Phrased in fields.yml, beside the field it describes — see subjectOf. */
-const summary = summarise(matches, facets, facet.id, subjectOf(fieldOf.get(facet.field)!, value));
+const summary = summarise(matches, facets, facet.id, subjectOf(fieldOf.get(facet.field)!, value, matches.length));
+
+/* The most recent `checkedAt` on this page, for the schema's dateModified. */
+const checkedDates = matches.map((row) => row.checkedAt).filter((date): date is Date => date instanceof Date);
+const newestChecked = checkedDates.length ? new Date(Math.max(...checkedDates.map((date) => date.getTime()))) : null;
 
 /*
  * The count, what the records have in common and what is missing, in one
@@ -60,7 +64,7 @@ const figure = note?.data.figure;
 
 <Base
   title={`${note?.data.title ?? valueTitle(facet.id, value.label)} — FindHost`}
-  description={note?.data.description ?? summary.split('. ')[0].concat('.')}
+  description={note?.data.description ?? firstSentence(summary)}
   image={valueCardPath(facet.id, value.slug)}
   imageAlt={`A FindHost card: ${matches.length} providers recorded as ${value.label.toLowerCase()}.`}
   schema={[
@@ -74,17 +78,29 @@ const figure = note?.data.figure;
     },
     {
       '@context': 'https://schema.org',
-      '@type': 'ItemList',
+      '@type': 'CollectionPage',
+      url: `${origin}${facetIndex(facet.id)}${value.slug}/`,
       name: note?.data.title ?? valueTitle(facet.id, value.label),
-      numberOfItems: matches.length,
-      isPartOf: organization(origin),
-      itemListOrder: 'https://schema.org/ItemListOrderAscending',
-      itemListElement: matches.map((provider, index) => ({
-        '@type': 'ListItem',
-        position: index + 1,
-        url: `${origin}/${provider.id}/`,
-        name: provider.name,
-      })),
+      inLanguage: 'en',
+      publisher: organization(origin),
+      license: 'https://creativecommons.org/licenses/by/4.0/',
+      /*
+       * The newest date any record on this page was read against the provider's
+       * own pages. A page is as current as its most recent claim, and where no
+       * record on it carries one the property is absent rather than invented.
+       */
+      ...(newestChecked ? { dateModified: newestChecked.toISOString().slice(0, 10) } : {}),
+      mainEntity: {
+        '@type': 'ItemList',
+        numberOfItems: matches.length,
+        itemListOrder: 'https://schema.org/ItemListOrderAscending',
+        itemListElement: matches.map((provider, index) => ({
+          '@type': 'ListItem',
+          position: index + 1,
+          url: `${origin}/${provider.id}/`,
+          name: provider.name,
+        })),
+      },
     },
   ]}
 >

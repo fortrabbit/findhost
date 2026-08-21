@@ -278,14 +278,30 @@ export function slugify(text: string): string {
  * template because it is a fact about the field, and a page that phrases its own
  * facet is where twenty facets' worth of English ends up living in one route.
  */
-export function subjectOf(field: Field, value: { id: string; label: string }): string {
+export function subjectOf(field: Field, value: { id: string; label: string }, count = 0): string {
   const own = field.values.find((candidate) => candidate.id === value.id)?.subject;
-  if (own) return own;
-
-  const template = field.subject;
+  const template = own ?? field.subject;
   if (!template) return `record ${field.label.toLowerCase()}: ${value.label}`;
 
-  return template.replaceAll('{label}', value.label).replaceAll('{lower}', value.label.toLowerCase());
+  return inflect(template.replaceAll('{label}', value.label).replaceAll('{lower}', value.label.toLowerCase()), count);
+}
+
+/**
+ * `{plural|singular}` picks a form: "operate{|s} in {label}" reads as "operate"
+ * for a page listing several and "operates" for a page listing one.
+ *
+ * The alternatives live in `fields.yml` beside the phrase they inflect, because
+ * English about a field belongs in the dictionary. Conjugating in TypeScript
+ * would mean a rule table that has to know "publish" takes -es and "are" becomes
+ * "is", and would still guess wrong on the next verb somebody writes.
+ *
+ * A phrase with no marker is used as written — a modal ("can be left") and a
+ * relative clause ("we like") are already right in both numbers.
+ */
+function inflect(phrase: string, count: number): string {
+  return phrase.replaceAll(/\{([^{}|]*)\|([^{}|]*)\}/g, (_, plural: string, singular: string) =>
+    count === 1 ? singular : plural,
+  );
 }
 
 /** The reader's word for a value. Falls back to the id, which is at least true. */

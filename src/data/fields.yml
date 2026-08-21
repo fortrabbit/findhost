@@ -57,11 +57,11 @@
   label: Headcount
   group: Identity
   values:
-    - { id: solo, label: One person, short: Solo, subject: 'are one person' }
-    - { id: '2-10', label: 2 to 10, subject: 'employ between 2 and 10 people' }
-    - { id: '11-50', label: 11 to 50, subject: 'employ between 11 and 50 people' }
-    - { id: '51-250', label: 51 to 250, subject: 'employ between 51 and 250 people' }
-    - { id: '250-plus', label: More than 250, short: '250+', subject: 'employ more than 250 people' }
+    - { id: solo, label: One person, short: Solo, subject: '{are|is} one person' }
+    - { id: '2-10', label: 2 to 10, subject: 'employ{|s} between 2 and 10 people' }
+    - { id: '11-50', label: 11 to 50, subject: 'employ{|s} between 11 and 50 people' }
+    - { id: '51-250', label: 51 to 250, subject: 'employ{|s} between 51 and 250 people' }
+    - { id: '250-plus', label: More than 250, short: '250+', subject: 'employ{|s} more than 250 people' }
 
 # The one editorial mark on a record: we like it. No score, no weight, no
 # arithmetic — a boolean somebody set on purpose, shown as a heart in the list
@@ -91,7 +91,7 @@
   label: Ownership
   group: Identity
   facet: ownership
-  subject: 'are {lower}'
+  subject: '{are|is} {lower}'
   filterOrder: 19
   values:
     - { id: independent, label: Independent }
@@ -144,7 +144,7 @@
   label: Categories
   group: Classification
   facet: categories
-  subject: 'are {lower}'
+  subject: '{are|is} {lower}'
   filterOrder: 2
   multiple: true
   values:
@@ -182,10 +182,10 @@
     # registrar runs nameservers, and the operators who sell DNS on its own sell
     # registration beside it. Splitting them would make two lists of the same
     # companies.
-    - { id: domains-dns, label: Domains and DNS, short: Domains, subject: 'sell domain names or run DNS' }
-    - { id: mail, label: Business email, subject: 'run mailboxes on a domain' }
-    - { id: dbaas, label: Database as a Service, short: DBaaS, subject: 'sell a managed database as the product' }
-    - { id: git-hosting, label: Git hosting, subject: 'host git repositories' }
+    - { id: domains-dns, label: Domains and DNS, short: Domains, subject: 'sell{|s} domain names or run{|s} DNS' }
+    - { id: mail, label: Business email, subject: 'run{|s} mailboxes on a domain' }
+    - { id: dbaas, label: Database as a Service, short: DBaaS, subject: 'sell{|s} a managed database as the product' }
+    - { id: git-hosting, label: Git hosting, subject: 'host{|s} git repositories' }
 
 # Two answers, because there are two: somebody applies the security updates or
 # somebody else does. A panel automates that work without moving it, and an image
@@ -195,11 +195,11 @@
   label: Operating system
   group: Classification
   facet: operating-system
-  subject: 'answer "{lower}" to who manages the operating system'
+  subject: 'answer{|s} "{lower}" to who manages the operating system'
   filterOrder: 16
   values:
-    - { id: managed, label: Managed, subject: 'manage the operating system for you' }
-    - { id: self-managed, label: Self-managed, subject: 'leave the operating system to you' }
+    - { id: managed, label: Managed, subject: 'manage{|s} the operating system for you' }
+    - { id: self-managed, label: Self-managed, subject: 'leave{|s} the operating system to you' }
 
 # More than one can be true at once: a panel that provisions onto your own cloud
 # account may also resell machines of its own.
@@ -211,9 +211,14 @@
   filterOrder: 17
   multiple: true
   values:
-    - { id: owns-metal, label: Owns the hardware, short: Owns, subject: 'own their hardware' }
-    - { id: resells-iaas, label: Resells someone else's, short: Reseller, subject: "resell someone else's hardware" }
-    - { id: byo-iaas, label: You bring your own, short: BYO, subject: 'run on hardware you bring' }
+    - { id: owns-metal, label: Owns the hardware, short: Owns, subject: 'own{|s} their hardware' }
+    - {
+        id: resells-iaas,
+        label: Resells someone else's,
+        short: Reseller,
+        subject: "resell{|s} someone else's hardware",
+      }
+    - { id: byo-iaas, label: You bring your own, short: BYO, subject: 'run{|s} on hardware you bring' }
 
 # Whose infrastructure the compute runs on. A relation: the values are record
 # ids, so the upstream is a page in this dataset and the relation reads from
@@ -240,7 +245,7 @@
   label: Use cases
   group: Classification
   facet: use-cases
-  subject: 'market themselves for {lower}'
+  subject: 'market{|s} themselves for {lower}'
   filterOrder: 10
   multiple: true
   values:
@@ -270,7 +275,7 @@
   label: Audience
   group: Classification
   facet: audience
-  subject: 'sell to {lower}'
+  subject: 'sell{|s} to {lower}'
   filterOrder: 12
   multiple: true
   values:
@@ -289,7 +294,7 @@
   label: Runtimes
   group: Tech stack
   facet: runtimes
-  subject: 'run {label}'
+  subject: 'run{|s} {label}'
   filterOrder: 5
   multiple: true
   values:
@@ -322,7 +327,7 @@
   label: Software
   group: Tech stack
   facet: software
-  subject: 'document support for {label}'
+  subject: 'document{|s} support for {label}'
   filterOrder: 1
   multiple: true
   values:
@@ -405,7 +410,7 @@
   label: Deployment
   group: Deployment
   facet: deployment
-  subject: 'deploy by {lower}'
+  subject: 'deploy{|s} by {lower}'
   filterOrder: 8
   multiple: true
   #
@@ -426,10 +431,10 @@
   # and others accept a commit to build or an image to run, and a reader
   # choosing between the two wants to know that both doors are open.
   values:
-    - { id: git, label: Git, subject: 'deploy from a git commit' }
-    - { id: docker-image, label: Container image, short: Container, subject: 'deploy a container image' }
-    - { id: control-panel, label: Control panel, short: Panel, subject: 'deploy from a control panel' }
-    - { id: file-transfer, label: File transfer, short: Upload, subject: 'accept an upload over SFTP or FTP' }
+    - { id: git, label: Git, subject: 'deploy{|s} from a git commit' }
+    - { id: docker-image, label: Container image, short: Container, subject: 'deploy{|s} a container image' }
+    - { id: control-panel, label: Control panel, short: Panel, subject: 'deploy{|s} from a control panel' }
+    - { id: file-transfer, label: File transfer, short: Upload, subject: 'accept{|s} an upload over SFTP or FTP' }
 
 # One scale, and the two ends of it are different kinds of shell rather than
 # different amounts of one. A jailed shell is complete inside its container and
@@ -442,13 +447,18 @@
   label: Shell
   group: Tech stack
   facet: shell
-  subject: 'give {lower}'
+  subject: 'give{|s} {lower}'
   ordered: true
   filterOrder: 15
   values:
     - { id: none, label: None, noFilter: true }
-    - { id: jailed, label: Jailed shell, short: Jailed, subject: 'give a shell inside the environment, without root' }
-    - { id: root, label: Root shell, short: Root, subject: 'give root on the machine' }
+    - {
+        id: jailed,
+        label: Jailed shell,
+        short: Jailed,
+        subject: 'give{|s} a shell inside the environment, without root',
+      }
+    - { id: root, label: Root shell, short: Root, subject: 'give{|s} root on the machine' }
 
 # Which engines the provider runs and keeps patched, as against which ones a
 # customer may install for themselves — the second is a property of the shell,
@@ -463,7 +473,7 @@
   label: Managed databases
   group: Tech stack
   facet: databases
-  subject: 'offer managed {label}'
+  subject: 'offer{|s} managed {label}'
   filterOrder: 6
   multiple: true
   values:
@@ -527,7 +537,7 @@
   label: Entry price
   group: Pricing
   facet: entry-price
-  subject: 'start at {lower}'
+  subject: 'start{|s} at {lower}'
   ordered: true
   filterOrder: 4
   values:
@@ -558,7 +568,7 @@
   label: Currencies
   group: Pricing
   facet: currencies
-  subject: 'bill in {label}'
+  subject: 'bill{|s} in {label}'
   filterOrder: 14
   multiple: true
   values:
@@ -657,17 +667,17 @@
 - id: pricingFeatures
   label: Pricing features
   facet: pricing
-  subject: 'price with {lower}'
+  subject: 'price{|s} with {lower}'
   filterOrder: 13
   multiple: true
   values:
-    - { id: free-tier, label: Free tier, from: freeTier, when: [permanent], subject: 'offer a permanent free tier' }
+    - { id: free-tier, label: Free tier, from: freeTier, when: [permanent], subject: 'offer{|s} a permanent free tier' }
     - {
         id: free-trial,
         label: Free trial,
         from: freeTier,
         when: [trial],
-        subject: 'offer a free trial rather than a free tier',
+        subject: 'offer{|s} a free trial rather than a free tier',
       }
     - {
         id: in-arrears,
@@ -675,7 +685,7 @@
         short: In arrears,
         from: billingTiming,
         when: [arrears],
-        subject: 'bill in arrears, for usage already run up',
+        subject: 'bill{|s} in arrears, for usage already run up',
       }
     - {
         id: upfront,
@@ -683,7 +693,7 @@
         short: Upfront,
         from: billingTiming,
         when: [advance],
-        subject: 'take the money before the month it pays for',
+        subject: 'take{|s} the money before the month it pays for',
       }
     - {
         id: usage-based,
@@ -691,7 +701,7 @@
         short: Metered,
         from: pricingModel,
         when: [usage-based],
-        subject: 'meter usage rather than sell a plan',
+        subject: 'meter{|s} usage rather than sell a plan',
       }
     # Not the opposite of `upfront`, which is why both can be true at once: that
     # one answers when the money leaves, this one answers how it is held. A
@@ -703,7 +713,7 @@
         short: Prepaid,
         from: pricingModel,
         when: [credit],
-        subject: 'run on prepaid credit',
+        subject: 'run{|s} on prepaid credit',
       }
     # The term, not the notice. How long the door takes to close is `exit`, and a
     # provider can hold nobody to a term while still wanting thirty days.
@@ -713,7 +723,7 @@
         short: No minimum,
         from: contractMinimum,
         when: [none],
-        subject: 'hold nobody to a minimum term',
+        subject: 'hold{|s} nobody to a minimum term',
       }
 
 # -------------------------------------------------------- Regions and law
@@ -724,7 +734,7 @@
   label: Regions
   group: Regions and law
   facet: regions
-  subject: 'operate in {label}'
+  subject: 'operate{|s} in {label}'
   slugFromLabel: true
   filterOrder: 3
   multiple: true
@@ -880,14 +890,14 @@
   label: Support
   group: Support
   facet: support
-  subject: 'offer support by {lower}'
+  subject: 'offer{|s} support by {lower}'
   filterOrder: 7
   multiple: true
   values:
-    - { id: email, label: Email, subject: 'answer email or a ticket' }
-    - { id: chat, label: Chat, subject: 'staff a chat' }
-    - { id: phone, label: Phone, subject: 'publish a phone number' }
-    - { id: forum, label: Forum, subject: 'run a community forum' }
+    - { id: email, label: Email, subject: 'answer{|s} email or a ticket' }
+    - { id: chat, label: Chat, subject: 'staff{|s} a chat' }
+    - { id: phone, label: Phone, subject: 'publish{|es} a phone number' }
+    - { id: forum, label: Forum, subject: 'run{|s} a community forum' }
 
 - id: supportHours
   label: Hours
@@ -972,7 +982,7 @@
 - id: features
   label: Other features
   facet: features
-  subject: 'include {lower}'
+  subject: 'include{|s} {lower}'
   filterOrder: 9
   multiple: true
   values:
@@ -981,14 +991,14 @@
         label: Collaboration,
         from: collaboration,
         when: [team, clients],
-        subject: 'let more than one person work on the same hosting',
+        subject: 'let{|s} more than one person work on the same hosting',
       }
     - {
         id: staging,
         label: Staging,
         from: staging,
         when: [included],
-        subject: 'give somewhere to try a deploy before it is the site',
+        subject: 'give{|s} somewhere to try a deploy before it is the site',
       }
     # These four name the same things as the `domains-dns` and `mail`
     # categories, and mean something else: not who sells it, but who hands it
@@ -1001,7 +1011,7 @@
         short: Domains,
         from: domainRegistration,
         when: [included],
-        subject: 'include a domain with the hosting',
+        subject: 'include{|s} a domain with the hosting',
       }
     - {
         id: dns,
@@ -1009,7 +1019,7 @@
         short: DNS,
         from: dnsHosting,
         when: [included],
-        subject: 'host DNS themselves, at no extra charge',
+        subject: 'host{|s} DNS themselves, at no extra charge',
       }
     - {
         id: email,
@@ -1017,7 +1027,7 @@
         short: Email,
         from: emailHosting,
         when: [included],
-        subject: 'host email themselves, at no extra charge',
+        subject: 'host{|s} email themselves, at no extra charge',
       }
     - {
         id: cdn,
@@ -1025,7 +1035,7 @@
         short: CDN,
         from: cdnIncluded,
         when: [included],
-        subject: 'include a CDN with the hosting',
+        subject: 'include{|s} a CDN with the hosting',
       }
     - {
         id: test-domain,
@@ -1033,7 +1043,7 @@
         short: Test URL,
         from: testDomain,
         when: [included],
-        subject: 'hand out a test URL to deploy to',
+        subject: 'hand{|s} out a test URL to deploy to',
       }
     # Two sources, either of which answers: the provider's own published claim,
     # and an id in the Green Web Foundation's directory. That second is a field
@@ -1041,7 +1051,7 @@
     # `when` is `*`, meaning recorded at all.
     - id: green
       label: Green energy
-      subject: 'say they run on green energy, and publish something to back it'
+      subject: 'say{|s} they run on green energy, and publish something to back it'
       sources:
         - { from: greenWebId, when: ['*'] }
         - { from: energyClaim, when: [24-7-cfe, annual-matched, offset, grid-mix-disclosed] }
@@ -1089,13 +1099,13 @@
 - id: automation
   label: Automation
   facet: automation
-  subject: 'offer {label}'
+  subject: 'offer{|s} {label}'
   filterOrder: 11
   multiple: true
   values:
-    - { id: api, label: API, from: apiAvailable, when: [public, partner-only], subject: 'publish an API' }
-    - { id: cli, label: CLI, from: cliTool, when: [official, third-party], subject: 'ship a command-line tool' }
-    - { id: mcp, label: MCP, from: mcpServer, when: [official, community], subject: 'ship an MCP server' }
+    - { id: api, label: API, from: apiAvailable, when: [public, partner-only], subject: 'publish{|es} an API' }
+    - { id: cli, label: CLI, from: cliTool, when: [official, third-party], subject: 'ship{|s} a command-line tool' }
+    - { id: mcp, label: MCP, from: mcpServer, when: [official, community], subject: 'ship{|s} an MCP server' }
     # Reads a multi-value field, which is why the derived matcher had to learn
     # about lists. Terraform is effectively the whole category: of the nineteen
     # records that answer, nineteen have Terraform, two have CloudFormation and

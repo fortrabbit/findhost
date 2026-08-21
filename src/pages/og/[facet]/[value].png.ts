@@ -20,7 +20,7 @@ export const GET: APIRoute = async ({ props }) => {
    * overrides both or neither.
    */
   const note = (await getCollection('notes')).find((entry) => entry.id === `${facet.id}/${value.id}`);
-  const summary = summarise(matches, facets, facet.id, subjectOf(fieldOf.get(facet.field)!, value));
+  const summary = summarise(matches, facets, facet.id, subjectOf(fieldOf.get(facet.field)!, value, matches.length));
 
   const png = await shareCard({
     name: note?.data.title ?? valueTitle(facet.id, value.label),
