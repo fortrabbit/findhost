@@ -60,7 +60,9 @@ export interface Aside {
  */
 export const loadAsides = once(async (): Promise<Aside[]> => {
   const groups = new Map<string, Aside>();
-  for (const { key, label } of asideOf.values()) groups.set(key, { key, label, rows: [] });
+  /* First status to claim a key names the group: more than one can share it,
+     and the later label would otherwise rename what the earlier one opened. */
+  for (const { key, label } of asideOf.values()) if (!groups.has(key)) groups.set(key, { key, label, rows: [] });
 
   for (const record of await loadAsideProviders()) {
     groups.get(asideGroup(record)!)!.rows.push({ ...toRow(record as never), status: String(record.data.status) });

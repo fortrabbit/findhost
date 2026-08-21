@@ -21,7 +21,7 @@ const records = new URL('../src/content/providers/', import.meta.url);
  * beside it, which keeps a page and a checkbox. Listed here rather than imported
  * so the number still arrives by a different route from the page's.
  */
-const outside = new Set(['draft', 'out-of-scope', 'discontinued', 'unlisted']);
+const outside = new Set(['draft', 'out-of-scope', 'discontinued', 'unverifiable', 'unlisted']);
 
 const listed = readdirSync(records).filter((file) => {
   if (!file.endsWith('.md')) return false;

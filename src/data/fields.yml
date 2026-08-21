@@ -124,7 +124,10 @@
     # indexed: what happened to a host people used is worth finding, and so is
     # why a name people know is not in the list.
     - { id: discontinued, label: Discontinued, short: Defunct, aside: defunct }
-    - { id: unverifiable, label: Unverifiable }
+    # Beside the register with `discontinued`, because the reader's question is
+    # the same one — this name is not an option any more — even though the two
+    # facts differ: one stopped trading, the other can no longer be read.
+    - { id: unverifiable, label: Unverifiable, aside: defunct }
     - { id: delisted-on-request, label: Delisted on request }
     # A company that owns hosting brands without selling hosting under its own
     # name. It has no runtimes, no regions and no price, so it cannot be
