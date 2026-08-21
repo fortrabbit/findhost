@@ -65,6 +65,7 @@ const figure = note?.data.figure;
 <Base
   title={`${note?.data.title ?? valueTitle(facet.id, value.label)} — FindHost`}
   description={note?.data.description ?? firstSentence(summary)}
+  markdown={`${facetIndex(facet.id)}${value.slug}.md`}
   image={valueCardPath(facet.id, value.slug)}
   imageAlt={`A FindHost card: ${matches.length} providers recorded as ${value.label.toLowerCase()}.`}
   schema={[

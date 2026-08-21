@@ -6,6 +6,7 @@ figure:
   color: rgb(255, 250, 0)
   textColor: rgb(165, 135, 60)
   text: The web hosting market is a "lemon market" where sellers have more information than buyers.
+updated: 2026-08-12
 description: Who publishes this, what the rules are, and how it is made.
 lead: Most "best web hosting lists" are ordered by affiliate commission, making independent hosting providers invisible. This website exists to give developers better choices to select a web host, large or small.
 ---

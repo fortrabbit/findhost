@@ -13,6 +13,12 @@ interface Props {
     title: string;
     description?: string;
     lead?: string;
+    /**
+     * When the prose on this page last changed, written by hand. These are the
+     * two pages a reader checks for currency and the only ones carrying no date
+     * at all; a build date would only say when the site was rebuilt.
+     */
+    updated?: string;
     figure?: { emoji: string; color: string; textColor: string; text: string };
   };
 }
@@ -22,11 +28,26 @@ const { figure } = frontmatter;
 
 const origin = Astro.site?.origin ?? '';
 const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url).href;
+
+/*
+ * `/guide/` and `/about/` are authored as markdown, so their twin is the source
+ * file with a heading on it. The address is the page's own with the trailing
+ * slash swapped for `.md`, which is the rule llms.txt states for every page.
+ */
+const markdown = `${Astro.url.pathname.replace(/\/$/, '')}.md`;
+
+/*
+ * The share card these two already send to a crawler as `og:image`. The schema
+ * pointed at nothing while the meta tag pointed at a picture, which is one page
+ * making two answers to the same question.
+ */
+const card = new URL('/og/default.png', Astro.site ?? Astro.url).href;
 ---
 
 <Base
   title={`${frontmatter.title} — FindHost`}
   description={frontmatter.description}
+  markdown={markdown}
   schema={{
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -34,6 +55,8 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url).href;
     ...(frontmatter.description ? { description: frontmatter.description } : {}),
     url: canonical,
     mainEntityOfPage: canonical,
+    image: card,
+    ...(frontmatter.updated ? { dateModified: frontmatter.updated } : {}),
     inLanguage: 'en',
     publisher: organization(origin),
     author: organization(origin),

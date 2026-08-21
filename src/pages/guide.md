@@ -1,6 +1,7 @@
 ---
 layout: ../layouts/Article.astro
 title: How to choose a web host
+updated: 2026-08-10
 description: Why the hosting market is hard to read from outside, what actually matters when comparing hosts, and which of it this dataset records.
 figure:
   emoji: 🫨

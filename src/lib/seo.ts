@@ -40,6 +40,12 @@ export const organization = (origin: string) => ({
   name: 'FindHost',
   url: `${origin}/`,
   publishingPrinciples: `${origin}/about/`,
+  /*
+   * The repository, because it is the only external place the publisher of this
+   * dataset exists independently of the dataset: every record's history, every
+   * correction and every contributor is there under a name a reader can check.
+   */
+  sameAs: ['https://github.com/fortrabbit/findhost'],
   parentOrganization: { '@type': 'Organization', name: 'fortrabbit GmbH', url: 'https://www.fortrabbit.com' },
 });
 
@@ -128,6 +134,21 @@ export const dataset = (
       '@type': 'DataDownload',
       encodingFormat: 'text/csv',
       contentUrl: `${origin}/providers.csv`,
+    },
+    /*
+     * The two formats addressed to the readers most likely to find the dataset
+     * through its schema rather than through a link: the index, and the whole
+     * register as one document.
+     */
+    {
+      '@type': 'DataDownload',
+      encodingFormat: 'text/plain',
+      contentUrl: `${origin}/llms.txt`,
+    },
+    {
+      '@type': 'DataDownload',
+      encodingFormat: 'text/plain',
+      contentUrl: `${origin}/llms-full.txt`,
     },
   ],
 });

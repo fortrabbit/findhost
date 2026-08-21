@@ -123,6 +123,21 @@ const card = new URL(image, origin).href;
           <p>
             Contributions welcome via <a href="https://github.com/fortrabbit/findhost">GitHub</a>.
           </p>
+          {
+            /*
+             * The same twin the `<link rel="alternate">` in the head announces,
+             * as an anchor. A crawler that only reads body links never sees the
+             * head, and the markdown copy is the form this site would rather be
+             * read in by anything that is not a browser.
+             */
+          }
+          {
+            markdown && (
+              <p>
+                <a href={markdown}>This page as markdown</a>.
+              </p>
+            )
+          }
         </div>
         {
           /*

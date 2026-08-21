@@ -2,8 +2,9 @@
 import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import PageFigure from '../../components/PageFigure.astro';
-import { loadFacets } from '../../lib/facets';
+import { facetIndex, loadFacets } from '../../lib/facets';
 import { facetCardPath } from '../../lib/og';
+import { licenceUrl, organization } from '../../lib/seo';
 
 export async function getStaticPaths() {
   const { facets } = await loadFacets();
@@ -50,13 +51,43 @@ const leadOf = new Map(
 );
 const Note = note ? (await render(note)).Content : null;
 const figure = note?.data.figure;
+
+const origin = Astro.site?.origin ?? '';
 ---
 
 <Base
   title={`${note?.data.title ?? facet.label} — FindHost`}
   description={note?.data.description ?? `Every value recorded for ${facet.label.toLowerCase()}.`}
+  markdown={`${facetIndex(facet.id)}index.md`}
   image={facetCardPath(facet.id)}
   imageAlt={`A FindHost card: what the register records for ${facet.label.toLowerCase()}.`}
+  schema={[
+    {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      url: `${origin}${facetIndex(facet.id)}`,
+      name: note?.data.title ?? facet.label,
+      inLanguage: 'en',
+      publisher: organization(origin),
+      license: licenceUrl,
+      /*
+       * The values, not the records: this page lists what the field can say,
+       * and each entry leads to the page that lists who says it. Only the
+       * values in use — an unused one has no page to point at.
+       */
+      mainEntity: {
+        '@type': 'ItemList',
+        numberOfItems: inUse.length,
+        itemListOrder: 'https://schema.org/ItemListOrderAscending',
+        itemListElement: inUse.map((value, index) => ({
+          '@type': 'ListItem',
+          position: index + 1,
+          url: `${origin}${facetIndex(facet.id)}${value.slug}/`,
+          name: value.label,
+        })),
+      },
+    },
+  ]}
 >
   {/* The same head as a value page, so both start their prose on the same line. */}
   <div class="page-head">

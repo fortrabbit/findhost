@@ -22,11 +22,22 @@ export const GET: APIRoute = async ({ site }) => {
    * on, and by then nothing outside it says what may be done with it — a key in
    * the object is the only part of the licence that survives the trip.
    */
+  /*
+   * The newest `checkedAt` in the register, so the file says how fresh it is
+   * without anybody having to scan two hundred records to work it out. Every
+   * record carries its own date; this is the one the whole download claims.
+   */
+  const checked = providers
+    .map((provider) => provider.checkedAt)
+    .filter((date): date is Date => Boolean(date))
+    .map(Number);
+
   const meta = {
     name: 'FindHost',
     url: `${site?.origin ?? ''}/`,
     license: licenceUrl,
     attribution: credit,
+    ...(checked.length ? { checkedAt: new Date(Math.max(...checked)).toISOString().slice(0, 10) } : {}),
     note: 'Attributes are recorded, never scored. An absent field means unknown, never zero and never bad.',
   };
 

@@ -5,6 +5,7 @@ import { countryPoints } from '../lib/map';
 import { loadProviders } from '../lib/providers';
 import { fieldOf, slugOf } from '../lib/fields';
 import { facetCardPath } from '../lib/og';
+import { licenceUrl, organization } from '../lib/seo';
 
 const providers = await loadProviders();
 
@@ -38,13 +39,39 @@ const unplaced = [...new Set(regions)].filter((code) => !countryPoints[code]);
  */
 const notApplicable = providers.filter((provider) => provider.data.regions === null).length;
 const unknown = providers.length - withRegions.length - notApplicable;
+
+const origin = Astro.site?.origin ?? '';
 ---
 
 <Base
   title="Where providers operate — FindHost"
   description="A map of the countries each hosting provider runs in, and a page for every one of them."
+  markdown="/regions/index.md"
   image={facetCardPath('regions')}
   imageAlt="A FindHost card: where hosting providers operate."
+  schema={[
+    {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      url: `${origin}/regions/`,
+      name: 'Where providers operate',
+      inLanguage: 'en',
+      publisher: organization(origin),
+      license: licenceUrl,
+      /* The same shape the other facet indexes carry: the countries, each leading to its own page. */
+      mainEntity: {
+        '@type': 'ItemList',
+        numberOfItems: byCountry.length,
+        itemListOrder: 'https://schema.org/ItemListOrderAscending',
+        itemListElement: byCountry.map((country, index) => ({
+          '@type': 'ListItem',
+          position: index + 1,
+          url: `${origin}/regions/${country.slug}/`,
+          name: country.label,
+        })),
+      },
+    },
+  ]}
 >
   <h1>Find a host near you</h1>
 
