@@ -820,6 +820,41 @@ html.js [data-find-fallback] {
   gap: var(--space-sm) var(--space-md);
 }
 
+/*
+ * The four the panel leads with. Counted rather than fitted: auto-fit takes as
+ * many as the width allows, which on a laptop is three and an orphan on a line
+ * of its own. Four things go 4, 2, 1 — never 3 — so the band is always a full
+ * rectangle. Wider columns are the hierarchy: these are the filters most people
+ * came for, and the rest are behind a control.
+ */
+.find-filters-lead {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 40rem) {
+  .find-filters-lead {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 62rem) {
+  .find-filters-lead {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Taller as well as wider, for the same reason: entry price is a scale, and a
+   scale that scrolls hides which end of it the reader is looking at. */
+.find-filters-lead .find-values {
+  --find-rows: 7.5;
+}
+
+/* Denser, so the second band reads as the second band. The half row stays: a
+   list cut mid-row is visibly a list with more in it. */
+.find-filters-rest .find-values {
+  --find-rows: 3.5;
+}
+
 .find-panel {
   margin-bottom: var(--space-xl);
 }
@@ -828,8 +863,12 @@ html.js [data-find-fallback] {
   display: none;
 }
 
-/** A way to put the filters away, not a way to fetch them: it opens closed only once asked. */
-.find-panel > summary {
+.find-more {
+  margin-top: var(--space-md);
+}
+
+/** A way to reach the rest, not a way to fetch them: every value is already in the markup. */
+.find-more > summary {
   margin-bottom: var(--space-md);
   font-size: var(--text-sm);
   font-weight: var(--weight-strong);

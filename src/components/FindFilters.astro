@@ -36,6 +36,25 @@ const index = {
 };
 
 /*
+ * A facet no record answers yet is a column of nothing. It appears the moment
+ * the data does, without anyone remembering to add it.
+ */
+const shown = facets.filter((facet) => facet.values.some((value) => value.count > 0));
+
+/*
+ * Four across the top, the rest behind a control. Every facet used to ship
+ * open, and nineteen columns of checkboxes pushed the register itself below the
+ * fold on a desktop screen — the panel was the page.
+ *
+ * Which four is not a judgement made here: `filterOrder` in fields.yml is
+ * already the order the panel reads in, most-asked first, and this takes the
+ * front of it.
+ */
+const LEAD = 4;
+const lead = shown.slice(0, LEAD);
+const rest = shown.slice(LEAD);
+
+/*
  * The filter panel, as markup rather than as DOM built in a loop. find.ts used
  * to construct every element here, which put the whole design of the panel
  * inside a script nobody edits for design reasons.
@@ -47,23 +66,30 @@ const index = {
  * hydration put those links in display:none and made the panel arrive with a
  * visible jump.
  *
- * Open by default: every facet shows, and the control is there to put them away
- * rather than to fetch them.
+ * The closed <details> below still ships its links in the markup, so the ones
+ * that are not on show are still there to be followed and indexed. It is a
+ * disclosure, not a fetch: nothing arrives when it opens.
  */
 ---
 
-<details class="find-panel" data-pagefind-ignore data-find-filters open>
-  <summary>Filters</summary>
-
-  <div class="find-filters full-width">
-    {
-      /* A facet no record answers yet is a column of nothing. It appears the
-         moment the data does, without anyone remembering to add it. */
-      facets
-        .filter((facet) => facet.values.some((value) => value.count > 0))
-        .map((facet) => <FindFacet facet={facet} />)
-    }
+<div class="find-panel" data-pagefind-ignore data-find-filters>
+  <div class="find-filters find-filters-lead full-width">
+    {lead.map((facet) => <FindFacet facet={facet} />)}
   </div>
 
+  {
+    rest.length > 0 && (
+      <details class="find-more">
+        <summary>More filters</summary>
+
+        <div class="find-filters find-filters-rest full-width">
+          {rest.map((facet) => (
+            <FindFacet facet={facet} />
+          ))}
+        </div>
+      </details>
+    )
+  }
+
   <script type="application/json" data-find-index set:html={JSON.stringify(index)} is:inline />
-</details>
+</div>

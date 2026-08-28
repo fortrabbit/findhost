@@ -184,7 +184,7 @@ if (filtersEl && resultsEl && summaryEl && indexEl) {
   /*
    * A ticked box the reader cannot see is a filter nobody trusts, and the values
    * scroll now — so a value arriving ticked from the URL is scrolled to, and one
-   * that sits under the "All filters" disclosure opens it.
+   * that sits under the "More filters" disclosure opens it.
    */
   const syncFilters = () => {
     for (const input of filtersEl.querySelectorAll<HTMLInputElement>('input[data-facet]')) {
