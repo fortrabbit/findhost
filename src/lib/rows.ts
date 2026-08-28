@@ -12,7 +12,7 @@ import { facetFields, isDerived, slugOf, sourcesOf, type Field } from './fields.
 export interface FacetValue {
   id: string;
   label: string;
-  /** The URL segment. The id for every facet but `regions`, where it is the country name. */
+  /** The URL segment, from lib/fields.ts — the id unless the field or the value says otherwise. */
   slug: string;
   /** The filter panel's version of the label, where the dictionary gives one. */
   short?: string;

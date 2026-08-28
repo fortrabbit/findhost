@@ -19,6 +19,7 @@ import {
   hiddenStatuses,
   renderModes,
   reservedSegments,
+  slugOf,
   sourcesOf,
 } from '../src/lib/fields.ts';
 import { priceBands } from '../src/lib/price.ts';
@@ -47,13 +48,15 @@ const seenFacet = new Set<string>();
 const seenOrder = new Map<number, string>();
 
 /*
- * The exceptions to the URL-safety rule below, and the only kind there will be:
- * fields whose values are ISO codes. 3166 for regions, 4217 for currencies. Both
- * are conventionally uppercase and are used as such wherever the dataset is read
- * as data, so /regions/DE/ and /currencies/EUR/ are the URLs. A facet whose
- * values are words takes lowercase ids.
+ * The one exception to the URL-safety rule below, and the only kind there will
+ * be: a field whose values are ISO codes and whose address keeps them. ISO 4217
+ * is conventionally uppercase and is used as such wherever the dataset is read
+ * as data, so /currencies/EUR/ is the URL. `regions` holds ISO 3166 and is not
+ * here, because it slugs from the label — /regions/germany/ is the address and
+ * DE is only how the record reads. A facet whose values are words takes
+ * lowercase ids.
  */
-const uppercaseIds = new Set(['regions', 'currencies']);
+const uppercaseSegments = new Set(['currencies']);
 
 for (const field of fields) {
   if (seenField.has(field.id)) fail(dictionaryFile, `duplicate entry for "${field.id}"`);
@@ -177,15 +180,32 @@ for (const field of fields) {
   }
 
   const values = new Set<string>();
+  const segments = new Map<string, string>();
   for (const value of field.values) {
     if (values.has(value.id)) fail(dictionaryFile, `"${field.id}" lists "${value.id}" twice`);
     values.add(value.id);
     if (!value.label) fail(dictionaryFile, `"${field.id}" value "${value.id}" has no label`);
 
-    // A facet value is a URL segment too, and one that needs escaping is one nobody can type.
-    if (field.facet && !uppercaseIds.has(field.id) && !/^[a-z0-9-]+$/.test(value.id)) {
-      fail(dictionaryFile, `"${field.id}" value "${value.id}" is not a usable URL segment`);
+    if (!field.facet) continue;
+
+    /*
+     * The segment rather than the id, because for three fields they differ: one
+     * slugs from the label, and a value may override both with a `slug` of its
+     * own. What has to be typeable is whatever ends up in the URL, and what has
+     * to be unique is the same string — two values resolving to one address is a
+     * page that lists the wrong records and a build that says nothing.
+     */
+    const segment = slugOf(field, value);
+    if (!uppercaseSegments.has(field.id) && !/^[a-z0-9-]+$/.test(segment)) {
+      fail(
+        dictionaryFile,
+        `"${field.id}" value "${value.id}" addresses "${segment}", which is not a usable URL segment`,
+      );
     }
+
+    const twin = segments.get(segment);
+    if (twin) fail(dictionaryFile, `"${field.id}" values "${twin}" and "${value.id}" both address "${segment}"`);
+    else segments.set(segment, value.id);
   }
 
   // An implication naming nothing never fires, which reads in the diff as a rule that holds.

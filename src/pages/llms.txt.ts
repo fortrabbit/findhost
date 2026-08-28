@@ -17,17 +17,30 @@ export const GET: APIRoute = async ({ site }) => {
     .sort((a, b) => a.id.localeCompare(b.id, 'en'));
 
   /*
-   * A note is keyed by the path it heads, so its own id is both its URL and the
-   * way back to its label — except the groups beside the register, which are
-   * filed under `aside/` and published at the root.
+   * A note is keyed by the value's id, and the page is at the value's slug. The
+   * two differ wherever a field slugs from its label — /entry-price/xs/ is a note
+   * filename and was never an address — so the URL is resolved through the facet
+   * rather than built from the id. The groups beside the register are the other
+   * exception: filed under `aside/` and published at the root.
    */
-  const urlOf = (id: string) => `${origin}/${id.replace(/^aside\//, '')}/`;
-
-  const headingOf = (id: string) => {
+  const valueOf = (id: string) => {
     const [facetId, valueId] = id.split('/');
     const facet = facets.find((entry) => entry.id === facetId);
-    if (!valueId) return facet?.label ?? facetId;
-    return facet?.values.find((value) => value.id === valueId)?.label ?? valueId;
+    return { facet, value: valueId ? facet?.values.find((entry) => entry.id === valueId) : undefined };
+  };
+
+  const urlOf = (id: string) => {
+    const { facet, value } = valueOf(id);
+    if (facet && value) return `${origin}/${facet.id}/${value.slug}/`;
+
+    return `${origin}/${id.replace(/^aside\//, '')}/`;
+  };
+
+  const headingOf = (id: string) => {
+    const { facet, value } = valueOf(id);
+    if (!id.includes('/')) return facet?.label ?? id;
+
+    return value?.label ?? id.split('/')[1];
   };
 
   const lines = [

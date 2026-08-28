@@ -559,14 +559,20 @@
   subject: 'start{|s} at {lower}'
   ordered: true
   filterOrder: 4
+  # The ids are a size scale because that is what a record reads as — `priceFrom:
+  # xs` beside `priceTo: xl` says the shape at a glance. The address is not: a
+  # reader looking for hosting under five dollars cannot guess /entry-price/xs/,
+  # and neither can anything that indexes it. The two values holding a thousands
+  # separator carry their own segment, because `$1,500` slugifies to `1-500`.
+  slugFromLabel: true
   values:
     - { id: xs, label: 'Under $5 a month' }
     - { id: sm, label: '$5 to $15 a month' }
     - { id: md, label: '$15 to $50 a month' }
     - { id: lg, label: '$50 to $150 a month' }
     - { id: xl, label: '$150 to $500 a month' }
-    - { id: 2xl, label: '$500 to $1,500 a month' }
-    - { id: 3xl, label: 'Over $1,500 a month' }
+    - { id: 2xl, label: '$500 to $1,500 a month', slug: 500-to-1500-a-month }
+    - { id: 3xl, label: 'Over $1,500 a month', slug: over-1500-a-month }
 
 # The exact starting figure in the provider's own currency, beside the band, so
 # nobody reads a conversion we invented.

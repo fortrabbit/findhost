@@ -20,6 +20,12 @@ export interface FieldValue {
   label: string;
   /** For the filter panel, which is a narrow column. Absent means the label already fits. */
   short?: string;
+  /**
+   * The URL segment, where neither the id nor the slugified label will do. Price
+   * bands need it: the label carries a thousands separator, and "$500 to $1,500"
+   * slugifies to `500-to-1-500`, which reads as a range nobody wrote.
+   */
+  slug?: string;
   /** Excluded from the register and from every count. Only `status` uses it. */
   hidden?: boolean;
   /**
@@ -81,10 +87,13 @@ export interface Field {
    */
   ordered?: boolean;
   /**
-   * The URL segment comes from the label rather than the id. Only `regions`
-   * needs it: the ids are ISO 3166 codes because that is what the data is read
-   * as everywhere else, but /regions/netherlands/ is the address a reader can
-   * guess and a search engine can read, and /regions/NL/ is not.
+   * The URL segment comes from the label rather than the id, for the fields
+   * whose ids are a code or a scale: `regions` holds ISO 3166 because that is
+   * what the data is read as everywhere else, and `priceFrom` holds a size run
+   * because that is what a record reads as. Neither is guessable as an address
+   * — /regions/netherlands/ and /entry-price/under-5-a-month/ are, and a search
+   * engine can read them. A value whose label does not slugify cleanly overrides
+   * the result with a `slug` of its own.
    */
   slugFromLabel?: boolean;
   /**
@@ -251,11 +260,18 @@ export function vocabulary(id: string): [string, ...string[]] {
 }
 
 /**
- * A value's URL segment. The id unless the field says otherwise — and where it
- * does, the label with its accents folded, so Türkiye is /turkiye/ rather than a
- * percent-encoded string nobody can read or type.
+ * A value's URL segment. The value's own `slug` first, then the label with its
+ * accents folded where the field asks for it — so Türkiye is /turkiye/ rather
+ * than a percent-encoded string nobody can read or type — and otherwise the id.
+ *
+ * A note is still keyed by the value's id, not by this. The two differ wherever
+ * a field slugs from its label, and the id is the stable name: /regions/nl/ was
+ * never the address, and notes/regions/NL.md would still be the file.
  */
 export function slugOf(field: Field, value: { id: string; label: string }): string {
+  const own = field.values.find((candidate) => candidate.id === value.id)?.slug;
+  if (own) return own;
+
   return field.slugFromLabel ? slugify(value.label) : value.id;
 }
 
