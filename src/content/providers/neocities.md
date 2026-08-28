@@ -7,6 +7,7 @@ urls:
 category:
   - static
   - vanity-hosting
+  - free-hosting
 hqCountry: US
 ownership: independent
 founded: 2013

@@ -161,6 +161,22 @@
     - { id: caas, label: Containers as a Service, short: CaaS }
     - { id: server-management, label: Server management }
     - { id: vanity-hosting, label: Vanity hosting }
+    # A market rather than an architecture, like `vanity-hosting` above it, and
+    # the reason it is a category and not a price: the test is whether an account
+    # that never pays is the thing being sold. A paid tier beside it does not
+    # settle the question — a supporter plan that raises an allowance, or a
+    # separate paid ladder, still leaves the free account a product rather than a
+    # sample of one.
+    #
+    # `pricing: free-tier` is the other question and keeps its own answer. Most
+    # records offering a permanent free tier are a PaaS, a serverless platform or
+    # a panel giving away a slice of something paid, and one value cannot mean
+    # both without the larger reading burying the smaller one.
+    - {
+        id: free-hosting,
+        label: Free hosting,
+        subject: 'give{|s} the hosting away as the product rather than as a sample',
+      }
     - { id: lcnc, label: Low-code and no-code, short: Low-code }
     # The four below are the other invoices. Nothing of a customer's is deployed
     # or run on any of them, which is why they are a category here rather than
