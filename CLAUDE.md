@@ -2,7 +2,7 @@
 
 ## What this is
 
-A ratings-free dataset of hosting providers, with a guide attached. Astro 7, static output, Pagefind for search, no database at build or request time. Deployed to fortrabbit, which runs PHP only — Node exists in the deploy service at build time and nowhere else, so nothing may depend on a server at request time.
+A ratings-free dataset of hosting providers, with a guide attached. Astro 7, static output, Pagefind for search, no database at build or request time. Live at www.findhost.app, deployed to fortrabbit, which runs PHP only — Node exists in the deploy service at build time and nowhere else, so nothing may depend on a server at request time.
 
 Background: `MR-156 FindHost technical implementation plan.md`, `MR-156 FindHost implementation phases.md`, `MR-159 FindHost provider data model.md` and `MR-159 FindHost governance draft.md` in the `fortrabbit/knowledge-base` repo.
 
@@ -18,7 +18,7 @@ pnpm run linkcheck:internal # every internal link, and the sitemap, against dist
 pnpm run test:e2e           # Playwright, a chromium project and a no-JS one
 ```
 
-CI runs `format`, `check`, `test`, `build`, `validate`, `linkcheck:internal` and `test:e2e` on every PR, in that order. `pnpm run linkcheck` — outbound URLs against the live web — runs in a job of its own that is allowed to fail: a third party's outage is not a reason to block a content pull request. None of it is required to deploy: fortrabbit builds from its own git remote and runs `pnpm build` there, so CI is what keeps a broken commit off `main` rather than off the server.
+CI runs `format`, `check`, `test`, `build`, `validate`, `linkcheck:internal` and `test:e2e` on every PR, in that order. `pnpm run linkcheck` — outbound URLs against the live web — runs in a job of its own that is allowed to fail: a third party's outage is not a reason to block a content pull request. None of it is required to deploy: fortrabbit builds from its own git remote and runs `pnpm build` there, so CI is what keeps a broken commit off `main` rather than off the server. The deploy strategy is **replace**: the document root is swapped for what the build produced, so a page the build stops producing stops being served rather than lingering at its old address.
 
 The build script does two things beyond `astro build`. `scripts/index-search.mjs` runs Pagefind and, when it cannot, prints why and exits zero — a register that cannot be searched is worse than one that can, and still a register. `scripts/deploy-env.mjs` prints what the build container actually has; it is diagnostic and can go once FR-6304 and FR-6305 are answered.
 
@@ -62,7 +62,7 @@ The same rules govern two frontmatter fields, because both are prose:
 
 ## Conventions
 
-- Do not hardcode the domain. Absolute URLs come from `SITE_URL`; this runs on a vanity URL before it runs on its own.
+- Do not hardcode the domain. Absolute URLs come from `SITE_URL`; the same build is served from a fortrabbit hostname as well as from www.findhost.app.
 - `src/content.config.ts` is a governance artifact, not a type definition. Read the comment at the top before changing it.
 - `src/data/fields.yml` is the field dictionary, and the only place a field is described. It carries the label, the vocabulary, the record-page group and the facet slug; the zod schema builds its enums from it and the record page builds its rows from it. Another field, another value, another facet: an entry there and no TypeScript. A field with no `group` is validated and never shown; one with no `facet` is shown and never filtered.
 - AI involvement is disclosed once, under Credits on `/about/`, for the whole site. A record's `ai` value says who wrote that description; it is data, and no page renders it.
@@ -77,7 +77,7 @@ Five procedures, because each one has a step that used to be forgotten silently.
 
 **Add a field.** Entry in `src/data/fields.yml`, then the key in `src/content.config.ts` — zod needs it written out, and a field the schema does not name is stripped from every record by the content loader. `validate` fails if you do the first and forget the second. Give it a `group` to have it appear on the record page and in the markdown export; omit `group` to have it validated and never shown.
 
-**Add a value.** One line in the field's `values`. Nothing else — the schema enum, the filter panel, the facet page and the counts all derive from it. Two things `validate` will stop you on: an id that is not a usable URL segment, and a note written for a value no record holds yet. If the value needs a shorter name in the filter column, give it `short:`. If it cannot honestly be held without another value of the same field — WooCommerce is WordPress — give it `implies: [other-id]` and `validate` holds every record to it.
+**Add a value.** One line in the field's `values`. Nothing else — the schema enum, the filter panel, the facet page and the counts all derive from it. Two things `validate` will stop you on: a URL segment that is not usable or that another value of the field already addresses, and a note written for a value no record holds yet. If the value needs a shorter name in the filter column, give it `short:`. If it cannot honestly be held without another value of the same field — WooCommerce is WordPress — give it `implies: [other-id]` and `validate` holds every record to it.
 
 **Add a facet.** `facet:` and a unique `filterOrder:` on the field. `validate` rejects a slug that collides with a real page, with a provider id, or with another field's facet — the root is one namespace shared by `/hetzner/`, `/software/` and `/about/`, and it is checked in both directions, so naming a facet after a provider fails the build and so does naming a provider after a facet. One thing it cannot see: the summary sentence on a value page is phrased from `subject:` in the dictionary — on the field, where `{label}` and `{lower}` interpolate the value, or on a single value that needs its own wording. A facet with no `subject:` falls back to prose that is correct and clumsy, so write one. And `regions` is the one facet whose index is written by hand — `src/pages/regions.astro`, so it can carry the map — which is why `[facet]/index.astro` skips it; the address is `/regions/` like every other.
 
@@ -85,7 +85,7 @@ Five procedures, because each one has a step that used to be forgotten silently.
 
 **A derived facet decides "asked?" per field, not per value** — `src/lib/rows.ts`. A record answering at least one source field gets an answer for the whole field, and every value it does not hold then reads as a checked no; a record answering none of them stays unknown, and that count is shown under the list like any other. So adding a source to an existing derived facet silently converts records from "nobody checked" into "checked, and no" across every other value of that facet. Count how many before doing it.
 
-**Rename a facet slug or a value id.** Change it in `fields.yml`, sweep every record that carries the old value, rename any note under `src/content/notes/`, and repoint every link that names the old path. `validate` catches the records and the notes; `linkcheck:internal` catches links in prose and the sitemap. **Fix the links; do not add a redirect.** `redirects` in `astro.config.mjs` is empty on purpose while the site is unpublished — a stub that forwards a path no reader has ever visited only hides a link nobody updated. Once the domain is live this reverses, and a rename needs both.
+**Rename a facet slug or a value id.** Change it in `fields.yml`, sweep every record that carries the old value, rename any note under `src/content/notes/`, and repoint every link that names the old path. `validate` catches the records and the notes; `linkcheck:internal` catches links in prose and the sitemap. **Fix the links; do not add a redirect.** `redirects` in `astro.config.mjs` is empty on purpose: nothing outside the site points at the old paths yet, and a stub forwarding a path no reader has visited only hides a link nobody updated. The site is live and open to every crawler, so this reverses as soon as a rename can strand a citation — and until it does, the replace deploy means an old address 404s rather than standing as a duplicate of the page that replaced it.
 
 **Write a note.** `src/content/notes/<facet>/<value>.md` introduces a value, `src/content/notes/<facet>.md` introduces the whole facet. The path is the facet's *slug*, not the field id — eight of them differ. A note's `title` sets the browser tab; on a value page the heading stays the value's own label, so the page and the filter chip that leads to it say the same word.
 
