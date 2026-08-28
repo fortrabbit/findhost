@@ -1,32 +1,39 @@
 # Contributing
 
-Changes arrive as pull requests. There is no address to write to and no form to fill in: fork the repo, edit the file, open a PR. Fixing one provider means editing one file, and the build reports what is wrong before a person looks.
+Changes arrive as pull requests. No email, no form: fork, edit the file, open a PR. Fixing one provider means editing one file, and the build says what is wrong before a person looks.
 
-## Correct or complete a record
+## Correct a record
 
-Records live in `src/content/providers/<slug>.md`, frontmatter and prose together.
+Records live in `src/content/providers/<slug>.md`.
 
-**Four fields are required** — `id`, `name`, `urls.home`, `category`. The rest are optional, and **absent means unknown**: it renders as `?`, which is a designed state rather than a gap to fill. Never guess a value.
+**Four fields are required** — `id`, `name`, `urls.home`, `category`. The rest are optional. **Absent means unknown**, renders as `?`, and is a designed state. Never guess.
 
-**Cite what changes.** Anything not obvious from the provider's home page needs a `sources` entry with the URL and the date it was read. A provider's own documentation is an acceptable source for facts about its own product.
+**Cite what changes.** Anything not obvious from the provider's home page needs a `sources` entry with the URL and the date it was read. A provider's own documentation is an acceptable source about its own product.
 
-**`checkedAt` is a claim, not a timestamp.** Set it only after reading the provider's live pages. An absent date renders as "never checked against the provider", which is honest; a borrowed one is not.
+**`checkedAt` is a claim.** Set it only after reading the provider's live pages. Never copy one from another record.
 
 ## Add a provider
 
-Six inclusion criteria, each a checkable fact rather than a judgement: it runs application code, it is sold to the public without a sales call, it publishes a price without a login, it documents its platform publicly, it has been purchasable for twelve months, and two independent artifacts exist — a framework's deployment guide, a third-party package or CLI, an unaffiliated talk or tutorial, or an issue-tracker thread. Press releases, sponsored posts, affiliate reviews, and the provider's own blog do not count.
+Six criteria, all checkable:
 
-A provider meeting all six and missing from the register is a bug: open a pull request with the record. One that fails a criterion still gets a record, with `status: out-of-scope` and the numbered `criterion` it failed, so the decision keeps a page and can be argued with.
+1. It runs application code.
+2. It is sold to the public without a sales call.
+3. It publishes a price without a login.
+4. It documents its platform publicly.
+5. It has been purchasable for twelve months.
+6. Two independent artifacts exist — a framework's deployment guide, a third-party package or CLI, an unaffiliated talk or tutorial, an issue-tracker thread. Press releases, sponsored posts, affiliate reviews, and the provider's own blog do not count.
 
-`status` decides where a record ends up. `discontinued` and `unlisted` put one beside the register, out of the list but still indexed — what happened to a host people used is worth finding. `out-of-scope` and `draft` hide one from the register, the counts, search, and the sitemap, while keeping its page. Only a listed record needs a `category`, and nothing is ever deleted.
+All six and not listed: that is a bug, so open a PR with the record. One fails: the record still goes in, carrying `status: out-of-scope` and the numbered `criterion`, so the decision has a page to be argued with.
+
+`status` decides where a record ends up. `discontinued` and `unlisted` put one beside the register, out of the list and still indexed. `out-of-scope` and `draft` hide one from the register, the counts, search, and the sitemap, keeping its page. Only a listed record needs a `category`. Nothing is ever deleted.
 
 ## What will never be merged
 
-Ratings, scores, stars, "best for" badges, or any field implying one — the build rejects a field named rank, score, boost, or weight, so this is enforced rather than promised. Affiliate or tracking parameters in any URL, rejected by the schema. Exact prices: bands only. Any order other than alphabetical.
+Ratings, scores, stars, "best for" badges, or any field implying one — the build rejects a field named rank, score, boost, or weight. Affiliate or tracking parameters in a URL, rejected by the schema. Exact prices; bands only. Any order but alphabetical.
 
 ## Disclose a relationship
 
-Contributors paid by a provider should say so in the pull request; the disclosure is what makes it possible to weigh what was written. Do not edit an employer's own record — propose the change and let someone else merge it.
+Contributors paid by a provider say so in the pull request, so reviewers can weigh it. Do not edit an employer's own record — propose the change and let someone else merge it.
 
 ## Running it
 
@@ -38,8 +45,8 @@ pnpm run check        # types
 pnpm run test:e2e     # Playwright, with and without JavaScript
 ```
 
-CI runs those on every pull request, plus formatting, unit tests, and an internal link check. There are no per-PR previews; `pnpm dev` is it.
+CI runs those on every pull request, plus formatting, unit tests, and an internal link check. There are no previews; `pnpm dev` is it.
 
 ## License
 
-Prose and record data go out under [CC BY 4.0](./LICENSE-DATA), code under [MIT](./LICENSE-CODE). Opening a pull request accepts those terms and confirms the right to give it — do not paste text from a provider's site, a competitor's table, or anywhere else.
+Prose and record data go out under [CC BY 4.0](./LICENSE-DATA), code under [MIT](./LICENSE-CODE). Opening a pull request accepts those terms and confirms the right to give it. Do not paste text from a provider's site, a competitor's table, or anywhere else.
