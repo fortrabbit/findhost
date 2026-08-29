@@ -44,7 +44,6 @@ export interface ProviderRow {
   id: string;
   name: string;
   description?: string;
-  publishedByUs?: boolean;
   /** Ours, not the provider's: we like it. Drawn as a heart beside the name. */
   favorite?: boolean;
   /** When this record was last read against the provider's own pages. Absent means nobody has. */
@@ -127,7 +126,6 @@ export function toRow(record: { id: string; data: Record<string, unknown> }): Pr
     id: record.id,
     name: String(data.name),
     description: data.description as string | undefined,
-    publishedByUs: data.publishedByUs as boolean | undefined,
     favorite: data.favorite as boolean | undefined,
     checkedAt: data.checkedAt as Date | undefined,
     greenWebId: data.greenWebId as number | null | undefined,

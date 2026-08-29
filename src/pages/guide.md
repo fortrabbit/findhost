@@ -38,7 +38,7 @@ Please do not try to choose on compute per coin. Two providers quoting the same 
 
 ## Try it
 
-Deploy something. Most providers offer a [free tier or a trial](/pricing/), and an afternoon of shipping tells more than a week of tables.
+Deploy something. Most providers offer a [free tier or a trial](/pricing/). What a provider is like to work with is not in the dataset.
 
 ## Follow the devs
 

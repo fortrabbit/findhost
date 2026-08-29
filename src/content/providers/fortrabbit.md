@@ -122,7 +122,6 @@ sources:
   - { field: contractMinimum, url: 'https://www.fortrabbit.com/pricing', checkedAt: 2026-08-01 }
 favorite: true
 favoriteNote: Shamelessly favorited our own service. It's not that bad anyhow.
-publishedByUs: true
 figure:
   emoji: 🐰
   color: rgb(163, 57, 177)

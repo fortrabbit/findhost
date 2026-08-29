@@ -272,10 +272,6 @@ const categoryLabels = (fieldOf.get('category')?.values ?? [])
       /* The date somebody read the provider's own pages — the only one we stand behind. */
       ...(data.checkedAt ? { dateModified: new Date(data.checkedAt).toISOString().slice(0, 10) } : {}),
       license: 'https://creativecommons.org/licenses/by/4.0/',
-      /* The same disclosure the page carries, for a reader that only parses schema. */
-      ...(data.publishedByUs
-        ? { disambiguatingDescription: 'This record is published by fortrabbit, which is also its subject.' }
-        : {}),
       /*
        * The provider is the subject of the page, not its author. `about` says that
        * without claiming the page is theirs, and everything in it is a field on
@@ -299,24 +295,6 @@ const categoryLabels = (fieldOf.get('category')?.values ?? [])
         <aside class="editorial-note">
           <p>
             <strong>May be out of date.</strong> Last checked {checkedDaysAgo} days ago.
-          </p>
-        </aside>
-      )
-    }
-
-    {
-      /*
-       * The one claim on a record page made in our own voice, and the disclosure
-       * the register owes its reader. It hangs off `publishedByUs` rather than
-       * off the heart beside it: a favorite is an opinion we could withdraw, and
-       * this is a fact about who publishes the page. Above the description,
-       * because a reader has to know whose account this is before reading it.
-       */
-      data.publishedByUs && (
-        <aside class="editorial-note">
-          <p>
-            <strong>Published by us.</strong> FindHost is published by fortrabbit, so this record is our own —{' '}
-            <a href="/about/#publisher">what that means</a>.
           </p>
         </aside>
       )

@@ -351,9 +351,6 @@ const providerFields = z
     // Display only — never filterable, never sortable, never counted
     figure: figure.optional(),
     caveat: caveat.optional(),
-
-    /** Set on our own record. Renders the "published by us" marker. */
-    publishedByUs: z.boolean().optional(),
   })
   /*
    * The required-field rule, which only a record in the register has to satisfy.

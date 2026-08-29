@@ -37,7 +37,7 @@ TypeScript is pinned to 6.x: `astro check` needs the programmatic compiler API, 
 - **Every value in use has a page, and every one of them is indexed.** Nearly half carry under three hundred words and a couple of dozen list a single provider, which is the shape a quality rater is told to flag — and a floor would `noindex` the long tail at exactly the point where a FindHost page is most likely to be the only neutral source about that value. They are real static filter targets with real data and a summary generated from it, and they are how a crawler reaches every value without running JavaScript. The one threshold is the one that already exists: a value nothing holds gets no page at all.
 - **Facet values go into the markup** as `data-pagefind-filter` attributes even where the design does not show them. Pagefind indexes rendered HTML; what is not in the markup cannot be searched.
 - **No affiliate parameters in any URL.** The schema rejects them.
-- **fortrabbit is in the dataset**, in alphabetical position, with the same fields and a permanent "published by us" marker.
+- **fortrabbit is in the dataset**, in alphabetical position, with the same fields as everything else and no marker of its own. The disclosure is a `## Conflict of interest` section in the record's prose, which is where the e2e test looks for it: what may not change is that a reader of our record learns who publishes the register, not how the page came to say so.
 
 ## Record prose
 
