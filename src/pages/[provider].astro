@@ -53,9 +53,14 @@ const soldBy = new Set(
   everyRecord.filter(isListed).flatMap((entry) => (entry.data.category as string[] | undefined) ?? []),
 );
 const alsoNeeded = [
-  { field: 'domainRegistration', need: 'A domain to point at it', category: 'domains-dns' },
-  { field: 'emailHosting', need: 'Mailboxes on that domain', category: 'mail' },
-].filter((pair) => valueOf(pair.field) === 'none' && soldBy.has(pair.category));
+  { field: 'domainRegistration', label: 'Domains', category: 'domains-dns' },
+  { field: 'emailHosting', label: 'Mailboxes', category: 'mail' },
+]
+  .filter((pair) => valueOf(pair.field) === 'none' && soldBy.has(pair.category))
+  .map((pair) => ({
+    label: pair.label,
+    cells: [{ text: 'Who sells them', href: `/categories/${pair.category}/` }],
+  }));
 
 /*
  * The rows, their order, their labels and the words their values are shown
@@ -403,21 +408,16 @@ const categoryLabels = (fieldOf.get('category')?.values ?? [])
         {/* Facts about this record held on other records, drawn from their side of the relation. */}
         {related.length > 0 && <FactGroups groups={[{ label: 'Related', rows: related }]} />}
 
-        {/* What this one says it does not sell, and where the register keeps the companies that do. */}
         {
-          alsoNeeded.length > 0 && (
-            <section class="fact-group">
-              <h2>Also needed</h2>
-              <ul class="also-needed">
-                {alsoNeeded.map((pair) => (
-                  <li>
-                    {pair.need} — <a href={`/categories/${pair.category}/`}>who sells it</a>
-                  </li>
-                ))}
-              </ul>
-            </section>
-          )
+          /*
+           * What this one says it does not sell, and where the register keeps the
+           * companies that do. Drawn as a group of facts rather than as a list,
+           * because it is one: the rows read the same fields the Other features
+           * group reads, and a bulleted list beside a column of tables read as a
+           * different kind of thing being said.
+           */
         }
+        {alsoNeeded.length > 0 && <FactGroups groups={[{ label: 'Bring your own', rows: alsoNeeded }]} />}
 
         {
           missing.length > 0 && (

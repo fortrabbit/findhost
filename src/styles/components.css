@@ -1259,6 +1259,16 @@ html.js [data-find-fallback] {
   max-width: none;
 }
 
+/*
+ * Two of these stack in the specs column — the recorded groups, then the ones
+ * drawn from other records — and a grid container has no margin of its own, so
+ * the second sat on the first with the gap the grid keeps between its own
+ * columns nowhere in evidence.
+ */
+.fact-groups + .fact-groups {
+  margin-top: var(--space-xl);
+}
+
 .fact-group {
   display: flow-root;
   margin: 0;
