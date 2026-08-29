@@ -1,0 +1,82 @@
+name: Add a provider
+description: Name a hosting provider the register is missing.
+title: 'Add: '
+labels: [provider]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A record is one file, and a pull request adding it is the fastest way in —
+        see [CONTRIBUTING.md](https://github.com/fortrabbit/findhost/blob/main/CONTRIBUTING.md).
+        This form is for naming a provider without writing the record: answer what
+        is known, leave the rest, and whoever picks it up reads the provider's own
+        pages for the fields you did not fill in.
+
+        Absent means unknown here as well as in the dataset. A blank field costs
+        nothing; a guessed one costs an hour of somebody checking it.
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      description: As the provider writes it, including the capitalization.
+      placeholder: Acme Hosting
+    validations:
+      required: true
+  - type: input
+    id: home
+    attributes:
+      label: Home page
+      description: The provider's own address. No affiliate or tracking parameters — the schema rejects them.
+      placeholder: https://www.example.com
+    validations:
+      required: true
+  - type: checkboxes
+    id: category
+    attributes:
+      label: What is it?
+      description: More than one is normal. Leave them all blank if none of it is obvious from the outside.
+      options:
+        - label: Platform as a Service
+        - label: Virtual Private Servers
+        - label: Bare metal
+        - label: Infrastructure as a Service
+        - label: Shared hosting
+        - label: Serverless
+        - label: Static hosting
+        - label: Containers as a Service
+        - label: Server management
+        - label: Vanity hosting
+        - label: Free hosting
+        - label: Low-code and no-code
+        - label: Domains and DNS
+        - label: Business email
+        - label: Database as a Service
+        - label: Git hosting
+  - type: textarea
+    id: sources
+    attributes:
+      label: Where did you read this?
+      description: |
+        URLs, one per line. The pricing page and the documentation are the two that
+        settle most of a record. Two independent artifacts are one of the six
+        inclusion criteria — a framework's deployment guide, a third-party package
+        or CLI, an unaffiliated talk or tutorial, an issue-tracker thread. Press
+        releases, sponsored posts, affiliate reviews and the provider's own blog do
+        not count.
+      placeholder: |
+        https://www.example.com/pricing
+        https://docs.example.com
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else
+      description: What it is for, what is unusual about it, what a reader should know before choosing it.
+  - type: checkboxes
+    id: disclosure
+    attributes:
+      label: Disclosure
+      description: You may still file this; the disclosure is what lets a reviewer weigh it.
+      options:
+        - label: I work for this provider, or am paid by it.

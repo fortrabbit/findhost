@@ -1,6 +1,6 @@
 # Contributing
 
-Changes arrive as pull requests. No email, no form: fork, edit the file, open a PR. Fixing one provider means editing one file, and the build says what is wrong before a person looks.
+Changes arrive as pull requests: fork, edit the file, open a PR. Fixing one provider means editing one file, and the build says what is wrong before a person looks. Naming a provider without writing the record is an [issue](https://github.com/fortrabbit/findhost/issues/new?template=add-provider.yml) instead.
 
 ## Correct a record
 

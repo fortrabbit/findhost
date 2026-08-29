@@ -8,6 +8,13 @@ interface Props {
   description?: string;
   /** Path to the same page as markdown, announced for readers that prefer text. */
   markdown?: string;
+  /**
+   * The page carries the markdown link itself, so the footer does not. A record
+   * puts it in the row beside its review date and its edit link, where it reads
+   * as one set of things to do with the page rather than as a stray line under
+   * the site's own credits.
+   */
+  markdownInPage?: boolean;
   /** A record kept for reference but not on show: out of the index and out of search, whatever the site-wide flag says. */
   hidden?: boolean;
   /** This page's share card, site-root relative. Records draw their own; every other page shares the register's. */
@@ -25,6 +32,7 @@ const {
   title,
   description,
   markdown,
+  markdownInPage = false,
   hidden = false,
   image = '/og/default.png',
   imageAlt = 'A FindHost card: the register of hosting providers.',
@@ -120,8 +128,18 @@ const card = new URL(image, origin).href;
           <p>
             Designed and curated by Frank Lämmer of <a href="/fortrabbit/">fortrabbit</a>. <a href="/about/">About</a>.
           </p>
+          {
+            /*
+             * Two destinations rather than one, because they are two different
+             * errands: a name that is missing from the register is a report
+             * anybody can file, and the repository is for everything else.
+             */
+          }
           <p>
-            Contributions welcome via <a href="https://github.com/fortrabbit/findhost">GitHub</a>.
+            <a href="https://github.com/fortrabbit/findhost/issues/new?template=add-provider.yml">Add a provider</a>.{
+              ' '
+            }
+            <a href="https://github.com/fortrabbit/findhost">GitHub</a>.
           </p>
           {
             /*
@@ -132,7 +150,7 @@ const card = new URL(image, origin).href;
              */
           }
           {
-            markdown && (
+            markdown && !markdownInPage && (
               <p>
                 <a href={markdown}>This page as markdown</a>.
               </p>

@@ -1204,6 +1204,18 @@ html.js [data-find-fallback] {
   max-width: var(--measure-data);
 }
 
+/*
+ * What can be done with the page, under it: when it was last read, where to
+ * change it, where to read it as text. One row rather than three lines, because
+ * they are one errand — and wrapping, because on a phone they are three.
+ */
+.record-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2xs) var(--space-md);
+  max-width: none;
+}
+
 /* A link and the source backing it, kept on one line so neither wraps alone. */
 .record-link {
   display: inline-flex;

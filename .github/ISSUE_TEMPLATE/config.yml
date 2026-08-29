@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Correct a record
+    url: https://github.com/fortrabbit/findhost/tree/main/src/content/providers
+    about: One provider is one file. Edit it and open a pull request — that is the whole flow.

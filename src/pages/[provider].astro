@@ -184,6 +184,7 @@ const social = [
 // The policy page promises staleness is computed from the recorded date rather
 // than from a promise to re-check. This is where that is kept.
 const staleAfterDays = 180;
+const checkedIso = data.checkedAt?.toISOString().slice(0, 10);
 const checkedDaysAgo = data.checkedAt ? Math.floor((Date.now() - data.checkedAt.getTime()) / 86_400_000) : undefined;
 const stale = checkedDaysAgo !== undefined && checkedDaysAgo > staleAfterDays;
 
@@ -237,6 +238,7 @@ const categoryLabels = (fieldOf.get('category')?.values ?? [])
   title={recordTitle(data.name, categoryLabels)}
   description={data.description}
   markdown={`/${provider.id}.md`}
+  markdownInPage
   hidden={!listed}
   image={cardPath(provider.id)}
   imageAlt={`A FindHost card for ${data.name}.`}
@@ -469,12 +471,33 @@ const categoryLabels = (fieldOf.get('category')?.values ?? [])
       )
     }
 
-    <p class="annotation">
-      {data.checkedAt ? `Last reviewed ${data.checkedAt.toISOString().slice(0, 10)}. ` : 'Never checked. '}
-      <br />
+    {
+      /*
+       * What can be done with the page, in one row: when it was last read against
+       * the provider, where to change it, and where to read it as text. They were
+       * three lines in two places — two here and the markdown link down in the
+       * site footer — which read as three unrelated afterthoughts.
+       *
+       * The date is a <time>, so the claim `checkedAt` makes is machine-readable
+       * rather than a string that happens to look like a date.
+       */
+    }
+    <p class="annotation record-meta">
+      <span>
+        {
+          data.checkedAt ? (
+            <>
+              Last reviewed <time datetime={checkedIso}>{checkedIso}</time>
+            </>
+          ) : (
+            'Never checked against the provider'
+          )
+        }
+      </span>
       <a href={`https://github.com/fortrabbit/findhost/edit/main/src/content/providers/${provider.id}.md`}>
-        Complete this record.
+        Edit on GitHub
       </a>
+      <a href={`/${provider.id}.md`}>This page as markdown</a>
     </p>
   </article>
 </Base>

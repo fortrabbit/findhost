@@ -235,6 +235,33 @@ if (bandsInDictionary.join(' | ') !== bandsInCode.join(' | ')) {
 }
 
 /*
+ * The third consumer that cannot read the dictionary, and the only one outside
+ * the build: GitHub renders the issue form from the file, so the categories a
+ * reporter ticks are a hand-written copy of the vocabulary. Checked here for the
+ * same reason the price bands are — a value added to `category` and not to the
+ * form is a category nobody can report a provider under, and nothing else would
+ * ever say so.
+ */
+const issueForm = '.github/ISSUE_TEMPLATE/add-provider.yml';
+if (existsSync(issueForm)) {
+  const form = parseYaml(readFileSync(issueForm, 'utf8')) as {
+    body?: { id?: string; attributes?: { options?: { label?: string }[] } }[];
+  };
+  const offered = (form.body ?? []).find((entry) => entry.id === 'category')?.attributes?.options ?? [];
+  const inForm = offered.map((option) => String(option.label));
+  const inDictionary = (fieldOf.get('category')?.values ?? []).map((value) => value.label);
+
+  if (inForm.join(' | ') !== inDictionary.join(' | ')) {
+    const missing = inDictionary.filter((label) => !inForm.includes(label));
+    const extra = inForm.filter((label) => !inDictionary.includes(label));
+    fail(
+      issueForm,
+      `the categories offered no longer match the dictionary${missing.length ? `\n    missing: ${missing.join(', ')}` : ''}${extra.length ? `\n    not a category: ${extra.join(', ')}` : ''}${!missing.length && !extra.length ? ' — same values, different order' : ''}`,
+    );
+  }
+}
+
+/*
  * The schema is the one consumer that cannot be derived from the dictionary —
  * zod needs the field written out — so it is the one that can silently fall
  * behind. A field the schema does not name is stripped from every record by the
