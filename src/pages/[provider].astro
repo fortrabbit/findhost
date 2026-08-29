@@ -91,11 +91,15 @@ const knownGroups = groups
   .filter((group) => group.fields.length > 0);
 
 /*
- * What a customer decides on stays beside the prose; what describes the company
- * rather than the product falls below it. Automation is on the near side because
- * an MCP server and a CLI are what an agent-shaped reader is here for.
+ * What a customer decides on stays beside the prose; everything else falls into
+ * the wide grid below it.
+ *
+ * Three near groups rather than four, because the prose is optional and the rail
+ * is not: a record with a short opening and no reservation left Automation and
+ * the group under it running down a column with nothing beside them. The wide
+ * grid has no such problem — it fills the page whatever the prose does.
  */
-const besideTheProse = ['Pricing', 'Tech stack', 'Classification', 'Automation'];
+const besideTheProse = ['Pricing', 'Tech stack', 'Classification'];
 const nearGroups = knownGroups.filter((group) => besideTheProse.includes(group.label));
 const farGroups = knownGroups.filter((group) => !besideTheProse.includes(group.label));
 
@@ -150,6 +154,9 @@ const drawn = (groups: { label: string; fields: Field[] }[]) =>
   }));
 
 const related = backlinks(everyRecord as never, provider.id);
+
+/** The wide grid under the prose, with the bring-your-own rows on the end of it. */
+const below = [...drawn(farGroups), ...(alsoNeeded.length > 0 ? [{ label: 'Bring your own', rows: alsoNeeded }] : [])];
 
 /*
  * A marker goes on the link it backs. Collected at the end of the row it was a
@@ -409,17 +416,6 @@ const categoryLabels = (fieldOf.get('category')?.values ?? [])
         {related.length > 0 && <FactGroups groups={[{ label: 'Related', rows: related }]} />}
 
         {
-          /*
-           * What this one says it does not sell, and where the register keeps the
-           * companies that do. Drawn as a group of facts rather than as a list,
-           * because it is one: the rows read the same fields the Other features
-           * group reads, and a bulleted list beside a column of tables read as a
-           * different kind of thing being said.
-           */
-        }
-        {alsoNeeded.length > 0 && <FactGroups groups={[{ label: 'Bring your own', rows: alsoNeeded }]} />}
-
-        {
           missing.length > 0 && (
             <details class="missing-fields">
               <summary>
@@ -449,7 +445,16 @@ const categoryLabels = (fieldOf.get('category')?.values ?? [])
       </div>
     </div>
 
-    {farGroups.length > 0 && <FactGroups groups={drawn(farGroups)} class="record-extra" />}
+    {
+      /*
+       * The wide grid: what describes the company rather than the product, and
+       * last of all what this one says it does not sell, with the register's own
+       * list of who does. That group is drawn from the same fields the Other
+       * features group above it reads, which is why it sits with them rather
+       * than in the rail.
+       */
+    }
+    {below.length > 0 && <FactGroups groups={below} class="record-extra" />}
 
     {
       notes.length > 0 && (
