@@ -126,21 +126,21 @@ const card = new URL(image, origin).href;
       <div class="footer-base">
         <div>
           <p>
-            Designed and curated by Frank Lämmer of <a href="/fortrabbit/">fortrabbit</a>. <a href="/about/">About</a>.
+            Designed and curated by Frank Lämmer of <a href="/fortrabbit/">fortrabbit</a>.
           </p>
           {
             /*
-             * Two destinations rather than one, because they are two different
-             * errands: a name that is missing from the register is a report
+             * Destinations rather than a sentence, so they take a row and a gap
+             * and no full stops. Two of them go to GitHub because they are two
+             * different errands: a name missing from the register is a report
              * anybody can file, and the repository is for everything else.
              */
           }
-          <p>
-            <a href="https://github.com/fortrabbit/findhost/issues/new?template=add-provider.yml">Add a provider</a>.{
-              ' '
-            }
-            <a href="https://github.com/fortrabbit/findhost">GitHub</a>.
-          </p>
+          <nav class="footer-nav" aria-label="Elsewhere">
+            <a href="/about/">About</a>
+            <a href="https://github.com/fortrabbit/findhost/issues/new?template=add-provider.yml">Add a provider</a>
+            <a href="https://github.com/fortrabbit/findhost">GitHub</a>
+          </nav>
           {
             /*
              * The same twin the `<link rel="alternate">` in the head announces,
