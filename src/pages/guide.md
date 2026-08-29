@@ -14,19 +14,9 @@ figure:
 
 The right level is the one that matches a team's skills, not the lowest one available. Shipping code instead of configuring servers is worth something at any level of experience, but it costs flexibility. That is mostly what the [category](/categories/) is for.
 
-## Understand the shape of the price
-
-Please do not try to choose on compute per coin. Two providers quoting the same vCPU count can differ by a factor in real throughput, because the hardware behind the figure is never on the marketing page. The rest of the arrangement is [pricing features](/pricing/).
-
-**Upfront or in arrears** matters most. Paid upfront, the bill cannot exceed the price. Paid in arrears the meter runs first, and the ceiling is whatever happened — a loop that ran all weekend, a bot that found an expensive endpoint. A fixed plan wastes money slowly; a metered one can lose it quickly.
-
-**How leaving works** is discovered late. A minimum term, a notice period, and a year paid in advance are one fact: time during which money keeps going out after the decision to stop. Recorded as [getting out](/exit/).
-
-**The renewal multiple** is easy to miss. Common in shared hosting: a cheap first term renewing automatically at two or three times the price. A free tier says nothing about what the paid plan renews at.
-
 ## What to compare
 
-- **Pricing** — the [entry band](/entry-price/), the [pricing features](/pricing/), the renewal multiple
+- **Pricing** — the [entry band](/entry-price/) and the [shape of the arrangement](/pricing/)
 - **The stack** — [runtimes](/runtimes/) and the [software](/software/) a provider documents
 - **Support** — [channels](/support/), hours, and whether they are behind a paid tier
 - **Openness** — [shell access](/shell/), [deployment methods](/deployment/), data export
@@ -35,6 +25,14 @@ Please do not try to choose on compute per coin. Two providers quoting the same 
 - **Privacy and data protection** — a data processing agreement
 - **Automation** — an [API, a CLI, an MCP server or infrastructure as code](/automation/)
 - **Environment** — an energy claim, and whether the [Green Web Foundation](/features/green/) lists the provider
+
+## Understand the shape of the price
+
+Two hosts quoting the same monthly figure can be different commitments. Paid upfront, the bill cannot exceed the price. Paid in arrears, the invoice follows the period, and only metered billing leaves it open-ended.
+
+A minimum term or a notice period keeps money going out after the decision to stop, recorded as [getting out](/exit/). A cheap first term renewing at two or three times the price is common in shared hosting.
+
+Do not choose on compute per coin either. Two providers quoting the same vCPU count can differ by a factor in real throughput, because the hardware behind the figure is never on the marketing page.
 
 ## Try it
 
