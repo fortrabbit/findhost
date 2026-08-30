@@ -658,6 +658,29 @@
     - { id: a-year, label: Within a year }
     - { id: over-a-year, label: Longer than a year }
 
+# The refund window, which is a different question from `exitWithin` and reads
+# like the same one. Exit is how long the money keeps going out once the decision
+# to leave has been made; this is how long there is to change that mind and be
+# given back what was already paid. A provider can answer one and not the other.
+#
+# Bands rather than the published number of days, because 14 and 15 are the same
+# fact to a reader.
+#
+# Shown on a record and filtered only as a yes-or-no under `pricing`. What a
+# refund window promises is the reversal of a payment, by a process the provider
+# owns and seldom writes down, which is worth less than never having handed the
+# money over — `free-trial` is that answer, and a column of its own here would
+# give the weaker of the two the louder voice.
+- id: moneyBack
+  label: Money back
+  group: Pricing
+  values:
+    - { id: none, label: 'No refund window' }
+    - { id: a-week, label: Within a week }
+    - { id: a-month, label: Within a month }
+    - { id: two-months, label: Within two months }
+    - { id: longer, label: Longer than two months }
+
 # Renewal ÷ introductory: 3.3 means a €2.99 offer that renews at €9.99.
 - id: renewalMultiple
   label: Renewal multiple
@@ -680,6 +703,28 @@
     - { id: monthly, label: Monthly }
     - { id: annual, label: Annual }
     - { id: multi-year, label: Multi-year }
+
+# How the money can actually be handed over, which settles whether a provider is
+# usable at all before anything else about it matters: a company that takes only
+# a card is closed to a buyer whose finance department pays by transfer, and one
+# that takes cryptocurrency is the only option for somebody who holds no card.
+#
+# Read off the checkout or the billing page. A logo strip on a pricing page is a
+# claim about what the payment processor supports, not about what this provider
+# accepts.
+- id: paymentMethods
+  label: Payment
+  group: Pricing
+  facet: payments
+  subject: 'take{|s} {lower}'
+  filterOrder: 20
+  multiple: true
+  values:
+    - { id: card, label: Card, subject: 'take{|s} card payments' }
+    - { id: paypal, label: PayPal, subject: 'take{|s} PayPal' }
+    - { id: bank-transfer, label: Bank transfer, subject: 'take{|s} a bank transfer' }
+    - { id: direct-debit, label: Direct debit }
+    - { id: crypto, label: Crypto, subject: 'take{|s} cryptocurrency' }
 
 # Derived, and the reason the free tier no longer has a facet to itself. A free
 # tier is the most advertised thing about a price and among the least useful:
@@ -749,6 +794,29 @@
         from: contractMinimum,
         when: [none],
         subject: 'hold{|s} nobody to a minimum term',
+      }
+    # One yes-or-no rather than the window itself, which stays on the record. A
+    # provider that publishes a window has promised to undo a payment; the
+    # promise above it, `free-trial`, is that the payment never happens.
+    - {
+        id: money-back,
+        label: Money-back window,
+        short: Money back,
+        from: moneyBack,
+        when: [a-week, a-month, two-months, longer],
+        subject: 'publish{|es} a money-back window',
+      }
+    # Money, which is why it sits here rather than under `features`: what an SLA
+    # pays when it is missed is a credit against the invoice. The flag says a
+    # figure is in the contract, not that the figure is generous or that missing
+    # it costs the provider anything.
+    - {
+        id: sla,
+        label: Published SLA,
+        short: SLA,
+        from: sla,
+        when: ['true'],
+        subject: 'publish{|es} a service level agreement',
       }
 
 # -------------------------------------------------------- Regions and law
@@ -939,6 +1007,25 @@
     - { id: all-plans, label: Same on every plan }
     - { id: paid-upgrade, label: Better on paid plans }
     - { id: enterprise-only, label: Enterprise only }
+
+# Whether the provider puts an uptime figure in a contract. Recorded as a yes or
+# a no rather than as the percentage, because the percentage is not a fact about
+# a provider: almost every host that publishes one publishes several, one per
+# product. Scaleway alone runs from 99% on shared instances through 99.5% on
+# dedicated to no commitment at all on development ones, and IONOS spans 99.5% to
+# 99.995% across its cloud. A single band would have to pick one of those and be
+# wrong about the rest.
+#
+# The flag says the figure is in a contract and nothing beyond it. What is owed
+# when the figure is missed runs from a schedule of credits to no remedy named at
+# all, so it cannot be assumed from the yes. A percentage on a marketing page is
+# in no contract and does not count, and that is where most of the shared-hosting
+# market keeps its number. Figures and remedies belong in a record's prose, where
+# they can be qualified per product and cited.
+- id: sla
+  label: Published SLA
+  group: Support
+  render: yes-no
 
 # ------------------------------------------------------------- Included
 

@@ -76,6 +76,7 @@ cdnIncluded: included
 staging: included
 testDomain: included
 collaboration: team
+sla: true
 status: active
 checkedAt: 2026-08-12
 sources:
@@ -104,6 +105,7 @@ sources:
   - { field: staging, url: 'https://vercel.com/docs/deployments/environments', checkedAt: 2026-08-12 }
   - { field: testDomain, url: 'https://vercel.com/docs/deployments/generated-urls', checkedAt: 2026-08-12 }
   - { field: collaboration, url: 'https://vercel.com/docs/accounts', checkedAt: 2026-08-12 }
+  - { field: sla, url: 'https://vercel.com/legal/sla', checkedAt: 2026-08-30 }
 figure:
   emoji: 🔺
   color: rgb(77, 77, 157)
@@ -117,4 +119,4 @@ Functions execute in a microVM with a read-only filesystem and a writable tempor
 
 ## Worth knowing
 
-Account plans run from a permanent free tier through usage-billed paid plans to a quoted enterprise tier. The free tier does not bill overage: it pauses once the included allowance is spent. Paid plans move to credit-based usage billing, so the monthly figure follows consumption rather than a fixed rate. Support is by email, with faster handling available as a paid upgrade.
+Account plans run from a permanent free tier through usage-billed paid plans to a quoted enterprise tier. The free tier does not bill overage: it pauses once the included allowance is spent. Paid plans move to credit-based usage billing, so the monthly figure follows consumption rather than a fixed rate. Support is by email, with faster handling available as a paid upgrade. The [enterprise service level agreement](https://vercel.com/legal/sla) names 99.99% availability as a commercially reasonable effort, and credits 10% to 50% of the monthly fee when it is missed, claimed in writing within thirty days.

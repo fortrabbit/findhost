@@ -11,6 +11,7 @@ category:
 description: Danish mass-market host selling shared hosting, managed WordPress, email and domains across most of Europe.
 hqCountry: DK
 ownership: pe-owned
+parent: group-one
 whoManagesOs: managed
 software:
   - wordpress
@@ -36,6 +37,8 @@ sources:
   - { field: category, url: 'https://www.one.com/en-gb/plans-pricing/', checkedAt: 2026-08-08 }
   - { field: software, url: 'https://www.one.com/en-gb/plans-pricing/', checkedAt: 2026-08-08 }
   - { field: currencies, url: 'https://www.one.com/en-gb/plans-pricing/', checkedAt: 2026-08-08 }
+  - { field: parent, url: 'https://www.group.one/', checkedAt: 2026-08-29 }
+  - { field: ownership, url: 'https://www.cinven.com/news-insights/cinven-and-ontario-teachers-to-invest-in-the-combination-of-group-one-and-dogado-group/', checkedAt: 2026-08-29 }
 figure:
   emoji: 🇩🇰
   color: rgb(196, 30, 58)

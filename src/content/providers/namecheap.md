@@ -11,6 +11,11 @@ category:
 description: A US domain registrar that also sells shared hosting and virtual servers.
 hqCountry: US
 ownership: pe-owned
+parent: cvc
+paymentMethods:
+  - card
+  - paypal
+  - crypto
 status: active
 checkedAt: 2026-08-12
 sources:
@@ -20,6 +25,8 @@ sources:
       url: 'https://domainnamewire.com/2025/09/12/private-equity-firm-is-buying-namecheap-in-deal-that-values-company-at-1-5-billion/',
       checkedAt: 2026-08-21,
     }
+  - { field: paymentMethods, url: 'https://www.namecheap.com/support/knowledgebase/article.aspx/35/7/what-payment-methods-do-you-accept-for-domain-registrations/', checkedAt: 2026-08-29 }
+  - { field: parent, url: 'https://domainnamewire.com/2025/09/12/private-equity-firm-is-buying-namecheap-in-deal-that-values-company-at-1-5-billion/', checkedAt: 2026-08-29 }
 figure:
   emoji: 🔑
   color: rgb(60, 120, 180)

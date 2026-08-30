@@ -67,6 +67,7 @@ mcpServer: official
 iacSupport:
   - terraform
   - ansible
+sla: true
 status: active
 checkedAt: 2026-08-12
 sources:
@@ -96,6 +97,7 @@ sources:
   - { field: iacSupport, url: 'https://docs.digitalocean.com/reference/', checkedAt: 2026-07-31 }
   - { field: useCases, url: 'https://www.digitalocean.com/', checkedAt: 2026-07-31 }
   - { field: audience, url: 'https://www.digitalocean.com/', checkedAt: 2026-07-31 }
+  - { field: sla, url: 'https://www.digitalocean.com/sla/cpu-droplets', checkedAt: 2026-08-29 }
 figure:
   emoji: 🐟
   color: rgb(45, 142, 190)
@@ -109,4 +111,4 @@ collaboration: team
 
 DigitalOcean Holdings, Inc. trades on the New York Stock Exchange as DOCN. It started with a single product — the Droplet, a virtual private server — and has since added block storage, managed databases, managed Kubernetes, object storage, serverless functions and an application platform. It acquired [Cloudways](/cloudways/) in 2022.
 
-Droplets are billed per second against fixed plan rates, with a one-minute minimum charge. Backups are a paid add-on priced as a percentage of the Droplet cost, and block storage, load balancers and managed database clusters are metered separately, so a Droplet's plan rate is not the whole bill. The tooling is documented in one place: a public REST API, the open-source `doctl` CLI, a Terraform provider, Ansible modules and a set of MCP servers.
+Droplets are billed per second against fixed plan rates, with a one-minute minimum charge. Backups are a paid add-on priced as a percentage of the Droplet cost, and block storage, load balancers and managed database clusters are metered separately, so a Droplet's plan rate is not the whole bill. The tooling is documented in one place: a public REST API, the open-source `doctl` CLI, a Terraform provider, Ansible modules and a set of MCP servers. Each Droplet carries its own [SLA](https://www.digitalocean.com/sla/cpu-droplets) of 99.99% monthly uptime, paid as a service credit against the resources affected.

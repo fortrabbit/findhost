@@ -58,6 +58,11 @@ supportHours: business-hours
 supportTiering: paid-upgrade
 favorite: true
 favoriteNote: Good shared hosting.
+paymentMethods:
+  - card
+  - paypal
+  - bank-transfer
+sla: true
 status: active
 checkedAt: 2026-08-01
 sources:
@@ -76,6 +81,8 @@ sources:
   - { field: billingPeriods, url: 'https://krystal.io/web-hosting', checkedAt: 2026-08-02 }
   - { field: supportHours, url: 'https://krystal.io/web-hosting', checkedAt: 2026-08-01 }
   - { field: supportTiering, url: 'https://krystal.io/web-hosting', checkedAt: 2026-08-01 }
+  - { field: paymentMethods, url: 'https://krystal.io/legal/terms-and-conditions', checkedAt: 2026-08-29 }
+  - { field: sla, url: 'https://krystal.io/legal/hosting-sla', checkedAt: 2026-08-30 }
 figure:
   emoji: 🌱
   color: rgb(53, 122, 49)
@@ -88,3 +95,5 @@ greenWebId: 709
 Krystal is a British host whose shared plans are named after gemstones and sold in a ladder that steps up on CPU allowance and on the number of sites allowed; the entry plan carries a single site. Billing is monthly, annual or biennial, with a discount for paying further ahead.
 
 Technically it is cPanel hosting with PHP, Python, Perl and Ruby, unlimited MySQL and MariaDB databases, SSH on every tier, and FTP, SFTP and WebDAV file access. What sets it apart is the environmental position, and the fact that it is documented rather than asserted: electricity is bought on a renewable supply contract, the company is a certified B Corp, and it participates in 1% For The Planet, reporting tree planting as a running total rather than as a slogan.
+
+The [hosting SLA](https://krystal.io/legal/hosting-sla) states 100% network availability as a commercially reasonable effort, and credits 5% of the monthly fee for every thirty minutes of failure, up to the whole of it, claimed within seven days.

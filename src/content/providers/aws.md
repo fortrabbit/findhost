@@ -59,6 +59,7 @@ regions:
   - TW
   - US
   - ZA
+sla: true
 status: active
 checkedAt: 2026-08-01
 sources:
@@ -69,6 +70,7 @@ sources:
   - { field: billingPeriods, url: 'https://aws.amazon.com/agreement/', checkedAt: 2026-08-02 }
   - { field: billingTiming, url: 'https://aws.amazon.com/agreement/', checkedAt: 2026-08-02 }
   - { field: exitWithin, url: 'https://aws.amazon.com/agreement/', checkedAt: 2026-08-02 }
+  - { field: sla, url: 'https://aws.amazon.com/compute/sla/', checkedAt: 2026-08-30 }
 figure:
   emoji: 📦
   color: "#FF9900"
@@ -85,3 +87,5 @@ There is no single front door for a web application here. EC2 provides a plain v
 The size of the catalogue is both the capability and the cost of it. Assembling a working web stack means selecting and wiring together a handful of independent services, each with its own options and pricing dimensions.
 
 Billing is usage-based and metered per service, so the monthly figure emerges from the architecture rather than being quoted up front. No entry price band is recorded here because there is no meaningful entry price to record.
+
+The [compute SLA](https://aws.amazon.com/compute/sla/) is written the same way round: 99.99% monthly uptime for instances spread across availability zones, and 99.5% for a single instance considered on its own.

@@ -87,6 +87,7 @@ apiAvailable: public
 cliTool: official
 mcpServer: official
 greenWebId: 1315
+sla: true
 status: active
 checkedAt: 2026-08-01
 sources:
@@ -120,6 +121,7 @@ sources:
   - { field: pricingModel, url: 'https://www.fortrabbit.com/pricing', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://www.fortrabbit.com/pricing', checkedAt: 2026-08-01 }
   - { field: contractMinimum, url: 'https://www.fortrabbit.com/pricing', checkedAt: 2026-08-01 }
+  - { field: sla, url: 'https://www.fortrabbit.com/legal/contract/service-level-agreement', checkedAt: 2026-08-30 }
 favorite: true
 favoriteNote: Shamelessly favorited our own service. It's not that bad anyhow.
 figure:
@@ -129,7 +131,7 @@ figure:
   text: As secure as Fort Knox, as fast as a rabbit.
 ---
 
-fortrabbit is a small, independent German company running a managed hosting platform for PHP applications. It owns no hardware: the platform is built on rented AWS capacity, in Ireland and in the United States. Applications are deployed by git push, with full SSH access to the running environment and managed MySQL alongside. Plans are fixed tiers rather than metered usage, billed by the month, and a trial is available before an application goes live.
+fortrabbit is a small, independent German company running a managed hosting platform for PHP applications. It owns no hardware: the platform is built on rented AWS capacity, in Ireland and in the United States. Applications are deployed by git push, with full SSH access to the running environment and managed MySQL alongside. Plans are fixed tiers rather than metered usage, billed by the month, and a trial is available before an application goes live. The [service level agreement](https://www.fortrabbit.com/legal/contract/service-level-agreement) commits to 99.5% uptime per billing cycle, paid as a credit capped at that month's fee and claimed within ten days of the month's end.
 
 ## Worth knowing
 

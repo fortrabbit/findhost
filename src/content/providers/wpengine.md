@@ -13,6 +13,7 @@ description: Managed WordPress host founded in 2010 in Austin, Texas, running cu
 founded: 2010
 hqCountry: US
 ownership: pe-owned
+parent: silver-lake
 whoManagesOs: managed
 useCases:
   - cms
@@ -62,6 +63,7 @@ sources:
   - { field: contractMinimum, url: 'https://wpengine.com/plans/', checkedAt: 2026-07-31 }
   - { field: apiAvailable, url: 'https://wpengine.com', checkedAt: 2026-08-09 }
   - { field: ownership, url: 'https://www.silverlake.com/portfolio/', checkedAt: 2026-08-21 }
+  - { field: parent, url: 'https://www.silverlake.com/portfolio/', checkedAt: 2026-08-29 }
 figure:
   emoji: 🚂
   color: rgb(66, 122, 169)

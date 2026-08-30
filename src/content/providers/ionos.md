@@ -62,6 +62,7 @@ supportChannels:
   - chat
 supportHours: 24-7
 apiAvailable: public
+sla: true
 status: active
 checkedAt: 2026-08-01
 sources:
@@ -76,6 +77,7 @@ sources:
   - { field: renewalMultiple, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-07-31 }
   - { field: contractMinimum, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-07-31 }
+  - { field: sla, url: 'https://cloud.ionos.com/terms-gtc/terms-enterprise-cloud/enterprise-agreement/', checkedAt: 2026-08-30 }
 figure:
   emoji: 🏢
   color: rgb(45, 117, 190)
@@ -93,3 +95,5 @@ For a mass-market host the shared line is unusually tolerant of developers: SSH,
 ## Worth knowing
 
 Advertised pricing is promotional, and IONOS prints both the introductory and the standing rate, which makes the size of the step visible. The multiple recorded here is the entry plan's; the middle tiers step up more steeply than that, and every plan carries a one-off setup fee on top.
+
+The uptime figure varies by product rather than describing the company. The [cloud agreement](https://cloud.ionos.com/terms-gtc/terms-enterprise-cloud/enterprise-agreement/) sets a monthly availability target per service, from 99.5% for object storage through 99.95% for compute to 99.995% for DNS.

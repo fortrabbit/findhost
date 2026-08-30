@@ -23,6 +23,7 @@ billingPeriods:
   - yearly
 billingTiming: advance
 exitWithin: a-year
+moneyBack: a-month
 entryPrice: { amount: 2.89, currency: EUR, period: month, introductory: true }
 renewalMultiple: 3.8
 contractMinimum: annual
@@ -50,6 +51,7 @@ sources:
   - { field: emailHosting, url: 'https://www.dreamhost.com/hosting/shared/', checkedAt: 2026-08-12 }
   - { field: cdnIncluded, url: 'https://www.dreamhost.com/hosting/shared/', checkedAt: 2026-08-12 }
   - { field: staging, url: 'https://www.dreamhost.com/hosting/shared/', checkedAt: 2026-08-12 }
+  - { field: moneyBack, url: 'https://www.dreamhost.com/legal/terms-of-service/', checkedAt: 2026-08-29 }
 figure:
   emoji: 🌙
   color: rgb(185, 144, 67)

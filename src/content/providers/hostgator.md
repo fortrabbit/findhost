@@ -20,6 +20,7 @@ billingPeriods:
   - multi-year
 billingTiming: advance
 exitWithin: a-year
+moneyBack: a-month
 supportChannels:
   - phone
   - chat
@@ -38,6 +39,7 @@ sources:
   - { field: billingTiming, url: 'https://www.hostgator.com/tos', checkedAt: 2026-08-02 }
   - { field: exitWithin, url: 'https://www.hostgator.com/tos', checkedAt: 2026-08-02 }
   - { field: supportChannels, url: 'https://www.hostgator.com/about', checkedAt: 2026-08-08 }
+  - { field: moneyBack, url: 'https://www.hostgator.com/terms', checkedAt: 2026-08-29 }
 figure:
   emoji: 🐊
   color: rgb(157, 124, 77)

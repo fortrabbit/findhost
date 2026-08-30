@@ -210,6 +210,13 @@ const providerFields = z
      */
     exitWithin: z.enum(vocabulary('exitWithin')).optional(),
     /*
+     * How long the customer has to change their mind and be given the money
+     * back, which is not the same question as exitWithin however similar the two
+     * read: one is how long the billing continues, the other is whether what has
+     * already been paid returns.
+     */
+    moneyBack: z.enum(vocabulary('moneyBack')).optional(),
+    /*
      * The exact starting figure in the provider's own currency, shown beside the
      * coins so nobody reads a conversion we invented. One number with a date,
      * not a series — this is not a price tracker.
@@ -231,6 +238,11 @@ const providerFields = z
     renewalMultiple: z.number().nullable().optional(),
     freeTier: z.enum(vocabulary('freeTier')).optional(),
     contractMinimum: z.enum(vocabulary('contractMinimum')).optional(),
+    /*
+     * Which ways of paying the provider accepts, from its checkout or billing
+     * page rather than from a logo strip, which describes the processor.
+     */
+    paymentMethods: z.array(z.enum(vocabulary('paymentMethods'))).optional(),
 
     /*
      * Regions. Absent means unknown; `null` means the question does not apply —
@@ -305,6 +317,13 @@ const providerFields = z
     supportChannels: z.array(z.enum(vocabulary('supportChannels'))).optional(),
     supportHours: z.enum(vocabulary('supportHours')).optional(),
     supportTiering: z.enum(vocabulary('supportTiering')).optional(),
+    /*
+     * Whether the provider commits to an uptime figure in a contract that pays a
+     * credit when it is missed. Not the figure: a host publishes one per product,
+     * so no single percentage describes the company. Nothing here observes
+     * whether the commitment holds, and a record must never imply that it does.
+     */
+    sla: z.boolean().optional(),
 
     /*
      * Included — what comes with the hosting and what has to be bought

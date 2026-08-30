@@ -60,6 +60,7 @@ apiAvailable: public
 cliTool: official
 iacSupport:
   - terraform
+sla: true
 status: active
 checkedAt: 2026-08-01
 sources:
@@ -75,6 +76,7 @@ sources:
   - { field: billingPeriods, url: 'https://www.scaleway.com/en/pricing/virtual-instances/', checkedAt: 2026-08-02 }
   - { field: billingTiming, url: 'https://www.scaleway.com/en/pricing/virtual-instances/', checkedAt: 2026-08-02 }
   - { field: exitWithin, url: 'https://www.scaleway.com/en/pricing/virtual-instances/', checkedAt: 2026-08-02 }
+  - { field: sla, url: 'https://www.scaleway.com/en/virtual-instances/sla/', checkedAt: 2026-08-30 }
 figure:
   emoji: 🐿️
   color: rgb(132, 73, 161)
@@ -92,4 +94,4 @@ The commercial argument is jurisdictional: European data centres, GDPR complianc
 
 ## Worth knowing
 
-The catalogue is wide and priced per product, so no single entry price describes it and none is recorded here. Regions are not named on the pricing page either; it links to a separate availability matrix, and the locations appear on the individual product pages instead.
+The catalogue is wide and priced per product, and the [service level agreement](https://www.scaleway.com/en/virtual-instances/sla/) is written the same way: instances commit to 99% on shared machines and 99.5% on dedicated ones, while development instances carry no commitment at all. No single entry price describes the range, so none is recorded here. Regions are not named on the pricing page either; it links to a separate availability matrix, and the locations appear on the individual product pages instead.
