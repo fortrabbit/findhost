@@ -24,15 +24,19 @@ export const GET: APIRoute = async ({ props, site }) => {
     `Source: ${origin}/${facet.id}/`,
     '',
     ...(note?.body?.trim() ? [note.body.trim(), ''] : []),
-    `${inUse.length} values in use.`,
-    ...(facet.unknown > 0 ? [`${facet.unknown} records do not record this field.`] : []),
-    ...(facet.notApplicable > 0 ? [`For ${facet.notApplicable} records the question does not apply.`] : []),
+    `${inUse.length} ${inUse.length === 1 ? 'value' : 'values'} in use.`,
+    ...(facet.unknown > 0
+      ? [`${facet.unknown} ${facet.unknown === 1 ? 'record does' : 'records do'} not record this field.`]
+      : []),
+    ...(facet.notApplicable > 0
+      ? [`For ${facet.notApplicable} ${facet.notApplicable === 1 ? 'record' : 'records'} the question does not apply.`]
+      : []),
     '',
     '## Values',
     '',
     ...inUse.map(
       (value: { slug: string; label: string; count: number }) =>
-        `- [${value.label}](${origin}/${facet.id}/${value.slug}/) — ${value.count} providers — ${origin}/${facet.id}/${value.slug}.md`,
+        `- [${value.label}](${origin}/${facet.id}/${value.slug}/) — ${value.count} ${value.count === 1 ? 'provider' : 'providers'} — ${origin}/${facet.id}/${value.slug}.md`,
     ),
     '',
     /*
