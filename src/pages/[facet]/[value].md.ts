@@ -41,9 +41,17 @@ export const GET: APIRoute = async ({ props, site }) => {
      * the thirty cannot tell.
      */
     ...(facet.unknown > 0
-      ? [`${facet.unknown} records do not record this field and cannot appear here either way.`, '']
+      ? [
+          `${facet.unknown} ${facet.unknown === 1 ? 'record does' : 'records do'} not record this field and cannot appear here either way.`,
+          '',
+        ]
       : []),
-    ...(facet.notApplicable > 0 ? [`For ${facet.notApplicable} records the question does not apply.`, ''] : []),
+    ...(facet.notApplicable > 0
+      ? [
+          `For ${facet.notApplicable} ${facet.notApplicable === 1 ? 'record' : 'records'} the question does not apply.`,
+          '',
+        ]
+      : []),
     `## Providers (${matches.length})`,
     '',
     ...matches.map(

@@ -10,6 +10,7 @@ category:
 description: German provider selling virtual and dedicated servers from Munich, with large resource allocations at low fixed monthly rates.
 hqCountry: DE
 ownership: pe-owned
+parent: kkr
 whoManagesOs: self-managed
 audience:
   - smb
@@ -31,6 +32,11 @@ billingTiming: advance
 exitWithin: a-quarter
 entryPrice: { amount: 5.50, currency: EUR, period: month }
 contractMinimum: monthly
+paymentMethods:
+  - card
+  - paypal
+  - bank-transfer
+  - direct-debit
 regions:
   - DE
   - US
@@ -41,6 +47,7 @@ regions:
   - AU
 apiAvailable: public
 cliTool: official
+sla: true
 status: active
 checkedAt: 2026-08-01
 sources:
@@ -59,6 +66,9 @@ sources:
   - { field: apiAvailable, url: 'https://www.contabo.com', checkedAt: 2026-08-09 }
   - { field: cliTool, url: 'https://www.contabo.com', checkedAt: 2026-08-09 }
   - { field: ownership, url: 'https://www.oakleycapital.com/latest-news/oakley-capital-agrees-sale-of-contabo-and-follow-on-investment/', checkedAt: 2026-08-21 }
+  - { field: paymentMethods, url: 'https://contabo.com/en/legal/terms-and-conditions/', checkedAt: 2026-08-29 }
+  - { field: sla, url: 'https://contabo.com/en/legal/terms-and-conditions/', checkedAt: 2026-08-29 }
+  - { field: parent, url: 'https://www.oakleycapital.com/latest-news/oakley-capital-agrees-sale-of-contabo-and-follow-on-investment/', checkedAt: 2026-08-29 }
 figure:
   emoji: 🥨
   color: rgb(190, 154, 45)
@@ -69,7 +79,7 @@ ai: authored
 
 Contabo is a German hosting provider founded in 2003 and headquartered in Munich. The range covers virtual private servers, dedicated servers, object storage and managed Kubernetes, and the virtual servers are the product it is known for: memory, storage and traffic allocations well above what the same money buys elsewhere.
 
-Contracts run on a monthly minimum, with each following term matching the initial one. Snapshots are included and automatic backups are a paid add-on. Locations span Europe, the United Kingdom, the Americas and Asia-Pacific, though the European capacity is listed as the European Union without naming the country it sits in.
+Contracts run on a monthly minimum, with each following term matching the initial one. Snapshots are included and automatic backups are a paid add-on. The [terms](https://contabo.com/en/legal/terms-and-conditions/) carry one availability figure, 99.9% as an annual average, covering webspace, VPS, dedicated servers and object storage alike. They name no credit or other remedy for missing it. Locations span Europe, the United Kingdom, the Americas and Asia-Pacific, though the European capacity is listed as the European Union without naming the country it sits in.
 
 ## Worth knowing
 

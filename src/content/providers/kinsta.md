@@ -53,6 +53,7 @@ regions:
   - KR
   - JP
   - AU
+moneyBack: none
 status: active
 checkedAt: 2026-08-01
 sources:
@@ -68,6 +69,7 @@ sources:
   - { field: backupsIncluded, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-07-31 }
   - { field: software, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-07-31 }
   - { field: specialisation, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-07-31 }
+  - { field: moneyBack, url: 'https://kinsta.com/legal/terms-of-service/', checkedAt: 2026-08-29 }
 figure:
   emoji: 👑
   color: rgb(120, 45, 190)

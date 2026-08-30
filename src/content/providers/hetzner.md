@@ -41,6 +41,11 @@ billingPeriods:
 billingTiming: arrears
 exitWithin: a-day
 contractMinimum: none
+paymentMethods:
+  - card
+  - paypal
+  - bank-transfer
+  - direct-debit
 regions:
   - DE
   - FI
@@ -76,6 +81,7 @@ sources:
   - { field: supportChannels, url: 'https://www.hetzner.com/support/', checkedAt: 2026-07-31 }
   - { field: audience, url: 'https://www.hetzner.com/', checkedAt: 2026-07-31 }
   - { field: ownership, url: 'https://career.hetzner.com/en/unsere-story/', checkedAt: 2026-08-21 }
+  - { field: paymentMethods, url: 'https://docs.hetzner.com/general/billing-and-account-management/billing-at-hetzner/payment-overview/', checkedAt: 2026-08-29 }
 figure:
   emoji: 🇩🇪
   color: rgb(183, 145, 52)
