@@ -1756,7 +1756,15 @@ article > pre {
  * numbers were counting and read as a second register rather than as a way into
  * the first. The page behind each link says how many, which is soon enough.
  */
-.pair-links {
+/*
+ * Side by side, and never more than three: the same `100% / n` floor the filter
+ * band uses, which is the only way auto-fit takes an upper bound. Stacked, three
+ * headings and three short sentences spent nine lines saying what fits in four.
+ */
+.pair-bands {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(max(15rem, 100% / 4 + 0.1%), 1fr));
+  gap: var(--space-sm) var(--space-lg);
   margin-block: var(--space-lg);
 }
 

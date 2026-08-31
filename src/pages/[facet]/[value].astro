@@ -145,36 +145,40 @@ const combined = (await pairsFor(facet.id, value.id)).map((group) => ({
      * half screens down, which is reachable by a crawler and by nobody else —
      * and these are a way *into* the register rather than a footnote to it.
      */
-    combined.map((group) => (
-      <section class="pair-links" data-pagefind-ignore>
-        {/*
-         * A heading, not a link. It led to the same list without the providers
-         * on it, which is a click that gives nothing back — the values are what
-         * there is to click. The rung keeps a link so a crawler still reaches it
-         * and deleting the last URL segment still lands somewhere.
-         */}
-        <h2>By {group.label.toLowerCase()}</h2>
-        {group.index && (
-          <a class="visually-hidden" href={group.index}>
-            Every {group.label.toLowerCase()} page for {value.label}
-          </a>
-        )}
+    combined.length > 0 && (
+      <div class="pair-bands">
+        {combined.map((group) => (
+          <section class="pair-links" data-pagefind-ignore>
+            {/*
+             * A heading, not a link. It led to the same list without the providers
+             * on it, which is a click that gives nothing back — the values are what
+             * there is to click. The rung keeps a link so a crawler still reaches it
+             * and deleting the last URL segment still lands somewhere.
+             */}
+            <h2>By {group.label.toLowerCase()}</h2>
+            {group.index && (
+              <a class="visually-hidden" href={group.index}>
+                Every {group.label.toLowerCase()} page for {value.label}
+              </a>
+            )}
 
-        {/*
-         * A sentence, not a table. Each of these has a count, and eight counts
-         * above the list they are counting is more arithmetic than a way in
-         * needs — the page behind the link says how many, which is soon enough.
-         */}
-        <p class="pair-line">
-          {group.rows.map((row) => (
-            <>
-              <a href={row.href}>{row.label}</a>
-              {row.tail}
-            </>
-          ))}
-        </p>
-      </section>
-    ))
+            {/*
+             * A sentence, not a table. Each of these has a count, and eight counts
+             * above the list they are counting is more arithmetic than a way in
+             * needs — the page behind the link says how many, which is soon enough.
+             */}
+            <p class="pair-line">
+              {group.rows.map((row) => (
+                <>
+                  <a href={row.href}>{row.label}</a>
+                  {row.tail}
+                </>
+              ))}
+            </p>
+          </section>
+        ))}
+      </div>
+    )
   }
 
   <ProviderRegister
