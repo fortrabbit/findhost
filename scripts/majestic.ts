@@ -18,7 +18,6 @@ import { join } from 'node:path';
 const LIST = 'https://downloads.majestic.com/majestic_million.csv';
 const CREDIT = 'https://majestic.com/reports/majestic-million';
 const providersDir = 'src/content/providers';
-const evidence = 'research/majestic-million.csv';
 
 const today = new Date().toISOString().slice(0, 10);
 
@@ -140,7 +139,6 @@ const files = (await readdir(providersDir)).filter((name) => name.endsWith('.md'
 
 let measured = 0;
 let unmeasured = 0;
-const matched: string[] = ['Domain,RefSubNets,PrevRefSubNets,provider'];
 
 for (const name of files) {
   const file = join(providersDir, name);
@@ -153,20 +151,8 @@ for (const name of files) {
   const held = rows.get(host) ?? null;
 
   write(file, held);
-  if (held) {
-    measured += 1;
-    matched.push(`${host},${held.subnets},${held.before ?? ''},${name.replace(/\.md$/, '')}`);
-  } else {
-    unmeasured += 1;
-  }
+  if (held) measured += 1;
+  else unmeasured += 1;
 }
 
-/*
- * The matched rows are checked in so the published figure can be traced to what
- * the list said on the day, without carrying eighty megabytes to do it. A
- * reader who wants to disagree with a number needs to see the row it came from.
- */
-writeFileSync(evidence, `${matched.join('\n')}\n`);
-
 console.log(`${measured} measured, ${unmeasured} the list carries no figure for, read ${today}.`);
-console.log(`Matched rows written to ${evidence}.`);
