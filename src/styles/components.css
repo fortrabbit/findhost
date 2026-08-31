@@ -7,8 +7,14 @@
 /* --- Identity and navigation --- */
 
 /** An anchor, so it has to opt out of the link colour explicitly. */
+/*
+ * The name, in the display face. It is the same wordmark the badge carries onto
+ * other people's footers, and the two have to be the same word in the same
+ * letters — a serif on their page and a sans on ours reads as two projects.
+ */
 .wordmark {
   color: var(--color-ink);
+  font-family: var(--font-display);
   font-size: var(--text-sm);
   font-weight: bold;
   text-underline-offset: 0.25em;

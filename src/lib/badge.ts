@@ -32,6 +32,9 @@ export const badgeWords = 'Listed on FindHost';
  * in and is right in their light theme and their dark one without them choosing
  * a variant.
  *
+ * The serif list is the one `--font-display` names, so the badge and the site's
+ * own wordmark fall through to the same face on the same machine.
+ *
  * Both lines are centred and neither is pinned to a width. `textLength` was the
  * obvious way to stop a wide fallback growing out through the rule — and it
  * scales the glyphs sideways to hit the number, which stretched the wordmark by
@@ -44,7 +47,7 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="120" height="44" vie
   <title>${badgeWords}</title>
   <rect x="0.5" y="0.5" width="119" height="43" rx="3" fill="none" stroke="currentColor" />
   <text x="60" y="17" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="8" letter-spacing="1.5">LISTED ON</text>
-  <text x="60" y="35" text-anchor="middle" font-family="Charter, 'Bitstream Charter', Cambria, Georgia, serif" font-size="18" font-weight="600">FindHost</text>
+  <text x="60" y="35" text-anchor="middle" font-family="Charter, 'Bitstream Charter', 'Sitka Text', Cambria, Georgia, serif" font-size="18" font-weight="600">FindHost</text>
 </svg>`;
 
 /** The artwork on its own, for the preview on /badge/ and for the snippet. */

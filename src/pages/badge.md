@@ -12,7 +12,7 @@ Every provider in the register is welcome to put this on their own site. One art
   <title>Listed on FindHost</title>
   <rect x="0.5" y="0.5" width="119" height="43" rx="3" fill="none" stroke="currentColor" />
   <text x="60" y="17" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="8" letter-spacing="1.5">LISTED ON</text>
-  <text x="60" y="35" text-anchor="middle" font-family="Charter, 'Bitstream Charter', Cambria, Georgia, serif" font-size="18" font-weight="600">FindHost</text>
+  <text x="60" y="35" text-anchor="middle" font-family="Charter, 'Bitstream Charter', 'Sitka Text', Cambria, Georgia, serif" font-size="18" font-weight="600">FindHost</text>
 </svg>
 
 ## What it means
@@ -32,7 +32,7 @@ Replace `your-record` with your own, or take the one already filled in at the bo
     <title>Listed on FindHost</title>
     <rect x="0.5" y="0.5" width="119" height="43" rx="3" fill="none" stroke="currentColor" />
     <text x="60" y="17" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="8" letter-spacing="1.5">LISTED ON</text>
-    <text x="60" y="35" text-anchor="middle" font-family="Charter, 'Bitstream Charter', Cambria, Georgia, serif" font-size="18" font-weight="600">FindHost</text>
+    <text x="60" y="35" text-anchor="middle" font-family="Charter, 'Bitstream Charter', 'Sitka Text', Cambria, Georgia, serif" font-size="18" font-weight="600">FindHost</text>
   </svg>
 </a>
 ```
