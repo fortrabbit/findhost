@@ -49,9 +49,11 @@ supportChannels:
 social:
   github: https://github.com/superfly
 cliTool: official
+referringSubnets: { now: 2503, before: 2520 }
 status: active
 checkedAt: 2026-08-12
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: testDomain, url: 'https://fly.io/docs/networking/custom-domain/', checkedAt: 2026-08-12 }
   - { field: collaboration, url: 'https://fly.io/docs/security/', checkedAt: 2026-08-12 }
   - { field: entryPrice, url: 'https://fly.io/docs/about/pricing/', checkedAt: 2026-08-01 }

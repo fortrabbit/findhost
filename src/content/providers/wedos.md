@@ -6,9 +6,12 @@ urls:
 category:
   - shared-hosting
   - vps
+referringSubnets: { now: 896, before: 905 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
+sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
 ---
 
 WEDOS is a Czech provider that built its own data center in Hluboká nad Vltavou and became known domestically for low-cost shared hosting and virtual servers.

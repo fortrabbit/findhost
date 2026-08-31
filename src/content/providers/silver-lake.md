@@ -4,9 +4,11 @@ name: Silver Lake
 urls:
   home: https://www.silverlake.com
 description: A US technology investment firm that majority-owns a managed WordPress host recorded here, and sells no hosting itself.
+referringSubnets: { now: 749, before: 766 }
 status: unlisted
 checkedAt: 2026-08-29
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: 'majority holding', url: 'https://www.silverlake.com/portfolio/', checkedAt: 2026-08-30 }
 figure:
   emoji: 💼

@@ -48,6 +48,7 @@ social:
   x: https://twitter.com/spinupwp
   bluesky: https://bsky.app/profile/spinupwp.com
   linkedin: https://ca.linkedin.com/company/spinupwp
+referringSubnets: { now: 478, before: 467 }
 status: active
 hqCountry: CA
 ownership: independent
@@ -55,6 +56,7 @@ checkedAt: 2026-08-09
 apiAvailable: public
 cliTool: official
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: hqCountry, url: 'https://spinupwp.com/about', checkedAt: 2026-08-09 }
   - { field: entryPrice, url: 'https://spinupwp.com/pricing/', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://spinupwp.com/terms/', checkedAt: 2026-08-01 }

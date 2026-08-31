@@ -54,6 +54,7 @@ supportHours: 24-7
 domainRegistration: paid-addon
 dnsHosting: included
 emailHosting: included
+referringSubnets: { now: 5137, before: 5099 }
 status: active
 checkedAt: 2026-08-12
 apiAvailable: public
@@ -62,6 +63,7 @@ social:
   linkedin: https://sk.linkedin.com/company/websupportsk
   youtube: https://www.youtube.com/websupport
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1463', checkedAt: 2026-08-10 }
   - { field: regions, url: 'https://www.websupport.sk/datacentrum', checkedAt: 2026-08-01 }
   - { field: energyClaim, url: 'https://www.websupport.sk/o-nas', checkedAt: 2026-08-01 }

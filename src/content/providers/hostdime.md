@@ -8,9 +8,12 @@ category:
   - iaas
 description: A bare metal and IaaS provider in the United States.
 hqCountry: US
+referringSubnets: { now: 545, before: 539 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
+sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
 ---
 
 HostDime sells bare metal and IaaS in the United States.

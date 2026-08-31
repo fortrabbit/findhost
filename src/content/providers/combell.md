@@ -49,9 +49,11 @@ freeTier: none
 regions:
   - BE
   - NL
+referringSubnets: { now: 1308, before: 1305 }
 status: active
 checkedAt: 2026-08-01
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#198', checkedAt: 2026-08-10 }
   - { field: priceFrom, url: 'https://www.combell.com/en/hosting/web-hosting', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://www.combell.com/en/servers/vps-server-hosting', checkedAt: 2026-08-02 }

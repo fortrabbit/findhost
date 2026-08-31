@@ -24,6 +24,7 @@ billingTiming: advance
 exitWithin: a-month
 freeTier: permanent
 cliTool: official
+referringSubnets: null
 status: active
 checkedAt: 2026-07-31
 sources:

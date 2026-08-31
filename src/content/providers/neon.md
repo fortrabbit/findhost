@@ -18,9 +18,11 @@ pricingModel: usage-based
 freeTier: permanent
 currencies:
   - USD
+referringSubnets: { now: 1925, before: 1904 }
 status: active
 checkedAt: 2026-08-12
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: category, url: 'https://neon.com/pricing', checkedAt: 2026-08-12 }
   - { field: managedDatabases, url: 'https://neon.com/pricing', checkedAt: 2026-08-12 }
   - { field: pricingModel, url: 'https://neon.com/pricing', checkedAt: 2026-08-12 }

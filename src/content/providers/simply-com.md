@@ -45,9 +45,11 @@ freeTier: none
 regions:
   - DK
 apiAvailable: public
+referringSubnets: { now: 1964, before: 1969 }
 status: active
 checkedAt: 2026-08-01
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: entryPrice, url: 'https://www.simply.com/en/hosting/', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://www.simply.com/en/hosting/', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://www.simply.com/en/hosting/', checkedAt: 2026-08-02 }

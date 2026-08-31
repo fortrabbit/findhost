@@ -47,8 +47,10 @@ social:
   github: https://github.com/world4youcom
   facebook: https://www.facebook.com/world4you
   linkedin: https://www.linkedin.com/company/world4you/
+referringSubnets: { now: 861, before: 874 }
 checkedAt: 2026-08-01
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: regions, url: 'https://www.world4you.com/unternehmen', checkedAt: 2026-08-01 }
   - { field: founded, url: 'https://www.world4you.com/unternehmen', checkedAt: 2026-08-01 }
   - { field: hqCountry, url: 'https://www.world4you.com/unternehmen', checkedAt: 2026-08-01 }

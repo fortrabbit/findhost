@@ -39,9 +39,11 @@ regions:
 iacSupport:
   - terraform
 apiAvailable: public
+referringSubnets: { now: 800, before: 796 }
 status: active
 checkedAt: 2026-08-09
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: entryPrice, url: 'https://www.kamatera.com/pricing/', checkedAt: 2026-08-04 }
   - { field: priceFrom, url: 'https://www.kamatera.com/pricing/', checkedAt: 2026-08-04 }
   - { field: currencies, url: 'https://www.kamatera.com/pricing/', checkedAt: 2026-08-04 }

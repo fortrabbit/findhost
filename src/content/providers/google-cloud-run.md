@@ -58,6 +58,7 @@ apiAvailable: public
 cliTool: official
 iacSupport:
   - terraform
+referringSubnets: null
 status: active
 checkedAt: 2026-08-01
 sources:

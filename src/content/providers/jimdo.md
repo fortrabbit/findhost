@@ -17,9 +17,11 @@ billingPeriods:
   - yearly
   - multi-year
 freeTier: permanent
+referringSubnets: { now: 29044, before: 29165 }
 status: active
 checkedAt: 2026-08-08
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: founded, url: 'https://www.jimdo.com/pricing/', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://www.jimdo.com/pricing/', checkedAt: 2026-08-01 }
   - { field: billingPeriods, url: 'https://www.jimdo.com/pricing/website/', checkedAt: 2026-08-02 }

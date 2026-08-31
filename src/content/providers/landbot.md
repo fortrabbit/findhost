@@ -7,6 +7,7 @@ category:
   - lcnc
 description: A low-code and no-code site builder in Spain.
 hqCountry: ES
+referringSubnets: null
 status: draft
 checkedAt: 2026-08-12
 ai: authored

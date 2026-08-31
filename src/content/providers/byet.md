@@ -65,9 +65,11 @@ supportTiering: paid-upgrade
 domainRegistration: paid-addon
 dnsHosting: included
 testDomain: included
+referringSubnets: { now: 953, before: 957 }
 status: active
 checkedAt: 2026-08-28
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: founded, url: 'https://byet.host/about', checkedAt: 2026-08-28 }
   - { field: hqCountry, url: 'https://byet.host/terms-of-service', checkedAt: 2026-08-28 }
   - { field: ownership, url: 'https://byet.host/paid-hosting', checkedAt: 2026-08-28 }

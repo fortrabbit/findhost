@@ -48,9 +48,11 @@ supportChannels:
   - chat
   - phone
 supportHours: 24-7
+referringSubnets: { now: 643, before: 644 }
 status: active
 checkedAt: 2026-08-01
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#701', checkedAt: 2026-08-10 }
   - { field: entryPrice, url: 'https://seravo.com/plans/', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://seravo.com/plans/', checkedAt: 2026-08-02 }

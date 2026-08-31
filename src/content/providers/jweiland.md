@@ -34,11 +34,13 @@ useCases:
 audience:
   - smb
   - agency
+referringSubnets: { now: 440, before: 434 }
 status: active
 emailHosting: included
 cdnIncluded: included
 checkedAt: 2026-08-12
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: software, url: 'https://jweiland.net', checkedAt: 2026-08-07 }
   - { field: runtimes, url: 'https://jweiland.net/hosting/hilfe-support/technik.html', checkedAt: 2026-08-07 }
   - { field: managedDatabases, url: 'https://jweiland.net/hosting/hilfe-support/technik.html', checkedAt: 2026-08-07 }

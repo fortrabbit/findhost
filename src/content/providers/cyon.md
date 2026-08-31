@@ -6,9 +6,12 @@ urls:
 category:
   - shared-hosting
 hqCountry: CH
+referringSubnets: { now: 1430, before: 1444 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
+sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
 ---
 
 cyon sells shared hosting in Switzerland.

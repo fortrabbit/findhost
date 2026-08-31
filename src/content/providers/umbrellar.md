@@ -8,6 +8,7 @@ category:
   - shared-hosting
 description: A IaaS and shared hosting provider in New Zealand.
 hqCountry: NZ
+referringSubnets: null
 status: draft
 checkedAt: 2026-08-12
 ai: authored

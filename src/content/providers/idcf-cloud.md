@@ -8,6 +8,7 @@ category:
   - vps
 description: A IaaS and VPS provider in Japan.
 hqCountry: JP
+referringSubnets: null
 status: draft
 checkedAt: 2026-08-12
 ai: authored

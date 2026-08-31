@@ -22,10 +22,12 @@ supportChannels:
   - email
   - phone
 supportHours: 24-7
+referringSubnets: { now: 1455, before: 1447 }
 status: active
 checkedAt: 2026-08-09
 apiAvailable: public
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: hqCountry, url: 'https://selectel.ru/en/', checkedAt: 2026-08-04 }
   - { field: infraContract, url: 'https://selectel.ru/en/', checkedAt: 2026-08-04 }
   - { field: iacSupport, url: 'https://github.com/selectel/terraform-provider-selectel', checkedAt: 2026-08-04 }

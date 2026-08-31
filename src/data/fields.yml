@@ -63,6 +63,27 @@
     - { id: '51-250', label: 51 to 250, subject: 'employ{|s} between 51 and 250 people' }
     - { id: '250-plus', label: More than 250, short: '250+', subject: 'employ{|s} more than 250 people' }
 
+# How many distinct networks link to the provider's own domain, from the
+# Majestic Million — a third party's published measurement with a date on it,
+# not a judgement of ours. Referring subnets rather than the rank Majestic
+# derives from them: a count is a fact about the world, while a rank moves when
+# domains with nothing to do with hosting shuffle past each other.
+#
+# It measures how linked-to a domain is. It does not measure how large the
+# company is, and the two come apart hardest at the ends that matter here — a
+# one-person host with a widely read blog outranks a large one that never
+# writes. Recorded, never scored, and the register's order does not know it
+# exists.
+#
+# `before` is the previous figure from the same file, so movement costs no
+# history of our own. `null` means Majestic cannot measure this domain at all:
+# the list is domain-level, so a provider living at a subdomain of a much larger
+# company is unmeasurable rather than small. Absent means nobody pulled it.
+- id: referringSubnets
+  label: Reach
+  group: Identity
+  render: reach
+
 # The one editorial mark on a record: we like it. No score, no weight, no
 # arithmetic — a boolean somebody set on purpose, shown as a heart in the list
 # and explained on the about page.

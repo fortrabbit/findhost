@@ -16,9 +16,11 @@ managedDatabases:
   - mariadb
   - postgres
   - redis
+referringSubnets: { now: 502, before: 494 }
 status: active
 checkedAt: 2026-08-14
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: category, url: 'https://nine.ch/en/', checkedAt: 2026-08-14 }
   - { field: hqCountry, url: 'https://nine.ch/en/', checkedAt: 2026-08-14 }
   - { field: regions, url: 'https://nine.ch/en/', checkedAt: 2026-08-14 }

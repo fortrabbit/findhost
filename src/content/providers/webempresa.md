@@ -51,8 +51,10 @@ social:
   facebook: https://www.facebook.com/webempresa.hosting
   linkedin: https://www.linkedin.com/company/webempresa-com
   youtube: https://www.youtube.com/user/webempresa
+referringSubnets: { now: 1117, before: 1120 }
 checkedAt: 2026-08-01
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: founded, url: 'https://www.webempresa.com/quienes-somos.html', checkedAt: 2026-08-01 }
   - { field: hqCountry, url: 'https://www.webempresa.com/quienes-somos.html', checkedAt: 2026-08-01 }
   - { field: parent, url: 'https://www.webempresa.com/quienes-somos.html', checkedAt: 2026-08-01 }

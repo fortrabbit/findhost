@@ -13,10 +13,12 @@ hqCountry: US
 ownership: subsidiary
 domainRegistration: paid-addon
 emailHosting: paid-addon
+referringSubnets: { now: 2122, before: 2147 }
 status: active
 checkedAt: 2026-08-12
 dnsHosting: included
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: category, url: 'https://porkbun.com/', checkedAt: 2026-08-12 }
   - { field: hqCountry, url: 'https://porkbun.com/', checkedAt: 2026-08-12 }
   - { field: domainRegistration, url: 'https://porkbun.com/', checkedAt: 2026-08-12 }

@@ -50,10 +50,12 @@ exitWithin: a-month
 freeTier: permanent
 apiAvailable: public
 cliTool: official
+referringSubnets: { now: 468, before: 474 }
 checkedAt: 2026-08-01
 hqCountry: GB
 ownership: vc-backed
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: priceFrom, url: 'https://www.cloud66.com/pricing/', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://www.cloud66.com/pricing/', checkedAt: 2026-08-02 }
   - { field: currencies, url: 'https://www.cloud66.com/pricing/', checkedAt: 2026-08-02 }

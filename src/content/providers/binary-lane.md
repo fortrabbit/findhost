@@ -45,8 +45,10 @@ regions:
 supportChannels:
   - email
 apiAvailable: public
+referringSubnets: { now: 309, before: 296 }
 checkedAt: 2026-08-01
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: entryPrice, url: 'https://www.binarylane.com.au', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://www.binarylane.com.au/vps-hosting/linux-vps', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://www.binarylane.com.au/vps-hosting/linux-vps', checkedAt: 2026-08-02 }

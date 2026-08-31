@@ -3,10 +3,13 @@ id: genezio
 name: Genezio
 urls:
   home: https://genezio.com
+referringSubnets: { now: 232 }
 status: out-of-scope
 criterion: 1
 checkedAt: 2026-07-31
 ai: authored
+sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
 ---
 
 Genezio was a Romanian platform for deploying TypeScript and JavaScript backends as typed remote functions, with a free tier and a genuine following among developers who wanted the serverless model without the AWS console.

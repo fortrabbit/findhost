@@ -8,6 +8,7 @@ category:
   - vps
   - serverless
 description: A shared hosting, VPS and serverless provider in Tanzania.
+referringSubnets: null
 status: draft
 checkedAt: 2026-08-12
 ai: authored

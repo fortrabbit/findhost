@@ -53,6 +53,7 @@ billingPeriods:
 gdprDpa: standard
 cdnIncluded: included
 staging: included
+referringSubnets: { now: 410, before: 420 }
 status: active
 checkedAt: 2026-08-12
 figure:
@@ -61,6 +62,7 @@ figure:
   textColor: rgb(236, 244, 250)
   text: Norwegian host sold on page speed.
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: category, url: 'https://servebolt.com', checkedAt: 2026-08-12 }
   - { field: hqCountry, url: 'https://servebolt.com', checkedAt: 2026-08-12 }
   - { field: ownership, url: 'https://servebolt.com', checkedAt: 2026-08-12 }

@@ -34,6 +34,7 @@ social:
   github: https://github.com/hostimdev
 favorite: true
 favoriteNote: A year old, priced in the open, and already doing the hard part.
+referringSubnets: null
 status: active
 checkedAt: 2026-08-12
 domainRegistration: none

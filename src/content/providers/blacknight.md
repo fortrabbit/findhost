@@ -36,6 +36,7 @@ useCases:
 audience:
   - smb
   - solo
+referringSubnets: { now: 1306, before: 1301 }
 status: active
 checkedAt: 2026-08-12
 domainRegistration: paid-addon
@@ -46,6 +47,7 @@ figure:
   textColor: rgb(241, 248, 244)
   text: Owns the data centres its customers sit in.
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: parent, url: 'https://your.online/brands', checkedAt: 2026-08-21 }
   - { field: ownership, url: 'https://blacknight.blog/the-next-chapter-for-blacknight.html', checkedAt: 2026-08-21 }
   - { field: category, url: 'https://www.blacknight.com/hosting/', checkedAt: 2026-08-08 }

@@ -44,8 +44,10 @@ supportChannels:
 social:
   linkedin: https://www.linkedin.com/company/umbler
   youtube: https://www.youtube.com/umbler
+referringSubnets: { now: 684, before: 660 }
 checkedAt: 2026-08-01
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: entryPrice, url: 'https://www.umbler.com/br/hospedagem-php', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://www.umbler.com/br/hospedagem-php', checkedAt: 2026-08-01 }
   - { field: priceTo, url: 'https://www.umbler.com/br/hospedagem-php', checkedAt: 2026-08-02 }

@@ -11,9 +11,11 @@ ownership: vc-backed
 regions:
   - ID
   - SG
+referringSubnets: { now: 836, before: 835 }
 status: active
 checkedAt: 2026-08-04
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: regions, url: 'https://status.idcloudhost.com', checkedAt: 2026-08-04 }
   - { field: ownership, url: 'https://init-6.fund/news/4', checkedAt: 2026-08-21 }
 figure:

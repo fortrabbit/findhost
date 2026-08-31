@@ -3,10 +3,13 @@ id: qovery
 name: Qovery
 urls:
   home: https://www.qovery.com
+referringSubnets: { now: 585, before: 578 }
 status: out-of-scope
 criterion: 3
 checkedAt: 2026-07-31
 ai: authored
+sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
 ---
 
 Qovery is a Paris company that has repositioned from a Heroku-like deploy tool into a control plane over CI/CD, Kubernetes, Terraform, secrets and monitoring, explicitly designed for coding agents to drive.

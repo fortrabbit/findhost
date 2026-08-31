@@ -45,9 +45,11 @@ domainRegistration: none
 dnsHosting: included
 emailHosting: none
 testDomain: included
+referringSubnets: { now: 1106, before: 1113 }
 status: active
 checkedAt: 2026-08-28
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: category, url: 'https://www.infinityfree.com/', checkedAt: 2026-08-28 }
   - { field: founded, url: 'https://www.infinityfree.com/', checkedAt: 2026-08-28 }
   - { field: hqCountry, url: 'https://www.infinityfree.com/terms/', checkedAt: 2026-08-28 }

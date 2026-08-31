@@ -39,11 +39,13 @@ billingTiming: arrears
 apiAvailable: public
 iacSupport:
   - terraform
+referringSubnets: { now: 1384, before: 1390 }
 status: active
 hqCountry: LU
 ownership: vc-backed
 checkedAt: 2026-08-09
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: hqCountry, url: 'https://gcore.com/about', checkedAt: 2026-08-09 }
   - { field: pricingModel, url: 'https://gcore.com/pricing', checkedAt: 2026-08-01 }
   - { field: currencies, url: 'https://gcore.com/pricing', checkedAt: 2026-08-02 }

@@ -9,9 +9,12 @@ category:
   - paas
 description: A shared hosting, VPS and PaaS provider in Morocco.
 hqCountry: MA
+referringSubnets: { now: 265, before: 263 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
+sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
 ---
 
 Nindohost Morocco sells shared hosting, VPS and PaaS in Morocco.

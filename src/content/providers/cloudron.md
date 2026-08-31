@@ -44,8 +44,10 @@ exitWithin: a-month
 freeTier: permanent
 hqCountry: DE
 ownership: independent
+referringSubnets: { now: 1440, before: 1436 }
 checkedAt: 2026-08-09
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: hqCountry, url: 'https://www.cloudron.io/about.html', checkedAt: 2026-08-09 }
   - { field: priceFrom, url: 'https://www.cloudron.io/pricing.html', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://www.cloudron.io/pricing.html', checkedAt: 2026-08-02 }

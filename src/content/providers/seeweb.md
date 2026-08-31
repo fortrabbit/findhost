@@ -16,6 +16,7 @@ regions:
   - IT
   - CH
   - BG
+referringSubnets: { now: 612, before: 613 }
 status: active
 checkedAt: 2026-08-12
 figure:
@@ -24,6 +25,7 @@ figure:
   textColor: rgb(238, 248, 242)
   text: Italian cloud, part of the DHH group.
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: founded, url: 'https://seeweb.it/en/', checkedAt: 2026-08-12 }
   - { field: hqCountry, url: 'https://seeweb.it/en/', checkedAt: 2026-08-12 }
   - { field: ownership, url: 'https://seeweb.it/en/', checkedAt: 2026-08-12 }

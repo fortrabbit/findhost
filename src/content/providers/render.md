@@ -48,12 +48,14 @@ regions:
   - SG
 apiAvailable: public
 cliTool: official
+referringSubnets: { now: 2502, before: 2481 }
 status: active
 checkedAt: 2026-08-12
 staging: included
 testDomain: included
 collaboration: team
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: hqCountry, url: 'https://render.com/about', checkedAt: 2026-07-31 }
   - { field: staging, url: 'https://render.com/docs/web-services', checkedAt: 2026-08-12 }
   - { field: testDomain, url: 'https://render.com/docs/web-services', checkedAt: 2026-08-12 }

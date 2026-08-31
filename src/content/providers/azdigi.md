@@ -29,6 +29,7 @@ useCases:
 audience:
   - smb
   - solo
+referringSubnets: { now: 813, before: 829 }
 status: active
 checkedAt: 2026-08-08
 figure:
@@ -37,6 +38,7 @@ figure:
   textColor: rgb(244, 236, 232)
   text: Vietnamese host in Ho Chi Minh City.
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: category, url: 'https://azdigi.com/en/', checkedAt: 2026-08-08 }
   - { field: regions, url: 'https://azdigi.com/en/', checkedAt: 2026-08-08 }
   - { field: gpuCapacity, url: 'https://azdigi.com/en/', checkedAt: 2026-08-08 }

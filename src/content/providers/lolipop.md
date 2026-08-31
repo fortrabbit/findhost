@@ -50,6 +50,7 @@ contractMinimum: annual
 supportChannels:
   - chat
   - phone
+referringSubnets: { now: 4191, before: 4221 }
 status: active
 checkedAt: 2026-08-12
 apiAvailable: public
@@ -59,6 +60,7 @@ dnsHosting: included
 emailHosting: included
 cdnIncluded: included
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: regions, url: 'https://lolipop.jp/pricing/', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://lolipop.jp/pricing/', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://lolipop.jp/pricing/', checkedAt: 2026-08-02 }

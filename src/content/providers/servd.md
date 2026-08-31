@@ -38,6 +38,7 @@ social:
   x: https://twitter.com/servdhosting
 favorite: true
 favoriteNote: Built by Craft developers, for Craft, and for nothing else.
+referringSubnets: null
 status: active
 checkedAt: 2026-08-01
 sources:

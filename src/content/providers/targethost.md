@@ -8,6 +8,7 @@ category:
   - vps
 description: A shared hosting and VPS provider in Brazil.
 hqCountry: BR
+referringSubnets: null
 status: draft
 checkedAt: 2026-08-12
 ai: authored

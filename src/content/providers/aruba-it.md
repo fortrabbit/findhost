@@ -53,6 +53,7 @@ supportChannels:
   - email
   - chat
 supportTiering: all-plans
+referringSubnets: { now: 546, before: 542 }
 status: active
 domainRegistration: paid-addon
 emailHosting: included
@@ -63,6 +64,7 @@ figure:
   textColor: rgb(242, 248, 242)
   text: Italian independent, owns its infrastructure.
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: category, url: 'https://www.arubacloud.com', checkedAt: 2026-08-12 }
   - { field: hqCountry, url: 'https://www.arubacloud.com/terms-conditions', checkedAt: 2026-08-12 }
   - { field: infraContract, url: 'https://www.arubacloud.com', checkedAt: 2026-08-12 }

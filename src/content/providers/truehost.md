@@ -32,9 +32,11 @@ audience:
 domainRegistration: paid-addon
 dnsHosting: included
 emailHosting: included
+referringSubnets: { now: 299, before: 302 }
 status: active
 checkedAt: 2026-08-12
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: runtimes, url: 'https://truehost.co.ke', checkedAt: 2026-07-31 }
   - { field: currencies, url: 'https://truehost.co.ke', checkedAt: 2026-07-31 }
   - { field: software, url: 'https://truehost.co.ke', checkedAt: 2026-07-31 }

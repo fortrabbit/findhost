@@ -8,6 +8,7 @@ category:
   - vps
   - bare-metal
 description: A small host selling shared, reseller, VPS, hourly KVM and dedicated plans alongside domains, mailboxes and storage, with a free .xyz domain as the hook.
+referringSubnets: null
 status: draft
 checkedAt: 2026-08-13
 sources:

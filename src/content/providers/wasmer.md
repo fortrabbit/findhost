@@ -46,10 +46,12 @@ social:
   discord: https://discord.gg/rWkMNStrEW
 favorite: true
 favoriteNote: A different bet from everyone else here, not a cheaper version of the same one.
+referringSubnets: { now: 899, before: 890 }
 status: active
 checkedAt: 2026-08-12
 cliTool: official
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: regions, url: 'https://docs.wasmer.io/edge/learn/regions', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://docs.wasmer.io/', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://wasmer.io/pricing', checkedAt: 2026-08-02 }

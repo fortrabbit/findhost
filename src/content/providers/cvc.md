@@ -4,9 +4,11 @@ name: CVC Capital Partners
 urls:
   home: https://www.cvc.com
 description: A private-equity firm that holds a majority stake in a registrar recorded here, and sells no hosting itself.
+referringSubnets: { now: 1168, before: 1184 }
 status: unlisted
 checkedAt: 2026-08-29
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: 'majority stake', url: 'https://domainnamewire.com/2025/09/12/private-equity-firm-is-buying-namecheap-in-deal-that-values-company-at-1-5-billion/', checkedAt: 2026-08-30 }
 figure:
   emoji: 💼

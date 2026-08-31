@@ -8,9 +8,12 @@ category:
   - vanity-hosting
 description: A low-code and vanity hosting provider in the United States.
 hqCountry: US
+referringSubnets: { now: 4003, before: 3997 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
+sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
 ---
 
 Cargo sells low-code and no-code and vanity hosting in the United States.

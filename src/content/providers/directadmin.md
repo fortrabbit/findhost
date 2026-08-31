@@ -42,9 +42,11 @@ freeTier: trial
 supportChannels:
   - email
   - forum
+referringSubnets: { now: 13931, before: 13934 }
 status: active
 checkedAt: 2026-08-12
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: hqCountry, url: 'https://directadmin.com/pricing.html', checkedAt: 2026-08-12 }
   - { field: founded, url: 'https://directadmin.com', checkedAt: 2026-08-12 }
   - { field: priceFrom, url: 'https://directadmin.com/pricing.html', checkedAt: 2026-08-12 }

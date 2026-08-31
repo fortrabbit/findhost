@@ -45,10 +45,12 @@ social:
   facebook: https://www.facebook.com/wpengine
   linkedin: https://www.linkedin.com/company/wpengine
   youtube: https://www.youtube.com/wpengine
+referringSubnets: { now: 17380, before: 17497 }
 status: active
 checkedAt: 2026-08-09
 apiAvailable: public
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: founded, url: 'https://wpengine.com/about-us/', checkedAt: 2026-08-01 }
   - { field: hqCountry, url: 'https://wpengine.com/about-us/', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://wpengine.com/legal/terms-of-service/', checkedAt: 2026-08-01 }

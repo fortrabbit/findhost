@@ -7,9 +7,12 @@ category:
   - shared-hosting
 description: A shared hosting provider in Czechia.
 hqCountry: CZ
+referringSubnets: { now: 4106, before: 4101 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
+sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
 ---
 
 ACTIVE 24 sells shared hosting in Czechia.

@@ -60,9 +60,11 @@ regions:
   - US
   - ZA
 sla: true
+referringSubnets: { now: 46453, before: 46794 }
 status: active
 checkedAt: 2026-08-01
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: infraContract, url: 'https://aws.amazon.com/about-aws/global-infrastructure/regions_az/', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://docs.aws.amazon.com/global-infrastructure/latest/regions/aws-regions.html', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://aws.amazon.com/ec2/pricing/on-demand/', checkedAt: 2026-08-02 }

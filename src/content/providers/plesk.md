@@ -52,6 +52,7 @@ billingPeriods:
   - yearly
 billingTiming: advance
 freeTier: trial
+referringSubnets: { now: 57852, before: 57982 }
 status: active
 checkedAt: 2026-08-12
 apiAvailable: public
@@ -61,6 +62,7 @@ emailHosting: included
 staging: included
 collaboration: team
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: hqCountry, url: 'https://www.plesk.com/legal/', checkedAt: 2026-08-01 }
   - { field: dnsHosting, url: 'https://www.plesk.com/features/', checkedAt: 2026-08-12 }
   - { field: emailHosting, url: 'https://www.plesk.com/features/', checkedAt: 2026-08-12 }

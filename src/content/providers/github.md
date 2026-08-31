@@ -22,9 +22,11 @@ freeTier: permanent
 collaboration: team
 apiAvailable: public
 cliTool: official
+referringSubnets: { now: 255851, before: 256387 }
 status: active
 checkedAt: 2026-08-13
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: category, url: 'https://github.com/pricing', checkedAt: 2026-08-13 }
   - { field: pricingModel, url: 'https://github.com/pricing', checkedAt: 2026-08-13 }
   - { field: currencies, url: 'https://github.com/pricing', checkedAt: 2026-08-13 }

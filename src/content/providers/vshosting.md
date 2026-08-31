@@ -3,6 +3,7 @@ id: vshosting
 name: vshosting
 urls:
   home: https://www.vshosting.eu
+referringSubnets: null
 status: draft
 checkedAt: 2026-08-07
 ai: authored

@@ -7,9 +7,12 @@ category:
   - caas
 description: A CaaS provider in the United States.
 hqCountry: US
+referringSubnets: { now: 633, before: 626 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
+sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
 ---
 
 Dokku sells CaaS in the United States.

@@ -54,9 +54,11 @@ supportHours: 24-7
 supportTiering: paid-upgrade
 certifications:
   - iso-27001
+referringSubnets: { now: 848, before: 841 }
 status: active
 checkedAt: 2026-08-12
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: staging, url: 'https://www.divio.com/pricing', checkedAt: 2026-08-12 }
   - { field: founded, url: 'https://www.divio.com/company/', checkedAt: 2026-08-01 }
   - { field: ownership, url: 'https://www.divio.com/company/', checkedAt: 2026-08-01 }

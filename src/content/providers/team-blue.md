@@ -4,6 +4,7 @@ name: team.blue
 urls:
   home: https://team.blue
 description: A European group assembled by acquisition, holding hosting and domain brands across a dozen countries.
+referringSubnets: { now: 775, before: 789 }
 status: unlisted
 checkedAt: 2026-08-07
 figure:
@@ -12,6 +13,8 @@ figure:
   textColor: rgb(252, 248, 238)
   text: European parent of acquired hosting brands.
 ai: authored
+sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
 ---
 
 team.blue is a European group assembled by acquisition, holding hosting and domain brands across a dozen countries — Combell, TransIP, Loopia, Papaki, Simply.com, Webempresa and Websupport among them. Nobody buys hosting from team.blue; they buy it from a brand it owns, usually one that was a local company before the acquisition and still trades under its own name.

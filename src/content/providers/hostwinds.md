@@ -8,9 +8,12 @@ category:
   - shared-hosting
 description: A VPS and shared hosting provider in the United States.
 hqCountry: US
+referringSubnets: { now: 1967, before: 1968 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
+sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
 ---
 
 Hostwinds sells VPS and shared hosting in the United States.

@@ -7,9 +7,12 @@ category:
   - vanity-hosting
 description: A host for personal sites in the United States.
 hqCountry: US
+referringSubnets: { now: 4031, before: 4052 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
+sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
 ---
 
 Micro.blog sells vanity hosting in the United States.

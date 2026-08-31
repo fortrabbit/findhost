@@ -21,6 +21,7 @@ billingPeriods:
   - yearly
 billingTiming: advance
 exitWithin: a-quarter
+referringSubnets: null
 status: active
 checkedAt: 2026-08-08
 sources:

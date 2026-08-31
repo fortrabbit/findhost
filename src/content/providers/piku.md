@@ -7,6 +7,7 @@ category:
   - caas
 description: A CaaS provider in Portugal.
 hqCountry: PT
+referringSubnets: null
 status: draft
 checkedAt: 2026-08-12
 ai: authored

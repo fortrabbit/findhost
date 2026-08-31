@@ -7,6 +7,7 @@ category:
   - iaas
 description: A IaaS provider in South Korea.
 hqCountry: KR
+referringSubnets: null
 status: draft
 checkedAt: 2026-08-12
 ai: authored

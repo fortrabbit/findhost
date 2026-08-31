@@ -9,9 +9,12 @@ category:
   - iaas
 description: A shared hosting, VPS and IaaS provider in Russia.
 hqCountry: RU
+referringSubnets: { now: 3834, before: 3817 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
+sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
 ---
 
 Timeweb sells shared hosting, VPS and IaaS in Russia.

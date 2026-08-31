@@ -113,7 +113,7 @@ export interface Field {
   filterOrder?: number;
   multiple: boolean;
   /** How the value is drawn where it is not a label lookup. */
-  render?: 'yes-no' | 'money' | 'multiple';
+  render?: 'yes-no' | 'money' | 'multiple' | 'reach';
   values: FieldValue[];
 }
 
@@ -124,7 +124,7 @@ interface Entry extends Omit<Field, 'multiple' | 'values'> {
 }
 
 /** Every value of `render` the record page knows how to draw. validate.ts rejects the rest. */
-export const renderModes = ['yes-no', 'money', 'multiple'] as const;
+export const renderModes = ['yes-no', 'money', 'multiple', 'reach'] as const;
 
 /**
  * Sections of the record page, in the order the dictionary lists them. Declared

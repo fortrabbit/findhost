@@ -58,8 +58,10 @@ supportHours: 24-7
 apiAvailable: public
 iacSupport:
   - terraform
+referringSubnets: { now: 770, before: 773 }
 checkedAt: 2026-08-01
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: regions, url: 'https://www.cherryservers.com/locations', checkedAt: 2026-08-01 }
   - { field: hqCountry, url: 'https://www.cherryservers.com/locations', checkedAt: 2026-08-01 }
   - { field: priceTo, url: 'https://www.cherryservers.com/pricing', checkedAt: 2026-08-02 }

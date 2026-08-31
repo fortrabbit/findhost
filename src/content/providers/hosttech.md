@@ -45,9 +45,11 @@ supportChannels:
   - phone
   - email
 supportHours: 24-7
+referringSubnets: { now: 2057, before: 2081 }
 status: active
 checkedAt: 2026-08-01
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1506', checkedAt: 2026-08-10 }
   - { field: regions, url: 'https://www.hosttech.ch/webhosting', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://www.hosttech.ch/webhosting', checkedAt: 2026-08-01 }

@@ -8,9 +8,12 @@ category:
   - paas
 description: A IaaS and PaaS provider in China.
 hqCountry: CN
+referringSubnets: { now: 1456, before: 1457 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
+sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
 ---
 
 Tencent Cloud sells IaaS and PaaS in China.

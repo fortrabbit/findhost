@@ -7,9 +7,12 @@ category:
   - vps
 description: A VPS provider in the United States.
 hqCountry: US
+referringSubnets: { now: 1368, before: 1360 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
+sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
 ---
 
 RackNerd sells VPS in the United States.

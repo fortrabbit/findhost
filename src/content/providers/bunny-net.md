@@ -53,8 +53,10 @@ regions:
 apiAvailable: public
 hqCountry: SI
 ownership: vc-backed
+referringSubnets: { now: 3589, before: 3576 }
 checkedAt: 2026-08-09
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: hqCountry, url: 'https://bunny.net', checkedAt: 2026-08-09 }
   - { field: regions, url: 'https://bunny.net/pricing/storage/', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://bunny.net/pricing/', checkedAt: 2026-08-01 }

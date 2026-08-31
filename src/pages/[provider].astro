@@ -120,6 +120,7 @@ const context = {
       facet.values.filter((value) => value.count > 0).map((value) => `${facet.field}:${value.id}`),
     ),
   ),
+  id: provider.id,
 };
 
 const linkLabels: Record<string, string> = {

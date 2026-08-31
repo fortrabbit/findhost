@@ -7,6 +7,7 @@ category:
   - shared-hosting
 description: A shared hosting provider in Uruguay.
 hqCountry: UY
+referringSubnets: null
 status: draft
 checkedAt: 2026-08-12
 ai: authored

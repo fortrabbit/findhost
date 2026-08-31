@@ -7,9 +7,12 @@ category:
   - shared-hosting
 description: A shared hosting provider in Türkiye.
 hqCountry: TR
+referringSubnets: { now: 2185, before: 2200 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
+sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
 ---
 
 Natro sells shared hosting in Türkiye.

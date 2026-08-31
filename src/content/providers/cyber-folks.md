@@ -48,8 +48,10 @@ domainRegistration: included
 dnsHosting: included
 emailHosting: included
 cdnIncluded: paid-addon
+referringSubnets: { now: 2922, before: 2930 }
 checkedAt: 2026-08-12
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: entryPrice, url: 'https://cyberfolks.pl/hosting/', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://cyberfolks.pl/hosting/', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://cyberfolks.pl/hosting/', checkedAt: 2026-08-02 }

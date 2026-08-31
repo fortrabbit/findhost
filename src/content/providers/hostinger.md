@@ -30,9 +30,11 @@ billingTiming: advance
 exitWithin: over-a-year
 renewalMultiple: 3.7
 contractMinimum: multi-year
+referringSubnets: { now: 20180, before: 20261 }
 status: active
 checkedAt: 2026-08-01
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1250', checkedAt: 2026-08-10 }
   - { field: founded, url: 'https://www.hostinger.com/about', checkedAt: 2026-08-01 }
   - { field: hqCountry, url: 'https://www.hostinger.com/about', checkedAt: 2026-08-01 }

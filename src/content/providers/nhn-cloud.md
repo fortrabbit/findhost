@@ -8,9 +8,12 @@ category:
   - paas
 description: A IaaS and PaaS provider in South Korea.
 hqCountry: KR
+referringSubnets: { now: 507, before: 512 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
+sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
 ---
 
 NHN Cloud sells IaaS and PaaS in South Korea.

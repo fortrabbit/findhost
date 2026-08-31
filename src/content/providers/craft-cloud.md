@@ -31,11 +31,13 @@ billingTiming: advance
 exitWithin: a-month
 entryPrice: { amount: 120, currency: USD, period: month }
 cliTool: official
+referringSubnets: { now: 1580, before: 1580 }
 status: active
 hqCountry: US
 ownership: independent
 checkedAt: 2026-08-09
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: hqCountry, url: 'https://craftcms.com/cloud', checkedAt: 2026-08-09 }
   - { field: entryPrice, url: 'https://craftcms.com/cloud', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://craftcms.com/cloud', checkedAt: 2026-08-02 }

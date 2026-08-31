@@ -10,6 +10,7 @@ category:
   - bare-metal
 description: A shared hosting, IaaS, VPS and bare metal provider in Bangladesh.
 hqCountry: BD
+referringSubnets: null
 status: draft
 checkedAt: 2026-08-12
 ai: authored

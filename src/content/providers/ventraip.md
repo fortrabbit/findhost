@@ -55,8 +55,10 @@ social:
   x: https://twitter.com/VentraIP/
   facebook: https://www.facebook.com/ventraip
   youtube: https://www.youtube.com/c/VentraIPAU/videos
+referringSubnets: { now: 548, before: 554 }
 checkedAt: 2026-08-12
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: founded, url: 'https://ventraip.com.au/about-us/', checkedAt: 2026-08-01 }
   - { field: hqCountry, url: 'https://ventraip.com.au/about-us/', checkedAt: 2026-08-01 }
   - { field: parent, url: 'https://ventraip.com.au/about-us/', checkedAt: 2026-08-01 }

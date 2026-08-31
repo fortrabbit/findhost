@@ -7,9 +7,12 @@ category:
   - shared-hosting
 description: A shared hosting provider in Japan.
 hqCountry: JP
+referringSubnets: { now: 2739, before: 2741 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
+sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
 ---
 
 Value-Domain sells shared hosting in Japan.

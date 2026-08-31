@@ -45,12 +45,14 @@ pricingModel: fixed-tier
 billingPeriods:
   - monthly
 gdprDpa: standard
+referringSubnets: { now: 1775, before: 1795 }
 status: active
 cdnIncluded: included
 staging: included
 collaboration: team
 checkedAt: 2026-08-12
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: category, url: 'https://pantheon.io', checkedAt: 2026-08-12 }
   - { field: cdnIncluded, url: 'https://pantheon.io', checkedAt: 2026-08-12 }
   - { field: staging, url: 'https://pantheon.io', checkedAt: 2026-08-12 }

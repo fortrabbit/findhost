@@ -9,7 +9,7 @@
  */
 export interface Row {
   label: string;
-  cells: { text: string; href?: string; filter?: string }[];
+  cells: { text: string; href?: string; filter?: string; mark?: string }[];
   note?: number;
 }
 
@@ -34,6 +34,7 @@ const { groups, class: className } = Astro.props;
                 {row.cells.map((cell, index) => (
                   <>
                     {index > 0 && ', '}
+                    {cell.mark && <span class="fact-mark">{cell.mark}</span>}
                     {/* Facet values must reach the markup even where the design does not show
                         them: Pagefind indexes rendered HTML, so what is absent here cannot be
                         searched later. */}

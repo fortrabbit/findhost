@@ -8,6 +8,7 @@ category:
   - iaas
 description: Krystal's cloud platform, formerly sold under its own name and now folded into the parent brand.
 hqCountry: GB
+referringSubnets: null
 status: out-of-scope
 criterion: 2
 checkedAt: 2026-08-12

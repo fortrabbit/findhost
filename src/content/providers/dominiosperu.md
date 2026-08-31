@@ -8,6 +8,7 @@ category:
   - vps
 description: A shared hosting and VPS provider in Peru.
 hqCountry: PE
+referringSubnets: null
 status: draft
 checkedAt: 2026-08-12
 ai: authored

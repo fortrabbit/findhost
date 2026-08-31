@@ -63,11 +63,13 @@ supportChannels:
 supportHours: 24-7
 apiAvailable: public
 cliTool: official
+referringSubnets: { now: 1310, before: 1303 }
 status: active
 staging: included
 collaboration: clients
 checkedAt: 2026-08-12
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1383', checkedAt: 2026-08-10 }
   - { field: software, url: 'https://www.mittwald.de/webhosting', checkedAt: 2026-08-09 }
   - { field: priceFrom, url: 'https://www.mittwald.de/webhosting', checkedAt: 2026-08-02 }

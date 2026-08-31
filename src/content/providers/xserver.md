@@ -42,6 +42,7 @@ freeTier: trial
 regions:
   - JP
 contractMinimum: annual
+referringSubnets: { now: 4269, before: 4272 }
 status: active
 checkedAt: 2026-08-09
 apiAvailable: public
@@ -51,6 +52,7 @@ social:
   x: https://x.com/xserverjp
   facebook: https://www.facebook.com/xserver.co.jp/
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: hqCountry, url: 'https://www.xserver.ne.jp/company.php', checkedAt: 2026-08-01 }
   - { field: certifications, url: 'https://www.xserver.ne.jp/company.php', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://www.xserver.ne.jp/price/', checkedAt: 2026-08-01 }

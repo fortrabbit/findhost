@@ -16,9 +16,11 @@ paymentMethods:
   - card
   - paypal
   - crypto
+referringSubnets: { now: 65359, before: 66361 }
 status: active
 checkedAt: 2026-08-12
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: docs, url: 'https://www.namecheap.com/support/knowledgebase/', checkedAt: 2026-08-12 }
   - {
       field: ownership,

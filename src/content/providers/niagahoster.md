@@ -3,10 +3,13 @@ id: niagahoster
 name: Niagahoster
 urls:
   home: https://www.niagahoster.co.id
+referringSubnets: { now: 892, before: 890 }
 status: out-of-scope
 criterion: 2
 checkedAt: 2026-07-31
 ai: authored
+sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
 ---
 
 Niagahoster was Indonesia's most visible hosting brand, based in Yogyakarta and long the default recommendation in Indonesian web-development circles.

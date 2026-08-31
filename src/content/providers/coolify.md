@@ -38,11 +38,13 @@ social:
   discord: https://coollabs.io/discord
 favorite: true
 favoriteNote: Popular tool. The paid version does not hold the free one hostage.
+referringSubnets: { now: 1205, before: 1196 }
 status: active
 hqCountry: HU
 ownership: independent
 checkedAt: 2026-08-12
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: hqCountry, url: 'https://coolify.io/about', checkedAt: 2026-08-09 }
   - { field: infraContract, url: 'https://coolify.io/', checkedAt: 2026-07-31 }
   - { field: runsOn, url: 'https://coolify.io/', checkedAt: 2026-07-31 }

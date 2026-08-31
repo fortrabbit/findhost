@@ -47,10 +47,12 @@ social:
   facebook: https://www.facebook.com/xCloud.host
   linkedin: https://www.linkedin.com/company/xcloud.host/
   youtube: https://www.youtube.com/@xCloud-Hosting
+referringSubnets: { now: 1195, before: 1188 }
 status: active
 checkedAt: 2026-08-09
 apiAvailable: public
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: hqCountry, url: 'https://xcloud.host/contact/', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://xcloud.host/pricing/', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://xcloud.host/terms-and-conditions/', checkedAt: 2026-08-01 }

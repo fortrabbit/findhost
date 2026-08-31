@@ -3,10 +3,13 @@ id: byte
 name: Byte
 urls:
   home: https://www.byte.nl
+referringSubnets: { now: 552, before: 553 }
 status: out-of-scope
 criterion: 2
 checkedAt: 2026-07-31
 ai: authored
+sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
 ---
 
 Byte was a Dutch host with a strong reputation in the Magento community, later absorbed into team.blue.

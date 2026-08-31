@@ -4,6 +4,7 @@ name: anynines
 urls:
   home: https://anynines.com
 hqCountry: DE
+referringSubnets: null
 status: out-of-scope
 criterion: 2
 checkedAt: 2026-08-09

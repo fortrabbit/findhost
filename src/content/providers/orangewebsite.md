@@ -17,9 +17,11 @@ entryPrice:
   currency: EUR
 currencies:
   - EUR
+referringSubnets: { now: 505, before: 504 }
 status: active
 checkedAt: 2026-08-14
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: category, url: 'https://www.orangewebsite.com', checkedAt: 2026-08-14 }
   - { field: regions, url: 'https://www.orangewebsite.com', checkedAt: 2026-08-14 }
   - { field: entryPrice, url: 'https://www.orangewebsite.com', checkedAt: 2026-08-14 }

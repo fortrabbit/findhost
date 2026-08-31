@@ -63,9 +63,11 @@ paymentMethods:
   - paypal
   - bank-transfer
 sla: true
+referringSubnets: { now: 634, before: 639 }
 status: active
 checkedAt: 2026-08-01
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#709', checkedAt: 2026-08-10 }
   - { field: regions, url: 'https://krystal.io/green', checkedAt: 2026-08-01 }
   - { field: energyClaim, url: 'https://krystal.io/green', checkedAt: 2026-08-01 }

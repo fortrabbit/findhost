@@ -27,9 +27,11 @@ useCases:
 audience:
   - smb
   - solo
+referringSubnets: { now: 561, before: 559 }
 status: active
 checkedAt: 2026-07-31
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: category, url: 'https://hyperhost.ua/en/', checkedAt: 2026-07-31 }
   - { field: founded, url: 'https://hyperhost.ua/en/', checkedAt: 2026-07-31 }
   - { field: currencies, url: 'https://hyperhost.ua/en/', checkedAt: 2026-07-31 }

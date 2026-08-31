@@ -22,9 +22,11 @@ entryPrice:
 currencies:
   - EUR
 domainRegistration: paid-addon
+referringSubnets: { now: 541, before: 540 }
 status: active
 checkedAt: 2026-08-14
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: category, url: 'https://flokinet.is', checkedAt: 2026-08-14 }
   - { field: regions, url: 'https://flokinet.is', checkedAt: 2026-08-14 }
   - { field: entryPrice, url: 'https://flokinet.is', checkedAt: 2026-08-14 }

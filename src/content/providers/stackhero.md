@@ -3,6 +3,7 @@ id: stackhero
 name: Stackhero
 urls:
   home: https://www.stackhero.io
+referringSubnets: null
 status: out-of-scope
 criterion: 3
 checkedAt: 2026-07-31

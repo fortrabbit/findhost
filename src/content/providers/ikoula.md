@@ -26,9 +26,11 @@ useCases:
   - cms
 audience:
   - smb
+referringSubnets: { now: 1036, before: 1024 }
 status: active
 checkedAt: 2026-07-31
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#900', checkedAt: 2026-08-10 }
   - { field: category, url: 'https://www.ikoula.com', checkedAt: 2026-07-31 }
   - { field: founded, url: 'https://www.ikoula.com', checkedAt: 2026-07-31 }

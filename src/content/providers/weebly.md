@@ -30,8 +30,10 @@ social:
   linkedin: https://www.linkedin.com/company/weebly
   youtube: https://www.youtube.com/user/weebly
 hqCountry: US
+referringSubnets: { now: 57092, before: 57412 }
 checkedAt: 2026-08-09
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: hqCountry, url: 'https://www.weebly.com/about', checkedAt: 2026-08-09 }
   - { field: freeTier, url: 'https://www.weebly.com/pricing', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://www.weebly.com/pricing', checkedAt: 2026-08-02 }

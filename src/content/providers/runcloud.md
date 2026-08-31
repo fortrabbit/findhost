@@ -28,9 +28,11 @@ runsOn:
   - digitalocean
   - linode
   - vultr
+referringSubnets: { now: 1221, before: 1227 }
 status: active
 checkedAt: 2026-08-08
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: audience, url: 'https://runcloud.io/pricing', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://runcloud.io/', checkedAt: 2026-08-01 }
   - { field: runsOn, url: 'https://runcloud.io/', checkedAt: 2026-08-01 }

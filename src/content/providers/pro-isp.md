@@ -7,9 +7,12 @@ category:
   - shared-hosting
 description: A shared hosting provider in Norway.
 hqCountry: NO
+referringSubnets: { now: 341, before: 350 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
+sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
 ---
 
 PRO ISP sells shared hosting in Norway.

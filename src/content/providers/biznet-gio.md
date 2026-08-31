@@ -8,9 +8,12 @@ category:
   - vps
 description: A IaaS and VPS provider in Indonesia.
 hqCountry: ID
+referringSubnets: { now: 403, before: 406 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
+sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
 ---
 
 Biznet Gio sells IaaS and VPS in Indonesia.

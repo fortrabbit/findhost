@@ -8,10 +8,12 @@ category:
   - paas
 description: A Drupal platform sold through sales conversations rather than published prices.
 hqCountry: US
+referringSubnets: { now: 2741, before: 2761 }
 status: out-of-scope
 criterion: 3
 checkedAt: 2026-08-12
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: status, url: 'https://www.acquia.com/pricing', checkedAt: 2026-08-12 }
 ai: authored
 ---

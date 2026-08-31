@@ -51,12 +51,14 @@ supportChannels:
   - chat
 supportHours: business-hours
 apiAvailable: public
+referringSubnets: { now: 6416, before: 6415 }
 status: active
 checkedAt: 2026-08-12
 domainRegistration: paid-addon
 dnsHosting: included
 emailHosting: included
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1010', checkedAt: 2026-08-10 }
   - { field: entryPrice, url: 'https://www.loopia.se/webbhotell/priser/', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://www.loopia.se/webbhotell/priser/', checkedAt: 2026-08-02 }

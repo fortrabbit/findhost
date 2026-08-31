@@ -7,6 +7,7 @@ category:
   - shared-hosting
 description: A shared hosting provider in Sri Lanka.
 hqCountry: LK
+referringSubnets: null
 status: draft
 checkedAt: 2026-08-12
 ai: authored

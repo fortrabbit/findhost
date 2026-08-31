@@ -7,9 +7,12 @@ category:
   - lcnc
 description: A low-code and no-code site builder in Bulgaria.
 hqCountry: BG
+referringSubnets: { now: 272, before: 267 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
+sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
 ---
 
 Directual sells low-code and no-code in Bulgaria.
