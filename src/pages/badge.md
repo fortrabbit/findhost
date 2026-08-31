@@ -6,7 +6,7 @@ description: A copy-paste snippet a listed provider can put on their own site, l
 lead: A link back, for providers with a record here.
 ---
 
-Every provider in the register is welcome to put this on their own site. One artwork for all of them — the market this project answers is full of seals that imply a ranking and are sold by the year. It loads nothing from this server, so no install count exists.
+Every provider in the register is welcome to put this on their own site. One artwork for all of them; the market this project answers is full of seals that imply a ranking and are sold by the year. It loads nothing from here, so no install count exists.
 
 <svg xmlns="http://www.w3.org/2000/svg" width="120" height="44" viewBox="0 0 120 44" role="img" fill="currentColor">
   <title>Listed on FindHost</title>
@@ -24,7 +24,7 @@ Every provider in the register is welcome to put this on their own site. One art
 
 ## The snippets
 
-Replace `your-record` with your own, or take the one already filled in at the bottom of your record.
+Replace `your-record` with your own, or take the one filled in at the bottom of your record.
 
 ```html
 <a href="https://www.findhost.app/your-record/">
@@ -45,7 +45,7 @@ Replace `your-record` with your own, or take the one already filled in at the bo
 [Listed on FindHost](https://www.findhost.app/your-record/)
 ```
 
-`currentColor` takes the colour of the text around it. Swap it for a hex, or change `width` and `height` to scale it.
+`currentColor` takes the colour of the text around it. Swap it for a hex, or change `width` and `height` to scale.
 
 ## Where to put it
 
