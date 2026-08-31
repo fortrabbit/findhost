@@ -4,11 +4,6 @@ title: For providers
 updated: 2026-08-31
 description: How to correct a record, how to get a missing provider added, and the badge a listed provider can display.
 lead: What a hosting company can do here.
-figure:
-  emoji: 🤝
-  color: rgb(255, 233, 163)
-  textColor: rgb(90, 66, 0)
-  text: Corrections welcome, including yours.
 ---
 
 Nothing here is for sale. A record exists because a provider meets the scope test, and it reports what that provider's own public pages say.

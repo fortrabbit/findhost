@@ -64,8 +64,9 @@ const origin = Astro.site?.origin ?? '';
     <BadgeSnippets origin={origin} id={placeholder} />
 
     <p>
-      Drawn in <code>currentColor</code>, so it takes the colour of the text around it in a light footer and a dark one
-      alike. Swap that word for a hex to fix the colour, or change <code>width</code> and <code>height</code> to scale it.
+      <code>currentColor</code> takes the colour of the text around it. Swap it for a hex to fix the colour, or change <code
+        >width</code
+      > and <code>height</code> to scale it.
     </p>
 
     <h2 id="where-to-put-it">Where to put it</h2>
@@ -73,16 +74,5 @@ const origin = Astro.site?.origin ?? '';
     <ul>
       {badgePlacements.map((where) => <li>{where}</li>)}
     </ul>
-
-    <h2 id="what-we-learn">What we learn from it</h2>
-    <p>
-      No install count exists. The badge loads nothing, so displaying it never reaches this server; a referrer, when
-      somebody follows the link, is all of it.
-    </p>
-    <p>
-      There is no application either. If a record exists, the badge is available, and <a href="/about/#who-is-listed"
-        >the scope test</a
-      > answers why one does not.
-    </p>
   </article>
 </Base>
