@@ -55,7 +55,7 @@ social:
   x: https://twitter.com/VentraIP/
   facebook: https://www.facebook.com/ventraip
   youtube: https://www.youtube.com/c/VentraIPAU/videos
-referringSubnets: { now: 548, before: 554 }
+referringSubnets: { now: 542, before: 548 }
 checkedAt: 2026-08-12
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }

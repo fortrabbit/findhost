@@ -9,7 +9,7 @@ description: A shared hosting provider in the Netherlands.
 hqCountry: NL
 ownership: subsidiary
 parent: your-online
-referringSubnets: { now: 3540, before: 3577 }
+referringSubnets: { now: 3425, before: 3540 }
 status: draft
 checkedAt: 2026-08-12
 sources:

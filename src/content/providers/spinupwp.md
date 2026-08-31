@@ -48,7 +48,7 @@ social:
   x: https://twitter.com/spinupwp
   bluesky: https://bsky.app/profile/spinupwp.com
   linkedin: https://ca.linkedin.com/company/spinupwp
-referringSubnets: { now: 478, before: 467 }
+referringSubnets: { now: 471, before: 478 }
 status: active
 hqCountry: CA
 ownership: independent

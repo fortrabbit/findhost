@@ -35,7 +35,7 @@ entryPrice: { amount: 25, currency: USD, period: month }
 freeTier: permanent
 apiAvailable: public
 cliTool: official
-referringSubnets: { now: 434, before: 427 }
+referringSubnets: { now: 437, before: 434 }
 status: active
 hqCountry: PT
 ownership: vc-backed

@@ -47,7 +47,7 @@ exitWithin: a-month
 entryPrice: { amount: 10, currency: USD, period: month }
 freeTier: permanent
 contractMinimum: none
-referringSubnets: { now: 3359, before: 3385 }
+referringSubnets: { now: 3329, before: 3359 }
 status: active
 testDomain: included
 checkedAt: 2026-08-12

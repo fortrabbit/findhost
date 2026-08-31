@@ -7,12 +7,13 @@ category:
   - shared-hosting
 description: A shared hosting provider in Türkiye.
 hqCountry: TR
-referringSubnets: { now: 968, before: 970 }
+referringSubnets: { now: 967, before: 968 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Turhost sells shared hosting in Türkiye.

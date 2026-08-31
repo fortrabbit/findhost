@@ -48,7 +48,7 @@ supportChannels:
   - phone
   - email
 supportHours: 24-7
-referringSubnets: { now: 822, before: 834 }
+referringSubnets: { now: 798, before: 822 }
 status: active
 checkedAt: 2026-08-12
 domainRegistration: paid-addon

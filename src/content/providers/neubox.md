@@ -25,7 +25,7 @@ useCases:
 audience:
   - smb
   - solo
-referringSubnets: { now: 807, before: 813 }
+referringSubnets: { now: 808, before: 807 }
 status: active
 checkedAt: 2026-08-12
 domainRegistration: included

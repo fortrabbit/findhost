@@ -15,7 +15,7 @@ hqCountry: CH
 ownership: independent
 freeTier: trial
 emailHosting: included
-referringSubnets: { now: 10083, before: 10153 }
+referringSubnets: { now: 10118, before: 10083 }
 status: active
 checkedAt: 2026-08-12
 sources:

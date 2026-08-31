@@ -47,7 +47,7 @@ social:
   facebook: https://www.facebook.com/xCloud.host
   linkedin: https://www.linkedin.com/company/xcloud.host/
   youtube: https://www.youtube.com/@xCloud-Hosting
-referringSubnets: { now: 1195, before: 1188 }
+referringSubnets: { now: 1184, before: 1195 }
 status: active
 checkedAt: 2026-08-09
 apiAvailable: public

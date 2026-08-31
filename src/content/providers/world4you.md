@@ -47,7 +47,7 @@ social:
   github: https://github.com/world4youcom
   facebook: https://www.facebook.com/world4you
   linkedin: https://www.linkedin.com/company/world4you/
-referringSubnets: { now: 861, before: 874 }
+referringSubnets: { now: 855, before: 861 }
 checkedAt: 2026-08-01
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }

@@ -7,12 +7,13 @@ category:
   - vanity-hosting
 description: A host for personal sites in South Africa.
 hqCountry: ZA
-referringSubnets: { now: 3002, before: 2998 }
+referringSubnets: { now: 2970, before: 3002 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Bear Blog sells vanity hosting in South Africa.

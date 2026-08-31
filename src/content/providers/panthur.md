@@ -8,12 +8,13 @@ category:
   - vps
 description: A shared hosting and VPS provider in Australia.
 hqCountry: AU
-referringSubnets: { now: 240, before: 236 }
+referringSubnets: { now: 237, before: 240 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Panthur sells shared hosting and VPS in Australia.

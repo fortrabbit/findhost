@@ -68,7 +68,7 @@ supportChannels:
   - email
   - forum
 apiAvailable: public
-referringSubnets: { now: 689, before: 689 }
+referringSubnets: { now: 698, before: 689 }
 status: active
 checkedAt: 2026-08-01
 sources:

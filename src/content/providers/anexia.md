@@ -3,7 +3,7 @@ id: anexia
 name: Anexia
 urls:
   home: https://www.anexia.com
-referringSubnets: { now: 571, before: 565 }
+referringSubnets: { now: 557, before: 571 }
 status: draft
 checkedAt: 2026-08-07
 ai: authored

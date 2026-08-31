@@ -8,12 +8,13 @@ category:
   - iaas
 description: A shared hosting and IaaS provider in Czechia.
 hqCountry: CZ
-referringSubnets: { now: 336, before: 328 }
+referringSubnets: { now: 326, before: 336 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Master Internet sells shared hosting and IaaS in Czechia.

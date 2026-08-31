@@ -53,7 +53,7 @@ regions:
 apiAvailable: public
 hqCountry: SI
 ownership: vc-backed
-referringSubnets: { now: 3589, before: 3576 }
+referringSubnets: { now: 3554, before: 3589 }
 checkedAt: 2026-08-09
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }

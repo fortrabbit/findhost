@@ -50,7 +50,7 @@ exitWithin: a-day
 domainRegistration: included
 dnsHosting: included
 emailHosting: included
-referringSubnets: { now: 867, before: 855 }
+referringSubnets: { now: 859, before: 867 }
 status: active
 checkedAt: 2026-08-12
 sources:

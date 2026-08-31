@@ -45,7 +45,7 @@ social:
   mastodon: https://phpc.social/@ploi
   github: https://github.com/ploi
   facebook: https://www.facebook.com/ploideploy
-referringSubnets: { now: 796, before: 792 }
+referringSubnets: { now: 805, before: 796 }
 status: active
 checkedAt: 2026-08-09
 apiAvailable: public

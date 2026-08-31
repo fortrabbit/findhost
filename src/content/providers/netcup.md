@@ -65,7 +65,7 @@ social:
   x: https://x.com/netcup
   linkedin: https://www.linkedin.com/company/netcup
   facebook: https://www.facebook.com/netcup
-referringSubnets: { now: 3130, before: 3100 }
+referringSubnets: { now: 3099, before: 3130 }
 status: active
 checkedAt: 2026-08-01
 sources:

@@ -7,12 +7,13 @@ category:
   - caas
 description: A CaaS provider in France.
 hqCountry: FR
-referringSubnets: { now: 2268, before: 2263 }
+referringSubnets: { now: 2249, before: 2268 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Strapi sells CaaS in France.

@@ -8,12 +8,13 @@ category:
   - vps
 description: A shared hosting and VPS provider in Malaysia.
 hqCountry: MY
-referringSubnets: { now: 499, before: 502 }
+referringSubnets: { now: 489, before: 499 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Shinjiru sells shared hosting and VPS in Malaysia.

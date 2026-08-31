@@ -77,7 +77,7 @@ staging: included
 testDomain: included
 collaboration: team
 sla: true
-referringSubnets: { now: 10332, before: 10362 }
+referringSubnets: { now: 10304, before: 10332 }
 status: active
 checkedAt: 2026-08-12
 sources:

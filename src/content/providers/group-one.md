@@ -7,7 +7,7 @@ description: A Swedish hosting group whose brands reach customers under their ow
 hqCountry: SE
 ownership: pe-owned
 parent: cinven
-referringSubnets: { now: 345, before: 347 }
+referringSubnets: { now: 345, before: 345 }
 status: unlisted
 checkedAt: 2026-08-29
 sources:

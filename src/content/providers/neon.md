@@ -18,7 +18,7 @@ pricingModel: usage-based
 freeTier: permanent
 currencies:
   - USD
-referringSubnets: { now: 1925, before: 1904 }
+referringSubnets: { now: 1910, before: 1925 }
 status: active
 checkedAt: 2026-08-12
 sources:

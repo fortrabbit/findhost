@@ -48,7 +48,7 @@ regions:
   - JP
   - KR
   - AU
-referringSubnets: { now: 424, before: 417 }
+referringSubnets: { now: 420, before: 424 }
 status: active
 hqCountry: US
 testDomain: included

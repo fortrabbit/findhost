@@ -34,7 +34,7 @@ useCases:
 audience:
   - smb
   - agency
-referringSubnets: { now: 440, before: 434 }
+referringSubnets: { now: 427, before: 440 }
 status: active
 emailHosting: included
 cdnIncluded: included

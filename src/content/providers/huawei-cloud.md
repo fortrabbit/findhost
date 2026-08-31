@@ -8,12 +8,13 @@ category:
   - paas
 description: A IaaS and PaaS provider in China.
 hqCountry: CN
-referringSubnets: { now: 6657, before: 6671 }
+referringSubnets: { now: 6664, before: 6657 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Huawei Cloud sells IaaS and PaaS in China.

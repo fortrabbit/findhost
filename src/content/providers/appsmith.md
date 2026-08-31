@@ -7,12 +7,13 @@ category:
   - lcnc
 description: A low-code and no-code site builder in India.
 hqCountry: IN
-referringSubnets: { now: 1140, before: 1145 }
+referringSubnets: { now: 1145, before: 1140 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Appsmith sells low-code and no-code in India.

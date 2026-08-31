@@ -45,7 +45,7 @@ pricingModel: fixed-tier
 billingPeriods:
   - monthly
 gdprDpa: standard
-referringSubnets: { now: 1775, before: 1795 }
+referringSubnets: { now: 1783, before: 1775 }
 status: active
 cdnIncluded: included
 staging: included

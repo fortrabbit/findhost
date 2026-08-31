@@ -54,7 +54,7 @@ regions:
   - JP
   - AU
 moneyBack: none
-referringSubnets: { now: 6511, before: 6558 }
+referringSubnets: { now: 6494, before: 6511 }
 status: active
 checkedAt: 2026-08-01
 sources:

@@ -7,12 +7,13 @@ category:
   - shared-hosting
 description: A shared hosting provider in New Zealand.
 hqCountry: NZ
-referringSubnets: { now: 477, before: 481 }
+referringSubnets: { now: 484, before: 477 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Voyager sells shared hosting in New Zealand.

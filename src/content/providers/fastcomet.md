@@ -8,12 +8,13 @@ category:
   - vps
 description: A shared hosting and VPS provider in the United States.
 hqCountry: US
-referringSubnets: { now: 1130, before: 1137 }
+referringSubnets: { now: 1115, before: 1130 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 FastComet sells shared hosting and VPS in the United States.

@@ -4,7 +4,7 @@ name: Silver Lake
 urls:
   home: https://www.silverlake.com
 description: A US technology investment firm that majority-owns a managed WordPress host recorded here, and sells no hosting itself.
-referringSubnets: { now: 749, before: 766 }
+referringSubnets: { now: 759, before: 749 }
 status: unlisted
 checkedAt: 2026-08-29
 sources:

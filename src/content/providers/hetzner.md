@@ -59,7 +59,7 @@ apiAvailable: public
 cliTool: official
 favorite: true
 favoriteNote: Popular VPS.
-referringSubnets: { now: 18947, before: 18934 }
+referringSubnets: { now: 18956, before: 18947 }
 status: active
 checkedAt: 2026-08-01
 sources:

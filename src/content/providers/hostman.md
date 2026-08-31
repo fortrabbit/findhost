@@ -8,12 +8,13 @@ category:
   - vps
 description: A PaaS and VPS provider in the United States.
 hqCountry: US
-referringSubnets: { now: 404, before: 403 }
+referringSubnets: { now: 403, before: 404 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Hostman sells PaaS and VPS in the United States.

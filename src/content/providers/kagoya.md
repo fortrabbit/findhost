@@ -8,12 +8,13 @@ category:
   - vps
 description: A shared hosting and VPS provider in Japan.
 hqCountry: JP
-referringSubnets: { now: 792, before: 798 }
+referringSubnets: { now: 792, before: 792 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 KAGOYA sells shared hosting and VPS in Japan.

@@ -9,12 +9,13 @@ category:
   - iaas
 description: A shared hosting, VPS and IaaS provider in Singapore.
 hqCountry: SG
-referringSubnets: { now: 304, before: 303 }
+referringSubnets: { now: 298, before: 304 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Oryon Networks sells shared hosting, VPS and IaaS in Singapore.

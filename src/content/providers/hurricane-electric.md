@@ -8,12 +8,13 @@ category:
   - bare-metal
 description: A IaaS and bare metal provider in the United States.
 hqCountry: US
-referringSubnets: { now: 5095, before: 5095 }
+referringSubnets: { now: 5108, before: 5095 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Hurricane Electric sells IaaS and bare metal in the United States.

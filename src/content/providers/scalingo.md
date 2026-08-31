@@ -70,7 +70,7 @@ iacSupport:
   - terraform
 social:
   github: https://github.com/Scalingo
-referringSubnets: { now: 509, before: 506 }
+referringSubnets: { now: 505, before: 509 }
 status: active
 staging: included
 testDomain: included

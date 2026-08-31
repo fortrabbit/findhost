@@ -7,12 +7,13 @@ category:
   - shared-hosting
 description: A shared hosting provider in Indonesia.
 hqCountry: ID
-referringSubnets: { now: 1855, before: 1866 }
+referringSubnets: { now: 1862, before: 1855 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Rumahweb sells shared hosting in Indonesia.

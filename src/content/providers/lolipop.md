@@ -50,7 +50,7 @@ contractMinimum: annual
 supportChannels:
   - chat
   - phone
-referringSubnets: { now: 4191, before: 4221 }
+referringSubnets: { now: 4179, before: 4191 }
 status: active
 checkedAt: 2026-08-12
 apiAvailable: public

@@ -22,7 +22,7 @@ supportChannels:
   - email
   - phone
 supportHours: 24-7
-referringSubnets: { now: 1455, before: 1447 }
+referringSubnets: { now: 1433, before: 1455 }
 status: active
 checkedAt: 2026-08-09
 apiAvailable: public

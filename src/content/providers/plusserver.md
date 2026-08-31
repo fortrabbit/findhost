@@ -8,12 +8,13 @@ category:
   - bare-metal
 description: A IaaS and bare metal provider in Germany.
 hqCountry: DE
-referringSubnets: { now: 732, before: 729 }
+referringSubnets: { now: 718, before: 732 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 plusserver sells IaaS and bare metal in Germany.

@@ -43,7 +43,7 @@ freeTier: permanent
 contractMinimum: annual
 regions:
   - US
-referringSubnets: { now: 8094, before: 8126 }
+referringSubnets: { now: 8065, before: 8094 }
 status: active
 collaboration: team
 checkedAt: 2026-08-12

@@ -11,7 +11,7 @@ ownership: vc-backed
 regions:
   - ID
   - SG
-referringSubnets: { now: 836, before: 835 }
+referringSubnets: { now: 829, before: 836 }
 status: active
 checkedAt: 2026-08-04
 sources:

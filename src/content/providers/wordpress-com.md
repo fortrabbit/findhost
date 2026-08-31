@@ -9,12 +9,13 @@ description: Automattic's managed WordPress service, the larger of its two hosti
 hqCountry: US
 ownership: subsidiary
 parent: automattic
-referringSubnets: { now: 132402, before: 132940 }
+referringSubnets: { now: 132422, before: 132402 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 WordPress.com is the hosted WordPress run by [Automattic](/automattic/), and by some distance the more visible of the company's two hosting brands — [Pressable](/pressable/) is the other, and it has a full record here while this one does not.

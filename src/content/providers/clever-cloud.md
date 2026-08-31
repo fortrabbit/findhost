@@ -74,7 +74,7 @@ iacSupport:
 social:
   github: https://github.com/CleverCloud
 collaboration: team
-referringSubnets: { now: 747, before: 741 }
+referringSubnets: { now: 732, before: 747 }
 status: active
 checkedAt: 2026-08-12
 sources:

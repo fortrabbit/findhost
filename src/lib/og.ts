@@ -291,3 +291,6 @@ export const facetCardPath = (facet: string) => `/og/${facet}/index.png`;
 
 /** One facet value's card: /og/categories/paas.png */
 export const valueCardPath = (facet: string, slug: string) => `/og/${facet}/${slug}.png`;
+
+/** A standalone page's card: /og/page/reach.png, beside its note at notes/page/reach.md */
+export const pageCardPath = (name: string) => `/og/page/${name}.png`;

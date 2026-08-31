@@ -56,7 +56,7 @@ supportChannels:
   - chat
 supportHours: 24-7
 cliTool: none
-referringSubnets: { now: 1416, before: 1430 }
+referringSubnets: { now: 1418, before: 1416 }
 status: active
 checkedAt: 2026-08-01
 sources:

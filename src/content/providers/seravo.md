@@ -48,7 +48,7 @@ supportChannels:
   - chat
   - phone
 supportHours: 24-7
-referringSubnets: { now: 643, before: 644 }
+referringSubnets: { now: 603, before: 643 }
 status: active
 checkedAt: 2026-08-01
 sources:

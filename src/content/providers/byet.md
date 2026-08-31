@@ -65,7 +65,7 @@ supportTiering: paid-upgrade
 domainRegistration: paid-addon
 dnsHosting: included
 testDomain: included
-referringSubnets: { now: 953, before: 957 }
+referringSubnets: { now: 940, before: 953 }
 status: active
 checkedAt: 2026-08-28
 sources:

@@ -7,12 +7,13 @@ category:
   - shared-hosting
 description: A shared hosting provider in Ukraine.
 hqCountry: UA
-referringSubnets: { now: 1746, before: 1744 }
+referringSubnets: { now: 1759, before: 1746 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 MiroHost sells shared hosting in Ukraine.

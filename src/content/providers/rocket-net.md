@@ -44,7 +44,7 @@ supportChannels:
   - email
   - phone
 supportHours: 24-7
-referringSubnets: { now: 584, before: 584 }
+referringSubnets: { now: 577, before: 584 }
 status: active
 checkedAt: 2026-08-09
 mcpServer: official

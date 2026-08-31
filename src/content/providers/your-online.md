@@ -7,7 +7,7 @@ description: A Dutch group holding hosting, domain and trust brands across Europ
 hqCountry: NL
 ownership: independent
 founded: 2017
-referringSubnets: { now: 688, before: 687 }
+referringSubnets: { now: 670, before: 688 }
 status: unlisted
 checkedAt: 2026-08-21
 sources:

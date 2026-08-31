@@ -9,12 +9,13 @@ category:
   - iaas
 hqCountry: DE
 ownership: subsidiary
-referringSubnets: { now: 500, before: 497 }
+referringSubnets: { now: 489, before: 500 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 STACKIT is the cloud arm of the Schwarz Group, the German retail company behind Lidl and Kaufland, built first to run the group's own systems and then opened to outside customers.

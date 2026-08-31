@@ -52,7 +52,7 @@ entryPrice: { amount: 29.99, currency: USD, period: month }
 freeTier: trial
 apiAvailable: public
 hqCountry: US
-referringSubnets: { now: 76085, before: 76647 }
+referringSubnets: { now: 75838, before: 76085 }
 checkedAt: 2026-08-09
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }

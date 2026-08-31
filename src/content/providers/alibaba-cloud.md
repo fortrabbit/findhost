@@ -72,7 +72,7 @@ supportChannels:
   - chat
 apiAvailable: public
 cliTool: official
-referringSubnets: { now: 6158, before: 6133 }
+referringSubnets: { now: 5966, before: 6158 }
 status: active
 checkedAt: 2026-08-12
 figure:

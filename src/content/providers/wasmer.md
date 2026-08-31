@@ -46,7 +46,7 @@ social:
   discord: https://discord.gg/rWkMNStrEW
 favorite: true
 favoriteNote: A different bet from everyone else here, not a cheaper version of the same one.
-referringSubnets: { now: 899, before: 890 }
+referringSubnets: { now: 895, before: 899 }
 status: active
 checkedAt: 2026-08-12
 cliTool: official

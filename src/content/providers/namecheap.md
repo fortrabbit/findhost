@@ -16,7 +16,7 @@ paymentMethods:
   - card
   - paypal
   - crypto
-referringSubnets: { now: 65359, before: 66361 }
+referringSubnets: { now: 62190, before: 65359 }
 status: active
 checkedAt: 2026-08-12
 sources:

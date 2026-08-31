@@ -66,7 +66,7 @@ dnsHosting: paid-addon
 emailHosting: paid-addon
 cdnIncluded: none
 staging: paid-addon
-referringSubnets: { now: 5157, before: 5204 }
+referringSubnets: { now: 4962, before: 5157 }
 status: active
 checkedAt: 2026-08-12
 figure:

@@ -3,7 +3,7 @@ id: gabia
 name: Gabia
 urls:
   home: https://www.gabia.com/
-referringSubnets: { now: 2334, before: 2330 }
+referringSubnets: { now: 2314, before: 2334 }
 status: out-of-scope
 criterion: 3
 checkedAt: 2026-08-04
@@ -13,6 +13,7 @@ gpuCapacity:
   - instances
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Gabia is a Seoul-based domain, hosting and cloud company — its cloud arm trades separately as gabiacloud.com — selling IDC space, cloud GPU servers, groupware and an "AI API Gateway" alongside traditional hosting.

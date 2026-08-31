@@ -9,12 +9,13 @@ category:
   - bare-metal
 description: A shared hosting, VPS and bare metal provider in Morocco.
 hqCountry: MA
-referringSubnets: { now: 442, before: 438 }
+referringSubnets: { now: 435, before: 442 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Cap Connect sells shared hosting, VPS and bare metal in Morocco.

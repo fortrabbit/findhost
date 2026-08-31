@@ -22,7 +22,7 @@ billingPeriods:
   - yearly
 freeTier: trial
 emailHosting: included
-referringSubnets: { now: 2828, before: 2803 }
+referringSubnets: { now: 2818, before: 2828 }
 status: active
 checkedAt: 2026-08-12
 sources:

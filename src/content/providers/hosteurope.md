@@ -7,12 +7,13 @@ category:
   - shared-hosting
   - vps
 hqCountry: DE
-referringSubnets: { now: 2967, before: 2987 }
+referringSubnets: { now: 2943, before: 2967 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Host Europe is a German hosting brand, long one of the larger sellers of shared hosting and virtual servers in the German-speaking market, and part of the consolidation that moved most of that market into a handful of groups.

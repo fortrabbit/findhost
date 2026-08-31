@@ -42,7 +42,7 @@ apiAvailable: public
 cliTool: official
 hqCountry: US
 ownership: vc-backed
-referringSubnets: { now: 732, before: 752 }
+referringSubnets: { now: 736, before: 732 }
 checkedAt: 2026-08-09
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }

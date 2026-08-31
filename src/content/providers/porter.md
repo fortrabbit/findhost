@@ -34,7 +34,7 @@ billingPeriods:
 billingTiming: arrears
 entryPrice: { amount: 6, currency: USD, period: month }
 freeTier: none
-referringSubnets: { now: 315, before: 316 }
+referringSubnets: { now: 317, before: 315 }
 status: active
 checkedAt: 2026-08-01
 sources:

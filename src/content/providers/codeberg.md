@@ -15,7 +15,7 @@ sshAccess: null
 regions: null
 collaboration: team
 apiAvailable: public
-referringSubnets: { now: 14645, before: 14658 }
+referringSubnets: { now: 14600, before: 14645 }
 status: active
 checkedAt: 2026-08-13
 sources:

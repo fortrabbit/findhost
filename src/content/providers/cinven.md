@@ -4,7 +4,7 @@ name: Cinven
 urls:
   home: https://www.cinven.com
 description: A European private-equity firm that owns the group behind a host recorded here, and sells no hosting itself.
-referringSubnets: { now: 437, before: 438 }
+referringSubnets: { now: 448, before: 437 }
 status: unlisted
 checkedAt: 2026-08-29
 sources:

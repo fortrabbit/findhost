@@ -48,7 +48,7 @@ entryPrice: { amount: 6.9, currency: EUR, period: month }
 freeTier: none
 certifications:
   - iso-27001
-referringSubnets: { now: 570, before: 575 }
+referringSubnets: { now: 555, before: 570 }
 status: active
 domainRegistration: included
 dnsHosting: included

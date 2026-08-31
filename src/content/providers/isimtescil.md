@@ -9,12 +9,13 @@ category:
   - bare-metal
 description: A shared hosting, VPS and bare metal provider in Türkiye.
 hqCountry: TR
-referringSubnets: { now: 440, before: 451 }
+referringSubnets: { now: 435, before: 440 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 IsimTescil sells shared hosting, VPS and bare metal in Türkiye.

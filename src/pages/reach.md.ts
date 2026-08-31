@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
 import { loadProviders } from '../lib/providers';
 import { attribution } from '../lib/seo';
+import { movementOf } from '../lib/record';
 
 /**
  * The chart as text. The bars carry the shape and the numbers carry the fact, so
@@ -25,10 +26,12 @@ export const GET: APIRoute = async ({ site }) => {
   const unknown = providers.length - bars.length - unmeasured;
 
   const number = new Intl.NumberFormat('en');
-  const moved = (bar: (typeof bars)[number]) =>
-    bar.before === undefined || bar.before === bar.now
-      ? ''
-      : `, ${bar.now > bar.before ? 'up' : 'down'} from ${number.format(bar.before)}`;
+  const moved = (bar: (typeof bars)[number]) => {
+    const movement = movementOf(bar);
+    if (movement === 'new') return ', not in the previous list';
+    if (movement === 'flat') return ', unchanged';
+    return `, ${movement} from ${number.format(bar.before!)}`;
+  };
 
   const lines = [
     '# Reach',

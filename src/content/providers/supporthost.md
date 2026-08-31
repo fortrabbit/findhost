@@ -7,12 +7,13 @@ category:
   - shared-hosting
 description: A shared hosting provider in Italy.
 hqCountry: IT
-referringSubnets: { now: 458, before: 448 }
+referringSubnets: { now: 446, before: 458 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 SupportHost sells shared hosting in Italy.

@@ -20,7 +20,7 @@ billingTiming: advance
 supportChannels:
   - phone
   - email
-referringSubnets: { now: 6774, before: 6792 }
+referringSubnets: { now: 6726, before: 6774 }
 status: active
 checkedAt: 2026-08-08
 sources:

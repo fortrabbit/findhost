@@ -62,7 +62,7 @@ regions:
   - AT
   - DE
   - HR
-referringSubnets: { now: 1011, before: 1013 }
+referringSubnets: { now: 988, before: 1011 }
 status: active
 checkedAt: 2026-08-12
 sources:

@@ -63,7 +63,7 @@ supportChannels:
 supportHours: 24-7
 apiAvailable: public
 cliTool: official
-referringSubnets: { now: 1310, before: 1303 }
+referringSubnets: { now: 1306, before: 1310 }
 status: active
 staging: included
 collaboration: clients

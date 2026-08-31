@@ -45,7 +45,7 @@ regions:
 supportChannels:
   - email
 apiAvailable: public
-referringSubnets: { now: 309, before: 296 }
+referringSubnets: { now: 290, before: 309 }
 checkedAt: 2026-08-01
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }

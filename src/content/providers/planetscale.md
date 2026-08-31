@@ -25,7 +25,7 @@ priceFrom: md
 freeTier: none
 currencies:
   - USD
-referringSubnets: { now: 1568, before: 1576 }
+referringSubnets: { now: 1567, before: 1568 }
 status: active
 checkedAt: 2026-08-12
 sources:

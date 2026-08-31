@@ -9,12 +9,13 @@ category:
   - bare-metal
 description: A shared hosting, VPS and bare metal provider in Pakistan.
 hqCountry: PK
-referringSubnets: { now: 284, before: 283 }
+referringSubnets: { now: 267, before: 284 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 HosterPK sells shared hosting, VPS and bare metal in Pakistan.

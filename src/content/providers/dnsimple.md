@@ -17,7 +17,7 @@ dnsHosting: paid-addon
 pricingModel: usage-based
 currencies:
   - USD
-referringSubnets: { now: 1186, before: 1195 }
+referringSubnets: { now: 1183, before: 1186 }
 status: active
 checkedAt: 2026-08-12
 sources:

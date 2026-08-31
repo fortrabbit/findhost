@@ -40,7 +40,7 @@ useCases:
 supportChannels:
   - forum
 supportHours: community-only
-referringSubnets: { now: 10805, before: 10808 }
+referringSubnets: { now: 10809, before: 10805 }
 status: active
 checkedAt: 2026-08-12
 sources:

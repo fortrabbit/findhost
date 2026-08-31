@@ -48,7 +48,7 @@ regions:
   - SG
 apiAvailable: public
 cliTool: official
-referringSubnets: { now: 2502, before: 2481 }
+referringSubnets: { now: 2482, before: 2502 }
 status: active
 checkedAt: 2026-08-12
 staging: included

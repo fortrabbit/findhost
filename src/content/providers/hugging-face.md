@@ -43,7 +43,7 @@ freeTier: permanent
 persistentStorage: false
 apiAvailable: public
 cliTool: official
-referringSubnets: { now: 22877, before: 22983 }
+referringSubnets: { now: 22895, before: 22877 }
 status: active
 testDomain: included
 collaboration: team

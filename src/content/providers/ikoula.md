@@ -26,7 +26,7 @@ useCases:
   - cms
 audience:
   - smb
-referringSubnets: { now: 1036, before: 1024 }
+referringSubnets: { now: 1028, before: 1036 }
 status: active
 checkedAt: 2026-07-31
 sources:

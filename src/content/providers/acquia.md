@@ -8,7 +8,7 @@ category:
   - paas
 description: A Drupal platform sold through sales conversations rather than published prices.
 hqCountry: US
-referringSubnets: { now: 2741, before: 2761 }
+referringSubnets: { now: 2748, before: 2741 }
 status: out-of-scope
 criterion: 3
 checkedAt: 2026-08-12

@@ -42,7 +42,7 @@ freeTier: trial
 regions:
   - JP
 contractMinimum: annual
-referringSubnets: { now: 4269, before: 4272 }
+referringSubnets: { now: 4321, before: 4269 }
 status: active
 checkedAt: 2026-08-09
 apiAvailable: public

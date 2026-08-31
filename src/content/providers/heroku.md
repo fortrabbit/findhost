@@ -65,7 +65,7 @@ regions:
   - AU
   - JP
 cliTool: official
-referringSubnets: { now: 6408, before: 6402 }
+referringSubnets: { now: 6391, before: 6408 }
 status: active
 staging: included
 testDomain: included

@@ -44,13 +44,12 @@ freeTier: permanent
 regions:
   - US
 cliTool: official
-referringSubnets: { now: 230 }
+referringSubnets: null
 status: active
 hqCountry: US
 ownership: independent
 checkedAt: 2026-08-12
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: testDomain, url: 'https://docs.gigalixir.com/app', checkedAt: 2026-08-12 }
   - { field: collaboration, url: 'https://docs.gigalixir.com/teams', checkedAt: 2026-08-12 }
   - { field: hqCountry, url: 'https://www.gigalixir.com/contact', checkedAt: 2026-08-09 }

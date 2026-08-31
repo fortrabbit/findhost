@@ -3,12 +3,13 @@ id: timme-hosting
 name: Timme Hosting
 urls:
   home: https://timmehosting.de
-referringSubnets: { now: 515, before: 521 }
+referringSubnets: { now: 513, before: 515 }
 status: draft
 checkedAt: 2026-07-31
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Timme Hosting is a German provider specialising in managed hosting for Shopware and Magento shops, running on ISPConfig-managed infrastructure.

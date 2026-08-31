@@ -7,12 +7,13 @@ category:
   - lcnc
 description: A low-code and no-code site builder in Estonia.
 hqCountry: EE
-referringSubnets: { now: 1221, before: 1214 }
+referringSubnets: { now: 1207, before: 1221 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Voog sells low-code and no-code in Estonia.

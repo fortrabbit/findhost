@@ -8,12 +8,13 @@ category:
   - vps
 description: A shared hosting and VPS provider in Finland.
 hqCountry: FI
-referringSubnets: { now: 758, before: 772 }
+referringSubnets: { now: 748, before: 758 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Louhi sells shared hosting and VPS in Finland.

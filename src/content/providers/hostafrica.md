@@ -27,7 +27,7 @@ audience:
 apiAvailable: public
 cliTool: official
 mcpServer: official
-referringSubnets: { now: 355, before: 353 }
+referringSubnets: { now: 347, before: 355 }
 status: active
 checkedAt: 2026-07-31
 sources:

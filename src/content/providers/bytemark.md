@@ -8,7 +8,7 @@ category:
 description: A UK virtual server provider, acquired by Hosting UK and no longer selling under its own name.
 hqCountry: GB
 ownership: subsidiary
-referringSubnets: { now: 977, before: 983 }
+referringSubnets: { now: 966, before: 977 }
 status: acquired
 checkedAt: 2026-08-12
 sources:

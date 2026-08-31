@@ -74,7 +74,7 @@ social:
   youtube: https://www.youtube.com/@elestio
   x: https://twitter.com/elest_io
   discord: https://discord.gg/4T4JGaMYrD
-referringSubnets: { now: 672, before: 679 }
+referringSubnets: { now: 670, before: 672 }
 status: active
 checkedAt: 2026-08-12
 sources:

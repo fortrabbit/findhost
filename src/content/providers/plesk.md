@@ -52,7 +52,7 @@ billingPeriods:
   - yearly
 billingTiming: advance
 freeTier: trial
-referringSubnets: { now: 57852, before: 57982 }
+referringSubnets: { now: 57354, before: 57852 }
 status: active
 checkedAt: 2026-08-12
 apiAvailable: public

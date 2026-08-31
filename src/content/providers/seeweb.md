@@ -16,7 +16,7 @@ regions:
   - IT
   - CH
   - BG
-referringSubnets: { now: 612, before: 613 }
+referringSubnets: { now: 607, before: 612 }
 status: active
 checkedAt: 2026-08-12
 figure:

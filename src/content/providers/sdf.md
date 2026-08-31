@@ -3,12 +3,13 @@ id: sdf
 name: SDF Public Access UNIX System
 urls:
   home: https://sdf.org
-referringSubnets: { now: 2918, before: 2909 }
+referringSubnets: { now: 2897, before: 2918 }
 status: draft
 checkedAt: 2026-08-14
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 A public-access UNIX system, run as a non-profit, offering shell accounts, personal pages and mail on shared machines — the arrangement most hosting grew out of, still operating.

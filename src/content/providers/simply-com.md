@@ -45,7 +45,7 @@ freeTier: none
 regions:
   - DK
 apiAvailable: public
-referringSubnets: { now: 1964, before: 1969 }
+referringSubnets: { now: 1927, before: 1964 }
 status: active
 checkedAt: 2026-08-01
 sources:

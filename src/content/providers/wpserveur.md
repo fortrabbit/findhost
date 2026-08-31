@@ -28,7 +28,7 @@ useCases:
 audience:
   - agency
   - solo
-referringSubnets: { now: 431, before: 437 }
+referringSubnets: { now: 429, before: 431 }
 status: active
 checkedAt: 2026-08-09
 cliTool: official

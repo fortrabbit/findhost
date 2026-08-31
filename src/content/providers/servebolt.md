@@ -53,7 +53,7 @@ billingPeriods:
 gdprDpa: standard
 cdnIncluded: included
 staging: included
-referringSubnets: { now: 410, before: 420 }
+referringSubnets: { now: 410, before: 410 }
 status: active
 checkedAt: 2026-08-12
 figure:

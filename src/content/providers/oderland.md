@@ -8,12 +8,13 @@ category:
   - vps
 description: A shared hosting and VPS provider in Sweden.
 hqCountry: SE
-referringSubnets: { now: 544, before: 536 }
+referringSubnets: { now: 544, before: 544 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Oderland sells shared hosting and VPS in Sweden.

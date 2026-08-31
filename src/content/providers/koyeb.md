@@ -53,7 +53,7 @@ regions:
   - JP
 apiAvailable: public
 cliTool: official
-referringSubnets: { now: 693, before: 693 }
+referringSubnets: { now: 701, before: 693 }
 status: active
 collaboration: team
 checkedAt: 2026-08-12

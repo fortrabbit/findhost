@@ -61,7 +61,7 @@ apiAvailable: public
 domainRegistration: paid-addon
 dnsHosting: included
 emailHosting: included
-referringSubnets: { now: 2533, before: 2513 }
+referringSubnets: { now: 2533, before: 2533 }
 checkedAt: 2026-08-12
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }

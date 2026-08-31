@@ -42,7 +42,7 @@ supportChannels:
   - forum
 supportHours: 24-7
 supportTiering: all-plans
-referringSubnets: { now: 2489, before: 2501 }
+referringSubnets: { now: 2469, before: 2489 }
 status: active
 checkedAt: 2026-08-12
 sources:

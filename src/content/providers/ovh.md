@@ -35,7 +35,7 @@ regions:
   - SG
   - AU
   - IN
-referringSubnets: { now: 31465, before: 31681 }
+referringSubnets: { now: 30626, before: 31465 }
 status: active
 checkedAt: 2026-08-09
 apiAvailable: public

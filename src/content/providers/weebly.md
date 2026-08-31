@@ -30,7 +30,7 @@ social:
   linkedin: https://www.linkedin.com/company/weebly
   youtube: https://www.youtube.com/user/weebly
 hqCountry: US
-referringSubnets: { now: 57092, before: 57412 }
+referringSubnets: { now: 56860, before: 57092 }
 checkedAt: 2026-08-09
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }

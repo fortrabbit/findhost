@@ -25,7 +25,7 @@ pricingModel: fixed-tier
 freeTier: permanent
 supportChannels:
   - forum
-referringSubnets: { now: 636, before: 634 }
+referringSubnets: { now: 636, before: 636 }
 status: active
 dnsHosting: included
 emailHosting: included

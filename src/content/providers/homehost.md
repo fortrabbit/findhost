@@ -8,12 +8,13 @@ category:
   - vps
 description: A shared hosting and VPS provider in Brazil.
 hqCountry: BR
-referringSubnets: { now: 377, before: 375 }
+referringSubnets: { now: 362, before: 377 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Homehost sells shared hosting and VPS in Brazil.

@@ -30,7 +30,7 @@ supportChannels:
 apiAvailable: public
 cliTool: none
 mcpServer: none
-referringSubnets: { now: 4922, before: 4891 }
+referringSubnets: { now: 4922, before: 4922 }
 status: active
 checkedAt: 2026-08-12
 sources:

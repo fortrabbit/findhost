@@ -45,7 +45,7 @@ domainRegistration: none
 dnsHosting: included
 emailHosting: none
 testDomain: included
-referringSubnets: { now: 1106, before: 1113 }
+referringSubnets: { now: 1089, before: 1106 }
 status: active
 checkedAt: 2026-08-28
 sources:

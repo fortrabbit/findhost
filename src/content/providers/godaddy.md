@@ -24,7 +24,7 @@ domainRegistration: paid-addon
 dnsHosting: included
 emailHosting: paid-addon
 whoManagesOs: managed
-referringSubnets: { now: 100588, before: 101056 }
+referringSubnets: { now: 100201, before: 100588 }
 status: active
 checkedAt: 2026-08-07
 sources:

@@ -8,12 +8,13 @@ category:
   - vanity-hosting
 description: A low-code and vanity hosting provider in the United States.
 hqCountry: US
-referringSubnets: { now: 12867, before: 12936 }
+referringSubnets: { now: 12828, before: 12867 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Carrd sells low-code and no-code and vanity hosting in the United States.

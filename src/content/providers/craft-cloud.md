@@ -31,7 +31,7 @@ billingTiming: advance
 exitWithin: a-month
 entryPrice: { amount: 120, currency: USD, period: month }
 cliTool: official
-referringSubnets: { now: 1580, before: 1580 }
+referringSubnets: { now: 1565, before: 1580 }
 status: active
 hqCountry: US
 ownership: independent

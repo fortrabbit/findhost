@@ -22,7 +22,7 @@ entryPrice:
 currencies:
   - EUR
 domainRegistration: paid-addon
-referringSubnets: { now: 541, before: 540 }
+referringSubnets: { now: 528, before: 541 }
 status: active
 checkedAt: 2026-08-14
 sources:

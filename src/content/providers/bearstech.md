@@ -3,13 +3,14 @@ id: bearstech
 name: Bearstech
 urls:
   home: https://bearstech.com
-referringSubnets: { now: 364, before: 362 }
+referringSubnets: { now: 342, before: 364 }
 status: out-of-scope
 criterion: 3
 checkedAt: 2026-07-31
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Bearstech is a SCOP — a French worker cooperative in which employees hold the entire capital and vote on salaries, hiring and strategy — operating from Paris since 2004. It provides managed operations for open-source stacks including PHP, Python, Node.js, Rails, Django and Kubernetes, on French data centres running renewable energy, and will also operate infrastructure the client already owns.

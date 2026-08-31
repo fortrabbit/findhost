@@ -63,7 +63,7 @@ supportChannels:
 supportHours: 24-7
 apiAvailable: public
 sla: true
-referringSubnets: { now: 21499, before: 21583 }
+referringSubnets: { now: 20986, before: 21499 }
 status: active
 checkedAt: 2026-08-01
 sources:

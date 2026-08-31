@@ -29,7 +29,7 @@ billingTiming: arrears
 exitWithin: a-day
 entryPrice: { amount: 5.5, currency: USD, period: month }
 freeTier: trial
-referringSubnets: { now: 667, before: 670 }
+referringSubnets: { now: 646, before: 667 }
 status: active
 checkedAt: 2026-08-01
 sources:

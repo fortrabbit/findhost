@@ -7,12 +7,13 @@ category:
   - lcnc
 description: A low-code and no-code site builder in Norway.
 hqCountry: NO
-referringSubnets: { now: 5224, before: 5256 }
+referringSubnets: { now: 5214, before: 5224 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Sanity sells low-code and no-code in Norway.

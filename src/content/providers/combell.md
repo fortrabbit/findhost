@@ -49,7 +49,7 @@ freeTier: none
 regions:
   - BE
   - NL
-referringSubnets: { now: 1308, before: 1305 }
+referringSubnets: { now: 1290, before: 1308 }
 status: active
 checkedAt: 2026-08-01
 sources:

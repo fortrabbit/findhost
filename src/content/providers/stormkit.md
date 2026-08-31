@@ -7,10 +7,13 @@ category:
   - static
   - serverless
 description: A static hosting and serverless provider.
-referringSubnets: null
+referringSubnets: { now: 227 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
+sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 StormKit sells static hosting and serverless.

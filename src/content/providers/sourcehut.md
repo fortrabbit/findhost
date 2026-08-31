@@ -17,7 +17,7 @@ pricingModel: fixed-tier
 currencies:
   - EUR
   - USD
-referringSubnets: { now: 1142, before: 1124 }
+referringSubnets: { now: 1141, before: 1142 }
 status: active
 checkedAt: 2026-08-13
 sources:

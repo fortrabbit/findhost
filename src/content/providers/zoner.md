@@ -7,12 +7,13 @@ category:
   - shared-hosting
 description: A shared hosting provider in Czechia.
 hqCountry: CZ
-referringSubnets: { now: 484, before: 498 }
+referringSubnets: { now: 480, before: 484 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Zoner sells shared hosting in Czechia.

@@ -9,12 +9,13 @@ category:
   - bare-metal
 description: A shared hosting, VPS and bare metal provider in South Africa.
 hqCountry: ZA
-referringSubnets: { now: 346, before: 348 }
+referringSubnets: { now: 336, before: 346 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Elitehost sells shared hosting, VPS and bare metal in South Africa.
