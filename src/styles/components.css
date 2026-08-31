@@ -1028,16 +1028,55 @@ html.js [data-find-fallback] {
   display: none;
 }
 
-.find-more {
+/*
+ * The disclosure and the shortcuts share a line: "More filters" opens the rest
+ * of the panel, the links beside it leave it entirely.
+ *
+ * The bar carries `full-width` rather than the open panel inside it, so the row
+ * begins and ends where the band of filters above it does: "More filters" lines
+ * up with the first column, the last shortcut with the last.
+ *
+ * The nav is laid over the disclosure's row rather than set beside it, so the
+ * <details> still spans the bar and the panel it opens stays as wide as the
+ * columns it continues.
+ */
+.find-more-bar {
   margin-top: var(--space-md);
+}
+
+@media (min-width: 40rem) {
+  .find-more-bar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .find-more-bar > .find-more {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+
+  .find-more-bar > .find-quicklinks {
+    grid-area: 1 / 2 / 2 / 3;
+    align-self: start;
+    justify-self: end;
+  }
 }
 
 /** A way to reach the rest, not a way to fetch them: every value is already in the markup. */
 .find-more > summary {
+  /* As wide as its two words. A block summary spans the row, and the shortcuts
+     lie over the end of it — clicking beside them would open the filters. */
+  width: fit-content;
   margin-bottom: var(--space-md);
   font-size: var(--text-sm);
   font-weight: var(--weight-strong);
   cursor: pointer;
+}
+
+.find-quicklinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2xs) var(--space-md);
+  font-size: var(--text-sm);
 }
 
 .find-facet {
