@@ -202,11 +202,32 @@ test.describe('a combination of two facets', () => {
     expect(german).toContain('run PHP and operate in Germany');
   });
 
-  test('is reachable from the value page it narrows, without JavaScript', async ({ page }) => {
+  /*
+   * From both parents, not one. The path has a direction and the pairing is
+   * declared on one side, but /regions/germany/ is half of this page too — and
+   * linking it from the declaring side only left the other half with no way
+   * through at all.
+   */
+  test('is reachable from either value page it narrows, without JavaScript', async ({ page }) => {
+    await page.goto('/runtimes/php/');
+    await expect(page.locator('.pair-links a[href="/runtimes/php/regions/germany/"]')).toBeVisible();
+
+    await page.goto('/regions/germany/');
+    await expect(page.locator('.pair-links a[href="/runtimes/php/regions/germany/"]')).toBeVisible();
+  });
+
+  /* Above the register, not under it: under 114 records it was nine screens down. */
+  test('offers the combinations before the list rather than after it', async ({ page }) => {
     await page.goto('/runtimes/php/');
 
-    const link = page.locator('.pair-links a[href="/runtimes/php/regions/germany/"]');
-    await expect(link).toBeVisible();
+    const block = await page.locator('.pair-links').first().boundingBox();
+    const list = await page.locator('[data-find-results]').boundingBox();
+    expect(block!.y).toBeLessThan(list!.y);
+  });
+
+  test('answers the price question people type', async ({ page }) => {
+    await page.goto('/regions/germany/entry-price/under-5-a-month/');
+    await expect(page.locator('h1')).toHaveText('Hosting in Germany under $5 a month');
   });
 
   /* Deleting the last segment of a URL that works must not land between two pages. */

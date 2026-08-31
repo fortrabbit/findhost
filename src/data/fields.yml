@@ -182,6 +182,7 @@
   # the questions asked about a kind of hosting rather than about a company.
   pairs:
     - with: regions
+    - with: entry-price
     - { with: pricing, draft: true }
     - { with: operating-system, draft: true }
     - { with: software, draft: true }
@@ -365,6 +366,7 @@
   multiple: true
   pairs:
     - with: regions
+    - with: entry-price
     - { with: pricing, draft: true }
     - { with: automation, draft: true }
   values:
@@ -616,6 +618,9 @@
   group: Pricing
   facet: entry-price
   subject: 'start{|s} at {lower}'
+  # Reads as a range on five of the seven; the open-ended band at each end says
+  # so itself and would come out "from under $5 a month" through the template.
+  titleWith: 'from {lower}'
   ordered: true
   filterOrder: 4
   # The ids are a size scale because that is what a record reads as — `priceFrom:
@@ -625,13 +630,13 @@
   # separator carry their own segment, because `$1,500` slugifies to `1-500`.
   slugFromLabel: true
   values:
-    - { id: xs, label: 'Under $5 a month' }
+    - { id: xs, label: 'Under $5 a month', titleWith: 'under $5 a month' }
     - { id: sm, label: '$5 to $15 a month' }
     - { id: md, label: '$15 to $50 a month' }
     - { id: lg, label: '$50 to $150 a month' }
     - { id: xl, label: '$150 to $500 a month' }
     - { id: 2xl, label: '$500 to $1,500 a month', slug: 500-to-1500-a-month }
-    - { id: 3xl, label: 'Over $1,500 a month', slug: over-1500-a-month }
+    - { id: 3xl, label: 'Over $1,500 a month', slug: over-1500-a-month, titleWith: 'over $1,500 a month' }
 
 # The exact starting figure in the provider's own currency, beside the band, so
 # nobody reads a conversion we invented.
@@ -900,6 +905,8 @@
   facet: regions
   subject: 'operate{|s} in {label}'
   titleWith: 'in {label}'
+  pairs:
+    - with: entry-price
   slugFromLabel: true
   filterOrder: 3
   multiple: true

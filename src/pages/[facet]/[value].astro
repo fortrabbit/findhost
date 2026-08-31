@@ -4,8 +4,7 @@ import Base from '../../layouts/Base.astro';
 import { organization, valueTitle } from '../../lib/seo';
 import ProviderRegister from '../../components/ProviderRegister.astro';
 import PageFigure from '../../components/PageFigure.astro';
-import { facetIndex, facetRoutes, loadFacets, pairsFrom } from '../../lib/facets';
-import { pairIndexPath, pairPath } from '../../lib/pairs';
+import { facetIndex, facetRoutes, loadFacets, pairsFor } from '../../lib/facets';
 import { fieldOf, subjectOf } from '../../lib/fields';
 import { firstSentence, summarise } from '../../lib/summarise';
 import { valueCardPath } from '../../lib/og';
@@ -63,16 +62,11 @@ const Note = note ? (await render(note)).Content : null;
 const figure = note?.data.figure;
 
 /*
- * The pair pages this value heads, grouped by the facet they combine with. They
- * are how a crawler reaches /runtimes/php/regions/germany/ at all: a pair page
- * is linked from the value page it narrows and from nowhere else.
+ * The combinations this value is half of. They are how anybody reaches
+ * /runtimes/php/regions/germany/: a pair page is linked from its two parents
+ * and from nowhere else.
  */
-const combined = [...Map.groupBy(await pairsFrom(facet.id, value.id), (page) => page.b.id).values()].map((pages) => ({
-  label: pages[0]!.b.label,
-  index: pairIndexPath(pages[0]!.a, pages[0]!.av, pages[0]!.b),
-  /* Longest lists first: on this block the count is the only reason to pick one. */
-  pages: [...pages].sort((one, other) => other.matches.length - one.matches.length),
-}));
+const combined = await pairsFor(facet.id, value.id);
 ---
 
 <Base
@@ -133,25 +127,33 @@ const combined = [...Map.groupBy(await pairsFrom(facet.id, value.id), (page) => 
   {/* What we know about the set, after what a person wrote about it. */}
   <p class="annotation">{counted}</p>
 
-  <ProviderRegister
-    providers={matches}
-    facets={facets}
-    seed={{ facet: facet.id, value: value.id, label: value.label }}
-  />
-
   {
+    /*
+     * Above the list rather than under it. Under 114 records it was eight and a
+     * half screens down, which is reachable by a crawler and by nobody else —
+     * and these are a way *into* the register rather than a footnote to it.
+     */
     combined.map((group) => (
-      <section class="pair-links" data-pagefind-ignore>
-        <h2>
-          <a href={group.index}>By {group.label.toLowerCase()}</a>
-        </h2>
+      <section class="pair-links full-width" data-pagefind-ignore>
+        {/*
+         * A heading, not a link. It led to the same list without the providers
+         * on it, which is a click that gives nothing back — the countries are
+         * what there is to click. The rung keeps a link so a crawler still
+         * reaches it and deleting the last URL segment still lands somewhere.
+         */}
+        <h2>By {group.label.toLowerCase()}</h2>
+        {group.index && (
+          <a class="visually-hidden" href={group.index}>
+            Every {group.label.toLowerCase()} page for {value.label}
+          </a>
+        )}
 
         <ul class="pair-list">
-          {group.pages.map((page) => (
+          {group.rows.map((row) => (
             <li>
-              <a href={pairPath(page)}>{page.bv.label}</a>
+              <a href={row.href}>{row.label}</a>
               <span class="pair-count">
-                {page.matches.length}
+                {row.count}
                 <span class="visually-hidden"> providers</span>
               </span>
             </li>
@@ -160,6 +162,12 @@ const combined = [...Map.groupBy(await pairsFrom(facet.id, value.id), (page) => 
       </section>
     ))
   }
+
+  <ProviderRegister
+    providers={matches}
+    facets={facets}
+    seed={{ facet: facet.id, value: value.id, label: value.label }}
+  />
 </Base>
 
 {/* For the extended/slim toggle only. This page ships no filters — its URL is the narrowing. */}

@@ -1,7 +1,7 @@
 import { asideOf, facetFields, fields } from './fields';
 import { asideGroup, isListed, loadAsideProviders, loadProviders } from './providers';
 import { byName, countValues, rowHolds, toRow, type Facet, type FacetValue, type ProviderRow } from './rows';
-import { pairPages, type PairPage } from './pairs';
+import { pairIndexPath, pairPages, pairPath, type PairPage } from './pairs';
 import { getCollection } from 'astro:content';
 
 /*
@@ -162,9 +162,48 @@ export async function pairIndexRoutes() {
   }));
 }
 
-/** The pairings one value page can offer, for the block that links to them. */
-export async function pairsFrom(facetId: string, valueId: string) {
+/**
+ * The combinations a value page can offer, grouped by the facet it combines
+ * with. Read from *both* ends: a pairing has one direction in the path, and
+ * /regions/germany/ is half of /runtimes/php/regions/germany/ whichever half
+ * declared it. Linking it from one parent only left the other with no way
+ * through, which is a hole in the site rather than a property of the pairing.
+ *
+ * `index` is the rung above the pair pages, and only the declaring side has
+ * one: /runtimes/php/regions/ exists, /regions/germany/runtimes/ does not,
+ * because a second index over the same pages would be the duplicate the one
+ * direction exists to prevent.
+ */
+export async function pairsFor(facetId: string, valueId: string) {
   const { facets, providers } = await loadFacets();
 
-  return pairPages(facets, fields, providers).filter((page) => page.a.id === facetId && page.av.id === valueId);
+  const groups = new Map<
+    string,
+    { label: string; index?: string; rows: { href: string; label: string; count: number }[] }
+  >();
+
+  for (const page of pairPages(facets, fields, providers)) {
+    const heads = page.a.id === facetId && page.av.id === valueId;
+    const tails = page.b.id === facetId && page.bv.id === valueId;
+    if (!heads && !tails) continue;
+
+    const other = heads ? page.b : page.a;
+    const held = groups.get(other.id) ?? {
+      label: other.label,
+      ...(heads ? { index: pairIndexPath(page.a, page.av, page.b) } : {}),
+      rows: [],
+    };
+
+    held.rows.push({
+      href: pairPath(page),
+      label: heads ? page.bv.label : page.av.label,
+      count: page.matches.length,
+    });
+    groups.set(other.id, held);
+  }
+
+  /* Longest lists first: on a row of links the count is the only reason to pick one. */
+  for (const group of groups.values()) group.rows.sort((one, other) => other.count - one.count);
+
+  return [...groups.values()];
 }

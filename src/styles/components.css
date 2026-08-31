@@ -1749,31 +1749,52 @@ article > pre {
 }
 
 /*
- * The pairings a value page offers, and the same list on the rung above the pair
- * pages themselves. A column of counted links rather than prose: the count is
- * the only thing that distinguishes one of these from the next, so it is the
- * thing set apart.
+ * The combinations a value is half of, and the same list on the rung above the
+ * pair pages themselves. Counted links rather than prose: what distinguishes one
+ * of these from the next is how many it lists, so that is the thing set apart.
+ *
+ * As wide as the register it introduces. In the text column it was two columns
+ * of eight against half a screen of nothing, which read as a stray list rather
+ * than as a band of ways in.
  */
 .pair-links {
-  margin-top: var(--space-xl);
+  /* `margin-block`, not `margin`: the shorthand resets the negative inline
+     margins `full-width` relies on, and the band silently stops being one. */
+  margin-block: var(--space-lg) var(--space-xl);
 }
 
 .pair-links > h2 {
-  margin-bottom: var(--space-xs);
-  font-size: var(--text-md);
+  margin: 0 0 var(--space-xs);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-strong);
 }
 
+/*
+ * Grid rather than `columns`, because the order is the point: the list runs
+ * commonest first, and multicol would send it down each column instead of
+ * across, so the second largest would sit at the foot of the first column.
+ */
 .pair-list {
+  /* base.css keeps every list to the prose measure. This one is a band of links
+     under a full-width heading, not a paragraph, so it takes the width it is given. */
+  max-width: none;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
-  gap: var(--space-2xs) var(--space-lg);
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  gap: var(--space-2xs) var(--space-md);
   margin: 0;
   padding: 0;
   list-style: none;
   font-size: var(--text-sm);
 }
 
+/*
+ * Capped rather than filling its column. Stretched across a wide screen the row
+ * leaves a hand's width of rule between a country and its count, and the two
+ * stop reading as a pair — so the row keeps the measure a column of the filter
+ * panel keeps, and the columns space themselves.
+ */
 .pair-list > li {
+  max-width: 13rem;
   display: flex;
   gap: var(--space-xs);
   align-items: baseline;
