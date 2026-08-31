@@ -25,9 +25,11 @@ priceFrom: md
 freeTier: none
 currencies:
   - USD
+referringSubnets: { now: 1568, before: 1576 }
 status: active
 checkedAt: 2026-08-12
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: category, url: 'https://planetscale.com/pricing', checkedAt: 2026-08-12 }
   - { field: managedDatabases, url: 'https://planetscale.com/pricing', checkedAt: 2026-08-12 }
   - { field: pricingModel, url: 'https://planetscale.com/pricing', checkedAt: 2026-08-12 }

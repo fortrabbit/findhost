@@ -8,9 +8,12 @@ category:
   - iaas
 description: A shared hosting and IaaS provider in Sweden.
 hqCountry: SE
+referringSubnets: { now: 502, before: 514 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
+sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
 ---
 
 Binero sells shared hosting and IaaS in Sweden.

@@ -48,12 +48,14 @@ entryPrice: { amount: 6.9, currency: EUR, period: month }
 freeTier: none
 certifications:
   - iso-27001
+referringSubnets: { now: 570, before: 575 }
 status: active
 domainRegistration: included
 dnsHosting: included
 emailHosting: included
 checkedAt: 2026-08-12
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: entryPrice, url: 'https://www.papaki.com/en/web-hosting/', checkedAt: 2026-08-01 }
   - { field: domainRegistration, url: 'https://www.papaki.com/en/web-hosting/', checkedAt: 2026-08-12 }
   - { field: dnsHosting, url: 'https://www.papaki.com/en/web-hosting/', checkedAt: 2026-08-12 }

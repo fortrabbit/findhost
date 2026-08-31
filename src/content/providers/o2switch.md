@@ -56,9 +56,11 @@ supportChannels:
   - chat
 supportHours: 24-7
 cliTool: none
+referringSubnets: { now: 1416, before: 1430 }
 status: active
 checkedAt: 2026-08-01
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: parent, url: 'https://your.online/brands', checkedAt: 2026-08-21 }
   - { field: ownership, url: 'https://your.online/brands', checkedAt: 2026-08-21 }
   - { field: infraContract, url: 'https://www.o2switch.fr/', checkedAt: 2026-07-31 }

@@ -86,6 +86,16 @@ const providerFields = z
     ownership: z.enum(vocabulary('ownership')).optional(),
     headcount: z.enum(vocabulary('headcount')).optional(),
     /*
+     * Networks linking to the provider's own domain, from the Majestic Million,
+     * with the previous figure from the same pull so movement needs no history.
+     * `null` means the list cannot measure the domain — it is domain-level, and
+     * a provider at a subdomain of a larger company is unmeasurable, not small.
+     */
+    referringSubnets: z
+      .object({ now: z.number().int().nonnegative(), before: z.number().int().nonnegative().optional() })
+      .nullable()
+      .optional(),
+    /*
      * We like it. The only editorial mark on a record, and deliberately a
      * boolean: the scoring system it replaced implied a precision nobody had.
      */

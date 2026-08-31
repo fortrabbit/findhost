@@ -13,6 +13,9 @@ figure:
   color: rgb(45, 107, 190)
   textColor: rgb(234, 239, 246)
   text: VPS from US for Craft CMS.
+referringSubnets: { now: 245, before: 238 }
+sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
 ---
 
 Arcustech is an independent VPS hosting company based in Minneapolis. Founded in 2013, it continues a hosting lineage that goes back to EngineHosting in the late 1990s.

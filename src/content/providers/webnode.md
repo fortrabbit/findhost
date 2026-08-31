@@ -7,9 +7,12 @@ category:
   - lcnc
 description: A low-code and no-code site builder in Czechia.
 hqCountry: CZ
+referringSubnets: { now: 9603, before: 9568 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
+sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
 ---
 
 Webnode sells low-code and no-code in Czechia.

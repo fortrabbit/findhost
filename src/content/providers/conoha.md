@@ -7,9 +7,12 @@ category:
   - vps
 description: A VPS provider in Japan.
 hqCountry: JP
+referringSubnets: { now: 988, before: 988 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
+sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
 ---
 
 ConoHa sells VPS in Japan.

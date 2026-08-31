@@ -1,0 +1,39 @@
+---
+import PageFigure from './PageFigure.astro';
+
+/**
+ * The top of every page that introduces a list: the heading, the written
+ * introduction, and the counts under it.
+ *
+ * It was the same six lines in four files, in three different orders — the facet
+ * index drew the lead above the figure, the value page had no lead at all, and
+ * /reach/ had its prose typed straight into the template where nobody could edit
+ * it without touching Astro. The prose belongs in `src/content/notes/`, the
+ * order belongs here, and a page supplies neither.
+ */
+interface Props {
+  title: string;
+  /** The opening line, set larger than the body. Comes from the note's frontmatter. */
+  lead?: string;
+  figure?: { emoji: string; color: string; textColor: string; text: string };
+  /** What the page knows about the set it is about to list, as one sentence. */
+  annotation?: string;
+}
+
+const { title, lead, figure, annotation } = Astro.props;
+---
+
+<div class="page-head">
+  <h1>{title}</h1>
+  {/* A page may put one link on the heading's own line — "Combine filters →". */}
+  <slot name="onward" />
+</div>
+
+{lead && <p class="lead">{lead}</p>}
+
+<PageFigure figure={figure} />
+
+{/* The note, rendered by the page that found it: only the page knows which one it wants. */}
+<slot />
+
+{annotation && <p class="annotation">{annotation}</p>}

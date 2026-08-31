@@ -3,6 +3,7 @@ id: cloud68
 name: Cloud68.co
 urls:
   home: https://cloud68.co
+referringSubnets: null
 status: out-of-scope
 criterion: 3
 checkedAt: 2026-07-31

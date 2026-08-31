@@ -68,9 +68,11 @@ supportChannels:
   - email
   - forum
 apiAvailable: public
+referringSubnets: { now: 689, before: 689 }
 status: active
 checkedAt: 2026-08-01
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1242', checkedAt: 2026-08-10 }
   - { field: priceFrom, url: 'https://www.alwaysdata.com/en/offers/plus/', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://www.alwaysdata.com/en/offers/plus/', checkedAt: 2026-08-02 }

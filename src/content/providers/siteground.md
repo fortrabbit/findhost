@@ -57,6 +57,7 @@ social:
   youtube: https://www.youtube.com/@siteground
 checkedAt: 2026-08-01
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1203', checkedAt: 2026-08-10 }
   - { field: founded, url: 'https://www.siteground.com/company', checkedAt: 2026-07-31 }
   - { field: runsOn, url: 'https://www.siteground.com/company', checkedAt: 2026-07-31 }
@@ -70,6 +71,7 @@ sources:
   - { field: renewalMultiple, url: 'https://www.siteground.com/web-hosting.htm', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://www.siteground.com/viewtos/terms_of_service', checkedAt: 2026-08-01 }
   - { field: software, url: 'https://www.siteground.com/kb/', checkedAt: 2026-07-31 }
+referringSubnets: { now: 6753, before: 6775 }
 status: active
 ai: authored
 figure:

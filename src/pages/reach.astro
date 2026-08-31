@@ -1,0 +1,133 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+import ProviderList from '../components/ProviderList.astro';
+import { loadProviders } from '../lib/providers';
+import { licenceUrl, organization } from '../lib/seo';
+
+/*
+ * The one page here ordered by anything but the alphabet, and it can be because
+ * its subject is the order. The same list sorted this way anywhere else would
+ * read as a verdict, which is why it lives on a page of its own and the
+ * register's own order never learns this field exists.
+ */
+const providers = await loadProviders();
+
+const measured = providers
+  .filter((provider) => provider.data.referringSubnets)
+  .sort((a, b) => b.data.referringSubnets!.now - a.data.referringSubnets!.now);
+
+const counts = measured.map((provider) => provider.data.referringSubnets!.now);
+const floor = Math.log(Math.max(1, Math.min(...counts)));
+const ceiling = Math.log(Math.max(...counts));
+
+/*
+ * Logarithmic by default, because the largest figure is about a thousand times
+ * the smallest and a straight axis leaves nearly two hundred providers a pixel
+ * wide. A shortest bar of no length reads as no data rather than as the smallest
+ * value, so the scale starts at 4% instead of at nothing.
+ */
+const logOf = (count: number) =>
+  ceiling === floor ? 100 : 4 + 96 * ((Math.log(Math.max(1, count)) - floor) / (ceiling - floor));
+
+/*
+ * The straight axis, offered because the log flatters the tail: it is the one
+ * that answers "how much bigger" honestly, and seeing two hundred hairlines
+ * under GitHub is the answer rather than a fault. A floor of 0.15% so a bar is
+ * a hairline rather than nothing at all.
+ */
+const largest = Math.max(...counts);
+const linearOf = (count: number) => Math.max(0.15, (100 * count) / largest);
+
+const number = new Intl.NumberFormat('en');
+
+const rows = measured.map((provider) => {
+  const held = provider.data.referringSubnets!;
+  const moved = held.before === undefined || held.before === held.now;
+
+  return {
+    id: provider.id,
+    name: String(provider.data.name),
+    figure: provider.data.figure,
+    favorite: provider.data.favorite,
+    meter: {
+      width: logOf(held.now),
+      alternate: linearOf(held.now),
+      text: number.format(held.now),
+      direction: moved ? undefined : held.now > held.before! ? ('up' as const) : ('down' as const),
+    },
+  };
+});
+
+/*
+ * `null` means the list publishes no figure for that domain, for either of two
+ * reasons: it sits below the millionth, or it is a subdomain of a much larger
+ * company and the list counts whole domains.
+ */
+const unmeasured = providers.filter((provider) => provider.data.referringSubnets === null).length;
+const unknown = providers.length - rows.length - unmeasured;
+
+/* One string, for the reason given in [facet]/index.astro. */
+const annotation = [
+  `${number.format(rows.length)} of ${number.format(providers.length)} records carry a figure.`,
+  unmeasured > 0 && `The list publishes none for ${unmeasured} more.`,
+  unknown > 0 && `${unknown} have not been read against it yet.`,
+]
+  .filter(Boolean)
+  .join(' ');
+
+/* The written introduction, where every other list page keeps one. */
+const note = (await getCollection('notes')).find((entry) => entry.id === 'page/reach');
+const Note = note ? (await render(note)).Content : null;
+
+const origin = Astro.site?.origin ?? '';
+---
+
+<Base
+  title={`${note?.data.title ?? 'Reach'} — FindHost`}
+  description={note?.data.description ?? "How many networks link to each hosting provider's own domain."}
+  markdown="/reach.md"
+  schema={[
+    {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      url: `${origin}/reach/`,
+      name: 'Reach',
+      inLanguage: 'en',
+      publisher: organization(origin),
+      license: licenceUrl,
+    },
+  ]}
+>
+  <PageHead
+    title={note?.data.title ?? 'Reach'}
+    lead={note?.data.lead}
+    figure={note?.data.figure}
+    annotation={annotation}
+  >
+    {Note && <Note />}
+  </PageHead>
+
+  {
+    /*
+    The scale is chosen in CSS rather than by a script: both widths are already on
+    every bar, so `:has()` on this wrapper only decides which of the two variables
+    is read. It works with JavaScript off, and a crawler gets the default axis
+    rather than an empty list.
+  */
+  }
+  <div class="scaled">
+    <fieldset class="scale-switch">
+      <legend class="visually-hidden">Scale</legend>
+
+      <input type="radio" name="scale" id="scale-log" checked />
+      <label for="scale-log">Logarithmic</label>
+
+      <input type="radio" name="scale" id="scale-linear" />
+      <label for="scale-linear">Linear</label>
+    </fieldset>
+
+    <ProviderList providers={rows} />
+  </div>
+</Base>

@@ -7,9 +7,12 @@ category:
   - vps
 description: A VPS provider in Canada.
 hqCountry: CA
+referringSubnets: { now: 669, before: 660 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
+sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
 ---
 
 BuyVM sells VPS in Canada.

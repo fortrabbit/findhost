@@ -33,9 +33,11 @@ domainRegistration: included
 emailHosting: included
 cdnIncluded: included
 staging: included
+referringSubnets: { now: 16637, before: 16720 }
 status: active
 checkedAt: 2026-08-12
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: entryPrice, url: 'https://www.dreamhost.com/hosting/shared/', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://www.dreamhost.com/legal/', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://www.dreamhost.com/hosting/shared/', checkedAt: 2026-08-02 }

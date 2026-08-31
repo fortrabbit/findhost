@@ -40,6 +40,7 @@ billingPeriods:
   - monthly
 billingTiming: arrears
 freeTier: permanent
+referringSubnets: null
 status: active
 hqCountry: US
 checkedAt: 2026-08-09

@@ -57,6 +57,7 @@ freeTier: none
 supportChannels:
   - email
 supportHours: 24-7
+referringSubnets: { now: 831, before: 821 }
 status: active
 checkedAt: 2026-08-12
 apiAvailable: public
@@ -65,6 +66,7 @@ emailHosting: included
 cliTool: official
 mcpServer: official
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: hqCountry, url: 'https://www.opalstack.com/', checkedAt: 2026-08-09 }
   - { field: entryPrice, url: 'https://www.opalstack.com/', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://www.opalstack.com/', checkedAt: 2026-08-02 }

@@ -48,9 +48,11 @@ regions:
 apiAvailable: public
 cliTool: official
 sla: true
+referringSubnets: { now: 2540, before: 2510 }
 status: active
 checkedAt: 2026-08-01
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: priceFrom, url: 'https://contabo.com/en/vps/', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://contabo.com/en/vps/', checkedAt: 2026-08-02 }
   - { field: currencies, url: 'https://contabo.com/en/legal/terms-and-conditions/', checkedAt: 2026-08-02 }

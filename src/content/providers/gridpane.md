@@ -44,12 +44,14 @@ exitWithin: a-month
 freeTier: permanent
 apiAvailable: public
 cliTool: official
+referringSubnets: { now: 333, before: 342 }
 status: active
 hqCountry: US
 ownership: vc-backed
 staging: included
 checkedAt: 2026-08-12
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: hqCountry, url: 'https://gridpane.com', checkedAt: 2026-08-09 }
   - { field: priceFrom, url: 'https://gridpane.com/pricing/', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://gridpane.com/pricing/', checkedAt: 2026-08-02 }

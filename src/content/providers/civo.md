@@ -55,8 +55,10 @@ iacSupport:
 certifications:
   - iso-27001
   - soc-2
+referringSubnets: { now: 800, before: 801 }
 checkedAt: 2026-08-12
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: regions, url: 'https://www.civo.com/docs/overview/regions', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://www.civo.com/pricing', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://www.civo.com/pricing', checkedAt: 2026-08-01 }

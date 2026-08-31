@@ -34,9 +34,11 @@ supportChannels:
   - email
   - forum
   - chat
+referringSubnets: { now: 8426, before: 8421 }
 status: active
 checkedAt: 2026-08-12
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: freeTier, url: 'https://cyberpanel.net', checkedAt: 2026-08-12 }
   - { field: supportChannels, url: 'https://cyberpanel.net', checkedAt: 2026-08-12 }
   - { field: runtimes, url: 'https://cyberpanel.net/features', checkedAt: 2026-08-12 }

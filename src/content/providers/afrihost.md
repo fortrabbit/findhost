@@ -35,6 +35,7 @@ useCases:
 audience:
   - smb
   - solo
+referringSubnets: { now: 1757, before: 1772 }
 status: active
 domainRegistration: paid-addon
 emailHosting: paid-addon
@@ -45,6 +46,7 @@ figure:
   textColor: rgb(244, 240, 230)
   text: South African ISP that also sells hosting.
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: category, url: 'https://www.afrihost.com', checkedAt: 2026-08-08 }
   - { field: entryPrice, url: 'https://www.afrihost.com', checkedAt: 2026-08-08 }
   - { field: priceTo, url: 'https://www.afrihost.com', checkedAt: 2026-08-08 }

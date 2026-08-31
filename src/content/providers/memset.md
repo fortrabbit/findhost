@@ -8,9 +8,12 @@ category:
   - iaas
 description: A VPS and IaaS provider in the United Kingdom.
 hqCountry: GB
+referringSubnets: { now: 357, before: 346 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
+sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
 ---
 
 Memset sells VPS and IaaS in the United Kingdom.

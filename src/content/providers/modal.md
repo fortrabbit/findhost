@@ -47,9 +47,11 @@ regions:
   - AU
 apiAvailable: public
 cliTool: official
+referringSubnets: { now: 1463, before: 1474 }
 status: active
 checkedAt: 2026-08-01
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: regions, url: 'https://modal.com/docs/guide/region-selection', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://modal.com/pricing', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://modal.com/pricing', checkedAt: 2026-08-02 }

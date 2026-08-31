@@ -12,9 +12,11 @@ ownership: subsidiary
 regions:
   - NL
 energyClaim: annual-matched
+referringSubnets: { now: 763, before: 753 }
 status: active
 checkedAt: 2026-08-14
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: category, url: 'https://greenhost.net', checkedAt: 2026-08-14 }
   - { field: hqCountry, url: 'https://greenhost.net', checkedAt: 2026-08-14 }
   - { field: energyClaim, url: 'https://greenhost.net', checkedAt: 2026-08-14 }

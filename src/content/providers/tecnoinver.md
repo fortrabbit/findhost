@@ -8,6 +8,7 @@ category:
   - bare-metal
 description: A VPS and bare metal provider in Chile.
 hqCountry: CL
+referringSubnets: null
 status: draft
 checkedAt: 2026-08-12
 ai: authored

@@ -7,9 +7,11 @@ description: A Swedish hosting group whose brands reach customers under their ow
 hqCountry: SE
 ownership: pe-owned
 parent: cinven
+referringSubnets: { now: 345, before: 347 }
 status: unlisted
 checkedAt: 2026-08-29
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: hqCountry, url: 'https://www.group.one/', checkedAt: 2026-08-29 }
   - { field: parent, url: 'https://www.cinven.com/news-insights/cinven-and-ontario-teachers-to-invest-in-the-combination-of-group-one-and-dogado-group/', checkedAt: 2026-08-29 }
   - { field: ownership, url: 'https://www.cinven.com/news-insights/cinven-and-ontario-teachers-to-invest-in-the-combination-of-group-one-and-dogado-group/', checkedAt: 2026-08-29 }

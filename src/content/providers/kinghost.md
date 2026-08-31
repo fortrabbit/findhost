@@ -53,9 +53,11 @@ supportChannels:
   - chat
   - phone
 supportHours: 24-7
+referringSubnets: { now: 1267, before: 1263 }
 status: active
 checkedAt: 2026-08-01
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: regions, url: 'https://king.host/hospedagem-de-sites', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://king.host/hospedagem-de-sites', checkedAt: 2026-08-01 }
   - { field: currencies, url: 'https://king.host/hospedagem-de-sites', checkedAt: 2026-08-02 }

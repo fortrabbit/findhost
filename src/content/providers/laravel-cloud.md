@@ -43,6 +43,7 @@ regions:
   - JP
   - AU
 supportTiering: all-plans
+referringSubnets: { now: 24193, before: 24267 }
 status: active
 hqCountry: US
 ownership: vc-backed
@@ -51,6 +52,7 @@ staging: included
 collaboration: team
 checkedAt: 2026-08-12
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: hqCountry, url: 'https://laravel.com/cloud', checkedAt: 2026-08-09 }
   - { field: entryPrice, url: 'https://laravel.com/cloud/pricing', checkedAt: 2026-08-01 }
   - { field: regions, url: 'https://laravel.com/cloud/pricing', checkedAt: 2026-08-01 }

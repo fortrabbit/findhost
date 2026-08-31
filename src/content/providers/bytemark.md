@@ -8,9 +8,11 @@ category:
 description: A UK virtual server provider, acquired by Hosting UK and no longer selling under its own name.
 hqCountry: GB
 ownership: subsidiary
+referringSubnets: { now: 977, before: 983 }
 status: acquired
 checkedAt: 2026-08-12
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: status, url: 'https://hostinguk.net/bytemark/', checkedAt: 2026-08-12 }
   - { field: ownership, url: 'https://hostinguk.net/bytemark/', checkedAt: 2026-08-21 }
 figure:

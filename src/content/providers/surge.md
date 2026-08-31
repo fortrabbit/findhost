@@ -26,10 +26,12 @@ cdnIncluded: included
 collaboration: team
 favorite: true
 favoriteNote: Nothing here puts less between a folder and the web.
+referringSubnets: { now: 2593, before: 2607 }
 status: active
 checkedAt: 2026-08-12
 cliTool: official
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: category, url: 'https://surge.sh', checkedAt: 2026-08-08 }
   - { field: freeTier, url: 'https://surge.sh', checkedAt: 2026-08-08 }
   - { field: runtimes, url: 'https://surge.sh', checkedAt: 2026-08-08 }

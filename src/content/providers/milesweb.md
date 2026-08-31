@@ -57,9 +57,11 @@ supportChannels:
   - chat
   - email
 supportHours: 24-7
+referringSubnets: { now: 790, before: 786 }
 status: active
 checkedAt: 2026-08-12
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: regions, url: 'https://www.milesweb.in/hosting/web-hosting', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://www.milesweb.in/hosting/web-hosting', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://www.milesweb.in/hosting/web-hosting', checkedAt: 2026-08-02 }

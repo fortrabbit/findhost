@@ -47,10 +47,12 @@ exitWithin: a-month
 entryPrice: { amount: 10, currency: USD, period: month }
 freeTier: permanent
 contractMinimum: none
+referringSubnets: { now: 3359, before: 3385 }
 status: active
 testDomain: included
 checkedAt: 2026-08-12
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: testDomain, url: 'https://www.pythonanywhere.com/pricing/', checkedAt: 2026-08-12 }
   - { field: entryPrice, url: 'https://www.pythonanywhere.com/pricing/', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://www.pythonanywhere.com/pricing/', checkedAt: 2026-08-02 }

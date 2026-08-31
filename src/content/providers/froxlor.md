@@ -7,9 +7,12 @@ category:
   - server-management
 description: Server management software in Germany.
 hqCountry: DE
+referringSubnets: { now: 3536, before: 3555 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
+sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
 ---
 
 Froxlor sells server management in Germany.

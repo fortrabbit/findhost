@@ -57,8 +57,10 @@ dnsHosting: included
 staging: included
 testDomain: included
 collaboration: team
+referringSubnets: { now: 240, before: 232 }
 checkedAt: 2026-08-12
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: hqCountry, url: 'https://cleavr.io', checkedAt: 2026-08-09 }
   - { field: entryPrice, url: 'https://cleavr.io/pricing', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://cleavr.io/pricing', checkedAt: 2026-08-01 }

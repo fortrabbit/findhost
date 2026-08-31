@@ -3,10 +3,13 @@ id: contentful
 name: Contentful
 urls:
   home: https://www.contentful.com
+referringSubnets: { now: 3004, before: 3011 }
 status: out-of-scope
 criterion: 1
 checkedAt: 2026-08-06
 ai: authored
+sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
 ---
 
 Contentful is a hosted content platform: an editing interface, a content model and a read API, sold per space and per API call. It is one of the products people mean by "CMS backend as a service", alongside Sanity, Storyblok and the hosted tiers of Directus and Strapi.

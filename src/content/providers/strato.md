@@ -55,8 +55,10 @@ social:
   linkedin: https://de.linkedin.com/company/strato-ag
   facebook: https://www.facebook.com/strato/
   youtube: https://www.youtube.com/user/stratoDE/
+referringSubnets: { now: 21079, before: 21103 }
 checkedAt: 2026-08-09
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: software, url: 'https://www.strato.de/hosting', checkedAt: 2026-08-09 }
   - { field: priceFrom, url: 'https://www.strato.de/webhosting/', checkedAt: 2026-07-31 }
   - { field: priceTo, url: 'https://www.strato.de/webhosting/', checkedAt: 2026-08-02 }

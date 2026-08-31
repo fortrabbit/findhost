@@ -9,6 +9,7 @@ category:
   - paas
 description: A shared hosting, VPS and PaaS provider in Chile.
 hqCountry: CL
+referringSubnets: null
 status: draft
 checkedAt: 2026-08-12
 ai: authored

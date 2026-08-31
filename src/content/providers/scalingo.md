@@ -70,12 +70,14 @@ iacSupport:
   - terraform
 social:
   github: https://github.com/Scalingo
+referringSubnets: { now: 509, before: 506 }
 status: active
 staging: included
 testDomain: included
 collaboration: team
 checkedAt: 2026-08-12
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: regions, url: 'https://doc.scalingo.com/platform/internals/regions', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://scalingo.com/pricing', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://scalingo.com/pricing', checkedAt: 2026-08-01 }

@@ -7,9 +7,12 @@ category:
   - shared-hosting
 description: A shared hosting provider in Germany.
 hqCountry: DE
+referringSubnets: { now: 526, before: 533 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
+sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
 ---
 
 Variomedia sells shared hosting in Germany.

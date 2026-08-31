@@ -31,6 +31,7 @@ regions:
   - FR
   - NL
   - PL
+referringSubnets: { now: 3874, before: 3878 }
 status: active
 hqCountry: FR
 ownership: subsidiary
@@ -38,6 +39,7 @@ checkedAt: 2026-08-09
 apiAvailable: public
 cliTool: official
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#925', checkedAt: 2026-08-10 }
   - { field: hqCountry, url: 'https://www.scaleway.com/en/about', checkedAt: 2026-08-09 }
   - { field: runtimes, url: 'https://www.scaleway.com/en/serverless-functions/', checkedAt: 2026-07-31 }

@@ -7,9 +7,12 @@ category:
   - server-management
 description: Server management software in India.
 hqCountry: IN
+referringSubnets: { now: 1186, before: 1181 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
+sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
 ---
 
 ServerAvatar sells server management in India.

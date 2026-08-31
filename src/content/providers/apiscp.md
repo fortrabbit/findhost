@@ -29,9 +29,11 @@ billingPeriods:
 billingTiming: advance
 entryPrice: { amount: 30, currency: USD, period: year }
 freeTier: trial
+referringSubnets: { now: 307, before: 320 }
 status: active
 checkedAt: 2026-08-01
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: entryPrice, url: 'https://apiscp.com/pricing/', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://apiscp.com/pricing/', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://apiscp.com/pricing/', checkedAt: 2026-08-01 }

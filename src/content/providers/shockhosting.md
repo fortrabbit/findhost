@@ -9,9 +9,12 @@ category:
   - bare-metal
 description: A shared hosting, virtual server and bare metal provider in the United States.
 hqCountry: US
+referringSubnets: { now: 454, before: 454 }
 status: draft
 checkedAt: 2026-08-21
 ai: authored
+sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
 ---
 
 Shock Hosting sells shared hosting, virtual servers and dedicated machines from New Jersey.

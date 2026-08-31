@@ -25,6 +25,7 @@ supportChannels:
   - phone
   - email
 supportHours: 24-7
+referringSubnets: null
 status: active
 checkedAt: 2026-08-08
 sources:

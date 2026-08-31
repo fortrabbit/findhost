@@ -34,9 +34,11 @@ billingTiming: advance
 exitWithin: over-a-year
 renewalMultiple: 2.5
 contractMinimum: multi-year
+referringSubnets: { now: 14878, before: 14878 }
 status: active
 checkedAt: 2026-08-01
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: founded, url: 'https://www.bluehost.com/about', checkedAt: 2026-08-01 }
   - { field: hqCountry, url: 'https://www.bluehost.com/about', checkedAt: 2026-08-01 }
   - { field: parent, url: 'https://www.bluehost.com/about', checkedAt: 2026-08-01 }

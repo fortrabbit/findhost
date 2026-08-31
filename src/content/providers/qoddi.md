@@ -50,6 +50,7 @@ billingPeriods:
 billingTiming: arrears
 entryPrice: { amount: 6, currency: USD, period: month }
 freeTier: permanent
+referringSubnets: null
 status: active
 checkedAt: 2026-08-12
 staging: included

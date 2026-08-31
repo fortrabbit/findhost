@@ -54,8 +54,10 @@ certifications:
 social:
   facebook: https://www.facebook.com/xneeloHosting/
   linkedin: https://www.linkedin.com/company/xneelo/
+referringSubnets: { now: 353, before: 349 }
 checkedAt: 2026-08-01
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: regions, url: 'https://xneelo.co.za/web-hosting/', checkedAt: 2026-08-01 }
   - { field: regions, url: 'https://xneelo.co.za/data-centre/', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://xneelo.co.za/web-hosting/', checkedAt: 2026-08-01 }

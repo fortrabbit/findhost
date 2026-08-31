@@ -22,9 +22,11 @@ billingPeriods:
   - yearly
 freeTier: trial
 emailHosting: included
+referringSubnets: { now: 2828, before: 2803 }
 status: active
 checkedAt: 2026-08-12
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: category, url: 'https://www.fastmail.com/pricing/', checkedAt: 2026-08-12 }
   - { field: pricingModel, url: 'https://www.fastmail.com/pricing/', checkedAt: 2026-08-12 }
   - { field: entryPrice, url: 'https://www.fastmail.com/pricing/', checkedAt: 2026-08-12 }

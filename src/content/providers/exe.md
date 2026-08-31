@@ -37,9 +37,11 @@ audience:
 apiAvailable: public
 favorite: true
 favoriteNote: Betting that a machine should cost about what a process costs.
+referringSubnets: { now: 732, before: 718 }
 status: active
 checkedAt: 2026-08-12
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: collaboration, url: 'https://exe.dev/', checkedAt: 2026-08-12 }
   - { field: entryPrice, url: 'https://exe.dev/pricing', checkedAt: 2026-08-08 }
   - { field: pricingModel, url: 'https://exe.dev/pricing', checkedAt: 2026-08-08 }

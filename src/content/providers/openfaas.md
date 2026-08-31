@@ -7,9 +7,12 @@ category:
   - serverless
 description: A serverless provider in the United Kingdom.
 hqCountry: GB
+referringSubnets: { now: 624, before: 633 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
+sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
 ---
 
 OpenFaaS sells serverless in the United Kingdom.

@@ -9,6 +9,7 @@ category:
   - bare-metal
 description: A shared hosting, VPS and bare metal provider in Sri Lanka.
 hqCountry: LK
+referringSubnets: null
 status: draft
 checkedAt: 2026-08-12
 ai: authored

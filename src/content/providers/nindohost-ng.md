@@ -10,6 +10,7 @@ category:
   - serverless
 description: A shared hosting, VPS, bare metal and serverless provider in Nigeria.
 hqCountry: NG
+referringSubnets: null
 status: draft
 checkedAt: 2026-08-12
 ai: authored

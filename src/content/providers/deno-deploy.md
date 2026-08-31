@@ -45,9 +45,11 @@ testDomain: included
 collaboration: team
 favorite: true
 favoriteNote: Shipped the standards-first argument rather than waiting for it.
+referringSubnets: { now: 2376, before: 2374 }
 status: active
 checkedAt: 2026-08-12
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: priceFrom, url: 'https://deno.com/deploy/pricing', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://deno.com/deploy/pricing', checkedAt: 2026-08-02 }
   - { field: freeTier, url: 'https://deno.com/deploy/pricing', checkedAt: 2026-07-31 }

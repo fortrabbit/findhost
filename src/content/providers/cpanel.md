@@ -52,8 +52,10 @@ entryPrice: { amount: 29.99, currency: USD, period: month }
 freeTier: trial
 apiAvailable: public
 hqCountry: US
+referringSubnets: { now: 76085, before: 76647 }
 checkedAt: 2026-08-09
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: hqCountry, url: 'https://cpanel.net', checkedAt: 2026-08-09 }
   - { field: entryPrice, url: 'https://cpanel.net/pricing/', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://cpanel.net/pricing/', checkedAt: 2026-08-01 }

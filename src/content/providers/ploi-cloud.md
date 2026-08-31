@@ -44,6 +44,7 @@ regions:
   - US
 favorite: true
 favoriteNote: Independent from NL. We like.
+referringSubnets: null
 status: active
 hqCountry: NL
 checkedAt: 2026-08-12

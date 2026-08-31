@@ -62,6 +62,7 @@ social:
   bluesky: https://bsky.app/profile/upsun.com
   linkedin: https://www.linkedin.com/company/upsundotcom
   youtube: https://www.youtube.com/@upsundotcom
+referringSubnets: { now: 1109, before: 1142 }
 status: active
 staging: included
 collaboration: team
@@ -69,6 +70,7 @@ apiAvailable: public
 cliTool: official
 checkedAt: 2026-08-12
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: staging, url: 'https://upsun.com/pricing/', checkedAt: 2026-08-12 }
   - { field: collaboration, url: 'https://upsun.com/pricing/', checkedAt: 2026-08-12 }
   - { field: regions, url: 'https://developer.upsun.com/docs/development/regions', checkedAt: 2026-08-01 }

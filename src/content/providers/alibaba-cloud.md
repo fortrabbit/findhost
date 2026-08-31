@@ -72,6 +72,7 @@ supportChannels:
   - chat
 apiAvailable: public
 cliTool: official
+referringSubnets: { now: 6158, before: 6133 }
 status: active
 checkedAt: 2026-08-12
 figure:
@@ -80,6 +81,7 @@ figure:
   textColor: rgb(245, 237, 230)
   text: Alibaba's multi-region global cloud platform.
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: founded, url: 'https://alibabacloud.com', checkedAt: 2026-08-12 }
   - { field: hqCountry, url: 'https://alibabacloud.com', checkedAt: 2026-08-12 }
   - { field: category, url: 'https://alibabacloud.com', checkedAt: 2026-08-12 }

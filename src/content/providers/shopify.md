@@ -29,9 +29,11 @@ billingTiming: advance
 exitWithin: a-month
 entryPrice: { amount: 25, currency: EUR, period: month }
 freeTier: trial
+referringSubnets: { now: 67064, before: 67405 }
 status: active
 checkedAt: 2026-08-01
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: priceFrom, url: 'https://www.shopify.com/pricing', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://www.shopify.com/pricing', checkedAt: 2026-08-02 }
   - { field: currencies, url: 'https://www.shopify.com/legal/terms', checkedAt: 2026-08-02 }

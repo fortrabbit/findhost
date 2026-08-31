@@ -58,9 +58,11 @@ regions:
   - FR
   - LU
 apiAvailable: public
+referringSubnets: { now: 12367, before: 12387 }
 status: active
 checkedAt: 2026-08-12
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: parent, url: 'https://your.online/brands', checkedAt: 2026-08-21 }
   - { field: ownership, url: 'https://your.online/brands', checkedAt: 2026-08-21 }
   - { field: priceFrom, url: 'https://www.gandi.net/en/simple-hosting', checkedAt: 2026-08-02 }

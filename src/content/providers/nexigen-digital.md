@@ -4,6 +4,7 @@ name: Nexigen Digital
 urls:
   home: https://nexigen.digital
 description: An Australian group holding hosting brands, VentraIP among them.
+referringSubnets: null
 status: unlisted
 checkedAt: 2026-08-07
 figure:

@@ -44,8 +44,10 @@ freeTier: trial
 contractMinimum: none
 regions:
   - DE
+referringSubnets: { now: 3989, before: 3971 }
 checkedAt: 2026-08-09
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#791', checkedAt: 2026-08-10 }
   - { field: software, url: 'https://www.all-inkl.com/webhosting/software-installer/', checkedAt: 2026-08-09 }
   - { field: priceFrom, url: 'https://all-inkl.com/webhosting/paketvergleich/', checkedAt: 2026-08-02 }

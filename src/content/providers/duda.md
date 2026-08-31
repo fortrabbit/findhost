@@ -32,11 +32,13 @@ supportChannels:
   - chat
   - email
   - phone
+referringSubnets: { now: 1552, before: 1557 }
 status: active
 hqCountry: IL
 ownership: vc-backed
 checkedAt: 2026-08-09
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: hqCountry, url: 'https://www.duda.co/about', checkedAt: 2026-08-09 }
   - { field: entryPrice, url: 'https://www.duda.co/pricing', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://www.duda.co/pricing', checkedAt: 2026-08-01 }

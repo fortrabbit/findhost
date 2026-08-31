@@ -39,6 +39,7 @@ staging: none
 collaboration: team
 favorite: true
 favoriteNote: The free tier that has never become a trap.
+referringSubnets: null
 status: active
 checkedAt: 2026-08-07
 sources:

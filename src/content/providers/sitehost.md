@@ -76,8 +76,10 @@ social:
   x: https://twitter.com/sitehostnz
 domainRegistration: paid-addon
 emailHosting: paid-addon
+referringSubnets: { now: 273, before: 270 }
 checkedAt: 2026-08-12
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: regions, url: 'https://sitehost.nz/hosting/cloud-containers', checkedAt: 2026-08-01 }
   - { field: regions, url: 'https://sitehost.nz/about', checkedAt: 2026-08-01 }
   - { field: founded, url: 'https://sitehost.nz/about', checkedAt: 2026-08-01 }

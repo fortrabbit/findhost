@@ -7,9 +7,12 @@ category:
   - shared-hosting
 description: A shared hosting provider in Poland.
 hqCountry: PL
+referringSubnets: { now: 2577, before: 2581 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
+sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
 ---
 
 SeoHost sells shared hosting in Poland.

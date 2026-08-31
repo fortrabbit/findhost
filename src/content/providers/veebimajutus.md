@@ -7,9 +7,12 @@ category:
   - shared-hosting
 description: A shared hosting provider in Estonia.
 hqCountry: EE
+referringSubnets: { now: 509, before: 498 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
+sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
 ---
 
 Veebimajutus sells shared hosting in Estonia.

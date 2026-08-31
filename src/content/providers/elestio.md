@@ -74,9 +74,11 @@ social:
   youtube: https://www.youtube.com/@elestio
   x: https://twitter.com/elest_io
   discord: https://discord.gg/4T4JGaMYrD
+referringSubnets: { now: 672, before: 679 }
 status: active
 checkedAt: 2026-08-12
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: entryPrice, url: 'https://elest.io/pricing', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://elest.io/pricing', checkedAt: 2026-08-01 }
   - { field: priceTo, url: 'https://elest.io/pricing', checkedAt: 2026-08-02 }

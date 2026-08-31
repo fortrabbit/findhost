@@ -33,6 +33,7 @@ billingPeriods:
 billingTiming: advance
 freeTier: permanent
 persistentStorage: false
+referringSubnets: null
 status: active
 hqCountry: US
 ownership: vc-backed

@@ -28,10 +28,12 @@ audience:
   - agency
 apiAvailable: public
 cliTool: official
+referringSubnets: { now: 613, before: 612 }
 status: active
 staging: included
 checkedAt: 2026-08-12
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: software, url: 'https://www.hypernode.com', checkedAt: 2026-07-31 }
   - { field: apiAvailable, url: 'https://www.hypernode.com', checkedAt: 2026-07-31 }
   - { field: cliTool, url: 'https://www.hypernode.com', checkedAt: 2026-07-31 }

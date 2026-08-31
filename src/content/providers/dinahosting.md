@@ -57,9 +57,11 @@ supportChannels:
   - chat
 supportHours: 24-7
 energyClaim: annual-matched
+referringSubnets: { now: 692, before: 696 }
 status: active
 checkedAt: 2026-08-01
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1325', checkedAt: 2026-08-10 }
   - { field: entryPrice, url: 'https://dinahosting.com/hosting', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://dinahosting.com/hosting', checkedAt: 2026-08-02 }

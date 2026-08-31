@@ -43,9 +43,11 @@ regions:
   - JP
   - AU
 apiAvailable: public
+referringSubnets: { now: 7440, before: 7431 }
 status: acquired
 checkedAt: 2026-08-01
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: entryPrice, url: 'https://api.linode.com/v4/linode/types', checkedAt: 2026-08-01 }
   - { field: parent, url: 'https://www.linode.com/company/about/', checkedAt: 2026-08-01 }
   - { field: ownership, url: 'https://www.linode.com/company/about/', checkedAt: 2026-08-01 }

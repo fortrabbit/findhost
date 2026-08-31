@@ -22,9 +22,11 @@ currencies:
   - GBP
   - NZD
   - AUD
+referringSubnets: { now: 806, before: 819 }
 status: active
 checkedAt: 2026-08-12
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: category, url: 'https://iwantmyname.com/', checkedAt: 2026-08-12 }
   - { field: founded, url: 'https://iwantmyname.com/', checkedAt: 2026-08-12 }
   - { field: currencies, url: 'https://iwantmyname.com/', checkedAt: 2026-08-12 }

@@ -38,6 +38,7 @@ audience:
   - solo
 dnsHosting: paid-addon
 cdnIncluded: paid-addon
+referringSubnets: null
 status: unverifiable
 checkedAt: 2026-08-12
 sources:

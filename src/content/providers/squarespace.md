@@ -32,9 +32,11 @@ social:
   facebook: https://www.facebook.com/squarespace
   linkedin: https://www.linkedin.com/company/squarespace/
   youtube: https://www.youtube.com/squarespace
+referringSubnets: { now: 41232, before: 41525 }
 status: active
 checkedAt: 2026-08-01
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: freeTier, url: 'https://www.squarespace.com/pricing', checkedAt: 2026-07-31 }
   - { field: contractMinimum, url: 'https://www.squarespace.com/pricing', checkedAt: 2026-07-31 }
   - { field: billingPeriods, url: 'https://www.squarespace.com/terms-of-service', checkedAt: 2026-08-02 }

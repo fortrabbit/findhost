@@ -7,9 +7,12 @@ category:
   - shared-hosting
 description: A shared hosting provider in Austria.
 hqCountry: AT
+referringSubnets: { now: 946, before: 952 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
+sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
 ---
 
 easyname sells shared hosting in Austria.

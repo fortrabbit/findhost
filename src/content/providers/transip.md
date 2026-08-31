@@ -55,9 +55,11 @@ social:
   linkedin: https://nl.linkedin.com/company/transip
   facebook: https://www.facebook.com/transipNL
   youtube: https://youtube.com/TransIP
+referringSubnets: { now: 9239, before: 9280 }
 status: active
 checkedAt: 2026-08-12
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1496', checkedAt: 2026-08-10 }
   - { field: priceFrom, url: 'https://www.transip.eu/web-hosting/', checkedAt: 2026-07-31 }
   - { field: priceTo, url: 'https://www.transip.eu/web-hosting/', checkedAt: 2026-08-02 }

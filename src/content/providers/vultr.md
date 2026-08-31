@@ -48,9 +48,11 @@ paymentMethods:
   - paypal
   - crypto
   - bank-transfer
+referringSubnets: { now: 5040, before: 5060 }
 status: active
 checkedAt: 2026-08-01
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: entryPrice, url: 'https://api.vultr.com/v2/plans', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://api.vultr.com/v2/plans', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://docs.vultr.com/', checkedAt: 2026-08-01 }

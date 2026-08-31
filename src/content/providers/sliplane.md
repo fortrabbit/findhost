@@ -53,8 +53,10 @@ regions:
 testDomain: included
 collaboration: team
 apiAvailable: public
+referringSubnets: { now: 367, before: 355 }
 checkedAt: 2026-08-12
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: testDomain, url: 'https://sliplane.io/pricing', checkedAt: 2026-08-12 }
   - { field: collaboration, url: 'https://sliplane.io/pricing', checkedAt: 2026-08-12 }
   - { field: regions, url: 'https://sliplane.io/pricing', checkedAt: 2026-08-01 }

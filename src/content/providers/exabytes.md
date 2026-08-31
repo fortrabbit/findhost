@@ -43,9 +43,11 @@ freeTier: none
 contractMinimum: multi-year
 regions:
   - MY
+referringSubnets: { now: 1533, before: 1522 }
 status: active
 checkedAt: 2026-08-01
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: entryPrice, url: 'https://www.exabytes.my/web-hosting', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://www.exabytes.my/web-hosting', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://www.exabytes.my/web-hosting', checkedAt: 2026-08-02 }

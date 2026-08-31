@@ -48,12 +48,14 @@ supportChannels:
   - phone
   - email
 supportHours: 24-7
+referringSubnets: { now: 822, before: 834 }
 status: active
 checkedAt: 2026-08-12
 domainRegistration: paid-addon
 dnsHosting: included
 emailHosting: included
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: entryPrice, url: 'https://raiolanetworks.com/hosting-web/', checkedAt: 2026-08-01 }
   - { field: domainRegistration, url: 'https://raiolanetworks.com/hosting-web/', checkedAt: 2026-08-12 }
   - { field: dnsHosting, url: 'https://raiolanetworks.com/hosting-web/', checkedAt: 2026-08-12 }

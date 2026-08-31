@@ -312,9 +312,23 @@ const noteKeys = (dir: string, prefix = ''): string[] =>
  */
 const asideNotes = new Set([...[...asideOf.values()].map((group) => group.key), 'stubs']);
 
+/*
+ * The same exception for pages that are neither a facet nor a group beside the
+ * register. /reach/ introduces a list and earns an introduction; the root of
+ * notes/ is facet names, so it is filed under `page/` rather than beside them.
+ */
+const pageNotes = new Set(['reach']);
+
 for (const key of noteKeys(notesDir)) {
   const [segment, value, ...rest] = key.split('/');
   const field = fields.find((candidate) => candidate.facet === segment);
+
+  if (segment === 'page') {
+    if (!value || rest.length || !pageNotes.has(value)) {
+      fail(`${notesDir}/${key}.md`, `a page note is page/<name>.md, one of: ${[...pageNotes].join(', ')}`);
+    }
+    continue;
+  }
 
   if (segment === 'aside') {
     if (!value || rest.length || !asideNotes.has(value)) {

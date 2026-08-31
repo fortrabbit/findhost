@@ -13,9 +13,11 @@ ownership: subsidiary
 infraContract:
   - owns-metal
 pricingModel: fixed-tier
+referringSubnets: { now: 2321, before: 2328 }
 status: active
 checkedAt: 2026-08-12
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: category, url: 'https://www.leaseweb.com', checkedAt: 2026-08-12 }
   - { field: infraContract, url: 'https://www.leaseweb.com', checkedAt: 2026-08-12 }
   - { field: ownership, url: 'https://ocom.com/brands/', checkedAt: 2026-08-21 }

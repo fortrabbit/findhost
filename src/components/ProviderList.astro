@@ -7,6 +7,19 @@ interface Row {
   figure?: { emoji: string; color: string; textColor: string };
   /** Ours: we like it. Drawn as a heart, the one editorial mark a row carries. */
   favorite?: boolean;
+  /*
+   * A measured bar under the body and its figure at the end of the row. Only
+   * /reach/ sets it: the register is alphabetical and a bar in it would imply an
+   * order the list does not have.
+   */
+  meter?: {
+    /** The width drawn by default, as a percentage. */
+    width: number;
+    /** A second width the page can switch to in CSS — /reach/ offers a linear axis. */
+    alternate?: number;
+    text: string;
+    direction?: 'up' | 'down';
+  };
 }
 
 interface Props {
@@ -22,11 +35,18 @@ const { providers, namesOnly = false } = Astro.props;
   {
     providers.map((provider) => {
       const described = !namesOnly && Boolean(provider.description);
+      /* The meter takes the second line rather than adding a third, so a row that
+         carries one is as tall as a described row and shares its tile. */
+      const twoLine = described || Boolean(provider.meter);
 
       return (
         /* The id is how find.ts finds this row again: it filters by hiding what
            the server already rendered, rather than by building rows of its own. */
-        <li class={described ? undefined : 'one-line'} data-record={provider.id}>
+        <li
+          id={provider.meter ? provider.id : undefined}
+          class={twoLine ? undefined : 'one-line'}
+          data-record={provider.id}
+        >
           {/* A record without a figure gets its initial, so a gap never looks like a broken row. */}
           {provider.figure ? (
             <span
@@ -47,13 +67,43 @@ const { providers, namesOnly = false } = Astro.props;
               <a href={`/${provider.id}/`}>{provider.name}</a>
             </span>
             {described && <p>{provider.description}</p>}
+            {provider.meter && (
+              <span class="provider-meter" aria-hidden="true">
+                <span
+                  class="provider-meter-bar"
+                  style={`--meter:${provider.meter.width.toFixed(2)}%;--meter-alt:${(provider.meter.alternate ?? provider.meter.width).toFixed(2)}%`}
+                />
+              </span>
+            )}
           </div>
 
-          {/* The row's own column, at the end of the line where the eye lands after the name. */}
-          {provider.favorite && (
-            <span class="record-badge favorite-badge" title="One we like">
-              <span aria-hidden="true">♥</span>
-              <span class="visually-hidden">One we like</span>
+          {/*
+            The row's own column, at the end of the line where the eye lands after
+            the name. One cell, however many facts it holds: the row is a three
+            column grid, so a second trailing element would wrap to a new row and
+            land under the tile.
+          */}
+          {(provider.favorite || provider.meter) && (
+            <span class="provider-trailing">
+              {provider.favorite && (
+                <span class="record-badge favorite-badge" title="One we like">
+                  <span aria-hidden="true">♥</span>
+                  <span class="visually-hidden">One we like</span>
+                </span>
+              )}
+              {provider.meter && (
+                <span class="provider-figure">
+                  {/* Before the number, not after it: not every row has moved, and an
+                      arrow on the right pushes the figure off the edge the rows
+                      share, so the numbers stop lining up. */}
+                  {provider.meter.direction && (
+                    <span class={`provider-move ${provider.meter.direction}`} aria-hidden="true">
+                      {provider.meter.direction === 'up' ? '↑' : '↓'}
+                    </span>
+                  )}
+                  {provider.meter.text}
+                </span>
+              )}
             </span>
           )}
         </li>

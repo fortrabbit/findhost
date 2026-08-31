@@ -7,6 +7,7 @@ category:
   - shared-hosting
 description: A shared hosting provider in Costa Rica.
 hqCountry: CR
+referringSubnets: null
 status: draft
 checkedAt: 2026-08-12
 ai: authored

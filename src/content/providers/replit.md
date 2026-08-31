@@ -43,10 +43,12 @@ freeTier: permanent
 contractMinimum: annual
 regions:
   - US
+referringSubnets: { now: 8094, before: 8126 }
 status: active
 collaboration: team
 checkedAt: 2026-08-12
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: collaboration, url: 'https://replit.com/pricing', checkedAt: 2026-08-12 }
   - { field: pricingModel, url: 'https://replit.com/pricing', checkedAt: 2026-07-31 }
   - { field: priceFrom, url: 'https://replit.com/pricing', checkedAt: 2026-08-02 }

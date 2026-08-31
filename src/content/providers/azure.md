@@ -63,6 +63,7 @@ regions:
   - SG
   - US
   - ZA
+referringSubnets: null
 status: active
 checkedAt: 2026-08-01
 sources:

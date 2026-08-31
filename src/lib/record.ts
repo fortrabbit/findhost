@@ -36,6 +36,12 @@ export interface Cell {
   text: string;
   href?: string;
   filter?: string;
+  /*
+   * A glyph shown before the value and left outside its link — the direction a
+   * measurement moved is not a place to go. Ahead of the value rather than after
+   * it, so a column of figures lines up whether or not each one has one.
+   */
+  mark?: string;
 }
 
 /**
@@ -46,7 +52,23 @@ export interface Cell {
 export interface RecordContext {
   nameOf: Map<string, string>;
   hasPage: Set<string>;
+  /** This record's own id, so a row can link to where the record sits among the others. */
+  id?: string;
 }
+
+/*
+ * The current figure and which way it moved, and no more: the previous number
+ * belongs to the comparison rather than to this record. An arrow says a
+ * measurement moves without spending a line on what it moved from.
+ */
+const reach = (entry: unknown): { text: string; mark?: string } | undefined => {
+  const held = entry as { now: number; before?: number };
+  if (typeof held?.now !== 'number') return undefined;
+
+  const text = new Intl.NumberFormat('en').format(held.now);
+  if (typeof held.before !== 'number' || held.before === held.now) return { text };
+  return { text, mark: held.now > held.before ? '↑' : '↓' };
+};
 
 const money = (entry: unknown): string | undefined => {
   const paid = entry as { amount: number; currency: string; period: string; introductory?: boolean };
@@ -58,6 +80,15 @@ export function cells(field: Field, value: unknown, context: RecordContext): Cel
   if (field.render === 'yes-no') return [{ text: value ? 'yes' : 'no' }];
   if (field.render === 'money') return [{ text: money(value) ?? '' }];
   if (field.render === 'multiple') return [{ text: `${String(value)}×` }];
+  /*
+   * The figure links to the same record's row on /reach/, because a number on
+   * its own says nothing: what a reader wants to know is where it sits among the
+   * others, and that page is the only place the register is ordered by it.
+   */
+  if (field.render === 'reach') {
+    const said = reach(value);
+    return said ? [{ ...said, href: context.id ? `/reach/#${context.id}` : '/reach/' }] : [];
+  }
 
   return (Array.isArray(value) ? value : [value]).map((entry) => {
     /*

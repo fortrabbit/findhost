@@ -41,9 +41,11 @@ regions:
   - IN
   - AU
   - MX
+referringSubnets: { now: 19857, before: 19931 }
 status: active
 checkedAt: 2026-08-01
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: pricingModel, url: 'https://docs.digitalocean.com/products/functions/details/pricing/', checkedAt: 2026-07-31 }
   - { field: freeTier, url: 'https://docs.digitalocean.com/products/functions/details/pricing/', checkedAt: 2026-07-31 }
   - { field: priceFrom, url: 'https://docs.digitalocean.com/products/functions/details/pricing/', checkedAt: 2026-08-02 }

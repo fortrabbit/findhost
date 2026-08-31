@@ -8,9 +8,12 @@ category:
   - shared-hosting
 description: A PaaS and shared hosting provider in the United States.
 hqCountry: US
+referringSubnets: { now: 1492, before: 1502 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
+sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
 ---
 
 Nexcess sells PaaS and shared hosting in the United States.
