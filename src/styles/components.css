@@ -722,6 +722,24 @@ html:not(.js) .theme-switch {
   width: var(--meter-alt);
 }
 
+/*
+ * A fixed trailing column, so the bars can be compared with each other.
+ *
+ * Every row is its own grid, and the third column was `auto`: a row carrying a
+ * heart made that column wider, which made the 1fr beside it narrower, which
+ * made its bar physically shorter than a longer bar on a row with no heart.
+ * Lovable at 11,815 drew shorter than Webflow at 11,813. The track has to be the
+ * same width on every row or the lengths mean nothing.
+ */
+.scaled .provider-list > li {
+  grid-template-columns: var(--tile) 1fr 8rem;
+}
+
+.scaled .provider-trailing {
+  justify-content: flex-end;
+  width: 100%;
+}
+
 /* Everything the row carries after the name, in the one cell the grid gives it. */
 .provider-trailing {
   display: flex;
