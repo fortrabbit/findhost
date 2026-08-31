@@ -7,6 +7,7 @@ import linkedin from 'bootstrap-icons/icons/linkedin.svg?raw';
 import mastodon from 'bootstrap-icons/icons/mastodon.svg?raw';
 import x from 'bootstrap-icons/icons/twitter-x.svg?raw';
 import youtube from 'bootstrap-icons/icons/youtube.svg?raw';
+import { outboundLinkAttrs } from '../lib/links';
 
 interface Props {
   /** The record's `social` block: network key to profile URL. */
@@ -52,7 +53,7 @@ const accounts = Object.entries(marks)
   accounts.length > 0 && (
     <span class="social-links">
       {accounts.map((account) => (
-        <a href={account.url} rel="nofollow" title={account.label}>
+        <a href={account.url} title={account.label} {...outboundLinkAttrs(account.url, 'record')}>
           <span class="visually-hidden">{account.label}</span>
           <Fragment set:html={account.svg} />
         </a>

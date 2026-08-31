@@ -7,6 +7,7 @@ import { isListed } from '../lib/providers';
 import { loadFacets } from '../lib/facets';
 import { organization, recordTitle } from '../lib/seo';
 import { cardPath } from '../lib/og';
+import { outboundLinkAttrs } from '../lib/links';
 import SocialLinks from '../components/SocialLinks.astro';
 import PageFigure from '../components/PageFigure.astro';
 import FactGroups from '../components/FactGroups.astro';
@@ -26,6 +27,9 @@ const { provider } = Astro.props;
 
 const { Content } = await render(provider);
 const data = provider.data;
+
+// The record's file, where a correction is one pull request rather than a mail.
+const editUrl = `https://github.com/fortrabbit/findhost/edit/main/src/content/providers/${provider.id}.md`;
 
 /*
  * Every record, because a relation is read from both ends: this one names its
@@ -316,7 +320,7 @@ const categoryLabels = (fieldOf.get('category')?.values ?? [])
       {
         data.urls?.home && (
           <span class="record-link">
-            <a class="record-home" href={data.urls.home} rel="nofollow">
+            <a class="record-home" href={data.urls.home} {...outboundLinkAttrs(data.urls.home, 'record')}>
               {data.urls.home.replace('https://', '')}
             </a>
             {noteFor('urls') && (
@@ -330,7 +334,7 @@ const categoryLabels = (fieldOf.get('category')?.values ?? [])
       {
         outgoing.map((link) => (
           <span class="record-link">
-            <a href={link.url} rel="nofollow">
+            <a href={link.url} {...outboundLinkAttrs(link.url, 'record')}>
               {link.label}
             </a>
             {/* `urls` is cited once, on the address; every page under it is the same source. */}
@@ -447,7 +451,7 @@ const categoryLabels = (fieldOf.get('category')?.values ?? [])
                 <span class="source-date">{note.checkedAt.toISOString().slice(0, 10)}</span>:&nbsp;
                 <span class="source-fields">{note.fields.map(sourceLabel).join(', ')}</span>
                 <br />
-                <a href={note.url} rel="nofollow">
+                <a href={note.url} {...outboundLinkAttrs(note.url, 'record')}>
                   {note.url.replace('https://', '')}
                 </a>{' '}
               </li>
@@ -503,9 +507,7 @@ const categoryLabels = (fieldOf.get('category')?.values ?? [])
           )
         }
       </span>
-      <a href={`https://github.com/fortrabbit/findhost/edit/main/src/content/providers/${provider.id}.md`}>
-        Edit on GitHub
-      </a>
+      <a href={editUrl} {...outboundLinkAttrs(editUrl, 'record')}>Edit on GitHub</a>
       <a href={`/${provider.id}.md`}>This page as markdown</a>
     </p>
   </article>

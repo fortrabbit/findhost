@@ -14,6 +14,12 @@ ErrorDocument 404 /404.html
 # No HSTS on purpose: it is the one header here that cannot be taken back
 # within its max-age. Referrer-Policy earns its place — every record links out
 # to a provider, and the default hands each of them the full referring URL.
+#
+# Strict is the floor, not the whole rule. A record's own links opt back up to
+# no-referrer-when-downgrade per link (src/lib/links.ts), so a provider clicking
+# through sees which record sent them rather than only the domain. The header
+# still covers everywhere else: "/regions/de/, then clicked out" is a lead
+# signal, and an address that one day carries a token would carry it out too.
 <IfModule mod_headers.c>
   Header always set X-Content-Type-Options "nosniff"
   Header always set Referrer-Policy "strict-origin-when-cross-origin"

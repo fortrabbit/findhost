@@ -1,6 +1,8 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import { dictionaryFile } from './src/lib/fields.ts';
+import { satteri } from '@astrojs/markdown-satteri';
+import { outboundProse } from './src/lib/outbound-prose.ts';
 
 /*
  * Canonical origin, deliberately not hardcoded: this runs on a vanity URL before
@@ -72,7 +74,15 @@ export default defineConfig({
    * whole palette is ink and paper. A snippet somebody is meant to read before
    * pasting it onto their own pages is also the wrong place to recolour tokens.
    */
-  markdown: { syntaxHighlight: false },
+  markdown: {
+    syntaxHighlight: false,
+    /*
+     * The default processor, named so it can be handed a plugin. The outbound
+     * policy reaches the prose here: every other link that leaves the site is an
+     * attribute somebody wrote, and nothing was applying the rule to markdown.
+     */
+    processor: satteri({ hastPlugins: [outboundProse] }),
+  },
   vite: {
     plugins: [
       /*

@@ -292,6 +292,33 @@ for (const field of fields) {
 }
 
 /*
+ * Every link that leaves the site asks src/lib/links.ts, so the policy is one
+ * function rather than an attribute repeated across the templates. Only a
+ * hand-typed address can be checked from here — an href built from a variable
+ * says nothing about where it points — and a hand-typed one is exactly the case
+ * that goes in without the question being asked.
+ */
+const componentFiles = (dir: string): string[] =>
+  readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
+    const path = join(dir, entry.name);
+    if (entry.isDirectory()) return componentFiles(path);
+    return entry.name.endsWith('.astro') ? [path] : [];
+  });
+
+for (const file of componentFiles('src')) {
+  const source = readFileSync(file, 'utf8');
+
+  // `[^>]` matches a newline, so a tag written over several lines is one match.
+  for (const [tag] of source.matchAll(/<a\b[^>]*>/g)) {
+    if (!/href=(?:"|'|\{`|\{')https?:\/\//.test(tag)) continue;
+    if (tag.includes('outboundLinkAttrs')) continue;
+
+    const href = tag.match(/href=(?:"|'|\{`|\{')(https?:\/\/[^"'`\s]*)/)?.[1] ?? 'the address';
+    fail(file, `<a href="${href}"> is written without outboundLinkAttrs(), so it escapes the outbound link policy`);
+  }
+}
+
+/*
  * Notes are keyed by the path they head: <facet>.md for a facet, <facet>/<value>.md
  * for one of its values. Nothing else reads them, so a typo in either segment is
  * a file that renders nowhere while llms.txt still publishes a link to it.

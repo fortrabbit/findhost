@@ -152,10 +152,25 @@ test.describe('a record', () => {
     await expect(page.locator('.sources li').first().locator('.source-date')).toHaveText(/^\d{4}-\d{2}-\d{2}$/);
   });
 
-  test('sends every outbound link with rel=nofollow', async ({ page }) => {
+  test('sends every outbound link with rel=nofollow, and hands the provider the record path', async ({ page }) => {
     await page.goto('/hetzner/');
     for (const link of await page.locator('.record-links a[href^="http"]').all()) {
       await expect(link).toHaveAttribute('rel', 'nofollow');
+      // Against the site-wide strict-origin header: a provider clicking their
+      // own link lands on their analytics as the record rather than the domain.
+      await expect(link).toHaveAttribute('referrerpolicy', 'no-referrer-when-downgrade');
+    }
+  });
+
+  test('holds the prose to the same policy, which it used to escape', async ({ page }) => {
+    await page.goto('/vercel/');
+
+    const links = await page.locator('.record-prose a[href^="http"]').all();
+    expect(links.length).toBeGreaterThan(0);
+
+    for (const link of links) {
+      await expect(link).toHaveAttribute('rel', 'nofollow');
+      await expect(link).toHaveAttribute('referrerpolicy', 'no-referrer-when-downgrade');
     }
   });
 });

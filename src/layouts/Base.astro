@@ -2,6 +2,7 @@
 import '../styles/tokens.css';
 import '../styles/base.css';
 import '../styles/components.css';
+import { outboundLinkAttrs } from '../lib/links';
 
 interface Props {
   title: string;
@@ -140,7 +141,12 @@ const card = new URL(image, origin).href;
           <nav class="footer-nav" aria-label="Elsewhere">
             <a href="/about/">About</a>
             <a href="/for-providers/">Add a provider</a>
-            <a href="https://github.com/fortrabbit/findhost">GitHub</a>
+            <a
+              href="https://github.com/fortrabbit/findhost"
+              {...outboundLinkAttrs('https://github.com/fortrabbit/findhost')}
+            >
+              GitHub
+            </a>
           </nav>
           {
             /*
