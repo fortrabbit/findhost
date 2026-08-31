@@ -44,7 +44,7 @@ supportChannels:
 social:
   linkedin: https://www.linkedin.com/company/umbler
   youtube: https://www.youtube.com/umbler
-referringSubnets: { now: 684, before: 660 }
+referringSubnets: { now: 674, before: 684 }
 checkedAt: 2026-08-01
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }

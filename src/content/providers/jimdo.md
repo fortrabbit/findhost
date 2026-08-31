@@ -17,7 +17,7 @@ billingPeriods:
   - yearly
   - multi-year
 freeTier: permanent
-referringSubnets: { now: 29044, before: 29165 }
+referringSubnets: { now: 29041, before: 29044 }
 status: active
 checkedAt: 2026-08-08
 sources:

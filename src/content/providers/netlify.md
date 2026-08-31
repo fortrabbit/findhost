@@ -70,7 +70,7 @@ staging: included
 collaboration: team
 favorite: true
 favoriteNote: Made deploying from a commit ordinary. Everyone else copied it.
-referringSubnets: { now: 7482, before: 7496 }
+referringSubnets: { now: 7466, before: 7482 }
 status: active
 checkedAt: 2026-08-12
 sources:

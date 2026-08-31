@@ -4,7 +4,7 @@ name: A1 Telekom Austria Group
 urls:
   home: https://www.a1.group
 description: An Austrian telecoms group and the owner of Exoscale.
-referringSubnets: { now: 534, before: 542 }
+referringSubnets: { now: 532, before: 534 }
 status: unlisted
 checkedAt: 2026-08-07
 figure:
@@ -15,6 +15,7 @@ figure:
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 An Austrian telecoms group, and the owner of Exoscale. As with several entries here, the hosting is a subsidiary of something much larger that sells something else.

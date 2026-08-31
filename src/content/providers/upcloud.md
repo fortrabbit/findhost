@@ -32,7 +32,7 @@ regions:
   - US
 social:
   github: https://github.com/UpCloudLtd
-referringSubnets: { now: 1205, before: 1217 }
+referringSubnets: { now: 1211, before: 1205 }
 checkedAt: 2026-08-08
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }

@@ -8,12 +8,13 @@ category:
   - static
 description: A low-code and static hosting provider in Iceland.
 hqCountry: IS
-referringSubnets: { now: 566, before: 553 }
+referringSubnets: { now: 553, before: 566 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Webstudio sells low-code and no-code and static hosting in Iceland.

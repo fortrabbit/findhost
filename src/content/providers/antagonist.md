@@ -33,7 +33,7 @@ useCases:
 audience:
   - smb
   - solo
-referringSubnets: { now: 2548, before: 2551 }
+referringSubnets: { now: 2552, before: 2548 }
 status: active
 domainRegistration: paid-addon
 emailHosting: included

@@ -29,7 +29,7 @@ useCases:
 audience:
   - smb
   - solo
-referringSubnets: { now: 813, before: 829 }
+referringSubnets: { now: 805, before: 813 }
 status: active
 checkedAt: 2026-08-08
 figure:

@@ -4,7 +4,7 @@ name: KKR
 urls:
   home: https://www.kkr.com
 description: A US investment firm that holds the majority of a server provider recorded here, and sells no hosting itself.
-referringSubnets: { now: 2246, before: 2266 }
+referringSubnets: { now: 2222, before: 2246 }
 status: unlisted
 checkedAt: 2026-08-29
 sources:

@@ -50,7 +50,7 @@ domainRegistration: included
 dnsHosting: included
 emailHosting: included
 staging: paid-addon
-referringSubnets: { now: 3947, before: 3954 }
+referringSubnets: { now: 3926, before: 3947 }
 status: active
 checkedAt: 2026-08-12
 sources:

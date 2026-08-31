@@ -21,7 +21,7 @@ supportChannels:
   - chat
 supportHours: 24-7
 supportTiering: all-plans
-referringSubnets: { now: 7262, before: 7218 }
+referringSubnets: { now: 7191, before: 7262 }
 status: active
 checkedAt: 2026-08-12
 sources:

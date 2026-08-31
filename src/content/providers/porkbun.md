@@ -13,7 +13,7 @@ hqCountry: US
 ownership: subsidiary
 domainRegistration: paid-addon
 emailHosting: paid-addon
-referringSubnets: { now: 2122, before: 2147 }
+referringSubnets: { now: 2123, before: 2122 }
 status: active
 checkedAt: 2026-08-12
 dnsHosting: included

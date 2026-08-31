@@ -10,7 +10,7 @@ description: A shared hosting and VPS provider in Italy.
 hqCountry: IT
 ownership: subsidiary
 parent: your-online
-referringSubnets: { now: 367, before: 361 }
+referringSubnets: { now: 363, before: 367 }
 status: draft
 checkedAt: 2026-08-12
 sources:

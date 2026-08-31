@@ -29,7 +29,7 @@ billingTiming: advance
 exitWithin: a-month
 entryPrice: { amount: 25, currency: EUR, period: month }
 freeTier: trial
-referringSubnets: { now: 67064, before: 67405 }
+referringSubnets: { now: 66755, before: 67064 }
 status: active
 checkedAt: 2026-08-01
 sources:

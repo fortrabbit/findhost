@@ -5,7 +5,7 @@ urls:
   home: https://www.savvii.com
 ownership: subsidiary
 parent: your-online
-referringSubnets: { now: 304, before: 300 }
+referringSubnets: { now: 299, before: 304 }
 status: draft
 checkedAt: 2026-07-31
 sources:

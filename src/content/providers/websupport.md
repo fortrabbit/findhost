@@ -54,7 +54,7 @@ supportHours: 24-7
 domainRegistration: paid-addon
 dnsHosting: included
 emailHosting: included
-referringSubnets: { now: 5137, before: 5099 }
+referringSubnets: { now: 5061, before: 5137 }
 status: active
 checkedAt: 2026-08-12
 apiAvailable: public

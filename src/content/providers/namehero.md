@@ -8,12 +8,13 @@ category:
   - vps
 description: A shared hosting and VPS provider in the United States.
 hqCountry: US
-referringSubnets: { now: 823, before: 825 }
+referringSubnets: { now: 818, before: 823 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 NameHero sells shared hosting and VPS in the United States.

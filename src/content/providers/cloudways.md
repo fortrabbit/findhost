@@ -44,7 +44,7 @@ billingTiming: arrears
 entryPrice: { amount: 11, currency: USD, period: month }
 freeTier: trial
 apiAvailable: public
-referringSubnets: { now: 5081, before: 5125 }
+referringSubnets: { now: 5095, before: 5081 }
 status: active
 checkedAt: 2026-08-09
 sources:

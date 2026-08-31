@@ -6,12 +6,13 @@ urls:
 category:
   - lcnc
 description: A low-code and no-code site builder.
-referringSubnets: { now: 500, before: 505 }
+referringSubnets: { now: 514, before: 500 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Typedream sells low-code and no-code.

@@ -58,7 +58,7 @@ regions:
   - FR
   - LU
 apiAvailable: public
-referringSubnets: { now: 12367, before: 12387 }
+referringSubnets: { now: 11933, before: 12367 }
 status: active
 checkedAt: 2026-08-12
 sources:

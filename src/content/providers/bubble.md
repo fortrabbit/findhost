@@ -22,7 +22,7 @@ billingPeriods:
   - yearly
 billingTiming: advance
 exitWithin: a-month
-referringSubnets: { now: 3915, before: 3941 }
+referringSubnets: { now: 3919, before: 3915 }
 status: active
 checkedAt: 2026-08-08
 sources:

@@ -45,7 +45,7 @@ supportChannels:
   - phone
   - email
 supportHours: 24-7
-referringSubnets: { now: 2057, before: 2081 }
+referringSubnets: { now: 2057, before: 2057 }
 status: active
 checkedAt: 2026-08-01
 sources:

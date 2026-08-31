@@ -31,7 +31,7 @@ runtimes:
 managedDatabases:
   - mysql
   - postgres
-referringSubnets: { now: 3710, before: 3784 }
+referringSubnets: { now: 3716, before: 3710 }
 status: active
 domainRegistration: included
 emailHosting: included

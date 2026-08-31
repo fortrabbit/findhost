@@ -51,7 +51,7 @@ social:
   facebook: https://www.facebook.com/webempresa.hosting
   linkedin: https://www.linkedin.com/company/webempresa-com
   youtube: https://www.youtube.com/user/webempresa
-referringSubnets: { now: 1117, before: 1120 }
+referringSubnets: { now: 1116, before: 1117 }
 checkedAt: 2026-08-01
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }

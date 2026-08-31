@@ -58,7 +58,7 @@ supportHours: 24-7
 apiAvailable: public
 iacSupport:
   - terraform
-referringSubnets: { now: 770, before: 773 }
+referringSubnets: { now: 770, before: 770 }
 checkedAt: 2026-08-01
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }

@@ -11,7 +11,7 @@ ownership: independent
 deployMethods:
   - file-transfer
 collaboration: none
-referringSubnets: { now: 300, before: 306 }
+referringSubnets: { now: 307, before: 300 }
 status: active
 checkedAt: 2026-08-14
 sources:

@@ -41,7 +41,7 @@ billingPeriods:
   - monthly
   - yearly
 freeTier: none
-referringSubnets: { now: 452, before: 447 }
+referringSubnets: { now: 449, before: 452 }
 status: active
 checkedAt: 2026-08-01
 sources:

@@ -48,7 +48,7 @@ regions:
 apiAvailable: public
 cliTool: official
 sla: true
-referringSubnets: { now: 2540, before: 2510 }
+referringSubnets: { now: 2513, before: 2540 }
 status: active
 checkedAt: 2026-08-01
 sources:

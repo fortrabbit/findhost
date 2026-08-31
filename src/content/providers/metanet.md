@@ -7,12 +7,13 @@ category:
   - shared-hosting
 description: A shared hosting provider in Switzerland.
 hqCountry: CH
-referringSubnets: { now: 779, before: 785 }
+referringSubnets: { now: 769, before: 779 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Metanet sells shared hosting in Switzerland.

@@ -16,7 +16,7 @@ managedDatabases:
   - mariadb
   - postgres
   - redis
-referringSubnets: { now: 502, before: 494 }
+referringSubnets: { now: 479, before: 502 }
 status: active
 checkedAt: 2026-08-14
 sources:

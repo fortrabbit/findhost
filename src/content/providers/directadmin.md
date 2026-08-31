@@ -42,7 +42,7 @@ freeTier: trial
 supportChannels:
   - email
   - forum
-referringSubnets: { now: 13931, before: 13934 }
+referringSubnets: { now: 13867, before: 13931 }
 status: active
 checkedAt: 2026-08-12
 sources:

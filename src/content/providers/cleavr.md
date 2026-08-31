@@ -57,7 +57,7 @@ dnsHosting: included
 staging: included
 testDomain: included
 collaboration: team
-referringSubnets: { now: 240, before: 232 }
+referringSubnets: { now: 228, before: 240 }
 checkedAt: 2026-08-12
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }

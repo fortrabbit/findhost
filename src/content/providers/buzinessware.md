@@ -9,12 +9,13 @@ category:
   - bare-metal
 description: A shared hosting, VPS and bare metal provider in the United Arab Emirates.
 hqCountry: AE
-referringSubnets: { now: 306, before: 311 }
+referringSubnets: { now: 302, before: 306 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Buzinessware sells shared hosting, VPS and bare metal in the United Arab Emirates.

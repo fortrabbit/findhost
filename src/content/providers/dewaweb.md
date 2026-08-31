@@ -8,12 +8,13 @@ category:
   - vps
 description: A shared hosting and VPS provider in Indonesia.
 hqCountry: ID
-referringSubnets: { now: 607, before: 606 }
+referringSubnets: { now: 604, before: 607 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Dewaweb sells shared hosting and VPS in Indonesia.

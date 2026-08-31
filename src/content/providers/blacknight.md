@@ -36,7 +36,7 @@ useCases:
 audience:
   - smb
   - solo
-referringSubnets: { now: 1306, before: 1301 }
+referringSubnets: { now: 1282, before: 1306 }
 status: active
 checkedAt: 2026-08-12
 domainRegistration: paid-addon

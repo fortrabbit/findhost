@@ -13,7 +13,7 @@ hqCountry: IL
 ownership: public
 whoManagesOs: managed
 sshAccess: none
-referringSubnets: { now: 37197, before: 37424 }
+referringSubnets: { now: 37230, before: 37197 }
 checkedAt: 2026-08-08
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }

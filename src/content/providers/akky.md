@@ -7,12 +7,13 @@ category:
   - shared-hosting
 description: A shared hosting provider in Mexico.
 hqCountry: MX
-referringSubnets: { now: 425, before: 423 }
+referringSubnets: { now: 418, before: 425 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Akky sells shared hosting in Mexico.

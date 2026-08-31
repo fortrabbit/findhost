@@ -71,7 +71,7 @@ sources:
   - { field: renewalMultiple, url: 'https://www.siteground.com/web-hosting.htm', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://www.siteground.com/viewtos/terms_of_service', checkedAt: 2026-08-01 }
   - { field: software, url: 'https://www.siteground.com/kb/', checkedAt: 2026-07-31 }
-referringSubnets: { now: 6753, before: 6775 }
+referringSubnets: { now: 6746, before: 6753 }
 status: active
 ai: authored
 figure:

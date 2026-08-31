@@ -43,7 +43,7 @@ billingPeriods:
 billingTiming: advance
 exitWithin: a-month
 freeTier: permanent
-referringSubnets: { now: 339, before: 325 }
+referringSubnets: { now: 341, before: 339 }
 status: active
 checkedAt: 2026-08-01
 sources:

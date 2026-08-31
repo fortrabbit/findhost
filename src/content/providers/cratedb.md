@@ -22,7 +22,7 @@ pricingModel: hourly
 freeTier: permanent
 currencies:
   - USD
-referringSubnets: { now: 733, before: 757 }
+referringSubnets: { now: 724, before: 733 }
 status: active
 checkedAt: 2026-08-12
 sources:

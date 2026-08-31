@@ -55,7 +55,7 @@ iacSupport:
 certifications:
   - iso-27001
   - soc-2
-referringSubnets: { now: 800, before: 801 }
+referringSubnets: { now: 792, before: 800 }
 checkedAt: 2026-08-12
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }

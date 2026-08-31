@@ -48,7 +48,7 @@ paymentMethods:
   - paypal
   - crypto
   - bank-transfer
-referringSubnets: { now: 5040, before: 5060 }
+referringSubnets: { now: 5071, before: 5040 }
 status: active
 checkedAt: 2026-08-01
 sources:

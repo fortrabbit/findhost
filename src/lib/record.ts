@@ -56,18 +56,36 @@ export interface RecordContext {
   id?: string;
 }
 
+/**
+ * Which way a measurement moved since the list before it. Four answers, not
+ * three: a figure that did not move and a figure with nothing to compare against
+ * are different facts, and a blank where an arrow goes cannot say which.
+ */
+export type Movement = 'up' | 'down' | 'flat' | 'new';
+
+export function movementOf(held: { now: number; before?: number }): Movement {
+  if (typeof held.before !== 'number') return 'new';
+  if (held.now === held.before) return 'flat';
+  return held.now > held.before ? 'up' : 'down';
+}
+
+/** The glyph each one is drawn as, in the list and on a record alike. */
+export const movementMark: Record<Movement, string> = {
+  up: '↑',
+  down: '↓',
+  flat: '←',
+  new: '?',
+};
+
 /*
  * The current figure and which way it moved, and no more: the previous number
- * belongs to the comparison rather than to this record. An arrow says a
- * measurement moves without spending a line on what it moved from.
+ * belongs to the comparison rather than to this record.
  */
-const reach = (entry: unknown): { text: string; mark?: string } | undefined => {
+const reach = (entry: unknown): { text: string; mark: string } | undefined => {
   const held = entry as { now: number; before?: number };
   if (typeof held?.now !== 'number') return undefined;
 
-  const text = new Intl.NumberFormat('en').format(held.now);
-  if (typeof held.before !== 'number' || held.before === held.now) return { text };
-  return { text, mark: held.now > held.before ? '↑' : '↓' };
+  return { text: new Intl.NumberFormat('en').format(held.now), mark: movementMark[movementOf(held)] };
 };
 
 const money = (entry: unknown): string | undefined => {

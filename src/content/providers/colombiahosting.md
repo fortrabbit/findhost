@@ -7,12 +7,13 @@ category:
   - shared-hosting
 description: A shared hosting provider in Colombia.
 hqCountry: CO
-referringSubnets: { now: 575, before: 569 }
+referringSubnets: { now: 568, before: 575 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 ColombiaHosting sells shared hosting in Colombia.

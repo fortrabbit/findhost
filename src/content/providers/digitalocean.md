@@ -68,7 +68,7 @@ iacSupport:
   - terraform
   - ansible
 sla: true
-referringSubnets: { now: 19857, before: 19931 }
+referringSubnets: { now: 19834, before: 19857 }
 status: active
 checkedAt: 2026-08-12
 sources:

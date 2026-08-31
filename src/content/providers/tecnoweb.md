@@ -9,12 +9,13 @@ category:
   - paas
 description: A shared hosting, VPS and PaaS provider in Chile.
 hqCountry: CL
-referringSubnets: { now: 319, before: 313 }
+referringSubnets: { now: 312, before: 319 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 TecnoWeb sells shared hosting, VPS and PaaS in Chile.

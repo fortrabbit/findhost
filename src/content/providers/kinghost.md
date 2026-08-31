@@ -53,7 +53,7 @@ supportChannels:
   - chat
   - phone
 supportHours: 24-7
-referringSubnets: { now: 1267, before: 1263 }
+referringSubnets: { now: 1264, before: 1267 }
 status: active
 checkedAt: 2026-08-01
 sources:

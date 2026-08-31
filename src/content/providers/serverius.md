@@ -8,12 +8,13 @@ category:
   - bare-metal
 description: A IaaS and bare metal provider in the Netherlands.
 hqCountry: NL
-referringSubnets: { now: 284, before: 285 }
+referringSubnets: { now: 277, before: 284 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Serverius sells IaaS and bare metal in the Netherlands.

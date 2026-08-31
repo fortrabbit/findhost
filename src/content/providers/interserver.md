@@ -51,7 +51,7 @@ contractMinimum: monthly
 freeTier: none
 regions:
   - US
-referringSubnets: { now: 2187, before: 2213 }
+referringSubnets: { now: 2168, before: 2187 }
 status: active
 checkedAt: 2026-08-01
 sources:

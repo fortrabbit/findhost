@@ -34,7 +34,7 @@ supportChannels:
   - email
   - forum
   - chat
-referringSubnets: { now: 8426, before: 8421 }
+referringSubnets: { now: 8422, before: 8426 }
 status: active
 checkedAt: 2026-08-12
 sources:

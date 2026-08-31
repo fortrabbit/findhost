@@ -53,7 +53,7 @@ regions:
   - GB
 supportChannels:
   - email
-referringSubnets: { now: 911, before: 908 }
+referringSubnets: { now: 903, before: 911 }
 status: active
 checkedAt: 2026-08-09
 apiAvailable: public

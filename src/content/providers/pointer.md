@@ -7,12 +7,13 @@ category:
   - shared-hosting
 description: A shared hosting provider in Greece.
 hqCountry: GR
-referringSubnets: { now: 292, before: 291 }
+referringSubnets: { now: 281, before: 292 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Pointer sells shared hosting in Greece.

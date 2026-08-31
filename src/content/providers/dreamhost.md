@@ -33,7 +33,7 @@ domainRegistration: included
 emailHosting: included
 cdnIncluded: included
 staging: included
-referringSubnets: { now: 16637, before: 16720 }
+referringSubnets: { now: 16441, before: 16637 }
 status: active
 checkedAt: 2026-08-12
 sources:

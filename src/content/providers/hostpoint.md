@@ -52,7 +52,7 @@ supportHours: 24-7
 supportTiering: all-plans
 certifications:
   - iso-27001
-referringSubnets: { now: 956, before: 962 }
+referringSubnets: { now: 972, before: 956 }
 status: active
 checkedAt: 2026-08-12
 sources:

@@ -20,7 +20,7 @@ currencies:
 freeTier: permanent
 collaboration: team
 apiAvailable: public
-referringSubnets: { now: 17411, before: 17468 }
+referringSubnets: { now: 17378, before: 17411 }
 status: active
 checkedAt: 2026-08-13
 sources:

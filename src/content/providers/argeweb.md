@@ -7,12 +7,13 @@ category:
   - shared-hosting
 description: A shared hosting provider in the Netherlands.
 hqCountry: NL
-referringSubnets: { now: 459, before: 462 }
+referringSubnets: { now: 452, before: 459 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Argeweb sells shared hosting in the Netherlands.

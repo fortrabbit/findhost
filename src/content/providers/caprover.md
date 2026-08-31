@@ -7,12 +7,13 @@ category:
   - caas
 description: A CaaS provider in the United States.
 hqCountry: US
-referringSubnets: { now: 3771, before: 3783 }
+referringSubnets: { now: 3772, before: 3771 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 CapRover sells CaaS in the United States.

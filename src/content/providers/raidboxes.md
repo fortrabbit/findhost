@@ -33,7 +33,7 @@ audience:
   - smb
 favorite: true
 favoriteNote: Managed WordPress without the upsell maze.
-referringSubnets: { now: 1115, before: 1127 }
+referringSubnets: { now: 1116, before: 1115 }
 status: active
 checkedAt: 2026-08-07
 sources:

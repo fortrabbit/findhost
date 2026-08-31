@@ -6,12 +6,13 @@ urls:
 category:
   - static
 description: A static hosting provider.
-referringSubnets: { now: 779, before: 773 }
+referringSubnets: { now: 773, before: 779 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Spheron sells static hosting.

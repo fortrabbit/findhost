@@ -43,7 +43,7 @@ regions:
   - JP
   - AU
 apiAvailable: public
-referringSubnets: { now: 7440, before: 7431 }
+referringSubnets: { now: 7434, before: 7440 }
 status: acquired
 checkedAt: 2026-08-01
 sources:

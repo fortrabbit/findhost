@@ -29,7 +29,7 @@ freeTier: none
 apiAvailable: public
 iacSupport:
   - terraform
-referringSubnets: { now: 3041, before: 3074 }
+referringSubnets: { now: 3001, before: 3041 }
 status: active
 domainRegistration: paid-addon
 emailHosting: included

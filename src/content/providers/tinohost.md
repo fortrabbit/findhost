@@ -8,12 +8,13 @@ category:
   - vps
 description: A shared hosting and VPS provider in Vietnam.
 hqCountry: VN
-referringSubnets: { now: 257, before: 250 }
+referringSubnets: { now: 241, before: 257 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 TinoHost sells shared hosting and VPS in Vietnam.

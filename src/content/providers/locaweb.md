@@ -24,7 +24,7 @@ audience:
   - smb
 apiAvailable: none
 cliTool: none
-referringSubnets: { now: 1482, before: 1468 }
+referringSubnets: { now: 1457, before: 1482 }
 status: active
 checkedAt: 2026-07-31
 sources:

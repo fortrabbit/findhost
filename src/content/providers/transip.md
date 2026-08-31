@@ -55,7 +55,7 @@ social:
   linkedin: https://nl.linkedin.com/company/transip
   facebook: https://www.facebook.com/transipNL
   youtube: https://youtube.com/TransIP
-referringSubnets: { now: 9239, before: 9280 }
+referringSubnets: { now: 9365, before: 9239 }
 status: active
 checkedAt: 2026-08-12
 sources:

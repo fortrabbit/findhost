@@ -7,12 +7,13 @@ category:
   - shared-hosting
 description: A shared hosting provider in Spain.
 hqCountry: ES
-referringSubnets: { now: 2253, before: 2262 }
+referringSubnets: { now: 2182, before: 2253 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Nominalia sells shared hosting in Spain.

@@ -28,7 +28,7 @@ audience:
   - agency
 apiAvailable: public
 cliTool: official
-referringSubnets: { now: 613, before: 612 }
+referringSubnets: { now: 609, before: 613 }
 status: active
 staging: included
 checkedAt: 2026-08-12

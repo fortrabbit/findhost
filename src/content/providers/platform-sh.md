@@ -3,13 +3,14 @@ id: platform-sh
 name: Platform.sh
 urls:
   home: https://platform.sh
-referringSubnets: { now: 1026, before: 1034 }
+referringSubnets: { now: 1021, before: 1026 }
 status: out-of-scope
 criterion: 2
 checkedAt: 2026-07-31
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Platform.sh was a YAML-described, git-driven PaaS with a strong following in the Drupal, Symfony and Magento worlds, and for years the most credible European answer to Heroku.

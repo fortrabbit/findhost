@@ -63,7 +63,7 @@ paymentMethods:
   - paypal
   - bank-transfer
 sla: true
-referringSubnets: { now: 634, before: 639 }
+referringSubnets: { now: 624, before: 634 }
 status: active
 checkedAt: 2026-08-01
 sources:

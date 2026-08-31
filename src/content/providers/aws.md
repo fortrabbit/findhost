@@ -60,7 +60,7 @@ regions:
   - US
   - ZA
 sla: true
-referringSubnets: { now: 46453, before: 46794 }
+referringSubnets: { now: 46564, before: 46453 }
 status: active
 checkedAt: 2026-08-01
 sources:

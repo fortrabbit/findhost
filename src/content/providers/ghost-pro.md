@@ -3,13 +3,14 @@ id: ghost-pro
 name: Ghost(Pro)
 urls:
   home: https://ghost.org
-referringSubnets: { now: 14684, before: 14727 }
+referringSubnets: { now: 14646, before: 14684 }
 status: out-of-scope
 criterion: 1
 checkedAt: 2026-07-31
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Ghost(Pro) is the managed service run by the Ghost Foundation, the non-profit behind the open-source Ghost publishing platform. Plans start at $18 a month billed yearly and run to $199, with a worldwide CDN, automated backups, SSL and DDoS mitigation included, and revenue funding the open-source project — an unusually clean arrangement.

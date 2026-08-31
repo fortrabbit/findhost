@@ -6,7 +6,7 @@ urls:
 hqCountry: GB
 ownership: subsidiary
 parent: your-online
-referringSubnets: { now: 494, before: 492 }
+referringSubnets: { now: 479, before: 494 }
 status: draft
 checkedAt: 2026-08-07
 sources:

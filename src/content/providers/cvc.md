@@ -4,7 +4,7 @@ name: CVC Capital Partners
 urls:
   home: https://www.cvc.com
 description: A private-equity firm that holds a majority stake in a registrar recorded here, and sells no hosting itself.
-referringSubnets: { now: 1168, before: 1184 }
+referringSubnets: { now: 1161, before: 1168 }
 status: unlisted
 checkedAt: 2026-08-29
 sources:

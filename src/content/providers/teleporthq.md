@@ -7,12 +7,13 @@ category:
   - lcnc
 description: A low-code and no-code site builder in Romania.
 hqCountry: RO
-referringSubnets: { now: 771, before: 766 }
+referringSubnets: { now: 757, before: 771 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 TeleportHQ sells low-code and no-code in Romania.

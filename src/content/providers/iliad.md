@@ -4,7 +4,7 @@ name: iliad Group
 urls:
   home: https://www.iliad.fr
 description: The French telecoms group behind Free, and the owner of Scaleway.
-referringSubnets: { now: 853, before: 855 }
+referringSubnets: { now: 839, before: 853 }
 status: unlisted
 checkedAt: 2026-08-07
 figure:
@@ -15,6 +15,7 @@ figure:
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 The French telecoms group behind Free, and the owner of Scaleway. Telecoms is the business; the cloud is one holding in it.

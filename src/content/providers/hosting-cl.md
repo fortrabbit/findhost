@@ -9,12 +9,10 @@ category:
   - bare-metal
 description: A shared hosting, VPS and bare metal provider in Chile.
 hqCountry: CL
-referringSubnets: { now: 230 }
+referringSubnets: null
 status: draft
 checkedAt: 2026-08-12
 ai: authored
-sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
 ---
 
 Hosting.cl sells shared hosting, VPS and bare metal in Chile.

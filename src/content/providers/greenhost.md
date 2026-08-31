@@ -12,7 +12,7 @@ ownership: subsidiary
 regions:
   - NL
 energyClaim: annual-matched
-referringSubnets: { now: 763, before: 753 }
+referringSubnets: { now: 730, before: 763 }
 status: active
 checkedAt: 2026-08-14
 sources:

@@ -32,7 +32,7 @@ audience:
 domainRegistration: paid-addon
 dnsHosting: included
 emailHosting: included
-referringSubnets: { now: 299, before: 302 }
+referringSubnets: { now: 290, before: 299 }
 status: active
 checkedAt: 2026-08-12
 sources:

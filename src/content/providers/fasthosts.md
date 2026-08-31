@@ -74,7 +74,7 @@ sources:
   - { field: exitWithin, url: 'https://www.fasthosts.co.uk/terms/general-terms-and-conditions', checkedAt: 2026-08-02 }
   - { field: regions, url: 'https://www.fasthosts.co.uk/virtual-private-servers', checkedAt: 2026-07-31 }
   - { field: parent, url: 'https://www.ionos-group.com/brands/fasthosts.html', checkedAt: 2026-07-31 }
-referringSubnets: { now: 8450, before: 8561 }
+referringSubnets: { now: 7934, before: 8450 }
 status: active
 ai: authored
 figure:

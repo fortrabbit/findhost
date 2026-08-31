@@ -58,7 +58,7 @@ apiAvailable: public
 cliTool: official
 iacSupport:
   - terraform
-referringSubnets: { now: 444, before: 443 }
+referringSubnets: { now: 443, before: 444 }
 status: active
 checkedAt: 2026-08-12
 sources:

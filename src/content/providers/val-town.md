@@ -7,12 +7,13 @@ category:
   - serverless
 description: A serverless provider in the United States.
 hqCountry: US
-referringSubnets: { now: 732, before: 724 }
+referringSubnets: { now: 725, before: 732 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Val Town sells serverless in the United States.

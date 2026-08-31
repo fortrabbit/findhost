@@ -54,7 +54,7 @@ supportHours: 24-7
 supportTiering: paid-upgrade
 certifications:
   - iso-27001
-referringSubnets: { now: 848, before: 841 }
+referringSubnets: { now: 842, before: 848 }
 status: active
 checkedAt: 2026-08-12
 sources:

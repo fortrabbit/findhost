@@ -36,7 +36,7 @@ billingPeriods:
 billingTiming: advance
 exitWithin: a-quarter
 entryPrice: { amount: 25, currency: USD, period: month }
-referringSubnets: { now: 1301, before: 1303 }
+referringSubnets: { now: 1294, before: 1301 }
 status: active
 checkedAt: 2026-08-01
 sources:

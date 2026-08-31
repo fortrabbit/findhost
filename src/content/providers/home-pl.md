@@ -49,7 +49,7 @@ supportChannels:
   - phone
   - email
 supportHours: 24-7
-referringSubnets: { now: 7764, before: 7753 }
+referringSubnets: { now: 7724, before: 7764 }
 status: active
 emailHosting: included
 domainRegistration: paid-addon

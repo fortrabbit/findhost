@@ -8,12 +8,13 @@ category:
   - vps
 description: A shared hosting and VPS provider in Italy.
 hqCountry: IT
-referringSubnets: { now: 417, before: 413 }
+referringSubnets: { now: 412, before: 417 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Keliweb sells shared hosting and VPS in Italy.

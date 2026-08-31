@@ -8,12 +8,13 @@ category:
   - vps
 description: A shared hosting and VPS provider in Russia.
 hqCountry: RU
-referringSubnets: { now: 5966, before: 5958 }
+referringSubnets: { now: 5910, before: 5966 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 REG.RU sells shared hosting and VPS in Russia.

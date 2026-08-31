@@ -32,7 +32,7 @@ social:
   facebook: https://www.facebook.com/squarespace
   linkedin: https://www.linkedin.com/company/squarespace/
   youtube: https://www.youtube.com/squarespace
-referringSubnets: { now: 41232, before: 41525 }
+referringSubnets: { now: 41197, before: 41232 }
 status: active
 checkedAt: 2026-08-01
 sources:

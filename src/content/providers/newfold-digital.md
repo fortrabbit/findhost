@@ -4,7 +4,7 @@ name: Newfold Digital
 urls:
   home: https://newfold.com
 description: The holding company for Bluehost, HostGator and Network Solutions.
-referringSubnets: { now: 1990, before: 1996 }
+referringSubnets: { now: 1947, before: 1990 }
 status: unlisted
 checkedAt: 2026-08-07
 figure:
@@ -15,6 +15,7 @@ figure:
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Newfold Digital holds the web-presence brands that were Endurance International Group and Web.com — Bluehost, HostGator, Network Solutions and others. See [Endurance](/endurance/) for the group it was assembled from.

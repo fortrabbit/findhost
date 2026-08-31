@@ -28,7 +28,7 @@ runsOn:
   - digitalocean
   - linode
   - vultr
-referringSubnets: { now: 1221, before: 1227 }
+referringSubnets: { now: 1219, before: 1221 }
 status: active
 checkedAt: 2026-08-08
 sources:

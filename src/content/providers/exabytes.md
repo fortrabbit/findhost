@@ -43,7 +43,7 @@ freeTier: none
 contractMinimum: multi-year
 regions:
   - MY
-referringSubnets: { now: 1533, before: 1522 }
+referringSubnets: { now: 1523, before: 1533 }
 status: active
 checkedAt: 2026-08-01
 sources:

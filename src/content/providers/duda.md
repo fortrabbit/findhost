@@ -32,7 +32,7 @@ supportChannels:
   - chat
   - email
   - phone
-referringSubnets: { now: 1552, before: 1557 }
+referringSubnets: { now: 1541, before: 1552 }
 status: active
 hqCountry: IL
 ownership: vc-backed

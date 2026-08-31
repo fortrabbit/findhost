@@ -7,12 +7,13 @@ category:
   - shared-hosting
 description: A shared hosting provider in the Netherlands.
 hqCountry: NL
-referringSubnets: { now: 776, before: 788 }
+referringSubnets: { now: 780, before: 776 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Openprovider sells shared hosting in the Netherlands.

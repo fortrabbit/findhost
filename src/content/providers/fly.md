@@ -49,7 +49,7 @@ supportChannels:
 social:
   github: https://github.com/superfly
 cliTool: official
-referringSubnets: { now: 2503, before: 2520 }
+referringSubnets: { now: 2506, before: 2503 }
 status: active
 checkedAt: 2026-08-12
 sources:

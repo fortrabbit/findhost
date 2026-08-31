@@ -56,7 +56,7 @@ regions:
 social:
   facebook: https://www.facebook.com/MyDevil.net
   x: https://x.com/MyDevilnet
-referringSubnets: { now: 606, before: 611 }
+referringSubnets: { now: 609, before: 606 }
 status: active
 emailHosting: included
 checkedAt: 2026-08-12

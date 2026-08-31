@@ -37,7 +37,7 @@ audience:
 apiAvailable: public
 favorite: true
 favoriteNote: Betting that a machine should cost about what a process costs.
-referringSubnets: { now: 732, before: 718 }
+referringSubnets: { now: 723, before: 732 }
 status: active
 checkedAt: 2026-08-12
 sources:

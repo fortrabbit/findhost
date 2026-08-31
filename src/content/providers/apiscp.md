@@ -29,7 +29,7 @@ billingPeriods:
 billingTiming: advance
 entryPrice: { amount: 30, currency: USD, period: year }
 freeTier: trial
-referringSubnets: { now: 307, before: 320 }
+referringSubnets: { now: 315, before: 307 }
 status: active
 checkedAt: 2026-08-01
 sources:

@@ -62,7 +62,7 @@ social:
   bluesky: https://bsky.app/profile/upsun.com
   linkedin: https://www.linkedin.com/company/upsundotcom
   youtube: https://www.youtube.com/@upsundotcom
-referringSubnets: { now: 1109, before: 1142 }
+referringSubnets: { now: 1116, before: 1109 }
 status: active
 staging: included
 collaboration: team

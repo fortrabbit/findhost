@@ -37,7 +37,7 @@ regions:
   - GB
   - AU
 supportHours: 24-7
-referringSubnets: { now: 2900, before: 2881 }
+referringSubnets: { now: 2885, before: 2900 }
 status: active
 checkedAt: 2026-08-01
 sources:

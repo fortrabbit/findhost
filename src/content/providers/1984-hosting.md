@@ -42,7 +42,7 @@ regions:
 energyClaim: annual-matched
 certifications:
   - iso-27001
-referringSubnets: { now: 668, before: 660 }
+referringSubnets: { now: 672, before: 668 }
 checkedAt: 2026-08-01
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }

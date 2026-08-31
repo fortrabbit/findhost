@@ -76,7 +76,7 @@ social:
   x: https://twitter.com/sitehostnz
 domainRegistration: paid-addon
 emailHosting: paid-addon
-referringSubnets: { now: 273, before: 270 }
+referringSubnets: { now: 261, before: 273 }
 checkedAt: 2026-08-12
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }

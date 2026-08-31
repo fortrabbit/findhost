@@ -67,7 +67,7 @@ contractMinimum: none
 energyClaim: annual-matched
 favorite: true
 favoriteNote: Pay what it is worth to you. They mean it.
-referringSubnets: { now: 1706, before: 1706 }
+referringSubnets: { now: 1720, before: 1706 }
 status: active
 checkedAt: 2026-08-09
 sources:

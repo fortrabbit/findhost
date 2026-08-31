@@ -7,12 +7,13 @@ category:
   - static
 description: A static hosting provider in the United States.
 hqCountry: US
-referringSubnets: { now: 444, before: 442 }
+referringSubnets: { now: 435, before: 444 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Filebase sells static hosting in the United States.

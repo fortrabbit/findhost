@@ -7,12 +7,13 @@ category:
   - lcnc
 description: A low-code and no-code site builder in the United States.
 hqCountry: US
-referringSubnets: { now: 541, before: 547 }
+referringSubnets: { now: 546, before: 541 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Plasmic sells low-code and no-code in the United States.

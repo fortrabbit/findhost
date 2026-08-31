@@ -21,7 +21,7 @@ social:
   linkedin: https://www.linkedin.com/company/webflow-inc-
   youtube: https://www.youtube.com/@Webflow
 hqCountry: US
-referringSubnets: { now: 11813, before: 11913 }
+referringSubnets: { now: 11757, before: 11813 }
 checkedAt: 2026-08-09
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }

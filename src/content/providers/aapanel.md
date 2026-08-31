@@ -7,12 +7,13 @@ category:
   - server-management
 description: Server management software in China.
 hqCountry: CN
-referringSubnets: { now: 4123, before: 4140 }
+referringSubnets: { now: 4097, before: 4123 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 aaPanel sells server management in China.

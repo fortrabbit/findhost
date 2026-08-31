@@ -13,7 +13,7 @@ ownership: subsidiary
 infraContract:
   - owns-metal
 pricingModel: fixed-tier
-referringSubnets: { now: 2321, before: 2328 }
+referringSubnets: { now: 2291, before: 2321 }
 status: active
 checkedAt: 2026-08-12
 sources:

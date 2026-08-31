@@ -57,7 +57,7 @@ supportChannels:
   - chat
 supportHours: 24-7
 energyClaim: annual-matched
-referringSubnets: { now: 692, before: 696 }
+referringSubnets: { now: 687, before: 692 }
 status: active
 checkedAt: 2026-08-01
 sources:

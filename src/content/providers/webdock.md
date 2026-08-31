@@ -49,7 +49,7 @@ social:
   linkedin: https://www.linkedin.com/company/webdock-io/
   facebook: https://www.facebook.com/webdockio
   youtube: https://www.youtube.com/@webdock
-referringSubnets: { now: 536, before: 533 }
+referringSubnets: { now: 534, before: 536 }
 checkedAt: 2026-08-01
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }

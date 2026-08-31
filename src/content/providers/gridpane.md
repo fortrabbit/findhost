@@ -44,7 +44,7 @@ exitWithin: a-month
 freeTier: permanent
 apiAvailable: public
 cliTool: official
-referringSubnets: { now: 333, before: 342 }
+referringSubnets: { now: 324, before: 333 }
 status: active
 hqCountry: US
 ownership: vc-backed

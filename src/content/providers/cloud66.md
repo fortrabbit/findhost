@@ -50,7 +50,7 @@ exitWithin: a-month
 freeTier: permanent
 apiAvailable: public
 cliTool: official
-referringSubnets: { now: 468, before: 474 }
+referringSubnets: { now: 467, before: 468 }
 checkedAt: 2026-08-01
 hqCountry: GB
 ownership: vc-backed

@@ -41,7 +41,7 @@ exitWithin: a-month
 freeTier: permanent
 apiAvailable: public
 cliTool: official
-referringSubnets: { now: 769, before: 769 }
+referringSubnets: { now: 774, before: 769 }
 status: active
 checkedAt: 2026-08-01
 sources:

@@ -61,7 +61,7 @@ cliTool: official
 iacSupport:
   - terraform
 sla: true
-referringSubnets: { now: 3874, before: 3878 }
+referringSubnets: { now: 3854, before: 3874 }
 status: active
 checkedAt: 2026-08-01
 sources:

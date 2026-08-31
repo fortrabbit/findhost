@@ -26,7 +26,7 @@ cdnIncluded: included
 collaboration: team
 favorite: true
 favoriteNote: Nothing here puts less between a folder and the web.
-referringSubnets: { now: 2593, before: 2607 }
+referringSubnets: { now: 2605, before: 2593 }
 status: active
 checkedAt: 2026-08-12
 cliTool: official

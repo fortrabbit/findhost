@@ -7,12 +7,13 @@ category:
   - iaas
 description: A IaaS provider in Iceland.
 hqCountry: IS
-referringSubnets: { now: 336, before: 336 }
+referringSubnets: { now: 346, before: 336 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Advania sells IaaS in Iceland.

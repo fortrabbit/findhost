@@ -8,12 +8,13 @@ category:
   - vps
 description: A shared hosting and VPS provider in Australia.
 hqCountry: AU
-referringSubnets: { now: 587, before: 588 }
+referringSubnets: { now: 567, before: 587 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Digital Pacific sells shared hosting and VPS in Australia.

@@ -88,7 +88,7 @@ cliTool: official
 mcpServer: official
 greenWebId: 1315
 sla: true
-referringSubnets: { now: 441, before: 442 }
+referringSubnets: { now: 443, before: 441 }
 status: active
 checkedAt: 2026-08-01
 sources:

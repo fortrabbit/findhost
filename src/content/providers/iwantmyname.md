@@ -22,7 +22,7 @@ currencies:
   - GBP
   - NZD
   - AUD
-referringSubnets: { now: 806, before: 819 }
+referringSubnets: { now: 804, before: 806 }
 status: active
 checkedAt: 2026-08-12
 sources:

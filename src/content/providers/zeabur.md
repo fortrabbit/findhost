@@ -64,7 +64,7 @@ social:
   x: https://x.com/zeaburapp
 testDomain: included
 collaboration: team
-referringSubnets: { now: 671, before: 660 }
+referringSubnets: { now: 659, before: 671 }
 checkedAt: 2026-08-12
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }

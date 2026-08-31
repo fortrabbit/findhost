@@ -17,7 +17,7 @@ entryPrice:
   currency: EUR
 currencies:
   - EUR
-referringSubnets: { now: 505, before: 504 }
+referringSubnets: { now: 486, before: 505 }
 status: active
 checkedAt: 2026-08-14
 sources:

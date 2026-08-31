@@ -47,7 +47,7 @@ regions:
   - CA
 apiAvailable: public
 cliTool: official
-referringSubnets: { now: 1050, before: 1048 }
+referringSubnets: { now: 1045, before: 1050 }
 checkedAt: 2026-08-01
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }

@@ -27,7 +27,7 @@ exitWithin: a-month
 pricingModel: fixed-tier
 renewalMultiple: 1.3
 contractMinimum: none
-referringSubnets: { now: 1033, before: 1046 }
+referringSubnets: { now: 1027, before: 1033 }
 status: active
 hqCountry: US
 checkedAt: 2026-08-09

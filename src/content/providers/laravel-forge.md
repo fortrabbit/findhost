@@ -45,7 +45,7 @@ freeTier: none
 contractMinimum: monthly
 supportHours: business-hours
 supportTiering: paid-upgrade
-referringSubnets: { now: 24193, before: 24267 }
+referringSubnets: null
 status: active
 hqCountry: US
 ownership: vc-backed
@@ -55,7 +55,6 @@ collaboration: team
 checkedAt: 2026-08-12
 apiAvailable: public
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: hqCountry, url: 'https://laravel.com/forge', checkedAt: 2026-08-09 }
   - { field: entryPrice, url: 'https://laravel.com/forge/pricing', checkedAt: 2026-08-01 }
   - { field: infraContract, url: 'https://laravel.com/forge', checkedAt: 2026-07-31 }

@@ -19,7 +19,7 @@ pricingModel: credit
 freeTier: permanent
 favorite: true
 favoriteNote: Popular among non devs.
-referringSubnets: { now: 11815, before: 11845 }
+referringSubnets: { now: 11678, before: 11815 }
 status: active
 checkedAt: 2026-08-12
 collaboration: team

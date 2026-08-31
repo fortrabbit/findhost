@@ -7,12 +7,13 @@ category:
   - shared-hosting
 description: A shared hosting provider in Finland.
 hqCountry: FI
-referringSubnets: { now: 350, before: 362 }
+referringSubnets: { now: 337, before: 350 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Planeetta sells shared hosting in Finland.

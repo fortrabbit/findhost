@@ -44,7 +44,7 @@ freeTier: trial
 contractMinimum: none
 regions:
   - DE
-referringSubnets: { now: 3989, before: 3971 }
+referringSubnets: { now: 3948, before: 3989 }
 checkedAt: 2026-08-09
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }

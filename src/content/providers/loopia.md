@@ -51,7 +51,7 @@ supportChannels:
   - chat
 supportHours: business-hours
 apiAvailable: public
-referringSubnets: { now: 6416, before: 6415 }
+referringSubnets: { now: 6418, before: 6416 }
 status: active
 checkedAt: 2026-08-12
 domainRegistration: paid-addon

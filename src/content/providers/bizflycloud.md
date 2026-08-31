@@ -8,12 +8,13 @@ category:
   - vps
 description: A IaaS and VPS provider in Vietnam.
 hqCountry: VN
-referringSubnets: { now: 418, before: 422 }
+referringSubnets: { now: 405, before: 418 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 BizFly Cloud sells IaaS and VPS in Vietnam.

@@ -39,7 +39,7 @@ regions:
 iacSupport:
   - terraform
 apiAvailable: public
-referringSubnets: { now: 800, before: 796 }
+referringSubnets: { now: 795, before: 800 }
 status: active
 checkedAt: 2026-08-09
 sources:

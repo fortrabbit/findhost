@@ -7,12 +7,13 @@ category:
   - server-management
 description: Server management software in the United States.
 hqCountry: US
-referringSubnets: { now: 14893, before: 14943 }
+referringSubnets: { now: 14894, before: 14893 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Virtualmin sells server management in the United States.

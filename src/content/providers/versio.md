@@ -8,12 +8,13 @@ category:
   - vps
 description: A shared hosting and VPS provider in the Netherlands.
 hqCountry: NL
-referringSubnets: { now: 744, before: 738 }
+referringSubnets: { now: 731, before: 744 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Versio sells shared hosting and VPS in the Netherlands.

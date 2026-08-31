@@ -42,7 +42,7 @@ regions:
   - US
   - NL
 supportHours: 24-7
-referringSubnets: { now: 741, before: 740 }
+referringSubnets: { now: 732, before: 741 }
 status: active
 hqCountry: US
 checkedAt: 2026-08-09

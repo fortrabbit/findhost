@@ -7,12 +7,13 @@ category:
   - static
 description: A static hosting provider in China.
 hqCountry: CN
-referringSubnets: { now: 402, before: 407 }
+referringSubnets: { now: 380, before: 402 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 4EVERLAND sells static hosting in China.

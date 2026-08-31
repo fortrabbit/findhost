@@ -4,7 +4,7 @@ name: GMO Pepabo
 urls:
   home: https://pepabo.com
 description: A Japanese internet company whose hosting reaches customers as Lolipop and other brands.
-referringSubnets: { now: 858, before: 858 }
+referringSubnets: { now: 859, before: 858 }
 status: unlisted
 checkedAt: 2026-08-07
 figure:
@@ -15,6 +15,7 @@ figure:
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 A Japanese internet company, part of the GMO group, whose hosting reaches customers as Lolipop and others.

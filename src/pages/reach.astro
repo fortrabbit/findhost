@@ -4,7 +4,9 @@ import Base from '../layouts/Base.astro';
 import PageHead from '../components/PageHead.astro';
 import ProviderList from '../components/ProviderList.astro';
 import { loadProviders } from '../lib/providers';
+import { movementOf } from '../lib/record';
 import { licenceUrl, organization } from '../lib/seo';
+import { pageCardPath } from '../lib/og';
 
 /*
  * The one page here ordered by anything but the alphabet, and it can be because
@@ -44,7 +46,6 @@ const number = new Intl.NumberFormat('en');
 
 const rows = measured.map((provider) => {
   const held = provider.data.referringSubnets!;
-  const moved = held.before === undefined || held.before === held.now;
 
   return {
     id: provider.id,
@@ -55,7 +56,7 @@ const rows = measured.map((provider) => {
       width: logOf(held.now),
       alternate: linearOf(held.now),
       text: number.format(held.now),
-      direction: moved ? undefined : held.now > held.before! ? ('up' as const) : ('down' as const),
+      direction: movementOf(held),
     },
   };
 });
@@ -88,6 +89,8 @@ const origin = Astro.site?.origin ?? '';
   title={`${note?.data.title ?? 'Reach'} — FindHost`}
   description={note?.data.description ?? "How many networks link to each hosting provider's own domain."}
   markdown="/reach.md"
+  image={pageCardPath('reach')}
+  imageAlt="A FindHost card: how linked-to each hosting provider is."
   schema={[
     {
       '@context': 'https://schema.org',

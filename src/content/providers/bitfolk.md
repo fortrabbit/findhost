@@ -18,7 +18,7 @@ entryPrice:
   currency: GBP
 currencies:
   - GBP
-referringSubnets: { now: 384, before: 391 }
+referringSubnets: { now: 389, before: 384 }
 status: active
 checkedAt: 2026-08-14
 sources:

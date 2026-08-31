@@ -48,7 +48,7 @@ billingPeriods:
   - multi-year
 billingTiming: advance
 freeTier: none
-referringSubnets: { now: 782, before: 792 }
+referringSubnets: { now: 786, before: 782 }
 status: active
 checkedAt: 2026-08-01
 sources:

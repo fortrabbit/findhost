@@ -7,12 +7,13 @@ category:
   - shared-hosting
 description: A shared hosting provider in Italy.
 hqCountry: IT
-referringSubnets: { now: 5561, before: 5608 }
+referringSubnets: { now: 5332, before: 5561 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+
 ---
 
 Register.it sells shared hosting in Italy.

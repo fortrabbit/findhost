@@ -53,7 +53,7 @@ supportChannels:
   - email
   - chat
 supportTiering: all-plans
-referringSubnets: { now: 546, before: 542 }
+referringSubnets: { now: 539, before: 546 }
 status: active
 domainRegistration: paid-addon
 emailHosting: included

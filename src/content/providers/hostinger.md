@@ -30,7 +30,7 @@ billingTiming: advance
 exitWithin: over-a-year
 renewalMultiple: 3.7
 contractMinimum: multi-year
-referringSubnets: { now: 20180, before: 20261 }
+referringSubnets: { now: 20194, before: 20180 }
 status: active
 checkedAt: 2026-08-01
 sources:

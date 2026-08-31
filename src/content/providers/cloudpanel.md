@@ -32,7 +32,7 @@ pricingModel: fixed-tier
 freeTier: permanent
 supportChannels:
   - forum
-referringSubnets: { now: 625, before: 626 }
+referringSubnets: { now: 624, before: 625 }
 status: active
 checkedAt: 2026-08-12
 sources:

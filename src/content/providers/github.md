@@ -22,7 +22,7 @@ freeTier: permanent
 collaboration: team
 apiAvailable: public
 cliTool: official
-referringSubnets: { now: 255851, before: 256387 }
+referringSubnets: { now: 256056, before: 255851 }
 status: active
 checkedAt: 2026-08-13
 sources:

@@ -53,7 +53,7 @@ regions:
 testDomain: included
 collaboration: team
 apiAvailable: public
-referringSubnets: { now: 367, before: 355 }
+referringSubnets: { now: 358, before: 367 }
 checkedAt: 2026-08-12
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }

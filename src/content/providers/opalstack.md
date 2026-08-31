@@ -57,7 +57,7 @@ freeTier: none
 supportChannels:
   - email
 supportHours: 24-7
-referringSubnets: { now: 831, before: 821 }
+referringSubnets: { now: 807, before: 831 }
 status: active
 checkedAt: 2026-08-12
 apiAvailable: public

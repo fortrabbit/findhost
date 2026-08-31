@@ -47,7 +47,7 @@ regions:
   - AU
 apiAvailable: public
 cliTool: official
-referringSubnets: { now: 1463, before: 1474 }
+referringSubnets: { now: 1469, before: 1463 }
 status: active
 checkedAt: 2026-08-01
 sources:

@@ -59,7 +59,7 @@ regions:
   - AU
 apiAvailable: public
 cliTool: official
-referringSubnets: { now: 801, before: 794 }
+referringSubnets: { now: 805, before: 801 }
 status: active
 staging: included
 collaboration: team

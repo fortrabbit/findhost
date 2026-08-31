@@ -1,4 +1,6 @@
 ---
+import { movementMark, type Movement } from '../lib/record';
+
 interface Row {
   id: string;
   name: string;
@@ -18,7 +20,7 @@ interface Row {
     /** A second width the page can switch to in CSS — /reach/ offers a linear axis. */
     alternate?: number;
     text: string;
-    direction?: 'up' | 'down';
+    direction: Movement;
   };
 }
 
@@ -88,11 +90,9 @@ const { providers, namesOnly = false } = Astro.props;
                   {/* Before the number, not after it: not every row has moved, and an
                       arrow on the right pushes the figure off the edge the rows
                       share, so the numbers stop lining up. */}
-                  {provider.meter.direction && (
-                    <span class={`provider-move ${provider.meter.direction}`} aria-hidden="true">
-                      {provider.meter.direction === 'up' ? '↑' : '↓'}
-                    </span>
-                  )}
+                  <span class={`provider-move ${provider.meter.direction}`} aria-hidden="true">
+                    {movementMark[provider.meter.direction]}
+                  </span>
                   {provider.meter.text}
                 </span>
               )}

@@ -45,7 +45,7 @@ social:
   facebook: https://www.facebook.com/wpengine
   linkedin: https://www.linkedin.com/company/wpengine
   youtube: https://www.youtube.com/wpengine
-referringSubnets: { now: 17380, before: 17497 }
+referringSubnets: { now: 17465, before: 17380 }
 status: active
 checkedAt: 2026-08-09
 apiAvailable: public

@@ -39,7 +39,7 @@ billingTiming: arrears
 apiAvailable: public
 iacSupport:
   - terraform
-referringSubnets: { now: 1384, before: 1390 }
+referringSubnets: { now: 1372, before: 1384 }
 status: active
 hqCountry: LU
 ownership: vc-backed

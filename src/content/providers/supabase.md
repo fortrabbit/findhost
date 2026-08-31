@@ -63,7 +63,7 @@ social:
 cdnIncluded: included
 staging: included
 collaboration: team
-referringSubnets: { now: 5243, before: 5239 }
+referringSubnets: { now: 5235, before: 5243 }
 checkedAt: 2026-08-12
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }

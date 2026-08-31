@@ -54,7 +54,7 @@ regions:
   - GB
   - NO
 apiAvailable: public
-referringSubnets: { now: 362, before: 355 }
+referringSubnets: { now: 352, before: 362 }
 status: active
 checkedAt: 2026-08-01
 sources:

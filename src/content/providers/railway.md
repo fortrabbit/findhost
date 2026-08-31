@@ -52,7 +52,7 @@ cliTool: official
 mcpServer: official
 favorite: true
 favoriteNote: No configuration file, and it charges for what actually ran. Popular.
-referringSubnets: { now: 2076, before: 2083 }
+referringSubnets: { now: 2069, before: 2076 }
 status: active
 checkedAt: 2026-08-12
 staging: included
