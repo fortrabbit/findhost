@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
 import type { Facet, ProviderRow } from './facets.ts';
-import { firstSentence, summarise } from './summarise.ts';
+import { firstSentence, summarise, summarisePair } from './summarise.ts';
 
 const facet = (id: string, field: string, values: string[]): Facet => ({
   id,
@@ -126,5 +126,54 @@ describe('firstSentence', () => {
       firstSentence('1 provider runs .NET, listed alphabetically. All of them vps.'),
       '1 provider runs .NET, listed alphabetically.',
     );
+  });
+});
+
+describe('summarisePair', () => {
+  /** Twelve of the forty running PHP also operate in Germany; eight of those are PaaS. */
+  const matches = [
+    ...Array.from({ length: 8 }, (_, i) => row(`Both${i}`, { runtimes: 'php', regions: 'DE', category: 'paas' })),
+    ...Array.from({ length: 4 }, (_, i) => row(`Rest${i}`, { runtimes: 'php', regions: 'DE', category: 'vps' })),
+  ];
+  const wider = [
+    ...matches,
+    ...Array.from({ length: 28 }, (_, i) => row(`Php${i}`, { runtimes: 'php', regions: 'FR', category: 'vps' })),
+  ];
+
+  const page = {
+    aId: 'runtimes',
+    bId: 'regions',
+    aSubject: 'run PHP',
+    bSubject: 'operate in Germany',
+    matches,
+    aTotal: 40,
+    bTotal: 20,
+    widerRows: wider,
+  };
+
+  it('opens with both halves and the order', () => {
+    assert.match(summarisePair(page, facets), /^12 providers run PHP and operate in Germany, listed alphabetically\./);
+  });
+
+  it('measures the intersection against the wider parent', () => {
+    assert.match(summarisePair(page, facets), /That is 12 of the 40 that run PHP\./);
+  });
+
+  /*
+   * The clause the whole file exists for. Without it every page of a pairing
+   * reads the same, because pinning the second facet flattens what varied.
+   */
+  it('names what this intersection has that its parent does not', () => {
+    assert.match(summarisePair(page, facets), /paas on 8 of them, against 8 of the 40\./);
+  });
+
+  it('says nothing about a third facet that is no more common here than there', () => {
+    const flat = { ...page, matches: matches.slice(0, 8), widerRows: matches.slice(0, 8), aTotal: 8, bTotal: 8 };
+    assert.equal(summarisePair(flat, facets).includes(' against '), false);
+  });
+
+  it('never speaks about either of its own facets', () => {
+    const summary = summarisePair(page, facets);
+    assert.equal(summary.split('. ').slice(2).join(' ').includes('DE'), false);
   });
 });

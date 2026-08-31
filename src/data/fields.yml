@@ -14,6 +14,13 @@
 #            that; everywhere the value is read as prose takes the full label.
 # - `valuesFrom` borrows another field's vocabulary rather than repeating it.
 # - `render` how a value is drawn where it is not a label lookup.
+# - `pairs`  the other facets this one combines with as a page of its own —
+#            /runtimes/php/regions/germany/. Declared on one side only, and the
+#            side that declares it comes first in the path. See lib/pairs.ts for
+#            what a pairing has to earn before it generates anything.
+# - `titleWith` how a pair page names the second value: "PHP hosting *in
+#            Germany*". On the field, or on a single value that needs its own
+#            wording. A pairing whose second facet has neither cannot ship.
 #
 # Group order, and field order within a group, is the order of this file. The
 # filter panel reads in `filterOrder`, which is a separate question: a record is
@@ -171,6 +178,15 @@
   subject: '{are|is} {lower}'
   filterOrder: 2
   multiple: true
+  # Where it sells, what it costs to leave, and who holds the root password:
+  # the questions asked about a kind of hosting rather than about a company.
+  pairs:
+    - with: regions
+    - { with: pricing, draft: true }
+    - { with: operating-system, draft: true }
+    - { with: software, draft: true }
+    - { with: shell, draft: true }
+    - { with: exit, draft: true }
   values:
     - { id: paas, label: Platform as a Service, short: PaaS }
     - { id: vps, label: Virtual Private Servers, short: VPS }
@@ -238,8 +254,18 @@
   subject: 'answer{|s} "{lower}" to who manages the operating system'
   filterOrder: 16
   values:
-    - { id: managed, label: Managed, subject: 'manage{|s} the operating system for you' }
-    - { id: self-managed, label: Self-managed, subject: 'leave{|s} the operating system to you' }
+    - {
+        id: managed,
+        label: Managed,
+        subject: 'manage{|s} the operating system for you',
+        titleWith: 'with a managed operating system',
+      }
+    - {
+        id: self-managed,
+        label: Self-managed,
+        subject: 'leave{|s} the operating system to you',
+        titleWith: 'where you manage the operating system',
+      }
 
 # More than one can be true at once: a panel that provisions onto your own cloud
 # account may also resell machines of its own.
@@ -337,6 +363,10 @@
   subject: 'run{|s} {label}'
   filterOrder: 5
   multiple: true
+  pairs:
+    - with: regions
+    - { with: pricing, draft: true }
+    - { with: automation, draft: true }
   values:
     - { id: php, label: PHP }
     - { id: node, label: Node.js }
@@ -368,6 +398,7 @@
   group: Tech stack
   facet: software
   subject: 'document{|s} support for {label}'
+  titleWith: 'for {label}'
   filterOrder: 1
   multiple: true
   values:
@@ -497,8 +528,15 @@
         label: Jailed shell,
         short: Jailed,
         subject: 'give{|s} a shell inside the environment, without root',
+        titleWith: 'with a jailed shell',
       }
-    - { id: root, label: Root shell, short: Root, subject: 'give{|s} root on the machine' }
+    - {
+        id: root,
+        label: Root shell,
+        short: Root,
+        subject: 'give{|s} root on the machine',
+        titleWith: 'with root access',
+      }
 
 # Which engines the provider runs and keeps patched, as against which ones a
 # customer may install for themselves — the second is a property of the shell,
@@ -670,6 +708,7 @@
   group: Pricing
   facet: exit
   subject: 'can be left {lower}'
+  titleWith: 'you can leave {lower}'
   ordered: true
   filterOrder: 18
   values:
@@ -762,13 +801,21 @@
   filterOrder: 13
   multiple: true
   values:
-    - { id: free-tier, label: Free tier, from: freeTier, when: [permanent], subject: 'offer{|s} a permanent free tier' }
+    - {
+        id: free-tier,
+        label: Free tier,
+        from: freeTier,
+        when: [permanent],
+        subject: 'offer{|s} a permanent free tier',
+        titleWith: 'with a free tier',
+      }
     - {
         id: free-trial,
         label: Free trial,
         from: freeTier,
         when: [trial],
         subject: 'offer{|s} a free trial rather than a free tier',
+        titleWith: 'with a free trial',
       }
     - {
         id: in-arrears,
@@ -777,6 +824,7 @@
         from: billingTiming,
         when: [arrears],
         subject: 'bill{|s} in arrears, for usage already run up',
+        titleWith: 'billed in arrears',
       }
     - {
         id: upfront,
@@ -785,6 +833,7 @@
         from: billingTiming,
         when: [advance],
         subject: 'take{|s} the money before the month it pays for',
+        titleWith: 'paid before the period',
       }
     - {
         id: usage-based,
@@ -793,6 +842,7 @@
         from: pricingModel,
         when: [usage-based],
         subject: 'meter{|s} usage rather than sell a plan',
+        titleWith: 'billed by metered usage',
       }
     # Not the opposite of `upfront`, which is why both can be true at once: that
     # one answers when the money leaves, this one answers how it is held. A
@@ -849,6 +899,7 @@
   group: Regions and law
   facet: regions
   subject: 'operate{|s} in {label}'
+  titleWith: 'in {label}'
   slugFromLabel: true
   filterOrder: 3
   multiple: true
@@ -1236,9 +1287,30 @@
   filterOrder: 11
   multiple: true
   values:
-    - { id: api, label: API, from: apiAvailable, when: [public, partner-only], subject: 'publish{|es} an API' }
-    - { id: cli, label: CLI, from: cliTool, when: [official, third-party], subject: 'ship{|s} a command-line tool' }
-    - { id: mcp, label: MCP, from: mcpServer, when: [official, community], subject: 'ship{|s} an MCP server' }
+    - {
+        id: api,
+        label: API,
+        from: apiAvailable,
+        when: [public, partner-only],
+        subject: 'publish{|es} an API',
+        titleWith: 'with an API',
+      }
+    - {
+        id: cli,
+        label: CLI,
+        from: cliTool,
+        when: [official, third-party],
+        subject: 'ship{|s} a command-line tool',
+        titleWith: 'with a command-line tool',
+      }
+    - {
+        id: mcp,
+        label: MCP,
+        from: mcpServer,
+        when: [official, community],
+        subject: 'ship{|s} an MCP server',
+        titleWith: 'with an MCP server',
+      }
     # Reads a multi-value field, which is why the derived matcher had to learn
     # about lists. Terraform is effectively the whole category: of the nineteen
     # records that answer, nineteen have Terraform, two have CloudFormation and
@@ -1249,6 +1321,7 @@
         short: IaC,
         from: iacSupport,
         when: [terraform, cloudformation, ansible],
+        titleWith: 'with infrastructure as code',
       }
 
 - id: iacSupport

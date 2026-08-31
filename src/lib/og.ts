@@ -294,3 +294,11 @@ export const valueCardPath = (facet: string, slug: string) => `/og/${facet}/${sl
 
 /** A standalone page's card: /og/page/reach.png, beside its note at notes/page/reach.md */
 export const pageCardPath = (name: string) => `/og/page/${name}.png`;
+
+/*
+ * One card per *pairing*, not per page. Rasterising is 83% of the build — 794
+ * cards at about 48ms each — so a card per pair page would cost more than the
+ * pages do. The card names the two facets, which is what a shared preview can
+ * honestly say about 55 different pages.
+ */
+export const pairCardPath = (pairing: string) => `/og/pair/${pairing}.png`;

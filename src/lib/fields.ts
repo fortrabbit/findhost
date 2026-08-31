@@ -70,6 +70,8 @@ export interface FieldValue {
    * read as English for this value; otherwise the field's is used.
    */
   subject?: string;
+  /** This value's own version of the field's `titleWith`, for the same reason. */
+  titleWith?: string;
 }
 
 export interface Field {
@@ -110,6 +112,18 @@ export interface Field {
    * A value may override it with a `subject` of its own.
    */
   subject?: string;
+  /**
+   * How a pair page names this facet's value as the second half of its title —
+   * "PHP hosting *in Germany*". Same interpolation as `subject`, and a value may
+   * override it with its own. Only read when this facet is the second half.
+   */
+  titleWith?: string;
+  /**
+   * The facets this one combines with as a page of its own. Declared on one side
+   * only, and the declaring side comes first in the path, so the reverse
+   * direction never exists. `draft` keeps a pairing written down and unbuilt.
+   */
+  pairs?: { with: string; draft?: boolean }[];
   filterOrder?: number;
   multiple: boolean;
   /** How the value is drawn where it is not a label lookup. */
@@ -320,6 +334,19 @@ function inflect(phrase: string, count: number): string {
   return phrase.replaceAll(/\{([^{}|]*)\|([^{}|]*)\}/g, (_, plural: string, singular: string) =>
     count === 1 ? singular : plural,
   );
+}
+
+/**
+ * How a pair page names its second value, from `titleWith` in the dictionary.
+ * Absent means the facet has never been phrased as a second half, which is the
+ * one thing that stops a pairing shipping — validate.ts says so by name.
+ */
+export function titleWithOf(field: Field, value: { id: string; label: string }): string | undefined {
+  const own = field.values.find((candidate) => candidate.id === value.id)?.titleWith;
+  const template = own ?? field.titleWith;
+  if (!template) return undefined;
+
+  return template.replaceAll('{label}', value.label).replaceAll('{lower}', value.label.toLowerCase());
 }
 
 /** The reader's word for a value. Falls back to the id, which is at least true. */

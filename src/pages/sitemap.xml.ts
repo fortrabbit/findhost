@@ -1,5 +1,7 @@
 import type { APIRoute } from 'astro';
 import { facetIndex, loadFacets } from '../lib/facets';
+import { fields } from '../lib/fields';
+import { pairIndexPath, pairPath, pairPages } from '../lib/pairs';
 import { loadIndexed } from '../lib/providers';
 
 /**
@@ -27,7 +29,10 @@ const staticPages = Object.keys(import.meta.glob('./**/*.{astro,md}'))
 export const GET: APIRoute = async ({ site }) => {
   const origin = site?.origin ?? '';
   const providers = await loadIndexed();
-  const { facets } = await loadFacets();
+  const { facets, providers: rows } = await loadFacets();
+
+  /* Both the pair pages and the rung above them: a page nothing links to is not published. */
+  const pairs = pairPages(facets, fields, rows);
 
   const routes = [
     ...staticPages,
@@ -36,6 +41,8 @@ export const GET: APIRoute = async ({ site }) => {
       facetIndex(facet.id),
       ...facet.values.filter((value) => value.count > 0).map((value) => `/${facet.id}/${value.slug}/`),
     ]),
+    ...pairs.map((page) => pairIndexPath(page.a, page.av, page.b)),
+    ...pairs.map(pairPath),
   ];
 
   const paths = [...new Set(routes)];

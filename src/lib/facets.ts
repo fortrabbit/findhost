@@ -1,7 +1,7 @@
-import { facetFields } from './fields';
+import { asideOf, facetFields, fields } from './fields';
 import { asideGroup, isListed, loadAsideProviders, loadProviders } from './providers';
-import { asideOf } from './fields';
-import { byName, countValues, rowHolds, toRow, type Facet, type ProviderRow } from './rows';
+import { byName, countValues, rowHolds, toRow, type Facet, type FacetValue, type ProviderRow } from './rows';
+import { pairPages, type PairPage } from './pairs';
 import { getCollection } from 'astro:content';
 
 /*
@@ -125,4 +125,46 @@ export async function facetRoutes() {
         },
       })),
   );
+}
+
+/**
+ * Every pair page that is built: two facet values, one address. The gate lives
+ * in lib/pairs.ts, which is pure; this is the half that needs the collection.
+ */
+export async function pairRoutes() {
+  const { facets, providers } = await loadFacets();
+
+  return pairPages(facets, fields, providers).map((page) => ({
+    params: { facet: page.a.id, value: page.av.slug, with: page.b.id, withValue: page.bv.slug },
+    props: page,
+  }));
+}
+
+/**
+ * The rung between a value page and a pair page: /runtimes/php/regions/ lists
+ * every country PHP hosting has a page for. Without it a reader who deletes the
+ * last segment of a URL that works lands on a 404 between two pages that exist.
+ */
+export async function pairIndexRoutes() {
+  const { facets, providers } = await loadFacets();
+  const grouped = new Map<string, { facet: Facet; value: FacetValue; with: Facet; pages: PairPage[] }>();
+
+  for (const page of pairPages(facets, fields, providers)) {
+    const key = `${page.a.id}/${page.av.slug}/${page.b.id}`;
+    const held = grouped.get(key) ?? { facet: page.a, value: page.av, with: page.b, pages: [] };
+    held.pages.push(page);
+    grouped.set(key, held);
+  }
+
+  return [...grouped.values()].map((group) => ({
+    params: { facet: group.facet.id, value: group.value.slug, with: group.with.id },
+    props: group,
+  }));
+}
+
+/** The pairings one value page can offer, for the block that links to them. */
+export async function pairsFrom(facetId: string, valueId: string) {
+  const { facets, providers } = await loadFacets();
+
+  return pairPages(facets, fields, providers).filter((page) => page.a.id === facetId && page.av.id === valueId);
 }

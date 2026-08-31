@@ -1,0 +1,76 @@
+---
+import Base from '../../../../layouts/Base.astro';
+import { facetIndex, pairIndexRoutes } from '../../../../lib/facets';
+import { pairIndexPath, pairPath } from '../../../../lib/pairs';
+import { organization, valueTitle } from '../../../../lib/seo';
+import { valueCardPath } from '../../../../lib/og';
+
+/*
+ * The rung between /runtimes/php/ and /runtimes/php/regions/germany/.
+ *
+ * Deleting the last segment of a URL that works is something readers do and
+ * crawlers do, and without this the two live pages have a 404 between them. It
+ * is also where the pair pages are linked from in bulk, so a crawler that only
+ * follows links reaches all 55 from one page rather than none.
+ */
+export async function getStaticPaths() {
+  return pairIndexRoutes();
+}
+
+const { facet, value, with: partner, pages } = Astro.props;
+
+const origin = Astro.site?.origin ?? '';
+const lead = valueTitle(facet.id, value.label);
+const title = `${lead} by ${partner.label.toLowerCase()}`;
+
+const rows = [...pages].sort((one, other) => other.matches.length - one.matches.length);
+const summary = `${rows.length} ${rows.length === 1 ? 'page' : 'pages'} combining ${lead.toLowerCase()} with a ${partner.label.toLowerCase()} value, each listing at least eight providers.`;
+---
+
+<Base
+  title={`${title} — FindHost`}
+  description={summary}
+  image={valueCardPath(facet.id, value.slug)}
+  imageAlt={`A FindHost card: ${lead}.`}
+  schema={[
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: facet.label, item: `${origin}${facetIndex(facet.id)}` },
+        { '@type': 'ListItem', position: 2, name: value.label, item: `${origin}${facetIndex(facet.id)}${value.slug}/` },
+        { '@type': 'ListItem', position: 3, name: partner.label },
+      ],
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      url: `${origin}${pairIndexPath(facet, value, partner)}`,
+      name: title,
+      inLanguage: 'en',
+      publisher: organization(origin),
+      license: 'https://creativecommons.org/licenses/by/4.0/',
+    },
+  ]}
+>
+  <p class="crumb" data-pagefind-ignore><a href={`${facetIndex(facet.id)}${value.slug}/`}>{value.label}</a></p>
+
+  <h1>{title}</h1>
+
+  <p class="annotation">{summary}</p>
+
+  {/* Counted, because the count is the only reason to click one rather than another. */}
+  <ul class="pair-list">
+    {
+      rows.map((page) => (
+        <li>
+          <a href={pairPath(page)}>{page.bv.label}</a>
+          <span class="pair-count">
+            {page.matches.length}
+            <span class="visually-hidden"> providers</span>
+          </span>
+        </li>
+      ))
+    }
+  </ul>
+</Base>

@@ -1,8 +1,9 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 import { loadFacets } from '../lib/facets';
+import { pairPath, pairPages } from '../lib/pairs';
 import { loadProviders } from '../lib/providers';
-import { fieldGroups } from '../lib/fields';
+import { fieldGroups, fields } from '../lib/fields';
 import { attribution, credit } from '../lib/seo';
 
 /**
@@ -26,8 +27,9 @@ const label = (value: unknown): string => {
 export const GET: APIRoute = async ({ site }) => {
   const origin = site?.origin ?? '';
   const providers = (await loadProviders()).sort((a, b) => a.data.name.localeCompare(b.data.name, 'en'));
-  const { facets } = await loadFacets();
+  const { facets, providers: rows } = await loadFacets();
   const notes = await getCollection('notes');
+  const pairs = pairPages(facets, fields, rows);
   const groups = fieldGroups();
 
   const lines: string[] = [
@@ -54,6 +56,16 @@ export const GET: APIRoute = async ({ site }) => {
           .map((value) => `${value.label} ${value.count}`)
           .join(', ')}`,
     ),
+    '',
+    /*
+     * Two facets at once, which is the shape of nearly every question anybody
+     * actually asks. Listed with their counts rather than described: the page
+     * itself is the description, and a line here that summarised it would be the
+     * same sentence twice.
+     */
+    `## Combinations (${pairs.length})`,
+    '',
+    ...pairs.map((page) => `- ${origin}${pairPath(page)}: ${page.matches.length}`),
     '',
     '## Notes',
     '',

@@ -1,0 +1,123 @@
+---
+import Base from '../../../../layouts/Base.astro';
+import ProviderRegister from '../../../../components/ProviderRegister.astro';
+import { facetIndex, loadFacets, pairRoutes } from '../../../../lib/facets';
+import { fieldOf, subjectOf, titleWithOf } from '../../../../lib/fields';
+import { pairCardPath } from '../../../../lib/og';
+import { pairIndexPath, pairPath, pairingKey } from '../../../../lib/pairs';
+import { organization, valueTitle } from '../../../../lib/seo';
+import { firstSentence, summarisePair } from '../../../../lib/summarise';
+
+/*
+ * Two facet values, one address. One value has had a page since the beginning;
+ * two happened in a query string, which nothing crawls, nothing exports and
+ * nobody can cite. The narrowing belongs in the path like every other narrowing
+ * on this site.
+ *
+ * The value page says a second value would contradict its URL, heading and
+ * prose at once. That argues for this page rather than against it: this one has
+ * its own URL, its own heading and its own prose, and nothing contradicts
+ * anything. What it must not become is a combination generated because it can
+ * be — see the gate in lib/pairs.ts.
+ */
+export async function getStaticPaths() {
+  return pairRoutes();
+}
+
+const { a, av, b, bv, matches, aTotal, bTotal } = Astro.props;
+
+const { facets, providers } = await loadFacets();
+
+const aField = fieldOf.get(a.field)!;
+const bField = fieldOf.get(b.field)!;
+const aSubject = subjectOf(aField, av, matches.length);
+const bSubject = subjectOf(bField, bv, matches.length);
+
+/*
+ * The wider parent, whose records the prose measures this page against. Held
+ * here rather than in lib/pairs.ts because it is only ever wanted for phrasing.
+ */
+const widerRows = providers.filter((provider) => {
+  const held = provider.facets[aTotal >= bTotal ? a.field : b.field];
+  const id = aTotal >= bTotal ? av.id : bv.id;
+  return Array.isArray(held) ? held.includes(id) : held === id;
+});
+
+const summary = summarisePair({ aId: a.id, bId: b.id, aSubject, bSubject, matches, aTotal, bTotal, widerRows }, facets);
+
+/* The title the value page uses, plus the phrase the dictionary gives the second half. */
+const title = `${valueTitle(a.id, av.label)} ${titleWithOf(bField, bv)}`;
+
+const checkedDates = matches.map((row) => row.checkedAt).filter((date): date is Date => date instanceof Date);
+const newestChecked = checkedDates.length ? new Date(Math.max(...checkedDates.map((date) => date.getTime()))) : null;
+
+const origin = Astro.site?.origin ?? '';
+const here = pairPath({ a, av, b, bv });
+---
+
+<Base
+  title={`${title} — FindHost`}
+  description={firstSentence(summary)}
+  markdown={`${here.slice(0, -1)}.md`}
+  image={pairCardPath(pairingKey(a, b))}
+  imageAlt={`A FindHost card: ${a.label} and ${b.label} combined.`}
+  schema={[
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: a.label, item: `${origin}${facetIndex(a.id)}` },
+        { '@type': 'ListItem', position: 2, name: av.label, item: `${origin}${facetIndex(a.id)}${av.slug}/` },
+        { '@type': 'ListItem', position: 3, name: title },
+      ],
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      url: `${origin}${here}`,
+      name: title,
+      inLanguage: 'en',
+      publisher: organization(origin),
+      license: 'https://creativecommons.org/licenses/by/4.0/',
+      ...(newestChecked ? { dateModified: newestChecked.toISOString().slice(0, 10) } : {}),
+      mainEntity: {
+        '@type': 'ItemList',
+        numberOfItems: matches.length,
+        itemListOrder: 'https://schema.org/ItemListOrderAscending',
+        itemListElement: matches.map((provider, index) => ({
+          '@type': 'ListItem',
+          position: index + 1,
+          url: `${origin}/${provider.id}/`,
+          name: provider.name,
+        })),
+      },
+    },
+  ]}
+>
+  {/* Both parents, because this page belongs to both and a reader may have come from either. */}
+  <p class="crumb" data-pagefind-ignore>
+    <a href={`${facetIndex(a.id)}${av.slug}/`}>{av.label}</a>
+    <span aria-hidden="true"> · </span>
+    <a href={`${facetIndex(b.id)}${bv.slug}/`}>{bv.label}</a>
+  </p>
+
+  <div class="page-head">
+    <h1>{title}</h1>
+    <a class="find-onward" data-pagefind-ignore href={`/?${a.id}=${av.id}&${b.id}=${bv.id}`}>Combine filters →</a>
+  </div>
+
+  <p class="annotation">{summary}</p>
+
+  <ProviderRegister providers={matches} facets={facets} seed={{ facet: a.id, value: av.id, label: title }} />
+
+  <p class="annotation" data-pagefind-ignore>
+    <a href={pairIndexPath(a, av, b)}
+      >Every {b.label.toLowerCase()} {valueTitle(a.id, av.label).toLowerCase()} has a page for →</a
+    >
+  </p>
+</Base>
+
+{/* For the extended/slim toggle only. This page ships no filters — its URL is the narrowing. */}
+<script>
+  import '../../../../scripts/find.ts';
+</script>

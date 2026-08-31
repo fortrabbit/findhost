@@ -1,6 +1,8 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 import { loadFacets } from '../lib/facets';
+import { fields } from '../lib/fields';
+import { pairPath, pairPages } from '../lib/pairs';
 import { loadProviders } from '../lib/providers';
 
 /**
@@ -11,7 +13,8 @@ import { loadProviders } from '../lib/providers';
 export const GET: APIRoute = async ({ site }) => {
   const origin = site?.origin ?? '';
   const providers = (await loadProviders()).sort((a, b) => a.data.name.localeCompare(b.data.name, 'en'));
-  const { facets } = await loadFacets();
+  const { facets, providers: rows } = await loadFacets();
+  const pairs = pairPages(facets, fields, rows);
   const notes = (await getCollection('notes'))
     .filter((entry) => entry.id !== 'aside/stubs')
     .sort((a, b) => a.id.localeCompare(b.id, 'en'));
@@ -75,8 +78,20 @@ export const GET: APIRoute = async ({ site }) => {
      * false of the three list pages beside the register — a 404 for anything that
      * believed it.
      */
-    'A record, a facet value and a whole facet each have a markdown copy at the same address with `.md` appended: /hetzner.md, /categories/paas.md, /categories/index.md. So does every written page: /guide.md, /about.md, /for-providers.md, /badge.md, /reach.md.',
+    'A record, a facet value and a whole facet each have a markdown copy at the same address with `.md` appended: /hetzner.md, /categories/paas.md, /categories/index.md. So does every written page: /guide.md, /about.md, /for-providers.md, /badge.md, /reach.md. So does a combination: /runtimes/php/regions/germany.md.',
     '',
+    '',
+    /*
+     * Two facets at once — "PHP hosting in Germany" — which is the shape of the
+     * question rather than "list hosting providers". Each is a real page with a
+     * markdown copy, so an answer can cite the address it actually used.
+     */
+    `## Combinations (${pairs.length})`,
+    '',
+    ...pairs.map(
+      (page) =>
+        `- [${page.av.label} and ${page.bv.label}](${origin}${pairPath(page)}): ${page.matches.length} providers`,
+    ),
     '',
     '## Notes',
     '',

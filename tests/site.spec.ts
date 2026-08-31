@@ -175,6 +175,61 @@ test.describe('a record', () => {
   });
 });
 
+test.describe('a combination of two facets', () => {
+  test('is a real page at a real address, with the narrowing in the path', async ({ page }) => {
+    await page.goto('/runtimes/php/regions/germany/');
+
+    await expect(page.locator('h1')).toHaveText('PHP hosting in Germany');
+    await expect(page.locator('[data-find-results] li[data-record]').first()).toBeVisible();
+
+    /* Both parents, because the page belongs to both. */
+    await expect(page.locator('.crumb a')).toHaveCount(2);
+  });
+
+  /*
+   * The reason this is not a doorway page. Pin the second facet and the clauses
+   * that varied on a value page stop varying, so the summary has to describe the
+   * intersection against its parents instead of counting it again.
+   */
+  test('says something its own that the neighbouring combination does not', async ({ page }) => {
+    await page.goto('/runtimes/php/regions/germany/');
+    const german = await page.locator('.annotation').first().innerText();
+
+    await page.goto('/runtimes/node/regions/germany/');
+    const node = await page.locator('.annotation').first().innerText();
+
+    expect(german).not.toEqual(node);
+    expect(german).toContain('run PHP and operate in Germany');
+  });
+
+  test('is reachable from the value page it narrows, without JavaScript', async ({ page }) => {
+    await page.goto('/runtimes/php/');
+
+    const link = page.locator('.pair-links a[href="/runtimes/php/regions/germany/"]');
+    await expect(link).toBeVisible();
+  });
+
+  /* Deleting the last segment of a URL that works must not land between two pages. */
+  test('keeps the rung above it', async ({ page }) => {
+    await page.goto('/runtimes/php/regions/');
+
+    await expect(page.locator('h1')).toContainText('PHP hosting');
+    await expect(page.locator('.pair-list a').first()).toBeVisible();
+  });
+
+  test('is exported as markdown like every other list', async ({ page }) => {
+    const answer = await page.request.get('/runtimes/php/regions/germany.md');
+    expect(answer.status()).toBe(200);
+    expect(await answer.text()).toContain('# PHP hosting in Germany');
+  });
+
+  /* A pairing nobody switched on must not have produced anything. */
+  test('does not exist for a pairing left in draft', async ({ page }) => {
+    const answer = await page.request.get('/runtimes/php/pricing/free-trial/');
+    expect(answer.status()).toBe(404);
+  });
+});
+
 test.describe('governance, as behaviour rather than policy text', () => {
   test('fortrabbit sits in alphabetical position and discloses itself', async ({ page }) => {
     await page.goto('/');

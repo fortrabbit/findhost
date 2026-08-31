@@ -4,7 +4,8 @@ import Base from '../../layouts/Base.astro';
 import { organization, valueTitle } from '../../lib/seo';
 import ProviderRegister from '../../components/ProviderRegister.astro';
 import PageFigure from '../../components/PageFigure.astro';
-import { facetIndex, facetRoutes, loadFacets } from '../../lib/facets';
+import { facetIndex, facetRoutes, loadFacets, pairsFrom } from '../../lib/facets';
+import { pairIndexPath, pairPath } from '../../lib/pairs';
 import { fieldOf, subjectOf } from '../../lib/fields';
 import { firstSentence, summarise } from '../../lib/summarise';
 import { valueCardPath } from '../../lib/og';
@@ -60,6 +61,18 @@ const notes = await getCollection('notes');
 const note = notes.find((entry) => entry.id === `${facet.id}/${value.id}`);
 const Note = note ? (await render(note)).Content : null;
 const figure = note?.data.figure;
+
+/*
+ * The pair pages this value heads, grouped by the facet they combine with. They
+ * are how a crawler reaches /runtimes/php/regions/germany/ at all: a pair page
+ * is linked from the value page it narrows and from nowhere else.
+ */
+const combined = [...Map.groupBy(await pairsFrom(facet.id, value.id), (page) => page.b.id).values()].map((pages) => ({
+  label: pages[0]!.b.label,
+  index: pairIndexPath(pages[0]!.a, pages[0]!.av, pages[0]!.b),
+  /* Longest lists first: on this block the count is the only reason to pick one. */
+  pages: [...pages].sort((one, other) => other.matches.length - one.matches.length),
+}));
 ---
 
 <Base
@@ -125,6 +138,28 @@ const figure = note?.data.figure;
     facets={facets}
     seed={{ facet: facet.id, value: value.id, label: value.label }}
   />
+
+  {
+    combined.map((group) => (
+      <section class="pair-links" data-pagefind-ignore>
+        <h2>
+          <a href={group.index}>By {group.label.toLowerCase()}</a>
+        </h2>
+
+        <ul class="pair-list">
+          {group.pages.map((page) => (
+            <li>
+              <a href={pairPath(page)}>{page.bv.label}</a>
+              <span class="pair-count">
+                {page.matches.length}
+                <span class="visually-hidden"> providers</span>
+              </span>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))
+  }
 </Base>
 
 {/* For the extended/slim toggle only. This page ships no filters — its URL is the narrowing. */}

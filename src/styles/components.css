@@ -1747,3 +1747,43 @@ article > pre {
   white-space: pre-wrap;
   overflow-wrap: anywhere;
 }
+
+/*
+ * The pairings a value page offers, and the same list on the rung above the pair
+ * pages themselves. A column of counted links rather than prose: the count is
+ * the only thing that distinguishes one of these from the next, so it is the
+ * thing set apart.
+ */
+.pair-links {
+  margin-top: var(--space-xl);
+}
+
+.pair-links > h2 {
+  margin-bottom: var(--space-xs);
+  font-size: var(--text-md);
+}
+
+.pair-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  gap: var(--space-2xs) var(--space-lg);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--text-sm);
+}
+
+.pair-list > li {
+  display: flex;
+  gap: var(--space-xs);
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: var(--rule-hairline) solid color-mix(in srgb, var(--color-ink) 15%, transparent);
+}
+
+.pair-count {
+  flex: none;
+  font-family: var(--font-data);
+  font-size: var(--text-xs);
+  font-variant-numeric: tabular-nums;
+}
