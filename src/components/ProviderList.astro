@@ -67,14 +67,6 @@ const { providers, namesOnly = false } = Astro.props;
               <a href={`/${provider.id}/`}>{provider.name}</a>
             </span>
             {described && <p>{provider.description}</p>}
-            {provider.meter && (
-              <span class="provider-meter" aria-hidden="true">
-                <span
-                  class="provider-meter-bar"
-                  style={`--meter:${provider.meter.width.toFixed(2)}%;--meter-alt:${(provider.meter.alternate ?? provider.meter.width).toFixed(2)}%`}
-                />
-              </span>
-            )}
           </div>
 
           {/*
@@ -104,6 +96,18 @@ const { providers, namesOnly = false } = Astro.props;
                   {provider.meter.text}
                 </span>
               )}
+            </span>
+          )}
+
+          {/* A row of the grid, not a line inside the body: the bar runs the whole
+              width beside the tile so the largest reaches the edge the figures
+              sit on. */}
+          {provider.meter && (
+            <span class="provider-meter" aria-hidden="true">
+              <span
+                class="provider-meter-bar"
+                style={`--meter:${provider.meter.width.toFixed(2)}%;--meter-alt:${(provider.meter.alternate ?? provider.meter.width).toFixed(2)}%`}
+              />
             </span>
           )}
         </li>

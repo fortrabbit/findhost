@@ -733,11 +733,38 @@ html:not(.js) .theme-switch {
  */
 .scaled .provider-list > li {
   grid-template-columns: var(--tile) 1fr 8rem;
+  grid-template-areas:
+    'tile name figure'
+    'tile meter meter';
+}
+
+.scaled .provider-tile {
+  grid-area: tile;
+}
+
+.scaled .provider-body {
+  grid-area: name;
 }
 
 .scaled .provider-trailing {
+  grid-area: figure;
   justify-content: flex-end;
   width: 100%;
+}
+
+.scaled .provider-meter {
+  grid-area: meter;
+}
+
+/*
+ * Arriving from a record: /reach/#surge is how a figure on a record page leads
+ * to where it sits among the others, and the row has to be findable once the
+ * page has scrolled to it.
+ */
+.provider-list > li:target {
+  background: var(--color-hover);
+  box-shadow: inset 0 0 0 var(--rule-strong) var(--color-ink);
+  scroll-margin-block: var(--space-md);
 }
 
 /* Everything the row carries after the name, in the one cell the grid gives it. */
