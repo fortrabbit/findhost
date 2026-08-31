@@ -239,7 +239,10 @@ test.describe('without JavaScript', () => {
    */
   test('the badge is still copyable by hand', async ({ page }) => {
     await page.goto('/badge/');
+    await expect(page.locator('article pre').first()).toContainText('<svg');
 
+    /* The record's block is the one with buttons, and they are absent until their script has run. */
+    await page.goto('/fortrabbit/');
     await expect(page.locator('.badge-snippets pre').first()).toContainText('<svg');
     await expect(page.locator('.badge-copy').first()).toBeHidden();
   });
@@ -492,7 +495,7 @@ test.describe('the provider badge', () => {
    */
   test('loads nothing when it is displayed', async ({ page }) => {
     await page.goto('/badge/');
-    const artwork = await page.locator('.badge-preview svg').innerHTML();
+    const artwork = await page.locator('article svg[role="img"]').innerHTML();
 
     expect(artwork).not.toMatch(/<image|src=|href=/);
     expect(artwork).toContain('currentColor');
@@ -507,7 +510,7 @@ test.describe('the provider badge', () => {
   test('holds both lines inside the frame, whatever serif answers', async ({ page }) => {
     await page.goto('/badge/');
 
-    const clearance = await page.locator('.badge-preview svg').evaluate((svg) => {
+    const clearance = await page.locator('article svg[role="img"]').evaluate((svg) => {
       const frame = svg.querySelector('rect')!;
       const room = frame.width.baseVal.value;
 
@@ -531,7 +534,7 @@ test.describe('the provider badge', () => {
 
   test('says in its own words that it is not a rating', async ({ page }) => {
     await page.goto('/badge/');
-    await expect(page.locator('.badge-terms')).toContainText('not an endorsement, not a rating, not a rank');
+    await expect(page.locator('article')).toContainText('not a rating, a rank, or an endorsement');
 
     /* Nothing on it may read as a tier, an award or a year — the artwork least of all. */
     const words = await page.locator('article').innerText();

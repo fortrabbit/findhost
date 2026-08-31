@@ -1685,9 +1685,13 @@ html:not(.js) .badge-copy {
 /*
  * The snippet as it will be pasted, wrapped rather than scrolled: a reader who
  * has to drag a bar sideways to see the end of a line cannot check what they are
- * about to publish, which is the one thing this block exists to let them do.
+ * about to publish, which is the one thing these blocks exist to let them do.
+ *
+ * Both places it appears — the block on a record, and the fenced code on /badge/
+ * — so the page describing the badge and the page handing it out look alike.
  */
-.badge-snippets pre {
+.badge-snippets pre,
+article > pre {
   margin: 0;
   padding: var(--space-xs) var(--space-sm);
   border: var(--rule-hairline) solid var(--color-ink);
@@ -1697,21 +1701,4 @@ html:not(.js) .badge-copy {
   line-height: var(--leading-data);
   white-space: pre-wrap;
   overflow-wrap: anywhere;
-}
-
-/* The promise, set apart from the prose that introduces it, one sentence a line. */
-.badge-terms {
-  max-width: var(--measure-prose);
-  margin-inline: 0;
-  padding-left: var(--space-md);
-  border-left: var(--rule-strong) solid var(--color-ink);
-}
-
-.badge-terms p {
-  margin-block: var(--space-2xs);
-}
-
-/* The prose that follows a block of snippets, which otherwise sits on the last one. */
-.badge-snippets + p {
-  margin-top: var(--space-lg);
 }

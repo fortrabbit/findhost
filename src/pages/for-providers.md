@@ -6,38 +6,34 @@ description: How to correct a record, how to get a missing provider added, and t
 lead: What a hosting company can do here.
 ---
 
-Nothing here is for sale. A record exists because a provider meets the scope test, and it reports what that provider's own public pages say.
+Nothing here is for sale. A record exists because a provider meets the scope test, and it reports what that provider's public pages say.
 
 ## Correcting a record
 
-Every record is one markdown file. The **Edit on GitHub** link at the bottom of a record page opens it, GitHub forks the repository, and saving the change opens a pull request. No checkout, no build.
+Every record is one markdown file. The **Edit on GitHub** link at the bottom of a record page opens it, and saving opens a pull request. No checkout, no build.
 
-What makes a correction quick to merge:
-
-- **Cite it.** Anything not obvious from the home page needs a `sources` entry with a URL and the date it was read. A provider's own documentation is a fine source about its own product.
+- **Cite it.** Anything not obvious from the home page needs a `sources` entry with a URL and the date it was read.
 - **Leave unknowns blank.** An absent field means nobody has checked. It renders as `?` and is a designed state.
-- **Disclose the relationship.** Contributors paid by a provider say so in the pull request. That applies to us as well.
+- **Disclose the relationship.** Contributors paid by a provider say so in the pull request. That applies to us too.
 
-Some things do not change on request: the alphabetical order, the absence of ratings, and the ♥️, which is the publisher's opinion rather than a field. Records are never deleted. A provider that would rather not appear can say so, and the record moves beside the register, keeping its page.
+The alphabetical order, the absence of ratings and the ♥️ do not change on request. Records are never deleted, and a provider that would rather not appear can say so; the record then moves beside the register.
 
 - [Every record, one file each](https://github.com/fortrabbit/findhost/tree/main/src/content/providers)
 - [The full contributing rules](https://github.com/fortrabbit/findhost/blob/main/CONTRIBUTING.md)
 
 ## Adding a provider
 
-The register is incomplete, and a missing name usually means nobody has got to it yet.
+The register is incomplete. A missing name usually means nobody has got to it yet.
 
-Write the record — one file under `src/content/providers/`, four required fields (`id`, `name`, `urls.home`, `category`), one pull request. Or name it in an issue and leave the fields to whoever picks it up.
+Write the record — one file, four required fields, one pull request. Or name it in an issue and leave the fields to whoever picks it up. A provider that fails one of the six criteria still gets a record, carrying the number it failed on, and most of those reverse once the evidence appears.
 
-A provider that fails one of the six criteria still gets a record, carrying the number it failed on. Most of those rulings reverse once the missing evidence appears.
-
-- [The six criteria a record is held to](/about/#who-is-listed)
+- [The six criteria](/about/#who-is-listed)
 - [Name a provider we are missing](https://github.com/fortrabbit/findhost/issues/new?template=add-provider.yml)
 
 ## The badge
 
-Listed providers are welcome to display a small **Listed on FindHost** badge. It says a record exists and nothing else: no tier, no score, no year, and no way to buy one. The artwork is inline markup, so it never calls this server and no install count exists.
+Listed providers are welcome to display a small **Listed on FindHost** badge. It says a record exists and nothing more, it cannot be bought, and displaying it loads nothing from this server.
 
-We would be glad if you took it. The snippet also sits at the bottom of your own record.
+We would be glad if you took it.
 
-- [The badge, its three forms and its terms](/badge/)
+- [The badge](/badge/)

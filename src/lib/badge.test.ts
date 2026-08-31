@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
-import { badgePlacements, badgeSnippets, badgeSvg, badgeTerms, badgeWords } from './badge.ts';
+import { readFileSync } from 'node:fs';
+import { badgeSnippets, badgeSvg, badgeTerms, badgeWords } from './badge.ts';
 
 /*
  * The badge is the one artifact of this project that gets published on somebody
@@ -45,16 +46,41 @@ describe('the terms', () => {
   it('says what the badge is not, before anybody reads it as a seal', () => {
     const said = badgeTerms.join(' ');
 
-    assert.match(said, /not an endorsement/);
-    assert.match(said, /not a rating/);
-    assert.match(said, /not a rank/);
-    assert.match(said, /cannot be/);
+    assert.match(said, /not a rating, a rank, or an endorsement/);
+    assert.match(said, /cannot be bought/);
+  });
+});
+
+/*
+ * /badge/ is a plain markdown page — no component, nothing generated — so the
+ * artwork and the promise are typed out there as well as held here. That is one
+ * file to edit rather than an Astro template, and the cost is that the page can
+ * quietly stop describing the badge the records hand out. This is the guard: a
+ * badge edited in one place and not the other fails here.
+ */
+describe('the page', () => {
+  const page = readFileSync('src/pages/badge.md', 'utf8');
+
+  it('shows the same artwork the snippets carry', () => {
+    assert.ok(page.includes(badgeSvg()), 'src/pages/badge.md no longer holds the current badge');
   });
 
-  /* The homepage is what a provider assumes is being asked for, and the reason most say no. */
-  it('offers somewhere other than the homepage to put it', () => {
-    assert.ok(badgePlacements.length > 1);
-    assert.ok(badgePlacements.every((where) => !/homepage/i.test(where)));
+  it('offers the same three forms', () => {
+    for (const snippet of badgeSnippets('https://www.findhost.app', 'your-record')) {
+      assert.ok(page.includes(snippet.code), `src/pages/badge.md is missing the ${snippet.id} snippet`);
+    }
+  });
+
+  it('states the terms in the words the records state them in', () => {
+    for (const sentence of badgeTerms) {
+      assert.ok(page.includes(sentence), `src/pages/badge.md is missing: ${sentence}`);
+    }
+  });
+
+  /* A snippet copied from a preview on a vanity hostname still has to point at the register. */
+  it('writes the public domain into the snippets, not whatever served the page', () => {
+    assert.ok(page.includes('https://www.findhost.app/your-record/'));
+    assert.doesNotMatch(page, /localhost/);
   });
 });
 

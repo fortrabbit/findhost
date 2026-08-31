@@ -101,27 +101,14 @@ export const badgeSnippets = (origin: string, id: string): BadgeSnippet[] => {
 };
 
 /**
- * What the badge means, in the words the page, the record's block and the
- * markdown twin all use. One copy, for the reason the attribution line in
- * seo.ts is one copy: a promise that is worded three ways is three promises,
- * and this one has to survive being quoted back at us.
+ * What the badge means, in the words the record's block and /badge/ both use.
+ * One copy, for the reason the attribution line in seo.ts is one copy: a promise
+ * worded three ways is three promises, and this one has to survive being quoted
+ * back at us. badge.test.ts holds the page to it.
  */
 export const badgeTerms = [
   'The badge means this provider has a record on FindHost.',
-  'It is not an endorsement, not a rating, not a rank.',
-  'It was not paid for and cannot be.',
-  'Every provider meeting the scope test gets a record whether they display it or not, and taking the badge down changes nothing about the record.',
-];
-
-/**
- * Where it can go. Written down because the answer providers assume is "the
- * homepage", and a badge nobody will agree to put on a homepage is a badge
- * nobody puts anywhere.
- */
-export const badgePlacements = [
-  'A site footer',
-  'An about or company page',
-  'A colophon or credits page',
-  'A trust or security page',
-  'A README',
+  'It is not a rating, a rank, or an endorsement.',
+  'It cannot be bought.',
+  'A record exists whether the badge is displayed or not.',
 ];
