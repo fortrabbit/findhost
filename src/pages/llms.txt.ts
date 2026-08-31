@@ -20,8 +20,9 @@ export const GET: APIRoute = async ({ site }) => {
    * A note is keyed by the value's id, and the page is at the value's slug. The
    * two differ wherever a field slugs from its label — /entry-price/xs/ is a note
    * filename and was never an address — so the URL is resolved through the facet
-   * rather than built from the id. The groups beside the register are the other
-   * exception: filed under `aside/` and published at the root.
+   * rather than built from the id. Two directories are not facets at all and are
+   * published at the root: `aside/` holds the groups beside the register, and
+   * `page/` holds the introduction to a page that writes itself.
    */
   const valueOf = (id: string) => {
     const [facetId, valueId] = id.split('/');
@@ -33,7 +34,7 @@ export const GET: APIRoute = async ({ site }) => {
     const { facet, value } = valueOf(id);
     if (facet && value) return `${origin}/${facet.id}/${value.slug}/`;
 
-    return `${origin}/${id.replace(/^aside\//, '')}/`;
+    return `${origin}/${id.replace(/^(aside|page)\//, '')}/`;
   };
 
   const headingOf = (id: string) => {
@@ -56,6 +57,7 @@ export const GET: APIRoute = async ({ site }) => {
     '',
     `- [How to choose a host](${origin}/guide/)`,
     `- [About, and who publishes this](${origin}/about/)`,
+    `- [For providers: correcting a record, adding one, and the badge](${origin}/for-providers/)`,
     `- [Every provider, filterable](${origin}/)`,
     `- [Where providers operate](${origin}/regions/)`,
     `- [providers.json, every facet and every record's facet fields](${origin}/providers.json)`,
@@ -73,7 +75,7 @@ export const GET: APIRoute = async ({ site }) => {
      * false of the three list pages beside the register — a 404 for anything that
      * believed it.
      */
-    'A record, a facet value, a whole facet and the two written pages each have a markdown copy at the same address with `.md` appended: /hetzner.md, /categories/paas.md, /categories/index.md, /guide.md, /about.md.',
+    'A record, a facet value and a whole facet each have a markdown copy at the same address with `.md` appended: /hetzner.md, /categories/paas.md, /categories/index.md. So does every written page: /guide.md, /about.md, /for-providers.md, /badge.md, /reach.md.',
     '',
     '',
     '## Notes',
