@@ -1,0 +1,96 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import PageFigure from '../components/PageFigure.astro';
+import BadgeSnippets from '../components/BadgeSnippets.astro';
+import { badgePlacements, badgeTerms } from '../lib/badge';
+import { licenceUrl, organization } from '../lib/seo';
+import { pageCardPath } from '../lib/og';
+
+/*
+ * A written page rather than a list, so it is shaped like /about/ — but it is an
+ * .astro file because the snippets and the preview are built from lib/badge.ts.
+ * The alternative was pasting the artwork into markdown, where the page and the
+ * thing it describes could drift apart without anything failing.
+ */
+const note = (await getCollection('notes')).find((entry) => entry.id === 'page/badge');
+const Note = note ? (await render(note)).Content : null;
+
+/*
+ * A placeholder, not an example record. Every provider's own snippet is on their
+ * own page; filling this one in with a real record would make the page that
+ * explains the badge into the one place a provider is named for showing it.
+ */
+const placeholder = 'your-record';
+
+const origin = Astro.site?.origin ?? '';
+---
+
+<Base
+  title={`${note?.data.title ?? 'Badge'} — FindHost`}
+  description={note?.data.description}
+  markdown="/badge.md"
+  image={pageCardPath('badge')}
+  imageAlt="A FindHost card: the badge a listed provider can display."
+  schema={[
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      url: `${origin}/badge/`,
+      name: 'Badge',
+      inLanguage: 'en',
+      publisher: organization(origin),
+      license: licenceUrl,
+    },
+  ]}
+>
+  <article>
+    <h1>{note?.data.title ?? 'Badge'}</h1>
+    {note?.data.lead && <p class="lead">{note.data.lead}</p>}
+    <PageFigure figure={note?.data.figure} />
+    {Note && <Note />}
+
+    <h2 id="what-it-means">What it means</h2>
+    {/* The promise, in the one wording it has anywhere — see lib/badge.ts. */}
+    <blockquote class="badge-terms">
+      {badgeTerms.map((sentence) => <p>{sentence}</p>)}
+    </blockquote>
+
+    <h2 id="the-snippets">The snippets</h2>
+    <p>
+      Three forms of one link. Copy the one that fits, and change <code>your-record</code> to your own — or open your record
+      and take the snippet already filled in there. Every record on this site carries one, under <em>Are you …?</em>
+    </p>
+
+    <BadgeSnippets origin={origin} id={placeholder} />
+
+    <p>
+      The artwork is drawn in <code>currentColor</code>, so it takes the colour of the text around it and is legible in
+      a light footer and a dark one without you choosing a version. Replace that word with a colour of your own if your
+      footer wants something else, and change the <code>width</code> and <code>height</code> to scale it — the shape is a
+      viewBox, so it stays sharp at any size.
+    </p>
+
+    <h2 id="where-to-put-it">Where to put it</h2>
+    <p>It does not have to be the homepage.</p>
+    <ul>
+      {badgePlacements.map((where) => <li>{where}</li>)}
+    </ul>
+
+    <h2 id="what-we-do-with-it">What we do with it</h2>
+    <p>
+      Nothing you can see. The badge is inline markup, so displaying it never calls this server and we never learn how
+      many sites carry one — which is the point: an image hosted here would be a tracker with a picture on it. What we
+      can read is the same thing you can read in your own analytics, a referrer, and that only when somebody follows the
+      link.
+    </p>
+    <p>
+      There is no application and nobody to ask. If your record is here, the badge is yours to take. If it is not, <a
+        href="/about/#who-is-listed">the scope test</a
+      > is the whole of the answer, and <a
+        href="https://github.com/fortrabbit/findhost/issues/new?template=add-provider.yml"
+        >a missing name is a report anybody can file</a
+      >.
+    </p>
+  </article>
+</Base>

@@ -231,6 +231,18 @@ test.describe('without JavaScript', () => {
     await expect(page.locator('.provider-list > li').first()).toBeVisible();
     await expect(page.locator('.annotation').first()).toContainText('provider');
   });
+
+  /*
+   * The snippet is text in a `<pre>`, so it can always be selected by hand. The
+   * copy button only saves the selecting, and is absent rather than dead when
+   * the script behind it has not run.
+   */
+  test('the badge is still copyable by hand', async ({ page }) => {
+    await page.goto('/badge/');
+
+    await expect(page.locator('.badge-snippets pre').first()).toContainText('<svg');
+    await expect(page.locator('.badge-copy').first()).toBeHidden();
+  });
 });
 
 test.describe('stubs', () => {
@@ -440,5 +452,58 @@ test.describe('search', () => {
 
     await expect(page.locator('[data-search-summary]')).toContainText(/pages? match/);
     await expect(page.locator('[data-search-results] a').first()).toBeVisible();
+  });
+});
+
+/*
+ * The one thing this site publishes that ends up on somebody else's pages, out
+ * of reach of any later edit. Two of these are governance rather than markup: a
+ * badge that could be read as a rank, or that could count installs, is the thing
+ * the register exists to be an alternative to.
+ */
+test.describe('the provider badge', () => {
+  test('is offered on a listed record and withheld from one that is not', async ({ page }) => {
+    await page.goto('/fortrabbit/');
+    await expect(page.locator('.badge-offer summary')).toContainText('Link back to this record');
+
+    /* Out of scope. A snippet reading "Listed on FindHost" here would be a claim we do not make. */
+    await page.goto('/acquia/');
+    await expect(page.locator('.badge-offer')).toHaveCount(0);
+  });
+
+  test('points at the plain record, with nothing appended', async ({ page }) => {
+    await page.goto('/fortrabbit/');
+    /* Native, so it opens with scripting off too. */
+    await page.locator('.badge-offer summary').click();
+    const snippets = await page.locator('.badge-snippets pre').allInnerTexts();
+
+    expect(snippets).toHaveLength(3);
+    for (const snippet of snippets) {
+      expect(snippet).toContain('/fortrabbit/');
+      expect(snippet).not.toMatch(/\/fortrabbit\/[?#]/);
+      expect(snippet).toContain('Listed on FindHost');
+    }
+  });
+
+  /*
+   * The reason the badge is inline SVG rather than an image on this server: a
+   * hosted one would be fetched on every page view of theirs and hand us an
+   * install count, which is a tracker with a picture on it.
+   */
+  test('loads nothing when it is displayed', async ({ page }) => {
+    await page.goto('/badge/');
+    const artwork = await page.locator('.badge-preview svg').innerHTML();
+
+    expect(artwork).not.toMatch(/<image|src=|href=/);
+    expect(artwork).toContain('currentColor');
+  });
+
+  test('says in its own words that it is not a rating', async ({ page }) => {
+    await page.goto('/badge/');
+    await expect(page.locator('.badge-terms')).toContainText('not an endorsement, not a rating, not a rank');
+
+    /* Nothing on it may read as a tier, an award or a year — the artwork least of all. */
+    const words = await page.locator('article').innerText();
+    expect(words).not.toMatch(/\b(best|top \d|award|rated|certified)\b/i);
   });
 });

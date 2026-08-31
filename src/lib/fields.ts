@@ -157,6 +157,8 @@ export const reservedSegments = [
   'defunct',
   'guide',
   'about',
+  'badge',
+  'for-providers',
   'search',
   'find',
   'notes',

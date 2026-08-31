@@ -1,0 +1,77 @@
+---
+import { badgeSnippets, badgeSvg } from '../lib/badge';
+
+/**
+ * The badge, and the three ways to paste it. Shown on a record filled in with
+ * that record's address, and on /badge/ filled in with a placeholder — the page
+ * that explains the badge must not hand out a working link to one provider, or
+ * the explanation itself becomes a feature slot.
+ */
+interface Props {
+  origin: string;
+  /** The record the snippets point at. `your-record` on /badge/, where there is no one record. */
+  id: string;
+}
+
+const { origin, id } = Astro.props;
+const snippets = badgeSnippets(origin, id);
+---
+
+<div class="badge-snippets">
+  {
+    /*
+     * The artwork at the size it is pasted at, drawn from the same string the
+     * snippet carries — a preview built any other way is a preview of something
+     * else. It takes the ink of the page around it here for the same reason it
+     * takes the ink of their footer there.
+     */
+  }
+  <div class="badge-preview">
+    <Fragment set:html={badgeSvg()} />
+  </div>
+
+  <ul class="badge-forms">
+    {
+      snippets.map((snippet) => (
+        <li>
+          <p class="badge-form-head">
+            <span class="badge-form-label">{snippet.label}</span>
+            {/* Hidden until the script that makes it work has run — see components.css. */}
+            <button type="button" class="badge-copy" data-badge-copy>
+              Copy
+            </button>
+          </p>
+          <p class="annotation">{snippet.note}</p>
+          {/* On one line, and held there: whitespace inside a <pre> is copied along with the snippet. */}
+          {/* prettier-ignore */}
+          <pre><code>{snippet.code}</code></pre>
+        </li>
+      ))
+    }
+  </ul>
+</div>
+
+<script>
+  /*
+   * The code is in the page whether this runs or not: a `<pre>` is selectable,
+   * and the button only saves the selecting. Which is why it reads the text out
+   * of the block rather than carrying its own copy — two copies of a snippet is
+   * two things to keep the same.
+   */
+  for (const button of document.querySelectorAll<HTMLButtonElement>('[data-badge-copy]')) {
+    button.addEventListener('click', async () => {
+      const code = button.closest('li')?.querySelector('pre')?.textContent;
+      if (!code) return;
+
+      try {
+        await navigator.clipboard.writeText(code);
+        button.textContent = 'Copied';
+      } catch {
+        // Denied, or no clipboard at all. Say so rather than claiming it worked.
+        button.textContent = 'Select it instead';
+      }
+
+      setTimeout(() => (button.textContent = 'Copy'), 2000);
+    });
+  }
+</script>

@@ -314,10 +314,13 @@ const asideNotes = new Set([...[...asideOf.values()].map((group) => group.key), 
 
 /*
  * The same exception for pages that are neither a facet nor a group beside the
- * register. /reach/ introduces a list and earns an introduction; the root of
- * notes/ is facet names, so it is filed under `page/` rather than beside them.
+ * register. /reach/ introduces a list and /badge/ introduces an object; the root
+ * of notes/ is facet names, so both are filed under `page/` rather than beside
+ * them. Named here rather than read from src/pages/, because the point of the
+ * check is that the note and the page agree — a list derived from one of them
+ * cannot catch the case where the other is missing.
  */
-const pageNotes = new Set(['reach']);
+const pageNotes = new Set(['reach', 'badge']);
 
 for (const key of noteKeys(notesDir)) {
   const [segment, value, ...rest] = key.split('/');
