@@ -1,0 +1,183 @@
+import assert from 'node:assert/strict';
+import { describe, it } from 'node:test';
+import { readFileSync } from 'node:fs';
+import { badgeSnippets, badgeSvg, badgeTerms, badgeWords } from './badge.ts';
+
+/*
+ * The badge is the one artifact of this project that gets published on somebody
+ * else's site, under their control, where nothing we write later can amend it.
+ * Every rule it has to hold is here as an assertion rather than as a paragraph
+ * in a ticket: the wording, the absence of a rank, the absence of a tracker.
+ */
+
+const origin = 'https://www.findhost.app';
+const codeFor = (slug: string) => badgeSnippets(origin, slug).map((snippet) => snippet.code);
+
+describe('the wording', () => {
+  it('states a fact rather than a selection', () => {
+    assert.equal(badgeWords, 'Listed on FindHost');
+  });
+
+  /*
+   * The line the badge must not cross. A market full of bought "Top 10 2026"
+   * seals is the reason this register exists, so the words that would put us in
+   * that business are checked rather than trusted to review — including in the
+   * artwork, which is where they would be hardest to notice later.
+   */
+  it('never implies a rank, an award or a year', () => {
+    const forbidden = /\b(best|top|award|awarded|rated|rating|winner|featured|certified|approved|20\d\d)\b/i;
+
+    /* The SVG namespace is a URL with a year in it, and it is not something anybody reads. */
+    const said = (code: string) => code.replace(/xmlns="[^"]*"/g, '');
+
+    for (const code of [...codeFor('hetzner'), badgeSvg()]) {
+      assert.doesNotMatch(said(code), forbidden);
+    }
+  });
+
+  it('is the anchor text of every form, so the link never reads as a keyword', () => {
+    for (const code of codeFor('hetzner')) {
+      assert.ok(code.includes(badgeWords), `missing the wording: ${code}`);
+    }
+  });
+});
+
+describe('the terms', () => {
+  it('says what the badge is not, before anybody reads it as a seal', () => {
+    const said = badgeTerms.join(' ');
+
+    assert.match(said, /not a rating, a rank, or an endorsement/);
+    assert.match(said, /cannot be bought/);
+  });
+});
+
+/*
+ * /badge/ is a plain markdown page — no component, nothing generated — so the
+ * artwork and the promise are typed out there as well as held here. That is one
+ * file to edit rather than an Astro template, and the cost is that the page can
+ * quietly stop describing the badge the records hand out. This is the guard: a
+ * badge edited in one place and not the other fails here.
+ */
+describe('the page', () => {
+  const page = readFileSync('src/pages/badge.md', 'utf8');
+
+  it('shows the same artwork the snippets carry', () => {
+    assert.ok(page.includes(badgeSvg()), 'src/pages/badge.md no longer holds the current badge');
+  });
+
+  it('offers the same three forms', () => {
+    for (const snippet of badgeSnippets('https://www.findhost.app', 'your-record')) {
+      assert.ok(page.includes(snippet.code), `src/pages/badge.md is missing the ${snippet.id} snippet`);
+    }
+  });
+
+  it('states the terms in the words the records state them in', () => {
+    for (const sentence of badgeTerms) {
+      assert.ok(page.includes(sentence), `src/pages/badge.md is missing: ${sentence}`);
+    }
+  });
+
+  /* A snippet copied from a preview on a vanity hostname still has to point at the register. */
+  it('writes the public domain into the snippets, not whatever served the page', () => {
+    assert.ok(page.includes('https://www.findhost.app/your-record/'));
+    assert.doesNotMatch(page, /localhost/);
+  });
+});
+
+describe('the link', () => {
+  it('points at the plain record', () => {
+    for (const code of codeFor('hetzner')) {
+      assert.ok(code.includes(`${origin}/hetzner/`), `wrong target: ${code}`);
+    }
+  });
+
+  /*
+   * No `?ref=`, no campaign, no fragment. A tracking parameter on a badge from a
+   * project that rejects affiliate links would be the unforced error.
+   */
+  it('carries no query string and no fragment', () => {
+    for (const code of codeFor('hetzner')) {
+      assert.doesNotMatch(code, /findhost\.app\/[^"')\s]*[?#]/);
+    }
+  });
+
+  it('survives an origin given with a trailing slash', () => {
+    for (const code of badgeSnippets(`${origin}/`, 'hetzner').map((snippet) => snippet.code)) {
+      assert.ok(code.includes(`${origin}/hetzner/`), `wrong target: ${code}`);
+      assert.doesNotMatch(code, /findhost\.app\/\/+/);
+    }
+  });
+});
+
+describe('the artwork', () => {
+  /*
+   * The whole reason the badge is inline SVG. A hosted image would call this
+   * server on every page view of theirs and hand us an install count — a tracker
+   * by another name. Nothing in the markup may fetch anything.
+   */
+  it('fetches nothing', () => {
+    const svg = badgeSvg();
+
+    assert.doesNotMatch(svg, /<image\b/);
+    assert.doesNotMatch(svg, /\bsrc=/);
+    assert.doesNotMatch(svg, /\bhref=/);
+    assert.doesNotMatch(svg, /url\(/);
+    assert.doesNotMatch(svg, /@import/);
+  });
+
+  /* It takes the host footer's own ink, so it is right in their light theme and their dark one. */
+  it('names no colour of its own', () => {
+    const svg = badgeSvg();
+
+    assert.ok(svg.includes('currentColor'));
+    assert.doesNotMatch(svg, /#[0-9a-f]{3,6}\b/i);
+  });
+
+  it('is small enough to read before pasting it', () => {
+    assert.ok(badgeSvg().length < 900, `${badgeSvg().length} bytes`);
+  });
+
+  /*
+   * The wordmark is set in whatever serif the visitor's machine has, and the
+   * natural width of "FindHost" at this size runs from 72 to 87 depending on
+   * which one answers. Pinning it to a number made the renderer scale the glyphs
+   * sideways to fit — nearly forty percent wider than Charter draws them.
+   * Centring absorbs the same variance as padding. The e2e suite measures what
+   * a browser then does with it.
+   */
+  it('lets the letterforms keep their own width', () => {
+    const lines = badgeSvg().match(/<text\b[^>]*>/g) ?? [];
+
+    assert.equal(lines.length, 2);
+    for (const line of lines) {
+      assert.doesNotMatch(line, /lengthAdjust|textLength/);
+      assert.match(line, /text-anchor="middle"/);
+    }
+  });
+
+  it('names itself for a reader who cannot see it', () => {
+    assert.ok(badgeSvg().includes(`<title>${badgeWords}</title>`));
+  });
+});
+
+describe('the three forms', () => {
+  it('offers the graphic, the plain link and the markdown', () => {
+    assert.deepEqual(
+      badgeSnippets(origin, 'hetzner').map((snippet) => snippet.id),
+      ['svg', 'html', 'markdown'],
+    );
+  });
+
+  it('wraps the artwork in the link rather than beside it', () => {
+    const [svg] = badgeSnippets(origin, 'hetzner');
+
+    assert.match(svg.code, /^<a href="[^"]+">\s*<svg/);
+    assert.match(svg.code, /<\/svg>\s*<\/a>$/);
+  });
+
+  it('writes the markdown as markdown', () => {
+    const markdown = badgeSnippets(origin, 'hetzner').at(-1)!;
+
+    assert.equal(markdown.code, `[${badgeWords}](${origin}/hetzner/)`);
+  });
+});

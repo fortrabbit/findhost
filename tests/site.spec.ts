@@ -231,6 +231,21 @@ test.describe('without JavaScript', () => {
     await expect(page.locator('.provider-list > li').first()).toBeVisible();
     await expect(page.locator('.annotation').first()).toContainText('provider');
   });
+
+  /*
+   * The snippet is text in a `<pre>`, so it can always be selected by hand. The
+   * copy button only saves the selecting, and is absent rather than dead when
+   * the script behind it has not run.
+   */
+  test('the badge is still copyable by hand', async ({ page }) => {
+    await page.goto('/badge/');
+    await expect(page.locator('article pre').first()).toContainText('<svg');
+
+    /* The record's block is the one with buttons, and they are absent until their script has run. */
+    await page.goto('/fortrabbit/');
+    await expect(page.locator('.badge-snippets pre').first()).toContainText('<svg');
+    await expect(page.locator('.badge-copy').first()).toBeHidden();
+  });
 });
 
 test.describe('stubs', () => {
@@ -440,5 +455,89 @@ test.describe('search', () => {
 
     await expect(page.locator('[data-search-summary]')).toContainText(/pages? match/);
     await expect(page.locator('[data-search-results] a').first()).toBeVisible();
+  });
+});
+
+/*
+ * The one thing this site publishes that ends up on somebody else's pages, out
+ * of reach of any later edit. Two of these are governance rather than markup: a
+ * badge that could be read as a rank, or that could count installs, is the thing
+ * the register exists to be an alternative to.
+ */
+test.describe('the provider badge', () => {
+  test('is offered on a listed record and withheld from one that is not', async ({ page }) => {
+    await page.goto('/fortrabbit/');
+    await expect(page.locator('.badge-offer summary')).toContainText('Link back to this record');
+
+    /* Out of scope. A snippet reading "Listed on FindHost" here would be a claim we do not make. */
+    await page.goto('/acquia/');
+    await expect(page.locator('.badge-offer')).toHaveCount(0);
+  });
+
+  test('points at the plain record, with nothing appended', async ({ page }) => {
+    await page.goto('/fortrabbit/');
+    /* Native, so it opens with scripting off too. */
+    await page.locator('.badge-offer summary').click();
+    const snippets = await page.locator('.badge-snippets pre').allInnerTexts();
+
+    expect(snippets).toHaveLength(3);
+    for (const snippet of snippets) {
+      expect(snippet).toContain('/fortrabbit/');
+      expect(snippet).not.toMatch(/\/fortrabbit\/[?#]/);
+      expect(snippet).toContain('Listed on FindHost');
+    }
+  });
+
+  /*
+   * The reason the badge is inline SVG rather than an image on this server: a
+   * hosted one would be fetched on every page view of theirs and hand us an
+   * install count, which is a tracker with a picture on it.
+   */
+  test('loads nothing when it is displayed', async ({ page }) => {
+    await page.goto('/badge/');
+    const artwork = await page.locator('article svg[role="img"]').innerHTML();
+
+    expect(artwork).not.toMatch(/<image|src=|href=/);
+    expect(artwork).toContain('currentColor');
+  });
+
+  /*
+   * The wordmark is set in whatever serif the visitor's machine answers with, and
+   * the natural width of "FindHost" varies by about a fifth across the stack. The
+   * badge lands on pages we will never see, so the frame is measured against every
+   * fallback rather than against the one this machine happens to have.
+   */
+  test('holds both lines inside the frame, whatever serif answers', async ({ page }) => {
+    await page.goto('/badge/');
+
+    const clearance = await page.locator('article svg[role="img"]').evaluate((svg) => {
+      const frame = svg.querySelector('rect')!;
+      const room = frame.width.baseVal.value;
+
+      return [...svg.querySelectorAll('text')].map((line) => {
+        const stack = (line.getAttribute('font-family') ?? '').split(',').map((name) => name.trim());
+        const widest = Math.max(
+          ...stack.map((family) => {
+            line.setAttribute('font-family', family);
+            return line.getComputedTextLength();
+          }),
+        );
+
+        line.setAttribute('font-family', stack.join(', '));
+        return room - widest;
+      });
+    });
+
+    /* Room for the rule and a margin that still reads as a frame rather than a box on the words. */
+    for (const room of clearance) expect(room).toBeGreaterThan(12);
+  });
+
+  test('says in its own words that it is not a rating', async ({ page }) => {
+    await page.goto('/badge/');
+    await expect(page.locator('article')).toContainText('not a rating, a rank, or an endorsement');
+
+    /* Nothing on it may read as a tier, an award or a year — the artwork least of all. */
+    const words = await page.locator('article').innerText();
+    expect(words).not.toMatch(/\b(best|top \d|award|rated|certified)\b/i);
   });
 });

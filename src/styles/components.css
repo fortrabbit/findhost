@@ -7,8 +7,14 @@
 /* --- Identity and navigation --- */
 
 /** An anchor, so it has to opt out of the link colour explicitly. */
+/*
+ * The name, in the display face. It is the same wordmark the badge carries onto
+ * other people's footers, and the two have to be the same word in the same
+ * letters — a serif on their page and a sans on ours reads as two projects.
+ */
 .wordmark {
   color: var(--color-ink);
+  font-family: var(--font-display);
   font-size: var(--text-sm);
   font-weight: bold;
   text-underline-offset: 0.25em;
@@ -1593,4 +1599,112 @@ html.js [data-find-fallback] {
   width: max(100%, 24px);
   height: max(100%, 24px);
   translate: -50% -50%;
+}
+
+/*
+ * The back link offered to the provider, on the record that is about them. Shut
+ * by default: it is the only thing on a record addressed to somebody other than
+ * the reader, and open it would push the sources down the page for everybody
+ * else. The rule above it separates it from them.
+ */
+.badge-offer {
+  max-width: var(--measure-prose);
+  margin-block: var(--space-lg);
+  padding-top: var(--space-sm);
+  border-top: var(--rule-hairline) solid var(--color-ink);
+  font-size: var(--text-sm);
+}
+
+.badge-offer summary {
+  cursor: pointer;
+}
+
+.badge-offer > p {
+  margin-block: var(--space-sm);
+}
+
+/*
+ * The artwork at the size it is pasted at, on the page's own paper. Centred in a
+ * ruled field rather than sitting loose in the prose: what it has to show is
+ * that the badge is a small object with edges, and prose around it reads as an
+ * illustration of a sentence.
+ */
+.badge-preview {
+  display: flex;
+  justify-content: center;
+  margin-block: var(--space-md);
+  padding: var(--space-lg) var(--space-md);
+  border: var(--rule-hairline) solid var(--color-ink);
+  border-radius: var(--radius);
+  background: var(--color-hover);
+}
+
+.badge-forms {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.badge-forms > li + li {
+  margin-top: var(--space-md);
+}
+
+.badge-form-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  margin-block: var(--space-xs) 0;
+}
+
+.badge-form-label {
+  font-weight: var(--weight-strong);
+}
+
+.badge-forms .annotation {
+  margin-block: var(--space-3xs) var(--space-2xs);
+}
+
+/*
+ * The button only saves a selection the reader could make by hand, so it is
+ * absent until the script behind it has run rather than sitting there dead.
+ */
+html:not(.js) .badge-copy {
+  display: none;
+}
+
+.badge-copy {
+  padding: var(--space-3xs) var(--space-xs);
+  border: var(--rule-hairline) solid var(--color-ink);
+  border-radius: var(--radius);
+  background: none;
+  color: inherit;
+  font: inherit;
+  font-size: var(--text-xs);
+  cursor: pointer;
+}
+
+.badge-copy:hover {
+  background: var(--color-hover);
+}
+
+/*
+ * The snippet as it will be pasted, wrapped rather than scrolled: a reader who
+ * has to drag a bar sideways to see the end of a line cannot check what they are
+ * about to publish, which is the one thing these blocks exist to let them do.
+ *
+ * Both places it appears — the block on a record, and the fenced code on /badge/
+ * — so the page describing the badge and the page handing it out look alike.
+ */
+.badge-snippets pre,
+article > pre {
+  margin: 0;
+  padding: var(--space-xs) var(--space-sm);
+  border: var(--rule-hairline) solid var(--color-ink);
+  border-radius: var(--radius);
+  overflow-x: auto;
+  font-size: var(--text-xs);
+  line-height: var(--leading-data);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
 }

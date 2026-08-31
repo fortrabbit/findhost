@@ -10,6 +10,8 @@ import { cardPath } from '../lib/og';
 import SocialLinks from '../components/SocialLinks.astro';
 import PageFigure from '../components/PageFigure.astro';
 import FactGroups from '../components/FactGroups.astro';
+import BadgeSnippets from '../components/BadgeSnippets.astro';
+import { badgeTerms } from '../lib/badge';
 import infoIcon from 'bootstrap-icons/icons/info-lg.svg?raw';
 
 export async function getStaticPaths() {
@@ -452,6 +454,29 @@ const categoryLabels = (fieldOf.get('category')?.values ?? [])
             ))}
           </ol>
         </section>
+      )
+    }
+
+    {
+      /*
+       * The back link, offered to the provider on the page that is about them —
+       * the one place they are certain to land. Folded away because it is the
+       * only thing on a record addressed to somebody other than the reader, and
+       * only on a listed record: a snippet reading "Listed on FindHost" under a
+       * record that is out of scope, a stub or discontinued would be a claim the
+       * register does not make.
+       */
+    }
+    {
+      listed && (
+        <details class="badge-offer" data-pagefind-ignore>
+          <summary>Are you {data.name}? Link back to this record.</summary>
+          {/* The promise, in the one wording it has anywhere — see lib/badge.ts. */}
+          <p>
+            {badgeTerms.join(' ')} <a href="/badge/">More about the badge</a>.
+          </p>
+          <BadgeSnippets origin={origin} id={provider.id} />
+        </details>
       )
     }
 

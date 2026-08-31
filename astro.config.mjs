@@ -66,6 +66,13 @@ export default defineConfig({
    */
   redirects: {},
   build: { format: 'directory' },
+  /*
+   * No syntax highlighter. The only fenced code on the site is the badge snippet
+   * on /badge/, and a highlighter theme paints it in six colours on a site whose
+   * whole palette is ink and paper. A snippet somebody is meant to read before
+   * pasting it onto their own pages is also the wrong place to recolour tokens.
+   */
+  markdown: { syntaxHighlight: false },
   vite: {
     plugins: [
       /*
