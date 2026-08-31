@@ -225,6 +225,26 @@ test.describe('a combination of two facets', () => {
     expect(block!.y).toBeLessThan(list!.y);
   });
 
+  /*
+   * A scale keeps its scale. Everything else is scanned for a particular value
+   * rather than for the biggest one, and the block shows no counts to order by.
+   */
+  test('orders the ways in for scanning, and a price scale by price', async ({ page }) => {
+    await page.goto('/runtimes/php/');
+
+    const countries = await page
+      .locator('.pair-links', { hasText: 'By regions' })
+      .locator('.pair-line a')
+      .allInnerTexts();
+    expect(countries).toEqual([...countries].sort((a, b) => a.localeCompare(b, 'en')));
+
+    const bands = await page
+      .locator('.pair-links', { hasText: 'By entry price' })
+      .locator('.pair-line a')
+      .allInnerTexts();
+    expect(bands[0]).toContain('Under $5');
+  });
+
   test('answers the price question people type', async ({ page }) => {
     await page.goto('/regions/germany/entry-price/under-5-a-month/');
     await expect(page.locator('h1')).toHaveText('Hosting in Germany under $5 a month');

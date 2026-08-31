@@ -1749,24 +1749,26 @@ article > pre {
 }
 
 /*
- * The combinations a value is half of, and the same list on the rung above the
- * pair pages themselves. Counted links rather than prose: what distinguishes one
- * of these from the next is how many it lists, so that is the thing set apart.
+ * The combinations a value is half of, above the register they narrow.
  *
- * As wide as the register it introduces. In the text column it was two columns
- * of eight against half a screen of nothing, which read as a stray list rather
- * than as a band of ways in.
+ * A sentence of links, in the column the prose above it keeps. It was a
+ * full-width band of counted rows, which put eight numbers over the list those
+ * numbers were counting and read as a second register rather than as a way into
+ * the first. The page behind each link says how many, which is soon enough.
  */
 .pair-links {
-  /* `margin-block`, not `margin`: the shorthand resets the negative inline
-     margins `full-width` relies on, and the band silently stops being one. */
-  margin-block: var(--space-lg) var(--space-xl);
+  margin-block: var(--space-lg);
 }
 
 .pair-links > h2 {
-  margin: 0 0 var(--space-xs);
+  margin: 0 0 var(--space-2xs);
   font-size: var(--text-sm);
   font-weight: var(--weight-strong);
+}
+
+.pair-line {
+  margin: 0;
+  font-size: var(--text-sm);
 }
 
 /*

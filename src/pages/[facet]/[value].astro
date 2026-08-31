@@ -66,7 +66,19 @@ const figure = note?.data.figure;
  * /runtimes/php/regions/germany/: a pair page is linked from its two parents
  * and from nowhere else.
  */
-const combined = await pairsFor(facet.id, value.id);
+const combined = (await pairsFor(facet.id, value.id)).map((group) => ({
+  ...group,
+  /*
+   * The separators built into the data, not into the markup. Astro drops a
+   * whitespace-only text node between two expressions, so `{link}, ` in a
+   * template renders "GermanyUnited Kingdom" the moment a formatter puts them on
+   * separate lines — see ProviderRegister.astro, where the same bug shipped.
+   */
+  rows: group.rows.map((row, index) => ({
+    ...row,
+    tail: index === group.rows.length - 1 ? '.' : index === group.rows.length - 2 ? ' and ' : ', ',
+  })),
+}));
 ---
 
 <Base
@@ -134,12 +146,12 @@ const combined = await pairsFor(facet.id, value.id);
      * and these are a way *into* the register rather than a footnote to it.
      */
     combined.map((group) => (
-      <section class="pair-links full-width" data-pagefind-ignore>
+      <section class="pair-links" data-pagefind-ignore>
         {/*
          * A heading, not a link. It led to the same list without the providers
-         * on it, which is a click that gives nothing back — the countries are
-         * what there is to click. The rung keeps a link so a crawler still
-         * reaches it and deleting the last URL segment still lands somewhere.
+         * on it, which is a click that gives nothing back — the values are what
+         * there is to click. The rung keeps a link so a crawler still reaches it
+         * and deleting the last URL segment still lands somewhere.
          */}
         <h2>By {group.label.toLowerCase()}</h2>
         {group.index && (
@@ -148,17 +160,19 @@ const combined = await pairsFor(facet.id, value.id);
           </a>
         )}
 
-        <ul class="pair-list">
+        {/*
+         * A sentence, not a table. Each of these has a count, and eight counts
+         * above the list they are counting is more arithmetic than a way in
+         * needs — the page behind the link says how many, which is soon enough.
+         */}
+        <p class="pair-line">
           {group.rows.map((row) => (
-            <li>
+            <>
               <a href={row.href}>{row.label}</a>
-              <span class="pair-count">
-                {row.count}
-                <span class="visually-hidden"> providers</span>
-              </span>
-            </li>
+              {row.tail}
+            </>
           ))}
-        </ul>
+        </p>
       </section>
     ))
   }

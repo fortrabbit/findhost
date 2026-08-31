@@ -202,8 +202,21 @@ export async function pairsFor(facetId: string, valueId: string) {
     groups.set(other.id, held);
   }
 
-  /* Longest lists first: on a row of links the count is the only reason to pick one. */
-  for (const group of groups.values()) group.rows.sort((one, other) => other.count - one.count);
+  /*
+   * Scanning order, not popularity order. The block shows no counts, so a reader
+   * arrives at it looking for a particular value rather than for the biggest
+   * one, and commonest-first with the numbers taken away reads as no order at
+   * all. A facet whose values are a scale keeps the scale — a price band list
+   * running "$15 to $50, $5 to $15, under $5" is alphabetical and wrong.
+   */
+  for (const [facetId, group] of groups) {
+    const facet = facets.find((entry) => entry.id === facetId)!;
+    const order = new Map(facet.values.map((value, index) => [value.label, index]));
+
+    group.rows.sort((one, other) =>
+      facet.ordered ? order.get(one.label)! - order.get(other.label)! : one.label.localeCompare(other.label, 'en'),
+    );
+  }
 
   return [...groups.values()];
 }
