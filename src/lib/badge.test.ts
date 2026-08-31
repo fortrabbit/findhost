@@ -112,15 +112,21 @@ describe('the artwork', () => {
   });
 
   /*
-   * Pinned widths. The wordmark is drawn in whatever serif the visitor's machine
-   * has, and an unpinned line set in a wide fallback runs out of the rule around
-   * it — on a page we cannot see and cannot fix.
+   * The wordmark is set in whatever serif the visitor's machine has, and the
+   * natural width of "FindHost" at this size runs from 72 to 87 depending on
+   * which one answers. Pinning it to a number made the renderer scale the glyphs
+   * sideways to fit — nearly forty percent wider than Charter draws them.
+   * Centring absorbs the same variance as padding. The e2e suite measures what
+   * a browser then does with it.
    */
-  it('pins every line to a width the box can hold', () => {
+  it('lets the letterforms keep their own width', () => {
     const lines = badgeSvg().match(/<text\b[^>]*>/g) ?? [];
 
-    assert.ok(lines.length > 0);
-    for (const line of lines) assert.match(line, /textLength="\d+"/);
+    assert.equal(lines.length, 2);
+    for (const line of lines) {
+      assert.doesNotMatch(line, /lengthAdjust|textLength/);
+      assert.match(line, /text-anchor="middle"/);
+    }
   });
 
   it('names itself for a reader who cannot see it', () => {

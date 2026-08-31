@@ -498,6 +498,37 @@ test.describe('the provider badge', () => {
     expect(artwork).toContain('currentColor');
   });
 
+  /*
+   * The wordmark is set in whatever serif the visitor's machine answers with, and
+   * the natural width of "FindHost" varies by about a fifth across the stack. The
+   * badge lands on pages we will never see, so the frame is measured against every
+   * fallback rather than against the one this machine happens to have.
+   */
+  test('holds both lines inside the frame, whatever serif answers', async ({ page }) => {
+    await page.goto('/badge/');
+
+    const clearance = await page.locator('.badge-preview svg').evaluate((svg) => {
+      const frame = svg.querySelector('rect')!;
+      const room = frame.width.baseVal.value;
+
+      return [...svg.querySelectorAll('text')].map((line) => {
+        const stack = (line.getAttribute('font-family') ?? '').split(',').map((name) => name.trim());
+        const widest = Math.max(
+          ...stack.map((family) => {
+            line.setAttribute('font-family', family);
+            return line.getComputedTextLength();
+          }),
+        );
+
+        line.setAttribute('font-family', stack.join(', '));
+        return room - widest;
+      });
+    });
+
+    /* Room for the rule and a margin that still reads as a frame rather than a box on the words. */
+    for (const room of clearance) expect(room).toBeGreaterThan(12);
+  });
+
   test('says in its own words that it is not a rating', async ({ page }) => {
     await page.goto('/badge/');
     await expect(page.locator('.badge-terms')).toContainText('not an endorsement, not a rating, not a rank');

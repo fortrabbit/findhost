@@ -58,17 +58,14 @@ const origin = Astro.site?.origin ?? '';
 
     <h2 id="the-snippets">The snippets</h2>
     <p>
-      Three forms of one link. Copy the one that fits, and change <code>your-record</code> to your own — or open your record
-      and take the snippet already filled in there. Every record on this site carries one, under <em>Are you …?</em>
+      Replace <code>your-record</code> with your own, or take the one already filled in at the bottom of your record.
     </p>
 
     <BadgeSnippets origin={origin} id={placeholder} />
 
     <p>
-      The artwork is drawn in <code>currentColor</code>, so it takes the colour of the text around it and is legible in
-      a light footer and a dark one without you choosing a version. Replace that word with a colour of your own if your
-      footer wants something else, and change the <code>width</code> and <code>height</code> to scale it — the shape is a
-      viewBox, so it stays sharp at any size.
+      Drawn in <code>currentColor</code>, so it takes the colour of the text around it in a light footer and a dark one
+      alike. Swap that word for a hex to fix the colour, or change <code>width</code> and <code>height</code> to scale it.
     </p>
 
     <h2 id="where-to-put-it">Where to put it</h2>
@@ -77,20 +74,15 @@ const origin = Astro.site?.origin ?? '';
       {badgePlacements.map((where) => <li>{where}</li>)}
     </ul>
 
-    <h2 id="what-we-do-with-it">What we do with it</h2>
+    <h2 id="what-we-learn">What we learn from it</h2>
     <p>
-      Nothing you can see. The badge is inline markup, so displaying it never calls this server and we never learn how
-      many sites carry one — which is the point: an image hosted here would be a tracker with a picture on it. What we
-      can read is the same thing you can read in your own analytics, a referrer, and that only when somebody follows the
-      link.
+      No install count exists. The badge loads nothing, so displaying it never reaches this server; a referrer, when
+      somebody follows the link, is all of it.
     </p>
     <p>
-      There is no application and nobody to ask. If your record is here, the badge is yours to take. If it is not, <a
-        href="/about/#who-is-listed">the scope test</a
-      > is the whole of the answer, and <a
-        href="https://github.com/fortrabbit/findhost/issues/new?template=add-provider.yml"
-        >a missing name is a report anybody can file</a
-      >.
+      There is no application either. If a record exists, the badge is available, and <a href="/about/#who-is-listed"
+        >the scope test</a
+      > answers why one does not.
     </p>
   </article>
 </Base>
