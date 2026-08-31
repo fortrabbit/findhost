@@ -46,7 +46,7 @@ const widerRows = providers.filter((provider) => {
 const summary = summarisePair({ aId: a.id, bId: b.id, aSubject, bSubject, matches, aTotal, bTotal, widerRows }, facets);
 
 /* The title the value page uses, plus the phrase the dictionary gives the second half. */
-const title = `${valueTitle(a.id, av.label)} ${titleWithOf(bField, bv)}`;
+const title = `${valueTitle(a.id, av)} ${titleWithOf(bField, bv)}`;
 
 const checkedDates = matches.map((row) => row.checkedAt).filter((date): date is Date => date instanceof Date);
 const newestChecked = checkedDates.length ? new Date(Math.max(...checkedDates.map((date) => date.getTime()))) : null;
@@ -112,7 +112,7 @@ const here = pairPath({ a, av, b, bv });
 
   <p class="annotation" data-pagefind-ignore>
     <a href={pairIndexPath(a, av, b)}
-      >Every {b.label.toLowerCase()} {valueTitle(a.id, av.label).toLowerCase()} has a page for →</a
+      >Every {b.label.toLowerCase()} {valueTitle(a.id, av).toLowerCase()} has a page for →</a
     >
   </p>
 </Base>

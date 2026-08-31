@@ -44,7 +44,7 @@ export const GET: APIRoute = async ({ props, site }) => {
   );
 
   const lines = [
-    `# ${valueTitle(a.id, av.label)} ${titleWithOf(bField, bv)}`,
+    `# ${valueTitle(a.id, av)} ${titleWithOf(bField, bv)}`,
     '',
     `Source: ${origin}${pairPath({ a, av, b, bv })}`,
     `Both halves on their own: ${origin}/${a.id}/${av.slug}/ and ${origin}/${b.id}/${bv.slug}/`,

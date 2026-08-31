@@ -190,7 +190,7 @@
     - { with: exit, draft: true }
   values:
     - { id: paas, label: Platform as a Service, short: PaaS }
-    - { id: vps, label: Virtual Private Servers, short: VPS }
+    - { id: vps, label: Virtual Private Servers, short: VPS, title: VPS hosting }
     - { id: bare-metal, label: Bare metal }
     - { id: iaas, label: Infrastructure as a Service, short: IaaS }
     - { id: shared-hosting, label: Shared hosting }
@@ -390,7 +390,7 @@
     - { id: lua, label: Lua }
     - { id: haskell, label: Haskell }
     - { id: docker, label: Docker }
-    - { id: any, label: Anything }
+    - { id: any, label: Anything, title: Hosting that runs anything, subject: 'run{|s} anything you install' }
 
 # Named software a provider documents support for — a one-click installer, an
 # official guide, a maintained buildpack. What the provider says it supports, not

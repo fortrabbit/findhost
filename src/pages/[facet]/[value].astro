@@ -82,7 +82,7 @@ const combined = (await pairsFor(facet.id, value.id)).map((group) => ({
 ---
 
 <Base
-  title={`${note?.data.title ?? valueTitle(facet.id, value.label)} — FindHost`}
+  title={`${note?.data.title ?? valueTitle(facet.id, value)} — FindHost`}
   description={note?.data.description ?? firstSentence(summary)}
   markdown={`${facetIndex(facet.id)}${value.slug}.md`}
   image={valueCardPath(facet.id, value.slug)}
@@ -100,7 +100,7 @@ const combined = (await pairsFor(facet.id, value.id)).map((group) => ({
       '@context': 'https://schema.org',
       '@type': 'CollectionPage',
       url: `${origin}${facetIndex(facet.id)}${value.slug}/`,
-      name: note?.data.title ?? valueTitle(facet.id, value.label),
+      name: note?.data.title ?? valueTitle(facet.id, value),
       inLanguage: 'en',
       publisher: organization(origin),
       license: 'https://creativecommons.org/licenses/by/4.0/',

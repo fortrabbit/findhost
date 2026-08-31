@@ -72,6 +72,13 @@ export interface FieldValue {
   subject?: string;
   /** This value's own version of the field's `titleWith`, for the same reason. */
   titleWith?: string;
+  /**
+   * How a page this value heads names itself, where the facet's pattern in
+   * lib/seo.ts does not read for it. "Anything" is a runtime in the sense that a
+   * machine will run whatever you install, and "Anything hosting" is not
+   * English. The heading stays the label; this is the title.
+   */
+  title?: string;
 }
 
 export interface Field {
@@ -335,6 +342,12 @@ function inflect(phrase: string, count: number): string {
     count === 1 ? singular : plural,
   );
 }
+
+const byFacet = new Map(fields.filter((field) => field.facet).map((field) => [field.facet!, field]));
+
+/** A value's own title for the page it heads, where the facet's pattern will not do. */
+export const titleOf = (facet: string, value: { id: string }): string | undefined =>
+  byFacet.get(facet)?.values.find((candidate) => candidate.id === value.id)?.title;
 
 /**
  * How a pair page names its second value, from `titleWith` in the dictionary.

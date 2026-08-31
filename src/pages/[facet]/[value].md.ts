@@ -26,7 +26,7 @@ export const GET: APIRoute = async ({ props, site }) => {
   const summary = summarise(matches, facets, facet.id, subjectOf(fieldOf.get(facet.field)!, value, matches.length));
 
   const lines = [
-    `# ${note?.data.title ?? valueTitle(facet.id, value.label)}`,
+    `# ${note?.data.title ?? valueTitle(facet.id, value)}`,
     '',
     `Source: ${origin}/${facet.id}/${value.slug}/`,
     `Facet: ${facet.label} — every value: ${origin}/${facet.id}/`,

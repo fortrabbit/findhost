@@ -1,3 +1,5 @@
+import { titleOf } from './fields.ts';
+
 /**
  * What a page calls itself to a search engine, and the structured data under it.
  *
@@ -31,7 +33,13 @@ const patterns: Record<string, (label: string) => string> = {
   currencies: (label) => `Hosting billed in ${label}`,
 };
 
-export const valueTitle = (facet: string, label: string) => patterns[facet]?.(label) ?? label;
+/*
+ * The dictionary first: a pattern that reads for every other value of a facet
+ * still has one it does not, and the exception belongs beside the value rather
+ * than as a branch here.
+ */
+export const valueTitle = (facet: string, value: { id: string; label: string }) =>
+  titleOf(facet, value) ?? patterns[facet]?.(value.label) ?? value.label;
 
 /** Roughly what a result shows of a title before it truncates. */
 const titleBudget = 60;

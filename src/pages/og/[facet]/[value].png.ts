@@ -23,7 +23,7 @@ export const GET: APIRoute = async ({ props }) => {
   const summary = summarise(matches, facets, facet.id, subjectOf(fieldOf.get(facet.field)!, value, matches.length));
 
   const png = await shareCard({
-    name: note?.data.title ?? valueTitle(facet.id, value.label),
+    name: note?.data.title ?? valueTitle(facet.id, value),
     description: note?.data.description ?? note?.data.lead ?? summary,
     facts: [facet.label, `${matches.length} ${matches.length === 1 ? 'provider' : 'providers'}`],
     figure: note?.data.figure,
