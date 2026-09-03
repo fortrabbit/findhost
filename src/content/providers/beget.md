@@ -44,7 +44,7 @@ sources:
   - { field: currencies, url: 'https://beget.com/en/hosting', checkedAt: 2026-08-04 }
   - { field: sshAccess, url: 'https://beget.com/en/hosting', checkedAt: 2026-08-04 }
   - { field: managedDatabases, url: 'https://beget.com/en', checkedAt: 2026-08-04 }
-  - { field: iacSupport, url: 'https://github.com/beget/terraform-provider-beget', checkedAt: 2026-08-04 }
+  - { field: iacSupport, url: 'https://github.com/LTD-Beget/terraform-provider-beget', checkedAt: 2026-09-03 }
   - { field: apiAvailable, url: 'https://beget.com', checkedAt: 2026-08-09 }
   - { field: domainRegistration, url: 'https://beget.com/en/hosting', checkedAt: 2026-08-12 }
   - { field: emailHosting, url: 'https://beget.com/en/hosting', checkedAt: 2026-08-12 }

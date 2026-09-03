@@ -3,7 +3,7 @@ id: sakura-internet
 name: Sakura Internet
 urls:
   home: https://sakura.ad.jp
-  pricing: https://sakura.ad.jp/pricing
+  pricing: https://rs.sakura.ad.jp/plan/
 category:
   - shared-hosting
   - vps

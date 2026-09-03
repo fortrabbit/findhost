@@ -22,7 +22,7 @@ deployMethods:
 status: discontinued
 checkedAt: 2026-08-07
 sources:
-  - { field: status, url: 'https://www.theregister.com/off-prem/2016/01/22/dotcloud_dotgone_ex_docker_paas_passes_away_amid_bankruptcy/', checkedAt: 2026-08-07 }
+  - { field: status, url: 'https://web.archive.org/web/20160127135608/http://www.paasfinder.com/how-to-migrate-from-dotcloud-to-heroku/', checkedAt: 2026-09-03 }
   - { field: description, url: 'https://venturebeat.com/business/dotcloud-the-cloud-service-that-gave-birth-to-docker-is-shutting-down-on-february-29', checkedAt: 2026-08-07 }
 figure:
   emoji: 🐳
@@ -34,4 +34,4 @@ ai: authored
 
 dotCloud was a polyglot platform-as-a-service launched in 2010, known mainly for the container tooling it built to run customer applications. That tooling was released as Docker in 2013, and within a year the company had renamed itself after it and left the hosting business.
 
-Docker sold dotCloud to Berlin's [cloudControl](/cloudcontrol/) in August 2014. When cloudControl filed for insolvency in January 2016, dotCloud went with it. The shutdown notice named the parent's insolvency as the reason and gave customers until 29 February 2016.
+Docker sold dotCloud to Berlin's [cloudControl](/cloudcontrol/) in August 2014. When cloudControl filed for insolvency in January 2016, dotCloud went with it. The [shutdown notice](https://web.archive.org/web/20160127135608/http://www.paasfinder.com/how-to-migrate-from-dotcloud-to-heroku/) named the parent's insolvency as the reason and gave customers until 29 February 2016.

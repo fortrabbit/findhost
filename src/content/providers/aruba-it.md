@@ -4,7 +4,7 @@ name: Aruba.it
 urls:
   home: https://www.arubacloud.com
   pricing: https://www.arubacloud.com/pricing
-  terms: https://www.arubacloud.com/terms-conditions
+  terms: https://www.arubacloud.com/terms-and-conditions
 category:
   - shared-hosting
   - vps
@@ -25,11 +25,7 @@ deployMethods:
   - control-panel
 sshAccess: root
 managedDatabases:
-  - postgres
   - mysql
-  - mariadb
-  - mongodb
-  - redis
 pricingModel: per-resource
 priceFrom: xs
 entryPrice: { amount: 1.99, currency: EUR, period: month }
@@ -66,11 +62,11 @@ figure:
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
   - { field: category, url: 'https://www.arubacloud.com', checkedAt: 2026-08-12 }
-  - { field: hqCountry, url: 'https://www.arubacloud.com/terms-conditions', checkedAt: 2026-08-12 }
+  - { field: hqCountry, url: 'https://www.arubacloud.com/terms-and-conditions', checkedAt: 2026-09-03 }
   - { field: infraContract, url: 'https://www.arubacloud.com', checkedAt: 2026-08-12 }
   - { field: whoManagesOs, url: 'https://www.arubacloud.com/vps.aspx', checkedAt: 2026-08-12 }
   - { field: sshAccess, url: 'https://www.arubacloud.com/vps.aspx', checkedAt: 2026-08-12 }
-  - { field: managedDatabases, url: 'https://www.arubacloud.com/cloud-databases.aspx', checkedAt: 2026-08-12 }
+  - { field: managedDatabases, url: 'https://www.arubacloud.com/database-as-a-service/', checkedAt: 2026-09-03 }
   - { field: pricingModel, url: 'https://www.arubacloud.com/public-cloud.aspx', checkedAt: 2026-08-12 }
   - { field: priceFrom, url: 'https://www.arubacloud.com/vps.aspx', checkedAt: 2026-08-12 }
   - { field: entryPrice, url: 'https://www.arubacloud.com/vps.aspx', checkedAt: 2026-08-12 }

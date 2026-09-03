@@ -2,7 +2,7 @@
 id: azure-static-web-apps
 name: Azure Static Web Apps
 urls:
-  home: https://staticwebapps.azure.com
+  home: https://azure.microsoft.com/en-us/products/app-service/static
 category:
   - static
 description: A static hosting provider in the United States.
