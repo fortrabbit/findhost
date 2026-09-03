@@ -4,7 +4,7 @@ name: Framer
 urls:
   home: https://framer.com
   pricing: https://framer.com/pricing
-  docs: https://developers.framer.com/
+  docs: https://www.framer.com/developers/
 category:
   - lcnc
   - static
@@ -40,7 +40,7 @@ sources:
   - { field: collaboration, url: 'https://framer.com/pricing', checkedAt: 2026-08-12 }
   - { field: staging, url: 'https://framer.com/pricing', checkedAt: 2026-08-12 }
   - { field: testDomain, url: 'https://framer.com/pricing', checkedAt: 2026-08-12 }
-  - { field: apiAvailable, url: 'https://developers.framer.com/', checkedAt: 2026-08-12 }
+  - { field: apiAvailable, url: 'https://www.framer.com/developers/', checkedAt: 2026-09-03 }
   - { field: category, url: 'https://framer.com/', checkedAt: 2026-08-12 }
   - { field: ownership, url: 'https://www.framer.com/blog/series-d/', checkedAt: 2026-08-21 }
 figure:

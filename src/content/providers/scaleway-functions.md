@@ -41,7 +41,7 @@ apiAvailable: public
 cliTool: official
 sources:
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#925', checkedAt: 2026-08-10 }
-  - { field: hqCountry, url: 'https://www.scaleway.com/en/about', checkedAt: 2026-08-09 }
+  - { field: hqCountry, url: 'https://www.scaleway.com/en/about-us/', checkedAt: 2026-09-03 }
   - { field: runtimes, url: 'https://www.scaleway.com/en/serverless-functions/', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://www.scaleway.com/en/serverless-functions/', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://www.scaleway.com/en/serverless-functions/', checkedAt: 2026-07-31 }
