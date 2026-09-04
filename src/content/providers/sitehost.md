@@ -3,14 +3,21 @@ id: sitehost
 name: SiteHost
 urls:
   home: https://sitehost.nz
+  home (AU): https://site-host.com.au
   pricing: https://sitehost.nz/hosting/cloud-containers
   terms: https://sitehost.nz/about/terms
 category:
+  - caas
   - paas
+  - vps
+  - bare-metal
+  - server-management
 description: New Zealand host that owns its Auckland data centre and sells Cloud Containers, a product that runs prebuilt or custom Docker images.
 founded: 2004
 hqCountry: NZ
 ownership: independent
+headcount: 11-50
+status: active
 whoManagesOs: self-managed
 infraContract:
   - owns-metal
@@ -34,6 +41,10 @@ runtimes:
   - ruby
   - dotnet
   - docker
+gpuCapacity:
+  - instances
+  - inference
+backupsIncluded: included
 deployMethods:
   - git
   - file-transfer
@@ -54,6 +65,8 @@ billingPeriods:
 billingTiming: advance
 exitWithin: a-quarter
 entryPrice: { amount: 35, currency: NZD, period: month }
+moneyBack: a-week
+paymentMethods: card
 freeTier: none
 regions:
   - NZ
@@ -66,6 +79,7 @@ supportChannels:
   - phone
   - email
 supportHours: 24-7
+sla: true
 apiAvailable: public
 iacSupport:
   - terraform
@@ -74,8 +88,15 @@ social:
   linkedin: https://www.linkedin.com/company/sitehost/
   facebook: https://www.facebook.com/SiteHost/
   x: https://twitter.com/sitehostnz
+  bluesky: https://bsky.app/profile/sitehost.nz
 domainRegistration: paid-addon
 emailHosting: paid-addon
+certifications:
+  - iso-27001
+  - soc-2
+  - pci-dss
+energyClaim: grid-mix-disclosed
+collaboration: team
 referringSubnets: { now: 261, before: 273 }
 checkedAt: 2026-08-12
 sources:
@@ -96,6 +117,8 @@ sources:
   - { field: urls, url: 'https://sitehost.nz/about/terms', checkedAt: 2026-08-01 }
   - { field: domainRegistration, url: 'https://sitehost.nz/about', checkedAt: 2026-08-12 }
   - { field: emailHosting, url: 'https://sitehost.nz/about', checkedAt: 2026-08-12 }
+  - { field: certifications, url: 'https://sitehost.nz/about/policies-compliance/compliance-certifications', checkedAt: 2026-09-03 }
+  - { field: gpuCapacity, url: 'https://sitehost.nz/services/ai-platform', checkedAt: 2026-09-03 }
 figure:
   emoji: 🥝
   color: rgb(63, 172, 109)
