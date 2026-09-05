@@ -107,7 +107,7 @@ sources:
   - { field: cliTool, url: 'https://www.statichost.eu/docs/direct-upload/', checkedAt: 2026-09-05 }
   - { field: ownership, url: 'https://www.statichost.eu/pricing/', checkedAt: 2026-09-05 }
   - { field: 'no visitor logs', url: 'https://www.statichost.eu/privacy/', checkedAt: 2026-09-05 }
-  - { field: 'CDN provider', url: 'https://www.statichost.eu/faq/', checkedAt: 2026-09-05 }
+  - { field: 'cdn provider', url: 'https://www.statichost.eu/faq/', checkedAt: 2026-09-05 }
   - { field: 'beta terms', url: 'https://www.statichost.eu/terms/', checkedAt: 2026-09-05 }
   - { field: 'overage handling', url: 'https://www.statichost.eu/faq/', checkedAt: 2026-09-05 }
   - { field: 'preview links', url: 'https://www.statichost.eu/roadmap/', checkedAt: 2026-09-05 }
