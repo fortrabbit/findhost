@@ -97,6 +97,15 @@ export const loadFacets = once(async (): Promise<{ facets: Facet[]; providers: P
 });
 
 /**
+ * Every pair page, once. The table is every pairing against every row, and
+ * every value page, the sitemap and both llms indexes ask for the same one.
+ */
+export const loadPairPages = once(async (): Promise<PairPage[]> => {
+  const { facets, providers } = await loadFacets();
+  return pairPages(facets, fields, providers);
+});
+
+/**
  * Where a facet's own index lives. One rule for all of them, including
  * `regions`: its index is written by hand in pages/regions.astro so it can
  * carry the map, but it answers to the same address as every other.
@@ -132,9 +141,7 @@ export async function facetRoutes() {
  * in lib/pairs.ts, which is pure; this is the half that needs the collection.
  */
 export async function pairRoutes() {
-  const { facets, providers } = await loadFacets();
-
-  return pairPages(facets, fields, providers).map((page) => ({
+  return (await loadPairPages()).map((page) => ({
     params: { facet: page.a.id, value: page.av.slug, with: page.b.id, withValue: page.bv.slug },
     props: page,
   }));
@@ -146,10 +153,9 @@ export async function pairRoutes() {
  * last segment of a URL that works lands on a 404 between two pages that exist.
  */
 export async function pairIndexRoutes() {
-  const { facets, providers } = await loadFacets();
   const grouped = new Map<string, { facet: Facet; value: FacetValue; with: Facet; pages: PairPage[] }>();
 
-  for (const page of pairPages(facets, fields, providers)) {
+  for (const page of await loadPairPages()) {
     const key = `${page.a.id}/${page.av.slug}/${page.b.id}`;
     const held = grouped.get(key) ?? { facet: page.a, value: page.av, with: page.b, pages: [] };
     held.pages.push(page);
@@ -175,14 +181,13 @@ export async function pairIndexRoutes() {
  * direction exists to prevent.
  */
 export async function pairsFor(facetId: string, valueId: string) {
-  const { facets, providers } = await loadFacets();
-
+  const { facets } = await loadFacets();
   const groups = new Map<
     string,
     { label: string; index?: string; rows: { href: string; label: string; count: number }[] }
   >();
 
-  for (const page of pairPages(facets, fields, providers)) {
+  for (const page of await loadPairPages()) {
     const heads = page.a.id === facetId && page.av.id === valueId;
     const tails = page.b.id === facetId && page.bv.id === valueId;
     if (!heads && !tails) continue;

@@ -53,13 +53,34 @@ const styleEl = document.querySelector<HTMLElement>('[data-list-style]');
 const indexEl = document.querySelector<HTMLScriptElement>('[data-find-index]');
 
 /*
+ * Storage is a convenience, never a dependency. A browser that blocks site data
+ * throws on the accessor itself, and an uncaught throw here ends the module
+ * before the filters below are wired — checkboxes shipped disabled would stay
+ * that way, on a page that looks like it works.
+ */
+const remembered = (key: string): string | null => {
+  try {
+    return localStorage.getItem(key);
+  } catch {
+    return null;
+  }
+};
+const remember = (key: string, value: string) => {
+  try {
+    localStorage.setItem(key, value);
+  } catch {
+    /* Nothing to remember into. The choice still applies for this page. */
+  }
+};
+
+/*
  * Extended or slim, as a class on the results rather than as a second way to
  * build a row. It runs on every page carrying a register, including the facet
  * value pages that ship no filters at all, so it is wired apart from everything
  * below.
  */
 if (styleEl && resultsEl) {
-  const stored = localStorage.getItem('list-style');
+  const stored = remembered('list-style');
   let current = stored === 'slim' ? 'slim' : 'extended';
 
   const show = (style: string) => {
@@ -68,7 +89,7 @@ if (styleEl && resultsEl) {
     for (const button of styleEl.querySelectorAll<HTMLButtonElement>('button')) {
       button.setAttribute('aria-pressed', String(button.value === style));
     }
-    localStorage.setItem('list-style', style);
+    remember('list-style', style);
   };
 
   for (const button of styleEl.querySelectorAll<HTMLButtonElement>('button[disabled]')) button.disabled = false;

@@ -14,7 +14,8 @@ const facet = (id: string, field: string, values: string[]): Facet => ({
 });
 
 const facets: Facet[] = [
-  facet('category', 'category', ['paas', 'vps', 'shared-hosting', 'serverless']),
+  // Slug and field differ here, as they do in the dictionary: a lookup by slug finds nothing.
+  facet('categories', 'category', ['paas', 'vps', 'shared-hosting', 'serverless']),
   facet('regions', 'regions', ['DE', 'US', 'FR']),
   facet('entry-price', 'entryPriceBand', ['free-tier', 'under-5', '5-15']),
 ];
@@ -41,7 +42,7 @@ describe('summarise', () => {
   // the padding this whole approach exists to avoid.
   it('never restates the page it is on', () => {
     const rows = [row('A', { category: 'paas' }), row('B', { category: 'paas' })];
-    assert.doesNotMatch(summarise(rows, facets, 'category', 'are platforms'), /split across|all of them/i);
+    assert.doesNotMatch(summarise(rows, facets, 'categories', 'are platforms'), /split across|all of them/i);
     assert.match(summarise(rows, facets, 'runtimes', 'run Rust'), /All of them paas/);
   });
 
@@ -75,7 +76,7 @@ describe('summarise', () => {
   // sentence takes the two strongest and stops.
   it('never runs past two sentences', () => {
     const rows = [row('A', { category: 'paas', regions: ['DE', 'US'], entryPriceBand: 'under-5' })];
-    for (const id of ['runtimes', 'category', 'regions', 'entry-price']) {
+    for (const id of ['runtimes', 'categories', 'regions', 'entry-price']) {
       const summary = summarise(rows, facets, id, 'do a thing');
       assert.ok(summary.split('. ').length <= 2, `${id}: ${summary}`);
     }
@@ -90,7 +91,7 @@ describe('summarise', () => {
 
   it('never emits a dangling connector or a double space', () => {
     const rows = [row('A', { category: 'paas', regions: ['DE'], entryPriceBand: 'under-5' })];
-    for (const id of ['runtimes', 'category', 'regions', 'entry-price']) {
+    for (const id of ['runtimes', 'categories', 'regions', 'entry-price']) {
       const summary = summarise(rows, facets, id, 'do a thing');
       assert.doesNotMatch(summary, / {2}/, id);
       assert.doesNotMatch(summary, /,\./, id);

@@ -1,7 +1,7 @@
 import type { APIRoute } from 'astro';
-import { loadFacets } from '../../../lib/facets';
+import { loadFacets, loadPairPages } from '../../../lib/facets';
 import { fields } from '../../../lib/fields';
-import { pairings, pairPages, pairingKey } from '../../../lib/pairs';
+import { pairings, pairingKey } from '../../../lib/pairs';
 import { shareCard } from '../../../lib/og';
 
 /*
@@ -11,8 +11,8 @@ import { shareCard } from '../../../lib/og';
  * all of them, which is the two facets and how many pages they made.
  */
 export async function getStaticPaths() {
-  const { facets, providers } = await loadFacets();
-  const built = pairPages(facets, fields, providers);
+  const { facets } = await loadFacets();
+  const built = await loadPairPages();
 
   return pairings(facets, fields)
     .filter((pairing) => !pairing.draft)

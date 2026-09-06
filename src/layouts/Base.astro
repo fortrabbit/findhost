@@ -206,8 +206,12 @@ const card = new URL(image, origin).href;
 
     <script is:inline>
       // Before first paint, or the page flashes the wrong theme on the way in.
-      const stored = localStorage.getItem('theme');
-      if (stored === 'dark' || stored === 'light') document.documentElement.dataset.theme = stored;
+      // Guarded: a browser that blocks site data throws on the accessor, and
+      // the `js` class below has to be set regardless.
+      try {
+        const stored = localStorage.getItem('theme');
+        if (stored === 'dark' || stored === 'light') document.documentElement.dataset.theme = stored;
+      } catch {}
 
       /*
        * Same reason. The filter panel is static markup and ships visible, so a
@@ -242,12 +246,14 @@ const card = new URL(image, origin).href;
           const wanted = choice.dataset.themeSet!;
 
           // System is the absence of a choice, so choosing it removes one.
-          if (wanted === 'system') {
-            delete root.dataset.theme;
-            localStorage.removeItem('theme');
-          } else {
-            root.dataset.theme = wanted;
-            localStorage.setItem('theme', wanted);
+          if (wanted === 'system') delete root.dataset.theme;
+          else root.dataset.theme = wanted;
+
+          try {
+            if (wanted === 'system') localStorage.removeItem('theme');
+            else localStorage.setItem('theme', wanted);
+          } catch {
+            /* Storage blocked: the theme still applies for this page. */
           }
 
           describe();

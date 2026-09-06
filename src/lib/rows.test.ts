@@ -53,6 +53,13 @@ describe('toRow', () => {
       assert.equal(row.facets.automation, undefined);
     });
 
+    // The same rule as a plain field: `iacSupport: []` records nothing, so it
+    // cannot be the answer that turns every other value into a checked no.
+    it('treats an empty source list as not asked', () => {
+      const row = toRow(record('a', { iacSupport: [] }));
+      assert.equal(row.facets.automation, undefined);
+    });
+
     it('matches a source that holds a list, not only a scalar', () => {
       const row = toRow(record('a', { iacSupport: ['terraform', 'ansible'] }));
       assert.ok((row.facets.automation as string[]).includes('iac'));

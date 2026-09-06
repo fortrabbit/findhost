@@ -10,7 +10,7 @@
 export interface Row {
   label: string;
   cells: { text: string; href?: string; filter?: string; mark?: string }[];
-  note?: number;
+  notes?: number[];
 }
 
 interface Props {
@@ -47,11 +47,11 @@ const { groups, class: className } = Astro.props;
                     )}
                   </>
                 ))}
-                {row.note && (
-                  <a class="footnote-ref" href={`#source-${row.note}`} aria-label={`Source ${row.note}`}>
-                    {row.note}
+                {row.notes?.map((note) => (
+                  <a class="footnote-ref" href={`#source-${note}`} aria-label={`Source ${note}`}>
+                    {note}
                   </a>
-                )}
+                ))}
               </dd>
             </>
           ))}

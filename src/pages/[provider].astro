@@ -156,7 +156,7 @@ const drawn = (groups: { label: string; fields: Field[] }[]) =>
     rows: group.fields.map((field) => ({
       label: field.label,
       cells: cells(field, valueOf(field.id), context),
-      note: numberOf.get(field.id),
+      notes: numberOf.get(field.id),
     })),
   }));
 
@@ -173,7 +173,7 @@ const below = [...drawn(farGroups), ...(alsoNeeded.length > 0 ? [{ label: 'Bring
  * Social accounts are not cited: a profile link either resolves to the provider
  * or it does not.
  */
-const noteFor = (field: string) => numberOf.get(field);
+const notesFor = (field: string) => numberOf.get(field) ?? [];
 
 /*
  * What each source backs, in the words the page uses for it. A source may name
@@ -323,11 +323,11 @@ const categoryLabels = (fieldOf.get('category')?.values ?? [])
             <a class="record-home" href={data.urls.home} {...outboundLinkAttrs(data.urls.home, 'record')}>
               {data.urls.home.replace('https://', '')}
             </a>
-            {noteFor('urls') && (
-              <a class="footnote-ref" href={`#source-${noteFor('urls')}`} aria-label={`Source ${noteFor('urls')}`}>
-                {noteFor('urls')}
+            {notesFor('urls').map((note) => (
+              <a class="footnote-ref" href={`#source-${note}`} aria-label={`Source ${note}`}>
+                {note}
               </a>
-            )}
+            ))}
           </span>
         )
       }
@@ -338,15 +338,12 @@ const categoryLabels = (fieldOf.get('category')?.values ?? [])
               {link.label}
             </a>
             {/* `urls` is cited once, on the address; every page under it is the same source. */}
-            {link.field !== 'urls' && noteFor(link.field) && (
-              <a
-                class="footnote-ref"
-                href={`#source-${noteFor(link.field)}`}
-                aria-label={`Source ${noteFor(link.field)}`}
-              >
-                {noteFor(link.field)}
-              </a>
-            )}
+            {link.field !== 'urls' &&
+              notesFor(link.field).map((note) => (
+                <a class="footnote-ref" href={`#source-${note}`} aria-label={`Source ${note}`}>
+                  {note}
+                </a>
+              ))}
           </span>
         ))
       }

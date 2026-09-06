@@ -1,8 +1,7 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
-import { loadFacets } from '../lib/facets';
-import { fields } from '../lib/fields';
-import { pairPath, pairPages } from '../lib/pairs';
+import { loadFacets, loadPairPages } from '../lib/facets';
+import { pairPath } from '../lib/pairs';
 import { loadProviders } from '../lib/providers';
 
 /**
@@ -13,8 +12,8 @@ import { loadProviders } from '../lib/providers';
 export const GET: APIRoute = async ({ site }) => {
   const origin = site?.origin ?? '';
   const providers = (await loadProviders()).sort((a, b) => a.data.name.localeCompare(b.data.name, 'en'));
-  const { facets, providers: rows } = await loadFacets();
-  const pairs = pairPages(facets, fields, rows);
+  const { facets } = await loadFacets();
+  const pairs = await loadPairPages();
   const notes = (await getCollection('notes'))
     .filter((entry) => entry.id !== 'aside/stubs')
     .sort((a, b) => a.id.localeCompare(b.id, 'en'));

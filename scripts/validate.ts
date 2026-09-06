@@ -23,7 +23,9 @@ import {
   sourcesOf,
   titleWithOf,
 } from '../src/lib/fields.ts';
+import { hasAffiliateParams } from '../src/lib/affiliate.ts';
 import { priceBands } from '../src/lib/price.ts';
+import { rowHolds, toRow } from '../src/lib/rows.ts';
 import { pairCeiling, pairFloor } from '../src/lib/pairs.ts';
 
 const providersDir = 'src/content/providers';
@@ -60,9 +62,19 @@ const seenOrder = new Map<number, string>();
  */
 const uppercaseSegments = new Set(['currencies']);
 
+// A ranking field is the one thing this dataset may never grow. CI4, mechanically.
+const forbidden = ['rank', 'ranking', 'score', 'rating', 'boost', 'weight', 'stars', 'position', 'featured'];
+
 for (const field of fields) {
   if (seenField.has(field.id)) fail(dictionaryFile, `duplicate entry for "${field.id}"`);
   seenField.add(field.id);
+
+  // The record check below matches whole keys; a field id is camelCase, so it
+  // is checked word by word — `qualityScore` is a score.
+  const words = field.id.split(/(?=[A-Z])/).map((word) => word.toLowerCase());
+  if (words.some((word) => forbidden.includes(word))) {
+    fail(dictionaryFile, `"${field.id}" is a ranking field — this dataset carries no scores`);
+  }
 
   if (!field.label) fail(dictionaryFile, `"${field.id}" has no label`);
 
@@ -495,7 +507,39 @@ for (const key of noteKeys(notesDir)) {
 const files = readdirSync(providersDir).filter((name) => name.endsWith('.md'));
 const seen = new Map<string, string>();
 
-const records = files.map((file) => ({ file, data: frontmatter(readFileSync(join(providersDir, file), 'utf8')) }));
+const records = files.map((file) => {
+  const raw = readFileSync(join(providersDir, file), 'utf8');
+  return { file, data: frontmatter(raw), body: raw.replace(/^---\r?\n[\s\S]*?\r?\n---/, '') };
+});
+
+/*
+ * The schema rejects a paid link in any URL field; prose is the other place a
+ * link can go, and the schema never reads it. Every markdown link in a record's
+ * body and in a note is held to the same pattern.
+ */
+const markdownLink = /\]\((https?:\/\/[^)\s]+)\)/g;
+const checkProseLinks = (file: string, body: string) => {
+  for (const [, url] of body.matchAll(markdownLink)) {
+    if (hasAffiliateParams(url!)) fail(file, `affiliate parameters in a prose link: ${url}`);
+  }
+};
+for (const record of records) checkProseLinks(join(providersDir, record.file), record.body);
+for (const key of noteKeys(notesDir)) {
+  const file = `${notesDir}/${key}.md`;
+  checkProseLinks(file, readFileSync(file, 'utf8'));
+}
+
+/*
+ * The records a value page is built from: listed and not beside the register,
+ * which is the filter lib/providers.ts applies. A hidden or aside record holds
+ * values too, and a note for one of those heads a page that is never built.
+ */
+const inRegister = records
+  .filter(({ data }) => {
+    const status = String(data?.status ?? 'active');
+    return !hiddenStatuses.has(status) && !asideOf.has(status);
+  })
+  .map(({ file, data }) => ({ id: file.replace(/\.md$/, ''), data: (data ?? {}) as Record<string, unknown> }));
 
 /*
  * Records live at the root — /hetzner/ — so a provider id, a facet slug and a
@@ -589,9 +633,6 @@ const citable = new Set([...fields.map((field) => field.id), 'notes', 'urls', 's
  * would make the guard something contributors work around.
  */
 const looksLikeField = (name: string) => /^[a-z]+[A-Z][A-Za-z0-9]*$/.test(name);
-
-// A ranking field is the one thing this dataset may never grow. CI4, mechanically.
-const forbidden = ['rank', 'ranking', 'score', 'rating', 'boost', 'weight', 'stars', 'position', 'featured'];
 
 /**
  * The advertised starting price and the band it is filed under have to agree.
@@ -788,26 +829,10 @@ for (const key of noteKeys(notesDir)) {
   if (!field) continue;
 
   /*
-   * A derived value is held by nobody literally — no record carries the field —
-   * so it has to be computed the way lib/facets.ts computes it, from the source
-   * field each value reads.
+   * Computed through lib/rows.ts, which is what builds the page: a derived value
+   * is held by nobody literally, and an empty list is held by nobody at all.
    */
-  const option = field.values.find((candidate) => candidate.id === value);
-  const sources = option ? sourcesOf(option) : [];
-
-  const held = records.some(({ data }) =>
-    sources.length
-      ? sources.some(({ from, when }) => {
-          const carried = data?.[from];
-          if (carried === undefined || carried === null) return false;
-          const answers = Array.isArray(carried) ? carried.map(String) : [String(carried)];
-          return when.includes('*') ? answers.length > 0 : answers.some((answer) => when.includes(answer));
-        })
-      : (() => {
-          const carried = data?.[field.id];
-          return Array.isArray(carried) ? carried.map(String).includes(value) : String(carried) === value;
-        })(),
-  );
+  const held = inRegister.some((record) => rowHolds(toRow(record), field.id, value));
 
   if (!held) fail(`${notesDir}/${key}.md`, `no record holds ${field.id} "${value}", so the page it heads is not built`);
 }

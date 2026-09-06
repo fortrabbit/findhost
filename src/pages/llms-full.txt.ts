@@ -1,9 +1,9 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
-import { loadFacets } from '../lib/facets';
-import { pairPath, pairPages } from '../lib/pairs';
+import { loadFacets, loadPairPages } from '../lib/facets';
+import { pairPath } from '../lib/pairs';
 import { loadProviders } from '../lib/providers';
-import { fieldGroups, fields } from '../lib/fields';
+import { fieldGroups } from '../lib/fields';
 import { attribution, credit } from '../lib/seo';
 
 /**
@@ -27,9 +27,9 @@ const label = (value: unknown): string => {
 export const GET: APIRoute = async ({ site }) => {
   const origin = site?.origin ?? '';
   const providers = (await loadProviders()).sort((a, b) => a.data.name.localeCompare(b.data.name, 'en'));
-  const { facets, providers: rows } = await loadFacets();
+  const { facets } = await loadFacets();
   const notes = await getCollection('notes');
-  const pairs = pairPages(facets, fields, rows);
+  const pairs = await loadPairPages();
   const groups = fieldGroups();
 
   const lines: string[] = [

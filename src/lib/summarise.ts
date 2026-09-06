@@ -17,9 +17,13 @@ export function summarise(matches: ProviderRow[], facets: Facet[], facetId: stri
   const count = matches.length;
   const noun = count === 1 ? 'provider' : 'providers';
 
-  /** Values of one facet held by the records on this page, commonest first. */
-  const spread = (id: string) => {
-    const facet = facets.find((entry) => entry.id === id);
+  /*
+   * Values of one facet held by the records on this page, commonest first. Looked
+   * up by the field it counts, not by its slug: a facet's id is its URL segment,
+   * and `category` lives at /categories/.
+   */
+  const spread = (field: string) => {
+    const facet = facets.find((entry) => entry.field === field);
     if (!facet) return [];
 
     return facet.values
@@ -39,8 +43,9 @@ export function summarise(matches: ProviderRow[], facets: Facet[], facetId: stri
    * skipped: restating what the heading says is the duplication, not the length.
    */
   const clauses: string[] = [];
+  const ownField = facets.find((entry) => entry.id === facetId)?.field ?? facetId;
 
-  if (facetId !== 'category') {
+  if (ownField !== 'category') {
     const categories = spread('category');
     if (categories.length) {
       const named = categories.slice(0, 3).map((entry) => entry.label.toLowerCase());
@@ -59,8 +64,8 @@ export function summarise(matches: ProviderRow[], facets: Facet[], facetId: stri
       clauses.push(facetId === 'regions' ? `also in ${others} other ${places}` : `across ${others} ${places}`);
   }
 
-  if (facetId !== 'entry-price') {
-    const price = spread('entry-price');
+  if (ownField !== 'entryPriceBand') {
+    const price = spread('entryPriceBand');
     if (price.length) clauses.push(`commonest entry price ${price[0]!.label.toLowerCase()}`);
   }
 

@@ -1,7 +1,8 @@
 import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
 import { z } from 'zod';
-import { asideOf, vocabulary } from './lib/fields';
+import { hasAffiliateParams } from './lib/affiliate';
+import { asideOf, hiddenStatuses, vocabulary } from './lib/fields';
 
 /**
  * This file is a governance artifact, not a type definition.
@@ -18,12 +19,10 @@ import { asideOf, vocabulary } from './lib/fields';
  * written for them and are the schema's alone.
  */
 
-const affiliateParams = /[?&](ref|aff|affiliate|partner|utm_[a-z]+|fpr|via)=/i;
-
 const publicUrl = z
   .url()
   .refine((value) => value.startsWith('https://'), 'Must be https')
-  .refine((value) => !affiliateParams.test(value), 'Affiliate parameters are not allowed in any URL');
+  .refine((value) => !hasAffiliateParams(value), 'Affiliate parameters are not allowed in any URL');
 
 /** Generative identity: an emoji and two hex values, no image file. */
 const figure = z.object({
@@ -392,7 +391,7 @@ const providerFields = z
    * one would mean inventing it.
    */
   .superRefine((record, ctx) => {
-    const hidden = record.status === 'draft' || record.status === 'out-of-scope';
+    const hidden = hiddenStatuses.has(String(record.status));
     const beside = asideOf.has(String(record.status));
 
     if (!hidden && !beside && !record.category?.length) {

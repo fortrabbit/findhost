@@ -43,9 +43,19 @@ describe('footnotes', () => {
 
     assert.equal(notes.length, 2);
     assert.deepEqual(notes[0]!.fields, ['founded', 'hqCountry']);
-    assert.equal(numberOf.get('founded'), 1);
-    assert.equal(numberOf.get('hqCountry'), 1);
-    assert.equal(numberOf.get('regions'), 2);
+    assert.deepEqual(numberOf.get('founded'), [1]);
+    assert.deepEqual(numberOf.get('hqCountry'), [1]);
+    assert.deepEqual(numberOf.get('regions'), [2]);
+  });
+
+  // A field read off two pages carries both numbers, or the second note is
+  // listed under Sources with nothing on the page pointing at it.
+  it('gives a field cited from two sources both numbers', () => {
+    const { numberOf } = footnotes([
+      { field: 'software', url: 'https://a.example/one', checkedAt: read },
+      { field: 'software', url: 'https://a.example/two', checkedAt: read },
+    ]);
+    assert.deepEqual(numberOf.get('software'), [1, 2]);
   });
 
   // The superscript is the whole mechanism: a fact with no marker is visibly an
@@ -72,6 +82,6 @@ describe('footnotes', () => {
       notes.map((note) => note.url),
       ['https://one.example/', 'https://two.example/'],
     );
-    assert.equal(numberOf.get('c'), 1);
+    assert.deepEqual(numberOf.get('c'), [1]);
   });
 });

@@ -173,7 +173,10 @@ export type Source = { field: string; url: string; checkedAt: Date };
 
 /**
  * Group sources by URL, so one page cited for four fields is one footnote and
- * not four. Returns the numbered footnotes plus a lookup from field to number.
+ * not four. Returns the numbered footnotes plus a lookup from field to numbers —
+ * plural, because a field read off two pages is backed by two notes, and a row
+ * marking only the last of them leaves the other listed with nothing pointing
+ * at it.
  */
 export function footnotes(sources: Source[] | undefined) {
   const byUrl = new Map<string, { url: string; fields: string[]; checkedAt: Date }>();
@@ -185,8 +188,10 @@ export function footnotes(sources: Source[] | undefined) {
   }
 
   const notes = [...byUrl.values()];
-  const numberOf = new Map<string, number>();
-  notes.forEach((note, index) => note.fields.forEach((field) => numberOf.set(field, index + 1)));
+  const numberOf = new Map<string, number[]>();
+  notes.forEach((note, index) =>
+    note.fields.forEach((field) => numberOf.set(field, [...(numberOf.get(field) ?? []), index + 1])),
+  );
 
   return { notes, numberOf };
 }

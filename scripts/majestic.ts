@@ -14,6 +14,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { readdir } from 'node:fs/promises';
 import { join } from 'node:path';
+import { hiddenStatuses } from '../src/lib/fields.ts';
 
 const LIST = 'https://downloads.majestic.com/majestic_million.csv';
 const CREDIT = 'https://majestic.com/reports/majestic-million';
@@ -163,7 +164,7 @@ for (const name of files) {
     id: name.replace(/\.md$/, ''),
     host: hostOf(home[1]),
     parent: parent?.[1],
-    hidden: status === 'draft' || status === 'out-of-scope',
+    hidden: hiddenStatuses.has(status),
   });
 }
 

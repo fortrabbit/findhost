@@ -100,7 +100,7 @@ export function toRow(record: { id: string; data: Record<string, unknown> }): Pr
      * not offer this" and the truth, which is that 37 of them were never asked.
      */
     if (isDerived(field.id)) {
-      const asked = field.values.flatMap(sourcesOf).some(({ from }) => data[from] !== undefined && data[from] !== null);
+      const asked = field.values.flatMap(sourcesOf).some(({ from }) => held(data[from]).length > 0);
       if (!asked) continue;
 
       facets[field.id] = field.values
