@@ -7,10 +7,14 @@ urls:
   terms: https://sitehost.nz/about/terms
 category:
   - paas
+  - caas
+  - vps
+  - bare-metal
 description: New Zealand host that owns its Auckland data centre and sells Cloud Containers, a product that runs prebuilt or custom Docker images.
 founded: 2004
 hqCountry: NZ
 ownership: independent
+status: active
 whoManagesOs: self-managed
 infraContract:
   - owns-metal
@@ -34,6 +38,10 @@ runtimes:
   - ruby
   - dotnet
   - docker
+gpuCapacity:
+  - instances
+  - inference
+backupsIncluded: included
 deployMethods:
   - git
   - file-transfer
@@ -54,6 +62,9 @@ billingPeriods:
 billingTiming: advance
 exitWithin: a-quarter
 entryPrice: { amount: 35, currency: NZD, period: month }
+moneyBack: a-week
+paymentMethods:
+  - card
 freeTier: none
 regions:
   - NZ
@@ -66,6 +77,7 @@ supportChannels:
   - phone
   - email
 supportHours: 24-7
+sla: true
 apiAvailable: public
 iacSupport:
   - terraform
@@ -74,8 +86,12 @@ social:
   linkedin: https://www.linkedin.com/company/sitehost/
   facebook: https://www.facebook.com/SiteHost/
   x: https://twitter.com/sitehostnz
+  bluesky: https://bsky.app/profile/sitehost.nz
 domainRegistration: paid-addon
 emailHosting: paid-addon
+certifications:
+  - iso-27001
+collaboration: clients
 referringSubnets: { now: 261, before: 273 }
 checkedAt: 2026-08-12
 sources:
@@ -96,6 +112,17 @@ sources:
   - { field: urls, url: 'https://sitehost.nz/about/terms', checkedAt: 2026-08-01 }
   - { field: domainRegistration, url: 'https://sitehost.nz/about', checkedAt: 2026-08-12 }
   - { field: emailHosting, url: 'https://sitehost.nz/about', checkedAt: 2026-08-12 }
+  - { field: category, url: 'https://sitehost.nz/about', checkedAt: 2026-09-06 }
+  - { field: category, url: 'https://sitehost.nz/hosting/dedicated-servers', checkedAt: 2026-09-06 }
+  - { field: gpuCapacity, url: 'https://sitehost.nz/services/ai-platform', checkedAt: 2026-09-06 }
+  - { field: gpuCapacity, url: 'https://sitehost.nz/hosting/gpu-hosting', checkedAt: 2026-09-06 }
+  - { field: backupsIncluded, url: 'https://sitehost.nz/hosting/cloud-containers', checkedAt: 2026-09-06 }
+  - { field: moneyBack, url: 'https://sitehost.nz/hosting/cloud-containers', checkedAt: 2026-09-06 }
+  - { field: paymentMethods, url: 'https://sitehost.nz/about/terms', checkedAt: 2026-09-06 }
+  - { field: sla, url: 'https://sitehost.nz/about/terms', checkedAt: 2026-09-06 }
+  - { field: certifications, url: 'https://sitehost.nz/about/policies-compliance/compliance-certifications', checkedAt: 2026-09-06 }
+  - { field: collaboration, url: 'https://kb.sitehost.nz/account/account-contacts', checkedAt: 2026-09-06 }
+  - { field: collaboration, url: 'https://kb.sitehost.nz/account/sub-accounts', checkedAt: 2026-09-06 }
 figure:
   emoji: 🥝
   color: rgb(63, 172, 109)
@@ -104,7 +131,7 @@ figure:
 ai: authored
 ---
 
-SiteHost was founded in 2004, is still independently owned, and owns and operates its Auckland data centre rather than renting rack space. It has since added hardware in Australia, Asia and the northern hemisphere.
+SiteHost was founded in 2004, is still independently owned, and owns and operates its Auckland data centre rather than renting rack space. It has since added hardware in Australia, Asia and the northern hemisphere. Besides Cloud Containers it sells Linux and Windows virtual servers and dedicated servers, unmanaged or with a managed service on top, and a GPU line that covers rented GPU servers and a hosted inference API with an OpenAI-compatible endpoint.
 
 Cloud Containers is the part that makes it a platform rather than a host. Prebuilt stack images cover Nginx and Apache with a choice of PHP, Node.js, Ruby and .NET runtimes, plus WordPress and Silverstripe images and a set of database and search containers. Each container gets its own SSH and SFTP user, cron and environment variables; custom Docker images can be pushed through the company's own registry and build pipeline. Containers are sold in unmanaged and managed variants. There is a public API, a Terraform provider, and independent API clients written by New Zealand agencies and individuals.
 
