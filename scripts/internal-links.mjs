@@ -59,15 +59,31 @@ for (const page of pages) {
  * Its entries are absolute, so they are reduced to paths first.
  */
 const sitemap = join(dist, 'sitemap.xml');
-if (existsSync(sitemap)) {
-  for (const [, loc] of readFileSync(sitemap, 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)) {
-    const target = loc.replace(/^https?:\/\/[^/]+/, '').split(/[#?]/)[0];
-    if (!resolves(target)) broken.push({ page: 'sitemap.xml', href: target });
+const locs = existsSync(sitemap) ? [...readFileSync(sitemap, 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)] : [];
+for (const [, loc] of locs) {
+  const target = loc.replace(/^https?:\/\/[^/]+/, '').split(/[#?]/)[0];
+  if (!resolves(target)) broken.push({ page: 'sitemap.xml', href: target });
+}
+
+/*
+ * And the two llms indexes, for the same reason: they offer every note and every
+ * pair page as a link, and a note whose id resolves to no value is a 404 only
+ * they publish. Their links are absolute and mixed with outbound ones, so only
+ * those on the site's own host — the one the sitemap is written for — count.
+ */
+const own = locs[0]?.[1].match(/^https?:\/\/[^/]+/)?.[0];
+for (const name of own ? ['llms.txt', 'llms-full.txt'] : []) {
+  const file = join(dist, name);
+  if (!existsSync(file)) continue;
+  for (const [, href] of readFileSync(file, 'utf8').matchAll(/\]\((https?:\/\/[^)\s]+)\)/g)) {
+    if (!href.startsWith(`${own}/`)) continue;
+    const target = href.slice(own.length).split(/[#?]/)[0];
+    if (!resolves(target)) broken.push({ page: name, href: target });
   }
 }
 
 if (!broken.length && !uncanonical.length) {
-  console.log(`${pages.length} pages and the sitemap, no broken internal links, every one canonical.`);
+  console.log(`${pages.length} pages, the sitemap and llms.txt, no broken internal links, every one canonical.`);
   process.exit(0);
 }
 

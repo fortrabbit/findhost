@@ -21,8 +21,11 @@ export const countryPoints: Record<
   { label: string; lat: number; lng: number; spread?: { lat: number; lng: number }[] }
 > = {
   AU: { label: 'Australia', lat: -33.9, lng: 151.2, spread: [{ lat: -31.95, lng: 115.86 }] },
+  BH: { label: 'Bahrain', lat: 26.2, lng: 50.6 },
   BR: { label: 'Brazil', lat: -23.5, lng: -46.6 },
   CA: { label: 'Canada', lat: 43.7, lng: -79.4, spread: [{ lat: 49.28, lng: -123.12 }] },
+  CN: { label: 'China', lat: 31.2, lng: 121.5, spread: [{ lat: 39.9, lng: 116.4 }] },
+  CO: { label: 'Colombia', lat: 4.7, lng: -74.1 },
   DE: { label: 'Germany', lat: 50.1, lng: 8.7 },
   FI: { label: 'Finland', lat: 60.2, lng: 24.9 },
   GB: { label: 'United Kingdom', lat: 51.5, lng: -0.1 },
@@ -30,9 +33,11 @@ export const countryPoints: Record<
   IN: { label: 'India', lat: 19.1, lng: 72.9, spread: [{ lat: 12.97, lng: 77.59 }] },
   JP: { label: 'Japan', lat: 35.7, lng: 139.7 },
   NL: { label: 'Netherlands', lat: 52.4, lng: 4.9 },
+  QA: { label: 'Qatar', lat: 25.3, lng: 51.5 },
   SG: { label: 'Singapore', lat: 1.35, lng: 103.8 },
   // Ashburn, plus the Pacific Northwest and Texas — the three concentrations
   // that between them hold nearly all US capacity.
+  UA: { label: 'Ukraine', lat: 50.45, lng: 30.5 },
   US: {
     label: 'United States',
     lat: 38.9,

@@ -85,15 +85,22 @@ const startRenderer = () => {
 };
 
 /**
- * Twemoji names its files by codepoint. The variation selector that asks for the
- * colour form is dropped from the name — except in a keycap, where it is part of
- * the sequence rather than a request about it.
+ * Twemoji names its files by codepoint, and is inconsistent about the variation
+ * selector that asks for the colour form: dropped from a plain emoji and from a
+ * keycap, kept inside a joined sequence. Rather than encode the rule, both
+ * spellings are tried and the one on disk wins. Neither on disk is an error —
+ * the alternative is a card with a box where the figure should be, and no build
+ * output to say so.
  */
-const emojiFile = (grapheme: string) => {
+export const emojiFile = (grapheme: string): string => {
   const points = [...grapheme].map((character) => character.codePointAt(0)!);
-  const keycap = points.includes(0x20e3);
-  const kept = keycap ? points : points.filter((point) => point !== 0xfe0f);
-  return `${kept.map((point) => point.toString(16)).join('-')}.svg`;
+  const name = (kept: number[]) => `${kept.map((point) => point.toString(16)).join('-')}.svg`;
+  const candidates = [name(points), name(points.filter((point) => point !== 0xfe0f))];
+
+  const dir = packageDir('@twemoji/svg');
+  const found = candidates.find((candidate) => existsSync(join(dir, candidate)));
+  if (!found) throw new Error(`No Twemoji image for "${grapheme}" (tried ${candidates.join(', ')})`);
+  return join(dir, found);
 };
 
 /**
@@ -101,14 +108,8 @@ const emojiFile = (grapheme: string) => {
  * Satori swaps a grapheme for an image when handed one, so the file is read off
  * disk and inlined — the build never reaches the network for a rabbit.
  */
-const emojiImage = (grapheme: string): string | undefined => {
-  try {
-    const svg = readFileSync(join(packageDir('@twemoji/svg'), emojiFile(grapheme)));
-    return `data:image/svg+xml;base64,${svg.toString('base64')}`;
-  } catch {
-    return undefined;
-  }
-};
+const emojiImage = (grapheme: string): string =>
+  `data:image/svg+xml;base64,${readFileSync(emojiFile(grapheme)).toString('base64')}`;
 
 const graphemesOf = (text: string) =>
   [...new Intl.Segmenter('en', { granularity: 'grapheme' }).segment(text)].map((part) => part.segment);
@@ -118,8 +119,7 @@ const emojiIn = (text: string) => {
   const images: Record<string, string> = {};
   for (const grapheme of graphemesOf(text)) {
     if (!/\p{Extended_Pictographic}|\p{Regional_Indicator}/u.test(grapheme)) continue;
-    const image = emojiImage(grapheme);
-    if (image) images[grapheme] = image;
+    images[grapheme] = emojiImage(grapheme);
   }
   return images;
 };

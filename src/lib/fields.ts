@@ -164,34 +164,6 @@ export const groupNames = [
   'Automation',
 ] as const;
 
-/**
- * The root is one namespace, shared by every provider record, every facet index
- * and every written page — `/hetzner/` and `/software/` are siblings. These are
- * the names already spoken for by a page or a generated file, so neither a
- * facet nor a record may take one. validate.ts checks both directions; a
- * collision here is a URL that silently resolves to the wrong thing.
- */
-export const reservedSegments = [
-  'providers',
-  'stubs',
-  'unlisted',
-  'defunct',
-  'guide',
-  'about',
-  'badge',
-  'for-providers',
-  'search',
-  'find',
-  'notes',
-  '404',
-  'robots.txt',
-  'sitemap.xml',
-  'llms.txt',
-  'providers.json',
-  'favicon.svg',
-  '_astro',
-];
-
 /*
  * Project-relative, as Astro's own file loader takes it, and not resolved from
  * import.meta.url: the build bundles this module into dist/.prerender/, where a

@@ -18,7 +18,6 @@ import {
   groupNames,
   hiddenStatuses,
   renderModes,
-  reservedSegments,
   slugOf,
   sourcesOf,
   titleWithOf,
@@ -553,6 +552,32 @@ const inRegister = records
  */
 const slugs = files.map((file) => file.replace(/\.md$/, ''));
 const claimed = new Map<string, string>();
+
+/*
+ * The names already spoken for at the root, read from the directories that
+ * define them rather than kept as a list: a page written last month and a
+ * static asset both take a segment, and a list nobody updates is a collision
+ * the check cannot see. A route file names its segment up to the first dot
+ * and, for an endpoint, the whole address — `about.md.ts` serves /about.md.
+ * Bracketed routes are the records and the facets, which are what is being
+ * checked. The build's own asset directory is the one name no file declares.
+ */
+const reservedSegments = new Set<string>(['_astro']);
+for (const name of readdirSync('src/pages')) {
+  if (name.startsWith('[')) continue;
+  const address = name.replace(/\.(astro|ts)$/, '');
+  if (address !== 'index') reservedSegments.add(address);
+  reservedSegments.add(address.split('.')[0]!);
+}
+/*
+ * One page is a facet index written by hand — regions, so it can carry the
+ * map — and [facet]/index.astro skips that facet for the same reason. It is
+ * the facet's own address, not a collision with it.
+ */
+for (const field of facetFields) {
+  if (existsSync(join('src/pages', `${field.facet}.astro`))) reservedSegments.delete(field.facet!);
+}
+for (const name of readdirSync(publicDir)) reservedSegments.add(name);
 
 for (const segment of reservedSegments) claimed.set(segment, 'a page or a generated file');
 for (const field of facetFields) {

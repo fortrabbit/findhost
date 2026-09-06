@@ -1,9 +1,9 @@
 ---
 import Base from '../layouts/Base.astro';
 import WorldMap from '../components/WorldMap.astro';
-import { countryPoints } from '../lib/map';
 import { loadProviders } from '../lib/providers';
 import { fieldOf, slugOf } from '../lib/fields';
+import { getCollection, render } from 'astro:content';
 import { facetCardPath } from '../lib/og';
 import { licenceUrl, organization } from '../lib/seo';
 
@@ -17,20 +17,29 @@ const regions = withRegions.flatMap((provider) => provider.data.regions ?? []);
  * countries as a column of text was the same page with the map taken out.
  * Each country leads to its own page rather than to an anchor further down
  * this one, so the list exists once.
+ *
+ * Every country a record names is listed, from the dictionary rather than from
+ * the map's coordinates: a country the map cannot place yet still has its page,
+ * and this is the page that links to it.
  */
 const regionField = fieldOf.get('regions')!;
+const valueOf = new Map(regionField.values.map((value) => [value.id, value]));
 
 const byCountry = [...new Set(regions)]
-  .filter((code) => countryPoints[code])
-  .map((code) => ({
-    code,
-    slug: slugOf(regionField, { id: code, label: countryPoints[code]!.label }),
-    label: countryPoints[code]!.label,
-    count: withRegions.filter((provider) => provider.data.regions?.includes(code)).length,
+  .map((code) => valueOf.get(code)!)
+  .map((value) => ({
+    code: value.id,
+    slug: slugOf(regionField, value),
+    label: value.label,
+    count: withRegions.filter((provider) => provider.data.regions?.includes(value.id)).length,
   }))
   .sort((a, b) => a.label.localeCompare(b.label, 'en'));
 
-const unplaced = [...new Set(regions)].filter((code) => !countryPoints[code]);
+/* The same note the facet's card reads, so the two cannot name this page differently. */
+const note = (await getCollection('notes')).find((entry) => entry.id === 'regions');
+const Note = note ? (await render(note)).Content : null;
+const title = note?.data.title ?? regionField.label;
+const description = note?.data.description ?? `Every value recorded for ${regionField.label.toLowerCase()}.`;
 
 /*
  * `regions: null` means the question does not apply — a panel that provisions
@@ -44,8 +53,8 @@ const origin = Astro.site?.origin ?? '';
 ---
 
 <Base
-  title="Where providers operate — FindHost"
-  description="A map of the countries each hosting provider runs in, and a page for every one of them."
+  title={`${title} — FindHost`}
+  description={description}
   markdown="/regions/index.md"
   image={facetCardPath('regions')}
   imageAlt="A FindHost card: where hosting providers operate."
@@ -54,7 +63,7 @@ const origin = Astro.site?.origin ?? '';
       '@context': 'https://schema.org',
       '@type': 'CollectionPage',
       url: `${origin}/regions/`,
-      name: 'Where providers operate',
+      name: title,
       inLanguage: 'en',
       publisher: organization(origin),
       license: licenceUrl,
@@ -73,7 +82,9 @@ const origin = Astro.site?.origin ?? '';
     },
   ]}
 >
-  <h1>Find a host near you</h1>
+  <h1>{title}</h1>
+
+  {Note && <Note />}
 
   <WorldMap
     regions={regions}
@@ -102,6 +113,5 @@ const origin = Astro.site?.origin ?? '';
       notApplicable > 0 &&
         ` A further ${notApplicable} run on infrastructure you bring yourself, so they have no regions of their own to record.`
     }
-    {unplaced.length > 0 && ` No coordinates yet for ${unplaced.join(', ')}.`}
   </p>
 </Base>

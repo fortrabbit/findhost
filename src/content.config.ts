@@ -435,7 +435,16 @@ const providers = defineCollection({
  * sites this dataset exists to correct do for a living.
  */
 const notes = defineCollection({
-  loader: glob({ base: 'src/content/notes', pattern: '**/*.md' }),
+  /*
+   * The id is the path as written. The loader's default slugs it, which
+   * lowercases `regions/DE.md` to `regions/de` — and nothing then matches a
+   * value whose id is the code.
+   */
+  loader: glob({
+    base: 'src/content/notes',
+    pattern: '**/*.md',
+    generateId: ({ entry }) => entry.replace(/\.md$/, ''),
+  }),
   schema: z.object({
     /** The browser title. A facet's note also takes the heading; a value's does not, so page and filter agree. */
     title: z.string().optional(),
