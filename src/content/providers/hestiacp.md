@@ -49,6 +49,6 @@ figure:
 ai: authored
 ---
 
-Hestia is a lightweight, open source control panel released under the GPLv3 licence for managing web servers, domains, email accounts, DNS zones and databases. It installs on a Linux server you supply and provides a web interface for administration. The software supports Apache and Nginx web servers with multiple PHP versions, MariaDB, MySQL and PostgreSQL databases, and email services via Exim and Dovecot.
+Hestia is a lightweight, open source control panel released under the GPLv3 license for managing web servers, domains, email accounts, DNS zones and databases. It installs on a Linux server you supply and provides a web interface for administration. The software supports Apache and Nginx web servers with multiple PHP versions, MariaDB, MySQL and PostgreSQL databases, and email services via Exim and Dovecot.
 
 Development is community-driven and welcoming to contributions. The project does not charge for the software itself and relies on voluntary donations to sustain operations. Support is provided through a public forum where users and developers engage with questions and issues.
