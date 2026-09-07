@@ -82,31 +82,6 @@ export const byDate = (key: Dated) => (a: ProviderRow, b: ProviderRow) => {
   return second - first || byName(a, b);
 };
 
-export interface DateGroup {
-  /** The month, written out, or the label given for the rows without a date. */
-  label: string;
-  /** `2026-09`, or `undated`. */
-  anchor: string;
-  rows: ProviderRow[];
-}
-
-/** Rows in a dated order, grouped by month; the undated ones last under their own heading, or no such group at all. */
-export function dateGroups(rows: ProviderRow[], key: Dated, undatedLabel: string): DateGroup[] {
-  const groups = new Map<string, DateGroup>();
-  for (const row of [...rows].sort(byDate(key))) {
-    const date = row[key];
-    const anchor = date ? date.toISOString().slice(0, 7) : 'undated';
-    if (!groups.has(anchor)) {
-      const label = date
-        ? date.toLocaleDateString('en', { month: 'long', year: 'numeric', timeZone: 'UTC' })
-        : undatedLabel;
-      groups.set(anchor, { label, anchor, rows: [] });
-    }
-    groups.get(anchor)!.rows.push(row);
-  }
-  return [...groups.values()];
-}
-
 /*
  * What a record answers for a field, as a list either way. A derived value reads
  * a source field that may hold one answer or several — `iacSupport: [terraform,

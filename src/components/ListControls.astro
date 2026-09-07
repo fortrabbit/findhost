@@ -20,8 +20,8 @@ export type Sort = 'name' | 'updated' | 'added';
 
 export const orders: { id: Sort; label: string; href: string }[] = [
   { id: 'name', label: 'A–Z', href: '/' },
-  { id: 'updated', label: 'Last updated', href: '/updated/' },
-  { id: 'added', label: 'Last added', href: '/added/' },
+  { id: 'updated', label: 'Updated', href: '/updated/' },
+  { id: 'added', label: 'Added', href: '/added/' },
 ];
 
 const { sort } = Astro.props;

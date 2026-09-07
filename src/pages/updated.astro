@@ -6,9 +6,8 @@ import { asideGroups, loadFacets } from '../lib/facets';
 
 /*
  * The register in the order it was last read: the same rows, the same filters,
- * grouped by the month a record was last checked against the provider's own
- * pages. `checkedAt` is the one date this project stands behind, which is why
- * this order exists and a "last edited" one does not.
+ * newest check first. `checkedAt` is the one date this project stands behind,
+ * which is why this order exists and a "last edited" one does not.
  */
 const { facets, providers } = await loadFacets();
 
@@ -20,14 +19,14 @@ const beside = (await asideGroups()).map((group) => ({
 ---
 
 <Base
-  title="Last updated — FindHost"
+  title="Updated — FindHost"
   description="Every hosting provider in the register, in the order its record was last checked against the provider's own pages."
 >
-  <h1>Last updated</h1>
+  <h1>Updated</h1>
 
   <p class="annotation">
-    The register, newest check first: the month under which a record sits is when it was last read against the
-    provider's own pages. A record nobody has checked yet sits at the end, and says so.
+    The register, newest check first: a record moves up when it is read against the provider's own pages. The ones
+    nobody has checked yet sit at the end. The date is on each record.
   </p>
 
   <ProviderRegister providers={providers} facets={facets} beside={beside} sort="updated">

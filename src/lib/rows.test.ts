@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
 import { fieldOf } from './fields.ts';
-import { byDate, countValues, dateGroups, toRow, type ProviderRow } from './rows.ts';
+import { byDate, countValues, toRow, type ProviderRow } from './rows.ts';
 
 /*
  * The counting rules, which are the ones that decide what the register claims.
@@ -159,30 +159,6 @@ describe('the dated orders', () => {
     assert.deepEqual(
       [...rows].sort(byDate('addedAt')).map((row) => row.id),
       ['c', 'd', 'a', 'b'],
-    );
-  });
-
-  it('groups by month, newest month first, with the undated rows in a group of their own at the end', () => {
-    const groups = dateGroups(rows, 'checkedAt', 'Never checked');
-    assert.deepEqual(
-      groups.map((group) => [group.label, group.anchor, group.rows.map((row) => row.id)]),
-      [
-        ['September 2026', '2026-09', ['a']],
-        ['August 2026', '2026-08', ['b', 'd']],
-        ['Never checked', 'undated', ['c']],
-      ],
-    );
-  });
-
-  it('leaves the undated group out when every row carries the date', () => {
-    const groups = dateGroups(rows, 'addedAt', 'Undated');
-    assert.deepEqual(
-      groups.map((group) => [group.anchor, group.rows.map((row) => row.id)]),
-      [
-        ['2026-09', ['c']],
-        ['2026-08', ['d']],
-        ['2026-07', ['a', 'b']],
-      ],
     );
   });
 });

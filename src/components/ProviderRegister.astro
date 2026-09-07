@@ -2,7 +2,7 @@
 import ProviderList from './ProviderList.astro';
 import ListControls, { type Sort } from './ListControls.astro';
 import { facetIndex, type Facet, type ProviderRow } from '../lib/facets';
-import { dateGroups } from '../lib/rows';
+import { byDate } from '../lib/rows';
 
 interface Props {
   providers: ProviderRow[];
@@ -76,18 +76,16 @@ const letterGroups = [...new Set(providers.map((provider) => letterOf(provider.n
 }));
 
 /*
- * A dated order groups by month where the alphabet groups by initial: the same
- * markup, so find.ts hides an emptied group the same way, and a heading a
- * reader can link to either way. The undated rows are named for what the date
- * means — "never checked" is a claim the register makes on purpose.
+ * A dated order is one list with no headings. Grouping it by month would put a
+ * date over every row, and a register nobody has re-read for a while would say
+ * so in its own subheadings; until records are re-checked on a schedule, the
+ * order is the claim and the date stays on the record page. The single section
+ * keeps the markup find.ts expects, so filtering hides rows the same way.
  */
-const groups =
-  sort === 'updated'
-    ? dateGroups(providers, 'checkedAt', 'Never checked')
-    : sort === 'added'
-      ? dateGroups(providers, 'addedAt', 'Undated')
-      : letterGroups;
 const dated = sort === 'updated' || sort === 'added';
+const groups = dated
+  ? [{ label: '', anchor: 'list', rows: [...providers].sort(byDate(sort === 'updated' ? 'checkedAt' : 'addedAt')) }]
+  : letterGroups;
 ---
 
 {
@@ -120,11 +118,13 @@ const dated = sort === 'updated' || sort === 'added';
   {
     groups.map((group) => (
       <section class:list={['letter-group', { dated }]} id={group.anchor}>
-        <h2>
-          <a class="anchor-link" href={`#${group.anchor}`} aria-label={`Link to ${group.label}`}>
-            {group.label}
-          </a>
-        </h2>
+        {!dated && (
+          <h2>
+            <a class="anchor-link" href={`#${group.anchor}`} aria-label={`Link to ${group.label}`}>
+              {group.label}
+            </a>
+          </h2>
+        )}
         <ProviderList providers={group.rows} />
       </section>
     ))

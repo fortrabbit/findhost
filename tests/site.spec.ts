@@ -68,24 +68,30 @@ test.describe('the one editorial mark', () => {
     const total = await page.locator('[data-find-results] li[data-record]').count();
 
     for (const [path, label] of [
-      ['/updated/', 'Last updated'],
-      ['/added/', 'Last added'],
+      ['/updated/', 'Updated'],
+      ['/added/', 'Added'],
     ]) {
       await page.goto(path);
       await expect(page.locator('.sort-links a[aria-current="page"]')).toHaveText(label);
       expect(await page.locator('[data-find-results] li[data-record]').count()).toBe(total);
 
-      /* Grouped by month, newest first. */
-      const headings = await page.locator('[data-find-results] .letter-group > h2').allInnerTexts();
-      expect(headings[0]).toMatch(/^[A-Z][a-z]+ \d{4}$/);
-      const months = headings.filter((heading) => /^[A-Z][a-z]+ \d{4}$/.test(heading)).map((h) => Date.parse(`1 ${h}`));
-      expect(months).toEqual([...months].sort((a, b) => b - a));
+      /* One list, no subheadings: a heading per month would date the register in its own words. */
+      await expect(page.locator('[data-find-results] h2')).toHaveCount(0);
     }
 
-    /* The records nobody has checked are at the end and say so, not oldest and not missing. */
+    /* Newest check first, and the records nobody has checked at the end rather than counted as oldest. */
     await page.goto('/updated/');
-    const last = page.locator('[data-find-results] .letter-group').last();
-    await expect(last.locator('h2')).toHaveText('Never checked');
+    const rows = page.locator('[data-find-results] li[data-record] .provider-name a');
+    const first = await rows.first().getAttribute('href');
+    const last = await rows.last().getAttribute('href');
+
+    await page.goto(first!);
+    const newest = await page.locator('.record-meta time').first().getAttribute('datetime');
+    expect(newest).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+    expect(Date.parse(newest!)).toBeGreaterThan(Date.now() - 400 * 86_400_000);
+
+    await page.goto(last!);
+    await expect(page.locator('.record-meta')).toContainText('Never checked');
   });
 });
 

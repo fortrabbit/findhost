@@ -444,11 +444,6 @@ html:not(.js) .theme-switch {
   min-width: 0;
 }
 
-/* A month is wider than a letter, and the column is the widest label it holds. */
-.letter-group.dated > h2 {
-  flex-basis: 9rem;
-}
-
 /* Back to stacked where 3.5rem is a tenth of the width rather than a margin. */
 @media (max-width: 40rem) {
   .letter-group {
