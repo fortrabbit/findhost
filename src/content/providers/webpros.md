@@ -4,7 +4,7 @@ name: WebPros
 urls:
   home: https://www.webpros.com
 description: The owner of cPanel and Plesk, which sells no hosting itself.
-referringSubnets: { now: 670, before: 657 }
+referringSubnets: { now: 678, before: 674 }
 status: unlisted
 checkedAt: 2026-08-07
 figure:
@@ -14,7 +14,7 @@ figure:
   text: The cPanel and Plesk company.
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

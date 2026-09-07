@@ -8,12 +8,12 @@ category:
   - iaas
 description: A shared hosting and IaaS provider in Sweden.
 hqCountry: SE
-referringSubnets: { now: 503, before: 502 }
+referringSubnets: { now: 491, before: 506 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

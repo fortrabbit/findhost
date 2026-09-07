@@ -48,7 +48,7 @@ regions:
   - JP
   - KR
   - AU
-referringSubnets: { now: 420, before: 424 }
+referringSubnets: { now: 419, before: 414 }
 status: active
 hqCountry: US
 testDomain: included
@@ -57,7 +57,7 @@ apiAvailable: public
 mcpServer: official
 checkedAt: 2026-08-12
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: testDomain, url: 'https://docs.sevalla.com/applications/domains/', checkedAt: 2026-08-12 }
   - { field: staging, url: 'https://sevalla.com/pricing/', checkedAt: 2026-08-12 }
   - { field: hqCountry, url: 'https://sevalla.com', checkedAt: 2026-08-09 }

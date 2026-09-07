@@ -4,7 +4,7 @@ name: Deno Land Inc.
 urls:
   home: https://deno.com
 description: The company behind the Deno runtime, which also operates Deno Deploy.
-referringSubnets: { now: 2370, before: 2376 }
+referringSubnets: { now: 2352, before: 2341 }
 status: unlisted
 checkedAt: 2026-08-07
 figure:
@@ -14,7 +14,7 @@ figure:
   text: Deno's maker, host to Deno Deploy.
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

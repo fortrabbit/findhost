@@ -31,11 +31,11 @@ useCases:
 audience:
   - solo
   - smb
-referringSubnets: { now: 13931, before: 14195 }
+referringSubnets: { now: 13034, before: 13091 }
 status: active
 checkedAt: 2026-08-08
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: category, url: 'https://www.one.com/en-gb/plans-pricing/', checkedAt: 2026-08-08 }
   - { field: software, url: 'https://www.one.com/en-gb/plans-pricing/', checkedAt: 2026-08-08 }
   - { field: currencies, url: 'https://www.one.com/en-gb/plans-pricing/', checkedAt: 2026-08-08 }

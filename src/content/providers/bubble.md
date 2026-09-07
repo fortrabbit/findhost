@@ -22,11 +22,11 @@ billingPeriods:
   - yearly
 billingTiming: advance
 exitWithin: a-month
-referringSubnets: { now: 3919, before: 3915 }
+referringSubnets: { now: 3844, before: 3872 }
 status: active
 checkedAt: 2026-08-08
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: regions, url: 'https://manual.bubble.io/help-guides/optimizing-an-application/hosting-and-scaling/how-bubble-hosting-works', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://manual.bubble.io/account-and-marketplace/account-and-billing/pricing-plans', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://manual.bubble.io/account-and-marketplace/account-and-billing/pricing-plans', checkedAt: 2026-08-02 }

@@ -13,10 +13,10 @@ hqCountry: IL
 ownership: public
 whoManagesOs: managed
 sshAccess: none
-referringSubnets: { now: 37230, before: 37197 }
+referringSubnets: { now: 36849, before: 36805 }
 checkedAt: 2026-08-08
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: founded, url: 'https://www.wix.com/about/us', checkedAt: 2026-08-01 }
   - { field: ownership, url: 'https://investors.wix.com/', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://www.wix.com/about/terms-of-use', checkedAt: 2026-08-01 }

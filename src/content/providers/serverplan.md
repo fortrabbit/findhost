@@ -8,12 +8,12 @@ category:
   - vps
 description: A shared hosting and VPS provider in Italy.
 hqCountry: IT
-referringSubnets: { now: 505, before: 493 }
+referringSubnets: { now: 484, before: 488 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

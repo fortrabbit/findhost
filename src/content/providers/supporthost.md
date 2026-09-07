@@ -7,12 +7,12 @@ category:
   - shared-hosting
 description: A shared hosting provider in Italy.
 hqCountry: IT
-referringSubnets: { now: 446, before: 458 }
+referringSubnets: { now: 441, before: 451 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

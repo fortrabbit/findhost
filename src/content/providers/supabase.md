@@ -63,10 +63,10 @@ social:
 cdnIncluded: included
 staging: included
 collaboration: team
-referringSubnets: { now: 5235, before: 5243 }
+referringSubnets: { now: 5338, before: 5328 }
 checkedAt: 2026-08-12
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: regions, url: 'https://supabase.com/docs/guides/platform/regions', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://supabase.com/pricing', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://supabase.com/pricing', checkedAt: 2026-08-02 }

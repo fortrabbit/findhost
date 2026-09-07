@@ -3,12 +3,12 @@ id: njalla
 name: Njalla
 urls:
   home: https://njal.la
-referringSubnets: { now: 880, before: 895 }
+referringSubnets: { now: 966, before: 944 }
 status: draft
 checkedAt: 2026-08-14
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

@@ -8,12 +8,12 @@ category:
   - vps
 description: A shared hosting and VPS provider in Russia.
 hqCountry: RU
-referringSubnets: { now: 5910, before: 5966 }
+referringSubnets: { now: 5821, before: 5850 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

@@ -8,12 +8,12 @@ category:
   - vps
 description: A shared hosting and VPS provider in Czechia.
 hqCountry: CZ
-referringSubnets: { now: 1117, before: 1135 }
+referringSubnets: { now: 1077, before: 1082 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

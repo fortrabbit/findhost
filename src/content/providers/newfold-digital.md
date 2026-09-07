@@ -4,7 +4,7 @@ name: Newfold Digital
 urls:
   home: https://newfold.com
 description: The holding company for Bluehost, HostGator and Network Solutions.
-referringSubnets: { now: 1947, before: 1990 }
+referringSubnets: { now: 1874, before: 1874 }
 status: unlisted
 checkedAt: 2026-08-07
 figure:
@@ -14,7 +14,7 @@ figure:
   text: Holding company for Bluehost and HostGator.
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

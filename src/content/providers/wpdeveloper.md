@@ -4,7 +4,7 @@ name: WPDeveloper
 urls:
   home: https://wpdeveloper.com
 description: A WordPress plugin company and the owner of xCloud.
-referringSubnets: { now: 611, before: 620 }
+referringSubnets: { now: 614, before: 618 }
 status: unlisted
 checkedAt: 2026-08-07
 figure:
@@ -14,7 +14,7 @@ figure:
   text: WordPress plugins, xCloud hosting division.
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

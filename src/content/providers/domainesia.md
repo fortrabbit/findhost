@@ -10,12 +10,12 @@ category:
   - bare-metal
 description: A shared hosting, IaaS, VPS and bare metal provider in Indonesia.
 hqCountry: ID
-referringSubnets: { now: 756, before: 764 }
+referringSubnets: { now: 759, before: 771 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

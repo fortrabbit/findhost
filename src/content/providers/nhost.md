@@ -35,7 +35,7 @@ entryPrice: { amount: 25, currency: USD, period: month }
 freeTier: permanent
 apiAvailable: public
 cliTool: official
-referringSubnets: { now: 437, before: 434 }
+referringSubnets: { now: 415, before: 419 }
 status: active
 hqCountry: PT
 ownership: vc-backed
@@ -44,7 +44,7 @@ domainRegistration: paid-addon
 collaboration: team
 checkedAt: 2026-08-12
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: hqCountry, url: 'https://nhost.io/about', checkedAt: 2026-08-09 }
   - { field: entryPrice, url: 'https://nhost.io/pricing', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://nhost.io/pricing', checkedAt: 2026-08-02 }

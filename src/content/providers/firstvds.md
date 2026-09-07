@@ -7,12 +7,12 @@ category:
   - vps
 description: A VPS provider in Russia.
 hqCountry: RU
-referringSubnets: { now: 975, before: 991 }
+referringSubnets: { now: 988, before: 985 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

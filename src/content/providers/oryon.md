@@ -9,12 +9,12 @@ category:
   - iaas
 description: A shared hosting, VPS and IaaS provider in Singapore.
 hqCountry: SG
-referringSubnets: { now: 298, before: 304 }
+referringSubnets: { now: 308, before: 310 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

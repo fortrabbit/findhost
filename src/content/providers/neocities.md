@@ -40,11 +40,11 @@ useCases:
 supportChannels:
   - forum
 supportHours: community-only
-referringSubnets: { now: 10809, before: 10805 }
+referringSubnets: { now: 10764, before: 10754 }
 status: active
 checkedAt: 2026-08-12
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: category, url: 'https://neocities.org', checkedAt: 2026-08-12 }
   - { field: hqCountry, url: 'https://neocities.org', checkedAt: 2026-08-12 }
   - { field: ownership, url: 'https://neocities.org', checkedAt: 2026-08-12 }

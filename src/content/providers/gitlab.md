@@ -21,11 +21,11 @@ freeTier: permanent
 collaboration: team
 apiAvailable: public
 cliTool: official
-referringSubnets: { now: 47785, before: 47853 }
+referringSubnets: { now: 47769, before: 47642 }
 status: active
 checkedAt: 2026-08-13
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: category, url: 'https://about.gitlab.com/pricing/', checkedAt: 2026-08-13 }
   - { field: pricingModel, url: 'https://about.gitlab.com/pricing/', checkedAt: 2026-08-13 }
   - { field: currencies, url: 'https://about.gitlab.com/pricing/', checkedAt: 2026-08-13 }

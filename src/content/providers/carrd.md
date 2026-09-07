@@ -8,12 +8,12 @@ category:
   - vanity-hosting
 description: A low-code and vanity hosting provider in the United States.
 hqCountry: US
-referringSubnets: { now: 12828, before: 12867 }
+referringSubnets: { now: 12791, before: 12811 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

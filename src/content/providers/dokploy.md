@@ -52,11 +52,11 @@ collaboration: team
 social:
   github: https://github.com/dokploy/dokploy
   x: https://x.com/getdokploy
-referringSubnets: { now: 629, before: 636 }
+referringSubnets: { now: 633, before: 646 }
 status: active
 checkedAt: 2026-08-12
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: entryPrice, url: 'https://dokploy.com/pricing', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://dokploy.com/pricing', checkedAt: 2026-08-01 }
   - { field: priceTo, url: 'https://dokploy.com/pricing', checkedAt: 2026-08-02 }

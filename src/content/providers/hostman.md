@@ -8,12 +8,12 @@ category:
   - vps
 description: A PaaS and VPS provider in the United States.
 hqCountry: US
-referringSubnets: { now: 403, before: 404 }
+referringSubnets: { now: 405, before: 409 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

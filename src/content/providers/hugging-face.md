@@ -43,13 +43,13 @@ freeTier: permanent
 persistentStorage: false
 apiAvailable: public
 cliTool: official
-referringSubnets: { now: 22895, before: 22877 }
+referringSubnets: { now: 23189, before: 23060 }
 status: active
 testDomain: included
 collaboration: team
 checkedAt: 2026-08-12
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: priceFrom, url: 'https://huggingface.co/pricing', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://huggingface.co/pricing', checkedAt: 2026-08-02 }
   - { field: currencies, url: 'https://huggingface.co/pricing', checkedAt: 2026-08-02 }

@@ -5,12 +5,12 @@ urls:
   home: https://www.pikapods.com
 description: Managed instances of open-source applications, billed by the resources each one is given, with a share of the revenue passed to the projects.
 hqCountry: MT
-referringSubnets: { now: 559, before: 562 }
+referringSubnets: { now: 557, before: 565 }
 status: out-of-scope
 criterion: 1
 checkedAt: 2026-08-14
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: status, url: 'https://www.pikapods.com', checkedAt: 2026-08-14 }
 figure:
   emoji: 🫙

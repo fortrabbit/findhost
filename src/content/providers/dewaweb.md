@@ -8,12 +8,12 @@ category:
   - vps
 description: A shared hosting and VPS provider in Indonesia.
 hqCountry: ID
-referringSubnets: { now: 604, before: 607 }
+referringSubnets: { now: 580, before: 581 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

@@ -88,11 +88,11 @@ cliTool: official
 mcpServer: official
 greenWebId: 1315
 sla: true
-referringSubnets: { now: 443, before: 441 }
+referringSubnets: { now: 445, before: 449 }
 status: active
 checkedAt: 2026-08-01
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1315', checkedAt: 2026-08-10 }
   - { field: headcount, url: 'https://www.fortrabbit.com/us/team', checkedAt: 2026-08-08 }
   - { field: software, url: 'https://www.fortrabbit.com/software/grav-cms', checkedAt: 2026-08-09 }

@@ -31,7 +31,7 @@ runtimes:
 managedDatabases:
   - mysql
   - postgres
-referringSubnets: { now: 3716, before: 3710 }
+referringSubnets: { now: 3578, before: 3617 }
 status: active
 domainRegistration: included
 emailHosting: included
@@ -40,7 +40,7 @@ testDomain: included
 collaboration: team
 checkedAt: 2026-08-12
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: supportHours, url: 'https://www.hosting.com/web-hosting/', checkedAt: 2026-08-01 }
   - { field: supportChannels, url: 'https://www.hosting.com/web-hosting/', checkedAt: 2026-08-01 }
   - { field: runtimes, url: 'https://www.hosting.com/web-hosting/', checkedAt: 2026-08-01 }

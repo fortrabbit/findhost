@@ -50,11 +50,11 @@ domainRegistration: included
 dnsHosting: included
 emailHosting: included
 staging: paid-addon
-referringSubnets: { now: 3926, before: 3947 }
+referringSubnets: { now: 3873, before: 3871 }
 status: active
 checkedAt: 2026-08-12
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: hqCountry, url: 'https://www.nazwa.pl', checkedAt: 2026-08-12 }
   - { field: ownership, url: 'https://www.nazwa.pl', checkedAt: 2026-08-12 }
   - { field: runtimes, url: 'https://www.nazwa.pl', checkedAt: 2026-08-12 }

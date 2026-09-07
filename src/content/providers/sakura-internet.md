@@ -42,11 +42,11 @@ supportChannels:
   - forum
 supportHours: 24-7
 supportTiering: all-plans
-referringSubnets: { now: 2469, before: 2489 }
+referringSubnets: { now: 2463, before: 2412 }
 status: active
 checkedAt: 2026-08-12
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: category, url: 'https://sakura.ad.jp/', checkedAt: 2026-08-12 }
   - { field: infraContract, url: 'https://sakura.ad.jp/', checkedAt: 2026-08-12 }
   - { field: whoManagesOs, url: 'https://help.sakura.ad.jp', checkedAt: 2026-08-12 }

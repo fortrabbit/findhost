@@ -53,12 +53,12 @@ regions:
   - GB
 supportChannels:
   - email
-referringSubnets: { now: 903, before: 911 }
+referringSubnets: { now: 902, before: 910 }
 status: active
 checkedAt: 2026-08-09
 apiAvailable: public
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1333', checkedAt: 2026-08-10 }
   - { field: regions, url: 'https://www.mythic-beasts.com/order/hosting', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://www.mythic-beasts.com/order/hosting', checkedAt: 2026-08-01 }

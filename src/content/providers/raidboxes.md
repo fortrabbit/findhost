@@ -33,11 +33,11 @@ audience:
   - smb
 favorite: true
 favoriteNote: Managed WordPress without the upsell maze.
-referringSubnets: { now: 1116, before: 1115 }
+referringSubnets: { now: 1104, before: 1109 }
 status: active
 checkedAt: 2026-08-07
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1466', checkedAt: 2026-08-10 }
   - { field: category, url: 'https://raidboxes.io', checkedAt: 2026-08-07 }
   - { field: software, url: 'https://raidboxes.io', checkedAt: 2026-08-07 }

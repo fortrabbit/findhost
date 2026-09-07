@@ -53,12 +53,12 @@ regions:
   - JP
 apiAvailable: public
 cliTool: official
-referringSubnets: { now: 701, before: 693 }
+referringSubnets: { now: 690, before: 682 }
 status: active
 collaboration: team
 checkedAt: 2026-08-12
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: priceFrom, url: 'https://www.koyeb.com/pricing', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://www.koyeb.com/pricing', checkedAt: 2026-08-02 }
   - { field: currencies, url: 'https://www.koyeb.com/pricing', checkedAt: 2026-08-02 }

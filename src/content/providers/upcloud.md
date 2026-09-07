@@ -32,10 +32,10 @@ regions:
   - US
 social:
   github: https://github.com/UpCloudLtd
-referringSubnets: { now: 1211, before: 1205 }
+referringSubnets: { now: 1189, before: 1200 }
 checkedAt: 2026-08-08
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1416', checkedAt: 2026-08-10 }
   - { field: regions, url: 'https://status.upcloud.com/', checkedAt: 2026-08-01 }
   - { field: apiAvailable, url: 'https://developers.upcloud.com/1.3/', checkedAt: 2026-08-01 }

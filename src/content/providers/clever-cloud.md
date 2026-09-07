@@ -74,11 +74,11 @@ iacSupport:
 social:
   github: https://github.com/CleverCloud
 collaboration: team
-referringSubnets: { now: 732, before: 747 }
+referringSubnets: { now: 769, before: 750 }
 status: active
 checkedAt: 2026-08-12
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: priceFrom, url: 'https://clever.cloud/pricing/', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://clever.cloud/pricing/', checkedAt: 2026-08-02 }
   - { field: currencies, url: 'https://clever.cloud/pricing/', checkedAt: 2026-08-02 }

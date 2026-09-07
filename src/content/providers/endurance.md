@@ -4,7 +4,7 @@ name: Endurance International Group
 urls:
   home: https://www.endurance.com
 description: The group that assembled Bluehost, HostGator and iPage before becoming Newfold Digital.
-referringSubnets: { now: 528, before: 527 }
+referringSubnets: { now: 524, before: 516 }
 status: unlisted
 checkedAt: 2026-08-06
 figure:
@@ -14,7 +14,7 @@ figure:
   text: Holds Bluehost, HostGator, and others.
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

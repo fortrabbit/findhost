@@ -6,11 +6,11 @@ urls:
 hqCountry: GB
 ownership: subsidiary
 parent: your-online
-referringSubnets: { now: 479, before: 494 }
+referringSubnets: { now: 475, before: 475 }
 status: draft
 checkedAt: 2026-08-07
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: parent, url: 'https://your.online/brands', checkedAt: 2026-08-21 }
   - { field: ownership, url: 'https://your.online/brands', checkedAt: 2026-08-21 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1454', checkedAt: 2026-08-10 }

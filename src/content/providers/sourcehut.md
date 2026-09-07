@@ -17,11 +17,11 @@ pricingModel: fixed-tier
 currencies:
   - EUR
   - USD
-referringSubnets: { now: 1141, before: 1142 }
+referringSubnets: { now: 1152, before: 1133 }
 status: active
 checkedAt: 2026-08-13
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: category, url: 'https://sourcehut.org/pricing/', checkedAt: 2026-08-13 }
   - { field: pricingModel, url: 'https://sourcehut.org/pricing/', checkedAt: 2026-08-13 }
   - { field: currencies, url: 'https://sourcehut.org/pricing/', checkedAt: 2026-08-13 }

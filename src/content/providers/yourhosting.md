@@ -9,11 +9,11 @@ description: A shared hosting provider in the Netherlands.
 hqCountry: NL
 ownership: subsidiary
 parent: your-online
-referringSubnets: { now: 3425, before: 3540 }
+referringSubnets: { now: 3272, before: 3327 }
 status: draft
 checkedAt: 2026-08-12
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: parent, url: 'https://your.online/brands', checkedAt: 2026-08-21 }
   - { field: ownership, url: 'https://your.online/brands', checkedAt: 2026-08-21 }
 ai: authored

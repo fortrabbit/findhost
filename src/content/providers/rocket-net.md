@@ -44,12 +44,12 @@ supportChannels:
   - email
   - phone
 supportHours: 24-7
-referringSubnets: { now: 577, before: 584 }
+referringSubnets: { now: 580, before: 574 }
 status: active
 checkedAt: 2026-08-09
 mcpServer: official
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: parent, url: 'https://hosting.com/about/mergers-and-acquisitions/', checkedAt: 2026-08-21 }
   - { field: entryPrice, url: 'https://rocket.net/pricing/', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://rocket.net/pricing/', checkedAt: 2026-08-02 }

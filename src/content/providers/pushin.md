@@ -28,6 +28,7 @@ gdprDpa: unclear
 collaboration: team
 apiAvailable: public
 cliTool: official
+referringSubnets: null
 status: active
 checkedAt: 2026-09-07
 sources:

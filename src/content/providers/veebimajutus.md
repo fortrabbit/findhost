@@ -7,12 +7,12 @@ category:
   - shared-hosting
 description: A shared hosting provider in Estonia.
 hqCountry: EE
-referringSubnets: { now: 486, before: 509 }
+referringSubnets: { now: 498, before: 490 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

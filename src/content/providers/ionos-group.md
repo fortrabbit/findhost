@@ -4,7 +4,7 @@ name: IONOS Group SE
 urls:
   home: https://www.ionos-group.com
 description: The listed holding company beneath which the IONOS brands sit, including Fasthosts and STRATO.
-referringSubnets: { now: 864, before: 883 }
+referringSubnets: { now: 842, before: 855 }
 status: unlisted
 checkedAt: 2026-08-07
 figure:
@@ -14,7 +14,7 @@ figure:
   text: Holding many European hosting brands.
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

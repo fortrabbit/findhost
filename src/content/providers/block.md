@@ -4,7 +4,7 @@ name: Block, Inc.
 urls:
   home: https://block.xyz
 description: The payments company formerly called Square, and the owner of Weebly.
-referringSubnets: { now: 1870, before: 1891 }
+referringSubnets: { now: 1842, before: 1860 }
 status: unlisted
 checkedAt: 2026-08-07
 figure:
@@ -14,7 +14,7 @@ figure:
   text: Payments company, Weebly website builder owner.
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

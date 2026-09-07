@@ -3,12 +3,12 @@ id: timme-hosting
 name: Timme Hosting
 urls:
   home: https://timmehosting.de
-referringSubnets: { now: 513, before: 515 }
+referringSubnets: { now: 512, before: 511 }
 status: draft
 checkedAt: 2026-07-31
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

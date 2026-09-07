@@ -49,10 +49,10 @@ social:
   linkedin: https://www.linkedin.com/company/webdock-io/
   facebook: https://www.facebook.com/webdockio
   youtube: https://www.youtube.com/@webdock
-referringSubnets: { now: 534, before: 536 }
+referringSubnets: { now: 535, before: 541 }
 checkedAt: 2026-08-01
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: regions, url: 'https://webdock.io/en/pricing', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://webdock.io/en/pricing', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://webdock.io/en/pricing', checkedAt: 2026-08-01 }

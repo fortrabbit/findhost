@@ -37,11 +37,11 @@ regions:
   - GB
   - AU
 supportHours: 24-7
-referringSubnets: { now: 2885, before: 2900 }
+referringSubnets: { now: 2834, before: 2856 }
 status: active
 checkedAt: 2026-08-01
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: regions, url: 'https://www.liquidweb.com/data-centers/', checkedAt: 2026-08-01 }
   - { field: supportHours, url: 'https://www.liquidweb.com/products/', checkedAt: 2026-07-31 }
   - { field: software, url: 'https://www.liquidweb.com/products/', checkedAt: 2026-07-31 }

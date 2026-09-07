@@ -44,11 +44,11 @@ billingTiming: arrears
 entryPrice: { amount: 11, currency: USD, period: month }
 freeTier: trial
 apiAvailable: public
-referringSubnets: { now: 5095, before: 5081 }
+referringSubnets: { now: 4994, before: 4979 }
 status: active
 checkedAt: 2026-08-09
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: parent, url: 'https://www.digitalocean.com/about', checkedAt: 2026-08-21 }
   - { field: entryPrice, url: 'https://www.cloudways.com/en/pricing.php', checkedAt: 2026-08-01 }
   - { field: runsOn, url: 'https://www.cloudways.com/en/pricing.php', checkedAt: 2026-07-31 }

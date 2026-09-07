@@ -7,12 +7,12 @@ category:
   - serverless
 description: A serverless provider in the United States.
 hqCountry: US
-referringSubnets: { now: 725, before: 732 }
+referringSubnets: { now: 729, before: 706 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

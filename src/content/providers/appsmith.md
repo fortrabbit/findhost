@@ -7,12 +7,12 @@ category:
   - lcnc
 description: A low-code and no-code site builder in India.
 hqCountry: IN
-referringSubnets: { now: 1145, before: 1140 }
+referringSubnets: { now: 1154, before: 1141 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

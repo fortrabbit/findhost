@@ -61,10 +61,10 @@ apiAvailable: public
 domainRegistration: paid-addon
 dnsHosting: included
 emailHosting: included
-referringSubnets: { now: 2533, before: 2533 }
+referringSubnets: { now: 2558, before: 2553 }
 checkedAt: 2026-08-12
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: parent, url: 'https://your.online/brands', checkedAt: 2026-08-21 }
   - { field: ownership, url: 'https://your.online/brands', checkedAt: 2026-08-21 }
   - { field: regions, url: 'https://www.zone.ee/en/about/', checkedAt: 2026-08-01 }

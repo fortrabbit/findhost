@@ -5,7 +5,7 @@ urls:
   home: https://automattic.com
 description: The company behind WordPress.com, Pressable and WooCommerce, which sells no hosting under its own name.
 hqCountry: US
-referringSubnets: { now: 24226, before: 24334 }
+referringSubnets: { now: 23958, before: 23895 }
 status: unlisted
 checkedAt: 2026-08-12
 figure:
@@ -15,7 +15,7 @@ figure:
   text: Owns the WordPress hosts, is not one.
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

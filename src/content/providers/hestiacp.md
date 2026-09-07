@@ -25,14 +25,14 @@ pricingModel: fixed-tier
 freeTier: permanent
 supportChannels:
   - forum
-referringSubnets: { now: 636, before: 636 }
+referringSubnets: { now: 636, before: 638 }
 status: active
 dnsHosting: included
 emailHosting: included
 collaboration: team
 checkedAt: 2026-08-12
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: runtimes, url: 'https://hestiacp.com/docs/', checkedAt: 2026-08-12 }
   - { field: managedDatabases, url: 'https://hestiacp.com/docs/', checkedAt: 2026-08-12 }
   - { field: freeTier, url: 'https://hestiacp.com', checkedAt: 2026-08-12 }

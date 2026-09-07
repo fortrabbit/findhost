@@ -70,11 +70,11 @@ staging: included
 collaboration: team
 favorite: true
 favoriteNote: Made deploying from a commit ordinary. Everyone else copied it.
-referringSubnets: { now: 7466, before: 7482 }
+referringSubnets: { now: 7403, before: 7413 }
 status: active
 checkedAt: 2026-08-12
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: pricingModel, url: 'https://www.netlify.com/pricing/', checkedAt: 2026-07-31 }
   - { field: priceFrom, url: 'https://www.netlify.com/pricing/', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://www.netlify.com/changelog/2026-07-14-pro-plan-credit-tiers/', checkedAt: 2026-08-02 }

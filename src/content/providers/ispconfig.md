@@ -7,12 +7,12 @@ category:
   - server-management
 description: Server management software in Germany.
 hqCountry: DE
-referringSubnets: { now: 15950, before: 16089 }
+referringSubnets: { now: 15843, before: 15843 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

@@ -7,6 +7,7 @@ description: A WordPress plugin company from Dhaka and the owner of FlyWP.
 founded: 2012
 hqCountry: BD
 headcount: 51-250
+referringSubnets: { now: 1139, before: 1155 }
 status: unlisted
 checkedAt: 2026-09-07
 figure:
@@ -16,6 +17,7 @@ figure:
   text: WordPress plugins, with a hosting panel on the side.
 ai: authored
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: founded, url: 'https://wedevs.com/about/', checkedAt: 2026-09-07 }
   - { field: hqCountry, url: 'https://wedevs.com/about/', checkedAt: 2026-09-07 }
   - { field: headcount, url: 'https://wedevs.com/about/', checkedAt: 2026-09-07 }

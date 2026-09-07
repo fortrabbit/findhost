@@ -8,12 +8,12 @@ category:
   - paas
 description: A IaaS and PaaS provider in China.
 hqCountry: CN
-referringSubnets: { now: 6664, before: 6657 }
+referringSubnets: { now: 6607, before: 6665 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

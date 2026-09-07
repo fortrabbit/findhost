@@ -3,12 +3,12 @@ id: maxcluster
 name: maxcluster
 urls:
   home: https://www.maxcluster.de
-referringSubnets: { now: 319, before: 348 }
+referringSubnets: { now: 337, before: 333 }
 status: draft
 checkedAt: 2026-07-31
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

@@ -7,12 +7,12 @@ category:
   - caas
 description: A CaaS provider in Germany.
 hqCountry: DE
-referringSubnets: { now: 426, before: 439 }
+referringSubnets: { now: 429, before: 423 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

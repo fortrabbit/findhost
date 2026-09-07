@@ -5,12 +5,12 @@ urls:
   home: https://www.df.eu
 parent: godaddy
 hqCountry: DE
-referringSubnets: { now: 1961, before: 2012 }
+referringSubnets: { now: 1889, before: 1889 }
 status: draft
 checkedAt: 2026-08-07
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

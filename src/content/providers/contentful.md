@@ -3,13 +3,13 @@ id: contentful
 name: Contentful
 urls:
   home: https://www.contentful.com
-referringSubnets: { now: 2974, before: 3004 }
+referringSubnets: { now: 2946, before: 2950 }
 status: out-of-scope
 criterion: 1
 checkedAt: 2026-08-06
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

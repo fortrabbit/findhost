@@ -3,13 +3,13 @@ id: anexia
 name: Anexia
 urls:
   home: https://www.anexia.com
-referringSubnets: { now: 557, before: 571 }
+referringSubnets: { now: 550, before: 549 }
 status: draft
 checkedAt: 2026-08-07
 ai: authored
 greenWebId: 1322
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1322', checkedAt: 2026-08-10 }
 ---
 

@@ -42,6 +42,7 @@ social:
   discord: https://discord.gg/uZeeHZZnm5
   x: https://x.com/vitodeploy
 ownership: independent
+referringSubnets: null
 status: active
 checkedAt: 2026-09-04
 sources:

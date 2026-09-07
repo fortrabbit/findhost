@@ -9,12 +9,12 @@ category:
   - paas
 description: A shared hosting, VPS and PaaS provider in Chile.
 hqCountry: CL
-referringSubnets: { now: 312, before: 319 }
+referringSubnets: { now: 309, before: 303 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

@@ -24,11 +24,11 @@ audience:
   - smb
 apiAvailable: none
 cliTool: none
-referringSubnets: { now: 1457, before: 1482 }
+referringSubnets: { now: 1447, before: 1462 }
 status: active
 checkedAt: 2026-07-31
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: ownership, url: 'https://www.locaweb.com.br', checkedAt: 2026-07-31 }
   - { field: sshAccess, url: 'https://www.locaweb.com.br', checkedAt: 2026-07-31 }
   - { field: currencies, url: 'https://www.locaweb.com.br', checkedAt: 2026-07-31 }

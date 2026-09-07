@@ -4,7 +4,7 @@ name: A1 Telekom Austria Group
 urls:
   home: https://www.a1.group
 description: An Austrian telecoms group and the owner of Exoscale.
-referringSubnets: { now: 532, before: 534 }
+referringSubnets: { now: 518, before: 513 }
 status: unlisted
 checkedAt: 2026-08-07
 figure:
@@ -14,7 +14,7 @@ figure:
   text: Telecoms conglomerate, Exoscale cloud owner.
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

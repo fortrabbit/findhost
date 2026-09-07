@@ -3,13 +3,13 @@ id: bearstech
 name: Bearstech
 urls:
   home: https://bearstech.com
-referringSubnets: { now: 342, before: 364 }
+referringSubnets: { now: 356, before: 352 }
 status: out-of-scope
 criterion: 3
 checkedAt: 2026-07-31
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

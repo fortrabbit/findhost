@@ -3,13 +3,13 @@ id: niagahoster
 name: Niagahoster
 urls:
   home: https://www.niagahoster.co.id
-referringSubnets: { now: 877, before: 892 }
+referringSubnets: { now: 846, before: 863 }
 status: out-of-scope
 criterion: 2
 checkedAt: 2026-07-31
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

@@ -9,12 +9,12 @@ category:
   - bare-metal
 description: A shared hosting, VPS and bare metal provider in Pakistan.
 hqCountry: PK
-referringSubnets: { now: 267, before: 284 }
+referringSubnets: { now: 285, before: 283 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

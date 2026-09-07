@@ -42,10 +42,10 @@ regions:
 energyClaim: annual-matched
 certifications:
   - iso-27001
-referringSubnets: { now: 672, before: 668 }
+referringSubnets: { now: 646, before: 651 }
 checkedAt: 2026-08-01
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1205', checkedAt: 2026-08-10 }
   - { field: regions, url: 'https://1984.hosting/', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://1984.hosting/product/pricelist/', checkedAt: 2026-08-02 }

@@ -41,11 +41,11 @@ exitWithin: a-month
 freeTier: permanent
 apiAvailable: public
 cliTool: official
-referringSubnets: { now: 774, before: 769 }
+referringSubnets: { now: 761, before: 746 }
 status: active
 checkedAt: 2026-08-01
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: priceFrom, url: 'https://encore.dev/pricing', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://encore.dev/pricing', checkedAt: 2026-08-02 }
   - { field: currencies, url: 'https://encore.dev/pricing', checkedAt: 2026-08-02 }

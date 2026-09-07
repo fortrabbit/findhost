@@ -8,12 +8,12 @@ category:
   - paas
 description: A serverless and PaaS provider in the United States.
 hqCountry: US
-referringSubnets: { now: 928, before: 936 }
+referringSubnets: { now: 938, before: 938 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

@@ -7,12 +7,12 @@ category:
   - iaas
 description: A IaaS provider in Iceland.
 hqCountry: IS
-referringSubnets: { now: 346, before: 336 }
+referringSubnets: { now: 353, before: 343 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

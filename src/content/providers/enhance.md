@@ -48,11 +48,11 @@ supportChannels:
 supportHours: business-hours
 supportTiering: all-plans
 apiAvailable: public
-referringSubnets: { now: 357, before: 369 }
+referringSubnets: { now: 358, before: 362 }
 status: active
 checkedAt: 2026-09-07
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: founded, url: 'https://find-and-update.company-information.service.gov.uk/company/11757770', checkedAt: 2026-09-07 }
   - { field: hqCountry, url: 'https://enhance.com/terms', checkedAt: 2026-09-07 }
   - { field: infraContract, url: 'https://enhance.com/faqs', checkedAt: 2026-09-07 }

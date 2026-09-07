@@ -63,11 +63,11 @@ supportChannels:
 supportHours: 24-7
 apiAvailable: public
 sla: true
-referringSubnets: { now: 20986, before: 21499 }
+referringSubnets: { now: 20252, before: 20377 }
 status: active
 checkedAt: 2026-08-01
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: supportHours, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-08-01 }
   - { field: supportChannels, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-08-02 }

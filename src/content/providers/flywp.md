@@ -62,9 +62,11 @@ supportTiering: paid-upgrade
 collaboration: team
 apiAvailable: public
 cliTool: official
+referringSubnets: { now: 249, before: 250 }
 status: active
 checkedAt: 2026-09-07
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: founded, url: 'https://flywp.com/blog/11359/flywp-year-in-review-2024/', checkedAt: 2026-09-07 }
   - { field: hqCountry, url: 'https://flywp.com/terms-of-service/', checkedAt: 2026-09-07 }
   - { field: ownership, url: 'https://wedevs.com/about/', checkedAt: 2026-09-07 }

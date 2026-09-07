@@ -6,12 +6,12 @@ urls:
 category:
   - static
 description: A static hosting provider.
-referringSubnets: { now: 773, before: 779 }
+referringSubnets: { now: 781, before: 772 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

@@ -7,12 +7,12 @@ category:
   - shared-hosting
 description: A shared hosting provider in Denmark.
 hqCountry: DK
-referringSubnets: { now: 247, before: 243 }
+referringSubnets: { now: 253, before: 253 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

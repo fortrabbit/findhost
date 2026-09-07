@@ -7,12 +7,12 @@ category:
   - shared-hosting
 description: A shared hosting provider in Ireland.
 hqCountry: IE
-referringSubnets: { now: 364, before: 379 }
+referringSubnets: { now: 365, before: 366 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

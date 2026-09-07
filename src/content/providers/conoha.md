@@ -7,12 +7,12 @@ category:
   - vps
 description: A VPS provider in Japan.
 hqCountry: JP
-referringSubnets: { now: 1001, before: 988 }
+referringSubnets: { now: 976, before: 974 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

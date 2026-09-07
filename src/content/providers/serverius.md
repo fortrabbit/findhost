@@ -8,12 +8,12 @@ category:
   - bare-metal
 description: A IaaS and bare metal provider in the Netherlands.
 hqCountry: NL
-referringSubnets: { now: 277, before: 284 }
+referringSubnets: { now: 295, before: 276 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

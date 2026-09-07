@@ -7,12 +7,12 @@ category:
   - shared-hosting
 description: A shared hosting provider in Spain.
 hqCountry: ES
-referringSubnets: { now: 2182, before: 2253 }
+referringSubnets: { now: 2046, before: 2108 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

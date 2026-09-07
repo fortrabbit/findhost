@@ -50,12 +50,13 @@ billingPeriods:
 billingTiming: arrears
 entryPrice: { amount: 6, currency: USD, period: month }
 freeTier: permanent
-referringSubnets: null
+referringSubnets: { now: 230, before: 229 }
 status: active
 checkedAt: 2026-08-12
 staging: included
 collaboration: team
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: entryPrice, url: 'https://qoddi.com/pricing/', checkedAt: 2026-08-01 }
   - { field: staging, url: 'https://qoddi.com/pricing/', checkedAt: 2026-08-12 }
   - { field: collaboration, url: 'https://qoddi.com/pricing/', checkedAt: 2026-08-12 }

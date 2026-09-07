@@ -66,7 +66,7 @@ dnsHosting: paid-addon
 emailHosting: paid-addon
 cdnIncluded: none
 staging: paid-addon
-referringSubnets: { now: 4962, before: 5157 }
+referringSubnets: { now: 5194, before: 5195 }
 status: active
 checkedAt: 2026-08-12
 figure:
@@ -75,7 +75,7 @@ figure:
   textColor: rgb(245, 239, 234)
   text: Spanish host since 1996, IONOS subsidiary.
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: founded, url: 'https://www.arsys.es/empresa', checkedAt: 2026-08-12 }
   - { field: hqCountry, url: 'https://www.arsys.es/legal', checkedAt: 2026-08-12 }
   - { field: ownership, url: 'https://www.arsys.es/empresa', checkedAt: 2026-08-12 }

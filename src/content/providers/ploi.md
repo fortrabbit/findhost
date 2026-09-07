@@ -45,14 +45,14 @@ social:
   mastodon: https://phpc.social/@ploi
   github: https://github.com/ploi
   facebook: https://www.facebook.com/ploideploy
-referringSubnets: { now: 805, before: 796 }
+referringSubnets: { now: 786, before: 802 }
 status: active
 checkedAt: 2026-08-09
 apiAvailable: public
 cliTool: official
 mcpServer: official
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: hqCountry, url: 'https://ploi.io/pricing', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://ploi.io/pricing', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://ploi.io/pricing', checkedAt: 2026-08-02 }

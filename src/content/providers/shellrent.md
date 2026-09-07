@@ -10,11 +10,11 @@ description: A shared hosting and VPS provider in Italy.
 hqCountry: IT
 ownership: subsidiary
 parent: your-online
-referringSubnets: { now: 363, before: 367 }
+referringSubnets: { now: 362, before: 362 }
 status: draft
 checkedAt: 2026-08-12
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: parent, url: 'https://your.online/brands', checkedAt: 2026-08-21 }
   - { field: ownership, url: 'https://your.online/brands', checkedAt: 2026-08-21 }
 ai: authored

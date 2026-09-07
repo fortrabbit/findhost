@@ -21,11 +21,11 @@ supportChannels:
   - chat
 supportHours: 24-7
 supportTiering: all-plans
-referringSubnets: { now: 7191, before: 7262 }
+referringSubnets: { now: 7155, before: 7143 }
 status: active
 checkedAt: 2026-08-12
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: category, url: 'https://infomaniakstatus.com/', checkedAt: 2026-08-12 }
   - { field: supportChannels, url: 'https://infomaniakstatus.com/', checkedAt: 2026-08-12 }
   - { field: supportHours, url: 'https://infomaniakstatus.com/', checkedAt: 2026-08-12 }

@@ -3,13 +3,13 @@ id: qovery
 name: Qovery
 urls:
   home: https://www.qovery.com
-referringSubnets: { now: 573, before: 585 }
+referringSubnets: { now: 579, before: 566 }
 status: out-of-scope
 criterion: 3
 checkedAt: 2026-07-31
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

@@ -32,11 +32,11 @@ pricingModel: fixed-tier
 freeTier: permanent
 supportChannels:
   - forum
-referringSubnets: { now: 624, before: 625 }
+referringSubnets: { now: 618, before: 613 }
 status: active
 checkedAt: 2026-08-12
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: runtimes, url: 'https://github.com/cloudpanel-io/cloudpanel-ce', checkedAt: 2026-08-12 }
   - { field: freeTier, url: 'https://cloudpanel.io', checkedAt: 2026-08-12 }
   - { field: software, url: 'https://cloudpanel.io', checkedAt: 2026-08-12 }

@@ -13,9 +13,9 @@ figure:
   color: rgb(45, 107, 190)
   textColor: rgb(234, 239, 246)
   text: VPS from US for Craft CMS.
-referringSubnets: { now: 231, before: 245 }
+referringSubnets: { now: 243, before: 242 }
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

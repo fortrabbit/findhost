@@ -6,12 +6,12 @@ urls:
 category:
   - shared-hosting
 hqCountry: CH
-referringSubnets: { now: 1411, before: 1430 }
+referringSubnets: { now: 1391, before: 1364 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

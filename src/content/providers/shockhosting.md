@@ -9,12 +9,12 @@ category:
   - bare-metal
 description: A shared hosting, virtual server and bare metal provider in the United States.
 hqCountry: US
-referringSubnets: { now: 449, before: 454 }
+referringSubnets: { now: 437, before: 438 }
 status: draft
 checkedAt: 2026-08-21
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

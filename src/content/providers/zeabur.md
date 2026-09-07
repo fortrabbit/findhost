@@ -64,10 +64,10 @@ social:
   x: https://x.com/zeaburapp
 testDomain: included
 collaboration: team
-referringSubnets: { now: 659, before: 671 }
+referringSubnets: { now: 672, before: 676 }
 checkedAt: 2026-08-12
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: testDomain, url: 'https://zeabur.com/docs/deploy/networking/public-networking', checkedAt: 2026-08-12 }
   - { field: collaboration, url: 'https://zeabur.com/docs/operations/team/invite-member', checkedAt: 2026-08-12 }
   - { field: hqCountry, url: 'https://zeabur.com/about', checkedAt: 2026-08-01 }

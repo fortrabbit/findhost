@@ -3,12 +3,12 @@ id: sdf
 name: SDF Public Access UNIX System
 urls:
   home: https://sdf.org
-referringSubnets: { now: 2897, before: 2918 }
+referringSubnets: { now: 2872, before: 2889 }
 status: draft
 checkedAt: 2026-08-14
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

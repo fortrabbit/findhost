@@ -15,11 +15,11 @@ sshAccess: null
 regions: null
 collaboration: team
 apiAvailable: public
-referringSubnets: { now: 14600, before: 14645 }
+referringSubnets: { now: 14642, before: 14631 }
 status: active
 checkedAt: 2026-08-13
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: category, url: 'https://docs.codeberg.org/getting-started/what-is-codeberg/', checkedAt: 2026-08-13 }
   - { field: hqCountry, url: 'https://docs.codeberg.org/getting-started/what-is-codeberg/', checkedAt: 2026-08-13 }
   - { field: ownership, url: 'https://docs.codeberg.org/getting-started/what-is-codeberg/', checkedAt: 2026-08-13 }

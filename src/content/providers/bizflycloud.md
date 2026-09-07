@@ -8,12 +8,12 @@ category:
   - vps
 description: A IaaS and VPS provider in Vietnam.
 hqCountry: VN
-referringSubnets: { now: 405, before: 418 }
+referringSubnets: { now: 409, before: 399 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

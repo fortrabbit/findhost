@@ -20,11 +20,11 @@ billingTiming: advance
 supportChannels:
   - phone
   - email
-referringSubnets: { now: 6726, before: 6774 }
+referringSubnets: { now: 6672, before: 6683 }
 status: active
 checkedAt: 2026-08-08
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: hqCountry, url: 'https://hosting.cafe24.com', checkedAt: 2026-08-04 }
   - { field: priceFrom, url: 'https://hosting.cafe24.com', checkedAt: 2026-08-04 }
   - { field: software, url: 'https://hosting.cafe24.com', checkedAt: 2026-08-04 }

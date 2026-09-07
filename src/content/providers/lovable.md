@@ -19,12 +19,12 @@ pricingModel: credit
 freeTier: permanent
 favorite: true
 favoriteNote: Popular among non devs.
-referringSubnets: { now: 11678, before: 11815 }
+referringSubnets: { now: 11718, before: 11707 }
 status: active
 checkedAt: 2026-08-12
 collaboration: team
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: pricingModel, url: 'https://lovable.dev/pricing', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://lovable.dev/pricing', checkedAt: 2026-08-01 }
   - { field: collaboration, url: 'https://docs.lovable.dev', checkedAt: 2026-08-12 }

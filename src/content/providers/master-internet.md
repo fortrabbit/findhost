@@ -8,12 +8,12 @@ category:
   - iaas
 description: A shared hosting and IaaS provider in Czechia.
 hqCountry: CZ
-referringSubnets: { now: 326, before: 336 }
+referringSubnets: { now: 328, before: 345 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

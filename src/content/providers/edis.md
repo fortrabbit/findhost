@@ -8,12 +8,12 @@ category:
   - bare-metal
 description: A VPS and bare metal provider in Austria.
 hqCountry: AT
-referringSubnets: { now: 559, before: 572 }
+referringSubnets: { now: 564, before: 542 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

@@ -3,13 +3,13 @@ id: ghost-pro
 name: Ghost(Pro)
 urls:
   home: https://ghost.org
-referringSubnets: { now: 14646, before: 14684 }
+referringSubnets: { now: 14599, before: 14563 }
 status: out-of-scope
 criterion: 1
 checkedAt: 2026-07-31
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

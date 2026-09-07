@@ -68,11 +68,11 @@ iacSupport:
   - terraform
   - ansible
 sla: true
-referringSubnets: { now: 19834, before: 19857 }
+referringSubnets: { now: 19794, before: 19766 }
 status: active
 checkedAt: 2026-08-12
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: testDomain, url: 'https://docs.digitalocean.com/docs/app-platform/reference/app-spec', checkedAt: 2026-08-12 }
   - { field: staging, url: 'https://www.digitalocean.com/products/app-platform', checkedAt: 2026-08-12 }
   - { field: collaboration, url: 'https://www.digitalocean.com/products/app-platform', checkedAt: 2026-08-12 }

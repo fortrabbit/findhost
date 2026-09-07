@@ -8,12 +8,12 @@ category:
   - iaas
 description: A bare metal and IaaS provider in the United States.
 hqCountry: US
-referringSubnets: { now: 533, before: 545 }
+referringSubnets: { now: 539, before: 546 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

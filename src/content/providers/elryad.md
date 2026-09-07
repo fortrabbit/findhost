@@ -9,12 +9,12 @@ category:
   - bare-metal
 description: A shared hosting, VPS and bare metal provider in Saudi Arabia.
 hqCountry: SA
-referringSubnets: { now: 319, before: 331 }
+referringSubnets: { now: 324, before: 317 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

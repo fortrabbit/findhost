@@ -4,7 +4,7 @@ name: Permira
 urls:
   home: https://www.permira.com
 description: A private-equity firm that owns a hosting company recorded here, and sells no hosting itself.
-referringSubnets: { now: 699, before: 700 }
+referringSubnets: { now: 687, before: 687 }
 status: unlisted
 checkedAt: 2026-08-07
 figure:
@@ -14,7 +14,7 @@ figure:
   text: Private-equity firm, owns hosting companies.
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

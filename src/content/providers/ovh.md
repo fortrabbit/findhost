@@ -35,14 +35,14 @@ regions:
   - SG
   - AU
   - IN
-referringSubnets: { now: 30626, before: 31465 }
+referringSubnets: { now: 29446, before: 29584 }
 status: active
 checkedAt: 2026-08-09
 apiAvailable: public
 cliTool: official
 mcpServer: official
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: founded, url: 'https://www.ovhcloud.com/en/about-us/', checkedAt: 2026-07-31 }
   - { field: hqCountry, url: 'https://www.ovhcloud.com/en/about-us/', checkedAt: 2026-07-31 }
   - { field: priceFrom, url: 'https://www.ovhcloud.com/en/vps/', checkedAt: 2026-08-02 }

@@ -47,11 +47,12 @@ billingTiming: advance
 exitWithin: a-month
 entryPrice: { amount: 10, currency: USD, period: month }
 freeTier: trial
-referringSubnets: null
+referringSubnets: { now: 226 }
 status: active
 hqCountry: US
 checkedAt: 2026-08-09
 sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: hqCountry, url: 'https://www.hatchbox.io/about', checkedAt: 2026-08-09 }
   - { field: entryPrice, url: 'https://www.hatchbox.io/pricing', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://www.hatchbox.io/pricing', checkedAt: 2026-08-01 }

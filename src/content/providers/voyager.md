@@ -7,12 +7,12 @@ category:
   - shared-hosting
 description: A shared hosting provider in New Zealand.
 hqCountry: NZ
-referringSubnets: { now: 484, before: 477 }
+referringSubnets: { now: 466, before: 471 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

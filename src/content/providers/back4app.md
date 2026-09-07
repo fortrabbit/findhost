@@ -42,10 +42,10 @@ apiAvailable: public
 cliTool: official
 hqCountry: US
 ownership: vc-backed
-referringSubnets: { now: 736, before: 732 }
+referringSubnets: { now: 740, before: 736 }
 checkedAt: 2026-08-09
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: hqCountry, url: 'https://www.back4app.com/about', checkedAt: 2026-08-09 }
   - { field: priceFrom, url: 'https://www.back4app.com/pricing/backend-as-a-service', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://www.back4app.com/pricing/backend-as-a-service', checkedAt: 2026-08-02 }

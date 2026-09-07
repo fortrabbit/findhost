@@ -7,12 +7,12 @@ category:
   - shared-hosting
 description: A shared hosting provider in Germany.
 hqCountry: DE
-referringSubnets: { now: 2916, before: 2925 }
+referringSubnets: { now: 2893, before: 2891 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

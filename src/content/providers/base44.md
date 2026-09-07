@@ -7,12 +7,12 @@ category:
   - lcnc
 description: A low-code and no-code site builder in Israel.
 hqCountry: IL
-referringSubnets: { now: 1098, before: 1091 }
+referringSubnets: { now: 1112, before: 1099 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

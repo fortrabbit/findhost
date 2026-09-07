@@ -8,12 +8,12 @@ category:
   - paas
 description: A IaaS and PaaS provider in South Korea.
 hqCountry: KR
-referringSubnets: { now: 605, before: 609 }
+referringSubnets: { now: 597, before: 599 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

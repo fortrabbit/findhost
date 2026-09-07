@@ -62,11 +62,11 @@ regions:
   - AT
   - DE
   - HR
-referringSubnets: { now: 988, before: 1011 }
+referringSubnets: { now: 971, before: 973 }
 status: active
 checkedAt: 2026-08-12
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: regions, url: 'https://www.exoscale.com/pricing/', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://www.exoscale.com/pricing/', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://www.exoscale.com/pricing/', checkedAt: 2026-08-01 }

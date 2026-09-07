@@ -49,13 +49,13 @@ supportChannels:
   - phone
   - email
 supportHours: 24-7
-referringSubnets: { now: 7724, before: 7764 }
+referringSubnets: { now: 7591, before: 7651 }
 status: active
 emailHosting: included
 domainRegistration: paid-addon
 checkedAt: 2026-08-12
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: parent, url: 'https://www.ionos-group.com/brands/homepl.html', checkedAt: 2026-08-21 }
   - { field: regions, url: 'https://home.pl/hosting', checkedAt: 2026-08-01 }
   - { field: supportHours, url: 'https://home.pl/hosting', checkedAt: 2026-08-01 }

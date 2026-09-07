@@ -77,11 +77,11 @@ staging: included
 testDomain: included
 collaboration: team
 sla: true
-referringSubnets: { now: 10304, before: 10332 }
+referringSubnets: { now: 10343, before: 10201 }
 status: active
 checkedAt: 2026-08-12
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: apiAvailable, url: 'https://vercel.com/docs/rest-api', checkedAt: 2026-08-09 }
   - { field: ownership, url: 'https://vercel.com/about', checkedAt: 2026-08-01 }
   - { field: urls, url: 'https://vercel.com/legal/terms', checkedAt: 2026-08-01 }

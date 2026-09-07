@@ -26,11 +26,11 @@ supportChannels:
   - chat
   - email
 supportHours: 24-7
-referringSubnets: { now: 7881, before: 7881 }
+referringSubnets: { now: 7599, before: 7674 }
 status: active
 checkedAt: 2026-08-08
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: founded, url: 'https://www.hostgator.com/about', checkedAt: 2026-08-01 }
   - { field: hqCountry, url: 'https://www.hostgator.com/about', checkedAt: 2026-08-01 }
   - { field: ownership, url: 'https://www.hostgator.com/about', checkedAt: 2026-08-01 }

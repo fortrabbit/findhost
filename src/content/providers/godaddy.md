@@ -24,11 +24,11 @@ domainRegistration: paid-addon
 dnsHosting: included
 emailHosting: paid-addon
 whoManagesOs: managed
-referringSubnets: { now: 100201, before: 100588 }
+referringSubnets: { now: 98247, before: 98161 }
 status: active
 checkedAt: 2026-08-07
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: founded, url: 'https://en.wikipedia.org/wiki/GoDaddy', checkedAt: 2026-08-07 }
   - { field: ownership, url: 'https://en.wikipedia.org/wiki/GoDaddy', checkedAt: 2026-08-07 }
   - { field: hqCountry, url: 'https://en.wikipedia.org/wiki/GoDaddy', checkedAt: 2026-08-07 }

@@ -7,12 +7,12 @@ category:
   - shared-hosting
 description: A shared hosting provider in Switzerland.
 hqCountry: CH
-referringSubnets: { now: 769, before: 779 }
+referringSubnets: { now: 762, before: 767 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

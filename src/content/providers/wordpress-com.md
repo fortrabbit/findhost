@@ -9,12 +9,12 @@ description: Automattic's managed WordPress service, the larger of its two hosti
 hqCountry: US
 ownership: subsidiary
 parent: automattic
-referringSubnets: { now: 132422, before: 132402 }
+referringSubnets: { now: 131496, before: 131560 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

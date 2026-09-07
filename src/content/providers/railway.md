@@ -52,13 +52,13 @@ cliTool: official
 mcpServer: official
 favorite: true
 favoriteNote: No configuration file, and it charges for what actually ran. Popular.
-referringSubnets: { now: 2069, before: 2076 }
+referringSubnets: { now: 2049, before: 2047 }
 status: active
 checkedAt: 2026-08-12
 staging: included
 collaboration: team
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: pricingModel, url: 'https://docs.railway.com/reference/pricing/plans', checkedAt: 2026-07-31 }
   - { field: staging, url: 'https://docs.railway.com/reference/pricing/plans', checkedAt: 2026-08-12 }
   - { field: collaboration, url: 'https://docs.railway.com/reference/teams', checkedAt: 2026-08-12 }

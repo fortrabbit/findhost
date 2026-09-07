@@ -65,11 +65,11 @@ social:
   x: https://x.com/netcup
   linkedin: https://www.linkedin.com/company/netcup
   facebook: https://www.facebook.com/netcup
-referringSubnets: { now: 3099, before: 3130 }
+referringSubnets: { now: 3000, before: 3022 }
 status: active
 checkedAt: 2026-08-01
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1475', checkedAt: 2026-08-10 }
   - { field: regions, url: 'https://www.netcup.com/de/server/vps', checkedAt: 2026-07-31 }
   - { field: contractMinimum, url: 'https://www.netcup.com/de/server/vps', checkedAt: 2026-07-31 }

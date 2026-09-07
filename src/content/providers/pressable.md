@@ -42,7 +42,7 @@ regions:
   - US
   - NL
 supportHours: 24-7
-referringSubnets: { now: 732, before: 741 }
+referringSubnets: { now: 744, before: 745 }
 status: active
 hqCountry: US
 checkedAt: 2026-08-09
@@ -50,7 +50,7 @@ apiAvailable: public
 cliTool: official
 mcpServer: official
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: hqCountry, url: 'https://pressable.com', checkedAt: 2026-08-09 }
   - { field: entryPrice, url: 'https://pressable.com/plans/', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://pressable.com/plans/', checkedAt: 2026-08-02 }

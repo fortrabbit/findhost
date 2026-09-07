@@ -50,11 +50,11 @@ exitWithin: a-day
 domainRegistration: included
 dnsHosting: included
 emailHosting: included
-referringSubnets: { now: 859, before: 867 }
+referringSubnets: { now: 846, before: 837 }
 status: active
 checkedAt: 2026-08-12
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: category, url: 'https://nearlyfreespeech.net', checkedAt: 2026-08-12 }
   - { field: hqCountry, url: 'https://nearlyfreespeech.net/about', checkedAt: 2026-08-12 }
   - { field: founded, url: 'https://nearlyfreespeech.net/about', checkedAt: 2026-08-12 }

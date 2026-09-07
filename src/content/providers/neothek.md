@@ -9,12 +9,12 @@ category:
   - paas
 description: A shared hosting, VPS and PaaS provider in Peru.
 hqCountry: PE
-referringSubnets: { now: 306, before: 324 }
+referringSubnets: { now: 312, before: 321 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

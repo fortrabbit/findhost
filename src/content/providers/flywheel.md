@@ -36,11 +36,11 @@ billingPeriods:
 billingTiming: advance
 exitWithin: a-quarter
 entryPrice: { amount: 25, currency: USD, period: month }
-referringSubnets: { now: 1294, before: 1301 }
+referringSubnets: { now: 1284, before: 1292 }
 status: active
 checkedAt: 2026-08-01
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: entryPrice, url: 'https://getflywheel.com/pricing/', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://getflywheel.com/pricing/', checkedAt: 2026-07-31 }
   - { field: priceTo, url: 'https://getflywheel.com/pricing/', checkedAt: 2026-08-02 }

@@ -43,11 +43,11 @@ billingPeriods:
 billingTiming: advance
 exitWithin: a-month
 freeTier: permanent
-referringSubnets: { now: 341, before: 339 }
+referringSubnets: { now: 336, before: 332 }
 status: active
 checkedAt: 2026-08-01
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: priceFrom, url: 'https://easypanel.io/pricing', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://easypanel.io/pricing', checkedAt: 2026-08-02 }
   - { field: currencies, url: 'https://easypanel.io/pricing', checkedAt: 2026-08-02 }

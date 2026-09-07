@@ -7,12 +7,12 @@ category:
   - caas
 description: A CaaS provider in the United States.
 hqCountry: US
-referringSubnets: { now: 618, before: 633 }
+referringSubnets: { now: 624, before: 607 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

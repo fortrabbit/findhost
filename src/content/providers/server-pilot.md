@@ -29,11 +29,11 @@ billingTiming: arrears
 exitWithin: a-day
 entryPrice: { amount: 5.5, currency: USD, period: month }
 freeTier: trial
-referringSubnets: { now: 646, before: 667 }
+referringSubnets: { now: 647, before: 643 }
 status: active
 checkedAt: 2026-08-01
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: entryPrice, url: 'https://serverpilot.io/pricing/', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://serverpilot.io/pricing/', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://serverpilot.io/pricing/', checkedAt: 2026-08-02 }

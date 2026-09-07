@@ -7,12 +7,12 @@ category:
   - lcnc
 description: A low-code and no-code site builder in Estonia.
 hqCountry: EE
-referringSubnets: { now: 1207, before: 1221 }
+referringSubnets: { now: 1215, before: 1208 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

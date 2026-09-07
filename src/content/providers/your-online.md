@@ -7,11 +7,11 @@ description: A Dutch group holding hosting, domain and trust brands across Europ
 hqCountry: NL
 ownership: independent
 founded: 2017
-referringSubnets: { now: 670, before: 688 }
+referringSubnets: { now: 603, before: 626 }
 status: unlisted
 checkedAt: 2026-08-21
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: ownership, url: 'https://your.online/about-us', checkedAt: 2026-08-21 }
   - { field: founded, url: 'https://your.online/about-us', checkedAt: 2026-08-21 }
 figure:

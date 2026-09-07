@@ -22,11 +22,11 @@ pricingModel: hourly
 freeTier: permanent
 currencies:
   - USD
-referringSubnets: { now: 724, before: 733 }
+referringSubnets: { now: 699, before: 700 }
 status: active
 checkedAt: 2026-08-12
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: category, url: 'https://cratedb.com/pricing', checkedAt: 2026-08-12 }
   - { field: pricingModel, url: 'https://cratedb.com/pricing', checkedAt: 2026-08-12 }
   - { field: freeTier, url: 'https://cratedb.com/pricing', checkedAt: 2026-08-12 }

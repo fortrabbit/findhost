@@ -7,12 +7,12 @@ category:
   - shared-hosting
 description: A shared hosting provider in Poland.
 hqCountry: PL
-referringSubnets: { now: 488, before: 502 }
+referringSubnets: { now: 485, before: 481 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

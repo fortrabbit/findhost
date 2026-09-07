@@ -7,12 +7,12 @@ category:
   - shared-hosting
 description: A shared hosting provider in the United States.
 hqCountry: US
-referringSubnets: { now: 653, before: 679 }
+referringSubnets: { now: 659, before: 645 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

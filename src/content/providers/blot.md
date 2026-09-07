@@ -8,12 +8,12 @@ category:
   - static
 description: A vanity hosting and static hosting provider in the United Kingdom.
 hqCountry: GB
-referringSubnets: { now: 657, before: 645 }
+referringSubnets: { now: 665, before: 668 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

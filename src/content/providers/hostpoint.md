@@ -52,11 +52,11 @@ supportHours: 24-7
 supportTiering: all-plans
 certifications:
   - iso-27001
-referringSubnets: { now: 972, before: 956 }
+referringSubnets: { now: 977, before: 963 }
 status: active
 checkedAt: 2026-08-12
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: category, url: 'https://www.hostpoint.ch/', checkedAt: 2026-08-12 }
   - { field: hqCountry, url: 'https://www.hostpoint.ch/', checkedAt: 2026-08-12 }
   - { field: runtimes, url: 'https://www.hostpoint.ch/webhosting', checkedAt: 2026-08-12 }

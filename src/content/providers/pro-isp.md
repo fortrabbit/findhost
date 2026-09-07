@@ -7,12 +7,12 @@ category:
   - shared-hosting
 description: A shared hosting provider in Norway.
 hqCountry: NO
-referringSubnets: { now: 335, before: 341 }
+referringSubnets: { now: 339, before: 334 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

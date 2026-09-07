@@ -7,12 +7,12 @@ category:
   - server-management
 description: Server management software in India.
 hqCountry: IN
-referringSubnets: { now: 1185, before: 1186 }
+referringSubnets: { now: 1168, before: 1167 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

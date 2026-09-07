@@ -4,7 +4,7 @@ name: GoRails, LLC
 urls:
   home: https://gorails.com
 description: A Ruby on Rails education company and the owner of Hatchbox.
-referringSubnets: { now: 611, before: 607 }
+referringSubnets: { now: 611, before: 608 }
 status: unlisted
 checkedAt: 2026-08-07
 figure:
@@ -14,7 +14,7 @@ figure:
   text: Rails education company and owner of the Hatchbox platform.
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

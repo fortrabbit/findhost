@@ -20,11 +20,11 @@ currencies:
 freeTier: permanent
 collaboration: team
 apiAvailable: public
-referringSubnets: { now: 17378, before: 17411 }
+referringSubnets: { now: 17283, before: 17224 }
 status: active
 checkedAt: 2026-08-13
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: category, url: 'https://www.atlassian.com/software/bitbucket/pricing', checkedAt: 2026-08-13 }
   - { field: pricingModel, url: 'https://www.atlassian.com/software/bitbucket/pricing', checkedAt: 2026-08-13 }
   - { field: currencies, url: 'https://www.atlassian.com/software/bitbucket/pricing', checkedAt: 2026-08-13 }

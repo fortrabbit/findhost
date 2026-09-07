@@ -9,12 +9,12 @@ category:
   - bare-metal
 description: A shared hosting, VPS and bare metal provider in the United Arab Emirates.
 hqCountry: AE
-referringSubnets: { now: 644, before: 657 }
+referringSubnets: { now: 640, before: 641 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

@@ -3,7 +3,7 @@ id: gabia
 name: Gabia
 urls:
   home: https://www.gabia.com/
-referringSubnets: { now: 2314, before: 2334 }
+referringSubnets: { now: 2286, before: 2270 }
 status: out-of-scope
 criterion: 3
 checkedAt: 2026-08-04
@@ -12,7 +12,7 @@ ai: authored
 gpuCapacity:
   - instances
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

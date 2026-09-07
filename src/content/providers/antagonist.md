@@ -33,7 +33,7 @@ useCases:
 audience:
   - smb
   - solo
-referringSubnets: { now: 2552, before: 2548 }
+referringSubnets: { now: 2455, before: 2453 }
 status: active
 domainRegistration: paid-addon
 emailHosting: included
@@ -44,7 +44,7 @@ figure:
   textColor: rgb(245, 239, 235)
   text: Dutch indie hoster, Enschede-based.
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: category, url: 'https://www.antagonist.nl/webhosting/', checkedAt: 2026-08-08 }
   - { field: runtimes, url: 'https://www.antagonist.nl/webhosting/', checkedAt: 2026-08-08 }
   - { field: sshAccess, url: 'https://www.antagonist.nl/webhosting/', checkedAt: 2026-08-08 }

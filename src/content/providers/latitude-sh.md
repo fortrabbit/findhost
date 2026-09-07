@@ -58,11 +58,11 @@ apiAvailable: public
 cliTool: official
 iacSupport:
   - terraform
-referringSubnets: { now: 443, before: 444 }
+referringSubnets: { now: 438, before: 425 }
 status: active
 checkedAt: 2026-08-12
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: regions, url: 'https://www.latitude.sh/locations', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://www.latitude.sh/pricing', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://www.latitude.sh/pricing', checkedAt: 2026-08-01 }

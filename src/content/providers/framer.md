@@ -30,11 +30,11 @@ supportChannels:
 apiAvailable: public
 cliTool: none
 mcpServer: none
-referringSubnets: { now: 4922, before: 4922 }
+referringSubnets: { now: 4830, before: 4888 }
 status: active
 checkedAt: 2026-08-12
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: priceFrom, url: 'https://framer.com/pricing', checkedAt: 2026-08-12 }
   - { field: freeTier, url: 'https://framer.com/pricing', checkedAt: 2026-08-12 }
   - { field: collaboration, url: 'https://framer.com/pricing', checkedAt: 2026-08-12 }

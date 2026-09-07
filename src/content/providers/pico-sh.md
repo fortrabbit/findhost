@@ -11,11 +11,11 @@ ownership: independent
 deployMethods:
   - file-transfer
 collaboration: none
-referringSubnets: { now: 307, before: 300 }
+referringSubnets: { now: 297, before: 300 }
 status: active
 checkedAt: 2026-08-14
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: category, url: 'https://pico.sh', checkedAt: 2026-08-14 }
   - { field: deployMethods, url: 'https://pico.sh', checkedAt: 2026-08-14 }
   - { field: ownership, url: 'https://pico.sh/about', checkedAt: 2026-08-21 }

@@ -7,12 +7,12 @@ category:
   - shared-hosting
 description: A shared hosting provider in Nigeria.
 hqCountry: NG
-referringSubnets: { now: 251, before: 265 }
+referringSubnets: { now: 253, before: 262 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

@@ -67,11 +67,11 @@ contractMinimum: none
 energyClaim: annual-matched
 favorite: true
 favoriteNote: Pay what it is worth to you. They mean it.
-referringSubnets: { now: 1720, before: 1706 }
+referringSubnets: { now: 1715, before: 1701 }
 status: active
 checkedAt: 2026-08-09
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: software, url: 'https://lab.uberspace.de/', checkedAt: 2026-08-09 }
   - { field: founded, url: 'https://uberspace.de/en/about/', checkedAt: 2026-08-09 }
   - { field: ownership, url: 'https://uberspace.de/en/about/', checkedAt: 2026-08-09 }

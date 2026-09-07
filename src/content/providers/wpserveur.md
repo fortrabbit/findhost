@@ -28,12 +28,12 @@ useCases:
 audience:
   - agency
   - solo
-referringSubnets: { now: 429, before: 431 }
+referringSubnets: { now: 416, before: 420 }
 status: active
 checkedAt: 2026-08-09
 cliTool: official
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: software, url: 'https://www.wpserveur.net', checkedAt: 2026-07-31 }
   - { field: sshAccess, url: 'https://www.wpserveur.net', checkedAt: 2026-07-31 }
   - { field: deployMethods, url: 'https://www.wpserveur.net', checkedAt: 2026-07-31 }

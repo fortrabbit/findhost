@@ -9,12 +9,12 @@ category:
   - iaas
 description: A shared hosting, VPS and IaaS provider in Russia.
 hqCountry: RU
-referringSubnets: { now: 3838, before: 3834 }
+referringSubnets: { now: 3801, before: 3802 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

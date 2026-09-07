@@ -4,7 +4,7 @@ name: team.blue
 urls:
   home: https://team.blue
 description: A European group assembled by acquisition, holding hosting and domain brands across a dozen countries.
-referringSubnets: { now: 778, before: 775 }
+referringSubnets: { now: 772, before: 755 }
 status: unlisted
 checkedAt: 2026-08-07
 figure:
@@ -14,7 +14,7 @@ figure:
   text: European parent of acquired hosting brands.
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

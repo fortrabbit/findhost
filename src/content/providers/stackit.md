@@ -9,12 +9,12 @@ category:
   - iaas
 hqCountry: DE
 ownership: subsidiary
-referringSubnets: { now: 489, before: 500 }
+referringSubnets: { now: 498, before: 492 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

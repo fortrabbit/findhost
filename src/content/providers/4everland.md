@@ -7,12 +7,12 @@ category:
   - static
 description: A static hosting provider in China.
 hqCountry: CN
-referringSubnets: { now: 380, before: 402 }
+referringSubnets: { now: 380, before: 381 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

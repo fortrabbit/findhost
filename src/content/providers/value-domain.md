@@ -7,12 +7,12 @@ category:
   - shared-hosting
 description: A shared hosting provider in Japan.
 hqCountry: JP
-referringSubnets: { now: 2703, before: 2739 }
+referringSubnets: { now: 2669, before: 2684 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

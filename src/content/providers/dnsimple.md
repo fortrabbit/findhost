@@ -17,11 +17,11 @@ dnsHosting: paid-addon
 pricingModel: usage-based
 currencies:
   - USD
-referringSubnets: { now: 1183, before: 1186 }
+referringSubnets: { now: 1161, before: 1169 }
 status: active
 checkedAt: 2026-08-12
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: category, url: 'https://dnsimple.com/pricing', checkedAt: 2026-08-12 }
   - { field: pricingModel, url: 'https://dnsimple.com/pricing', checkedAt: 2026-08-12 }
   - { field: currencies, url: 'https://dnsimple.com/pricing', checkedAt: 2026-08-12 }

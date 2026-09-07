@@ -7,12 +7,12 @@ category:
   - shared-hosting
 description: A shared hosting provider in the Netherlands.
 hqCountry: NL
-referringSubnets: { now: 9464, before: 9597 }
+referringSubnets: { now: 10112, before: 10081 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

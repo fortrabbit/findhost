@@ -9,12 +9,12 @@ category:
   - server-management
 description: A shared hosting, VPS and server management provider in Singapore.
 hqCountry: SG
-referringSubnets: { now: 1240, before: 1231 }
+referringSubnets: { now: 1231, before: 1224 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

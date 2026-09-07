@@ -41,11 +41,11 @@ billingPeriods:
   - monthly
   - yearly
 freeTier: none
-referringSubnets: { now: 449, before: 452 }
+referringSubnets: { now: 458, before: 460 }
 status: active
 checkedAt: 2026-08-01
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: founded, url: 'https://www.e2enetworks.com/about-us', checkedAt: 2026-08-01 }
   - { field: hqCountry, url: 'https://www.e2enetworks.com/about-us', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://www.e2enetworks.com/pricing', checkedAt: 2026-08-01 }

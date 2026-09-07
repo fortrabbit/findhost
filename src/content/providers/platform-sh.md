@@ -3,13 +3,13 @@ id: platform-sh
 name: Platform.sh
 urls:
   home: https://platform.sh
-referringSubnets: { now: 1021, before: 1026 }
+referringSubnets: { now: 1014, before: 1008 }
 status: out-of-scope
 criterion: 2
 checkedAt: 2026-07-31
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

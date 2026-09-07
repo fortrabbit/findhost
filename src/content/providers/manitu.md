@@ -34,11 +34,11 @@ useCases:
 audience:
   - smb
   - solo
-referringSubnets: { now: 636, before: 637 }
+referringSubnets: { now: 631, before: 635 }
 status: active
 checkedAt: 2026-08-08
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: parent, url: 'https://your.online/brands', checkedAt: 2026-08-21 }
   - { field: ownership, url: 'https://your.online/brands', checkedAt: 2026-08-21 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#837', checkedAt: 2026-08-10 }

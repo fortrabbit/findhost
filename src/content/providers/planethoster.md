@@ -29,13 +29,13 @@ useCases:
 audience:
   - smb
   - solo
-referringSubnets: { now: 1300, before: 1329 }
+referringSubnets: { now: 1271, before: 1267 }
 status: active
 checkedAt: 2026-08-09
 apiAvailable: public
 cliTool: official
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#749', checkedAt: 2026-08-10 }
   - { field: regions, url: 'https://www.planethoster.com', checkedAt: 2026-07-31 }
   - { field: runtimes, url: 'https://www.planethoster.com', checkedAt: 2026-07-31 }

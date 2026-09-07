@@ -8,12 +8,12 @@ category:
   - static
 description: A vanity hosting and static hosting provider in the United States.
 hqCountry: US
-referringSubnets: { now: 3679, before: 3697 }
+referringSubnets: { now: 3661, before: 3642 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

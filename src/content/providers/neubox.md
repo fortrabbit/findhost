@@ -25,13 +25,13 @@ useCases:
 audience:
   - smb
   - solo
-referringSubnets: { now: 808, before: 807 }
+referringSubnets: { now: 773, before: 773 }
 status: active
 checkedAt: 2026-08-12
 domainRegistration: included
 dnsHosting: included
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: founded, url: 'https://www.neubox.com', checkedAt: 2026-07-31 }
   - { field: currencies, url: 'https://www.neubox.com', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://www.neubox.com', checkedAt: 2026-07-31 }

@@ -51,11 +51,11 @@ contractMinimum: monthly
 freeTier: none
 regions:
   - US
-referringSubnets: { now: 2168, before: 2187 }
+referringSubnets: { now: 2128, before: 2161 }
 status: active
 checkedAt: 2026-08-01
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: regions, url: 'https://www.interserver.net/webhosting/', checkedAt: 2026-08-01 }
   - { field: founded, url: 'https://www.interserver.net/webhosting/', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://www.interserver.net/webhosting/', checkedAt: 2026-08-01 }

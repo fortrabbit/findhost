@@ -18,11 +18,11 @@ entryPrice:
   currency: GBP
 currencies:
   - GBP
-referringSubnets: { now: 389, before: 384 }
+referringSubnets: { now: 387, before: 385 }
 status: active
 checkedAt: 2026-08-14
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: category, url: 'https://bitfolk.com', checkedAt: 2026-08-14 }
   - { field: hqCountry, url: 'https://bitfolk.com', checkedAt: 2026-08-14 }
   - { field: entryPrice, url: 'https://bitfolk.com', checkedAt: 2026-08-14 }

@@ -7,12 +7,12 @@ category:
   - serverless
 description: A serverless provider in the United Kingdom.
 hqCountry: GB
-referringSubnets: { now: 608, before: 624 }
+referringSubnets: { now: 610, before: 609 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

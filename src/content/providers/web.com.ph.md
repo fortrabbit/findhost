@@ -10,12 +10,12 @@ category:
   - bare-metal
 description: A shared hosting, VPS, IaaS and bare metal provider in the Philippines.
 hqCountry: PH
-referringSubnets: { now: 319, before: 331 }
+referringSubnets: { now: 317, before: 310 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

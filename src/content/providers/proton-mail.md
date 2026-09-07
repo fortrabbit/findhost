@@ -15,11 +15,11 @@ hqCountry: CH
 ownership: independent
 freeTier: trial
 emailHosting: included
-referringSubnets: { now: 10118, before: 10083 }
+referringSubnets: { now: 10028, before: 10011 }
 status: active
 checkedAt: 2026-08-12
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: category, url: 'https://proton.me/business/mail/pricing', checkedAt: 2026-08-12 }
   - { field: hqCountry, url: 'https://proton.me/business/mail/pricing', checkedAt: 2026-08-12 }
   - { field: freeTier, url: 'https://proton.me/business/mail/pricing', checkedAt: 2026-08-12 }

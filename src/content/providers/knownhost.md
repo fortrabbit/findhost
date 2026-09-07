@@ -27,12 +27,12 @@ exitWithin: a-month
 pricingModel: fixed-tier
 renewalMultiple: 1.3
 contractMinimum: none
-referringSubnets: { now: 1027, before: 1033 }
+referringSubnets: { now: 1006, before: 1017 }
 status: active
 hqCountry: US
 checkedAt: 2026-08-09
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: hqCountry, url: 'https://www.knownhost.com/contact', checkedAt: 2026-08-09 }
   - { field: regions, url: 'https://www.knownhost.com/network', checkedAt: 2026-08-01 }
   - { field: founded, url: 'https://www.knownhost.com/', checkedAt: 2026-08-01 }

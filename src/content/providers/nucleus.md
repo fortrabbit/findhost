@@ -3,13 +3,13 @@ id: nucleus
 name: Nucleus
 urls:
   home: https://www.nucleus.be
-referringSubnets: { now: 257, before: 264 }
+referringSubnets: { now: 268, before: 251 }
 status: out-of-scope
 criterion: 2
 checkedAt: 2026-07-31
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

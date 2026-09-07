@@ -54,11 +54,11 @@ regions:
   - JP
   - AU
 moneyBack: none
-referringSubnets: { now: 6494, before: 6511 }
+referringSubnets: { now: 6420, before: 6449 }
 status: active
 checkedAt: 2026-08-01
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1226', checkedAt: 2026-08-10 }
   - { field: regions, url: 'https://kinsta.com/docs/service-information/data-center-locations/', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-08-01 }

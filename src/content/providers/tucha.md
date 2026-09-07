@@ -8,10 +8,12 @@ category:
   - vps
 description: A IaaS and VPS provider in Ukraine.
 hqCountry: UA
-referringSubnets: null
+referringSubnets: { now: 251, before: 242 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
+sources:
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 ---
 
 Tucha sells IaaS and VPS in Ukraine.

@@ -7,12 +7,12 @@ category:
   - shared-hosting
   - vps
 hqCountry: DE
-referringSubnets: { now: 2943, before: 2967 }
+referringSubnets: { now: 2875, before: 2872 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

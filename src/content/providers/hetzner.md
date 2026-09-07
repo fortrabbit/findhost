@@ -59,11 +59,11 @@ apiAvailable: public
 cliTool: official
 favorite: true
 favoriteNote: Popular VPS.
-referringSubnets: { now: 18956, before: 18947 }
+referringSubnets: { now: 18992, before: 18978 }
 status: active
 checkedAt: 2026-08-01
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: regions, url: 'https://www.hetzner.com/cloud/', checkedAt: 2026-08-01 }
   - { field: founded, url: 'https://www.hetzner.com/unternehmen/ueber-uns/', checkedAt: 2026-07-31 }
   - { field: hqCountry, url: 'https://www.hetzner.com/unternehmen/ueber-uns/', checkedAt: 2026-07-31 }

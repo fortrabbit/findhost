@@ -56,12 +56,12 @@ regions:
 social:
   facebook: https://www.facebook.com/MyDevil.net
   x: https://x.com/MyDevilnet
-referringSubnets: { now: 609, before: 606 }
+referringSubnets: { now: 598, before: 593 }
 status: active
 emailHosting: included
 checkedAt: 2026-08-12
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: regions, url: 'https://www.mydevil.net', checkedAt: 2026-08-01 }
   - { field: hqCountry, url: 'https://www.mydevil.net', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://www.mydevil.net', checkedAt: 2026-08-02 }

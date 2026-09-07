@@ -3,13 +3,13 @@ id: genezio
 name: Genezio
 urls:
   home: https://genezio.com
-referringSubnets: { now: 234, before: 232 }
+referringSubnets: { now: 229 }
 status: out-of-scope
 criterion: 1
 checkedAt: 2026-07-31
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

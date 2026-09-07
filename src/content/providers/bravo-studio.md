@@ -7,12 +7,12 @@ category:
   - lcnc
 description: A low-code and no-code site builder in the United States.
 hqCountry: US
-referringSubnets: { now: 443, before: 445 }
+referringSubnets: { now: 453, before: 446 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

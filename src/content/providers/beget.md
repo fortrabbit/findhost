@@ -29,14 +29,14 @@ freeTier: none
 apiAvailable: public
 iacSupport:
   - terraform
-referringSubnets: { now: 3001, before: 3041 }
+referringSubnets: { now: 3129, before: 3093 }
 status: active
 domainRegistration: paid-addon
 emailHosting: included
 cdnIncluded: paid-addon
 checkedAt: 2026-08-12
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: hqCountry, url: 'https://beget.com/en/hosting', checkedAt: 2026-08-04 }
   - { field: founded, url: 'https://beget.com/en/hosting', checkedAt: 2026-08-04 }
   - { field: entryPrice, url: 'https://beget.com/en/hosting', checkedAt: 2026-08-04 }

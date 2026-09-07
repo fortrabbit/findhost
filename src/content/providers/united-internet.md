@@ -4,7 +4,7 @@ name: United Internet
 urls:
   home: https://www.united-internet.de
 description: The German group behind Ionos, 1&1, Fasthosts, Arsys, home.pl and Strato.
-referringSubnets: { now: 615, before: 636 }
+referringSubnets: { now: 607, before: 595 }
 status: unlisted
 checkedAt: 2026-08-06
 figure:
@@ -14,7 +14,7 @@ figure:
   text: German parent company of Ionos and 1&1.
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

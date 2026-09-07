@@ -61,11 +61,11 @@ cliTool: official
 iacSupport:
   - terraform
 sla: true
-referringSubnets: { now: 3854, before: 3874 }
+referringSubnets: { now: 3831, before: 3851 }
 status: active
 checkedAt: 2026-08-01
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#925', checkedAt: 2026-08-10 }
   - { field: regions, url: 'https://www.scaleway.com/en/virtual-instances/', checkedAt: 2026-08-01 }
   - { field: ownership, url: 'https://www.scaleway.com/en/about-us/', checkedAt: 2026-08-01 }

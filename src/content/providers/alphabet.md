@@ -4,7 +4,7 @@ name: Alphabet
 urls:
   home: https://abc.xyz
 description: Google's holding company, which sells no hosting under its own name.
-referringSubnets: { now: 4632, before: 4616 }
+referringSubnets: { now: 4558, before: 4551 }
 status: unlisted
 checkedAt: 2026-08-07
 figure:
@@ -14,7 +14,7 @@ figure:
   text: Google's corporate parent company.
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

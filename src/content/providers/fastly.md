@@ -8,12 +8,12 @@ category:
 description: Edge network and CDN, selling compute at the edge and owner of Glitch since 2022.
 hqCountry: US
 ownership: public
-referringSubnets: { now: 7358, before: 7325 }
+referringSubnets: { now: 7251, before: 7249 }
 status: draft
 checkedAt: 2026-08-08
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

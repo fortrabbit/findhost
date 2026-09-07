@@ -6,12 +6,12 @@ urls:
 category:
   - shared-hosting
   - vps
-referringSubnets: { now: 899, before: 896 }
+referringSubnets: { now: 898, before: 891 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

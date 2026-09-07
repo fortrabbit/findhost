@@ -7,12 +7,12 @@ category:
   - shared-hosting
 description: A shared hosting provider in Portugal.
 hqCountry: PT
-referringSubnets: { now: 1154, before: 1179 }
+referringSubnets: { now: 1077, before: 1082 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

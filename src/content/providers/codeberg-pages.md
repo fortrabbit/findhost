@@ -8,12 +8,12 @@ category:
   - vanity-hosting
 description: A static hosting and vanity hosting provider in Germany.
 hqCountry: DE
-referringSubnets: { now: 2589, before: 2601 }
+referringSubnets: { now: 2665, before: 2629 }
 status: draft
 checkedAt: 2026-08-12
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 

@@ -3,12 +3,12 @@ id: akamai
 name: Akamai Technologies
 urls:
   home: https://www.akamai.com
-referringSubnets: { now: 10621, before: 10638 }
+referringSubnets: { now: 10539, before: 10466 }
 status: draft
 checkedAt: 2026-08-07
 ai: authored
 sources:
-  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-08-31 }
+  - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 
 ---
 
