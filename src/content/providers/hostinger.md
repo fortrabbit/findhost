@@ -32,6 +32,7 @@ renewalMultiple: 3.7
 contractMinimum: multi-year
 referringSubnets: { now: 19756, before: 19829 }
 status: active
+addedAt: 2026-07-31
 checkedAt: 2026-08-01
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

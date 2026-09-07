@@ -60,6 +60,7 @@ regions:
 apiAvailable: public
 referringSubnets: { now: 11640, before: 11613 }
 status: active
+addedAt: 2026-07-31
 checkedAt: 2026-08-12
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

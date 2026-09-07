@@ -9,6 +9,7 @@ description: A low-code and no-code site builder in Israel.
 hqCountry: IL
 referringSubnets: { now: 1112, before: 1099 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

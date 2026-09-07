@@ -6,6 +6,7 @@ urls:
 description: A group of hosting brands acquired and run under their own names.
 referringSubnets: null
 status: unlisted
+addedAt: 2026-08-07
 checkedAt: 2026-08-07
 figure:
   emoji: 🌍

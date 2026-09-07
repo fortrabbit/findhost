@@ -9,6 +9,7 @@ description: A shared hosting provider in Czechia.
 hqCountry: CZ
 referringSubnets: { now: 3913, before: 3946 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

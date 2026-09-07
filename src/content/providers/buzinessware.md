@@ -11,6 +11,7 @@ description: A shared hosting, VPS and bare metal provider in the United Arab Em
 hqCountry: AE
 referringSubnets: { now: 313, before: 305 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

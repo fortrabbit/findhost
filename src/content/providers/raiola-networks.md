@@ -50,6 +50,7 @@ supportChannels:
 supportHours: 24-7
 referringSubnets: { now: 810, before: 822 }
 status: active
+addedAt: 2026-07-31
 checkedAt: 2026-08-12
 domainRegistration: paid-addon
 dnsHosting: included

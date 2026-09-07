@@ -9,6 +9,7 @@ description: A shared hosting provider in Ireland.
 hqCountry: IE
 referringSubnets: { now: 365, before: 366 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

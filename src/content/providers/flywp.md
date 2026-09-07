@@ -64,6 +64,7 @@ apiAvailable: public
 cliTool: official
 referringSubnets: { now: 249, before: 250 }
 status: active
+addedAt: 2026-09-07
 checkedAt: 2026-09-07
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

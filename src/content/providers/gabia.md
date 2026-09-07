@@ -6,6 +6,7 @@ urls:
 referringSubnets: { now: 2286, before: 2270 }
 status: out-of-scope
 criterion: 3
+addedAt: 2026-08-04
 checkedAt: 2026-08-04
 boundedSearch: true
 ai: authored

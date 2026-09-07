@@ -5,6 +5,7 @@ urls:
   home: https://timmehosting.de
 referringSubnets: { now: 512, before: 511 }
 status: draft
+addedAt: 2026-07-31
 checkedAt: 2026-07-31
 ai: authored
 sources:

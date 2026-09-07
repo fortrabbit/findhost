@@ -204,6 +204,7 @@ const social = [
 // than from a promise to re-check. This is where that is kept.
 const staleAfterDays = 180;
 const checkedIso = data.checkedAt?.toISOString().slice(0, 10);
+const addedIso = data.addedAt?.toISOString().slice(0, 10);
 const checkedDaysAgo = data.checkedAt ? Math.floor((Date.now() - data.checkedAt.getTime()) / 86_400_000) : undefined;
 const stale = checkedDaysAgo !== undefined && checkedDaysAgo > staleAfterDays;
 
@@ -501,6 +502,16 @@ const categoryLabels = (fieldOf.get('category')?.values ?? [])
             </>
           ) : (
             'Never checked against the provider'
+          )
+        }
+        {
+          /* When the record entered the register — the date the "last added" order sorts by, said where a reader can find it. */
+        }
+        {
+          addedIso && (
+            <>
+              {' · '}Listed since <time datetime={addedIso}>{addedIso}</time>
+            </>
           )
         }
       </span>

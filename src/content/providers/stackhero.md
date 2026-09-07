@@ -6,6 +6,7 @@ urls:
 referringSubnets: null
 status: out-of-scope
 criterion: 3
+addedAt: 2026-07-31
 checkedAt: 2026-07-31
 boundedSearch: true
 ai: authored

@@ -93,6 +93,7 @@ social:
   facebook: https://www.facebook.com/webslice
 referringSubnets: null
 status: active
+addedAt: 2026-09-06
 checkedAt: 2026-09-06
 sources:
   - { field: description, url: 'https://webslice.com', checkedAt: 2026-09-06 }

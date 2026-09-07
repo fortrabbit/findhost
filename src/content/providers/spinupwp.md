@@ -52,6 +52,7 @@ referringSubnets: { now: 467, before: 465 }
 status: active
 hqCountry: CA
 ownership: independent
+addedAt: 2026-07-31
 checkedAt: 2026-08-09
 apiAvailable: public
 cliTool: official

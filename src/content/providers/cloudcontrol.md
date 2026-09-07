@@ -19,6 +19,7 @@ runtimes:
 deployMethods:
   - git
 status: discontinued
+addedAt: 2026-08-07
 checkedAt: 2026-08-07
 sources:
   - { field: status, url: 'https://www.exoscale.com/static/files/press/20160411_Swiss_Exoscale_Acquires_German_PaaS_Provider_cloudControl.pdf', checkedAt: 2026-08-07 }

@@ -10,6 +10,7 @@ description: A VPS and shared hosting provider in the United States.
 hqCountry: US
 referringSubnets: { now: 1921, before: 1924 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

@@ -10,6 +10,7 @@ hqCountry: US
 ownership: public
 referringSubnets: { now: 7251, before: 7249 }
 status: draft
+addedAt: 2026-08-08
 checkedAt: 2026-08-08
 ai: authored
 sources:

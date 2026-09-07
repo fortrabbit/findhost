@@ -31,6 +31,7 @@ audience:
   - solo
 referringSubnets: { now: 783, before: 782 }
 status: active
+addedAt: 2026-08-04
 checkedAt: 2026-08-08
 figure:
   emoji: 🇻🇳

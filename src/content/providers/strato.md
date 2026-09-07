@@ -56,6 +56,7 @@ social:
   facebook: https://www.facebook.com/strato/
   youtube: https://www.youtube.com/user/stratoDE/
 referringSubnets: { now: 19313, before: 19596 }
+addedAt: 2026-07-31
 checkedAt: 2026-08-09
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

@@ -45,6 +45,7 @@ contractMinimum: none
 regions:
   - DE
 referringSubnets: { now: 3770, before: 3794 }
+addedAt: 2026-07-31
 checkedAt: 2026-08-09
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

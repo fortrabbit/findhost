@@ -5,6 +5,7 @@ urls:
   home: https://sdf.org
 referringSubnets: { now: 2872, before: 2889 }
 status: draft
+addedAt: 2026-08-14
 checkedAt: 2026-08-14
 ai: authored
 sources:

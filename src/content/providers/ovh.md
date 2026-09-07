@@ -37,6 +37,7 @@ regions:
   - IN
 referringSubnets: { now: 29446, before: 29584 }
 status: active
+addedAt: 2026-07-31
 checkedAt: 2026-08-09
 apiAvailable: public
 cliTool: official

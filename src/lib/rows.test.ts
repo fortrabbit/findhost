@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
 import { fieldOf } from './fields.ts';
-import { countValues, toRow, type ProviderRow } from './rows.ts';
+import { byDate, countValues, dateGroups, toRow, type ProviderRow } from './rows.ts';
 
 /*
  * The counting rules, which are the ones that decide what the register claims.
@@ -134,5 +134,55 @@ describe('countValues', () => {
     const facet = countValues(category, []);
     assert.equal(facet.id, 'categories');
     assert.equal(facet.field, 'category');
+  });
+});
+
+/*
+ * The two dated orders beside the alphabetical one. Both are pure functions of
+ * the rows, and both have a rule that is easy to get wrong by eye: a row with
+ * no date is not oldest, it is undated, and it goes after every dated row in
+ * the order the register already uses.
+ */
+describe('the dated orders', () => {
+  const rows = [
+    { id: 'b', name: 'Beta', checkedAt: new Date('2026-08-14'), addedAt: new Date('2026-07-20') },
+    { id: 'a', name: 'Alpha', checkedAt: new Date('2026-09-01'), addedAt: new Date('2026-07-20') },
+    { id: 'c', name: 'Charlie', addedAt: new Date('2026-09-05') },
+    { id: 'd', name: 'Delta', checkedAt: new Date('2026-08-14'), addedAt: new Date('2026-08-30') },
+  ] as ProviderRow[];
+
+  it('puts the newest date first and the undated last, alphabetical within a day', () => {
+    assert.deepEqual(
+      [...rows].sort(byDate('checkedAt')).map((row) => row.id),
+      ['a', 'b', 'd', 'c'],
+    );
+    assert.deepEqual(
+      [...rows].sort(byDate('addedAt')).map((row) => row.id),
+      ['c', 'd', 'a', 'b'],
+    );
+  });
+
+  it('groups by month, newest month first, with the undated rows in a group of their own at the end', () => {
+    const groups = dateGroups(rows, 'checkedAt', 'Never checked');
+    assert.deepEqual(
+      groups.map((group) => [group.label, group.anchor, group.rows.map((row) => row.id)]),
+      [
+        ['September 2026', '2026-09', ['a']],
+        ['August 2026', '2026-08', ['b', 'd']],
+        ['Never checked', 'undated', ['c']],
+      ],
+    );
+  });
+
+  it('leaves the undated group out when every row carries the date', () => {
+    const groups = dateGroups(rows, 'addedAt', 'Undated');
+    assert.deepEqual(
+      groups.map((group) => [group.anchor, group.rows.map((row) => row.id)]),
+      [
+        ['2026-09', ['c']],
+        ['2026-08', ['d']],
+        ['2026-07', ['a', 'b']],
+      ],
+    );
   });
 });

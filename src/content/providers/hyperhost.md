@@ -29,6 +29,7 @@ audience:
   - solo
 referringSubnets: { now: 555, before: 554 }
 status: active
+addedAt: 2026-08-04
 checkedAt: 2026-07-31
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

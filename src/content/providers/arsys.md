@@ -68,6 +68,7 @@ cdnIncluded: none
 staging: paid-addon
 referringSubnets: { now: 5194, before: 5195 }
 status: active
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:
   emoji: 🇪🇸

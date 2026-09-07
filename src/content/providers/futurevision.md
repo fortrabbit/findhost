@@ -40,6 +40,7 @@ dnsHosting: paid-addon
 cdnIncluded: paid-addon
 referringSubnets: null
 status: unverifiable
+addedAt: 2026-08-09
 checkedAt: 2026-08-12
 sources:
   - { field: category, url: 'https://futurevision.host', checkedAt: 2026-08-09 }

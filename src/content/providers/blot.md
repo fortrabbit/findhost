@@ -10,6 +10,7 @@ description: A vanity hosting and static hosting provider in the United Kingdom.
 hqCountry: GB
 referringSubnets: { now: 665, before: 668 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

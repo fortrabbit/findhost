@@ -17,6 +17,7 @@ useCases:
   - static-site
   - cms
 status: discontinued
+addedAt: 2026-08-08
 checkedAt: 2026-08-08
 sources:
   - { field: status, url: 'https://www.netlify.com/blog/gatsby-cloud-evolution/', checkedAt: 2026-08-08 }

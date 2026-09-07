@@ -6,6 +6,7 @@ urls:
 description: The payments company formerly called Square, and the owner of Weebly.
 referringSubnets: { now: 1842, before: 1860 }
 status: unlisted
+addedAt: 2026-08-07
 checkedAt: 2026-08-07
 figure:
   emoji: 🧱

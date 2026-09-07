@@ -6,6 +6,7 @@ urls:
 description: A Ruby on Rails education company and the owner of Hatchbox.
 referringSubnets: { now: 611, before: 608 }
 status: unlisted
+addedAt: 2026-08-07
 checkedAt: 2026-08-07
 figure:
   emoji: 💎

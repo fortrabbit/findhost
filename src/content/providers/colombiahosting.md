@@ -9,6 +9,7 @@ description: A shared hosting provider in Colombia.
 hqCountry: CO
 referringSubnets: { now: 555, before: 552 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

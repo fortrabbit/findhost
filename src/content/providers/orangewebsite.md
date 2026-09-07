@@ -19,6 +19,7 @@ currencies:
   - EUR
 referringSubnets: { now: 478, before: 483 }
 status: active
+addedAt: 2026-08-14
 checkedAt: 2026-08-14
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

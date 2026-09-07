@@ -9,6 +9,7 @@ description: A shared hosting provider in Finland.
 hqCountry: FI
 referringSubnets: { now: 371, before: 346 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

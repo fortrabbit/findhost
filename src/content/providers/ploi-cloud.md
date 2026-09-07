@@ -47,6 +47,7 @@ favoriteNote: Independent from NL. We like.
 referringSubnets: null
 status: active
 hqCountry: NL
+addedAt: 2026-07-31
 checkedAt: 2026-08-12
 apiAvailable: public
 cliTool: official

@@ -9,6 +9,7 @@ description: A shared hosting provider in Greece.
 hqCountry: GR
 referringSubnets: { now: 297, before: 292 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

@@ -23,6 +23,7 @@ billingTiming: advance
 exitWithin: a-quarter
 referringSubnets: null
 status: active
+addedAt: 2026-07-31
 checkedAt: 2026-08-08
 sources:
   - { field: priceFrom, url: 'https://www.nixihost.com/hosting/shared', checkedAt: 2026-08-02 }

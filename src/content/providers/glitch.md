@@ -21,6 +21,7 @@ audience:
   - solo
 freeTier: permanent
 status: discontinued
+addedAt: 2026-08-08
 checkedAt: 2026-08-08
 sources:
   - { field: status, url: 'https://blog.glitch.com/post/changes-are-coming-to-glitch', checkedAt: 2026-08-08 }

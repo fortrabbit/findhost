@@ -10,6 +10,7 @@ description: A VPS and bare metal provider in Austria.
 hqCountry: AT
 referringSubnets: { now: 564, before: 542 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

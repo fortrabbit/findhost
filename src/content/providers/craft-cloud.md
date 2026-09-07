@@ -35,6 +35,7 @@ referringSubnets: { now: 1552, before: 1538 }
 status: active
 hqCountry: US
 ownership: independent
+addedAt: 2026-07-31
 checkedAt: 2026-08-09
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

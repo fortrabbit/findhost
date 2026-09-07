@@ -9,6 +9,7 @@ description: A shared hosting provider in Spain.
 hqCountry: ES
 referringSubnets: { now: 2046, before: 2108 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

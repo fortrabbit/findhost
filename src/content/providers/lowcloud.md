@@ -56,6 +56,7 @@ social:
   x: https://x.com/lowcloud_de
   linkedin: https://www.linkedin.com/company/98501599
 status: active
+addedAt: 2026-09-07
 checkedAt: 2026-09-07
 sources:
   - { field: category, url: 'https://lowcloud.io/en/product/container-hosting', checkedAt: 2026-09-07 }

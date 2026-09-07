@@ -18,6 +18,7 @@ regions:
   - BG
 referringSubnets: { now: 611, before: 604 }
 status: active
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:
   emoji: 🇮🇹

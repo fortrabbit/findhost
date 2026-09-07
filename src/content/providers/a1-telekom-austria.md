@@ -6,6 +6,7 @@ urls:
 description: An Austrian telecoms group and the owner of Exoscale.
 referringSubnets: { now: 518, before: 513 }
 status: unlisted
+addedAt: 2026-08-07
 checkedAt: 2026-08-07
 figure:
   emoji: 📡

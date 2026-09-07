@@ -7,6 +7,7 @@ parent: godaddy
 hqCountry: DE
 referringSubnets: { now: 1889, before: 1889 }
 status: draft
+addedAt: 2026-08-07
 checkedAt: 2026-08-07
 ai: authored
 sources:

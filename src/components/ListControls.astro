@@ -2,13 +2,43 @@
 import ListStyleToggle from './ListStyleToggle.astro';
 
 /**
- * What sits between a list and its heading. One control now — how much of each
- * row to show — after the Signal ordering was replaced by a heart on the rows
- * that earn one. A bar with nothing in it but the toggle is still worth keeping:
- * it is the rule that separates the list from whatever introduced it.
+ * What sits between a list and its heading: which order it is in, and how much
+ * of each row to show.
+ *
+ * The orders are links to pages rather than a control that sorts in the
+ * browser: each order is a page of its own, so it can be linked to, crawled and
+ * read without JavaScript, and the register keeps the address it always had.
+ * None of them ranks anything — a date says when something happened to the
+ * record, not how good the provider is — and the default is the alphabet.
  */
+interface Props {
+  /** Which order this page is already in. Absent means the page offers no choice of order. */
+  sort?: Sort;
+}
+
+export type Sort = 'name' | 'updated' | 'added';
+
+export const orders: { id: Sort; label: string; href: string }[] = [
+  { id: 'name', label: 'A–Z', href: '/' },
+  { id: 'updated', label: 'Last updated', href: '/updated/' },
+  { id: 'added', label: 'Last added', href: '/added/' },
+];
+
+const { sort } = Astro.props;
 ---
 
 <div class="list-controls">
+  {
+    sort && (
+      <nav class="sort-links" aria-label="Order" data-pagefind-ignore>
+        {orders.map((order) => (
+          <a href={order.href} aria-current={order.id === sort ? 'page' : undefined}>
+            {order.label}
+          </a>
+        ))}
+      </nav>
+    )
+  }
+
   <ListStyleToggle />
 </div>

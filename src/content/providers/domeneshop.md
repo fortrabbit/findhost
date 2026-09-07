@@ -9,6 +9,7 @@ description: A shared hosting provider in Norway.
 hqCountry: NO
 referringSubnets: { now: 302, before: 307 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

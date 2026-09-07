@@ -6,6 +6,7 @@ urls:
 description: A European private-equity firm that owns the group behind a host recorded here, and sells no hosting itself.
 referringSubnets: { now: 446, before: 445 }
 status: unlisted
+addedAt: 2026-08-30
 checkedAt: 2026-08-29
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

@@ -10,6 +10,7 @@ description: A IaaS and PaaS provider in South Korea.
 hqCountry: KR
 referringSubnets: { now: 513, before: 515 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

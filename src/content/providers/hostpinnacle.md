@@ -27,6 +27,7 @@ supportChannels:
 supportHours: 24-7
 referringSubnets: null
 status: active
+addedAt: 2026-08-04
 checkedAt: 2026-08-08
 sources:
   - { field: hqCountry, url: 'https://www.hostpinnacle.co.ke', checkedAt: 2026-08-04 }

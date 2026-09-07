@@ -30,6 +30,7 @@ apiAvailable: public
 cliTool: official
 referringSubnets: null
 status: active
+addedAt: 2026-09-07
 checkedAt: 2026-09-07
 sources:
   - { field: category, url: 'https://pushin.eu', checkedAt: 2026-09-07 }

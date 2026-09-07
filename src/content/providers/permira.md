@@ -6,6 +6,7 @@ urls:
 description: A private-equity firm that owns a hosting company recorded here, and sells no hosting itself.
 referringSubnets: { now: 687, before: 687 }
 status: unlisted
+addedAt: 2026-08-07
 checkedAt: 2026-08-07
 figure:
   emoji: 💼

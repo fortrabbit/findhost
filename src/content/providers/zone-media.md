@@ -62,6 +62,7 @@ domainRegistration: paid-addon
 dnsHosting: included
 emailHosting: included
 referringSubnets: { now: 2558, before: 2553 }
+addedAt: 2026-07-31
 checkedAt: 2026-08-12
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

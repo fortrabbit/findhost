@@ -6,6 +6,7 @@ urls:
 description: The French telecoms group behind Free, and the owner of Scaleway.
 referringSubnets: { now: 846, before: 844 }
 status: unlisted
+addedAt: 2026-08-07
 checkedAt: 2026-08-07
 figure:
   emoji: 📡

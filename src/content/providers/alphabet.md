@@ -6,6 +6,7 @@ urls:
 description: Google's holding company, which sells no hosting under its own name.
 referringSubnets: { now: 4558, before: 4551 }
 status: unlisted
+addedAt: 2026-08-07
 checkedAt: 2026-08-07
 figure:
   emoji: 🔤

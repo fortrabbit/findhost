@@ -9,6 +9,7 @@ description: A shared hosting provider in Indonesia.
 hqCountry: ID
 referringSubnets: { now: 1820, before: 1827 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

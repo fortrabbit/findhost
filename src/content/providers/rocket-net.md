@@ -46,6 +46,7 @@ supportChannels:
 supportHours: 24-7
 referringSubnets: { now: 580, before: 574 }
 status: active
+addedAt: 2026-07-31
 checkedAt: 2026-08-09
 mcpServer: official
 sources:

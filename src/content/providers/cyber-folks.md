@@ -49,6 +49,7 @@ dnsHosting: included
 emailHosting: included
 cdnIncluded: paid-addon
 referringSubnets: { now: 2767, before: 2781 }
+addedAt: 2026-07-31
 checkedAt: 2026-08-12
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

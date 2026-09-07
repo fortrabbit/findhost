@@ -5,6 +5,7 @@ urls:
   home: https://www.akamai.com
 referringSubnets: { now: 10539, before: 10466 }
 status: draft
+addedAt: 2026-08-07
 checkedAt: 2026-08-07
 ai: authored
 sources:

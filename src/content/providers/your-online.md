@@ -9,6 +9,7 @@ ownership: independent
 founded: 2017
 referringSubnets: { now: 603, before: 626 }
 status: unlisted
+addedAt: 2026-08-21
 checkedAt: 2026-08-21
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

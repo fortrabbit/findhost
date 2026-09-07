@@ -48,6 +48,7 @@ referringSubnets: null
 status: active
 hqCountry: US
 ownership: independent
+addedAt: 2026-07-31
 checkedAt: 2026-08-12
 sources:
   - { field: testDomain, url: 'https://docs.gigalixir.com/app', checkedAt: 2026-08-12 }

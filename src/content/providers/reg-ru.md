@@ -10,6 +10,7 @@ description: A shared hosting and VPS provider in Russia.
 hqCountry: RU
 referringSubnets: { now: 5821, before: 5850 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

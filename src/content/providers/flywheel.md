@@ -38,6 +38,7 @@ exitWithin: a-quarter
 entryPrice: { amount: 25, currency: USD, period: month }
 referringSubnets: { now: 1284, before: 1292 }
 status: active
+addedAt: 2026-07-31
 checkedAt: 2026-08-01
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

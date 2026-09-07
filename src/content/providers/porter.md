@@ -36,6 +36,7 @@ entryPrice: { amount: 6, currency: USD, period: month }
 freeTier: none
 referringSubnets: { now: 306, before: 307 }
 status: active
+addedAt: 2026-07-31
 checkedAt: 2026-08-01
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

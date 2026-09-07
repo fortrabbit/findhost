@@ -59,6 +59,7 @@ supportChannels:
 supportHours: 24-7
 referringSubnets: { now: 802, before: 797 }
 status: active
+addedAt: 2026-07-31
 checkedAt: 2026-08-12
 apiAvailable: public
 dnsHosting: included

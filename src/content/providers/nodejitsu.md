@@ -15,6 +15,7 @@ runtimes:
 deployMethods:
   - git
 status: discontinued
+addedAt: 2026-08-07
 checkedAt: 2026-08-07
 sources:
   - { field: status, url: 'https://en.wikipedia.org/wiki/Nodejitsu', checkedAt: 2026-08-07 }

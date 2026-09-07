@@ -36,6 +36,7 @@ referringSubnets: { now: 1547, before: 1523 }
 status: active
 hqCountry: IL
 ownership: vc-backed
+addedAt: 2026-07-31
 checkedAt: 2026-08-09
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

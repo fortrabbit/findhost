@@ -10,6 +10,7 @@ description: A shared hosting and VPS provider in the United Kingdom.
 hqCountry: GB
 referringSubnets: { now: 249, before: 247 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

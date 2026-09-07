@@ -6,6 +6,7 @@ urls:
 description: The company behind the Deno runtime, which also operates Deno Deploy.
 referringSubnets: { now: 2352, before: 2341 }
 status: unlisted
+addedAt: 2026-08-07
 checkedAt: 2026-08-07
 figure:
   emoji: 🦕

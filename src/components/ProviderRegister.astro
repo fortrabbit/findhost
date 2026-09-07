@@ -1,7 +1,8 @@
 ---
 import ProviderList from './ProviderList.astro';
-import ListControls from './ListControls.astro';
+import ListControls, { type Sort } from './ListControls.astro';
 import { facetIndex, type Facet, type ProviderRow } from '../lib/facets';
+import { dateGroups } from '../lib/rows';
 
 interface Props {
   providers: ProviderRow[];
@@ -29,9 +30,16 @@ interface Props {
    * belong in the same sentence.
    */
   beside?: { label: string; href: string; count: number }[];
+  /*
+   * Which order the rows are in, and so which tab is lit. Only the register
+   * offers a choice — a narrowed page is one order, the alphabet, and shows no
+   * tabs. The rows arrive alphabetical whatever the order; the dated ones are
+   * sorted here, since the grouping decides the sort.
+   */
+  sort?: Sort;
 }
 
-const { providers, facets, seed, bare, beside = [] } = Astro.props;
+const { providers, facets, seed, bare, beside = [], sort } = Astro.props;
 
 /*
  * Built here rather than in the template. Astro drops a whitespace-only text
@@ -59,14 +67,27 @@ const besideLinks = beside.map((group, index) => ({
   tail: index < beside.length - 1 ? ', ' : '.',
 }));
 
-const groups = [...new Set(providers.map((provider) => letterOf(provider.name)))].sort().map((letter) => ({
-  letter,
+const letterGroups = [...new Set(providers.map((provider) => letterOf(provider.name)))].sort().map((letter) => ({
   // The heading already carries a `#` as its anchor link, so the numeric group
   // says what it holds instead of repeating the glyph.
   label: letter === '#' ? '0–9' : letter,
   anchor: letter === '#' ? 'other' : letter.toLowerCase(),
   rows: providers.filter((provider) => letterOf(provider.name) === letter),
 }));
+
+/*
+ * A dated order groups by month where the alphabet groups by initial: the same
+ * markup, so find.ts hides an emptied group the same way, and a heading a
+ * reader can link to either way. The undated rows are named for what the date
+ * means — "never checked" is a claim the register makes on purpose.
+ */
+const groups =
+  sort === 'updated'
+    ? dateGroups(providers, 'checkedAt', 'Never checked')
+    : sort === 'added'
+      ? dateGroups(providers, 'addedAt', 'Undated')
+      : letterGroups;
+const dated = sort === 'updated' || sort === 'added';
 ---
 
 {
@@ -93,12 +114,12 @@ const groups = [...new Set(providers.map((provider) => letterOf(provider.name)))
   !seed && !bare && <slot />
 }
 
-<ListControls />
+<ListControls sort={sort} />
 
 <div data-pagefind-ignore data-find-results>
   {
     groups.map((group) => (
-      <section class="letter-group" id={group.anchor}>
+      <section class:list={['letter-group', { dated }]} id={group.anchor}>
         <h2>
           <a class="anchor-link" href={`#${group.anchor}`} aria-label={`Link to ${group.label}`}>
             {group.label}

@@ -52,6 +52,7 @@ supportChannels:
   - phone
 referringSubnets: { now: 4124, before: 4131 }
 status: active
+addedAt: 2026-07-31
 checkedAt: 2026-08-12
 apiAvailable: public
 mcpServer: official

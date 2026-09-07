@@ -45,6 +45,7 @@ supportHours: 24-7
 referringSubnets: { now: 744, before: 745 }
 status: active
 hqCountry: US
+addedAt: 2026-07-31
 checkedAt: 2026-08-09
 apiAvailable: public
 cliTool: official

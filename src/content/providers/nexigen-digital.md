@@ -6,6 +6,7 @@ urls:
 description: An Australian group holding hosting brands, VentraIP among them.
 referringSubnets: null
 status: unlisted
+addedAt: 2026-08-07
 checkedAt: 2026-08-07
 figure:
   emoji: 🇦🇺

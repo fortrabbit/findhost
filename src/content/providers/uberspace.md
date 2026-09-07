@@ -69,6 +69,7 @@ favorite: true
 favoriteNote: Pay what it is worth to you. They mean it.
 referringSubnets: { now: 1715, before: 1701 }
 status: active
+addedAt: 2026-07-31
 checkedAt: 2026-08-09
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

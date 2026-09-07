@@ -33,6 +33,7 @@ audience:
   - smb
 referringSubnets: { now: 13034, before: 13091 }
 status: active
+addedAt: 2026-07-31
 checkedAt: 2026-08-08
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

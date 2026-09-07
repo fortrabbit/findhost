@@ -53,6 +53,7 @@ referringSubnets: { now: 537, before: 536 }
 status: active
 domainRegistration: paid-addon
 emailHosting: included
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:
   emoji: 🇮🇹

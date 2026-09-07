@@ -10,6 +10,7 @@ description: A IaaS and PaaS provider in China.
 hqCountry: CN
 referringSubnets: { now: 6607, before: 6665 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

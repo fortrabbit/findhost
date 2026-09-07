@@ -28,6 +28,7 @@ favorite: true
 favoriteNote: Nothing here puts less between a folder and the web.
 referringSubnets: { now: 2597, before: 2575 }
 status: active
+addedAt: 2026-08-08
 checkedAt: 2026-08-12
 cliTool: official
 sources:

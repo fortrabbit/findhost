@@ -9,6 +9,7 @@ description: A shared hosting provider in India.
 hqCountry: IN
 referringSubnets: { now: 853, before: 857 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

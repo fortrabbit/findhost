@@ -9,6 +9,7 @@ description: A shared hosting provider in New Zealand.
 hqCountry: NZ
 referringSubnets: { now: 466, before: 471 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

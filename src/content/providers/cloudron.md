@@ -45,6 +45,7 @@ freeTier: permanent
 hqCountry: DE
 ownership: independent
 referringSubnets: { now: 1413, before: 1406 }
+addedAt: 2026-07-31
 checkedAt: 2026-08-09
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

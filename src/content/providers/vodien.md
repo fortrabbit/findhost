@@ -11,6 +11,7 @@ description: A shared hosting, VPS and server management provider in Singapore.
 hqCountry: SG
 referringSubnets: { now: 1231, before: 1224 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

@@ -43,6 +43,7 @@ regions:
   - MX
 referringSubnets: null
 status: active
+addedAt: 2026-07-31
 checkedAt: 2026-08-01
 sources:
   - { field: pricingModel, url: 'https://docs.digitalocean.com/products/functions/details/pricing/', checkedAt: 2026-07-31 }

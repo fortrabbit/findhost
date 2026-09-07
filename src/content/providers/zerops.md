@@ -81,6 +81,7 @@ cdnIncluded: included
 staging: included
 collaboration: clients
 referringSubnets: null
+addedAt: 2026-07-31
 checkedAt: 2026-08-12
 favorite: true
 favoriteNote: Interesting newer project.

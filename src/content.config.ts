@@ -357,6 +357,14 @@ const providerFields = z
 
     // Meta & provenance
     checkedAt: z.coerce.date().optional(),
+    /*
+     * When the record entered the register — the date the file was first
+     * committed, carried in the record because the deploy container fetches a
+     * single commit and has no history to read it from. Optional here so a
+     * malformed record still fails on the field that is wrong; scripts/validate.ts
+     * holds every record to it.
+     */
+    addedAt: z.coerce.date().optional(),
     sources: z.array(z.object({ field: z.string(), url: publicUrl, checkedAt: z.coerce.date() })).optional(),
     /*
      * Entries are never deleted — for a dataset published by a competitor,

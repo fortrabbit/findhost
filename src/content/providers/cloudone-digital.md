@@ -6,6 +6,7 @@ urls:
 description: The holding company that acquired Liquid Web.
 referringSubnets: null
 status: unlisted
+addedAt: 2026-08-07
 checkedAt: 2026-08-07
 figure:
   emoji: 🏢

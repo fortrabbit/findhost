@@ -12,6 +12,7 @@ description: A shared hosting, IaaS, VPS and bare metal provider in Bangladesh.
 hqCountry: BD
 referringSubnets: null
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 ---

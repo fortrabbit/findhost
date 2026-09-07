@@ -9,6 +9,7 @@ description: A shared hosting provider in Germany.
 hqCountry: DE
 referringSubnets: { now: 2893, before: 2891 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

@@ -47,14 +47,45 @@ test.describe('the one editorial mark', () => {
 
     /* And no score anywhere: that is the thing this replaced. */
     await expect(page.locator('.provider-signal')).toHaveCount(0);
-    await expect(page.locator('.sort-links')).toHaveCount(0);
   });
 
-  test('the register is alphabetical and offers no other order', async ({ page }) => {
+  test('the register is alphabetical by default', async ({ page }) => {
     await page.goto('/');
     const names = await page.locator('[data-find-results] .provider-name a').allInnerTexts();
     const sorted = [...names].sort((a, b) => a.replace(/^the /i, '').localeCompare(b.replace(/^the /i, ''), 'en'));
     expect(names).toEqual(sorted);
+    await expect(page.locator('.sort-links a[aria-current="page"]')).toHaveText('A–Z');
+  });
+
+  /*
+   * Two more orders, both by a date and neither a ranking: when a record was
+   * last checked, and when it entered the register. Each is a page, so it works
+   * without JavaScript and can be linked to, and each holds every row the
+   * register holds.
+   */
+  test('offers the same rows by date last checked and by date added, as pages', async ({ page }) => {
+    await page.goto('/');
+    const total = await page.locator('[data-find-results] li[data-record]').count();
+
+    for (const [path, label] of [
+      ['/updated/', 'Last updated'],
+      ['/added/', 'Last added'],
+    ]) {
+      await page.goto(path);
+      await expect(page.locator('.sort-links a[aria-current="page"]')).toHaveText(label);
+      expect(await page.locator('[data-find-results] li[data-record]').count()).toBe(total);
+
+      /* Grouped by month, newest first. */
+      const headings = await page.locator('[data-find-results] .letter-group > h2').allInnerTexts();
+      expect(headings[0]).toMatch(/^[A-Z][a-z]+ \d{4}$/);
+      const months = headings.filter((heading) => /^[A-Z][a-z]+ \d{4}$/.test(heading)).map((h) => Date.parse(`1 ${h}`));
+      expect(months).toEqual([...months].sort((a, b) => b - a));
+    }
+
+    /* The records nobody has checked are at the end and say so, not oldest and not missing. */
+    await page.goto('/updated/');
+    const last = page.locator('[data-find-results] .letter-group').last();
+    await expect(last.locator('h2')).toHaveText('Never checked');
   });
 });
 

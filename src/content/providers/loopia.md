@@ -53,6 +53,7 @@ supportHours: business-hours
 apiAvailable: public
 referringSubnets: { now: 6406, before: 6386 }
 status: active
+addedAt: 2026-07-31
 checkedAt: 2026-08-12
 domainRegistration: paid-addon
 dnsHosting: included

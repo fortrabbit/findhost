@@ -20,6 +20,7 @@ runtimes:
 deployMethods:
   - git
 status: discontinued
+addedAt: 2026-08-07
 checkedAt: 2026-08-07
 sources:
   - { field: status, url: 'https://web.archive.org/web/20160127135608/http://www.paasfinder.com/how-to-migrate-from-dotcloud-to-heroku/', checkedAt: 2026-09-03 }

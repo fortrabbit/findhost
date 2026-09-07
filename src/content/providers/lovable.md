@@ -21,6 +21,7 @@ favorite: true
 favoriteNote: Popular among non devs.
 referringSubnets: { now: 11718, before: 11707 }
 status: active
+addedAt: 2026-07-31
 checkedAt: 2026-08-12
 collaboration: team
 sources:

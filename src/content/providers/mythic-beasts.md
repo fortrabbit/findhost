@@ -55,6 +55,7 @@ supportChannels:
   - email
 referringSubnets: { now: 902, before: 910 }
 status: active
+addedAt: 2026-07-31
 checkedAt: 2026-08-09
 apiAvailable: public
 sources:

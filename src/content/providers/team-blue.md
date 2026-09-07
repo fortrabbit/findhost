@@ -6,6 +6,7 @@ urls:
 description: A European group assembled by acquisition, holding hosting and domain brands across a dozen countries.
 referringSubnets: { now: 772, before: 755 }
 status: unlisted
+addedAt: 2026-08-07
 checkedAt: 2026-08-07
 figure:
   emoji: 🔗

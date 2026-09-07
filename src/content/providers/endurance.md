@@ -6,6 +6,7 @@ urls:
 description: The group that assembled Bluehost, HostGator and iPage before becoming Newfold Digital.
 referringSubnets: { now: 524, before: 516 }
 status: unlisted
+addedAt: 2026-08-06
 checkedAt: 2026-08-06
 figure:
   emoji: 🏢

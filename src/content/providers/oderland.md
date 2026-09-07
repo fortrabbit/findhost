@@ -10,6 +10,7 @@ description: A shared hosting and VPS provider in Sweden.
 hqCountry: SE
 referringSubnets: { now: 525, before: 531 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

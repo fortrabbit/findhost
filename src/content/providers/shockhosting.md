@@ -11,6 +11,7 @@ description: A shared hosting, virtual server and bare metal provider in the Uni
 hqCountry: US
 referringSubnets: { now: 437, before: 438 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-21
 ai: authored
 sources:

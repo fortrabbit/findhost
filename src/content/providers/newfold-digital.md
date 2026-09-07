@@ -6,6 +6,7 @@ urls:
 description: The holding company for Bluehost, HostGator and Network Solutions.
 referringSubnets: { now: 1874, before: 1874 }
 status: unlisted
+addedAt: 2026-08-07
 checkedAt: 2026-08-07
 figure:
   emoji: 🏢

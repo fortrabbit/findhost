@@ -9,6 +9,7 @@ description: A shared hosting provider in Switzerland.
 hqCountry: CH
 referringSubnets: { now: 762, before: 767 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

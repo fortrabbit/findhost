@@ -52,6 +52,7 @@ entryPrice: { amount: 6, currency: USD, period: month }
 freeTier: permanent
 referringSubnets: { now: 230, before: 229 }
 status: active
+addedAt: 2026-07-31
 checkedAt: 2026-08-12
 staging: included
 collaboration: team

@@ -6,6 +6,7 @@ urls:
 description: A US investment firm that holds the majority of a server provider recorded here, and sells no hosting itself.
 referringSubnets: { now: 2210, before: 2171 }
 status: unlisted
+addedAt: 2026-08-30
 checkedAt: 2026-08-29
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

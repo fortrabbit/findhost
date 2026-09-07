@@ -9,6 +9,7 @@ category:
 description: A static hosting and serverless provider.
 referringSubnets: { now: 237, before: 228 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

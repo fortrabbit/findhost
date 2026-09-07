@@ -11,6 +11,7 @@ hqCountry: GB
 referringSubnets: null
 status: out-of-scope
 criterion: 2
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 sources:
   - { field: status, url: 'https://krystal.io/cloud', checkedAt: 2026-08-12 }

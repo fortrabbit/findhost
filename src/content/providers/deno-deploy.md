@@ -47,6 +47,7 @@ favorite: true
 favoriteNote: Shipped the standards-first argument rather than waiting for it.
 referringSubnets: null
 status: active
+addedAt: 2026-07-31
 checkedAt: 2026-08-12
 sources:
   - { field: priceFrom, url: 'https://deno.com/deploy/pricing', checkedAt: 2026-08-02 }

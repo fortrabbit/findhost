@@ -10,6 +10,7 @@ category:
 description: A small host selling shared, reseller, VPS, hourly KVM and dedicated plans alongside domains, mailboxes and storage, with a free .xyz domain as the hook.
 referringSubnets: null
 status: draft
+addedAt: 2026-08-13
 checkedAt: 2026-08-13
 sources:
   - { field: category, url: 'https://findhost.net', checkedAt: 2026-08-13 }

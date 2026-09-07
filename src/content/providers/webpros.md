@@ -6,6 +6,7 @@ urls:
 description: The owner of cPanel and Plesk, which sells no hosting itself.
 referringSubnets: { now: 678, before: 674 }
 status: unlisted
+addedAt: 2026-08-07
 checkedAt: 2026-08-07
 figure:
   emoji: ⚙️

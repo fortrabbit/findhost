@@ -48,6 +48,7 @@ favorite: true
 favoriteNote: A different bet from everyone else here, not a cheaper version of the same one.
 referringSubnets: { now: 894, before: 890 }
 status: active
+addedAt: 2026-07-31
 checkedAt: 2026-08-12
 cliTool: official
 sources:

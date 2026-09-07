@@ -25,6 +25,7 @@ entryPrice: { amount: 5.99, currency: CAD, period: month }
 priceFrom: xs
 status: out-of-scope
 criterion: 5
+addedAt: 2026-09-07
 checkedAt: 2026-09-07
 sources:
   - { field: status, url: 'https://dotmoose.com/about/', checkedAt: 2026-09-07 }

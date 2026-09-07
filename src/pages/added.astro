@@ -1,0 +1,39 @@
+---
+import Base from '../layouts/Base.astro';
+import ProviderRegister from '../components/ProviderRegister.astro';
+import FindFilters from '../components/FindFilters.astro';
+import { asideGroups, loadFacets } from '../lib/facets';
+
+/*
+ * The register in the order it grew: the same rows, the same filters, grouped
+ * by the month a record entered it. A date about the register rather than the
+ * provider — a host founded in 1999 and added in August is an August record.
+ */
+const { facets, providers } = await loadFacets();
+
+const beside = (await asideGroups()).map((group) => ({
+  label: group.label,
+  href: `/${group.key}/`,
+  count: group.rows.length,
+}));
+---
+
+<Base
+  title="Last added — FindHost"
+  description="Every hosting provider in the register, in the order its record was added."
+>
+  <h1>Last added</h1>
+
+  <p class="annotation">
+    The register, newest record first: the month under which a record sits is when it entered the register, which says
+    nothing about how old the provider is.
+  </p>
+
+  <ProviderRegister providers={providers} facets={facets} beside={beside} sort="added">
+    <FindFilters facets={facets} providers={providers} />
+  </ProviderRegister>
+</Base>
+
+<script>
+  import '../scripts/find.ts';
+</script>

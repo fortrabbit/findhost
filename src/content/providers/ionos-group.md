@@ -6,6 +6,7 @@ urls:
 description: The listed holding company beneath which the IONOS brands sit, including Fasthosts and STRATO.
 referringSubnets: { now: 842, before: 855 }
 status: unlisted
+addedAt: 2026-08-07
 checkedAt: 2026-08-07
 figure:
   emoji: 🏛️

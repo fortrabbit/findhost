@@ -9,6 +9,7 @@ description: A VPS provider in Russia.
 hqCountry: RU
 referringSubnets: { now: 988, before: 985 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

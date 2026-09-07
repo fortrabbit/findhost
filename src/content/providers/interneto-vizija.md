@@ -10,6 +10,7 @@ description: A shared hosting and VPS provider in Lithuania.
 hqCountry: LT
 referringSubnets: { now: 1285, before: 1316 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

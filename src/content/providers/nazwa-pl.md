@@ -52,6 +52,7 @@ emailHosting: included
 staging: paid-addon
 referringSubnets: { now: 3873, before: 3871 }
 status: active
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

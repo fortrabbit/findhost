@@ -10,6 +10,7 @@ description: A IaaS and VPS provider in Vietnam.
 hqCountry: VN
 referringSubnets: { now: 409, before: 399 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

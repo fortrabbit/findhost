@@ -11,6 +11,7 @@ ownership: subsidiary
 parent: automattic
 referringSubnets: { now: 131496, before: 131560 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

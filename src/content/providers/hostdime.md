@@ -10,6 +10,7 @@ description: A bare metal and IaaS provider in the United States.
 hqCountry: US
 referringSubnets: { now: 539, before: 546 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

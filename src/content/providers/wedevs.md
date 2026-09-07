@@ -9,6 +9,7 @@ hqCountry: BD
 headcount: 51-250
 referringSubnets: { now: 1139, before: 1155 }
 status: unlisted
+addedAt: 2026-09-07
 checkedAt: 2026-09-07
 figure:
   emoji: 🧩

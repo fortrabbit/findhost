@@ -9,6 +9,7 @@ description: A shared hosting provider in Türkiye.
 hqCountry: TR
 referringSubnets: { now: 2108, before: 2126 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

@@ -6,7 +6,7 @@ Changes arrive as pull requests: fork, edit the file, open a PR. Fixing one prov
 
 Records live in `src/content/providers/<slug>.md`.
 
-**Four fields are required** — `id`, `name`, `urls.home`, `category`. The rest are optional. **Absent means unknown**, renders as `?`, and is a designed state. Never guess.
+**Four fields are required** — `id`, `name`, `urls.home`, `category` — plus `addedAt`, the date the record entered the register, which the build cannot read from git. The rest are optional. **Absent means unknown**, renders as `?`, and is a designed state. Never guess.
 
 **Cite what changes.** Anything not obvious from the provider's home page needs a `sources` entry with the URL and the date it was read. A provider's own documentation is an acceptable source about its own product.
 

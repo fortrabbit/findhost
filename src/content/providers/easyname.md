@@ -9,6 +9,7 @@ description: A shared hosting provider in Austria.
 hqCountry: AT
 referringSubnets: { now: 957, before: 958 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

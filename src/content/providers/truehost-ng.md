@@ -11,6 +11,7 @@ description: A shared hosting, VPS and bare metal provider in Nigeria.
 hqCountry: NG
 referringSubnets: { now: 280, before: 281 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

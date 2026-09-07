@@ -38,6 +38,7 @@ audience:
   - solo
 referringSubnets: { now: 1258, before: 1248 }
 status: active
+addedAt: 2026-07-31
 checkedAt: 2026-08-12
 domainRegistration: paid-addon
 dnsHosting: included

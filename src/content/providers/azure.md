@@ -65,6 +65,7 @@ regions:
   - ZA
 referringSubnets: null
 status: active
+addedAt: 2026-07-31
 checkedAt: 2026-08-01
 sources:
   - { field: regions, url: 'https://learn.microsoft.com/en-us/azure/reliability/regions-list', checkedAt: 2026-08-01 }

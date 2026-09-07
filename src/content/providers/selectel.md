@@ -24,6 +24,7 @@ supportChannels:
 supportHours: 24-7
 referringSubnets: { now: 1456, before: 1456 }
 status: active
+addedAt: 2026-08-04
 checkedAt: 2026-08-09
 apiAvailable: public
 sources:

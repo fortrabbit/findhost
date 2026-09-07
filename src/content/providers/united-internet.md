@@ -6,6 +6,7 @@ urls:
 description: The German group behind Ionos, 1&1, Fasthosts, Arsys, home.pl and Strato.
 referringSubnets: { now: 607, before: 595 }
 status: unlisted
+addedAt: 2026-08-06
 checkedAt: 2026-08-06
 figure:
   emoji: 🇩🇪

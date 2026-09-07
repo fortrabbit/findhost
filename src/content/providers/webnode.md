@@ -9,6 +9,7 @@ description: A low-code and no-code site builder in Czechia.
 hqCountry: CZ
 referringSubnets: { now: 9504, before: 9468 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

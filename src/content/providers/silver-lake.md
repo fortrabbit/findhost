@@ -6,6 +6,7 @@ urls:
 description: A US technology investment firm that majority-owns a managed WordPress host recorded here, and sells no hosting itself.
 referringSubnets: { now: 741, before: 742 }
 status: unlisted
+addedAt: 2026-08-30
 checkedAt: 2026-08-29
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

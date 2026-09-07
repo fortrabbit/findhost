@@ -48,6 +48,8 @@ export interface ProviderRow {
   favorite?: boolean;
   /** When this record was last read against the provider's own pages. Absent means nobody has. */
   checkedAt?: Date;
+  /** When the record entered the register. A fact about the register, not about the provider. */
+  addedAt?: Date;
   /** Present when a third party has verified the energy claim. Not a score. */
   greenWebId?: number | null;
   /** Headquarters, as the ISO code a list shows rather than the flag it does not. */
@@ -64,6 +66,46 @@ export interface ProviderRow {
 
 /** Alphabetical, always — see the sort rule in CLAUDE.md. */
 export const byName = (a: { name: string }, b: { name: string }) => a.name.localeCompare(b.name, 'en');
+
+/*
+ * The two dated orders the register offers beside the alphabetical one. Neither
+ * is a ranking: a date says when something happened to the record, not how good
+ * the provider is, and the same row sits in every order. A row without the date
+ * is not the oldest, it is undated, so it goes after every dated row — in the
+ * alphabetical order the register already has, as does a tie.
+ */
+type Dated = 'checkedAt' | 'addedAt';
+
+export const byDate = (key: Dated) => (a: ProviderRow, b: ProviderRow) => {
+  const first = a[key]?.getTime() ?? -Infinity;
+  const second = b[key]?.getTime() ?? -Infinity;
+  return second - first || byName(a, b);
+};
+
+export interface DateGroup {
+  /** The month, written out, or the label given for the rows without a date. */
+  label: string;
+  /** `2026-09`, or `undated`. */
+  anchor: string;
+  rows: ProviderRow[];
+}
+
+/** Rows in a dated order, grouped by month; the undated ones last under their own heading, or no such group at all. */
+export function dateGroups(rows: ProviderRow[], key: Dated, undatedLabel: string): DateGroup[] {
+  const groups = new Map<string, DateGroup>();
+  for (const row of [...rows].sort(byDate(key))) {
+    const date = row[key];
+    const anchor = date ? date.toISOString().slice(0, 7) : 'undated';
+    if (!groups.has(anchor)) {
+      const label = date
+        ? date.toLocaleDateString('en', { month: 'long', year: 'numeric', timeZone: 'UTC' })
+        : undatedLabel;
+      groups.set(anchor, { label, anchor, rows: [] });
+    }
+    groups.get(anchor)!.rows.push(row);
+  }
+  return [...groups.values()];
+}
 
 /*
  * What a record answers for a field, as a list either way. A derived value reads
@@ -128,6 +170,7 @@ export function toRow(record: { id: string; data: Record<string, unknown> }): Pr
     description: data.description as string | undefined,
     favorite: data.favorite as boolean | undefined,
     checkedAt: data.checkedAt as Date | undefined,
+    addedAt: data.addedAt as Date | undefined,
     greenWebId: data.greenWebId as number | null | undefined,
     country: data.hqCountry as string | undefined,
     figure: data.figure as ProviderRow['figure'],

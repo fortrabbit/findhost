@@ -11,6 +11,7 @@ description: A shared hosting, VPS and bare metal provider in South Africa.
 hqCountry: ZA
 referringSubnets: { now: 335, before: 337 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

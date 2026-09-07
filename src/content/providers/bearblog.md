@@ -9,6 +9,7 @@ description: A host for personal sites in South Africa.
 hqCountry: ZA
 referringSubnets: { now: 2977, before: 2979 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

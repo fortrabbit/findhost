@@ -9,6 +9,7 @@ description: A serverless provider in the United States.
 hqCountry: US
 referringSubnets: { now: 3227, before: 3221 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

@@ -10,6 +10,7 @@ hqCountry: GB
 ownership: subsidiary
 referringSubnets: { now: 962, before: 966 }
 status: acquired
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

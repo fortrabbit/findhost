@@ -8,6 +8,7 @@ ownership: subsidiary
 parent: your-online
 referringSubnets: { now: 475, before: 475 }
 status: draft
+addedAt: 2026-08-07
 checkedAt: 2026-08-07
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

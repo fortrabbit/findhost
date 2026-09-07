@@ -10,6 +10,7 @@ description: A IaaS and shared hosting provider in New Zealand.
 hqCountry: NZ
 referringSubnets: null
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 ---

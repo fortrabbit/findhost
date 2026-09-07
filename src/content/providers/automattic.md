@@ -7,6 +7,7 @@ description: The company behind WordPress.com, Pressable and WooCommerce, which 
 hqCountry: US
 referringSubnets: { now: 23958, before: 23895 }
 status: unlisted
+addedAt: 2026-08-07
 checkedAt: 2026-08-12
 figure:
   emoji: 🅰️

@@ -45,6 +45,7 @@ staging: included
 collaboration: team
 referringSubnets: null
 status: active
+addedAt: 2026-08-09
 checkedAt: 2026-08-12
 sources:
   - { field: category, url: 'https://diploi.com/', checkedAt: 2026-08-09 }

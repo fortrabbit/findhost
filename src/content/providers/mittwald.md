@@ -67,6 +67,7 @@ referringSubnets: { now: 1302, before: 1294 }
 status: active
 staging: included
 collaboration: clients
+addedAt: 2026-07-31
 checkedAt: 2026-08-12
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

@@ -9,6 +9,7 @@ category:
 description: A shared hosting and PaaS provider in Guatemala.
 referringSubnets: null
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 ---

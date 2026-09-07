@@ -7,6 +7,7 @@ hqCountry: DE
 referringSubnets: null
 status: out-of-scope
 criterion: 2
+addedAt: 2026-08-09
 checkedAt: 2026-08-09
 sources:
   - { field: criterion, url: 'https://anynines.com/', checkedAt: 2026-08-09 }

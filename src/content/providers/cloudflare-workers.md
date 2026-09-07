@@ -26,6 +26,7 @@ freeTier: permanent
 cliTool: official
 referringSubnets: null
 status: active
+addedAt: 2026-07-31
 checkedAt: 2026-07-31
 sources:
   - { field: runtimes, url: 'https://developers.cloudflare.com/workers/languages/', checkedAt: 2026-07-31 }

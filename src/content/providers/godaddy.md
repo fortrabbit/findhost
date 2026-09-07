@@ -26,6 +26,7 @@ emailHosting: paid-addon
 whoManagesOs: managed
 referringSubnets: { now: 98247, before: 98161 }
 status: active
+addedAt: 2026-07-31
 checkedAt: 2026-08-07
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

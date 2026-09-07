@@ -10,6 +10,7 @@ hqCountry: US
 ownership: public
 whoManagesOs: managed
 status: discontinued
+addedAt: 2026-08-07
 checkedAt: 2026-09-02
 sources:
   - { field: founded, url: 'https://www.company-histories.com/Opsware-Inc-Company-History.html', checkedAt: 2026-08-07 }

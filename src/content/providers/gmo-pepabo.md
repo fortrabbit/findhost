@@ -6,6 +6,7 @@ urls:
 description: A Japanese internet company whose hosting reaches customers as Lolipop and other brands.
 referringSubnets: { now: 851, before: 854 }
 status: unlisted
+addedAt: 2026-08-07
 checkedAt: 2026-08-07
 figure:
   emoji: 🇯🇵

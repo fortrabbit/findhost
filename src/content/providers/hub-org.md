@@ -21,6 +21,7 @@ managedDatabases:
 regions:
   - PA
 status: discontinued
+addedAt: 2026-08-14
 checkedAt: 2026-08-14
 sources:
   - { field: founded, url: 'https://www.postgresql.org/about/news/huborg-announces-availability-of-postgresql-90-hosting-1237/', checkedAt: 2026-08-14 }

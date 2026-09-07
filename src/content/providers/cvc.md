@@ -6,6 +6,7 @@ urls:
 description: A private-equity firm that holds a majority stake in a registrar recorded here, and sells no hosting itself.
 referringSubnets: { now: 1135, before: 1146 }
 status: unlisted
+addedAt: 2026-08-30
 checkedAt: 2026-08-29
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

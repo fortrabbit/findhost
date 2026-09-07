@@ -54,6 +54,7 @@ billingTiming: advance
 freeTier: trial
 referringSubnets: { now: 56051, before: 56839 }
 status: active
+addedAt: 2026-07-31
 checkedAt: 2026-08-12
 apiAvailable: public
 cliTool: official

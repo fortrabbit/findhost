@@ -9,6 +9,7 @@ description: Server management software in Germany.
 hqCountry: DE
 referringSubnets: { now: 15843, before: 15843 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

@@ -6,6 +6,7 @@ urls:
 description: An infrastructure investment manager and the owner of GleSYS.
 referringSubnets: null
 status: unlisted
+addedAt: 2026-08-07
 checkedAt: 2026-08-07
 figure:
   emoji: 🏗️

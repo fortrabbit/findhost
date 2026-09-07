@@ -17,6 +17,7 @@ deployMethods:
 managedDatabases:
   - mysql
 status: discontinued
+addedAt: 2026-08-07
 checkedAt: 2026-08-07
 sources:
   - { field: description, url: 'https://www.sitepoint.com/introducing-pagoda-box-paas-just-php/', checkedAt: 2026-08-07 }

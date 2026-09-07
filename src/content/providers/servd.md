@@ -40,6 +40,7 @@ favorite: true
 favoriteNote: Built by Craft developers, for Craft, and for nothing else.
 referringSubnets: null
 status: active
+addedAt: 2026-07-31
 checkedAt: 2026-08-01
 sources:
   - { field: hqCountry, url: 'https://servd.host/terms', checkedAt: 2026-08-01 }

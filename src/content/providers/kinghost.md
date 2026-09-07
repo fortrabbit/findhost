@@ -55,6 +55,7 @@ supportChannels:
 supportHours: 24-7
 referringSubnets: { now: 1223, before: 1241 }
 status: active
+addedAt: 2026-07-31
 checkedAt: 2026-08-01
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

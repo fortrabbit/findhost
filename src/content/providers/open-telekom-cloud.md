@@ -9,6 +9,7 @@ description: A IaaS provider in Germany.
 hqCountry: DE
 referringSubnets: { now: 455, before: 441 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

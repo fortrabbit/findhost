@@ -8,6 +8,7 @@ hqCountry: MT
 referringSubnets: { now: 557, before: 565 }
 status: out-of-scope
 criterion: 1
+addedAt: 2026-08-14
 checkedAt: 2026-08-14
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

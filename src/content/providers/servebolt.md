@@ -55,6 +55,7 @@ cdnIncluded: included
 staging: included
 referringSubnets: { now: 434, before: 440 }
 status: active
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:
   emoji: ⚡

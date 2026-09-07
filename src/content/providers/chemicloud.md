@@ -9,6 +9,7 @@ description: A shared hosting provider in the United States.
 hqCountry: US
 referringSubnets: { now: 659, before: 645 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

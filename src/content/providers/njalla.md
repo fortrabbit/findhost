@@ -5,6 +5,7 @@ urls:
   home: https://njal.la
 referringSubnets: { now: 966, before: 944 }
 status: draft
+addedAt: 2026-08-14
 checkedAt: 2026-08-14
 ai: authored
 sources:

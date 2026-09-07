@@ -6,6 +6,7 @@ urls:
 description: A software company that owns Heroku and sells no hosting under its own name.
 referringSubnets: { now: 30604, before: 30380 }
 status: unlisted
+addedAt: 2026-08-07
 checkedAt: 2026-08-07
 figure:
   emoji: ☁️

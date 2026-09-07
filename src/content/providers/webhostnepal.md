@@ -12,6 +12,7 @@ description: A shared hosting, VPS, IaaS and bare metal provider in Nepal.
 hqCountry: NP
 referringSubnets: null
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 ---

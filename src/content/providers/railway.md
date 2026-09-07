@@ -54,6 +54,7 @@ favorite: true
 favoriteNote: No configuration file, and it charges for what actually ran. Popular.
 referringSubnets: { now: 2049, before: 2047 }
 status: active
+addedAt: 2026-07-31
 checkedAt: 2026-08-12
 staging: included
 collaboration: team

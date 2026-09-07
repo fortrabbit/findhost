@@ -39,6 +39,7 @@ favorite: true
 favoriteNote: Betting that a machine should cost about what a process costs.
 referringSubnets: { now: 737, before: 742 }
 status: active
+addedAt: 2026-08-08
 checkedAt: 2026-08-12
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

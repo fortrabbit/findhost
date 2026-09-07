@@ -10,6 +10,7 @@ description: A shared hosting and VPS provider in Japan.
 hqCountry: JP
 referringSubnets: { now: 801, before: 802 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

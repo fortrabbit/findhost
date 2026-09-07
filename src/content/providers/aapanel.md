@@ -9,6 +9,7 @@ description: Server management software in China.
 hqCountry: CN
 referringSubnets: { now: 4069, before: 4080 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

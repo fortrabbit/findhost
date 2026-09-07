@@ -36,6 +36,7 @@ parent: scaleway
 status: active
 hqCountry: FR
 ownership: subsidiary
+addedAt: 2026-07-31
 checkedAt: 2026-08-09
 apiAvailable: public
 cliTool: official

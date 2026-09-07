@@ -10,6 +10,7 @@ description: A shared hosting and VPS provider in Australia.
 hqCountry: AU
 referringSubnets: { now: 231, before: 225 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

@@ -57,6 +57,7 @@ export const GET: APIRoute = async ({ props, site }) => {
     data.checkedAt
       ? `Last checked against the provider: ${label(data.checkedAt)}`
       : 'Never checked against the provider, so no date is claimed.',
+    ...(data.addedAt ? [`In the register since: ${label(data.addedAt)}`] : []),
     '',
     '## Record',
     '',

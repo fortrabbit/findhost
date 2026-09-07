@@ -9,6 +9,7 @@ description: A IaaS provider in Iceland.
 hqCountry: IS
 referringSubnets: { now: 353, before: 343 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

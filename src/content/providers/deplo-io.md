@@ -25,6 +25,7 @@ certifications:
   - iso-27001
 referringSubnets: null
 status: active
+addedAt: 2026-08-14
 checkedAt: 2026-08-14
 sources:
   - { field: category, url: 'https://deplo.io/en', checkedAt: 2026-08-14 }

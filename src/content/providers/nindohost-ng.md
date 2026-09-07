@@ -12,6 +12,7 @@ description: A shared hosting, VPS, bare metal and serverless provider in Nigeri
 hqCountry: NG
 referringSubnets: null
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 ---

@@ -37,6 +37,7 @@ referringSubnets: null
 status: active
 hqCountry: US
 ownership: vc-backed
+addedAt: 2026-07-31
 checkedAt: 2026-08-09
 cliTool: official
 sources:

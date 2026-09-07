@@ -51,6 +51,7 @@ freeTier: permanent
 apiAvailable: public
 cliTool: official
 referringSubnets: { now: 455, before: 461 }
+addedAt: 2026-07-31
 checkedAt: 2026-08-01
 hqCountry: GB
 ownership: vc-backed

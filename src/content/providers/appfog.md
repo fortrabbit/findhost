@@ -19,6 +19,7 @@ runtimes:
 deployMethods:
   - git
 status: discontinued
+addedAt: 2026-08-07
 checkedAt: 2026-08-07
 figure:
   emoji: 💨

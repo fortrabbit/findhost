@@ -44,6 +44,7 @@ regions:
 contractMinimum: annual
 referringSubnets: { now: 4251, before: 4265 }
 status: active
+addedAt: 2026-07-31
 checkedAt: 2026-08-09
 apiAvailable: public
 certifications:

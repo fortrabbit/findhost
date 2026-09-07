@@ -50,6 +50,7 @@ ownership: vc-backed
 testDomain: included
 staging: included
 collaboration: team
+addedAt: 2026-07-31
 checkedAt: 2026-08-12
 sources:
   - { field: hqCountry, url: 'https://laravel.com/cloud', checkedAt: 2026-08-09 }

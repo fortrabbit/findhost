@@ -9,6 +9,7 @@ ownership: pe-owned
 parent: cinven
 referringSubnets: { now: 348, before: 350 }
 status: unlisted
+addedAt: 2026-08-30
 checkedAt: 2026-08-29
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

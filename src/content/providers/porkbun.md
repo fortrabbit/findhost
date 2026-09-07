@@ -15,6 +15,7 @@ domainRegistration: paid-addon
 emailHosting: paid-addon
 referringSubnets: { now: 2091, before: 2097 }
 status: active
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 dnsHosting: included
 sources:

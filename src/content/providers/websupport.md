@@ -56,6 +56,7 @@ dnsHosting: included
 emailHosting: included
 referringSubnets: { now: 4951, before: 4999 }
 status: active
+addedAt: 2026-07-31
 checkedAt: 2026-08-12
 apiAvailable: public
 social:

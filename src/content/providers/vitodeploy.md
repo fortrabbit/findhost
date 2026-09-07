@@ -44,6 +44,7 @@ social:
 ownership: independent
 referringSubnets: null
 status: active
+addedAt: 2026-09-04
 checkedAt: 2026-09-04
 sources:
   - { field: description, url: 'https://vitodeploy.com/docs/getting-started/introduction', checkedAt: 2026-09-04 }

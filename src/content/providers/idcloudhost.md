@@ -13,6 +13,7 @@ regions:
   - SG
 referringSubnets: { now: 826, before: 817 }
 status: active
+addedAt: 2026-08-04
 checkedAt: 2026-08-04
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

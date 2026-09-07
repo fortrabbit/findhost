@@ -43,6 +43,7 @@ freeTier: permanent
 referringSubnets: null
 status: active
 hqCountry: US
+addedAt: 2026-07-31
 checkedAt: 2026-08-09
 sources:
   - { field: hqCountry, url: 'https://firebase.google.com', checkedAt: 2026-08-09 }

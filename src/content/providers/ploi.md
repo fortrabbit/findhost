@@ -47,6 +47,7 @@ social:
   facebook: https://www.facebook.com/ploideploy
 referringSubnets: { now: 786, before: 802 }
 status: active
+addedAt: 2026-07-31
 checkedAt: 2026-08-09
 apiAvailable: public
 cliTool: official

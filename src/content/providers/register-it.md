@@ -9,6 +9,7 @@ description: A shared hosting provider in Italy.
 hqCountry: IT
 referringSubnets: { now: 5070, before: 5111 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

@@ -17,6 +17,7 @@ collaboration: team
 apiAvailable: public
 referringSubnets: { now: 14642, before: 14631 }
 status: active
+addedAt: 2026-08-13
 checkedAt: 2026-08-13
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

@@ -9,6 +9,7 @@ description: A VPS provider in Canada.
 hqCountry: CA
 referringSubnets: { now: 660, before: 658 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

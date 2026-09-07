@@ -9,6 +9,7 @@ description: A shared hosting provider in Ukraine.
 hqCountry: UA
 referringSubnets: { now: 1625, before: 1648 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

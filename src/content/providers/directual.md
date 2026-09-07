@@ -9,6 +9,7 @@ description: A low-code and no-code site builder in Bulgaria.
 hqCountry: BG
 referringSubnets: { now: 279, before: 258 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

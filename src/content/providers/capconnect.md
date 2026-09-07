@@ -11,6 +11,7 @@ description: A shared hosting, VPS and bare metal provider in Morocco.
 hqCountry: MA
 referringSubnets: { now: 449, before: 442 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

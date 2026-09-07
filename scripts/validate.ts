@@ -523,6 +523,20 @@ const checkProseLinks = (file: string, body: string) => {
   }
 };
 for (const record of records) checkProseLinks(join(providersDir, record.file), record.body);
+
+/*
+ * Every record says when it entered the register. The "last added" order is
+ * built from it, and a record without one would not be newest or oldest but
+ * missing from the order altogether — which nothing on the page would say. The
+ * date is the file's first commit; the build cannot read that itself, because
+ * the deploy container fetches one commit and no history.
+ */
+for (const record of records) {
+  const added = record.data?.addedAt;
+  const isDate = added instanceof Date || /^\d{4}-\d{2}-\d{2}$/.test(String(added ?? ''));
+  if (!isDate)
+    fail(join(providersDir, record.file), 'no addedAt — the date this record entered the register, as YYYY-MM-DD');
+}
 for (const key of noteKeys(notesDir)) {
   const file = `${notesDir}/${key}.md`;
   checkProseLinks(file, readFileSync(file, 'utf8'));

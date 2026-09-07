@@ -10,6 +10,7 @@ description: A PaaS and shared hosting provider in the United States.
 hqCountry: US
 referringSubnets: { now: 1465, before: 1474 }
 status: draft
+addedAt: 2026-08-12
 checkedAt: 2026-08-12
 ai: authored
 sources:

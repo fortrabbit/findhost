@@ -31,6 +31,7 @@ audience:
   - solo
 referringSubnets: { now: 1271, before: 1267 }
 status: active
+addedAt: 2026-07-31
 checkedAt: 2026-08-09
 apiAvailable: public
 cliTool: official
