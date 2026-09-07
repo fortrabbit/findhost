@@ -46,10 +46,26 @@ export const GET: APIRoute = async ({ site }) => {
 
   const paths = [...new Set(routes)];
 
+  /*
+   * <lastmod> is what a crawler uses to decide what to fetch again, and the only
+   * date this project stands behind is `checkedAt` — the same value the record's
+   * JSON-LD reports as dateModified. A record without one, and every other page,
+   * carries no date at all: the commit date would say when the file moved, not
+   * when the facts were read.
+   */
+  const lastmod = new Map(
+    providers
+      .filter((provider) => provider.data.checkedAt)
+      .map((provider) => [`/${provider.id}/`, provider.data.checkedAt!.toISOString().slice(0, 10)]),
+  );
+
   const body = [
     '<?xml version="1.0" encoding="UTF-8"?>',
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-    ...paths.map((path) => `  <url><loc>${origin}${path}</loc></url>`),
+    ...paths.map((path) => {
+      const date = lastmod.get(path);
+      return `  <url><loc>${origin}${path}</loc>${date ? `<lastmod>${date}</lastmod>` : ''}</url>`;
+    }),
     '</urlset>',
     '',
   ].join('\n');

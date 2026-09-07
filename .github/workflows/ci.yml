@@ -10,6 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # The whole history, so the IndexNow step below can diff a push of
+          # several commits against what main was before it.
+          fetch-depth: 0
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
@@ -31,6 +35,16 @@ jobs:
       - run: pnpm run linkcheck:internal
       - run: pnpm exec playwright install --with-deps chromium
       - run: pnpm run test:e2e
+      # A push to main is a deploy. Tell IndexNow which pages it changed, so
+      # Bing and the engines behind it fetch them now rather than on the next
+      # crawl. The deploy runs beside this job, not after it, and a ping that
+      # arrives first is fine: the fetch comes minutes later. Reported, never
+      # blocking — a third party's outage is not a reason to fail the run.
+      - if: github.event_name == 'push'
+        continue-on-error: true
+        env:
+          SITE_URL: https://www.findhost.app
+        run: node scripts/indexnow.ts ${{ github.event.before }} ${{ github.sha }}
 
   # Third-party availability is not something a content pull request should be
   # blocked on, so this reports and never fails the run. It exists because a
