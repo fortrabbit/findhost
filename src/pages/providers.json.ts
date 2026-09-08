@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
 import { loadAsides, loadDrafts, loadFacets } from '../lib/facets';
 import { credit, licenceUrl } from '../lib/seo';
+import { newest } from '../lib/modified';
 
 /**
  * The "database": every facet definition and every record's facet fields, in one
@@ -27,6 +28,7 @@ export const GET: APIRoute = async ({ site }) => {
    * without anybody having to scan two hundred records to work it out. Every
    * record carries its own date; this is the one the whole download claims.
    */
+  const modified = newest(providers.map((provider) => provider.modifiedAt));
   const checked = providers
     .map((provider) => provider.checkedAt)
     .filter((date): date is Date => Boolean(date))
@@ -38,6 +40,7 @@ export const GET: APIRoute = async ({ site }) => {
     license: licenceUrl,
     attribution: credit,
     ...(checked.length ? { checkedAt: new Date(Math.max(...checked)).toISOString().slice(0, 10) } : {}),
+    ...(modified ? { modifiedAt: modified.toISOString().slice(0, 10) } : {}),
     note: 'Attributes are recorded, never scored. An absent field means unknown, never zero and never bad.',
   };
 

@@ -8,6 +8,7 @@ import { loadFacets } from '../lib/facets';
 import { organization, recordTitle } from '../lib/seo';
 import { cardPath } from '../lib/og';
 import { outboundLinkAttrs } from '../lib/links';
+import { modifiedAt, updatedAfterCheck } from '../lib/modified';
 import SocialLinks from '../components/SocialLinks.astro';
 import PageFigure from '../components/PageFigure.astro';
 import FactGroups from '../components/FactGroups.astro';
@@ -212,18 +213,12 @@ const staleAfterDays = 180;
 const checkedIso = data.checkedAt?.toISOString().slice(0, 10);
 const addedIso = data.addedAt?.toISOString().slice(0, 10);
 /*
- * The newest date on any source: the last time a field on this record was read
- * or refreshed, by a person or a script. Shown only when it is newer than the
- * record's own `checkedAt`, since otherwise it says the same thing twice.
+ * "Updated" is the newest date on any source when that is newer than the
+ * record's own `checkedAt`: a field refreshed on its own, by a script or the
+ * routine. Shown only then, since otherwise it says the same thing twice.
  */
-const newestSource = (data.sources ?? []).reduce<Date | undefined>(
-  (newest, source) => (!newest || source.checkedAt > newest ? source.checkedAt : newest),
-  undefined,
-);
-const updatedIso =
-  newestSource && (!data.checkedAt || newestSource > data.checkedAt)
-    ? newestSource.toISOString().slice(0, 10)
-    : undefined;
+const updatedIso = updatedAfterCheck(data)?.toISOString().slice(0, 10);
+const modifiedIso = modifiedAt(data)?.toISOString().slice(0, 10);
 const checkedDaysAgo = data.checkedAt ? Math.floor((Date.now() - data.checkedAt.getTime()) / 86_400_000) : undefined;
 const stale = checkedDaysAgo !== undefined && checkedDaysAgo > staleAfterDays;
 
@@ -297,7 +292,7 @@ const categoryLabels = (fieldOf.get('category')?.values ?? [])
       inLanguage: 'en',
       publisher: organization(origin),
       /* The date somebody read the provider's own pages — the only one we stand behind. */
-      ...(data.checkedAt ? { dateModified: new Date(data.checkedAt).toISOString().slice(0, 10) } : {}),
+      ...(modifiedIso ? { dateModified: modifiedIso } : {}),
       license: 'https://creativecommons.org/licenses/by/4.0/',
       /*
        * The provider is the subject of the page, not its author. `about` says that

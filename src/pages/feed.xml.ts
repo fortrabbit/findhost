@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
 import { loadIndexed } from '../lib/providers';
 import { licenceUrl } from '../lib/seo';
+import { modifiedAt } from '../lib/modified';
 
 /**
  * Recently checked records, as Atom.
@@ -23,21 +24,22 @@ export const GET: APIRoute = async ({ site }) => {
   const origin = site?.origin ?? '';
 
   const checked = (await loadIndexed())
-    .filter((provider) => provider.data.checkedAt)
-    .sort((a, b) => Number(new Date(b.data.checkedAt!)) - Number(new Date(a.data.checkedAt!)))
+    .map((provider) => ({ provider, modified: modifiedAt(provider.data) }))
+    .filter((entry): entry is { provider: (typeof entry)['provider']; modified: Date } => Boolean(entry.modified))
+    .sort((a, b) => b.modified.getTime() - a.modified.getTime())
     .slice(0, entries);
 
   const stamp = (value: Date | string) => new Date(value).toISOString();
-  const updated = checked.length ? stamp(checked[0].data.checkedAt!) : '1970-01-01T00:00:00.000Z';
+  const updated = checked.length ? stamp(checked[0].modified) : '1970-01-01T00:00:00.000Z';
 
-  const items = checked.map((provider) =>
+  const items = checked.map(({ provider, modified }) =>
     [
       '  <entry>',
       `    <title>${escape(provider.data.name)}</title>`,
       `    <link href="${origin}/${provider.id}/"/>`,
       `    <link rel="alternate" type="text/markdown" href="${origin}/${provider.id}.md"/>`,
       `    <id>${origin}/${provider.id}/</id>`,
-      `    <updated>${stamp(provider.data.checkedAt!)}</updated>`,
+      `    <updated>${stamp(modified)}</updated>`,
       ...(provider.data.description ? [`    <summary>${escape(provider.data.description)}</summary>`] : []),
       '  </entry>',
     ].join('\n'),

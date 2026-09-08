@@ -8,6 +8,7 @@
  * having a test for.
  */
 import { facetFields, isDerived, slugOf, sourcesOf, type Field } from './fields.ts';
+import { modifiedAt } from './modified.ts';
 
 export interface FacetValue {
   id: string;
@@ -48,6 +49,8 @@ export interface ProviderRow {
   favorite?: boolean;
   /** When this record was last read against the provider's own pages. Absent means nobody has. */
   checkedAt?: Date;
+  /** When anything on the record last changed: `checkedAt` or the newest source date. For machines. */
+  modifiedAt?: Date;
   /** When the record entered the register. A fact about the register, not about the provider. */
   addedAt?: Date;
   /** Present when a third party has verified the energy claim. Not a score. */
@@ -145,6 +148,7 @@ export function toRow(record: { id: string; data: Record<string, unknown> }): Pr
     description: data.description as string | undefined,
     favorite: data.favorite as boolean | undefined,
     checkedAt: data.checkedAt as Date | undefined,
+    modifiedAt: modifiedAt(data as { checkedAt?: Date; sources?: { checkedAt: Date }[] }),
     addedAt: data.addedAt as Date | undefined,
     greenWebId: data.greenWebId as number | null | undefined,
     country: data.hqCountry as string | undefined,

@@ -6,6 +6,7 @@ import { asideGroups, loadFacets } from '../lib/facets';
 import { loadIndexed } from '../lib/providers';
 import { fields } from '../lib/fields';
 import { dataset, website } from '../lib/seo';
+import { modifiedAt, newest } from '../lib/modified';
 
 const { facets, providers } = await loadFacets();
 
@@ -15,11 +16,7 @@ const { facets, providers } = await loadFacets();
  * make and a commission-ordered table cannot, so it is stated where a machine
  * finds it without reading prose.
  */
-const checkedDates = (await loadIndexed())
-  .map((provider) => provider.data.checkedAt)
-  .filter(Boolean)
-  .map((date) => new Date(date as string | Date));
-const lastChecked = checkedDates.length ? new Date(Math.max(...checkedDates.map(Number))) : undefined;
+const lastChecked = newest((await loadIndexed()).map((provider) => modifiedAt(provider.data)));
 
 // Named the same way here, on their own pages and in the sitemap: one source, three uses.
 const beside = (await asideGroups()).map((group) => ({

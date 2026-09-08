@@ -2,6 +2,7 @@ import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 import { fieldGroups, hiddenStatuses } from '../lib/fields';
 import { attribution } from '../lib/seo';
+import { updatedAfterCheck } from '../lib/modified';
 
 /**
  * The record as markdown, for anything that would rather read text than HTML.
@@ -30,6 +31,7 @@ const label = (value: unknown): string => {
 export const GET: APIRoute = async ({ props, site }) => {
   const { provider } = props as { provider: Awaited<ReturnType<typeof getCollection<'providers'>>>[number] };
   const data = provider.data as Record<string, unknown>;
+  const updated = updatedAfterCheck(provider.data);
   const origin = site?.origin ?? '';
 
   /*
@@ -54,10 +56,9 @@ export const GET: APIRoute = async ({ props, site }) => {
       : '',
     hidden ? '' : undefined,
     `Source: ${origin}/${provider.id}/`,
-    data.checkedAt
-      ? `Last checked against the provider: ${label(data.checkedAt)}`
-      : 'Never checked against the provider, so no date is claimed.',
-    ...(data.addedAt ? [`In the register since: ${label(data.addedAt)}`] : []),
+    ...(data.checkedAt ? [`Last reviewed: ${label(data.checkedAt)}`] : []),
+    ...(updated ? [`Updated: ${label(updated)}`] : []),
+    ...(data.addedAt ? [`Listed since: ${label(data.addedAt)}`] : []),
     '',
     '## Record',
     '',
