@@ -1861,9 +1861,3 @@ article > pre {
   max-width: var(--measure-prose);
   text-wrap: pretty;
 }
-
-/* The way on from the list, set like the meta line under the record rather than as a row of it. */
-.similar-more {
-  margin-top: var(--space-md);
-  font-size: var(--text-sm);
-}

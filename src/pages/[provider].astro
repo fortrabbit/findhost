@@ -9,7 +9,7 @@ import { toRow } from '../lib/rows';
 import { similarTo } from '../lib/similar';
 import ProviderList from '../components/ProviderList.astro';
 import ListControls from '../components/ListControls.astro';
-import { organization, recordTitle, valueTitle } from '../lib/seo';
+import { organization, recordTitle } from '../lib/seo';
 import { cardPath } from '../lib/og';
 import { outboundLinkAttrs } from '../lib/links';
 import SocialLinks from '../components/SocialLinks.astro';
@@ -186,26 +186,6 @@ const similar = similarTo(toRow(provider as never), registerRows).map((match) =>
   favorite: match.row.favorite,
   figure: match.row.figure,
 }));
-
-/*
- * Where the list goes on: the page of the most specific category this record
- * holds. A pair page would be narrower, but the narrowest one a record sits on
- * is usually a niche — "serverless providers in Japan" — where the category
- * page is the list this one was drawn from. Every category in use has a page,
- * so nothing is generated for the link.
- */
-const categoryFacet = allFacets.find((facet) => facet.field === 'category');
-const categoryHere = categoryFacet?.values
-  .filter((value) => value.count > 0 && (data.category ?? []).includes(value.id as never))
-  .sort((a, b) => a.count - b.count)[0];
-const more =
-  categoryHere && categoryFacet
-    ? {
-        href: `/${categoryFacet.id}/${categoryHere.slug}/`,
-        label: valueTitle(categoryFacet.id, categoryHere),
-        count: categoryHere.count,
-      }
-    : undefined;
 
 /** The wide grid under the prose, with the bring-your-own rows on the end of it. */
 const below = [...drawn(farGroups), ...(alsoNeeded.length > 0 ? [{ label: 'Bring your own', rows: alsoNeeded }] : [])];
@@ -607,21 +587,15 @@ const categoryLabels = (fieldOf.get('category')?.values ?? [])
        */
       similar.length > 0 && (
         <section class="similar" data-pagefind-ignore>
-          <h2>Similar providers</h2>
+          <h2>Somehow similar providers</h2>
           <p>
-            The records sharing the most of this one's category, regions, software, runtimes, entry price and operating
-            system, most in common first and alphabetical after that. Every field either record leaves blank is left out
-            of the count.
+            Ordered by how many of category, regions, software, runtimes, entry price and operating system they share
+            with this record. A field left blank on either side does not count.
           </p>
           <ListControls />
           <div data-find-results>
             <ProviderList providers={similar} />
           </div>
-          {more && (
-            <p class="similar-more">
-              More: <a href={more.href}>{more.label}</a>, {more.count} providers
-            </p>
-          )}
         </section>
       )
     }
