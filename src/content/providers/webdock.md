@@ -36,6 +36,8 @@ priceFrom: xs
 priceTo: md
 currencies:
   - EUR
+  - DKK
+  - USD
 billingPeriods:
   - monthly
 exitWithin: a-month
@@ -51,17 +53,17 @@ social:
   youtube: https://www.youtube.com/@webdock
 referringSubnets: { now: 535, before: 541 }
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-09-08
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: regions, url: 'https://webdock.io/en/pricing', checkedAt: 2026-08-01 }
-  - { field: entryPrice, url: 'https://webdock.io/en/pricing', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://webdock.io/en/pricing', checkedAt: 2026-08-01 }
-  - { field: priceTo, url: 'https://webdock.io/en/pricing', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://webdock.io/en/pricing', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://webdock.io/en/pricing', checkedAt: 2026-08-02 }
-  - { field: exitWithin, url: 'https://webdock.io/en/pricing', checkedAt: 2026-08-02 }
-  - { field: urls, url: 'https://status.webdock.io/', checkedAt: 2026-08-01 }
+  - { field: regions, url: 'https://webdock.io/en/pricing', checkedAt: 2026-09-08 }
+  - { field: entryPrice, url: 'https://webdock.io/en/pricing', checkedAt: 2026-09-08 }
+  - { field: priceFrom, url: 'https://webdock.io/en/pricing', checkedAt: 2026-09-08 }
+  - { field: priceTo, url: 'https://webdock.io/en/pricing', checkedAt: 2026-09-08 }
+  - { field: currencies, url: 'https://webdock.io/en/pricing', checkedAt: 2026-09-08 }
+  - { field: billingPeriods, url: 'https://webdock.io/en/pricing', checkedAt: 2026-09-08 }
+  - { field: exitWithin, url: 'https://webdock.io/en/pricing', checkedAt: 2026-09-08 }
+  - { field: urls, url: 'https://status.webdock.io/', checkedAt: 2026-09-08 }
 figure:
   emoji: 🇩🇰
   color: rgb(166, 69, 83)
