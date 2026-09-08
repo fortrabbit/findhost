@@ -33,3 +33,7 @@ The queue order, not a judgement about the provider. Nothing in this file ranks 
 ### Removing rows
 
 A row leaves this file when its record lands in `src/content/providers/`, whatever status that record takes. A provider that fails the rules is worth keeping as a record with `status: out-of-scope` and a written reason, rather than being quietly dropped here — the question "why is this not listed" deserves an answer on the site, not in a research file.
+
+## refresh-log.tsv
+
+One line per record the refresh routine handled, tab-separated: the date, the record id, the outcome (`confirmed`, `changed`, `unreadable`, `stopped`) and a short note. `scripts/refresh-pick.mjs` reads it to skip records handled in the last sixty days, so a record whose pages cannot be read is not picked again every morning. The routine appends to it and nothing else reads it; the record's own `checkedAt` stays the only claim about when it was checked.
