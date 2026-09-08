@@ -13,9 +13,11 @@
  *   node scripts/refresh-pick.mjs --n 3      # three
  *   node scripts/refresh-pick.mjs --days 30  # retry sooner than the default 60
  *
- * Reads research/refresh-log.tsv, which the routine appends to. See
- * .claude/skills/refresh-record/SKILL.md.
+ * Reads research/refresh-log.tsv, which the routine appends to, and skips any
+ * record still waiting on the review branch, whose commit carries no log line.
+ * See .claude/skills/refresh-record/SKILL.md.
  */
+import { execFileSync } from 'node:child_process';
 import { readdirSync, readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { parse } from 'yaml';
@@ -40,6 +42,21 @@ if (existsSync(logFile)) {
     const [date, id] = line.split('\t');
     if (date && id && date >= since) recent.add(id);
   }
+}
+
+/* Records changed on the review branch and not yet merged: somebody is reading those. */
+const reviewBranch = 'origin/claude/refresh-review';
+try {
+  const changed = execFileSync('git', ['diff', '--name-only', `origin/main...${reviewBranch}`], {
+    encoding: 'utf8',
+    stdio: ['ignore', 'pipe', 'ignore'],
+  });
+  for (const path of changed.split('\n')) {
+    const match = path.match(/^src\/content\/providers\/(.+)\.md$/);
+    if (match) recent.add(match[1]);
+  }
+} catch {
+  /* No review branch, nothing waiting. */
 }
 
 const front = (file) => {
