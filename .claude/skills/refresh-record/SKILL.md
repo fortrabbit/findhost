@@ -1,6 +1,6 @@
 ---
 name: refresh-record
-description: Re-read one or more provider records against the provider's own pages, update what the pages contradict, date what they confirm, and push the result to the rolling `refresh` branch. Use when asked to refresh, re-check, or re-verify provider records, or when running as the scheduled refresh routine (MR-320).
+description: Re-read one or more provider records against the provider's own pages, update what the pages contradict, date what they confirm, set `status` on the provider's own announcement, and push the result to the rolling `claude/refresh` branch. Use when asked to refresh, re-check, or re-verify provider records, or when running as the scheduled refresh routine (MR-320).
 ---
 
 # Refresh a provider record
@@ -18,13 +18,13 @@ This runs unattended. Never ask a question. Where the procedure says stop, stop 
 
 ```sh
 git fetch origin
-git checkout refresh 2>/dev/null || git checkout -b refresh origin/main
-git merge --ff-only origin/refresh 2>/dev/null || true
+git checkout claude/refresh 2>/dev/null || git checkout -b claude/refresh origin/main
+git merge --ff-only origin/claude/refresh 2>/dev/null || true
 git merge origin/main
 pnpm install --frozen-lockfile
 ```
 
-All work lands on `refresh`. It is merged to `main` by a person through a pull request, roughly weekly. Never push to `main`.
+All work lands on `claude/refresh`. The prefix is what the cloud routine may always push to; any other branch name is checked and can be refused. It is merged to `main` by a person through a pull request, roughly weekly. Never push to `main`.
 
 ## 2. Pick
 
@@ -33,7 +33,7 @@ Candidates are the records in `src/content/providers/*.md` that the register sho
 Skip any record already changed on this branch since `main`:
 
 ```sh
-git diff --name-only origin/main...refresh
+git diff --name-only origin/main...claude/refresh
 ```
 
 That is what stops a record whose pages cannot be read from being picked every day until somebody notices.
@@ -42,9 +42,9 @@ Order the rest by `checkedAt`, oldest first, records with no `checkedAt` first o
 
 ## 3. Read
 
-For each record, the pages to read are every URL under `urls` and every distinct URL in `sources`. Fetch each one. A page counts as read only when it answers 200 and the body is the page rather than a bot challenge, a login wall or an empty shell waiting for JavaScript. Anything else is **unreadable**. Note which and why, and read on.
+For each record, the pages to read are every URL under `urls` and every distinct URL in `sources`, except the sources of fields the scripts own, `referringSubnets` and `greenWebId`; those point at third parties, and the scripts under `scripts/` refresh them. Fetch each one. A page counts as read only when it answers 200 and the body is the page rather than a bot challenge, a login wall or an empty shell waiting for JavaScript. Anything else is **unreadable**. Note which and why, and read on.
 
-Do not search the web for a fact. The provider's own pages are the only source this record may cite. If a page has moved, follow its redirect within the same domain and record the new URL as the source. A redirect to a different domain is an escalation, see step 6.
+Do not search the web for a fact. The provider's own pages are the only source this record may cite. If a page has moved, follow its redirect within the same domain and record the new URL as the source. A redirect to a different domain is read for what it says, see step 5, and never becomes a source.
 
 ## 4. Compare
 
@@ -58,28 +58,40 @@ Fields with no `sources` entry are not compared. Do not add sources for them, an
 
 Set the record's own `checkedAt` to today only when every page in `sources` was read. If any was unreadable, leave the record's `checkedAt` alone: the claim would not be true.
 
-## 5. Never touch
+## 5. Status
 
-- Prose below the frontmatter, `description`, `figure`, `favorite`, `favoriteNote`.
-- `status`, `addedAt`, `ai`, `criterion`.
+`status` is the one field the record's own pages can change without a `sources` entry, because a provider's own announcement is the source. Everything on this branch is merged by a person, so a status change is a proposal in a diff, not a decision that ships on its own. Write it, and put the evidence in the commit body.
+
+- **`discontinued`.** A page the provider publishes says the service has ended, or `urls.home` now redirects to a page that says so. Quote it.
+- **`acquired`.** The provider's own pages announce the acquisition and the service is still sold. Quote it. Fill `parent` only if the vocabulary already has the acquirer.
+- **`renamed`.** The provider's own pages announce the new name. Quote it, and do not touch `name` or `id`; a rename of the record is a person's job.
+- **`out-of-scope`.** Only on the two criteria the provider's own pages can show, from the six in `CONTRIBUTING.md`: criterion 3, it no longer publishes a price without a login, and criterion 4, it no longer documents its platform publicly. Set `criterion` to 3 or 4 and quote what the page shows instead, a login wall, a contact-sales form, an empty docs domain. Never rule on the other four; they need sources this skill may not read.
+- **Never `draft`.** That means a record somebody started and did not finish. A provider that fails a criterion is a decision, and `out-of-scope` is where the site records one with a page to argue with.
+
+A domain that does not answer is not evidence of anything. A parked page, an NXDOMAIN, a timeout: leave `status` alone, report it, and a person looks at it in the pull request.
+
+Set the record's `checkedAt` to today on any status change; the pages were read.
+
+## 6. Never touch
+
+- Prose below the frontmatter, `description`, `figure`, `favorite`, `favoriteNote`. A discontinued record's About keeps reading in the present tense until a person edits it.
+- `name`, `id`, `addedAt`, `ai`.
 - `referringSubnets` and `greenWebId`. Scripts own those.
 - Any field whose page said nothing.
 
-## 6. Escalate instead of writing
+## 7. Stop instead of writing
 
 Stop work on the record, write nothing to it, and open a Linear issue when any of these is true:
 
-- `urls.home` is unreachable or answers with a parked page.
-- Any page redirects to another domain.
-- A page announces an acquisition, a rename, a shutdown or an end of sales.
-- More than five fields on one record would change.
+- More than five fields on one record would change, status not counted.
 - `N` is five or more and more than a fifth of the batch would change.
+- The pages contradict each other, or say something the vocabulary cannot hold, on a question that decides `status`.
 
 The issue goes to team Marketing, project FindHost+, title `FindHost: <name>, <what happened>`, body starting with 🤖 on its own line, then the URL, what was seen, and the quote. One issue per record. Search Linear first, and comment on an existing open issue for the record instead of opening a second.
 
 If Linear is not reachable, put the same text in the run report and continue.
 
-## 7. Write
+## 8. Write
 
 One record, one commit. Before committing:
 
@@ -90,18 +102,18 @@ pnpm run validate
 
 A failing `validate` means the change is wrong. Revert the file, report the failure, move on.
 
-Commit subject: `Refresh <name>, read <today>`. Body: one line per changed field, `field: old → new`, followed by the quote and the URL. Then one line per stale source and one per unreadable page. End with `Co-Authored-By: Claude <noreply@anthropic.com>`.
+Commit subject: `Refresh <name>, read <today>`. Body: a status change first, if any, with the quote and the URL. Then one line per changed field, `field: old → new`, followed by the quote and the URL. Then one line per stale source and one per unreadable page. End with `Co-Authored-By: Claude <noreply@anthropic.com>`.
 
 Push:
 
 ```sh
-git push origin refresh
+git push origin claude/refresh
 ```
 
-## 8. Pull request
+## 9. Pull request
 
-If no open pull request exists from `refresh` to `main`, open one titled `Refresh: week of <Monday's date>` with the run report as its body. If one exists, add the run report as a comment on it. If `gh` is missing or unauthenticated, skip this step; the commits carry the same information.
+If no open pull request exists from `claude/refresh` to `main`, open one titled `Refresh: week of <Monday's date>` with the run report as its body. If one exists, add the run report as a comment on it. Status changes go first in either, one line each with the quote; they are what the reviewer must see. If `gh` is missing or unauthenticated, skip this step; the commits carry the same information.
 
-## 9. Report
+## 10. Report
 
-End with a table, one row per record picked: id, pages read of total, fields confirmed, fields changed, stale sources, and whether `checkedAt` was set. Below it, the escalations. Nothing else.
+End with a table, one row per record picked: id, pages read of total, fields confirmed, fields changed, status change if any, stale sources, and whether `checkedAt` was set. Below it, the status changes with their quotes, then the escalations. Nothing else.
