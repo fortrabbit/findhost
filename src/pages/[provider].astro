@@ -5,6 +5,9 @@ import { fieldGroups, fieldOf, type Field } from '../lib/fields';
 import { backlinks, cells, footnotes } from '../lib/record';
 import { isListed } from '../lib/providers';
 import { loadFacets } from '../lib/facets';
+import { toRow } from '../lib/rows';
+import { similarTo } from '../lib/similar';
+import ProviderList from '../components/ProviderList.astro';
 import { organization, recordTitle } from '../lib/seo';
 import { cardPath } from '../lib/og';
 import { outboundLinkAttrs } from '../lib/links';
@@ -167,6 +170,32 @@ const drawn = (groups: { label: string; fields: Field[] }[]) =>
   }));
 
 const related = backlinks(everyRecord as never, provider.id);
+
+/*
+ * The records most like this one, drawn from the register — never from beside
+ * it or below it, since an alternative has to be one a reader can buy from
+ * today. Each row names the facts it shares, in the filter column's shorter
+ * wording, so the order is legible as what it is: a count, not a verdict.
+ */
+const { providers: registerRows } = await loadFacets();
+const shortLabel = (field: string, value: string) => {
+  const option = fieldOf.get(field)?.values.find((candidate) => candidate.id === value);
+  return option?.short ?? option?.label ?? value;
+};
+const similar = similarTo(toRow(provider as never), registerRows).map((match) => ({
+  id: match.row.id,
+  name: match.row.name,
+  favorite: match.row.favorite,
+  figure: match.row.figure,
+  description: match.shared
+    .map((entry) => {
+      // Three values and a count: a host shared in fourteen countries is one fact, not fourteen.
+      const shown = entry.values.slice(0, 3).map((value) => shortLabel(entry.field, value));
+      const rest = entry.values.length - shown.length;
+      return rest > 0 ? `${shown.join(' · ')} +${rest}` : shown.join(' · ');
+    })
+    .join(' · '),
+}));
 
 /** The wide grid under the prose, with the bring-your-own rows on the end of it. */
 const below = [...drawn(farGroups), ...(alsoNeeded.length > 0 ? [{ label: 'Bring your own', rows: alsoNeeded }] : [])];
@@ -457,6 +486,23 @@ const categoryLabels = (fieldOf.get('category')?.values ?? [])
        */
     }
     {below.length > 0 && <FactGroups groups={below} class="record-extra" />}
+
+    {
+      /*
+       * Kept out of the search index: a reader searching for a name should land
+       * on its record, not on the ten records that happen to resemble it.
+       */
+      similar.length > 0 && (
+        <section class="similar" data-pagefind-ignore>
+          <h2>Similar providers</h2>
+          <p class="annotation">
+            The records sharing the most of this one's category, regions, software, runtimes, entry price and operating
+            system — the most in common first, alphabetical after that. What each shares is under its name.
+          </p>
+          <ProviderList providers={similar} />
+        </section>
+      )
+    }
 
     {
       notes.length > 0 && (

@@ -1847,3 +1847,19 @@ article > pre {
   font-size: var(--text-xs);
   font-variant-numeric: tabular-nums;
 }
+
+/*
+ * The records most like this one, under the wide grid and above the sources.
+ * Sized like the sources block rather than as a section of its own: it is a
+ * list drawn from the register, not a claim about the provider.
+ */
+.similar {
+  margin: var(--space-lg) 0 var(--space-2xl);
+}
+
+.similar > h2 {
+  margin: 0 0 var(--space-2xs);
+  font-family: var(--font-data);
+  font-size: var(--text-xs);
+  line-height: var(--leading-body);
+}
