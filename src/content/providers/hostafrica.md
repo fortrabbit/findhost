@@ -6,6 +6,7 @@ urls:
 category:
   - shared-hosting
   - vps
+  - bare-metal
 description: Pan-African host with storefronts in five countries, running cPanel and DirectAdmin hosting out of South African facilities.
 hqCountry: ZA
 whoManagesOs: managed
@@ -18,6 +19,9 @@ regions:
   - ZA
 currencies:
   - USD
+  - ZAR
+  - KES
+  - NGN
 pricingModel: fixed-tier
 useCases:
   - cms
@@ -30,15 +34,15 @@ mcpServer: official
 referringSubnets: { now: 362, before: 371 }
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-07-31
+checkedAt: 2026-09-08
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: category, url: 'https://hostafrica.com', checkedAt: 2026-07-31 }
-  - { field: regions, url: 'https://hostafrica.com', checkedAt: 2026-07-31 }
-  - { field: currencies, url: 'https://hostafrica.com', checkedAt: 2026-07-31 }
-  - { field: apiAvailable, url: 'https://hostafrica.com', checkedAt: 2026-08-09 }
-  - { field: cliTool, url: 'https://hostafrica.com', checkedAt: 2026-08-09 }
-  - { field: mcpServer, url: 'https://hostafrica.com', checkedAt: 2026-08-09 }
+  - { field: category, url: 'https://hostafrica.com', checkedAt: 2026-09-08 }
+  - { field: regions, url: 'https://hostafrica.com', checkedAt: 2026-09-08 }
+  - { field: currencies, url: 'https://hostafrica.com', checkedAt: 2026-09-08 }
+  - { field: apiAvailable, url: 'https://hostafrica.com', checkedAt: 2026-09-08 }
+  - { field: cliTool, url: 'https://hostafrica.com', checkedAt: 2026-09-08 }
+  - { field: mcpServer, url: 'https://hostafrica.com', checkedAt: 2026-09-08 }
 figure:
   emoji: 🌍
   color: rgb(76, 110, 43)
