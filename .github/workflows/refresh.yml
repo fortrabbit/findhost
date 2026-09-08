@@ -4,9 +4,10 @@
 # bump is all they are. Anything else the routine puts on claude/refresh-review
 # and opens a pull request for, and this workflow never touches that branch.
 #
-# Pushes to main from here carry the default token, so they trigger neither
-# the CI workflow nor the IndexNow ping. That is why the build runs here first:
-# what lands on main has been built once.
+# Pushes to main from here carry the default token, so they trigger no other
+# workflow: not CI, and not the IndexNow ping CI would send. That is why the
+# build runs here first, so what lands on main has been built once, and why
+# the ping is sent from here too.
 name: Refresh
 
 on:
@@ -36,11 +37,22 @@ jobs:
       - run: pnpm run validate
       - run: pnpm run build
       - name: Merge into main
+        id: merge
         run: |
           git config user.name "FindHost refresh"
           git config user.email "noreply@findhost.app"
           git fetch origin main
+          echo "before=$(git rev-parse origin/main)" >> "$GITHUB_OUTPUT"
           git checkout main
           git merge --no-ff claude/refresh -m "Merge confirmations from the refresh routine"
           git push origin main
+          echo "after=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
           git push origin --delete claude/refresh
+      # The same ping CI sends on a push to main, for the pages this merge
+      # changed. The sitemap it reads is the one the build above wrote, which
+      # lists the same pages main will serve. Reported, never blocking.
+      - name: Ping IndexNow
+        continue-on-error: true
+        env:
+          SITE_URL: https://www.findhost.app
+        run: node scripts/indexnow.ts ${{ steps.merge.outputs.before }} ${{ steps.merge.outputs.after }}
