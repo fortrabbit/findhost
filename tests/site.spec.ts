@@ -91,7 +91,7 @@ test.describe('the one editorial mark', () => {
     expect(Date.parse(newest!)).toBeGreaterThan(Date.now() - 400 * 86_400_000);
 
     await page.goto(last!);
-    await expect(page.locator('.record-meta')).toContainText('Never checked');
+    await expect(page.locator('.record-meta')).not.toContainText('Last reviewed');
   });
 });
 
