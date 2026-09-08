@@ -8,7 +8,8 @@ import { loadFacets } from '../lib/facets';
 import { toRow } from '../lib/rows';
 import { similarTo } from '../lib/similar';
 import ProviderList from '../components/ProviderList.astro';
-import { organization, recordTitle } from '../lib/seo';
+import ListControls from '../components/ListControls.astro';
+import { organization, recordTitle, valueTitle } from '../lib/seo';
 import { cardPath } from '../lib/og';
 import { outboundLinkAttrs } from '../lib/links';
 import SocialLinks from '../components/SocialLinks.astro';
@@ -174,28 +175,37 @@ const related = backlinks(everyRecord as never, provider.id);
 /*
  * The records most like this one, drawn from the register — never from beside
  * it or below it, since an alternative has to be one a reader can buy from
- * today. Each row names the facts it shares, in the filter column's shorter
- * wording, so the order is legible as what it is: a count, not a verdict.
+ * today. Rows read as they do in the register, and the paragraph above them
+ * says what the order is: a count of shared facts, not a verdict.
  */
 const { providers: registerRows } = await loadFacets();
-const shortLabel = (field: string, value: string) => {
-  const option = fieldOf.get(field)?.values.find((candidate) => candidate.id === value);
-  return option?.short ?? option?.label ?? value;
-};
 const similar = similarTo(toRow(provider as never), registerRows).map((match) => ({
   id: match.row.id,
   name: match.row.name,
+  description: match.row.description,
   favorite: match.row.favorite,
   figure: match.row.figure,
-  description: match.shared
-    .map((entry) => {
-      // Three values and a count: a host shared in fourteen countries is one fact, not fourteen.
-      const shown = entry.values.slice(0, 3).map((value) => shortLabel(entry.field, value));
-      const rest = entry.values.length - shown.length;
-      return rest > 0 ? `${shown.join(' · ')} +${rest}` : shown.join(' · ');
-    })
-    .join(' · '),
 }));
+
+/*
+ * Where the list goes on: the page of the most specific category this record
+ * holds. A pair page would be narrower, but the narrowest one a record sits on
+ * is usually a niche — "serverless providers in Japan" — where the category
+ * page is the list this one was drawn from. Every category in use has a page,
+ * so nothing is generated for the link.
+ */
+const categoryFacet = allFacets.find((facet) => facet.field === 'category');
+const categoryHere = categoryFacet?.values
+  .filter((value) => value.count > 0 && (data.category ?? []).includes(value.id as never))
+  .sort((a, b) => a.count - b.count)[0];
+const more =
+  categoryHere && categoryFacet
+    ? {
+        href: `/${categoryFacet.id}/${categoryHere.slug}/`,
+        label: valueTitle(categoryFacet.id, categoryHere),
+        count: categoryHere.count,
+      }
+    : undefined;
 
 /** The wide grid under the prose, with the bring-your-own rows on the end of it. */
 const below = [...drawn(farGroups), ...(alsoNeeded.length > 0 ? [{ label: 'Bring your own', rows: alsoNeeded }] : [])];
@@ -488,23 +498,6 @@ const categoryLabels = (fieldOf.get('category')?.values ?? [])
     {below.length > 0 && <FactGroups groups={below} class="record-extra" />}
 
     {
-      /*
-       * Kept out of the search index: a reader searching for a name should land
-       * on its record, not on the ten records that happen to resemble it.
-       */
-      similar.length > 0 && (
-        <section class="similar" data-pagefind-ignore>
-          <h2>Similar providers</h2>
-          <p class="annotation">
-            The records sharing the most of this one's category, regions, software, runtimes, entry price and operating
-            system — the most in common first, alphabetical after that. What each shares is under its name.
-          </p>
-          <ProviderList providers={similar} />
-        </section>
-      )
-    }
-
-    {
       notes.length > 0 && (
         <section class="sources">
           <h2>Sources</h2>
@@ -603,5 +596,38 @@ const categoryLabels = (fieldOf.get('category')?.values ?? [])
       <a href={editUrl} {...outboundLinkAttrs(editUrl, 'record')}>Edit on GitHub</a>
       <a href={`/${provider.id}.md`}>This page as markdown</a>
     </p>
+    {
+      /*
+       * After everything the record says about the provider, the register's
+       * answer to the question a reader asks next. Kept out of the search
+       * index: a name search should land on its record, not on the twenty records
+       * that resemble it. The list header is the register's own, so the
+       * extended and slim views carry over — find.ts wires the toggle on any
+       * page that has both the buttons and a results block.
+       */
+      similar.length > 0 && (
+        <section class="similar" data-pagefind-ignore>
+          <h2>Similar providers</h2>
+          <p>
+            The records sharing the most of this one's category, regions, software, runtimes, entry price and operating
+            system, most in common first and alphabetical after that. Every field either record leaves blank is left out
+            of the count.
+          </p>
+          <ListControls />
+          <div data-find-results>
+            <ProviderList providers={similar} />
+          </div>
+          {more && (
+            <p class="similar-more">
+              More: <a href={more.href}>{more.label}</a>, {more.count} providers
+            </p>
+          )}
+        </section>
+      )
+    }
   </article>
 </Base>
+
+<script>
+  import '../scripts/find.ts';
+</script>

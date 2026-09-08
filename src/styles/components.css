@@ -1849,17 +1849,21 @@ article > pre {
 }
 
 /*
- * The records most like this one, under the wide grid and above the sources.
- * Sized like the sources block rather than as a section of its own: it is a
- * list drawn from the register, not a claim about the provider.
+ * The records most like this one, at the end of the record. A section of its
+ * own with the page's ordinary heading: it is a list drawn from the register,
+ * read after the record rather than as part of it.
  */
 .similar {
-  margin: var(--space-lg) 0 var(--space-2xl);
+  margin-top: var(--space-2xl);
 }
 
-.similar > h2 {
-  margin: 0 0 var(--space-2xs);
-  font-family: var(--font-data);
-  font-size: var(--text-xs);
-  line-height: var(--leading-body);
+.similar > p {
+  max-width: var(--measure-prose);
+  text-wrap: pretty;
+}
+
+/* The way on from the list, set like the meta line under the record rather than as a row of it. */
+.similar-more {
+  margin-top: var(--space-md);
+  font-size: var(--text-sm);
 }

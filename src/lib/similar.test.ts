@@ -46,13 +46,21 @@ describe('similar providers', () => {
     assert.deepEqual(similarTo(self, rows), []);
   });
 
+  it('offers only what sells the same kind of thing', () => {
+    const rows = [
+      self,
+      row('shared-host', { category: ['shared-hosting'], regions: ['DE'], software: ['laravel'], priceFrom: 'md' }),
+    ];
+    assert.deepEqual(similarTo(self, rows), []);
+  });
+
   it('stops at the cap', () => {
     const rows = [
       self,
       ...Array.from({ length: 30 }, (_, i) => row(`r-${i}`, { category: ['paas'], regions: ['DE'] })),
     ];
     assert.equal(similarTo(self, rows).length, similarCap);
-    assert.equal(similarCap, 10);
+    assert.equal(similarCap, 20);
   });
 
   it('treats an unknown field as neither shared nor different', () => {

@@ -24,7 +24,7 @@ export const comparedFields = ['category', 'regions', 'software', 'runtimes', 'p
  */
 export const similarFloor = 2;
 
-export const similarCap = 10;
+export const similarCap = 20;
 
 export interface Shared {
   field: string;
@@ -46,10 +46,16 @@ const valuesOf = (row: ProviderRow, field: string): string[] => {
  * One point per field, not per value: a host in twelve of the same countries is
  * not twelve times the alternative that a host in one of them is. A field
  * unknown on either side is left out — absent means unknown, never a mismatch.
+ *
+ * Category is the one field that has to match. An alternative sells the same
+ * kind of thing: a shared host in the same country running the same software
+ * at the same price is not one to a platform, and without this rule it led the
+ * list.
  */
 export function similarTo(self: ProviderRow, rows: ProviderRow[]): Similar[] {
+  const mine = valuesOf(self, 'category');
   return rows
-    .filter((row) => row.id !== self.id)
+    .filter((row) => row.id !== self.id && valuesOf(row, 'category').some((value) => mine.includes(value)))
     .map((row) => ({
       row,
       shared: comparedFields.flatMap((field) => {
