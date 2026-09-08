@@ -2,24 +2,23 @@
 id: cloudflare-workers
 name: Cloudflare Workers
 urls:
-  home: https://workers.cloudflare.com
+  home: https://www.cloudflare.com/products/workers/
   pricing: https://developers.cloudflare.com/workers/platform/pricing/
 category:
   - serverless
 description: Cloudflare's edge compute platform, running JavaScript, TypeScript, Python and Rust in V8 isolates on the network that already serves the request.
-ownership: subsidiary
+ownership: public
 whoManagesOs: managed
 runtimes:
   - python
   - rust
-pricingModel: usage-based
+pricingModel: plan-plus-overage
 priceFrom: sm
 priceTo: lg
 currencies:
   - USD
 billingPeriods:
   - monthly
-  - yearly
 billingTiming: advance
 exitWithin: a-month
 freeTier: permanent
@@ -27,19 +26,19 @@ cliTool: official
 referringSubnets: null
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-07-31
+checkedAt: 2026-09-08
 sources:
-  - { field: runtimes, url: 'https://developers.cloudflare.com/workers/languages/', checkedAt: 2026-07-31 }
-  - { field: pricingModel, url: 'https://developers.cloudflare.com/workers/platform/pricing/', checkedAt: 2026-07-31 }
-  - { field: priceFrom, url: 'https://developers.cloudflare.com/workers/platform/pricing/', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://developers.cloudflare.com/workers/platform/pricing/', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://developers.cloudflare.com/workers/platform/pricing/', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://developers.cloudflare.com/billing/billing-policy/', checkedAt: 2026-08-02 }
-  - { field: billingTiming, url: 'https://developers.cloudflare.com/billing/billing-policy/', checkedAt: 2026-08-02 }
-  - { field: exitWithin, url: 'https://developers.cloudflare.com/billing/billing-policy/', checkedAt: 2026-08-02 }
-  - { field: freeTier, url: 'https://developers.cloudflare.com/workers/platform/pricing/', checkedAt: 2026-07-31 }
-  - { field: cliTool, url: 'https://developers.cloudflare.com/workers/', checkedAt: 2026-08-09 }
-  - { field: ownership, url: 'https://www.cloudflare.com/about-overview/', checkedAt: 2026-08-21 }
+  - { field: runtimes, url: 'https://developers.cloudflare.com/workers/languages/', checkedAt: 2026-09-08 }
+  - { field: pricingModel, url: 'https://developers.cloudflare.com/workers/platform/pricing/', checkedAt: 2026-09-08 }
+  - { field: priceFrom, url: 'https://developers.cloudflare.com/workers/platform/pricing/', checkedAt: 2026-09-08 }
+  - { field: priceTo, url: 'https://developers.cloudflare.com/workers/platform/pricing/', checkedAt: 2026-09-08 }
+  - { field: currencies, url: 'https://developers.cloudflare.com/workers/platform/pricing/', checkedAt: 2026-09-08 }
+  - { field: billingPeriods, url: 'https://developers.cloudflare.com/billing/understand/billing-policy/', checkedAt: 2026-09-08 }
+  - { field: billingTiming, url: 'https://developers.cloudflare.com/billing/understand/billing-policy/', checkedAt: 2026-09-08 }
+  - { field: exitWithin, url: 'https://developers.cloudflare.com/billing/understand/billing-policy/', checkedAt: 2026-09-08 }
+  - { field: freeTier, url: 'https://developers.cloudflare.com/workers/platform/pricing/', checkedAt: 2026-09-08 }
+  - { field: cliTool, url: 'https://developers.cloudflare.com/workers/', checkedAt: 2026-09-08 }
+  - { field: ownership, url: 'https://www.cloudflare.com/about-overview/', checkedAt: 2026-09-08 }
 figure:
   emoji: 🔶
   color: rgb(176, 117, 59)
