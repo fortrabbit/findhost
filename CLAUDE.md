@@ -93,7 +93,7 @@ Five procedures, because each one has a step that used to be forgotten silently.
 
 ## Refreshing records
 
-`.claude/skills/refresh-record/SKILL.md` is the procedure for re-reading a record against the provider's pages, and a scheduled cloud routine runs it daily (MR-320). It writes to the `refresh` branch only, one commit per record, and a person merges that branch through a pull request about once a week. The routine confirms and corrects sourced fields, dates what it read, and sets `status` when the provider's own pages announce a shutdown, an acquisition or a rename, or show that criterion 3 or 4 no longer holds. A domain that does not answer changes nothing. It never touches prose, `name`, or the fields the scripts under `scripts/` own, and the weekly pull request is where a status change is reviewed before it ships.
+`.claude/skills/refresh-record/SKILL.md` is the procedure for re-reading a record against the provider's pages, and a scheduled cloud routine runs it daily (MR-320). It writes to the `claude/refresh` branch only, one commit per record, and a person merges that branch through a pull request about once a week. The routine confirms and corrects sourced fields, dates what it read, and sets `status` when the provider's own pages announce a shutdown, an acquisition or a rename, or show that criterion 3 or 4 no longer holds. A domain that does not answer changes nothing. It never touches prose, `name`, or the fields the scripts under `scripts/` own, and the weekly pull request is where a status change is reviewed before it ships.
 
 ## Share cards
 

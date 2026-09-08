@@ -1,6 +1,6 @@
 ---
 name: refresh-record
-description: Re-read one or more provider records against the provider's own pages, update what the pages contradict, date what they confirm, set `status` on the provider's own announcement, and push the result to the rolling `refresh` branch. Use when asked to refresh, re-check, or re-verify provider records, or when running as the scheduled refresh routine (MR-320).
+description: Re-read one or more provider records against the provider's own pages, update what the pages contradict, date what they confirm, set `status` on the provider's own announcement, and push the result to the rolling `claude/refresh` branch. Use when asked to refresh, re-check, or re-verify provider records, or when running as the scheduled refresh routine (MR-320).
 ---
 
 # Refresh a provider record
@@ -18,13 +18,13 @@ This runs unattended. Never ask a question. Where the procedure says stop, stop 
 
 ```sh
 git fetch origin
-git checkout refresh 2>/dev/null || git checkout -b refresh origin/main
-git merge --ff-only origin/refresh 2>/dev/null || true
+git checkout claude/refresh 2>/dev/null || git checkout -b claude/refresh origin/main
+git merge --ff-only origin/claude/refresh 2>/dev/null || true
 git merge origin/main
 pnpm install --frozen-lockfile
 ```
 
-All work lands on `refresh`. It is merged to `main` by a person through a pull request, roughly weekly. Never push to `main`.
+All work lands on `claude/refresh`. The prefix is what the cloud routine may always push to; any other branch name is checked and can be refused. It is merged to `main` by a person through a pull request, roughly weekly. Never push to `main`.
 
 ## 2. Pick
 
@@ -33,7 +33,7 @@ Candidates are the records in `src/content/providers/*.md` that the register sho
 Skip any record already changed on this branch since `main`:
 
 ```sh
-git diff --name-only origin/main...refresh
+git diff --name-only origin/main...claude/refresh
 ```
 
 That is what stops a record whose pages cannot be read from being picked every day until somebody notices.
@@ -107,12 +107,12 @@ Commit subject: `Refresh <name>, read <today>`. Body: a status change first, if 
 Push:
 
 ```sh
-git push origin refresh
+git push origin claude/refresh
 ```
 
 ## 9. Pull request
 
-If no open pull request exists from `refresh` to `main`, open one titled `Refresh: week of <Monday's date>` with the run report as its body. If one exists, add the run report as a comment on it. Status changes go first in either, one line each with the quote; they are what the reviewer must see. If `gh` is missing or unauthenticated, skip this step; the commits carry the same information.
+If no open pull request exists from `claude/refresh` to `main`, open one titled `Refresh: week of <Monday's date>` with the run report as its body. If one exists, add the run report as a comment on it. Status changes go first in either, one line each with the quote; they are what the reviewer must see. If `gh` is missing or unauthenticated, skip this step; the commits carry the same information.
 
 ## 10. Report
 
