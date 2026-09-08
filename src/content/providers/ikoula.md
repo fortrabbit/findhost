@@ -29,14 +29,14 @@ audience:
 referringSubnets: { now: 1020, before: 1029 }
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-07-31
+checkedAt: 2026-09-08
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#900', checkedAt: 2026-08-10 }
-  - { field: category, url: 'https://www.ikoula.com', checkedAt: 2026-07-31 }
-  - { field: founded, url: 'https://www.ikoula.com', checkedAt: 2026-07-31 }
-  - { field: infraContract, url: 'https://www.ikoula.com', checkedAt: 2026-07-31 }
-  - { field: regions, url: 'https://www.ikoula.com', checkedAt: 2026-07-31 }
+  - { field: category, url: 'https://www.ikoula.com', checkedAt: 2026-09-08 }
+  - { field: founded, url: 'https://www.ikoula.com', checkedAt: 2026-09-08 }
+  - { field: infraContract, url: 'https://www.ikoula.com', checkedAt: 2026-09-08 }
+  - { field: regions, url: 'https://www.ikoula.com', checkedAt: 2026-09-08 }
 figure:
   emoji: 🇫🇷
   color: rgb(0, 85, 164)
