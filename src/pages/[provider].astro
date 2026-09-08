@@ -5,6 +5,10 @@ import { fieldGroups, fieldOf, type Field } from '../lib/fields';
 import { backlinks, cells, footnotes } from '../lib/record';
 import { isListed } from '../lib/providers';
 import { loadFacets } from '../lib/facets';
+import { toRow } from '../lib/rows';
+import { similarTo } from '../lib/similar';
+import ProviderList from '../components/ProviderList.astro';
+import ListControls from '../components/ListControls.astro';
 import { organization, recordTitle } from '../lib/seo';
 import { cardPath } from '../lib/og';
 import { outboundLinkAttrs } from '../lib/links';
@@ -168,6 +172,21 @@ const drawn = (groups: { label: string; fields: Field[] }[]) =>
   }));
 
 const related = backlinks(everyRecord as never, provider.id);
+
+/*
+ * The records most like this one, drawn from the register — never from beside
+ * it or below it, since an alternative has to be one a reader can buy from
+ * today. Rows read as they do in the register, and the paragraph above them
+ * says what the order is: a count of shared facts, not a verdict.
+ */
+const { providers: registerRows } = await loadFacets();
+const similar = similarTo(toRow(provider as never), registerRows).map((match) => ({
+  id: match.row.id,
+  name: match.row.name,
+  description: match.row.description,
+  favorite: match.row.favorite,
+  figure: match.row.figure,
+}));
 
 /** The wide grid under the prose, with the bring-your-own rows on the end of it. */
 const below = [...drawn(farGroups), ...(alsoNeeded.length > 0 ? [{ label: 'Bring your own', rows: alsoNeeded }] : [])];
@@ -552,5 +571,32 @@ const categoryLabels = (fieldOf.get('category')?.values ?? [])
       <a href={editUrl} {...outboundLinkAttrs(editUrl, 'record')}>Edit on GitHub</a>
       <a href={`/${provider.id}.md`}>This page as markdown</a>
     </p>
+    {
+      /*
+       * After everything the record says about the provider, the register's
+       * answer to the question a reader asks next. Kept out of the search
+       * index: a name search should land on its record, not on the twenty records
+       * that resemble it. The list header is the register's own, so the
+       * extended and slim views carry over — find.ts wires the toggle on any
+       * page that has both the buttons and a results block.
+       */
+      similar.length > 0 && (
+        <section class="similar" data-pagefind-ignore>
+          <h2>Somehow similar providers</h2>
+          <p>
+            Ordered by how many of category, regions, software, runtimes, entry price and operating system they share
+            with this record. A field left blank on either side does not count.
+          </p>
+          <ListControls />
+          <div data-find-results>
+            <ProviderList providers={similar} />
+          </div>
+        </section>
+      )
+    }
   </article>
 </Base>
+
+<script>
+  import '../scripts/find.ts';
+</script>

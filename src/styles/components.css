@@ -1847,3 +1847,17 @@ article > pre {
   font-size: var(--text-xs);
   font-variant-numeric: tabular-nums;
 }
+
+/*
+ * The records most like this one, at the end of the record. A section of its
+ * own with the page's ordinary heading: it is a list drawn from the register,
+ * read after the record rather than as part of it.
+ */
+.similar {
+  margin-top: var(--space-2xl);
+}
+
+.similar > p {
+  max-width: var(--measure-prose);
+  text-wrap: pretty;
+}
