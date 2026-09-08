@@ -91,6 +91,10 @@ Five procedures, because each one has a step that used to be forgotten silently.
 
 **One paragraph, no headings.** A note says what a value means before somebody filters on it, which is one paragraph of work; the median is under seventy words. Anything longer is a page nobody finishes, and a note that has grown an `##` heading has become an article by accident. Keep the links — they are how a reader crosses from one facet to another — and drop the second example, the aside and the provider names the register already lists.
 
+## Refreshing records
+
+`.claude/skills/refresh-record/SKILL.md` is the procedure for re-reading a record against the provider's pages, and a scheduled cloud routine runs it daily (MR-320). It writes to the `refresh` branch only, one commit per record, and a person merges that branch through a pull request about once a week. The routine confirms and corrects sourced fields, dates what it read, and escalates a dead domain, a redirect off-domain or an announced acquisition to a Linear issue instead of writing anything. It never touches prose, `status`, or the fields the scripts under `scripts/` own.
+
 ## Share cards
 
 Every record and every facet page builds its own social preview image, as an Astro endpoint under `src/pages/og/`. `src/lib/og.ts` composes the card and rasterises it; the endpoints supply the words.
