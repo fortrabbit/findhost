@@ -30,6 +30,12 @@ const data = provider.data;
 
 // The record's file, where a correction is one pull request rather than a mail.
 const editUrl = `https://github.com/fortrabbit/findhost/edit/main/src/content/providers/${provider.id}.md`;
+/*
+ * Every change to this record, with the pull request each came in. The build
+ * has no git history to say which commit last touched a record, and GitHub's
+ * own listing answers that better than a date could.
+ */
+const historyUrl = `https://github.com/fortrabbit/findhost/commits/main/src/content/providers/${provider.id}.md`;
 
 /*
  * Every record, because a relation is read from both ends: this one names its
@@ -519,12 +525,18 @@ const categoryLabels = (fieldOf.get('category')?.values ?? [])
           [
             checkedIso && (
               <>
-                Last reviewed <time datetime={checkedIso}>{checkedIso}</time>
+                Last reviewed{' '}
+                <a href={historyUrl} {...outboundLinkAttrs(historyUrl, 'record')}>
+                  <time datetime={checkedIso}>{checkedIso}</time>
+                </a>
               </>
             ),
             updatedIso && (
               <>
-                Updated <time datetime={updatedIso}>{updatedIso}</time>
+                Updated{' '}
+                <a href={historyUrl} {...outboundLinkAttrs(historyUrl, 'record')}>
+                  <time datetime={updatedIso}>{updatedIso}</time>
+                </a>
               </>
             ),
             addedIso && (
