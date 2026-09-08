@@ -49,20 +49,20 @@ social:
   linkedin: https://www.linkedin.com/company/world4you/
 referringSubnets: { now: 864, before: 869 }
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-09-08
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: regions, url: 'https://www.world4you.com/unternehmen', checkedAt: 2026-08-01 }
-  - { field: founded, url: 'https://www.world4you.com/unternehmen', checkedAt: 2026-08-01 }
-  - { field: hqCountry, url: 'https://www.world4you.com/unternehmen', checkedAt: 2026-08-01 }
-  - { field: parent, url: 'https://www.world4you.com/unternehmen', checkedAt: 2026-08-01 }
-  - { field: contractMinimum, url: 'https://www.world4you.com/hosting/web-hosting', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://www.world4you.com/hosting/web-hosting', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://www.world4you.com/hosting/web-hosting', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://www.world4you.com/unternehmen/agb', checkedAt: 2026-08-02 }
-  - { field: billingTiming, url: 'https://www.world4you.com/unternehmen/agb', checkedAt: 2026-08-02 }
-  - { field: exitWithin, url: 'https://www.world4you.com/unternehmen/agb', checkedAt: 2026-08-02 }
-  - { field: urls, url: 'https://www.world4you.com/unternehmen/agb', checkedAt: 2026-08-01 }
+  - { field: regions, url: 'https://www.world4you.com/unternehmen', checkedAt: 2026-09-08 }
+  - { field: founded, url: 'https://www.world4you.com/unternehmen', checkedAt: 2026-09-08 }
+  - { field: hqCountry, url: 'https://www.world4you.com/unternehmen', checkedAt: 2026-09-08 }
+  - { field: parent, url: 'https://www.world4you.com/unternehmen', checkedAt: 2026-09-08 }
+  - { field: contractMinimum, url: 'https://www.world4you.com/hosting/web-hosting', checkedAt: 2026-09-08 }
+  - { field: priceFrom, url: 'https://www.world4you.com/hosting/web-hosting', checkedAt: 2026-09-08 }
+  - { field: currencies, url: 'https://www.world4you.com/hosting/web-hosting', checkedAt: 2026-09-08 }
+  - { field: billingPeriods, url: 'https://www.world4you.com/unternehmen/agb', checkedAt: 2026-09-08 }
+  - { field: billingTiming, url: 'https://www.world4you.com/unternehmen/agb', checkedAt: 2026-09-08 }
+  - { field: exitWithin, url: 'https://www.world4you.com/unternehmen/agb', checkedAt: 2026-09-08 }
+  - { field: urls, url: 'https://www.world4you.com/unternehmen/agb', checkedAt: 2026-09-08 }
 figure:
   emoji: 🥨
   color: rgb(184, 51, 61)
