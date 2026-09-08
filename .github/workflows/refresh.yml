@@ -1,0 +1,46 @@
+# The refresh routine's confirmation lane. It pushes records it re-read and
+# found unchanged, with their checkedAt dates moved, to claude/refresh. Nobody
+# needs to read a date bump, so this merges them — after checking that a date
+# bump is all they are. Anything else the routine puts on claude/refresh-review
+# and opens a pull request for, and this workflow never touches that branch.
+#
+# Pushes to main from here carry the default token, so they trigger neither
+# the CI workflow nor the IndexNow ping. That is why the build runs here first:
+# what lands on main has been built once.
+name: Refresh
+
+on:
+  push:
+    branches: [claude/refresh]
+
+permissions:
+  contents: write
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      # The rule is src/lib/confirmation.ts, the same one the routine used to
+      # pick this branch. A failure here means the routine put a real change
+      # on the confirmation lane; the run goes red and a person looks.
+      - run: node scripts/refresh-guard.ts origin/main HEAD
+      - run: pnpm run validate
+      - run: pnpm run build
+      - name: Merge into main
+        run: |
+          git config user.name "FindHost refresh"
+          git config user.email "noreply@findhost.app"
+          git fetch origin main
+          git checkout main
+          git merge --no-ff claude/refresh -m "Merge confirmations from the refresh routine"
+          git push origin main
+          git push origin --delete claude/refresh

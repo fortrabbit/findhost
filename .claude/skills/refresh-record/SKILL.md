@@ -16,15 +16,18 @@ This runs unattended. Never ask a question. Where the procedure says stop, stop 
 
 ## 1. Branch
 
+Two branches, one per lane, and the lane is decided per record in step 8. Start on main, up to date:
+
 ```sh
 git fetch origin
-git checkout claude/refresh 2>/dev/null || git checkout -b claude/refresh origin/main
-git merge --ff-only origin/claude/refresh 2>/dev/null || true
-git merge origin/main
+git checkout -B work origin/main
 pnpm install --frozen-lockfile
 ```
 
-All work lands on `claude/refresh`. The prefix is what the cloud routine may always push to; any other branch name is checked and can be refused. It is merged to `main` by a person through a pull request, roughly weekly. Never push to `main`.
+- **`claude/refresh`** is the confirmation lane: records re-read and found unchanged, with their `checkedAt` dates moved, plus the log. A GitHub Action merges it into `main` on its own after checking that dates are all that changed, then deletes the branch.
+- **`claude/refresh-review`** is the review lane: anything that changes a value, a status or a source. A person reads the pull request from it and merges.
+
+Never push to `main`, and never put a real change on `claude/refresh`; the Action would refuse it and go red.
 
 ## 2. Pick
 
@@ -87,28 +90,45 @@ If Linear is not reachable, put the same text in the run report and continue.
 
 ## 8. Write
 
-One record, one commit, and every record picked gets a commit, even one whose pages could not be read: append a line to `research/refresh-log.tsv` for it, tab-separated, `<today>\t<id>\t<outcome>\t<note>`, where the outcome is `confirmed`, `changed`, `unreadable` or `stopped` and the note is one clause, such as `Cloudflare challenge on home`. That line is what keeps the record out of tomorrow's pick, and it is why a run with nothing to confirm still pushes.
+One record, one commit, and every record picked gets a commit, even one whose pages could not be read. The work happens on `work`; the last step moves the commit to its lane.
 
-Before committing:
+**Decide the lane.** Stage the record and ask the guard, the same check the Action runs before merging:
 
 ```sh
 pnpm exec prettier --write src/content/providers/<id>.md
-pnpm run validate
+git add src/content/providers/<id>.md
+node scripts/refresh-guard.ts HEAD --staged
 ```
 
-A failing `validate` means the change is wrong. Revert the file, report the failure, move on.
+It prints `confirmation` or `review`. Nothing staged counts as `confirmation`.
+
+- **`confirmation`:** append a line to `research/refresh-log.tsv`, tab-separated, `<today>\t<id>\t<outcome>\t<note>`, where the outcome is `confirmed`, `unreadable` or `stopped` and the note is one clause, such as `Cloudflare challenge on home`. Stage it too. That line is what keeps the record out of tomorrow's pick, and it is why a run with nothing to confirm still pushes.
+- **`review`:** no log line. The pick script skips records waiting on the review branch by itself.
+
+**Validate, then commit on `work`:**
+
+```sh
+pnpm run validate
+git commit
+```
+
+A failing `validate` means the change is wrong. Revert the record, log it as `stopped`, and commit that on the confirmation lane instead.
 
 Commit subject: `Refresh <name>, read <today>`, or `Log <name> as unreadable, <today>` when nothing on the record changed. Body: a status change first, if any, with the quote and the URL. Then one line per changed field, `field: old → new`, followed by the quote and the URL. Then one line per stale source and one per unreadable page. End with `Co-Authored-By: Claude <noreply@anthropic.com>`.
 
-Push:
+**Move it to the lane and push.** `<lane>` is `claude/refresh` for a confirmation, `claude/refresh-review` for a review:
 
 ```sh
-git push origin claude/refresh
+git checkout -B <lane> origin/<lane> 2>/dev/null || git checkout -B <lane> origin/main
+git merge --no-edit work
+git push origin <lane>
 ```
 
 ## 9. Pull request
 
-If no open pull request exists from `claude/refresh` to `main`, open one titled `Refresh: week of <Monday's date>` with the run report as its body. If one exists, add the run report as a comment on it. Status changes go first in either, one line each with the quote; they are what the reviewer must see. If `gh` is missing or unauthenticated, skip this step; the commits carry the same information.
+Only for the review lane. If no open pull request exists from `claude/refresh-review` to `main`, open one titled `Refresh for review: <today>` with the run report as its body. If one exists, add the run report as a comment on it. Status changes go first in either, one line each with the quote; they are what the reviewer must see. If `gh` is missing or unauthenticated, skip this step; the commits carry the same information.
+
+The confirmation lane needs no pull request. The Action merges it.
 
 ## 10. Report
 

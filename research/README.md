@@ -36,4 +36,4 @@ A row leaves this file when its record lands in `src/content/providers/`, whatev
 
 ## refresh-log.tsv
 
-One line per record the refresh routine handled, tab-separated: the date, the record id, the outcome (`confirmed`, `changed`, `unreadable`, `stopped`) and a short note. `scripts/refresh-pick.mjs` reads it to skip records handled in the last sixty days, so a record whose pages cannot be read is not picked again every morning. The routine appends to it and nothing else reads it; the record's own `checkedAt` stays the only claim about when it was checked.
+One line per record the refresh routine handled, tab-separated: the date, the record id, the outcome (`confirmed`, `changed`, `unreadable`, `stopped`) and a short note. `scripts/refresh-pick.mjs` reads it to skip records handled in the last sixty days, so a record whose pages cannot be read is not picked again every morning. The routine appends to it on its confirmation lane only; a record with a real change waits on the review branch instead, and the pick script skips those on its own. Nothing else reads it; the record's own `checkedAt` stays the only claim about when it was checked.
