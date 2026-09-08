@@ -38,7 +38,7 @@ currencies:
 billingPeriods:
   - monthly
 billingTiming: advance
-exitWithin: a-quarter
+exitWithin: a-month
 entryPrice: { amount: 99, currency: ZAR, period: month }
 freeTier: none
 regions:
@@ -56,22 +56,22 @@ social:
   linkedin: https://www.linkedin.com/company/xneelo/
 referringSubnets: { now: 345, before: 336 }
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-09-08
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: regions, url: 'https://xneelo.co.za/web-hosting/', checkedAt: 2026-08-01 }
+  - { field: regions, url: 'https://xneelo.co.za/web-hosting/', checkedAt: 2026-09-08 }
   - { field: regions, url: 'https://xneelo.co.za/data-centre/', checkedAt: 2026-08-01 }
-  - { field: entryPrice, url: 'https://xneelo.co.za/web-hosting/', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://xneelo.co.za/web-hosting/', checkedAt: 2026-08-01 }
-  - { field: priceTo, url: 'https://xneelo.co.za/web-hosting/', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://xneelo.co.za/web-hosting/', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://xneelo.co.za/legal/terms-of-service/', checkedAt: 2026-08-02 }
-  - { field: billingTiming, url: 'https://xneelo.co.za/legal/terms-of-service/', checkedAt: 2026-08-02 }
-  - { field: exitWithin, url: 'https://xneelo.co.za/legal/terms-of-service/', checkedAt: 2026-08-02 }
-  - { field: supportHours, url: 'https://xneelo.co.za/web-hosting/', checkedAt: 2026-08-01 }
-  - { field: supportChannels, url: 'https://xneelo.co.za/web-hosting/', checkedAt: 2026-08-01 }
-  - { field: certifications, url: 'https://xneelo.co.za/data-centre/', checkedAt: 2026-08-01 }
-  - { field: urls, url: 'https://xneelo.co.za/legal/terms-of-service/', checkedAt: 2026-08-01 }
+  - { field: entryPrice, url: 'https://xneelo.co.za/web-hosting/', checkedAt: 2026-09-08 }
+  - { field: priceFrom, url: 'https://xneelo.co.za/web-hosting/', checkedAt: 2026-09-08 }
+  - { field: priceTo, url: 'https://xneelo.co.za/web-hosting/', checkedAt: 2026-09-08 }
+  - { field: currencies, url: 'https://xneelo.co.za/web-hosting/', checkedAt: 2026-09-08 }
+  - { field: billingPeriods, url: 'https://xneelo.co.za/legal/terms-of-service/', checkedAt: 2026-09-08 }
+  - { field: billingTiming, url: 'https://xneelo.co.za/legal/terms-of-service/', checkedAt: 2026-09-08 }
+  - { field: exitWithin, url: 'https://xneelo.co.za/legal/terms-of-service/', checkedAt: 2026-09-08 }
+  - { field: supportHours, url: 'https://xneelo.co.za/web-hosting/', checkedAt: 2026-09-08 }
+  - { field: supportChannels, url: 'https://xneelo.co.za/web-hosting/', checkedAt: 2026-09-08 }
+  - { field: certifications, url: 'https://xneelo.co.za/data-centre/', checkedAt: 2026-09-08 }
+  - { field: urls, url: 'https://xneelo.co.za/legal/terms-of-service/', checkedAt: 2026-09-08 }
 figure:
   emoji: 🦓
   color: rgb(77, 77, 157)
