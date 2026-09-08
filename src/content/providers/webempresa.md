@@ -53,19 +53,19 @@ social:
   youtube: https://www.youtube.com/user/webempresa
 referringSubnets: { now: 1100, before: 1100 }
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-09-08
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: founded, url: 'https://www.webempresa.com/quienes-somos.html', checkedAt: 2026-08-01 }
-  - { field: hqCountry, url: 'https://www.webempresa.com/quienes-somos.html', checkedAt: 2026-08-01 }
-  - { field: parent, url: 'https://www.webempresa.com/quienes-somos.html', checkedAt: 2026-08-01 }
-  - { field: supportHours, url: 'https://www.webempresa.com/quienes-somos.html', checkedAt: 2026-08-01 }
-  - { field: energyClaim, url: 'https://www.webempresa.com/quienes-somos.html', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://www.webempresa.com/hosting-wordpress.html', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://www.webempresa.com/hosting-wordpress.html', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://www.webempresa.com/hosting-wordpress.html', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://www.webempresa.com/hosting-wordpress.html', checkedAt: 2026-08-02 }
-  - { field: billingTiming, url: 'https://www.webempresa.com/hosting-wordpress.html', checkedAt: 2026-08-02 }
+  - { field: founded, url: 'https://www.webempresa.com/quienes-somos.html', checkedAt: 2026-09-08 }
+  - { field: hqCountry, url: 'https://www.webempresa.com/quienes-somos.html', checkedAt: 2026-09-08 }
+  - { field: parent, url: 'https://www.webempresa.com/quienes-somos.html', checkedAt: 2026-09-08 }
+  - { field: supportHours, url: 'https://www.webempresa.com/quienes-somos.html', checkedAt: 2026-09-08 }
+  - { field: energyClaim, url: 'https://www.webempresa.com/quienes-somos.html', checkedAt: 2026-09-08 }
+  - { field: priceFrom, url: 'https://www.webempresa.com/hosting-wordpress.html', checkedAt: 2026-09-08 }
+  - { field: priceTo, url: 'https://www.webempresa.com/hosting-wordpress.html', checkedAt: 2026-09-08 }
+  - { field: currencies, url: 'https://www.webempresa.com/hosting-wordpress.html', checkedAt: 2026-09-08 }
+  - { field: billingPeriods, url: 'https://www.webempresa.com/hosting-wordpress.html', checkedAt: 2026-09-08 }
+  - { field: billingTiming, url: 'https://www.webempresa.com/hosting-wordpress.html', checkedAt: 2026-09-08 }
 figure:
   emoji: 🛡️
   color: rgb(125, 77, 157)
