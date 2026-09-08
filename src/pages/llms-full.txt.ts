@@ -5,6 +5,7 @@ import { pairPath } from '../lib/pairs';
 import { loadProviders } from '../lib/providers';
 import { fieldGroups } from '../lib/fields';
 import { attribution, credit } from '../lib/seo';
+import { updatedAfterCheck } from '../lib/modified';
 
 /**
  * The whole register as one text file, which is the other half of the llms.txt
@@ -81,9 +82,8 @@ export const GET: APIRoute = async ({ site }) => {
       '',
       `${origin}/${provider.id}/`,
       ...(data.description ? [String(data.description)] : []),
-      ...(data.checkedAt
-        ? [`Last checked against the provider: ${label(data.checkedAt)}`]
-        : ['Never checked against the provider.']),
+      ...(data.checkedAt ? [`Last reviewed: ${label(data.checkedAt)}`] : []),
+      ...(updatedAfterCheck(data) ? [`Updated: ${label(updatedAfterCheck(data))}`] : []),
       '',
       ...groups.flatMap((group) => group.fields.map((field) => `- ${field.id}: ${label(data[field.id])}`)),
       '',

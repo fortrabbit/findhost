@@ -2,6 +2,7 @@ import type { APIRoute } from 'astro';
 import { facetIndex, loadFacets, loadPairPages } from '../lib/facets';
 import { pairIndexPath, pairPath } from '../lib/pairs';
 import { loadIndexed } from '../lib/providers';
+import { modifiedAt } from '../lib/modified';
 
 /**
  * Hand-rolled rather than an integration: the route list is short, entirely
@@ -47,17 +48,17 @@ export const GET: APIRoute = async ({ site }) => {
   const paths = [...new Set(routes)];
 
   /*
-   * <lastmod> is what a crawler uses to decide what to fetch again, and the only
-   * date this project stands behind is `checkedAt` — the same value the record's
-   * JSON-LD reports as dateModified. A record without one, and every other page,
-   * carries no date at all: the commit date would say when the file moved, not
-   * when the facts were read.
+   * <lastmod> is what a crawler uses to decide what to fetch again, so it is the
+   * newest date on the record, its own `checkedAt` or any source's — the same
+   * value the record's JSON-LD reports as dateModified. A record without one,
+   * and every other page, carries no date at all: the commit date would say
+   * when the file moved, not when the facts were read.
    */
-  const lastmod = new Map(
-    providers
-      .filter((provider) => provider.data.checkedAt)
-      .map((provider) => [`/${provider.id}/`, provider.data.checkedAt!.toISOString().slice(0, 10)]),
-  );
+  const lastmod = new Map<string, string>();
+  for (const provider of providers) {
+    const modified = modifiedAt(provider.data);
+    if (modified) lastmod.set(`/${provider.id}/`, modified.toISOString().slice(0, 10));
+  }
 
   const body = [
     '<?xml version="1.0" encoding="UTF-8"?>',

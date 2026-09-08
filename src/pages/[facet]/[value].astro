@@ -8,6 +8,7 @@ import { facetIndex, facetRoutes, loadFacets, pairsFor } from '../../lib/facets'
 import { fieldOf, subjectOf } from '../../lib/fields';
 import { firstSentence, summarise } from '../../lib/summarise';
 import { valueCardPath } from '../../lib/og';
+import { newest } from '../../lib/modified';
 
 /*
  * One static page per facet value in use. These are what a crawler follows and
@@ -29,9 +30,8 @@ const { facets } = await loadFacets();
 /* Phrased in fields.yml, beside the field it describes — see subjectOf. */
 const summary = summarise(matches, facets, facet.id, subjectOf(fieldOf.get(facet.field)!, value, matches.length));
 
-/* The most recent `checkedAt` on this page, for the schema's dateModified. */
-const checkedDates = matches.map((row) => row.checkedAt).filter((date): date is Date => date instanceof Date);
-const newestChecked = checkedDates.length ? new Date(Math.max(...checkedDates.map((date) => date.getTime()))) : null;
+/* The most recently changed record on this page, for the schema's dateModified. */
+const newestChecked = newest(matches.map((row) => row.modifiedAt)) ?? null;
 
 /*
  * The count, what the records have in common and what is missing, in one
