@@ -1,10 +1,13 @@
 /*
  * Which records the refresh routine reads next.
  *
- * The register's records, oldest `checkedAt` first, records nobody has checked
- * first of all, ties alphabetical. Records the routine already handled recently
- * are skipped, whatever the outcome: a page that cannot be read leaves no date
- * on the record, and without this the same record would come up every morning.
+ * The /updated/ page read from the bottom: records nobody has checked first,
+ * then the oldest `checkedAt`, and within one date the reverse of the page's
+ * A-to-Z. So the next pick is always the last row on that page that the log
+ * below does not list, and a person can predict it by looking. Records the
+ * routine already handled recently are skipped, whatever the outcome: a page
+ * that cannot be read leaves no date on the record, and without this the same
+ * record would come up every morning.
  *
  *   node scripts/refresh-pick.mjs            # one id
  *   node scripts/refresh-pick.mjs --n 3      # three
@@ -49,7 +52,11 @@ const candidates = readdirSync(providersDir)
   .filter((file) => file.endsWith('.md'))
   .map(front)
   .filter((data) => inRegister.has(data.status ?? 'active') && !recent.has(data.id))
-  .map((data) => ({ id: data.id, checkedAt: data.checkedAt ? String(data.checkedAt).slice(0, 10) : '' }))
-  .sort((a, b) => a.checkedAt.localeCompare(b.checkedAt) || a.id.localeCompare(b.id));
+  .map((data) => ({
+    id: data.id,
+    name: String(data.name),
+    checkedAt: data.checkedAt ? String(data.checkedAt).slice(0, 10) : '',
+  }))
+  .sort((a, b) => a.checkedAt.localeCompare(b.checkedAt) || b.name.localeCompare(a.name));
 
 for (const { id } of candidates.slice(0, n)) console.log(id);
