@@ -1080,6 +1080,9 @@ html.js [data-find-fallback] {
 }
 
 .find-facet {
+  /* Shared with the box below, so the title's count sits over the column of counts inside it. */
+  --find-pad: var(--space-xs);
+
   min-width: 0;
 }
 
@@ -1099,7 +1102,6 @@ html.js [data-find-fallback] {
      of checkboxes is. It was 1.25rem, sized off the line rather than the finger. */
   --find-row: 1.5rem;
   --find-rows: 4.5;
-  --find-pad: var(--space-xs);
 
   /* border-box, so the padding is added back or it eats the half row that shows there is more. */
   height: calc(var(--find-rows) * var(--find-row) + 2 * var(--find-pad));
@@ -1220,6 +1222,11 @@ html.js [data-find-fallback] {
   font-family: var(--font-data);
   font-size: var(--text-xs);
   font-variant-numeric: tabular-nums;
+}
+
+/* Inset by the box's padding, so it lines up with the counts in the rows below. */
+.find-jump {
+  margin-right: var(--find-pad);
 }
 
 /* One line of small print under the list: what it is hiding, and what it never knew. */
