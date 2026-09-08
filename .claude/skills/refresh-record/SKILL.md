@@ -28,17 +28,11 @@ All work lands on `claude/refresh`. The prefix is what the cloud routine may alw
 
 ## 2. Pick
 
-Candidates are the records in `src/content/providers/*.md` that the register shows: `status` absent, `active`, `acquired`, `renamed`, `winding-down` or `delisted-on-request`. Skip every other status. A `draft` or `out-of-scope` record has nothing to refresh, and a defunct one has no pages to read.
-
-Skip any record already changed on this branch since `main`:
-
 ```sh
-git diff --name-only origin/main...claude/refresh
+node scripts/refresh-pick.mjs --n N
 ```
 
-That is what stops a record whose pages cannot be read from being picked every day until somebody notices.
-
-Order the rest by `checkedAt`, oldest first, records with no `checkedAt` first of all, ties alphabetical by id. Take the first `N`.
+It prints the ids to refresh: the register's records, oldest `checkedAt` first, records with none first of all, skipping anything `research/refresh-log.tsv` lists in the last sixty days. Do not pick by hand.
 
 ## 3. Read
 
@@ -93,7 +87,9 @@ If Linear is not reachable, put the same text in the run report and continue.
 
 ## 8. Write
 
-One record, one commit. Before committing:
+One record, one commit, and every record picked gets a commit, even one whose pages could not be read: append a line to `research/refresh-log.tsv` for it, tab-separated, `<today>\t<id>\t<outcome>\t<note>`, where the outcome is `confirmed`, `changed`, `unreadable` or `stopped` and the note is one clause, such as `Cloudflare challenge on home`. That line is what keeps the record out of tomorrow's pick, and it is why a run with nothing to confirm still pushes.
+
+Before committing:
 
 ```sh
 pnpm exec prettier --write src/content/providers/<id>.md
@@ -102,7 +98,7 @@ pnpm run validate
 
 A failing `validate` means the change is wrong. Revert the file, report the failure, move on.
 
-Commit subject: `Refresh <name>, read <today>`. Body: a status change first, if any, with the quote and the URL. Then one line per changed field, `field: old → new`, followed by the quote and the URL. Then one line per stale source and one per unreadable page. End with `Co-Authored-By: Claude <noreply@anthropic.com>`.
+Commit subject: `Refresh <name>, read <today>`, or `Log <name> as unreadable, <today>` when nothing on the record changed. Body: a status change first, if any, with the quote and the URL. Then one line per changed field, `field: old → new`, followed by the quote and the URL. Then one line per stale source and one per unreadable page. End with `Co-Authored-By: Claude <noreply@anthropic.com>`.
 
 Push:
 
