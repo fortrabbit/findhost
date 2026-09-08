@@ -30,12 +30,12 @@ audience:
 referringSubnets: { now: 555, before: 554 }
 status: active
 addedAt: 2026-08-04
-checkedAt: 2026-07-31
+checkedAt: 2026-09-08
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: category, url: 'https://hyperhost.ua/en/', checkedAt: 2026-07-31 }
-  - { field: founded, url: 'https://hyperhost.ua/en/', checkedAt: 2026-07-31 }
-  - { field: currencies, url: 'https://hyperhost.ua/en/', checkedAt: 2026-07-31 }
+  - { field: category, url: 'https://hyperhost.ua/en/', checkedAt: 2026-09-08 }
+  - { field: founded, url: 'https://hyperhost.ua/en/', checkedAt: 2026-09-08 }
+  - { field: currencies, url: 'https://hyperhost.ua/en/', checkedAt: 2026-09-08 }
 figure:
   emoji: 🇺🇦
   color: rgb(0, 87, 183)
