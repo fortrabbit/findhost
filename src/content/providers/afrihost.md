@@ -36,6 +36,7 @@ audience:
   - smb
   - solo
 referringSubnets: { now: 1728, before: 1742 }
+wikidata: Q16058170
 status: active
 domainRegistration: paid-addon
 emailHosting: paid-addon
@@ -47,6 +48,7 @@ figure:
   textColor: rgb(244, 240, 230)
   text: South African ISP that also sells hosting.
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q16058170', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: category, url: 'https://www.afrihost.com', checkedAt: 2026-08-08 }
   - { field: entryPrice, url: 'https://www.afrihost.com', checkedAt: 2026-08-08 }

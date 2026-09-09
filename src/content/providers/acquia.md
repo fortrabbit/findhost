@@ -9,11 +9,13 @@ category:
 description: A Drupal platform sold through sales conversations rather than published prices.
 hqCountry: US
 referringSubnets: { now: 2699, before: 2690 }
+wikidata: Q4674765
 status: out-of-scope
 criterion: 3
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q4674765', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: status, url: 'https://www.acquia.com/pricing', checkedAt: 2026-08-12 }
 ai: authored

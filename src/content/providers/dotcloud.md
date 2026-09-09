@@ -19,10 +19,12 @@ runtimes:
   - perl
 deployMethods:
   - git
+wikidata: Q22766296
 status: discontinued
 addedAt: 2026-08-07
 checkedAt: 2026-08-07
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q22766296', checkedAt: 2026-09-09 }
   - { field: status, url: 'https://web.archive.org/web/20160127135608/http://www.paasfinder.com/how-to-migrate-from-dotcloud-to-heroku/', checkedAt: 2026-09-03 }
   - { field: description, url: 'https://venturebeat.com/business/dotcloud-the-cloud-service-that-gave-birth-to-docker-is-shutting-down-on-february-29', checkedAt: 2026-08-07 }
 figure:

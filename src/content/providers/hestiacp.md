@@ -26,6 +26,7 @@ freeTier: permanent
 supportChannels:
   - forum
 referringSubnets: { now: 636, before: 638 }
+wikidata: Q122639654
 status: active
 dnsHosting: included
 emailHosting: included
@@ -33,6 +34,7 @@ collaboration: team
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q122639654', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: runtimes, url: 'https://hestiacp.com/docs/', checkedAt: 2026-08-12 }
   - { field: managedDatabases, url: 'https://hestiacp.com/docs/', checkedAt: 2026-08-12 }

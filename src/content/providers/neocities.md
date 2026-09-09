@@ -41,10 +41,12 @@ supportChannels:
   - forum
 supportHours: community-only
 referringSubnets: { now: 10764, before: 10754 }
+wikidata: Q17071099
 status: active
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q17071099', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: category, url: 'https://neocities.org', checkedAt: 2026-08-12 }
   - { field: hqCountry, url: 'https://neocities.org', checkedAt: 2026-08-12 }

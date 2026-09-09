@@ -87,12 +87,14 @@ apiAvailable: public
 cliTool: official
 mcpServer: official
 greenWebId: 1315
+wikidata: Q141277820
 sla: true
 referringSubnets: { now: 445, before: 449 }
 status: active
 addedAt: 2026-07-31
 checkedAt: 2026-08-01
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q141277820', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1315', checkedAt: 2026-08-10 }
   - { field: headcount, url: 'https://www.fortrabbit.com/us/team', checkedAt: 2026-08-08 }

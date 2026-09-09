@@ -50,10 +50,12 @@ regions:
   - BE
   - NL
 referringSubnets: { now: 1278, before: 1284 }
+wikidata: Q109450229
 status: active
 addedAt: 2026-07-31
 checkedAt: 2026-08-01
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q109450229', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#198', checkedAt: 2026-08-10 }
   - { field: priceFrom, url: 'https://www.combell.com/en/hosting/web-hosting', checkedAt: 2026-08-02 }

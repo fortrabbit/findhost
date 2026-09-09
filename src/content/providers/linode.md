@@ -44,10 +44,12 @@ regions:
   - AU
 apiAvailable: public
 referringSubnets: { now: 7387, before: 7395 }
+wikidata: Q6554704
 status: acquired
 addedAt: 2026-07-31
 checkedAt: 2026-08-01
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q6554704', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: entryPrice, url: 'https://api.linode.com/v4/linode/types', checkedAt: 2026-08-01 }
   - { field: parent, url: 'https://www.linode.com/company/about/', checkedAt: 2026-08-01 }

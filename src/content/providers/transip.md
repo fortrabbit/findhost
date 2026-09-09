@@ -56,10 +56,12 @@ social:
   facebook: https://www.facebook.com/transipNL
   youtube: https://youtube.com/TransIP
 referringSubnets: { now: 8973, before: 8948 }
+wikidata: Q62023047
 status: active
 addedAt: 2026-07-31
 checkedAt: 2026-08-12
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q62023047', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1496', checkedAt: 2026-08-10 }
   - { field: priceFrom, url: 'https://www.transip.eu/web-hosting/', checkedAt: 2026-07-31 }

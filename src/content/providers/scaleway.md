@@ -62,10 +62,12 @@ iacSupport:
   - terraform
 sla: true
 referringSubnets: { now: 3831, before: 3851 }
+wikidata: Q3352745
 status: active
 addedAt: 2026-07-31
 checkedAt: 2026-08-01
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q3352745', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#925', checkedAt: 2026-08-10 }
   - { field: regions, url: 'https://www.scaleway.com/en/virtual-instances/', checkedAt: 2026-08-01 }

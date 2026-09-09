@@ -5,10 +5,12 @@ urls:
   home: https://www.kkr.com
 description: A US investment firm that holds the majority of a server provider recorded here, and sells no hosting itself.
 referringSubnets: { now: 2210, before: 2171 }
+wikidata: Q1570773
 status: unlisted
 addedAt: 2026-08-30
 checkedAt: 2026-08-29
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q1570773', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: 'majority stake', url: 'https://www.oakleycapital.com/latest-news/oakley-capital-agrees-sale-of-contabo-and-follow-on-investment/', checkedAt: 2026-08-30 }
   - { field: 'minority held by the previous owner', url: 'https://www.oakleycapital.com/latest-news/oakley-capital-agrees-sale-of-contabo-and-follow-on-investment/', checkedAt: 2026-08-30 }

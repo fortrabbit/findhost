@@ -21,10 +21,12 @@ freeTier: permanent
 collaboration: team
 apiAvailable: public
 referringSubnets: { now: 17283, before: 17224 }
+wikidata: Q2493781
 status: active
 addedAt: 2026-08-13
 checkedAt: 2026-08-13
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q2493781', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: category, url: 'https://www.atlassian.com/software/bitbucket/pricing', checkedAt: 2026-08-13 }
   - { field: pricingModel, url: 'https://www.atlassian.com/software/bitbucket/pricing', checkedAt: 2026-08-13 }

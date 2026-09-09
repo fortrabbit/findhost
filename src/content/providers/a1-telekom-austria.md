@@ -5,6 +5,7 @@ urls:
   home: https://www.a1.group
 description: An Austrian telecoms group and the owner of Exoscale.
 referringSubnets: { now: 518, before: 513 }
+wikidata: Q688755
 status: unlisted
 addedAt: 2026-08-07
 checkedAt: 2026-08-07
@@ -15,8 +16,8 @@ figure:
   text: Telecoms conglomerate, Exoscale cloud owner.
 ai: authored
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q688755', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-
 ---
 
 An Austrian telecoms group, and the owner of Exoscale. As with several entries here, the hosting is a subsidiary of something much larger that sells something else.

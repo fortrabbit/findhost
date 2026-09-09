@@ -25,10 +25,12 @@ dnsHosting: included
 emailHosting: paid-addon
 whoManagesOs: managed
 referringSubnets: { now: 98247, before: 98161 }
+wikidata: Q1416215
 status: active
 addedAt: 2026-07-31
 checkedAt: 2026-08-07
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q1416215', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: founded, url: 'https://en.wikipedia.org/wiki/GoDaddy', checkedAt: 2026-08-07 }
   - { field: ownership, url: 'https://en.wikipedia.org/wiki/GoDaddy', checkedAt: 2026-08-07 }

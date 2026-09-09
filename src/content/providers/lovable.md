@@ -20,11 +20,13 @@ freeTier: permanent
 favorite: true
 favoriteNote: Popular among non devs.
 referringSubnets: { now: 11718, before: 11707 }
+wikidata: Q135998012
 status: active
 addedAt: 2026-07-31
 checkedAt: 2026-08-12
 collaboration: team
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q135998012', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: pricingModel, url: 'https://lovable.dev/pricing', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://lovable.dev/pricing', checkedAt: 2026-08-01 }

@@ -37,6 +37,7 @@ audience:
   - smb
   - solo
 referringSubnets: { now: 1258, before: 1248 }
+wikidata: Q131895398
 status: active
 addedAt: 2026-07-31
 checkedAt: 2026-08-12
@@ -48,6 +49,7 @@ figure:
   textColor: rgb(241, 248, 244)
   text: Owns the data centres its customers sit in.
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q131895398', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: parent, url: 'https://your.online/brands', checkedAt: 2026-08-21 }
   - { field: ownership, url: 'https://blacknight.blog/the-next-chapter-for-blacknight.html', checkedAt: 2026-08-21 }

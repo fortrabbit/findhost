@@ -64,10 +64,12 @@ regions:
   - US
   - ZA
 referringSubnets: null
+wikidata: Q725967
 status: active
 addedAt: 2026-07-31
 checkedAt: 2026-08-01
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q725967', checkedAt: 2026-09-09 }
   - { field: regions, url: 'https://learn.microsoft.com/en-us/azure/reliability/regions-list', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://azure.microsoft.com/en-us/pricing/details/app-service/linux/', checkedAt: 2026-07-31 }
   - { field: priceFrom, url: 'https://azure.microsoft.com/en-us/pricing/details/app-service/linux/', checkedAt: 2026-08-02 }

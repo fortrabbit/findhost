@@ -6,10 +6,12 @@ founded: 1998
 hqCountry: US
 ownership: subsidiary
 description: The developer-facing host GoDaddy bought in 2013 to reach web professionals, and retired in 2023.
+wikidata: Q6805556
 status: discontinued
 addedAt: 2026-08-07
 checkedAt: 2026-08-07
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q6805556', checkedAt: 2026-09-09 }
   - { field: status, url: 'https://wptavern.com/godaddy-retires-media-temple-brand', checkedAt: 2026-08-07 }
 figure:
   emoji: 🎬

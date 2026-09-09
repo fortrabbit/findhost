@@ -36,6 +36,7 @@ regions:
   - AU
   - IN
 referringSubnets: { now: 29446, before: 29584 }
+wikidata: Q568183
 status: active
 addedAt: 2026-07-31
 checkedAt: 2026-08-09
@@ -43,6 +44,7 @@ apiAvailable: public
 cliTool: official
 mcpServer: official
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q568183', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: founded, url: 'https://www.ovhcloud.com/en/about-us/', checkedAt: 2026-07-31 }
   - { field: hqCountry, url: 'https://www.ovhcloud.com/en/about-us/', checkedAt: 2026-07-31 }

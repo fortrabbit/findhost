@@ -27,10 +27,12 @@ supportChannels:
   - email
 supportHours: 24-7
 referringSubnets: { now: 7599, before: 7674 }
+wikidata: Q3595393
 status: active
 addedAt: 2026-07-31
 checkedAt: 2026-08-08
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q3595393', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: founded, url: 'https://www.hostgator.com/about', checkedAt: 2026-08-01 }
   - { field: hqCountry, url: 'https://www.hostgator.com/about', checkedAt: 2026-08-01 }

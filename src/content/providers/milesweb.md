@@ -58,10 +58,12 @@ supportChannels:
   - email
 supportHours: 24-7
 referringSubnets: { now: 787, before: 790 }
+wikidata: Q140031833
 status: active
 addedAt: 2026-07-31
 checkedAt: 2026-08-12
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q140031833', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: regions, url: 'https://www.milesweb.in/hosting/web-hosting', checkedAt: 2026-08-01 }
   - { field: entryPrice, url: 'https://www.milesweb.in/hosting/web-hosting', checkedAt: 2026-08-01 }

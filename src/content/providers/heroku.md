@@ -66,6 +66,7 @@ regions:
   - JP
 cliTool: official
 referringSubnets: { now: 6340, before: 6335 }
+wikidata: Q2350702
 status: active
 staging: included
 testDomain: included
@@ -73,6 +74,7 @@ collaboration: team
 addedAt: 2026-07-31
 checkedAt: 2026-08-12
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q2350702', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: entryPrice, url: 'https://www.heroku.com/pricing', checkedAt: 2026-08-01 }
   - { field: freeTier, url: 'https://www.heroku.com/pricing', checkedAt: 2026-08-01 }

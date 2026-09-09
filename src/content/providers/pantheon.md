@@ -46,6 +46,7 @@ billingPeriods:
   - monthly
 gdprDpa: standard
 referringSubnets: { now: 1739, before: 1719 }
+wikidata: Q17073920
 status: active
 cdnIncluded: included
 staging: included
@@ -53,6 +54,7 @@ collaboration: team
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q17073920', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: category, url: 'https://pantheon.io', checkedAt: 2026-08-12 }
   - { field: cdnIncluded, url: 'https://pantheon.io', checkedAt: 2026-08-12 }

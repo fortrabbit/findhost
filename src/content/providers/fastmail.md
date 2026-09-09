@@ -23,10 +23,12 @@ billingPeriods:
 freeTier: trial
 emailHosting: included
 referringSubnets: { now: 2798, before: 2778 }
+wikidata: Q1006504
 status: active
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q1006504', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: category, url: 'https://www.fastmail.com/pricing/', checkedAt: 2026-08-12 }
   - { field: pricingModel, url: 'https://www.fastmail.com/pricing/', checkedAt: 2026-08-12 }

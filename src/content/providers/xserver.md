@@ -43,6 +43,7 @@ regions:
   - JP
 contractMinimum: annual
 referringSubnets: { now: 4251, before: 4265 }
+wikidata: Q74670812
 status: active
 addedAt: 2026-07-31
 checkedAt: 2026-08-09
@@ -53,6 +54,7 @@ social:
   x: https://x.com/xserverjp
   facebook: https://www.facebook.com/xserver.co.jp/
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q74670812', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: hqCountry, url: 'https://www.xserver.ne.jp/company.php', checkedAt: 2026-08-01 }
   - { field: certifications, url: 'https://www.xserver.ne.jp/company.php', checkedAt: 2026-08-01 }

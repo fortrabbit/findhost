@@ -45,10 +45,12 @@ entryPrice: { amount: 11, currency: USD, period: month }
 freeTier: trial
 apiAvailable: public
 referringSubnets: { now: 4994, before: 4979 }
+wikidata: Q135003129
 status: active
 addedAt: 2026-07-31
 checkedAt: 2026-08-09
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q135003129', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: parent, url: 'https://www.digitalocean.com/about', checkedAt: 2026-08-21 }
   - { field: entryPrice, url: 'https://www.cloudways.com/en/pricing.php', checkedAt: 2026-08-01 }

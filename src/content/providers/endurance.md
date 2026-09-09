@@ -5,6 +5,7 @@ urls:
   home: https://www.endurance.com
 description: The group that assembled Bluehost, HostGator and iPage before becoming Newfold Digital.
 referringSubnets: { now: 524, before: 516 }
+wikidata: Q5376661
 status: unlisted
 addedAt: 2026-08-06
 checkedAt: 2026-08-06
@@ -15,8 +16,8 @@ figure:
   text: Holds Bluehost, HostGator, and others.
 ai: authored
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q5376661', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-
 ---
 
 Endurance International Group assembled a large portfolio of hosting brands — Bluehost, HostGator, iPage, A Small Orange and others — and was taken private by Clearlake Capital in 2021, with the web-presence brands since operating as Newfold Digital. Nobody bought hosting from Endurance; they bought it from a brand it owned.

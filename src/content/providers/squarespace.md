@@ -33,10 +33,12 @@ social:
   linkedin: https://www.linkedin.com/company/squarespace/
   youtube: https://www.youtube.com/squarespace
 referringSubnets: { now: 40320, before: 40005 }
+wikidata: Q7582097
 status: active
 addedAt: 2026-07-31
 checkedAt: 2026-08-01
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q7582097', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: freeTier, url: 'https://www.squarespace.com/pricing', checkedAt: 2026-07-31 }
   - { field: contractMinimum, url: 'https://www.squarespace.com/pricing', checkedAt: 2026-07-31 }

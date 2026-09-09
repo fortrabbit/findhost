@@ -48,9 +48,11 @@ regions:
 apiAvailable: public
 cliTool: official
 referringSubnets: { now: 1058, before: 1050 }
+wikidata: Q127672178
 addedAt: 2026-07-31
 checkedAt: 2026-08-01
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q127672178', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: regions, url: 'https://appwrite.io/docs/products/network/regions', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://appwrite.io/pricing', checkedAt: 2026-08-02 }

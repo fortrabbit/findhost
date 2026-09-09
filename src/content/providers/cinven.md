@@ -5,10 +5,12 @@ urls:
   home: https://www.cinven.com
 description: A European private-equity firm that owns the group behind a host recorded here, and sells no hosting itself.
 referringSubnets: { now: 446, before: 445 }
+wikidata: Q1092600
 status: unlisted
 addedAt: 2026-08-30
 checkedAt: 2026-08-29
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q1092600', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: 'ownership of the group', url: 'https://www.cinven.com/news-insights/cinven-and-ontario-teachers-to-invest-in-the-combination-of-group-one-and-dogado-group/', checkedAt: 2026-08-30 }
 figure:

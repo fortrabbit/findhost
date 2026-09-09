@@ -30,10 +30,12 @@ exitWithin: a-month
 entryPrice: { amount: 25, currency: EUR, period: month }
 freeTier: trial
 referringSubnets: { now: 65327, before: 65435 }
+wikidata: Q7501150
 status: active
 addedAt: 2026-07-31
 checkedAt: 2026-08-01
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q7501150', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: priceFrom, url: 'https://www.shopify.com/pricing', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://www.shopify.com/pricing', checkedAt: 2026-08-02 }

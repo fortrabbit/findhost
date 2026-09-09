@@ -49,9 +49,11 @@ dnsHosting: included
 emailHosting: included
 cdnIncluded: paid-addon
 referringSubnets: { now: 2767, before: 2781 }
+wikidata: Q133445212
 addedAt: 2026-07-31
 checkedAt: 2026-08-12
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q133445212', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: entryPrice, url: 'https://cyberfolks.pl/hosting/', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://cyberfolks.pl/hosting/', checkedAt: 2026-08-02 }

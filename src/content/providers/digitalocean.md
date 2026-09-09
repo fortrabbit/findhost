@@ -69,10 +69,12 @@ iacSupport:
   - ansible
 sla: true
 referringSubnets: { now: 19794, before: 19766 }
+wikidata: Q17052116
 status: active
 addedAt: 2026-07-31
 checkedAt: 2026-08-12
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q17052116', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: testDomain, url: 'https://docs.digitalocean.com/docs/app-platform/reference/app-spec', checkedAt: 2026-08-12 }
   - { field: staging, url: 'https://www.digitalocean.com/products/app-platform', checkedAt: 2026-08-12 }

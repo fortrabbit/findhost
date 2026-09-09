@@ -5,6 +5,7 @@ urls:
   home: https://www.permira.com
 description: A private-equity firm that owns a hosting company recorded here, and sells no hosting itself.
 referringSubnets: { now: 687, before: 687 }
+wikidata: Q662030
 status: unlisted
 addedAt: 2026-08-07
 checkedAt: 2026-08-07
@@ -15,8 +16,8 @@ figure:
   text: Private-equity firm, owns hosting companies.
 ai: authored
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q662030', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-
 ---
 
 A private-equity firm, recorded here because it owns a company in this dataset. It sells no hosting and never did; what it does own is the decision-making above one.

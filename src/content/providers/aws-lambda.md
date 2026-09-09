@@ -64,10 +64,12 @@ regions:
   - US
   - ZA
 referringSubnets: null
+wikidata: Q21462856
 status: active
 addedAt: 2026-07-31
 checkedAt: 2026-08-01
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q21462856', checkedAt: 2026-09-09 }
   - { field: regions, url: 'https://docs.aws.amazon.com/general/latest/gr/lambda-service.html', checkedAt: 2026-08-01 }
   - { field: runtimes, url: 'https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html', checkedAt: 2026-07-31 }
   - { field: pricingModel, url: 'https://aws.amazon.com/lambda/pricing/', checkedAt: 2026-07-31 }

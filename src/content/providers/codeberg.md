@@ -16,10 +16,12 @@ regions: null
 collaboration: team
 apiAvailable: public
 referringSubnets: { now: 14642, before: 14631 }
+wikidata: Q106102182
 status: active
 addedAt: 2026-08-13
 checkedAt: 2026-08-13
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q106102182', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: category, url: 'https://docs.codeberg.org/getting-started/what-is-codeberg/', checkedAt: 2026-08-13 }
   - { field: hqCountry, url: 'https://docs.codeberg.org/getting-started/what-is-codeberg/', checkedAt: 2026-08-13 }

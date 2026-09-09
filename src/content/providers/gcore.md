@@ -40,12 +40,14 @@ apiAvailable: public
 iacSupport:
   - terraform
 referringSubnets: { now: 1363, before: 1376 }
+wikidata: Q114616935
 status: active
 hqCountry: LU
 ownership: vc-backed
 addedAt: 2026-07-31
 checkedAt: 2026-08-09
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q114616935', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: hqCountry, url: 'https://gcore.com/about', checkedAt: 2026-08-09 }
   - { field: pricingModel, url: 'https://gcore.com/pricing', checkedAt: 2026-08-01 }

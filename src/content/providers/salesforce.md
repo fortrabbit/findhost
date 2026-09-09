@@ -5,6 +5,7 @@ urls:
   home: https://www.salesforce.com
 description: A software company that owns Heroku and sells no hosting under its own name.
 referringSubnets: { now: 30604, before: 30380 }
+wikidata: Q941127
 status: unlisted
 addedAt: 2026-08-07
 checkedAt: 2026-08-07
@@ -15,8 +16,8 @@ figure:
   text: Software company that acquired Heroku.
 ai: authored
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q941127', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-
 ---
 
 Salesforce sells software, not hosting, and owns Heroku — for a decade the platform most developers meant when they said platform-as-a-service.

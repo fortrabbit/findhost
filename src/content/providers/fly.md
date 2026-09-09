@@ -50,10 +50,12 @@ social:
   github: https://github.com/superfly
 cliTool: official
 referringSubnets: { now: 2509, before: 2510 }
+wikidata: Q133943318
 status: active
 addedAt: 2026-07-31
 checkedAt: 2026-08-12
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q133943318', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: testDomain, url: 'https://fly.io/docs/networking/custom-domain/', checkedAt: 2026-08-12 }
   - { field: collaboration, url: 'https://fly.io/docs/security/', checkedAt: 2026-08-12 }

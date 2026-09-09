@@ -51,10 +51,12 @@ domainRegistration: included
 dnsHosting: included
 emailHosting: included
 referringSubnets: { now: 846, before: 837 }
+wikidata: Q85846766
 status: active
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q85846766', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: category, url: 'https://nearlyfreespeech.net', checkedAt: 2026-08-12 }
   - { field: hqCountry, url: 'https://nearlyfreespeech.net/about', checkedAt: 2026-08-12 }

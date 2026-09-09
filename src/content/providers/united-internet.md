@@ -5,6 +5,7 @@ urls:
   home: https://www.united-internet.de
 description: The German group behind Ionos, 1&1, Fasthosts, Arsys, home.pl and Strato.
 referringSubnets: { now: 607, before: 595 }
+wikidata: Q322579
 status: unlisted
 addedAt: 2026-08-06
 checkedAt: 2026-08-06
@@ -15,8 +16,8 @@ figure:
   text: German parent company of Ionos and 1&1.
 ai: authored
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q322579', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-
 ---
 
 United Internet is the German group behind Ionos, 1&1, Fasthosts, Arsys, home.pl and Strato, among others. It is a holding company: nobody buys hosting from United Internet, they buy it from one of its brands.

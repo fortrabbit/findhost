@@ -14,9 +14,11 @@ ownership: public
 whoManagesOs: managed
 sshAccess: none
 referringSubnets: { now: 36849, before: 36805 }
+wikidata: Q420506
 addedAt: 2026-07-31
 checkedAt: 2026-08-08
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q420506', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: founded, url: 'https://www.wix.com/about/us', checkedAt: 2026-08-01 }
   - { field: ownership, url: 'https://investors.wix.com/', checkedAt: 2026-08-01 }

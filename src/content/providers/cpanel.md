@@ -53,9 +53,11 @@ freeTier: trial
 apiAvailable: public
 hqCountry: US
 referringSubnets: { now: 74427, before: 74596 }
+wikidata: Q283637
 addedAt: 2026-07-31
 checkedAt: 2026-08-09
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q283637', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: hqCountry, url: 'https://cpanel.net', checkedAt: 2026-08-09 }
   - { field: entryPrice, url: 'https://cpanel.net/pricing/', checkedAt: 2026-08-01 }
