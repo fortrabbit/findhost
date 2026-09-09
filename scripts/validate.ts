@@ -85,6 +85,11 @@ for (const field of fields) {
     fail(dictionaryFile, `"${field.id}" renders as "${field.render}", which is not one of: ${renderModes.join(', ')}`);
   }
 
+  // A template with nowhere to put the value links every record at the same page.
+  if (field.link && (!field.link.startsWith('https://') || !field.link.includes('{value}'))) {
+    fail(dictionaryFile, `"${field.id}" links to "${field.link}", which must be https and carry {value}`);
+  }
+
   /*
    * A borrowed vocabulary that resolves to nothing leaves the field unvalidated
    * below. Checked on this field's own resolved list, not the target's: the

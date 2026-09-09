@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
-import { footnotes, price } from './record.ts';
+import { cells, footnotes, price } from './record.ts';
 
 describe('price', () => {
   it('keeps the provider currency rather than converting', () => {
@@ -28,6 +28,28 @@ describe('price', () => {
   it('names the period it was recorded against', () => {
     assert.match(price({ amount: 120, currency: 'USD', period: 'year' })!, /a year$/);
     assert.match(price({ amount: 0.5, currency: 'USD', period: 'hour' })!, /an hour$/);
+  });
+});
+
+describe('cells', () => {
+  const context = { nameOf: new Map(), hasPage: new Set<string>() };
+
+  it('draws an id in another register as the link into it', () => {
+    const field = {
+      id: 'wikidata',
+      label: 'Wikidata',
+      multiple: false,
+      values: [],
+      link: 'https://www.wikidata.org/wiki/{value}',
+    };
+    assert.deepEqual(cells(field, 'Q55613975', context), [
+      { text: 'Q55613975', href: 'https://www.wikidata.org/wiki/Q55613975' },
+    ]);
+  });
+
+  it('leaves a free value without a template as text', () => {
+    const field = { id: 'founded', label: 'Founded', multiple: false, values: [] };
+    assert.deepEqual(cells(field, 2004, context), [{ text: '2004' }]);
   });
 });
 

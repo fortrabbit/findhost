@@ -120,6 +120,7 @@ export function cells(field: Field, value: unknown, context: RecordContext): Cel
     }
 
     const label = labelOf(field.id, entry);
+    if (field.link) return { text: label, href: field.link.replace('{value}', encodeURIComponent(String(entry))) };
     if (!field.facet) return { text: label };
 
     /*

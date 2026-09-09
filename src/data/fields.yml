@@ -14,6 +14,8 @@
 #            that; everywhere the value is read as prose takes the full label.
 # - `valuesFrom` borrows another field's vocabulary rather than repeating it.
 # - `render` how a value is drawn where it is not a label lookup.
+# - `link`   where a free value points, with `{value}` standing in for it — an id
+#            in somebody else's register is shown as the link into that register.
 # - `pairs`  the other facets this one combines with as a page of its own —
 #            /runtimes/php/regions/germany/. Declared on one side only, and the
 #            side that declares it comes first in the path. See lib/pairs.ts for
@@ -1045,6 +1047,7 @@
 - id: greenWebId
   label: Green Web directory
   group: Other features
+  link: 'https://app.greenweb.org/directory/#{value}'
 
 # Which company this is, rather than what it sells. A name is ambiguous and a
 # homepage moves; a Wikidata item is the handle Wikipedia, an answer engine and
@@ -1052,7 +1055,8 @@
 # with a record anywhere else. Emitted as schema.org sameAs on the record page.
 - id: wikidata
   label: Wikidata
-  group: Classification
+  group: Identity
+  link: 'https://www.wikidata.org/wiki/{value}'
 
 # --------------------------------------------------------------- Support
 

@@ -135,6 +135,12 @@ export interface Field {
   multiple: boolean;
   /** How the value is drawn where it is not a label lookup. */
   render?: 'yes-no' | 'money' | 'multiple' | 'reach';
+  /**
+   * Where a free value points, with `{value}` standing in for it. An id in
+   * somebody else's register — Wikidata, the Green Web directory — is only
+   * useful as the way into that register, so the row is drawn as that link.
+   */
+  link?: string;
   values: FieldValue[];
 }
 
