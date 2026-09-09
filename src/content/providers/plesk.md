@@ -53,6 +53,7 @@ billingPeriods:
 billingTiming: advance
 freeTier: trial
 referringSubnets: { now: 56051, before: 56839 }
+wikidata: Q2099390
 status: active
 addedAt: 2026-07-31
 checkedAt: 2026-08-12
@@ -63,6 +64,7 @@ emailHosting: included
 staging: included
 collaboration: team
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q2099390', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: hqCountry, url: 'https://www.plesk.com/legal/', checkedAt: 2026-08-01 }
   - { field: dnsHosting, url: 'https://www.plesk.com/features/', checkedAt: 2026-08-12 }

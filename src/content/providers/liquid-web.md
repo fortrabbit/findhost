@@ -38,10 +38,12 @@ regions:
   - AU
 supportHours: 24-7
 referringSubnets: { now: 2834, before: 2856 }
+wikidata: Q17031875
 status: active
 addedAt: 2026-07-31
 checkedAt: 2026-08-01
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q17031875', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: regions, url: 'https://www.liquidweb.com/data-centers/', checkedAt: 2026-08-01 }
   - { field: supportHours, url: 'https://www.liquidweb.com/products/', checkedAt: 2026-07-31 }

@@ -45,9 +45,11 @@ contractMinimum: none
 regions:
   - DE
 referringSubnets: { now: 3770, before: 3794 }
+wikidata: Q138835306
 addedAt: 2026-07-31
 checkedAt: 2026-08-09
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q138835306', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#791', checkedAt: 2026-08-10 }
   - { field: software, url: 'https://www.all-inkl.com/webhosting/software-installer/', checkedAt: 2026-08-09 }

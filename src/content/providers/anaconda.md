@@ -5,6 +5,7 @@ urls:
   home: https://www.anaconda.com
 description: A Python tooling company and the owner of PythonAnywhere.
 referringSubnets: { now: 5410, before: 5429 }
+wikidata: Q107517996
 status: unlisted
 addedAt: 2026-08-07
 checkedAt: 2026-08-07
@@ -15,8 +16,8 @@ figure:
   text: Python tools, PythonAnywhere owner.
 ai: authored
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q107517996', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-
 ---
 
 A Python tooling company, owner of PythonAnywhere. It sells no hosting under its own name.

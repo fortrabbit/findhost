@@ -31,9 +31,11 @@ social:
   youtube: https://www.youtube.com/user/weebly
 hqCountry: US
 referringSubnets: { now: 56393, before: 56472 }
+wikidata: Q2705110
 addedAt: 2026-07-31
 checkedAt: 2026-08-09
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q2705110', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: hqCountry, url: 'https://www.weebly.com/about', checkedAt: 2026-08-09 }
   - { field: freeTier, url: 'https://www.weebly.com/pricing', checkedAt: 2026-08-01 }

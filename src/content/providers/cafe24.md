@@ -21,10 +21,12 @@ supportChannels:
   - phone
   - email
 referringSubnets: { now: 6672, before: 6683 }
+wikidata: Q12604947
 status: active
 addedAt: 2026-08-04
 checkedAt: 2026-08-08
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q12604947', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: hqCountry, url: 'https://hosting.cafe24.com', checkedAt: 2026-08-04 }
   - { field: priceFrom, url: 'https://hosting.cafe24.com', checkedAt: 2026-08-04 }

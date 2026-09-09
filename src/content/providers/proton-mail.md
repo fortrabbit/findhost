@@ -16,10 +16,12 @@ ownership: independent
 freeTier: trial
 emailHosting: included
 referringSubnets: { now: 10028, before: 10011 }
+wikidata: Q17355735
 status: active
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q17355735', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: category, url: 'https://proton.me/business/mail/pricing', checkedAt: 2026-08-12 }
   - { field: hqCountry, url: 'https://proton.me/business/mail/pricing', checkedAt: 2026-08-12 }

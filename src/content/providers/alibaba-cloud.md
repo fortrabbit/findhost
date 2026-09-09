@@ -73,6 +73,7 @@ supportChannels:
 apiAvailable: public
 cliTool: official
 referringSubnets: { now: 5880, before: 5884 }
+wikidata: Q17062154
 status: active
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
@@ -82,6 +83,7 @@ figure:
   textColor: rgb(245, 237, 230)
   text: Alibaba's multi-region global cloud platform.
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q17062154', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: founded, url: 'https://alibabacloud.com', checkedAt: 2026-08-12 }
   - { field: hqCountry, url: 'https://alibabacloud.com', checkedAt: 2026-08-12 }

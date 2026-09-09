@@ -18,10 +18,12 @@ pricingModel: usage-based
 currencies:
   - USD
 referringSubnets: { now: 1161, before: 1169 }
+wikidata: Q20539298
 status: active
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q20539298', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: category, url: 'https://dnsimple.com/pricing', checkedAt: 2026-08-12 }
   - { field: pricingModel, url: 'https://dnsimple.com/pricing', checkedAt: 2026-08-12 }

@@ -46,10 +46,12 @@ collaboration: team
 favorite: true
 favoriteNote: Shipped the standards-first argument rather than waiting for it.
 referringSubnets: null
+wikidata: Q131417385
 status: active
 addedAt: 2026-07-31
 checkedAt: 2026-08-12
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q131417385', checkedAt: 2026-09-09 }
   - { field: priceFrom, url: 'https://deno.com/deploy/pricing', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://deno.com/deploy/pricing', checkedAt: 2026-08-02 }
   - { field: freeTier, url: 'https://deno.com/deploy/pricing', checkedAt: 2026-07-31 }

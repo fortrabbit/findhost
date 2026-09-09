@@ -14,10 +14,12 @@ runtimes:
   - node
 deployMethods:
   - git
+wikidata: Q16982843
 status: discontinued
 addedAt: 2026-08-07
 checkedAt: 2026-08-07
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q16982843', checkedAt: 2026-09-09 }
   - { field: status, url: 'https://en.wikipedia.org/wiki/Nodejitsu', checkedAt: 2026-08-07 }
   - { field: ownership, url: 'https://venturebeat.com/dev/why-godaddys-nodejitsu-deal-is-great-for-node-js/', checkedAt: 2026-08-07 }
 figure:

@@ -17,10 +17,12 @@ paymentMethods:
   - paypal
   - crypto
 referringSubnets: { now: 63156, before: 61673 }
+wikidata: Q6544704
 status: active
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q6544704', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: docs, url: 'https://www.namecheap.com/support/knowledgebase/', checkedAt: 2026-08-12 }
   - {

@@ -44,12 +44,14 @@ persistentStorage: false
 apiAvailable: public
 cliTool: official
 referringSubnets: { now: 23189, before: 23060 }
+wikidata: Q108943604
 status: active
 testDomain: included
 collaboration: team
 addedAt: 2026-07-31
 checkedAt: 2026-08-12
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q108943604', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: priceFrom, url: 'https://huggingface.co/pricing', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://huggingface.co/pricing', checkedAt: 2026-08-02 }

@@ -35,10 +35,12 @@ exitWithin: over-a-year
 renewalMultiple: 2.5
 contractMinimum: multi-year
 referringSubnets: { now: 14336, before: 14496 }
+wikidata: Q4930366
 status: active
 addedAt: 2026-07-31
 checkedAt: 2026-08-01
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q4930366', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: founded, url: 'https://www.bluehost.com/about', checkedAt: 2026-08-01 }
   - { field: hqCountry, url: 'https://www.bluehost.com/about', checkedAt: 2026-08-01 }

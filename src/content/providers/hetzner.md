@@ -60,10 +60,12 @@ cliTool: official
 favorite: true
 favoriteNote: Popular VPS.
 referringSubnets: { now: 18992, before: 18978 }
+wikidata: Q18349346
 status: active
 addedAt: 2026-07-31
 checkedAt: 2026-08-01
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q18349346', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: regions, url: 'https://www.hetzner.com/cloud/', checkedAt: 2026-08-01 }
   - { field: founded, url: 'https://www.hetzner.com/unternehmen/ueber-uns/', checkedAt: 2026-07-31 }

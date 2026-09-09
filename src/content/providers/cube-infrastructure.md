@@ -5,9 +5,12 @@ urls:
   home: https://www.cubeinfrastructure.com
 description: An infrastructure investment manager and the owner of GleSYS.
 referringSubnets: null
+wikidata: Q131897589
 status: unlisted
 addedAt: 2026-08-07
 checkedAt: 2026-08-07
+sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q131897589', checkedAt: 2026-09-09 }
 figure:
   emoji: 🏗️
   color: rgb(118, 130, 140)

@@ -49,10 +49,12 @@ paymentMethods:
   - crypto
   - bank-transfer
 referringSubnets: { now: 5004, before: 5028 }
+wikidata: Q137343200
 status: active
 addedAt: 2026-07-31
 checkedAt: 2026-09-08
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q137343200', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: entryPrice, url: 'https://api.vultr.com/v2/plans', checkedAt: 2026-09-08 }
   - { field: pricingModel, url: 'https://api.vultr.com/v2/plans', checkedAt: 2026-09-08 }

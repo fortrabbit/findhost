@@ -5,10 +5,12 @@ urls:
   home: https://www.silverlake.com
 description: A US technology investment firm that majority-owns a managed WordPress host recorded here, and sells no hosting itself.
 referringSubnets: { now: 741, before: 742 }
+wikidata: Q1676442
 status: unlisted
 addedAt: 2026-08-30
 checkedAt: 2026-08-29
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q1676442', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: 'majority holding', url: 'https://www.silverlake.com/portfolio/', checkedAt: 2026-08-30 }
 figure:

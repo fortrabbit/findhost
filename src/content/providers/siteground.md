@@ -58,6 +58,7 @@ social:
 addedAt: 2026-07-31
 checkedAt: 2026-08-01
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q17081038', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1203', checkedAt: 2026-08-10 }
   - { field: founded, url: 'https://www.siteground.com/company', checkedAt: 2026-07-31 }
@@ -73,6 +74,7 @@ sources:
   - { field: urls, url: 'https://www.siteground.com/viewtos/terms_of_service', checkedAt: 2026-08-01 }
   - { field: software, url: 'https://www.siteground.com/kb/', checkedAt: 2026-07-31 }
 referringSubnets: { now: 6661, before: 6666 }
+wikidata: Q17081038
 status: active
 ai: authored
 figure:

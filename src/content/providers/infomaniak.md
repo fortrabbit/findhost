@@ -22,10 +22,12 @@ supportChannels:
 supportHours: 24-7
 supportTiering: all-plans
 referringSubnets: { now: 7155, before: 7143 }
+wikidata: Q21117293
 status: active
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q21117293', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: category, url: 'https://infomaniakstatus.com/', checkedAt: 2026-08-12 }
   - { field: supportChannels, url: 'https://infomaniakstatus.com/', checkedAt: 2026-08-12 }

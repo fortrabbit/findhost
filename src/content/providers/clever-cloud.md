@@ -75,10 +75,12 @@ social:
   github: https://github.com/CleverCloud
 collaboration: team
 referringSubnets: { now: 769, before: 750 }
+wikidata: Q112112594
 status: active
 addedAt: 2026-07-31
 checkedAt: 2026-08-12
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q112112594', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: priceFrom, url: 'https://clever.cloud/pricing/', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://clever.cloud/pricing/', checkedAt: 2026-08-02 }

@@ -51,10 +51,12 @@ dnsHosting: included
 emailHosting: included
 staging: paid-addon
 referringSubnets: { now: 3873, before: 3871 }
+wikidata: Q60856275
 status: active
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q60856275', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: hqCountry, url: 'https://www.nazwa.pl', checkedAt: 2026-08-12 }
   - { field: ownership, url: 'https://www.nazwa.pl', checkedAt: 2026-08-12 }

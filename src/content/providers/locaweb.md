@@ -25,10 +25,12 @@ audience:
 apiAvailable: none
 cliTool: none
 referringSubnets: { now: 1447, before: 1462 }
+wikidata: Q10319484
 status: active
 addedAt: 2026-07-31
 checkedAt: 2026-07-31
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q10319484', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: ownership, url: 'https://www.locaweb.com.br', checkedAt: 2026-07-31 }
   - { field: sshAccess, url: 'https://www.locaweb.com.br', checkedAt: 2026-07-31 }

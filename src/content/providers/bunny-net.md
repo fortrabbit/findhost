@@ -54,9 +54,11 @@ apiAvailable: public
 hqCountry: SI
 ownership: vc-backed
 referringSubnets: { now: 3534, before: 3545 }
+wikidata: Q110644081
 addedAt: 2026-07-31
 checkedAt: 2026-08-09
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q110644081', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: hqCountry, url: 'https://bunny.net', checkedAt: 2026-08-09 }
   - { field: regions, url: 'https://bunny.net/pricing/storage/', checkedAt: 2026-08-01 }

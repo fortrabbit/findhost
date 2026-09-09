@@ -78,10 +78,12 @@ testDomain: included
 collaboration: team
 sla: true
 referringSubnets: { now: 10343, before: 10201 }
+wikidata: Q56069184
 status: active
 addedAt: 2026-07-31
 checkedAt: 2026-08-12
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q56069184', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: apiAvailable, url: 'https://vercel.com/docs/rest-api', checkedAt: 2026-08-09 }
   - { field: ownership, url: 'https://vercel.com/about', checkedAt: 2026-08-01 }

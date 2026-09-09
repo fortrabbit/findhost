@@ -24,10 +24,12 @@ exitWithin: a-month
 freeTier: permanent
 cliTool: official
 referringSubnets: null
+wikidata: Q131417404
 status: active
 addedAt: 2026-07-31
 checkedAt: 2026-09-08
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q131417404', checkedAt: 2026-09-09 }
   - { field: runtimes, url: 'https://developers.cloudflare.com/workers/languages/', checkedAt: 2026-09-08 }
   - { field: pricingModel, url: 'https://developers.cloudflare.com/workers/platform/pricing/', checkedAt: 2026-09-08 }
   - { field: priceFrom, url: 'https://developers.cloudflare.com/workers/platform/pricing/', checkedAt: 2026-09-08 }

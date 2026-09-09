@@ -49,6 +49,7 @@ supportChannels:
   - email
 supportHours: 24-7
 referringSubnets: { now: 810, before: 822 }
+wikidata: Q140449811
 status: active
 addedAt: 2026-07-31
 checkedAt: 2026-08-12
@@ -56,6 +57,7 @@ domainRegistration: paid-addon
 dnsHosting: included
 emailHosting: included
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q140449811', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: entryPrice, url: 'https://raiolanetworks.com/hosting-web/', checkedAt: 2026-08-01 }
   - { field: domainRegistration, url: 'https://raiolanetworks.com/hosting-web/', checkedAt: 2026-08-12 }

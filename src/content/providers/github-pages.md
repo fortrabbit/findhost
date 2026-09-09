@@ -40,10 +40,12 @@ collaboration: team
 favorite: true
 favoriteNote: The free tier that has never become a trap.
 referringSubnets: null
+wikidata: Q30324817
 status: active
 addedAt: 2026-08-07
 checkedAt: 2026-08-07
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q30324817', checkedAt: 2026-09-09 }
   - { field: category, url: 'https://pages.github.com', checkedAt: 2026-08-07 }
   - { field: runtimes, url: 'https://docs.github.com/en/pages', checkedAt: 2026-08-07 }
   - { field: deployMethods, url: 'https://docs.github.com/en/pages', checkedAt: 2026-08-07 }

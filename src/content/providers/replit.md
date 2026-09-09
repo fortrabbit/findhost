@@ -44,11 +44,13 @@ contractMinimum: annual
 regions:
   - US
 referringSubnets: { now: 8006, before: 8047 }
+wikidata: Q60768699
 status: active
 collaboration: team
 addedAt: 2026-07-31
 checkedAt: 2026-08-12
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q60768699', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: collaboration, url: 'https://replit.com/pricing', checkedAt: 2026-08-12 }
   - { field: pricingModel, url: 'https://replit.com/pricing', checkedAt: 2026-07-31 }

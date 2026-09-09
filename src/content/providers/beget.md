@@ -30,6 +30,7 @@ apiAvailable: public
 iacSupport:
   - terraform
 referringSubnets: { now: 3129, before: 3093 }
+wikidata: Q125181659
 status: active
 domainRegistration: paid-addon
 emailHosting: included
@@ -37,6 +38,7 @@ cdnIncluded: paid-addon
 addedAt: 2026-08-04
 checkedAt: 2026-08-12
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q125181659', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: hqCountry, url: 'https://beget.com/en/hosting', checkedAt: 2026-08-04 }
   - { field: founded, url: 'https://beget.com/en/hosting', checkedAt: 2026-08-04 }

@@ -32,10 +32,12 @@ audience:
   - solo
   - smb
 referringSubnets: { now: 13034, before: 13091 }
+wikidata: Q138967319
 status: active
 addedAt: 2026-07-31
 checkedAt: 2026-08-08
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q138967319', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: category, url: 'https://www.one.com/en-gb/plans-pricing/', checkedAt: 2026-08-08 }
   - { field: software, url: 'https://www.one.com/en-gb/plans-pricing/', checkedAt: 2026-08-08 }

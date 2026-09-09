@@ -64,10 +64,12 @@ supportHours: 24-7
 apiAvailable: public
 sla: true
 referringSubnets: { now: 20252, before: 20377 }
+wikidata: Q882107
 status: active
 addedAt: 2026-07-31
 checkedAt: 2026-08-01
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q882107', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: supportHours, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-08-01 }
   - { field: supportChannels, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-08-01 }

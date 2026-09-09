@@ -71,10 +71,12 @@ collaboration: team
 favorite: true
 favoriteNote: Made deploying from a commit ordinary. Everyone else copied it.
 referringSubnets: { now: 7403, before: 7413 }
+wikidata: Q56102498
 status: active
 addedAt: 2026-07-31
 checkedAt: 2026-08-12
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q56102498', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: pricingModel, url: 'https://www.netlify.com/pricing/', checkedAt: 2026-07-31 }
   - { field: priceFrom, url: 'https://www.netlify.com/pricing/', checkedAt: 2026-08-02 }

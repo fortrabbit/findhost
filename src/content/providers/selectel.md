@@ -23,11 +23,13 @@ supportChannels:
   - phone
 supportHours: 24-7
 referringSubnets: { now: 1456, before: 1456 }
+wikidata: Q16495806
 status: active
 addedAt: 2026-08-04
 checkedAt: 2026-08-09
 apiAvailable: public
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q16495806', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: hqCountry, url: 'https://selectel.ru/en/', checkedAt: 2026-08-04 }
   - { field: infraContract, url: 'https://selectel.ru/en/', checkedAt: 2026-08-04 }

@@ -56,9 +56,11 @@ social:
   facebook: https://www.facebook.com/strato/
   youtube: https://www.youtube.com/user/stratoDE/
 referringSubnets: { now: 19313, before: 19596 }
+wikidata: Q2353933
 addedAt: 2026-07-31
 checkedAt: 2026-08-09
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q2353933', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: software, url: 'https://www.strato.de/hosting', checkedAt: 2026-08-09 }
   - { field: priceFrom, url: 'https://www.strato.de/webhosting/', checkedAt: 2026-07-31 }

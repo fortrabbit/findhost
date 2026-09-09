@@ -50,12 +50,14 @@ supportChannels:
   - email
 supportHours: 24-7
 referringSubnets: { now: 7591, before: 7651 }
+wikidata: Q24945891
 status: active
 emailHosting: included
 domainRegistration: paid-addon
 addedAt: 2026-07-31
 checkedAt: 2026-08-12
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q24945891', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: parent, url: 'https://www.ionos-group.com/brands/homepl.html', checkedAt: 2026-08-21 }
   - { field: regions, url: 'https://home.pl/hosting', checkedAt: 2026-08-01 }

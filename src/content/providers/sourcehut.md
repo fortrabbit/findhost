@@ -18,10 +18,12 @@ currencies:
   - EUR
   - USD
 referringSubnets: { now: 1152, before: 1133 }
+wikidata: Q78514485
 status: active
 addedAt: 2026-08-13
 checkedAt: 2026-08-13
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q78514485', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: category, url: 'https://sourcehut.org/pricing/', checkedAt: 2026-08-13 }
   - { field: pricingModel, url: 'https://sourcehut.org/pricing/', checkedAt: 2026-08-13 }

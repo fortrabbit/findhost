@@ -45,9 +45,11 @@ freeTier: permanent
 hqCountry: DE
 ownership: independent
 referringSubnets: { now: 1413, before: 1406 }
+wikidata: Q130299941
 addedAt: 2026-07-31
 checkedAt: 2026-08-09
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q130299941', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: hqCountry, url: 'https://www.cloudron.io/about.html', checkedAt: 2026-08-09 }
   - { field: priceFrom, url: 'https://www.cloudron.io/pricing.html', checkedAt: 2026-08-02 }

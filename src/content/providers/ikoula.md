@@ -27,10 +27,12 @@ useCases:
 audience:
   - smb
 referringSubnets: { now: 1020, before: 1029 }
+wikidata: Q135190041
 status: active
 addedAt: 2026-07-31
 checkedAt: 2026-09-08
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q135190041', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#900', checkedAt: 2026-08-10 }
   - { field: category, url: 'https://www.ikoula.com', checkedAt: 2026-09-08 }

@@ -61,6 +61,7 @@ social:
 addedAt: 2026-07-31
 checkedAt: 2026-08-01
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q1397778', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1282', checkedAt: 2026-08-10 }
   - { field: entryPrice, url: 'https://www.fasthosts.co.uk/web-hosting', checkedAt: 2026-08-01 }
@@ -76,6 +77,7 @@ sources:
   - { field: regions, url: 'https://www.fasthosts.co.uk/virtual-private-servers', checkedAt: 2026-07-31 }
   - { field: parent, url: 'https://www.ionos-group.com/brands/fasthosts.html', checkedAt: 2026-07-31 }
 referringSubnets: { now: 7364, before: 7511 }
+wikidata: Q1397778
 status: active
 ai: authored
 figure:

@@ -52,6 +52,7 @@ supportChannels:
 supportHours: business-hours
 apiAvailable: public
 referringSubnets: { now: 6406, before: 6386 }
+wikidata: Q10569256
 status: active
 addedAt: 2026-07-31
 checkedAt: 2026-08-12
@@ -59,6 +60,7 @@ domainRegistration: paid-addon
 dnsHosting: included
 emailHosting: included
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q10569256', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1010', checkedAt: 2026-08-10 }
   - { field: entryPrice, url: 'https://www.loopia.se/webbhotell/priser/', checkedAt: 2026-08-01 }

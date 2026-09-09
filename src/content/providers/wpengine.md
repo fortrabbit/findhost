@@ -46,11 +46,13 @@ social:
   linkedin: https://www.linkedin.com/company/wpengine
   youtube: https://www.youtube.com/wpengine
 referringSubnets: { now: 17300, before: 17233 }
+wikidata: Q19903819
 status: active
 addedAt: 2026-07-31
 checkedAt: 2026-08-09
 apiAvailable: public
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q19903819', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: founded, url: 'https://wpengine.com/about-us/', checkedAt: 2026-08-01 }
   - { field: hqCountry, url: 'https://wpengine.com/about-us/', checkedAt: 2026-08-01 }

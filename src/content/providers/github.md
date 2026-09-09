@@ -23,10 +23,12 @@ collaboration: team
 apiAvailable: public
 cliTool: official
 referringSubnets: { now: 255822, before: 255418 }
+wikidata: Q364
 status: active
 addedAt: 2026-08-07
 checkedAt: 2026-08-13
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q364', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: category, url: 'https://github.com/pricing', checkedAt: 2026-08-13 }
   - { field: pricingModel, url: 'https://github.com/pricing', checkedAt: 2026-08-13 }

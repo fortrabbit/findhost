@@ -54,11 +54,13 @@ regions:
 supportChannels:
   - email
 referringSubnets: { now: 902, before: 910 }
+wikidata: Q137383565
 status: active
 addedAt: 2026-07-31
 checkedAt: 2026-08-09
 apiAvailable: public
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q137383565', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1333', checkedAt: 2026-08-10 }
   - { field: regions, url: 'https://www.mythic-beasts.com/order/hosting', checkedAt: 2026-08-01 }

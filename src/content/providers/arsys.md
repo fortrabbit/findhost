@@ -67,6 +67,7 @@ emailHosting: paid-addon
 cdnIncluded: none
 staging: paid-addon
 referringSubnets: { now: 5194, before: 5195 }
+wikidata: Q5706430
 status: active
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
@@ -76,6 +77,7 @@ figure:
   textColor: rgb(245, 239, 234)
   text: Spanish host since 1996, IONOS subsidiary.
 sources:
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q5706430', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: founded, url: 'https://www.arsys.es/empresa', checkedAt: 2026-08-12 }
   - { field: hqCountry, url: 'https://www.arsys.es/legal', checkedAt: 2026-08-12 }
