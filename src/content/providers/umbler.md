@@ -46,14 +46,14 @@ social:
   youtube: https://www.youtube.com/umbler
 referringSubnets: { now: 678, before: 645 }
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-09-09
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: entryPrice, url: 'https://www.umbler.com/br/hospedagem-php', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://www.umbler.com/br/hospedagem-php', checkedAt: 2026-08-01 }
-  - { field: priceTo, url: 'https://www.umbler.com/br/hospedagem-php', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://www.umbler.com/br/hospedagem-php', checkedAt: 2026-08-02 }
-  - { field: runtimes, url: 'https://www.umbler.com/br/hospedagem-php', checkedAt: 2026-08-01 }
+  - { field: entryPrice, url: 'https://www.umbler.com/br/hospedagem-php', checkedAt: 2026-09-09 }
+  - { field: priceFrom, url: 'https://www.umbler.com/br/hospedagem-php', checkedAt: 2026-09-09 }
+  - { field: priceTo, url: 'https://www.umbler.com/br/hospedagem-php', checkedAt: 2026-09-09 }
+  - { field: currencies, url: 'https://www.umbler.com/br/hospedagem-php', checkedAt: 2026-09-09 }
+  - { field: runtimes, url: 'https://www.umbler.com/br/hospedagem-php', checkedAt: 2026-09-09 }
 figure:
   emoji: ⏱️
   color: rgb(59, 106, 176)
