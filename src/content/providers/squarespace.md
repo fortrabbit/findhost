@@ -36,14 +36,14 @@ referringSubnets: { now: 40320, before: 40005 }
 wikidata: Q7582097
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-09-10
 sources:
-  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q7582097', checkedAt: 2026-09-09 }
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q7582097', checkedAt: 2026-09-10 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: freeTier, url: 'https://www.squarespace.com/pricing', checkedAt: 2026-07-31 }
-  - { field: contractMinimum, url: 'https://www.squarespace.com/pricing', checkedAt: 2026-07-31 }
-  - { field: billingPeriods, url: 'https://www.squarespace.com/terms-of-service', checkedAt: 2026-08-02 }
-  - { field: billingTiming, url: 'https://www.squarespace.com/terms-of-service', checkedAt: 2026-08-02 }
+  - { field: freeTier, url: 'https://www.squarespace.com/pricing', checkedAt: 2026-09-10 }
+  - { field: contractMinimum, url: 'https://www.squarespace.com/pricing', checkedAt: 2026-09-10 }
+  - { field: billingPeriods, url: 'https://www.squarespace.com/terms-of-service', checkedAt: 2026-09-10 }
+  - { field: billingTiming, url: 'https://www.squarespace.com/terms-of-service', checkedAt: 2026-09-10 }
   - { field: exitWithin, url: 'https://www.squarespace.com/terms-of-service', checkedAt: 2026-08-02 }
 figure:
   emoji: 🎨
