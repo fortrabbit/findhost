@@ -6,3 +6,4 @@
 2026-09-08	webempresa	confirmed	Home, quienes-somos and pricing pages confirmed founded, hqCountry, parent, supportHours, energyClaim, priceFrom, priceTo, currencies, billingPeriods, billingTiming unchanged
 2026-09-08	vultr	confirmed	API and docs pages confirmed entryPrice, pricingModel, regions, priceFrom, priceTo, billingPeriods, apiAvailable, ownership, paymentMethods unchanged; home and pricing pages returned 403
 2026-09-09	umbler	confirmed	Pricing page confirmed entryPrice, priceFrom, priceTo, currencies, runtimes unchanged; status page returned 502
+2026-09-10	squarespace	confirmed	wikidata, pricing and terms pages confirmed wikidata, freeTier, contractMinimum, billingPeriods, billingTiming unchanged; terms page no longer states exit timing
