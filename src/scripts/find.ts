@@ -45,8 +45,8 @@ const track = (event: string) => {
 const filtersEl = document.querySelector<HTMLElement>('[data-find-filters]');
 const resultsEl = document.querySelector<HTMLElement>('[data-find-results]');
 /*
- * The count, not the sentence it sits in: the links to the groups beside the
- * register share that paragraph and do not change when a filter does.
+ * The count on its own. The groups beside the register are a row under it and do
+ * not change when a filter does, so they are not in this element to be rewritten.
  */
 const summaryEl = document.querySelector<HTMLElement>('[data-find-count]');
 const styleEl = document.querySelector<HTMLElement>('[data-list-style]');
@@ -222,7 +222,7 @@ if (filtersEl && resultsEl && summaryEl && indexEl) {
   // with JavaScript should not be told "150 of 150" where a visitor without it
   // is told "150" — the script is here to narrow the list, not to restate it.
   const updateSummary = (found: number) => {
-    const noun = providers.length === 1 ? 'record' : 'records';
+    const noun = providers.length === 1 ? 'web host' : 'web hosts';
     summaryEl.textContent = activeFacets().length
       ? `${found} of ${providers.length} ${noun}.`
       : `${providers.length} ${noun}.`;

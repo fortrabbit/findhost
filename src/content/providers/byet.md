@@ -16,6 +16,8 @@ description: iFastNet's free hosting brand, running PHP and MySQL accounts on a 
 founded: 2005
 hqCountry: GB
 ownership: subsidiary
+panels:
+  - cpanel
 whoManagesOs: managed
 infraContract:
   - owns-metal

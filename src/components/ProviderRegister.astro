@@ -23,13 +23,16 @@ interface Props {
    */
   bare?: boolean;
   /*
-   * The groups that sit beside the register, named in the line that counts it.
-   * They were a column in the filter panel, which put three links that are not
-   * filters among fourteen columns that are, under a heading that had to be
-   * called "Other" because nothing truer fitted. The count and its exceptions
-   * belong in the same sentence.
+   * The groups that sit beside the register, split by the question that made
+   * them. The ones a status put there are records of ours we do not count, so
+   * they belong in the sentence that gives the count. The ones a category put
+   * there are other kinds of company, which is a different subject and gets a
+   * row of its own — the shape a reader already scans under the filters.
+   *
+   * They were one list, read as one sentence naming eight numbers, and parsed
+   * as none.
    */
-  beside?: { label: string; href: string; count: number }[];
+  beside?: { label: string; href: string; count: number; of: 'status' | 'kind' }[];
   /*
    * Which order the rows are in, and so which tab is lit. Only the register
    * offers a choice — a narrowed page is one order, the alphabet, and shows no
@@ -49,7 +52,7 @@ const { providers, facets, seed, bare, beside = [], sort } = Astro.props;
  *
  * The wording matches what find.ts writes here once a filter changes.
  */
-const summary = `${providers.length} ${providers.length === 1 ? 'record' : 'records'}.`;
+const summary = `${providers.length} ${providers.length === 1 ? 'web host' : 'web hosts'}.`;
 
 // Grouped by initial so the register can be scanned and linked to without JavaScript.
 const letterOf = (name: string) => {
@@ -58,14 +61,23 @@ const letterOf = (name: string) => {
 };
 
 /*
- * Same reason as the summary: the count and the label are one string, and the
- * separator is decided here rather than by a conditional in the markup.
+ * Same reason as the summary: the count and the label are one string rather than
+ * two expressions a formatter could put on separate lines.
+ *
+ * Case follows the shape. In the sentence the labels are prose and read lower;
+ * in the row they are nav and keep what the dictionary wrote, which is also the
+ * only way "Domains and DNS" survives being about DNS.
  */
-const besideLinks = beside.map((group, index) => ({
+const held = beside.filter((group) => group.of === 'status');
+const heldLinks = held.map((group, index) => ({
   href: group.href,
   text: `${group.count} ${group.label.toLowerCase()}`,
-  tail: index < beside.length - 1 ? ', ' : '.',
+  tail: index < held.length - 1 ? ', ' : '.',
 }));
+
+const kindLinks = beside
+  .filter((group) => group.of === 'kind')
+  .map((group) => ({ href: group.href, text: `${group.count} ${group.label}` }));
 
 const letterGroups = [...new Set(providers.map((provider) => letterOf(provider.name)))].sort().map((letter) => ({
   // The heading already carries a `#` as its anchor link, so the numeric group
@@ -91,19 +103,29 @@ const groups = dated
 {
   /* A seeded page has already counted itself, in a sentence that says more than this one. */
   !seed && !bare && (
-    <p class="annotation" data-find-summary>
-      <span data-find-count>{summary}</span>{' '}
-      {besideLinks.length > 0 && (
-        <span>
-          {besideLinks.map((link) => (
-            <>
-              <a href={link.href}>{link.text}</a>
-              {link.tail}
-            </>
+    <div class="register-head">
+      <p class="annotation" data-find-summary>
+        <span data-find-count>{summary}</span>{' '}
+        {heldLinks.length > 0 && (
+          <span>
+            {heldLinks.map((link) => (
+              <>
+                <a href={link.href}>{link.text}</a>
+                {link.tail}
+              </>
+            ))}
+          </span>
+        )}
+      </p>
+
+      {kindLinks.length > 0 && (
+        <nav class="beside-links" aria-label="Companies that sell no hosting" data-pagefind-ignore>
+          {kindLinks.map((link) => (
+            <a href={link.href}>{link.text}</a>
           ))}
-        </span>
+        </nav>
       )}
-    </p>
+    </div>
   )
 }
 

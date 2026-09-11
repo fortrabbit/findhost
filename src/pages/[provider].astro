@@ -3,8 +3,8 @@ import { getCollection, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import { fieldGroups, fieldOf, type Field } from '../lib/fields';
 import { backlinks, cells, footnotes } from '../lib/record';
-import { isListed } from '../lib/providers';
-import { loadFacets } from '../lib/facets';
+import { asideKindGroup, isListed } from '../lib/providers';
+import { asideGroupOf, loadFacets } from '../lib/facets';
 import { toRow } from '../lib/rows';
 import { similarTo } from '../lib/similar';
 import ProviderList from '../components/ProviderList.astro';
@@ -174,13 +174,21 @@ const drawn = (groups: { label: string; fields: Field[] }[]) =>
 const related = backlinks(everyRecord as never, provider.id);
 
 /*
- * The records most like this one, drawn from the register — never from beside
- * it or below it, since an alternative has to be one a reader can buy from
- * today. Rows read as they do in the register, and the paragraph above them
- * says what the order is: a count of shared facts, not a verdict.
+ * The records most like this one, drawn from the register — never from below it,
+ * and never from a group beside it that a reader cannot buy from: a provider
+ * that stopped trading is not an alternative to anything.
+ *
+ * A record beside the register because it sells no hosting is the exception, and
+ * compares within its own group. The alternative to Plesk is cPanel, not a
+ * shared host that happens to share a country with it, and both are on sale.
+ *
+ * Rows read as they do in the register, and the paragraph above them says what
+ * the order is: a count of shared facts, not a verdict.
  */
+const kind = asideKindGroup(provider);
 const { providers: registerRows } = await loadFacets();
-const similar = similarTo(toRow(provider as never), registerRows).map((match) => ({
+const pool = kind ? (await asideGroupOf(kind)).rows : registerRows;
+const similar = similarTo(toRow(provider as never), pool).map((match) => ({
   id: match.row.id,
   name: match.row.name,
   description: match.row.description,

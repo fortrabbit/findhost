@@ -8,6 +8,8 @@ urls:
   terms: https://www.netcup.com/de/agb
 category:
   - vps
+panels:
+  - plesk
 description: Karlsruhe-based provider selling low-priced webhosting, VPS and root servers from European, North American and Asian locations, part of the Anexia group.
 founded: 2008
 hqCountry: DE

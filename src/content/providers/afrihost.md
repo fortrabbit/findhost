@@ -10,6 +10,8 @@ category:
 description: South African ISP selling fibre, mobile and VoIP, with shared, cloud and dedicated hosting as one line among many.
 hqCountry: ZA
 ownership: subsidiary
+panels:
+  - cpanel
 whoManagesOs: managed
 runtimes:
   - php

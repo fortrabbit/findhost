@@ -11,8 +11,9 @@ This runs unattended. Never ask a question. Where the procedure says stop, stop 
 
 ## Input
 
-- `N`, how many records to refresh. Default 1.
-- Optionally, explicit record ids. Then `N` is ignored and the pick step is skipped.
+- `N`, how many records to reach. Default 1.
+- `K`, how many unreachable records to pass over before the run gives up. Default 3.
+- Optionally, explicit record ids. Then `N` and `K` are ignored and the pick step is skipped.
 
 ## 1. Branch
 
@@ -32,14 +33,20 @@ Never push to `main`, and never put a real change on `claude/refresh`; the Actio
 ## 2. Pick
 
 ```sh
-node scripts/refresh-pick.mjs --n N
+node scripts/refresh-pick.mjs --n <N plus K>
 ```
 
-It prints the ids to refresh: the register's records, oldest `checkedAt` first, records with none first of all, skipping anything `research/refresh-log.tsv` lists in the last sixty days. Do not pick by hand.
+It prints a queue, oldest `checkedAt` first, records with none first of all, skipping anything `research/refresh-log.tsv` lists in the last sixty days. Every record is in it but the defunct ones: a stub and an out-of-scope record have a home page like any other, and whether it still answers is a fact about the register worth re-reading. Do not pick by hand.
+
+The queue is attempts, not a batch. Take one record at a time, all the way through step 8, before starting the next. Stop when `N` records have been **reached**, step 3, or when the queue runs out. An unreachable record costs one attempt; the ids still in the queue when the run stops are left alone and come up again tomorrow.
 
 ## 3. Read
 
 For each record, the pages to read are every URL under `urls` and every distinct URL in `sources`, except the sources of fields the scripts own, `referringSubnets` and `greenWebId`; those point at third parties, and the scripts under `scripts/` refresh them. Fetch each one. A page counts as read only when it answers 200 and the body is the page rather than a bot challenge, a login wall or an empty shell waiting for JavaScript. Anything else is **unreadable**. Note which and why, and read on.
+
+A record is **reached** when at least one page the provider itself publishes was read — a URL under `urls`, or a source on one of those domains. A third party answering is not the provider answering: a Wikidata page reads whether or not the company still exists.
+
+A record that was not reached is finished here. Write nothing to it — no field, no source `checkedAt`, no record `checkedAt`, however many of its sources were third parties that read perfectly well. A date this project stands behind says its pages were read, and none of them were. Go to step 8, log it `unreadable`, and take the next id in the queue. The record keeps the date it had, which is what puts it in front of a person reading /updated/ from the bottom.
 
 Do not search the web for a fact. The provider's own pages are the only source this record may cite. If a page has moved, follow its redirect within the same domain and record the new URL as the source. A redirect to a different domain is read for what it says, see step 5, and never becomes a source.
 
@@ -53,7 +60,9 @@ Go through the record's `sources` entries. Each names a field and the page that 
 
 Fields with no `sources` entry are not compared. Do not add sources for them, and do not fill fields that are absent. A refresh confirms and corrects; it does not research.
 
-Set the record's own `checkedAt` to today only when every page in `sources` was read. If any was unreadable, leave the record's `checkedAt` alone: the claim would not be true.
+Set the record's own `checkedAt` to today only when there was a source to compare and every page in `sources` was read. If any was unreadable, leave the record's `checkedAt` alone: the claim would not be true.
+
+**A record with nothing to compare.** Most stubs carry no `sources` entry but the ones the scripts own, and so do some out-of-scope and unlisted records. Nothing can be confirmed and nothing corrected, so reading the home page is the whole of the work. Act on what it shows only where step 5 says to, and never set `checkedAt` — the date means fields were read against the provider's pages, and there were none to read. The record was reached, which is what the run needed; log it `confirmed`, note that there was nothing to compare, and take the next id. Filling those fields is research, and a refresh does not research.
 
 ## 5. Status
 
@@ -90,7 +99,7 @@ If Linear is not reachable, put the same text in the run report and continue.
 
 ## 8. Write
 
-One record, one commit, and every record picked gets a commit, even one whose pages could not be read. The work happens on `work`; the last step moves the commit to its lane.
+One record, one commit, and every record attempted gets a commit, even one that could not be reached — the ids left in the queue were not attempted and get nothing. The work happens on `work`; the last step moves the commit to its lane.
 
 **Decide the lane.** Stage the record and ask the guard, the same check the Action runs before merging:
 
@@ -132,4 +141,4 @@ The confirmation lane needs no pull request. The Action merges it.
 
 ## 10. Report
 
-End with a table, one row per record picked: id, pages read of total, fields confirmed, fields changed, status change if any, stale sources, and whether `checkedAt` was set. Below it, the status changes with their quotes, then the escalations. Nothing else.
+End with a table, one row per record attempted: id, pages read of total, fields confirmed, fields changed, status change if any, stale sources, and whether `checkedAt` was set. Below it, the status changes with their quotes, then the escalations. Nothing else.

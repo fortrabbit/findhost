@@ -32,7 +32,12 @@ export interface FieldValue {
    * Out of the register by default and back in through a filter, keeping its
    * page and its place in the index. The value names the group it joins, so
    * "stopped trading" and "never sold hosting" are two answers rather than one
-   * bucket. Only `status` uses it.
+   * bucket.
+   *
+   * `status` and `category` both use it, and the two ask different questions: a
+   * status says what happened to a record, a category says what kind of thing
+   * it is. A record answering either way sits beside the register. Where both
+   * apply the status wins — a panel that stopped trading is defunct first.
    */
   aside?: string;
   /**
@@ -248,6 +253,21 @@ export const asideOf = new Map(
   (fieldOf.get('status')?.values ?? [])
     .filter((value) => value.aside)
     .map((value) => [value.id, { key: value.aside!, label: value.short ?? value.label }]),
+);
+
+/**
+ * The same fact read off `category`: the kinds of company that sell no hosting
+ * — control panels, registrars, mailbox hosts, database and git services.
+ *
+ * Kept apart from `asideOf` because the rule that reads it is different. One
+ * aside status is enough to move a record; one aside category is not, since a
+ * registrar that also sells shared hosting is a host. See `asideGroup` in
+ * lib/providers.ts, which is the only place either map is applied.
+ */
+export const asideCategoryOf = new Map(
+  (fieldOf.get('category')?.values ?? [])
+    .filter((value) => value.aside)
+    .map((value) => [value.id, { key: value.aside!, label: value.label }]),
 );
 
 /**

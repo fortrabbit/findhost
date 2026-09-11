@@ -171,19 +171,31 @@ html:not(.js) .theme-switch {
 }
 
 /*
- * The groups beside the register are named where the count is, and they read as
- * an aside rather than as three offers: quiet until pointed at. In link colour
- * they carried more weight than the 157 records under them.
+ * Two lines, because there are two subjects. The first is the register and the
+ * records of ours it does not count — defunct, unlisted, unfinished — which is
+ * one sentence and reads as one. The second is the companies that sell no
+ * hosting, which are not records in a state but a different kind of thing, and
+ * get the row treatment the shortcuts under the filters already use.
+ *
+ * All eight were one sentence once. Eight numbers and eight nouns across two
+ * lines had no shape to scan, and they were colourless as well, on the argument
+ * that three links in link colour outweighed the count above them. Three in a
+ * sentence still works; eight did not, and an unlinked run of numbers was the
+ * part nobody could parse.
  */
-[data-find-summary] a {
-  color: inherit;
-  text-decoration: none;
+.register-head {
+  margin-bottom: var(--space-lg);
 }
 
-[data-find-summary] a:hover,
-[data-find-summary] a:focus-visible {
-  color: var(--color-link);
-  text-decoration: underline;
+.register-head > .annotation {
+  margin-bottom: var(--space-2xs);
+}
+
+.beside-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2xs) var(--space-md);
+  font-size: var(--text-sm);
 }
 
 /** Every country the dataset covers, beneath the map that shows the same set. */

@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import ProviderRegister from '../components/ProviderRegister.astro';
 import FindFilters from '../components/FindFilters.astro';
-import { asideGroups, loadFacets } from '../lib/facets';
+import { besideTheRegister, loadFacets } from '../lib/facets';
 import { loadIndexed } from '../lib/providers';
 import { fields } from '../lib/fields';
 import { dataset, website } from '../lib/seo';
@@ -18,12 +18,7 @@ const { facets, providers } = await loadFacets();
  */
 const lastChecked = newest((await loadIndexed()).map((provider) => modifiedAt(provider.data)));
 
-// Named the same way here, on their own pages and in the sitemap: one source, three uses.
-const beside = (await asideGroups()).map((group) => ({
-  label: group.label,
-  href: `/${group.key}/`,
-  count: group.rows.length,
-}));
+const beside = await besideTheRegister();
 ---
 
 {

@@ -141,6 +141,8 @@ const backlinkLabels = [
   { label: 'Owns', field: 'parent' },
   { label: 'Runs here', field: 'runsOn' },
   { label: 'CDN for', field: 'cdnFrom' },
+  /* On a control panel's own record: the hosts that hand you this one. */
+  { label: 'Offered by', field: 'panels' },
 ];
 
 /**

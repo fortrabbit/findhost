@@ -20,13 +20,30 @@ const records = new URL('../src/content/providers/', import.meta.url);
  * Two ways to be out of the register: hidden, which keeps no place anywhere, and
  * beside it, which keeps a page and a checkbox. Listed here rather than imported
  * so the number still arrives by a different route from the page's.
+ *
+ * A status is one way beside; selling no hosting is the other. Every category a
+ * record holds has to be one of those five for it to leave, which is what keeps
+ * a registrar that also sells hosting in the register.
  */
 const outside = new Set(['draft', 'out-of-scope', 'discontinued', 'unverifiable', 'unlisted']);
+const notHosting = new Set(['server-management', 'domains-dns', 'mail', 'dbaas', 'git-hosting']);
 
 const listed = readdirSync(records).filter((file) => {
   if (!file.endsWith('.md')) return false;
-  const status = readFileSync(new URL(file, records), 'utf8').match(/^status: *(\S+)/m)?.[1];
-  return status === undefined || !outside.has(status);
+  const source = readFileSync(new URL(file, records), 'utf8');
+
+  const status = source.match(/^status: *(\S+)/m)?.[1];
+  if (status !== undefined && outside.has(status)) return false;
+
+  const held = source.match(/^category:\n((?: *- *\S+\n)+)/m)?.[1];
+  const categories = held
+    ? held
+        .trim()
+        .split('\n')
+        .map((line) => line.replace(/^ *- */, ''))
+    : [];
+
+  return categories.length === 0 || !categories.every((value) => notHosting.has(value));
 }).length;
 
 test.describe('the one editorial mark', () => {
@@ -135,11 +152,11 @@ test.describe('the register', () => {
    */
   test('puts a space between a number and the noun it counts', async ({ page }) => {
     await page.goto('/');
-    await expect(page.locator('[data-find-count]')).toHaveText(/^\d+ records\.$/);
+    await expect(page.locator('[data-find-count]')).toHaveText(/^\d+ web hosts\.$/);
 
-    /* Same hazard, same line: each group beside the register is a count and a word. */
-    for (const link of await page.locator('[data-find-summary] a').all()) {
-      await expect(link).toHaveText(/^\d+ [a-z]/);
+    /* Same hazard, both places a group beside the register is named: a count and a word. */
+    for (const link of await page.locator('[data-find-summary] a, .beside-links a').all()) {
+      await expect(link).toHaveText(/^\d+ [A-Za-z]/);
     }
 
     await page.goto('/software/');
@@ -409,7 +426,7 @@ test.describe('stubs', () => {
     await page.goto('/');
 
     await expect(page.locator('[data-find-results] .provider-list > li')).toHaveCount(listed);
-    await expect(page.locator('[data-find-count]')).toHaveText(new RegExp(`^${listed} records\\.$`));
+    await expect(page.locator('[data-find-count]')).toHaveText(new RegExp(`^${listed} web hosts\\.$`));
 
     /* The way to them is a link, so it works without scripting and can be crawled. */
     await page.locator('[data-find-summary] a[href="/stubs/"]').first().click();

@@ -8,6 +8,7 @@ import { readdirSync, readFileSync, existsSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import { parse as parseYaml } from 'yaml';
 import {
+  asideCategoryOf,
   asideOf,
   borrowedFrom,
   dictionaryFile,
@@ -466,9 +467,10 @@ const noteKeys = (dir: string, prefix = ''): string[] =>
 /*
  * The exception to the rule above: the groups beside the register are pages
  * with prose and no facet behind them, so their notes are filed under `aside/`.
- * Two come from the dictionary; the stubs are ours.
+ * Both dictionaries name groups — a status says what happened to a record, a
+ * category says it sells no hosting — and the stubs are ours.
  */
-const asideNotes = new Set([...[...asideOf.values()].map((group) => group.key), 'stubs']);
+const asideNotes = new Set([...[...asideOf.values(), ...asideCategoryOf.values()].map((group) => group.key), 'stubs']);
 
 /*
  * The same exception for pages that are neither a facet nor a group beside the
@@ -551,11 +553,22 @@ for (const key of noteKeys(notesDir)) {
  * The records a value page is built from: listed and not beside the register,
  * which is the filter lib/providers.ts applies. A hidden or aside record holds
  * values too, and a note for one of those heads a page that is never built.
+ *
+ * Both halves of `asideGroup` are repeated here rather than imported, because
+ * this script runs under plain Node and lib/providers.ts reaches for
+ * `astro:content`. The rule they share: one aside status moves a record, but
+ * every category has to be an aside category, so a registrar that also sells
+ * hosting stays.
  */
+const besideByKind = (data: Record<string, unknown> | null | undefined) => {
+  const held = data?.category as string[] | null | undefined;
+  return Boolean(held?.length && held.every((value) => asideCategoryOf.has(value)));
+};
+
 const inRegister = records
   .filter(({ data }) => {
     const status = String(data?.status ?? 'active');
-    return !hiddenStatuses.has(status) && !asideOf.has(status);
+    return !hiddenStatuses.has(status) && !asideOf.has(status) && !besideByKind(data);
   })
   .map(({ file, data }) => ({ id: file.replace(/\.md$/, ''), data: (data ?? {}) as Record<string, unknown> }));
 
@@ -841,7 +854,7 @@ for (const { file, data } of records) {
   const slug = file.replace(/\.md$/, '');
 
   if (hiddenStatuses.has(String(data.status))) hidden += 1;
-  else if (asideOf.has(String(data.status))) aside += 1;
+  else if (asideOf.has(String(data.status)) || besideByKind(data)) aside += 1;
 
   if (data.id !== slug) {
     fail(file, `id "${String(data.id)}" does not match the filename — the id is the URL`);

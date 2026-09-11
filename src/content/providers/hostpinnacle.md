@@ -8,6 +8,8 @@ category:
   - shared-hosting
 description: HostPinnacle is a Kenyan host selling cPanel shared hosting alongside self-managed and cPanel-managed VPS from Nairobi.
 hqCountry: KE
+panels:
+  - cpanel
 whoManagesOs: self-managed
 useCases:
   - cms
