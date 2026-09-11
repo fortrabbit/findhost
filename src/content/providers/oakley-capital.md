@@ -20,7 +20,7 @@ figure:
 ai: authored
 ---
 
-A British private-equity firm, recorded here because it owns [World Host Group](/holdings/world-host-group/), the group assembled by acquisition behind Hosting.com and FastComet. Oakley carved Webcentral out of its Australian listed parent in 2023 alongside the hosting entrepreneurs Tom Strohe and Jochen Berger, and merged it with World Host Group the following year, as its [portfolio entry](https://www.oakleycapital.com/our-companies/hostingcom) sets out.
+A British private-equity firm, recorded here because it owns [Hosting.com](/hosting-com/), the group assembled by acquisition that traded as World Host Group until 2025. Oakley carved Webcentral out of its Australian listed parent in 2023 alongside the hosting entrepreneurs Tom Strohe and Jochen Berger, and merged it with World Host Group the following year, as its [portfolio entry](https://www.oakleycapital.com/our-companies/hostingcom) sets out.
 
 ## Worth knowing
 
