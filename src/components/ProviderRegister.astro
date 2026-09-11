@@ -23,11 +23,11 @@ interface Props {
    */
   bare?: boolean;
   /*
-   * The groups that sit beside the register, named in the line that counts it.
-   * They were a column in the filter panel, which put three links that are not
-   * filters among fourteen columns that are, under a heading that had to be
-   * called "Other" because nothing truer fitted. The count and its exceptions
-   * belong in the same sentence.
+   * The groups that sit beside the register, on a row under the line that counts
+   * it. They were a column in the filter panel, which put links that are not
+   * filters among fourteen columns that are; then a clause on the end of the
+   * count, which read as one sentence naming eight numbers and parsed as none.
+   * A row of links is the shape a reader already scans elsewhere on this page.
    */
   beside?: { label: string; href: string; count: number }[];
   /*
@@ -49,7 +49,7 @@ const { providers, facets, seed, bare, beside = [], sort } = Astro.props;
  *
  * The wording matches what find.ts writes here once a filter changes.
  */
-const summary = `${providers.length} ${providers.length === 1 ? 'record' : 'records'}.`;
+const summary = `${providers.length} ${providers.length === 1 ? 'web host' : 'web hosts'}.`;
 
 // Grouped by initial so the register can be scanned and linked to without JavaScript.
 const letterOf = (name: string) => {
@@ -58,13 +58,14 @@ const letterOf = (name: string) => {
 };
 
 /*
- * Same reason as the summary: the count and the label are one string, and the
- * separator is decided here rather than by a conditional in the markup.
+ * Same reason as the summary: the count and the label are one string rather than
+ * two expressions a formatter could put on separate lines.
  */
-const besideLinks = beside.map((group, index) => ({
+const besideLinks = beside.map((group) => ({
   href: group.href,
-  text: `${group.count} ${group.label.toLowerCase()}`,
-  tail: index < beside.length - 1 ? ', ' : '.',
+  /* The label as the dictionary wrote it. Lowercasing it read as prose and cost
+     the acronyms — "2 domains and dns" for a group about DNS. */
+  text: `${group.count} ${group.label}`,
 }));
 
 const letterGroups = [...new Set(providers.map((provider) => letterOf(provider.name)))].sort().map((letter) => ({
@@ -91,19 +92,19 @@ const groups = dated
 {
   /* A seeded page has already counted itself, in a sentence that says more than this one. */
   !seed && !bare && (
-    <p class="annotation" data-find-summary>
-      <span data-find-count>{summary}</span>{' '}
+    <div class="register-head">
+      <p class="annotation" data-find-summary data-find-count>
+        {summary}
+      </p>
+
       {besideLinks.length > 0 && (
-        <span>
+        <nav class="beside-links" aria-label="Beside the register" data-pagefind-ignore>
           {besideLinks.map((link) => (
-            <>
-              <a href={link.href}>{link.text}</a>
-              {link.tail}
-            </>
+            <a href={link.href}>{link.text}</a>
           ))}
-        </span>
+        </nav>
       )}
-    </p>
+    </div>
   )
 }
 
