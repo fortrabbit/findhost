@@ -6,6 +6,7 @@ import { loadProviders } from '../lib/providers';
 import { fieldGroups } from '../lib/fields';
 import { attribution, credit } from '../lib/seo';
 import { updatedAfterCheck } from '../lib/modified';
+import { recordPath } from '../lib/paths';
 
 /**
  * The whole register as one text file, which is the other half of the llms.txt
@@ -80,7 +81,7 @@ export const GET: APIRoute = async ({ site }) => {
     lines.push(
       `### ${data.name}`,
       '',
-      `${origin}/${provider.id}/`,
+      `${origin}${recordPath(provider)}`,
       ...(data.description ? [String(data.description)] : []),
       ...(data.checkedAt ? [`Last reviewed: ${label(data.checkedAt)}`] : []),
       ...(updatedAfterCheck(data) ? [`Updated: ${label(updatedAfterCheck(data))}`] : []),

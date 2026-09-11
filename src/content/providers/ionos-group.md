@@ -19,4 +19,4 @@ sources:
 
 ---
 
-IONOS Group SE is the listed holding company beneath which the IONOS brands sit, including Fasthosts and STRATO. It is majority-owned by [United Internet](/united-internet/), which is why two familiar European brands can turn out to be one company at the second remove rather than the first.
+IONOS Group SE is the listed holding company beneath which the IONOS brands sit, including Fasthosts and STRATO. It is majority-owned by [United Internet](/holdings/united-internet/), which is why two familiar European brands can turn out to be one company at the second remove rather than the first.

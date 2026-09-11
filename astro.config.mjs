@@ -79,6 +79,53 @@ export default defineConfig({
     '/categories/mail/': '/mail/',
     '/categories/dbaas/': '/dbaas/',
     '/categories/git-hosting/': '/git-hosting/',
+
+    /*
+     * The 33 holding companies moved off the root and under /holdings/, a month
+     * after the first of them was published. This is the case the rule above
+     * was written for: every link of ours is fixed, and these are for the ones
+     * that are not ours — a crawler that indexed /alphabet/, a citation nobody
+     * told us about. Astro writes each as a page that refreshes to the target
+     * and asks not to be indexed, which is what a static host can do.
+     *
+     * The markdown twins are not here. A redirect is an HTML page, and .htaccess
+     * serves .md as text/markdown, so /alphabet.md would hand a reader expecting
+     * markdown a page of HTML labelled as markdown. A 404 is the honest answer.
+     */
+    '/unlisted/': '/holdings/',
+    '/a1-telekom-austria/': '/holdings/a1-telekom-austria/',
+    '/alphabet/': '/holdings/alphabet/',
+    '/anaconda/': '/holdings/anaconda/',
+    '/automattic/': '/holdings/automattic/',
+    '/block/': '/holdings/block/',
+    '/cinven/': '/holdings/cinven/',
+    '/clearlake/': '/holdings/clearlake/',
+    '/cloudone-digital/': '/holdings/cloudone-digital/',
+    '/cube-infrastructure/': '/holdings/cube-infrastructure/',
+    '/cvc/': '/holdings/cvc/',
+    '/deno-land/': '/holdings/deno-land/',
+    '/endurance/': '/holdings/endurance/',
+    '/gmo-pepabo/': '/holdings/gmo-pepabo/',
+    '/gorails/': '/holdings/gorails/',
+    '/group-one/': '/holdings/group-one/',
+    '/hg/': '/holdings/hg/',
+    '/iliad/': '/holdings/iliad/',
+    '/ionos-group/': '/holdings/ionos-group/',
+    '/kkr/': '/holdings/kkr/',
+    '/newfold-digital/': '/holdings/newfold-digital/',
+    '/nexigen-digital/': '/holdings/nexigen-digital/',
+    '/oakley-capital/': '/holdings/oakley-capital/',
+    '/permira/': '/holdings/permira/',
+    '/salesforce/': '/holdings/salesforce/',
+    '/silver-lake/': '/holdings/silver-lake/',
+    '/siris/': '/holdings/siris/',
+    '/team-blue/': '/holdings/team-blue/',
+    '/united-internet/': '/holdings/united-internet/',
+    '/webpros/': '/holdings/webpros/',
+    '/wedevs/': '/holdings/wedevs/',
+    '/world-host-group/': '/holdings/world-host-group/',
+    '/wpdeveloper/': '/holdings/wpdeveloper/',
+    '/your-online/': '/holdings/your-online/',
   },
   build: { format: 'directory' },
   /*

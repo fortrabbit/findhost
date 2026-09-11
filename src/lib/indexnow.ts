@@ -17,9 +17,18 @@ export function sitemapPaths(xml: string): string[] {
 /* Files that reach no page at all. Everything else outside the rules below reaches every page. */
 const reachesNothing = [/^(?!src\/)(?!astro\.config\.mjs$)/, /\.test\.ts$/];
 
-/* Files that reach one page, and which. Order matters: the first match decides. */
-const reachesOne: [RegExp, (m: RegExpMatchArray) => string][] = [
-  [/^src\/content\/providers\/([^/]+)\.md$/, (m) => `/${m[1]}/`],
+/*
+ * Files that reach one page, and which. Order matters: the first match decides.
+ * A record's address is not its id at the root any more — a holding company
+ * sits under /holdings/ — so the record rule asks the sitemap where the page it
+ * publishes ended up rather than assuming a shape. Everything else is a path
+ * the file name already spells.
+ */
+const reachesOne: [RegExp, (m: RegExpMatchArray, sitemap: string[]) => string][] = [
+  [
+    /^src\/content\/providers\/([^/]+)\.md$/,
+    (m, sitemap) => sitemap.find((path) => path.endsWith(`/${m[1]}/`)) ?? `/${m[1]}/`,
+  ],
   [/^src\/content\/notes\/([^/]+)\.md$/, (m) => `/${m[1]}/`],
   [/^src\/content\/notes\/([^/]+)\/([^/]+)\.md$/, (m) => `/${m[1]}/${m[2]}/`],
   // A written page, not a dynamic route: those enumerate content and reach every page they render.
@@ -31,7 +40,7 @@ function reach(file: string, sitemap: string[]): string[] {
   for (const [rule, page] of reachesOne) {
     const match = file.match(rule);
     if (match) {
-      const path = page(match);
+      const path = page(match, sitemap);
       return [path.endsWith('/') ? path : `${path}/`];
     }
   }

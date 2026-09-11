@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import { loadFacets, loadPairPages } from '../lib/facets';
 import { pairPath } from '../lib/pairs';
 import { loadProviders } from '../lib/providers';
+import { recordMarkdownPath, recordPath } from '../lib/paths';
 
 /**
  * The dataset is the asset and being cited is the distribution thesis, so the
@@ -102,7 +103,7 @@ export const GET: APIRoute = async ({ site }) => {
     '',
     ...providers.map(
       (provider) =>
-        `- [${provider.data.name}](${origin}/${provider.id}/): ${provider.data.description ?? 'No description recorded yet.'} — record as markdown: ${origin}/${provider.id}.md`,
+        `- [${provider.data.name}](${origin}${recordPath(provider)}): ${provider.data.description ?? 'No description recorded yet.'} — record as markdown: ${origin}${recordMarkdownPath(provider)}`,
     ),
     '',
   ];

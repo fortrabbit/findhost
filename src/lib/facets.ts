@@ -46,7 +46,7 @@ export const loadDrafts = once(async (): Promise<ProviderRow[]> => {
 });
 
 export interface Aside {
-  /** The group's id, which is also its page: /defunct/, /unlisted/, /stubs/. */
+  /** The group's id, which is also its page: /defunct/, /holdings/, /stubs/. */
   key: string;
   /** The word the register uses for it, and the heading of its page. */
   label: string;

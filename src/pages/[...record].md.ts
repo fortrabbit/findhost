@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import { fieldGroups, hiddenStatuses } from '../lib/fields';
 import { attribution } from '../lib/seo';
 import { updatedAfterCheck } from '../lib/modified';
+import { recordMarkdownPath, recordPath } from '../lib/paths';
 
 /**
  * The record as markdown, for anything that would rather read text than HTML.
@@ -12,7 +13,11 @@ import { updatedAfterCheck } from '../lib/modified';
  */
 export async function getStaticPaths() {
   const providers = await getCollection('providers');
-  return providers.map((provider) => ({ params: { provider: provider.id }, props: { provider } }));
+  /* The twin of the page, so the two move together. See lib/paths.ts. */
+  return providers.map((provider) => ({
+    params: { record: recordMarkdownPath(provider).slice(1).replace(/\.md$/, '') },
+    props: { provider },
+  }));
 }
 
 const label = (value: unknown): string => {
@@ -55,7 +60,7 @@ export const GET: APIRoute = async ({ props, site }) => {
         : 'DRAFT. This record is started and not finished, so it is not part of the register, not counted and not indexed.'
       : '',
     hidden ? '' : undefined,
-    `Source: ${origin}/${provider.id}/`,
+    `Source: ${origin}${recordPath(provider)}`,
     ...(data.checkedAt ? [`Last reviewed: ${label(data.checkedAt)}`] : []),
     ...(updated ? [`Updated: ${label(updated)}`] : []),
     ...(data.addedAt ? [`Listed since: ${label(data.addedAt)}`] : []),

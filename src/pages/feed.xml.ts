@@ -2,6 +2,7 @@ import type { APIRoute } from 'astro';
 import { loadIndexed } from '../lib/providers';
 import { licenceUrl } from '../lib/seo';
 import { modifiedAt } from '../lib/modified';
+import { recordMarkdownPath, recordPath } from '../lib/paths';
 
 /**
  * Recently checked records, as Atom.
@@ -36,9 +37,9 @@ export const GET: APIRoute = async ({ site }) => {
     [
       '  <entry>',
       `    <title>${escape(provider.data.name)}</title>`,
-      `    <link href="${origin}/${provider.id}/"/>`,
-      `    <link rel="alternate" type="text/markdown" href="${origin}/${provider.id}.md"/>`,
-      `    <id>${origin}/${provider.id}/</id>`,
+      `    <link href="${origin}${recordPath(provider)}"/>`,
+      `    <link rel="alternate" type="text/markdown" href="${origin}${recordMarkdownPath(provider)}"/>`,
+      `    <id>${origin}${recordPath(provider)}</id>`,
       `    <updated>${stamp(modified)}</updated>`,
       ...(provider.data.description ? [`    <summary>${escape(provider.data.description)}</summary>`] : []),
       '  </entry>',

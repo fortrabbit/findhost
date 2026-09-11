@@ -4,6 +4,8 @@ import { movementMark, type Movement } from '../lib/record';
 interface Row {
   id: string;
   name: string;
+  /** Where the record's page is. Worked out in lib/rows.ts, never here. */
+  href: string;
   description?: string;
   greenWebId?: number | null;
   figure?: { emoji: string; color: string; textColor: string };
@@ -66,7 +68,7 @@ const { providers, namesOnly = false } = Astro.props;
 
           <div class="provider-body">
             <span class="provider-name">
-              <a href={`/${provider.id}/`}>{provider.name}</a>
+              <a href={provider.href}>{provider.name}</a>
             </span>
             {described && <p>{provider.description}</p>}
           </div>

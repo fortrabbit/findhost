@@ -437,9 +437,16 @@ test.describe('stubs', () => {
   });
 
   test('a group beside the register keeps its own list', async ({ page }) => {
-    await page.goto('/unlisted/');
+    await page.goto('/holdings/');
 
-    await expect(page.locator('h1')).toHaveText('Unlisted');
+    await expect(page.locator('h1')).toHaveText('Holdings');
+
+    /*
+     * The one group whose records sit under the group's own path rather than at
+     * the root, because a holding company provides nothing. Asserted from the
+     * list, since the addresses are the point of the arrangement.
+     */
+    await expect(page.locator('.provider-list > li a').first()).toHaveAttribute('href', /^\/holdings\//);
 
     /* Exactly the group, not the group appended to everything else. */
     const rows = page.locator('.provider-list > li');

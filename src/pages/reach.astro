@@ -4,6 +4,7 @@ import Base from '../layouts/Base.astro';
 import PageHead from '../components/PageHead.astro';
 import ProviderList from '../components/ProviderList.astro';
 import { loadProviders } from '../lib/providers';
+import { recordPath } from '../lib/paths';
 import { movementOf } from '../lib/record';
 import { licenceUrl, organization } from '../lib/seo';
 import { pageCardPath } from '../lib/og';
@@ -49,6 +50,7 @@ const rows = measured.map((provider) => {
 
   return {
     id: provider.id,
+    href: recordPath(provider),
     name: String(provider.data.name),
     figure: provider.data.figure,
     favorite: provider.data.favorite,

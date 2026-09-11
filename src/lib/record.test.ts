@@ -32,7 +32,7 @@ describe('price', () => {
 });
 
 describe('cells', () => {
-  const context = { nameOf: new Map(), hasPage: new Set<string>() };
+  const context = { nameOf: new Map(), pathOf: new Map(), hasPage: new Set<string>() };
 
   it('draws an id in another register as the link into it', () => {
     const field = {

@@ -57,7 +57,7 @@ ai: authored
 greenWebId: 837
 ---
 
-manitu is a German host from St. Wendel in the Saarland, long-established and with a reputation for plain dealing in German hosting forums. Founded in 1997, it is now a brand of the Dutch group [Your.Online](/your-online/).
+manitu is a German host from St. Wendel in the Saarland, long-established and with a reputation for plain dealing in German hosting forums. Founded in 1997, it is now a brand of the Dutch group [Your.Online](/holdings/your-online/).
 
 It owns the building. manitu has run its own data centre in St. Wendel since 2002, on its own hardware with its own staff, and on renewable electricity since February 2008 — a combination almost nobody at shared-hosting prices can claim, and the reason the record carries owns-metal rather than the reseller mark most of its neighbours have.
 

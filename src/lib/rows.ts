@@ -7,6 +7,7 @@
  * reason the file exists, and the counting rules below are the ones most worth
  * having a test for.
  */
+import { recordPath } from './paths.ts';
 import { facetFields, isDerived, slugOf, sourcesOf, type Field } from './fields.ts';
 import { modifiedAt } from './modified.ts';
 
@@ -44,6 +45,11 @@ export interface Facet {
 export interface ProviderRow {
   id: string;
   name: string;
+  /*
+   * Where the record's page is, worked out once here rather than by every list
+   * that draws a link to it. Not every record is at the root: see lib/paths.ts.
+   */
+  href: string;
   description?: string;
   /** Ours, not the provider's: we like it. Drawn as a heart beside the name. */
   favorite?: boolean;
@@ -144,6 +150,7 @@ export function toRow(record: { id: string; data: Record<string, unknown> }): Pr
 
   return {
     id: record.id,
+    href: recordPath(record),
     name: String(data.name),
     description: data.description as string | undefined,
     favorite: data.favorite as boolean | undefined,

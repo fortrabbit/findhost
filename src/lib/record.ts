@@ -1,4 +1,5 @@
 import { labelOf, slugOf, type Field } from './fields.ts';
+import { recordPath } from './paths.ts';
 
 /*
  * The exact figure in the provider's own currency, so nobody reads a conversion
@@ -51,6 +52,12 @@ export interface Cell {
  */
 export interface RecordContext {
   nameOf: Map<string, string>;
+  /*
+   * Where each record's page sits, because not every one is at the root: a
+   * holding company is under /holdings/. Read from a map rather than worked out
+   * here, since a relation names an id and nothing else about the record.
+   */
+  pathOf: Map<string, string>;
   hasPage: Set<string>;
   /** This record's own id, so a row can link to where the record sits among the others. */
   id?: string;
@@ -116,7 +123,7 @@ export function cells(field: Field, value: unknown, context: RecordContext): Cel
      */
     if (field.relation) {
       const id = String(entry);
-      return { text: context.nameOf.get(id) ?? id, href: `/${id}/` };
+      return { text: context.nameOf.get(id) ?? id, href: context.pathOf.get(id) ?? `/${id}/` };
     }
 
     const label = labelOf(field.id, entry);
@@ -168,7 +175,7 @@ export function backlinks(
       label: group.label,
       cells: group.rows
         .sort((a, b) => String(a.data.name).localeCompare(String(b.data.name), 'en'))
-        .map((entry) => ({ text: String(entry.data.name), href: `/${entry.id}/` })),
+        .map((entry) => ({ text: String(entry.data.name), href: recordPath(entry) })),
     }));
 }
 

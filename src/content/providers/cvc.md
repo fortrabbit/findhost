@@ -22,4 +22,4 @@ figure:
 ai: authored
 ---
 
-A European private-equity firm, recorded here because it holds the majority stake in a company this register lists, and since 2019 the majority of [WebPros](/webpros/), the group that owns cPanel and Plesk, as the seller's [announcement](https://www.oakleycapital.com/news-and-insights/oakley-capital-agrees-sale-of-webpros-to-cvc-fund-vii-and-follow-on-investment) records. It has never sold hosting under its own name, and what it owns is the layer of decision-making above companies that do.
+A European private-equity firm, recorded here because it holds the majority stake in a company this register lists, and since 2019 the majority of [WebPros](/holdings/webpros/), the group that owns cPanel and Plesk, as the seller's [announcement](https://www.oakleycapital.com/news-and-insights/oakley-capital-agrees-sale-of-webpros-to-cvc-fund-vii-and-follow-on-investment) records. It has never sold hosting under its own name, and what it owns is the layer of decision-making above companies that do.
