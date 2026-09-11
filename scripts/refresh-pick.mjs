@@ -1,13 +1,18 @@
 /*
  * Which records the refresh routine reads next.
  *
- * The /updated/ page read from the bottom: records nobody has checked first,
- * then the oldest `checkedAt`, and within one date the reverse of the page's
- * A-to-Z. So the next pick is always the last row on that page that the log
- * below does not list, and a person can predict it by looking. Records the
- * routine already handled recently are skipped, whatever the outcome: a page
- * that cannot be read leaves no date on the record, and without this the same
- * record would come up every morning.
+ * Every record whose provider still has pages to read, oldest `checkedAt`
+ * first, records nobody has checked first of all, and within one date the
+ * reverse of A-to-Z. A stub and an out-of-scope record are picked like any
+ * other: both have a home page, and whether it still answers is a fact about
+ * the register worth re-reading. Records the routine already handled recently
+ * are skipped, whatever the outcome: a provider that cannot be reached leaves
+ * no date on the record, and without this the same one would come up every
+ * morning.
+ *
+ * The list is a queue of attempts, not a batch. The routine works down it and
+ * stops once enough records have been reached, so the tail is usually untouched
+ * and comes up again tomorrow.
  *
  *   node scripts/refresh-pick.mjs            # one id
  *   node scripts/refresh-pick.mjs --n 3      # three
@@ -21,6 +26,7 @@ import { execFileSync } from 'node:child_process';
 import { readdirSync, readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { parse } from 'yaml';
+import { asideOf } from '../src/lib/fields.ts';
 
 const providersDir = 'src/content/providers';
 const logFile = 'research/refresh-log.tsv';
@@ -32,8 +38,13 @@ const arg = (name, fallback) => {
 const n = arg('n', 1);
 const days = arg('days', 60);
 
-/* The statuses the register shows. Everything else has no pages worth reading. */
-const inRegister = new Set(['active', 'acquired', 'renamed', 'winding-down', 'delisted-on-request']);
+/*
+ * The defunct statuses, and the only ones with nothing left to read: one
+ * stopped trading, the other can no longer be read at all. Taken from the
+ * dictionary rather than listed again here, so a status added there is
+ * refreshed without anybody remembering this file.
+ */
+const defunct = new Set([...asideOf].filter(([, aside]) => aside.key === 'defunct').map(([id]) => id));
 
 const since = new Date(Date.now() - days * 86400000).toISOString().slice(0, 10);
 const recent = new Set();
@@ -68,7 +79,7 @@ const front = (file) => {
 const candidates = readdirSync(providersDir)
   .filter((file) => file.endsWith('.md'))
   .map(front)
-  .filter((data) => inRegister.has(data.status ?? 'active') && !recent.has(data.id))
+  .filter((data) => !defunct.has(data.status ?? 'active') && !recent.has(data.id))
   .map((data) => ({
     id: data.id,
     name: String(data.name),

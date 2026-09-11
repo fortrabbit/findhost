@@ -23,13 +23,16 @@ interface Props {
    */
   bare?: boolean;
   /*
-   * The groups that sit beside the register, on a row under the line that counts
-   * it. They were a column in the filter panel, which put links that are not
-   * filters among fourteen columns that are; then a clause on the end of the
-   * count, which read as one sentence naming eight numbers and parsed as none.
-   * A row of links is the shape a reader already scans elsewhere on this page.
+   * The groups that sit beside the register, split by the question that made
+   * them. The ones a status put there are records of ours we do not count, so
+   * they belong in the sentence that gives the count. The ones a category put
+   * there are other kinds of company, which is a different subject and gets a
+   * row of its own — the shape a reader already scans under the filters.
+   *
+   * They were one list, read as one sentence naming eight numbers, and parsed
+   * as none.
    */
-  beside?: { label: string; href: string; count: number }[];
+  beside?: { label: string; href: string; count: number; of: 'status' | 'kind' }[];
   /*
    * Which order the rows are in, and so which tab is lit. Only the register
    * offers a choice — a narrowed page is one order, the alphabet, and shows no
@@ -60,13 +63,21 @@ const letterOf = (name: string) => {
 /*
  * Same reason as the summary: the count and the label are one string rather than
  * two expressions a formatter could put on separate lines.
+ *
+ * Case follows the shape. In the sentence the labels are prose and read lower;
+ * in the row they are nav and keep what the dictionary wrote, which is also the
+ * only way "Domains and DNS" survives being about DNS.
  */
-const besideLinks = beside.map((group) => ({
+const held = beside.filter((group) => group.of === 'status');
+const heldLinks = held.map((group, index) => ({
   href: group.href,
-  /* The label as the dictionary wrote it. Lowercasing it read as prose and cost
-     the acronyms — "2 domains and dns" for a group about DNS. */
-  text: `${group.count} ${group.label}`,
+  text: `${group.count} ${group.label.toLowerCase()}`,
+  tail: index < held.length - 1 ? ', ' : '.',
 }));
+
+const kindLinks = beside
+  .filter((group) => group.of === 'kind')
+  .map((group) => ({ href: group.href, text: `${group.count} ${group.label}` }));
 
 const letterGroups = [...new Set(providers.map((provider) => letterOf(provider.name)))].sort().map((letter) => ({
   // The heading already carries a `#` as its anchor link, so the numeric group
@@ -93,13 +104,23 @@ const groups = dated
   /* A seeded page has already counted itself, in a sentence that says more than this one. */
   !seed && !bare && (
     <div class="register-head">
-      <p class="annotation" data-find-summary data-find-count>
-        {summary}
+      <p class="annotation" data-find-summary>
+        <span data-find-count>{summary}</span>{' '}
+        {heldLinks.length > 0 && (
+          <span>
+            {heldLinks.map((link) => (
+              <>
+                <a href={link.href}>{link.text}</a>
+                {link.tail}
+              </>
+            ))}
+          </span>
+        )}
       </p>
 
-      {besideLinks.length > 0 && (
-        <nav class="beside-links" aria-label="Beside the register" data-pagefind-ignore>
-          {besideLinks.map((link) => (
+      {kindLinks.length > 0 && (
+        <nav class="beside-links" aria-label="Companies that sell no hosting" data-pagefind-ignore>
+          {kindLinks.map((link) => (
             <a href={link.href}>{link.text}</a>
           ))}
         </nav>

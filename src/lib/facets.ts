@@ -50,6 +50,13 @@ export interface Aside {
   key: string;
   /** The word the register uses for it, and the heading of its page. */
   label: string;
+  /*
+   * Which question put the records here. `status` is a record of ours we do not
+   * count — it stopped trading, it sells nothing itself, we have not finished
+   * it. `kind` is a company that sells no hosting, which is a different sort of
+   * thing entirely and reads badly in the same breath as the other three.
+   */
+  of: 'status' | 'kind';
   rows: ProviderRow[];
 }
 
@@ -66,8 +73,12 @@ export const loadAsides = once(async (): Promise<Aside[]> => {
   /* First value to claim a key names the group: more than one can share it,
      and the later label would otherwise rename what the earlier one opened.
      Statuses first, so "Defunct" keeps the name it has always had. */
-  for (const { key, label } of [...asideOf.values(), ...asideCategoryOf.values()])
-    if (!groups.has(key)) groups.set(key, { key, label, rows: [] });
+  for (const [source, named] of [
+    ['status', asideOf],
+    ['kind', asideCategoryOf],
+  ] as const)
+    for (const { key, label } of named.values())
+      if (!groups.has(key)) groups.set(key, { key, label, of: source, rows: [] });
 
   for (const record of await loadAsideProviders()) {
     groups.get(asideGroup(record)!)!.rows.push({ ...toRow(record as never), status: String(record.data.status) });
@@ -83,8 +94,21 @@ export const loadAsides = once(async (): Promise<Aside[]> => {
  * disagree about what exists.
  */
 export const asideGroups = once(async (): Promise<Aside[]> => {
-  return [...(await loadAsides()), { key: 'stubs', label: 'Stubs', rows: await loadDrafts() }];
+  return [...(await loadAsides()), { key: 'stubs', label: 'Stubs', of: 'status' as const, rows: await loadDrafts() }];
 });
+
+/**
+ * The groups as the register names them: a label, its page, its count and which
+ * question put it there. The three orders of the register each drew this map for
+ * themselves, which is three places for the shape to drift.
+ */
+export const besideTheRegister = async () =>
+  (await asideGroups()).map((group) => ({
+    label: group.label,
+    href: `/${group.key}/`,
+    count: group.rows.length,
+    of: group.of,
+  }));
 
 export const asideGroupOf = async (key: string): Promise<Aside> => {
   const group = (await asideGroups()).find((candidate) => candidate.key === key);

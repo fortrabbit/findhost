@@ -171,13 +171,17 @@ html:not(.js) .theme-switch {
 }
 
 /*
- * The count and the groups beside it: two lines, not one sentence. The groups
- * were a clause on the end of the count and read as prose — eight numbers and
- * eight nouns with no shape to scan. They were also colourless, on the argument
- * that three links in link colour outweighed the count above them; at eight
- * that argument inverts, because an unlinked list of numbers is the part
- * nobody can parse. Same row treatment as the shortcuts under the filters,
- * which is the shape a reader on this page has already learned.
+ * Two lines, because there are two subjects. The first is the register and the
+ * records of ours it does not count — defunct, unlisted, unfinished — which is
+ * one sentence and reads as one. The second is the companies that sell no
+ * hosting, which are not records in a state but a different kind of thing, and
+ * get the row treatment the shortcuts under the filters already use.
+ *
+ * All eight were one sentence once. Eight numbers and eight nouns across two
+ * lines had no shape to scan, and they were colourless as well, on the argument
+ * that three links in link colour outweighed the count above them. Three in a
+ * sentence still works; eight did not, and an unlinked run of numbers was the
+ * part nobody could parse.
  */
 .register-head {
   margin-bottom: var(--space-lg);
