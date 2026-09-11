@@ -9,6 +9,9 @@ category:
   - bare-metal
 description: Pan-African host with storefronts in five countries, running cPanel and DirectAdmin hosting out of South African facilities.
 hqCountry: ZA
+panels:
+  - cpanel
+  - directadmin
 whoManagesOs: managed
 runtimes:
   - php

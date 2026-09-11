@@ -11,6 +11,8 @@ description: Ukrainian host trading since 2008, selling shared hosting, VPS and 
 founded: 2008
 hqCountry: UA
 ownership: independent
+panels:
+  - cpanel
 whoManagesOs: managed
 runtimes:
   - php

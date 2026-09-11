@@ -8,6 +8,9 @@ category:
   - shared-hosting
 description: Exabytes is a Malaysian host selling shared plans on a choice of cPanel or Plesk from its own data centre in Malaysia.
 hqCountry: MY
+panels:
+  - cpanel
+  - plesk
 whoManagesOs: self-managed
 useCases:
   - cms

@@ -327,6 +327,22 @@
   multiple: true
   relation: true
 
+# Which control panel the hosting account arrives with. A relation for the same
+# reason as the two above: cPanel, Plesk and DirectAdmin are records here, and a
+# vocabulary repeating their names would be the register copied into a list
+# beside itself.
+#
+# Empty is an answer in two directions and the record says which. A host whose
+# `deployment` includes `control-panel` and names none runs its own — Hostinger
+# built hPanel, SiteGround built Site Tools — and a host with a `shell` of
+# `root` and none named leaves the choice to you, which is where RunCloud or
+# Coolify goes. Neither is a panel this field can name, so neither is invented.
+- id: panels
+  label: Control panel
+  group: Tech stack
+  multiple: true
+  relation: true
+
 # What a provider markets itself for, taken from its own site. A claim it makes,
 # never a judgement about what it is good at.
 - id: useCases

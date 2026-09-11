@@ -8,6 +8,8 @@ category:
   - domains-dns
   - shared-hosting
   - static
+panels:
+  - cpanel
 description: An ICANN-accredited registrar in Oregon that also sells static, PHP and cPanel hosting, and mailboxes by the inbox.
 hqCountry: US
 ownership: subsidiary

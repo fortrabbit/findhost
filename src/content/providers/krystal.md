@@ -7,6 +7,8 @@ urls:
   status: https://krystalstatus.uk/
 category:
   - shared-hosting
+panels:
+  - cpanel
 description: British host running PHP, Python, Perl and Ruby on cPanel, powered by certified renewable electricity and operated as a certified B Corp.
 founded: 2002
 hqCountry: GB

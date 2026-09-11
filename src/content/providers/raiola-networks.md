@@ -6,6 +6,8 @@ urls:
   pricing: https://raiolanetworks.com/hosting-web/
 category:
   - shared-hosting
+panels:
+  - cpanel
 description: Spanish shared host from Lugo, running cPanel on servers it assembles itself and operates in Tier III facilities in Madrid.
 hqCountry: ES
 ownership: independent

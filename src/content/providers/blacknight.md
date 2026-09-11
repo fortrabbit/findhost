@@ -14,6 +14,8 @@ description: Irish host and ICANN-accredited registrar in Carlow, running its ow
 hqCountry: IE
 ownership: subsidiary
 parent: your-online
+panels:
+  - plesk
 whoManagesOs: managed
 infraContract:
   - owns-metal

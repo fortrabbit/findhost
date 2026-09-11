@@ -9,6 +9,8 @@ category:
 description: Polish shared host from Poznań with a per-domain choice of PHP version alongside Node and Python, running on LiteSpeed with DirectAdmin as the panel.
 hqCountry: PL
 ownership: public
+panels:
+  - directadmin
 whoManagesOs: self-managed
 useCases:
   - cms

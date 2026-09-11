@@ -270,6 +270,7 @@ const providerFields = z
      */
     runsOn: z.array(z.string()).nullable().optional(),
     cdnFrom: z.array(z.string()).nullable().optional(),
+    panels: z.array(z.string()).nullable().optional(),
     gdprDpa: z.enum(vocabulary('gdprDpa')).optional(),
 
     /*

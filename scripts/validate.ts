@@ -560,7 +560,7 @@ for (const key of noteKeys(notesDir)) {
  * every category has to be an aside category, so a registrar that also sells
  * hosting stays.
  */
-const besideByKind = (data: Record<string, unknown> | undefined) => {
+const besideByKind = (data: Record<string, unknown> | null | undefined) => {
   const held = data?.category as string[] | null | undefined;
   return Boolean(held?.length && held.every((value) => asideCategoryOf.has(value)));
 };

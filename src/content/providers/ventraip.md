@@ -7,6 +7,8 @@ urls:
 category:
   - shared-hosting
   - domains-dns
+panels:
+  - cpanel
 description: Australian domain registrar and hosting provider selling cPanel shared hosting, WordPress hosting and VPS, operated by Nexigen Digital.
 founded: 2008
 hqCountry: AU
