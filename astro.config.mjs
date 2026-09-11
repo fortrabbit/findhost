@@ -60,13 +60,26 @@ export default defineConfig({
    */
   trailingSlash: 'always',
   /*
-   * Deliberately empty. Nothing here has been published yet — the build renders
-   * noindex until PUBLIC_INDEXABLE says otherwise — so a renamed path is fixed
-   * at every link that points at it rather than papered over with a stub. The
-   * moment the domain is live this stops being true, and a rename then needs a
-   * redirect written here as well as the links updated.
+   * Written only where an address we published stops being built. A renamed path
+   * is still fixed at every link that points at it — a redirect is for the links
+   * we do not control, not a substitute for updating our own.
    */
-  redirects: {},
+  redirects: {
+    /*
+     * Four categories that sell no hosting moved out of the register and onto
+     * pages of their own, so their facet pages stopped being built. The group
+     * page answers the question the facet value did.
+     *
+     * `/categories/domains-dns/` is deliberately not here: sixteen registrars in
+     * the register also sell hosting, so that page still has records and still
+     * means something — "hosts that also register domains", against the
+     * registrars that sell no hosting at /domains-dns/.
+     */
+    '/categories/server-management/': '/server-management/',
+    '/categories/mail/': '/mail/',
+    '/categories/dbaas/': '/dbaas/',
+    '/categories/git-hosting/': '/git-hosting/',
+  },
   build: { format: 'directory' },
   /*
    * No syntax highlighter. The only fenced code on the site is the badge snippet

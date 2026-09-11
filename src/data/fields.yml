@@ -199,7 +199,7 @@
     - { id: serverless, label: Serverless }
     - { id: static, label: Static hosting }
     - { id: caas, label: Containers as a Service, short: CaaS }
-    - { id: server-management, label: Server management }
+    - { id: server-management, label: Server management, aside: server-management }
     - { id: vanity-hosting, label: Vanity hosting }
     # A market rather than an architecture, like `vanity-hosting` above it, and
     # the reason it is a category and not a price: the test is whether an account
@@ -227,6 +227,13 @@
     # hosts, whose records answer the hosting-shaped fields with `null`, meaning
     # the question does not apply rather than nobody checked.
     #
+    # All five carry `aside`, so a record holding nothing but these sits beside
+    # the register rather than in it: "185 hosting providers" cannot mean a
+    # number that counts cPanel, GitHub and Fastmail. A record holding one of
+    # these *and* a hosting category stays in, because a registrar that also
+    # sells shared hosting is a host — which is why the rule reads every value
+    # rather than the first one it finds.
+    #
     # A company doing both carries both: a registrar that also sells shared
     # hosting is `[shared-hosting, domains-dns]`, which is why these are values
     # of a multiple field and not a collection of their own.
@@ -241,10 +248,22 @@
     # registrar runs nameservers, and the operators who sell DNS on its own sell
     # registration beside it. Splitting them would make two lists of the same
     # companies.
-    - { id: domains-dns, label: Domains and DNS, short: Domains, subject: 'sell{|s} domain names or run{|s} DNS' }
-    - { id: mail, label: Business email, subject: 'run{|s} mailboxes on a domain' }
-    - { id: dbaas, label: Database as a Service, short: DBaaS, subject: 'sell{|s} a managed database as the product' }
-    - { id: git-hosting, label: Git hosting, subject: 'host{|s} git repositories' }
+    - {
+        id: domains-dns,
+        label: Domains and DNS,
+        short: Domains,
+        subject: 'sell{|s} domain names or run{|s} DNS',
+        aside: domains-dns,
+      }
+    - { id: mail, label: Business email, subject: 'run{|s} mailboxes on a domain', aside: mail }
+    - {
+        id: dbaas,
+        label: Database as a Service,
+        short: DBaaS,
+        subject: 'sell{|s} a managed database as the product',
+        aside: dbaas,
+      }
+    - { id: git-hosting, label: Git hosting, subject: 'host{|s} git repositories', aside: git-hosting }
 
 # Two answers, because there are two: somebody applies the security updates or
 # somebody else does. A panel automates that work without moving it, and an image

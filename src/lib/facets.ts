@@ -1,4 +1,4 @@
-import { asideOf, facetFields, fields } from './fields';
+import { asideCategoryOf, asideOf, facetFields, fields } from './fields';
 import { asideGroup, isListed, loadAsideProviders, loadProviders } from './providers';
 import { byName, countValues, rowHolds, toRow, type Facet, type FacetValue, type ProviderRow } from './rows';
 import { pairIndexPath, pairPages, pairPath, type PairPage } from './pairs';
@@ -57,12 +57,17 @@ export interface Aside {
  * The groups beside the register, from the dictionary rather than from the
  * records — a group with nothing in it yet still has a page and still says so,
  * which is how "we would list a defunct provider" is visible before there is one.
+ *
+ * Two dictionaries feed it, because two questions put a record beside the
+ * register: what happened to it, and whether it sells hosting at all.
  */
 export const loadAsides = once(async (): Promise<Aside[]> => {
   const groups = new Map<string, Aside>();
-  /* First status to claim a key names the group: more than one can share it,
-     and the later label would otherwise rename what the earlier one opened. */
-  for (const { key, label } of asideOf.values()) if (!groups.has(key)) groups.set(key, { key, label, rows: [] });
+  /* First value to claim a key names the group: more than one can share it,
+     and the later label would otherwise rename what the earlier one opened.
+     Statuses first, so "Defunct" keeps the name it has always had. */
+  for (const { key, label } of [...asideOf.values(), ...asideCategoryOf.values()])
+    if (!groups.has(key)) groups.set(key, { key, label, rows: [] });
 
   for (const record of await loadAsideProviders()) {
     groups.get(asideGroup(record)!)!.rows.push({ ...toRow(record as never), status: String(record.data.status) });
