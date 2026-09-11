@@ -1,5 +1,6 @@
 import type { APIRoute } from 'astro';
 import { loadProviders } from '../lib/providers';
+import { recordPath } from '../lib/paths';
 import { attribution } from '../lib/seo';
 import { movementOf } from '../lib/record';
 
@@ -16,6 +17,7 @@ export const GET: APIRoute = async ({ site }) => {
     .filter((provider) => provider.data.referringSubnets)
     .map((provider) => ({
       id: provider.id,
+      href: recordPath(provider),
       name: String(provider.data.name),
       now: provider.data.referringSubnets!.now,
       before: provider.data.referringSubnets!.before,
@@ -50,7 +52,7 @@ export const GET: APIRoute = async ({ site }) => {
     '',
     '## Providers, most linked-to first',
     '',
-    ...bars.map((bar) => `- [${bar.name}](${origin}/${bar.id}/) — ${number.format(bar.now)} networks${moved(bar)}`),
+    ...bars.map((bar) => `- [${bar.name}](${origin}${bar.href}) — ${number.format(bar.now)} networks${moved(bar)}`),
     '',
     '---',
     '',

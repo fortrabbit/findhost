@@ -16,6 +16,6 @@ sources:
 ai: authored
 ---
 
-Savvii is a Dutch managed WordPress host, and a brand of the group [Your.Online](/your-online/).
+Savvii is a Dutch managed WordPress host, and a brand of the group [Your.Online](/holdings/your-online/).
 
 **Not listed yet, and the open question is the price.** The site sells managed hosting for WordPress, WooCommerce, Magento, Shopware, Hyvä and Laravel, on Dutch data centres running renewable power, with daily backups and Plesk as an option — but no plan price appears without asking for a quote. Criterion 3 needs checking against the pricing pages before this joins the register.

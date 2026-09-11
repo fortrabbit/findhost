@@ -20,4 +20,4 @@ ai: authored
 greenWebId: 1454
 ---
 
-A British host aimed at resellers, and part of the Host Europe Group that [GoDaddy](/godaddy/) bought in 2017. GoDaddy sold it on to [Your.Online](/your-online/) in March 2024, together with the lease on its Leeds data center, so it is no longer a GoDaddy brand. A stub until its hosting is recorded.
+A British host aimed at resellers, and part of the Host Europe Group that [GoDaddy](/godaddy/) bought in 2017. GoDaddy sold it on to [Your.Online](/holdings/your-online/) in March 2024, together with the lease on its Leeds data center, so it is no longer a GoDaddy brand. A stub until its hosting is recorded.

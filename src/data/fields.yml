@@ -163,7 +163,7 @@
     # name. It has no runtimes, no regions and no price, so it cannot be
     # described by the fields here — but somebody looking for United Internet
     # should find out that Ionos is the part that sells hosting.
-    - { id: unlisted, label: 'Owns hosting brands, sells none', short: Unlisted, aside: unlisted }
+    - { id: unlisted, label: 'Owns hosting brands, sells none', short: Holdings, aside: holdings }
     # `hidden` keeps a record out of the register and out of every count. It is
     # the only place that fact is written down.
     - { id: draft, label: Stub, hidden: true }

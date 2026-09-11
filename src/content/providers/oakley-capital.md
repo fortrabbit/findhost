@@ -20,8 +20,8 @@ figure:
 ai: authored
 ---
 
-A British private-equity firm, recorded here because it owns [World Host Group](/world-host-group/), the group assembled by acquisition behind Hosting.com and FastComet. Oakley carved Webcentral out of its Australian listed parent in 2023 alongside the hosting entrepreneurs Tom Strohe and Jochen Berger, and merged it with World Host Group the following year, as its [portfolio entry](https://www.oakleycapital.com/our-companies/hostingcom) sets out.
+A British private-equity firm, recorded here because it owns [World Host Group](/holdings/world-host-group/), the group assembled by acquisition behind Hosting.com and FastComet. Oakley carved Webcentral out of its Australian listed parent in 2023 alongside the hosting entrepreneurs Tom Strohe and Jochen Berger, and merged it with World Host Group the following year, as its [portfolio entry](https://www.oakleycapital.com/our-companies/hostingcom) sets out.
 
 ## Worth knowing
 
-The same firm assembled [WebPros](/webpros/) from Plesk and cPanel between 2017 and 2018, as Oakley's [case study](https://www.oakleycapital.com/news-and-insights/building-a-business-the-webpros-story) describes, and sold the majority to [CVC](/cvc/) in 2019 while reinvesting as a minority partner, per its [sale announcement](https://www.oakleycapital.com/news-and-insights/oakley-capital-agrees-sale-of-webpros-to-cvc-fund-vii-and-follow-on-investment). A minority stake is not ownership, which is why WebPros names CVC as its parent and not Oakley.
+The same firm assembled [WebPros](/holdings/webpros/) from Plesk and cPanel between 2017 and 2018, as Oakley's [case study](https://www.oakleycapital.com/news-and-insights/building-a-business-the-webpros-story) describes, and sold the majority to [CVC](/holdings/cvc/) in 2019 while reinvesting as a minority partner, per its [sale announcement](https://www.oakleycapital.com/news-and-insights/oakley-capital-agrees-sale-of-webpros-to-cvc-fund-vii-and-follow-on-investment). A minority stake is not ownership, which is why WebPros names CVC as its parent and not Oakley.

@@ -3,6 +3,7 @@ import { facetIndex, loadFacets, loadPairPages } from '../lib/facets';
 import { pairIndexPath, pairPath } from '../lib/pairs';
 import { loadIndexed } from '../lib/providers';
 import { modifiedAt } from '../lib/modified';
+import { recordPath } from '../lib/paths';
 
 /**
  * Hand-rolled rather than an integration: the route list is short, entirely
@@ -36,7 +37,7 @@ export const GET: APIRoute = async ({ site }) => {
 
   const routes = [
     ...staticPages,
-    ...providers.map((provider) => `/${provider.id}/`),
+    ...providers.map(recordPath),
     ...facets.flatMap((facet) => [
       facetIndex(facet.id),
       ...facet.values.filter((value) => value.count > 0).map((value) => `/${facet.id}/${value.slug}/`),
@@ -57,7 +58,7 @@ export const GET: APIRoute = async ({ site }) => {
   const lastmod = new Map<string, string>();
   for (const provider of providers) {
     const modified = modifiedAt(provider.data);
-    if (modified) lastmod.set(`/${provider.id}/`, modified.toISOString().slice(0, 10));
+    if (modified) lastmod.set(recordPath(provider), modified.toISOString().slice(0, 10));
   }
 
   const body = [

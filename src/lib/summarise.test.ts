@@ -22,6 +22,7 @@ const facets: Facet[] = [
 
 const row = (name: string, fields: Record<string, string | string[]>): ProviderRow => ({
   id: name.toLowerCase(),
+  href: `/${name.toLowerCase()}/`,
   name,
   facets: fields,
   notApplicable: [],

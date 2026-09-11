@@ -4,6 +4,7 @@ import Base from '../layouts/Base.astro';
 import { fieldGroups, fieldOf, type Field } from '../lib/fields';
 import { backlinks, cells, footnotes } from '../lib/record';
 import { asideKindGroup, isListed } from '../lib/providers';
+import { recordMarkdownPath, recordPath } from '../lib/paths';
 import { asideGroupOf, loadFacets } from '../lib/facets';
 import { toRow } from '../lib/rows';
 import { similarTo } from '../lib/similar';
@@ -22,8 +23,13 @@ import infoIcon from 'bootstrap-icons/icons/info-lg.svg?raw';
 
 export async function getStaticPaths() {
   const providers = await getCollection('providers');
+  /*
+   * A rest parameter because a record's address is not one shape: a holding
+   * company sits under /holdings/, everything else at the root. One route
+   * rather than two so the template a reader sees is the same file either way.
+   */
   return providers.map((provider) => ({
-    params: { provider: provider.id },
+    params: { record: recordPath(provider).slice(1, -1) },
     props: { provider },
   }));
 }
@@ -48,6 +54,7 @@ const historyUrl = `https://github.com/fortrabbit/findhost/commits/main/src/cont
  */
 const everyRecord = await getCollection('providers');
 const nameOf = new Map(everyRecord.map((entry) => [String(entry.data.id), entry.data.name]));
+const pathOf = new Map(everyRecord.map((entry) => [String(entry.data.id), recordPath(entry)]));
 const valueOf = (field: string) => (data as Record<string, unknown>)[field];
 
 /*
@@ -132,6 +139,7 @@ const total = applicable.length;
 const { facets: allFacets } = await loadFacets();
 const context = {
   nameOf,
+  pathOf,
   hasPage: new Set(
     allFacets.flatMap((facet) =>
       facet.values.filter((value) => value.count > 0).map((value) => `${facet.field}:${value.id}`),
@@ -190,6 +198,7 @@ const { providers: registerRows } = await loadFacets();
 const pool = kind ? (await asideGroupOf(kind)).rows : registerRows;
 const similar = similarTo(toRow(provider as never), pool).map((match) => ({
   id: match.row.id,
+  href: match.row.href,
   name: match.row.name,
   description: match.row.description,
   favorite: match.row.favorite,
@@ -298,7 +307,7 @@ const categoryLabels = (fieldOf.get('category')?.values ?? [])
 <Base
   title={recordTitle(data.name, categoryLabels)}
   description={data.description}
-  markdown={`/${provider.id}.md`}
+  markdown={recordMarkdownPath(provider)}
   markdownInPage
   hidden={!listed}
   image={cardPath(provider.id)}
@@ -315,7 +324,7 @@ const categoryLabels = (fieldOf.get('category')?.values ?? [])
     {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
-      url: `${origin}/${provider.id}/`,
+      url: `${origin}${recordPath(provider)}`,
       inLanguage: 'en',
       publisher: organization(origin),
       /* The date somebody read the provider's own pages — the only one we stand behind. */
@@ -577,7 +586,7 @@ const categoryLabels = (fieldOf.get('category')?.values ?? [])
         }
       </span>
       <a href={editUrl} {...outboundLinkAttrs(editUrl, 'record')}>Edit on GitHub</a>
-      <a href={`/${provider.id}.md`}>This page as markdown</a>
+      <a href={recordMarkdownPath(provider)}>This page as markdown</a>
     </p>
     {
       /*

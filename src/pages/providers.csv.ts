@@ -2,6 +2,7 @@ import type { APIRoute } from 'astro';
 import { loadProviders } from '../lib/providers';
 import { fields } from '../lib/fields';
 import { credit } from '../lib/seo';
+import { recordPath } from '../lib/paths';
 
 /**
  * The register as one table, because CSV is what the tools that consume open
@@ -36,7 +37,7 @@ export const GET: APIRoute = async ({ site }) => {
       cell(data.id),
       cell(data.name),
       cell((data.urls as Record<string, string> | undefined)?.home),
-      `${origin}/${provider.id}/`,
+      `${origin}${recordPath(provider)}`,
       ...columns.map((column) => cell(data[column])),
       cell(data.checkedAt),
     ]
