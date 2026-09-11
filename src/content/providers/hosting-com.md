@@ -12,8 +12,8 @@ category:
   - shared-hosting
 founded: 2003
 hqCountry: US
-ownership: subsidiary
-parent: world-host-group
+ownership: pe-owned
+parent: oakley-capital
 headcount: 250-plus
 useCases:
   - cms
@@ -45,6 +45,9 @@ addedAt: 2026-07-31
 checkedAt: 2026-09-09
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
+  - { field: parent, url: 'https://www.oakleycapital.com/our-companies/hostingcom', checkedAt: 2026-09-11 }
+  - { field: ownership, url: 'https://www.oakleycapital.com/our-companies/hostingcom', checkedAt: 2026-09-11 }
+  - { field: 'group rename', url: 'https://www.oakleycapital.com/our-companies/hostingcom', checkedAt: 2026-09-11 }
   - { field: supportHours, url: 'https://hosting.com/hosting/', checkedAt: 2026-09-09 }
   - { field: supportChannels, url: 'https://hosting.com/hosting/', checkedAt: 2026-09-09 }
   - { field: runtimes, url: 'https://hosting.com/hosting/', checkedAt: 2026-09-09 }
@@ -75,7 +78,7 @@ figure:
   text: A2 Hosting under a new name.
 ---
 
-Hosting.com is the brand World Host Group runs its hosting business under. The company behind it was founded in Ann Arbor, Michigan in 2003 as A2 Hosting, was acquired by World Host Group in January 2025 and became hosting.com that April, each announced in a blog post ([acquisition](https://hosting.com/blog/the-future-of-hosting-world-host-group-and-a2-hosting/), [rename](https://hosting.com/blog/a-new-chapter-begins-a2-hosting/)); `a2hosting.com` now redirects to `hosting.com`. The group's [mergers and acquisitions page](https://hosting.com/about/mergers-and-acquisitions/) presents its other purchases as having joined hosting.com too: FastComet and Rocket.net in 2025, [ColombiaHosting](/colombiahosting/) in 2024, HostingRaja, Webcentral and Stablepoint in 2023.
+Hosting.com is the hosting business and the group that owns it under a single name: [World Host Group](/holdings/world-host-group/) renamed itself Hosting.com in 2025, as its owner's [portfolio entry](https://www.oakleycapital.com/our-companies/hostingcom) records. The company behind the brand was founded in Ann Arbor, Michigan in 2003 as A2 Hosting, was acquired by World Host Group in January 2025 and became hosting.com that April, each announced in a blog post ([acquisition](https://hosting.com/blog/the-future-of-hosting-world-host-group-and-a2-hosting/), [rename](https://hosting.com/blog/a-new-chapter-begins-a2-hosting/)); `a2hosting.com` now redirects to `hosting.com`. The group's [mergers and acquisitions page](https://hosting.com/about/mergers-and-acquisitions/) presents its other purchases as having joined hosting.com too: FastComet and Rocket.net in 2025, [ColombiaHosting](/colombiahosting/) in 2024, HostingRaja, Webcentral and Stablepoint in 2023.
 
 The range is shared hosting, managed WordPress, VPS, dedicated servers, reseller accounts, domains and email. Plans are sold monthly, yearly or on a four-year term, with the lowest advertised price on the longest one, and every plan carries a 30-day refund window. Support is staffed around the clock by chat, phone and email from offices in several countries, listed on the [about page](https://hosting.com/about/).
 
