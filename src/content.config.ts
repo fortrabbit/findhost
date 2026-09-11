@@ -104,7 +104,14 @@ const providerFields = z
      * offered beside the facts, not an argument that competes with them.
      */
     favoriteNote: z.string().min(12).max(200).optional(),
-    parent: z.string().optional(),
+    /*
+     * A list where a company has more than one owner and no single one of them
+     * is the answer: Newfold Digital is held by two private-equity firms that
+     * both back it. Everything downstream already reads a relation as a list — the row
+     * on the record page, the "Owns" backlink, the guard in validate.ts — so a
+     * second owner costs a second id and nothing else.
+     */
+    parent: z.union([z.string(), z.array(z.string()).min(1)]).optional(),
 
     // Classification
     whoManagesOs: z.enum(vocabulary('whoManagesOs')).optional(),
