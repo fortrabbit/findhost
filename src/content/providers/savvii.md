@@ -8,11 +8,11 @@ parent: your-online
 referringSubnets: { now: 324, before: 318 }
 status: draft
 addedAt: 2026-07-31
-checkedAt: 2026-07-31
+checkedAt: 2026-09-12
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: parent, url: 'https://your.online/brands', checkedAt: 2026-08-21 }
-  - { field: ownership, url: 'https://your.online/brands', checkedAt: 2026-08-21 }
+  - { field: parent, url: 'https://your.online/brands', checkedAt: 2026-09-12 }
+  - { field: ownership, url: 'https://your.online/brands', checkedAt: 2026-09-12 }
 ai: authored
 ---
 
