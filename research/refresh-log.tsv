@@ -8,3 +8,4 @@
 2026-09-09	umbler	confirmed	Pricing page confirmed entryPrice, priceFrom, priceTo, currencies, runtimes unchanged; status page returned 502
 2026-09-10	squarespace	confirmed	wikidata, pricing and terms pages confirmed wikidata, freeTier, contractMinimum, billingPeriods, billingTiming unchanged; terms page no longer states exit timing
 2026-09-11	siteground	confirmed	Wikidata page confirmed wikidata id unchanged; home, pricing, terms, kb, company pages returned sgcaptcha bot challenge, unreadable
+2026-09-12	timme-hosting	confirmed	Home page read (200); only source is referringSubnets (script-owned, excluded); nothing to compare
