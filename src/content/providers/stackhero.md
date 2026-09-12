@@ -4,10 +4,8 @@ name: Stackhero
 urls:
   home: https://www.stackhero.io
 referringSubnets: null
-status: out-of-scope
-criterion: 3
 addedAt: 2026-07-31
-checkedAt: 2026-07-31
+checkedAt: 2026-09-12
 boundedSearch: true
 ai: authored
 ---
