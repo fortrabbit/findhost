@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import PageFigure from '../../components/PageFigure.astro';
 import { facetIndex, loadFacets } from '../../lib/facets';
+import { borrowedFrom } from '../../lib/fields';
 import { facetCardPath } from '../../lib/og';
 import { licenceUrl, organization } from '../../lib/seo';
 
@@ -21,7 +22,15 @@ export async function getStaticPaths() {
 
 const { facet } = Astro.props;
 const inUse = facet.values.filter((value) => value.count > 0);
-const unused = facet.values.filter((value) => value.count === 0);
+
+/*
+ * A field that borrows its vocabulary is answering a different question with
+ * another field's list, so a value nothing holds here says nothing about our
+ * coverage: no provider is headquartered in Bahrain, and the register would not
+ * be more complete if one were. The unused values are named only where the
+ * vocabulary was written for the field.
+ */
+const unused = borrowedFrom.has(facet.field) ? [] : facet.values.filter((value) => value.count === 0);
 
 /* One string, for the reason given in providers/index.astro. */
 const annotation = [

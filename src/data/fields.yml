@@ -122,7 +122,7 @@
   group: Identity
   facet: ownership
   subject: '{are|is} {lower}'
-  filterOrder: 19
+  filterOrder: 20
   values:
     - { id: independent, label: Independent }
     - { id: vc-backed, label: VC-backed }
@@ -274,7 +274,7 @@
   group: Classification
   facet: operating-system
   subject: 'answer{|s} "{lower}" to who manages the operating system'
-  filterOrder: 16
+  filterOrder: 17
   values:
     - {
         id: managed,
@@ -296,7 +296,7 @@
   group: Classification
   facet: metal
   subject: '{lower}'
-  filterOrder: 17
+  filterOrder: 18
   multiple: true
   values:
     - { id: owns-metal, label: Owns the hardware, short: Owns, subject: 'own{|s} their hardware' }
@@ -350,7 +350,7 @@
   group: Classification
   facet: use-cases
   subject: 'market{|s} themselves for {lower}'
-  filterOrder: 10
+  filterOrder: 11
   multiple: true
   values:
     - { id: cms, label: CMS sites }
@@ -380,7 +380,7 @@
   group: Classification
   facet: audience
   subject: 'sell{|s} to {lower}'
-  filterOrder: 12
+  filterOrder: 13
   multiple: true
   values:
     - { id: solo, label: Solo and freelance, short: Solo }
@@ -399,7 +399,7 @@
   group: Tech stack
   facet: runtimes
   subject: 'run{|s} {label}'
-  filterOrder: 5
+  filterOrder: 6
   multiple: true
   pairs:
     - with: regions
@@ -521,7 +521,7 @@
   group: Deployment
   facet: deployment
   subject: 'deploy{|s} by {lower}'
-  filterOrder: 8
+  filterOrder: 9
   multiple: true
   #
   # One question, asked four ways: what does the customer hand over, and what
@@ -559,7 +559,7 @@
   facet: shell
   subject: 'give{|s} {lower}'
   ordered: true
-  filterOrder: 15
+  filterOrder: 16
   values:
     - { id: none, label: None, noFilter: true }
     - {
@@ -591,7 +591,7 @@
   group: Tech stack
   facet: databases
   subject: 'offer{|s} managed {label}'
-  filterOrder: 6
+  filterOrder: 7
   multiple: true
   values:
     - { id: mysql, label: MySQL }
@@ -695,7 +695,7 @@
   group: Pricing
   facet: currencies
   subject: 'bill{|s} in {label}'
-  filterOrder: 14
+  filterOrder: 15
   multiple: true
   values:
     - { id: USD, label: USD }
@@ -752,7 +752,7 @@
   subject: 'can be left {lower}'
   titleWith: 'you can leave {lower}'
   ordered: true
-  filterOrder: 18
+  filterOrder: 19
   values:
     - { id: a-day, label: Within a day }
     - { id: a-month, label: Within a month }
@@ -819,7 +819,7 @@
   group: Pricing
   facet: payments
   subject: 'take{|s} {lower}'
-  filterOrder: 20
+  filterOrder: 21
   multiple: true
   values:
     - { id: card, label: Card, subject: 'take{|s} card payments' }
@@ -840,7 +840,7 @@
   label: Pricing features
   facet: pricing
   subject: 'price{|s} with {lower}'
-  filterOrder: 13
+  filterOrder: 14
   multiple: true
   values:
     - {
@@ -1037,6 +1037,10 @@
 - id: hqCountry
   label: Headquarters
   group: Regions and law
+  facet: headquarters
+  subject: '{are|is} headquartered in {label}'
+  slugFromLabel: true
+  filterOrder: 5
   valuesFrom: regions
 
 - id: gdprDpa
@@ -1102,7 +1106,7 @@
   group: Support
   facet: support
   subject: 'offer{|s} support by {lower}'
-  filterOrder: 7
+  filterOrder: 8
   multiple: true
   values:
     - { id: email, label: Email, subject: 'answer{|s} email or a ticket' }
@@ -1213,7 +1217,7 @@
   label: Other features
   facet: features
   subject: 'include{|s} {lower}'
-  filterOrder: 9
+  filterOrder: 10
   multiple: true
   values:
     - {
@@ -1330,7 +1334,7 @@
   label: Automation
   facet: automation
   subject: 'offer{|s} {label}'
-  filterOrder: 11
+  filterOrder: 12
   multiple: true
   values:
     - {
