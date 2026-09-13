@@ -8,10 +8,10 @@ wikidata: Q56309413
 status: out-of-scope
 criterion: 2
 addedAt: 2026-07-31
-checkedAt: 2026-07-31
+checkedAt: 2026-09-13
 ai: authored
 sources:
-  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q56309413', checkedAt: 2026-09-09 }
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q56309413', checkedAt: 2026-09-13 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 ---
 
