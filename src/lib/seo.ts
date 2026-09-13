@@ -28,6 +28,7 @@ const patterns: Record<string, (label: string) => string> = {
   runtimes: (label) => `${label} hosting`,
   categories: (label) => `${label} providers`,
   regions: (label) => `Hosting in ${label}`,
+  headquarters: (label) => `Hosting companies based in ${label}`,
   'use-cases': (label) => `Hosting for ${soften(label)}`,
   audience: (label) => `Hosting for ${soften(label)}`,
   currencies: (label) => `Hosting billed in ${label}`,

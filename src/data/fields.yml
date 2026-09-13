@@ -1037,6 +1037,10 @@
 - id: hqCountry
   label: Headquarters
   group: Regions and law
+  facet: headquarters
+  subject: '{are|is} headquartered in {label}'
+  slugFromLabel: true
+  filterOrder: 21
   valuesFrom: regions
 
 - id: gdprDpa
