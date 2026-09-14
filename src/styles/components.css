@@ -1241,13 +1241,19 @@ html.js [data-find-fallback] {
  * was ticked, so a reader arriving from anywhere reads the same thing.
  */
 /*
- * A facet the list on show cannot answer, and a value nothing in it holds. Both
- * are drawn by the find view rather than by the build, because which list is on
- * show is a choice the page makes after it is rendered.
+ * A facet the list on show cannot answer, and a value nothing in it holds: dim
+ * and switched off, never taken away. The panel is a grid twenty boxes wide,
+ * and a box that leaves reflows every box after it — under the pointer that
+ * had just chosen the list.
  */
-.find-facet[hidden],
-.find-row[hidden] {
-  display: none;
+.find-row.empty,
+.find-facet.empty {
+  opacity: 0.4;
+}
+
+/* Once, not twice: every row in an empty box is an empty row. */
+.find-facet.empty .find-row.empty {
+  opacity: 1;
 }
 
 /* The list on show is one answer, so its row is the one in bold. */

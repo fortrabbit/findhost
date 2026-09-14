@@ -319,9 +319,12 @@ if (filtersEl && resultsEl && summaryEl && indexEl) {
    * to the email hosts it would be the panel describing a page nobody is
    * looking at.
    *
-   * A value nothing in the list holds loses its row, the way a facet nothing
-   * answers has no box — unless it is ticked, because a filter the reader
-   * cannot see to untick is worse than one reading zero.
+   * A value nothing in the list holds is dimmed and switched off rather than
+   * taken away, and so is a box nothing in it answers. Removing them was honest
+   * and unusable: the panel is a grid twenty boxes wide, and switching lists
+   * reflowed the whole page under the pointer that had just chosen one. A
+   * ticked value is never switched off, whatever it counts — a filter the
+   * reader cannot untick is worse than one reading zero.
    */
   const updateCounts = () => {
     const rows = listed();
@@ -344,8 +347,10 @@ if (filtersEl && resultsEl && summaryEl && indexEl) {
         const count = known.filter((entry) => holds(entry, facet.field, input.value)).length;
         setNumber(row.querySelector('.find-count'), count);
 
-        row.hidden = count === 0 && !input.checked;
-        if (!row.hidden) visible += 1;
+        const spent = count === 0 && !input.checked;
+        input.disabled = spent;
+        row.classList.toggle('empty', spent);
+        if (!spent) visible += 1;
       }
 
       setNumber(box.querySelector('.find-jump'), visible);
@@ -360,7 +365,7 @@ if (filtersEl && resultsEl && summaryEl && indexEl) {
           .join(' · ');
       }
 
-      box.hidden = visible === 0;
+      box.classList.toggle('empty', visible === 0);
     }
   };
 

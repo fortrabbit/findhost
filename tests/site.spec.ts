@@ -571,6 +571,7 @@ test.describe('the lists beside the register', () => {
       await page.goto('/');
 
       const box = await openPanel(page);
+      const boxes = await page.locator('.find-facet').count();
       await box.locator('input[value=mail]').check();
 
       await expect(page.locator('[data-find-summary]')).toContainText('in Business email');
@@ -580,6 +581,15 @@ test.describe('the lists beside the register', () => {
       await expect(page.locator('[data-find-results]')).toBeHidden();
       const shown = page.locator('[data-find-list=mail] .provider-list > li:visible');
       expect(await shown.count()).toBeGreaterThan(0);
+
+      /*
+       * The panel keeps its shape. It is a grid twenty boxes wide, and a box
+       * that left would reflow every box after it under the pointer that had
+       * just chosen the list — so what the new list cannot answer is dimmed and
+       * switched off instead.
+       */
+      await expect(page.locator('.find-facet')).toHaveCount(boxes);
+      expect(await page.locator('.find-facet.empty input[type=checkbox]:disabled').count()).toBeGreaterThan(0);
 
       /* No count in the panel may exceed the list on show. */
       const held = await shown.count();
