@@ -104,11 +104,47 @@ export const asideGroups = once(async (): Promise<Aside[]> => {
  */
 export const besideTheRegister = async () =>
   (await asideGroups()).map((group) => ({
+    key: group.key,
     label: group.label,
     href: `/${group.key}/`,
     count: group.rows.length,
     of: group.of,
   }));
+
+/** One of the lists the find view can be switched to, rows and all. */
+export interface RegisterList {
+  /** The group's own page, and what the find view keeps in the URL. */
+  key: string;
+  label: string;
+  href: string;
+  rows: ProviderRow[];
+}
+
+/**
+ * The lists the register can be switched between: the register itself, then the
+ * groups beside it a reader could still buy from — the kinds of company that
+ * sell no hosting, and the groups that own the hosts.
+ *
+ * Not the defunct, which sell nothing, and not the stubs, which are our own
+ * working state rather than an answer. Both keep their page and their link in
+ * the sentence above the list; neither is a register anybody browses.
+ */
+export const registerLists = once(async (): Promise<RegisterList[]> => {
+  const { providers } = await loadFacets();
+  const beside = await loadAsides();
+
+  /* Kinds of company first, then the groups above them: a reader scanning for
+     "email hosting" is looking for a service, and a holding company is not one. */
+  const offered = [
+    ...beside.filter((group) => group.of === 'kind'),
+    ...beside.filter((group) => group.of === 'status' && group.key !== 'defunct'),
+  ];
+
+  return [
+    { key: 'hosting', label: 'Web hosts', href: '/', rows: providers },
+    ...offered.map((group) => ({ key: group.key, label: group.label, href: `/${group.key}/`, rows: group.rows })),
+  ];
+});
 
 export const asideGroupOf = async (key: string): Promise<Aside> => {
   const group = (await asideGroups()).find((candidate) => candidate.key === key);

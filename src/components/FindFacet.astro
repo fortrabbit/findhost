@@ -26,7 +26,7 @@ const missing = [
   .join(' · ');
 ---
 
-<div class="find-facet" role="group" aria-labelledby={`facet-${facet.id}`}>
+<div class="find-facet" role="group" aria-labelledby={`facet-${facet.id}`} data-facet-box={facet.id}>
   {/* The count is the link, on both lines: the number says how much is behind it. */}
   <h2 class="find-facet-title" id={`facet-${facet.id}`}>
     <span>{facet.label}</span>
@@ -65,6 +65,13 @@ const missing = [
     }
   </div>
 
-  {/* Outside the scroller: what the facet never knew does not scroll away. */}
-  {missing && <p class="find-facet-foot">{missing}</p>}
+  {
+    /*
+     * Outside the scroller: what the facet never knew does not scroll away.
+     * Always drawn, empty or not — the find view rewrites it when the list on
+     * show changes, and an element never rendered cannot be rewritten. An empty
+     * one is hidden in CSS.
+     */
+  }
+  <p class="find-facet-foot">{missing}</p>
 </div>
