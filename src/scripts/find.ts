@@ -21,8 +21,15 @@ interface Facet {
 
 interface ProviderRow {
   id: string;
+  /** Which list the row is in. A record is in exactly one of them. */
+  register: string;
   facets: Record<string, string | string[]>;
   notApplicable: string[];
+}
+
+interface Register {
+  key: string;
+  label: string;
 }
 
 /**
@@ -83,9 +90,13 @@ if (styleEl && resultsEl) {
   const stored = remembered('list-style');
   let current = stored === 'slim' ? 'slim' : 'extended';
 
+  /* Every list on the page, not only the one on show: a toggle that skipped the
+     others would change under the reader the moment they switched lists. */
+  const lists = [resultsEl, ...document.querySelectorAll<HTMLElement>('[data-find-list]')];
+
   const show = (style: string) => {
     current = style;
-    resultsEl.classList.toggle('slim', style === 'slim');
+    for (const list of lists) list.classList.toggle('slim', style === 'slim');
     for (const button of styleEl.querySelectorAll<HTMLButtonElement>('button')) {
       button.setAttribute('aria-pressed', String(button.value === style));
     }
@@ -106,18 +117,31 @@ if (styleEl && resultsEl) {
 }
 
 if (filtersEl && resultsEl && summaryEl && indexEl) {
-  const { facets, providers } = JSON.parse(indexEl.textContent!) as {
+  const { facets, providers, registers } = JSON.parse(indexEl.textContent!) as {
     facets: Facet[];
     providers: ProviderRow[];
+    registers: Register[];
   };
+
+  /*
+   * The lists the page carries, the register first. Each is whole and only one
+   * is shown; the others arrive hidden and are shown by swapping which, so a
+   * reader switching lists keeps every tick they had made.
+   */
+  const home = registers[0]?.key ?? 'hosting';
+  let register = home;
+  const listOf = new Map<string, HTMLElement>([[home, resultsEl]]);
+  for (const list of document.querySelectorAll<HTMLElement>('[data-find-list]')) {
+    listOf.set(list.dataset.findList!, list);
+  }
 
   /* Every row the server drew, by the id it carries. Nothing is added or removed. */
   const rowOf = new Map<string, HTMLElement>();
-  for (const row of resultsEl.querySelectorAll<HTMLElement>('li[data-record]')) {
-    rowOf.set(row.dataset.record!, row);
+  const letterGroups: HTMLElement[] = [];
+  for (const list of listOf.values()) {
+    for (const row of list.querySelectorAll<HTMLElement>('li[data-record]')) rowOf.set(row.dataset.record!, row);
+    letterGroups.push(...list.querySelectorAll<HTMLElement>('.letter-group'));
   }
-
-  const letterGroups = [...resultsEl.querySelectorAll<HTMLElement>('.letter-group')];
 
   const selected = new Map<string, Set<string>>();
 
@@ -129,6 +153,12 @@ if (filtersEl && resultsEl && summaryEl && indexEl) {
    */
   const readUrl = () => {
     const params = new URLSearchParams(location.search);
+
+    /* A list nobody offers is not a list: an unknown name falls back to the
+       register rather than emptying the page. */
+    const wanted = params.get('register');
+    register = registers.some((entry) => entry.key === wanted) ? wanted! : home;
+
     selected.clear();
     for (const facet of facets) {
       const asked = params.get(facet.id);
@@ -149,9 +179,14 @@ if (filtersEl && resultsEl && summaryEl && indexEl) {
 
   const writeUrl = () => {
     const params = new URLSearchParams();
+    /* First, because it says which list the rest of the query narrows. The
+       register itself is the default and stays out of the address. */
+    if (register !== home) params.set('register', register);
+
     for (const [facetId, values] of selected) {
       if (values.size) params.set(facetId, [...values].join(','));
     }
+
     const query = params.toString();
     history.replaceState(null, '', query ? `${location.pathname}?${query}` : location.pathname);
   };
@@ -164,8 +199,12 @@ if (filtersEl && resultsEl && summaryEl && indexEl) {
 
   const activeFacets = () => facets.filter((facet) => (selected.get(facet.id)?.size ?? 0) > 0);
 
+  /* The list on show before any facet narrows it. Every number on the page is
+     taken from this rather than from every row the page happens to carry. */
+  const listed = () => providers.filter((provider) => provider.register === register);
+
   const matches = () =>
-    providers.filter((provider) =>
+    listed().filter((provider) =>
       activeFacets().every((facet) =>
         [...selected.get(facet.id)!].some((value) => holds(provider, facet.field, value)),
       ),
@@ -199,6 +238,22 @@ if (filtersEl && resultsEl && summaryEl && indexEl) {
       });
     }
 
+    for (const input of filtersEl.querySelectorAll<HTMLInputElement>('input[data-register-option]')) {
+      input.addEventListener('change', () => {
+        if (!input.checked || input.value === register) return;
+
+        /*
+         * The ticks stay. Asking for German email hosting after German hosting
+         * is one question rather than two, and it is why this is a filter and
+         * not the row of links it used to be.
+         */
+        register = input.value;
+        track('filter register');
+        writeUrl();
+        renderResults();
+      });
+    }
+
     for (const input of filtersEl.querySelectorAll<HTMLInputElement>('input[disabled]')) input.disabled = false;
   };
 
@@ -208,6 +263,13 @@ if (filtersEl && resultsEl && summaryEl && indexEl) {
    * that sits under the "More filters" disclosure opens it.
    */
   const syncFilters = () => {
+    for (const input of filtersEl.querySelectorAll<HTMLInputElement>('input[data-register-option]')) {
+      input.checked = input.value === register;
+      /* A list asked for in the address is a narrowing the reader cannot see:
+         the box that says which one is behind the disclosure. */
+      if (input.checked && register !== home) input.closest<HTMLDetailsElement>('details')?.setAttribute('open', '');
+    }
+
     for (const input of filtersEl.querySelectorAll<HTMLInputElement>('input[data-facet]')) {
       input.checked = selected.get(input.dataset.facet!)?.has(input.value) ?? false;
       if (!input.checked) continue;
@@ -222,14 +284,95 @@ if (filtersEl && resultsEl && summaryEl && indexEl) {
   // with JavaScript should not be told "150 of 150" where a visitor without it
   // is told "150" — the script is here to narrow the list, not to restate it.
   const updateSummary = (found: number) => {
-    const noun = providers.length === 1 ? 'web host' : 'web hosts';
-    summaryEl.textContent = activeFacets().length
-      ? `${found} of ${providers.length} ${noun}.`
-      : `${providers.length} ${noun}.`;
+    const total = listed().length;
+
+    /*
+     * The register says what it counts; the other lists say which list they are.
+     * Their labels name a group rather than what is in it, and "28 server
+     * management" reads as a phrase cut short.
+     */
+    const said =
+      register === home
+        ? `${total} ${total === 1 ? 'web host' : 'web hosts'}`
+        : `${total} in ${registers.find((entry) => entry.key === register)?.label}`;
+
+    summaryEl.textContent = activeFacets().length ? `${found} of ${said}.` : `${said}.`;
   };
+
+  /**
+   * The number in a count link, leaving the words beside it alone: the element
+   * is also the link to that value's page, and the rest of it is what a screen
+   * reader hears.
+   */
+  const setNumber = (element: Element | null | undefined, value: number) => {
+    for (const node of element?.childNodes ?? []) {
+      if (node.nodeType === Node.TEXT_NODE && node.nodeValue?.trim()) {
+        node.nodeValue = String(value);
+        return;
+      }
+    }
+  };
+
+  /*
+   * What the panel's numbers count, now that the list under them can change. A
+   * "79" beside WordPress is 79 of the list on show; left there after switching
+   * to the email hosts it would be the panel describing a page nobody is
+   * looking at.
+   *
+   * A value nothing in the list holds loses its row, the way a facet nothing
+   * answers has no box — unless it is ticked, because a filter the reader
+   * cannot see to untick is worse than one reading zero.
+   */
+  const updateCounts = () => {
+    const rows = listed();
+
+    for (const box of filtersEl.querySelectorAll<HTMLElement>('[data-facet-box]')) {
+      const facet = facets.find((entry) => entry.id === box.dataset.facetBox);
+      if (!facet) continue;
+
+      /* The same three rules as countValues() in lib/rows.ts: a field a record
+         sets to null does not apply to it, one it never mentions is unknown,
+         and only the rest can hold a value. */
+      const applicable = rows.filter((row) => !row.notApplicable.includes(facet.field));
+      const known = applicable.filter((row) => row.facets[facet.field] !== undefined);
+      let visible = 0;
+
+      for (const row of box.querySelectorAll<HTMLElement>('.find-row')) {
+        const input = row.querySelector<HTMLInputElement>('input[data-facet]');
+        if (!input) continue;
+
+        const count = known.filter((entry) => holds(entry, facet.field, input.value)).length;
+        setNumber(row.querySelector('.find-count'), count);
+
+        row.hidden = count === 0 && !input.checked;
+        if (!row.hidden) visible += 1;
+      }
+
+      setNumber(box.querySelector('.find-jump'), visible);
+
+      const foot = box.querySelector<HTMLElement>('.find-facet-foot');
+      if (foot) {
+        foot.textContent = [
+          applicable.length > known.length && `${applicable.length - known.length} unknown`,
+          rows.length > applicable.length && `${rows.length - applicable.length} n/a`,
+        ]
+          .filter(Boolean)
+          .join(' · ');
+      }
+
+      box.hidden = visible === 0;
+    }
+  };
+
+  const aside = document.querySelector<HTMLElement>('[data-find-aside]');
 
   const renderResults = () => {
     const found = new Set(matches().map((provider) => provider.id));
+
+    /* One list on show, and it is a whole list rather than rows picked out of
+       several: the register's own markup is what says how many hosts there are. */
+    for (const [key, list] of listOf) list.hidden = key !== register;
+    if (aside) aside.hidden = register !== home;
 
     for (const [id, row] of rowOf) row.hidden = !found.has(id);
 
@@ -238,6 +381,7 @@ if (filtersEl && resultsEl && summaryEl && indexEl) {
       group.hidden = !group.querySelector('li[data-record]:not([hidden])');
     }
 
+    updateCounts();
     updateSummary(found.size);
   };
 

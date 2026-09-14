@@ -1,0 +1,56 @@
+---
+import type { RegisterList } from '../lib/facets';
+
+interface Props {
+  registers: RegisterList[];
+  /** The one the server drew visible, which is the register itself. */
+  current: string;
+}
+
+const { registers, current } = Astro.props;
+
+/*
+ * Which list the page is showing, rather than which values its rows hold — so
+ * one answer at a time, and a radio rather than a checkbox. It is not a facet:
+ * a record is in exactly one of these lists, and no record says which, because
+ * which register a record belongs to is a fact about the register.
+ *
+ * It narrows the same list the facets narrow and it is drawn like them, so it
+ * behaves like them: the ticks already made stay made, and the page does not
+ * move. The count beside each is the link out to that list's own page — the
+ * same bargain every facet box strikes, and the way a crawler reaches a list
+ * that is no longer named above the register.
+ */
+---
+
+<div class="find-facet find-register" role="group" aria-labelledby="facet-register">
+  <h2 class="find-facet-title" id="facet-register">
+    <span>Register</span>
+    <span class="find-jump">{registers.length}</span>
+  </h2>
+
+  <div class="find-values">
+    {
+      registers.map((register) => (
+        <div class="find-row">
+          <label title={register.label}>
+            <input
+              type="radio"
+              name="register"
+              data-register-option
+              value={register.key}
+              checked={register.key === current}
+              autocomplete="off"
+              disabled
+            />
+            <span class="find-value">{register.label}</span>
+          </label>
+          <a class="find-count" href={register.href}>
+            {register.rows.length}
+            <span class="visually-hidden"> records, listed on their own page</span>
+          </a>
+        </div>
+      ))
+    }
+  </div>
+</div>

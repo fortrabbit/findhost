@@ -1,15 +1,24 @@
 ---
 import FindFacet from './FindFacet.astro';
-import type { Facet } from '../lib/facets';
+import FindRegister from './FindRegister.astro';
+import type { Facet, RegisterList } from '../lib/facets';
 
 import type { ProviderRow } from '../lib/facets';
 
 interface Props {
   facets: Facet[];
   providers: ProviderRow[];
+  /*
+   * The lists this panel sits over — the register and the groups beside it that
+   * are lists in their own right. Each is a page carrying this same panel, so
+   * the box that offers them is links rather than a filter.
+   */
+  registers?: RegisterList[];
+  /** Which of them the page is showing, which is the register itself. */
+  current?: string;
 }
 
-const { facets, providers } = Astro.props;
+const { facets, providers, registers = [], current = 'hosting' } = Astro.props;
 
 /*
  * What the script needs to filter, and nothing else: which values each record
@@ -28,10 +37,16 @@ const index = {
     field: facet.field,
     values: facet.values.filter((value) => value.count > 0).map((value) => value.id),
   })),
-  providers: providers.map((provider) => ({
-    id: provider.id,
-    facets: provider.facets,
-    notApplicable: provider.notApplicable,
+  /* What the box can switch to, in the order it offers them. */
+  registers: registers.map((register) => ({ key: register.key, label: register.label })),
+  providers: (registers.length
+    ? registers.flatMap((register) => register.rows.map((row) => ({ row, register: register.key })))
+    : providers.map((row) => ({ row, register: current }))
+  ).map(({ row, register }) => ({
+    id: row.id,
+    register,
+    facets: row.facets,
+    notApplicable: row.notApplicable,
   })),
 };
 
@@ -112,6 +127,8 @@ const quicklinks = [
             {rest.map((facet) => (
               <FindFacet facet={facet} />
             ))}
+            {/* Last: it is the one box that changes what the others count. */}
+            {registers.length > 1 && <FindRegister registers={registers} current={current} />}
           </div>
         </details>
       )

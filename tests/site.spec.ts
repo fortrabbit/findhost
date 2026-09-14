@@ -534,6 +534,99 @@ test.describe('filtering', () => {
 });
 
 /*
+ * The register is one of several lists the same page carries: the hosting
+ * register itself, the kinds of company that sell no hosting, and the groups
+ * that own the hosts. Each is whole and one is shown, which is two failures
+ * worth guarding — another list leaking into the register's own markup, and the
+ * box doing nothing where there is no script to make it work.
+ */
+test.describe('the lists beside the register', () => {
+  const openPanel = async (page: import('@playwright/test').Page) => {
+    await page.locator('.find-more > summary').click();
+    return page.locator('[aria-labelledby="facet-register"]');
+  };
+
+  test('leave the register the register, and link out of it', async ({ page }) => {
+    await page.goto('/');
+
+    /* The register's own markup holds the register and nothing else: it is what
+       every count taken off this page is taken from. */
+    await expect(page.locator('[data-find-results] .provider-list > li')).toHaveCount(listed);
+    await expect(page.locator('[data-find-summary]')).toContainText(`${listed} web hosts`);
+
+    const box = await openPanel(page);
+    await expect(box.locator('a[href="/mail/"]')).toBeVisible();
+    await expect(box.locator('a[href="/holdings/"]')).toBeVisible();
+
+    /* The groups that are not a list to browse keep their place in the sentence
+       over the register, which is the only link to them on the page. */
+    await expect(page.locator('[data-find-summary] a[href="/defunct/"]')).toBeVisible();
+    await expect(page.locator('[data-find-summary] a[href="/stubs/"]')).toBeVisible();
+  });
+
+  test.describe('with the script', () => {
+    test.skip(({ javaScriptEnabled }) => javaScriptEnabled === false, 'switching lists is the script talking');
+
+    test('swap the list, the counts and the address', async ({ page }) => {
+      await page.goto('/');
+
+      const box = await openPanel(page);
+      await box.locator('input[value=mail]').check();
+
+      await expect(page.locator('[data-find-summary]')).toContainText('in Business email');
+      expect(new URL(page.url()).searchParams.get('register')).toBe('mail');
+
+      /* The register's list is put away whole rather than row by row. */
+      await expect(page.locator('[data-find-results]')).toBeHidden();
+      const shown = page.locator('[data-find-list=mail] .provider-list > li:visible');
+      expect(await shown.count()).toBeGreaterThan(0);
+
+      /* No count in the panel may exceed the list on show. */
+      const held = await shown.count();
+      for (const count of await page.locator('.find-facet:not(.find-register) .find-count:visible').allInnerTexts()) {
+        expect(Number(count.trim().split(/\s+/)[0])).toBeLessThanOrEqual(held);
+      }
+    });
+
+    /*
+     * The reason this is a filter rather than the row of links it replaced: a
+     * reader narrowing the register and then changing which register it is has
+     * asked one question, not two.
+     */
+    test('keep the filters already ticked', async ({ page }) => {
+      await page.goto('/');
+
+      const box = await openPanel(page);
+      const ticked = page.locator('.find-facet:not(.find-register) input[type=checkbox]:visible').first();
+      await ticked.check();
+      const value = await ticked.getAttribute('value');
+
+      await box.locator('input[value=holdings]').check();
+      await expect(page.locator('[data-find-summary]')).toContainText('in Holdings');
+
+      /* Still ticked, and still in the panel: a value the new list holds none of
+         reads zero rather than disappearing, or there would be no way to undo it. */
+      await expect(page.locator(`.find-facet input[type=checkbox][value="${value}"]`)).toBeChecked();
+      await expect(page.locator(`.find-facet input[type=checkbox][value="${value}"]`)).toBeVisible();
+
+      /* And back, with the tick still on and the register counted again. */
+      await box.locator('input[value=hosting]').check();
+      await expect(page.locator('[data-find-summary]')).toContainText(`of ${listed} web hosts`);
+    });
+
+    /* A list asked for in the address arrives on show, with the box that says so
+       open rather than folded away under a disclosure nobody opened. */
+    test('are addressable', async ({ page }) => {
+      await page.goto('/?register=holdings');
+
+      await expect(page.locator('[data-find-list=holdings]')).toBeVisible();
+      await expect(page.locator('[data-find-results]')).toBeHidden();
+      await expect(page.locator('input[data-register-option][value=holdings]')).toBeChecked();
+    });
+  });
+});
+
+/*
  * The card a link turns into elsewhere, which is the one part of the site nobody
  * on the site ever sees. It is drawn at build time by a WebAssembly renderer, so
  * the failure to guard against is not an ugly card — it is 234 of them silently
