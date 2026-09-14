@@ -13,6 +13,11 @@ ai: authored
 sources:
   - { field: category, url: 'https://www.stackhero.io', checkedAt: 2026-09-14 }
   - { field: 'per-service pricing', url: 'https://www.stackhero.io/en-US/services/GitLab/pricing', checkedAt: 2026-09-14 }
+figure:
+  emoji: 🦸
+  color: rgb(48, 72, 140)
+  textColor: rgb(234, 238, 248)
+  text: Open-source services, rented by the hour.
 ---
 
 Stackhero is a French platform-as-a-service offering dozens of managed open-source services — PostgreSQL, MySQL, MariaDB, RabbitMQ, Kafka, Grafana, Prometheus — alongside Node.js, Python, PHP, Ruby and Docker application stacks, in either a European or a United States region with backups kept in the EU. It is ISO 27001 certified and states plainly that it operates under French and European law.
