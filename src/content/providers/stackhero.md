@@ -3,15 +3,20 @@ id: stackhero
 name: Stackhero
 urls:
   home: https://www.stackhero.io
+category:
+  - paas
+description: French platform running dozens of managed open-source services, from databases and message brokers to GitLab and Nextcloud, in European or United States regions.
 referringSubnets: null
 addedAt: 2026-07-31
-checkedAt: 2026-09-12
-boundedSearch: true
+checkedAt: 2026-09-14
 ai: authored
+sources:
+  - { field: category, url: 'https://www.stackhero.io', checkedAt: 2026-09-14 }
+  - { field: 'per-service pricing', url: 'https://www.stackhero.io/en-US/services/GitLab/pricing', checkedAt: 2026-09-14 }
 ---
 
-Stackhero is a French platform-as-a-service offering more than fifty managed open-source services — PostgreSQL, MySQL, MariaDB, RabbitMQ, Kafka, Grafana, Prometheus — alongside Node.js, Python, PHP, Ruby and Docker application stacks, in either a European or a United States region with backups kept in the EU. It is ISO 27001 certified and states plainly that it operates under French and European law.
+Stackhero is a French platform-as-a-service offering dozens of managed open-source services — PostgreSQL, MySQL, MariaDB, RabbitMQ, Kafka, Grafana, Prometheus — alongside Node.js, Python, PHP, Ruby and Docker application stacks, in either a European or a United States region with backups kept in the EU. It is ISO 27001 certified and states plainly that it operates under French and European law.
 
-**Criterion 3 — public pricing — could not be satisfied.** The site describes hourly billing consolidated into a single monthly invoice, but publishes no figure for any service on the pages reachable without an account. Searched: the homepage, the services overview and the pricing links from both.
+## Worth knowing
 
-This is a bounded search rather than a finding that no price exists — the figures may sit behind a service configurator this session could not reach. **A published price for any single service would be enough to list it**, and the rest of the record is already in good shape: the runtime list, the regions, the jurisdiction and the certification are all documented.
+Prices are published one service at a time rather than in a single table: each service carries a pricing page of its own with a monthly figure and its hourly equivalent, as the [GitLab service's pricing page](https://www.stackhero.io/en-US/services/GitLab/pricing) shows, and the home page carries none. Billing is hourly and arrives as one monthly invoice, so what a stack costs is the sum of the services running in it.
