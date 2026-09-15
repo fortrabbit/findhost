@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import ProviderRegister from '../components/ProviderRegister.astro';
 import FindFilters from '../components/FindFilters.astro';
-import { besideTheRegister, loadFacets } from '../lib/facets';
+import { besideTheRegister, loadFacets, registerLists } from '../lib/facets';
 import { loadIndexed } from '../lib/providers';
 import { fields } from '../lib/fields';
 import { dataset, website } from '../lib/seo';
@@ -18,7 +18,15 @@ const { facets, providers } = await loadFacets();
  */
 const lastChecked = newest((await loadIndexed()).map((provider) => modifiedAt(provider.data)));
 
-const beside = await besideTheRegister();
+const registers = await registerLists();
+
+/*
+ * The groups the panel does not offer as a list of its own: they stay in the
+ * sentence over the register, which is where a reader asks what happened to a
+ * host rather than what to buy.
+ */
+const offered = new Set(registers.map((register) => register.key));
+const beside = (await besideTheRegister()).filter((group) => !offered.has(group.key));
 ---
 
 {
@@ -37,8 +45,8 @@ const beside = await besideTheRegister();
 >
   <h1>Find your next web host</h1>
 
-  <ProviderRegister providers={providers} facets={facets} beside={beside} sort="name">
-    <FindFilters facets={facets} providers={providers} />
+  <ProviderRegister providers={providers} facets={facets} beside={beside} registers={registers} sort="name">
+    <FindFilters facets={facets} providers={providers} registers={registers} />
   </ProviderRegister>
 </Base>
 

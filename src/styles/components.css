@@ -191,11 +191,22 @@ html:not(.js) .theme-switch {
   margin-bottom: var(--space-2xs);
 }
 
-.beside-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2xs) var(--space-md);
-  font-size: var(--text-sm);
+/*
+ * A link that reads as the sentence it sits in. The groups beside the register
+ * are an aside about our own edges — what stopped trading, what we have not
+ * finished — and drawn in link colour they took the line that gives the count.
+ */
+.quiet-link,
+.quiet-link:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* It is still a link, and says so where a pointer or a keyboard asks. */
+.quiet-link:hover,
+.quiet-link:focus-visible {
+  color: var(--color-link);
+  text-decoration: underline;
 }
 
 /** Every country the dataset covers, beneath the map that shows the same set. */
@@ -1221,6 +1232,33 @@ html.js [data-find-fallback] {
   min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+/*
+ * Which list the panel sits over, drawn as the radio column it behaves like.
+ * Every row is a link to that list's page — the switch is navigation, so it
+ * needs no script — and the mark says which page this is rather than which box
+ * was ticked, so a reader arriving from anywhere reads the same thing.
+ */
+/*
+ * A facet the list on show cannot answer, and a value nothing in it holds: dim
+ * and switched off, never taken away. The panel is a grid twenty boxes wide,
+ * and a box that leaves reflows every box after it — under the pointer that
+ * had just chosen the list.
+ */
+.find-row.empty,
+.find-facet.empty {
+  opacity: 0.4;
+}
+
+/* Once, not twice: every row in an empty box is an empty row. */
+.find-facet.empty .find-row.empty {
+  opacity: 1;
+}
+
+/* The list on show is one answer, so its row is the one in bold. */
+.find-register input:checked + .find-value {
+  font-weight: var(--weight-strong);
 }
 
 /*

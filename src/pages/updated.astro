@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import ProviderRegister from '../components/ProviderRegister.astro';
 import FindFilters from '../components/FindFilters.astro';
-import { besideTheRegister, loadFacets } from '../lib/facets';
+import { besideTheRegister, loadFacets, registerLists } from '../lib/facets';
 
 /*
  * The register in the order it was last read: the same rows, the same filters,
@@ -11,7 +11,15 @@ import { besideTheRegister, loadFacets } from '../lib/facets';
  */
 const { facets, providers } = await loadFacets();
 
-const beside = await besideTheRegister();
+const registers = await registerLists();
+
+/*
+ * The groups the panel does not offer as a list of its own: they stay in the
+ * sentence over the register, which is where a reader asks what happened to a
+ * host rather than what to buy.
+ */
+const offered = new Set(registers.map((register) => register.key));
+const beside = (await besideTheRegister()).filter((group) => !offered.has(group.key));
 ---
 
 <Base
@@ -25,8 +33,8 @@ const beside = await besideTheRegister();
     nobody has checked yet sit at the end. The date is on each record.
   </p>
 
-  <ProviderRegister providers={providers} facets={facets} beside={beside} sort="updated">
-    <FindFilters facets={facets} providers={providers} />
+  <ProviderRegister providers={providers} facets={facets} beside={beside} registers={registers} sort="updated">
+    <FindFilters facets={facets} providers={providers} registers={registers} />
   </ProviderRegister>
 </Base>
 
