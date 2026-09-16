@@ -4,7 +4,6 @@
   "private": true,
   "version": "0.0.1",
   "license": "SEE LICENSE IN LICENSE-CODE",
-  "packageManager": "pnpm@11.18.0",
   "engines": {
     "node": ">=22.18.0"
   },
