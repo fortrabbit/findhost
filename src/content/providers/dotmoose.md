@@ -23,12 +23,9 @@ billingPeriods:
   - multi-year
 entryPrice: { amount: 5.99, currency: CAD, period: month }
 priceFrom: xs
-status: out-of-scope
-criterion: 5
 addedAt: 2026-09-07
 checkedAt: 2026-09-07
 sources:
-  - { field: status, url: 'https://dotmoose.com/about/', checkedAt: 2026-09-07 }
   - { field: founded, url: 'https://dotmoose.com/about/', checkedAt: 2026-09-07 }
   - { field: headcount, url: 'https://dotmoose.com/about/', checkedAt: 2026-09-07 }
   - { field: category, url: 'https://dotmoose.com/', checkedAt: 2026-09-07 }
@@ -44,9 +41,5 @@ ai: authored
 ---
 
 DotMoose is a Canadian hosting provider launched in August 2026 by its founder, who runs it alone. It sells shared hosting on Virtualmin, managed WordPress, virtual servers with root access and a choice of free control panels, dedicated servers on quote, backup storage and domain registration, all billed in Canadian dollars. The virtual servers run in Beauharnois, Quebec.
-
-**Criterion 5 — purchasable for twelve months — fails.** The provider's own about page gives the launch as August 2026, which makes the service weeks old at this check.
-
-**This reverses when the service has been on sale for twelve months and two independent artifacts about it exist, which is criterion 6 and has not been checked.** A launch date alone does not carry a record in.
 
 The record was [proposed by DotMoose's founder](https://github.com/fortrabbit/findhost/pull/9) in a pull request that disclosed the relationship, and written by the register from the provider's pages.

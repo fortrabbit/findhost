@@ -21,9 +21,9 @@ The alphabetical order, the absence of ratings and the ♥️ do not change on r
 
 ## Adding a provider
 
-The register is incomplete; a missing name usually means nobody has got to it yet. Write the record — one file, four required fields, one pull request — or name it in an issue and leave the fields to whoever picks it up. A provider failing one of the six criteria still gets a record carrying the number it failed on, and most of those reverse once the evidence appears.
+The register is incomplete; a missing name usually means nobody has got to it yet. Write the record — one file, four required fields, one pull request — or name it in an issue and leave the fields to whoever picks it up. A provider failing one of the five criteria still gets a record carrying the number it failed on, and most of those reverse once the evidence appears.
 
-- [The six criteria](/about/#who-is-listed)
+- [The five criteria](/about/#who-is-listed)
 - [Name a provider we are missing](https://github.com/fortrabbit/findhost/issues/new?template=add-provider.yml)
 
 ## The badge
