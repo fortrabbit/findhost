@@ -16,3 +16,4 @@
 2026-09-14	platform-sh	confirmed	Home page confirms redirect to upsun.com still holds (criterion 2 unchanged); wikidata id confirmed unchanged
 2026-09-15	qovery	confirmed	Home page read (200); only source is referringSubnets (script-owned, excluded); nothing to compare
 2026-09-15	platform-sh	confirmed	Home page confirms redirect to upsun.com still holds (criterion 2 unchanged); wikidata id confirmed unchanged
+2026-09-16	nucleus	confirmed	Home page confirms redirect to combell.com still holds (criterion 2 unchanged)
