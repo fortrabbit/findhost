@@ -14,16 +14,15 @@ Records live in `src/content/providers/<slug>.md`.
 
 ## Add a provider
 
-Six criteria, all checkable:
+Five criteria, all checkable:
 
 1. It runs application code.
 2. It is sold to the public without a sales call.
 3. It publishes a price without a login.
 4. It documents its platform publicly.
-5. It has been purchasable for twelve months.
-6. Two independent artifacts exist — a framework's deployment guide, a third-party package or CLI, an unaffiliated talk or tutorial, an issue-tracker thread. Press releases, sponsored posts, affiliate reviews, and the provider's own blog do not count.
+5. Two independent artifacts exist — a framework's deployment guide, a third-party package or CLI, an unaffiliated talk or tutorial, an issue-tracker thread. Press releases, sponsored posts, affiliate reviews, and the provider's own blog do not count.
 
-All six and not listed: that is a bug, so open a PR with the record. One fails: the record still goes in, carrying `status: out-of-scope` and the numbered `criterion`, so the decision has a page to be argued with.
+All five and not listed: that is a bug, so open a PR with the record. One fails: the record still goes in, carrying `status: out-of-scope` and the numbered `criterion`, so the decision has a page to be argued with.
 
 `status` decides where a record ends up. `discontinued` and `unlisted` put one beside the register, out of the list and still indexed. `out-of-scope` and `draft` hide one from the register, the counts, search, and the sitemap, keeping its page. Only a listed record needs a `category`. Nothing is ever deleted.
 

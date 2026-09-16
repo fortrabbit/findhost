@@ -16,11 +16,12 @@ currencies:
   - USD
 freeTier: permanent
 status: out-of-scope
-criterion: 5
+criterion: 2
 addedAt: 2026-09-14
-checkedAt: 2026-09-14
+checkedAt: 2026-09-16
 sources:
   - { field: status, url: 'https://www.mesa.dev/blog/introducing-mesa-filesystem-for-agents', checkedAt: 2026-09-14 }
+  - { field: status, url: 'https://www.mesa.dev/pricing', checkedAt: 2026-09-16 }
   - { field: category, url: 'https://www.mesa.dev/features/git-server', checkedAt: 2026-09-14 }
   - { field: pricingModel, url: 'https://www.mesa.dev/pricing', checkedAt: 2026-09-14 }
   - { field: currencies, url: 'https://www.mesa.dev/pricing', checkedAt: 2026-09-14 }
@@ -30,6 +31,6 @@ ai: authored
 
 Mesa, from Mesa Systems, Inc., hosts git repositories for AI agents to read and write, as its [git server page](https://www.mesa.dev/features/git-server) describes. The [pricing page](https://www.mesa.dev/pricing) includes an allowance of storage and repositories at no charge and meters storage and egress above it.
 
-**Criterion 5 — purchasable for twelve months — fails.** The [announcement](https://www.mesa.dev/blog/introducing-mesa-filesystem-for-agents) is dated April 28, 2026, and introduced the service as a private beta.
+**Criterion 2 — sold to the public — fails.** The [announcement](https://www.mesa.dev/blog/introducing-mesa-filesystem-for-agents), dated April 28, 2026, introduced the service as a private beta, and the [pricing page](https://www.mesa.dev/pricing) still offers early access on request rather than a sign-up.
 
-**This reverses when the service has been on sale for twelve months and two independent artifacts about it exist, which is criterion 6 and has not been checked.**
+**This reverses when anyone can sign up without asking.**

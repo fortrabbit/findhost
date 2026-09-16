@@ -15,11 +15,12 @@ regions: null
 apiAvailable: public
 cliTool: official
 status: out-of-scope
-criterion: 5
+criterion: 2
 addedAt: 2026-09-14
-checkedAt: 2026-09-14
+checkedAt: 2026-09-16
 sources:
   - { field: status, url: 'https://cursor.com/changelog/origin-code-hosting', checkedAt: 2026-09-14 }
+  - { field: status, url: 'https://cursor.com/docs/origin', checkedAt: 2026-09-16 }
   - { field: category, url: 'https://cursor.com/docs/origin', checkedAt: 2026-09-14 }
   - { field: apiAvailable, url: 'https://cursor.com/docs/origin', checkedAt: 2026-09-14 }
   - { field: cliTool, url: 'https://cursor.com/docs/origin/cli', checkedAt: 2026-09-14 }
@@ -30,6 +31,6 @@ Origin is the git forge of Cursor, the code editor, for hosting repositories, sy
 
 Origin has no price of its own. Per the documentation, it is included in the paid Cursor plans and not in the free one, so buying it means buying the editor subscription.
 
-**Criterion 5 — purchasable for twelve months — fails.** The [changelog entry](https://cursor.com/changelog/origin-code-hosting) starts the early beta rollout on August 17, 2026.
+**Criterion 2 — sold to the public — fails.** The [changelog entry](https://cursor.com/changelog/origin-code-hosting) starts an early beta rollout on August 17, 2026, and the [Origin documentation](https://cursor.com/docs/origin) says access opens in stages, so a paying customer may not have it yet.
 
-**This reverses when Origin has been on sale for twelve months and two independent artifacts about it exist, which is criterion 6 and has not been checked.**
+**This reverses when every paid plan includes Origin on purchase.**

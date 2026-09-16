@@ -387,7 +387,7 @@ const providerFields = z
      */
     status: z.enum(vocabulary('status')).optional(),
     /** The numbered inclusion criterion an out-of-scope record failed. */
-    criterion: z.number().int().min(1).max(6).optional(),
+    criterion: z.number().int().min(1).max(5).optional(),
     /** Set where the failure is "we could not find it", not "it does not exist". */
     boundedSearch: z.boolean().optional(),
     ai: z.enum(vocabulary('ai')).optional(),
