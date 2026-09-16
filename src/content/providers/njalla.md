@@ -27,10 +27,12 @@ paymentMethods:
   - crypto
   - paypal
 referringSubnets: { now: 966, before: 944 }
+status: anonymous
 addedAt: 2026-08-14
 checkedAt: 2026-09-16
 ai: authored
 sources:
+  - { field: status, url: 'https://njal.la/about/', checkedAt: 2026-09-16 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: category, url: 'https://njal.la/', checkedAt: 2026-09-16 }
   - {

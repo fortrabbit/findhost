@@ -25,7 +25,7 @@ const records = new URL('../src/content/providers/', import.meta.url);
  * record holds has to be one of those five for it to leave, which is what keeps
  * a registrar that also sells hosting in the register.
  */
-const outside = new Set(['draft', 'out-of-scope', 'discontinued', 'unverifiable', 'unlisted']);
+const outside = new Set(['draft', 'out-of-scope', 'discontinued', 'unverifiable', 'unlisted', 'anonymous']);
 const notHosting = new Set(['server-management', 'domains-dns', 'mail', 'dbaas', 'git-hosting']);
 
 const listed = readdirSync(records).filter((file) => {

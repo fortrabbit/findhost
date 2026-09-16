@@ -23,10 +23,11 @@ currencies:
   - EUR
 domainRegistration: paid-addon
 referringSubnets: { now: 518, before: 538 }
-status: active
+status: anonymous
 addedAt: 2026-08-14
 checkedAt: 2026-08-14
 sources:
+  - { field: status, url: 'https://flokinet.is/', checkedAt: 2026-09-16 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: category, url: 'https://flokinet.is', checkedAt: 2026-08-14 }
   - { field: regions, url: 'https://flokinet.is', checkedAt: 2026-08-14 }
