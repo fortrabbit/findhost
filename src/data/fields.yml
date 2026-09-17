@@ -164,6 +164,13 @@
     # described by the fields here — but somebody looking for United Internet
     # should find out that Ionos is the part that sells hosting.
     - { id: unlisted, label: 'Owns hosting brands, sells none', short: Holdings, aside: holdings }
+    # A host whose own pages sell sign-up without identification as the feature.
+    # Beside the register rather than out of scope: journalists and activists have
+    # reasons to want one, and the register is for choosing where to run an app,
+    # where not knowing the neighbours is a cost. A host that merely asks for no
+    # ID and says nothing about it stays in — the evidence is the provider's own
+    # wording, quoted in a `status` source.
+    - { id: anonymous, label: 'Sells anonymous sign-up', short: Anonymous hosting, aside: anonymous }
     # `hidden` keeps a record out of the register and out of every count. It is
     # the only place that fact is written down.
     - { id: draft, label: Stub, hidden: true }
