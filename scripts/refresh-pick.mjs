@@ -3,12 +3,16 @@
  *
  * Every record whose provider still has pages to read, oldest `checkedAt`
  * first, records nobody has checked first of all, and within one date the
- * reverse of A-to-Z. A stub and an out-of-scope record are picked like any
- * other: both have a home page, and whether it still answers is a fact about
- * the register worth re-reading. Records the routine already handled recently
+ * reverse of A-to-Z. Records the routine already handled recently
  * are skipped, whatever the outcome: a provider that cannot be reached leaves
  * no date on the record, and without this the same one would come up every
  * morning.
+ *
+ * A stub and an out-of-scope record run on a weekly cycle: first in the queue
+ * on Sundays (UTC), last on every other day. Both have a home page worth
+ * re-reading, but most carry nothing to compare, so a read leaves no date, and
+ * none of them is on /updated/. Sorted in with the rest, their July dates put
+ * them at the front of every run and the listed records were never reached.
  *
  * The list is a queue of attempts, not a batch. The routine works down it and
  * stops once enough records have been reached, so the tail is usually untouched
@@ -17,6 +21,7 @@
  *   node scripts/refresh-pick.mjs            # one id
  *   node scripts/refresh-pick.mjs --n 3      # three
  *   node scripts/refresh-pick.mjs --days 30  # retry sooner than the default 60
+ *   node scripts/refresh-pick.mjs --hidden   # the Sunday order, any day
  *
  * Reads research/refresh-log.tsv, which the routine appends to, and skips any
  * record still waiting on the review branch, whose commit carries no log line.
@@ -26,7 +31,7 @@ import { execFileSync } from 'node:child_process';
 import { readdirSync, readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { parse } from 'yaml';
-import { asideOf } from '../src/lib/fields.ts';
+import { asideOf, hiddenStatuses } from '../src/lib/fields.ts';
 
 const providersDir = 'src/content/providers';
 const logFile = 'research/refresh-log.tsv';
@@ -37,6 +42,7 @@ const arg = (name, fallback) => {
 };
 const n = arg('n', 1);
 const days = arg('days', 60);
+const hiddenFirst = process.argv.includes('--hidden') || new Date().getUTCDay() === 0;
 
 /*
  * The defunct statuses, and the only ones with nothing left to read: one
@@ -84,7 +90,10 @@ const candidates = readdirSync(providersDir)
     id: data.id,
     name: String(data.name),
     checkedAt: data.checkedAt ? String(data.checkedAt).slice(0, 10) : '',
+    hidden: hiddenStatuses.has(data.status ?? 'active') === hiddenFirst ? 0 : 1,
   }))
-  .sort((a, b) => a.checkedAt.localeCompare(b.checkedAt) || b.name.localeCompare(a.name));
+  .sort(
+    (a, b) => a.hidden - b.hidden || a.checkedAt.localeCompare(b.checkedAt) || b.name.localeCompare(a.name),
+  );
 
 for (const { id } of candidates.slice(0, n)) console.log(id);

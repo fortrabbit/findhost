@@ -36,7 +36,7 @@ Never push to `main`, and never put a real change on `claude/refresh`; the Actio
 node scripts/refresh-pick.mjs --n <N plus K>
 ```
 
-It prints a queue, oldest `checkedAt` first, records with none first of all, skipping anything `research/refresh-log.tsv` lists in the last sixty days. Every record is in it but the defunct ones: a stub and an out-of-scope record have a home page like any other, and whether it still answers is a fact about the register worth re-reading. Do not pick by hand.
+It prints a queue, oldest `checkedAt` first, records with none first of all, skipping anything `research/refresh-log.tsv` lists in the last sixty days. Every record is in it but the defunct ones. Stubs and out-of-scope records come first on Sundays (UTC) and last on every other day: whether their home page still answers is worth re-reading, but most have nothing to compare, and sorted by date they took every run. Do not pick by hand.
 
 The queue is attempts, not a batch. Take one record at a time, all the way through step 8, before starting the next. Stop when `N` records have been **reached**, step 3, or when the queue runs out. An unreachable record costs one attempt; the ids still in the queue when the run stops are left alone and come up again tomorrow.
 
