@@ -15,11 +15,19 @@ currencies:
   - USD
 paymentMethods:
   - crypto
+infraContract:
+  - resells-iaas
+runsOn:
+  - digitalocean
+  - linode
+  - vultr
 status: anonymous
 addedAt: 2026-09-17
 checkedAt: 2026-09-17
 ai: authored
 sources:
+  - { field: infraContract, url: 'https://bithost.io/', checkedAt: 2026-09-17 }
+  - { field: runsOn, url: 'https://bithost.io/', checkedAt: 2026-09-17 }
   - { field: status, url: 'https://bithost.io/', checkedAt: 2026-09-17 }
   - { field: category, url: 'https://bithost.io/', checkedAt: 2026-09-17 }
   - { field: pricingModel, url: 'https://bithost.io/prices/', checkedAt: 2026-09-17 }
