@@ -11,6 +11,11 @@ referringSubnets: { now: 2236, before: 2238 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🧩
+  color: rgb(70, 50, 130)
+  textColor: rgb(236, 234, 242)
+  text: A French container service.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

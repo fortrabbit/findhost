@@ -11,6 +11,11 @@ referringSubnets: { now: 2977, before: 2979 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🐻
+  color: rgb(100, 70, 40)
+  textColor: rgb(240, 236, 234)
+  text: A home for personal sites, from South Africa.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

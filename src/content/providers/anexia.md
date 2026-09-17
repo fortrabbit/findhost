@@ -7,6 +7,11 @@ referringSubnets: { now: 550, before: 549 }
 status: draft
 addedAt: 2026-08-07
 checkedAt: 2026-08-07
+figure:
+  emoji: 🏔️
+  color: rgb(70, 50, 110)
+  textColor: rgb(236, 234, 240)
+  text: The Austrian company that owns netcup.
 ai: authored
 greenWebId: 1322
 sources:

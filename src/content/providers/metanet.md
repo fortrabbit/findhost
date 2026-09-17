@@ -11,6 +11,11 @@ referringSubnets: { now: 762, before: 767 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🧀
+  color: rgb(130, 40, 40)
+  textColor: rgb(242, 234, 234)
+  text: Swiss shared hosting.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

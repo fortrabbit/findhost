@@ -11,6 +11,11 @@ referringSubnets: { now: 913, before: 922 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🏷️
+  color: rgb(100, 40, 90)
+  textColor: rgb(240, 234, 238)
+  text: A British host named for what it sells.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

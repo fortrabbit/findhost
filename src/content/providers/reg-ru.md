@@ -12,6 +12,11 @@ referringSubnets: { now: 5821, before: 5850 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🇷🇺
+  color: rgb(40, 50, 120)
+  textColor: rgb(234, 234, 242)
+  text: A Russian registrar that also hosts.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

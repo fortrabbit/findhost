@@ -12,6 +12,11 @@ referringSubnets: { now: 475, before: 485 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🌺
+  color: rgb(110, 30, 70)
+  textColor: rgb(240, 232, 236)
+  text: Shared hosting and VPS in Malaysia.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

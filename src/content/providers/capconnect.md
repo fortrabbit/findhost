@@ -13,6 +13,11 @@ referringSubnets: { now: 449, before: 442 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🇲🇦
+  color: rgb(110, 30, 40)
+  textColor: rgb(240, 232, 234)
+  text: Servers of every size from Morocco.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

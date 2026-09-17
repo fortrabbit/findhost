@@ -7,6 +7,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-07
 checkedAt: 2026-08-07
+figure:
+  emoji: 🏭
+  color: rgb(50, 60, 80)
+  textColor: rgb(234, 236, 238)
+  text: The Czech ground Zerops stands on.
 ai: authored
 ---
 

@@ -11,6 +11,11 @@ referringSubnets: { now: 371, before: 346 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🪐
+  color: rgb(60, 40, 110)
+  textColor: rgb(236, 234, 240)
+  text: Finnish shared hosting with a planetary name.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

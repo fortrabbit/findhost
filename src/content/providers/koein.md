@@ -11,6 +11,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🌲
+  color: rgb(30, 85, 60)
+  textColor: rgb(232, 238, 236)
+  text: Shared hosting and servers from Lebanon.
 ai: authored
 ---
 

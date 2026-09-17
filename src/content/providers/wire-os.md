@@ -11,6 +11,11 @@ referringSubnets: { now: 435, before: 430 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🔌
+  color: rgb(100, 40, 60)
+  textColor: rgb(240, 234, 236)
+  text: Venezuelan shared hosting and VPS.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

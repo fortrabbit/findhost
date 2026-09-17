@@ -11,6 +11,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🦜
+  color: rgb(30, 110, 80)
+  textColor: rgb(232, 240, 238)
+  text: Guatemala on the domain and in the name.
 ai: authored
 ---
 

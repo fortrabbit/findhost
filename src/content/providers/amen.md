@@ -11,6 +11,11 @@ referringSubnets: { now: 1077, before: 1082 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🙏
+  color: rgb(30, 90, 80)
+  textColor: rgb(232, 238, 238)
+  text: Portuguese shared hosting with a short name.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

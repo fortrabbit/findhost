@@ -12,6 +12,11 @@ referringSubnets: { now: 295, before: 276 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🏭
+  color: rgb(50, 70, 90)
+  textColor: rgb(234, 236, 238)
+  text: Dutch data centers and dedicated machines.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

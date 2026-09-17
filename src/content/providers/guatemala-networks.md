@@ -10,6 +10,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🦜
+  color: rgb(20, 90, 110)
+  textColor: rgb(232, 238, 240)
+  text: A network named after its country.
 ai: authored
 ---
 

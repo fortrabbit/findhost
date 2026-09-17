@@ -13,6 +13,11 @@ referringSubnets: { now: 3801, before: 3802 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: ⏳
+  color: rgb(50, 70, 110)
+  textColor: rgb(234, 236, 240)
+  text: Russian hosting, from shared to cloud.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

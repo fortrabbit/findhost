@@ -12,6 +12,11 @@ referringSubnets: { now: 5053, before: 5051 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🌀
+  color: rgb(40, 60, 110)
+  textColor: rgb(234, 236, 240)
+  text: A storm of a name for US servers.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

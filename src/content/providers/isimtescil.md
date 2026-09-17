@@ -13,6 +13,11 @@ referringSubnets: { now: 422, before: 430 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🧿
+  color: rgb(20, 60, 120)
+  textColor: rgb(232, 236, 242)
+  text: Turkish hosting from shared to bare metal.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

@@ -12,6 +12,11 @@ referringSubnets: { now: 938, before: 938 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🔷
+  color: rgb(40, 40, 120)
+  textColor: rgb(234, 234, 242)
+  text: Backend functions from the United States.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

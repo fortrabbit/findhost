@@ -11,6 +11,11 @@ referringSubnets: { now: 2669, before: 2684 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🎌
+  color: rgb(120, 35, 50)
+  textColor: rgb(242, 233, 234)
+  text: Japanese shared hosting from a domain seller.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

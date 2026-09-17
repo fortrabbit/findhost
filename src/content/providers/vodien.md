@@ -13,6 +13,11 @@ referringSubnets: { now: 1231, before: 1224 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🦁
+  color: rgb(100, 50, 70)
+  textColor: rgb(240, 234, 236)
+  text: Singapore hosting with server management.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

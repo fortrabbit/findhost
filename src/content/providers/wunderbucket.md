@@ -11,6 +11,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🪣
+  color: rgb(30, 90, 100)
+  textColor: rgb(232, 238, 240)
+  text: Static sites poured into a bucket.
 ai: authored
 ---
 

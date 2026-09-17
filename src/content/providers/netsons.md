@@ -12,6 +12,11 @@ referringSubnets: { now: 1735, before: 1745 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🇮🇹
+  color: rgb(30, 100, 60)
+  textColor: rgb(232, 240, 236)
+  text: Italian shared hosting and VPS.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

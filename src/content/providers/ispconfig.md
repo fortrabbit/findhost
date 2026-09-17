@@ -11,6 +11,11 @@ referringSubnets: { now: 15843, before: 15843 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🎛️
+  color: rgb(70, 70, 100)
+  textColor: rgb(236, 236, 240)
+  text: A control panel for running your own servers.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

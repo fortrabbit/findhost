@@ -13,6 +13,11 @@ referringSubnets: { now: 263, before: 264 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🕌
+  color: rgb(110, 60, 40)
+  textColor: rgb(240, 236, 234)
+  text: Moroccan hosting with an app platform.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

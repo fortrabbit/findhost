@@ -22,6 +22,11 @@ runsOn:
 status: anonymous
 addedAt: 2026-09-17
 checkedAt: 2026-09-17
+figure:
+  emoji: 🍄
+  color: rgb(100, 60, 50)
+  textColor: rgb(240, 236, 234)
+  text: Servers bought with a token.
 ai: authored
 sources:
   - { field: infraContract, url: 'https://sporestack.com/', checkedAt: 2026-09-17 }

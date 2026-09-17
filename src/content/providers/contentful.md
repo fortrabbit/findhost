@@ -9,6 +9,11 @@ status: out-of-scope
 criterion: 1
 addedAt: 2026-08-06
 checkedAt: 2026-08-06
+figure:
+  emoji: 📰
+  color: rgb(60, 60, 120)
+  textColor: rgb(236, 236, 242)
+  text: Content over an API, code elsewhere.
 ai: authored
 sources:
   - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q18348837', checkedAt: 2026-09-09 }

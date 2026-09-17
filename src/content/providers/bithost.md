@@ -24,6 +24,11 @@ runsOn:
 status: anonymous
 addedAt: 2026-09-17
 checkedAt: 2026-09-17
+figure:
+  emoji: 🪙
+  color: rgb(120, 90, 30)
+  textColor: rgb(242, 238, 232)
+  text: Three clouds, paid in crypto.
 ai: authored
 sources:
   - { field: infraContract, url: 'https://bithost.io/', checkedAt: 2026-09-17 }

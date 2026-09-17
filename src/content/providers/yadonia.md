@@ -12,6 +12,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🏺
+  color: rgb(110, 60, 40)
+  textColor: rgb(240, 236, 234)
+  text: Jordanian hosting, from shared to bare metal.
 ai: authored
 ---
 

@@ -11,6 +11,11 @@ referringSubnets: { now: 339, before: 334 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🎿
+  color: rgb(30, 80, 120)
+  textColor: rgb(232, 238, 242)
+  text: Shared hosting in Norway.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

@@ -7,6 +7,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-07
 checkedAt: 2026-08-07
+figure:
+  emoji: 🦣
+  color: rgb(90, 60, 40)
+  textColor: rgb(238, 236, 234)
+  text: Australian parent of Binary Lane.
 ai: authored
 ---
 

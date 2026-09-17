@@ -11,6 +11,11 @@ referringSubnets: { now: 1820, before: 1827 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🏠
+  color: rgb(120, 65, 30)
+  textColor: rgb(242, 236, 232)
+  text: A web home, in Indonesian.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

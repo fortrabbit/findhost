@@ -12,6 +12,11 @@ referringSubnets: { now: 1104, before: 1111 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: ☄️
+  color: rgb(80, 30, 100)
+  textColor: rgb(238, 232, 240)
+  text: A hosting company named after a comet.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

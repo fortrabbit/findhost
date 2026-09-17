@@ -11,6 +11,11 @@ referringSubnets: { now: 237, before: 228 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🌩️
+  color: rgb(50, 55, 95)
+  textColor: rgb(234, 235, 239)
+  text: Static sites and functions, origin unrecorded.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

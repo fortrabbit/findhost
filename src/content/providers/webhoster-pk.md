@@ -12,6 +12,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🏏
+  color: rgb(25, 95, 55)
+  textColor: rgb(232, 239, 235)
+  text: Pakistani shared hosting and virtual servers.
 ai: authored
 ---
 

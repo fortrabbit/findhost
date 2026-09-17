@@ -12,6 +12,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🪐
+  color: rgb(60, 50, 120)
+  textColor: rgb(236, 234, 242)
+  text: A Colombian host with planetary ambitions.
 ai: authored
 ---
 

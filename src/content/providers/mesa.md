@@ -26,6 +26,11 @@ sources:
   - { field: pricingModel, url: 'https://www.mesa.dev/pricing', checkedAt: 2026-09-14 }
   - { field: currencies, url: 'https://www.mesa.dev/pricing', checkedAt: 2026-09-14 }
   - { field: freeTier, url: 'https://www.mesa.dev/pricing', checkedAt: 2026-09-14 }
+figure:
+  emoji: 🏜️
+  color: rgb(140, 80, 50)
+  textColor: rgb(244, 238, 234)
+  text: Git servers for agents.
 ai: authored
 ---
 

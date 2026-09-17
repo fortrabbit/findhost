@@ -12,6 +12,11 @@ referringSubnets: { now: 491, before: 506 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🇸🇪
+  color: rgb(20, 60, 110)
+  textColor: rgb(232, 236, 240)
+  text: Swedish shared hosting and infrastructure.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

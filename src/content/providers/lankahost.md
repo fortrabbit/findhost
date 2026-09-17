@@ -11,6 +11,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🌴
+  color: rgb(20, 100, 80)
+  textColor: rgb(232, 240, 238)
+  text: Shared hosting from Sri Lanka.
 ai: authored
 ---
 

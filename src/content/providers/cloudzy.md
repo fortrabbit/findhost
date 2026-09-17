@@ -11,6 +11,11 @@ referringSubnets: { now: 745, before: 744 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: ☁️
+  color: rgb(50, 70, 130)
+  textColor: rgb(234, 236, 242)
+  text: Virtual servers sold from the United States.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

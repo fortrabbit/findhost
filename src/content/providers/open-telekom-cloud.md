@@ -11,6 +11,11 @@ referringSubnets: { now: 455, before: 441 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 📡
+  color: rgb(120, 20, 80)
+  textColor: rgb(242, 232, 238)
+  text: 'A telecom''s public cloud, run from Germany.'
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

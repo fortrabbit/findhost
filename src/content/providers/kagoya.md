@@ -12,6 +12,11 @@ referringSubnets: { now: 801, before: 802 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🗾
+  color: rgb(100, 30, 60)
+  textColor: rgb(240, 232, 236)
+  text: Japanese servers, shared and virtual.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

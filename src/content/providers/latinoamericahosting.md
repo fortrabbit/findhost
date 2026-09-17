@@ -12,6 +12,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🌎
+  color: rgb(40, 90, 90)
+  textColor: rgb(234, 238, 238)
+  text: A continent in the name, Peru on the map.
 ai: authored
 ---
 

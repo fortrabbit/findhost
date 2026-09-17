@@ -12,6 +12,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🕌
+  color: rgb(120, 40, 30)
+  textColor: rgb(242, 234, 232)
+  text: Moroccan shared hosting and VPS.
 ai: authored
 ---
 

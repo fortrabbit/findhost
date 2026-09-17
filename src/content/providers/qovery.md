@@ -8,6 +8,11 @@ status: out-of-scope
 criterion: 3
 addedAt: 2026-07-31
 checkedAt: 2026-07-31
+figure:
+  emoji: 🕹️
+  color: rgb(60, 35, 110)
+  textColor: rgb(236, 233, 240)
+  text: A control plane for clusters you own.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

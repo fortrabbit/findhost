@@ -12,6 +12,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🎯
+  color: rgb(130, 30, 40)
+  textColor: rgb(242, 232, 234)
+  text: Brazilian shared hosting and VPS.
 ai: authored
 ---
 

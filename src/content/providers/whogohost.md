@@ -11,6 +11,11 @@ referringSubnets: { now: 373, before: 380 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🇳🇬
+  color: rgb(20, 100, 50)
+  textColor: rgb(232, 240, 234)
+  text: Nigerian shared hosting.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

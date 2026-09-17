@@ -11,6 +11,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🇪🇹
+  color: rgb(30, 100, 60)
+  textColor: rgb(232, 240, 236)
+  text: Hosting from Ethiopia.
 ai: authored
 ---
 

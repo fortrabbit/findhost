@@ -10,6 +10,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🗺️
+  color: rgb(40, 100, 110)
+  textColor: rgb(234, 240, 240)
+  text: Guatemalan hosting with the country in its name.
 ai: authored
 ---
 

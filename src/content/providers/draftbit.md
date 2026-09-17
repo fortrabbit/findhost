@@ -11,6 +11,11 @@ referringSubnets: { now: 607, before: 600 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: ✏️
+  color: rgb(40, 80, 120)
+  textColor: rgb(234, 238, 242)
+  text: Visual app builder in the United States.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

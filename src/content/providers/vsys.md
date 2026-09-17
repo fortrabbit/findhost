@@ -18,6 +18,11 @@ paymentMethods:
 status: anonymous
 addedAt: 2026-09-17
 checkedAt: 2026-09-17
+figure:
+  emoji: 🇺🇦
+  color: rgb(40, 80, 130)
+  textColor: rgb(234, 238, 242)
+  text: Ukrainian hosting, no name needed.
 ai: authored
 sources:
   - { field: status, url: 'https://vsys.host/', checkedAt: 2026-09-17 }

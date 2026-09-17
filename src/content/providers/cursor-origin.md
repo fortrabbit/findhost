@@ -24,6 +24,11 @@ sources:
   - { field: category, url: 'https://cursor.com/docs/origin', checkedAt: 2026-09-14 }
   - { field: apiAvailable, url: 'https://cursor.com/docs/origin', checkedAt: 2026-09-14 }
   - { field: cliTool, url: 'https://cursor.com/docs/origin/cli', checkedAt: 2026-09-14 }
+figure:
+  emoji: 🌱
+  color: rgb(40, 90, 70)
+  textColor: rgb(234, 238, 236)
+  text: A forge inside an editor subscription.
 ai: authored
 ---
 

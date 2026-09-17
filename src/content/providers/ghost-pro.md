@@ -8,6 +8,11 @@ status: out-of-scope
 criterion: 1
 addedAt: 2026-07-31
 checkedAt: 2026-07-31
+figure:
+  emoji: 👻
+  color: rgb(60, 60, 70)
+  textColor: rgb(236, 236, 236)
+  text: 'The Ghost Foundation''s own publishing service.'
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

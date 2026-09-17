@@ -13,6 +13,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🇱🇰
+  color: rgb(110, 60, 20)
+  textColor: rgb(240, 236, 232)
+  text: Sri Lankan hosting from shared to dedicated.
 ai: authored
 ---
 

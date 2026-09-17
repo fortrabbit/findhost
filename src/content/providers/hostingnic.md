@@ -13,6 +13,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🌶️
+  color: rgb(130, 30, 30)
+  textColor: rgb(242, 232, 232)
+  text: Shared hosting to bare metal in Chile.
 ai: authored
 ---
 

@@ -12,6 +12,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🛕
+  color: rgb(130, 90, 10)
+  textColor: rgb(242, 238, 230)
+  text: Myanmar hosting, shared to bare metal.
 ai: authored
 ---
 

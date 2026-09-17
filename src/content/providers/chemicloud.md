@@ -11,6 +11,11 @@ referringSubnets: { now: 659, before: 645 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🧪
+  color: rgb(40, 100, 90)
+  textColor: rgb(234, 240, 238)
+  text: Shared hosting with a lab coat name.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

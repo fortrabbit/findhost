@@ -8,6 +8,11 @@ status: out-of-scope
 criterion: 2
 addedAt: 2026-07-31
 checkedAt: 2026-07-31
+figure:
+  emoji: ↪️
+  color: rgb(70, 70, 90)
+  textColor: rgb(236, 236, 238)
+  text: The address now forwards to Hypernode.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

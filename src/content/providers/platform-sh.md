@@ -9,6 +9,11 @@ status: out-of-scope
 criterion: 2
 addedAt: 2026-07-31
 checkedAt: 2026-09-15
+figure:
+  emoji: ↪️
+  color: rgb(70, 45, 95)
+  textColor: rgb(236, 234, 239)
+  text: A name that now redirects to Upsun.
 ai: authored
 sources:
   - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q56309413', checkedAt: 2026-09-15 }

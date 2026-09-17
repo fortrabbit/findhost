@@ -11,6 +11,11 @@ referringSubnets: { now: 5247, before: 5407 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🇩🇪
+  color: rgb(30, 30, 30)
+  textColor: rgb(232, 232, 232)
+  text: A German shared host with a short name.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

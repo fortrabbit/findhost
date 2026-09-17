@@ -12,6 +12,11 @@ referringSubnets: { now: 789, before: 787 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🦸
+  color: rgb(40, 50, 130)
+  textColor: rgb(234, 234, 242)
+  text: A hero in name, a host in the US.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

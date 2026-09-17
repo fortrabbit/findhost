@@ -37,6 +37,11 @@ sources:
   - { field: entryPrice, url: 'https://dotmoose.com/hosting/', checkedAt: 2026-09-07 }
   - { field: priceFrom, url: 'https://dotmoose.com/hosting/', checkedAt: 2026-09-07 }
   - { field: 'proposed by', url: 'https://github.com/fortrabbit/findhost/pull/9', checkedAt: 2026-09-07 }
+figure:
+  emoji: 🫎
+  color: rgb(100, 60, 30)
+  textColor: rgb(240, 236, 232)
+  text: One founder, billing in Canadian dollars.
 ai: authored
 ---
 

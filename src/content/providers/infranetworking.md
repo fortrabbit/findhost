@@ -13,6 +13,11 @@ referringSubnets: { now: 303, before: 306 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🔌
+  color: rgb(35, 85, 105)
+  textColor: rgb(233, 238, 240)
+  text: Colombian hosting across three layers.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

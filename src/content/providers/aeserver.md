@@ -13,6 +13,11 @@ referringSubnets: { now: 640, before: 641 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🏜️
+  color: rgb(130, 80, 30)
+  textColor: rgb(242, 238, 232)
+  text: Servers of three sizes in the Emirates.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

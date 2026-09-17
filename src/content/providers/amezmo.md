@@ -11,6 +11,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🚀
+  color: rgb(40, 70, 130)
+  textColor: rgb(234, 236, 242)
+  text: An American platform as a service.
 ai: authored
 ---
 

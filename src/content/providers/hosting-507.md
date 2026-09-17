@@ -12,6 +12,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🇵🇦
+  color: rgb(40, 50, 120)
+  textColor: rgb(234, 234, 242)
+  text: Panama, with a number in front.
 ai: authored
 ---
 

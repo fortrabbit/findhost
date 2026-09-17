@@ -19,6 +19,11 @@ currencies:
 status: anonymous
 addedAt: 2026-09-17
 checkedAt: 2026-09-17
+figure:
+  emoji: 🥸
+  color: rgb(70, 60, 100)
+  textColor: rgb(236, 236, 240)
+  text: An email address is the whole account.
 ai: authored
 sources:
   - { field: status, url: 'https://incognet.io/', checkedAt: 2026-09-17 }

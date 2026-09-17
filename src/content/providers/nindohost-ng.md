@@ -14,6 +14,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🇳🇬
+  color: rgb(20, 90, 40)
+  textColor: rgb(232, 238, 234)
+  text: Nigerian hosting, from shared to serverless.
 ai: authored
 ---
 

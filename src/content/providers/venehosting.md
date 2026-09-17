@@ -10,6 +10,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🦜
+  color: rgb(115, 70, 25)
+  textColor: rgb(241, 236, 232)
+  text: Shared hosting from Venezuela.
 ai: authored
 ---
 

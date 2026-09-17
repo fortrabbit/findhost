@@ -11,6 +11,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 👖
+  color: rgb(80, 60, 110)
+  textColor: rgb(238, 236, 240)
+  text: A US app platform sized for a pocket.
 ai: authored
 ---
 

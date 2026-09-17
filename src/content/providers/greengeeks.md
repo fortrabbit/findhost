@@ -12,6 +12,11 @@ referringSubnets: { now: 2147, before: 2137 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🌿
+  color: rgb(30, 100, 50)
+  textColor: rgb(232, 240, 234)
+  text: Shared hosting in a green shade of geek.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

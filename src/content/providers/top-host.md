@@ -11,6 +11,11 @@ referringSubnets: { now: 297, before: 292 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🏛️
+  color: rgb(30, 80, 130)
+  textColor: rgb(232, 238, 242)
+  text: Greek shared hosting.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

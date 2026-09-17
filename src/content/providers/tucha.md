@@ -12,6 +12,11 @@ referringSubnets: { now: 251, before: 242 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🌻
+  color: rgb(35, 75, 125)
+  textColor: rgb(233, 237, 242)
+  text: Ukrainian cloud and virtual servers.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

@@ -12,6 +12,11 @@ referringSubnets: { now: 7251, before: 7249 }
 status: draft
 addedAt: 2026-08-08
 checkedAt: 2026-08-08
+figure:
+  emoji: ⚡
+  color: rgb(140, 30, 20)
+  textColor: rgb(244, 232, 232)
+  text: A CDN that also runs code.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

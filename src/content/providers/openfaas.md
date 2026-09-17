@@ -11,6 +11,11 @@ referringSubnets: { now: 610, before: 609 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: ⚙️
+  color: rgb(45, 75, 120)
+  textColor: rgb(234, 237, 242)
+  text: Functions as a service, open by name.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

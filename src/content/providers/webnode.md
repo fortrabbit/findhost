@@ -11,6 +11,11 @@ referringSubnets: { now: 9504, before: 9468 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🧱
+  color: rgb(30, 90, 130)
+  textColor: rgb(232, 238, 242)
+  text: A Czech website builder.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

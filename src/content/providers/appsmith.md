@@ -11,6 +11,11 @@ referringSubnets: { now: 1154, before: 1141 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🧰
+  color: rgb(90, 50, 120)
+  textColor: rgb(238, 234, 242)
+  text: Internal tools, built with few lines of code.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

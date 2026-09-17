@@ -12,6 +12,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🌍
+  color: rgb(110, 75, 30)
+  textColor: rgb(240, 237, 232)
+  text: A Nigerian host that names a continent.
 ai: authored
 ---
 

@@ -11,6 +11,11 @@ referringSubnets: { now: 2875, before: 2872 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🇪🇺
+  color: rgb(30, 50, 120)
+  textColor: rgb(232, 234, 242)
+  text: A German hosting brand behind a blank page.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

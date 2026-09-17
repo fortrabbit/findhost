@@ -11,6 +11,11 @@ referringSubnets: { now: 2046, before: 2108 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🔖
+  color: rgb(120, 45, 45)
+  textColor: rgb(242, 234, 234)
+  text: Spanish shared hosting.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

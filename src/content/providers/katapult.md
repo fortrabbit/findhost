@@ -15,6 +15,11 @@ addedAt: 2026-08-12
 checkedAt: 2026-08-12
 sources:
   - { field: status, url: 'https://krystal.io/cloud', checkedAt: 2026-08-12 }
+figure:
+  emoji: 🪃
+  color: rgb(80, 70, 80)
+  textColor: rgb(238, 236, 238)
+  text: A cloud brand folded back into Krystal.
 ai: authored
 ---
 

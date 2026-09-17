@@ -12,6 +12,11 @@ referringSubnets: { now: 1285, before: 1316 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🇱🇹
+  color: rgb(80, 90, 30)
+  textColor: rgb(238, 238, 232)
+  text: Lithuanian hosting with a vision in its name.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

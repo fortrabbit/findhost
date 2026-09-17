@@ -11,6 +11,11 @@ referringSubnets: { now: 3227, before: 3221 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🧠
+  color: rgb(50, 50, 70)
+  textColor: rgb(234, 234, 236)
+  text: AI models behind an API.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

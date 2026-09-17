@@ -12,6 +12,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🌷
+  color: rgb(100, 40, 90)
+  textColor: rgb(240, 234, 238)
+  text: Dutch hosting with a number in its name.
 ai: authored
 ---
 

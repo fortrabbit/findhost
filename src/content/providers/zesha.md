@@ -11,6 +11,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🦒
+  color: rgb(120, 70, 20)
+  textColor: rgb(242, 236, 232)
+  text: Tanzanian shared hosting and VPS.
 ai: authored
 ---
 

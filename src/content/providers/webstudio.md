@@ -12,6 +12,11 @@ referringSubnets: { now: 551, before: 555 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🖌️
+  color: rgb(60, 40, 90)
+  textColor: rgb(236, 234, 238)
+  text: A visual site builder from Iceland.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

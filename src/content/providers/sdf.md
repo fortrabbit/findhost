@@ -7,6 +7,11 @@ referringSubnets: { now: 2872, before: 2889 }
 status: draft
 addedAt: 2026-08-14
 checkedAt: 2026-08-14
+figure:
+  emoji: 🐚
+  color: rgb(35, 40, 50)
+  textColor: rgb(233, 234, 234)
+  text: Shell accounts on a public UNIX system.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
