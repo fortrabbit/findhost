@@ -28,8 +28,15 @@ paymentMethods:
   - paypal
 referringSubnets: { now: 966, before: 944 }
 status: anonymous
+favorite: true
+favoriteNote: Privacy as the whole product, sold with a straight face and a few jokes.
 addedAt: 2026-08-14
 checkedAt: 2026-09-16
+figure:
+  emoji: 🛖
+  color: rgb(62, 84, 64)
+  textColor: rgb(236, 242, 234)
+  text: Named after a Sámi storage hut on a pole.
 ai: authored
 sources:
   - { field: status, url: 'https://njal.la/about/', checkedAt: 2026-09-16 }
