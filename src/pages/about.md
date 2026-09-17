@@ -44,6 +44,8 @@ There are thousands of web hosting providers out there, WHTop claims to have 29k
 
 Failing one of these is not a criticism, and most rulings reverse the moment the missing evidence appears. A record that fails names the number it failed on.
 
+[Anonymous hosting](/anonymous/) is the exception. A host whose own pages sell sign-up without identification sits on that list if it meets the first three criteria. The last two are waived there, because a host that sells anonymity tends to keep itself out of view as well.
+
 ## Favorite records with a ♥️
 
 The providers list grew very long. Sure, you can filter, but I wanted to provide some signal on services that I think are more interesting than others. They might be popular among developers, or I have innovative tech, or the company has more nice business practices or is more sustainable. At the same time I wanted to promote smaller services as well. Initially I experimented with a scoring system, based on favorable features, but I turned to a 100% biased human selection instead. Please excuse that I have featured our own service. 

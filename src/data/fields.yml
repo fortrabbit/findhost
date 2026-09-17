@@ -169,7 +169,9 @@
     # reasons to want one, and the register is for choosing where to run an app,
     # where not knowing the neighbours is a cost. A host that merely asks for no
     # ID and says nothing about it stays in — the evidence is the provider's own
-    # wording, quoted in a `status` source.
+    # wording, quoted in a `status` source. The list has its own test, criteria
+    # 1 to 3 and that wording: 4 and 5 are waived, because a host that sells
+    # anonymity tends to keep itself out of view as well.
     - { id: anonymous, label: 'Sells anonymous sign-up', short: Anonymous hosting, aside: anonymous }
     # `hidden` keeps a record out of the register and out of every count. It is
     # the only place that fact is written down.
@@ -1038,6 +1040,7 @@
     - { id: CY, label: Cyprus }
     - { id: MT, label: Malta }
     - { id: GE, label: Georgia }
+    - { id: KN, label: Saint Kitts and Nevis }
 
 # Where the company is, beside where it runs: an order is served on a legal
 # entity rather than on a rack, so the two answer one question together.
