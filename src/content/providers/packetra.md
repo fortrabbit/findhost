@@ -33,15 +33,12 @@ moneyBack: a-month
 paymentMethods:
   - crypto
 backupsIncluded: included
-status: out-of-scope
-criterion: 5
-boundedSearch: true
+status: anonymous
 addedAt: 2026-09-16
 checkedAt: 2026-09-16
 sources:
   - { field: launch, url: 'https://packetra.com/about', checkedAt: 2026-09-16 }
-  - { field: status, url: 'https://wpmayor.com/discover-packetra-wordpress-hosting/', checkedAt: 2026-09-16 }
-  - { field: status, url: 'https://www.webhostingtalk.com/showthread.php?t=1957997', checkedAt: 2026-09-16 }
+  - { field: status, url: 'https://packetra.com/', checkedAt: 2026-09-17 }
   - {
       field: status,
       url: 'https://lowendtalk.com/discussion/220961/packetra-no-kyc-kvm-vps-turku-finland-2-vcpu-1-5gb-25gb-1gbit-unmetered-9-77-mo-btc-xmr',
@@ -62,8 +59,8 @@ ai: authored
 
 Packetra sells shared and WordPress hosting, cloud VPS and dedicated servers, plus domain registration, from infrastructure in Finland and Switzerland. An account needs only an email address, and payment can be made in cryptocurrency. Shared plans are billed for six months or longer. VPS and dedicated servers come with root access and no management of the operating system, with cPanel or DirectAdmin sold as an add-on, as the [cloud VPS page](https://packetra.com/hosting/cloud-hosting) lists. The company does not name its legal entity or the data center operators on its site.
 
-Packetra's [about page](https://packetra.com/about) says it launched publicly in January 2026, after a beta phase.
+Packetra's [about page](https://packetra.com/about) says it launched publicly in January 2026, after a beta phase. Its own [offer on LowEndTalk](https://lowendtalk.com/discussion/220961/packetra-no-kyc-kvm-vps-turku-finland-2-vcpu-1-5gb-25gb-1gbit-unmetered-9-77-mo-btc-xmr) is headed "No KYC".
 
-**Criterion 5 — two independent artifacts — fails, as far as a search on September 16, 2026 reached.** The one editorial article found, on [WP Mayor](https://wpmayor.com/discover-packetra-wordpress-hosting/), is marked as sponsored. The forum threads found, on [Web Hosting Talk](https://www.webhostingtalk.com/showthread.php?t=1957997) and [LowEndTalk](https://lowendtalk.com/discussion/220961/packetra-no-kyc-kvm-vps-turku-finland-2-vcpu-1-5gb-25gb-1gbit-unmetered-9-77-mo-btc-xmr), are Packetra's own offers. Review-site listings do not count.
+## Worth knowing
 
-**This reverses when two artifacts about Packetra exist that it neither wrote nor paid for.**
+The [acceptable use policy](https://packetra.com/aup) treats its two Finnish networks differently: on one, US DMCA notices are not acted on without a Finnish court order; on the other, they are.

@@ -24,7 +24,7 @@ Five criteria, all checkable:
 
 All five and not listed: that is a bug, so open a PR with the record. One fails: the record still goes in, carrying `status: out-of-scope` and the numbered `criterion`, so the decision has a page to be argued with.
 
-`status` decides where a record ends up. `discontinued` and `unlisted` put one beside the register, out of the list and still indexed. So does `anonymous`, for a host whose own pages sell sign-up without identification; quote that wording in a `status` source. `out-of-scope` and `draft` hide one from the register, the counts, search, and the sitemap, keeping its page. Only a listed record needs a `category`. Nothing is ever deleted.
+`status` decides where a record ends up. `discontinued` and `unlisted` put one beside the register, out of the list and still indexed. So does `anonymous`, for a host whose own pages sell sign-up without identification; quote that wording in a `status` source. That list has a test of its own: criteria 1 to 3 and the wording. Criteria 4 and 5 are waived, because a host that sells anonymity tends to keep itself out of view as well. `out-of-scope` and `draft` hide one from the register, the counts, search, and the sitemap, keeping its page. Only a listed record needs a `category`. Nothing is ever deleted.
 
 ## What will never be merged
 
