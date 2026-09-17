@@ -90,10 +90,8 @@ const candidates = readdirSync(providersDir)
     id: data.id,
     name: String(data.name),
     checkedAt: data.checkedAt ? String(data.checkedAt).slice(0, 10) : '',
-    hidden: hiddenStatuses.has(data.status ?? 'active') === hiddenFirst ? 0 : 1,
+    later: hiddenStatuses.has(data.status ?? 'active') === hiddenFirst ? 0 : 1,
   }))
-  .sort(
-    (a, b) => a.hidden - b.hidden || a.checkedAt.localeCompare(b.checkedAt) || b.name.localeCompare(a.name),
-  );
+  .sort((a, b) => a.later - b.later || a.checkedAt.localeCompare(b.checkedAt) || b.name.localeCompare(a.name));
 
 for (const { id } of candidates.slice(0, n)) console.log(id);
