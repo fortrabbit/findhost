@@ -11,6 +11,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🌲
+  color: rgb(30, 90, 50)
+  textColor: rgb(232, 238, 234)
+  text: Lebanese shared hosting and PaaS.
 ai: authored
 ---
 

@@ -16,6 +16,11 @@ sources:
   - { field: ownership, url: 'https://your.online/brands', checkedAt: 2026-08-21 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1454', checkedAt: 2026-08-10 }
   - { field: status, url: 'https://aboutus.godaddy.net/newsroom/company-news/news-details/2024/GoDaddy-Divests-Heart-Internet/default.aspx', checkedAt: 2026-08-07 }
+figure:
+  emoji: ❤️
+  color: rgb(130, 20, 50)
+  textColor: rgb(242, 232, 234)
+  text: Leeds hosting for resellers, twice sold.
 ai: authored
 greenWebId: 1454
 ---

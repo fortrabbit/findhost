@@ -14,6 +14,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🛕
+  color: rgb(110, 40, 35)
+  textColor: rgb(240, 234, 233)
+  text: Nepali hosting across the stack.
 ai: authored
 ---
 

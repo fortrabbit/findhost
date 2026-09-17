@@ -11,6 +11,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-21
 checkedAt: 2026-08-21
+figure:
+  emoji: 🇬🇧
+  color: rgb(50, 40, 80)
+  textColor: rgb(234, 234, 238)
+  text: Virtual servers on a British domain.
 ai: authored
 ---
 

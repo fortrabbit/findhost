@@ -11,6 +11,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🇺🇬
+  color: rgb(90, 70, 20)
+  textColor: rgb(238, 236, 232)
+  text: Ugandan shared hosting and VPS.
 ai: authored
 ---
 

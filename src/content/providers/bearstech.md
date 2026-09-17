@@ -8,6 +8,11 @@ status: out-of-scope
 criterion: 3
 addedAt: 2026-07-31
 checkedAt: 2026-07-31
+figure:
+  emoji: 🤝
+  color: rgb(110, 40, 70)
+  textColor: rgb(240, 234, 236)
+  text: A Paris cooperative owned by its staff.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

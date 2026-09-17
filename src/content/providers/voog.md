@@ -11,6 +11,11 @@ referringSubnets: { now: 1215, before: 1208 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🇪🇪
+  color: rgb(10, 70, 120)
+  textColor: rgb(230, 236, 242)
+  text: Estonian site building.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

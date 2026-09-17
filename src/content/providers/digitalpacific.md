@@ -12,6 +12,11 @@ referringSubnets: { now: 571, before: 574 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🌊
+  color: rgb(10, 80, 110)
+  textColor: rgb(230, 238, 240)
+  text: Australian shared hosting and VPS.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

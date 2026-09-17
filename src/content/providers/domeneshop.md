@@ -11,6 +11,11 @@ referringSubnets: { now: 302, before: 307 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🇳🇴
+  color: rgb(110, 30, 40)
+  textColor: rgb(240, 232, 234)
+  text: A Norwegian shop for domains and hosting.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

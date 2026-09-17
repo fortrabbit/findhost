@@ -13,6 +13,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🇵🇭
+  color: rgb(30, 60, 130)
+  textColor: rgb(232, 236, 242)
+  text: Philippine hosting under a country domain.
 ai: authored
 ---
 

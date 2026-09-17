@@ -13,6 +13,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 📞
+  color: rgb(30, 90, 80)
+  textColor: rgb(232, 238, 238)
+  text: Costa Rican hosting with a number attached.
 ai: authored
 ---
 

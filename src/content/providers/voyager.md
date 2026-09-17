@@ -11,6 +11,11 @@ referringSubnets: { now: 466, before: 471 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: ⛵
+  color: rgb(25, 80, 100)
+  textColor: rgb(232, 238, 240)
+  text: 'A New Zealand host with a traveler''s name.'
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

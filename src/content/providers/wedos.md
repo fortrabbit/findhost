@@ -10,6 +10,11 @@ referringSubnets: { now: 898, before: 891 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🔀
+  color: rgb(80, 40, 60)
+  textColor: rgb(238, 234, 236)
+  text: A Czech host that may have become two.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

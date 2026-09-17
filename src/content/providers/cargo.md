@@ -12,6 +12,11 @@ referringSubnets: { now: 3956, before: 3923 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 📦
+  color: rgb(110, 60, 30)
+  textColor: rgb(240, 236, 232)
+  text: Site builder with a shipping name.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

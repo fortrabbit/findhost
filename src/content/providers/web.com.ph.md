@@ -14,6 +14,11 @@ referringSubnets: { now: 317, before: 310 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🇵🇭
+  color: rgb(40, 60, 120)
+  textColor: rgb(234, 236, 242)
+  text: Filipino hosting, from shared to bare metal.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

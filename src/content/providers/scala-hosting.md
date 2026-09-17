@@ -12,6 +12,11 @@ referringSubnets: { now: 987, before: 990 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🪜
+  color: rgb(80, 40, 100)
+  textColor: rgb(238, 234, 240)
+  text: American shared hosting and VPS.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

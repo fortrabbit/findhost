@@ -13,6 +13,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🌶️
+  color: rgb(130, 40, 30)
+  textColor: rgb(242, 234, 232)
+  text: A Chilean host named after its domain.
 ai: authored
 ---
 

@@ -11,6 +11,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 👾
+  color: rgb(90, 30, 110)
+  textColor: rgb(238, 232, 240)
+  text: Malaysian shared hosting.
 ai: authored
 ---
 

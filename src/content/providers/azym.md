@@ -13,6 +13,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🏗️
+  color: rgb(110, 30, 60)
+  textColor: rgb(240, 232, 236)
+  text: Hosting from shared to bare metal, in Qatar.
 ai: authored
 ---
 

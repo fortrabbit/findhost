@@ -11,6 +11,11 @@ referringSubnets: { now: 532, before: 531 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🧩
+  color: rgb(90, 40, 120)
+  textColor: rgb(238, 234, 242)
+  text: Visual site building from the United States.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

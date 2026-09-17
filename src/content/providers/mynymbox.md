@@ -19,6 +19,11 @@ paymentMethods:
 status: anonymous
 addedAt: 2026-09-17
 checkedAt: 2026-09-17
+figure:
+  emoji: 📦
+  color: rgb(80, 70, 50)
+  textColor: rgb(238, 236, 234)
+  text: Hosting from Saint Kitts and Nevis.
 ai: authored
 sources:
   - { field: status, url: 'https://mynymbox.io/', checkedAt: 2026-09-17 }

@@ -7,6 +7,11 @@ referringSubnets: { now: 337, before: 333 }
 status: draft
 addedAt: 2026-07-31
 checkedAt: 2026-07-31
+figure:
+  emoji: 🛒
+  color: rgb(30, 90, 100)
+  textColor: rgb(232, 238, 240)
+  text: Managed clusters for German online shops.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

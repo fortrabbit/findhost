@@ -12,6 +12,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🌋
+  color: rgb(30, 95, 50)
+  textColor: rgb(232, 239, 234)
+  text: Costa Rican virtual and bare metal servers.
 ai: authored
 ---
 

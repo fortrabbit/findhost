@@ -12,6 +12,11 @@ referringSubnets: { now: 716, before: 702 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: ➕
+  color: rgb(120, 30, 30)
+  textColor: rgb(242, 232, 232)
+  text: German infrastructure and bare metal.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

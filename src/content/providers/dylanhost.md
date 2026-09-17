@@ -10,6 +10,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🌋
+  color: rgb(60, 80, 50)
+  textColor: rgb(236, 238, 234)
+  text: Shared hosting in Guatemala.
 ai: authored
 ---
 

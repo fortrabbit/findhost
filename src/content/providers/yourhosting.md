@@ -17,6 +17,11 @@ sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: parent, url: 'https://your.online/brands', checkedAt: 2026-08-21 }
   - { field: ownership, url: 'https://your.online/brands', checkedAt: 2026-08-21 }
+figure:
+  emoji: 🏠
+  color: rgb(100, 40, 90)
+  textColor: rgb(240, 234, 238)
+  text: Dutch hosting with a possessive name.
 ai: authored
 ---
 

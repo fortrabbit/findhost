@@ -11,6 +11,11 @@ referringSubnets: { now: 853, before: 857 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🪨
+  color: rgb(90, 70, 50)
+  textColor: rgb(238, 236, 234)
+  text: Shared hosting from India.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

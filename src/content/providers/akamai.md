@@ -7,6 +7,11 @@ referringSubnets: { now: 10539, before: 10466 }
 status: draft
 addedAt: 2026-08-07
 checkedAt: 2026-08-07
+figure:
+  emoji: 🛰️
+  color: rgb(20, 70, 120)
+  textColor: rgb(232, 236, 242)
+  text: A delivery network that bought a cloud.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

@@ -12,6 +12,11 @@ referringSubnets: { now: 267, before: 281 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🌵
+  color: rgb(40, 95, 60)
+  textColor: rgb(234, 239, 236)
+  text: The country is right there in the name.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

@@ -12,6 +12,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🗻
+  color: rgb(80, 50, 60)
+  textColor: rgb(238, 234, 236)
+  text: Chilean virtual and bare metal servers.
 ai: authored
 ---
 

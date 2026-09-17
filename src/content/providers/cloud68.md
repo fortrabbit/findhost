@@ -10,6 +10,11 @@ criterion: 3
 addedAt: 2026-07-31
 checkedAt: 2026-07-31
 boundedSearch: true
+figure:
+  emoji: 🔓
+  color: rgb(40, 80, 100)
+  textColor: rgb(234, 238, 240)
+  text: Open-source apps, priced on request.
 ai: authored
 sources:
   - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q118233469', checkedAt: 2026-09-09 }

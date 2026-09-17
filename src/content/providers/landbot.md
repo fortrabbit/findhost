@@ -11,6 +11,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🤖
+  color: rgb(110, 40, 100)
+  textColor: rgb(240, 234, 240)
+  text: A Spanish builder for people who skip code.
 ai: authored
 ---
 

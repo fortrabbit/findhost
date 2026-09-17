@@ -11,6 +11,11 @@ referringSubnets: { now: 365, before: 366 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 📅
+  color: rgb(30, 95, 75)
+  textColor: rgb(232, 239, 237)
+  text: Irish shared hosting with a year in its name.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

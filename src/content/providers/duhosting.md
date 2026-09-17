@@ -12,6 +12,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🦒
+  color: rgb(120, 80, 20)
+  textColor: rgb(242, 238, 232)
+  text: Hosting in several shapes, from Tanzania.
 ai: authored
 ---
 

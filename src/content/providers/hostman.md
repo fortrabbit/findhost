@@ -12,6 +12,11 @@ referringSubnets: { now: 405, before: 409 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🧑‍🔧
+  color: rgb(60, 40, 100)
+  textColor: rgb(236, 234, 240)
+  text: Platform and virtual servers, US-based.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

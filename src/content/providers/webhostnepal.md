@@ -14,6 +14,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🧗
+  color: rgb(85, 55, 35)
+  textColor: rgb(238, 235, 233)
+  text: Nepal in the name, every server type inside.
 ai: authored
 ---
 

@@ -11,6 +11,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: ☁️
+  color: rgb(20, 80, 140)
+  textColor: rgb(232, 238, 244)
+  text: Static hosting with a sky-blue name.
 ai: authored
 ---
 

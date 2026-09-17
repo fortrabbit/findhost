@@ -10,6 +10,11 @@ criterion: 3
 addedAt: 2026-08-04
 checkedAt: 2026-08-04
 boundedSearch: true
+figure:
+  emoji: 🏯
+  color: rgb(100, 45, 55)
+  textColor: rgb(240, 234, 235)
+  text: Seoul hosting with prices kept out of view.
 ai: authored
 gpuCapacity:
   - instances

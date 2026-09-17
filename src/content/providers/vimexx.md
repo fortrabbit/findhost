@@ -11,6 +11,11 @@ referringSubnets: { now: 857, before: 867 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🚲
+  color: rgb(90, 40, 40)
+  textColor: rgb(238, 234, 234)
+  text: Shared hosting from the Netherlands.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

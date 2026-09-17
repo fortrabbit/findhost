@@ -11,6 +11,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🦊
+  color: rgb(120, 55, 30)
+  textColor: rgb(242, 235, 232)
+  text: Static sites served from a Git forge.
 ai: authored
 ---
 

@@ -11,6 +11,11 @@ addedAt: 2026-08-09
 checkedAt: 2026-08-09
 sources:
   - { field: criterion, url: 'https://anynines.com/', checkedAt: 2026-08-09 }
+figure:
+  emoji: 🧰
+  color: rgb(70, 50, 110)
+  textColor: rgb(236, 234, 240)
+  text: Platform software for your own machines.
 ai: authored
 ---
 

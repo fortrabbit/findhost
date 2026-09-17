@@ -11,6 +11,11 @@ referringSubnets: { now: 253, before: 262 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 👑
+  color: rgb(110, 80, 20)
+  textColor: rgb(240, 238, 232)
+  text: A Nigerian host with a royal domain.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

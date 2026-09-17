@@ -13,6 +13,11 @@ referringSubnets: { now: 349, before: 338 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: ⚡
+  color: rgb(110, 80, 10)
+  textColor: rgb(240, 238, 230)
+  text: Argentine hosting from shared to PaaS.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

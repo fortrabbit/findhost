@@ -8,6 +8,11 @@ status: out-of-scope
 criterion: 2
 addedAt: 2026-07-31
 checkedAt: 2026-07-31
+figure:
+  emoji: 🔀
+  color: rgb(80, 40, 110)
+  textColor: rgb(238, 234, 240)
+  text: An Indonesian name that now leads to Hostinger.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

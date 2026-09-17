@@ -13,6 +13,11 @@ referringSubnets: { now: 312, before: 321 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🗿
+  color: rgb(80, 60, 90)
+  textColor: rgb(238, 236, 238)
+  text: Peruvian hosting from shared to platform.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

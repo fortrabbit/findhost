@@ -12,6 +12,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 📄
+  color: rgb(140, 70, 20)
+  textColor: rgb(244, 236, 232)
+  text: Possibly a chapter of another record.
 ai: authored
 ---
 

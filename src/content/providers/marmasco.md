@@ -12,6 +12,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🇿🇼
+  color: rgb(40, 90, 50)
+  textColor: rgb(234, 238, 234)
+  text: Hosting from Zimbabwe, up to bare metal.
 ai: authored
 ---
 

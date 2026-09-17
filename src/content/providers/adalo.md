@@ -11,6 +11,11 @@ referringSubnets: { now: 1393, before: 1417 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 📱
+  color: rgb(90, 50, 140)
+  textColor: rgb(238, 234, 244)
+  text: A builder for mobile apps.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

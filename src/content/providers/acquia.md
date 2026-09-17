@@ -18,6 +18,11 @@ sources:
   - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q4674765', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: status, url: 'https://www.acquia.com/pricing', checkedAt: 2026-08-12 }
+figure:
+  emoji: 💧
+  color: rgb(20, 70, 120)
+  textColor: rgb(232, 236, 242)
+  text: Drupal, priced after a conversation.
 ai: authored
 ---
 

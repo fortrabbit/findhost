@@ -11,6 +11,11 @@ referringSubnets: { now: 380, before: 381 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🗂️
+  color: rgb(120, 40, 50)
+  textColor: rgb(242, 234, 234)
+  text: Static files, served from China.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

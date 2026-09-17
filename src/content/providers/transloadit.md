@@ -11,6 +11,11 @@ referringSubnets: { now: 616, before: 608 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🎞️
+  color: rgb(20, 100, 100)
+  textColor: rgb(232, 240, 240)
+  text: Dutch serverless functions.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

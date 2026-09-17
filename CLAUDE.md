@@ -60,6 +60,7 @@ The same rules govern two frontmatter fields, because both are prose:
 
 - **`description`** — one sentence naming what the provider is. It is the line every list shows, truncated. No version numbers, no region counts, no plan details, and no defining a provider by what it does not run.
 - **`figure.text`** — a short display line, dry or wry about *what the thing is*. Never a verdict on how good it is: "Flashy marketing, sluggish reality" is an unsourced opinion about a named company published under fortrabbit's byline, which is exactly the power this dataset gives up. Never a version number either.
+- **Every record carries a `figure`**, stubs and out-of-scope records included: emoji, a background `color`, a `textColor` that reads on it at 4.5:1 or better, and the text. It is what the page heading and the share card show, and a record without one looks unfinished beside the rest. Write it when the record is created, from what the record already says; a stub's figure describes what the stub knows and nothing more.
 
 ## Conventions
 

@@ -8,6 +8,11 @@ category:
 description: Tor-friendly virtual servers in Moldova and Romania.
 status: draft
 addedAt: 2026-09-17
+figure:
+  emoji: 🧅
+  color: rgb(90, 60, 110)
+  textColor: rgb(238, 236, 240)
+  text: Virtual servers that welcome Tor.
 ai: authored
 ---
 

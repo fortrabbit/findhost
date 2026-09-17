@@ -11,6 +11,11 @@ referringSubnets: { now: 1625, before: 1648 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🌻
+  color: rgb(40, 70, 140)
+  textColor: rgb(234, 236, 244)
+  text: Shared hosting from Ukraine.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

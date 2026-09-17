@@ -12,6 +12,11 @@ referringSubnets: { now: 539, before: 546 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🪙
+  color: rgb(90, 80, 40)
+  textColor: rgb(238, 238, 234)
+  text: Dedicated machines and cloud from the US.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

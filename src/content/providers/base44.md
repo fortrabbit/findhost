@@ -11,6 +11,11 @@ referringSubnets: { now: 1112, before: 1099 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🧱
+  color: rgb(45, 60, 100)
+  textColor: rgb(234, 236, 240)
+  text: An Israeli builder for no-code apps.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

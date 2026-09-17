@@ -13,6 +13,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🏔️
+  color: rgb(70, 50, 100)
+  textColor: rgb(236, 234, 240)
+  text: Shared hosting, VPS and a platform in Chile.
 ai: authored
 ---
 

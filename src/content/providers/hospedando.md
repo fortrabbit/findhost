@@ -13,6 +13,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🌮
+  color: rgb(120, 50, 40)
+  textColor: rgb(242, 234, 234)
+  text: Mexican hosting, from shared to platform.
 ai: authored
 ---
 

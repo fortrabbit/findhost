@@ -13,6 +13,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🗄️
+  color: rgb(55, 65, 85)
+  textColor: rgb(235, 236, 238)
+  text: Israeli servers, shared or whole.
 ai: authored
 ---
 

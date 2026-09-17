@@ -11,6 +11,11 @@ referringSubnets: { now: 429, before: 423 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🐝
+  color: rgb(120, 90, 10)
+  textColor: rgb(242, 238, 230)
+  text: Containers by the swarm, from Germany.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

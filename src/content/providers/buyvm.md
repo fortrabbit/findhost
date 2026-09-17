@@ -11,6 +11,11 @@ referringSubnets: { now: 660, before: 658 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🍁
+  color: rgb(140, 30, 30)
+  textColor: rgb(244, 232, 232)
+  text: Canadian virtual machines for sale.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

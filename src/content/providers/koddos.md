@@ -10,6 +10,11 @@ category:
 description: Offshore host with DDoS protection, operated by Amarutu Technology Ltd.
 status: draft
 addedAt: 2026-09-17
+figure:
+  emoji: 🌊
+  color: rgb(30, 80, 110)
+  textColor: rgb(232, 238, 240)
+  text: Offshore, with a flood barrier.
 ai: authored
 ---
 

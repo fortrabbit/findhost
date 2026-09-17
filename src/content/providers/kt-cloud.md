@@ -11,6 +11,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 📡
+  color: rgb(20, 60, 120)
+  textColor: rgb(232, 236, 242)
+  text: Infrastructure as a service from South Korea.
 ai: authored
 ---
 

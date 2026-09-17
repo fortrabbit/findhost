@@ -16,6 +16,11 @@ paymentMethods:
 status: anonymous
 addedAt: 2026-09-17
 checkedAt: 2026-09-17
+figure:
+  emoji: 🗝️
+  color: rgb(90, 50, 60)
+  textColor: rgb(238, 234, 236)
+  text: A generated key instead of an account.
 ai: authored
 sources:
   - { field: status, url: 'https://servury.com/', checkedAt: 2026-09-17 }

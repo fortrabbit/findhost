@@ -11,6 +11,11 @@ referringSubnets: { now: 1168, before: 1167 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🧑‍💻
+  color: rgb(30, 70, 110)
+  textColor: rgb(232, 236, 240)
+  text: Server management software from India.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

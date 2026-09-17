@@ -11,6 +11,11 @@ referringSubnets: { now: 2827, before: 2775 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 📈
+  color: rgb(40, 90, 60)
+  textColor: rgb(234, 238, 236)
+  text: Polish shared hosting named for search.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

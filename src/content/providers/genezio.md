@@ -8,6 +8,11 @@ status: out-of-scope
 criterion: 1
 addedAt: 2026-07-31
 checkedAt: 2026-07-31
+figure:
+  emoji: 🔎
+  color: rgb(90, 60, 100)
+  textColor: rgb(238, 236, 240)
+  text: Once serverless, now search visibility.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

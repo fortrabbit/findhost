@@ -13,6 +13,11 @@ referringSubnets: { now: 285, before: 283 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🏔️
+  color: rgb(20, 90, 50)
+  textColor: rgb(232, 238, 234)
+  text: Pakistani servers, shared to dedicated.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

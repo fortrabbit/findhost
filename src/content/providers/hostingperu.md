@@ -13,6 +13,11 @@ referringSubnets: { now: 266, before: 259 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🦙
+  color: rgb(110, 55, 70)
+  textColor: rgb(240, 235, 236)
+  text: Peruvian hosting that names its country.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

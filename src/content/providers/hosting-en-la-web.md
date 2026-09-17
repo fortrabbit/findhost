@@ -13,6 +13,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🧉
+  color: rgb(60, 80, 120)
+  textColor: rgb(236, 238, 242)
+  text: Uruguayan hosting, named in Spanish.
 ai: authored
 ---
 

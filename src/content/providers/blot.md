@@ -12,6 +12,11 @@ referringSubnets: { now: 665, before: 668 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: ✒️
+  color: rgb(40, 40, 50)
+  textColor: rgb(234, 234, 234)
+  text: A British home for vanity sites.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

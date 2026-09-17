@@ -12,6 +12,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🦙
+  color: rgb(110, 50, 40)
+  textColor: rgb(240, 234, 234)
+  text: Domains and servers from Peru.
 ai: authored
 ---
 

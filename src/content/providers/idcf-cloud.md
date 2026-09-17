@@ -12,6 +12,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🗾
+  color: rgb(120, 30, 50)
+  textColor: rgb(242, 232, 234)
+  text: Japanese infrastructure and virtual servers.
 ai: authored
 ---
 

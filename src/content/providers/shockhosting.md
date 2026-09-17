@@ -13,6 +13,11 @@ referringSubnets: { now: 437, before: 438 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-21
+figure:
+  emoji: ⚡
+  color: rgb(110, 90, 20)
+  textColor: rgb(240, 238, 232)
+  text: Hosting from New Jersey, shared to dedicated.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

@@ -14,6 +14,11 @@ referringSubnets: { now: 759, before: 771 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🏝️
+  color: rgb(20, 100, 90)
+  textColor: rgb(232, 240, 238)
+  text: Indonesian hosting from shared to bare metal.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

@@ -12,6 +12,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🌍
+  color: rgb(100, 90, 20)
+  textColor: rgb(240, 238, 232)
+  text: Zambian hosting, up to bare metal.
 ai: authored
 ---
 

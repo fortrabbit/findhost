@@ -14,6 +14,11 @@ runsOn:
   - linode
 status: draft
 addedAt: 2026-09-17
+figure:
+  emoji: 🚀
+  color: rgb(50, 70, 120)
+  textColor: rgb(234, 236, 242)
+  text: Servers by the hour, no name asked.
 ai: authored
 sources:
   - { field: infraContract, url: 'https://bitlaunch.io/', checkedAt: 2026-09-17 }

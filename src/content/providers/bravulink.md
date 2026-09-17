@@ -13,6 +13,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🔗
+  color: rgb(20, 110, 60)
+  textColor: rgb(232, 240, 236)
+  text: Three kinds of hosting, sold in Brazil.
 ai: authored
 ---
 

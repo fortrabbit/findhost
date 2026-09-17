@@ -7,6 +7,11 @@ referringSubnets: { now: 512, before: 511 }
 status: draft
 addedAt: 2026-07-31
 checkedAt: 2026-07-31
+figure:
+  emoji: 🛒
+  color: rgb(60, 80, 110)
+  textColor: rgb(236, 238, 240)
+  text: German hosting for Shopware and Magento.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

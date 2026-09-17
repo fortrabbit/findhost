@@ -11,6 +11,11 @@ referringSubnets: { now: 279, before: 258 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🧭
+  color: rgb(60, 40, 110)
+  textColor: rgb(236, 234, 240)
+  text: No-code app building out of Bulgaria.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

@@ -11,6 +11,11 @@ referringSubnets: { now: 5190, before: 5174 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🖋️
+  color: rgb(140, 40, 40)
+  textColor: rgb(244, 234, 234)
+  text: Site building, from Norway.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

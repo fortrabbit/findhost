@@ -11,6 +11,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🌴
+  color: rgb(30, 100, 70)
+  textColor: rgb(232, 240, 236)
+  text: Shared hosting from Costa Rica.
 ai: authored
 ---
 

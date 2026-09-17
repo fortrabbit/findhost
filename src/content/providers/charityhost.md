@@ -12,6 +12,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-21
 checkedAt: 2026-08-21
+figure:
+  emoji: 🤝
+  color: rgb(100, 40, 90)
+  textColor: rgb(240, 234, 238)
+  text: A name that leans toward nonprofits.
 ai: authored
 ---
 

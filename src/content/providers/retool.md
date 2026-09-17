@@ -11,6 +11,11 @@ referringSubnets: { now: 2521, before: 2506 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🔧
+  color: rgb(60, 60, 60)
+  textColor: rgb(236, 236, 236)
+  text: Internal tools, awaiting a scope decision.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

@@ -12,6 +12,11 @@ referringSubnets: { now: 1077, before: 1082 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🇨🇿
+  color: rgb(30, 60, 130)
+  textColor: rgb(232, 236, 242)
+  text: Czech shared hosting and VPS.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

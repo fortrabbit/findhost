@@ -24,6 +24,11 @@ sources:
   - { field: pricingModel, url: 'https://radicle.garden/', checkedAt: 2026-09-14 }
   - { field: currencies, url: 'https://radicle.garden/', checkedAt: 2026-09-14 }
   - { field: freeTier, url: 'https://radicle.garden/', checkedAt: 2026-09-14 }
+figure:
+  emoji: 🌿
+  color: rgb(60, 100, 60)
+  textColor: rgb(236, 240, 236)
+  text: A node that stays up while yours sleeps.
 ai: authored
 ---
 

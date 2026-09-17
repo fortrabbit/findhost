@@ -11,6 +11,11 @@ referringSubnets: { now: 1615, before: 1619 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🛝
+  color: rgb(20, 110, 110)
+  textColor: rgb(232, 240, 240)
+  text: No-code site building from the US.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

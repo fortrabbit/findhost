@@ -12,6 +12,11 @@ referringSubnets: { now: 1465, before: 1474 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🛒
+  color: rgb(50, 50, 90)
+  textColor: rgb(234, 234, 238)
+  text: Managed platform with shared plans, US-based.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

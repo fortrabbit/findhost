@@ -11,6 +11,11 @@ referringSubnets: { now: 3913, before: 3946 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🏰
+  color: rgb(110, 40, 48)
+  textColor: rgb(240, 234, 234)
+  text: Shared hosting from Czechia.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

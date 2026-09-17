@@ -13,6 +13,11 @@ sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: parent, url: 'https://your.online/brands', checkedAt: 2026-09-12 }
   - { field: ownership, url: 'https://your.online/brands', checkedAt: 2026-09-12 }
+figure:
+  emoji: 🧀
+  color: rgb(120, 80, 20)
+  textColor: rgb(242, 238, 232)
+  text: Dutch managed WordPress with a quote form.
 ai: authored
 ---
 

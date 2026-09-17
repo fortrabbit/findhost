@@ -12,6 +12,11 @@ referringSubnets: { now: 537, before: 536 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🏢
+  color: rgb(20, 90, 90)
+  textColor: rgb(232, 238, 238)
+  text: Vietnamese infrastructure and VPS.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

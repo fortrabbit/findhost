@@ -12,6 +12,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🕌
+  color: rgb(90, 70, 40)
+  textColor: rgb(238, 236, 234)
+  text: Saudi cloud for shared sites and VPS.
 ai: authored
 ---
 

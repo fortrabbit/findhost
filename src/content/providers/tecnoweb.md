@@ -13,6 +13,11 @@ referringSubnets: { now: 309, before: 303 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🏔
+  color: rgb(120, 50, 30)
+  textColor: rgb(242, 234, 232)
+  text: Chilean hosting in three shapes.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

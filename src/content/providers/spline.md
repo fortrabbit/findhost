@@ -12,6 +12,11 @@ referringSubnets: { now: 2355, before: 2347 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🎨
+  color: rgb(90, 40, 120)
+  textColor: rgb(238, 234, 242)
+  text: Low-code building with vanity hosting, from the US.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

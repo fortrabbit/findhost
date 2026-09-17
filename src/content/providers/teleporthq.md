@@ -11,6 +11,11 @@ referringSubnets: { now: 758, before: 758 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🌀
+  color: rgb(40, 90, 110)
+  textColor: rgb(234, 238, 240)
+  text: Low-code site building from Romania.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

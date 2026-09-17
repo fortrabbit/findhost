@@ -12,6 +12,11 @@ referringSubnets: { now: 12791, before: 12811 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🪪
+  color: rgb(130, 50, 90)
+  textColor: rgb(242, 234, 238)
+  text: Low-code sites on your own domain.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

@@ -12,6 +12,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🏜️
+  color: rgb(115, 75, 40)
+  textColor: rgb(241, 237, 234)
+  text: Hosting of every shape out of Jordan.
 ai: authored
 ---
 

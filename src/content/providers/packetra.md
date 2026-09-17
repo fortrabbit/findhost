@@ -54,6 +54,11 @@ sources:
   - { field: moneyBack, url: 'https://packetra.com/hosting/shared-hosting', checkedAt: 2026-09-16 }
   - { field: paymentMethods, url: 'https://packetra.com/', checkedAt: 2026-09-16 }
   - { field: backupsIncluded, url: 'https://packetra.com/hosting/shared-hosting', checkedAt: 2026-09-16 }
+figure:
+  emoji: 🇫🇮
+  color: rgb(40, 70, 120)
+  textColor: rgb(234, 236, 242)
+  text: Privacy hosting from Finland and Switzerland.
 ai: authored
 ---
 

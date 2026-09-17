@@ -11,6 +11,11 @@ referringSubnets: { now: 3440, before: 3453 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🛠️
+  color: rgb(50, 90, 50)
+  textColor: rgb(234, 238, 234)
+  text: Server management software from Germany.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

@@ -9,6 +9,11 @@ category:
 description: Privacy-oriented provider of virtual and dedicated servers, run by Privex Inc. in Belize.
 status: draft
 addedAt: 2026-09-17
+figure:
+  emoji: 🔏
+  color: rgb(50, 60, 80)
+  textColor: rgb(234, 236, 238)
+  text: Servers from a company in Belize.
 ai: authored
 ---
 

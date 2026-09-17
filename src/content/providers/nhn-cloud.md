@@ -12,6 +12,11 @@ referringSubnets: { now: 513, before: 515 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🇰🇷
+  color: rgb(25, 55, 115)
+  textColor: rgb(232, 235, 241)
+  text: Korean cloud infrastructure and platform.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

@@ -16,6 +16,11 @@ currencies:
 status: anonymous
 addedAt: 2026-09-17
 checkedAt: 2026-09-17
+figure:
+  emoji: 🏝️
+  color: rgb(30, 100, 90)
+  textColor: rgb(232, 240, 238)
+  text: Uncensored hosting, run from Dominica.
 ai: authored
 sources:
   - { field: status, url: 'https://nicevps.net/', checkedAt: 2026-09-17 }

@@ -11,6 +11,11 @@ referringSubnets: { now: 1477, before: 1477 }
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: 🪶
+  color: rgb(100, 55, 110)
+  textColor: rgb(240, 235, 240)
+  text: A no-code builder from Germany.
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }

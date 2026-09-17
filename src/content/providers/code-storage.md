@@ -26,6 +26,11 @@ sources:
   - { field: pricingModel, url: 'https://code.storage/pricing', checkedAt: 2026-09-14 }
   - { field: currencies, url: 'https://code.storage/pricing', checkedAt: 2026-09-14 }
   - { field: apiAvailable, url: 'https://code.storage/docs', checkedAt: 2026-09-14 }
+figure:
+  emoji: 🗄️
+  color: rgb(60, 70, 90)
+  textColor: rgb(236, 236, 238)
+  text: Git without a web page.
 ai: authored
 ---
 

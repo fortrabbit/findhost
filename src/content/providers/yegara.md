@@ -11,6 +11,11 @@ referringSubnets: null
 status: draft
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
+figure:
+  emoji: ☕
+  color: rgb(95, 55, 35)
+  textColor: rgb(239, 235, 233)
+  text: Shared hosting and servers from Ethiopia.
 ai: authored
 ---
 
