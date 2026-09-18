@@ -70,7 +70,10 @@ describe('a sourced change', () => {
   it('is not a status change, however well cited', () => {
     const after = record
       .replace('status: active', 'status: discontinued')
-      .replace('---\n\nHetzner', "  - { field: status, url: 'https://www.hetzner.com/news/', checkedAt: 2026-09-08 }\n---\n\nHetzner");
+      .replace(
+        '---\n\nHetzner',
+        "  - { field: status, url: 'https://www.hetzner.com/news/', checkedAt: 2026-09-08 }\n---\n\nHetzner",
+      );
     assert.equal(isSelfMerging(record, after), false);
   });
 
