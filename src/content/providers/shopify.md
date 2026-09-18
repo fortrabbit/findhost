@@ -27,25 +27,25 @@ billingPeriods:
   - yearly
 billingTiming: advance
 exitWithin: a-month
-entryPrice: { amount: 25, currency: EUR, period: month }
+entryPrice: { amount: 29, currency: USD, period: month }
 freeTier: trial
 referringSubnets: { now: 65327, before: 65435 }
 wikidata: Q7501150
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-09-18
 sources:
-  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q7501150', checkedAt: 2026-09-09 }
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q7501150', checkedAt: 2026-09-18 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: priceFrom, url: 'https://www.shopify.com/pricing', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://www.shopify.com/pricing', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://www.shopify.com/legal/terms', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://www.shopify.com/pricing', checkedAt: 2026-08-02 }
-  - { field: billingTiming, url: 'https://www.shopify.com/legal/terms', checkedAt: 2026-08-02 }
-  - { field: exitWithin, url: 'https://www.shopify.com/legal/terms', checkedAt: 2026-08-02 }
-  - { field: pricingModel, url: 'https://www.shopify.com/pricing', checkedAt: 2026-07-31 }
-  - { field: freeTier, url: 'https://www.shopify.com/pricing', checkedAt: 2026-07-31 }
-  - { field: entryPrice, url: 'https://www.shopify.com/pricing', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://www.shopify.com/pricing', checkedAt: 2026-09-18 }
+  - { field: priceTo, url: 'https://www.shopify.com/pricing', checkedAt: 2026-09-18 }
+  - { field: currencies, url: 'https://www.shopify.com/legal/terms', checkedAt: 2026-09-18 }
+  - { field: billingPeriods, url: 'https://www.shopify.com/pricing', checkedAt: 2026-09-18 }
+  - { field: billingTiming, url: 'https://www.shopify.com/legal/terms', checkedAt: 2026-09-18 }
+  - { field: exitWithin, url: 'https://www.shopify.com/legal/terms', checkedAt: 2026-09-18 }
+  - { field: pricingModel, url: 'https://www.shopify.com/pricing', checkedAt: 2026-09-18 }
+  - { field: freeTier, url: 'https://www.shopify.com/pricing', checkedAt: 2026-09-18 }
+  - { field: entryPrice, url: 'https://www.shopify.com/pricing', checkedAt: 2026-09-18 }
 figure:
   emoji: 🛒
   color: rgb(157, 131, 77)
