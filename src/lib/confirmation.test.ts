@@ -67,12 +67,26 @@ describe('a sourced change', () => {
     assert.equal(isSelfMerging(record, after), false);
   });
 
-  it('is not a status change, however well cited', () => {
+  it('is a status change the record cites, which ships without a person', () => {
     const after = record
       .replace('status: active', 'status: discontinued')
       .replace(
         '---\n\nHetzner',
         "  - { field: status, url: 'https://www.hetzner.com/news/', checkedAt: 2026-09-08 }\n---\n\nHetzner",
+      );
+    assert.equal(isSelfMerging(record, after), true);
+  });
+
+  it('is not a status change nothing cites', () => {
+    assert.equal(isSelfMerging(record, record.replace('status: active', 'status: discontinued')), false);
+  });
+
+  it('is never the record identity, however well cited', () => {
+    const after = record
+      .replace('name: Hetzner', 'name: Hetzner Online')
+      .replace(
+        '---\n\nHetzner',
+        "  - { field: name, url: 'https://www.hetzner.com/about/', checkedAt: 2026-09-08 }\n---\n\nHetzner",
       );
     assert.equal(isSelfMerging(record, after), false);
   });

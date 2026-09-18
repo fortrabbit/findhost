@@ -1,10 +1,11 @@
-# The refresh routine's merge lane. It pushes what it re-read to claude/refresh:
-# records found unchanged with their checkedAt dates moved, and records whose
-# field values changed where every changed field carries a sources entry naming
-# it. Nobody has time to read a price moving on a page that says so, and an
-# unread price is worse than a merged one, so this merges them — after checking
-# that is all they are. A status change, a name, a figure or a line of prose
-# goes to claude/refresh-review instead, where a person reads the pull request,
+# The refresh routine's merge lane. It pushes everything it researched to
+# claude/refresh: dates moved on a record found unchanged, changed field values,
+# and a changed status. The condition is a citation — every changed field
+# carries a sources entry naming it — and this merges what passes that. Nobody
+# here has a routine for reading pull requests, and one sitting open is not
+# review; it is a change that has not shipped while the register goes on saying
+# something the provider's own pages contradict. What is left goes to
+# claude/refresh-review — an uncited field, an identity field, a line of prose —
 # and this workflow never touches that branch.
 #
 # Pushes to main from here carry the default token, so they trigger no other
@@ -36,8 +37,8 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       # The rule is src/lib/confirmation.ts, the same one the routine used to
-      # pick this branch. A failure here means the routine put something a
-      # person owns on the merge lane; the run goes red and a person looks.
+      # pick this branch. A failure here means the routine put something it
+      # cannot cite on the merge lane; the run goes red and a person looks.
       - run: node scripts/refresh-guard.ts origin/main HEAD
       - run: pnpm run validate
       - run: pnpm run build
