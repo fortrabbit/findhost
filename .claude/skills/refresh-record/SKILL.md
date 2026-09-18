@@ -25,10 +25,10 @@ git checkout -B work origin/main
 pnpm install --frozen-lockfile
 ```
 
-- **`claude/refresh`** is the merge lane: records re-read and found unchanged with their `checkedAt` dates moved, records whose field values changed where every changed field carries a `sources` entry naming it, and the log. A GitHub Action merges it into `main` on its own after checking exactly that, then deletes the branch.
-- **`claude/refresh-review`** is the review lane: a `status` change, a `name`, a `figure`, a `description`, the heart and its sentence, a changed value nothing cites, and any line of prose. A person reads the pull request from it and merges.
+- **`claude/refresh`** is the merge lane, and it carries everything a run researched: dates moved on a record found unchanged, changed field values, a changed `status`, and the log. The one condition is that every field the run changed carries a `sources` entry naming it. A GitHub Action merges it into `main` on its own after checking exactly that, then deletes the branch.
+- **`claude/refresh-review`** is the review lane, and it should be rare: a changed field nothing cites, a changed `id`, `name` or `addedAt`, and any line of prose. Those are not what a re-reading produces, so a person reads the pull request before it ships.
 
-Never push to `main`, and never put a status change or an uncited value on `claude/refresh`; the Action would refuse it and go red.
+Never push to `main`, and never put an uncited change on `claude/refresh`; the Action would refuse it and go red. Cite what you change and the lane sorts itself out.
 
 ## 2. Pick
 
@@ -138,6 +138,8 @@ git push origin <lane>
 Only for the review lane. If no open pull request exists from `claude/refresh-review` to `main`, open one titled `Refresh for review: <today>` with the run report as its body. If one exists, add the run report as a comment on it. Status changes go first in either, one line each with the quote; they are what the reviewer must see. If `gh` is missing or unauthenticated, skip this step; the commits carry the same information.
 
 The merge lane needs no pull request. The Action merges it.
+
+**What a person reads is the page, after it shipped.** A status change that lands this way still gets read — not here, but on www.findhost.app, from the list `node scripts/landed.ts` prints. So write the record as though nobody will see it before a reader does, quote the provider in the `sources` entry, and leave the status alone where you cannot.
 
 ## 10. Report
 
