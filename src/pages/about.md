@@ -56,7 +56,7 @@ Everything is tracked in Git and public on GitHub. Affiliation must be disclosed
 
 ## Credits
 
-AI agents gathered facts and written most code. Idea, design, data structure, review is mine. Built with [Astro](https://astro.build), content schema. Search is [Pagefind](https://pagefind.app).
+AI agents gathered facts and written most code. Idea, design and data structure are mine. A daily agent re-reads records against the providers' own pages and corrects what it can cite there; those changes ship without me reading them first, and I review the published pages afterwards. Built with [Astro](https://astro.build), content schema. Search is [Pagefind](https://pagefind.app).
 
 ## Licences
 

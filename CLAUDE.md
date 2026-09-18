@@ -16,6 +16,7 @@ pnpm run test               # unit tests, node --test over src/**/*.test.ts
 pnpm run validate           # guards zod cannot express
 pnpm run linkcheck:internal # every internal link, and the sitemap, against dist
 pnpm run test:e2e           # Playwright, a chromium project and a no-JS one
+node scripts/landed.ts      # records that landed on main, with the pages to read
 ```
 
 CI runs `format`, `check`, `test`, `build`, `validate`, `linkcheck:internal` and `test:e2e` on every PR, in that order. `pnpm run linkcheck` — outbound URLs against the live web — runs in a job of its own that is allowed to fail: a third party's outage is not a reason to block a content pull request. **A push to `main` on GitHub is a deploy.** fortrabbit builds from the GitHub repository — there is no separate fortrabbit git remote to push to, and a checkout showing only `origin` is not evidence that the site has not been updated. None of the CI is required for that to happen, so CI is what keeps a broken commit off `main` rather than off the server: once it is on `main` it is on www.findhost.app. The deploy strategy is **replace**: the document root is swapped for what the build produced, so a page the build stops producing stops being served rather than lingering at its old address.
@@ -96,6 +97,8 @@ Five procedures, because each one has a step that used to be forgotten silently.
 ## Refreshing records
 
 `.claude/skills/refresh-record/SKILL.md` is the procedure for re-reading a record against the provider's pages, and a scheduled cloud routine runs it daily (MR-320). It writes one commit per record to one of two branches. `claude/refresh` carries everything a run researched — dates moved, field values, `status` — on the one condition that every changed field carries a `sources` entry naming it. `.github/workflows/refresh.yml` merges it into `main` after `scripts/refresh-guard.ts` has checked exactly that; the rule is `src/lib/confirmation.ts`. `claude/refresh-review` is what is left over and should be rare: a changed field nothing cites, a changed `id`, `name` or `addedAt`, a line of prose. There is no routine here for reading pull requests, and one sitting open is not review — it is a change that has not shipped while the register goes on saying something the provider's own pages contradict. A citation is the bar instead. The routine confirms and corrects sourced fields, dates what it read, and sets `status` when the provider's own pages announce a shutdown, an acquisition or a rename, or show that criterion 3 or 4 no longer holds. A domain that does not answer changes nothing. It never touches prose, `name`, or the fields the scripts under `scripts/` own. A status change ships on the provider's own announcement, cited in the record, with nobody in between — so the quote in the `sources` entry is the whole safeguard, and a run that cannot quote one leaves the status alone.
+
+**The review moved to the published page.** Nobody reads the pull requests, so saying they are read would be a claim this register cannot make. `node scripts/landed.ts` prints what changed on the register and the address of each page, newest last; a session working here opens with that list so the pages get read after they shipped rather than not at all. A correction found that way is an ordinary edit, and `/about/` says this is how it works.
 
 ## Share cards
 
