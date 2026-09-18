@@ -48,23 +48,23 @@ apiAvailable: public
 referringSubnets: { now: 1891, before: 1916 }
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-09-18
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: entryPrice, url: 'https://www.simply.com/en/hosting/', checkedAt: 2026-08-01 }
   - { field: priceFrom, url: 'https://www.simply.com/en/hosting/', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://www.simply.com/en/hosting/', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://www.simply.com/en/terms-of-service/', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://www.simply.com/en/terms-of-service/', checkedAt: 2026-08-02 }
-  - { field: billingTiming, url: 'https://www.simply.com/en/terms-of-service/', checkedAt: 2026-08-02 }
-  - { field: exitWithin, url: 'https://www.simply.com/en/terms-of-service/', checkedAt: 2026-08-02 }
-  - { field: renewalMultiple, url: 'https://www.simply.com/en/hosting/', checkedAt: 2026-08-01 }
-  - { field: pricingModel, url: 'https://www.simply.com/en/hosting/', checkedAt: 2026-08-01 }
-  - { field: regions, url: 'https://www.simply.com/en/about/', checkedAt: 2026-08-01 }
-  - { field: founded, url: 'https://www.simply.com/en/about/', checkedAt: 2026-08-01 }
-  - { field: hqCountry, url: 'https://www.simply.com/en/about/', checkedAt: 2026-08-01 }
-  - { field: ownership, url: 'https://www.simply.com/en/about/', checkedAt: 2026-08-01 }
-  - { field: parent, url: 'https://www.simply.com/en/about/', checkedAt: 2026-08-01 }
+  - { field: currencies, url: 'https://www.simply.com/en/terms-of-service/', checkedAt: 2026-09-18 }
+  - { field: billingPeriods, url: 'https://www.simply.com/en/terms-of-service/', checkedAt: 2026-09-18 }
+  - { field: billingTiming, url: 'https://www.simply.com/en/terms-of-service/', checkedAt: 2026-09-18 }
+  - { field: exitWithin, url: 'https://www.simply.com/en/terms-of-service/', checkedAt: 2026-09-18 }
+  - { field: renewalMultiple, url: 'https://www.simply.com/en/hosting/', checkedAt: 2026-09-18 }
+  - { field: pricingModel, url: 'https://www.simply.com/en/hosting/', checkedAt: 2026-09-18 }
+  - { field: regions, url: 'https://www.simply.com/en/about/', checkedAt: 2026-09-18 }
+  - { field: founded, url: 'https://www.simply.com/en/about/', checkedAt: 2026-09-18 }
+  - { field: hqCountry, url: 'https://www.simply.com/en/about/', checkedAt: 2026-09-18 }
+  - { field: ownership, url: 'https://www.simply.com/en/about/', checkedAt: 2026-09-18 }
+  - { field: parent, url: 'https://www.simply.com/en/about/', checkedAt: 2026-09-18 }
 figure:
   emoji: 🧊
   color: rgb(70, 117, 164)
