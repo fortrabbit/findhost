@@ -10,12 +10,17 @@
  * cited there. Reviewing those by hand was a queue nobody had time for, and an
  * unread price is worse than a merged one.
  *
- * What still stops for a person is the judgement, not the value: `status` and
- * the fields that decide where a record appears or how it is presented. A host
- * leaving the register, a rename, an out-of-scope ruling, a line of prose — each
- * is somebody's reading of a provider's announcement, and those ship after a
- * person has read them. The same function decides both the routine's lane and
- * the Action's guard, so the two cannot disagree.
+ * `status` is in that too, so a host whose own pages say it has shut down leaves
+ * the register without anybody merging it. Nobody here has a routine for reading
+ * those, and a pull request sitting open is not review: it is a change that has
+ * not shipped while the register goes on saying something the provider itself
+ * contradicts.
+ *
+ * What stays outside is what the routine does not write. Prose, and the record's
+ * identity. A changed body, `id` or `name` on this lane means a run went wrong
+ * rather than that something was researched, so the Action stops and a person
+ * looks. The same function decides both the routine's lane and the Action's
+ * guard, so the two cannot disagree.
  */
 
 const date = /checkedAt: \d{4}-\d{2}-\d{2}/g;
@@ -34,25 +39,12 @@ export function isConfirmation(before: string, after: string): boolean {
 }
 
 /*
- * Fields the routine may never merge on its own, whatever it cites. `status`
- * and `criterion` move a record between the register, the aside lists and the
- * hidden ones. `id`, `name` and `parent` are identity. The rest are the
- * editorial surface — a figure, a description, the heart and its sentence —
- * which no re-reading of a pricing page has any business changing.
+ * The fields no citation makes mergeable, because the routine has no business
+ * writing them at all. `id` is the address, `name` is what the provider calls
+ * itself, and `addedAt` is a fact about the register rather than about the
+ * provider. A change to one of these is a bug in the run, not research.
  */
-const reviewed = new Set([
-  'id',
-  'name',
-  'status',
-  'criterion',
-  'parent',
-  'addedAt',
-  'figure',
-  'caveat',
-  'description',
-  'favorite',
-  'favoriteNote',
-]);
+const reviewed = new Set(['id', 'name', 'addedAt']);
 
 /** The frontmatter and the body, or null where the file is not a record. */
 function parts(record: string): { frontmatter: string; body: string } | null {
@@ -92,7 +84,7 @@ function cited(frontmatter: string): Set<string> {
 /**
  * May the routine merge this change itself? True for a confirmation, and for a
  * change to field values where every field it touched is cited in the record it
- * wrote and none of them is reviewed by a person. Prose has to be untouched:
+ * wrote and none of them is the record's identity. Prose has to be untouched:
  * the routine does not write prose, so a changed body is something else.
  */
 export function isSelfMerging(before: string, after: string): boolean {
