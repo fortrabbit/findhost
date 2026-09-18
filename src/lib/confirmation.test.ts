@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
-import { isConfirmation, isRecord, withoutDates } from './confirmation.ts';
+import { changedFields, isConfirmation, isRecord, isSelfMerging, withoutDates } from './confirmation.ts';
 
 const record = [
   '---',
@@ -53,6 +53,44 @@ describe('a confirmation', () => {
       "  - { field: hqCountry, url: 'https://www.hetzner.com/about/', checkedAt: 2026-09-08 }\n---\n\nHetzner",
     );
     assert.equal(isConfirmation(record, after), false);
+  });
+});
+
+describe('a sourced change', () => {
+  it('is a field the record cites, so the routine merges it', () => {
+    const after = record.replace('founded: 1997', 'founded: 1998').replace('2026-07-31', '2026-09-08');
+    assert.equal(isSelfMerging(record, after), true);
+  });
+
+  it('is not a field nothing cites', () => {
+    const after = record.replace('name: Hetzner', 'name: Hetzner Online');
+    assert.equal(isSelfMerging(record, after), false);
+  });
+
+  it('is not a status change, however well cited', () => {
+    const after = record
+      .replace('status: active', 'status: discontinued')
+      .replace(
+        '---\n\nHetzner',
+        "  - { field: status, url: 'https://www.hetzner.com/news/', checkedAt: 2026-09-08 }\n---\n\nHetzner",
+      );
+    assert.equal(isSelfMerging(record, after), false);
+  });
+
+  it('is not a change to prose', () => {
+    assert.equal(isSelfMerging(record, record.replace('founded in 1997.', 'founded in 1998.')), false);
+  });
+
+  it('covers a confirmation, which changes no field at all', () => {
+    const after = record.replace('checkedAt: 2026-08-01', 'checkedAt: 2026-09-08');
+    assert.equal(isSelfMerging(record, after), true);
+  });
+
+  it('takes a list as one field, so a changed region is a changed regions', () => {
+    const listed = record.replace('founded: 1997', 'regions:\n  - DE\n  - FI');
+    const after = listed.replace('  - FI', '  - US');
+    assert.deepEqual(changedFields(listed, after), ['regions']);
+    assert.equal(isSelfMerging(listed, after), true);
   });
 });
 

@@ -25,10 +25,10 @@ git checkout -B work origin/main
 pnpm install --frozen-lockfile
 ```
 
-- **`claude/refresh`** is the confirmation lane: records re-read and found unchanged, with their `checkedAt` dates moved, plus the log. A GitHub Action merges it into `main` on its own after checking that dates are all that changed, then deletes the branch.
-- **`claude/refresh-review`** is the review lane: anything that changes a value, a status or a source. A person reads the pull request from it and merges.
+- **`claude/refresh`** is the merge lane: records re-read and found unchanged with their `checkedAt` dates moved, records whose field values changed where every changed field carries a `sources` entry naming it, and the log. A GitHub Action merges it into `main` on its own after checking exactly that, then deletes the branch.
+- **`claude/refresh-review`** is the review lane: a `status` change, a `name`, a `figure`, a `description`, the heart and its sentence, a changed value nothing cites, and any line of prose. A person reads the pull request from it and merges.
 
-Never push to `main`, and never put a real change on `claude/refresh`; the Action would refuse it and go red.
+Never push to `main`, and never put a status change or an uncited value on `claude/refresh`; the Action would refuse it and go red.
 
 ## 2. Pick
 
@@ -109,9 +109,9 @@ git add src/content/providers/<id>.md
 node scripts/refresh-guard.ts HEAD --staged
 ```
 
-It prints `confirmation` or `review`. Nothing staged counts as `confirmation`.
+It prints `merge` or `review`. Nothing staged counts as `merge`.
 
-- **`confirmation`:** append a line to `research/refresh-log.tsv`, tab-separated, `<today>\t<id>\t<outcome>\t<note>`, where the outcome is `confirmed`, `unreadable` or `stopped` and the note is one clause, such as `Cloudflare challenge on home`. Stage it too. That line is what keeps the record out of tomorrow's pick, and it is why a run with nothing to confirm still pushes.
+- **`merge`:** append a line to `research/refresh-log.tsv`, tab-separated, `<today>\t<id>\t<outcome>\t<note>`, where the outcome is `confirmed`, `unreadable` or `stopped` and the note is one clause, such as `Cloudflare challenge on home`. Stage it too. That line is what keeps the record out of tomorrow's pick, and it is why a run with nothing to confirm still pushes.
 - **`review`:** no log line. The pick script skips records waiting on the review branch by itself.
 
 **Validate, then commit on `work`:**
@@ -121,11 +121,11 @@ pnpm run validate
 git commit
 ```
 
-A failing `validate` means the change is wrong. Revert the record, log it as `stopped`, and commit that on the confirmation lane instead.
+A failing `validate` means the change is wrong. Revert the record, log it as `stopped`, and commit that on the merge lane instead.
 
 Commit subject: `Refresh <name>, read <today>`, or `Log <name> as unreadable, <today>` when nothing on the record changed. Body: a status change first, if any, with the quote and the URL. Then one line per changed field, `field: old → new`, followed by the quote and the URL. Then one line per stale source and one per unreadable page. End with `Co-Authored-By: Claude <noreply@anthropic.com>`.
 
-**Move it to the lane and push.** `<lane>` is `claude/refresh` for a confirmation, `claude/refresh-review` for a review:
+**Move it to the lane and push.** `<lane>` is `claude/refresh` for a merge, `claude/refresh-review` for a review:
 
 ```sh
 git checkout -B <lane> origin/<lane> 2>/dev/null || git checkout -B <lane> origin/main
@@ -137,7 +137,7 @@ git push origin <lane>
 
 Only for the review lane. If no open pull request exists from `claude/refresh-review` to `main`, open one titled `Refresh for review: <today>` with the run report as its body. If one exists, add the run report as a comment on it. Status changes go first in either, one line each with the quote; they are what the reviewer must see. If `gh` is missing or unauthenticated, skip this step; the commits carry the same information.
 
-The confirmation lane needs no pull request. The Action merges it.
+The merge lane needs no pull request. The Action merges it.
 
 ## 10. Report
 

@@ -1,18 +1,19 @@
 /*
- * Is a push confirmation-only, so the refresh Action may merge it on its own?
+ * May the refresh Action merge this push on its own?
  *
  *   node scripts/refresh-guard.ts <base> <head>
  *   node scripts/refresh-guard.ts HEAD --staged     # the index against HEAD
  *
- * Exit 0 when every changed file is either a record whose only difference is
- * `checkedAt` dates, or the refresh log. Exit 1 otherwise, naming the file, so
- * a person reads it. The refresh routine runs the same check on its own diff
- * to choose between the `claude/refresh` and `claude/refresh-review` branches,
+ * Exit 0 when every changed file is the refresh log or a record that moved only
+ * `checkedAt` dates and field values it cites. Exit 1 otherwise, naming the
+ * file, so a person reads it: a status, a name, a figure or a line of prose.
+ * The refresh routine runs the same check on its own diff to choose between the
+ * `claude/refresh` and `claude/refresh-review` branches,
  * and the Action runs it again before merging: the routine choosing wrongly is
  * caught, and the rule lives in one place, src/lib/confirmation.ts.
  */
 import { execFileSync } from 'node:child_process';
-import { confirmationFiles, isConfirmation, isRecord } from '../src/lib/confirmation.ts';
+import { confirmationFiles, isRecord, isSelfMerging } from '../src/lib/confirmation.ts';
 
 const [base, head] = process.argv.slice(2);
 if (!base || !head) {
@@ -44,11 +45,11 @@ for (const path of changed) {
   const before = at(base, path);
   const after = at(staged ? '' : head, path);
   if (!before || !after) problems.push(`${path}: added or removed`);
-  else if (!isConfirmation(before, after)) problems.push(`${path}: changes more than checkedAt dates`);
+  else if (!isSelfMerging(before, after)) problems.push(`${path}: changes more than dates and cited fields`);
 }
 
 if (problems.length) {
   console.log(`review: ${problems.join('; ')}`);
   process.exit(1);
 }
-console.log(`confirmation: ${changed.length} file${changed.length === 1 ? '' : 's'}`);
+console.log(`merge: ${changed.length} file${changed.length === 1 ? '' : 's'}`);
