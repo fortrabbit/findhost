@@ -51,22 +51,22 @@ supportHours: 24-7
 referringSubnets: { now: 592, before: 578 }
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-09-19
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#701', checkedAt: 2026-08-10 }
-  - { field: entryPrice, url: 'https://seravo.com/plans/', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://seravo.com/plans/', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://seravo.com/plans/', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://seravo.com/en/terms/', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://seravo.com/en/terms/', checkedAt: 2026-08-02 }
-  - { field: billingTiming, url: 'https://seravo.com/en/terms/', checkedAt: 2026-08-02 }
-  - { field: exitWithin, url: 'https://seravo.com/en/terms/', checkedAt: 2026-08-02 }
-  - { field: pricingModel, url: 'https://seravo.com/plans/', checkedAt: 2026-08-01 }
+  - { field: entryPrice, url: 'https://seravo.com/plans/', checkedAt: 2026-09-19 }
+  - { field: priceFrom, url: 'https://seravo.com/plans/', checkedAt: 2026-09-19 }
+  - { field: priceTo, url: 'https://seravo.com/plans/', checkedAt: 2026-09-19 }
+  - { field: currencies, url: 'https://seravo.com/en/terms/', checkedAt: 2026-09-19 }
+  - { field: billingPeriods, url: 'https://seravo.com/en/terms/', checkedAt: 2026-09-19 }
+  - { field: billingTiming, url: 'https://seravo.com/en/terms/', checkedAt: 2026-09-19 }
+  - { field: exitWithin, url: 'https://seravo.com/en/terms/', checkedAt: 2026-09-19 }
+  - { field: pricingModel, url: 'https://seravo.com/plans/', checkedAt: 2026-09-19 }
   - { field: energyClaim, url: 'https://seravo.com/features/sustainable/', checkedAt: 2026-08-01 }
   - { field: sustainabilityUrl, url: 'https://seravo.com/features/sustainable/', checkedAt: 2026-08-01 }
-  - { field: hqCountry, url: 'https://seravo.com/', checkedAt: 2026-08-01 }
-  - { field: ownership, url: 'https://www.privateequitywire.co.uk/perwyn-backed-miss-group-acquires-finnish-web-hosting-firm-seravo/', checkedAt: 2026-08-21 }
+  - { field: hqCountry, url: 'https://seravo.com/', checkedAt: 2026-09-19 }
+  - { field: ownership, url: 'https://www.privateequitywire.co.uk/perwyn-backed-miss-group-acquires-finnish-web-hosting-firm-seravo/', checkedAt: 2026-09-19 }
 figure:
   emoji: 🐧
   color: rgb(59, 132, 176)

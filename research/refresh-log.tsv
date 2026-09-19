@@ -23,3 +23,4 @@
 2026-09-18	simply-com	confirmed	Pricing page geolocated to USD; entryPrice/priceFrom/priceTo not confirmed
 2026-09-19	server-pilot	confirmed	Home and pricing pages read (200); all 10 sourced fields still supported
 2026-09-19	servd	unreadable	All pages (home, pricing, terms) return HTTP 403
+2026-09-19	seravo	confirmed	Home, plans and terms pages read (200); ownership confirmed via privateequitywire.co.uk; sustainability page (features/sustainable/) now redirects to an unrelated blog post, stale source for energyClaim/sustainabilityUrl
