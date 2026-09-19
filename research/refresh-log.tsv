@@ -21,3 +21,4 @@
 2026-09-17	maxcluster	confirmed	Home page read (200); only source is referringSubnets (script-owned, excluded); nothing to compare
 2026-09-17	ghost-pro	confirmed	Home page read (200); still SaaS-only, criterion 1 unchanged; only source is referringSubnets (script-owned, excluded)
 2026-09-18	simply-com	confirmed	Pricing page geolocated to USD; entryPrice/priceFrom/priceTo not confirmed
+2026-09-19	servd	unreadable	All pages (home, pricing, terms) return HTTP 403
