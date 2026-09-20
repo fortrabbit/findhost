@@ -5,7 +5,7 @@ description: Re-read one or more provider records against the provider's own pag
 
 # Refresh a provider record
 
-Read the repository `CLAUDE.md` first. Every rule in it applies here, and three of them decide most of what this skill does: absent means unknown, `checkedAt` is a claim, and nothing may be guessed.
+Read the repository `AGENTS.md` first. Every rule in it applies here, and three of them decide most of what this skill does: absent means unknown, `checkedAt` is a claim, and nothing may be guessed.
 
 This runs unattended. Never ask a question. Where the procedure says stop, stop and report.
 

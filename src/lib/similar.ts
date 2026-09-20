@@ -2,7 +2,7 @@
  * The records most like this one, by how many facts they share.
  *
  * Ordered by a count of shared fields, which is an order the register otherwise
- * refuses: the rule in CLAUDE.md forbids ordering by quality, and a shared-fact
+ * refuses: the rule in AGENTS.md forbids ordering by quality, and a shared-fact
  * count is not one — a provider at the top of this list is the one most like
  * the record being read, not the best of them. Every row says which facts it
  * shares, so the order explains itself and nothing is implied beyond it.

@@ -73,7 +73,7 @@ export interface ProviderRow {
   status?: string;
 }
 
-/** Alphabetical, always — see the sort rule in CLAUDE.md. */
+/** Alphabetical, always — see the sort rule in AGENTS.md. */
 export const byName = (a: { name: string }, b: { name: string }) => a.name.localeCompare(b.name, 'en');
 
 /*

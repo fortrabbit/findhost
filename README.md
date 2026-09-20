@@ -28,7 +28,7 @@ Copy `.env.example` to `.env`; nothing in it is needed to develop. Astro 7, stat
 
 Four fields are required of a listed record — `id`, `name`, `urls.home`, `category`. Everything else is optional, and absent means unknown.
 
-[CONTRIBUTING.md](./CONTRIBUTING.md) to correct a record or add a provider. [CLAUDE.md](./CLAUDE.md) for the full brief: the rules, the prose style, how to change the data model.
+[CONTRIBUTING.md](./CONTRIBUTING.md) to correct a record or add a provider. [AGENTS.md](./AGENTS.md) for the full brief: the rules, the prose style, how to change the data model.
 
 ## Licences
 
