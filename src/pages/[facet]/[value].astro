@@ -6,7 +6,7 @@ import ProviderRegister from '../../components/ProviderRegister.astro';
 import PageFigure from '../../components/PageFigure.astro';
 import { facetIndex, facetRoutes, loadFacets, pairsFor } from '../../lib/facets';
 import { fieldOf, subjectOf } from '../../lib/fields';
-import { firstSentence, summarise } from '../../lib/summarise';
+import { summarise } from '../../lib/summarise';
 import { valueCardPath } from '../../lib/og';
 import { newest } from '../../lib/modified';
 
@@ -83,7 +83,7 @@ const combined = (await pairsFor(facet.id, value.id)).map((group) => ({
 
 <Base
   title={`${note?.data.title ?? valueTitle(facet.id, value)} — FindHost`}
-  description={note?.data.description ?? firstSentence(summary)}
+  description={note?.data.description ?? summary}
   markdown={`${facetIndex(facet.id)}${value.slug}.md`}
   image={valueCardPath(facet.id, value.slug)}
   imageAlt={`A FindHost card: ${matches.length} providers recorded as ${value.label.toLowerCase()}.`}
