@@ -42,6 +42,16 @@ ErrorDocument 404 /404.html
   </FilesMatch>
 </IfModule>
 
+# Every PNG on the site is a social card under /og/, at a URL that stays the
+# same across builds while the card changes with its record, so it cannot be
+# immutable. A day is how stale a card may run; after that the ETag decides
+# whether it is fetched again.
+<IfModule mod_headers.c>
+  <FilesMatch "\.png$">
+    Header set Cache-Control "public, max-age=86400"
+  </FilesMatch>
+</IfModule>
+
 # Nothing was compressed: the homepage went out at 274 KB, and so did every
 # markdown twin and the whole JSON and CSV export. Listed by type rather than by
 # extension so pagefind's index chunks, which are compressed binaries already
