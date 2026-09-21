@@ -44,7 +44,7 @@ managedDatabases:
   - mongodb
 pricingModel: hourly
 priceFrom: xs
-priceTo: xl
+priceTo: 3xl
 currencies:
   - EUR
 billingPeriods:
@@ -65,23 +65,23 @@ referringSubnets: { now: 3831, before: 3851 }
 wikidata: Q3352745
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-09-21
 sources:
-  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q3352745', checkedAt: 2026-09-09 }
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q3352745', checkedAt: 2026-09-21 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#925', checkedAt: 2026-08-10 }
-  - { field: regions, url: 'https://www.scaleway.com/en/virtual-instances/', checkedAt: 2026-08-01 }
-  - { field: ownership, url: 'https://www.scaleway.com/en/about-us/', checkedAt: 2026-08-01 }
-  - { field: parent, url: 'https://www.scaleway.com/en/about-us/', checkedAt: 2026-08-01 }
-  - { field: founded, url: 'https://www.scaleway.com/en/about-us/', checkedAt: 2026-08-01 }
-  - { field: infraContract, url: 'https://www.scaleway.com/en/datacenter/', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://www.scaleway.com/en/pricing/virtual-instances/', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://www.scaleway.com/en/pricing/virtual-instances/', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://www.scaleway.com/en/pricing/virtual-instances/', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://www.scaleway.com/en/pricing/virtual-instances/', checkedAt: 2026-08-02 }
+  - { field: regions, url: 'https://www.scaleway.com/en/virtual-instances/', checkedAt: 2026-09-21 }
+  - { field: ownership, url: 'https://www.scaleway.com/en/about-us/', checkedAt: 2026-09-21 }
+  - { field: parent, url: 'https://www.scaleway.com/en/about-us/', checkedAt: 2026-09-21 }
+  - { field: founded, url: 'https://www.scaleway.com/en/about-us/', checkedAt: 2026-09-21 }
+  - { field: infraContract, url: 'https://www.scaleway.com/en/datacenter/', checkedAt: 2026-09-21 }
+  - { field: priceFrom, url: 'https://www.scaleway.com/en/pricing/virtual-instances/', checkedAt: 2026-09-21 }
+  - { field: priceTo, url: 'https://www.scaleway.com/en/pricing/virtual-instances/', checkedAt: 2026-09-21 }
+  - { field: currencies, url: 'https://www.scaleway.com/en/pricing/virtual-instances/', checkedAt: 2026-09-21 }
+  - { field: billingPeriods, url: 'https://www.scaleway.com/en/pricing/virtual-instances/', checkedAt: 2026-09-21 }
   - { field: billingTiming, url: 'https://www.scaleway.com/en/pricing/virtual-instances/', checkedAt: 2026-08-02 }
   - { field: exitWithin, url: 'https://www.scaleway.com/en/pricing/virtual-instances/', checkedAt: 2026-08-02 }
-  - { field: sla, url: 'https://www.scaleway.com/en/virtual-instances/sla/', checkedAt: 2026-08-30 }
+  - { field: sla, url: 'https://www.scaleway.com/en/virtual-instances/sla/', checkedAt: 2026-09-21 }
 figure:
   emoji: 🐿️
   color: rgb(132, 73, 161)
