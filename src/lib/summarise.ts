@@ -165,4 +165,3 @@ export interface PairSummary {
   bTotal: number;
   widerRows: ProviderRow[];
 }
-

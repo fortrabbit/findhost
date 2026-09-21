@@ -66,7 +66,8 @@ const origin = Astro.site?.origin ?? '';
 
 <Base
   title={`${note?.data.title ?? facet.label} — FindHost`}
-  description={note?.data.description ?? `Every value recorded for ${facet.label.toLowerCase()}, each with the number of hosting providers that hold it and a page listing them alphabetically.`}
+  description={note?.data.description ??
+    `Every value recorded for ${facet.label.toLowerCase()}, each with the number of hosting providers that hold it and a page listing them alphabetically.`}
   markdown={`${facetIndex(facet.id)}index.md`}
   image={facetCardPath(facet.id)}
   imageAlt={`A FindHost card: what the register records for ${facet.label.toLowerCase()}.`}
