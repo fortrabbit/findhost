@@ -37,18 +37,18 @@ freeTier: none
 referringSubnets: { now: 306, before: 307 }
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-09-21
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: entryPrice, url: 'https://www.porter.run/pricing', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://www.porter.run/pricing', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://www.porter.run/pricing', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://www.porter.run/pricing', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://www.porter.run/pricing', checkedAt: 2026-08-02 }
-  - { field: billingTiming, url: 'https://www.porter.run/pricing', checkedAt: 2026-08-02 }
-  - { field: pricingModel, url: 'https://www.porter.run/pricing', checkedAt: 2026-08-01 }
-  - { field: freeTier, url: 'https://www.porter.run/pricing', checkedAt: 2026-08-01 }
-  - { field: infraContract, url: 'https://www.porter.run/pricing', checkedAt: 2026-08-01 }
+  - { field: entryPrice, url: 'https://www.porter.run/pricing', checkedAt: 2026-09-21 }
+  - { field: priceFrom, url: 'https://www.porter.run/pricing', checkedAt: 2026-09-21 }
+  - { field: priceTo, url: 'https://www.porter.run/pricing', checkedAt: 2026-09-21 }
+  - { field: currencies, url: 'https://www.porter.run/pricing', checkedAt: 2026-09-21 }
+  - { field: billingPeriods, url: 'https://www.porter.run/pricing', checkedAt: 2026-09-21 }
+  - { field: billingTiming, url: 'https://www.porter.run/pricing', checkedAt: 2026-09-21 }
+  - { field: pricingModel, url: 'https://www.porter.run/pricing', checkedAt: 2026-09-21 }
+  - { field: freeTier, url: 'https://www.porter.run/pricing', checkedAt: 2026-09-21 }
+  - { field: infraContract, url: 'https://www.porter.run/pricing', checkedAt: 2026-09-21 }
 figure:
   emoji: 🧳
   color: rgb(77, 109, 157)
