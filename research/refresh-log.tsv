@@ -27,3 +27,4 @@
 2026-09-20	privex	confirmed	Home page read (200); stub, no sources to compare, no status change
 2026-09-20	koddos	confirmed	Home page read (200); stub, no sources to compare, no status change
 2026-09-21	scaleway	confirmed	priceTo xl -> 3xl (top instance now ~e2406/mo); billingTiming/exitWithin sources on pricing page no longer state those facts
+2026-09-21	porter	confirmed	Home and pricing pages read (200); all 10 sourced fields still supported, no free-tier or billing-timing language found but consistent with existing record
