@@ -6,7 +6,7 @@ import { fieldOf, subjectOf, titleWithOf } from '../../../../lib/fields';
 import { pairCardPath } from '../../../../lib/og';
 import { pairIndexPath, pairPath, pairingKey } from '../../../../lib/pairs';
 import { organization, valueTitle } from '../../../../lib/seo';
-import { firstSentence, summarisePair } from '../../../../lib/summarise';
+import { summarisePair } from '../../../../lib/summarise';
 
 /*
  * Two facet values, one address. One value has had a page since the beginning;
@@ -57,7 +57,7 @@ const here = pairPath({ a, av, b, bv });
 
 <Base
   title={`${title} — FindHost`}
-  description={firstSentence(summary)}
+  description={summary}
   markdown={`${here.slice(0, -1)}.md`}
   image={pairCardPath(pairingKey(a, b))}
   imageAlt={`A FindHost card: ${a.label} and ${b.label} combined.`}

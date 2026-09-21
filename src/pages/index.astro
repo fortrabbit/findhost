@@ -37,7 +37,7 @@ const beside = (await besideTheRegister()).filter((group) => !offered.has(group.
 }
 <Base
   title="FindHost — a register of web hosting providers"
-  description="Opinionated field guide to choosing a web host."
+  description="Web hosting providers recorded field by field, with a source for every answer. Filter by runtime, region or price. No scores, rankings or affiliate links."
   schema={[
     dataset(Astro.site?.origin ?? '', providers.length, { fields, modified: lastChecked }),
     website(Astro.site?.origin ?? ''),
