@@ -66,18 +66,18 @@ export default defineConfig({
    */
   redirects: {
     /*
-     * Four categories that sell no hosting moved out of the register and onto
-     * pages of their own, so their facet pages stopped being built. The group
-     * page answers the question the facet value did.
+     * Categories that sell no hosting moved out of the register and onto pages
+     * of their own. Where no listed host also carries the category, its facet
+     * page stopped being built, and the group page answers the question the
+     * facet value did.
      *
-     * `/categories/domains-dns/` is deliberately not here: sixteen registrars in
-     * the register also sell hosting, so that page still has records and still
-     * means something — "hosts that also register domains", against the
-     * registrars that sell no hosting at /domains-dns/.
+     * A category a listed host still carries keeps its facet page and gets no
+     * redirect here: the redirect would replace a page the sitemap and the
+     * filters still point at. `/categories/domains-dns/` is "hosts that also
+     * register domains", against the registrars at /domains-dns/; `dbaas` and
+     * `mail` are the same shape.
      */
     '/categories/server-management/': '/server-management/',
-    '/categories/mail/': '/mail/',
-    '/categories/dbaas/': '/dbaas/',
     '/categories/git-hosting/': '/git-hosting/',
 
     /*
