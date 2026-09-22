@@ -70,23 +70,23 @@ social:
 referringSubnets: { now: 3000, before: 3022 }
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-09-22
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1475', checkedAt: 2026-08-10 }
-  - { field: regions, url: 'https://www.netcup.com/de/server/vps', checkedAt: 2026-07-31 }
-  - { field: contractMinimum, url: 'https://www.netcup.com/de/server/vps', checkedAt: 2026-07-31 }
-  - { field: pricingModel, url: 'https://www.netcup.com/de/server/vps', checkedAt: 2026-07-31 }
-  - { field: entryPrice, url: 'https://www.netcup.com/de/hosting', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://www.netcup.com/de/hosting', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://www.netcup.com/de/server/vps', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://www.netcup.com/de/hosting', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://www.netcup.com/de/server/vps', checkedAt: 2026-08-02 }
-  - { field: billingTiming, url: 'https://www.netcup.com/de/server/vps', checkedAt: 2026-08-02 }
-  - { field: exitWithin, url: 'https://www.netcup.com/de/server/vps', checkedAt: 2026-08-02 }
-  - { field: renewalMultiple, url: 'https://www.netcup.com/de/hosting', checkedAt: 2026-08-01 }
-  - { field: parent, url: 'https://www.netcup.com/de/kontakt/impressum', checkedAt: 2026-08-01 }
-  - { field: hqCountry, url: 'https://www.netcup.com/de/kontakt/impressum', checkedAt: 2026-08-01 }
+  - { field: regions, url: 'https://www.netcup.com/de/server/vps', checkedAt: 2026-09-22 }
+  - { field: contractMinimum, url: 'https://www.netcup.com/de/server/vps', checkedAt: 2026-09-22 }
+  - { field: pricingModel, url: 'https://www.netcup.com/de/server/vps', checkedAt: 2026-09-22 }
+  - { field: entryPrice, url: 'https://www.netcup.com/de/hosting', checkedAt: 2026-09-22 }
+  - { field: priceFrom, url: 'https://www.netcup.com/de/hosting', checkedAt: 2026-09-22 }
+  - { field: priceTo, url: 'https://www.netcup.com/de/server/vps', checkedAt: 2026-09-22 }
+  - { field: currencies, url: 'https://www.netcup.com/de/hosting', checkedAt: 2026-09-22 }
+  - { field: billingPeriods, url: 'https://www.netcup.com/de/server/vps', checkedAt: 2026-09-22 }
+  - { field: billingTiming, url: 'https://www.netcup.com/de/server/vps', checkedAt: 2026-09-22 }
+  - { field: exitWithin, url: 'https://www.netcup.com/de/server/vps', checkedAt: 2026-09-22 }
+  - { field: renewalMultiple, url: 'https://www.netcup.com/de/hosting', checkedAt: 2026-09-22 }
+  - { field: parent, url: 'https://www.netcup.com/de/kontakt/impressum', checkedAt: 2026-09-22 }
+  - { field: hqCountry, url: 'https://www.netcup.com/de/kontakt/impressum', checkedAt: 2026-09-22 }
 figure:
   emoji: 🪙
   color: rgb(70, 164, 129)
