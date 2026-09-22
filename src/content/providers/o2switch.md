@@ -62,24 +62,24 @@ referringSubnets: { now: 1395, before: 1380 }
 wikidata: Q140700079
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-09-22
 sources:
-  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q140700079', checkedAt: 2026-09-09 }
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q140700079', checkedAt: 2026-09-22 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: parent, url: 'https://your.online/brands', checkedAt: 2026-08-21 }
-  - { field: ownership, url: 'https://your.online/brands', checkedAt: 2026-08-21 }
-  - { field: infraContract, url: 'https://www.o2switch.fr/', checkedAt: 2026-07-31 }
-  - { field: regions, url: 'https://www.o2switch.fr/', checkedAt: 2026-07-31 }
-  - { field: hqCountry, url: 'https://www.o2switch.fr/', checkedAt: 2026-07-31 }
-  - { field: supportHours, url: 'https://www.o2switch.fr/hebergement-illimite/', checkedAt: 2026-08-01 }
+  - { field: parent, url: 'https://your.online/brands', checkedAt: 2026-09-22 }
+  - { field: ownership, url: 'https://your.online/brands', checkedAt: 2026-09-22 }
+  - { field: infraContract, url: 'https://www.o2switch.fr/', checkedAt: 2026-09-22 }
+  - { field: regions, url: 'https://www.o2switch.fr/', checkedAt: 2026-09-22 }
+  - { field: hqCountry, url: 'https://www.o2switch.fr/', checkedAt: 2026-09-22 }
+  - { field: supportHours, url: 'https://www.o2switch.fr/hebergement-illimite/', checkedAt: 2026-09-22 }
   - { field: supportChannels, url: 'https://www.o2switch.fr/hebergement-illimite/', checkedAt: 2026-08-01 }
-  - { field: sustainabilityUrl, url: 'https://www.o2switch.fr/green/', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://www.o2switch.fr/hebergement-illimite/', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://www.o2switch.fr/hebergement-illimite/', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://www.o2switch.fr/cgv/', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://www.o2switch.fr/hebergement-illimite/', checkedAt: 2026-08-02 }
-  - { field: billingTiming, url: 'https://www.o2switch.fr/cgv/', checkedAt: 2026-08-02 }
-  - { field: exitWithin, url: 'https://www.o2switch.fr/cgv/', checkedAt: 2026-08-02 }
+  - { field: sustainabilityUrl, url: 'https://www.o2switch.fr/green/', checkedAt: 2026-09-22 }
+  - { field: priceFrom, url: 'https://www.o2switch.fr/hebergement-illimite/', checkedAt: 2026-09-22 }
+  - { field: priceTo, url: 'https://www.o2switch.fr/hebergement-illimite/', checkedAt: 2026-09-22 }
+  - { field: currencies, url: 'https://www.o2switch.fr/cgv/', checkedAt: 2026-09-22 }
+  - { field: billingPeriods, url: 'https://www.o2switch.fr/hebergement-illimite/', checkedAt: 2026-09-22 }
+  - { field: billingTiming, url: 'https://www.o2switch.fr/cgv/', checkedAt: 2026-09-22 }
+  - { field: exitWithin, url: 'https://www.o2switch.fr/cgv/', checkedAt: 2026-09-22 }
 figure:
   emoji: 🌋
   color: rgb(166, 83, 69)
