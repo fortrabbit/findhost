@@ -31,3 +31,4 @@
 2026-09-22	o2switch	confirmed	Home, pricing, cgv, green, wikidata and your.online/brands pages read (200); all sourced fields confirmed; supportChannels source no longer shows an email contact method (phone and chat/Tidio widget still present)
 2026-09-22	netcup	confirmed	Home, hosting, VPS, impressum, status and AGB pages read (200); all sourced fields confirmed, no changes
 2026-09-23	modal	confirmed	Home, pricing, terms and region-selection pages read (200); all sourced fields confirmed; billingTiming source no longer states arrears/advance timing
+2026-09-23	liquid-web	confirmed	Home, hosting (redirected from /products/), vps-hosting, data-centers and wikidata pages read (200); all sourced fields confirmed; Servers.com sibling-brand cities on data-centers page excluded from regions
