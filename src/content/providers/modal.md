@@ -50,18 +50,18 @@ cliTool: official
 referringSubnets: { now: 1486, before: 1484 }
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-09-23
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: regions, url: 'https://modal.com/docs/guide/region-selection', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://modal.com/pricing', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://modal.com/pricing', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://modal.com/pricing', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://modal.com/legal/terms', checkedAt: 2026-08-02 }
+  - { field: regions, url: 'https://modal.com/docs/guide/region-selection', checkedAt: 2026-09-23 }
+  - { field: priceFrom, url: 'https://modal.com/pricing', checkedAt: 2026-09-23 }
+  - { field: priceTo, url: 'https://modal.com/pricing', checkedAt: 2026-09-23 }
+  - { field: currencies, url: 'https://modal.com/pricing', checkedAt: 2026-09-23 }
+  - { field: billingPeriods, url: 'https://modal.com/legal/terms', checkedAt: 2026-09-23 }
   - { field: billingTiming, url: 'https://modal.com/legal/terms', checkedAt: 2026-08-02 }
-  - { field: exitWithin, url: 'https://modal.com/legal/terms', checkedAt: 2026-08-02 }
-  - { field: freeTier, url: 'https://modal.com/pricing', checkedAt: 2026-08-01 }
-  - { field: pricingModel, url: 'https://modal.com/pricing', checkedAt: 2026-08-01 }
+  - { field: exitWithin, url: 'https://modal.com/legal/terms', checkedAt: 2026-09-23 }
+  - { field: freeTier, url: 'https://modal.com/pricing', checkedAt: 2026-09-23 }
+  - { field: pricingModel, url: 'https://modal.com/pricing', checkedAt: 2026-09-23 }
 figure:
   emoji: 🎛️
   color: rgb(72, 162, 144)
