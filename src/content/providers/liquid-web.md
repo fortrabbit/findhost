@@ -41,17 +41,17 @@ referringSubnets: { now: 2834, before: 2856 }
 wikidata: Q17031875
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-09-23
 sources:
-  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q17031875', checkedAt: 2026-09-09 }
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q17031875', checkedAt: 2026-09-23 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: regions, url: 'https://www.liquidweb.com/data-centers/', checkedAt: 2026-08-01 }
-  - { field: supportHours, url: 'https://www.liquidweb.com/products/', checkedAt: 2026-07-31 }
-  - { field: software, url: 'https://www.liquidweb.com/products/', checkedAt: 2026-07-31 }
-  - { field: priceFrom, url: 'https://www.liquidweb.com/vps-hosting/', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://www.liquidweb.com/vps-hosting/', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://www.liquidweb.com/vps-hosting/', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://www.liquidweb.com/vps-hosting/', checkedAt: 2026-08-02 }
+  - { field: regions, url: 'https://www.liquidweb.com/data-centers/', checkedAt: 2026-09-23 }
+  - { field: supportHours, url: 'https://www.liquidweb.com/hosting/', checkedAt: 2026-09-23 }
+  - { field: software, url: 'https://www.liquidweb.com/hosting/', checkedAt: 2026-09-23 }
+  - { field: priceFrom, url: 'https://www.liquidweb.com/vps-hosting/', checkedAt: 2026-09-23 }
+  - { field: priceTo, url: 'https://www.liquidweb.com/vps-hosting/', checkedAt: 2026-09-23 }
+  - { field: currencies, url: 'https://www.liquidweb.com/vps-hosting/', checkedAt: 2026-09-23 }
+  - { field: billingPeriods, url: 'https://www.liquidweb.com/vps-hosting/', checkedAt: 2026-09-23 }
 figure:
   emoji: 💧
   color: rgb(45, 117, 190)
