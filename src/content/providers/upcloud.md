@@ -44,12 +44,14 @@ sources:
   - { field: urls, url: 'https://developers.upcloud.com/', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://developers.upcloud.com/1.3/4-pricing/', checkedAt: 2026-08-08 }
   - { field: ownership, url: 'https://tech.eu/2020/01/21/helsinki-based-upcloud-raises-e18-million-to-rapidly-grow-its-team-and-cloud-computing-services/', checkedAt: 2026-08-21 }
+  - { field: gpuCapacity, url: 'https://upcloud.com/docs/products/gpu-servers/', checkedAt: 2026-09-24 }
 greenWebId: 1416
 figure:
   emoji: ☁️
   color: rgb(0, 122, 204)
   textColor: rgb(230, 244, 253)
   text: Finnish VMs and storage, hourly metered.
+gpuCapacity: [instances]
 ---
 
 UpCloud is a Finnish cloud infrastructure provider selling virtual machines, block storage and private networking. The operating system on a machine is the customer's to manage, full SSH access comes with it, and any runtime can be installed.

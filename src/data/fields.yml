@@ -617,17 +617,41 @@
     - { id: influxdb, label: InfluxDB }
     - { id: kafka, label: Kafka }
 
-# Rentable accelerator hardware, and managed inference on top of it. Recorded
-# rather than filtered: 16 records described it in prose, where nothing could
-# count it, and "AI hosting" means three different products — the other two are
-# `automation` (can an agent drive it) and the `ai-app` use case.
+# Where a customer can run weights of their own on rented accelerators. "AI
+# hosting" means three different products, and this is one of them — the other
+# two are `automation` (can an agent drive it) and the `ai-app` use case. Every
+# value but `model-api` is somewhere the customer's own model runs; a token API
+# over the provider's catalogue is recorded and shown, and not offered as a way
+# to find a GPU.
 - id: gpuCapacity
   label: GPU
   group: Tech stack
+  facet: gpu
+  subject: 'offer{|s} {lower}'
+  filterOrder: 22
   multiple: true
+  pairs:
+    - with: regions
   values:
-    - { id: instances, label: Instances }
-    - { id: inference, label: Managed inference, short: Inference }
+    - {
+        id: instances,
+        label: GPU instances,
+        short: Instances,
+        subject: 'rent{|s} out GPU servers, virtual or dedicated',
+      }
+    - {
+        id: serverless,
+        label: Serverless GPU,
+        short: Serverless,
+        subject: "run{|s} the customer's own container on a GPU, billed only while it runs",
+      }
+    - {
+        id: inference,
+        label: Managed inference,
+        short: Inference,
+        subject: "serve{|s} the customer's own or Hugging Face weights from a managed endpoint",
+      }
+    - { id: model-api, label: Model API, noFilter: true }
 
 - id: persistentStorage
   label: Persistent storage

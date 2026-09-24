@@ -26,12 +26,15 @@ sources:
   - { field: hqCountry, url: 'https://nine.ch/en/', checkedAt: 2026-08-14 }
   - { field: regions, url: 'https://nine.ch/en/', checkedAt: 2026-08-14 }
   - { field: managedDatabases, url: 'https://nine.ch/en/', checkedAt: 2026-08-14 }
+  - { field: gpuCapacity, url: 'https://nine.ch/en/products/gpu-server/', checkedAt: 2026-09-24 }
 figure:
   emoji: 🇨🇭
   color: rgb(140, 20, 30)
   textColor: rgb(255, 236, 236)
   text: Swiss infrastructure, one legal system throughout.
 ai: authored
+gpuCapacity:
+  - instances
 ---
 
 Nine Internet Solutions sells the layers separately and lets a customer pick one: managed Kubernetes, a managed server, a root server. Databases, object storage, search and caches are sold as managed services beside them, from data centres in Zurich.

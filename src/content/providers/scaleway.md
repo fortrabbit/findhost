@@ -82,6 +82,8 @@ sources:
   - { field: billingTiming, url: 'https://www.scaleway.com/en/pricing/virtual-instances/', checkedAt: 2026-08-02 }
   - { field: exitWithin, url: 'https://www.scaleway.com/en/pricing/virtual-instances/', checkedAt: 2026-08-02 }
   - { field: sla, url: 'https://www.scaleway.com/en/virtual-instances/sla/', checkedAt: 2026-09-21 }
+  - { field: gpuCapacity, url: 'https://www.scaleway.com/en/inference/', checkedAt: 2026-09-24 }
+  - { field: gpuCapacity, url: 'https://www.scaleway.com/en/generative-apis/', checkedAt: 2026-09-24 }
 figure:
   emoji: 🐿️
   color: rgb(132, 73, 161)
@@ -90,6 +92,8 @@ figure:
 ai: authored
 gpuCapacity:
   - instances
+  - inference
+  - model-api
 greenWebId: 925
 ---
 

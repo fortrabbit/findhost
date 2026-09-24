@@ -9,7 +9,7 @@ urls:
 category:
   - paas
   - caas
-description: French platform that deploys containers and repositories across global regions with scale-to-zero, per-second billing, GPU instances and serverless Postgres.
+description: French platform that deploys containers and repositories across global regions with scale-to-zero, per-second billing, GPUs and serverless Postgres.
 hqCountry: FR
 ownership: vc-backed
 whoManagesOs: self-managed
@@ -70,6 +70,7 @@ sources:
   - { field: entryPrice, url: 'https://www.koyeb.com/pricing', checkedAt: 2026-08-01 }
   - { field: regions, url: 'https://www.koyeb.com/docs/reference/regions', checkedAt: 2026-08-01 }
   - { field: collaboration, url: 'https://www.koyeb.com', checkedAt: 2026-08-12 }
+  - { field: gpuCapacity, url: 'https://www.koyeb.com/pricing', checkedAt: 2026-09-24 }
 figure:
   emoji: 🛫
   color: rgb(64, 75, 171)
@@ -77,10 +78,10 @@ figure:
   text: Scale to zero, pay by the second.
 ai: authored
 gpuCapacity:
-  - instances
+  - serverless
 ---
 
-Koyeb is a Paris-founded platform that takes a Git repository or a container image and runs it across regions in the Americas, Europe and Asia, with automatic HTTPS, scale-to-zero and per-second billing. Alongside ordinary CPU workloads it rents GPU instances by the hour and offers a serverless Postgres, which puts it in front of the machine-learning inference market as much as the web one.
+Koyeb is a Paris-founded platform that takes a Git repository or a container image and runs it across regions in the Americas, Europe and Asia, with automatic HTTPS, scale-to-zero and per-second billing. Alongside ordinary CPU workloads it runs containers on GPUs, billed by the second, and offers a serverless Postgres, which puts it in front of the machine-learning inference market as much as the web one.
 
 Plans are a monthly subscription with a usage credit attached, stepping from a single-developer tier through a team tier to a quoted enterprise tier that adds dedicated infrastructure and access to AWS regions. Consumption is billed by the second on top of the subscription.
 

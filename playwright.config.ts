@@ -38,5 +38,8 @@ export default defineConfig({
     url: origin,
     reuseExistingServer: !process.env.CI,
     timeout: 120_000,
+    // Without it `astro preview` outlives the run and Playwright waits on it
+    // forever, which in CI is a job that never finishes rather than one that fails.
+    gracefulShutdown: { signal: 'SIGTERM', timeout: 5_000 },
   },
 });

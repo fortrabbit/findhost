@@ -52,11 +52,13 @@ sources:
   - { field: priceTo, url: 'https://www.liquidweb.com/vps-hosting/', checkedAt: 2026-09-23 }
   - { field: currencies, url: 'https://www.liquidweb.com/vps-hosting/', checkedAt: 2026-09-23 }
   - { field: billingPeriods, url: 'https://www.liquidweb.com/vps-hosting/', checkedAt: 2026-09-23 }
+  - { field: gpuCapacity, url: 'https://www.liquidweb.com/gpu-hosting/', checkedAt: 2026-09-24 }
 figure:
   emoji: 💧
   color: rgb(45, 117, 190)
   textColor: rgb(234, 240, 246)
   text: Managed hosting, high touch.
+gpuCapacity: [instances]
 ---
 
 Liquid Web is a hosting provider from Lansing, Michigan, trading since 1997 and specialising in managed VPS, dedicated servers, private and public cloud, and WordPress hosting. Support is the positioning: the product is sold as high-touch and fully managed, under the slogan "Most Helpful Humans in Hosting".

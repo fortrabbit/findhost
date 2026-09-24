@@ -113,6 +113,9 @@ sources:
   - { field: supportHours, url: 'https://www.keyweb.de/de/support/hosting-support', checkedAt: 2026-09-18 }
   - { field: 'TEAG majority stake', url: 'https://www.keyweb.de/de/keyweb/unternehmen/meilensteine', checkedAt: 2026-09-18 }
   - { field: 'TÜV certification scope', url: 'https://www.keyweb.de/de/keyweb/rechenzentrum', checkedAt: 2026-09-18 }
+  - { field: gpuCapacity, url: 'https://www.keyweb.de/de/server/ki-machine', checkedAt: 2026-09-24 }
+gpuCapacity:
+  - instances
 ---
 
 Keyweb sells self-managed root virtual servers, dedicated physical servers, and shared webhosting for CMS and shop software, from data centers in Thuringia, Berlin and Frankfurt that the company built and runs itself rather than reselling capacity from another operator. The company was founded in Erfurt in 1997, and as the company's [milestones page](https://www.keyweb.de/de/keyweb/unternehmen/meilensteine) states, Thuringia's regional energy utility TEAG has held a majority stake in Keyweb since 2025.

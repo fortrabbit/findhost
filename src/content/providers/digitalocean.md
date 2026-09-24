@@ -103,6 +103,9 @@ sources:
   - { field: useCases, url: 'https://www.digitalocean.com/', checkedAt: 2026-07-31 }
   - { field: audience, url: 'https://www.digitalocean.com/', checkedAt: 2026-07-31 }
   - { field: sla, url: 'https://www.digitalocean.com/sla/cpu-droplets', checkedAt: 2026-08-29 }
+  - { field: gpuCapacity, url: 'https://www.digitalocean.com/products/gpu-droplets', checkedAt: 2026-09-24 }
+  - { field: gpuCapacity, url: 'https://docs.digitalocean.com/products/gradient-ai-platform/details/features/', checkedAt: 2026-09-24 }
+  - { field: gpuCapacity, url: 'https://docs.digitalocean.com/products/gradient-ai-platform/details/pricing/', checkedAt: 2026-09-24 }
 figure:
   emoji: 🐟
   color: rgb(45, 142, 190)
@@ -112,6 +115,7 @@ domainRegistration: none
 testDomain: included
 staging: included
 collaboration: team
+gpuCapacity: [instances, inference, model-api]
 ---
 
 DigitalOcean Holdings, Inc. trades on the New York Stock Exchange as DOCN. It started with a single product — the Droplet, a virtual private server — and has since added block storage, managed databases, managed Kubernetes, object storage, serverless functions and an application platform. It acquired [Cloudways](/cloudways/) in 2022.

@@ -72,12 +72,15 @@ sources:
   - { field: paymentMethods, url: 'https://contabo.com/en/legal/terms-and-conditions/', checkedAt: 2026-08-29 }
   - { field: sla, url: 'https://contabo.com/en/legal/terms-and-conditions/', checkedAt: 2026-08-29 }
   - { field: parent, url: 'https://www.oakleycapital.com/latest-news/oakley-capital-agrees-sale-of-contabo-and-follow-on-investment/', checkedAt: 2026-08-29 }
+  - { field: gpuCapacity, url: 'https://contabo.com/en/gpu-cloud/', checkedAt: 2026-09-24 }
 figure:
   emoji: 🥨
   color: rgb(190, 154, 45)
   textColor: rgb(246, 243, 234)
   text: Bulk servers out of Munich.
 ai: authored
+gpuCapacity:
+  - instances
 ---
 
 Contabo is a German hosting provider founded in 2003 and headquartered in Munich. The range covers virtual private servers, dedicated servers, object storage and managed Kubernetes, and the virtual servers are the product it is known for: memory, storage and traffic allocations well above what the same money buys elsewhere.

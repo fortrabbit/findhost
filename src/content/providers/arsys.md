@@ -102,7 +102,10 @@ sources:
   - { field: regions, url: 'https://www.arsys.es/vps', checkedAt: 2026-08-12 }
   - { field: supportChannels, url: 'https://www.arsys.es/soporte', checkedAt: 2026-08-12 }
   - { field: supportHours, url: 'https://www.arsys.es/empresa', checkedAt: 2026-08-12 }
+  - { field: gpuCapacity, url: 'https://www.arsys.es/servidores/gpu', checkedAt: 2026-09-24 }
 ai: authored
+gpuCapacity:
+  - instances
 ---
 
 Arsys is a Spanish hosting company founded in 1996, based in Logroño and owned by IONOS Group since 2013. It sells shared hosting and virtual private servers, with data centers in Spain, Germany and the United States. Shared hosting runs on Linux with PHP, Python and Perl support; Windows hosting adds ASP.NET and SQL Server. VPS customers choose the region when ordering and receive root access over SSH.

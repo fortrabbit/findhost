@@ -33,12 +33,17 @@ sources:
   - { field: supportChannels, url: 'https://infomaniakstatus.com/', checkedAt: 2026-08-12 }
   - { field: supportHours, url: 'https://infomaniakstatus.com/', checkedAt: 2026-08-12 }
   - { field: ownership, url: 'https://news.infomaniak.com/en/infomaniak-foundation-sovereign-cloud/', checkedAt: 2026-08-21 }
+  - { field: gpuCapacity, url: 'https://www.infomaniak.com/en/hosting/public-cloud/prices', checkedAt: 2026-09-24 }
+  - { field: gpuCapacity, url: 'https://www.infomaniak.com/en/hosting/ai-services/prices', checkedAt: 2026-09-24 }
 figure:
   emoji: ☁️
   color: rgb(0, 51, 102)
   textColor: rgb(240, 247, 255)
   text: Swiss hosting and cloud provider with European data centres.
 ai: authored
+gpuCapacity:
+  - instances
+  - model-api
 ---
 
 Infomaniak is a Swiss hosting and cloud provider offering shared hosting, VPS, and dedicated servers alongside public cloud infrastructure and database services. The company operates multiple data centers in Europe and bills on fixed-tier plans from shared hosting through to enterprise cloud services.

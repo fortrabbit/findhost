@@ -76,7 +76,10 @@ sources:
   - { field: certifications, url: 'https://www.arubacloud.com', checkedAt: 2026-08-12 }
   - { field: domainRegistration, url: 'https://www.aruba.it/en/', checkedAt: 2026-08-12 }
   - { field: emailHosting, url: 'https://www.aruba.it/en/', checkedAt: 2026-08-12 }
+  - { field: gpuCapacity, url: 'https://www.arubacloud.com/use-case/dedicated-servers-for-ai-and-machine-learning', checkedAt: 2026-09-24 }
 ai: authored
+gpuCapacity:
+  - instances
 ---
 
 Aruba is an Italian provider that owns and runs its own data centers, and sells across most of the market at once: registrar services, shared hosting, virtual and bare metal servers, and a public cloud. Billing is per resource rather than by plan tier, in euros and by the month.

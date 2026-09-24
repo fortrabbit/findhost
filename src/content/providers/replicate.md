@@ -19,7 +19,12 @@ figure:
 ai: authored
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-
+  - { field: gpuCapacity, url: 'https://replicate.com/pricing', checkedAt: 2026-09-24 }
+  - { field: gpuCapacity, url: 'https://replicate.com/docs/topics/deployments', checkedAt: 2026-09-24 }
+gpuCapacity:
+  - serverless
+  - inference
+  - model-api
 ---
 
 Replicate sells serverless in the United States.

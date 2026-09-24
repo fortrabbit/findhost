@@ -76,11 +76,18 @@ sources:
   - { field: billingTiming, url: 'https://aws.amazon.com/agreement/', checkedAt: 2026-08-02 }
   - { field: exitWithin, url: 'https://aws.amazon.com/agreement/', checkedAt: 2026-08-02 }
   - { field: sla, url: 'https://aws.amazon.com/compute/sla/', checkedAt: 2026-08-30 }
+  - { field: gpuCapacity, url: 'https://aws.amazon.com/ec2/instance-types/accelerated-computing/', checkedAt: 2026-09-24 }
+  - { field: gpuCapacity, url: 'https://aws.amazon.com/sagemaker/ai/deploy/', checkedAt: 2026-09-24 }
+  - { field: gpuCapacity, url: 'https://aws.amazon.com/bedrock/pricing/', checkedAt: 2026-09-24 }
 figure:
   emoji: 📦
   color: "#FF9900"
   textColor: rgb(155, 64, 8)
   text: Everything from A to Z.
+gpuCapacity:
+  - instances
+  - inference
+  - model-api
 ---
 
 Amazon Web Services is Amazon's cloud infrastructure division, and the infrastructure a good deal of the rest of this dataset is built on: managed platforms and smaller hosts frequently rent AWS capacity rather than owning hardware. Its regions span most major markets, each divided into isolated availability zones.

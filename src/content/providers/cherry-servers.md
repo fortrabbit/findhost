@@ -69,12 +69,14 @@ sources:
   - { field: currencies, url: 'https://www.cherryservers.com/pricing', checkedAt: 2026-08-02 }
   - { field: billingPeriods, url: 'https://www.cherryservers.com/terms-of-service', checkedAt: 2026-08-02 }
   - { field: exitWithin, url: 'https://www.cherryservers.com/terms-of-service', checkedAt: 2026-08-02 }
+  - { field: gpuCapacity, url: 'https://www.cherryservers.com/dedicated-gpu-servers', checkedAt: 2026-09-24 }
 figure:
   emoji: 🍒
   color: rgb(172, 63, 109)
   textColor: rgb(246, 234, 239)
   text: Bare metal by the hour, since 2001.
 ai: authored
+gpuCapacity: [instances]
 ---
 
 Cherry Servers has run from Lithuania since 2001 and owns the hardware it rents out. The catalogue is dedicated machines and virtual servers, with elastic block and backup storage, floating IPs, load balancers and public IP subnets alongside them. The same machine can be taken hourly, on a fixed term or as spot capacity, which is a wider set of billing arrangements than the size of the company suggests.

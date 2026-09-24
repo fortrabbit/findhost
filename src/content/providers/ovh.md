@@ -95,12 +95,16 @@ sources:
       url: 'https://www.euronext.com/en/about/media/euronext-press-releases/ovhcloud-lists-euronext-paris',
       checkedAt: 2026-08-21,
     }
+  - { field: gpuCapacity, url: 'https://www.ovhcloud.com/en/public-cloud/gpu/', checkedAt: 2026-09-24 }
+  - { field: gpuCapacity, url: 'https://docs.ovhcloud.com/en/guides/public-cloud/ai-machine-learning/ai-deploy-build-use-custom-image', checkedAt: 2026-09-24 }
+  - { field: gpuCapacity, url: 'https://endpoints.ai.cloud.ovh.net/', checkedAt: 2026-09-24 }
 figure:
   emoji: 🧯
   color: rgb(190, 45, 49)
   textColor: rgb(246, 234, 234)
   text: Builds its own metal, cools it with water.
 greenWebId: 1305
+gpuCapacity: [instances, inference, model-api]
 ---
 
 OVHcloud — long known as OVH — was founded in Roubaix by Octave Klaba and has been listed on Euronext Paris since 2021. The traditional business is dedicated servers and VPS, extended into an OpenStack-based public cloud, shared hosting and domains, sold across Europe, North America and Asia-Pacific.

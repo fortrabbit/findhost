@@ -41,11 +41,14 @@ sources:
   - { field: freeTier, url: 'https://developers.cloudflare.com/workers/platform/pricing/', checkedAt: 2026-09-08 }
   - { field: cliTool, url: 'https://developers.cloudflare.com/workers/', checkedAt: 2026-09-08 }
   - { field: ownership, url: 'https://www.cloudflare.com/about-overview/', checkedAt: 2026-09-08 }
+  - { field: gpuCapacity, url: 'https://developers.cloudflare.com/workers-ai/platform/pricing/', checkedAt: 2026-09-24 }
 figure:
   emoji: 🔶
   color: rgb(176, 117, 59)
   textColor: rgb(246, 240, 234)
   text: Code next to the visitor.
+gpuCapacity:
+  - model-api
 ---
 
 Cloudflare Workers runs code in V8 isolates on Cloudflare's network, close to the visitor and without the cold-start cost of a container. Cloudflare documents first-class support for JavaScript, TypeScript, Python and Rust, and describes WebAssembly as the route for everything else, naming C, C++, Kotlin and Go as examples.

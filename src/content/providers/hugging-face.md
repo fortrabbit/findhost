@@ -64,6 +64,7 @@ sources:
   - { field: deployMethods, url: 'https://huggingface.co/docs/hub/spaces-overview', checkedAt: 2026-08-01 }
   - { field: testDomain, url: 'https://huggingface.co/docs/hub/spaces-overview', checkedAt: 2026-08-12 }
   - { field: collaboration, url: 'https://huggingface.co/docs/hub/spaces-overview', checkedAt: 2026-08-12 }
+  - { field: gpuCapacity, url: 'https://huggingface.co/docs/inference-endpoints/about', checkedAt: 2026-09-24 }
 figure:
   emoji: 🤗
   color: rgb(190, 145, 45)
@@ -72,6 +73,7 @@ figure:
 ai: authored
 gpuCapacity:
   - instances
+  - inference
 ---
 
 Hugging Face is best known as the registry where machine-learning models and datasets live, but its Spaces product makes it a hosting provider as well. A Space is a Git repository that the platform builds and runs as a live application, either through one of the supported SDKs — Gradio and Streamlit for Python, or a plain static site — or from a Dockerfile, which admits anything that fits in a container.

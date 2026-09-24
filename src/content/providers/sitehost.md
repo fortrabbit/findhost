@@ -40,7 +40,7 @@ runtimes:
   - docker
 gpuCapacity:
   - instances
-  - inference
+  - model-api
 backupsIncluded: included
 deployMethods:
   - git
@@ -115,8 +115,8 @@ sources:
   - { field: emailHosting, url: 'https://sitehost.nz/about', checkedAt: 2026-08-12 }
   - { field: category, url: 'https://sitehost.nz/about', checkedAt: 2026-09-06 }
   - { field: category, url: 'https://sitehost.nz/hosting/dedicated-servers', checkedAt: 2026-09-06 }
-  - { field: gpuCapacity, url: 'https://sitehost.nz/services/ai-platform', checkedAt: 2026-09-06 }
-  - { field: gpuCapacity, url: 'https://sitehost.nz/hosting/gpu-hosting', checkedAt: 2026-09-06 }
+  - { field: gpuCapacity, url: 'https://sitehost.nz/services/ai-platform', checkedAt: 2026-09-24 }
+  - { field: gpuCapacity, url: 'https://sitehost.nz/hosting/gpu-hosting', checkedAt: 2026-09-24 }
   - { field: backupsIncluded, url: 'https://sitehost.nz/hosting/cloud-containers', checkedAt: 2026-09-06 }
   - { field: moneyBack, url: 'https://sitehost.nz/hosting/cloud-containers', checkedAt: 2026-09-06 }
   - { field: paymentMethods, url: 'https://sitehost.nz/about/terms', checkedAt: 2026-09-06 }
