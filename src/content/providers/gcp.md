@@ -71,12 +71,19 @@ sources:
   - { field: regions, url: 'https://cloud.google.com/about/locations', checkedAt: 2026-08-01 }
   - { field: billingPeriods, url: 'https://docs.cloud.google.com/billing/docs/how-to/billing-cycle', checkedAt: 2026-08-02 }
   - { field: billingTiming, url: 'https://docs.cloud.google.com/billing/docs/how-to/billing-cycle', checkedAt: 2026-08-02 }
+  - { field: gpuCapacity, url: 'https://docs.cloud.google.com/compute/docs/gpus', checkedAt: 2026-09-24 }
+  - { field: gpuCapacity, url: 'https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/predictions/configure-compute', checkedAt: 2026-09-24 }
+  - { field: gpuCapacity, url: 'https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing', checkedAt: 2026-09-24 }
 greenWebId: 595
 figure:
   emoji: 🌐
   color: rgb(66, 133, 244)
   textColor: rgb(242, 245, 250)
   text: Hyperscaler selling compute and data services on Google's infrastructure.
+gpuCapacity:
+  - instances
+  - inference
+  - model-api
 ---
 
 Google Cloud Platform is the third of the big three hyperscalers, after AWS and Azure. It runs on the same infrastructure Google uses for Search, Gmail and YouTube, and its catalogue reflects Google's own centre of gravity: data and analytics through BigQuery, Kubernetes through GKE, machine learning throughout.

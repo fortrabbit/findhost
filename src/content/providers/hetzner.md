@@ -87,12 +87,14 @@ sources:
   - { field: audience, url: 'https://www.hetzner.com/', checkedAt: 2026-07-31 }
   - { field: ownership, url: 'https://career.hetzner.com/en/unsere-story/', checkedAt: 2026-08-21 }
   - { field: paymentMethods, url: 'https://docs.hetzner.com/general/billing-and-account-management/billing-at-hetzner/payment-overview/', checkedAt: 2026-08-29 }
+  - { field: gpuCapacity, url: 'https://www.hetzner.com/dedicated-rootserver/matrix-gpu/', checkedAt: 2026-09-24 }
 figure:
   emoji: 🇩🇪
   color: rgb(183, 145, 52)
   textColor: rgb(246, 242, 234)
   text: IT made in Germany.
 greenWebId: 131
+gpuCapacity: [instances]
 ---
 
 Hetzner Online GmbH was founded in 1997 and is headquartered in Gunzenhausen, Germany. It owns and operates its own data centre parks in Germany and Finland, and has added capacity in Singapore and the United States.

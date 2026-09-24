@@ -63,11 +63,13 @@ sources:
   - { field: exitWithin, url: 'https://techdocs.akamai.com/cloud-computing/docs/understanding-how-billing-works', checkedAt: 2026-08-02 }
   - { field: pricingModel, url: 'https://api.linode.com/v4/linode/types', checkedAt: 2026-09-24 }
   - { field: apiAvailable, url: 'https://api.linode.com/v4/regions', checkedAt: 2026-09-24 }
+  - { field: gpuCapacity, url: 'https://techdocs.akamai.com/cloud-computing/docs/gpu-compute-instances', checkedAt: 2026-09-24 }
 figure:
   emoji: 🇺🇸
   color: rgb(45, 107, 190)
   textColor: rgb(234, 239, 246)
   text: VPS from US by Akamai.
+gpuCapacity: [instances]
 ---
 
 Linode has sold Linux virtual servers to developers since 2003. Akamai acquired it in 2022 and the product is now marketed as Akamai Cloud, with the catalogue widening from plain VPS instances towards broader infrastructure services integrated with Akamai's CDN and edge network.

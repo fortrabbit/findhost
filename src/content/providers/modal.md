@@ -62,6 +62,10 @@ sources:
   - { field: exitWithin, url: 'https://modal.com/legal/terms', checkedAt: 2026-09-23 }
   - { field: freeTier, url: 'https://modal.com/pricing', checkedAt: 2026-09-23 }
   - { field: pricingModel, url: 'https://modal.com/pricing', checkedAt: 2026-09-23 }
+  - { field: gpuCapacity, url: 'https://modal.com/pricing', checkedAt: 2026-09-24 }
+  - { field: gpuCapacity, url: 'https://modal.com/docs/guide/scale', checkedAt: 2026-09-24 }
+  - { field: gpuCapacity, url: 'https://modal.com/docs/guide/dedicated-endpoints', checkedAt: 2026-09-24 }
+  - { field: gpuCapacity, url: 'https://modal.com/docs/guide/shared-endpoints', checkedAt: 2026-09-24 }
 figure:
   emoji: 🎛️
   color: rgb(72, 162, 144)
@@ -69,7 +73,9 @@ figure:
   text: A decorator, then a GPU.
 ai: authored
 gpuCapacity:
-  - instances
+  - serverless
+  - inference
+  - model-api
 ---
 
 Modal turns a Python function into a remote container. Decorate it, describe the image and the hardware it needs in the same file, and the platform provisions the machine, runs the code and tears it down again — billed by the second, with nothing charged while idle. The same mechanism covers model inference, sandboxes, training runs, notebooks and batch processing.

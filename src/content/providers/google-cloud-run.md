@@ -71,12 +71,16 @@ sources:
   - { field: billingTiming, url: 'https://docs.cloud.google.com/billing/docs/how-to/billing-cycle', checkedAt: 2026-08-02 }
   - { field: deployMethods, url: 'https://cloud.google.com/run/pricing', checkedAt: 2026-07-31 }
   - { field: ownership, url: 'https://cloud.google.com/terms/services', checkedAt: 2026-08-21 }
+  - { field: gpuCapacity, url: 'https://docs.cloud.google.com/run/docs/configuring/services/gpu', checkedAt: 2026-09-24 }
+  - { field: gpuCapacity, url: 'https://cloud.google.com/run/pricing', checkedAt: 2026-09-24 }
 figure:
   emoji: 🏃
   color: rgb(77, 109, 157)
   textColor: rgb(234, 239, 245)
   text: Containers that scale to zero.
 greenWebId: 595
+gpuCapacity:
+  - serverless
 ---
 
 Cloud Run is Google's serverless container platform. It runs any container image, scales it to zero when idle, and bills only while a request is in flight — the scale-to-zero end of serverless without the function model. Code arrives as an image pushed to a registry, deployed from the gcloud CLI, the API or Terraform.

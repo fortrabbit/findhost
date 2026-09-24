@@ -38,12 +38,15 @@ sources:
   - { field: supportChannels, url: 'https://selectel.ru/en/', checkedAt: 2026-08-08 }
   - { field: supportHours, url: 'https://selectel.ru/en/', checkedAt: 2026-08-08 }
   - { field: apiAvailable, url: 'https://selectel.ru/en/', checkedAt: 2026-08-09 }
+  - { field: gpuCapacity, url: 'https://selectel.ru/services/gpu/', checkedAt: 2026-09-24 }
 figure:
   emoji: 🇷🇺
   color: rgb(77, 100, 157)
   textColor: rgb(234, 237, 245)
   text: Six data centres of its own, Saint Petersburg and Moscow.
 ai: authored
+gpuCapacity:
+  - instances
 ---
 
 Selectel is an infrastructure company operating six data centres it describes as its own, split between Saint Petersburg and Moscow with partner facilities in the Leningrad region. It sells dedicated servers, cloud virtual machines, a VMware-based cloud, managed Kubernetes, managed databases and object storage, priced in Russian roubles. The company states 36,000-plus clients and describes itself as having operated for 17 years.

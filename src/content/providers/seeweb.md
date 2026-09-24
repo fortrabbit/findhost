@@ -32,7 +32,10 @@ sources:
   - { field: ownership, url: 'https://seeweb.it/en/', checkedAt: 2026-08-12 }
   - { field: regions, url: 'https://seeweb.it/en/', checkedAt: 2026-08-12 }
   - { field: category, url: 'https://seeweb.it/en/', checkedAt: 2026-08-12 }
+  - { field: gpuCapacity, url: 'https://www.seeweb.it/en/products/cloud-server-gpu', checkedAt: 2026-09-24 }
 ai: authored
+gpuCapacity:
+  - instances
 ---
 
 Seeweb is an Italian cloud infrastructure provider founded in 1998 and part of the DHH Group. It sells virtual private servers, cloud servers, and managed hosting services alongside storage and database options. Data centers operate in Italy (Milan and Frosinone), Switzerland (Lugano and Zurich), and Bulgaria (Sofia). The company offers cloud servers with shared and dedicated CPU options, GPU instances, and specialized services including managed Kubernetes, cloud databases, and email hosting.

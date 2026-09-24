@@ -77,11 +77,20 @@ sources:
   - { field: billingPeriods, url: 'https://azure.microsoft.com/en-us/pricing/purchase-options/pay-as-you-go/', checkedAt: 2026-08-02 }
   - { field: billingTiming, url: 'https://azure.microsoft.com/en-us/pricing/purchase-options/pay-as-you-go/', checkedAt: 2026-08-02 }
   - { field: exitWithin, url: 'https://azure.microsoft.com/en-us/pricing/purchase-options/pay-as-you-go/', checkedAt: 2026-08-02 }
+  - { field: gpuCapacity, url: 'https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/overview', checkedAt: 2026-09-24 }
+  - { field: gpuCapacity, url: 'https://learn.microsoft.com/en-us/azure/container-apps/gpu-serverless-overview', checkedAt: 2026-09-24 }
+  - { field: gpuCapacity, url: 'https://learn.microsoft.com/en-us/azure/machine-learning/concept-endpoints-online', checkedAt: 2026-09-24 }
+  - { field: gpuCapacity, url: 'https://azure.microsoft.com/en-us/pricing/details/azure-openai/', checkedAt: 2026-09-24 }
 figure:
   emoji: ☁️
   color: rgb(45, 95, 190)
   textColor: rgb(234, 238, 246)
   text: Windows in the sky?
+gpuCapacity:
+  - instances
+  - serverless
+  - inference
+  - model-api
 ---
 
 Azure is Microsoft's cloud platform, spanning virtual machines, storage, networking, databases and AI services, and integrating with the rest of the Microsoft estate — Entra ID, Microsoft 365, Visual Studio, .NET. That integration is why it is the default cloud in many corporate IT environments.

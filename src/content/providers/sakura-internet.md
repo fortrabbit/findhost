@@ -59,12 +59,19 @@ sources:
   - { field: supportChannels, url: 'https://help.sakura.ad.jp', checkedAt: 2026-08-12 }
   - { field: supportHours, url: 'https://help.sakura.ad.jp', checkedAt: 2026-08-12 }
   - { field: ownership, url: 'https://www.sakura.ad.jp/corporate/en/ir/', checkedAt: 2026-08-21 }
+  - { field: gpuCapacity, url: 'https://ai.sakura.ad.jp/gpu/', checkedAt: 2026-09-24 }
+  - { field: gpuCapacity, url: 'https://ai.sakura.ad.jp/gpu/koukaryoku-dok/', checkedAt: 2026-09-24 }
+  - { field: gpuCapacity, url: 'https://ai.sakura.ad.jp/sakura-ai/ai-engine/', checkedAt: 2026-09-24 }
 figure:
   emoji: 🌸
   color: rgb(220, 120, 160)
   textColor: rgb(246, 238, 243)
   text: Japanese infrastructure, from shared to dedicated.
 ai: authored
+gpuCapacity:
+  - instances
+  - serverless
+  - model-api
 ---
 
 Sakura Internet is a Japanese cloud and infrastructure provider offering shared hosting, virtual private servers, and dedicated servers. The rental server product is a managed hosting platform marketed for WordPress sites. VPS and dedicated servers offer root access for self-managed infrastructure. The company also operates Sakura Cloud for scalable infrastructure and specializes in domestic AI and GPU computing through its Koukaryoku platform.

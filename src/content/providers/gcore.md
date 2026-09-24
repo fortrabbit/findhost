@@ -56,6 +56,8 @@ sources:
   - { field: billingTiming, url: 'https://gcore.com/pricing', checkedAt: 2026-08-02 }
   - { field: category, url: 'https://gcore.com/cloud', checkedAt: 2026-08-01 }
   - { field: ownership, url: 'https://gcore.com/press-releases/gcore-raises-60-million-in-series-a-funding-to-drive-ai-innovation-and-global-expansion', checkedAt: 2026-08-21 }
+  - { field: gpuCapacity, url: 'https://gcore.com/gpu-cloud', checkedAt: 2026-09-24 }
+  - { field: gpuCapacity, url: 'https://gcore.com/everywhere-inference', checkedAt: 2026-09-24 }
 figure:
   emoji: 🌐
   color: rgb(73, 103, 161)

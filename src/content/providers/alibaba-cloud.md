@@ -97,7 +97,16 @@ sources:
   - { field: useCases, url: 'https://www.alibabacloud.com/en/solutions', checkedAt: 2026-08-12 }
   - { field: supportChannels, url: 'https://www.alibabacloud.com/en/service/support', checkedAt: 2026-08-12 }
   - { field: apiAvailable, url: 'https://www.alibabacloud.com/en/product/api-gateway', checkedAt: 2026-08-12 }
+  - { field: gpuCapacity, url: 'https://www.alibabacloud.com/help/en/egs/what-is-elastic-gpu-service', checkedAt: 2026-09-24 }
+  - { field: gpuCapacity, url: 'https://www.alibabacloud.com/help/en/functioncompute/quasi-real-time-inference-scenarios', checkedAt: 2026-09-24 }
+  - { field: gpuCapacity, url: 'https://www.alibabacloud.com/help/en/pai/overview-2', checkedAt: 2026-09-24 }
+  - { field: gpuCapacity, url: 'https://www.alibabacloud.com/help/en/model-studio/model-pricing', checkedAt: 2026-09-24 }
 ai: authored
+gpuCapacity:
+  - instances
+  - serverless
+  - inference
+  - model-api
 ---
 
 Alibaba Cloud is Alibaba's cloud infrastructure division, operating 32 regions with 105 availability zones spread across six continents. The platform offers virtual machines (ECS), containers (Kubernetes), serverless functions, and managed databases alongside storage, networking, security and AI services. Instances run Linux and Windows, support multiple programming languages including Python, Node.js, Java, Go and PHP, and can be provisioned via control panel, API or marketplace images.

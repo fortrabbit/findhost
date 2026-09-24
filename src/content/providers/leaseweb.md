@@ -24,12 +24,14 @@ sources:
   - { field: category, url: 'https://www.leaseweb.com', checkedAt: 2026-08-12 }
   - { field: infraContract, url: 'https://www.leaseweb.com', checkedAt: 2026-08-12 }
   - { field: ownership, url: 'https://ocom.com/brands/', checkedAt: 2026-08-21 }
+  - { field: gpuCapacity, url: 'https://blog.leaseweb.com/2026/09/09/epyc-gpu-dedicated-servers/', checkedAt: 2026-09-24 }
 figure:
   emoji: 🔩
   color: rgb(40, 100, 170)
   textColor: rgb(235, 242, 250)
   text: Dutch bare metal infrastructure provider.
 ai: authored
+gpuCapacity: [instances]
 ---
 
 Leaseweb is a Dutch infrastructure provider selling bare metal servers, virtual private servers, and infrastructure as a service. The company operates multiple global data centers.
