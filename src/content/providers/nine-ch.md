@@ -7,6 +7,7 @@ category:
   - caas
   - vps
   - bare-metal
+  - gpu
 description: A Swiss provider selling managed Kubernetes, managed and root servers, databases and object storage, all from data centres in Zurich.
 hqCountry: CH
 regions:

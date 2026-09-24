@@ -12,6 +12,7 @@ category:
   - bare-metal
   - caas
   - domains-dns
+  - gpu
 description: An Italian provider that owns its data centers and sells registrar services, hosting, servers and a public cloud.
 hqCountry: IT
 ownership: independent

@@ -9,6 +9,7 @@ category:
   - vps
   - bare-metal
   - serverless
+  - gpu
 description: Gcore is an edge and cloud provider selling CDN, streaming, DDoS protection, virtual machines, bare metal, Kubernetes and serverless functions.
 whoManagesOs: self-managed
 useCases:

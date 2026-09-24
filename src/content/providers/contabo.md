@@ -7,6 +7,7 @@ urls:
 category:
   - vps
   - bare-metal
+  - gpu
 description: German provider selling virtual and dedicated servers from Munich, with large resource allocations at low fixed monthly rates.
 hqCountry: DE
 ownership: pe-owned

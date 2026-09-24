@@ -10,6 +10,7 @@ category:
   - caas
   - vps
   - bare-metal
+  - gpu
 description: New Zealand host that owns its Auckland data centre and sells Cloud Containers, a product that runs prebuilt or custom Docker images.
 founded: 2004
 hqCountry: NZ

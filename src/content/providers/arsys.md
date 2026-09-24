@@ -9,6 +9,7 @@ urls:
 category:
   - shared-hosting
   - vps
+  - gpu
 description: Spanish hosting provider offering shared hosting and VPS from ISO-certified datacenters in Logroño, part of the IONOS Group since 2013.
 founded: 1996
 hqCountry: ES

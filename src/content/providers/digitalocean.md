@@ -8,6 +8,7 @@ urls:
 category:
   - vps
   - paas
+  - gpu
 description: DigitalOcean is a publicly listed cloud provider best known for Droplets, its VPS product, alongside managed databases, Kubernetes and an app platform.
 founded: 2012
 favorite: true

@@ -6,6 +6,7 @@ urls:
   pricing: https://www.liquidweb.com/products/
 category:
   - vps
+  - gpu
 description: Liquid Web is a US hosting provider from 1997 specialising in managed VPS, dedicated servers, cloud and WordPress hosting, with 24/7 support.
 founded: 1997
 hqCountry: US

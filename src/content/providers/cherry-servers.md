@@ -7,6 +7,7 @@ urls:
 category:
   - bare-metal
   - vps
+  - gpu
 description: Lithuanian provider selling dedicated machines and virtual servers on its own hardware, billed by the hour, by fixed term or as spot capacity.
 founded: 2001
 hqCountry: LT

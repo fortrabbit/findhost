@@ -9,6 +9,7 @@ urls:
   status: https://www.cloudscale-status.net
 category:
   - iaas
+  - gpu
 description: Swiss infrastructure-as-a-service provider selling virtual servers, object storage and load balancers on server hardware it owns in Swiss data centers.
 founded: 2014
 hqCountry: CH

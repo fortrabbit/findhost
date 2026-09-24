@@ -208,6 +208,7 @@
     - { id: serverless, label: Serverless }
     - { id: static, label: Static hosting }
     - { id: caas, label: Containers as a Service, short: CaaS }
+    - { id: gpu, label: GPU cloud, short: GPU, subject: "rent{|s} out GPUs to run the customer's own models" }
     - { id: server-management, label: Server management, aside: server-management }
     - { id: vanity-hosting, label: Vanity hosting }
     # A market rather than an architecture, like `vanity-hosting` above it, and
@@ -617,41 +618,21 @@
     - { id: influxdb, label: InfluxDB }
     - { id: kafka, label: Kafka }
 
-# Where a customer can run weights of their own on rented accelerators. "AI
-# hosting" means three different products, and this is one of them — the other
-# two are `automation` (can an agent drive it) and the `ai-app` use case. Every
-# value but `model-api` is somewhere the customer's own model runs; a token API
-# over the provider's catalogue is recorded and shown, and not offered as a way
-# to find a GPU.
+# Which kind of GPU compute, on a record the `gpu` category already names. Not a
+# facet: filters combine across fields with AND and within one with OR, and GPU
+# is a kind of hosting — beside `category` it would ask for low-code serverless
+# GPU, where as a category value it widens the list like any other. `validate`
+# holds the two together: every value but `model-api` earns the category, since
+# a token API over the provider's own catalogue runs no model of the customer's.
 - id: gpuCapacity
   label: GPU
   group: Tech stack
-  facet: gpu
-  subject: 'offer{|s} {lower}'
-  filterOrder: 22
   multiple: true
-  pairs:
-    - with: regions
   values:
-    - {
-        id: instances,
-        label: GPU instances,
-        short: Instances,
-        subject: 'rent{|s} out GPU servers, virtual or dedicated',
-      }
-    - {
-        id: serverless,
-        label: Serverless GPU,
-        short: Serverless,
-        subject: "run{|s} the customer's own container on a GPU, billed only while it runs",
-      }
-    - {
-        id: inference,
-        label: Managed inference,
-        short: Inference,
-        subject: "serve{|s} the customer's own or Hugging Face weights from a managed endpoint",
-      }
-    - { id: model-api, label: Model API, noFilter: true }
+    - { id: instances, label: GPU instances }
+    - { id: serverless, label: Serverless GPU }
+    - { id: inference, label: Managed inference }
+    - { id: model-api, label: Model API }
 
 - id: persistentStorage
   label: Persistent storage

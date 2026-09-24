@@ -8,6 +8,7 @@ urls:
   terms: https://www.spheron.network/terms
 category:
   - iaas
+  - gpu
 description: A GPU rental marketplace that resells virtual machines and bare-metal servers from third-party data centers.
 hqCountry: SG
 infraContract:

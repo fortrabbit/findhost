@@ -9,6 +9,7 @@ category:
   - paas
   - iaas
   - vps
+  - gpu
 description: A Swiss hosting and cloud provider selling shared hosting, servers and public cloud infrastructure.
 hqCountry: CH
 ownership: independent

@@ -6,6 +6,7 @@ urls:
   pricing: https://www.latitude.sh/pricing
 category:
   - bare-metal
+  - gpu
 description: Bare-metal and GPU infrastructure billed hourly with automated provisioning, an API, SDKs, a CLI and Terraform support.
 ownership: subsidiary
 whoManagesOs: self-managed

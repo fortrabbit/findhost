@@ -9,6 +9,7 @@ category:
   - vps
   - bare-metal
   - serverless
+  - gpu
 description: French cloud provider selling instances, bare metal, managed Kubernetes, serverless containers and managed databases, with European data residency as the pitch.
 founded: 1999
 hqCountry: FR

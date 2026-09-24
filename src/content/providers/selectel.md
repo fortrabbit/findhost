@@ -6,6 +6,7 @@ urls:
 category:
   - vps
   - bare-metal
+  - gpu
 description: Selectel is a Russian infrastructure company running its own data centres in Saint Petersburg and Moscow, selling dedicated servers, cloud servers and object storage.
 hqCountry: RU
 infraContract:

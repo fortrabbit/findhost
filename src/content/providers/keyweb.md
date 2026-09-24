@@ -11,6 +11,7 @@ category:
   - bare-metal
   - shared-hosting
   - domains-dns
+  - gpu
 description: A German host selling root servers, dedicated servers and shared webhosting from data centers it operates itself.
 founded: 1997
 hqCountry: DE

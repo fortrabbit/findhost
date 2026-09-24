@@ -8,6 +8,7 @@ category:
   - vps
   - bare-metal
   - shared-hosting
+  - gpu
 description: French hosting company selling dedicated servers, VPS, an OpenStack-based public cloud and web hosting from data centres it builds and operates itself.
 founded: 1999
 hqCountry: FR
