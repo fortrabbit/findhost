@@ -6,6 +6,7 @@ urls:
   pricing: https://www.linode.com/pricing/
 category:
   - vps
+  - gpu
 description: Linode is a US VPS provider founded in 2003, acquired by Akamai in 2022 and now sold as Akamai Cloud.
 founded: 2003
 hqCountry: US

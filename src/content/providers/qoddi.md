@@ -6,6 +6,7 @@ urls:
   pricing: https://qoddi.com/pricing/
 category:
   - paas
+  - gpu
 description: Managed application platform deploying Node, Java, Go, Ruby, PHP, Python and Docker workloads with per-second billing and managed databases alongside.
 whoManagesOs: self-managed
 useCases:

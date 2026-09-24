@@ -7,6 +7,7 @@ category:
   - shared-hosting
   - vps
   - vanity-hosting
+  - gpu
 description: Vietnamese host in Ho Chi Minh City, running shared, WordPress and cloud hosting out of two Tier III data centres, with GPU instances alongside.
 hqCountry: VN
 ownership: independent

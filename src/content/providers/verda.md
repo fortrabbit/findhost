@@ -10,6 +10,7 @@ urls:
 category:
   - iaas
   - caas
+  - gpu
 description: Finnish GPU cloud selling GPU virtual machines, multi-node clusters and serverless containers from data centers in Helsinki.
 founded: 2020
 hqCountry: FI

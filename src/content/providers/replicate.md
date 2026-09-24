@@ -5,6 +5,7 @@ urls:
   home: https://replicate.com
 category:
   - serverless
+  - gpu
 description: A serverless provider in the United States.
 hqCountry: US
 referringSubnets: { now: 3227, before: 3221 }

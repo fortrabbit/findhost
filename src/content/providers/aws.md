@@ -5,6 +5,7 @@ urls:
   home: https://aws.amazon.com
 category:
   - iaas
+  - gpu
 description: Amazon Web Services is the largest cloud infrastructure provider, spanning 123 Availability Zones in 39 geographic Regions.
 ownership: subsidiary
 hqCountry: US

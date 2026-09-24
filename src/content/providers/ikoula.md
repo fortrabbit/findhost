@@ -7,6 +7,7 @@ category:
   - shared-hosting
   - vps
   - iaas
+  - gpu
 description: One of the oldest independent French hosts, trading since 1998, running two of its own certified data centres in France.
 founded: 1998
 hqCountry: FR

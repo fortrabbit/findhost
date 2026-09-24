@@ -8,6 +8,7 @@ category:
   - iaas
   - paas
   - serverless
+  - gpu
 description: Alibaba Cloud provides infrastructure, platform and serverless services spanning 32 regions with support for Linux, Windows, containers and multiple runtimes.
 founded: 2009
 hqCountry: CN

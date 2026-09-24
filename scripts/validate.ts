@@ -829,6 +829,29 @@ function checkVocabulary(file: string, data: Record<string, unknown>) {
   }
 }
 
+/**
+ * The `gpu` category and the `gpuCapacity` row say the same thing twice, once as
+ * a filter and once as the detail, so a record holding one without the other is
+ * missing from the category page or listed there with nothing to show for it. A
+ * record carrying no category at all, as an out-of-scope one may, is left alone.
+ */
+const gpuCompute = ['instances', 'serverless', 'inference'];
+
+function checkGpuCategory(file: string, data: Record<string, unknown>) {
+  if (!Array.isArray(data.category)) return;
+
+  const inCategory = data.category.includes('gpu');
+  const capacity = Array.isArray(data.gpuCapacity) ? data.gpuCapacity.map(String) : [];
+  const runsModels = capacity.some((value) => gpuCompute.includes(value));
+
+  if (runsModels && !inCategory) {
+    fail(file, `gpuCapacity holds ${capacity.join(', ')} but category does not hold "gpu"`);
+  }
+  if (inCategory && !runsModels) {
+    fail(file, `category holds "gpu" but gpuCapacity holds none of ${gpuCompute.join(', ')}`);
+  }
+}
+
 /** The one thing this dataset may never grow, and the assets a record points at. */
 function checkRecordShape(file: string, data: Record<string, unknown>) {
   for (const key of Object.keys(data)) {
@@ -870,6 +893,7 @@ for (const { file, data } of records) {
   checkRecordShape(file, data);
   checkSources(file, data);
   checkVocabulary(file, data);
+  checkGpuCategory(file, data);
 }
 
 /*

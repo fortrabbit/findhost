@@ -44,6 +44,7 @@ body:
         - label: Serverless
         - label: Static hosting
         - label: Containers as a Service
+        - label: GPU cloud
         - label: Server management
         - label: Vanity hosting
         - label: Free hosting

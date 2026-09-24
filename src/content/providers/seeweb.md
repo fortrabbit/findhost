@@ -8,6 +8,7 @@ category:
   - iaas
   - vps
   - shared-hosting
+  - gpu
 description: Italian cloud provider founded in 1998, part of the DHH Group, offering cloud servers, VPS, and managed services.
 founded: 1998
 hqCountry: IT

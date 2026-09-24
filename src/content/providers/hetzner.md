@@ -8,6 +8,7 @@ urls:
 category:
   - vps
   - bare-metal
+  - gpu
 description: Hetzner is an independent German hosting company offering VPS, dedicated servers, cloud and storage infrastructure from its own data centres.
 founded: 1997
 hqCountry: DE

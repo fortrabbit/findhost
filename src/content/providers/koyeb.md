@@ -9,6 +9,7 @@ urls:
 category:
   - paas
   - caas
+  - gpu
 description: French platform that deploys containers and repositories across global regions with scale-to-zero, per-second billing, GPUs and serverless Postgres.
 hqCountry: FR
 ownership: vc-backed

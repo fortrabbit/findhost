@@ -6,6 +6,7 @@ urls:
   pricing: https://azure.microsoft.com/en-us/pricing/details/app-service/linux/
 category:
   - iaas
+  - gpu
 description: Microsoft's hyperscale cloud — hundreds of separately metered infrastructure services, with App Service as the managed application layer above them.
 ownership: subsidiary
 hqCountry: US

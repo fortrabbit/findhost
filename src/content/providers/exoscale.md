@@ -7,6 +7,7 @@ urls:
   status: https://exoscalestatus.com/
 category:
   - vps
+  - gpu
 description: Exoscale is a Swiss infrastructure provider selling KVM instances, managed Kubernetes, object and block storage and managed databases from European zones.
 founded: 2011
 hqCountry: CH

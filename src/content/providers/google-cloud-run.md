@@ -6,6 +6,7 @@ urls:
   pricing: https://cloud.google.com/run/pricing
 category:
   - serverless
+  - gpu
 description: Google Cloud Run runs any container image, scales it to zero when idle and bills per request and per resource-second.
 ownership: subsidiary
 parent: gcp

@@ -7,6 +7,7 @@ urls:
   docs: https://developers.upcloud.com/
 category:
   - vps
+  - gpu
 description: Finnish cloud infrastructure provider selling virtual machines, block storage and private networking, driven by a public API.
 ownership: vc-backed
 whoManagesOs: self-managed

@@ -8,6 +8,7 @@ urls:
 category:
   - vps
   - bare-metal
+  - gpu
 description: Cloud infrastructure provider selling virtual private servers, bare metal, GPU instances, object storage and managed Kubernetes, billed by the hour.
 ownership: vc-backed
 whoManagesOs: self-managed

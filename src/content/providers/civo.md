@@ -7,6 +7,7 @@ urls:
   status: https://status.civo.com/
 category:
   - vps
+  - gpu
 description: British Kubernetes-first cloud that charges for worker nodes only, with control planes included and data transfer unmetered.
 hqCountry: GB
 ownership: vc-backed
