@@ -47,22 +47,22 @@ referringSubnets: { now: 7387, before: 7395 }
 wikidata: Q6554704
 status: acquired
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-09-24
 sources:
-  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q6554704', checkedAt: 2026-09-09 }
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q6554704', checkedAt: 2026-09-24 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: entryPrice, url: 'https://api.linode.com/v4/linode/types', checkedAt: 2026-08-01 }
+  - { field: entryPrice, url: 'https://api.linode.com/v4/linode/types', checkedAt: 2026-09-24 }
   - { field: parent, url: 'https://www.linode.com/company/about/', checkedAt: 2026-08-01 }
   - { field: ownership, url: 'https://www.linode.com/company/about/', checkedAt: 2026-08-01 }
-  - { field: regions, url: 'https://api.linode.com/v4/regions', checkedAt: 2026-07-31 }
-  - { field: priceFrom, url: 'https://api.linode.com/v4/linode/types', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://api.linode.com/v4/linode/types', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://api.linode.com/v4/linode/types', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://techdocs.akamai.com/cloud-computing/docs/understanding-how-billing-works', checkedAt: 2026-08-02 }
-  - { field: billingTiming, url: 'https://techdocs.akamai.com/cloud-computing/docs/understanding-how-billing-works', checkedAt: 2026-08-02 }
+  - { field: regions, url: 'https://api.linode.com/v4/regions', checkedAt: 2026-09-24 }
+  - { field: priceFrom, url: 'https://api.linode.com/v4/linode/types', checkedAt: 2026-09-24 }
+  - { field: priceTo, url: 'https://api.linode.com/v4/linode/types', checkedAt: 2026-09-24 }
+  - { field: currencies, url: 'https://api.linode.com/v4/linode/types', checkedAt: 2026-09-24 }
+  - { field: billingPeriods, url: 'https://techdocs.akamai.com/cloud-computing/docs/understanding-how-billing-works', checkedAt: 2026-09-24 }
+  - { field: billingTiming, url: 'https://techdocs.akamai.com/cloud-computing/docs/understanding-how-billing-works', checkedAt: 2026-09-24 }
   - { field: exitWithin, url: 'https://techdocs.akamai.com/cloud-computing/docs/understanding-how-billing-works', checkedAt: 2026-08-02 }
-  - { field: pricingModel, url: 'https://api.linode.com/v4/linode/types', checkedAt: 2026-07-31 }
-  - { field: apiAvailable, url: 'https://api.linode.com/v4/regions', checkedAt: 2026-07-31 }
+  - { field: pricingModel, url: 'https://api.linode.com/v4/linode/types', checkedAt: 2026-09-24 }
+  - { field: apiAvailable, url: 'https://api.linode.com/v4/regions', checkedAt: 2026-09-24 }
 figure:
   emoji: 🇺🇸
   color: rgb(45, 107, 190)
