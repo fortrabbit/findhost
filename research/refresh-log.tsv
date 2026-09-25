@@ -34,3 +34,4 @@
 2026-09-23	liquid-web	confirmed	Home, hosting (redirected from /products/), vps-hosting, data-centers and wikidata pages read (200); all sourced fields confirmed; Servers.com sibling-brand cities on data-centers page excluded from regions
 2026-09-24	linode	confirmed	Home, API and Akamai billing docs pages read (200); pricing and company/about pages redirect cross-domain to akamai.com, read for status but not as a source; all comparable fields confirmed; parent/ownership source moved, exitWithin source no longer states timing
 2026-09-24	krystal	confirmed	Home, web-hosting, status, green, about, terms and SLA pages read (200); certifications gained iso-27001, all other sourced fields confirmed
+2026-09-25	kinsta	confirmed	Home, wordpress-hosting, docs, data-center-locations, about-us, terms-of-service and Wikidata pages read (200); all sourced fields confirmed unchanged
