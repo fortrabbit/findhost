@@ -58,23 +58,23 @@ referringSubnets: { now: 6420, before: 6449 }
 wikidata: Q106594994
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-09-25
 sources:
-  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q106594994', checkedAt: 2026-09-09 }
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q106594994', checkedAt: 2026-09-25 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1226', checkedAt: 2026-08-10 }
-  - { field: regions, url: 'https://kinsta.com/docs/service-information/data-center-locations/', checkedAt: 2026-08-01 }
-  - { field: entryPrice, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-08-01 }
-  - { field: founded, url: 'https://kinsta.com/about-us/', checkedAt: 2026-07-31 }
-  - { field: priceFrom, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-08-02 }
-  - { field: pricingModel, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-07-31 }
-  - { field: backupsIncluded, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-07-31 }
-  - { field: software, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-07-31 }
-  - { field: specialisation, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-07-31 }
-  - { field: moneyBack, url: 'https://kinsta.com/legal/terms-of-service/', checkedAt: 2026-08-29 }
+  - { field: regions, url: 'https://kinsta.com/docs/service-information/data-center-locations/', checkedAt: 2026-09-25 }
+  - { field: entryPrice, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-09-25 }
+  - { field: founded, url: 'https://kinsta.com/about-us/', checkedAt: 2026-09-25 }
+  - { field: priceFrom, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-09-25 }
+  - { field: priceTo, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-09-25 }
+  - { field: currencies, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-09-25 }
+  - { field: billingPeriods, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-09-25 }
+  - { field: pricingModel, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-09-25 }
+  - { field: backupsIncluded, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-09-25 }
+  - { field: software, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-09-25 }
+  - { field: specialisation, url: 'https://kinsta.com/wordpress-hosting/', checkedAt: 2026-09-25 }
+  - { field: moneyBack, url: 'https://kinsta.com/legal/terms-of-service/', checkedAt: 2026-09-25 }
 figure:
   emoji: 👑
   color: rgb(120, 45, 190)
