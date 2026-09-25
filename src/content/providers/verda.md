@@ -40,7 +40,9 @@ billingPeriods:
   - hourly
   - monthly
   - quarterly
+  - half-yearly
   - yearly
+  - multi-year
 billingTiming: advance
 exitWithin: a-day
 regions:
@@ -52,33 +54,34 @@ iacSupport:
   - terraform
 status: active
 addedAt: 2026-09-24
+checkedAt: 2026-09-25
 sources:
-  - { field: category, url: 'https://verda.com/gpu-instances', checkedAt: 2026-09-24 }
-  - { field: founded, url: 'https://verda.com/company', checkedAt: 2026-09-24 }
-  - { field: ownership, url: 'https://verda.com/company', checkedAt: 2026-09-24 }
-  - { field: hqCountry, url: 'https://verda.com/terms-and-conditions', checkedAt: 2026-09-24 }
-  - { field: exitWithin, url: 'https://verda.com/terms-and-conditions', checkedAt: 2026-09-24 }
-  - { field: whoManagesOs, url: 'https://docs.verda.com/cpu-and-gpu-instances/tips-and-tricks/losing-ssh-access-to-your-machines/', checkedAt: 2026-09-24 }
-  - { field: sshAccess, url: 'https://docs.verda.com/cpu-and-gpu-instances/tips-and-tricks/losing-ssh-access-to-your-machines/', checkedAt: 2026-09-24 }
+  - { field: category, url: 'https://verda.com/gpu-instances', checkedAt: 2026-09-25 }
+  - { field: founded, url: 'https://verda.com/company', checkedAt: 2026-09-25 }
+  - { field: ownership, url: 'https://verda.com/company', checkedAt: 2026-09-25 }
+  - { field: hqCountry, url: 'https://verda.com/terms-and-conditions', checkedAt: 2026-09-25 }
+  - { field: exitWithin, url: 'https://verda.com/terms-and-conditions', checkedAt: 2026-09-25 }
+  - { field: whoManagesOs, url: 'https://docs.verda.com/cpu-and-gpu-instances/tips-and-tricks/losing-ssh-access-to-your-machines/', checkedAt: 2026-09-25 }
+  - { field: sshAccess, url: 'https://docs.verda.com/cpu-and-gpu-instances/tips-and-tricks/losing-ssh-access-to-your-machines/', checkedAt: 2026-09-25 }
   - { field: deployMethods, url: 'https://docs.verda.com/containers/overview/', checkedAt: 2026-09-24 }
-  - { field: runtimes, url: 'https://docs.verda.com/containers/overview/', checkedAt: 2026-09-24 }
-  - { field: useCases, url: 'https://verda.com/pricing', checkedAt: 2026-09-24 }
-  - { field: gpuCapacity, url: 'https://verda.com/pricing', checkedAt: 2026-09-24 }
-  - { field: gpuCapacity, url: 'https://docs.verda.com/containers/overview/', checkedAt: 2026-09-24 }
-  - { field: pricingModel, url: 'https://verda.com/pricing', checkedAt: 2026-09-24 }
-  - { field: entryPrice, url: 'https://verda.com/pricing', checkedAt: 2026-09-24 }
-  - { field: priceFrom, url: 'https://verda.com/pricing', checkedAt: 2026-09-24 }
-  - { field: priceTo, url: 'https://verda.com/pricing', checkedAt: 2026-09-24 }
-  - { field: billingPeriods, url: 'https://verda.com/pricing', checkedAt: 2026-09-24 }
-  - { field: currencies, url: 'https://docs.verda.com/welcome-to-verda/pricing-and-billing/', checkedAt: 2026-09-24 }
-  - { field: billingTiming, url: 'https://docs.verda.com/welcome-to-verda/pricing-and-billing/', checkedAt: 2026-09-24 }
-  - { field: regions, url: 'https://docs.verda.com/welcome-to-verda/locations-and-sustainability/', checkedAt: 2026-09-24 }
-  - { field: apiAvailable, url: 'https://api.verda.com/v1/docs', checkedAt: 2026-09-24 }
-  - { field: cliTool, url: 'https://docs.verda.com/cli/', checkedAt: 2026-09-24 }
-  - { field: mcpServer, url: 'https://docs.verda.com/cli/mcp/', checkedAt: 2026-09-24 }
-  - { field: iacSupport, url: 'https://docs.verda.com/infrastructure-as-code/terraform/', checkedAt: 2026-09-24 }
-  - { field: 'rename from DataCrunch', url: 'https://verda.com/blog/datacrunch-is-changing-its-name-to-verda', checkedAt: 2026-09-24 }
-  - { field: 'Sundsvall site', url: 'https://verda.com/blog/verda-ai-infrastructure-sundsvall-sweden', checkedAt: 2026-09-24 }
+  - { field: runtimes, url: 'https://docs.verda.com/containers/overview/', checkedAt: 2026-09-25 }
+  - { field: useCases, url: 'https://verda.com/pricing', checkedAt: 2026-09-25 }
+  - { field: gpuCapacity, url: 'https://verda.com/pricing', checkedAt: 2026-09-25 }
+  - { field: gpuCapacity, url: 'https://docs.verda.com/containers/overview/', checkedAt: 2026-09-25 }
+  - { field: pricingModel, url: 'https://verda.com/pricing', checkedAt: 2026-09-25 }
+  - { field: entryPrice, url: 'https://verda.com/pricing', checkedAt: 2026-09-25 }
+  - { field: priceFrom, url: 'https://verda.com/pricing', checkedAt: 2026-09-25 }
+  - { field: priceTo, url: 'https://verda.com/pricing', checkedAt: 2026-09-25 }
+  - { field: billingPeriods, url: 'https://verda.com/pricing', checkedAt: 2026-09-25 }
+  - { field: currencies, url: 'https://docs.verda.com/welcome-to-verda/pricing-and-billing/', checkedAt: 2026-09-25 }
+  - { field: billingTiming, url: 'https://docs.verda.com/welcome-to-verda/pricing-and-billing/', checkedAt: 2026-09-25 }
+  - { field: regions, url: 'https://docs.verda.com/welcome-to-verda/locations-and-sustainability/', checkedAt: 2026-09-25 }
+  - { field: apiAvailable, url: 'https://api.verda.com/v1/docs', checkedAt: 2026-09-25 }
+  - { field: cliTool, url: 'https://docs.verda.com/cli/', checkedAt: 2026-09-25 }
+  - { field: mcpServer, url: 'https://docs.verda.com/cli/mcp/', checkedAt: 2026-09-25 }
+  - { field: iacSupport, url: 'https://docs.verda.com/infrastructure-as-code/terraform/', checkedAt: 2026-09-25 }
+  - { field: 'rename from DataCrunch', url: 'https://verda.com/blog/datacrunch-is-changing-its-name-to-verda', checkedAt: 2026-09-25 }
+  - { field: 'Sundsvall site', url: 'https://verda.com/blog/verda-ai-infrastructure-sundsvall-sweden', checkedAt: 2026-09-25 }
 figure:
   emoji: ⚡
   color: rgb(28, 74, 60)
