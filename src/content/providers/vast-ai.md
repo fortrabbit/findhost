@@ -37,23 +37,23 @@ cliTool: official
 status: active
 addedAt: 2026-09-24
 sources:
-  - { field: category, url: 'https://docs.vast.ai/guides/instances/overview', checkedAt: 2026-09-24 }
+  - { field: category, url: 'https://docs.vast.ai/guides/instances/overview', checkedAt: 2026-09-26 }
   - { field: description, url: 'https://docs.vast.ai/guides/instances/pricing', checkedAt: 2026-09-24 }
-  - { field: founded, url: 'https://vast.ai/about', checkedAt: 2026-09-24 }
-  - { field: hqCountry, url: 'https://vast.ai/about', checkedAt: 2026-09-24 }
-  - { field: useCases, url: 'https://docs.vast.ai/guides/instances/overview', checkedAt: 2026-09-24 }
-  - { field: runtimes, url: 'https://docs.vast.ai/guides/instances/virtual-machines', checkedAt: 2026-09-24 }
-  - { field: deployMethods, url: 'https://docs.vast.ai/guides/instances/choosing/templates', checkedAt: 2026-09-24 }
-  - { field: gpuCapacity, url: 'https://docs.vast.ai/guides/instances/overview', checkedAt: 2026-09-24 }
-  - { field: gpuCapacity, url: 'https://docs.vast.ai/guides/serverless/pricing', checkedAt: 2026-09-24 }
-  - { field: pricingModel, url: 'https://docs.vast.ai/guides/reference/billing', checkedAt: 2026-09-24 }
-  - { field: billingTiming, url: 'https://docs.vast.ai/guides/reference/billing', checkedAt: 2026-09-24 }
+  - { field: founded, url: 'https://vast.ai/about', checkedAt: 2026-09-26 }
+  - { field: hqCountry, url: 'https://vast.ai/about', checkedAt: 2026-09-26 }
+  - { field: useCases, url: 'https://docs.vast.ai/guides/instances/overview', checkedAt: 2026-09-26 }
+  - { field: runtimes, url: 'https://docs.vast.ai/guides/instances/virtual-machines', checkedAt: 2026-09-26 }
+  - { field: deployMethods, url: 'https://docs.vast.ai/guides/instances/choosing/templates', checkedAt: 2026-09-26 }
+  - { field: gpuCapacity, url: 'https://docs.vast.ai/guides/instances/overview', checkedAt: 2026-09-26 }
+  - { field: gpuCapacity, url: 'https://docs.vast.ai/guides/serverless/pricing', checkedAt: 2026-09-26 }
+  - { field: pricingModel, url: 'https://docs.vast.ai/guides/reference/billing', checkedAt: 2026-09-26 }
+  - { field: billingTiming, url: 'https://docs.vast.ai/guides/reference/billing', checkedAt: 2026-09-26 }
   - { field: billingPeriods, url: 'https://docs.vast.ai/guides/instances/pricing', checkedAt: 2026-09-24 }
   - { field: priceFrom, url: 'https://cloud.vast.ai/create/', checkedAt: 2026-09-24 }
   - { field: priceTo, url: 'https://cloud.vast.ai/create/', checkedAt: 2026-09-24 }
-  - { field: currencies, url: 'https://docs.vast.ai/guides/reference/billing', checkedAt: 2026-09-24 }
-  - { field: apiAvailable, url: 'https://docs.vast.ai/api-reference/hello-world', checkedAt: 2026-09-24 }
-  - { field: cliTool, url: 'https://docs.vast.ai/cli/hello-world', checkedAt: 2026-09-24 }
+  - { field: currencies, url: 'https://docs.vast.ai/guides/reference/billing', checkedAt: 2026-09-26 }
+  - { field: apiAvailable, url: 'https://docs.vast.ai/api-reference/hello-world', checkedAt: 2026-09-26 }
+  - { field: cliTool, url: 'https://docs.vast.ai/cli/hello-world', checkedAt: 2026-09-26 }
 figure:
   emoji: 🏪
   color: rgb(20, 70, 120)
