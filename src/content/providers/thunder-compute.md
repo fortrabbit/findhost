@@ -31,26 +31,27 @@ iacSupport:
   - terraform
 status: active
 addedAt: 2026-09-24
+checkedAt: 2026-09-26
 sources:
-  - { field: category, url: 'https://www.thundercompute.com/pricing', checkedAt: 2026-09-24 }
-  - { field: founded, url: 'https://www.thundercompute.com/', checkedAt: 2026-09-24 }
-  - { field: ownership, url: 'https://www.thundercompute.com/', checkedAt: 2026-09-24 }
-  - { field: useCases, url: 'https://www.thundercompute.com/docs/restrictions', checkedAt: 2026-09-24 }
-  - { field: deployMethods, url: 'https://www.thundercompute.com/docs/console/quickstart', checkedAt: 2026-09-24 }
-  - { field: gpuCapacity, url: 'https://www.thundercompute.com/pricing', checkedAt: 2026-09-24 }
-  - { field: pricingModel, url: 'https://www.thundercompute.com/docs/billing', checkedAt: 2026-09-24 }
-  - { field: entryPrice, url: 'https://www.thundercompute.com/pricing', checkedAt: 2026-09-24 }
-  - { field: priceFrom, url: 'https://www.thundercompute.com/pricing', checkedAt: 2026-09-24 }
-  - { field: priceTo, url: 'https://www.thundercompute.com/pricing', checkedAt: 2026-09-24 }
-  - { field: currencies, url: 'https://www.thundercompute.com/pricing', checkedAt: 2026-09-24 }
-  - { field: apiAvailable, url: 'https://www.thundercompute.com/docs/api-reference/instances/create-instance', checkedAt: 2026-09-24 }
-  - { field: cliTool, url: 'https://www.thundercompute.com/docs/cli/quickstart', checkedAt: 2026-09-24 }
-  - { field: mcpServer, url: 'https://www.thundercompute.com/docs/mcp-server/quickstart', checkedAt: 2026-09-24 }
-  - { field: iacSupport, url: 'https://github.com/Thunder-Compute/terraform-provider-thundercompute', checkedAt: 2026-09-24 }
-  - { field: 'instances are containers', url: 'https://www.thundercompute.com/docs/guides/using-docker-on-thundercompute', checkedAt: 2026-09-24 }
-  - { field: 'known incompatibilities', url: 'https://www.thundercompute.com/docs/compatibility', checkedAt: 2026-09-24 }
-  - { field: 'location and pre-installed software', url: 'https://www.thundercompute.com/docs/technical-specs', checkedAt: 2026-09-24 }
-  - { field: 'country restrictions', url: 'https://www.thundercompute.com/docs/restrictions', checkedAt: 2026-09-24 }
+  - { field: category, url: 'https://www.thundercompute.com/pricing', checkedAt: 2026-09-26 }
+  - { field: founded, url: 'https://www.thundercompute.com/', checkedAt: 2026-09-26 }
+  - { field: ownership, url: 'https://www.thundercompute.com/', checkedAt: 2026-09-26 }
+  - { field: useCases, url: 'https://www.thundercompute.com/docs/restrictions', checkedAt: 2026-09-26 }
+  - { field: deployMethods, url: 'https://www.thundercompute.com/docs/console/quickstart', checkedAt: 2026-09-26 }
+  - { field: gpuCapacity, url: 'https://www.thundercompute.com/pricing', checkedAt: 2026-09-26 }
+  - { field: pricingModel, url: 'https://www.thundercompute.com/docs/billing', checkedAt: 2026-09-26 }
+  - { field: entryPrice, url: 'https://www.thundercompute.com/pricing', checkedAt: 2026-09-26 }
+  - { field: priceFrom, url: 'https://www.thundercompute.com/pricing', checkedAt: 2026-09-26 }
+  - { field: priceTo, url: 'https://www.thundercompute.com/pricing', checkedAt: 2026-09-26 }
+  - { field: currencies, url: 'https://www.thundercompute.com/pricing', checkedAt: 2026-09-26 }
+  - { field: apiAvailable, url: 'https://www.thundercompute.com/docs/api-reference/instances/create-instance', checkedAt: 2026-09-26 }
+  - { field: cliTool, url: 'https://www.thundercompute.com/docs/cli/quickstart', checkedAt: 2026-09-26 }
+  - { field: mcpServer, url: 'https://www.thundercompute.com/docs/mcp-server/quickstart', checkedAt: 2026-09-26 }
+  - { field: iacSupport, url: 'https://github.com/Thunder-Compute/terraform-provider-thundercompute', checkedAt: 2026-09-26 }
+  - { field: 'instances are containers', url: 'https://www.thundercompute.com/docs/guides/using-docker-on-thundercompute', checkedAt: 2026-09-26 }
+  - { field: 'known incompatibilities', url: 'https://www.thundercompute.com/docs/compatibility', checkedAt: 2026-09-26 }
+  - { field: 'location and pre-installed software', url: 'https://www.thundercompute.com/docs/technical-specs', checkedAt: 2026-09-26 }
+  - { field: 'country restrictions', url: 'https://www.thundercompute.com/docs/restrictions', checkedAt: 2026-09-26 }
 figure:
   emoji: 🌩️
   color: rgb(30, 41, 74)
