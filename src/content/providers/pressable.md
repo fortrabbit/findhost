@@ -69,8 +69,8 @@ sources:
   - { field: mcpServer, url: 'https://pressable.com', checkedAt: 2026-08-09 }
 figure:
   emoji: 🅰️
-  color: rgb(77, 117, 157)
-  textColor: rgb(234, 240, 245)
+  color: rgb(73, 111, 151)
+  textColor: rgb(237, 242, 247)
   text: Automattic's other WordPress host.
 ai: authored
 ---

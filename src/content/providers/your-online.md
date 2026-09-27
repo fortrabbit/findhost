@@ -17,7 +17,7 @@ sources:
   - { field: founded, url: 'https://your.online/about-us', checkedAt: 2026-08-21 }
 figure:
   emoji: 🧩
-  color: rgb(90, 120, 160)
+  color: rgb(84, 114, 151)
   textColor: rgb(244, 247, 251)
   text: Buys hosting brands and leaves the names on the door.
 ai: authored

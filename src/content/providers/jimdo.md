@@ -33,7 +33,7 @@ sources:
 figure:
   emoji: 🪴
   color: rgb(77, 157, 77)
-  textColor: rgb(234, 245, 234)
+  textColor: rgb(18, 41, 18)
   text: Small sites.
 ---
 

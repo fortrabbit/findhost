@@ -51,7 +51,7 @@ sources:
 figure:
   emoji: 🌱
   color: rgb(90, 150, 100)
-  textColor: rgb(240, 250, 244)
+  textColor: rgb(15, 37, 25)
   text: Owner-run German host on green power.
 ai: authored
 greenWebId: 837

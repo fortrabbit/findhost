@@ -84,7 +84,7 @@ sources:
   - { field: 'account rules', url: 'https://www.infinityfree.com/terms/', checkedAt: 2026-08-28 }
 figure:
   emoji: ♾️
-  color: rgb(23, 128, 98)
+  color: rgb(22, 124, 95)
   textColor: rgb(236, 246, 242)
   text: Free hosting, and only free hosting.
 ai: authored

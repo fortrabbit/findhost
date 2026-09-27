@@ -77,7 +77,7 @@ sources:
   - { field: emailHosting, url: 'https://ventraip.com.au/domain-names/', checkedAt: 2026-08-12 }
 figure:
   emoji: 🪃
-  color: rgb(179, 83, 55)
+  color: rgb(171, 79, 53)
   textColor: rgb(246, 236, 234)
   text: A registrar with cPanel attached.
 ai: authored

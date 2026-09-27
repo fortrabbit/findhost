@@ -16,7 +16,7 @@ checkedAt: 2026-09-11
 figure:
   emoji: 🏢
   color: rgb(80, 140, 190)
-  textColor: rgb(242, 247, 252)
+  textColor: rgb(12, 33, 55)
   text: Holding company for Bluehost and HostGator.
 ai: authored
 sources:

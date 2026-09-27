@@ -11,7 +11,7 @@ checkedAt: 2026-08-07
 figure:
   emoji: 🌍
   color: rgb(120, 130, 150)
-  textColor: rgb(242, 244, 248)
+  textColor: rgb(16, 25, 36)
   text: Took the name Hosting.com in 2025.
 ai: authored
 sources:

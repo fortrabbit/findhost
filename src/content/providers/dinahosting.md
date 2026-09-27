@@ -77,8 +77,8 @@ sources:
   - { field: apiAvailable, url: 'https://dinahosting.com', checkedAt: 2026-08-09 }
 figure:
   emoji: 🐚
-  color: rgb(73, 132, 161)
-  textColor: rgb(234, 242, 245)
+  color: rgb(77, 138, 169)
+  textColor: rgb(14, 29, 33)
   text: From Santiago, with a shell prompt.
 ai: authored
 greenWebId: 1325

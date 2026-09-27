@@ -47,8 +47,8 @@ sources:
   - { field: moneyBack, url: 'https://www.hostgator.com/terms', checkedAt: 2026-08-29 }
 figure:
   emoji: 🐊
-  color: rgb(157, 124, 77)
-  textColor: rgb(245, 241, 234)
+  color: rgb(160, 127, 79)
+  textColor: rgb(33, 26, 14)
   text: Don't feed the alligators.
 ---
 

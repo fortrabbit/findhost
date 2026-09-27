@@ -70,8 +70,8 @@ sources:
   - { field: cliTool, url: 'https://divio.com/developers', checkedAt: 2026-08-09 }
 figure:
   emoji: 📦
-  color: rgb(77, 131, 157)
-  textColor: rgb(234, 241, 245)
+  color: rgb(81, 137, 163)
+  textColor: rgb(14, 26, 33)
   text: Docker in, Django usually.
 staging: included
 ai: authored

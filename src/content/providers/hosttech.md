@@ -65,7 +65,7 @@ sources:
 figure:
   emoji: ⛰️
   color: rgb(77, 157, 117)
-  textColor: rgb(234, 245, 240)
+  textColor: rgb(18, 41, 29)
   text: A data centre under a mountain.
 ai: authored
 greenWebId: 1506

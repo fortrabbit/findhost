@@ -79,7 +79,7 @@ greenWebId: 595
 figure:
   emoji: 🌐
   color: rgb(66, 133, 244)
-  textColor: rgb(242, 245, 250)
+  textColor: rgb(21, 33, 50)
   text: Hyperscaler selling compute and data services on Google's infrastructure.
 gpuCapacity:
   - instances

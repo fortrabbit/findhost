@@ -25,7 +25,7 @@ sources:
 figure:
   emoji: 🇮🇩
   color: rgb(77, 157, 125)
-  textColor: rgb(234, 245, 241)
+  textColor: rgb(20, 45, 35)
   text: Jakarta and Singapore, tracked component by component.
 ai: authored
 ---

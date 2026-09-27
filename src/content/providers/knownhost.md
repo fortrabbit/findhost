@@ -53,7 +53,7 @@ sources:
   - { field: contractMinimum, url: 'https://www.knownhost.com/web-hosting', checkedAt: 2026-08-01 }
 figure:
   emoji: 🧠
-  color: rgb(45, 122, 190)
+  color: rgb(41, 110, 174)
   textColor: rgb(234, 240, 246)
   text: Managed servers, your choice of panel.
 ---

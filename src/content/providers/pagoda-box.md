@@ -24,8 +24,8 @@ sources:
   - { field: status, url: 'https://blog.cloud66.com/paas-graveyard-why-platforms-keep-dying', checkedAt: 2026-08-07 }
 figure:
   emoji: 📦
-  color: rgb(160, 110, 60)
-  textColor: rgb(244, 239, 233)
+  color: rgb(172, 119, 63)
+  textColor: rgb(34, 24, 15)
   text: PHP platform-as-a-service, acquired and retired.
 ai: authored
 ---

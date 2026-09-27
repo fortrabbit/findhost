@@ -80,7 +80,7 @@ ai: authored
 figure:
   emoji: 🏗️
   color: rgb(77, 157, 125)
-  textColor: rgb(234, 245, 241)
+  textColor: rgb(20, 45, 35)
   text: Managed WordPress, rented from Google.
 greenWebId: 1203
 ---

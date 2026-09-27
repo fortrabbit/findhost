@@ -74,7 +74,7 @@ sources:
 figure:
   emoji: 🦆
   color: rgb(97, 157, 77)
-  textColor: rgb(237, 245, 234)
+  textColor: rgb(26, 41, 18)
   text: Greece's little duck, owned in Belgium.
 ai: authored
 ---

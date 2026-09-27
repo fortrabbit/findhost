@@ -69,8 +69,8 @@ sources:
   - { field: ownership, url: 'https://www.privateequitywire.co.uk/perwyn-backed-miss-group-acquires-finnish-web-hosting-firm-seravo/', checkedAt: 2026-09-19 }
 figure:
   emoji: 🐧
-  color: rgb(59, 132, 176)
-  textColor: rgb(234, 241, 246)
+  color: rgb(61, 138, 184)
+  textColor: rgb(15, 28, 36)
   text: WordPress, done the Debian way.
 ai: authored
 greenWebId: 701

@@ -84,7 +84,7 @@ sources:
 figure:
   emoji: ⚡
   color: rgb(67, 168, 117)
-  textColor: rgb(234, 246, 240)
+  textColor: rgb(22, 52, 37)
   text: Postgres, with the rest bolted on.
 ai: authored
 ---

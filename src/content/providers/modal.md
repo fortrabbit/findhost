@@ -70,7 +70,7 @@ sources:
 figure:
   emoji: 🎛️
   color: rgb(72, 162, 144)
-  textColor: rgb(234, 246, 243)
+  textColor: rgb(20, 48, 43)
   text: A decorator, then a GPU.
 ai: authored
 gpuCapacity:

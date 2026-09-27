@@ -81,7 +81,7 @@ sources:
   - { field: emailHosting, url: 'https://www.loopia.se/om-loopia/', checkedAt: 2026-08-12 }
 figure:
   emoji: 🪟
-  color: rgb(45, 112, 190)
+  color: rgb(43, 108, 182)
   textColor: rgb(234, 239, 246)
   text: Still running ASP.NET, on purpose.
 ai: authored

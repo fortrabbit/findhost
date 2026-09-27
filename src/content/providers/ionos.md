@@ -86,7 +86,7 @@ sources:
   - { field: sla, url: 'https://cloud.ionos.com/terms-gtc/terms-enterprise-cloud/enterprise-agreement/', checkedAt: 2026-08-30 }
 figure:
   emoji: 🏢
-  color: rgb(45, 117, 190)
+  color: rgb(43, 111, 182)
   textColor: rgb(234, 240, 246)
   text: Mass market, developer tolerant.
 ai: authored

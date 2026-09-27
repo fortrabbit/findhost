@@ -64,7 +64,7 @@ sources:
 figure:
   emoji: 💜
   color: rgb(160, 100, 200)
-  textColor: rgb(245, 235, 250)
+  textColor: rgb(31, 10, 41)
   text: Free static sites, no corporate layer.
 ai: authored
 ---

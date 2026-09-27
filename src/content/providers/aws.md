@@ -82,8 +82,8 @@ sources:
   - { field: gpuCapacity, url: 'https://aws.amazon.com/bedrock/pricing/', checkedAt: 2026-09-24 }
 figure:
   emoji: 📦
-  color: "#FF9900"
-  textColor: rgb(155, 64, 8)
+  color: rgb(255, 153, 0)
+  textColor: rgb(115, 48, 8)
   text: Everything from A to Z.
 gpuCapacity:
   - instances

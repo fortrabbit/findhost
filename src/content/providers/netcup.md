@@ -90,7 +90,7 @@ sources:
 figure:
   emoji: 🪙
   color: rgb(70, 164, 129)
-  textColor: rgb(234, 246, 241)
+  textColor: rgb(20, 48, 37)
   text: Cheap, and the price stays.
 ai: authored
 greenWebId: 1475

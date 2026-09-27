@@ -65,8 +65,8 @@ sources:
   - { field: backupsIncluded, url: 'https://www.exabytes.my/web-hosting', checkedAt: 2026-08-01 }
 figure:
   emoji: 🌺
-  color: rgb(168, 117, 67)
-  textColor: rgb(246, 240, 234)
+  color: rgb(172, 120, 68)
+  textColor: rgb(36, 25, 15)
   text: cPanel or Plesk, on Malaysian metal.
 ai: authored
 ---

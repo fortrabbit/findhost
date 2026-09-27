@@ -44,7 +44,7 @@ sources:
 figure:
   emoji: 🌐
   color: rgb(52, 168, 219)
-  textColor: rgb(230, 244, 251)
+  textColor: rgb(13, 57, 79)
   text: Static files published from a command.
 ai: authored
 ---

@@ -4,7 +4,7 @@ title: About
 figure:
   emoji: 🍋
   color: rgb(255, 250, 0)
-  textColor: rgb(165, 135, 60)
+  textColor: rgb(129, 108, 51)
   text: The web hosting market is a "lemon market" where sellers have more information than buyers.
 updated: 2026-08-12
 description: Who publishes FindHost and why, the rules every record follows, how records are sourced and checked, and the conflict of interest in a register run by a host.

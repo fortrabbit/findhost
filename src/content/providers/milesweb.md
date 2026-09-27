@@ -77,7 +77,7 @@ sources:
   - { field: supportChannels, url: 'https://www.milesweb.in/hosting/web-hosting', checkedAt: 2026-08-01 }
 figure:
   emoji: 🪷
-  color: rgb(168, 101, 67)
+  color: rgb(152, 93, 63)
   textColor: rgb(246, 238, 234)
   text: Rupee prices, and they hold at renewal.
 ai: authored

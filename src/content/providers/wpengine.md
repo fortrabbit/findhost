@@ -71,7 +71,7 @@ sources:
   - { field: parent, url: 'https://www.silverlake.com/portfolio/', checkedAt: 2026-08-29 }
 figure:
   emoji: 🚂
-  color: rgb(66, 122, 169)
+  color: rgb(63, 113, 157)
   textColor: rgb(234, 240, 246)
   text: WordPress, and nothing but.
 ---

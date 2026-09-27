@@ -44,8 +44,8 @@ sources:
   - { field: gpuCapacity, url: 'https://developers.cloudflare.com/workers-ai/platform/pricing/', checkedAt: 2026-09-24 }
 figure:
   emoji: 🔶
-  color: rgb(176, 117, 59)
-  textColor: rgb(246, 240, 234)
+  color: rgb(180, 120, 60)
+  textColor: rgb(36, 25, 15)
   text: Code next to the visitor.
 gpuCapacity:
   - model-api

@@ -153,8 +153,8 @@ sources:
   - { field: 'late payment', url: 'https://webslice.com/policies-compliance/terms-and-conditions', checkedAt: 2026-09-06 }
 figure:
   emoji: 🍕
-  color: rgb(214, 88, 47)
-  textColor: rgb(252, 240, 235)
+  color: rgb(215, 91, 51)
+  textColor: rgb(43, 16, 5)
   text: Containers by the month, PHP by the request.
 ai: authored
 ---

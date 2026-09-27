@@ -42,7 +42,7 @@ sources:
   - { field: cliTool, url: 'https://www.wpserveur.net', checkedAt: 2026-08-09 }
 figure:
   emoji: 🇫🇷
-  color: rgb(55, 115, 200)
+  color: rgb(53, 111, 192)
   textColor: rgb(236, 245, 252)
   text: French WordPress host, git and SSH.
 ai: authored

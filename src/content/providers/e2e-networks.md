@@ -59,7 +59,7 @@ sources:
 figure:
   emoji: 🇮🇳
   color: rgb(184, 117, 50)
-  textColor: rgb(246, 240, 234)
+  textColor: rgb(36, 25, 15)
   text: A listed cloud, priced by the minute.
 ai: authored
 gpuCapacity:

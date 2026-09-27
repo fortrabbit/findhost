@@ -85,8 +85,8 @@ sources:
   - { field: emailHosting, url: 'https://www.opalstack.com/', checkedAt: 2026-08-12 }
 figure:
   emoji: 💠
-  color: rgb(77, 131, 157)
-  textColor: rgb(234, 241, 245)
+  color: rgb(81, 137, 163)
+  textColor: rgb(14, 26, 33)
   text: Shared hosting with a shell on every plan.
 ai: authored
 ---

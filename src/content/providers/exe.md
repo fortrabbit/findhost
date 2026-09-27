@@ -52,7 +52,7 @@ sources:
 figure:
   emoji: ⚡
   color: rgb(14, 165, 233)
-  textColor: rgb(240, 249, 255)
+  textColor: rgb(0, 52, 87)
   text: Capacity pool, not individual-unit billing.
 ai: authored
 collaboration: team

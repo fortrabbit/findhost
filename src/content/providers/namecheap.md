@@ -34,7 +34,7 @@ sources:
   - { field: parent, url: 'https://domainnamewire.com/2025/09/12/private-equity-firm-is-buying-namecheap-in-deal-that-values-company-at-1-5-billion/', checkedAt: 2026-08-29 }
 figure:
   emoji: 🔑
-  color: rgb(60, 120, 180)
+  color: rgb(58, 114, 172)
   textColor: rgb(240, 244, 250)
   text: Domain registrar with hosting bundled.
 ai: authored

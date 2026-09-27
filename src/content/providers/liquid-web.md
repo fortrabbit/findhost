@@ -56,7 +56,7 @@ sources:
   - { field: gpuCapacity, url: 'https://www.liquidweb.com/gpu-hosting/', checkedAt: 2026-09-24 }
 figure:
   emoji: 💧
-  color: rgb(45, 117, 190)
+  color: rgb(43, 111, 182)
   textColor: rgb(234, 240, 246)
   text: Managed hosting, high touch.
 gpuCapacity: [instances]

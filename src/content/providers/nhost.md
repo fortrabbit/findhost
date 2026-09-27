@@ -59,8 +59,8 @@ sources:
   - { field: ownership, url: 'https://nhost.io/blog/nhost-raises-3m-dollar-in-seed-funding', checkedAt: 2026-08-21 }
 figure:
   emoji: 🧊
-  color: rgb(77, 117, 157)
-  textColor: rgb(234, 240, 245)
+  color: rgb(73, 111, 151)
+  textColor: rgb(237, 242, 247)
   text: Postgres and GraphQL, assembled.
 ai: authored
 ---

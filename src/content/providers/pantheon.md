@@ -74,7 +74,7 @@ sources:
   - { field: gdprDpa, url: 'https://pantheon.pactsafe.io/legal.html', checkedAt: 2026-08-12 }
 figure:
   emoji: 🏛️
-  color: rgb(100, 115, 145)
+  color: rgb(94, 109, 136)
   textColor: rgb(238, 240, 245)
   text: Managed WordPress and Drupal platform.
 ai: authored

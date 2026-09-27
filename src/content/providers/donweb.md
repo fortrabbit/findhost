@@ -65,7 +65,7 @@ sources:
 figure:
   emoji: 🧉
   color: rgb(77, 157, 109)
-  textColor: rgb(234, 245, 239)
+  textColor: rgb(18, 41, 29)
   text: Its own metal, in Rosario.
 ai: authored
 ---

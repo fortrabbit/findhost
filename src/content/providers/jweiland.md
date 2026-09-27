@@ -52,8 +52,8 @@ sources:
   - { field: cdnIncluded, url: 'https://jweiland.net', checkedAt: 2026-08-12 }
 figure:
   emoji: 🔧
-  color: rgb(70, 140, 110)
-  textColor: rgb(235, 248, 243)
+  color: rgb(76, 149, 119)
+  textColor: rgb(15, 36, 27)
   text: TYPO3 hosting built by CMS contributors.
 ai: authored
 ---

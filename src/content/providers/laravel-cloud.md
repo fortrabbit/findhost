@@ -76,7 +76,7 @@ sources:
 figure:
   emoji: 🧺
   color: rgb(164, 142, 70)
-  textColor: rgb(246, 243, 234)
+  textColor: rgb(44, 40, 19)
   text: The framework vendor's own platform.
 ---
 

@@ -70,8 +70,8 @@ sources:
   - { field: paymentMethods, url: 'https://docs.vultr.com/platform/billing/make-account-payments', checkedAt: 2026-09-08 }
 figure:
   emoji: 🦅
-  color: rgb(45, 132, 190)
-  textColor: rgb(234, 241, 246)
+  color: rgb(47, 138, 198)
+  textColor: rgb(15, 28, 36)
   text: No cage required.
 gpuCapacity:
   - instances

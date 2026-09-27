@@ -49,7 +49,7 @@ sources:
 figure:
   emoji: 🇩🇪
   color: rgb(180, 140, 80)
-  textColor: rgb(245, 241, 235)
+  textColor: rgb(52, 40, 25)
   text: German hosting built for agencies.
 ai: authored
 greenWebId: 1466

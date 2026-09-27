@@ -85,7 +85,7 @@ sources:
 figure:
   emoji: 🧬
   color: rgb(69, 166, 138)
-  textColor: rgb(234, 246, 242)
+  textColor: rgb(22, 52, 43)
   text: Shared hosting, many languages.
 ai: authored
 greenWebId: 1242

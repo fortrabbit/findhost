@@ -64,7 +64,7 @@ sources:
 figure:
   emoji: 🐋
   color: rgb(45, 169, 190)
-  textColor: rgb(234, 244, 246)
+  textColor: rgb(26, 55, 60)
   text: DIY PaaS, DIY ops.
 ---
 

@@ -41,7 +41,7 @@ sources:
 figure:
   emoji: 🇰🇪
   color: rgb(59, 176, 117)
-  textColor: rgb(234, 246, 240)
+  textColor: rgb(24, 56, 40)
   text: cPanel hosting out of Nairobi.
 ai: authored
 ---

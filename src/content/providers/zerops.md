@@ -104,7 +104,7 @@ sources:
   - { field: collaboration, url: 'https://docs.zerops.io/features/rbac', checkedAt: 2026-08-12 }
 figure:
   emoji: 🧊
-  color: rgb(67, 117, 168)
+  color: rgb(65, 111, 160)
   textColor: rgb(234, 240, 246)
   text: Pay for what the app consumes.
 ai: authored

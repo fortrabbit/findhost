@@ -14,7 +14,7 @@ addedAt: 2026-08-07
 checkedAt: 2026-09-09
 figure:
   emoji: ⚙️
-  color: rgb(100, 115, 140)
+  color: rgb(96, 111, 134)
   textColor: rgb(240, 242, 246)
   text: The cPanel and Plesk company.
 ai: authored

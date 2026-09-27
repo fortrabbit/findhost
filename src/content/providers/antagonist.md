@@ -42,7 +42,7 @@ checkedAt: 2026-08-12
 figure:
   emoji: 🇳🇱
   color: rgb(230, 85, 48)
-  textColor: rgb(245, 239, 235)
+  textColor: rgb(38, 27, 17)
   text: Dutch indie hoster, Enschede-based.
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
