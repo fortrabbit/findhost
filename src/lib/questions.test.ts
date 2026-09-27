@@ -23,6 +23,18 @@ describe('topicOf', () => {
   });
 });
 
+describe('best', () => {
+  it('words the answer the same way for the same page on every build', () => {
+    assert.equal(best('Kirby hosting provider').a, best('Kirby hosting provider').a);
+  });
+
+  it('words it differently across pages', () => {
+    const topics = ['Kirby', 'WordPress', 'PHP', 'Node.js', 'Germany', 'France', 'VPS', 'PaaS'];
+    const answers = new Set(topics.map((topic) => best(topic).a));
+    assert.ok(answers.size > 1);
+  });
+});
+
 describe('questionsFor', () => {
   it('puts the value first, the facet next and the best question last', () => {
     const questions = questionsFor(

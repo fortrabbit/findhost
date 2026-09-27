@@ -31,14 +31,29 @@ const topics: Record<string, (label: string) => string> = {
 export const topicOf = (facet: string, label: string, override?: string) =>
   override ?? topics[facet]?.(label.trim());
 
-/**
- * Asked on every list page, because it is what people type, and answered the
- * same way on each, because the answer does not change with the list: nothing
- * here is ranked, and "best" depends on the reader.
+/*
+ * The same position in different words. One answer repeated on every list page
+ * reads as boilerplate to a person and to a crawler alike; the position does
+ * not change, so only the wording rotates.
  */
-export const best = (topic?: string): Question => ({
+const bestAnswers = [
+  "We don't know. A static portfolio and a busy shop need different things from a host, and so do a freelancer and an agency with forty client sites. Nobody pays to be listed here and the order is alphabetical. The [guide](/guide/) covers what to compare.",
+  "No idea. We list hosts, we don't rate them. Open the records that look close and compare them side by side; the [guide](/guide/) says where to start.",
+  "We can't tell from here. A host that suits a small agency site can be wrong for an API with users in Asia and Europe. The list is alphabetical and nobody paid for a place on it. The [guide](/guide/) covers what to compare.",
+  "Hard to say without knowing the project. A free tier matters for a side project and barely at all for a shop that loses money every minute it is down. Read a few records side by side; the [guide](/guide/) says where to start.",
+];
+
+/* A stable pick per page, so a rebuild does not reword a page nobody edited. */
+const pick = (seed: string) => [...seed].reduce((sum, char) => (sum * 31 + char.charCodeAt(0)) % 9973, 7);
+
+/**
+ * Asked on every list page, because it is what people type. The answer holds
+ * the same position on each: nothing here is ranked, and "best" depends on the
+ * reader.
+ */
+export const best = (topic: string | undefined, seed = topic ?? ''): Question => ({
   q: topic ? `Who is the best ${topic}?` : 'Which of these providers is best?',
-  a: "We don't know, and FindHost doesn't pick one. It depends on the app, where its users are, how much server work the team wants to take on, and the budget. Nobody pays to be listed here and the order is alphabetical. Compare a few records on the fields that matter to the project; the [guide](/guide/) lists the ones worth comparing.",
+  a: bestAnswers[pick(seed) % bestAnswers.length]!,
 });
 
 /** The value's own questions first, then the facet's, then the one every page asks. */
@@ -50,7 +65,7 @@ export const questionsFor = (
 ): Question[] => [
   ...valueQuestions,
   ...facetQuestions.map(({ q, a }) => ({ q: fill(q, label), a: fill(a, label) })),
-  best(topic),
+  best(topic, `${topic ?? ''}${label}`),
 ];
 
 const fill = (text: string, label: string) => text.replaceAll('{label}', label.trim());
