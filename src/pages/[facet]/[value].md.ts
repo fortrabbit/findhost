@@ -4,6 +4,7 @@ import { facetRoutes, loadFacets } from '../../lib/facets';
 import { fieldOf, subjectOf } from '../../lib/fields';
 import { summarise } from '../../lib/summarise';
 import { attribution, valueTitle } from '../../lib/seo';
+import { answerText, questionsFor, topicOf } from '../../lib/questions';
 
 /**
  * A facet value as markdown: the list, and what the list means.
@@ -22,7 +23,14 @@ export const GET: APIRoute = async ({ props, site }) => {
   const origin = site?.origin ?? '';
   const { facets } = await loadFacets();
 
-  const note = (await getCollection('notes')).find((entry) => entry.id === `${facet.id}/${value.id}`);
+  const notes = await getCollection('notes');
+  const note = notes.find((entry) => entry.id === `${facet.id}/${value.id}`);
+  const questions = questionsFor(
+    value.label,
+    topicOf(facet.id, value.label, note?.data.topic),
+    notes.find((entry) => entry.id === facet.id)?.data.faq,
+    note?.data.faq,
+  );
   const summary = summarise(matches, facets, facet.id, subjectOf(fieldOf.get(facet.field)!, value, matches.length));
 
   const lines = [
@@ -59,6 +67,9 @@ export const GET: APIRoute = async ({ props, site }) => {
         `- [${provider.name}](${origin}/${provider.id}/) — ${origin}/${provider.id}.md`,
     ),
     '',
+    '## Questions',
+    '',
+    ...questions.flatMap(({ q, a }) => [`### ${q}`, '', answerText(a), '']),
     '---',
     '',
     ...attribution,

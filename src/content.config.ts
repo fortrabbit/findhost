@@ -469,6 +469,22 @@ const notes = defineCollection({
     lead: z.string().optional(),
     figure: figure.optional(),
     ai: z.enum(vocabulary('ai')).optional(),
+    /*
+     * The questions a value page answers under its list. On a facet's note they
+     * are asked on every value page of it, with `{label}` for the value. Kept
+     * short because the first sentence is the one that gets quoted, and plain
+     * except for links, which is all an answer needs to send a reader onward.
+     */
+    faq: z
+      .array(
+        z.object({
+          q: z.string().max(100),
+          a: z.string().refine((answer) => answer.split(/\s+/).length <= 70, 'An answer is 70 words at most'),
+        }),
+      )
+      .optional(),
+    /** What a "best" question asks about, where the facet's pattern reads badly for this value. */
+    topic: z.string().optional(),
   }),
 });
 

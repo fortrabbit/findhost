@@ -4,11 +4,13 @@ import Base from '../../layouts/Base.astro';
 import { organization, valueTitle } from '../../lib/seo';
 import ProviderRegister from '../../components/ProviderRegister.astro';
 import PageFigure from '../../components/PageFigure.astro';
+import Questions from '../../components/Questions.astro';
 import { facetIndex, facetRoutes, loadFacets, pairsFor } from '../../lib/facets';
 import { fieldOf, subjectOf } from '../../lib/fields';
 import { summarise } from '../../lib/summarise';
 import { valueCardPath } from '../../lib/og';
 import { newest } from '../../lib/modified';
+import { faqSchema, questionsFor, topicOf } from '../../lib/questions';
 
 /*
  * One static page per facet value in use. These are what a crawler follows and
@@ -60,6 +62,15 @@ const notes = await getCollection('notes');
 const note = notes.find((entry) => entry.id === `${facet.id}/${value.id}`);
 const Note = note ? (await render(note)).Content : null;
 const figure = note?.data.figure;
+
+/* The value's questions, the facet's asked of this value, and the one every page asks. */
+const facetNote = notes.find((entry) => entry.id === facet.id);
+const questions = questionsFor(
+  value.label,
+  topicOf(facet.id, value.label, note?.data.topic),
+  facetNote?.data.faq,
+  note?.data.faq,
+);
 
 /*
  * The combinations this value is half of. They are how anybody reaches
@@ -122,6 +133,7 @@ const combined = (await pairsFor(facet.id, value.id)).map((group) => ({
         })),
       },
     },
+    faqSchema(questions),
   ]}
 >
   {/* The parent, and only the parent — the register is the wordmark's job. */}
@@ -186,6 +198,8 @@ const combined = (await pairsFor(facet.id, value.id)).map((group) => ({
     facets={facets}
     seed={{ facet: facet.id, value: value.id, label: value.label }}
   />
+
+  <Questions questions={questions} />
 </Base>
 
 {/* For the extended/slim toggle only. This page ships no filters — its URL is the narrowing. */}

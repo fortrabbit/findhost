@@ -13,7 +13,7 @@ import { titleOf } from './fields.ts';
  * "CMS sites" and "AI and LLM apps" are not sentence case, and flattening them
  * spells the acronym wrong in the one line a search result shows.
  */
-const soften = (label: string) =>
+export const soften = (label: string) =>
   label === label.charAt(0) + label.slice(1).toLowerCase() ? label.toLowerCase() : label;
 
 /**

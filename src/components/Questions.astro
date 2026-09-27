@@ -1,0 +1,31 @@
+---
+import { answerHtml, type Question } from '../lib/questions';
+
+/*
+ * One <details> a question, closed. The list is what the page is for, and a
+ * reader who scrolled past it came for one answer, not all of them. The text
+ * is in the markup either way, so a crawler reads every answer open or shut.
+ *
+ * The last question is the "best" one every page asks alike, so search skips
+ * it: otherwise every page would match the same query with the same words.
+ */
+interface Props {
+  questions: Question[];
+}
+
+const { questions } = Astro.props;
+---
+
+{
+  questions.length > 0 && (
+    <section class="questions" aria-labelledby="questions">
+      <h2 id="questions">Questions</h2>
+      {questions.map(({ q, a }, index) => (
+        <details data-pagefind-ignore={index === questions.length - 1 ? 'all' : undefined}>
+          <summary>{q}</summary>
+          <p set:html={answerHtml(a)} />
+        </details>
+      ))}
+    </section>
+  )
+}
