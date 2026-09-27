@@ -40,28 +40,29 @@ apiAvailable: public
 status: out-of-scope
 criterion: 5
 addedAt: 2026-09-24
+checkedAt: 2026-09-27
 sources:
-  - { field: criterion, url: 'https://www.hivenet.com/compute', checkedAt: 2026-09-24 }
-  - { field: category, url: 'https://docs.hivenet.com/about-hivenet', checkedAt: 2026-09-24 }
-  - { field: hqCountry, url: 'https://www.hivenet.com/terms-of-service', checkedAt: 2026-09-24 }
-  - { field: whoManagesOs, url: 'https://docs.hivenet.com/documentation/essentials/choosing-between-a-virtual-machine-and-a-container', checkedAt: 2026-09-24 }
-  - { field: sshAccess, url: 'https://docs.hivenet.com/documentation/essentials/choosing-between-a-virtual-machine-and-a-container', checkedAt: 2026-09-24 }
-  - { field: useCases, url: 'https://www.hivenet.com/compute', checkedAt: 2026-09-24 }
-  - { field: runtimes, url: 'https://docs.hivenet.com/documentation/essentials/custom-templates', checkedAt: 2026-09-24 }
-  - { field: deployMethods, url: 'https://docs.hivenet.com/documentation/essentials/custom-templates', checkedAt: 2026-09-24 }
-  - { field: gpuCapacity, url: 'https://docs.hivenet.com/documentation/reference/gpu-types', checkedAt: 2026-09-24 }
-  - { field: gpuCapacity, url: 'https://docs.hivenet.com/documentation/inference-api/overview', checkedAt: 2026-09-24 }
-  - { field: pricingModel, url: 'https://www.hivenet.com/subscribe', checkedAt: 2026-09-24 }
-  - { field: priceFrom, url: 'https://docs.hivenet.com/documentation/reference/cpu-types', checkedAt: 2026-09-24 }
+  - { field: criterion, url: 'https://www.hivenet.com/compute', checkedAt: 2026-09-27 }
+  - { field: category, url: 'https://docs.hivenet.com/about-hivenet', checkedAt: 2026-09-27 }
+  - { field: hqCountry, url: 'https://www.hivenet.com/terms-of-service', checkedAt: 2026-09-27 }
+  - { field: whoManagesOs, url: 'https://docs.hivenet.com/documentation/essentials/choosing-between-a-virtual-machine-and-a-container', checkedAt: 2026-09-27 }
+  - { field: sshAccess, url: 'https://docs.hivenet.com/documentation/essentials/choosing-between-a-virtual-machine-and-a-container', checkedAt: 2026-09-27 }
+  - { field: useCases, url: 'https://www.hivenet.com/compute', checkedAt: 2026-09-27 }
+  - { field: runtimes, url: 'https://docs.hivenet.com/documentation/essentials/custom-templates', checkedAt: 2026-09-27 }
+  - { field: deployMethods, url: 'https://docs.hivenet.com/documentation/essentials/custom-templates', checkedAt: 2026-09-27 }
+  - { field: gpuCapacity, url: 'https://docs.hivenet.com/documentation/reference/gpu-types', checkedAt: 2026-09-27 }
+  - { field: gpuCapacity, url: 'https://docs.hivenet.com/documentation/inference-api/overview', checkedAt: 2026-09-27 }
+  - { field: pricingModel, url: 'https://www.hivenet.com/subscribe', checkedAt: 2026-09-27 }
+  - { field: priceFrom, url: 'https://docs.hivenet.com/documentation/reference/cpu-types', checkedAt: 2026-09-27 }
   - { field: priceTo, url: 'https://www.hivenet.com/subscribe', checkedAt: 2026-09-24 }
   - { field: priceTo, url: 'https://docs.hivenet.com/documentation/reference/gpu-types', checkedAt: 2026-09-24 }
-  - { field: entryPrice, url: 'https://docs.hivenet.com/documentation/reference/cpu-types', checkedAt: 2026-09-24 }
-  - { field: currencies, url: 'https://docs.hivenet.com/documentation/account-billing/billing-info', checkedAt: 2026-09-24 }
+  - { field: entryPrice, url: 'https://docs.hivenet.com/documentation/reference/cpu-types', checkedAt: 2026-09-27 }
+  - { field: currencies, url: 'https://docs.hivenet.com/documentation/account-billing/billing-info', checkedAt: 2026-09-27 }
   - { field: billingPeriods, url: 'https://docs.hivenet.com/documentation/account-billing/billing-info', checkedAt: 2026-09-24 }
-  - { field: billingTiming, url: 'https://docs.hivenet.com/documentation/account-billing/billing-info', checkedAt: 2026-09-24 }
-  - { field: regions, url: 'https://www.hivenet.com/compute', checkedAt: 2026-09-24 }
-  - { field: apiAvailable, url: 'https://docs.hivenet.com/public-api/get-started-with-the-compute-api', checkedAt: 2026-09-24 }
-  - { field: 'certified providers', url: 'https://docs.hivenet.com/documentation/reference/faq', checkedAt: 2026-09-24 }
+  - { field: billingTiming, url: 'https://docs.hivenet.com/documentation/account-billing/billing-info', checkedAt: 2026-09-27 }
+  - { field: regions, url: 'https://www.hivenet.com/compute', checkedAt: 2026-09-27 }
+  - { field: apiAvailable, url: 'https://docs.hivenet.com/public-api/get-started-with-the-compute-api', checkedAt: 2026-09-27 }
+  - { field: 'certified providers', url: 'https://docs.hivenet.com/documentation/reference/faq', checkedAt: 2026-09-27 }
 figure:
   emoji: 🐝
   color: rgb(74, 58, 12)
