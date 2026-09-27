@@ -18,8 +18,7 @@ const { questions } = Astro.props;
 
 {
   questions.length > 0 && (
-    <section class="questions" aria-labelledby="questions">
-      <h2 id="questions">Questions</h2>
+    <section class="questions" aria-label="Questions">
       {questions.map(({ q, a }, index) => (
         <details data-pagefind-ignore={index === questions.length - 1 ? 'all' : undefined}>
           <summary>{q}</summary>

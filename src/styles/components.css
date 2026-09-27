@@ -1920,24 +1920,23 @@ article > pre {
 }
 
 /*
- * Under the list, at the measure of prose: an answer is read as a sentence,
- * and a rule above keeps it from reading as the last row of the register.
+ * Under the list, ruled across the full width of the content like the register
+ * above it, with the answers held to the measure of prose: an answer is read as
+ * a sentence, and the rule keeps it from reading as the last row of the list.
  */
 .questions {
-  max-width: var(--measure-prose);
-  margin-block: var(--space-xl) var(--space-lg);
+  margin-block: var(--space-2xl) var(--space-lg);
   padding-top: var(--space-sm);
-  border-top: var(--rule-hairline) solid var(--color-ink);
+  border-top: var(--rule-strong) solid var(--color-ink);
 }
 
-.questions > h2 {
-  margin: 0 0 var(--space-xs);
-  font-size: var(--text-sm);
-  font-weight: var(--weight-strong);
+.questions details {
+  max-width: var(--measure-prose);
 }
 
 .questions summary {
   padding-block: var(--space-2xs);
+  font-weight: var(--weight-strong);
   cursor: pointer;
 }
 

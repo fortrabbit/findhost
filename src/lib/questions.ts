@@ -38,7 +38,7 @@ export const topicOf = (facet: string, label: string, override?: string) =>
  */
 export const best = (topic?: string): Question => ({
   q: topic ? `Who is the best ${topic}?` : 'Which of these providers is best?',
-  a: "We don't know, and FindHost does not try to find out. The right host depends on what you run, where your users are, how much of the server you want to look after, and what you can spend. Nobody pays to be listed and the order is alphabetical. Open two or three records and compare what matters to you; the [guide](/guide/) lists what is worth comparing.",
+  a: "We don't know, and FindHost doesn't pick one. It depends on the app, where its users are, how much server work the team wants to take on, and the budget. Nobody pays to be listed here and the order is alphabetical. Compare a few records on the fields that matter to the project; the [guide](/guide/) lists the ones worth comparing.",
 });
 
 /** The value's own questions first, then the facet's, then the one every page asks. */
