@@ -34,27 +34,28 @@ billingTiming: advance
 apiAvailable: public
 status: acquired
 addedAt: 2026-09-24
+checkedAt: 2026-09-28
 sources:
-  - { field: category, url: 'https://docs.tensordock.com/virtual-machines/introduction-to-core-compute-vms', checkedAt: 2026-09-24 }
-  - { field: description, url: 'https://docs.tensordock.com/who-we-are/readme', checkedAt: 2026-09-24 }
-  - { field: hqCountry, url: 'https://docs.tensordock.com/legal-information/legal-information', checkedAt: 2026-09-24 }
-  - { field: ownership, url: 'https://voltagepark.com/blog/voltage-park-acquires-tensordock-expanding-gpu-cloud-services-for-ai-and-machine-learning', checkedAt: 2026-09-24 }
-  - { field: status, url: 'https://voltagepark.com/blog/voltage-park-acquires-tensordock-expanding-gpu-cloud-services-for-ai-and-machine-learning', checkedAt: 2026-09-24 }
-  - { field: whoManagesOs, url: 'https://www.tensordock.com/', checkedAt: 2026-09-24 }
-  - { field: sshAccess, url: 'https://www.tensordock.com/', checkedAt: 2026-09-24 }
-  - { field: useCases, url: 'https://www.tensordock.com/cloud-gpus.html', checkedAt: 2026-09-24 }
-  - { field: runtimes, url: 'https://www.tensordock.com/', checkedAt: 2026-09-24 }
-  - { field: deployMethods, url: 'https://docs.tensordock.com/virtual-machines/introduction-to-core-compute-vms', checkedAt: 2026-09-24 }
-  - { field: gpuCapacity, url: 'https://www.tensordock.com/cloud-gpus.html', checkedAt: 2026-09-24 }
-  - { field: pricingModel, url: 'https://www.tensordock.com/', checkedAt: 2026-09-24 }
-  - { field: billingTiming, url: 'https://www.tensordock.com/', checkedAt: 2026-09-24 }
-  - { field: billingPeriods, url: 'https://www.tensordock.com/cloud-gpus.html', checkedAt: 2026-09-24 }
-  - { field: entryPrice, url: 'https://www.tensordock.com/', checkedAt: 2026-09-24 }
-  - { field: priceFrom, url: 'https://www.tensordock.com/', checkedAt: 2026-09-24 }
-  - { field: priceTo, url: 'https://www.tensordock.com/cloud-gpus.html', checkedAt: 2026-09-24 }
-  - { field: currencies, url: 'https://www.tensordock.com/cloud-gpus.html', checkedAt: 2026-09-24 }
-  - { field: apiAvailable, url: 'https://dashboard.tensordock.com/api/docs', checkedAt: 2026-09-24 }
-  - { field: 'acquisition by Voltage Park', url: 'https://voltagepark.com/blog/voltage-park-acquires-tensordock-expanding-gpu-cloud-services-for-ai-and-machine-learning', checkedAt: 2026-09-24 }
+  - { field: category, url: 'https://docs.tensordock.com/virtual-machines/introduction-to-core-compute-vms', checkedAt: 2026-09-28 }
+  - { field: description, url: 'https://docs.tensordock.com/who-we-are/readme', checkedAt: 2026-09-28 }
+  - { field: hqCountry, url: 'https://docs.tensordock.com/legal-information/legal-information', checkedAt: 2026-09-28 }
+  - { field: ownership, url: 'https://voltagepark.com/blog/voltage-park-acquires-tensordock-expanding-gpu-cloud-services-for-ai-and-machine-learning', checkedAt: 2026-09-28 }
+  - { field: status, url: 'https://voltagepark.com/blog/voltage-park-acquires-tensordock-expanding-gpu-cloud-services-for-ai-and-machine-learning', checkedAt: 2026-09-28 }
+  - { field: whoManagesOs, url: 'https://www.tensordock.com/', checkedAt: 2026-09-28 }
+  - { field: sshAccess, url: 'https://www.tensordock.com/', checkedAt: 2026-09-28 }
+  - { field: useCases, url: 'https://www.tensordock.com/cloud-gpus.html', checkedAt: 2026-09-28 }
+  - { field: runtimes, url: 'https://www.tensordock.com/', checkedAt: 2026-09-28 }
+  - { field: deployMethods, url: 'https://docs.tensordock.com/virtual-machines/introduction-to-core-compute-vms', checkedAt: 2026-09-28 }
+  - { field: gpuCapacity, url: 'https://www.tensordock.com/cloud-gpus.html', checkedAt: 2026-09-28 }
+  - { field: pricingModel, url: 'https://www.tensordock.com/', checkedAt: 2026-09-28 }
+  - { field: billingTiming, url: 'https://www.tensordock.com/', checkedAt: 2026-09-28 }
+  - { field: billingPeriods, url: 'https://www.tensordock.com/cloud-gpus.html', checkedAt: 2026-09-28 }
+  - { field: entryPrice, url: 'https://www.tensordock.com/', checkedAt: 2026-09-28 }
+  - { field: priceFrom, url: 'https://www.tensordock.com/', checkedAt: 2026-09-28 }
+  - { field: priceTo, url: 'https://www.tensordock.com/cloud-gpus.html', checkedAt: 2026-09-28 }
+  - { field: currencies, url: 'https://www.tensordock.com/cloud-gpus.html', checkedAt: 2026-09-28 }
+  - { field: apiAvailable, url: 'https://dashboard.tensordock.com/api/docs', checkedAt: 2026-09-28 }
+  - { field: 'acquisition by Voltage Park', url: 'https://voltagepark.com/blog/voltage-park-acquires-tensordock-expanding-gpu-cloud-services-for-ai-and-machine-learning', checkedAt: 2026-09-28 }
 figure:
   emoji: 🧩
   color: rgb(236, 244, 236)
