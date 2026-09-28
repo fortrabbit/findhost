@@ -1,4 +1,5 @@
 ---
+import { getCollection } from 'astro:content';
 import Base from '../../../../layouts/Base.astro';
 import ProviderRegister from '../../../../components/ProviderRegister.astro';
 import { facetIndex, loadFacets, pairRoutes } from '../../../../lib/facets';
@@ -6,7 +7,9 @@ import { fieldOf, subjectOf, titleWithOf } from '../../../../lib/fields';
 import { pairCardPath } from '../../../../lib/og';
 import { pairIndexPath, pairPath, pairingKey } from '../../../../lib/pairs';
 import { licenceUrl, providerList, publisherRef, valueTitle, websiteRef } from '../../../../lib/seo';
-import { summarisePair } from '../../../../lib/summarise';
+import { pairOpening, summarisePair } from '../../../../lib/summarise';
+import Questions from '../../../../components/Questions.astro';
+import { best, faqSchema, topicOf } from '../../../../lib/questions';
 import { newest } from '../../../../lib/modified';
 
 /*
@@ -44,13 +47,25 @@ const widerRows = providers.filter((provider) => {
   return Array.isArray(held) ? held.includes(id) : held === id;
 });
 
-const summary = summarisePair({ aId: a.id, bId: b.id, aSubject, bSubject, matches, aTotal, bTotal, widerRows }, facets);
+const pairSummary = { aId: a.id, bId: b.id, aSubject, bSubject, matches, aTotal, bTotal, widerRows };
+const summary = summarisePair(pairSummary, facets);
+const opening = pairOpening(pairSummary, facets);
 
 /* The title the value page uses, plus the phrase the dictionary gives the second half. */
 const title = `${valueTitle(a.id, av)} ${titleWithOf(bField, bv)}`;
 
 /* The most recently changed record on this page, for the schema's dateModified. */
 const newestModified = newest(matches.map((row) => row.modifiedAt));
+
+/*
+ * The one question every list page asks, asked of the pair. The value pages'
+ * own questions stay there: repeated on every pair a value is half of, they
+ * would be the same answer on fifty pages.
+ */
+const firstNote = (await getCollection('notes')).find((entry) => entry.id === `${a.id}/${av.id}`);
+const firstTopic = topicOf(a.id, av.label, firstNote?.data.topic);
+const secondHalf = titleWithOf(bField, bv);
+const questions = [best(firstTopic && secondHalf ? `${firstTopic} ${secondHalf}` : undefined, title)];
 
 const origin = Astro.site?.origin ?? '';
 const here = pairPath({ a, av, b, bv });
@@ -84,6 +99,7 @@ const here = pairPath({ a, av, b, bv });
       ...(newestModified ? { dateModified: newestModified.toISOString().slice(0, 10) } : {}),
       mainEntity: providerList(origin, matches),
     },
+    faqSchema(questions),
   ]}
 >
   {/* Both parents, because this page belongs to both and a reader may have come from either. */}
@@ -98,7 +114,7 @@ const here = pairPath({ a, av, b, bv });
     <a class="find-onward" data-pagefind-ignore href={`/?${a.id}=${av.id}&${b.id}=${bv.id}`}>Combine filters →</a>
   </div>
 
-  <p class="annotation">{summary}</p>
+  <p class="annotation">{opening}</p>
 
   <ProviderRegister providers={matches} facets={facets} seed={{ facet: a.id, value: av.id, label: title }} />
 
@@ -107,6 +123,8 @@ const here = pairPath({ a, av, b, bv });
       >Every {b.label.toLowerCase()} {valueTitle(a.id, av).toLowerCase()} has a page for →</a
     >
   </p>
+
+  <Questions questions={questions} />
 </Base>
 
 {/* For the extended/slim toggle only. This page ships no filters — its URL is the narrowing. */}

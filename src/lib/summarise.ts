@@ -1,3 +1,4 @@
+import { soften } from './seo.ts';
 import { rowHolds } from './rows.ts';
 import type { Facet, ProviderRow } from './facets';
 
@@ -14,6 +15,19 @@ import type { Facet, ProviderRow } from './facets';
  * and a wall of counted nouns reads as filler however true each number is.
  */
 export function summarise(matches: ProviderRow[], facets: Facet[], facetId: string, subject: string): string {
+  return valueSentences(matches, facets, facetId, subject).join(' ');
+}
+
+/**
+ * The summary as a page opens with it: the same sentences with every provider
+ * named after the first, where there are few enough to name. The summary alone
+ * stays the meta description and the card, which have no room for names.
+ */
+export function valueOpening(matches: ProviderRow[], facets: Facet[], facetId: string, subject: string): string {
+  return withNames(valueSentences(matches, facets, facetId, subject), matches);
+}
+
+function valueSentences(matches: ProviderRow[], facets: Facet[], facetId: string, subject: string): string[] {
   const count = matches.length;
   const noun = count === 1 ? 'provider' : 'providers';
 
@@ -48,7 +62,7 @@ export function summarise(matches: ProviderRow[], facets: Facet[], facetId: stri
   if (ownField !== 'category') {
     const categories = spread('category');
     if (categories.length) {
-      const named = categories.slice(0, 3).map((entry) => entry.label.toLowerCase());
+      const named = categories.slice(0, 3).map((entry) => soften(entry.label));
       const joined = named.length > 1 ? `${named.slice(0, -1).join(', ')} and ${named.at(-1)}` : named[0];
       if (categories.length > named.length) clauses.push(`mostly ${joined}, of ${categories.length} categories in all`);
       else if (named.length > 1) clauses.push(`split across ${joined}`);
@@ -66,7 +80,7 @@ export function summarise(matches: ProviderRow[], facets: Facet[], facetId: stri
 
   if (ownField !== 'entryPriceBand') {
     const price = spread('entryPriceBand');
-    if (price.length) clauses.push(`commonest entry price ${price[0]!.label.toLowerCase()}`);
+    if (price.length) clauses.push(`commonest entry price ${soften(price[0]!.label)}`);
   }
 
   /*
@@ -84,9 +98,7 @@ export function summarise(matches: ProviderRow[], facets: Facet[], facetId: stri
   return [
     `${count} ${noun} ${subject}, listed alphabetically.`,
     context && `${context[0]!.toUpperCase()}${context.slice(1)}.`,
-  ]
-    .filter(Boolean)
-    .join(' ');
+  ].filter((sentence): sentence is string => Boolean(sentence));
 }
 
 /**
@@ -101,6 +113,15 @@ export function summarise(matches: ProviderRow[], facets: Facet[], facetId: stri
  * different page rather than the same page with a second heading.
  */
 export function summarisePair(page: PairSummary, facets: Facet[]): string {
+  return pairSentences(page, facets).join(' ');
+}
+
+/** `valueOpening` for a pair page. */
+export function pairOpening(page: PairSummary, facets: Facet[]): string {
+  return withNames(pairSentences(page, facets), page.matches);
+}
+
+function pairSentences(page: PairSummary, facets: Facet[]): string[] {
   const { matches, aTotal, bTotal } = page;
   const count = matches.length;
   const noun = count === 1 ? 'provider' : 'providers';
@@ -144,10 +165,34 @@ export function summarisePair(page: PairSummary, facets: Facet[]): string {
     `${count} ${noun} ${page.aSubject} and ${page.bSubject}, listed alphabetically.`,
     `That is ${count} of the ${wider.total} that ${wider.subject}.`,
     contrast && `${contrast.label} on ${contrast.here} of them, against ${contrast.there} of the ${wider.total}.`,
-  ]
-    .filter(Boolean)
-    .join(' ');
+  ].filter((sentence): sentence is string => Boolean(sentence));
 }
+
+/*
+ * Above this many, a sentence of names is the list set as prose, and the list
+ * is right under it. Past the limit none are named rather than the first few:
+ * the first twelve alphabetically would read as a selection.
+ */
+export const namedLimit = 12;
+
+/**
+ * Every provider on the page by name, alphabetically — the order the list
+ * draws, so naming them is the list read aloud rather than a pick. Names only:
+ * a sentence that describes one of them is a sentence that ranks it.
+ */
+export function names(rows: { name: string }[]): string | undefined {
+  if (rows.length === 0 || rows.length > namedLimit) return undefined;
+
+  const sorted = rows.map((row) => row.name).sort((a, b) => a.localeCompare(b, 'en'));
+  if (sorted.length === 1) return `It is ${sorted[0]}.`;
+  return `They are ${sorted.slice(0, -1).join(', ')} and ${sorted.at(-1)}.`;
+}
+
+/* The names go second: after the count they complete, before the counts that compare. */
+const withNames = (sentences: string[], rows: { name: string }[]) => {
+  const named = names(rows);
+  return (named ? [sentences[0]!, named, ...sentences.slice(1)] : sentences).join(' ');
+};
 
 /**
  * What `summarisePair` needs, written out rather than taking the whole PairPage:

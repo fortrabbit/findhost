@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
 import type { Facet, ProviderRow } from './facets.ts';
-import { summarise, summarisePair } from './summarise.ts';
+import { namedLimit, names, pairOpening, summarise, summarisePair, valueOpening } from './summarise.ts';
 
 const facet = (id: string, field: string, values: string[]): Facet => ({
   id,
@@ -147,5 +147,58 @@ describe('summarisePair', () => {
   it('never speaks about either of its own facets', () => {
     const summary = summarisePair(page, facets);
     assert.equal(summary.split('. ').slice(2).join(' ').includes('DE'), false);
+  });
+});
+
+describe('names', () => {
+  it('names one provider on its own', () => {
+    assert.equal(names([row('Hetzner', {})]), 'It is Hetzner.');
+  });
+
+  it('names every provider under the limit, alphabetically whatever order they came in', () => {
+    assert.equal(names([row('Zeta', {}), row('alpha', {}), row('Beta', {})]), 'They are alpha, Beta and Zeta.');
+  });
+
+  it('names none over the limit rather than the first few', () => {
+    const many = Array.from({ length: namedLimit + 1 }, (_, i) => row(`P${i}`, {}));
+    assert.equal(names(many), undefined);
+    assert.ok(names(many.slice(0, namedLimit)));
+  });
+
+  it('names nobody on an empty page', () => {
+    assert.equal(names([]), undefined);
+  });
+});
+
+describe('openings', () => {
+  const rows = [row('Beta', { category: 'paas' }), row('Alpha', { category: 'vps' })];
+
+  it('puts the names after the count and before the comparison', () => {
+    const opening = valueOpening(rows, facets, 'runtimes', 'run Rust');
+    const summary = summarise(rows, facets, 'runtimes', 'run Rust');
+    const [first, ...rest] = summary.split('. ');
+    assert.equal(opening, `${first}. They are Alpha and Beta. ${rest.join('. ')}`);
+  });
+
+  it('is the summary unchanged when there are too many to name', () => {
+    const many = Array.from({ length: namedLimit + 1 }, (_, i) => row(`P${i}`, { category: 'paas' }));
+    assert.equal(valueOpening(many, facets, 'runtimes', 'run Rust'), summarise(many, facets, 'runtimes', 'run Rust'));
+  });
+
+  it('names a pair page the same way', () => {
+    const page = {
+      aId: 'runtimes',
+      bId: 'regions',
+      aSubject: 'run PHP',
+      bSubject: 'operate in Germany',
+      matches: rows,
+      aTotal: 10,
+      bTotal: 5,
+      widerRows: rows,
+    };
+    assert.match(
+      pairOpening(page, facets),
+      /^2 providers run PHP and operate in Germany, listed alphabetically\. They are Alpha and Beta\. That is 2 of the 10/,
+    );
   });
 });

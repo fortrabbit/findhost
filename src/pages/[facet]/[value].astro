@@ -7,7 +7,7 @@ import PageFigure from '../../components/PageFigure.astro';
 import Questions from '../../components/Questions.astro';
 import { facetIndex, facetRoutes, loadFacets, pairsFor } from '../../lib/facets';
 import { fieldOf, subjectOf } from '../../lib/fields';
-import { summarise } from '../../lib/summarise';
+import { summarise, valueOpening } from '../../lib/summarise';
 import { valueCardPath } from '../../lib/og';
 import { newest } from '../../lib/modified';
 import { faqSchema, questionsFor, topicOf } from '../../lib/questions';
@@ -36,22 +36,6 @@ const summary = summarise(matches, facets, facet.id, subjectOf(fieldOf.get(facet
 const newestChecked = newest(matches.map((row) => row.modifiedAt)) ?? null;
 
 /*
- * The count, what the records have in common and what is missing, in one
- * annotation. They were three stacked blocks of numbers, two of them opening
- * with the same total — read as a wall and skipped as one.
- *
- * One string, for the reason given in ProviderRegister.astro.
- */
-const counted = [
-  summary,
-  facet.unknown > 0 &&
-    `${facet.unknown} ${facet.unknown === 1 ? 'record does' : 'records do'} not record this field, and cannot appear here either way.`,
-  facet.notApplicable > 0 && `For ${facet.notApplicable} the question does not apply.`,
-]
-  .filter(Boolean)
-  .join(' ');
-
-/*
  * A written explainer exists for some values and not others, which is the
  * intended state: filler for all of them would be thin content by definition.
  * Its title heads the browser tab only — the heading stays the value's own
@@ -62,6 +46,25 @@ const notes = await getCollection('notes');
 const note = notes.find((entry) => entry.id === `${facet.id}/${value.id}`);
 const Note = note ? (await render(note)).Content : null;
 const figure = note?.data.figure;
+
+/*
+ * The count, what the records have in common and what is missing, in one
+ * annotation. They were three stacked blocks of numbers, two of them opening
+ * with the same total — read as a wall and skipped as one.
+ *
+ * One string, for the reason given in ProviderRegister.astro.
+ */
+const counted = [
+  /* Where nobody has written about the value, the providers are named instead. */
+  note?.body?.trim()
+    ? summary
+    : valueOpening(matches, facets, facet.id, subjectOf(fieldOf.get(facet.field)!, value, matches.length)),
+  facet.unknown > 0 &&
+    `${facet.unknown} ${facet.unknown === 1 ? 'record does' : 'records do'} not record this field, and cannot appear here either way.`,
+  facet.notApplicable > 0 && `For ${facet.notApplicable} the question does not apply.`,
+]
+  .filter(Boolean)
+  .join(' ');
 
 /* The value's questions, the facet's asked of this value, and the one every page asks. */
 const facetNote = notes.find((entry) => entry.id === facet.id);

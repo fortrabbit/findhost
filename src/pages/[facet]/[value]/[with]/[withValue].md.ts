@@ -3,7 +3,7 @@ import { loadFacets, pairRoutes } from '../../../../lib/facets';
 import { fieldOf, subjectOf, titleWithOf } from '../../../../lib/fields';
 import { pairPath } from '../../../../lib/pairs';
 import { attribution, valueTitle } from '../../../../lib/seo';
-import { summarisePair } from '../../../../lib/summarise';
+import { pairOpening } from '../../../../lib/summarise';
 
 /**
  * A pair page as markdown. "Which hosts run PHP in Germany" is the shape of
@@ -29,7 +29,7 @@ export const GET: APIRoute = async ({ props, site }) => {
   });
 
   /* Derived the way the page derives them, so the two cannot describe one set differently. */
-  const summary = summarisePair(
+  const summary = pairOpening(
     {
       aId: a.id,
       bId: b.id,
