@@ -7,6 +7,7 @@ import { pairCardPath } from '../../../../lib/og';
 import { pairIndexPath, pairPath, pairingKey } from '../../../../lib/pairs';
 import { licenceUrl, providerList, publisherRef, valueTitle, websiteRef } from '../../../../lib/seo';
 import { summarisePair } from '../../../../lib/summarise';
+import { newest } from '../../../../lib/modified';
 
 /*
  * Two facet values, one address. One value has had a page since the beginning;
@@ -48,8 +49,8 @@ const summary = summarisePair({ aId: a.id, bId: b.id, aSubject, bSubject, matche
 /* The title the value page uses, plus the phrase the dictionary gives the second half. */
 const title = `${valueTitle(a.id, av)} ${titleWithOf(bField, bv)}`;
 
-const checkedDates = matches.map((row) => row.checkedAt).filter((date): date is Date => date instanceof Date);
-const newestChecked = checkedDates.length ? new Date(Math.max(...checkedDates.map((date) => date.getTime()))) : null;
+/* The most recently changed record on this page, for the schema's dateModified. */
+const newestModified = newest(matches.map((row) => row.modifiedAt));
 
 const origin = Astro.site?.origin ?? '';
 const here = pairPath({ a, av, b, bv });
@@ -80,7 +81,7 @@ const here = pairPath({ a, av, b, bv });
       isPartOf: websiteRef(origin),
       publisher: publisherRef(origin),
       license: licenceUrl,
-      ...(newestChecked ? { dateModified: newestChecked.toISOString().slice(0, 10) } : {}),
+      ...(newestModified ? { dateModified: newestModified.toISOString().slice(0, 10) } : {}),
       mainEntity: providerList(origin, matches),
     },
   ]}

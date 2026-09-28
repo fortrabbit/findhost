@@ -331,6 +331,8 @@ const categoryLabels = (fieldOf.get('category')?.values ?? [])
       ...(addedIso ? { datePublished: addedIso } : {}),
       /* The date somebody read the provider's own pages — the only one we stand behind. */
       ...(modifiedIso ? { dateModified: modifiedIso } : {}),
+      /* The check alone, so a machine can tell a confirmation from an edit. */
+      ...(checkedIso ? { lastReviewed: checkedIso } : {}),
       license: licenceUrl,
       /*
        * The provider is the subject of the page, not its author. `about` says that
