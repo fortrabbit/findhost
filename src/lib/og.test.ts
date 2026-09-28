@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
-import { emojiFile } from './og.ts';
+import { existsSync, unlinkSync } from 'node:fs';
+import { cardFile, emojiFile, shareCard } from './og.ts';
 
 /*
  * Twemoji's filenames keep U+FE0F inside a joined sequence and drop it
@@ -32,5 +33,24 @@ describe('emojiFile', () => {
 
   it('refuses rather than draw a box', () => {
     assert.throws(() => emojiFile('\u{10FFFF}'), /No Twemoji image/);
+  });
+});
+
+describe('shareCard', () => {
+  const spec = { name: `Cache test ${process.pid} ${Date.now()}`, description: 'A card drawn twice.' };
+
+  it('keeps a card under a key of its words, and hands back the same bytes', async () => {
+    const file = cardFile(spec);
+    try {
+      const drawn = await shareCard(spec);
+      assert.ok(existsSync(file));
+      assert.deepEqual(await shareCard(spec), drawn);
+    } finally {
+      if (existsSync(file)) unlinkSync(file);
+    }
+  });
+
+  it('gives different words a different key', () => {
+    assert.notEqual(cardFile(spec), cardFile({ ...spec, description: 'A different sentence.' }));
   });
 });
