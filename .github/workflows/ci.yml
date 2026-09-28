@@ -24,6 +24,14 @@ jobs:
           node-version: 24
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+      # The share cards from the last run, each under a key of what it draws
+      # (src/lib/og.ts). Any earlier run's set will do: a card whose words or
+      # drawing moved has a key nothing restored, and is drawn again.
+      - uses: actions/cache@v4
+        with:
+          path: node_modules/.cache/findhost-og
+          key: og-cards-${{ github.sha }}
+          restore-keys: og-cards-
       - run: pnpm run format
       - run: pnpm run check
       - run: pnpm run test
