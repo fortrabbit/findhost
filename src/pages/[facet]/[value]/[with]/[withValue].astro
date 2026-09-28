@@ -1,4 +1,5 @@
 ---
+import { getCollection } from 'astro:content';
 import Base from '../../../../layouts/Base.astro';
 import ProviderRegister from '../../../../components/ProviderRegister.astro';
 import { facetIndex, loadFacets, pairRoutes } from '../../../../lib/facets';
@@ -61,7 +62,8 @@ const newestModified = newest(matches.map((row) => row.modifiedAt));
  * own questions stay there: repeated on every pair a value is half of, they
  * would be the same answer on fifty pages.
  */
-const firstTopic = topicOf(a.id, av.label);
+const firstNote = (await getCollection('notes')).find((entry) => entry.id === `${a.id}/${av.id}`);
+const firstTopic = topicOf(a.id, av.label, firstNote?.data.topic);
 const secondHalf = titleWithOf(bField, bv);
 const questions = [best(firstTopic && secondHalf ? `${firstTopic} ${secondHalf}` : undefined, title)];
 
