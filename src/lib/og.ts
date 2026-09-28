@@ -16,6 +16,7 @@ import {
   mkdirSync,
   readdirSync,
   readFileSync,
+  realpathSync,
   renameSync,
   statSync,
   unlinkSync,
@@ -275,11 +276,12 @@ const compose = (spec: CardSpec): Box => {
 export async function shareCard(spec: CardSpec): Promise<Uint8Array<ArrayBuffer>> {
   const file = cardFile(spec);
 
-  if (existsSync(file)) {
+  /* Another build, or the dev server beside one, may prune or replace the file between the check and the read; drawing it again is the answer. */
+  try {
     const now = new Date();
     utimesSync(file, now, now);
     return new Uint8Array(readFileSync(file));
-  }
+  } catch {}
 
   /* Written aside and renamed into place, so a build killed mid-write leaves no half a card to reuse. */
   const png = await render(spec);
@@ -305,15 +307,17 @@ async function render(spec: CardSpec): Promise<Uint8Array<ArrayBuffer>> {
 }
 
 /*
- * Rendering is most of a deploy — three and a half minutes of four for 936
- * cards, nearly all of them unchanged — so a card is kept on disk under a hash
- * of everything that draws it and reused while none of it moves.
+ * Rendering is most of a deploy, and nearly every card is unchanged from the
+ * last one, so a card is kept on disk under a hash of everything that draws it
+ * and reused while none of it moves.
  *
  * Under node_modules because that is the directory the deploy container keeps
  * between builds; `dist` is thrown away every time, and CI caches the same path.
  *
  * The key is the words (the spec) and the drawing: this file's source and the
- * versions of the renderer, the font and the emoji. Any edit here, comments
+ * versions of the renderer, the font and the emoji. Satori's own dependencies
+ * count too — yoga does its layout and they are ranged, so a lockfile bump can
+ * move a card under the same satori version. Any edit here, comments
  * included, redraws every card — a stale card is the failure worth avoiding,
  * and a full render is only the build as it was.
  */
@@ -341,18 +345,32 @@ const prune = (dir: string) => {
   const cutoff = Date.now() - keptFor;
   for (const name of readdirSync(dir)) {
     const path = join(dir, name);
-    if (statSync(path).mtimeMs < cutoff) unlinkSync(path);
+    try {
+      if (statSync(path).mtimeMs < cutoff) unlinkSync(path);
+    } catch {}
   }
 };
 
 let drawing: string | undefined;
 
+const manifest = (dir: string) => JSON.parse(readFileSync(join(dir, 'package.json'), 'utf8'));
+
+/* pnpm puts a package's dependencies beside it, not at the top of node_modules. */
+const satoriDependencies = () => {
+  const beside = dirname(realpathSync(packageDir('satori')));
+  return Object.keys(manifest(packageDir('satori')).dependencies ?? {}).map((name) => join(beside, name));
+};
+
 const template = () => {
   drawing ??= [
     readFileSync(join(dirname(nodeModules), 'src', 'lib', 'og.ts'), 'utf8'),
-    ...['satori', '@resvg/resvg-wasm', '@fontsource/charis-sil', '@twemoji/svg'].map(
-      (name) => `${name}@${JSON.parse(readFileSync(join(packageDir(name), 'package.json'), 'utf8')).version}`,
-    ),
+    ...[
+      ...['satori', '@resvg/resvg-wasm', '@fontsource/charis-sil', '@twemoji/svg'].map(packageDir),
+      ...satoriDependencies(),
+    ].map((dir) => {
+      const { name, version } = manifest(dir);
+      return `${name}@${version}`;
+    }),
   ].join('\n');
   return drawing;
 };
