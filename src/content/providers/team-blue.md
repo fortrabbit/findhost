@@ -14,7 +14,7 @@ checkedAt: 2026-08-07
 figure:
   emoji: 🔗
   color: rgb(200, 160, 70)
-  textColor: rgb(252, 248, 238)
+  textColor: rgb(74, 57, 13)
   text: European parent of acquired hosting brands.
 ai: authored
 sources:

@@ -24,6 +24,7 @@ import {
   titleWithOf,
 } from '../src/lib/fields.ts';
 import { hasAffiliateParams } from '../src/lib/affiliate.ts';
+import { contrast } from '../src/lib/contrast.ts';
 import { priceBands } from '../src/lib/price.ts';
 import { rowHolds, toRow } from '../src/lib/rows.ts';
 import { pairCeiling, pairFloor } from '../src/lib/pairs.ts';
@@ -916,6 +917,32 @@ for (const key of noteKeys(notesDir)) {
   const held = inRegister.some((record) => rowHolds(toRow(record), field.id, value));
 
   if (!held) fail(`${notesDir}/${key}.md`, `no record holds ${field.id} "${value}", so the page it heads is not built`);
+}
+
+/*
+ * A figure is the page heading's band and the share card, so its text has to
+ * read on its colour: 4.5:1, the WCAG floor for body text, although the band
+ * sets it large, because the card sets it smaller.
+ */
+const figureFiles = [
+  ...files.map((file) => join(providersDir, file)),
+  ...noteKeys(notesDir).map((key) => join(notesDir, `${key}.md`)),
+  ...readdirSync('src/pages')
+    .filter((name) => name.endsWith('.md'))
+    .map((name) => join('src/pages', name)),
+];
+
+for (const file of figureFiles) {
+  const data = frontmatter(readFileSync(file, 'utf8'));
+
+  for (const key of ['figure', 'caveat']) {
+    const figure = data?.[key] as { color?: string; textColor?: string } | undefined;
+    if (!figure?.color || !figure.textColor) continue;
+
+    const ratio = contrast(figure.color, figure.textColor);
+    if (ratio === undefined) fail(file, `${key} colours must be rgb() or #rrggbb`);
+    else if (ratio < 4.5) fail(file, `${key} text contrast is ${ratio.toFixed(2)}:1, under 4.5:1`);
+  }
 }
 
 if (errors.length) {

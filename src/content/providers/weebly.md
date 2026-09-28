@@ -48,8 +48,8 @@ sources:
   - { field: supportChannels, url: 'https://www.weebly.com', checkedAt: 2026-08-08 }
 figure:
   emoji: 🧰
-  color: rgb(157, 125, 77)
-  textColor: rgb(245, 241, 234)
+  color: rgb(160, 128, 79)
+  textColor: rgb(33, 26, 14)
   text: Simple tools, small jobs.
 ---
 

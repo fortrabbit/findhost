@@ -66,7 +66,7 @@ sources:
 figure:
   emoji: 🌸
   color: rgb(220, 120, 160)
-  textColor: rgb(246, 238, 243)
+  textColor: rgb(60, 32, 49)
   text: Japanese infrastructure, from shared to dedicated.
 ai: authored
 gpuCapacity:

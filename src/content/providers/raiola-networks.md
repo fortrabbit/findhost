@@ -79,7 +79,7 @@ sources:
 figure:
   emoji: 🔧
   color: rgb(137, 157, 77)
-  textColor: rgb(242, 245, 234)
+  textColor: rgb(41, 49, 22)
   text: They screw the servers together themselves.
 ai: authored
 ---

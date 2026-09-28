@@ -91,7 +91,7 @@ sources:
   - { field: ownership, url: 'https://upsun.com/blog/securing-series-d-financing/', checkedAt: 2026-08-21 }
 figure:
   emoji: ☀️
-  color: rgb(45, 120, 190)
+  color: rgb(42, 111, 178)
   textColor: rgb(234, 240, 246)
   text: YAML in, environments out.
 ---

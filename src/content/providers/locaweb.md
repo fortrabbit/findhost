@@ -38,7 +38,7 @@ sources:
 figure:
   emoji: 🇧🇷
   color: rgb(190, 130, 50)
-  textColor: rgb(250, 242, 230)
+  textColor: rgb(53, 34, 9)
   text: Anchor brand of a Brazilian public company.
 ai: authored
 ---

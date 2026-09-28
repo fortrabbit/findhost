@@ -83,7 +83,7 @@ sources:
   - { field: emailHosting, url: 'https://www.websupport.sk/webhosting', checkedAt: 2026-08-12 }
 figure:
   emoji: 🏔️
-  color: rgb(69, 124, 166)
+  color: rgb(63, 112, 150)
   textColor: rgb(234, 241, 246)
   text: Slovak registrar with its own data centre.
 ai: authored

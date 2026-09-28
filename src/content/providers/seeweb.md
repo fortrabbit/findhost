@@ -23,7 +23,7 @@ addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:
   emoji: 🇮🇹
-  color: rgb(46, 130, 90)
+  color: rgb(45, 126, 87)
   textColor: rgb(238, 248, 242)
   text: Italian cloud, part of the DHH group.
 sources:

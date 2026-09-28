@@ -84,7 +84,7 @@ sources:
 figure:
   emoji: 💸
   color: rgb(89, 183, 52)
-  textColor: rgb(237, 246, 234)
+  textColor: rgb(37, 64, 28)
   text: Pay for VPS, plus VPS software.
 ---
 

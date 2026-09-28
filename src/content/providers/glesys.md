@@ -74,7 +74,7 @@ sources:
   - { field: freeTier, url: 'https://glesys.com/pricing/', checkedAt: 2026-08-01 }
 figure:
   emoji: 🧊
-  color: rgb(53, 123, 182)
+  color: rgb(49, 111, 166)
   textColor: rgb(234, 240, 246)
   text: Compute, storage, nothing else.
 ai: authored

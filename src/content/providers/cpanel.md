@@ -71,8 +71,8 @@ sources:
   - { field: apiAvailable, url: 'https://cpanel.net/developers/', checkedAt: 2026-08-09 }
 figure:
   emoji: 🎛️
-  color: rgb(180, 108, 54)
-  textColor: rgb(246, 239, 234)
+  color: rgb(188, 112, 56)
+  textColor: rgb(36, 25, 15)
   text: Per-server licence, per-account price.
 ai: authored
 ---

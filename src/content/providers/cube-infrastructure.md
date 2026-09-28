@@ -14,7 +14,7 @@ sources:
 figure:
   emoji: 🏗️
   color: rgb(118, 130, 140)
-  textColor: rgb(242, 244, 245)
+  textColor: rgb(22, 23, 25)
   text: Infrastructure investor, owner of GleSYS.
 ai: authored
 ---

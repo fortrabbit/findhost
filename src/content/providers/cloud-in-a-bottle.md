@@ -68,8 +68,8 @@ sources:
   - { field: 'built by Imbue', url: 'https://cloudinabottle.org/blog/launch-post', checkedAt: 2026-09-08 }
 figure:
   emoji: 🫧
-  color: rgb(72, 128, 176)
-  textColor: rgb(234, 241, 247)
+  color: rgb(76, 134, 182)
+  textColor: rgb(14, 24, 34)
   text: A personal cloud on one Ubuntu box.
 ai: authored
 ---

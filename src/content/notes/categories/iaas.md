@@ -3,8 +3,8 @@ description: Rented compute, storage and networking, assembled by the customer i
 lead: Cloud parts, wired together by the customer.
 figure:
   emoji: 🏗️
-  color: '#607D8B'
-  textColor: rgb(255, 211, 78)
+  color: rgb(90, 116, 130)
+  textColor: rgb(255, 247, 228)
   text: Building blocks, not buildings.
 ---
 

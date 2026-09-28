@@ -4,7 +4,7 @@ lead: Hosting built around one software ecosystem.
 figure:
   emoji: 🐴
   color: rgb(255, 105, 180)
-  textColor: rgb(255, 255, 255)
+  textColor: rgb(46, 46, 46)
   text: One trick pony. Why not?
 ---
 

@@ -10,8 +10,8 @@ addedAt: 2026-08-07
 checkedAt: 2026-08-07
 figure:
   emoji: 💜
-  color: rgb(0, 128, 180)
-  textColor: rgb(228, 242, 250)
+  color: rgb(0, 116, 165)
+  textColor: rgb(232, 244, 251)
   text: WordPress plugins, xCloud hosting division.
 ai: authored
 sources:

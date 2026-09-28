@@ -75,7 +75,7 @@ sources:
 figure:
   emoji: ☁️
   color: rgb(190, 124, 45)
-  textColor: rgb(246, 240, 234)
+  textColor: rgb(44, 31, 19)
   text: Dutch clouds.
 ---
 

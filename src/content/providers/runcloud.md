@@ -46,7 +46,7 @@ sources:
 figure:
   emoji: 🔁
   color: rgb(45, 175, 190)
-  textColor: rgb(234, 245, 246)
+  textColor: rgb(26, 58, 60)
   text: You patch the box, RunCloud runs the panel.
 ---
 

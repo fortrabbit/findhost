@@ -72,7 +72,7 @@ sources:
 figure:
   emoji: 🐍
   color: rgb(74, 111, 161)
-  textColor: rgb(234, 239, 245)
+  textColor: rgb(237, 242, 247)
   text: A Python box, in a browser tab.
 ai: authored
 ---

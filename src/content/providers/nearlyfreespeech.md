@@ -77,7 +77,7 @@ sources:
 figure:
   emoji: 💸
   color: rgb(80, 160, 150)
-  textColor: rgb(242, 250, 248)
+  textColor: rgb(19, 46, 41)
   text: Shared hosting metered by consumption.
 ai: authored
 ---

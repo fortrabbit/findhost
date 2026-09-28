@@ -29,7 +29,7 @@ sources:
 figure:
   emoji: ✨
   color: rgb(255, 0, 127)
-  textColor: rgb(255, 240, 250)
+  textColor: rgb(57, 0, 39)
   text: Browser editor for Node apps with live preview; service ended 2025.
 ai: authored
 ---

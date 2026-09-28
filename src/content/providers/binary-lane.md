@@ -59,7 +59,7 @@ sources:
   - { field: exitWithin, url: 'https://www.binarylane.com.au/terms-of-service', checkedAt: 2026-08-02 }
 figure:
   emoji: 🦘
-  color: rgb(62, 111, 173)
+  color: rgb(61, 109, 169)
   textColor: rgb(234, 239, 246)
   text: Pick your own resource shape.
 ai: authored

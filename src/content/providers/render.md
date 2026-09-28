@@ -77,7 +77,7 @@ sources:
 figure:
   emoji: 🎨
   color: rgb(47, 187, 182)
-  textColor: rgb(234, 246, 245)
+  textColor: rgb(28, 64, 61)
   text: Git push to a managed container.
 ---
 

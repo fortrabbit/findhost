@@ -47,7 +47,7 @@ sources:
   - { field: ownership, url: 'https://cyberpanel.net/about-us', checkedAt: 2026-08-21 }
 figure:
   emoji: 🚀
-  color: rgb(34, 139, 34)
+  color: rgb(31, 127, 31)
   textColor: rgb(240, 248, 240)
   text: Free, open source, OpenLiteSpeed-native.
 ai: authored

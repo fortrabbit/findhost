@@ -92,7 +92,7 @@ sources:
 figure:
   emoji: 🇩🇪
   color: rgb(183, 145, 52)
-  textColor: rgb(246, 242, 234)
+  textColor: rgb(56, 46, 24)
   text: IT made in Germany.
 greenWebId: 131
 gpuCapacity: [instances]

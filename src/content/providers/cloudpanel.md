@@ -44,8 +44,8 @@ sources:
   - { field: supportChannels, url: 'https://cloudpanel.io', checkedAt: 2026-08-12 }
 figure:
   emoji: ⚡
-  color: rgb(41, 128, 185)
-  textColor: rgb(236, 245, 252)
+  color: rgb(44, 137, 197)
+  textColor: rgb(5, 26, 45)
   text: Multi-runtime, open source, free.
 ai: authored
 ---

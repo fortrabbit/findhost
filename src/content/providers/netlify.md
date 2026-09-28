@@ -97,7 +97,7 @@ sources:
 figure:
   emoji: 🕸️
   color: rgb(52, 96, 52)
-  textColor: rgb(174, 203, 186)
+  textColor: rgb(183, 209, 195)
   text: Git push in, CDN out.
 ai: authored
 ---

@@ -79,7 +79,7 @@ apiAvailable: public
 figure:
   emoji: 🧇
   color: rgb(190, 129, 45)
-  textColor: rgb(246, 241, 234)
+  textColor: rgb(48, 37, 20)
   text: Benelux incumbent, framework aware.
 ai: authored
 greenWebId: 198

@@ -110,7 +110,7 @@ sources:
 figure:
   emoji: 🐟
   color: rgb(45, 142, 190)
-  textColor: rgb(234, 242, 246)
+  textColor: rgb(15, 31, 36)
   text: Virtual machines, billed by the second.
 domainRegistration: none
 testDomain: included

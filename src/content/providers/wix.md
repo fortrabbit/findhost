@@ -27,7 +27,7 @@ sources:
 figure:
   emoji: 🧱
   color: rgb(160, 131, 75)
-  textColor: rgb(245, 242, 234)
+  textColor: rgb(37, 32, 16)
   text: Building blocks, no blueprints.
 ---
 

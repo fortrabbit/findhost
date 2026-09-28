@@ -43,7 +43,7 @@ sources:
 figure:
   emoji: 🇲🇽
   color: rgb(200, 110, 70)
-  textColor: rgb(250, 240, 230)
+  textColor: rgb(45, 25, 7)
   text: Mexican registrar and host, .MX specialist.
 ai: authored
 ---

@@ -71,7 +71,7 @@ supportHours: 24-7
 figure:
   emoji: 🧰
   color: rgb(190, 124, 45)
-  textColor: rgb(246, 240, 234)
+  textColor: rgb(44, 31, 19)
   text: All inclusive, says the name.
 ai: authored
 greenWebId: 791

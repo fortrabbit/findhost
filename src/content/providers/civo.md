@@ -73,7 +73,7 @@ sources:
   - { field: ownership, url: 'https://www.civo.com/blog/thg-ingenuity-investment', checkedAt: 2026-08-21 }
 figure:
   emoji: ☸️
-  color: rgb(63, 125, 172)
+  color: rgb(59, 113, 156)
   textColor: rgb(234, 241, 246)
   text: The control plane is free. Really.
 ai: authored

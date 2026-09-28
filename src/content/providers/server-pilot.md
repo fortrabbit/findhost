@@ -48,7 +48,7 @@ sources:
 figure:
   emoji: ✈️
   color: rgb(45, 145, 190)
-  textColor: rgb(234, 242, 246)
+  textColor: rgb(17, 34, 40)
   text: Installs the stack, billed per app.
 ---
 

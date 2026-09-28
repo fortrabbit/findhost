@@ -81,7 +81,7 @@ checkedAt: 2026-08-12
 figure:
   emoji: ☁️
   color: rgb(243, 95, 48)
-  textColor: rgb(245, 237, 230)
+  textColor: rgb(50, 35, 21)
   text: Alibaba's multi-region global cloud platform.
 sources:
   - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q17062154', checkedAt: 2026-09-09 }

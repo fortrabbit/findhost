@@ -48,7 +48,7 @@ sources:
   - { field: emailHosting, url: 'https://truehost.co.ke/web-hosting/', checkedAt: 2026-08-12 }
 figure:
   emoji: 🇰🇪
-  color: rgb(34, 139, 34)
+  color: rgb(31, 127, 31)
   textColor: rgb(237, 246, 237)
   text: Kenyan host, .ke domain registrar.
 ai: authored

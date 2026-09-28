@@ -65,7 +65,7 @@ sources:
 figure:
   emoji: 💻
   color: rgb(59, 130, 246)
-  textColor: rgb(240, 248, 255)
+  textColor: rgb(0, 31, 62)
   text: Development environment and hosting, hourly billing.
 ai: authored
 ---

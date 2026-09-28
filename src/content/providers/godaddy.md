@@ -39,7 +39,7 @@ sources:
 figure:
   emoji: 🕷️
   color: rgb(190, 137, 45)
-  textColor: rgb(246, 241, 234)
+  textColor: rgb(52, 40, 22)
   text: Domains first, hosting attached.
 ---
 

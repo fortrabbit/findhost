@@ -85,7 +85,7 @@ sources:
 figure:
   emoji: 🚂
   color: rgb(157, 77, 77)
-  textColor: rgb(240, 200, 200)
+  textColor: rgb(246, 224, 224)
   text: Mighty but a bit complex.
 ---
 

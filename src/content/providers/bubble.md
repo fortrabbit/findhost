@@ -42,8 +42,8 @@ sources:
   - { field: ownership, url: 'https://bubble.io/blog/bubble-series-a-100m/', checkedAt: 2026-08-21 }
 figure:
   emoji: 🫧
-  color: rgb(77, 141, 157)
-  textColor: rgb(234, 243, 245)
+  color: rgb(79, 144, 160)
+  textColor: rgb(14, 32, 33)
   text: No code in, no code out.
 ---
 

@@ -46,8 +46,8 @@ addedAt: 2026-07-31
 checkedAt: 2026-08-12
 figure:
   emoji: 🇿🇦
-  color: rgb(152, 125, 53)
-  textColor: rgb(244, 240, 230)
+  color: rgb(164, 134, 56)
+  textColor: rgb(36, 33, 15)
   text: South African ISP that also sells hosting.
 sources:
   - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q16058170', checkedAt: 2026-09-09 }

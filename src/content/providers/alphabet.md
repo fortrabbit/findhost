@@ -12,7 +12,7 @@ checkedAt: 2026-08-07
 figure:
   emoji: 🔤
   color: rgb(52, 168, 224)
-  textColor: rgb(235, 244, 250)
+  textColor: rgb(18, 51, 73)
   text: Google's corporate parent company.
 ai: authored
 sources:

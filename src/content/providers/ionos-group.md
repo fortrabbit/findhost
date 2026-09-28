@@ -10,8 +10,8 @@ addedAt: 2026-08-07
 checkedAt: 2026-08-07
 figure:
   emoji: 🏛️
-  color: rgb(160, 120, 70)
-  textColor: rgb(248, 242, 235)
+  color: rgb(164, 123, 72)
+  textColor: rgb(36, 25, 15)
   text: Holding many European hosting brands.
 ai: authored
 sources:

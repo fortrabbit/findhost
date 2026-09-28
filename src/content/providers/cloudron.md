@@ -63,7 +63,7 @@ sources:
 figure:
   emoji: 🏡
   color: rgb(77, 157, 131)
-  textColor: rgb(234, 245, 241)
+  textColor: rgb(20, 45, 35)
   text: Self-hosting for people with other jobs.
 ai: authored
 ---

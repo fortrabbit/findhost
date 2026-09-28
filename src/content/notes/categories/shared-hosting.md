@@ -4,7 +4,7 @@ lead: Cheap, oversold, thin walls.
 figure:
   emoji: 🤢
   color: rgb(0, 187, 87)
-  textColor: rgb(0, 87, 20)
+  textColor: rgb(0, 67, 16)
   text: Are you really considering shared hosting?
 faq:
   - q: 'Is shared hosting enough for my site?'

@@ -25,7 +25,7 @@ sources:
 figure:
   emoji: 🚀
   color: rgb(104, 187, 64)
-  textColor: rgb(242, 246, 235)
+  textColor: rgb(51, 63, 28)
   text: The Node.js platform, shutdown by GoDaddy.
 ai: authored
 ---

@@ -49,7 +49,7 @@ sources:
 figure:
   emoji: 🛒
   color: rgb(157, 131, 77)
-  textColor: rgb(245, 241, 234)
+  textColor: rgb(37, 29, 16)
   text: Store in a box.
 ---
 

@@ -71,8 +71,8 @@ sources:
   - { field: emailHosting, url: 'https://www.nazwa.pl', checkedAt: 2026-08-12 }
 figure:
   emoji: 🇵🇱
-  color: rgb(190, 90, 80)
-  textColor: rgb(250, 235, 233)
+  color: rgb(193, 101, 92)
+  textColor: rgb(39, 14, 8)
   text: Polish-born cloud host, global footprint.
 ai: authored
 ---

@@ -75,7 +75,7 @@ sources:
   - { field: collaboration, url: 'https://dokploy.com', checkedAt: 2026-08-12 }
 figure:
   emoji: 🐋
-  color: rgb(63, 125, 172)
+  color: rgb(59, 113, 156)
   textColor: rgb(234, 241, 246)
   text: A control plane for servers you already rent.
 ai: authored

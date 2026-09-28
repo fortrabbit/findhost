@@ -77,7 +77,7 @@ sources:
 figure:
   emoji: 🥨
   color: rgb(190, 154, 45)
-  textColor: rgb(246, 243, 234)
+  textColor: rgb(60, 52, 26)
   text: Bulk servers out of Munich.
 ai: authored
 gpuCapacity:

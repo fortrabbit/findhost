@@ -128,7 +128,7 @@ sources:
 figure:
   emoji: 🥝
   color: rgb(63, 172, 109)
-  textColor: rgb(234, 246, 239)
+  textColor: rgb(22, 52, 37)
   text: Containers, out of an Auckland data centre.
 ai: authored
 ---

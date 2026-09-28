@@ -60,7 +60,7 @@ sources:
 figure:
   emoji: 🌙
   color: rgb(185, 144, 67)
-  textColor: rgb(246, 243, 235)
+  textColor: rgb(51, 45, 22)
   text: Established 1996, still independently run.
 ---
 

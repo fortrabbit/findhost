@@ -58,7 +58,7 @@ addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:
   emoji: 🇮🇹
-  color: rgb(57, 130, 59)
+  color: rgb(55, 126, 57)
   textColor: rgb(242, 248, 242)
   text: Italian independent, owns its infrastructure.
 sources:

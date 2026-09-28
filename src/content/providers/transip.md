@@ -81,7 +81,7 @@ sources:
 figure:
   emoji: 🌷
   color: rgb(50, 184, 168)
-  textColor: rgb(234, 246, 244)
+  textColor: rgb(28, 64, 58)
   text: Registrar first, cloud second.
 ai: authored
 greenWebId: 1496

@@ -115,7 +115,8 @@ a:visited {
 
 a:focus-visible,
 button:focus-visible,
-input:focus-visible {
+input:focus-visible,
+summary:focus-visible {
   outline: 2px solid var(--color-link);
   outline-offset: 2px;
 }

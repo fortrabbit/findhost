@@ -77,7 +77,7 @@ sources:
   - { field: mcpServer, url: 'https://sevalla.com', checkedAt: 2026-08-09 }
 figure:
   emoji: ⛈️
-  color: rgb(45, 118, 190)
+  color: rgb(42, 109, 178)
   textColor: rgb(234, 240, 246)
   text: General-purpose PaaS.
 ---

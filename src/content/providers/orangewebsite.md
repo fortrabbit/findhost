@@ -31,7 +31,7 @@ sources:
   - { field: currencies, url: 'https://www.orangewebsite.com', checkedAt: 2026-08-14 }
 figure:
   emoji: 🗻
-  color: rgb(196, 92, 24)
+  color: rgb(176, 84, 20)
   textColor: rgb(255, 240, 228)
   text: Iceland, and a jurisdiction argument.
 ai: authored

@@ -12,7 +12,7 @@ checkedAt: 2026-08-07
 figure:
   emoji: 📡
   color: rgb(230, 95, 60)
-  textColor: rgb(245, 238, 234)
+  textColor: rgb(45, 31, 20)
   text: Telecoms conglomerate, Exoscale cloud owner.
 ai: authored
 sources:

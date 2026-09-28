@@ -69,7 +69,7 @@ sources:
 figure:
   emoji: 🤗
   color: rgb(190, 145, 45)
-  textColor: rgb(246, 242, 234)
+  textColor: rgb(56, 46, 24)
   text: A model registry that grew a host.
 ai: authored
 gpuCapacity:

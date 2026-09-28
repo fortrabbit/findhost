@@ -12,7 +12,7 @@ checkedAt: 2026-08-07
 figure:
   emoji: 🐍
   color: rgb(62, 159, 58)
-  textColor: rgb(240, 248, 240)
+  textColor: rgb(17, 40, 17)
   text: Python tools, PythonAnywhere owner.
 ai: authored
 sources:

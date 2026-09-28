@@ -49,7 +49,7 @@ sources:
 greenWebId: 1416
 figure:
   emoji: ☁️
-  color: rgb(0, 122, 204)
+  color: rgb(0, 113, 189)
   textColor: rgb(230, 244, 253)
   text: Finnish VMs and storage, hourly metered.
 gpuCapacity: [instances]
