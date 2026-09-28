@@ -4,8 +4,8 @@ import ProviderRegister from '../components/ProviderRegister.astro';
 import FindFilters from '../components/FindFilters.astro';
 import { besideTheRegister, loadFacets, registerLists } from '../lib/facets';
 import { loadIndexed } from '../lib/providers';
-import { fields } from '../lib/fields';
-import { dataset, website } from '../lib/seo';
+import { fieldOf, fields } from '../lib/fields';
+import { dataset } from '../lib/seo';
 import { modifiedAt, newest } from '../lib/modified';
 
 const { facets, providers } = await loadFacets();
@@ -16,7 +16,20 @@ const { facets, providers } = await loadFacets();
  * make and a commission-ordered table cannot, so it is stated where a machine
  * finds it without reading prose.
  */
-const lastChecked = newest((await loadIndexed()).map((provider) => modifiedAt(provider.data)));
+const indexed = await loadIndexed();
+const lastChecked = newest(indexed.map((provider) => modifiedAt(provider.data)));
+
+/* The day the register first held a record, for the Dataset's `datePublished`, over the same records. */
+const firstAdded = indexed
+  .map((provider) => provider.data.addedAt?.getTime())
+  .filter((time): time is number => time !== undefined)
+  .sort((a, b) => a - b)[0];
+
+/* The categories some record holds, as the words somebody looking for this dataset would use. */
+const held = new Set(providers.flatMap((provider) => provider.facets.category ?? []));
+const keywords = (fieldOf.get('category')?.values ?? [])
+  .filter((value) => held.has(value.id))
+  .map((value) => value.label);
 
 const registers = await registerLists();
 
@@ -39,8 +52,12 @@ const beside = (await besideTheRegister()).filter((group) => !offered.has(group.
   title="FindHost — a register of web hosting providers"
   description="Web hosting providers recorded field by field, with a source for every answer. Filter by runtime, region or price. No scores, rankings or affiliate links."
   schema={[
-    dataset(Astro.site?.origin ?? '', providers.length, { fields, modified: lastChecked }),
-    website(Astro.site?.origin ?? ''),
+    dataset(Astro.site?.origin ?? '', providers.length, {
+      fields,
+      modified: lastChecked,
+      published: firstAdded === undefined ? undefined : new Date(firstAdded),
+      keywords,
+    }),
   ]}
 >
   <h1>Find your next web host</h1>

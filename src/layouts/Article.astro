@@ -1,7 +1,7 @@
 ---
 import Base from './Base.astro';
 import PageFigure from '../components/PageFigure.astro';
-import { organization } from '../lib/seo';
+import { licenceUrl, publisherRef, websiteRef } from '../lib/seo';
 
 /*
  * Every written page: the guide and About. One layout, so a page of prose looks
@@ -19,6 +19,8 @@ interface Props {
      * at all; a build date would only say when the site was rebuilt.
      */
     updated?: string;
+    /** When the page first went up, written by hand for the same reason. */
+    published?: string;
     figure?: { emoji: string; color: string; textColor: string; text: string };
   };
 }
@@ -27,6 +29,14 @@ const { frontmatter } = Astro.props;
 const { figure } = frontmatter;
 
 const origin = Astro.site?.origin ?? '';
+
+/*
+ * YAML reads an unquoted date as a timestamp, which reaches the layout as a Date
+ * or as its ISO string. The schema wants the day either way.
+ */
+const day = (value?: string | Date) => (value instanceof Date ? value.toISOString().slice(0, 10) : value?.slice(0, 10));
+const published = day(frontmatter.published);
+const updated = day(frontmatter.updated);
 const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url).href;
 
 /*
@@ -49,18 +59,19 @@ const card = new URL('/og/default.png', Astro.site ?? Astro.url).href;
   description={frontmatter.description}
   markdown={markdown}
   schema={{
-    '@context': 'https://schema.org',
     '@type': 'Article',
     headline: frontmatter.title,
     ...(frontmatter.description ? { description: frontmatter.description } : {}),
     url: canonical,
     mainEntityOfPage: canonical,
     image: card,
-    ...(frontmatter.updated ? { dateModified: frontmatter.updated } : {}),
+    ...(published ? { datePublished: published } : {}),
+    ...(updated ? { dateModified: updated } : {}),
     inLanguage: 'en',
-    publisher: organization(origin),
-    author: organization(origin),
-    license: 'https://creativecommons.org/licenses/by/4.0/',
+    isPartOf: websiteRef(origin),
+    publisher: publisherRef(origin),
+    author: publisherRef(origin),
+    license: licenceUrl,
   }}
 >
   <article>

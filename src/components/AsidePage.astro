@@ -4,7 +4,7 @@ import Base from '../layouts/Base.astro';
 import PageFigure from './PageFigure.astro';
 import ProviderRegister from './ProviderRegister.astro';
 import { asideGroupOf, loadFacets } from '../lib/facets';
-import { organization } from '../lib/seo';
+import { licenceUrl, providerList, publisherRef, websiteRef } from '../lib/seo';
 
 /**
  * A group that sits beside the register: the ones that stopped trading, the
@@ -47,18 +47,15 @@ const origin = Astro.site?.origin ?? '';
   hidden={hidden}
   schema={[
     {
-      '@context': 'https://schema.org',
-      '@type': 'ItemList',
+      '@type': 'CollectionPage',
+      url: `${origin}/${key}/`,
       name: note?.data.title ?? label,
-      numberOfItems: rows.length,
-      isPartOf: organization(origin),
-      itemListOrder: 'https://schema.org/ItemListOrderAscending',
-      itemListElement: rows.map((provider, index) => ({
-        '@type': 'ListItem',
-        position: index + 1,
-        url: `${origin}${provider.href}`,
-        name: provider.name,
-      })),
+      ...(note?.data.description ? { description: note.data.description } : {}),
+      inLanguage: 'en',
+      isPartOf: websiteRef(origin),
+      publisher: publisherRef(origin),
+      license: licenceUrl,
+      mainEntity: providerList(origin, rows),
     },
   ]}
 >

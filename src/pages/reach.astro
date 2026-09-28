@@ -6,7 +6,7 @@ import ProviderList from '../components/ProviderList.astro';
 import { loadProviders } from '../lib/providers';
 import { recordPath } from '../lib/paths';
 import { movementOf } from '../lib/record';
-import { licenceUrl, organization } from '../lib/seo';
+import { licenceUrl, publisherRef, websiteRef } from '../lib/seo';
 import { pageCardPath } from '../lib/og';
 
 /*
@@ -84,23 +84,26 @@ const annotation = [
 const note = (await getCollection('notes')).find((entry) => entry.id === 'page/reach');
 const Note = note ? (await render(note)).Content : null;
 
+const description = note?.data.description ?? "How many networks link to each hosting provider's own domain.";
+
 const origin = Astro.site?.origin ?? '';
 ---
 
 <Base
   title={`${note?.data.title ?? 'Reach'} — FindHost`}
-  description={note?.data.description ?? "How many networks link to each hosting provider's own domain."}
+  description={description}
   markdown="/reach.md"
   image={pageCardPath('reach')}
   imageAlt="A FindHost card: how linked-to each hosting provider is."
   schema={[
     {
-      '@context': 'https://schema.org',
       '@type': 'CollectionPage',
       url: `${origin}/reach/`,
-      name: 'Reach',
+      name: note?.data.title ?? 'Reach',
+      description,
       inLanguage: 'en',
-      publisher: organization(origin),
+      isPartOf: websiteRef(origin),
+      publisher: publisherRef(origin),
       license: licenceUrl,
     },
   ]}

@@ -1,7 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
-import { organization, valueTitle } from '../../lib/seo';
+import { licenceUrl, providerList, publisherRef, valueTitle, websiteRef } from '../../lib/seo';
 import ProviderRegister from '../../components/ProviderRegister.astro';
 import PageFigure from '../../components/PageFigure.astro';
 import Questions from '../../components/Questions.astro';
@@ -100,38 +100,29 @@ const combined = (await pairsFor(facet.id, value.id)).map((group) => ({
   imageAlt={`A FindHost card: ${matches.length} providers recorded as ${value.label.toLowerCase()}.`}
   schema={[
     {
-      '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: facet.label, item: `${origin}${facetIndex(facet.id)}` },
-        { '@type': 'ListItem', position: 2, name: value.label },
+        { '@type': 'ListItem', position: 1, name: 'FindHost', item: `${origin}/` },
+        { '@type': 'ListItem', position: 2, name: facet.label, item: `${origin}${facetIndex(facet.id)}` },
+        { '@type': 'ListItem', position: 3, name: value.label },
       ],
     },
     {
-      '@context': 'https://schema.org',
       '@type': 'CollectionPage',
       url: `${origin}${facetIndex(facet.id)}${value.slug}/`,
       name: note?.data.title ?? valueTitle(facet.id, value),
+      description: note?.data.description ?? summary,
       inLanguage: 'en',
-      publisher: organization(origin),
-      license: 'https://creativecommons.org/licenses/by/4.0/',
+      isPartOf: websiteRef(origin),
+      publisher: publisherRef(origin),
+      license: licenceUrl,
       /*
        * The newest date any record on this page was read against the provider's
        * own pages. A page is as current as its most recent claim, and where no
        * record on it carries one the property is absent rather than invented.
        */
       ...(newestChecked ? { dateModified: newestChecked.toISOString().slice(0, 10) } : {}),
-      mainEntity: {
-        '@type': 'ItemList',
-        numberOfItems: matches.length,
-        itemListOrder: 'https://schema.org/ItemListOrderAscending',
-        itemListElement: matches.map((provider, index) => ({
-          '@type': 'ListItem',
-          position: index + 1,
-          url: `${origin}/${provider.id}/`,
-          name: provider.name,
-        })),
-      },
+      mainEntity: providerList(origin, matches),
     },
     faqSchema(questions),
   ]}

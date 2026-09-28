@@ -5,7 +5,7 @@ import { loadProviders } from '../lib/providers';
 import { fieldOf, slugOf } from '../lib/fields';
 import { getCollection, render } from 'astro:content';
 import { facetCardPath } from '../lib/og';
-import { licenceUrl, organization } from '../lib/seo';
+import { licenceUrl, publisherRef, websiteRef } from '../lib/seo';
 
 const providers = await loadProviders();
 
@@ -60,12 +60,13 @@ const origin = Astro.site?.origin ?? '';
   imageAlt="A FindHost card: where hosting providers operate."
   schema={[
     {
-      '@context': 'https://schema.org',
       '@type': 'CollectionPage',
       url: `${origin}/regions/`,
       name: title,
+      description,
       inLanguage: 'en',
-      publisher: organization(origin),
+      isPartOf: websiteRef(origin),
+      publisher: publisherRef(origin),
       license: licenceUrl,
       /* The same shape the other facet indexes carry: the countries, each leading to its own page. */
       mainEntity: {

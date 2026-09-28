@@ -6,6 +6,7 @@ figure:
   color: rgb(255, 250, 0)
   textColor: rgb(129, 108, 51)
   text: The web hosting market is a "lemon market" where sellers have more information than buyers.
+published: 2026-07-31
 updated: 2026-08-12
 description: Who publishes FindHost and why, the rules every record follows, how records are sourced and checked, and the conflict of interest in a register run by a host.
 lead: Most "best web hosting" lists are ordered by affiliate commission, which makes independent hosting providers invisible. This website exists to give developers better choices when picking a web host, large or small.

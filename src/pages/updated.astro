@@ -3,6 +3,8 @@ import Base from '../layouts/Base.astro';
 import ProviderRegister from '../components/ProviderRegister.astro';
 import FindFilters from '../components/FindFilters.astro';
 import { besideTheRegister, loadFacets, registerLists } from '../lib/facets';
+import { byDate } from '../lib/rows';
+import { licenceUrl, providerList, publisherRef, websiteRef } from '../lib/seo';
 
 /*
  * The register in the order it was last read: the same rows, the same filters,
@@ -20,11 +22,29 @@ const registers = await registerLists();
  */
 const offered = new Set(registers.map((register) => register.key));
 const beside = (await besideTheRegister()).filter((group) => !offered.has(group.key));
+
+const origin = Astro.site?.origin ?? '';
+const description =
+  "Every hosting provider in the register, in the order its record was last checked against the provider's own pages.";
 ---
 
 <Base
   title="Updated — FindHost"
-  description="Every hosting provider in the register, in the order its record was last checked against the provider's own pages."
+  description={description}
+  schema={[
+    {
+      '@type': 'CollectionPage',
+      url: `${origin}/updated/`,
+      name: 'Updated',
+      description,
+      inLanguage: 'en',
+      isPartOf: websiteRef(origin),
+      publisher: publisherRef(origin),
+      license: licenceUrl,
+      /* The same rows in the same order the list below draws, newest first. */
+      mainEntity: providerList(origin, [...providers].sort(byDate('checkedAt')), 'descending'),
+    },
+  ]}
 >
   <h1>Updated</h1>
 

@@ -1,6 +1,7 @@
 ---
 layout: ../layouts/Article.astro
 title: Badge
+published: 2026-08-31
 updated: 2026-08-31
 description: A copy-paste snippet a listed provider can put on their own site, linking back to their record.
 lead: A link back, for providers with a record here.
