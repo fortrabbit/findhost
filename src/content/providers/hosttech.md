@@ -9,7 +9,7 @@ urls:
   docs: https://support.hosttech.ch/knowledge-base/
 category:
   - shared-hosting
-description: Swiss internet service provider from Richterswil that owns and operates its own data centres in Switzerland.
+description: Swiss internet service provider from Richterswil that owns and operates its own data centers in Switzerland.
 founded: 2004
 hqCountry: CH
 ownership: independent
@@ -66,7 +66,7 @@ figure:
   emoji: ⛰️
   color: rgb(77, 157, 117)
   textColor: rgb(18, 41, 29)
-  text: A data centre under a mountain.
+  text: A data center under a mountain.
 ai: authored
 greenWebId: 1506
 ---
@@ -77,6 +77,6 @@ DATAROCK in Nottwil occupies a former Swiss Army military hospital fifteen metre
 
 ## Worth knowing
 
-Only those three Swiss sites could be confirmed. hosttech is described elsewhere as running data centres in Berlin and Vienna, but no page on hosttech.ch states it, and the data-centre URLs that would say so return 404. The Salzburg, Berlin and Cologne addresses the company does publish are offices, which is a different claim from a facility.
+Only those three Swiss sites could be confirmed. hosttech is described elsewhere as running data centers in Berlin and Vienna, but no page on hosttech.ch states it, and the data-centre URLs that would say so return 404. The Salzburg, Berlin and Cologne addresses the company does publish are offices, which is a different claim from a facility.
 
 Shell access begins at the second tier, so the entry plan is a control-panel and FTP arrangement. Round-the-clock cover is a written emergency ticket raised in the customer centre; the phone line keeps weekday office hours.

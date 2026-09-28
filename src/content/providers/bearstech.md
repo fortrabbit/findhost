@@ -19,7 +19,7 @@ sources:
 
 ---
 
-Bearstech is a SCOP — a French worker cooperative in which employees hold the entire capital and vote on salaries, hiring and strategy — operating from Paris since 2004. It provides managed operations for open-source stacks including PHP, Python, Node.js, Rails, Django and Kubernetes, on French data centres running renewable energy, and will also operate infrastructure the client already owns.
+Bearstech is a SCOP — a French worker cooperative in which employees hold the entire capital and vote on salaries, hiring and strategy — operating from Paris since 2004. It provides managed operations for open-source stacks including PHP, Python, Node.js, Rails, Django and Kubernetes, on French data centers running renewable energy, and will also operate infrastructure the client already owns.
 
 **Criterion 3 — public pricing — fails.** No price for any offer appears anywhere on the site. Every engagement routes to "Demander un devis", a telephone number or an email address, and a quote is not a price.
 

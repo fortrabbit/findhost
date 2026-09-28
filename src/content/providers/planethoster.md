@@ -6,7 +6,7 @@ urls:
 category:
   - shared-hosting
   - vps
-description: Franco-Canadian host with data centres in Paris, Lausanne and Montreal, letting a customer pick the location per project.
+description: Franco-Canadian host with data centers in Paris, Lausanne and Montreal, letting a customer pick the location per project.
 hqCountry: CA
 ownership: independent
 whoManagesOs: managed
@@ -47,9 +47,9 @@ figure:
   emoji: 🌍
   color: rgb(82, 143, 102)
   textColor: rgb(18, 29, 23)
-  text: Franco-Canadian hosting, pick your data centre.
+  text: Franco-Canadian hosting, pick your data center.
 ai: authored
 greenWebId: 749
 ---
 
-PlanetHoster is a Franco-Canadian host operating data centres in Paris, Lausanne and Montreal, letting a customer pick the location per project — unusual at its price point. It sells "Web Projects" rather than accounts, on its own N0C panel, with PHP 5.6 to 8.5, Python, Node.js and Ruby documented and a public knowledge base covering SSH, Composer, cron and databases.
+PlanetHoster is a Franco-Canadian host operating data centers in Paris, Lausanne and Montreal, letting a customer pick the location per project — unusual at its price point. It sells "Web Projects" rather than accounts, on its own N0C panel, with PHP 5.6 to 8.5, Python, Node.js and Ruby documented and a public knowledge base covering SSH, Composer, cron and databases.

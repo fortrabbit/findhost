@@ -68,14 +68,14 @@ figure:
   emoji: 🇩🇰
   color: rgb(166, 69, 83)
   textColor: rgb(246, 234, 235)
-  text: One country, one data centre.
+  text: One country, one data center.
 ai: authored
 ---
 
 Webdock is a small independent Danish company selling virtual servers on AMD Epyc and Xeon hardware with NVMe storage, alongside prepared WordPress plans and add-on load balancing and web application firewall. Billing carries no minimum term, and servers can be resized or cancelled at any point.
 
-The pitch is jurisdictional simplicity. There is one data centre, in Denmark, and the company states plainly that everything sits under EU jurisdiction — no region picker, no ambiguity about where a backup landed. A web control panel, a mobile app and a public API sit on top of the servers, which puts it closer to managed hosting than to bare infrastructure.
+The pitch is jurisdictional simplicity. There is one data center, in Denmark, and the company states plainly that everything sits under EU jurisdiction — no region picker, no ambiguity about where a backup landed. A web control panel, a mobile app and a public API sit on top of the servers, which puts it closer to managed hosting than to bare infrastructure.
 
 ## Worth knowing
 
-One data centre is a clear answer and also a single point of failure. There is no second region to fail over to, and no option for anyone who needs capacity outside Denmark.
+One data center is a clear answer and also a single point of failure. There is no second region to fail over to, and no option for anyone who needs capacity outside Denmark.

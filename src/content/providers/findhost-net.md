@@ -22,7 +22,7 @@ figure:
 ai: authored
 ---
 
-FindHost sells shared and WordPress hosting, reseller accounts, VPS, hourly KVM instances, dedicated servers, storage, mailboxes and domain names — the full catalogue, from one navigation bar. The homepage claims tier-4 data centres, 99.99% uptime and 10 Tbps of network capacity.
+FindHost sells shared and WordPress hosting, reseller accounts, VPS, hourly KVM instances, dedicated servers, storage, mailboxes and domain names — the full catalogue, from one navigation bar. The homepage claims tier-4 data centers, 99.99% uptime and 10 Tbps of network capacity.
 
 **A stub, because the site refuses automated requests.** Every fetch returns 403, so nothing here has been read the way every other record in this register was read: no plan, no price, no terms page. What is written above comes from the homepage seen in a browser, and that is not enough to list a provider on.
 

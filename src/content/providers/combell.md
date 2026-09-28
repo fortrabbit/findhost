@@ -7,7 +7,7 @@ urls:
   status: https://status.combell.com/en/
 category:
   - shared-hosting
-description: Belgian hosting provider offering shared PHP and Node.js hosting, VPS and OpenStack from data centres in Belgium and the Netherlands.
+description: Belgian hosting provider offering shared PHP and Node.js hosting, VPS and OpenStack from data centers in Belgium and the Netherlands.
 founded: 1999
 hqCountry: BE
 ownership: subsidiary
@@ -85,7 +85,7 @@ ai: authored
 greenWebId: 198
 ---
 
-Combell was founded in Ghent in 1999 and became the anchor of Combell Group, which merged with TransIP Group in 2019 to form team.blue. Data centres are in Belgium and the Netherlands, and the company sells across the Benelux.
+Combell was founded in Ghent in 1999 and became the anchor of Combell Group, which merged with TransIP Group in 2019 to form team.blue. Data centers are in Belgium and the Netherlands, and the company sells across the Benelux.
 
 Shared hosting is PHP-FPM on Percona MySQL with shell access, a git-based deployment pipeline and separately sold Node.js hosting. The public knowledge base carries framework-specific instructions rather than generic ones, down to pointing a domain at a Laravel application's `public` directory. An HMAC-authenticated API exists, documented mainly for resellers.
 

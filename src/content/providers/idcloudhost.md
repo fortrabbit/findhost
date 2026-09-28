@@ -9,7 +9,7 @@ category:
 panels:
   - cpanel
   - plesk
-description: IDCloudHost is an Indonesian infrastructure company selling cloud VPS, managed hosting, dedicated servers and object storage from data centres in Jakarta and Singapore.
+description: IDCloudHost is an Indonesian infrastructure company selling cloud VPS, managed hosting, dedicated servers and object storage from data centers in Jakarta and Singapore.
 ownership: vc-backed
 regions:
   - ID

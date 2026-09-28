@@ -8,7 +8,7 @@ urls:
 category:
   - shared-hosting
   - domains-dns
-description: Slovakia's largest domain registrar, selling shared hosting and a website builder across Slovakia, Czechia and Hungary from its own data centre.
+description: Slovakia's largest domain registrar, selling shared hosting and a website builder across Slovakia, Czechia and Hungary from its own data center.
 hqCountry: SK
 ownership: subsidiary
 parent: team-blue
@@ -85,14 +85,14 @@ figure:
   emoji: 🏔️
   color: rgb(63, 112, 150)
   textColor: rgb(234, 241, 246)
-  text: Slovak registrar with its own data centre.
+  text: Slovak registrar with its own data center.
 ai: authored
 greenWebId: 1463
 ---
 
 WebSupport describes itself as the largest domain registrar in Slovakia and trades across Slovakia, Czechia and Hungary. It belongs to team.blue, the group that has assembled much of central and northern Europe's hosting market under one owner.
 
-The offering is deliberately narrow: shared hosting aimed at one or more WordPress sites with professional email, and a separate website builder with templates and AI assistance for simple shops. Automatic backups are included and support runs every day of the year. The company operates its own data centre in Bratislava and documents it on a page of its own.
+The offering is deliberately narrow: shared hosting aimed at one or more WordPress sites with professional email, and a separate website builder with templates and AI assistance for simple shops. Automatic backups are included and support runs every day of the year. The company operates its own data center in Bratislava and documents it on a page of its own.
 
 ## Worth knowing
 

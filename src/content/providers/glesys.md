@@ -8,7 +8,7 @@ urls:
 category:
   - vps
   - gpu
-description: GleSYS is a Swedish infrastructure provider selling KVM and VMware servers, bare metal, managed databases, object storage and colocation from Nordic data centres.
+description: GleSYS is a Swedish infrastructure provider selling KVM and VMware servers, bare metal, managed databases, object storage and colocation from Nordic data centers.
 founded: 1999
 hqCountry: SE
 ownership: pe-owned
@@ -85,4 +85,4 @@ greenWebId: 1213
 
 GleSYS was formed in Falkenberg and sells infrastructure rather than packaged hosting: compute, storage, managed databases, connectivity and colocation, each priced per resource with hourly and monthly rates published in full. GPU and ARM machines are quoted rather than listed.
 
-It owns data centres in Sweden and Finland and uses partner facilities in the Netherlands, Germany, the United Kingdom and Norway, all running on renewable energy. The automation surface is documented: a public API, a community-maintained Terraform provider, a lego DNS module and a status page with per-site maintenance notices. Ownership has passed through private equity twice — VIA Equity invested in 2018, and Cube Infrastructure Managers acquired the company in 2023 with the founder reinvesting for a minority stake.
+It owns data centers in Sweden and Finland and uses partner facilities in the Netherlands, Germany, the United Kingdom and Norway, all running on renewable energy. The automation surface is documented: a public API, a community-maintained Terraform provider, a lego DNS module and a status page with per-site maintenance notices. Ownership has passed through private equity twice — VIA Equity invested in 2018, and Cube Infrastructure Managers acquired the company in 2023 with the founder reinvesting for a minority stake.

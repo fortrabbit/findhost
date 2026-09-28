@@ -10,7 +10,7 @@ urls:
 category:
   - shared-hosting
   - domains-dns
-description: Dutch registrar and hosting provider selling shared webhosting, VPS, OpenStack cloud and managed Kubernetes from its own Netherlands data centres.
+description: Dutch registrar and hosting provider selling shared webhosting, VPS, OpenStack cloud and managed Kubernetes from its own Netherlands data centers.
 founded: 2003
 hqCountry: NL
 ownership: subsidiary

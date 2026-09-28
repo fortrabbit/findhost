@@ -8,7 +8,7 @@ category:
   - vps
   - vanity-hosting
   - gpu
-description: Vietnamese host in Ho Chi Minh City, running shared, WordPress and cloud hosting out of two Tier III data centres, with GPU instances alongside.
+description: Vietnamese host in Ho Chi Minh City, running shared, WordPress and cloud hosting out of two Tier III data centers, with GPU instances alongside.
 hqCountry: VN
 ownership: independent
 whoManagesOs: managed
@@ -49,7 +49,7 @@ sources:
 ai: authored
 ---
 
-AZDIGI is a Vietnamese host based in Ho Chi Minh City, running shared hosting, WordPress-optimised hosting and cloud VPS across two Tier III data centres — Viettel IDC in Song Than Industrial Park and FPT IDC in Tan Thuan — with published pricing and a documented stack including LiteSpeed and Redis.
+AZDIGI is a Vietnamese host based in Ho Chi Minh City, running shared hosting, WordPress-optimised hosting and cloud VPS across two Tier III data centers — Viettel IDC in Song Than Industrial Park and FPT IDC in Tan Thuan — with published pricing and a documented stack including LiteSpeed and Redis.
 
 It sells cPanel and DirectAdmin licences alongside the hosting, which is the usual shape of a market where the control panel is the product a customer recognises. GPU instances sit in the same catalogue as the shared plans, which is a combination almost nobody in this register offers.
 

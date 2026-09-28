@@ -7,7 +7,7 @@ urls:
   terms: https://all-inkl.com/agb/
 category:
   - shared-hosting
-description: Owner-run German shared hosting and managed server provider operating from Friedersdorf in Saxony, with data centres in Dresden.
+description: Owner-run German shared hosting and managed server provider operating from Friedersdorf in Saxony, with data centers in Dresden.
 founded: 2000
 hqCountry: DE
 ownership: independent

@@ -98,9 +98,9 @@ gpuCapacity:
 greenWebId: 925
 ---
 
-Scaleway is one of the two French clouds of any scale, a subsidiary of the iliad Group with a history running back to Dedibox, the dedicated-server brand — and the bare-metal heritage is still the most distinctive part of the catalogue. Dedicated servers, bare-metal instances, Apple hardware and colocation sit alongside conventional and GPU instances, object, block and cold storage, managed relational and document databases, Kubernetes, serverless containers and functions, transactional email and observability. It owns and operates its own data centres.
+Scaleway is one of the two French clouds of any scale, a subsidiary of the iliad Group with a history running back to Dedibox, the dedicated-server brand — and the bare-metal heritage is still the most distinctive part of the catalogue. Dedicated servers, bare-metal instances, Apple hardware and colocation sit alongside conventional and GPU instances, object, block and cold storage, managed relational and document databases, Kubernetes, serverless containers and functions, transactional email and observability. It owns and operates its own data centers.
 
-The commercial argument is jurisdictional: European data centres, GDPR compliance and certification for regulated data such as health records. Several other platforms in this dataset, Clever Cloud and Scalingo among them, rent capacity from Scaleway rather than owning their own.
+The commercial argument is jurisdictional: European data centers, GDPR compliance and certification for regulated data such as health records. Several other platforms in this dataset, Clever Cloud and Scalingo among them, rent capacity from Scaleway rather than owning their own.
 
 ## Worth knowing
 

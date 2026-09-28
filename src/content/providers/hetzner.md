@@ -9,7 +9,7 @@ category:
   - vps
   - bare-metal
   - gpu
-description: Hetzner is an independent German hosting company offering VPS, dedicated servers, cloud and storage infrastructure from its own data centres.
+description: Hetzner is an independent German hosting company offering VPS, dedicated servers, cloud and storage infrastructure from its own data centers.
 founded: 1997
 hqCountry: DE
 ownership: independent
@@ -98,8 +98,8 @@ greenWebId: 131
 gpuCapacity: [instances]
 ---
 
-Hetzner Online GmbH was founded in 1997 and is headquartered in Gunzenhausen, Germany. It owns and operates its own data centre parks in Germany and Finland, and has added capacity in Singapore and the United States.
+Hetzner Online GmbH was founded in 1997 and is headquartered in Gunzenhausen, Germany. It owns and operates its own data center parks in Germany and Finland, and has added capacity in Singapore and the United States.
 
 The product range covers shared hosting, dedicated servers, colocation, cloud servers, block storage and object storage. A cloud server arrives as a Linux install with root access and nothing configured on top of it; everything above the operating system is the customer's to set up and to keep running. Billing is hourly against a monthly price cap, and a server deleted part-way through a month is charged only for the hours it ran, so there is no minimum term. Backups are an opt-in extra.
 
-The infrastructure is driven through a documented REST API and an official command-line tool. General support runs on a German phone line during business hours, and each data centre publishes a separate round-the-clock line for hardware faults.
+The infrastructure is driven through a documented REST API and an official command-line tool. General support runs on a German phone line during business hours, and each data center publishes a separate round-the-clock line for hardware faults.

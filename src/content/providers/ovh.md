@@ -9,7 +9,7 @@ category:
   - bare-metal
   - shared-hosting
   - gpu
-description: French hosting company selling dedicated servers, VPS, an OpenStack-based public cloud and web hosting from data centres it builds and operates itself.
+description: French hosting company selling dedicated servers, VPS, an OpenStack-based public cloud and web hosting from data centers it builds and operates itself.
 founded: 1999
 hqCountry: FR
 ownership: public
@@ -110,10 +110,10 @@ gpuCapacity: [instances, inference, model-api]
 
 OVHcloud — long known as OVH — was founded in Roubaix by Octave Klaba and has been listed on Euronext Paris since 2021. The traditional business is dedicated servers and VPS, extended into an OpenStack-based public cloud, shared hosting and domains, sold across Europe, North America and Asia-Pacific.
 
-It designs and assembles its own servers, develops its own water cooling and runs its own data centres rather than renting capacity. Prices sit at the low end of the market, and the customer manages the operating system on both the VPS and bare-metal lines.
+It designs and assembles its own servers, develops its own water cooling and runs its own data centers rather than renting capacity. Prices sit at the low end of the market, and the customer manages the operating system on both the VPS and bare-metal lines.
 
 ## Worth knowing
 
 The catalogue is hard to navigate: bare metal, VPS, several cloud lines and shared hosting, each with its own panel and its own pricing logic. Location naming is inconsistent between them, so the regions here are read off the cities named on product pages rather than off a country list OVHcloud publishes.
 
-A fire in March 2021 [destroyed the SBG2 data centre](https://corporate.ovhcloud.com/en/newsroom/news/informations-site-strasbourg/) in Strasbourg and took the whole site offline. [The state investigation](https://www.igedd.developpement-durable.gouv.fr/IMG/pdf/rapport_ovh_67_vdif_cle01cf13.pdf) found the battery rooms had fire detection but no automatic suppression, and did not establish what started it. OVHcloud's [own filings](https://corporate.ovhcloud.com/sites/default/files/2021-12/ovh-groupe-urd-2021-eng-vdef_0.pdf) record that some customers lost data permanently, because backup was a paid option that could be held in the same building. The site has since been [rebuilt](https://corporate.ovhcloud.com/en-gb/newsroom/news/SBG5-opening/) with compartmentalised rooms and gas suppression.
+A fire in March 2021 [destroyed the SBG2 data center](https://corporate.ovhcloud.com/en/newsroom/news/informations-site-strasbourg/) in Strasbourg and took the whole site offline. [The state investigation](https://www.igedd.developpement-durable.gouv.fr/IMG/pdf/rapport_ovh_67_vdif_cle01cf13.pdf) found the battery rooms had fire detection but no automatic suppression, and did not establish what started it. OVHcloud's [own filings](https://corporate.ovhcloud.com/sites/default/files/2021-12/ovh-groupe-urd-2021-eng-vdef_0.pdf) record that some customers lost data permanently, because backup was a paid option that could be held in the same building. The site has since been [rebuilt](https://corporate.ovhcloud.com/en-gb/newsroom/news/SBG5-opening/) with compartmentalised rooms and gas suppression.

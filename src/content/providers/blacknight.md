@@ -10,7 +10,7 @@ category:
   - bare-metal
   - vanity-hosting
   - domains-dns
-description: Irish host and ICANN-accredited registrar in Carlow, running its own data centres and selling everything from shared hosting to dedicated servers.
+description: Irish host and ICANN-accredited registrar in Carlow, running its own data centers and selling everything from shared hosting to dedicated servers.
 hqCountry: IE
 ownership: subsidiary
 parent: your-online
@@ -49,7 +49,7 @@ figure:
   emoji: 🇮🇪
   color: rgb(16, 126, 67)
   textColor: rgb(241, 248, 244)
-  text: Owns the data centres its customers sit in.
+  text: Owns the data centers its customers sit in.
 sources:
   - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q131895398', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
@@ -64,6 +64,6 @@ sources:
 ai: authored
 ---
 
-Blacknight is a Carlow-based Irish host and ICANN-accredited registrar running its own data centres in Carlow and Dublin, with Plesk-based PHP hosting from €4.99 a month.
+Blacknight is a Carlow-based Irish host and ICANN-accredited registrar running its own data centers in Carlow and Dublin, with Plesk-based PHP hosting from €4.99 a month.
 
 Owning the hardware is the unusual part at this size. The ladder runs from shared hosting through managed WordPress and cloud VPS to dedicated servers at €149.99, all quoted excluding VAT, and all of it in Ireland — which makes it one of the few places to buy hosting that is Irish in the operational sense rather than in the billing address.

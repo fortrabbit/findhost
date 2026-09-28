@@ -8,7 +8,7 @@ category:
   - vps
   - bare-metal
   - gpu
-description: A Swiss provider selling managed Kubernetes, managed and root servers, databases and object storage, all from data centres in Zurich.
+description: A Swiss provider selling managed Kubernetes, managed and root servers, databases and object storage, all from data centers in Zurich.
 hqCountry: CH
 regions:
   - CH
@@ -38,7 +38,7 @@ gpuCapacity:
   - instances
 ---
 
-Nine Internet Solutions sells the layers separately and lets a customer pick one: managed Kubernetes, a managed server, a root server. Databases, object storage, search and caches are sold as managed services beside them, from data centres in Zurich.
+Nine Internet Solutions sells the layers separately and lets a customer pick one: managed Kubernetes, a managed server, a root server. Databases, object storage, search and caches are sold as managed services beside them, from data centers in Zurich.
 
 ## Worth knowing
 

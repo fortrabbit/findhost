@@ -4,7 +4,7 @@ import { worldBitmap, worldBitmapBbox, worldBitmapCols, worldBitmapRows } from '
  * Country-level dots, drawn at build time.
  *
  * `regions` holds ISO country codes, so this is as precise as the data is: a dot
- * sits at a country's principal hosting metro, not at a data centre. Every
+ * sits at a country's principal hosting metro, not at a data center. Every
  * caption has to say so. Recording actual locations is the phase-4 upgrade
  * (MR-164).
  *

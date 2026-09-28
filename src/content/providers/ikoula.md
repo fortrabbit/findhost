@@ -8,7 +8,7 @@ category:
   - vps
   - iaas
   - gpu
-description: One of the oldest independent French hosts, trading since 1998, running two of its own certified data centres in France.
+description: One of the oldest independent French hosts, trading since 1998, running two of its own certified data centers in France.
 founded: 1998
 hqCountry: FR
 ownership: independent
@@ -45,11 +45,11 @@ figure:
   emoji: 🇫🇷
   color: rgb(0, 85, 164)
   textColor: rgb(240, 248, 255)
-  text: Independent French host since 1998, operates own data centres.
+  text: Independent French host since 1998, operates own data centers.
 ai: authored
 greenWebId: 900
 gpuCapacity:
   - instances
 ---
 
-Ikoula is one of the oldest independent French hosts, trading since 1998, running two of its own data centres in France with ISO 27001 and ISO 50001 certification. It sells shared Linux and Windows hosting, VPS with full root access and a CloudStack-based public cloud, with prices published in euros.
+Ikoula is one of the oldest independent French hosts, trading since 1998, running two of its own data centers in France with ISO 27001 and ISO 50001 certification. It sells shared Linux and Windows hosting, VPS with full root access and a CloudStack-based public cloud, with prices published in euros.

@@ -90,4 +90,4 @@ Billing is described as "pay for what you run", with no per-seat charge and comp
 
 Usage-based billing makes the advertised entry figure a floor rather than a price: what an application costs depends on what it consumes, across meters that are quoted per component.
 
-The pricing page counts data centres without naming the countries they are in; that list lives in the documentation, away from where a plan is chosen.
+The pricing page counts data centers without naming the countries they are in; that list lives in the documentation, away from where a plan is chosen.

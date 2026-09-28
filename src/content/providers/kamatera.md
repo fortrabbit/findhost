@@ -6,7 +6,7 @@ urls:
   pricing: https://www.kamatera.com/pricing/
 category:
   - vps
-description: Kamatera is a cloud infrastructure company selling hourly-billed cloud servers, block storage, load balancers and firewalls from data centres worldwide.
+description: Kamatera is a cloud infrastructure company selling hourly-billed cloud servers, block storage, load balancers and firewalls from data centers worldwide.
 ownership: subsidiary
 whoManagesOs: self-managed
 runtimes:
@@ -60,13 +60,13 @@ figure:
   emoji: ☁️
   color: rgb(67, 101, 168)
   textColor: rgb(234, 238, 246)
-  text: Cloud servers billed by the hour, across eighteen data centres.
+  text: Cloud servers billed by the hour, across eighteen data centers.
 ai: authored
 ---
 
 Kamatera sells cloud servers, virtual private cloud networking, block storage, load balancers and cloud firewalls, billed hourly against a monthly cap. A server arrives as a base OS image, Ubuntu by default with other Linux and Windows images offered, with full root access and nothing configured above the operating system. The published price list starts at a single-core, 1GB preset and scales through a configurator up to 104 vCPUs, with extra traffic and storage metered separately.
 
-Data centres are spread across North America, Europe, the Middle East and Asia-Pacific, including locations few independent clouds in this dataset reach — Tel Aviv, Bucharest and Hong Kong among them. Kamatera publishes its own Terraform provider and CLI toolbox, and independent developers have separately built a Kubernetes autoscaler and cluster tooling against the same API.
+Data centers are spread across North America, Europe, the Middle East and Asia-Pacific, including locations few independent clouds in this dataset reach — Tel Aviv, Bucharest and Hong Kong among them. Kamatera publishes its own Terraform provider and CLI toolbox, and independent developers have separately built a Kubernetes autoscaler and cluster tooling against the same API.
 
 ## Worth knowing
 

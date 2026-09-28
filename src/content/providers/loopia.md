@@ -96,4 +96,4 @@ It is one of the few providers still running a genuine Windows hosting track —
 
 Introductory pricing is steep in both directions: the first year runs at a fraction of the standing rate, and on the larger business plans the step up is several-fold.
 
-Python and Perl are offered through CGI rather than a modern application server, which limits what can realistically be deployed there. The specification pages do not state where the data centres are.
+Python and Perl are offered through CGI rather than a modern application server, which limits what can realistically be deployed there. The specification pages do not state where the data centers are.
