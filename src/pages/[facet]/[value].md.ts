@@ -2,7 +2,7 @@ import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 import { facetRoutes, loadFacets } from '../../lib/facets';
 import { fieldOf, subjectOf } from '../../lib/fields';
-import { summarise } from '../../lib/summarise';
+import { summarise, valueOpening } from '../../lib/summarise';
 import { attribution, valueTitle } from '../../lib/seo';
 import { answerText, questionsFor, topicOf } from '../../lib/questions';
 
@@ -31,7 +31,11 @@ export const GET: APIRoute = async ({ props, site }) => {
     notes.find((entry) => entry.id === facet.id)?.data.faq,
     note?.data.faq,
   );
-  const summary = summarise(matches, facets, facet.id, subjectOf(fieldOf.get(facet.field)!, value, matches.length));
+  const subject = subjectOf(fieldOf.get(facet.field)!, value, matches.length);
+  /* As the page has it: the providers named where no note was written. */
+  const summary = note?.body?.trim()
+    ? summarise(matches, facets, facet.id, subject)
+    : valueOpening(matches, facets, facet.id, subject);
 
   const lines = [
     `# ${note?.data.title ?? valueTitle(facet.id, value)}`,
