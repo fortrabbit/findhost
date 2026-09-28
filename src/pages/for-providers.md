@@ -1,6 +1,7 @@
 ---
 layout: ../layouts/Article.astro
 title: For providers
+published: 2026-08-31
 updated: 2026-08-31
 description: How to correct a record, how to get a missing provider added, and the badge a listed provider can display.
 lead: Nothing here is for sale. A record exists because a provider meets the scope test.

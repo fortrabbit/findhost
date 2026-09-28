@@ -46,7 +46,11 @@ describe('questionsFor', () => {
 
     assert.deepEqual(
       questions.map(({ q }) => q),
-      ['Does Kirby need a database?', 'Do I need special hosting for Kirby?', 'Who is the best Kirby hosting provider?'],
+      [
+        'Does Kirby need a database?',
+        'Do I need special hosting for Kirby?',
+        'Who is the best Kirby hosting provider?',
+      ],
     );
     assert.equal(questions[1]!.a, 'Kirby runs where PHP runs.');
   });

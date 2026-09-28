@@ -2,7 +2,7 @@
 import Base from '../../../../layouts/Base.astro';
 import { facetIndex, pairIndexRoutes } from '../../../../lib/facets';
 import { pairIndexPath, pairPath } from '../../../../lib/pairs';
-import { organization, valueTitle } from '../../../../lib/seo';
+import { licenceUrl, publisherRef, valueTitle, websiteRef } from '../../../../lib/seo';
 import { valueCardPath } from '../../../../lib/og';
 
 /*
@@ -34,22 +34,23 @@ const summary = `${rows.length} ${rows.length === 1 ? 'page' : 'pages'} combinin
   imageAlt={`A FindHost card: ${lead}.`}
   schema={[
     {
-      '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: facet.label, item: `${origin}${facetIndex(facet.id)}` },
-        { '@type': 'ListItem', position: 2, name: value.label, item: `${origin}${facetIndex(facet.id)}${value.slug}/` },
-        { '@type': 'ListItem', position: 3, name: partner.label },
+        { '@type': 'ListItem', position: 1, name: 'FindHost', item: `${origin}/` },
+        { '@type': 'ListItem', position: 2, name: facet.label, item: `${origin}${facetIndex(facet.id)}` },
+        { '@type': 'ListItem', position: 3, name: value.label, item: `${origin}${facetIndex(facet.id)}${value.slug}/` },
+        { '@type': 'ListItem', position: 4, name: partner.label },
       ],
     },
     {
-      '@context': 'https://schema.org',
       '@type': 'CollectionPage',
       url: `${origin}${pairIndexPath(facet, value, partner)}`,
       name: title,
+      description: summary,
       inLanguage: 'en',
-      publisher: organization(origin),
-      license: 'https://creativecommons.org/licenses/by/4.0/',
+      isPartOf: websiteRef(origin),
+      publisher: publisherRef(origin),
+      license: licenceUrl,
     },
   ]}
 >

@@ -1,6 +1,7 @@
 ---
 layout: ../layouts/Article.astro
 title: How to choose a web host
+published: 2026-08-05
 updated: 2026-08-29
 description: Why the hosting market is hard to read from outside, what matters when comparing hosts, and which of it this dataset records.
 figure:

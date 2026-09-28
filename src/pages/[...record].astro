@@ -10,7 +10,7 @@ import { toRow } from '../lib/rows';
 import { similarTo } from '../lib/similar';
 import ProviderList from '../components/ProviderList.astro';
 import ListControls from '../components/ListControls.astro';
-import { organization, recordTitle } from '../lib/seo';
+import { licenceUrl, providerId, publisherRef, recordTitle, websiteRef } from '../lib/seo';
 import { cardPath } from '../lib/og';
 import { outboundLinkAttrs } from '../lib/links';
 import { modifiedAt, updatedAfterCheck } from '../lib/modified';
@@ -313,7 +313,6 @@ const categoryLabels = (fieldOf.get('category')?.values ?? [])
   imageAlt={`A FindHost card for ${data.name}.`}
   schema={[
     {
-      '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'FindHost', item: `${origin}/` },
@@ -321,22 +320,29 @@ const categoryLabels = (fieldOf.get('category')?.values ?? [])
       ],
     },
     {
-      '@context': 'https://schema.org',
       '@type': 'WebPage',
       url: `${origin}${recordPath(provider)}`,
+      name: data.name,
+      ...(data.description ? { description: data.description } : {}),
       inLanguage: 'en',
-      publisher: organization(origin),
+      isPartOf: websiteRef(origin),
+      publisher: publisherRef(origin),
+      /* The day the record entered the register — a fact about the register, not the provider. */
+      ...(addedIso ? { datePublished: addedIso } : {}),
       /* The date somebody read the provider's own pages — the only one we stand behind. */
       ...(modifiedIso ? { dateModified: modifiedIso } : {}),
-      license: 'https://creativecommons.org/licenses/by/4.0/',
+      license: licenceUrl,
       /*
        * The provider is the subject of the page, not its author. `about` says that
        * without claiming the page is theirs, and everything in it is a field on
-       * the record — nothing is asserted here that the page does not show.
+       * the record — nothing is asserted here that the page does not show. The
+       * `@id` is what every list naming this provider points at.
        */
       about: {
         '@type': 'Organization',
+        '@id': providerId(origin, recordPath(provider)),
         name: data.name,
+        ...(data.description ? { description: data.description } : {}),
         ...(data.urls?.home ? { url: data.urls.home } : {}),
         ...(data.founded ? { foundingDate: String(data.founded) } : {}),
         ...(data.hqCountry ? { address: { '@type': 'PostalAddress', addressCountry: String(data.hqCountry) } } : {}),

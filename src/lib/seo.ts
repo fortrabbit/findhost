@@ -82,7 +82,67 @@ export const organization = (origin: string) => ({
    * correction and every contributor is there under a name a reader can check.
    */
   sameAs: ['https://github.com/fortrabbit/findhost'],
-  parentOrganization: { '@type': 'Organization', name: 'fortrabbit GmbH', url: 'https://www.fortrabbit.com' },
+  /*
+   * The `@id` fortrabbit.com gives itself, so the two sites describe one company
+   * rather than two that share a name.
+   */
+  parentOrganization: {
+    '@type': 'Organization',
+    '@id': 'https://www.fortrabbit.com/#org',
+    name: 'fortrabbit GmbH',
+    url: 'https://www.fortrabbit.com',
+    sameAs: [
+      'https://www.wikidata.org/wiki/Q141277820',
+      'https://www.linkedin.com/company/fortrabbit',
+      'https://github.com/fortrabbit',
+    ],
+  },
+});
+
+/*
+ * Pointers to the two nodes every page carries. Written out in full once, by
+ * `graph`, and referred to everywhere else, so no page states the publisher
+ * twice and no two statements of it can differ.
+ */
+export const publisherRef = (origin: string) => ({ '@id': `${origin}/#publisher` });
+export const websiteRef = (origin: string) => ({ '@id': `${origin}/#website` });
+
+/** A provider as the subject of its record page, addressable from every list that names it. */
+export const providerId = (origin: string, href: string) => `${origin}${href}#provider`;
+
+/**
+ * Providers as a list. Each entry points at the provider node on its record
+ * page, so a list and a record say the same thing about who is meant.
+ *
+ * Ascending is the alphabetical order every list uses; the two dated lists say
+ * descending, newest first.
+ */
+export const providerList = (
+  origin: string,
+  rows: { name: string; href: string }[],
+  order: 'ascending' | 'descending' = 'ascending',
+) => ({
+  '@type': 'ItemList',
+  numberOfItems: rows.length,
+  itemListOrder: `https://schema.org/ItemListOrder${order === 'ascending' ? 'Ascending' : 'Descending'}`,
+  itemListElement: rows.map((row, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    url: `${origin}${row.href}`,
+    name: row.name,
+    item: { '@id': providerId(origin, row.href) },
+  })),
+});
+
+/**
+ * One page's structured data as a single graph: the publisher and the site
+ * first, then whatever the page says about itself. One block, because an `@id`
+ * reference resolves within the block it sits in; split across script tags it
+ * would be a reference to nothing.
+ */
+export const graph = (origin: string, nodes: Record<string, unknown>[]) => ({
+  '@context': 'https://schema.org',
+  '@graph': [organization(origin), website(origin), ...nodes.map(({ '@context': _context, ...node }) => node)],
 });
 
 export const licenceUrl = 'https://creativecommons.org/licenses/by/4.0/';
@@ -90,20 +150,15 @@ export const licenceUrl = 'https://creativecommons.org/licenses/by/4.0/';
 /**
  * The site as an entity, and the one action it offers: the search at /search/,
  * which is a plain GET form and works without JavaScript like everything else.
- *
- * It rides in the same block as the Dataset so the bare `@id` here resolves
- * against the publisher object written out there — split across two script tags
- * it would be a reference to nothing.
  */
 export const website = (origin: string) => ({
-  '@context': 'https://schema.org',
   '@type': 'WebSite',
   '@id': `${origin}/#website`,
   url: `${origin}/`,
   name: 'FindHost',
   inLanguage: 'en',
   license: licenceUrl,
-  publisher: { '@id': `${origin}/#publisher` },
+  publisher: publisherRef(origin),
   potentialAction: {
     '@type': 'SearchAction',
     target: {
@@ -137,21 +192,32 @@ export const attribution = [
  * data answers its question. `dateModified` is the newest `checkedAt` in the
  * register: freshness is the claim this dataset can make and an affiliate table
  * cannot, so it is worth stating in a form nobody has to read prose to find.
+ * `datePublished` is the oldest `addedAt`, the day the register first held a
+ * record.
  */
 export const dataset = (
   origin: string,
   records: number,
-  options: { fields?: { id: string; label: string; group?: string }[]; modified?: Date } = {},
+  options: {
+    fields?: { id: string; label: string; group?: string }[];
+    modified?: Date;
+    published?: Date;
+    keywords?: string[];
+  } = {},
 ) => ({
-  '@context': 'https://schema.org',
   '@type': 'Dataset',
+  '@id': `${origin}/#dataset`,
   name: 'FindHost',
   description: `Attributes of ${records} hosting providers, recorded field by field. Ratings-free: no stars, no score, no affiliate ordering. A heart marks the handful we like, which is an opinion and says so.`,
   url: `${origin}/`,
   license: licenceUrl,
   isAccessibleForFree: true,
-  creator: organization(origin),
+  isPartOf: websiteRef(origin),
+  creator: publisherRef(origin),
+  publisher: publisherRef(origin),
+  ...(options.published ? { datePublished: options.published.toISOString().slice(0, 10) } : {}),
   ...(options.modified ? { dateModified: options.modified.toISOString().slice(0, 10) } : {}),
+  ...(options.keywords?.length ? { keywords: options.keywords } : {}),
   ...(options.fields?.length
     ? {
         variableMeasured: options.fields

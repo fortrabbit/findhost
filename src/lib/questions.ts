@@ -28,8 +28,7 @@ const topics: Record<string, (label: string) => string> = {
   currencies: (label) => `host that bills in ${label}`,
 };
 
-export const topicOf = (facet: string, label: string, override?: string) =>
-  override ?? topics[facet]?.(label.trim());
+export const topicOf = (facet: string, label: string, override?: string) => override ?? topics[facet]?.(label.trim());
 
 /*
  * The same position in different words. One answer repeated on every list page
@@ -40,7 +39,7 @@ const bestAnswers = [
   "We don't know. A static portfolio and a busy shop need different things from a host, and so do a freelancer and an agency with forty client sites. Nobody pays to be listed here and the order is alphabetical. The [guide](/guide/) covers what to compare.",
   "No idea. We list hosts, we don't rate them. Open the records that look close and compare them side by side; the [guide](/guide/) says where to start.",
   "We can't tell from here. A host that suits a small agency site can be wrong for an API with users in Asia and Europe. The list is alphabetical and nobody paid for a place on it. The [guide](/guide/) covers what to compare.",
-  "Hard to say without knowing the project. A free tier matters for a side project and barely at all for a shop that loses money every minute it is down. Read a few records side by side; the [guide](/guide/) says where to start.",
+  'Hard to say without knowing the project. A free tier matters for a side project and barely at all for a shop that loses money every minute it is down. Read a few records side by side; the [guide](/guide/) says where to start.',
 ];
 
 /* A stable pick per page, so a rebuild does not reword a page nobody edited. */
@@ -84,7 +83,6 @@ export const answerText = (answer: string) => answer.replace(link, '$1');
 
 /** The same questions as structured data, from the same strings the page shows. */
 export const faqSchema = (questions: Question[]) => ({
-  '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: questions.map(({ q, a }) => ({
     '@type': 'Question',
