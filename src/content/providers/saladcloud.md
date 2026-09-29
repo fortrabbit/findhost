@@ -13,7 +13,7 @@ category:
 description: Container platform that runs customer images on idle consumer GPUs contributed by a distributed network of home and small-business machines.
 founded: 2018
 ownership: vc-backed
-whoManagesOs: self-managed
+whoManagesOs: managed
 useCases:
   - ai-app
   - background-jobs
@@ -38,24 +38,25 @@ paymentMethods:
 apiAvailable: public
 status: active
 addedAt: 2026-09-24
+checkedAt: 2026-09-29
 sources:
-  - { field: category, url: 'https://salad.com/', checkedAt: 2026-09-24 }
-  - { field: founded, url: 'https://salad.com/about/', checkedAt: 2026-09-24 }
-  - { field: ownership, url: 'https://salad.com/about/', checkedAt: 2026-09-24 }
-  - { field: whoManagesOs, url: 'https://docs.salad.com/container-engine/explanation/core-concepts/container-vs-vps', checkedAt: 2026-09-24 }
-  - { field: useCases, url: 'https://salad.com/', checkedAt: 2026-09-24 }
-  - { field: runtimes, url: 'https://docs.salad.com/container-engine/explanation/infrastructure-platform/container-registries', checkedAt: 2026-09-24 }
-  - { field: deployMethods, url: 'https://docs.salad.com/container-engine/tutorials/quickstart', checkedAt: 2026-09-24 }
-  - { field: gpuCapacity, url: 'https://docs.salad.com/container-engine/reference/autoscaling/settings', checkedAt: 2026-09-24 }
-  - { field: gpuCapacity, url: 'https://docs.salad.com/ai-gateway/reference/pricing', checkedAt: 2026-09-24 }
-  - { field: pricingModel, url: 'https://salad.com/pricing', checkedAt: 2026-09-24 }
-  - { field: priceFrom, url: 'https://salad.com/pricing', checkedAt: 2026-09-24 }
-  - { field: entryPrice, url: 'https://salad.com/pricing', checkedAt: 2026-09-24 }
-  - { field: currencies, url: 'https://salad.com/pricing', checkedAt: 2026-09-24 }
-  - { field: billingTiming, url: 'https://docs.salad.com/general/explanation/billing', checkedAt: 2026-09-24 }
-  - { field: freeTier, url: 'https://salad.com/pricing', checkedAt: 2026-09-24 }
-  - { field: paymentMethods, url: 'https://docs.salad.com/general/explanation/billing', checkedAt: 2026-09-24 }
-  - { field: apiAvailable, url: 'https://docs.salad.com/container-engine/tutorials/quickstart-api', checkedAt: 2026-09-24 }
+  - { field: category, url: 'https://salad.com/', checkedAt: 2026-09-29 }
+  - { field: founded, url: 'https://salad.com/about/', checkedAt: 2026-09-29 }
+  - { field: ownership, url: 'https://salad.com/about/', checkedAt: 2026-09-29 }
+  - { field: whoManagesOs, url: 'https://docs.salad.com/container-engine/explanation/core-concepts/container-vs-vps', checkedAt: 2026-09-29 }
+  - { field: useCases, url: 'https://salad.com/', checkedAt: 2026-09-29 }
+  - { field: runtimes, url: 'https://docs.salad.com/container-engine/explanation/infrastructure-platform/container-registries', checkedAt: 2026-09-29 }
+  - { field: deployMethods, url: 'https://docs.salad.com/container-engine/tutorials/quickstart', checkedAt: 2026-09-29 }
+  - { field: gpuCapacity, url: 'https://docs.salad.com/container-engine/reference/autoscaling/settings', checkedAt: 2026-09-29 }
+  - { field: gpuCapacity, url: 'https://docs.salad.com/ai-gateway/reference/pricing', checkedAt: 2026-09-29 }
+  - { field: pricingModel, url: 'https://salad.com/pricing', checkedAt: 2026-09-29 }
+  - { field: priceFrom, url: 'https://salad.com/pricing', checkedAt: 2026-09-29 }
+  - { field: entryPrice, url: 'https://salad.com/pricing', checkedAt: 2026-09-29 }
+  - { field: currencies, url: 'https://salad.com/pricing', checkedAt: 2026-09-29 }
+  - { field: billingTiming, url: 'https://docs.salad.com/general/explanation/billing', checkedAt: 2026-09-29 }
+  - { field: freeTier, url: 'https://salad.com/pricing', checkedAt: 2026-09-29 }
+  - { field: paymentMethods, url: 'https://docs.salad.com/general/explanation/billing', checkedAt: 2026-09-29 }
+  - { field: apiAvailable, url: 'https://docs.salad.com/container-engine/tutorials/quickstart-api', checkedAt: 2026-09-29 }
 figure:
   emoji: 🥗
   color: rgb(20, 83, 45)
