@@ -58,30 +58,31 @@ iacSupport:
   - terraform
 status: active
 addedAt: 2026-09-24
+checkedAt: 2026-09-29
 sources:
-  - { field: category, url: 'https://docs.runpod.io/overview', checkedAt: 2026-09-24 }
-  - { field: description, url: 'https://docs.runpod.io/overview', checkedAt: 2026-09-24 }
-  - { field: founded, url: 'https://www.runpod.io/about', checkedAt: 2026-09-24 }
-  - { field: hqCountry, url: 'https://www.runpod.io/legal/terms-of-service', checkedAt: 2026-09-24 }
-  - { field: useCases, url: 'https://docs.runpod.io/pods/overview', checkedAt: 2026-09-24 }
-  - { field: runtimes, url: 'https://docs.runpod.io/pods/overview', checkedAt: 2026-09-24 }
-  - { field: deployMethods, url: 'https://docs.runpod.io/pods/overview', checkedAt: 2026-09-24 }
-  - { field: gpuCapacity, url: 'https://docs.runpod.io/overview', checkedAt: 2026-09-24 }
-  - { field: gpuCapacity, url: 'https://docs.runpod.io/serverless/pricing', checkedAt: 2026-09-24 }
-  - { field: gpuCapacity, url: 'https://docs.runpod.io/public-endpoints/reference', checkedAt: 2026-09-24 }
-  - { field: pricingModel, url: 'https://docs.runpod.io/accounts-billing/billing', checkedAt: 2026-09-24 }
-  - { field: billingTiming, url: 'https://docs.runpod.io/accounts-billing/billing', checkedAt: 2026-09-24 }
-  - { field: entryPrice, url: 'https://www.runpod.io/pricing', checkedAt: 2026-09-24 }
-  - { field: priceFrom, url: 'https://www.runpod.io/pricing', checkedAt: 2026-09-24 }
-  - { field: priceTo, url: 'https://www.runpod.io/pricing', checkedAt: 2026-09-24 }
-  - { field: currencies, url: 'https://www.runpod.io/pricing', checkedAt: 2026-09-24 }
-  - { field: billingPeriods, url: 'https://docs.runpod.io/pods/pricing', checkedAt: 2026-09-24 }
+  - { field: category, url: 'https://docs.runpod.io/overview', checkedAt: 2026-09-29 }
+  - { field: description, url: 'https://docs.runpod.io/overview', checkedAt: 2026-09-29 }
+  - { field: founded, url: 'https://www.runpod.io/about', checkedAt: 2026-09-29 }
+  - { field: hqCountry, url: 'https://www.runpod.io/legal/terms-of-service', checkedAt: 2026-09-29 }
+  - { field: useCases, url: 'https://docs.runpod.io/pods/overview', checkedAt: 2026-09-29 }
+  - { field: runtimes, url: 'https://docs.runpod.io/pods/overview', checkedAt: 2026-09-29 }
+  - { field: deployMethods, url: 'https://docs.runpod.io/pods/overview', checkedAt: 2026-09-29 }
+  - { field: gpuCapacity, url: 'https://docs.runpod.io/overview', checkedAt: 2026-09-29 }
+  - { field: gpuCapacity, url: 'https://docs.runpod.io/serverless/pricing', checkedAt: 2026-09-29 }
+  - { field: gpuCapacity, url: 'https://docs.runpod.io/public-endpoints/reference', checkedAt: 2026-09-29 }
+  - { field: pricingModel, url: 'https://docs.runpod.io/accounts-billing/billing', checkedAt: 2026-09-29 }
+  - { field: billingTiming, url: 'https://docs.runpod.io/accounts-billing/billing', checkedAt: 2026-09-29 }
+  - { field: entryPrice, url: 'https://www.runpod.io/pricing', checkedAt: 2026-09-29 }
+  - { field: priceFrom, url: 'https://www.runpod.io/pricing', checkedAt: 2026-09-29 }
+  - { field: priceTo, url: 'https://www.runpod.io/pricing', checkedAt: 2026-09-29 }
+  - { field: currencies, url: 'https://www.runpod.io/pricing', checkedAt: 2026-09-29 }
+  - { field: billingPeriods, url: 'https://docs.runpod.io/pods/pricing', checkedAt: 2026-09-29 }
   - { field: regions, url: 'https://docs.runpod.io/api-reference-v2/catalog/list-data-centers', checkedAt: 2026-09-24 }
-  - { field: apiAvailable, url: 'https://docs.runpod.io/api-reference/overview', checkedAt: 2026-09-24 }
-  - { field: cliTool, url: 'https://docs.runpod.io/runpodctl/overview', checkedAt: 2026-09-24 }
-  - { field: mcpServer, url: 'https://docs.runpod.io/get-started/mcp-servers', checkedAt: 2026-09-24 }
-  - { field: iacSupport, url: 'https://github.com/runpod/terraform-provider-runpod', checkedAt: 2026-09-24 }
-  - { field: 'Secure Cloud and hosts', url: 'https://docs.runpod.io/references/security-and-compliance', checkedAt: 2026-09-24 }
+  - { field: apiAvailable, url: 'https://docs.runpod.io/api-reference/overview', checkedAt: 2026-09-29 }
+  - { field: cliTool, url: 'https://docs.runpod.io/runpodctl/overview', checkedAt: 2026-09-29 }
+  - { field: mcpServer, url: 'https://docs.runpod.io/get-started/mcp-servers', checkedAt: 2026-09-29 }
+  - { field: iacSupport, url: 'https://github.com/runpod/terraform-provider-runpod', checkedAt: 2026-09-29 }
+  - { field: 'Secure Cloud and hosts', url: 'https://docs.runpod.io/references/security-and-compliance', checkedAt: 2026-09-29 }
 figure:
   emoji: 🫛
   color: rgb(88, 46, 150)
