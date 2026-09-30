@@ -50,31 +50,32 @@ iacSupport:
   - terraform
 status: active
 addedAt: 2026-09-24
+checkedAt: 2026-09-30
 sources:
-  - { field: category, url: 'https://nebius.com/prices', checkedAt: 2026-09-24 }
-  - { field: category, url: 'https://docs.nebius.com/serverless/overview', checkedAt: 2026-09-24 }
-  - { field: hqCountry, url: 'https://nebius.com/about', checkedAt: 2026-09-24 }
-  - { field: ownership, url: 'https://nebius.com/about', checkedAt: 2026-09-24 }
-  - { field: whoManagesOs, url: 'https://docs.nebius.com/compute/virtual-machines/connect', checkedAt: 2026-09-24 }
-  - { field: sshAccess, url: 'https://docs.nebius.com/compute/virtual-machines/connect', checkedAt: 2026-09-24 }
-  - { field: useCases, url: 'https://docs.nebius.com/serverless/overview', checkedAt: 2026-09-24 }
-  - { field: runtimes, url: 'https://docs.nebius.com/serverless/overview', checkedAt: 2026-09-24 }
-  - { field: deployMethods, url: 'https://docs.nebius.com/serverless/overview', checkedAt: 2026-09-24 }
-  - { field: gpuCapacity, url: 'https://nebius.com/prices', checkedAt: 2026-09-24 }
-  - { field: gpuCapacity, url: 'https://docs.nebius.com/serverless/overview', checkedAt: 2026-09-24 }
-  - { field: gpuCapacity, url: 'https://docs.tokenfactory.nebius.com/ai-models-inference/dedicated-endpoints/overview', checkedAt: 2026-09-24 }
-  - { field: 'custom weights in beta', url: 'https://docs.tokenfactory.nebius.com/ai-models-inference/dedicated-endpoints/custom-weights', checkedAt: 2026-09-24 }
-  - { field: pricingModel, url: 'https://docs.nebius.com/compute/resources/pricing', checkedAt: 2026-09-24 }
-  - { field: entryPrice, url: 'https://nebius.com/prices', checkedAt: 2026-09-24 }
-  - { field: priceFrom, url: 'https://nebius.com/prices', checkedAt: 2026-09-24 }
-  - { field: priceTo, url: 'https://nebius.com/prices', checkedAt: 2026-09-24 }
-  - { field: currencies, url: 'https://nebius.com/prices', checkedAt: 2026-09-24 }
-  - { field: billingTiming, url: 'https://docs.nebius.com/signup-billing/billing-models/payg', checkedAt: 2026-09-24 }
-  - { field: regions, url: 'https://docs.nebius.com/overview/regions', checkedAt: 2026-09-24 }
-  - { field: apiAvailable, url: 'https://github.com/nebius/api', checkedAt: 2026-09-24 }
-  - { field: cliTool, url: 'https://docs.nebius.com/cli', checkedAt: 2026-09-24 }
-  - { field: mcpServer, url: 'https://github.com/nebius/mcp-server', checkedAt: 2026-09-24 }
-  - { field: iacSupport, url: 'https://docs.nebius.com/terraform-provider', checkedAt: 2026-09-24 }
+  - { field: category, url: 'https://nebius.com/prices', checkedAt: 2026-09-30 }
+  - { field: category, url: 'https://docs.nebius.com/serverless/overview', checkedAt: 2026-09-30 }
+  - { field: hqCountry, url: 'https://nebius.com/about', checkedAt: 2026-09-30 }
+  - { field: ownership, url: 'https://nebius.com/about', checkedAt: 2026-09-30 }
+  - { field: whoManagesOs, url: 'https://docs.nebius.com/compute/virtual-machines/connect', checkedAt: 2026-09-30 }
+  - { field: sshAccess, url: 'https://docs.nebius.com/compute/virtual-machines/connect', checkedAt: 2026-09-30 }
+  - { field: useCases, url: 'https://docs.nebius.com/serverless/overview', checkedAt: 2026-09-30 }
+  - { field: runtimes, url: 'https://docs.nebius.com/serverless/overview', checkedAt: 2026-09-30 }
+  - { field: deployMethods, url: 'https://docs.nebius.com/serverless/overview', checkedAt: 2026-09-30 }
+  - { field: gpuCapacity, url: 'https://nebius.com/prices', checkedAt: 2026-09-30 }
+  - { field: gpuCapacity, url: 'https://docs.nebius.com/serverless/overview', checkedAt: 2026-09-30 }
+  - { field: gpuCapacity, url: 'https://docs.tokenfactory.nebius.com/ai-models-inference/dedicated-endpoints/overview', checkedAt: 2026-09-30 }
+  - { field: 'custom weights in beta', url: 'https://docs.tokenfactory.nebius.com/ai-models-inference/dedicated-endpoints/custom-weights', checkedAt: 2026-09-30 }
+  - { field: pricingModel, url: 'https://docs.nebius.com/compute/resources/pricing', checkedAt: 2026-09-30 }
+  - { field: entryPrice, url: 'https://nebius.com/prices', checkedAt: 2026-09-30 }
+  - { field: priceFrom, url: 'https://nebius.com/prices', checkedAt: 2026-09-30 }
+  - { field: priceTo, url: 'https://nebius.com/prices', checkedAt: 2026-09-30 }
+  - { field: currencies, url: 'https://nebius.com/prices', checkedAt: 2026-09-30 }
+  - { field: billingTiming, url: 'https://docs.nebius.com/signup-billing/billing-models/payg', checkedAt: 2026-09-30 }
+  - { field: regions, url: 'https://docs.nebius.com/overview/regions', checkedAt: 2026-09-30 }
+  - { field: apiAvailable, url: 'https://github.com/nebius/api', checkedAt: 2026-09-30 }
+  - { field: cliTool, url: 'https://docs.nebius.com/cli', checkedAt: 2026-09-30 }
+  - { field: mcpServer, url: 'https://github.com/nebius/mcp-server', checkedAt: 2026-09-30 }
+  - { field: iacSupport, url: 'https://docs.nebius.com/terraform-provider', checkedAt: 2026-09-30 }
 figure:
   emoji: 🌌
   color: rgb(34, 30, 70)
