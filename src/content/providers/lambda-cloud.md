@@ -42,29 +42,30 @@ regions:
 apiAvailable: public
 status: active
 addedAt: 2026-09-24
+checkedAt: 2026-09-30
 sources:
-  - { field: category, url: 'https://docs.lambda.ai/public-cloud/on-demand/', checkedAt: 2026-09-24 }
-  - { field: description, url: 'https://docs.lambda.ai/', checkedAt: 2026-09-24 }
-  - { field: founded, url: 'https://lambda.ai/about', checkedAt: 2026-09-24 }
-  - { field: hqCountry, url: 'https://lambda.ai/legal/terms-of-service', checkedAt: 2026-09-24 }
-  - { field: ownership, url: 'https://lambda.ai/investors', checkedAt: 2026-09-24 }
-  - { field: whoManagesOs, url: 'https://docs.lambda.ai/public-cloud/on-demand/', checkedAt: 2026-09-24 }
-  - { field: sshAccess, url: 'https://docs.lambda.ai/public-cloud/on-demand/connecting-instance/', checkedAt: 2026-09-24 }
-  - { field: sshAccess, url: 'https://docs.lambda.ai/public-cloud/on-demand/managing-system-environment/', checkedAt: 2026-09-24 }
-  - { field: useCases, url: 'https://lambda.ai/about', checkedAt: 2026-09-24 }
-  - { field: runtimes, url: 'https://docs.lambda.ai/public-cloud/on-demand/', checkedAt: 2026-09-24 }
-  - { field: deployMethods, url: 'https://docs.lambda.ai/public-cloud/on-demand/creating-managing-instances/', checkedAt: 2026-09-24 }
-  - { field: gpuCapacity, url: 'https://lambda.ai/pricing', checkedAt: 2026-09-24 }
-  - { field: pricingModel, url: 'https://docs.lambda.ai/public-cloud/billing/', checkedAt: 2026-09-24 }
-  - { field: billingPeriods, url: 'https://docs.lambda.ai/public-cloud/billing/', checkedAt: 2026-09-24 }
-  - { field: billingTiming, url: 'https://docs.lambda.ai/public-cloud/billing/', checkedAt: 2026-09-24 }
-  - { field: entryPrice, url: 'https://lambda.ai/pricing', checkedAt: 2026-09-24 }
-  - { field: priceFrom, url: 'https://lambda.ai/pricing', checkedAt: 2026-09-24 }
-  - { field: priceTo, url: 'https://lambda.ai/pricing', checkedAt: 2026-09-24 }
-  - { field: currencies, url: 'https://lambda.ai/pricing', checkedAt: 2026-09-24 }
-  - { field: regions, url: 'https://docs.lambda.ai/public-cloud/on-demand/', checkedAt: 2026-09-24 }
-  - { field: apiAvailable, url: 'https://docs.lambda.ai/api/cloud', checkedAt: 2026-09-24 }
-  - { field: 'Inference API wind-down', url: 'https://lambda.ai/inference', checkedAt: 2026-09-24 }
+  - { field: category, url: 'https://docs.lambda.ai/public-cloud/on-demand/', checkedAt: 2026-09-30 }
+  - { field: description, url: 'https://docs.lambda.ai/', checkedAt: 2026-09-30 }
+  - { field: founded, url: 'https://lambda.ai/about', checkedAt: 2026-09-30 }
+  - { field: hqCountry, url: 'https://lambda.ai/legal/terms-of-service', checkedAt: 2026-09-30 }
+  - { field: ownership, url: 'https://lambda.ai/investors', checkedAt: 2026-09-30 }
+  - { field: whoManagesOs, url: 'https://docs.lambda.ai/public-cloud/on-demand/', checkedAt: 2026-09-30 }
+  - { field: sshAccess, url: 'https://docs.lambda.ai/public-cloud/on-demand/connecting-instance/', checkedAt: 2026-09-30 }
+  - { field: sshAccess, url: 'https://docs.lambda.ai/public-cloud/on-demand/managing-system-environment/', checkedAt: 2026-09-30 }
+  - { field: useCases, url: 'https://lambda.ai/about', checkedAt: 2026-09-30 }
+  - { field: runtimes, url: 'https://docs.lambda.ai/public-cloud/on-demand/', checkedAt: 2026-09-30 }
+  - { field: deployMethods, url: 'https://docs.lambda.ai/public-cloud/on-demand/creating-managing-instances/', checkedAt: 2026-09-30 }
+  - { field: gpuCapacity, url: 'https://lambda.ai/pricing', checkedAt: 2026-09-30 }
+  - { field: pricingModel, url: 'https://docs.lambda.ai/public-cloud/billing/', checkedAt: 2026-09-30 }
+  - { field: billingPeriods, url: 'https://docs.lambda.ai/public-cloud/billing/', checkedAt: 2026-09-30 }
+  - { field: billingTiming, url: 'https://docs.lambda.ai/public-cloud/billing/', checkedAt: 2026-09-30 }
+  - { field: entryPrice, url: 'https://lambda.ai/pricing', checkedAt: 2026-09-30 }
+  - { field: priceFrom, url: 'https://lambda.ai/pricing', checkedAt: 2026-09-30 }
+  - { field: priceTo, url: 'https://lambda.ai/pricing', checkedAt: 2026-09-30 }
+  - { field: currencies, url: 'https://lambda.ai/pricing', checkedAt: 2026-09-30 }
+  - { field: regions, url: 'https://docs.lambda.ai/public-cloud/on-demand/', checkedAt: 2026-09-30 }
+  - { field: apiAvailable, url: 'https://docs.lambda.ai/api/cloud', checkedAt: 2026-09-30 }
+  - { field: 'Inference API wind-down', url: 'https://lambda.ai/inference', checkedAt: 2026-09-30 }
 figure:
   emoji: 🐑
   color: rgb(30, 30, 36)
