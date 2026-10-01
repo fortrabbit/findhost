@@ -40,21 +40,21 @@ iacSupport:
 status: active
 addedAt: 2026-09-24
 sources:
-  - { field: category, url: 'https://www.hyperstack.cloud/gpu-pricing', checkedAt: 2026-09-24 }
-  - { field: hqCountry, url: 'https://www.hyperstack.cloud/gpu-pricing', checkedAt: 2026-09-24 }
-  - { field: whoManagesOs, url: 'https://docs.hyperstack.cloud/docs/network/ubuntu-ssh', checkedAt: 2026-09-24 }
-  - { field: sshAccess, url: 'https://docs.hyperstack.cloud/docs/network/ubuntu-ssh', checkedAt: 2026-09-24 }
-  - { field: useCases, url: 'https://docs.hyperstack.cloud/docs/ai-studio', checkedAt: 2026-09-24 }
-  - { field: deployMethods, url: 'https://docs.hyperstack.cloud/docs/getting-started', checkedAt: 2026-09-24 }
-  - { field: gpuCapacity, url: 'https://www.hyperstack.cloud/gpu-pricing', checkedAt: 2026-09-24 }
-  - { field: gpuCapacity, url: 'https://docs.hyperstack.cloud/docs/ai-studio/dedicated-inference', checkedAt: 2026-09-24 }
-  - { field: pricingModel, url: 'https://docs.hyperstack.cloud/docs/billing/billing-policies', checkedAt: 2026-09-24 }
-  - { field: entryPrice, url: 'https://www.hyperstack.cloud/gpu-pricing', checkedAt: 2026-09-24 }
-  - { field: priceFrom, url: 'https://www.hyperstack.cloud/gpu-pricing', checkedAt: 2026-09-24 }
-  - { field: priceTo, url: 'https://www.hyperstack.cloud/gpu-pricing', checkedAt: 2026-09-24 }
-  - { field: currencies, url: 'https://www.hyperstack.cloud/gpu-pricing', checkedAt: 2026-09-24 }
-  - { field: billingTiming, url: 'https://docs.hyperstack.cloud/docs/billing/billing-policies', checkedAt: 2026-09-24 }
-  - { field: regions, url: 'https://docs.hyperstack.cloud/docs/resource-management/regions', checkedAt: 2026-09-24 }
+  - { field: category, url: 'https://www.hyperstack.cloud/gpu-pricing', checkedAt: 2026-10-01 }
+  - { field: hqCountry, url: 'https://www.hyperstack.cloud/gpu-pricing', checkedAt: 2026-10-01 }
+  - { field: whoManagesOs, url: 'https://docs.hyperstack.cloud/docs/network/ubuntu-ssh', checkedAt: 2026-10-01 }
+  - { field: sshAccess, url: 'https://docs.hyperstack.cloud/docs/network/ubuntu-ssh', checkedAt: 2026-10-01 }
+  - { field: useCases, url: 'https://docs.hyperstack.cloud/docs/ai-studio', checkedAt: 2026-10-01 }
+  - { field: deployMethods, url: 'https://docs.hyperstack.cloud/docs/getting-started', checkedAt: 2026-10-01 }
+  - { field: gpuCapacity, url: 'https://www.hyperstack.cloud/gpu-pricing', checkedAt: 2026-10-01 }
+  - { field: gpuCapacity, url: 'https://docs.hyperstack.cloud/docs/ai-studio/dedicated-inference', checkedAt: 2026-10-01 }
+  - { field: pricingModel, url: 'https://docs.hyperstack.cloud/docs/billing/billing-policies', checkedAt: 2026-10-01 }
+  - { field: entryPrice, url: 'https://www.hyperstack.cloud/gpu-pricing', checkedAt: 2026-10-01 }
+  - { field: priceFrom, url: 'https://www.hyperstack.cloud/gpu-pricing', checkedAt: 2026-10-01 }
+  - { field: priceTo, url: 'https://www.hyperstack.cloud/gpu-pricing', checkedAt: 2026-10-01 }
+  - { field: currencies, url: 'https://www.hyperstack.cloud/gpu-pricing', checkedAt: 2026-10-01 }
+  - { field: billingTiming, url: 'https://docs.hyperstack.cloud/docs/billing/billing-policies', checkedAt: 2026-10-01 }
+  - { field: regions, url: 'https://docs.hyperstack.cloud/docs/resource-management/regions', checkedAt: 2026-10-01 }
   - { field: apiAvailable, url: 'https://docs.hyperstack.cloud/docs/api-reference', checkedAt: 2026-09-24 }
   - { field: mcpServer, url: 'https://docs.hyperstack.cloud/docs/libraries/mcp', checkedAt: 2026-09-24 }
   - { field: iacSupport, url: 'https://docs.hyperstack.cloud/docs/libraries/terraform', checkedAt: 2026-09-24 }
