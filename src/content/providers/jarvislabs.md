@@ -43,26 +43,27 @@ regions:
 cliTool: official
 status: active
 addedAt: 2026-09-24
+checkedAt: 2026-10-01
 sources:
-  - { field: category, url: 'https://jarvislabs.ai/llms.txt', checkedAt: 2026-09-24 }
-  - { field: founded, url: 'https://jarvislabs.ai/llms.txt', checkedAt: 2026-09-24 }
-  - { field: hqCountry, url: 'https://jarvislabs.ai/', checkedAt: 2026-09-24 }
-  - { field: whoManagesOs, url: 'https://jarvislabs.ai/products/vm', checkedAt: 2026-09-24 }
-  - { field: sshAccess, url: 'https://jarvislabs.ai/products/vm', checkedAt: 2026-09-24 }
-  - { field: useCases, url: 'https://jarvislabs.ai/llms.txt', checkedAt: 2026-09-24 }
-  - { field: runtimes, url: 'https://jarvislabs.ai/products/vm', checkedAt: 2026-09-24 }
-  - { field: deployMethods, url: 'https://docs.jarvislabs.ai/', checkedAt: 2026-09-24 }
-  - { field: gpuCapacity, url: 'https://jarvislabs.ai/llms.txt', checkedAt: 2026-09-24 }
-  - { field: gpuCapacity, url: 'https://jarvislabs.ai/pricing', checkedAt: 2026-09-24 }
-  - { field: pricingModel, url: 'https://jarvislabs.ai/pricing', checkedAt: 2026-09-24 }
-  - { field: priceFrom, url: 'https://jarvislabs.ai/pricing', checkedAt: 2026-09-24 }
-  - { field: priceTo, url: 'https://jarvislabs.ai/pricing', checkedAt: 2026-09-24 }
-  - { field: entryPrice, url: 'https://jarvislabs.ai/pricing', checkedAt: 2026-09-24 }
-  - { field: currencies, url: 'https://jarvislabs.ai/pricing', checkedAt: 2026-09-24 }
-  - { field: billingPeriods, url: 'https://jarvislabs.ai/pricing', checkedAt: 2026-09-24 }
-  - { field: billingTiming, url: 'https://docs.jarvislabs.ai/', checkedAt: 2026-09-24 }
-  - { field: regions, url: 'https://docs.jarvislabs.ai/cli/', checkedAt: 2026-09-24 }
-  - { field: cliTool, url: 'https://docs.jarvislabs.ai/cli/', checkedAt: 2026-09-24 }
+  - { field: category, url: 'https://jarvislabs.ai/llms.txt', checkedAt: 2026-10-01 }
+  - { field: founded, url: 'https://jarvislabs.ai/llms.txt', checkedAt: 2026-10-01 }
+  - { field: hqCountry, url: 'https://jarvislabs.ai/', checkedAt: 2026-10-01 }
+  - { field: whoManagesOs, url: 'https://jarvislabs.ai/products/vm', checkedAt: 2026-10-01 }
+  - { field: sshAccess, url: 'https://jarvislabs.ai/products/vm', checkedAt: 2026-10-01 }
+  - { field: useCases, url: 'https://jarvislabs.ai/llms.txt', checkedAt: 2026-10-01 }
+  - { field: runtimes, url: 'https://jarvislabs.ai/products/vm', checkedAt: 2026-10-01 }
+  - { field: deployMethods, url: 'https://docs.jarvislabs.ai/', checkedAt: 2026-10-01 }
+  - { field: gpuCapacity, url: 'https://jarvislabs.ai/llms.txt', checkedAt: 2026-10-01 }
+  - { field: gpuCapacity, url: 'https://jarvislabs.ai/pricing', checkedAt: 2026-10-01 }
+  - { field: pricingModel, url: 'https://jarvislabs.ai/pricing', checkedAt: 2026-10-01 }
+  - { field: priceFrom, url: 'https://jarvislabs.ai/pricing', checkedAt: 2026-10-01 }
+  - { field: priceTo, url: 'https://jarvislabs.ai/pricing', checkedAt: 2026-10-01 }
+  - { field: entryPrice, url: 'https://jarvislabs.ai/pricing', checkedAt: 2026-10-01 }
+  - { field: currencies, url: 'https://jarvislabs.ai/pricing', checkedAt: 2026-10-01 }
+  - { field: billingPeriods, url: 'https://jarvislabs.ai/pricing', checkedAt: 2026-10-01 }
+  - { field: billingTiming, url: 'https://docs.jarvislabs.ai/', checkedAt: 2026-10-01 }
+  - { field: regions, url: 'https://docs.jarvislabs.ai/cli/', checkedAt: 2026-10-01 }
+  - { field: cliTool, url: 'https://docs.jarvislabs.ai/cli/', checkedAt: 2026-10-01 }
 figure:
   emoji: 🧪
   color: rgb(96, 42, 22)
