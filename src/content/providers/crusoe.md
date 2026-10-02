@@ -40,30 +40,31 @@ iacSupport:
   - terraform
 status: active
 addedAt: 2026-09-24
+checkedAt: 2026-10-02
 sources:
-  - { field: category, url: 'https://www.crusoe.ai/cloud/pricing', checkedAt: 2026-09-24 }
-  - { field: founded, url: 'https://www.crusoe.ai/about/company', checkedAt: 2026-09-24 }
+  - { field: category, url: 'https://www.crusoe.ai/cloud/pricing', checkedAt: 2026-10-02 }
+  - { field: founded, url: 'https://www.crusoe.ai/about/company', checkedAt: 2026-10-02 }
   - { field: hqCountry, url: 'https://www.crusoe.ai/', checkedAt: 2026-09-24 }
-  - { field: ownership, url: 'https://www.crusoe.ai/about/company', checkedAt: 2026-09-24 }
-  - { field: whoManagesOs, url: 'https://docs.crusoecloud.com/compute/virtual-machines/accessing-vms', checkedAt: 2026-09-24 }
-  - { field: sshAccess, url: 'https://docs.crusoecloud.com/compute/virtual-machines/accessing-vms', checkedAt: 2026-09-24 }
-  - { field: useCases, url: 'https://docs.crusoecloud.com/', checkedAt: 2026-09-24 }
-  - { field: deployMethods, url: 'https://docs.crusoecloud.com/quickstart/creating-a-vm', checkedAt: 2026-09-24 }
-  - { field: gpuCapacity, url: 'https://www.crusoe.ai/cloud/pricing', checkedAt: 2026-09-24 }
-  - { field: gpuCapacity, url: 'https://docs.crusoecloud.com/self-serve-deployments/overview', checkedAt: 2026-09-24 }
-  - { field: pricingModel, url: 'https://www.crusoe.ai/cloud/pricing', checkedAt: 2026-09-24 }
-  - { field: entryPrice, url: 'https://www.crusoe.ai/cloud/pricing', checkedAt: 2026-09-24 }
+  - { field: ownership, url: 'https://www.crusoe.ai/about/company', checkedAt: 2026-10-02 }
+  - { field: whoManagesOs, url: 'https://docs.crusoecloud.com/compute/virtual-machines/accessing-vms', checkedAt: 2026-10-02 }
+  - { field: sshAccess, url: 'https://docs.crusoecloud.com/compute/virtual-machines/accessing-vms', checkedAt: 2026-10-02 }
+  - { field: useCases, url: 'https://docs.crusoecloud.com/', checkedAt: 2026-10-02 }
+  - { field: deployMethods, url: 'https://docs.crusoecloud.com/quickstart/creating-a-vm', checkedAt: 2026-10-02 }
+  - { field: gpuCapacity, url: 'https://www.crusoe.ai/cloud/pricing', checkedAt: 2026-10-02 }
+  - { field: gpuCapacity, url: 'https://docs.crusoecloud.com/self-serve-deployments/overview', checkedAt: 2026-10-02 }
+  - { field: pricingModel, url: 'https://www.crusoe.ai/cloud/pricing', checkedAt: 2026-10-02 }
+  - { field: entryPrice, url: 'https://www.crusoe.ai/cloud/pricing', checkedAt: 2026-10-02 }
   - { field: entryPrice, url: 'https://docs.crusoecloud.com/compute/virtual-machines/overview', checkedAt: 2026-09-24 }
-  - { field: priceFrom, url: 'https://www.crusoe.ai/cloud/pricing', checkedAt: 2026-09-24 }
-  - { field: priceTo, url: 'https://www.crusoe.ai/cloud/pricing', checkedAt: 2026-09-24 }
-  - { field: currencies, url: 'https://www.crusoe.ai/cloud/pricing', checkedAt: 2026-09-24 }
-  - { field: regions, url: 'https://docs.crusoecloud.com/reference/locations', checkedAt: 2026-09-24 }
-  - { field: apiAvailable, url: 'https://docs.crusoecloud.com/reference/api/', checkedAt: 2026-09-24 }
-  - { field: cliTool, url: 'https://docs.crusoecloud.com/installing-the-cli', checkedAt: 2026-09-24 }
-  - { field: mcpServer, url: 'https://docs.crusoecloud.com/reference/mcp-server', checkedAt: 2026-09-24 }
-  - { field: iacSupport, url: 'https://docs.crusoecloud.com/infrastructure-cloud/terraform', checkedAt: 2026-09-24 }
-  - { field: 'quota increases', url: 'https://docs.crusoecloud.com/usage-billing/viewing-quotas', checkedAt: 2026-09-24 }
-  - { field: 'account signup and billing', url: 'https://docs.crusoecloud.com/create-an-account', checkedAt: 2026-09-24 }
+  - { field: priceFrom, url: 'https://www.crusoe.ai/cloud/pricing', checkedAt: 2026-10-02 }
+  - { field: priceTo, url: 'https://www.crusoe.ai/cloud/pricing', checkedAt: 2026-10-02 }
+  - { field: currencies, url: 'https://www.crusoe.ai/cloud/pricing', checkedAt: 2026-10-02 }
+  - { field: regions, url: 'https://docs.crusoecloud.com/reference/locations', checkedAt: 2026-10-02 }
+  - { field: apiAvailable, url: 'https://docs.crusoecloud.com/reference/api/', checkedAt: 2026-10-02 }
+  - { field: cliTool, url: 'https://docs.crusoecloud.com/installing-the-cli', checkedAt: 2026-10-02 }
+  - { field: mcpServer, url: 'https://docs.crusoecloud.com/reference/mcp-server', checkedAt: 2026-10-02 }
+  - { field: iacSupport, url: 'https://docs.crusoecloud.com/infrastructure-cloud/terraform', checkedAt: 2026-10-02 }
+  - { field: 'quota increases', url: 'https://docs.crusoecloud.com/usage-billing/viewing-quotas', checkedAt: 2026-10-02 }
+  - { field: 'account signup and billing', url: 'https://docs.crusoecloud.com/create-an-account', checkedAt: 2026-10-02 }
 figure:
   emoji: 🏝️
   color: rgb(92, 44, 20)
