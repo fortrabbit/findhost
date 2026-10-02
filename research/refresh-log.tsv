@@ -48,3 +48,4 @@
 2026-09-30	lambda-cloud	confirmed	Home, pricing, status, terms, docs, on-demand overview, about, investors, connecting-instance, managing-system-environment, creating-managing-instances, billing, api/cloud and inference pages read (200); all fields confirmed unchanged; record checkedAt set
 2026-10-01	jarvislabs	confirmed	Home, pricing, docs, llms.txt, products/vm and cli pages read (200); terms page empty shell (nav only, no terms text); all fields confirmed unchanged; record checkedAt set
 2026-10-01	hyperstack	confirmed	Home, pricing, status, terms, docs, ubuntu-ssh, ai-studio, getting-started, dedicated-inference, billing-policies, regions, mcp and terraform pages read (200); api-reference page 404, apiAvailable source stale/unreadable; all other fields confirmed unchanged; record checkedAt withheld (not every source read)
+2026-10-02	cerebrium	confirmed	stale sources: founded (no year stated), gpuCapacity cost page (no longer mentions serverless)
