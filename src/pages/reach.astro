@@ -6,7 +6,7 @@ import ProviderList from '../components/ProviderList.astro';
 import { loadProviders } from '../lib/providers';
 import { recordPath } from '../lib/paths';
 import { movementOf } from '../lib/record';
-import { licenceUrl, publisherRef, websiteRef } from '../lib/seo';
+import { extendDescription, licenceUrl, publisherRef, websiteRef } from '../lib/seo';
 import { pageCardPath } from '../lib/og';
 
 /*
@@ -84,7 +84,10 @@ const annotation = [
 const note = (await getCollection('notes')).find((entry) => entry.id === 'page/reach');
 const Note = note ? (await render(note)).Content : null;
 
-const description = note?.data.description ?? "How many networks link to each hosting provider's own domain.";
+const description = extendDescription(
+  note?.data.description ?? "How many networks link to each hosting provider's own domain.",
+  [annotation.split('. ')[0]?.replace(/\.?$/, '.'), 'A measure of links, not of quality.'],
+);
 
 const origin = Astro.site?.origin ?? '';
 ---

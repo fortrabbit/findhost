@@ -27,7 +27,8 @@ export function valueOpening(matches: ProviderRow[], facets: Facet[], facetId: s
   return withNames(valueSentences(matches, facets, facetId, subject), matches);
 }
 
-function valueSentences(matches: ProviderRow[], facets: Facet[], facetId: string, subject: string): string[] {
+/** The summary's sentences one by one, for a description that has room for some of them. */
+export function valueSentences(matches: ProviderRow[], facets: Facet[], facetId: string, subject: string): string[] {
   const count = matches.length;
   const noun = count === 1 ? 'provider' : 'providers';
 

@@ -2,7 +2,7 @@
 import Base from '../../../../layouts/Base.astro';
 import { facetIndex, pairIndexRoutes } from '../../../../lib/facets';
 import { pairIndexPath, pairPath } from '../../../../lib/pairs';
-import { licenceUrl, publisherRef, valueTitle, websiteRef } from '../../../../lib/seo';
+import { extendDescription, joinAnd, licenceUrl, publisherRef, valueTitle, websiteRef } from '../../../../lib/seo';
 import { valueCardPath } from '../../../../lib/og';
 
 /*
@@ -24,7 +24,11 @@ const lead = valueTitle(facet.id, value);
 const title = `${lead} by ${partner.label.toLowerCase()}`;
 
 const rows = [...pages].sort((one, other) => other.matches.length - one.matches.length);
-const summary = `${rows.length} ${rows.length === 1 ? 'page' : 'pages'} combining ${lead.toLowerCase()} with a ${partner.label.toLowerCase()} value, each listing at least eight providers.`;
+const pageCount = `${rows.length} ${rows.length === 1 ? 'page' : 'pages'}`;
+const named = `${title}, in ${pageCount}: ${joinAnd(rows.map((page) => page.bv.label))}.`;
+const summary = extendDescription(named.length <= 120 ? named : `${title}, in ${pageCount}.`, [
+  `Each lists at least eight providers, alphabetically.`,
+]);
 ---
 
 <Base

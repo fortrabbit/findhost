@@ -1,13 +1,13 @@
 ---
 import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
-import { licenceUrl, providerList, publisherRef, valueTitle, websiteRef } from '../../lib/seo';
+import { extendDescription, licenceUrl, providerList, publisherRef, valueTitle, websiteRef } from '../../lib/seo';
 import ProviderRegister from '../../components/ProviderRegister.astro';
 import PageFigure from '../../components/PageFigure.astro';
 import Questions from '../../components/Questions.astro';
 import { facetIndex, facetRoutes, loadFacets, pairsFor } from '../../lib/facets';
 import { fieldOf, subjectOf } from '../../lib/fields';
-import { summarise, valueOpening } from '../../lib/summarise';
+import { summarise, valueOpening, valueSentences } from '../../lib/summarise';
 import { valueCardPath } from '../../lib/og';
 import { newest } from '../../lib/modified';
 import { faqSchema, questionsFor, topicOf } from '../../lib/questions';
@@ -46,6 +46,14 @@ const notes = await getCollection('notes');
 const note = notes.find((entry) => entry.id === `${facet.id}/${value.id}`);
 const Note = note ? (await render(note)).Content : null;
 const figure = note?.data.figure;
+
+/* A note's one line, then as much of the counted summary as a search result shows. */
+const description = note?.data.description
+  ? extendDescription(
+      note.data.description,
+      valueSentences(matches, facets, facet.id, subjectOf(fieldOf.get(facet.field)!, value, matches.length)),
+    )
+  : summary;
 
 /*
  * The count, what the records have in common and what is missing, in one
@@ -97,7 +105,7 @@ const combined = (await pairsFor(facet.id, value.id)).map((group) => ({
 
 <Base
   title={`${note?.data.title ?? valueTitle(facet.id, value)} — FindHost`}
-  description={note?.data.description ?? summary}
+  description={description}
   markdown={`${facetIndex(facet.id)}${value.slug}.md`}
   image={valueCardPath(facet.id, value.slug)}
   imageAlt={`A FindHost card: ${matches.length} providers recorded as ${value.label.toLowerCase()}.`}
@@ -114,7 +122,7 @@ const combined = (await pairsFor(facet.id, value.id)).map((group) => ({
       '@type': 'CollectionPage',
       url: `${origin}${facetIndex(facet.id)}${value.slug}/`,
       name: note?.data.title ?? valueTitle(facet.id, value),
-      description: note?.data.description ?? summary,
+      description,
       inLanguage: 'en',
       isPartOf: websiteRef(origin),
       publisher: publisherRef(origin),
