@@ -1,7 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
-import { fieldGroups, fieldOf, type Field } from '../lib/fields';
+import { fieldGroups, fieldOf, labelOf, type Field } from '../lib/fields';
 import { backlinks, cells, footnotes } from '../lib/record';
 import { asideKindGroup, isListed } from '../lib/providers';
 import { recordMarkdownPath, recordPath } from '../lib/paths';
@@ -10,7 +10,16 @@ import { toRow } from '../lib/rows';
 import { similarTo } from '../lib/similar';
 import ProviderList from '../components/ProviderList.astro';
 import ListControls from '../components/ListControls.astro';
-import { licenceUrl, providerId, publisherRef, recordTitle, websiteRef } from '../lib/seo';
+import {
+  extendDescription,
+  joinAnd,
+  licenceUrl,
+  providerId,
+  publisherRef,
+  recordTitle,
+  soften,
+  websiteRef,
+} from '../lib/seo';
 import { cardPath } from '../lib/og';
 import { outboundLinkAttrs } from '../lib/links';
 import { modifiedAt, updatedAfterCheck } from '../lib/modified';
@@ -301,11 +310,25 @@ const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[dat
 const categoryLabels = (fieldOf.get('category')?.values ?? [])
   .filter((value) => (data.category ?? []).includes(value.id as never))
   .map((value) => value.short ?? value.label);
+
+/* The record's sentence, then what its fields say about the company, for a search result. */
+const categoryNames = (fieldOf.get('category')?.values ?? [])
+  .filter((value) => (data.category ?? []).includes(value.id as never))
+  .map((value) => value.label);
+const kinds = categoryNames.map((label, index) => (index === 0 ? label : soften(label)));
+const metaDescription = data.description
+  ? extendDescription(data.description, [
+      kinds.length > 0 && `${kinds.join(', ')}.`,
+      data.hqCountry && `Headquarters: ${labelOf('hqCountry', data.hqCountry)}.`,
+      !!data.founded && !data.description.includes(String(data.founded)) && `Founded ${data.founded}.`,
+      'Recorded field by field, no ratings.',
+    ])
+  : undefined;
 ---
 
 <Base
   title={recordTitle(data.name, categoryLabels)}
-  description={data.description}
+  description={metaDescription}
   markdown={recordMarkdownPath(provider)}
   markdownInPage
   hidden={!listed}

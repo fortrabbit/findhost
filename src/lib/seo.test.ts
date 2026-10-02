@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { dataset, graph, organization, providerList, recordTitle } from './seo.ts';
+import { dataset, extendDescription, graph, joinAnd, organization, providerList, recordTitle } from './seo.ts';
 
 test('a record title carries as many categories as the budget allows', () => {
   assert.equal(recordTitle('Hetzner', ['VPS', 'Bare metal', 'IaaS']), 'Hetzner — VPS, Bare metal, IaaS — FindHost');
@@ -85,4 +85,16 @@ test('the dataset leaves out a date it was not given', () => {
   const node = dataset(origin, 3);
   assert.ok(!('datePublished' in node));
   assert.ok(!('keywords' in node));
+});
+
+test('a description gains whole facts while they fit, and skips one that does not', () => {
+  const lead = 'x'.repeat(100);
+  const described = extendDescription(lead, ['Short fact.', 'y'.repeat(60), undefined, false, 'Last.']);
+  assert.equal(described, `${lead} Short fact. Last.`);
+  assert.ok(described.length <= 160);
+});
+
+test('names are joined the way a sentence lists them', () => {
+  assert.equal(joinAnd(['A']), 'A');
+  assert.equal(joinAnd(['A', 'B', 'C']), 'A, B and C');
 });

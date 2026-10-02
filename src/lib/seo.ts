@@ -69,6 +69,25 @@ export const recordTitle = (name: string, categories: string[]) => {
   return `${name}${fact ? ` — ${fact}` : ''}${suffix}`;
 };
 
+/** Roughly what a result shows of a description before it truncates. */
+const descriptionBudget = 160;
+
+/**
+ * A meta description that starts from a page's own sentence and adds facts the
+ * page states, whole sentences only, while they fit. The sentence stays short
+ * because every list shows it; a search result has room for more.
+ */
+export const extendDescription = (lead: string, facts: (string | false | undefined)[]) =>
+  facts.reduce<string>((kept, fact) => {
+    if (!fact) return kept;
+    const next = `${kept} ${fact}`;
+    return next.length <= descriptionBudget ? next : kept;
+  }, lead.trim());
+
+/** "A", "A and B", "A, B and C". */
+export const joinAnd = (items: string[]) =>
+  items.length < 2 ? (items[0] ?? '') : `${items.slice(0, -1).join(', ')} and ${items.at(-1)}`;
+
 /** The publisher, named the same way wherever it appears. */
 export const organization = (origin: string) => ({
   '@type': 'Organization',

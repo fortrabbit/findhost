@@ -5,7 +5,7 @@ import PageFigure from '../../components/PageFigure.astro';
 import { facetIndex, loadFacets } from '../../lib/facets';
 import { borrowedFrom } from '../../lib/fields';
 import { facetCardPath } from '../../lib/og';
-import { licenceUrl, publisherRef, websiteRef } from '../../lib/seo';
+import { extendDescription, licenceUrl, publisherRef, websiteRef } from '../../lib/seo';
 
 export async function getStaticPaths() {
   const { facets } = await loadFacets();
@@ -61,9 +61,8 @@ const leadOf = new Map(
 const Note = note ? (await render(note)).Content : null;
 const figure = note?.data.figure;
 
-const description =
-  note?.data.description ??
-  `Every value recorded for ${facet.label.toLowerCase()}, each with the number of hosting providers that hold it and a page listing them alphabetically.`;
+const listing = `Every value recorded for ${facet.label.toLowerCase()}, each with the number of hosting providers that hold it and a page listing them alphabetically.`;
+const description = note?.data.description ? extendDescription(note.data.description, [listing]) : listing;
 
 const origin = Astro.site?.origin ?? '';
 ---
