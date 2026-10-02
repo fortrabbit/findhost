@@ -42,26 +42,27 @@ apiAvailable: public
 cliTool: official
 status: active
 addedAt: 2026-09-24
+checkedAt: 2026-10-02
 sources:
-  - { field: category, url: 'https://www.cerebrium.ai/', checkedAt: 2026-09-24 }
+  - { field: category, url: 'https://www.cerebrium.ai/', checkedAt: 2026-10-02 }
   - { field: founded, url: 'https://www.cerebrium.ai/about', checkedAt: 2026-09-24 }
-  - { field: hqCountry, url: 'https://www.cerebrium.ai/about', checkedAt: 2026-09-24 }
-  - { field: ownership, url: 'https://www.cerebrium.ai/about', checkedAt: 2026-09-24 }
-  - { field: whoManagesOs, url: 'https://cerebrium.ai/docs/container-images/defining-container-images', checkedAt: 2026-09-24 }
-  - { field: useCases, url: 'https://www.cerebrium.ai/', checkedAt: 2026-09-24 }
-  - { field: runtimes, url: 'https://cerebrium.ai/docs/container-images/custom-dockerfiles', checkedAt: 2026-09-24 }
-  - { field: deployMethods, url: 'https://cerebrium.ai/docs/container-images/custom-dockerfiles', checkedAt: 2026-09-24 }
-  - { field: deployMethods, url: 'https://cerebrium.ai/docs/api-reference/apps/create-github-app', checkedAt: 2026-09-24 }
+  - { field: hqCountry, url: 'https://www.cerebrium.ai/about', checkedAt: 2026-10-02 }
+  - { field: ownership, url: 'https://www.cerebrium.ai/about', checkedAt: 2026-10-02 }
+  - { field: whoManagesOs, url: 'https://cerebrium.ai/docs/container-images/defining-container-images', checkedAt: 2026-10-02 }
+  - { field: useCases, url: 'https://www.cerebrium.ai/', checkedAt: 2026-10-02 }
+  - { field: runtimes, url: 'https://cerebrium.ai/docs/container-images/custom-dockerfiles', checkedAt: 2026-10-02 }
+  - { field: deployMethods, url: 'https://cerebrium.ai/docs/container-images/custom-dockerfiles', checkedAt: 2026-10-02 }
+  - { field: deployMethods, url: 'https://cerebrium.ai/docs/api-reference/apps/create-github-app', checkedAt: 2026-10-02 }
   - { field: gpuCapacity, url: 'https://cerebrium.ai/docs/calculating-cost', checkedAt: 2026-09-24 }
-  - { field: pricingModel, url: 'https://www.cerebrium.ai/pricing', checkedAt: 2026-09-24 }
-  - { field: priceFrom, url: 'https://www.cerebrium.ai/pricing', checkedAt: 2026-09-24 }
-  - { field: priceTo, url: 'https://www.cerebrium.ai/pricing', checkedAt: 2026-09-24 }
-  - { field: entryPrice, url: 'https://www.cerebrium.ai/pricing', checkedAt: 2026-09-24 }
-  - { field: currencies, url: 'https://www.cerebrium.ai/pricing', checkedAt: 2026-09-24 }
-  - { field: billingPeriods, url: 'https://www.cerebrium.ai/pricing', checkedAt: 2026-09-24 }
-  - { field: regions, url: 'https://cerebrium.ai/docs/deployments/multi-region-deployment', checkedAt: 2026-09-24 }
-  - { field: apiAvailable, url: 'https://cerebrium.ai/docs/api-reference/apps/list-apps', checkedAt: 2026-09-24 }
-  - { field: cliTool, url: 'https://cerebrium.ai/docs/getting-started/introduction', checkedAt: 2026-09-24 }
+  - { field: pricingModel, url: 'https://www.cerebrium.ai/pricing', checkedAt: 2026-10-02 }
+  - { field: priceFrom, url: 'https://www.cerebrium.ai/pricing', checkedAt: 2026-10-02 }
+  - { field: priceTo, url: 'https://www.cerebrium.ai/pricing', checkedAt: 2026-10-02 }
+  - { field: entryPrice, url: 'https://www.cerebrium.ai/pricing', checkedAt: 2026-10-02 }
+  - { field: currencies, url: 'https://www.cerebrium.ai/pricing', checkedAt: 2026-10-02 }
+  - { field: billingPeriods, url: 'https://www.cerebrium.ai/pricing', checkedAt: 2026-10-02 }
+  - { field: regions, url: 'https://cerebrium.ai/docs/deployments/multi-region-deployment', checkedAt: 2026-10-02 }
+  - { field: apiAvailable, url: 'https://cerebrium.ai/docs/api-reference/apps/list-apps', checkedAt: 2026-10-02 }
+  - { field: cliTool, url: 'https://cerebrium.ai/docs/getting-started/introduction', checkedAt: 2026-10-02 }
 figure:
   emoji: 🎙️
   color: rgb(46, 16, 101)
