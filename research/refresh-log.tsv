@@ -50,3 +50,4 @@
 2026-10-01	hyperstack	confirmed	Home, pricing, status, terms, docs, ubuntu-ssh, ai-studio, getting-started, dedicated-inference, billing-policies, regions, mcp and terraform pages read (200); api-reference page 404, apiAvailable source stale/unreadable; all other fields confirmed unchanged; record checkedAt withheld (not every source read)
 2026-10-02	crusoe	confirmed	stale sources: hqCountry homepage, entryPrice VM overview page
 2026-10-02	cerebrium	confirmed	stale sources: founded (no year stated), gpuCapacity cost page (no longer mentions serverless)
+2026-10-03	beam	confirmed	Home, pricing, status, terms, intro, custom-images, pricing-and-billing, api, cli and beta9 pages read (200); all fields confirmed unchanged; record checkedAt set
