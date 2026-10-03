@@ -39,25 +39,26 @@ apiAvailable: public
 cliTool: official
 status: active
 addedAt: 2026-09-24
+checkedAt: 2026-10-03
 sources:
-  - { field: category, url: 'https://www.beam.cloud/', checkedAt: 2026-09-24 }
-  - { field: hqCountry, url: 'https://docs.beam.cloud/v2/security/terms-and-conditions', checkedAt: 2026-09-24 }
-  - { field: ownership, url: 'https://www.beam.cloud/', checkedAt: 2026-09-24 }
-  - { field: whoManagesOs, url: 'https://docs.beam.cloud/v2/environment/custom-images', checkedAt: 2026-09-24 }
-  - { field: useCases, url: 'https://www.beam.cloud/', checkedAt: 2026-09-24 }
-  - { field: runtimes, url: 'https://docs.beam.cloud/v2/getting-started/introduction', checkedAt: 2026-09-24 }
-  - { field: deployMethods, url: 'https://docs.beam.cloud/v2/getting-started/introduction', checkedAt: 2026-09-24 }
-  - { field: gpuCapacity, url: 'https://www.beam.cloud/pricing', checkedAt: 2026-09-24 }
-  - { field: gpuCapacity, url: 'https://docs.beam.cloud/v2/resources/pricing-and-billing', checkedAt: 2026-09-24 }
-  - { field: pricingModel, url: 'https://www.beam.cloud/pricing', checkedAt: 2026-09-24 }
-  - { field: priceFrom, url: 'https://www.beam.cloud/pricing', checkedAt: 2026-09-24 }
-  - { field: priceTo, url: 'https://www.beam.cloud/pricing', checkedAt: 2026-09-24 }
-  - { field: entryPrice, url: 'https://www.beam.cloud/pricing', checkedAt: 2026-09-24 }
-  - { field: currencies, url: 'https://docs.beam.cloud/v2/security/terms-and-conditions', checkedAt: 2026-09-24 }
-  - { field: billingPeriods, url: 'https://docs.beam.cloud/v2/security/terms-and-conditions', checkedAt: 2026-09-24 }
-  - { field: apiAvailable, url: 'https://docs.beam.cloud/v2/reference/api', checkedAt: 2026-09-24 }
-  - { field: cliTool, url: 'https://docs.beam.cloud/v2/reference/cli', checkedAt: 2026-09-24 }
-  - { field: 'open-source engine', url: 'https://github.com/beam-cloud/beta9', checkedAt: 2026-09-24 }
+  - { field: category, url: 'https://www.beam.cloud/', checkedAt: 2026-10-03 }
+  - { field: hqCountry, url: 'https://docs.beam.cloud/v2/security/terms-and-conditions', checkedAt: 2026-10-03 }
+  - { field: ownership, url: 'https://www.beam.cloud/', checkedAt: 2026-10-03 }
+  - { field: whoManagesOs, url: 'https://docs.beam.cloud/v2/environment/custom-images', checkedAt: 2026-10-03 }
+  - { field: useCases, url: 'https://www.beam.cloud/', checkedAt: 2026-10-03 }
+  - { field: runtimes, url: 'https://docs.beam.cloud/v2/getting-started/introduction', checkedAt: 2026-10-03 }
+  - { field: deployMethods, url: 'https://docs.beam.cloud/v2/getting-started/introduction', checkedAt: 2026-10-03 }
+  - { field: gpuCapacity, url: 'https://www.beam.cloud/pricing', checkedAt: 2026-10-03 }
+  - { field: gpuCapacity, url: 'https://docs.beam.cloud/v2/resources/pricing-and-billing', checkedAt: 2026-10-03 }
+  - { field: pricingModel, url: 'https://www.beam.cloud/pricing', checkedAt: 2026-10-03 }
+  - { field: priceFrom, url: 'https://www.beam.cloud/pricing', checkedAt: 2026-10-03 }
+  - { field: priceTo, url: 'https://www.beam.cloud/pricing', checkedAt: 2026-10-03 }
+  - { field: entryPrice, url: 'https://www.beam.cloud/pricing', checkedAt: 2026-10-03 }
+  - { field: currencies, url: 'https://docs.beam.cloud/v2/security/terms-and-conditions', checkedAt: 2026-10-03 }
+  - { field: billingPeriods, url: 'https://docs.beam.cloud/v2/security/terms-and-conditions', checkedAt: 2026-10-03 }
+  - { field: apiAvailable, url: 'https://docs.beam.cloud/v2/reference/api', checkedAt: 2026-10-03 }
+  - { field: cliTool, url: 'https://docs.beam.cloud/v2/reference/cli', checkedAt: 2026-10-03 }
+  - { field: 'open-source engine', url: 'https://github.com/beam-cloud/beta9', checkedAt: 2026-10-03 }
 figure:
   emoji: 🔦
   color: rgb(30, 41, 59)
