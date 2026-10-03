@@ -42,29 +42,30 @@ cliTool: official
 mcpServer: official
 status: active
 addedAt: 2026-09-24
+checkedAt: 2026-10-03
 sources:
-  - { field: category, url: 'https://docs.baseten.co/overview', checkedAt: 2026-09-24 }
-  - { field: hqCountry, url: 'https://www.baseten.co/terms-and-conditions/', checkedAt: 2026-09-24 }
-  - { field: whoManagesOs, url: 'https://docs.baseten.co/development/model/custom-server', checkedAt: 2026-09-24 }
-  - { field: useCases, url: 'https://docs.baseten.co/overview', checkedAt: 2026-09-24 }
-  - { field: runtimes, url: 'https://docs.baseten.co/development/model/model-class', checkedAt: 2026-09-24 }
-  - { field: runtimes, url: 'https://docs.baseten.co/development/model/custom-server', checkedAt: 2026-09-24 }
-  - { field: deployMethods, url: 'https://docs.baseten.co/development/model/custom-server', checkedAt: 2026-09-24 }
-  - { field: gpuCapacity, url: 'https://docs.baseten.co/inference/model-apis/overview', checkedAt: 2026-09-24 }
-  - { field: gpuCapacity, url: 'https://docs.baseten.co/development/model/build-your-first-model', checkedAt: 2026-09-24 }
-  - { field: gpuCapacity, url: 'https://docs.baseten.co/deployment/manage/scaling', checkedAt: 2026-09-24 }
-  - { field: pricingModel, url: 'https://www.baseten.co/pricing/', checkedAt: 2026-09-24 }
-  - { field: priceFrom, url: 'https://www.baseten.co/pricing/', checkedAt: 2026-09-24 }
-  - { field: priceTo, url: 'https://www.baseten.co/pricing/', checkedAt: 2026-09-24 }
-  - { field: entryPrice, url: 'https://www.baseten.co/pricing/', checkedAt: 2026-09-24 }
-  - { field: currencies, url: 'https://www.baseten.co/pricing/', checkedAt: 2026-09-24 }
-  - { field: billingPeriods, url: 'https://docs.baseten.co/organization/billing', checkedAt: 2026-09-24 }
-  - { field: billingTiming, url: 'https://docs.baseten.co/organization/billing', checkedAt: 2026-09-24 }
-  - { field: freeTier, url: 'https://docs.baseten.co/organization/billing', checkedAt: 2026-09-24 }
-  - { field: regions, url: 'https://docs.baseten.co/deployment/regional-deployments', checkedAt: 2026-09-24 }
-  - { field: apiAvailable, url: 'https://docs.baseten.co/deployment/manage/overview', checkedAt: 2026-09-24 }
-  - { field: cliTool, url: 'https://docs.baseten.co/deployment/manage/overview', checkedAt: 2026-09-24 }
-  - { field: mcpServer, url: 'https://docs.baseten.co/agent-setup', checkedAt: 2026-09-24 }
+  - { field: category, url: 'https://docs.baseten.co/overview', checkedAt: 2026-10-03 }
+  - { field: hqCountry, url: 'https://www.baseten.co/terms-and-conditions/', checkedAt: 2026-10-03 }
+  - { field: whoManagesOs, url: 'https://docs.baseten.co/development/model/custom-server', checkedAt: 2026-10-03 }
+  - { field: useCases, url: 'https://docs.baseten.co/overview', checkedAt: 2026-10-03 }
+  - { field: runtimes, url: 'https://docs.baseten.co/development/model/model-class', checkedAt: 2026-10-03 }
+  - { field: runtimes, url: 'https://docs.baseten.co/development/model/custom-server', checkedAt: 2026-10-03 }
+  - { field: deployMethods, url: 'https://docs.baseten.co/development/model/custom-server', checkedAt: 2026-10-03 }
+  - { field: gpuCapacity, url: 'https://docs.baseten.co/inference/model-apis/overview', checkedAt: 2026-10-03 }
+  - { field: gpuCapacity, url: 'https://docs.baseten.co/development/model/build-your-first-model', checkedAt: 2026-10-03 }
+  - { field: gpuCapacity, url: 'https://docs.baseten.co/deployment/manage/scaling', checkedAt: 2026-10-03 }
+  - { field: pricingModel, url: 'https://www.baseten.co/pricing/', checkedAt: 2026-10-03 }
+  - { field: priceFrom, url: 'https://www.baseten.co/pricing/', checkedAt: 2026-10-03 }
+  - { field: priceTo, url: 'https://www.baseten.co/pricing/', checkedAt: 2026-10-03 }
+  - { field: entryPrice, url: 'https://www.baseten.co/pricing/', checkedAt: 2026-10-03 }
+  - { field: currencies, url: 'https://www.baseten.co/pricing/', checkedAt: 2026-10-03 }
+  - { field: billingPeriods, url: 'https://docs.baseten.co/organization/billing', checkedAt: 2026-10-03 }
+  - { field: billingTiming, url: 'https://docs.baseten.co/organization/billing', checkedAt: 2026-10-03 }
+  - { field: freeTier, url: 'https://docs.baseten.co/organization/billing', checkedAt: 2026-10-03 }
+  - { field: regions, url: 'https://docs.baseten.co/deployment/regional-deployments', checkedAt: 2026-10-03 }
+  - { field: apiAvailable, url: 'https://docs.baseten.co/deployment/manage/overview', checkedAt: 2026-10-03 }
+  - { field: cliTool, url: 'https://docs.baseten.co/deployment/manage/overview', checkedAt: 2026-10-03 }
+  - { field: mcpServer, url: 'https://docs.baseten.co/agent-setup', checkedAt: 2026-10-03 }
 figure:
   emoji: 🧮
   color: rgb(15, 76, 92)
