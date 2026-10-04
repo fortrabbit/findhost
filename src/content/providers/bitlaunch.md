@@ -14,6 +14,7 @@ runsOn:
   - linode
 status: draft
 addedAt: 2026-09-17
+checkedAt: 2026-10-04
 figure:
   emoji: 🚀
   color: rgb(50, 70, 120)
@@ -21,8 +22,8 @@ figure:
   text: Servers by the hour, no name asked.
 ai: authored
 sources:
-  - { field: infraContract, url: 'https://bitlaunch.io/', checkedAt: 2026-09-17 }
-  - { field: runsOn, url: 'https://bitlaunch.io/', checkedAt: 2026-09-17 }
+  - { field: infraContract, url: 'https://bitlaunch.io/', checkedAt: 2026-10-04 }
+  - { field: runsOn, url: 'https://bitlaunch.io/', checkedAt: 2026-10-04 }
 ---
 
 BitLaunch sells virtual servers under its own name and resold from DigitalOcean, Vultr and Linode, per its [home page](https://bitlaunch.io/). Its [anonymous VPS page](https://bitlaunch.io/anonymous-vps) says it does not require a full name or address, and a [developer site](https://developers.bitlaunch.io/) documents an API.
