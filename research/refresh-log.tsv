@@ -52,3 +52,4 @@
 2026-10-02	cerebrium	confirmed	stale sources: founded (no year stated), gpuCapacity cost page (no longer mentions serverless)
 2026-10-03	beam	confirmed	Home, pricing, status, terms, intro, custom-images, pricing-and-billing, api, cli and beta9 pages read (200); all fields confirmed unchanged; record checkedAt set
 2026-10-03	baseten	confirmed	Home, pricing, status, terms, overview, custom-server, model-class, model-apis, build-your-first-model, scaling, billing, regional-deployments, manage overview and agent-setup pages read (200); all fields confirmed unchanged; EU listed alongside US as a pinnable region but vocabulary has no country-level value for it, left as US; record checkedAt set
+2026-10-04	bitlaunch	confirmed	Home page read (200); infraContract and runsOn sources confirmed unchanged (DigitalOcean, Vultr, Linode all still named); pricing page still 404, stub status unchanged; record checkedAt set
