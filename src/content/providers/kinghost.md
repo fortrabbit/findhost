@@ -56,16 +56,16 @@ supportHours: 24-7
 referringSubnets: { now: 1223, before: 1241 }
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-10-05
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: regions, url: 'https://king.host/hospedagem-de-sites', checkedAt: 2026-08-01 }
-  - { field: entryPrice, url: 'https://king.host/hospedagem-de-sites', checkedAt: 2026-08-01 }
-  - { field: currencies, url: 'https://king.host/hospedagem-de-sites', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://king.host/hospedagem-de-sites', checkedAt: 2026-08-02 }
-  - { field: contractMinimum, url: 'https://king.host/hospedagem-de-sites', checkedAt: 2026-08-01 }
-  - { field: pricingModel, url: 'https://king.host/hospedagem-de-sites', checkedAt: 2026-08-01 }
-  - { field: supportHours, url: 'https://king.host/hospedagem-de-sites', checkedAt: 2026-08-01 }
+  - { field: regions, url: 'https://king.host/hospedagem-de-sites', checkedAt: 2026-10-05 }
+  - { field: entryPrice, url: 'https://king.host/hospedagem-de-sites', checkedAt: 2026-10-05 }
+  - { field: currencies, url: 'https://king.host/hospedagem-de-sites', checkedAt: 2026-10-05 }
+  - { field: billingPeriods, url: 'https://king.host/hospedagem-de-sites', checkedAt: 2026-10-05 }
+  - { field: contractMinimum, url: 'https://king.host/hospedagem-de-sites', checkedAt: 2026-10-05 }
+  - { field: pricingModel, url: 'https://king.host/hospedagem-de-sites', checkedAt: 2026-10-05 }
+  - { field: supportHours, url: 'https://king.host/hospedagem-de-sites', checkedAt: 2026-10-05 }
   - { field: supportChannels, url: 'https://king.host/hospedagem-de-sites', checkedAt: 2026-08-01 }
 figure:
   emoji: 👑
