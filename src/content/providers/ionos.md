@@ -68,22 +68,22 @@ referringSubnets: { now: 20252, before: 20377 }
 wikidata: Q882107
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-10-05
 sources:
-  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q882107', checkedAt: 2026-09-09 }
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q882107', checkedAt: 2026-10-05 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: supportHours, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-08-01 }
-  - { field: supportChannels, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://www.ionos.de/terms-gtc/terms', checkedAt: 2026-08-02 }
-  - { field: billingTiming, url: 'https://www.ionos.de/terms-gtc/terms', checkedAt: 2026-08-02 }
-  - { field: exitWithin, url: 'https://www.ionos.de/terms-gtc/terms', checkedAt: 2026-08-02 }
-  - { field: renewalMultiple, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-07-31 }
-  - { field: contractMinimum, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-07-31 }
-  - { field: pricingModel, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-07-31 }
-  - { field: sla, url: 'https://cloud.ionos.com/terms-gtc/terms-enterprise-cloud/enterprise-agreement/', checkedAt: 2026-08-30 }
+  - { field: supportHours, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-10-05 }
+  - { field: supportChannels, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-10-05 }
+  - { field: priceFrom, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-10-05 }
+  - { field: priceTo, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-10-05 }
+  - { field: currencies, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-10-05 }
+  - { field: billingPeriods, url: 'https://www.ionos.de/terms-gtc/terms', checkedAt: 2026-10-05 }
+  - { field: billingTiming, url: 'https://www.ionos.de/terms-gtc/terms', checkedAt: 2026-10-05 }
+  - { field: exitWithin, url: 'https://www.ionos.de/terms-gtc/terms', checkedAt: 2026-10-05 }
+  - { field: renewalMultiple, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-10-05 }
+  - { field: contractMinimum, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-10-05 }
+  - { field: pricingModel, url: 'https://www.ionos.de/hosting/webhosting', checkedAt: 2026-10-05 }
+  - { field: sla, url: 'https://cloud.ionos.com/terms-gtc/terms-enterprise-cloud/enterprise-agreement/', checkedAt: 2026-10-05 }
 figure:
   emoji: 🏢
   color: rgb(43, 111, 182)
