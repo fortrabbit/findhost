@@ -80,7 +80,7 @@ status: active
 staging: included
 collaboration: clients
 addedAt: 2026-07-31
-checkedAt: 2026-08-12
+checkedAt: 2026-10-06
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1383', checkedAt: 2026-08-10 }
@@ -90,7 +90,7 @@ sources:
   - { field: currencies, url: 'https://www.mittwald.de/webhosting', checkedAt: 2026-08-02 }
   - { field: billingPeriods, url: 'https://www.mittwald.de/agb', checkedAt: 2026-08-02 }
   - { field: billingTiming, url: 'https://www.mittwald.de/agb', checkedAt: 2026-08-02 }
-  - { field: exitWithin, url: 'https://www.mittwald.de/agb', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://www.mittwald.de/agb', checkedAt: 2026-10-06 }
   - { field: freeTier, url: 'https://www.mittwald.de/hosting', checkedAt: 2026-07-31 }
   - { field: regions, url: 'https://www.mittwald.de/webhosting', checkedAt: 2026-08-01 }
   - { field: pricingModel, url: 'https://www.mittwald.de/hosting', checkedAt: 2026-07-31 }
