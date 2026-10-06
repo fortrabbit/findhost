@@ -100,6 +100,16 @@ Five procedures, because each one has a step that used to be forgotten silently.
 
 **The review moved to the published page.** Nobody reads the pull requests, so saying they are read would be a claim this register cannot make. `node scripts/landed.ts` prints what changed on the register and the address of each page, newest last; a session working here opens with that list so the pages get read after they shipped rather than not at all. A correction found that way is an ordinary edit, and `/about/` says this is how it works.
 
+## Contributions from providers
+
+A pull request from someone who works at the provider may source a field the provider's own pages do not state, on three conditions:
+
+- **The affiliation is disclosed** in the pull request.
+- **A maintainer has checked the person**, not taken the disclosure on trust: the GitHub profile, the provider's team or imprint page, or a direct contact ties them to the company. A disclosure is a claim; the check is what makes it a source.
+- **The `sources` entry names the pull request** — `{ field: testDomain, url: 'https://github.com/fortrabbit/findhost/pull/67', checkedAt: … }` — so a reader sees the provider said it, not that the register read it.
+
+Every other field keeps its citation to the provider's pages, and where a page and a pull request disagree, the page wins. Prose is held to the record prose rules above however it arrives: a provider does not get to write a verdict on itself.
+
 ## Share cards
 
 Every record and every facet page builds its own social preview image, as an Astro endpoint under `src/pages/og/`. `src/lib/og.ts` composes the card and rasterises it; the endpoints supply the words.
