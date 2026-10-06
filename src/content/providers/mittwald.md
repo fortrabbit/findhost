@@ -1,6 +1,6 @@
 ---
 id: mittwald
-name: Mittwald
+name: mittwald
 urls:
   home: https://www.mittwald.de
   pricing: https://www.mittwald.de/webhosting
@@ -103,11 +103,11 @@ ai: authored
 greenWebId: 1383
 ---
 
-Mittwald is a family-owned hosting company in Espelkamp, North Rhine-Westphalia, trading since 2003 and running its own data center at its headquarters. Everything is hosted in Germany; there is no region to choose.
+mittwald is a family-owned hosting company in Espelkamp, North Rhine-Westphalia, trading since 2003 and running its own data center at its headquarters. Everything is hosted in Germany; there is no region to choose.
 
 The product sits closer to a platform than to commodity shared hosting. Projects run in containers and are administered through mStudio, a control plane with a documented REST API, API tokens meant for CI, published client libraries and an official `mw` command-line tool. SSH is available, and the classic tariffs sit alongside container hosting for Node and Docker workloads. Current PHP releases are documented; older ones are reachable only through a paid extended-support add-on.
 
-The audience it addresses is agencies and freelancers handling client sites — TYPO3, WordPress, Shopware and Magento are named explicitly, and TYPO3's own installation documentation lists Mittwald as a technology partner with preinstalled packages.
+The audience it addresses is agencies and freelancers handling client sites — TYPO3, WordPress, Shopware and Magento are named explicitly, and TYPO3's own installation documentation lists mittwald as a technology partner with preinstalled packages.
 
 ## Worth knowing
 
