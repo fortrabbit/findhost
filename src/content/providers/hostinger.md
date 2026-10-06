@@ -68,42 +68,42 @@ mcpServer: official
 referringSubnets: { now: 19756, before: 19829 }
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-10-06
 sources:
-  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q55613975', checkedAt: 2026-09-09 }
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q55613975', checkedAt: 2026-10-06 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1250', checkedAt: 2026-08-10 }
-  - { field: founded, url: 'https://www.hostinger.com/about', checkedAt: 2026-09-09 }
-  - { field: hqCountry, url: 'https://www.hostinger.com/about', checkedAt: 2026-09-09 }
-  - { field: ownership, url: 'https://www.hostinger.com/about', checkedAt: 2026-09-09 }
-  - { field: headcount, url: 'https://www.hostinger.com/about', checkedAt: 2026-09-09 }
-  - { field: regions, url: 'https://www.hostinger.com/about', checkedAt: 2026-09-09 }
-  - { field: regions, url: 'https://www.hostinger.com/support/1583267-where-are-hostinger-servers-located/', checkedAt: 2026-09-09 }
-  - { field: entryPrice, url: 'https://www.hostinger.com/web-hosting', checkedAt: 2026-09-09 }
-  - { field: priceFrom, url: 'https://www.hostinger.com/web-hosting', checkedAt: 2026-09-09 }
-  - { field: priceTo, url: 'https://www.hostinger.com/web-hosting', checkedAt: 2026-09-09 }
-  - { field: currencies, url: 'https://www.hostinger.com/legal/universal-terms-of-service-agreement', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://www.hostinger.com/web-hosting', checkedAt: 2026-08-02 }
-  - { field: billingTiming, url: 'https://www.hostinger.com/legal/universal-terms-of-service-agreement', checkedAt: 2026-08-02 }
-  - { field: exitWithin, url: 'https://www.hostinger.com/legal/universal-terms-of-service-agreement', checkedAt: 2026-08-02 }
-  - { field: renewalMultiple, url: 'https://www.hostinger.com/web-hosting', checkedAt: 2026-09-09 }
-  - { field: contractMinimum, url: 'https://www.hostinger.com/web-hosting', checkedAt: 2026-09-09 }
-  - { field: pricingModel, url: 'https://www.hostinger.com/web-hosting', checkedAt: 2026-09-09 }
-  - { field: software, url: 'https://www.hostinger.com/web-hosting', checkedAt: 2026-09-09 }
-  - { field: runtimes, url: 'https://www.hostinger.com/web-hosting', checkedAt: 2026-09-09 }
-  - { field: managedDatabases, url: 'https://www.hostinger.com/web-hosting', checkedAt: 2026-09-09 }
-  - { field: sshAccess, url: 'https://www.hostinger.com/web-hosting', checkedAt: 2026-09-09 }
-  - { field: deployMethods, url: 'https://www.hostinger.com/web-hosting', checkedAt: 2026-09-09 }
-  - { field: domainRegistration, url: 'https://www.hostinger.com/web-hosting', checkedAt: 2026-09-09 }
-  - { field: emailHosting, url: 'https://www.hostinger.com/web-hosting', checkedAt: 2026-09-09 }
-  - { field: cdnIncluded, url: 'https://www.hostinger.com/web-hosting', checkedAt: 2026-09-09 }
-  - { field: supportChannels, url: 'https://www.hostinger.com/contact', checkedAt: 2026-09-09 }
-  - { field: supportHours, url: 'https://www.hostinger.com/contact', checkedAt: 2026-09-09 }
-  - { field: apiAvailable, url: 'https://developers.hostinger.com/', checkedAt: 2026-09-09 }
-  - { field: cliTool, url: 'https://developers.hostinger.com/', checkedAt: 2026-09-09 }
-  - { field: mcpServer, url: 'https://developers.hostinger.com/', checkedAt: 2026-09-09 }
-  - { field: history, url: 'https://en.wikipedia.org/wiki/Hostinger', checkedAt: 2026-09-09 }
-  - { field: '2019 incident', url: 'https://www.hostinger.com/blog/security-incident-what-you-need-to-know/', checkedAt: 2026-09-09 }
+  - { field: founded, url: 'https://www.hostinger.com/about', checkedAt: 2026-10-06 }
+  - { field: hqCountry, url: 'https://www.hostinger.com/about', checkedAt: 2026-10-06 }
+  - { field: ownership, url: 'https://www.hostinger.com/about', checkedAt: 2026-10-06 }
+  - { field: headcount, url: 'https://www.hostinger.com/about', checkedAt: 2026-10-06 }
+  - { field: regions, url: 'https://www.hostinger.com/about', checkedAt: 2026-10-06 }
+  - { field: regions, url: 'https://www.hostinger.com/support/1583267-where-are-hostinger-servers-located/', checkedAt: 2026-10-06 }
+  - { field: entryPrice, url: 'https://www.hostinger.com/web-hosting', checkedAt: 2026-10-06 }
+  - { field: priceFrom, url: 'https://www.hostinger.com/web-hosting', checkedAt: 2026-10-06 }
+  - { field: priceTo, url: 'https://www.hostinger.com/web-hosting', checkedAt: 2026-10-06 }
+  - { field: currencies, url: 'https://www.hostinger.com/legal/universal-terms-of-service-agreement', checkedAt: 2026-10-06 }
+  - { field: billingPeriods, url: 'https://www.hostinger.com/web-hosting', checkedAt: 2026-10-06 }
+  - { field: billingTiming, url: 'https://www.hostinger.com/legal/universal-terms-of-service-agreement', checkedAt: 2026-10-06 }
+  - { field: exitWithin, url: 'https://www.hostinger.com/legal/universal-terms-of-service-agreement', checkedAt: 2026-10-06 }
+  - { field: renewalMultiple, url: 'https://www.hostinger.com/web-hosting', checkedAt: 2026-10-06 }
+  - { field: contractMinimum, url: 'https://www.hostinger.com/web-hosting', checkedAt: 2026-10-06 }
+  - { field: pricingModel, url: 'https://www.hostinger.com/web-hosting', checkedAt: 2026-10-06 }
+  - { field: software, url: 'https://www.hostinger.com/web-hosting', checkedAt: 2026-10-06 }
+  - { field: runtimes, url: 'https://www.hostinger.com/web-hosting', checkedAt: 2026-10-06 }
+  - { field: managedDatabases, url: 'https://www.hostinger.com/web-hosting', checkedAt: 2026-10-06 }
+  - { field: sshAccess, url: 'https://www.hostinger.com/web-hosting', checkedAt: 2026-10-06 }
+  - { field: deployMethods, url: 'https://www.hostinger.com/web-hosting', checkedAt: 2026-10-06 }
+  - { field: domainRegistration, url: 'https://www.hostinger.com/web-hosting', checkedAt: 2026-10-06 }
+  - { field: emailHosting, url: 'https://www.hostinger.com/web-hosting', checkedAt: 2026-10-06 }
+  - { field: cdnIncluded, url: 'https://www.hostinger.com/web-hosting', checkedAt: 2026-10-06 }
+  - { field: supportChannels, url: 'https://www.hostinger.com/contact', checkedAt: 2026-10-06 }
+  - { field: supportHours, url: 'https://www.hostinger.com/contact', checkedAt: 2026-10-06 }
+  - { field: apiAvailable, url: 'https://developers.hostinger.com/', checkedAt: 2026-10-06 }
+  - { field: cliTool, url: 'https://developers.hostinger.com/', checkedAt: 2026-10-06 }
+  - { field: mcpServer, url: 'https://developers.hostinger.com/', checkedAt: 2026-10-06 }
+  - { field: history, url: 'https://en.wikipedia.org/wiki/Hostinger', checkedAt: 2026-10-06 }
+  - { field: '2019 incident', url: 'https://www.hostinger.com/blog/security-incident-what-you-need-to-know/', checkedAt: 2026-10-06 }
 figure:
   emoji: 🪙
   color: rgb(151, 45, 190)
