@@ -9,6 +9,9 @@ urls:
   docs: https://developer.mittwald.de
 category:
   - paas
+  - caas
+  - domains-dns
+  - mail
 description: German managed hosting platform with per-project containers, a control plane called mStudio, an official CLI and a public REST API.
 founded: 2003
 hqCountry: DE
@@ -16,9 +19,11 @@ ownership: independent
 whoManagesOs: managed
 useCases:
   - cms
+  - headless-cms
   - e-commerce
   - api
   - campaign-site
+  - ai-app
 audience:
   - solo
   - agency
@@ -29,6 +34,11 @@ software:
   - joomla
   - shopware
   - magento
+  - drupal
+  - n8n
+  - nextcloud
+  - express
+  - nextjs
 runtimes:
   - php
   - node
@@ -38,18 +48,19 @@ deployMethods:
   - file-transfer
   - git
   - control-panel
+  - docker-image
 sshAccess: jailed
 pricingModel: fixed-tier
 entryPrice: { amount: 13, currency: EUR, period: month }
 priceFrom: sm
-priceTo: md
+priceTo: 2xl
 currencies:
   - EUR
 billingPeriods:
   - monthly
   - yearly
 billingTiming: advance
-exitWithin: a-quarter
+exitWithin: a-month
 freeTier: trial
 contractMinimum: monthly
 regions:
@@ -63,6 +74,7 @@ supportChannels:
 supportHours: 24-7
 apiAvailable: public
 cliTool: official
+mcpServer: official
 referringSubnets: { now: 1302, before: 1294 }
 status: active
 staging: included
@@ -74,7 +86,7 @@ sources:
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1383', checkedAt: 2026-08-10 }
   - { field: software, url: 'https://www.mittwald.de/webhosting', checkedAt: 2026-08-09 }
   - { field: priceFrom, url: 'https://www.mittwald.de/webhosting', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://www.mittwald.de/webhosting', checkedAt: 2026-08-02 }
+  - { field: priceTo, url: 'https://www.mittwald.de/dedicated-server', checkedAt: 2026-10-06 }
   - { field: currencies, url: 'https://www.mittwald.de/webhosting', checkedAt: 2026-08-02 }
   - { field: billingPeriods, url: 'https://www.mittwald.de/agb', checkedAt: 2026-08-02 }
   - { field: billingTiming, url: 'https://www.mittwald.de/agb', checkedAt: 2026-08-02 }
@@ -90,6 +102,13 @@ sources:
   - { field: certifications, url: 'https://www.mittwald.de/webhosting', checkedAt: 2026-08-01 }
   - { field: staging, url: 'https://www.mittwald.de/webhosting', checkedAt: 2026-08-12 }
   - { field: collaboration, url: 'https://www.mittwald.de/webhosting', checkedAt: 2026-08-12 }
+  - { field: iacSupport, url: 'https://developer.mittwald.de/docs/v2/guides/deployment/terraform/', checkedAt: 2026-10-06 }
+  - { field: mcpServer, url: 'https://developer.mittwald.de/mcp/', checkedAt: 2026-10-06 }
+  - { field: domainRegistration, url: 'https://www.mittwald.de/produkte/domains', checkedAt: 2026-10-06 }
+  - { field: backupsIncluded, url: 'https://www.mittwald.de/webhosting', checkedAt: 2026-10-06 }
+  - { field: gpuCapacity, url: 'https://www.mittwald.de/mstudio/ai-hosting', checkedAt: 2026-10-06 }
+  - { field: deployMethods, url: 'https://developer.mittwald.de/docs/v2/guides/deployment/', checkedAt: 2026-10-06 }
+  - { field: infraContract, url: 'https://www.mittwald.de/darum-mittwald/technologie', checkedAt: 2026-10-06 }
 social:
   github: https://github.com/mittwald
   facebook: https://www.facebook.com/mittwald
@@ -99,8 +118,23 @@ figure:
   color: rgb(45, 86, 190)
   textColor: rgb(234, 237, 246)
   text: Agency plumbing, documented.
-ai: authored
+ai: co-authored
 greenWebId: 1383
+iacSupport:
+  - terraform
+testDomain: included
+domainRegistration: paid-addon
+dnsHosting: included
+emailHosting: included
+backupsIncluded: included
+gpuCapacity:
+  - inference
+  - model-api
+managedDatabases:
+  - mysql
+  - redis
+infraContract:
+  - owns-metal
 ---
 
 mittwald is a family-owned hosting company in Espelkamp, North Rhine-Westphalia, trading since 2003 and running its own data center at its headquarters. Everything is hosted in Germany; there is no region to choose.
