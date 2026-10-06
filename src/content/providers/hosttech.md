@@ -48,20 +48,20 @@ supportHours: 24-7
 referringSubnets: { now: 2042, before: 2039 }
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-10-06
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1506', checkedAt: 2026-08-10 }
-  - { field: regions, url: 'https://www.hosttech.ch/webhosting', checkedAt: 2026-08-01 }
-  - { field: entryPrice, url: 'https://www.hosttech.ch/webhosting', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://www.hosttech.ch/webhosting', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://www.hosttech.ch/webhosting', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://www.hosttech.ch/webhosting', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://www.hosttech.ch/webhosting', checkedAt: 2026-08-02 }
-  - { field: pricingModel, url: 'https://www.hosttech.ch/webhosting', checkedAt: 2026-08-01 }
-  - { field: supportHours, url: 'https://www.hosttech.ch/support', checkedAt: 2026-08-02 }
-  - { field: supportChannels, url: 'https://www.hosttech.ch/webhosting', checkedAt: 2026-08-01 }
-  - { field: ownership, url: 'https://www.hosttech.at/impressum/', checkedAt: 2026-08-21 }
+  - { field: regions, url: 'https://www.hosttech.ch/webhosting', checkedAt: 2026-10-06 }
+  - { field: entryPrice, url: 'https://www.hosttech.ch/webhosting', checkedAt: 2026-10-06 }
+  - { field: priceFrom, url: 'https://www.hosttech.ch/webhosting', checkedAt: 2026-10-06 }
+  - { field: priceTo, url: 'https://www.hosttech.ch/webhosting', checkedAt: 2026-10-06 }
+  - { field: currencies, url: 'https://www.hosttech.ch/webhosting', checkedAt: 2026-10-06 }
+  - { field: billingPeriods, url: 'https://www.hosttech.ch/webhosting', checkedAt: 2026-10-06 }
+  - { field: pricingModel, url: 'https://www.hosttech.ch/webhosting', checkedAt: 2026-10-06 }
+  - { field: supportHours, url: 'https://www.hosttech.ch/support', checkedAt: 2026-10-06 }
+  - { field: supportChannels, url: 'https://www.hosttech.ch/webhosting', checkedAt: 2026-10-06 }
+  - { field: ownership, url: 'https://www.hosttech.at/impressum/', checkedAt: 2026-10-06 }
 figure:
   emoji: ⛰️
   color: rgb(77, 157, 117)
