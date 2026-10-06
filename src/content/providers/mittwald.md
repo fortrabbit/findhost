@@ -128,7 +128,6 @@ dnsHosting: included
 emailHosting: included
 backupsIncluded: included
 gpuCapacity:
-  - inference
   - model-api
 managedDatabases:
   - mysql
