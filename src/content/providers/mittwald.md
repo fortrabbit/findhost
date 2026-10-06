@@ -109,6 +109,13 @@ sources:
   - { field: gpuCapacity, url: 'https://www.mittwald.de/mstudio/ai-hosting', checkedAt: 2026-10-06 }
   - { field: deployMethods, url: 'https://developer.mittwald.de/docs/v2/guides/deployment/', checkedAt: 2026-10-06 }
   - { field: infraContract, url: 'https://www.mittwald.de/darum-mittwald/technologie', checkedAt: 2026-10-06 }
+  - { field: category, url: 'https://github.com/fortrabbit/findhost/pull/67', checkedAt: 2026-10-06 }
+  - { field: useCases, url: 'https://github.com/fortrabbit/findhost/pull/67', checkedAt: 2026-10-06 }
+  - { field: software, url: 'https://github.com/fortrabbit/findhost/pull/67', checkedAt: 2026-10-06 }
+  - { field: testDomain, url: 'https://github.com/fortrabbit/findhost/pull/67', checkedAt: 2026-10-06 }
+  - { field: dnsHosting, url: 'https://github.com/fortrabbit/findhost/pull/67', checkedAt: 2026-10-06 }
+  - { field: emailHosting, url: 'https://github.com/fortrabbit/findhost/pull/67', checkedAt: 2026-10-06 }
+  - { field: managedDatabases, url: 'https://github.com/fortrabbit/findhost/pull/67', checkedAt: 2026-10-06 }
 social:
   github: https://github.com/mittwald
   facebook: https://www.facebook.com/mittwald
