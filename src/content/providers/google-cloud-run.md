@@ -62,18 +62,18 @@ iacSupport:
 referringSubnets: null
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-10-07
 sources:
-  - { field: regions, url: 'https://docs.cloud.google.com/run/docs/locations', checkedAt: 2026-08-01 }
-  - { field: pricingModel, url: 'https://cloud.google.com/run/pricing', checkedAt: 2026-07-31 }
-  - { field: freeTier, url: 'https://cloud.google.com/run/pricing', checkedAt: 2026-07-31 }
-  - { field: priceFrom, url: 'https://cloud.google.com/run/pricing', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://docs.cloud.google.com/billing/docs/how-to/billing-cycle', checkedAt: 2026-08-02 }
-  - { field: billingTiming, url: 'https://docs.cloud.google.com/billing/docs/how-to/billing-cycle', checkedAt: 2026-08-02 }
-  - { field: deployMethods, url: 'https://cloud.google.com/run/pricing', checkedAt: 2026-07-31 }
+  - { field: regions, url: 'https://docs.cloud.google.com/run/docs/locations', checkedAt: 2026-10-07 }
+  - { field: pricingModel, url: 'https://cloud.google.com/run/pricing', checkedAt: 2026-10-07 }
+  - { field: freeTier, url: 'https://cloud.google.com/run/pricing', checkedAt: 2026-10-07 }
+  - { field: priceFrom, url: 'https://cloud.google.com/run/pricing', checkedAt: 2026-10-07 }
+  - { field: billingPeriods, url: 'https://docs.cloud.google.com/billing/docs/how-to/billing-cycle', checkedAt: 2026-10-07 }
+  - { field: billingTiming, url: 'https://docs.cloud.google.com/billing/docs/how-to/billing-cycle', checkedAt: 2026-10-07 }
+  - { field: deployMethods, url: 'https://cloud.google.com/run/pricing', checkedAt: 2026-10-07 }
   - { field: ownership, url: 'https://cloud.google.com/terms/services', checkedAt: 2026-08-21 }
-  - { field: gpuCapacity, url: 'https://docs.cloud.google.com/run/docs/configuring/services/gpu', checkedAt: 2026-09-24 }
-  - { field: gpuCapacity, url: 'https://cloud.google.com/run/pricing', checkedAt: 2026-09-24 }
+  - { field: gpuCapacity, url: 'https://docs.cloud.google.com/run/docs/configuring/services/gpu', checkedAt: 2026-10-07 }
+  - { field: gpuCapacity, url: 'https://cloud.google.com/run/pricing', checkedAt: 2026-10-07 }
 figure:
   emoji: 🏃
   color: rgb(77, 109, 157)
