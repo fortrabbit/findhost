@@ -467,6 +467,8 @@ const notes = defineCollection({
     description: z.string().max(200).optional(),
     /** The opening line, set larger than the body. `description` is for search results; this is for the reader. */
     lead: z.string().optional(),
+    /** When the note last changed what it says. Dates its page in the sitemap, and so what IndexNow is told. */
+    updated: z.coerce.date().optional(),
     figure: figure.optional(),
     ai: z.enum(vocabulary('ai')).optional(),
     /*

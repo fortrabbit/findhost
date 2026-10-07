@@ -9,11 +9,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      # The sitemap the server has now, before this push's deploy replaces it:
+      # the IndexNow step below submits the pages whose date the build moved.
+      - if: github.event_name == 'push'
+        run: curl -fsS https://www.findhost.app/sitemap.xml -o "$RUNNER_TEMP/live-sitemap.xml" || true
       - uses: actions/checkout@v4
-        with:
-          # The whole history, so the IndexNow step below can diff a push of
-          # several commits against what main was before it.
-          fetch-depth: 0
       - uses: pnpm/action-setup@v4
         with:
           version: latest
@@ -54,7 +54,7 @@ jobs:
         continue-on-error: true
         env:
           SITE_URL: https://www.findhost.app
-        run: node scripts/indexnow.ts ${{ github.event.before }} ${{ github.sha }}
+        run: node scripts/indexnow.ts "$RUNNER_TEMP/live-sitemap.xml"
 
   # Third-party availability is not something a content pull request should be
   # blocked on, so this reports and never fails the run. It exists because a

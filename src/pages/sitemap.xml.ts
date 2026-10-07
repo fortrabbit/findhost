@@ -1,8 +1,9 @@
 import type { APIRoute } from 'astro';
-import { facetIndex, loadFacets, loadPairPages } from '../lib/facets';
+import { getCollection } from 'astro:content';
+import { facetIndex, facetRoutes, loadFacets, loadPairPages } from '../lib/facets';
 import { pairIndexPath, pairPath } from '../lib/pairs';
 import { loadIndexed } from '../lib/providers';
-import { modifiedAt } from '../lib/modified';
+import { modifiedAt, newest } from '../lib/modified';
 import { recordPath } from '../lib/paths';
 
 /**
@@ -19,14 +20,31 @@ import { recordPath } from '../lib/paths';
  * Skipped: dynamic routes, which are enumerated from content below; 404, which
  * is not a destination; and the endpoints, which are .ts and so never match.
  */
+const route = (file: string) => {
+  const path = file
+    .replace(/^\.\//, '')
+    .replace(/\.(astro|md)$/, '')
+    // Only a whole `index` segment is the directory itself. `error-index` is a page.
+    .replace(/(^|\/)index$/, '$1');
+  return `/${path}${path && !path.endsWith('/') ? '/' : ''}`;
+};
 const staticPages = Object.keys(import.meta.glob('./**/*.{astro,md}'))
-  .map((path) => path.replace(/^\.\//, '').replace(/\.(astro|md)$/, ''))
   // Dynamic routes are enumerated from content below; 404 is not a destination.
-  .filter((path) => !path.includes('[') && path !== '404')
-  // Only a whole `index` segment is the directory itself. `error-index` is a page.
-  .map((path) => path.replace(/(^|\/)index$/, '$1'))
-  .map((path) => `/${path}${path && !path.endsWith('/') ? '/' : ''}`)
+  .filter((file) => !file.includes('[') && file !== './404.astro')
+  .map(route)
   .sort();
+
+/* A written page's own dates, from its frontmatter. */
+type Dates = { frontmatter: { published?: string | Date; updated?: string | Date } };
+const writtenPages = new Map(
+  Object.entries(import.meta.glob<Dates>('./**/*.md', { eager: true })).map(([file, page]) => {
+    const date = page.frontmatter.updated ?? page.frontmatter.published;
+    return [route(file), date ? new Date(date) : undefined];
+  }),
+);
+
+/* The search page draws no record of its own: nothing on it moves when one changes. */
+const undated = new Set(['/search/']);
 export const GET: APIRoute = async ({ site }) => {
   const origin = site?.origin ?? '';
   const providers = await loadIndexed();
@@ -49,24 +67,58 @@ export const GET: APIRoute = async ({ site }) => {
   const paths = [...new Set(routes)];
 
   /*
-   * <lastmod> is what a crawler uses to decide what to fetch again, so it is the
-   * newest date on the record, its own `checkedAt` or any source's — the same
-   * value the record's JSON-LD reports as dateModified. A record without one,
-   * and every other page, carries no date at all: the commit date would say
-   * when the file moved, not when the facts were read.
+   * <lastmod> is what a crawler uses to decide what to fetch again, and what
+   * scripts/indexnow.ts submits by, so every page with content carries one, and
+   * it moves only when what the page says does:
+   *
+   * - a record: the newest date on it, its own `checkedAt` or any source's, the
+   *   same value its JSON-LD reports as dateModified;
+   * - a facet value, a facet, a pair page and the rung above it: the newest of
+   *   the records it lists, and of the notes written for it;
+   * - a written markdown page: its `updated`, else its `published`;
+   * - every other written page lists the register: the newest record in it.
+   *
+   * Never the commit date: that says when a file moved, not when the facts were
+   * read. A page whose records carry no date carries none either.
    */
-  const lastmod = new Map<string, string>();
-  for (const provider of providers) {
-    const modified = modifiedAt(provider.data);
-    if (modified) lastmod.set(recordPath(provider), modified.toISOString().slice(0, 10));
+  const lastmod = new Map<string, Date>();
+  const date = (path: string, ...dates: (Date | undefined)[]) => {
+    const latest = newest([lastmod.get(path), ...dates]);
+    if (latest) lastmod.set(path, latest);
+  };
+
+  for (const provider of providers) date(recordPath(provider), modifiedAt(provider.data));
+
+  const notes = await getCollection('notes');
+  const noteDate = (id: string) => notes.find((note) => note.id === id)?.data.updated;
+  for (const { props } of await facetRoutes()) {
+    const dates = [
+      ...props.matches.map((row) => row.modifiedAt),
+      noteDate(props.facet.id),
+      noteDate(`${props.facet.id}/${props.value.id}`),
+    ];
+    date(`/${props.facet.id}/${props.value.slug}/`, ...dates);
+    date(facetIndex(props.facet.id), ...dates);
+  }
+
+  for (const page of pairs) {
+    const dates = page.matches.map((row) => row.modifiedAt);
+    date(pairPath(page), ...dates);
+    date(pairIndexPath(page.a, page.av, page.b), ...dates);
+  }
+
+  const register = newest(providers.map((provider) => modifiedAt(provider.data)));
+  for (const path of staticPages) {
+    if (undated.has(path)) continue;
+    date(path, writtenPages.has(path) ? writtenPages.get(path) : register);
   }
 
   const body = [
     '<?xml version="1.0" encoding="UTF-8"?>',
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
     ...paths.map((path) => {
-      const date = lastmod.get(path);
-      return `  <url><loc>${origin}${path}</loc>${date ? `<lastmod>${date}</lastmod>` : ''}</url>`;
+      const day = lastmod.get(path)?.toISOString().slice(0, 10);
+      return `  <url><loc>${origin}${path}</loc>${day ? `<lastmod>${day}</lastmod>` : ''}</url>`;
     }),
     '</urlset>',
     '',

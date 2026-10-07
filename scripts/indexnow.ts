@@ -3,8 +3,14 @@
  * `push: main` only; the deploy runs beside it, and a ping that lands before
  * the page does is fine because the fetch comes minutes later.
  *
- *   node scripts/indexnow.ts <before> <after>   pages the commits in between reach
- *   node scripts/indexnow.ts --all              every page in the sitemap, once
+ *   node scripts/indexnow.ts <live-sitemap.xml>   pages whose date differs from the live sitemap's
+ *   node scripts/indexnow.ts --all                every page in the sitemap, once
+ *
+ * The live sitemap is fetched before the build, while the server still has the
+ * previous deploy.
+ *
+ * What a page's date means, and so what gets announced, is decided where the
+ * sitemap is written: src/pages/sitemap.xml.ts.
  *
  * The key is the one file under public/ whose name is its own content, which is
  * how IndexNow verifies it: no secret, so nothing to configure. Bing owns the
@@ -15,10 +21,9 @@
  * page late is a delay; a deploy blocked on a third party's uptime is a policy
  * this project has already declined for outbound links.
  */
-import { execFileSync } from 'node:child_process';
-import { readdirSync, readFileSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { pathsToPing, sitemapPaths } from '../src/lib/indexnow.ts';
+import { changedPaths, sitemapEntries } from '../src/lib/indexnow.ts';
 
 const site = process.env.SITE_URL?.trim();
 if (!site) {
@@ -36,20 +41,18 @@ if (!key) {
   process.exit(1);
 }
 
-const sitemap = sitemapPaths(readFileSync('dist/sitemap.xml', 'utf8'));
+const sitemap = sitemapEntries(readFileSync('dist/sitemap.xml', 'utf8'));
 
-const [before, after] = process.argv.slice(2);
+const [live] = process.argv.slice(2);
 let paths: string[];
-if (before === '--all' || /^0+$/.test(before ?? '')) {
-  /* A first push, or a force push: no earlier commit to diff against, so everything. */
-  paths = sitemap;
-} else if (before && after) {
-  const changed = execFileSync('git', ['diff', '--name-only', before, after], { encoding: 'utf8' })
-    .split('\n')
-    .filter(Boolean);
-  paths = pathsToPing(changed, sitemap);
+if (live === '--all') {
+  paths = sitemap.map((entry) => entry.path);
+} else if (live && existsSync(live) && readFileSync(live, 'utf8').includes('<urlset')) {
+  paths = changedPaths(sitemap, sitemapEntries(readFileSync(live, 'utf8')));
 } else {
-  console.error('Usage: node scripts/indexnow.ts <before> <after> | --all');
+  /* Without the live sitemap there is nothing to compare against, and guessing would be the 845-URL push again. */
+  console.error(`IndexNow: no live sitemap at ${live ?? '(no path given)'}, nothing submitted.`);
+  console.error('Usage: node scripts/indexnow.ts <live-sitemap.xml> | --all');
   process.exit(1);
 }
 

@@ -25,6 +25,9 @@ jobs:
   merge:
     runs-on: ubuntu-latest
     steps:
+      # The sitemap the server has now, before this push's deploy replaces it:
+      # the IndexNow step below submits the pages whose date the build moved.
+      - run: curl -fsS https://www.findhost.app/sitemap.xml -o "$RUNNER_TEMP/live-sitemap.xml" || true
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -48,11 +51,9 @@ jobs:
           git config user.name "FindHost refresh"
           git config user.email "noreply@findhost.app"
           git fetch origin main
-          echo "before=$(git rev-parse origin/main)" >> "$GITHUB_OUTPUT"
           git checkout main
           git merge --no-ff claude/refresh -m "Merge sourced changes from the refresh routine"
           git push origin main
-          echo "after=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
           git push origin --delete claude/refresh
       # The same ping CI sends on a push to main, for the pages this merge
       # changed. The sitemap it reads is the one the build above wrote, which
@@ -61,4 +62,4 @@ jobs:
         continue-on-error: true
         env:
           SITE_URL: https://www.findhost.app
-        run: node scripts/indexnow.ts ${{ steps.merge.outputs.before }} ${{ steps.merge.outputs.after }}
+        run: node scripts/indexnow.ts "$RUNNER_TEMP/live-sitemap.xml"
