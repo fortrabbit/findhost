@@ -1,6 +1,6 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
-import { facetIndex, facetRoutes, loadFacets, loadPairPages } from '../lib/facets';
+import { facetIndex, facetRoutes, loadFacets, loadPairPages, type ProviderRow } from '../lib/facets';
 import { pairIndexPath, pairPath } from '../lib/pairs';
 import { loadIndexed } from '../lib/providers';
 import { modifiedAt, newest } from '../lib/modified';
@@ -72,9 +72,10 @@ export const GET: APIRoute = async ({ site }) => {
    * it moves only when what the page says does:
    *
    * - a record: the newest date on it, its own `checkedAt` or any source's, the
-   *   same value its JSON-LD reports as dateModified;
+   *   same value its JSON-LD reports as dateModified, or `addedAt` when it is
+   *   newer, so a record that has just entered the register is announced;
    * - a facet value, a facet, a pair page and the rung above it: the newest of
-   *   the records it lists, and of the notes written for it;
+   *   the records it lists, and of the notes it renders;
    * - a written markdown page: its `updated`, else its `published`;
    * - every other written page lists the register: the newest record in it.
    *
@@ -87,27 +88,29 @@ export const GET: APIRoute = async ({ site }) => {
     if (latest) lastmod.set(path, latest);
   };
 
-  for (const provider of providers) date(recordPath(provider), modifiedAt(provider.data));
+  const recordDate = (provider: (typeof providers)[number]) =>
+    newest([modifiedAt(provider.data), provider.data.addedAt]);
+  for (const provider of providers) date(recordPath(provider), recordDate(provider));
 
-  const notes = await getCollection('notes');
-  const noteDate = (id: string) => notes.find((note) => note.id === id)?.data.updated;
+  const rowDates = (rows: ProviderRow[]) => rows.map((row) => newest([row.modifiedAt, row.addedAt]));
+  const notes = new Map((await getCollection('notes')).map((note) => [note.id, note.data.updated]));
   for (const { props } of await facetRoutes()) {
     const dates = [
-      ...props.matches.map((row) => row.modifiedAt),
-      noteDate(props.facet.id),
-      noteDate(`${props.facet.id}/${props.value.id}`),
+      ...rowDates(props.matches),
+      notes.get(props.facet.id),
+      notes.get(`${props.facet.id}/${props.value.id}`),
     ];
     date(`/${props.facet.id}/${props.value.slug}/`, ...dates);
     date(facetIndex(props.facet.id), ...dates);
   }
 
   for (const page of pairs) {
-    const dates = page.matches.map((row) => row.modifiedAt);
+    const dates = [...rowDates(page.matches), notes.get(`${page.a.id}/${page.av.id}`)];
     date(pairPath(page), ...dates);
     date(pairIndexPath(page.a, page.av, page.b), ...dates);
   }
 
-  const register = newest(providers.map((provider) => modifiedAt(provider.data)));
+  const register = newest(providers.map(recordDate));
   for (const path of staticPages) {
     if (undated.has(path)) continue;
     date(path, writtenPages.has(path) ? writtenPages.get(path) : register);
