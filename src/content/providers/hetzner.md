@@ -64,31 +64,31 @@ referringSubnets: { now: 18992, before: 18978 }
 wikidata: Q18349346
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-10-07
 sources:
-  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q18349346', checkedAt: 2026-09-09 }
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q18349346', checkedAt: 2026-10-07 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: regions, url: 'https://www.hetzner.com/cloud/', checkedAt: 2026-08-01 }
-  - { field: founded, url: 'https://www.hetzner.com/unternehmen/ueber-uns/', checkedAt: 2026-07-31 }
-  - { field: hqCountry, url: 'https://www.hetzner.com/unternehmen/ueber-uns/', checkedAt: 2026-07-31 }
-  - { field: infraContract, url: 'https://www.hetzner.com/unternehmen/ueber-uns/', checkedAt: 2026-07-31 }
-  - { field: pricingModel, url: 'https://docs.hetzner.com/cloud/billing/faq/', checkedAt: 2026-07-31 }
-  - { field: priceFrom, url: 'https://docs.hetzner.com/cloud/billing/faq/', checkedAt: 2026-07-31 }
+  - { field: regions, url: 'https://www.hetzner.com/cloud/', checkedAt: 2026-10-07 }
+  - { field: founded, url: 'https://www.hetzner.com/unternehmen/ueber-uns/', checkedAt: 2026-10-07 }
+  - { field: hqCountry, url: 'https://www.hetzner.com/unternehmen/ueber-uns/', checkedAt: 2026-10-07 }
+  - { field: infraContract, url: 'https://www.hetzner.com/unternehmen/ueber-uns/', checkedAt: 2026-10-07 }
+  - { field: pricingModel, url: 'https://docs.hetzner.com/cloud/billing/faq/', checkedAt: 2026-10-07 }
+  - { field: priceFrom, url: 'https://docs.hetzner.com/cloud/billing/faq/', checkedAt: 2026-10-07 }
   - { field: priceTo, url: 'https://www.hetzner.com/cloud/', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://docs.hetzner.com/cloud/billing/faq/', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://docs.hetzner.com/cloud/billing/faq/', checkedAt: 2026-08-02 }
-  - { field: billingTiming, url: 'https://docs.hetzner.com/cloud/billing/faq/', checkedAt: 2026-08-02 }
-  - { field: exitWithin, url: 'https://docs.hetzner.com/cloud/billing/faq/', checkedAt: 2026-08-02 }
-  - { field: contractMinimum, url: 'https://docs.hetzner.com/cloud/billing/faq/', checkedAt: 2026-07-31 }
-  - { field: backupsIncluded, url: 'https://docs.hetzner.com/cloud/billing/faq/', checkedAt: 2026-07-31 }
-  - { field: persistentStorage, url: 'https://docs.hetzner.com/cloud/servers/backups-snapshots/faq/', checkedAt: 2026-07-31 }
-  - { field: apiAvailable, url: 'https://www.hetzner.com/cloud/', checkedAt: 2026-07-31 }
-  - { field: cliTool, url: 'https://www.hetzner.com/cloud/', checkedAt: 2026-07-31 }
-  - { field: supportChannels, url: 'https://www.hetzner.com/support/', checkedAt: 2026-07-31 }
-  - { field: audience, url: 'https://www.hetzner.com/', checkedAt: 2026-07-31 }
-  - { field: ownership, url: 'https://career.hetzner.com/en/unsere-story/', checkedAt: 2026-08-21 }
-  - { field: paymentMethods, url: 'https://docs.hetzner.com/general/billing-and-account-management/billing-at-hetzner/payment-overview/', checkedAt: 2026-08-29 }
-  - { field: gpuCapacity, url: 'https://www.hetzner.com/dedicated-rootserver/matrix-gpu/', checkedAt: 2026-09-24 }
+  - { field: currencies, url: 'https://docs.hetzner.com/cloud/billing/faq/', checkedAt: 2026-10-07 }
+  - { field: billingPeriods, url: 'https://docs.hetzner.com/cloud/billing/faq/', checkedAt: 2026-10-07 }
+  - { field: billingTiming, url: 'https://docs.hetzner.com/cloud/billing/faq/', checkedAt: 2026-10-07 }
+  - { field: exitWithin, url: 'https://docs.hetzner.com/cloud/billing/faq/', checkedAt: 2026-10-07 }
+  - { field: contractMinimum, url: 'https://docs.hetzner.com/cloud/billing/faq/', checkedAt: 2026-10-07 }
+  - { field: backupsIncluded, url: 'https://docs.hetzner.com/cloud/billing/faq/', checkedAt: 2026-10-07 }
+  - { field: persistentStorage, url: 'https://docs.hetzner.com/cloud/servers/backups-snapshots/faq/', checkedAt: 2026-10-07 }
+  - { field: apiAvailable, url: 'https://www.hetzner.com/cloud/', checkedAt: 2026-10-07 }
+  - { field: cliTool, url: 'https://www.hetzner.com/cloud/', checkedAt: 2026-10-07 }
+  - { field: supportChannels, url: 'https://www.hetzner.com/support/', checkedAt: 2026-10-07 }
+  - { field: audience, url: 'https://www.hetzner.com/', checkedAt: 2026-10-07 }
+  - { field: ownership, url: 'https://career.hetzner.com/en/unsere-story/', checkedAt: 2026-10-07 }
+  - { field: paymentMethods, url: 'https://docs.hetzner.com/general/billing-and-account-management/billing-at-hetzner/payment-overview/', checkedAt: 2026-10-07 }
+  - { field: gpuCapacity, url: 'https://www.hetzner.com/dedicated-rootserver/matrix-gpu/', checkedAt: 2026-10-07 }
 figure:
   emoji: 🇩🇪
   color: rgb(183, 145, 52)
