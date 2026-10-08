@@ -9,7 +9,7 @@ category:
   - paas
   - serverless
   - gpu
-description: Alibaba Cloud provides infrastructure, platform and serverless services spanning 32 regions with support for Linux, Windows, containers and multiple runtimes.
+description: Alibaba Group's cloud platform, selling virtual machines, containers, serverless functions and managed services.
 founded: 2009
 hqCountry: CN
 ownership: subsidiary
@@ -110,10 +110,6 @@ gpuCapacity:
   - model-api
 ---
 
-Alibaba Cloud is Alibaba's cloud infrastructure division, operating 32 regions with 105 availability zones spread across six continents. The platform offers virtual machines (ECS), containers (Kubernetes), serverless functions, and managed databases alongside storage, networking, security and AI services. Instances run Linux and Windows, support multiple programming languages including Python, Node.js, Java, Go and PHP, and can be provisioned via control panel, API or marketplace images.
+Alibaba Cloud is the cloud computing arm of Alibaba Group. It sells virtual machines (Elastic Compute Service), managed Kubernetes, serverless functions and managed databases, alongside storage, networking, security and AI services, all from one account. Instances run Linux or Windows with root access over SSH and are provisioned from the console, the API or marketplace images.
 
-Billing is usage-based and metered per service, with hourly and monthly payment options. Customers can build across all service categories—compute, storage, networking, databases, AI and data analytics—in a single account across all regions. SSH access to instances is available with root privileges.
-
-## Worth knowing
-
-Alibaba Cloud operates infrastructure on multiple continents but headquarters in China. Entry-level compute instances are available, and the platform offers a free trial covering 80+ services including up to 12 months free ECS eligibility for new accounts.
+Most services are metered by usage and billed hourly or monthly, and new accounts get a free trial. Regions cover mainland China, Hong Kong and data centers across Asia-Pacific, Europe, the Americas, the Middle East and Africa.
