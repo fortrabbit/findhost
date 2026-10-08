@@ -65,16 +65,16 @@ referringSubnets: null
 wikidata: Q17054505
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-10-08
 sources:
-  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q17054505', checkedAt: 2026-09-09 }
-  - { field: infraContract, url: 'https://cloud.google.com/about/locations', checkedAt: 2026-07-31 }
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q17054505', checkedAt: 2026-10-08 }
+  - { field: infraContract, url: 'https://cloud.google.com/about/locations', checkedAt: 2026-10-08 }
   - { field: regions, url: 'https://cloud.google.com/about/locations', checkedAt: 2026-08-01 }
-  - { field: billingPeriods, url: 'https://docs.cloud.google.com/billing/docs/how-to/billing-cycle', checkedAt: 2026-08-02 }
-  - { field: billingTiming, url: 'https://docs.cloud.google.com/billing/docs/how-to/billing-cycle', checkedAt: 2026-08-02 }
-  - { field: gpuCapacity, url: 'https://docs.cloud.google.com/compute/docs/gpus', checkedAt: 2026-09-24 }
-  - { field: gpuCapacity, url: 'https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/predictions/configure-compute', checkedAt: 2026-09-24 }
-  - { field: gpuCapacity, url: 'https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing', checkedAt: 2026-09-24 }
+  - { field: billingPeriods, url: 'https://docs.cloud.google.com/billing/docs/how-to/billing-cycle', checkedAt: 2026-10-08 }
+  - { field: billingTiming, url: 'https://docs.cloud.google.com/billing/docs/how-to/billing-cycle', checkedAt: 2026-10-08 }
+  - { field: gpuCapacity, url: 'https://docs.cloud.google.com/compute/docs/gpus', checkedAt: 2026-10-08 }
+  - { field: gpuCapacity, url: 'https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/predictions/configure-compute', checkedAt: 2026-10-08 }
+  - { field: gpuCapacity, url: 'https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing', checkedAt: 2026-10-08 }
 greenWebId: 595
 figure:
   emoji: 🌐
