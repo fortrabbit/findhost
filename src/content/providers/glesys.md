@@ -58,20 +58,20 @@ apiAvailable: public
 referringSubnets: { now: 357, before: 350 }
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-10-08
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1213', checkedAt: 2026-08-10 }
-  - { field: regions, url: 'https://glesys.com/pricing/', checkedAt: 2026-08-01 }
-  - { field: entryPrice, url: 'https://glesys.com/pricing/', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://glesys.com/pricing/', checkedAt: 2026-08-01 }
-  - { field: priceTo, url: 'https://glesys.com/pricing/', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://glesys.com/pricing/', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://glesys.com/pricing/', checkedAt: 2026-08-02 }
+  - { field: regions, url: 'https://glesys.com/pricing/', checkedAt: 2026-10-08 }
+  - { field: entryPrice, url: 'https://glesys.com/pricing/', checkedAt: 2026-10-08 }
+  - { field: priceFrom, url: 'https://glesys.com/pricing/', checkedAt: 2026-10-08 }
+  - { field: priceTo, url: 'https://glesys.com/pricing/', checkedAt: 2026-10-08 }
+  - { field: currencies, url: 'https://glesys.com/pricing/', checkedAt: 2026-10-08 }
+  - { field: billingPeriods, url: 'https://glesys.com/pricing/', checkedAt: 2026-10-08 }
   - { field: billingTiming, url: 'https://glesys.com/legal/general-terms-and-conditions/', checkedAt: 2026-08-02 }
-  - { field: exitWithin, url: 'https://glesys.com/legal/general-terms-and-conditions/', checkedAt: 2026-08-02 }
-  - { field: pricingModel, url: 'https://glesys.com/pricing/', checkedAt: 2026-08-01 }
-  - { field: freeTier, url: 'https://glesys.com/pricing/', checkedAt: 2026-08-01 }
+  - { field: exitWithin, url: 'https://glesys.com/legal/general-terms-and-conditions/', checkedAt: 2026-10-08 }
+  - { field: pricingModel, url: 'https://glesys.com/pricing/', checkedAt: 2026-10-08 }
+  - { field: freeTier, url: 'https://glesys.com/pricing/', checkedAt: 2026-10-08 }
 figure:
   emoji: 🧊
   color: rgb(49, 111, 166)
