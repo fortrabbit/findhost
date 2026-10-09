@@ -39,18 +39,18 @@ entryPrice: { amount: 25, currency: USD, period: month }
 referringSubnets: { now: 1284, before: 1292 }
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-10-09
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: entryPrice, url: 'https://getflywheel.com/pricing/', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://getflywheel.com/pricing/', checkedAt: 2026-07-31 }
-  - { field: priceTo, url: 'https://getflywheel.com/pricing/', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://getflywheel.com/pricing/', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://getflywheel.com/pricing/', checkedAt: 2026-08-02 }
-  - { field: billingTiming, url: 'https://wpengine.com/legal/terms-of-service/', checkedAt: 2026-08-02 }
-  - { field: exitWithin, url: 'https://wpengine.com/legal/terms-of-service/', checkedAt: 2026-08-02 }
-  - { field: pricingModel, url: 'https://getflywheel.com/pricing/', checkedAt: 2026-07-31 }
-  - { field: backupsIncluded, url: 'https://getflywheel.com/pricing/', checkedAt: 2026-07-31 }
+  - { field: entryPrice, url: 'https://getflywheel.com/pricing/', checkedAt: 2026-10-09 }
+  - { field: priceFrom, url: 'https://getflywheel.com/pricing/', checkedAt: 2026-10-09 }
+  - { field: priceTo, url: 'https://getflywheel.com/pricing/', checkedAt: 2026-10-09 }
+  - { field: currencies, url: 'https://getflywheel.com/pricing/', checkedAt: 2026-10-09 }
+  - { field: billingPeriods, url: 'https://getflywheel.com/pricing/', checkedAt: 2026-10-09 }
+  - { field: billingTiming, url: 'https://wpengine.com/legal/terms-of-service/', checkedAt: 2026-10-09 }
+  - { field: exitWithin, url: 'https://wpengine.com/legal/terms-of-service/', checkedAt: 2026-10-09 }
+  - { field: pricingModel, url: 'https://getflywheel.com/pricing/', checkedAt: 2026-10-09 }
+  - { field: backupsIncluded, url: 'https://getflywheel.com/pricing/', checkedAt: 2026-10-09 }
 figure:
   emoji: 🎡
   color: rgb(176, 59, 59)
