@@ -1,7 +1,10 @@
 ---
 description: Hosting providers that rent out GPUs to run your own model — as a server, as a container billed only while it runs, or behind a managed endpoint.
 lead: Your weights, their accelerator.
+updated: 2026-10-09
 faq:
+  - q: 'What is a neocloud?'
+    a: 'The industry name for a cloud company built around renting GPUs, as distinct from AWS, Google Cloud and Azure, which sell GPUs beside everything else. Neoclouds are listed here like any other GPU cloud, with no filter of their own: the GPU field on each record says whether it sells instances, serverless GPU or managed inference.'
   - q: 'Do I need a GPU cloud to use an AI model?'
     a: 'Only to run a model yourself. An app that calls a hosted model over an API needs no GPU, and an ordinary [web app](/use-cases/web-app/) host will do. GPU clouds rent accelerators for training, fine-tuning or serving model weights, usually by the hour.'
 ---
