@@ -12,6 +12,7 @@ category:
   - paas
 audience:
   - solo
+  - agency
 useCases:
   - cms
   - e-commerce
@@ -52,7 +53,7 @@ sshAccess: jailed
 managedDatabases:
   - mysql
 backupsIncluded: included
-pricingModel: fixed-tier
+pricingModel: usage-based
 priceFrom: xs
 priceTo: lg
 currencies:
@@ -92,41 +93,41 @@ sla: true
 referringSubnets: { now: 445, before: 449 }
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-10-09
 sources:
-  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q141277820', checkedAt: 2026-09-09 }
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q141277820', checkedAt: 2026-10-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1315', checkedAt: 2026-08-10 }
-  - { field: headcount, url: 'https://www.fortrabbit.com/us/team', checkedAt: 2026-08-08 }
-  - { field: software, url: 'https://www.fortrabbit.com/software/grav-cms', checkedAt: 2026-08-09 }
+  - { field: headcount, url: 'https://www.fortrabbit.com/us/team', checkedAt: 2026-10-09 }
+  - { field: software, url: 'https://www.fortrabbit.com/software/grav-cms', checkedAt: 2026-10-09 }
   - { field: software, url: 'https://www.fortrabbit.com/php-cloud-hosting', checkedAt: 2026-08-09 }
   - { field: software, url: 'https://www.fortrabbit.com/', checkedAt: 2026-08-05 }
-  - { field: audience, url: 'https://www.fortrabbit.com/php-cloud-hosting', checkedAt: 2026-08-06 }
+  - { field: audience, url: 'https://www.fortrabbit.com/php-cloud-hosting', checkedAt: 2026-10-09 }
   - { field: useCases, url: 'https://www.fortrabbit.com/php-cloud-hosting', checkedAt: 2026-08-06 }
-  - { field: testDomain, url: 'https://docs.fortrabbit.com/platform/dns/test-domain', checkedAt: 2026-08-06 }
-  - { field: collaboration, url: 'https://docs.fortrabbit.com/platform/collaboration', checkedAt: 2026-08-07 }
+  - { field: testDomain, url: 'https://docs.fortrabbit.com/platform/dns/test-domain', checkedAt: 2026-10-09 }
+  - { field: collaboration, url: 'https://docs.fortrabbit.com/platform/collaboration', checkedAt: 2026-10-09 }
   - { field: staging, url: 'https://docs.fortrabbit.com/platform/concepts', checkedAt: 2026-08-07 }
   - { field: domainRegistration, url: 'https://docs.fortrabbit.com/platform/dns/external-domains', checkedAt: 2026-08-06 }
-  - { field: dnsHosting, url: 'https://docs.fortrabbit.com/integrations/dns', checkedAt: 2026-08-06 }
-  - { field: emailHosting, url: 'https://docs.fortrabbit.com/integrations/email', checkedAt: 2026-08-06 }
+  - { field: dnsHosting, url: 'https://docs.fortrabbit.com/integrations/dns', checkedAt: 2026-10-09 }
+  - { field: emailHosting, url: 'https://docs.fortrabbit.com/integrations/email', checkedAt: 2026-10-09 }
   - { field: backupsIncluded, url: 'https://docs.fortrabbit.com/platform/backups', checkedAt: 2026-08-06 }
   - { field: renewalMultiple, url: 'https://www.fortrabbit.com/pricing', checkedAt: 2026-08-06 }
   - { field: cliTool, url: 'https://www.fortrabbit.com/', checkedAt: 2026-08-05 }
   - { field: mcpServer, url: 'https://www.fortrabbit.com/', checkedAt: 2026-08-05 }
-  - { field: regions, url: 'https://www.fortrabbit.com/', checkedAt: 2026-08-01 }
-  - { field: hqCountry, url: 'https://www.fortrabbit.com/', checkedAt: 2026-08-01 }
-  - { field: runsOn, url: 'https://www.fortrabbit.com/', checkedAt: 2026-08-01 }
-  - { field: entryPrice, url: 'https://www.fortrabbit.com/pricing', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://www.fortrabbit.com/raw/pricing/details.md', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://www.fortrabbit.com/raw/pricing/details.md', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://www.fortrabbit.com/raw/pricing/details.md', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://www.fortrabbit.com/terms', checkedAt: 2026-08-02 }
-  - { field: billingTiming, url: 'https://www.fortrabbit.com/terms', checkedAt: 2026-08-02 }
-  - { field: exitWithin, url: 'https://www.fortrabbit.com/terms', checkedAt: 2026-08-02 }
-  - { field: pricingModel, url: 'https://www.fortrabbit.com/pricing', checkedAt: 2026-08-01 }
-  - { field: freeTier, url: 'https://www.fortrabbit.com/pricing', checkedAt: 2026-08-01 }
+  - { field: regions, url: 'https://www.fortrabbit.com/', checkedAt: 2026-10-09 }
+  - { field: hqCountry, url: 'https://www.fortrabbit.com/', checkedAt: 2026-10-09 }
+  - { field: runsOn, url: 'https://www.fortrabbit.com/', checkedAt: 2026-10-09 }
+  - { field: entryPrice, url: 'https://www.fortrabbit.com/pricing', checkedAt: 2026-10-09 }
+  - { field: priceFrom, url: 'https://www.fortrabbit.com/raw/pricing/details.md', checkedAt: 2026-10-09 }
+  - { field: priceTo, url: 'https://www.fortrabbit.com/raw/pricing/details.md', checkedAt: 2026-10-09 }
+  - { field: currencies, url: 'https://www.fortrabbit.com/raw/pricing/details.md', checkedAt: 2026-10-09 }
+  - { field: billingPeriods, url: 'https://www.fortrabbit.com/terms', checkedAt: 2026-10-09 }
+  - { field: billingTiming, url: 'https://www.fortrabbit.com/terms', checkedAt: 2026-10-09 }
+  - { field: exitWithin, url: 'https://www.fortrabbit.com/terms', checkedAt: 2026-10-09 }
+  - { field: pricingModel, url: 'https://www.fortrabbit.com/pricing', checkedAt: 2026-10-09 }
+  - { field: freeTier, url: 'https://www.fortrabbit.com/pricing', checkedAt: 2026-10-09 }
   - { field: contractMinimum, url: 'https://www.fortrabbit.com/pricing', checkedAt: 2026-08-01 }
-  - { field: sla, url: 'https://www.fortrabbit.com/legal/contract/service-level-agreement', checkedAt: 2026-08-30 }
+  - { field: sla, url: 'https://www.fortrabbit.com/legal/contract/service-level-agreement', checkedAt: 2026-10-09 }
 favorite: true
 favoriteNote: Shamelessly favorited our own service. It's not that bad anyhow.
 figure:
