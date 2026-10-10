@@ -49,20 +49,20 @@ regions:
 referringSubnets: { now: 1520, before: 1516 }
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-10-10
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: entryPrice, url: 'https://www.exabytes.my/web-hosting', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://www.exabytes.my/web-hosting', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://www.exabytes.my/web-hosting', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://www.exabytes.my/web-hosting', checkedAt: 2026-08-02 }
+  - { field: entryPrice, url: 'https://www.exabytes.my/web-hosting', checkedAt: 2026-10-10 }
+  - { field: priceFrom, url: 'https://www.exabytes.my/web-hosting', checkedAt: 2026-10-10 }
+  - { field: priceTo, url: 'https://www.exabytes.my/web-hosting', checkedAt: 2026-10-10 }
+  - { field: currencies, url: 'https://www.exabytes.my/web-hosting', checkedAt: 2026-10-10 }
   - { field: billingPeriods, url: 'https://www.exabytes.my/web-hosting', checkedAt: 2026-08-02 }
   - { field: billingTiming, url: 'https://www.exabytes.my/web-hosting', checkedAt: 2026-08-02 }
-  - { field: renewalMultiple, url: 'https://www.exabytes.my/web-hosting', checkedAt: 2026-08-01 }
+  - { field: renewalMultiple, url: 'https://www.exabytes.my/web-hosting', checkedAt: 2026-10-10 }
   - { field: contractMinimum, url: 'https://www.exabytes.my/web-hosting', checkedAt: 2026-08-01 }
-  - { field: regions, url: 'https://www.exabytes.my/web-hosting', checkedAt: 2026-08-01 }
-  - { field: pricingModel, url: 'https://www.exabytes.my/web-hosting', checkedAt: 2026-08-01 }
-  - { field: backupsIncluded, url: 'https://www.exabytes.my/web-hosting', checkedAt: 2026-08-01 }
+  - { field: regions, url: 'https://www.exabytes.my/web-hosting', checkedAt: 2026-10-10 }
+  - { field: pricingModel, url: 'https://www.exabytes.my/web-hosting', checkedAt: 2026-10-10 }
+  - { field: backupsIncluded, url: 'https://www.exabytes.my/web-hosting', checkedAt: 2026-10-10 }
 figure:
   emoji: 🌺
   color: rgb(172, 120, 68)
