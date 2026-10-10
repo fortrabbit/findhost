@@ -59,23 +59,23 @@ social:
   linkedin: https://www.linkedin.com/company/fasthosts-internet-ltd
   youtube: https://www.youtube.com/user/fasthostsinternet
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-10-10
 sources:
-  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q1397778', checkedAt: 2026-09-09 }
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q1397778', checkedAt: 2026-10-10 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1282', checkedAt: 2026-08-10 }
-  - { field: entryPrice, url: 'https://www.fasthosts.co.uk/web-hosting', checkedAt: 2026-08-01 }
-  - { field: supportHours, url: 'https://www.fasthosts.co.uk/web-hosting', checkedAt: 2026-08-01 }
-  - { field: renewalMultiple, url: 'https://www.fasthosts.co.uk/web-hosting', checkedAt: 2026-08-01 }
-  - { field: runtimes, url: 'https://www.fasthosts.co.uk/web-hosting', checkedAt: 2026-07-31 }
-  - { field: priceFrom, url: 'https://www.fasthosts.co.uk/web-hosting', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://www.fasthosts.co.uk/web-hosting', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://www.fasthosts.co.uk/web-hosting', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://www.fasthosts.co.uk/terms/general-terms-and-conditions', checkedAt: 2026-08-02 }
-  - { field: billingTiming, url: 'https://www.fasthosts.co.uk/terms/general-terms-and-conditions', checkedAt: 2026-08-02 }
-  - { field: exitWithin, url: 'https://www.fasthosts.co.uk/terms/general-terms-and-conditions', checkedAt: 2026-08-02 }
-  - { field: regions, url: 'https://www.fasthosts.co.uk/virtual-private-servers', checkedAt: 2026-07-31 }
-  - { field: parent, url: 'https://www.ionos-group.com/brands/fasthosts.html', checkedAt: 2026-07-31 }
+  - { field: entryPrice, url: 'https://www.fasthosts.co.uk/web-hosting', checkedAt: 2026-10-10 }
+  - { field: supportHours, url: 'https://www.fasthosts.co.uk/web-hosting', checkedAt: 2026-10-10 }
+  - { field: renewalMultiple, url: 'https://www.fasthosts.co.uk/web-hosting', checkedAt: 2026-10-10 }
+  - { field: runtimes, url: 'https://www.fasthosts.co.uk/web-hosting', checkedAt: 2026-10-10 }
+  - { field: priceFrom, url: 'https://www.fasthosts.co.uk/web-hosting', checkedAt: 2026-10-10 }
+  - { field: priceTo, url: 'https://www.fasthosts.co.uk/web-hosting', checkedAt: 2026-10-10 }
+  - { field: currencies, url: 'https://www.fasthosts.co.uk/web-hosting', checkedAt: 2026-10-10 }
+  - { field: billingPeriods, url: 'https://www.fasthosts.co.uk/terms/general-terms-and-conditions', checkedAt: 2026-10-10 }
+  - { field: billingTiming, url: 'https://www.fasthosts.co.uk/terms/general-terms-and-conditions', checkedAt: 2026-10-10 }
+  - { field: exitWithin, url: 'https://www.fasthosts.co.uk/terms/general-terms-and-conditions', checkedAt: 2026-10-10 }
+  - { field: regions, url: 'https://www.fasthosts.co.uk/virtual-private-servers', checkedAt: 2026-10-10 }
+  - { field: parent, url: 'https://www.ionos-group.com/brands/fasthosts.html', checkedAt: 2026-10-10 }
 referringSubnets: { now: 7364, before: 7511 }
 wikidata: Q1397778
 status: active
