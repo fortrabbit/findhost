@@ -8,7 +8,7 @@ wikidata: Q118233469
 status: out-of-scope
 criterion: 3
 addedAt: 2026-07-31
-checkedAt: 2026-07-31
+checkedAt: 2026-10-11
 boundedSearch: true
 figure:
   emoji: 🔓
@@ -17,7 +17,7 @@ figure:
   text: Open-source apps, priced on request.
 ai: authored
 sources:
-  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q118233469', checkedAt: 2026-09-09 }
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q118233469', checkedAt: 2026-10-11 }
 ---
 
 Cloud68.co provides managed hosting for open-source applications — Nextcloud, Mattermost, WordPress, Mastodon, Vaultwarden and others — for small and medium teams, with a stated open-source and privacy mission and support staffed on Berlin hours.
