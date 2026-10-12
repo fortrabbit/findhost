@@ -32,7 +32,7 @@ deployMethods:
   - docker-image
   - control-panel
 sshAccess: root
-pricingModel: per-resource
+pricingModel: fixed-tier
 priceFrom: sm
 priceTo: md
 currencies:
@@ -46,17 +46,17 @@ freeTier: permanent
 referringSubnets: { now: 336, before: 332 }
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-10-12
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: priceFrom, url: 'https://easypanel.io/pricing', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://easypanel.io/pricing', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://easypanel.io/pricing', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://easypanel.io/pricing', checkedAt: 2026-08-02 }
-  - { field: billingTiming, url: 'https://easypanel.io/terms', checkedAt: 2026-08-02 }
-  - { field: exitWithin, url: 'https://easypanel.io/terms', checkedAt: 2026-08-02 }
-  - { field: freeTier, url: 'https://easypanel.io/pricing', checkedAt: 2026-08-01 }
-  - { field: pricingModel, url: 'https://easypanel.io/pricing', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://easypanel.io/pricing', checkedAt: 2026-10-12 }
+  - { field: priceTo, url: 'https://easypanel.io/pricing', checkedAt: 2026-10-12 }
+  - { field: currencies, url: 'https://easypanel.io/pricing', checkedAt: 2026-10-12 }
+  - { field: billingPeriods, url: 'https://easypanel.io/pricing', checkedAt: 2026-10-12 }
+  - { field: billingTiming, url: 'https://easypanel.io/terms', checkedAt: 2026-10-12 }
+  - { field: exitWithin, url: 'https://easypanel.io/terms', checkedAt: 2026-10-12 }
+  - { field: freeTier, url: 'https://easypanel.io/pricing', checkedAt: 2026-10-12 }
+  - { field: pricingModel, url: 'https://easypanel.io/pricing', checkedAt: 2026-10-12 }
 figure:
   emoji: 🎚️
   color: rgb(77, 97, 157)
