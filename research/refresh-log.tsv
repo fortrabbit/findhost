@@ -69,3 +69,4 @@
 2026-10-10	exabytes	confirmed	Home unreadable (403 Forbidden); pricing page read (200); entryPrice, priceFrom, priceTo, currencies, renewalMultiple, regions, pricingModel and backupsIncluded confirmed unchanged; billingPeriods, billingTiming and contractMinimum no longer discussed on the page, stale; record checkedAt set
 2026-10-11	genezio	confirmed	Home page read (200); no sources entries besides script-owned referringSubnets, nothing to compare; out-of-scope (GEO-platform pivot) status confirmed unchanged
 2026-10-11	cloud68	confirmed	Home page read (200); no pricing anywhere, criterion 3 out-of-scope confirmed unchanged; wikidata entry read (200), still supports value; record checkedAt set
+2026-10-12	encore	confirmed	billingTiming source no longer states advance/arrears

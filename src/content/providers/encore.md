@@ -44,18 +44,18 @@ cliTool: official
 referringSubnets: { now: 761, before: 746 }
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-10-12
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: priceFrom, url: 'https://encore.dev/pricing', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://encore.dev/pricing', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://encore.dev/pricing', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://encore.dev/legal/terms', checkedAt: 2026-08-02 }
+  - { field: priceFrom, url: 'https://encore.dev/pricing', checkedAt: 2026-10-12 }
+  - { field: priceTo, url: 'https://encore.dev/pricing', checkedAt: 2026-10-12 }
+  - { field: currencies, url: 'https://encore.dev/pricing', checkedAt: 2026-10-12 }
+  - { field: billingPeriods, url: 'https://encore.dev/legal/terms', checkedAt: 2026-10-12 }
   - { field: billingTiming, url: 'https://encore.dev/legal/terms', checkedAt: 2026-08-02 }
-  - { field: exitWithin, url: 'https://encore.dev/legal/terms', checkedAt: 2026-08-02 }
-  - { field: freeTier, url: 'https://encore.dev/pricing', checkedAt: 2026-08-01 }
-  - { field: pricingModel, url: 'https://encore.dev/pricing', checkedAt: 2026-08-01 }
-  - { field: ownership, url: 'https://encore.dev/blog/fun-back-into-software-development', checkedAt: 2026-08-21 }
+  - { field: exitWithin, url: 'https://encore.dev/legal/terms', checkedAt: 2026-10-12 }
+  - { field: freeTier, url: 'https://encore.dev/pricing', checkedAt: 2026-10-12 }
+  - { field: pricingModel, url: 'https://encore.dev/pricing', checkedAt: 2026-10-12 }
+  - { field: ownership, url: 'https://encore.dev/blog/fun-back-into-software-development', checkedAt: 2026-10-12 }
 figure:
   emoji: 🧭
   color: rgb(77, 97, 157)
