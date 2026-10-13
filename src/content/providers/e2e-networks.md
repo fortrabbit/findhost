@@ -45,17 +45,17 @@ freeTier: none
 referringSubnets: { now: 458, before: 460 }
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-10-13
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: founded, url: 'https://www.e2enetworks.com/about-us', checkedAt: 2026-08-01 }
-  - { field: hqCountry, url: 'https://www.e2enetworks.com/about-us', checkedAt: 2026-08-01 }
-  - { field: pricingModel, url: 'https://www.e2enetworks.com/pricing', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://www.e2enetworks.com/us/pricing', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://www.e2enetworks.com/us/pricing', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://www.e2enetworks.com/pricing', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://www.e2enetworks.com/us/pricing', checkedAt: 2026-08-02 }
-  - { field: ownership, url: 'https://www.e2enetworks.com/about-us', checkedAt: 2026-08-01 }
+  - { field: founded, url: 'https://www.e2enetworks.com/about-us', checkedAt: 2026-10-13 }
+  - { field: hqCountry, url: 'https://www.e2enetworks.com/about-us', checkedAt: 2026-10-13 }
+  - { field: pricingModel, url: 'https://www.e2enetworks.com/pricing', checkedAt: 2026-10-13 }
+  - { field: priceFrom, url: 'https://www.e2enetworks.com/us/pricing', checkedAt: 2026-10-13 }
+  - { field: priceTo, url: 'https://www.e2enetworks.com/us/pricing', checkedAt: 2026-10-13 }
+  - { field: currencies, url: 'https://www.e2enetworks.com/pricing', checkedAt: 2026-10-13 }
+  - { field: billingPeriods, url: 'https://www.e2enetworks.com/us/pricing', checkedAt: 2026-10-13 }
+  - { field: ownership, url: 'https://www.e2enetworks.com/about-us', checkedAt: 2026-10-13 }
 figure:
   emoji: 🇮🇳
   color: rgb(184, 117, 50)

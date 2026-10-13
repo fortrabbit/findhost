@@ -71,3 +71,4 @@
 2026-10-11	cloud68	confirmed	Home page read (200); no pricing anywhere, criterion 3 out-of-scope confirmed unchanged; wikidata entry read (200), still supports value; record checkedAt set
 2026-10-12	encore	confirmed	billingTiming source no longer states advance/arrears
 2026-10-12	easypanel	confirmed	pricingModel corrected per-resource -> fixed-tier
+2026-10-13	e2e-networks	confirmed	All 5 pages read (home, pricing, docs, about-us, us/pricing); 8 sourced fields confirmed unchanged; record checkedAt set
