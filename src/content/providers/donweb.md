@@ -38,7 +38,7 @@ deployMethods:
   - control-panel
 pricingModel: fixed-tier
 priceFrom: xs
-priceTo: md
+priceTo: sm
 currencies:
   - ARS
   - USD
@@ -51,17 +51,17 @@ freeTier: none
 referringSubnets: { now: 775, before: 771 }
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-10-13
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: pricingModel, url: 'https://donweb.com/es-ar/hosting', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://donweb.com/en-us/hosting', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://donweb.com/en-us/hosting', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://donweb.com/es-ar/hosting', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://donweb.com/en-us/hosting', checkedAt: 2026-08-02 }
+  - { field: pricingModel, url: 'https://donweb.com/es-ar/hosting', checkedAt: 2026-10-13 }
+  - { field: priceFrom, url: 'https://donweb.com/en-us/hosting', checkedAt: 2026-10-13 }
+  - { field: priceTo, url: 'https://donweb.com/en-us/hosting', checkedAt: 2026-10-13 }
+  - { field: currencies, url: 'https://donweb.com/es-ar/hosting', checkedAt: 2026-10-13 }
+  - { field: billingPeriods, url: 'https://donweb.com/en-us/hosting', checkedAt: 2026-10-13 }
   - { field: billingTiming, url: 'https://donweb.com/en-us/hosting', checkedAt: 2026-08-02 }
-  - { field: freeTier, url: 'https://donweb.com/es-ar/hosting', checkedAt: 2026-08-01 }
-  - { field: urls, url: 'https://donweb.com', checkedAt: 2026-08-01 }
+  - { field: freeTier, url: 'https://donweb.com/es-ar/hosting', checkedAt: 2026-10-13 }
+  - { field: urls, url: 'https://donweb.com', checkedAt: 2026-10-13 }
 figure:
   emoji: 🧉
   color: rgb(77, 157, 109)
