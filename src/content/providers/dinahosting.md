@@ -47,7 +47,7 @@ billingPeriods:
 billingTiming: advance
 entryPrice: { amount: 2.75, currency: EUR, period: month, introductory: true }
 renewalMultiple: 1.98
-freeTier: none
+freeTier: trial
 apiAvailable: public
 regions:
   - ES
@@ -60,21 +60,21 @@ energyClaim: annual-matched
 referringSubnets: { now: 675, before: 679 }
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-10-13
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1325', checkedAt: 2026-08-10 }
-  - { field: entryPrice, url: 'https://dinahosting.com/hosting', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://dinahosting.com/hosting', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://dinahosting.com/hosting', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://dinahosting.com/hosting', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://dinahosting.com/hosting', checkedAt: 2026-08-02 }
+  - { field: entryPrice, url: 'https://dinahosting.com/hosting', checkedAt: 2026-10-13 }
+  - { field: priceFrom, url: 'https://dinahosting.com/hosting', checkedAt: 2026-10-13 }
+  - { field: priceTo, url: 'https://dinahosting.com/hosting', checkedAt: 2026-10-13 }
+  - { field: currencies, url: 'https://dinahosting.com/hosting', checkedAt: 2026-10-13 }
+  - { field: billingPeriods, url: 'https://dinahosting.com/hosting', checkedAt: 2026-10-13 }
   - { field: billingTiming, url: 'https://dinahosting.com/hosting', checkedAt: 2026-08-02 }
-  - { field: renewalMultiple, url: 'https://dinahosting.com/hosting', checkedAt: 2026-08-01 }
-  - { field: pricingModel, url: 'https://dinahosting.com/hosting', checkedAt: 2026-08-01 }
-  - { field: freeTier, url: 'https://dinahosting.com/hosting', checkedAt: 2026-08-01 }
-  - { field: supportHours, url: 'https://dinahosting.com/hosting', checkedAt: 2026-08-01 }
-  - { field: apiAvailable, url: 'https://dinahosting.com', checkedAt: 2026-08-09 }
+  - { field: renewalMultiple, url: 'https://dinahosting.com/hosting', checkedAt: 2026-10-13 }
+  - { field: pricingModel, url: 'https://dinahosting.com/hosting', checkedAt: 2026-10-13 }
+  - { field: freeTier, url: 'https://dinahosting.com/hosting', checkedAt: 2026-10-13 }
+  - { field: supportHours, url: 'https://dinahosting.com/hosting', checkedAt: 2026-10-13 }
+  - { field: apiAvailable, url: 'https://dinahosting.com', checkedAt: 2026-10-13 }
 figure:
   emoji: 🐚
   color: rgb(77, 138, 169)
