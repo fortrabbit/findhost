@@ -73,3 +73,4 @@
 2026-10-12	easypanel	confirmed	pricingModel corrected per-resource -> fixed-tier
 2026-10-13	e2e-networks	confirmed	All 5 pages read (home, pricing, docs, about-us, us/pricing); 8 sourced fields confirmed unchanged; record checkedAt set
 2026-10-13	donweb	confirmed	Home, es-ar/hosting and en-us/hosting pages read (200); pricingModel, priceFrom, currencies, billingPeriods, freeTier and urls confirmed unchanged; priceTo corrected md -> sm; billingTiming source no longer states advance/arrears, stale; record checkedAt set
+2026-10-13	dinahosting	confirmed	Home and pricing pages read (200); entryPrice, priceFrom, priceTo, currencies, billingPeriods, renewalMultiple, pricingModel, supportHours and apiAvailable confirmed unchanged; freeTier corrected none -> trial; billingTiming source no longer states advance/arrears, stale; record checkedAt set
