@@ -2,7 +2,7 @@
 layout: ../layouts/Article.astro
 title: For providers
 published: 2026-08-31
-updated: 2026-08-31
+updated: 2026-10-13
 description: How to correct a record, how to get a missing provider added, and the badge a listed provider can display.
 lead: Nothing here is for sale. A record exists because a provider meets the scope test.
 ---
@@ -22,10 +22,9 @@ The alphabetical order, the absence of ratings and the ♥️ do not change on r
 
 ## Adding a provider
 
-The register is incomplete; a missing name usually means nobody has got to it yet. Write the record — one file, four required fields, one pull request — or name it in an issue and leave the fields to whoever picks it up. A provider failing one of the five criteria still gets a record carrying the number it failed on, and most of those reverse once the evidence appears.
+The register is incomplete; a missing name usually means nobody has got to it yet. Write the record — one file, four required fields, one pull request — or name it in an issue and leave the fields to whoever picks it up. A provider failing one of [the five criteria](/about/#who-is-listed) still gets a record carrying the number it failed on, and most of those reverse once the evidence appears.
 
-- [The five criteria](/about/#who-is-listed)
-- [Name a provider we are missing](https://github.com/fortrabbit/findhost/issues/new?template=add-provider.yml)
+- [Open a GitHub issue to add a provider](https://github.com/fortrabbit/findhost/issues/new?template=add-provider.yml)
 
 ## The badge
 
