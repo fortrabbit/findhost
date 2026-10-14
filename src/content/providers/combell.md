@@ -53,23 +53,23 @@ referringSubnets: { now: 1278, before: 1284 }
 wikidata: Q109450229
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-10-14
 sources:
-  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q109450229', checkedAt: 2026-09-09 }
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q109450229', checkedAt: 2026-10-14 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#198', checkedAt: 2026-08-10 }
-  - { field: priceFrom, url: 'https://www.combell.com/en/hosting/web-hosting', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://www.combell.com/en/servers/vps-server-hosting', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://www.combell.com/en/about-combell/general-conditions', checkedAt: 2026-08-02 }
+  - { field: priceFrom, url: 'https://www.combell.com/en/hosting/web-hosting', checkedAt: 2026-10-14 }
+  - { field: priceTo, url: 'https://www.combell.com/en/servers/vps-server-hosting', checkedAt: 2026-10-14 }
+  - { field: currencies, url: 'https://www.combell.com/en/about-combell/general-conditions', checkedAt: 2026-10-14 }
   - { field: billingPeriods, url: 'https://www.combell.com/en/about-combell/general-conditions', checkedAt: 2026-08-02 }
-  - { field: billingTiming, url: 'https://www.combell.com/en/about-combell/general-conditions', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://www.combell.com/en/about-combell/general-conditions', checkedAt: 2026-10-14 }
   - { field: exitWithin, url: 'https://www.combell.com/en/about-combell/general-conditions', checkedAt: 2026-08-02 }
-  - { field: renewalMultiple, url: 'https://www.combell.com/en/hosting/web-hosting', checkedAt: 2026-07-31 }
-  - { field: pricingModel, url: 'https://www.combell.com/en/hosting/web-hosting', checkedAt: 2026-07-31 }
-  - { field: regions, url: 'https://www.combell.com/en/about-combell', checkedAt: 2026-08-01 }
-  - { field: founded, url: 'https://www.combell.com/en/about-combell', checkedAt: 2026-08-01 }
-  - { field: parent, url: 'https://www.combell.com/en/about-combell', checkedAt: 2026-08-01 }
-  - { field: supportHours, url: 'https://www.combell.com/en/about-combell', checkedAt: 2026-08-01 }
+  - { field: renewalMultiple, url: 'https://www.combell.com/en/hosting/web-hosting', checkedAt: 2026-10-14 }
+  - { field: pricingModel, url: 'https://www.combell.com/en/hosting/web-hosting', checkedAt: 2026-10-14 }
+  - { field: regions, url: 'https://www.combell.com/en/about-combell', checkedAt: 2026-10-14 }
+  - { field: founded, url: 'https://www.combell.com/en/about-combell', checkedAt: 2026-10-14 }
+  - { field: parent, url: 'https://www.combell.com/en/about-combell', checkedAt: 2026-10-14 }
+  - { field: supportHours, url: 'https://www.combell.com/en/about-combell', checkedAt: 2026-10-14 }
 supportChannels:
   - email
   - chat
