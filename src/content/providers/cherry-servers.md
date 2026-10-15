@@ -36,13 +36,14 @@ pricingModel: hourly
 priceFrom: sm
 priceTo: xl
 currencies:
-  - EUR
+  - USD
 billingPeriods:
-  - hourly
   - monthly
+  - quarterly
+  - half-yearly
   - yearly
   - multi-year
-exitWithin: a-day
+exitWithin: a-month
 freeTier: none
 regions:
   - NL
@@ -61,16 +62,16 @@ iacSupport:
   - terraform
 referringSubnets: { now: 768, before: 773 }
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-10-15
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: regions, url: 'https://www.cherryservers.com/locations', checkedAt: 2026-08-01 }
-  - { field: hqCountry, url: 'https://www.cherryservers.com/locations', checkedAt: 2026-08-01 }
-  - { field: priceTo, url: 'https://www.cherryservers.com/pricing', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://www.cherryservers.com/pricing', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://www.cherryservers.com/terms-of-service', checkedAt: 2026-08-02 }
-  - { field: exitWithin, url: 'https://www.cherryservers.com/terms-of-service', checkedAt: 2026-08-02 }
-  - { field: gpuCapacity, url: 'https://www.cherryservers.com/dedicated-gpu-servers', checkedAt: 2026-09-24 }
+  - { field: regions, url: 'https://www.cherryservers.com/locations', checkedAt: 2026-10-15 }
+  - { field: hqCountry, url: 'https://www.cherryservers.com/locations', checkedAt: 2026-10-15 }
+  - { field: priceTo, url: 'https://www.cherryservers.com/pricing', checkedAt: 2026-10-15 }
+  - { field: currencies, url: 'https://www.cherryservers.com/pricing', checkedAt: 2026-10-15 }
+  - { field: billingPeriods, url: 'https://www.cherryservers.com/terms-of-service', checkedAt: 2026-10-15 }
+  - { field: exitWithin, url: 'https://www.cherryservers.com/terms-of-service', checkedAt: 2026-10-15 }
+  - { field: gpuCapacity, url: 'https://www.cherryservers.com/dedicated-gpu-servers', checkedAt: 2026-10-15 }
 figure:
   emoji: 🍒
   color: rgb(172, 63, 109)

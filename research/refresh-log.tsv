@@ -78,3 +78,4 @@
 2026-10-14	contabo	unreadable	All contabo.com/www.contabo.com pages returned 403 (bot-block image challenge page); oakleycapital.com read fine but is a third party, so the record was not reached
 2026-10-14	combell	confirmed	Home, status, web-hosting, vps-server-hosting, general-conditions, about-combell and wikidata pages read (200); wikidata, priceFrom, priceTo, currencies, billingTiming, renewalMultiple, pricingModel, regions, founded, parent and supportHours confirmed unchanged; billingPeriods and exitWithin sources no longer state monthly billing or a notice period explicitly, stale; record checkedAt set
 2026-10-15	cloud66	confirmed	billingTiming source stale on pricing page
+2026-10-15	cherry-servers	confirmed	regions, hqCountry, priceTo and gpuCapacity confirmed unchanged; currencies corrected EUR -> USD; billingPeriods corrected to drop hourly, add quarterly/half-yearly per ToS; exitWithin corrected a-day -> a-month per 30-day notice clause
