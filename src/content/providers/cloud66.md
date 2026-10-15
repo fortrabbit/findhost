@@ -52,20 +52,20 @@ apiAvailable: public
 cliTool: official
 referringSubnets: { now: 455, before: 461 }
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-10-15
 hqCountry: GB
 ownership: vc-backed
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: priceFrom, url: 'https://www.cloud66.com/pricing/', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://www.cloud66.com/pricing/', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://www.cloud66.com/pricing/', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://www.cloud66.com/pricing/', checkedAt: 2026-08-02 }
+  - { field: priceFrom, url: 'https://www.cloud66.com/pricing/', checkedAt: 2026-10-15 }
+  - { field: priceTo, url: 'https://www.cloud66.com/pricing/', checkedAt: 2026-10-15 }
+  - { field: currencies, url: 'https://www.cloud66.com/pricing/', checkedAt: 2026-10-15 }
+  - { field: billingPeriods, url: 'https://www.cloud66.com/pricing/', checkedAt: 2026-10-15 }
   - { field: billingTiming, url: 'https://www.cloud66.com/pricing/', checkedAt: 2026-08-02 }
-  - { field: exitWithin, url: 'https://www.cloud66.com/pricing/', checkedAt: 2026-08-02 }
-  - { field: freeTier, url: 'https://www.cloud66.com/pricing/', checkedAt: 2026-08-01 }
-  - { field: pricingModel, url: 'https://www.cloud66.com/pricing/', checkedAt: 2026-08-01 }
-  - { field: ownership, url: 'https://tech.eu/news/fresh-funding-code-cloud-startup-cloud-66-hopes-become-europes-heroku-better/', checkedAt: 2026-08-21 }
+  - { field: exitWithin, url: 'https://www.cloud66.com/pricing/', checkedAt: 2026-10-15 }
+  - { field: freeTier, url: 'https://www.cloud66.com/pricing/', checkedAt: 2026-10-15 }
+  - { field: pricingModel, url: 'https://www.cloud66.com/pricing/', checkedAt: 2026-10-15 }
+  - { field: ownership, url: 'https://tech.eu/news/fresh-funding-code-cloud-startup-cloud-66-hopes-become-europes-heroku-better/', checkedAt: 2026-10-15 }
 figure:
   emoji: 🛞
   color: rgb(117, 77, 157)
