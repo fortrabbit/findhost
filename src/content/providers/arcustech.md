@@ -5,6 +5,8 @@ urls:
   home: https://www.arcustech.com
 category:
   - vps
+software:
+  - craft-cms
 description: US VPS provider selling managed and self-managed NVMe servers, with a long-running focus on Craft CMS, ExpressionEngine and related PHP applications.
 favorite: true
 favoriteNote: Keeping it real like forever.
@@ -17,6 +19,7 @@ referringSubnets: { now: 243, before: 242 }
 addedAt: 2026-07-31
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
+  - { field: software, url: 'https://www.arcustech.com/managed/craftcms-hosting/', checkedAt: 2026-10-16 }
 
 ---
 
