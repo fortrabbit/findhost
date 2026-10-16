@@ -30,14 +30,14 @@ deployMethods:
 sshAccess: root
 pricingModel: hourly
 priceFrom: xs
-priceTo: lg
+priceTo: xl
 currencies:
   - AUD
 billingPeriods:
   - hourly
   - monthly
 billingTiming: arrears
-exitWithin: a-day
+exitWithin: a-month
 entryPrice: { amount: 4.90, currency: AUD, period: month }
 regions:
   - AU
@@ -47,16 +47,16 @@ supportChannels:
 apiAvailable: public
 referringSubnets: { now: 291, before: 296 }
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-10-16
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: entryPrice, url: 'https://www.binarylane.com.au', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://www.binarylane.com.au/vps-hosting/linux-vps', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://www.binarylane.com.au/vps-hosting/linux-vps', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://www.binarylane.com.au/vps-hosting/linux-vps', checkedAt: 2026-08-02 }
+  - { field: entryPrice, url: 'https://www.binarylane.com.au', checkedAt: 2026-10-16 }
+  - { field: priceFrom, url: 'https://www.binarylane.com.au/vps-hosting/linux-vps', checkedAt: 2026-10-16 }
+  - { field: priceTo, url: 'https://www.binarylane.com.au/vps-hosting/linux-vps', checkedAt: 2026-10-16 }
+  - { field: currencies, url: 'https://www.binarylane.com.au/vps-hosting/linux-vps', checkedAt: 2026-10-16 }
   - { field: billingPeriods, url: 'https://www.binarylane.com.au/terms-of-service', checkedAt: 2026-08-02 }
   - { field: billingTiming, url: 'https://www.binarylane.com.au/terms-of-service', checkedAt: 2026-08-02 }
-  - { field: exitWithin, url: 'https://www.binarylane.com.au/terms-of-service', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://www.binarylane.com.au/terms-of-service', checkedAt: 2026-10-16 }
 figure:
   emoji: 🦘
   color: rgb(61, 109, 169)
