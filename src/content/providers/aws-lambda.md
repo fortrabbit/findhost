@@ -67,18 +67,18 @@ referringSubnets: null
 wikidata: Q21462856
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-10-17
 sources:
-  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q21462856', checkedAt: 2026-09-09 }
-  - { field: regions, url: 'https://docs.aws.amazon.com/general/latest/gr/lambda-service.html', checkedAt: 2026-08-01 }
-  - { field: runtimes, url: 'https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html', checkedAt: 2026-07-31 }
-  - { field: pricingModel, url: 'https://aws.amazon.com/lambda/pricing/', checkedAt: 2026-07-31 }
-  - { field: freeTier, url: 'https://aws.amazon.com/lambda/pricing/', checkedAt: 2026-07-31 }
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q21462856', checkedAt: 2026-10-17 }
+  - { field: regions, url: 'https://docs.aws.amazon.com/general/latest/gr/lambda-service.html', checkedAt: 2026-10-17 }
+  - { field: runtimes, url: 'https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html', checkedAt: 2026-10-17 }
+  - { field: pricingModel, url: 'https://aws.amazon.com/lambda/pricing/', checkedAt: 2026-10-17 }
+  - { field: freeTier, url: 'https://aws.amazon.com/lambda/pricing/', checkedAt: 2026-10-17 }
   - { field: priceFrom, url: 'https://aws.amazon.com/lambda/pricing/', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://aws.amazon.com/lambda/pricing/', checkedAt: 2026-08-02 }
   - { field: billingPeriods, url: 'https://aws.amazon.com/lambda/pricing/', checkedAt: 2026-08-02 }
-  - { field: billingTiming, url: 'https://aws.amazon.com/agreement/', checkedAt: 2026-08-02 }
-  - { field: exitWithin, url: 'https://aws.amazon.com/agreement/', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://aws.amazon.com/agreement/', checkedAt: 2026-10-17 }
+  - { field: exitWithin, url: 'https://aws.amazon.com/agreement/', checkedAt: 2026-10-17 }
   - { field: ownership, url: 'https://aws.amazon.com/about-aws/', checkedAt: 2026-08-21 }
 figure:
   emoji: ⚙️
