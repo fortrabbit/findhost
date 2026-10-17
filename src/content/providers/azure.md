@@ -68,20 +68,20 @@ referringSubnets: null
 wikidata: Q725967
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-10-17
 sources:
-  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q725967', checkedAt: 2026-09-09 }
-  - { field: regions, url: 'https://learn.microsoft.com/en-us/azure/reliability/regions-list', checkedAt: 2026-08-01 }
-  - { field: freeTier, url: 'https://azure.microsoft.com/en-us/pricing/details/app-service/linux/', checkedAt: 2026-07-31 }
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q725967', checkedAt: 2026-10-17 }
+  - { field: regions, url: 'https://learn.microsoft.com/en-us/azure/reliability/regions-list', checkedAt: 2026-10-17 }
+  - { field: freeTier, url: 'https://azure.microsoft.com/en-us/pricing/details/app-service/linux/', checkedAt: 2026-10-17 }
   - { field: priceFrom, url: 'https://azure.microsoft.com/en-us/pricing/details/app-service/linux/', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://azure.microsoft.com/en-us/pricing/details/app-service/linux/', checkedAt: 2026-08-02 }
   - { field: billingPeriods, url: 'https://azure.microsoft.com/en-us/pricing/purchase-options/pay-as-you-go/', checkedAt: 2026-08-02 }
   - { field: billingTiming, url: 'https://azure.microsoft.com/en-us/pricing/purchase-options/pay-as-you-go/', checkedAt: 2026-08-02 }
-  - { field: exitWithin, url: 'https://azure.microsoft.com/en-us/pricing/purchase-options/pay-as-you-go/', checkedAt: 2026-08-02 }
-  - { field: gpuCapacity, url: 'https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/overview', checkedAt: 2026-09-24 }
-  - { field: gpuCapacity, url: 'https://learn.microsoft.com/en-us/azure/container-apps/gpu-serverless-overview', checkedAt: 2026-09-24 }
-  - { field: gpuCapacity, url: 'https://learn.microsoft.com/en-us/azure/machine-learning/concept-endpoints-online', checkedAt: 2026-09-24 }
-  - { field: gpuCapacity, url: 'https://azure.microsoft.com/en-us/pricing/details/azure-openai/', checkedAt: 2026-09-24 }
+  - { field: exitWithin, url: 'https://azure.microsoft.com/en-us/pricing/purchase-options/pay-as-you-go/', checkedAt: 2026-10-17 }
+  - { field: gpuCapacity, url: 'https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/overview', checkedAt: 2026-10-17 }
+  - { field: gpuCapacity, url: 'https://learn.microsoft.com/en-us/azure/container-apps/gpu-serverless-overview', checkedAt: 2026-10-17 }
+  - { field: gpuCapacity, url: 'https://learn.microsoft.com/en-us/azure/machine-learning/concept-endpoints-online', checkedAt: 2026-10-17 }
+  - { field: gpuCapacity, url: 'https://azure.microsoft.com/en-us/pricing/details/azure-openai/', checkedAt: 2026-10-17 }
 figure:
   emoji: ☁️
   color: rgb(45, 95, 190)
