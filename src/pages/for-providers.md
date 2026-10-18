@@ -18,12 +18,12 @@ Every record is one markdown file. The **Edit on GitHub** link at the bottom of 
 The alphabetical order, the absence of ratings and the ♥️ do not change on request. Records are never deleted; a provider that would rather not appear can ask to move beside the register.
 
 - [Every record, one file each](https://github.com/fortrabbit/findhost/tree/main/src/content/providers)
-- [Who is listed, and how the review works](/about/#who-is-listed)
+- [Listing criteria](/criteria/)
 - [Pull request mechanics, on GitHub](https://github.com/fortrabbit/findhost/blob/main/CONTRIBUTING.md)
 
 ## Adding a provider
 
-The register is incomplete; a missing name usually means nobody has got to it yet. Write the record — one file, four required fields, one pull request — or name it in an issue and leave the fields to whoever picks it up. Every new record starts as a stub and moves into the list after [the checks and a review](/about/#who-is-listed). A stub keeps its page and gets reviewed again.
+The register is incomplete; a missing name usually means nobody has got to it yet. Write the record — one file, four required fields, one pull request — or name it in an issue and leave the fields to whoever picks it up. Every new record starts as a stub and moves into the list after [the checks and a review](/criteria/). A stub keeps its page and gets reviewed again.
 
 - [Open a GitHub issue to add a provider](https://github.com/fortrabbit/findhost/issues/new?template=add-provider.yml)
 

@@ -60,7 +60,7 @@ body:
       description: |
         URLs, one per line. The pricing page, the documentation and the page that
         names the company behind it settle most of a record. What happens next is
-        described at https://www.findhost.app/about/#who-is-listed
+        described at https://www.findhost.app/criteria/
       placeholder: |
         https://www.example.com/pricing
         https://docs.example.com

@@ -13,7 +13,7 @@ Records live in `src/content/providers/<slug>.md`.
 
 ## Add a provider
 
-Who gets into the register, the five checks and the review that follows them, is on the website: [Who is listed](https://www.findhost.app/about/#who-is-listed). This file covers the mechanics only.
+Who gets into the register, the five checks and the review that follows them, is on the website: [Listing criteria](https://www.findhost.app/criteria/). This file covers the mechanics only.
 
 New records start as a stub. A stub has a page, and stays out of the register, the counts, search, and the sitemap.
 
