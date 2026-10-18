@@ -2,9 +2,9 @@
 layout: ../layouts/Article.astro
 title: For providers
 published: 2026-08-31
-updated: 2026-10-13
+updated: 2026-10-18
 description: How to correct a record, how to get a missing provider added, and the badge a listed provider can display.
-lead: Nothing here is for sale. A record exists because a provider meets the scope test.
+lead: Nothing here is for sale. A provider is listed because it passed the checks and the review.
 ---
 
 ## Correcting a record
@@ -18,7 +18,8 @@ Every record is one markdown file. The **Edit on GitHub** link at the bottom of 
 The alphabetical order, the absence of ratings and the ♥️ do not change on request. Records are never deleted; a provider that would rather not appear can ask to move beside the register.
 
 - [Every record, one file each](https://github.com/fortrabbit/findhost/tree/main/src/content/providers)
-- [The full contributing rules](https://github.com/fortrabbit/findhost/blob/main/CONTRIBUTING.md)
+- [Who is listed, and how the review works](/about/#who-is-listed)
+- [Pull request mechanics, on GitHub](https://github.com/fortrabbit/findhost/blob/main/CONTRIBUTING.md)
 
 ## Adding a provider
 
