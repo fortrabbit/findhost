@@ -32,7 +32,7 @@ A pet project. I may extend it. There are plenty of ideas, from verified real us
 
 ## Listing criteria
 
-FindHost lists a few hundred providers, each with a reason to be here, and many more wait as stubs. A provider gets in after five checks anyone can verify and a review of its homepage by me. The [listing criteria](/criteria/) describe both.
+FindHost lists a few hundred providers, each with a reason to be here, and many more wait as stubs. A provider gets in after meeting five [listing criteria](/criteria/) anyone can verify and a review of its homepage by me.
 
 ## Favorite records with a ♥️
 

@@ -13,12 +13,12 @@ Records live in `src/content/providers/<slug>.md`.
 
 ## Add a provider
 
-Who gets into the register, the five checks and the review that follows them, is on the website: [Listing criteria](https://www.findhost.app/criteria/). This file covers the mechanics only.
+Who gets into the register, the criteria and the review that follows them, is on the website: [Listing criteria](https://www.findhost.app/criteria/). This file covers the mechanics only.
 
 New records start as a stub. A stub has a page, and stays out of the register, the counts, search, and the sitemap.
 
 - `status: draft` is a stub: reviewed and not picked yet, or not finished.
-- `status: out-of-scope` failed one of the five checks. It names the number in `criterion`.
+- `status: out-of-scope` failed one of the criteria. It names the number in `criterion`.
 
 `discontinued`, `unlisted`, and `anonymous` put a record beside the register, still indexed. `anonymous` is for a host whose own pages sell sign-up without identification; quote that wording in a `status` source. Nothing is ever deleted.
 

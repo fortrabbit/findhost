@@ -60,7 +60,7 @@ export const GET: APIRoute = async ({ site }) => {
     '',
     `- [How to choose a host](${origin}/guide/)`,
     `- [About, and who publishes this](${origin}/about/)`,
-    `- [Listing criteria: the five checks, the review, and stubs](${origin}/criteria/)`,
+    `- [Listing criteria, the review, and stubs](${origin}/criteria/)`,
     `- [For providers: correcting a record, adding one, and the badge](${origin}/for-providers/)`,
     `- [Every provider, filterable](${origin}/)`,
     `- [Where providers operate](${origin}/regions/)`,
