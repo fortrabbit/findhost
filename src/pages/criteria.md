@@ -21,7 +21,9 @@ An AI agent reads the provider's own pages, fills in the record and checks five 
 
 ## Human review
 
-Then I look at the homepage and decide whether the provider adds something the list does not have yet: a feature or an angle, the way [exe.dev](/exe/) or [Uberspace](/uberspace/) have one, or a country with no comparable provider. The homepage has to make that case, with its design and its words. Nobody needs another thousand VPS resellers. Independent traces help: a framework's deployment guide, a third-party package, an unaffiliated tutorial.
+Then I look at the homepage and decide whether the provider adds something the list does not have yet: a feature, an angle, or a country with no comparable provider. The homepage has to make that case, with its design and its words. Nobody needs another thousand VPS resellers. Independent traces help: a framework's deployment guide, a third-party package, an unaffiliated tutorial.
+
+I also want to give small, innovative providers a push. When I find one, it may get in even if it misses one of the criteria above.
 
 The review is my judgment and has no score. It decides who is listed, never the order, which stays alphabetical.
 
