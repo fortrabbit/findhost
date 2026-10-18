@@ -17,7 +17,7 @@ An AI agent reads the provider's own pages, fills in the record and checks five 
 2. **Sold to the public.** Purchasable without sales call or invitation.
 3. **Public pricing.** A price for at least one plan is published without login.
 4. **Public technical documentation.** Documentation a developer could work from, not a billing FAQ.
-5. **A named business.** The site names the company behind it with a legal name and an address, in an imprint, the terms or on the contact page. Hosts that sell sign-up without identification have [a list of their own](/anonymous/).
+5. **A named business.** The site names the legal entity behind it, such as a company with its legal form or a sole trader, in an imprint, the terms or on the contact page. Hosts that sell sign-up without identification have [a list of their own](/anonymous/).
 
 ## Human review
 
