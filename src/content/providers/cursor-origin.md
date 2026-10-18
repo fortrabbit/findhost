@@ -14,7 +14,7 @@ sshAccess: null
 regions: null
 apiAvailable: public
 cliTool: official
-status: out-of-scope
+status: stub
 criterion: 2
 addedAt: 2026-09-14
 checkedAt: 2026-09-16

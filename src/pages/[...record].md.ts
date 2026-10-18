@@ -55,8 +55,8 @@ export const GET: APIRoute = async ({ props, site }) => {
     data.description ? `${data.description}` : '',
     '',
     hidden
-      ? data.status === 'out-of-scope'
-        ? `NOT LISTED. This record failed inclusion criterion ${label(data.criterion)} and is not part of the register, not counted and not indexed.`
+      ? data.criterion
+        ? `STUB. This provider was checked and fails listing criterion ${label(data.criterion)}, so it is not part of the register, not counted and not indexed. It will be checked again.`
         : 'STUB. This provider was checked and not picked for the full list yet, so it is not part of the register, not counted and not indexed. It will be checked again.'
       : '',
     hidden ? '' : undefined,

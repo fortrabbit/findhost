@@ -5,7 +5,7 @@ urls:
   home: https://platform.sh
 referringSubnets: { now: 1014, before: 1008 }
 wikidata: Q56309413
-status: out-of-scope
+status: stub
 criterion: 2
 addedAt: 2026-07-31
 checkedAt: 2026-09-15

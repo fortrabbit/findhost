@@ -8,7 +8,7 @@
  * no date on the record, and without this the same one would come up every
  * morning.
  *
- * A stub and an out-of-scope record run on a weekly cycle: first in the queue
+ * A stub runs on a weekly cycle: first in the queue
  * on Sundays (UTC), last on every other day. Both have a home page worth
  * re-reading, but most carry nothing to compare, so a read leaves no date, and
  * none of them is on /updated/. Sorted in with the rest, their July dates put

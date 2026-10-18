@@ -4,8 +4,8 @@ import { asideCategoryOf, asideOf, hiddenStatuses } from './fields';
 /*
  * Two statuses hide a record, and which two is `hidden: true` in the dictionary
  * rather than a list repeated here. `stub` is one checked and not picked for
- * the full list yet, to be checked again; `out-of-scope` is one that failed a
- * numbered criterion.
+ * the full list yet, to be checked again, naming the criterion it failed where
+ * it failed one.
  *
  * Both keep a page — a decision nobody can link to is not a decision, and a
  * name that redirects somewhere else deserves to be findable by the name people

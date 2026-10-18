@@ -4,7 +4,7 @@ name: Qovery
 urls:
   home: https://www.qovery.com
 referringSubnets: { now: 579, before: 566 }
-status: out-of-scope
+status: stub
 criterion: 3
 addedAt: 2026-07-31
 checkedAt: 2026-07-31

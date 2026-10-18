@@ -5,7 +5,7 @@ urls:
   home: https://www.gabia.com/
 referringSubnets: { now: 2286, before: 2270 }
 wikidata: Q18444030
-status: out-of-scope
+status: stub
 criterion: 3
 addedAt: 2026-08-04
 checkedAt: 2026-08-04

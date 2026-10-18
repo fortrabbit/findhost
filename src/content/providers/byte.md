@@ -4,7 +4,7 @@ name: Byte
 urls:
   home: https://www.byte.nl
 referringSubnets: { now: 555, before: 545 }
-status: out-of-scope
+status: stub
 criterion: 2
 addedAt: 2026-07-31
 checkedAt: 2026-07-31
@@ -21,6 +21,6 @@ sources:
 
 Byte was a Dutch host with a strong reputation in the Magento community, later absorbed into team.blue.
 
-**Criterion 2 — sold to the public — fails, because the brand no longer sells anything.** byte.nl now redirects to Hypernode, the platform Byte's engineering became. There is no distinct pricing, no distinct documentation and no distinct infrastructure left under the Byte name, which puts it in the out-of-scope category of a rebrand rather than a provider.
+**Criterion 2 — sold to the public — fails, because the brand no longer sells anything.** byte.nl now redirects to Hypernode, the platform Byte's engineering became. There is no distinct pricing, no distinct documentation and no distinct infrastructure left under the Byte name, which makes it a rebrand rather than a provider.
 
 [Hypernode](/hypernode/) has a record of its own.

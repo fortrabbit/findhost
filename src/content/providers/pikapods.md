@@ -6,7 +6,7 @@ urls:
 description: Managed instances of open-source applications, billed by the resources each one is given, with a share of the revenue passed to the projects.
 hqCountry: MT
 referringSubnets: { now: 557, before: 565 }
-status: out-of-scope
+status: stub
 criterion: 1
 addedAt: 2026-08-14
 checkedAt: 2026-08-14

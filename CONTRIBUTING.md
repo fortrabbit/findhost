@@ -17,8 +17,7 @@ Who gets into the register, the criteria and the review that follows them, is on
 
 New records start as a stub. A stub has a page, and stays out of the register, the counts, search, and the sitemap.
 
-- `status: stub` is a provider checked and not picked for the full list yet. It will be checked again.
-- `status: out-of-scope` failed one of the criteria. It names the number in `criterion`.
+- `status: stub` is a provider checked and not picked for the full list yet. It will be checked again. A stub that failed one of the criteria names the number in `criterion`.
 
 `discontinued`, `unlisted`, and `anonymous` put a record beside the register, still indexed. `anonymous` is for a host whose own pages sell sign-up without identification; quote that wording in a `status` source. Nothing is ever deleted.
 

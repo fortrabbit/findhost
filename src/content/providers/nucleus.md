@@ -4,7 +4,7 @@ name: Nucleus
 urls:
   home: https://www.nucleus.be
 referringSubnets: { now: 268, before: 251 }
-status: out-of-scope
+status: stub
 criterion: 2
 addedAt: 2026-07-31
 checkedAt: 2026-07-31

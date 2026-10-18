@@ -5,7 +5,7 @@ urls:
   home: https://anynines.com
 hqCountry: DE
 referringSubnets: null
-status: out-of-scope
+status: stub
 criterion: 2
 addedAt: 2026-08-09
 checkedAt: 2026-08-09

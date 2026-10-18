@@ -4,7 +4,7 @@ name: Genezio
 urls:
   home: https://genezio.com
 referringSubnets: { now: 229 }
-status: out-of-scope
+status: stub
 criterion: 1
 addedAt: 2026-07-31
 checkedAt: 2026-07-31

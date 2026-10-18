@@ -379,14 +379,13 @@ const providerFields = z
      * removal is the power that has to be given up. A provider that dies or
      * leaves scope keeps its page and changes status.
      *
-     * Two of these hide the record: `stub` is one checked and not picked for
-     * the full list yet, `out-of-scope` is one that failed a numbered
-     * criterion. Both keep a page, so a decision has somewhere to be argued
-     * with, and neither is listed, counted or indexed. See lib/providers.ts —
+     * One of these hides the record: `stub`, checked and not picked for the
+     * full list yet, naming the criterion it failed where it failed one. It keeps a page, so a decision has somewhere to be argued
+     * with, and it is not listed, counted or indexed. See lib/providers.ts —
      * the filter lives in one place so no page can forget it.
      */
     status: z.enum(vocabulary('status')).optional(),
-    /** The numbered inclusion criterion an out-of-scope record failed. */
+    /** The numbered listing criterion a stub failed, where it failed one. */
     criterion: z.number().int().min(1).max(5).optional(),
     /** Set where the failure is "we could not find it", not "it does not exist". */
     boundedSearch: z.boolean().optional(),
@@ -398,9 +397,8 @@ const providerFields = z
   })
   /*
    * The required-field rule, which only a record in the register has to satisfy.
-   * Hiding a record is how an unfinished one is admitted without lowering the bar
-   * for the ones on show, and an out-of-scope record has to name the criterion it
-   * failed — otherwise "not listed" is an assertion rather than a decision.
+   * Hiding a record is how a stub is admitted without lowering the bar for the
+   * ones on show.
    *
    * A record beside the register is exempt for a different reason: a company that
    * owns hosting brands without selling hosting has no category, and demanding
@@ -414,7 +412,7 @@ const providerFields = z
       ctx.addIssue({
         code: 'custom',
         path: ['category'],
-        message: 'Required unless the record is a stub, out of scope, or beside the register',
+        message: 'Required unless the record is a stub or beside the register',
       });
     }
 
@@ -425,14 +423,6 @@ const providerFields = z
      */
     if (record.status !== 'discontinued' && !record.urls?.home) {
       ctx.addIssue({ code: 'custom', path: ['urls', 'home'], message: 'Required unless the provider has stopped' });
-    }
-
-    if (record.status === 'out-of-scope' && !record.criterion) {
-      ctx.addIssue({
-        code: 'custom',
-        path: ['criterion'],
-        message: 'An out-of-scope record must name the criterion it failed',
-      });
     }
   });
 

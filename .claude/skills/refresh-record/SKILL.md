@@ -36,7 +36,7 @@ Never push to `main`, and never put an uncited change on `claude/refresh`; the A
 node scripts/refresh-pick.mjs --n <N plus K>
 ```
 
-It prints a queue, oldest `checkedAt` first, records with none first of all, skipping anything `research/refresh-log.tsv` lists in the last sixty days. Every record is in it but the defunct ones. Stubs and out-of-scope records come first on Sundays (UTC) and last on every other day: whether their home page still answers is worth re-reading, but most have nothing to compare, and sorted by date they took every run. Do not pick by hand.
+It prints a queue, oldest `checkedAt` first, records with none first of all, skipping anything `research/refresh-log.tsv` lists in the last sixty days. Every record is in it but the defunct ones. Stubs come first on Sundays (UTC) and last on every other day: whether their home page still answers is worth re-reading, but most have nothing to compare, and sorted by date they took every run. Do not pick by hand.
 
 The queue is attempts, not a batch. Take one record at a time, all the way through step 8, before starting the next. Stop when `N` records have been **reached**, step 3, or when the queue runs out. An unreachable record costs one attempt; the ids still in the queue when the run stops are left alone and come up again tomorrow.
 
@@ -62,7 +62,7 @@ Fields with no `sources` entry are not compared. Do not add sources for them, an
 
 Set the record's own `checkedAt` to today only when there was a source to compare and every page in `sources` was read. If any was unreadable, leave the record's `checkedAt` alone: the claim would not be true.
 
-**A record with nothing to compare.** Most stubs carry no `sources` entry but the ones the scripts own, and so do some out-of-scope and unlisted records. Nothing can be confirmed and nothing corrected, so reading the home page is the whole of the work. Act on what it shows only where step 5 says to, and never set `checkedAt` — the date means fields were read against the provider's pages, and there were none to read. The record was reached, which is what the run needed; log it `confirmed`, note that there was nothing to compare, and take the next id. Filling those fields is research, and a refresh does not research.
+**A record with nothing to compare.** Most stubs carry no `sources` entry but the ones the scripts own, and so do some unlisted records. Nothing can be confirmed and nothing corrected, so reading the home page is the whole of the work. Act on what it shows only where step 5 says to, and never set `checkedAt` — the date means fields were read against the provider's pages, and there were none to read. The record was reached, which is what the run needed; log it `confirmed`, note that there was nothing to compare, and take the next id. Filling those fields is research, and a refresh does not research.
 
 ## 5. Status
 
@@ -71,8 +71,8 @@ Set the record's own `checkedAt` to today only when there was a source to compar
 - **`discontinued`.** A page the provider publishes says the service has ended, or `urls.home` now redirects to a page that says so. Quote it.
 - **`acquired`.** The provider's own pages announce the acquisition and the service is still sold. Quote it. Fill `parent` only if the vocabulary already has the acquirer.
 - **`renamed`.** The provider's own pages announce the new name. Quote it, and do not touch `name` or `id`; a rename of the record is a person's job.
-- **`out-of-scope`.** Only on the two criteria the provider's own pages can show, from the five on `/criteria/`: criterion 3, it no longer publishes a price without a login, and criterion 4, it no longer documents its platform publicly. Set `criterion` to 3 or 4 and quote what the page shows instead, a login wall, a contact-sales form, an empty docs domain. Never rule on the other three; they need sources this skill may not read. A record with `status: anonymous` is never moved out of scope on criterion 4, which that list waives.
-- **Never `stub`.** Moving a listed provider back to the stubs is a review decision, made by a person. A provider that fails a criterion is a decision, and `out-of-scope` is where the site records one with a page to argue with.
+- **`stub` with a `criterion`.** Only on the two criteria the provider's own pages can show, from the five on `/criteria/`: criterion 3, it no longer publishes a price without a login, and criterion 4, it no longer documents its platform publicly. Set `criterion` to 3 or 4 and quote what the page shows instead, a login wall, a contact-sales form, an empty docs domain. Never rule on the other three; they need sources this skill may not read. A record with `status: anonymous` is never made a stub on criterion 4, which that list waives.
+- **Never `stub` without a `criterion`.** Moving a listed provider back to the stubs for any other reason is a review decision, made by a person.
 
 A domain that does not answer is not evidence of anything. A parked page, an NXDOMAIN, a timeout: leave `status` alone, report it, and a person looks at it in the pull request.
 

@@ -18,7 +18,7 @@ regions:
   - FI
 supportChannels:
   - chat
-status: out-of-scope
+status: stub
 criterion: 2
 addedAt: 2026-09-18
 checkedAt: 2026-09-18

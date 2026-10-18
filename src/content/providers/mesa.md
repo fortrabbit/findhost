@@ -15,7 +15,7 @@ pricingModel: usage-based
 currencies:
   - USD
 freeTier: permanent
-status: out-of-scope
+status: stub
 criterion: 2
 addedAt: 2026-09-14
 checkedAt: 2026-09-16

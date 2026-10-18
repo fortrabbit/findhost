@@ -5,7 +5,7 @@ urls:
   home: https://boomla.com
   docs: https://boomla.com/docs
 description: A web application platform with its own language, object model and hosting, reachable currently only by requesting a demo.
-status: out-of-scope
+status: stub
 criterion: 2
 addedAt: 2026-09-18
 checkedAt: 2026-09-18

@@ -4,7 +4,7 @@ name: Ghost(Pro)
 urls:
   home: https://ghost.org
 referringSubnets: { now: 14599, before: 14563 }
-status: out-of-scope
+status: stub
 criterion: 1
 addedAt: 2026-07-31
 checkedAt: 2026-07-31

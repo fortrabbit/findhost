@@ -175,8 +175,8 @@
     - { id: anonymous, label: 'Sells anonymous sign-up', short: Anonymous hosting, aside: anonymous }
     # `hidden` keeps a record out of the register and out of every count. It is
     # the only place that fact is written down.
+    # A stub that failed a numbered criterion names it in `criterion`.
     - { id: stub, label: Stub, hidden: true }
-    - { id: out-of-scope, label: Out of scope, hidden: true }
 
 # ---------------------------------------------------------- Classification
 

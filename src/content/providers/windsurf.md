@@ -5,7 +5,7 @@ urls:
   home: https://windsurf.com
 description: An AI code editor with a deploy-to-URL feature, folded into Devin Desktop after Cognition acquired it.
 parent: cognition
-status: out-of-scope
+status: stub
 criterion: 2
 addedAt: 2026-09-18
 checkedAt: 2026-09-18

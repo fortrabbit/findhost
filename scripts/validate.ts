@@ -834,7 +834,7 @@ function checkVocabulary(file: string, data: Record<string, unknown>) {
  * The `gpu` category and the `gpuCapacity` row say the same thing twice, once as
  * a filter and once as the detail, so a record holding one without the other is
  * missing from the category page or listed there with nothing to show for it. A
- * record carrying no category at all, as an out-of-scope one may, is left alone.
+ * record carrying no category at all, as a stub may, is left alone.
  */
 const gpuCompute = ['instances', 'serverless', 'inference'];
 

@@ -293,14 +293,14 @@ const listed = isListed(provider);
  * listed" without one is an assertion, and this page is where the decision is
  * argued with.
  */
-const outOfScope =
-  data.status === 'out-of-scope' && data.criterion
-    ? `Not listed. Fails criterion ${data.criterion} — ${criteria[data.criterion]}${
+const failed =
+  data.status === 'stub' && data.criterion
+    ? `This is a stub: checked, and not picked for the full list yet. It fails criterion ${data.criterion} — ${criteria[data.criterion]}${
         data.boundedSearch ? ', recorded as a bounded search rather than as proof of absence' : ''
-      }. Being out of scope is not a criticism and most of these are reversible: bring the missing evidence and the record goes in.`
+      }. It will be checked again, and the missing evidence moves it into the list.`
     : undefined;
 
-const notice = outOfScope ?? (typeof data.status === 'string' ? statusNotice[data.status] : undefined);
+const notice = failed ?? (typeof data.status === 'string' ? statusNotice[data.status] : undefined);
 
 /*
  * The categories this record holds, in dictionary order and in the filter
@@ -461,7 +461,7 @@ const metaDescription = data.description
            * Why this record is not in the register, read as one of the recorded
            * facts rather than as a boxed warning above the page. It is the first
            * thing the record answers, and the box gave it a weight the sentence
-           * does not need: being out of scope is a ruling, not an alarm.
+           * does not need: being a stub is a ruling, not an alarm.
            */
           notice && (
             <div class="fact-groups">
@@ -545,7 +545,7 @@ const metaDescription = data.description
        * the one place they are certain to land. Folded away because it is the
        * only thing on a record addressed to somebody other than the reader, and
        * only on a listed record: a snippet reading "Listed on FindHost" under a
-       * record that is out of scope, a stub or discontinued would be a claim the
+       * record that is a stub or discontinued would be a claim the
        * register does not make.
        */
     }

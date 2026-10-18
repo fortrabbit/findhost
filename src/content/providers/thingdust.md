@@ -8,7 +8,7 @@ urls:
 description: A Swiss company selling sensor-based office-occupancy dashboards that it operates itself.
 founded: 2017
 hqCountry: CH
-status: out-of-scope
+status: stub
 criterion: 1
 addedAt: 2026-09-18
 checkedAt: 2026-09-18

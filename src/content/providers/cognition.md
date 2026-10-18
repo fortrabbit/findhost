@@ -9,7 +9,7 @@ category:
 description: The company behind Devin, an autonomous coding agent that can publish small apps it builds to a live URL as part of a Devin subscription.
 apiAvailable: public
 cliTool: official
-status: out-of-scope
+status: stub
 criterion: 3
 addedAt: 2026-09-18
 checkedAt: 2026-09-18

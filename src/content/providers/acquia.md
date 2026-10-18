@@ -10,7 +10,7 @@ description: A Drupal platform sold through sales conversations rather than publ
 hqCountry: US
 referringSubnets: { now: 2699, before: 2690 }
 wikidata: Q4674765
-status: out-of-scope
+status: stub
 criterion: 3
 addedAt: 2026-08-12
 checkedAt: 2026-08-12

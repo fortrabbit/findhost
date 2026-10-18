@@ -4,7 +4,7 @@ name: Bearstech
 urls:
   home: https://bearstech.com
 referringSubnets: { now: 356, before: 352 }
-status: out-of-scope
+status: stub
 criterion: 3
 addedAt: 2026-07-31
 checkedAt: 2026-07-31

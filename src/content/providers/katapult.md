@@ -9,7 +9,7 @@ category:
 description: Krystal's cloud platform, formerly sold under its own name and now folded into the parent brand.
 hqCountry: GB
 referringSubnets: null
-status: out-of-scope
+status: stub
 criterion: 2
 addedAt: 2026-08-12
 checkedAt: 2026-08-12

@@ -9,7 +9,7 @@ urls:
 category:
   - static
 description: A browser-based desktop that gives each account cloud storage, apps and a puter.site subdomain to publish to; the underlying software is also open source and self-hostable.
-status: out-of-scope
+status: stub
 criterion: 3
 addedAt: 2026-09-18
 checkedAt: 2026-09-18

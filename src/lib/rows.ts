@@ -69,7 +69,7 @@ export interface ProviderRow {
   facets: Record<string, string | string[]>;
   /** Fields this record sets to null: the question does not apply, which is not the same as not knowing. */
   notApplicable: string[];
-  /** Only on a hidden row: `stub` or `out-of-scope`. Absent on everything in the register. */
+  /** Only on a hidden row: `stub`. Absent on everything in the register. */
   status?: string;
 }
 

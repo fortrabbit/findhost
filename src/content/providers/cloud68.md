@@ -5,7 +5,7 @@ urls:
   home: https://cloud68.co
 referringSubnets: null
 wikidata: Q118233469
-status: out-of-scope
+status: stub
 criterion: 3
 addedAt: 2026-07-31
 checkedAt: 2026-10-11

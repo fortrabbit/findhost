@@ -5,7 +5,7 @@ urls:
   home: https://www.contentful.com
 referringSubnets: { now: 2946, before: 2950 }
 wikidata: Q18348837
-status: out-of-scope
+status: stub
 criterion: 1
 addedAt: 2026-08-06
 checkedAt: 2026-08-06

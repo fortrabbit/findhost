@@ -4,7 +4,7 @@ name: CoreSpeed
 urls:
   home: https://corespeed.io
 description: A managed connector service that gives AI agents access to a user's other apps, memory and tools through one MCP endpoint.
-status: out-of-scope
+status: stub
 criterion: 1
 addedAt: 2026-09-18
 checkedAt: 2026-09-18

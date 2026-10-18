@@ -10,7 +10,7 @@ category:
 description: A Spanish cloud platform for IT service providers, rebranded Plenit in 2026 and sold wholesale through partners rather than directly to end customers.
 founded: 2020
 hqCountry: ES
-status: out-of-scope
+status: stub
 criterion: 2
 addedAt: 2026-09-18
 checkedAt: 2026-09-18

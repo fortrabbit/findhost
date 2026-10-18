@@ -10,7 +10,7 @@ category:
 description: An open-source AI coding agent, owned by Anaconda, whose app builder deploys the apps it generates.
 ownership: subsidiary
 parent: anaconda
-status: out-of-scope
+status: stub
 criterion: 3
 addedAt: 2026-09-18
 checkedAt: 2026-09-18
