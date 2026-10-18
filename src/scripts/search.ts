@@ -58,7 +58,11 @@ if (form && input && resultsEl && summaryEl) {
     return words ? trimmed : (summary ?? '');
   };
 
+  /* A slower search for an earlier query must not write over a newer one. */
+  let latest = 0;
+
   const run = async (query: string) => {
+    const turn = ++latest;
     resultsEl.innerHTML = '';
 
     if (!query.trim()) {
@@ -67,11 +71,12 @@ if (form && input && resultsEl && summaryEl) {
     }
 
     const engine = await load();
-    if (!engine) return;
+    if (!engine || turn !== latest) return;
 
     summaryEl.textContent = 'Searching…';
     const { results } = await engine.search(query);
     const shown = await Promise.all(results.slice(0, 30).map((result) => result.data()));
+    if (turn !== latest) return;
 
     summaryEl.textContent = `${results.length} ${results.length === 1 ? 'page' : 'pages'} match “${query}”.`;
 

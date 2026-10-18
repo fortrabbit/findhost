@@ -75,23 +75,36 @@ export function changedFields(before: string, after: string): string[] {
   return [...keys].filter((key) => key && a.get(key) !== b.get(key));
 }
 
-/** The fields a record's `sources` name, so a changed one can be held to carrying its citation. */
-function cited(frontmatter: string): Set<string> {
-  const sources = blocks(frontmatter).get('sources') ?? '';
-  return new Set([...sources.matchAll(/field:\s*'?([A-Za-z]\w*)'?/g)].map((match) => match[1]));
+/** The `sources` entries as written, dates included, one string per list item however it wraps. */
+function sourceEntries(frontmatter: string): string[] {
+  const block = frontmatter.match(/^sources:\n((?:[ \t]+.*(?:\n|$))*)/m)?.[1] ?? '';
+  return block
+    .split(/\n(?=\s*- )/)
+    .map((entry) => entry.replace(/\s+/g, ' ').trim())
+    .filter(Boolean);
+}
+
+/**
+ * The fields cited by a `sources` entry this run wrote or touched. An entry left
+ * exactly as it was vouches for the old value, not the new one, so it does not count.
+ */
+function freshlyCited(before: string, after: string): Set<string> {
+  const old = new Set(sourceEntries(before));
+  const fresh = sourceEntries(after).filter((entry) => !old.has(entry));
+  return new Set(fresh.flatMap((entry) => [...entry.matchAll(/field:\s*'?([A-Za-z]\w*)'?/g)].map((match) => match[1])));
 }
 
 /**
  * May the routine merge this change itself? True for a confirmation, and for a
- * change to field values where every field it touched is cited in the record it
- * wrote and none of them is the record's identity. Prose has to be untouched:
- * the routine does not write prose, so a changed body is something else.
+ * change to field values where every field it touched is cited by a source entry
+ * this run wrote or re-dated, and none of them is the record's identity. Prose has
+ * to be untouched: the routine does not write prose, so a changed body is something else.
  */
 export function isSelfMerging(before: string, after: string): boolean {
   const [a, b] = [parts(before), parts(after)];
   if (!a || !b || a.body !== b.body) return false;
 
-  const citations = cited(b.frontmatter);
+  const citations = freshlyCited(a.frontmatter, b.frontmatter);
   return changedFields(a.frontmatter, b.frontmatter).every(
     (field) => field === 'sources' || field === 'checkedAt' || (!reviewed.has(field) && citations.has(field)),
   );

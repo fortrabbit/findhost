@@ -62,6 +62,20 @@ describe('a sourced change', () => {
     assert.equal(isSelfMerging(record, after), true);
   });
 
+  it('is not a field cited only by a source the run left untouched', () => {
+    assert.equal(isSelfMerging(record, record.replace('founded: 1997', 'founded: 1998')), false);
+  });
+
+  it('reads a source entry that wraps over several lines', () => {
+    const wrapped = record.replace(
+      "  - { field: founded, url: 'https://www.hetzner.com/about/', checkedAt: 2026-07-31 }",
+      "  - {\n      field: founded,\n      url: 'https://www.hetzner.com/about/',\n      checkedAt: 2026-07-31,\n    }",
+    );
+    const after = wrapped.replace('founded: 1997', 'founded: 1998').replace('2026-07-31', '2026-09-08');
+    assert.equal(isSelfMerging(wrapped, after), true);
+    assert.equal(isSelfMerging(wrapped, wrapped.replace('founded: 1997', 'founded: 1998')), false);
+  });
+
   it('is not a field nothing cites', () => {
     const after = record.replace('name: Hetzner', 'name: Hetzner Online');
     assert.equal(isSelfMerging(record, after), false);
@@ -102,7 +116,9 @@ describe('a sourced change', () => {
 
   it('takes a list as one field, so a changed region is a changed regions', () => {
     const listed = record.replace('founded: 1997', 'regions:\n  - DE\n  - FI');
-    const after = listed.replace('  - FI', '  - US');
+    const after = listed
+      .replace('  - FI', '  - US')
+      .replace("cloud/', checkedAt: 2026-08-01", "cloud/', checkedAt: 2026-09-08");
     assert.deepEqual(changedFields(listed, after), ['regions']);
     assert.equal(isSelfMerging(listed, after), true);
   });

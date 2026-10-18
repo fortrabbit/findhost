@@ -30,7 +30,8 @@ export const GET: APIRoute = async ({ site }) => {
   const origin = site?.origin ?? '';
   const providers = (await loadProviders()).sort((a, b) => a.data.name.localeCompare(b.data.name, 'en'));
   const { facets } = await loadFacets();
-  const notes = await getCollection('notes');
+  /* The stubs group is our working state, which /llms.txt leaves out as well. */
+  const notes = (await getCollection('notes')).filter((entry) => entry.id !== 'aside/stubs');
   const pairs = await loadPairPages();
   const groups = fieldGroups();
 
