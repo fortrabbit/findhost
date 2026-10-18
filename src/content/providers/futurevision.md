@@ -39,7 +39,8 @@ audience:
 dnsHosting: paid-addon
 cdnIncluded: paid-addon
 referringSubnets: null
-status: unverifiable
+status: stub
+criterion: 5
 addedAt: 2026-08-09
 checkedAt: 2026-08-12
 sources:
@@ -52,6 +53,7 @@ sources:
   - { field: dnsHosting, url: 'https://futurevision.host', checkedAt: 2026-08-12 }
   - { field: cdnIncluded, url: 'https://futurevision.host', checkedAt: 2026-08-12 }
   - { field: status, url: 'https://futurevision.host', checkedAt: 2026-08-21 }
+  - { field: criterion, url: 'https://futurevision.host', checkedAt: 2026-08-21 }
 figure:
   emoji: 🔮
   color: rgb(124, 58, 156)

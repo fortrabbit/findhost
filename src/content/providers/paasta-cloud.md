@@ -58,6 +58,7 @@ billingPeriods:
   - monthly
   - hourly
 status: stub
+criterion: 5
 addedAt: 2026-10-18
 checkedAt: 2026-10-18
 sources:
@@ -71,6 +72,7 @@ sources:
   - { field: cliTool, url: 'https://paasta.cloud/docs/cli', checkedAt: 2026-10-18 }
   - { field: apiAvailable, url: 'https://paasta.cloud/docs/api', checkedAt: 2026-10-18 }
   - { field: mcpServer, url: 'https://paasta.cloud/docs/mcp-agent', checkedAt: 2026-10-18 }
+  - { field: criterion, url: 'https://paasta.cloud/legal/terms', checkedAt: 2026-10-18 }
   - { field: pricingModel, url: 'https://paasta.cloud/pricing', checkedAt: 2026-10-18 }
   - { field: billingPeriods, url: 'https://paasta.cloud/pricing', checkedAt: 2026-10-18 }
 figure:
