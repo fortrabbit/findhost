@@ -1561,6 +1561,10 @@ html.js [data-find-fallback] {
  * things rather than as one fact. Against the right edge the values line up with
  * each other and the eye can run down them.
  */
+.fact-group > p {
+  font-size: var(--text-xs);
+}
+
 .fact-list {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);

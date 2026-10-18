@@ -267,7 +267,7 @@ const modifiedIso = modifiedAt(data)?.toISOString().slice(0, 10);
 const checkedDaysAgo = data.checkedAt ? Math.floor((Date.now() - data.checkedAt.getTime()) / 86_400_000) : undefined;
 const stale = checkedDaysAgo !== undefined && checkedDaysAgo > staleAfterDays;
 
-/* The scope test, in the order /about/ numbers it. */
+/* The listing criteria, in the order /criteria/ numbers them. */
 const criteria: Record<number, string> = {
   1: 'runs an application, or serves a site',
   2: 'sold to the public',
@@ -277,7 +277,7 @@ const criteria: Record<number, string> = {
 };
 
 const statusNotice: Record<string, string> = {
-  stub: 'This is a stub: checked, and not picked for the full list yet. It is not counted, and it will be checked again.',
+  stub: 'Stub: checked, not in the full list yet.',
   acquired: 'Acquired, still operating.',
   renamed: 'Renamed. Same service under a new name.',
   'winding-down': 'Winding down: an end of life has been announced.',
@@ -294,9 +294,7 @@ const listed = isListed(provider);
  */
 const failed =
   data.status === 'stub' && data.criterion
-    ? `This is a stub: checked, and not picked for the full list yet. It fails criterion ${data.criterion} — ${criteria[data.criterion]}${
-        data.boundedSearch ? ', recorded as a bounded search rather than as proof of absence' : ''
-      }. It will be checked again, and the missing evidence moves it into the list.`
+    ? `Stub: fails criterion ${data.criterion}, ${criteria[data.criterion]}${data.boundedSearch ? ', as far as a search found' : ''}.`
     : undefined;
 
 const notice = failed ?? (typeof data.status === 'string' ? statusNotice[data.status] : undefined);
@@ -466,7 +464,9 @@ const metaDescription = data.description
             <div class="fact-groups">
               <section class="fact-group">
                 <h2>Status</h2>
-                <p>{notice}</p>
+                <p>
+                  {notice} {data.status === 'stub' && <a href="/criteria/">Listing criteria</a>}
+                </p>
               </section>
             </div>
           )
