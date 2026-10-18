@@ -7,7 +7,7 @@ category:
   - shared-hosting
 description: A shared hosting and domain provider in Poland.
 hqCountry: PL
-status: draft
+status: stub
 addedAt: 2026-09-21
 checkedAt: 2026-09-21
 figure:

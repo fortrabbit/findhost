@@ -8,7 +8,7 @@ category:
   - vps
   - bare-metal
 description: Offshore host with DDoS protection, operated by Amarutu Technology Ltd.
-status: draft
+status: stub
 addedAt: 2026-09-17
 figure:
   emoji: 🌊

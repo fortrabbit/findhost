@@ -57,7 +57,7 @@ pricingModel: fixed-tier
 billingPeriods:
   - monthly
   - hourly
-status: draft
+status: stub
 addedAt: 2026-10-18
 checkedAt: 2026-10-18
 sources:

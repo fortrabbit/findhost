@@ -4,7 +4,7 @@ name: vshosting
 urls:
   home: https://www.vshosting.eu
 referringSubnets: null
-status: draft
+status: stub
 addedAt: 2026-08-07
 checkedAt: 2026-08-07
 figure:

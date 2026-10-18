@@ -9,7 +9,7 @@ category:
 description: A shared hosting and virtual server provider in the United States.
 hqCountry: US
 referringSubnets: null
-status: draft
+status: stub
 addedAt: 2026-08-21
 checkedAt: 2026-08-21
 figure:

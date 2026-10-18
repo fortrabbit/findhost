@@ -10,7 +10,7 @@ category:
 description: A shared hosting, VPS and IaaS provider in Singapore.
 hqCountry: SG
 referringSubnets: { now: 308, before: 310 }
-status: draft
+status: stub
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:

@@ -8,7 +8,7 @@ category:
 description: A virtual server provider selling KVM machines under a British domain.
 hqCountry: US
 referringSubnets: null
-status: draft
+status: stub
 addedAt: 2026-08-21
 checkedAt: 2026-08-21
 figure:

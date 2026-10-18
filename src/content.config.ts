@@ -379,8 +379,8 @@ const providerFields = z
      * removal is the power that has to be given up. A provider that dies or
      * leaves scope keeps its page and changes status.
      *
-     * Two of these hide the record: `draft` is one we have started and not
-     * finished, `out-of-scope` is one considered and failed against a numbered
+     * Two of these hide the record: `stub` is one checked and not picked for
+     * the full list yet, `out-of-scope` is one that failed a numbered
      * criterion. Both keep a page, so a decision has somewhere to be argued
      * with, and neither is listed, counted or indexed. See lib/providers.ts —
      * the filter lives in one place so no page can forget it.

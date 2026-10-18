@@ -7,7 +7,7 @@ category:
   - shared-hosting
 hqCountry: CH
 referringSubnets: { now: 1391, before: 1364 }
-status: draft
+status: stub
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:

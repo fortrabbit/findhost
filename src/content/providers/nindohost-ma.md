@@ -10,7 +10,7 @@ category:
 description: A shared hosting, VPS and PaaS provider in Morocco.
 hqCountry: MA
 referringSubnets: { now: 263, before: 264 }
-status: draft
+status: stub
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:

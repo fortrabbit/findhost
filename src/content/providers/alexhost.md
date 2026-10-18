@@ -8,7 +8,7 @@ category:
   - vps
   - bare-metal
 description: Moldovan host with its own data center in Chișinău, selling shared hosting, virtual and dedicated servers.
-status: draft
+status: stub
 addedAt: 2026-09-17
 figure:
   emoji: 🇲🇩

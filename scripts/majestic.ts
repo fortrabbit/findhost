@@ -181,7 +181,7 @@ for (const name of files) {
  * Laravel products sit on laravel.com, which is Laravel and is neither of them —
  * the domain belongs to something outside the register and they all take null.
  *
- * Hidden records are left out of the grouping. A draft stub is out of the
+ * Hidden records are left out of the grouping. A stub is out of the
  * register and out of every count, and a stub at gitlab.com that named nothing
  * took GitLab's figure away with it.
  */

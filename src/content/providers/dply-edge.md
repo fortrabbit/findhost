@@ -60,7 +60,7 @@ apiAvailable: public
 cliTool: official
 mcpServer: official
 collaboration: team
-status: draft
+status: stub
 addedAt: 2026-10-15
 checkedAt: 2026-10-15
 sources:

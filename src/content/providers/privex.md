@@ -7,7 +7,7 @@ category:
   - vps
   - bare-metal
 description: Privacy-oriented provider of virtual and dedicated servers, run by Privex Inc. in Belize.
-status: draft
+status: stub
 addedAt: 2026-09-17
 figure:
   emoji: 🔏

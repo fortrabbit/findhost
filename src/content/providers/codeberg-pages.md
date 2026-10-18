@@ -9,7 +9,7 @@ category:
 description: A static hosting and vanity hosting provider in Germany.
 hqCountry: DE
 referringSubnets: { now: 2665, before: 2629 }
-status: draft
+status: stub
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:

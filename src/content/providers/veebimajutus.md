@@ -8,7 +8,7 @@ category:
 description: A shared hosting provider in Estonia.
 hqCountry: EE
 referringSubnets: { now: 498, before: 490 }
-status: draft
+status: stub
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:

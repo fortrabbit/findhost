@@ -4,7 +4,7 @@ name: maxcluster
 urls:
   home: https://www.maxcluster.de
 referringSubnets: { now: 337, before: 333 }
-status: draft
+status: stub
 addedAt: 2026-07-31
 checkedAt: 2026-07-31
 figure:

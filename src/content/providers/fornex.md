@@ -6,7 +6,7 @@ urls:
 category:
   - shared-hosting
 description: A shared hosting and VPS provider.
-status: draft
+status: stub
 addedAt: 2026-10-16
 figure:
   emoji: 🗄️

@@ -8,7 +8,7 @@ category:
 description: A shared hosting provider in Germany.
 hqCountry: DE
 referringSubnets: { now: 515, before: 524 }
-status: draft
+status: stub
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:

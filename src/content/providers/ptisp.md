@@ -9,7 +9,7 @@ category:
 description: A shared hosting and VPS provider in Portugal.
 hqCountry: PT
 referringSubnets: { now: 418, before: 404 }
-status: draft
+status: stub
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:

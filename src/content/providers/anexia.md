@@ -4,7 +4,7 @@ name: Anexia
 urls:
   home: https://www.anexia.com
 referringSubnets: { now: 550, before: 549 }
-status: draft
+status: stub
 addedAt: 2026-08-07
 checkedAt: 2026-08-07
 figure:

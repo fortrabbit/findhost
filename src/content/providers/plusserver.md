@@ -9,7 +9,7 @@ category:
 description: A IaaS and bare metal provider in Germany.
 hqCountry: DE
 referringSubnets: { now: 716, before: 702 }
-status: draft
+status: stub
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:

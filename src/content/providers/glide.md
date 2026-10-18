@@ -8,7 +8,7 @@ category:
 description: A low-code and no-code site builder in the United States.
 hqCountry: US
 referringSubnets: { now: 1615, before: 1619 }
-status: draft
+status: stub
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:

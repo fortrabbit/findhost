@@ -8,7 +8,7 @@ category:
 description: A low-code and no-code site builder in Norway.
 hqCountry: NO
 referringSubnets: { now: 5190, before: 5174 }
-status: draft
+status: stub
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:

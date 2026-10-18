@@ -12,7 +12,7 @@ runsOn:
   - digitalocean
   - vultr
   - linode
-status: draft
+status: stub
 addedAt: 2026-09-17
 checkedAt: 2026-10-04
 figure:

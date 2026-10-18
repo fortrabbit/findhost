@@ -8,7 +8,7 @@ category:
   - serverless
 description: A static hosting and serverless provider.
 referringSubnets: { now: 237, before: 228 }
-status: draft
+status: stub
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:

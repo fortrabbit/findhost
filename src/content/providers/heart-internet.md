@@ -7,7 +7,7 @@ hqCountry: GB
 ownership: subsidiary
 parent: your-online
 referringSubnets: { now: 475, before: 475 }
-status: draft
+status: stub
 addedAt: 2026-08-07
 checkedAt: 2026-08-07
 sources:

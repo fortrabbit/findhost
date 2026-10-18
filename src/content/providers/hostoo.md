@@ -9,7 +9,7 @@ category:
 description: A PaaS and shared hosting provider in Brazil.
 hqCountry: BR
 referringSubnets: null
-status: draft
+status: stub
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:

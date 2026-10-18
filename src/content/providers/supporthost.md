@@ -8,7 +8,7 @@ category:
 description: A shared hosting provider in Italy.
 hqCountry: IT
 referringSubnets: { now: 441, before: 451 }
-status: draft
+status: stub
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:

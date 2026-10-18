@@ -10,7 +10,7 @@ category:
 description: A shared hosting, VPS and PaaS provider in Colombia.
 hqCountry: CO
 referringSubnets: { now: 440, before: 436 }
-status: draft
+status: stub
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:

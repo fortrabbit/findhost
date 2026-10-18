@@ -9,7 +9,7 @@ category:
 description: A shared hosting and VPS provider in Italy.
 hqCountry: IT
 referringSubnets: { now: 397, before: 401 }
-status: draft
+status: stub
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:

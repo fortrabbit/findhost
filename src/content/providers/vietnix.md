@@ -9,7 +9,7 @@ category:
 description: A shared hosting and VPS provider in Vietnam.
 hqCountry: VN
 referringSubnets: { now: 524, before: 519 }
-status: draft
+status: stub
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:

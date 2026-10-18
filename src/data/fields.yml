@@ -175,7 +175,7 @@
     - { id: anonymous, label: 'Sells anonymous sign-up', short: Anonymous hosting, aside: anonymous }
     # `hidden` keeps a record out of the register and out of every count. It is
     # the only place that fact is written down.
-    - { id: draft, label: Stub, hidden: true }
+    - { id: stub, label: Stub, hidden: true }
     - { id: out-of-scope, label: Out of scope, hidden: true }
 
 # ---------------------------------------------------------- Classification

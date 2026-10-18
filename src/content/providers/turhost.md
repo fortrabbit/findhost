@@ -8,7 +8,7 @@ category:
 description: A shared hosting provider in Türkiye.
 hqCountry: TR
 referringSubnets: { now: 934, before: 948 }
-status: draft
+status: stub
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:

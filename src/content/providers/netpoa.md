@@ -9,7 +9,7 @@ category:
   - bare-metal
 description: A shared hosting, VPS and bare metal provider in Tanzania.
 referringSubnets: null
-status: draft
+status: stub
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:

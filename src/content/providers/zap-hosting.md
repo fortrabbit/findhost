@@ -5,7 +5,7 @@ urls:
   home: https://zap-hosting.com
 description: A hosting company registered as ZAP-Hosting GmbH in Münster, Germany.
 hqCountry: DE
-status: draft
+status: stub
 addedAt: 2026-09-18
 checkedAt: 2026-09-18
 figure:

@@ -8,7 +8,7 @@ category:
 description: A shared hosting provider in the United Kingdom.
 hqCountry: GB
 referringSubnets: { now: 913, before: 922 }
-status: draft
+status: stub
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:

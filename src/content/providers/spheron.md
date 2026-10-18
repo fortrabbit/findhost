@@ -16,7 +16,7 @@ infraContract:
 gpuCapacity:
   - instances
 referringSubnets: { now: 781, before: 772 }
-status: draft
+status: stub
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:
@@ -35,4 +35,4 @@ sources:
 
 Spheron is a marketplace for GPU compute. Its [terms](https://www.spheron.network/terms) describe it as aggregating capacity from third-party data center providers, and say the company does not own or operate the hardware. The [documentation](https://docs.spheron.ai/overview) lists GPU virtual machines, on dedicated or spot capacity, and multi-GPU bare-metal servers, both with root access.
 
-**A draft, not yet listed.** Whether it meets the [listing criteria](/criteria/) has not been checked.
+**A stub.** Not every [listing criterion](/criteria/) has been checked yet.

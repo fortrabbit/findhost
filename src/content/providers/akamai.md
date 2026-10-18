@@ -4,7 +4,7 @@ name: Akamai Technologies
 urls:
   home: https://www.akamai.com
 referringSubnets: { now: 10539, before: 10466 }
-status: draft
+status: stub
 addedAt: 2026-08-07
 checkedAt: 2026-08-07
 figure:

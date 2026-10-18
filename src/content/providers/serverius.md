@@ -9,7 +9,7 @@ category:
 description: A IaaS and bare metal provider in the Netherlands.
 hqCountry: NL
 referringSubnets: { now: 295, before: 276 }
-status: draft
+status: stub
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:

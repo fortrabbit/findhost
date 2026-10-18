@@ -9,7 +9,7 @@ category:
 description: A shared hosting and IaaS provider in Czechia.
 hqCountry: CZ
 referringSubnets: { now: 328, before: 345 }
-status: draft
+status: stub
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:

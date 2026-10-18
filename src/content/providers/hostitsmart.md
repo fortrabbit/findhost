@@ -9,7 +9,7 @@ category:
 description: A shared hosting and VPS provider in India.
 hqCountry: IN
 referringSubnets: { now: 369, before: 363 }
-status: draft
+status: stub
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:

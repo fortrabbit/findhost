@@ -9,7 +9,7 @@ category:
 description: A shared hosting and VPS provider in Spain.
 hqCountry: ES
 referringSubnets: { now: 420, before: 430 }
-status: draft
+status: stub
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:

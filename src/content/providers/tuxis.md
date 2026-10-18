@@ -5,7 +5,7 @@ urls:
   home: https://www.tuxis.nl
 hqCountry: NL
 referringSubnets: null
-status: draft
+status: stub
 addedAt: 2026-08-14
 checkedAt: 2026-08-14
 figure:

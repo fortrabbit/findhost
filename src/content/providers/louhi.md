@@ -9,7 +9,7 @@ category:
 description: A shared hosting and VPS provider in Finland.
 hqCountry: FI
 referringSubnets: { now: 711, before: 727 }
-status: draft
+status: stub
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:

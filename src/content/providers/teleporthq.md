@@ -8,7 +8,7 @@ category:
 description: A low-code and no-code site builder in Romania.
 hqCountry: RO
 referringSubnets: { now: 758, before: 758 }
-status: draft
+status: stub
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:

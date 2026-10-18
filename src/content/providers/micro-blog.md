@@ -8,7 +8,7 @@ category:
 description: A host for personal sites in the United States.
 hqCountry: US
 referringSubnets: { now: 3972, before: 3983 }
-status: draft
+status: stub
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:

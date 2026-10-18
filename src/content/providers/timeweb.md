@@ -10,7 +10,7 @@ category:
 description: A shared hosting, VPS and IaaS provider in Russia.
 hqCountry: RU
 referringSubnets: { now: 3801, before: 3802 }
-status: draft
+status: stub
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:

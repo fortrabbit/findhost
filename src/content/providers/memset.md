@@ -9,7 +9,7 @@ category:
 description: A VPS and IaaS provider in the United Kingdom.
 hqCountry: GB
 referringSubnets: { now: 360, before: 347 }
-status: draft
+status: stub
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:

@@ -4,7 +4,7 @@ name: SDF Public Access UNIX System
 urls:
   home: https://sdf.org
 referringSubnets: { now: 2872, before: 2889 }
-status: draft
+status: stub
 addedAt: 2026-08-14
 checkedAt: 2026-08-14
 figure:

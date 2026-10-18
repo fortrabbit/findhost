@@ -8,7 +8,7 @@ category:
 description: A low-code and no-code site builder in Germany.
 hqCountry: DE
 referringSubnets: { now: 1477, before: 1477 }
-status: draft
+status: stub
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:

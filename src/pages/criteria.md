@@ -34,4 +34,4 @@ The review is my judgment, with no score behind it. It decides who is listed, ne
 
 ## Stubs
 
-A provider I have reviewed and not picked yet is a stub, and so is one that fails a criterion. A stub keeps its own page on the [stubs list](/stubs/), with what is known about it. Being a stub is where every provider starts. I review the stubs again from time to time. New evidence, or something I missed, is welcome in a [GitHub issue](https://github.com/fortrabbit/findhost/issues/new?template=add-provider.yml).
+Every provider starts as a stub. A stub has been checked and did not make the full list: it failed a criterion, or the review did not pick it. It keeps its own page on the [stubs list](/stubs/), with what is known about it. I check the stubs again from time to time. New evidence, or something I missed, is welcome in a [GitHub issue](https://github.com/fortrabbit/findhost/issues/new?template=add-provider.yml).

@@ -8,7 +8,7 @@ category:
 description: A CaaS provider in France.
 hqCountry: FR
 referringSubnets: { now: 2236, before: 2238 }
-status: draft
+status: stub
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:

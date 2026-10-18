@@ -4,7 +4,7 @@ name: Observable
 urls:
   home: https://observablehq.com
 description: A notebook and data-app platform whose open-source Framework tool builds sites deployable to Observable Cloud.
-status: draft
+status: stub
 addedAt: 2026-09-18
 checkedAt: 2026-09-18
 sources:

@@ -45,7 +45,7 @@ freeTier: permanent
 apiAvailable: public
 cliTool: official
 mcpServer: official
-status: draft
+status: stub
 addedAt: 2026-10-13
 checkedAt: 2026-10-13
 sources:

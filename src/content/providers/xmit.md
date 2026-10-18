@@ -14,7 +14,7 @@ deployMethods:
 cliTool: official
 testDomain: included
 freeTier: permanent
-status: draft
+status: stub
 addedAt: 2026-09-18
 checkedAt: 2026-09-18
 sources:

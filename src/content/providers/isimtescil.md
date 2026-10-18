@@ -10,7 +10,7 @@ category:
 description: A shared hosting, VPS and bare metal provider in Türkiye.
 hqCountry: TR
 referringSubnets: { now: 422, before: 430 }
-status: draft
+status: stub
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:

@@ -8,7 +8,7 @@ urls:
 category:
   - static
 description: An AI tool that turns a prompt into a UI design, publishable to a URL or a custom domain.
-status: draft
+status: stub
 addedAt: 2026-09-18
 checkedAt: 2026-09-18
 sources:

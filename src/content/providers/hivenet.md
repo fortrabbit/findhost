@@ -37,7 +37,7 @@ regions:
   - AE
   - US
 apiAvailable: public
-status: draft
+status: stub
 addedAt: 2026-09-24
 checkedAt: 2026-09-27
 sources:

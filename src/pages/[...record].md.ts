@@ -57,7 +57,7 @@ export const GET: APIRoute = async ({ props, site }) => {
     hidden
       ? data.status === 'out-of-scope'
         ? `NOT LISTED. This record failed inclusion criterion ${label(data.criterion)} and is not part of the register, not counted and not indexed.`
-        : 'DRAFT. This record is started and not finished, so it is not part of the register, not counted and not indexed.'
+        : 'STUB. This provider was checked and not picked for the full list yet, so it is not part of the register, not counted and not indexed. It will be checked again.'
       : '',
     hidden ? '' : undefined,
     `Source: ${origin}${recordPath(provider)}`,

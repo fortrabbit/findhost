@@ -7,7 +7,7 @@ category:
   - caas
 description: A platform for spinning up isolated cloud sandboxes that run code, with previews served at their own address.
 ownership: subsidiary
-status: draft
+status: stub
 addedAt: 2026-09-18
 checkedAt: 2026-09-18
 sources:

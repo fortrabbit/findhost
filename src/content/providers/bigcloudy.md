@@ -11,7 +11,7 @@ category:
   - bare-metal
 description: An Indian host selling shared hosting, virtual servers and dedicated machines, with domains and mailboxes alongside.
 hqCountry: IN
-status: draft
+status: stub
 addedAt: 2026-09-18
 checkedAt: 2026-09-18
 sources:

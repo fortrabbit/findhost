@@ -8,7 +8,7 @@ category:
   - vps
 hqCountry: DE
 referringSubnets: { now: 2875, before: 2872 }
-status: draft
+status: stub
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:

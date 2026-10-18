@@ -9,7 +9,7 @@ category:
 description: A vanity hosting and static hosting provider in the United States.
 hqCountry: US
 referringSubnets: { now: 3661, before: 3642 }
-status: draft
+status: stub
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:

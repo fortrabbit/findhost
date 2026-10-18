@@ -4,7 +4,7 @@ name: Timme Hosting
 urls:
   home: https://timmehosting.de
 referringSubnets: { now: 512, before: 511 }
-status: draft
+status: stub
 addedAt: 2026-07-31
 checkedAt: 2026-07-31
 figure:

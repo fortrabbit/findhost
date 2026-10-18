@@ -8,7 +8,7 @@ category:
 description: A shared hosting provider in the Netherlands.
 hqCountry: NL
 referringSubnets: { now: 10112, before: 10081 }
-status: draft
+status: stub
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:

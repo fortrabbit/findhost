@@ -9,7 +9,7 @@ category:
 description: A shared hosting and VPS provider in Mexico.
 hqCountry: MX
 referringSubnets: { now: 267, before: 281 }
-status: draft
+status: stub
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:

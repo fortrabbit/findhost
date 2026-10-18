@@ -8,7 +8,7 @@ category:
 description: A static hosting provider in China.
 hqCountry: CN
 referringSubnets: { now: 380, before: 381 }
-status: draft
+status: stub
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:

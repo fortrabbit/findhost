@@ -8,7 +8,7 @@ category:
 description: A low-code and no-code site builder in India.
 hqCountry: IN
 referringSubnets: { now: 1154, before: 1141 }
-status: draft
+status: stub
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:

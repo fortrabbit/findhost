@@ -51,7 +51,7 @@ supportChannels:
   - phone
 supportHours: 24-7
 apiAvailable: public
-status: draft
+status: stub
 addedAt: 2026-10-13
 checkedAt: 2026-10-13
 sources:

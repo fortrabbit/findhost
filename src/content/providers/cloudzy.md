@@ -8,7 +8,7 @@ category:
 description: A VPS provider in the United States.
 hqCountry: US
 referringSubnets: { now: 745, before: 744 }
-status: draft
+status: stub
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:

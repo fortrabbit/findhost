@@ -11,7 +11,7 @@ category:
 description: A shared hosting, VPS, IaaS and bare metal provider in the Philippines.
 hqCountry: PH
 referringSubnets: { now: 317, before: 310 }
-status: draft
+status: stub
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:

@@ -8,7 +8,7 @@ category:
 description: A shared hosting provider in Japan.
 hqCountry: JP
 referringSubnets: { now: 1465, before: 1466 }
-status: draft
+status: stub
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:

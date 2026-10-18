@@ -9,7 +9,7 @@ description: Edge network and CDN, selling compute at the edge and owner of Glit
 hqCountry: US
 ownership: public
 referringSubnets: { now: 7251, before: 7249 }
-status: draft
+status: stub
 addedAt: 2026-08-08
 checkedAt: 2026-08-08
 figure:

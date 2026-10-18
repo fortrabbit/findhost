@@ -6,7 +6,7 @@ urls:
 category:
   - vps
 description: Tor-friendly virtual servers in Moldova and Romania.
-status: draft
+status: stub
 addedAt: 2026-09-17
 figure:
   emoji: 🧅

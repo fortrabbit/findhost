@@ -11,7 +11,7 @@ hqCountry: IT
 ownership: subsidiary
 parent: your-online
 referringSubnets: { now: 362, before: 362 }
-status: draft
+status: stub
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 sources:

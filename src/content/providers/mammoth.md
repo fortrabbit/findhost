@@ -4,7 +4,7 @@ name: Mammoth
 urls:
   home: https://www.mammoth.com.au
 referringSubnets: null
-status: draft
+status: stub
 addedAt: 2026-08-07
 checkedAt: 2026-08-07
 figure:

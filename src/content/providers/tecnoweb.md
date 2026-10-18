@@ -10,7 +10,7 @@ category:
 description: A shared hosting, VPS and PaaS provider in Chile.
 hqCountry: CL
 referringSubnets: { now: 309, before: 303 }
-status: draft
+status: stub
 addedAt: 2026-08-12
 checkedAt: 2026-08-12
 figure:
