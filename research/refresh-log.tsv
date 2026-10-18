@@ -85,3 +85,4 @@
 2026-10-17	aws-lambda	confirmed	Home, pricing, wikidata, regions, runtimes and AWS customer agreement pages read; wikidata, regions, runtimes, pricingModel, freeTier, billingTiming and exitWithin confirmed unchanged; priceFrom, priceTo and billingPeriods sources on pricing page do not state a clear band or billing cadence (usage-based, worked examples span $2.73-$1,241/mo), stale; ownership source no longer calls AWS a subsidiary in so many words, stale; record checkedAt set
 2026-10-18	fornex	unreadable	HTTP 403 on home (bot block, same as at record creation), only URL on record
 2026-10-18	byte	confirmed	Home still redirects byte.nl -> hypernode.com/en; only sourced field is referringSubnets (script-owned); nothing on record to compare
+2026-10-18	bearstech	confirmed	Home read; no price for any offer still appears anywhere on it, matching criterion-3 out-of-scope; only sourced field is referringSubnets (script-owned); nothing on record to compare
