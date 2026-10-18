@@ -326,6 +326,11 @@ test.describe('a combination of two facets', () => {
 });
 
 test.describe('governance, as behaviour rather than policy text', () => {
+  test('the sitemap lists no page that asks not to be indexed', async ({ page }) => {
+    const sitemap = await (await page.request.get('/sitemap.xml')).text();
+    expect(sitemap).not.toContain('/stubs/</loc>');
+  });
+
   test('fortrabbit sits in alphabetical position and discloses itself', async ({ page }) => {
     await page.goto('/');
 

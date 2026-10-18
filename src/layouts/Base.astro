@@ -94,7 +94,11 @@ const structured = schema && graph(new URL(origin).origin, Array.isArray(schema)
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content={imageAlt} />
     <meta name="twitter:card" content="summary_large_image" />
-    {structured && <script type="application/ld+json" set:html={JSON.stringify(structured)} is:inline />}
+    {
+      structured && (
+        <script type="application/ld+json" set:html={JSON.stringify(structured).replace(/</g, '\\u003c')} is:inline />
+      )
+    }
     {fathomSiteId && <script is:inline src="https://cdn.usefathom.com/script.js" data-site={fathomSiteId} defer />}
   </head>
   <body data-pagefind-ignore={hidden ? 'all' : undefined}>

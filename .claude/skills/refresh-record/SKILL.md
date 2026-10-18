@@ -25,7 +25,7 @@ git checkout -B work origin/main
 pnpm install --frozen-lockfile
 ```
 
-- **`claude/refresh`** is the merge lane, and it carries everything a run researched: dates moved on a record found unchanged, changed field values, a changed `status`, and the log. The one condition is that every field the run changed carries a `sources` entry naming it. A GitHub Action merges it into `main` on its own after checking exactly that, then deletes the branch.
+- **`claude/refresh`** is the merge lane, and it carries everything a run researched: dates moved on a record found unchanged, changed field values, a changed `status`, and the log. The one condition is that every field the run changed carries a `sources` entry naming it that the run wrote or re-dated: an entry left as it was vouches for the old value. A GitHub Action merges it into `main` on its own after checking exactly that, then deletes the branch.
 - **`claude/refresh-review`** is the review lane, and it should be rare: a changed field nothing cites, a changed `id`, `name` or `addedAt`, and any line of prose. Those are not what a re-reading produces, so a person reads the pull request before it ships.
 
 Never push to `main`, and never put an uncited change on `claude/refresh`; the Action would refuse it and go red. Cite what you change and the lane sorts itself out.
