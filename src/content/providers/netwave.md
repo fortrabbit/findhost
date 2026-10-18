@@ -22,4 +22,4 @@ sources:
 
 Netwave sells shared hosting, domains and SSL certificates in Poland, under the name netwave.pl.
 
-**Listed as a stub because only the name, the domain and the country have been checked.** The domain answered when this record was made, and the footer of its home page gives a Polish tax number. Whether it meets the criteria — sold to the public, a price published without login, technical documentation in the open, independent artifacts — is still an open question, and every other field stays unknown until somebody reads the provider's own pages.
+**Listed as a stub because only the name, the domain and the country have been checked.** The domain answered when this record was made, and the footer of its home page gives a Polish tax number. Whether it meets the criteria — sold to the public, a price published without login, technical documentation in the open, a named business — is still an open question, and every other field stays unknown until somebody reads the provider's own pages.
