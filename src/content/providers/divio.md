@@ -25,6 +25,7 @@ audience:
   - enterprise
 software:
   - django
+  - wagtail
   - laravel
   - symfony
   - rails
@@ -60,6 +61,7 @@ addedAt: 2026-07-31
 checkedAt: 2026-08-12
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
+  - { field: software, url: 'https://docs.divio.com/introduction/wagtail/', checkedAt: 2026-10-18 }
   - { field: staging, url: 'https://www.divio.com/pricing', checkedAt: 2026-08-12 }
   - { field: founded, url: 'https://www.divio.com/company/', checkedAt: 2026-08-01 }
   - { field: ownership, url: 'https://www.divio.com/company/', checkedAt: 2026-08-01 }
