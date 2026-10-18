@@ -51,9 +51,7 @@ supportChannels:
   - phone
 supportHours: 24-7
 apiAvailable: public
-status: out-of-scope
-criterion: 5
-boundedSearch: true
+status: draft
 addedAt: 2026-10-13
 checkedAt: 2026-10-13
 sources:
@@ -68,7 +66,6 @@ sources:
   - { field: supportChannels, url: 'https://monovm.com/support/', checkedAt: 2026-10-13 }
   - { field: supportHours, url: 'https://monovm.com/support/', checkedAt: 2026-10-13 }
   - { field: apiAvailable, url: 'https://dashboard.monovm.com/api/documentation', checkedAt: 2026-10-13 }
-  - { field: criterion, url: 'https://github.com/monovm/MonoVM-VPS-Hosting-WHMCS-Reseller-Module', checkedAt: 2026-10-13 }
 figure:
   emoji: 🪙
   color: rgb(22, 44, 84)
@@ -78,7 +75,3 @@ ai: authored
 ---
 
 MonoVM sells Linux and Windows virtual private servers, dedicated servers, shared and reseller hosting, domain registration and mailboxes. A Linux server comes with root access over SSH and a Windows one with administrator access over remote desktop, as the [VPS page](https://monovm.com/vps-server/) says, and images with a control panel or an application preinstalled are sold beside the plain operating systems. The same page says both managed and unmanaged servers are offered, without saying which plans are which. Payment is taken by card, PayPal, bank transfer and cryptocurrency. An [API reference](https://dashboard.monovm.com/api/documentation) covers domain records and ordering, renewing and upgrading servers. The site names no legal entity or headquarters, and does not say who operates the data centers.
-
-**Criterion 5, two independent artifacts, is not satisfied.** A search turned up review aggregators, directory listings and coupon pages, which the criterion excludes. The [WHMCS reseller module](https://github.com/monovm/MonoVM-VPS-Hosting-WHMCS-Reseller-Module) and the tutorials are MonoVM's own. Criteria 1 to 4 hold: plans are bought online, prices are published, and the API reference is public.
-
-**This ruling reverses when the evidence appears.** A framework's deployment guide, a third-party package or tool, an unaffiliated tutorial or a thread in an issue tracker would settle it.

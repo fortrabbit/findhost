@@ -58,12 +58,9 @@ body:
     attributes:
       label: Where did you read this?
       description: |
-        URLs, one per line. The pricing page and the documentation are the two that
-        settle most of a record. Two independent artifacts are one of the six
-        inclusion criteria — a framework's deployment guide, a third-party package
-        or CLI, an unaffiliated talk or tutorial, an issue-tracker thread. Press
-        releases, sponsored posts, affiliate reviews and the provider's own blog do
-        not count.
+        URLs, one per line. The pricing page, the documentation and the page that
+        names the company behind it settle most of a record. What happens next is
+        described at https://www.findhost.app/about/#who-is-listed
       placeholder: |
         https://www.example.com/pricing
         https://docs.example.com

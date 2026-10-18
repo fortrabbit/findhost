@@ -37,12 +37,10 @@ regions:
   - AE
   - US
 apiAvailable: public
-status: out-of-scope
-criterion: 5
+status: draft
 addedAt: 2026-09-24
 checkedAt: 2026-09-27
 sources:
-  - { field: criterion, url: 'https://www.hivenet.com/compute', checkedAt: 2026-09-27 }
   - { field: category, url: 'https://docs.hivenet.com/about-hivenet', checkedAt: 2026-09-27 }
   - { field: hqCountry, url: 'https://www.hivenet.com/terms-of-service', checkedAt: 2026-09-27 }
   - { field: whoManagesOs, url: 'https://docs.hivenet.com/documentation/essentials/choosing-between-a-virtual-machine-and-a-container', checkedAt: 2026-09-27 }
@@ -73,7 +71,6 @@ ai: authored
 
 Hivenet sells Compute, a GPU and CPU rental service, beside a consumer file-storage product. A customer launches a container from a template or its own image, or a virtual machine with full OS access, on NVIDIA GPUs or CPU-only hosts, and reaches it over SSH, HTTPS, TCP or UDP. An Inference API runs open-weight models from a catalog as dedicated OpenAI-compatible endpoints with a fixed number of replicas. Usage is billed by the second from a prepaid organization balance held in euros, and the [Compute page](https://www.hivenet.com/compute) names France, the UAE and the US as locations. The contracting entity in the terms is Hive Computing Services SA, in Geneva.
 
-**Criterion 5 — two independent artifacts — is not satisfied.** Beyond Hivenet's own site, docs, blog and benchmarks, what turned up was review-site listings and one research repository that points at a Compute host in its configuration. No third-party tool integrates the Compute API, and no unaffiliated tutorial or issue thread was found. Criteria 1 to 4 hold: signup is self-serve, prices are on the [pricing page](https://www.hivenet.com/subscribe), and the [docs](https://docs.hivenet.com/) cover instances, billing and a public API.
 
 ## Worth knowing
 

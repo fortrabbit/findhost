@@ -1,7 +1,7 @@
 ---
 title: Stubs
-description: Records started and not finished, and names considered and ruled out against a numbered criterion. Not part of the register.
-lead: Started and not finished, or considered and left out.
+description: Providers reviewed and not picked for the list yet, and providers that fail one of the numbered checks. Reviewed again from time to time.
+lead: Reviewed, and not picked yet.
 ---
 
-Why is that hosting provider not in the list? A stub is a name with a handful of fields and no research behind it yet. Visible so that the work in progress can be seen. Stubs are not counted, and the filters do not reach them. Being out of scope or not finished is not a criticism. Rulings are reversible, and several are near-misses on a single criterion — usually published pricing. Bring the missing evidence and the record moves into the register.
+Why is that hosting provider not in the list? Every provider starts here. A stub is a provider I have reviewed and not picked for the list yet, or one that fails one of the [five checks](/about/#who-is-listed) and names the number. Stubs are not counted, and the filters do not reach them. I review them again from time to time, and new evidence moves a provider into the list.

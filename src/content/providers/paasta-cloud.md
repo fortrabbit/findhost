@@ -57,9 +57,7 @@ pricingModel: fixed-tier
 billingPeriods:
   - monthly
   - hourly
-status: out-of-scope
-criterion: 5
-boundedSearch: true
+status: draft
 addedAt: 2026-10-18
 checkedAt: 2026-10-18
 sources:
@@ -75,7 +73,6 @@ sources:
   - { field: mcpServer, url: 'https://paasta.cloud/docs/mcp-agent', checkedAt: 2026-10-18 }
   - { field: pricingModel, url: 'https://paasta.cloud/pricing', checkedAt: 2026-10-18 }
   - { field: billingPeriods, url: 'https://paasta.cloud/pricing', checkedAt: 2026-10-18 }
-  - { field: criterion, url: 'https://github.com/fortrabbit/findhost/issues/70', checkedAt: 2026-10-18 }
 figure:
   emoji: 🍝
   color: rgb(120, 30, 40)
@@ -91,5 +88,3 @@ App plans come in fixed monthly tiers, prepaid, or billed by the hour against pr
 ## Worth knowing
 
 The site names no legal entity, address or data center location; the contact phone number carries Iran's country code. Private images from a custom registry are not supported, so a private image has to be built from a Dockerfile or Compose file.
-
-**Criterion 5, two independent artifacts, is not satisfied.** A search found nothing about Paasta Cloud outside its own site, and the [suggestion filed on GitHub](https://github.com/fortrabbit/findhost/issues/70) on the provider's behalf says the same. Criteria 1 to 4 hold: signup is self-serve, prices are published, and the documentation is public. A framework's deployment guide, a third-party package, an unaffiliated tutorial or a thread in an issue tracker would settle it.

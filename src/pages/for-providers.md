@@ -22,7 +22,7 @@ The alphabetical order, the absence of ratings and the ♥️ do not change on r
 
 ## Adding a provider
 
-The register is incomplete; a missing name usually means nobody has got to it yet. Write the record — one file, four required fields, one pull request — or name it in an issue and leave the fields to whoever picks it up. A provider failing one of [the five criteria](/about/#who-is-listed) still gets a record carrying the number it failed on, and most of those reverse once the evidence appears.
+The register is incomplete; a missing name usually means nobody has got to it yet. Write the record — one file, four required fields, one pull request — or name it in an issue and leave the fields to whoever picks it up. Every new record starts as a stub and moves into the list after [the checks and a review](/about/#who-is-listed). A stub keeps its page and gets reviewed again.
 
 - [Open a GitHub issue to add a provider](https://github.com/fortrabbit/findhost/issues/new?template=add-provider.yml)
 

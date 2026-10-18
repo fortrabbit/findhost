@@ -13,24 +13,12 @@ Records live in `src/content/providers/<slug>.md`.
 
 ## Add a provider
 
-Five criteria, explained on the [about page](https://www.findhost.app/about/#who-is-listed):
+Who gets into the register, the five checks and the review that follows them, is on the website: [Who is listed](https://www.findhost.app/about/#who-is-listed). This file covers the mechanics only.
 
-1. It runs an app, serves a site, or sells something a site needs.
-2. It is sold to the public without a sales call.
-3. It publishes a price without a login.
-4. It documents its platform publicly.
-5. Two independent artifacts exist: a framework's deployment guide, a third-party package or CLI, an unaffiliated talk or tutorial, an issue-tracker thread. Press releases, sponsored posts, affiliate reviews, and the provider's own blog do not count.
+New records start as a stub. A stub has a page, and stays out of the register, the counts, search, and the sitemap.
 
-A maintainer applies the criteria and also looks at the provider as a whole: its site, its product, how it is sold. That reading decides the borderline cases.
-
-## Stubs
-
-Most new records start as a stub. A stub has a page, and stays out of the register, the counts, search, and the sitemap.
-
-- `status: draft` is a record nobody has finished.
-- `status: out-of-scope` is a record that failed a criterion. It names the number in `criterion`.
-
-Stubs are reviewed again and move into the register once the record holds up. Missing evidence speeds that up: post it in an issue.
+- `status: draft` is a stub: reviewed and not picked yet, or not finished.
+- `status: out-of-scope` failed one of the five checks. It names the number in `criterion`.
 
 `discontinued`, `unlisted`, and `anonymous` put a record beside the register, still indexed. `anonymous` is for a host whose own pages sell sign-up without identification; quote that wording in a `status` source. Nothing is ever deleted.
 

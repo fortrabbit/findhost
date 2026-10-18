@@ -60,9 +60,7 @@ apiAvailable: public
 cliTool: official
 mcpServer: official
 collaboration: team
-status: out-of-scope
-criterion: 5
-boundedSearch: true
+status: draft
 addedAt: 2026-10-15
 checkedAt: 2026-10-15
 sources:
@@ -85,7 +83,6 @@ sources:
   - { field: apiAvailable, url: 'https://edge.dply.io/docs/api', checkedAt: 2026-10-15 }
   - { field: cliTool, url: 'https://edge.dply.io/docs/cli', checkedAt: 2026-10-15 }
   - { field: mcpServer, url: 'https://edge.dply.io/docs/mcp', checkedAt: 2026-10-15 }
-  - { field: criterion, url: 'https://edge.dply.io/docs/private-beta', checkedAt: 2026-10-15 }
 figure:
   emoji: ☁️
   color: rgb(243, 128, 32)
@@ -101,5 +98,3 @@ The [compliance page](https://edge.dply.io/compliance) names the infrastructure:
 ## Worth knowing
 
 The [documentation](https://edge.dply.io/docs/private-beta) describes the product as a private beta, with open sign-up.
-
-**Criterion 5, two independent artifacts, is not satisfied.** A search found nothing about dply Edge outside its own site, its owner's GitHub repositories and the owner's launch post on Mastodon. Criteria 1 to 4 hold: signup is self-serve, the price is published, and the documentation is public. A framework's deployment guide, a third-party package, an unaffiliated tutorial or a thread in an issue tracker would settle it.
