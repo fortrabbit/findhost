@@ -86,3 +86,4 @@
 2026-10-18	fornex	unreadable	HTTP 403 on home (bot block, same as at record creation), only URL on record
 2026-10-18	byte	confirmed	Home still redirects byte.nl -> hypernode.com/en; only sourced field is referringSubnets (script-owned); nothing on record to compare
 2026-10-18	bearstech	confirmed	Home read; no price for any offer still appears anywhere on it, matching criterion-3 out-of-scope; only sourced field is referringSubnets (script-owned); nothing on record to compare
+2026-10-19	appwrite	confirmed	Home, pricing, status redirect, wikidata, regions and oss-journey blog pages read; wikidata, regions, priceFrom, priceTo, currencies, billingPeriods and freeTier confirmed unchanged; ownership source (oss-journey blog) now redirects to the generic /home page and no longer mentions funding, stale; record checkedAt set
