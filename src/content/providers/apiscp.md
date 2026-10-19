@@ -32,20 +32,20 @@ freeTier: trial
 referringSubnets: { now: 299, before: 275 }
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-10-19
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: entryPrice, url: 'https://apiscp.com/pricing/', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://apiscp.com/pricing/', checkedAt: 2026-08-01 }
-  - { field: pricingModel, url: 'https://apiscp.com/pricing/', checkedAt: 2026-08-01 }
-  - { field: freeTier, url: 'https://apiscp.com/pricing/', checkedAt: 2026-08-01 }
-  - { field: runtimes, url: 'https://apiscp.com/', checkedAt: 2026-08-01 }
-  - { field: infraContract, url: 'https://apiscp.com/pricing/', checkedAt: 2026-08-01 }
-  - { field: priceTo, url: 'https://apiscp.com/pricing/', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://apiscp.com/pricing/', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://apiscp.com/pricing/', checkedAt: 2026-08-02 }
+  - { field: entryPrice, url: 'https://apiscp.com/pricing/', checkedAt: 2026-10-19 }
+  - { field: priceFrom, url: 'https://apiscp.com/pricing/', checkedAt: 2026-10-19 }
+  - { field: pricingModel, url: 'https://apiscp.com/pricing/', checkedAt: 2026-10-19 }
+  - { field: freeTier, url: 'https://apiscp.com/pricing/', checkedAt: 2026-10-19 }
+  - { field: runtimes, url: 'https://apiscp.com/', checkedAt: 2026-10-19 }
+  - { field: infraContract, url: 'https://apiscp.com/pricing/', checkedAt: 2026-10-19 }
+  - { field: priceTo, url: 'https://apiscp.com/pricing/', checkedAt: 2026-10-19 }
+  - { field: currencies, url: 'https://apiscp.com/pricing/', checkedAt: 2026-10-19 }
+  - { field: billingPeriods, url: 'https://apiscp.com/pricing/', checkedAt: 2026-10-19 }
   - { field: billingTiming, url: 'https://apiscp.com/pricing/', checkedAt: 2026-08-02 }
-  - { field: ownership, url: 'https://hostineer.com/company/about-us', checkedAt: 2026-08-21 }
+  - { field: ownership, url: 'https://hostineer.com/company/about-us', checkedAt: 2026-10-19 }
 figure:
   emoji: 🎛️
   color: rgb(188, 47, 47)
