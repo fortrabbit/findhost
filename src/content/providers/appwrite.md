@@ -50,16 +50,16 @@ cliTool: official
 referringSubnets: { now: 1058, before: 1050 }
 wikidata: Q127672178
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-10-19
 sources:
-  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q127672178', checkedAt: 2026-09-09 }
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q127672178', checkedAt: 2026-10-19 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: regions, url: 'https://appwrite.io/docs/products/network/regions', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://appwrite.io/pricing', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://appwrite.io/pricing', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://appwrite.io/pricing', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://appwrite.io/pricing', checkedAt: 2026-08-02 }
-  - { field: freeTier, url: 'https://appwrite.io/pricing', checkedAt: 2026-08-01 }
+  - { field: regions, url: 'https://appwrite.io/docs/products/network/regions', checkedAt: 2026-10-19 }
+  - { field: priceFrom, url: 'https://appwrite.io/pricing', checkedAt: 2026-10-19 }
+  - { field: priceTo, url: 'https://appwrite.io/pricing', checkedAt: 2026-10-19 }
+  - { field: currencies, url: 'https://appwrite.io/pricing', checkedAt: 2026-10-19 }
+  - { field: billingPeriods, url: 'https://appwrite.io/pricing', checkedAt: 2026-10-19 }
+  - { field: freeTier, url: 'https://appwrite.io/pricing', checkedAt: 2026-10-19 }
   - { field: ownership, url: 'https://appwrite.io/blog/post/oss-journey-blog', checkedAt: 2026-08-21 }
 figure:
   emoji: 🧰
