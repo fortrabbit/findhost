@@ -834,6 +834,11 @@ jweiland:
   page: https://jweiland.net
   fetchedAt: 2026-10-20
   fills: true
+kamatera:
+  kind: favicon
+  image: https://www.kamatera.com/wp-content/uploads/cropped-cropped-06169472-7db8-4ba3-91f6-3b4e34b5e168-1-192x192.png
+  page: https://www.kamatera.com
+  fetchedAt: 2026-10-20
 keyweb:
   kind: favicon
   image: https://www.keyweb.de/assets//components/keyweb/fav/favicon-196x196.png
@@ -1058,6 +1063,11 @@ nhost:
   page: https://nhost.io
   fetchedAt: 2026-10-20
   fills: true
+nicevps:
+  kind: favicon
+  image: https://nicevps.net/favicon.ico
+  page: https://nicevps.net
+  fetchedAt: 2026-10-20
 nine-ch:
   kind: favicon
   image: https://nine.ch/favicon.png
@@ -1067,6 +1077,11 @@ nixihost:
   kind: favicon
   image: https://www.nixihost.com/images/browser/favicon-196x196.png
   page: https://nixihost.com
+  fetchedAt: 2026-10-20
+njalla:
+  kind: favicon
+  image: https://njal.la/favicon.ico
+  page: https://njal.la
   fetchedAt: 2026-10-20
 northflank:
   kind: favicon
