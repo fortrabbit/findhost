@@ -682,6 +682,11 @@ html:not(.js) .theme-switch {
   margin: 0;
 }
 
+/* In a list row the logo also carries .provider-tile; its inner tile already paints the frame. */
+.provider-logo.provider-tile {
+  background: none;
+}
+
 .provider-logo-tile {
   display: grid;
   place-items: center;
