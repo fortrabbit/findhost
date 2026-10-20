@@ -703,30 +703,38 @@ html:not(.js) .theme-switch {
   height: auto;
 }
 
-/* The record's heading with its logo hung in the margin, where the gutter has room for it. */
+/*
+ * The record's heading with its logo on the same line. Where the gutter has
+ * room, a negative margin hangs the logo in it, so the name keeps the edge the
+ * text below it shares.
+ */
 .record-title {
-  position: relative;
+  --logo: 3rem;
+
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin: var(--space-md) 0 var(--space-xs);
+}
+
+.record-title > h1 {
+  margin: 0;
 }
 
 .record-logo {
-  width: 4.5rem;
-  margin-top: var(--space-md);
-}
-
-.record-logo + h1 {
-  margin-top: var(--space-sm);
+  flex: none;
+  width: var(--logo);
 }
 
 @media (min-width: 75rem) {
-  .record-logo {
-    position: absolute;
-    top: 0.35rem;
-    right: calc(100% + var(--space-md));
-    margin-top: var(--space-md);
+  .record-title {
+    --logo: 4.5rem;
+
+    gap: var(--space-md);
   }
 
-  .record-logo + h1 {
-    margin-top: var(--space-md);
+  .record-title:has(.record-logo) {
+    margin-inline-start: calc((var(--logo) + var(--space-md)) * -1);
   }
 }
 
