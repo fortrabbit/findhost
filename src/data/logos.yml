@@ -93,6 +93,12 @@ azdigi:
   page: https://azdigi.com/en/
   fetchedAt: 2026-10-20
   fills: true
+azure:
+  kind: favicon
+  image: https://azure.microsoft.com/favicon.ico?v2
+  page: https://azure.microsoft.com
+  fetchedAt: 2026-10-20
+  fills: true
 back4app:
   kind: mark
   image: https://www.back4app.com/_public/apple-touch-icon.png
@@ -463,6 +469,11 @@ framer:
   page: https://framer.com
   fetchedAt: 2026-10-20
   fills: true
+galaxy:
+  kind: favicon
+  image: https://dmtgy0px4zdqn.cloudfront.net/favicon.ico?v=2
+  page: https://www.meteor.com/cloud
+  fetchedAt: 2026-10-20
 gandi:
   kind: favicon
   image: https://www.gandi.net/static/images/favicon.e848261f33f9.svg
@@ -595,6 +606,11 @@ hosting-com:
   image: https://hosting.com/assets/brand/favicons/apple-touch-icon.png
   page: https://hosting.com
   fetchedAt: 2026-10-20
+hostinger:
+  kind: favicon
+  image: https://www.hostinger.com/favicon.ico
+  page: https://www.hostinger.com
+  fetchedAt: 2026-10-20
 hostpinnacle:
   kind: favicon
   image: https://www.hostpinnacle.co.ke/wp-content/uploads/2023/10/cropped-Host-Pinnacle-Kenya-192x192.png
@@ -612,6 +628,11 @@ hosttech:
   page: https://www.hosttech.ch
   fetchedAt: 2026-10-20
   fills: true
+huawei-cloud:
+  kind: favicon
+  image: https://www.huaweicloud.com/favicon.ico
+  page: https://www.huaweicloud.com/intl/en-us/
+  fetchedAt: 2026-10-20
 hugging-face:
   kind: favicon
   image: https://huggingface.co/favicon.ico
@@ -763,6 +784,11 @@ leapcell:
   image: https://leapcell.io/favicon.ico
   page: https://leapcell.io
   fetchedAt: 2026-10-20
+leaseweb:
+  kind: favicon
+  image: https://www.leaseweb.com/favicon.ico
+  page: https://www.leaseweb.com
+  fetchedAt: 2026-10-20
 linode:
   kind: favicon
   image: https://assets.linode.com/icons/favicon-194x194.png
@@ -827,6 +853,11 @@ neon:
   page: https://neon.com
   fetchedAt: 2026-10-20
   fills: true
+netcup:
+  kind: favicon
+  image: https://www.netcup.com/favicon.ico
+  page: https://www.netcup.com
+  fetchedAt: 2026-10-20
 netlify:
   kind: mark
   image: https://www.netlify.com/favicon/icon-512.png
@@ -1160,6 +1191,11 @@ statichost:
   image: https://www.statichost.eu/android-chrome-512x512.png
   page: https://www.statichost.eu/
   fetchedAt: 2026-10-20
+strato:
+  kind: favicon
+  image: https://www.strato.de/favicon.ico
+  page: https://www.strato.de
+  fetchedAt: 2026-10-20
 supabase:
   kind: mark
   image: https://supabase.com/favicon/android-icon-512x512.png
@@ -1354,6 +1390,11 @@ zeabur:
   page: https://zeabur.com/
   fetchedAt: 2026-10-20
   fills: true
+zerops:
+  kind: favicon
+  image: https://zerops.io/favicon.ico
+  page: https://zerops.io
+  fetchedAt: 2026-10-20
 zone-media:
   kind: mark
   image: https://www.zone.ee/wp-content/themes/zone-eu-theme/assets/favicon/apple-touch-icon.png

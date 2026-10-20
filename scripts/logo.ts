@@ -15,6 +15,7 @@
  */
 import { existsSync, mkdirSync, readFileSync, rmdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
+import { crc32, deflateSync } from 'node:zlib';
 import { parse as parseYaml, stringify } from 'yaml';
 import { initWasm, Resvg } from '@resvg/resvg-wasm';
 import { hasAffiliateParams } from '../src/lib/affiliate.ts';
@@ -133,16 +134,88 @@ const svgSize = (text: string) => {
   return ratio >= 1 ? { width: 10_000 * ratio, height: 10_000 } : { width: 10_000, height: 10_000 / ratio };
 };
 
-/** An .ico is a directory of bitmaps. Only PNG entries are kept: resvg cannot read the BMP ones. */
+/** A PNG from raw RGBA, so a BMP icon can go through the same renderer as everything else. */
+const encodePng = (width: number, height: number, rgba: Uint8Array) => {
+  const chunk = (type: string, data: Buffer) => {
+    const body = Buffer.concat([Buffer.from(type, 'latin1'), data]);
+    const length = Buffer.alloc(4);
+    length.writeUInt32BE(data.length);
+    const crc = Buffer.alloc(4);
+    crc.writeUInt32BE(crc32(body));
+    return Buffer.concat([length, body, crc]);
+  };
+  const header = Buffer.alloc(13);
+  header.writeUInt32BE(width, 0);
+  header.writeUInt32BE(height, 4);
+  header.set([8, 6, 0, 0, 0], 8);
+  const rows = Buffer.alloc(height * (width * 4 + 1));
+  for (let y = 0; y < height; y++) rows.set(rgba.subarray(y * width * 4, (y + 1) * width * 4), y * (width * 4 + 1) + 1);
+  return Buffer.concat([
+    Buffer.from('\x89PNG\r\n\x1a\n', 'latin1'),
+    chunk('IHDR', header),
+    chunk('IDAT', deflateSync(rows)),
+    chunk('IEND', Buffer.alloc(0)),
+  ]);
+};
+
+/**
+ * An icon's BMP entry: a header, an optional palette, the colour rows bottom
+ * up, then a one-bit transparency mask. 32-bit entries carry their own alpha
+ * and the mask is ignored; everything shallower takes its transparency from it.
+ */
+const decodeBmp = (data: Buffer) => {
+  const headerSize = data.readUInt32LE(0);
+  const width = data.readInt32LE(4);
+  const height = data.readInt32LE(8) / 2;
+  const depth = data.readUInt16LE(14);
+  if (data.readUInt32LE(16) !== 0 || ![1, 4, 8, 24, 32].includes(depth)) return undefined;
+  const colours = depth <= 8 ? data.readUInt32LE(32) || 1 << depth : 0;
+  const palette = headerSize;
+  const pixels = palette + colours * 4;
+  const stride = Math.ceil((width * depth) / 32) * 4;
+  const mask = pixels + stride * height;
+  const maskStride = Math.ceil(width / 32) * 4;
+  if (mask > data.length) return undefined;
+
+  const rgba = new Uint8Array(width * height * 4);
+  for (let y = 0; y < height; y++) {
+    const row = pixels + (height - 1 - y) * stride;
+    for (let x = 0; x < width; x++) {
+      const out = (y * width + x) * 4;
+      let at: number;
+      if (depth >= 24) at = row + x * (depth / 8);
+      else {
+        const bit = x * depth;
+        const index = (data[row + (bit >> 3)]! >> (8 - depth - (bit & 7))) & ((1 << depth) - 1);
+        at = palette + index * 4;
+      }
+      rgba[out] = data[at + 2]!;
+      rgba[out + 1] = data[at + 1]!;
+      rgba[out + 2] = data[at]!;
+      if (depth === 32) rgba[out + 3] = data[at + 3]!;
+      else {
+        const masked =
+          mask + maskStride * height <= data.length &&
+          (data[mask + (height - 1 - y) * maskStride + (x >> 3)]! >> (7 - (x & 7))) & 1;
+        rgba[out + 3] = masked ? 0 : 255;
+      }
+    }
+  }
+  return encodePng(width, height, rgba);
+};
+
+/** An .ico is a directory of bitmaps, PNG or BMP. The largest wins, as a PNG either way. */
 const largestIcoEntry = (bytes: Buffer) => {
   let best: Buffer | undefined;
   let bestSide = 0;
   for (let entry = 0; entry < bytes.readUInt16LE(4); entry++) {
     const at = 6 + entry * 16;
     const side = bytes[at] || 256;
+    if (side <= bestSide) continue;
     const data = bytes.subarray(bytes.readUInt32LE(at + 12), bytes.readUInt32LE(at + 12) + bytes.readUInt32LE(at + 8));
-    if (side > bestSide && data.subarray(0, 4).toString('latin1') === '\x89PNG') {
-      best = data;
+    const png = data.subarray(0, 4).toString('latin1') === '\x89PNG' ? data : decodeBmp(data);
+    if (png) {
+      best = png;
       bestSide = side;
     }
   }
@@ -154,7 +227,7 @@ const sniff = (url: string, raw: Buffer): Image | string => {
   let bytes = raw;
   if (bytes.readUInt32BE(0) === 0x00000100) {
     const entry = largestIcoEntry(bytes);
-    if (!entry) return 'an .ico of BMP bitmaps only';
+    if (!entry) return 'an .ico with no entry it can read';
     bytes = entry;
   }
   const head = bytes.subarray(0, 12).toString('latin1');
