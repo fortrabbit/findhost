@@ -1,0 +1,27 @@
+---
+import { logoOf } from '../lib/logos';
+
+interface Props {
+  id: string;
+  class?: string;
+}
+
+const { id, class: className } = Astro.props;
+const logo = logoOf(id);
+
+/*
+ * The tile is CSS, not part of the image: most logos are drawn for white, so
+ * they sit on white in both themes, and the PNG stays transparent. The alt is
+ * empty because the provider's name is always beside it.
+ */
+---
+
+{
+  logo && (
+    <figure class:list={['provider-logo', className]}>
+      <div class:list={['provider-logo-tile', { fills: logo.fills }]}>
+        <img src={logo.src} alt="" width="128" height="128" loading="lazy" decoding="async" />
+      </div>
+    </figure>
+  )
+}

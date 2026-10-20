@@ -1,0 +1,17 @@
+1984-hosting:
+  kind: favicon
+  image: https://1984.hosting/static/favicon/favicon.svg?v=47b5463f0e44b1063d7e239a7008441e
+  page: https://1984.hosting
+  fetchedAt: 2026-10-20
+fortrabbit:
+  kind: favicon
+  image: https://www.fortrabbit.com/apple-touch-icon.png
+  page: https://www.fortrabbit.com
+  fetchedAt: 2026-10-20
+  fills: true
+hetzner:
+  kind: favicon
+  image: https://www.hetzner.com/_resources/themes/hetzner/images/favicons/android-icon-192x192.png
+  page: https://www.hetzner.com
+  fetchedAt: 2026-10-20
+  fills: true

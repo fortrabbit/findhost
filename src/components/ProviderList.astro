@@ -1,5 +1,7 @@
 ---
 import { movementMark, type Movement } from '../lib/record';
+import ProviderLogo from './ProviderLogo.astro';
+import { logoOf } from '../lib/logos';
 
 interface Row {
   id: string;
@@ -51,8 +53,10 @@ const { providers, namesOnly = false } = Astro.props;
           class={twoLine ? undefined : 'one-line'}
           data-record={provider.id}
         >
-          {/* A record without a figure gets its initial, so a gap never looks like a broken row. */}
-          {provider.figure ? (
+          {/* A logo where one is on file, then the emoji, then the initial, so a gap never looks like a broken row. */}
+          {logoOf(provider.id) ? (
+            <ProviderLogo id={provider.id} class="provider-tile" />
+          ) : provider.figure ? (
             <span
               class="provider-tile"
               style={`background:${provider.figure.color};color:${provider.figure.textColor}`}

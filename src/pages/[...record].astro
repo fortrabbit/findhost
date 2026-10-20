@@ -25,6 +25,7 @@ import { outboundLinkAttrs } from '../lib/links';
 import { modifiedAt, updatedAfterCheck } from '../lib/modified';
 import SocialLinks from '../components/SocialLinks.astro';
 import PageFigure from '../components/PageFigure.astro';
+import ProviderLogo from '../components/ProviderLogo.astro';
 import FactGroups from '../components/FactGroups.astro';
 import BadgeSnippets from '../components/BadgeSnippets.astro';
 import { badgeTerms } from '../lib/badge';
@@ -374,7 +375,10 @@ const metaDescription = data.description
   ]}
 >
   <article>
-    <h1>{data.name}</h1>
+    <div class="record-title">
+      <ProviderLogo id={provider.id} class="record-logo" />
+      <h1>{data.name}</h1>
+    </div>
     {
       stale && (
         <aside class="editorial-note">

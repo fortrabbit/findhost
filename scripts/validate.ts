@@ -25,6 +25,7 @@ import {
 } from '../src/lib/fields.ts';
 import { hasAffiliateParams } from '../src/lib/affiliate.ts';
 import { contrast } from '../src/lib/contrast.ts';
+import { logoDir, logoEntries, logoFile, logoManifest } from '../src/lib/logos.ts';
 import { priceBands } from '../src/lib/price.ts';
 import { rowHolds, toRow } from '../src/lib/rows.ts';
 import { pairCeiling, pairFloor } from '../src/lib/pairs.ts';
@@ -943,6 +944,27 @@ for (const file of figureFiles) {
     if (ratio === undefined) fail(file, `${key} colours must be rgb() or #rrggbb`);
     else if (ratio < 4.5) fail(file, `${key} text contrast is ${ratio.toFixed(2)}:1, under 4.5:1`);
   }
+}
+
+/*
+ * A logo is a file and a manifest entry, written together by scripts/logo.ts.
+ * One without the other is either an image nothing draws or a tile pointing at
+ * nothing, and a logo for a record that is gone is a trademark with no reason
+ * to be served.
+ */
+const logos = logoEntries();
+for (const [id, entry] of Object.entries(logos)) {
+  if (!recordIds.has(id)) fail(logoManifest, `logo for "${id}", which is not a record`);
+  if (!existsSync(join(logoDir, logoFile(id)))) fail(logoManifest, `no ${logoDir}/${logoFile(id)} for "${id}"`);
+  if (!['mark', 'favicon'].includes(entry.kind)) fail(logoManifest, `"${id}" kind must be mark or favicon`);
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(String(entry.fetchedAt))) fail(logoManifest, `"${id}" has no fetchedAt`);
+  for (const url of [entry.image, entry.page]) {
+    if (!/^https?:\/\//.test(String(url))) fail(logoManifest, `"${id}" needs image and page URLs`);
+    else if (hasAffiliateParams(url)) fail(logoManifest, `affiliate parameters in ${url}`);
+  }
+}
+for (const name of existsSync(logoDir) ? readdirSync(logoDir) : []) {
+  if (!logos[name.replace(/\.png$/, '')]) fail(join(logoDir, name), `not in ${logoManifest}`);
 }
 
 if (errors.length) {

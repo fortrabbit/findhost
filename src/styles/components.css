@@ -669,6 +669,63 @@ html:not(.js) .theme-switch {
   font-size: 0.85rem;
 }
 
+/*
+ * A provider's own logo, fetched once by scripts/logo.ts and served from here.
+ * White in both themes because nearly every logo is drawn for white; the
+ * record's colour stays on the figure band below the heading.
+ */
+.provider-logo {
+  margin: 0;
+}
+
+.provider-logo-tile {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 1;
+  padding: 12%;
+  border-radius: var(--radius);
+  background: #fff;
+}
+
+.provider-logo-tile.fills {
+  padding: 0;
+  overflow: hidden;
+}
+
+.provider-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* The record's heading with its logo hung in the margin, where the gutter has room for it. */
+.record-title {
+  position: relative;
+}
+
+.record-logo {
+  width: 4.5rem;
+  margin-top: var(--space-md);
+}
+
+.record-logo + h1 {
+  margin-top: var(--space-sm);
+}
+
+@media (min-width: 75rem) {
+  .record-logo {
+    position: absolute;
+    top: 0.35rem;
+    right: calc(100% + var(--space-md));
+    margin-top: var(--space-md);
+  }
+
+  .record-logo + h1 {
+    margin-top: var(--space-md);
+  }
+}
+
 .one-line .provider-tile.letter {
   font-size: var(--text-xs);
 }
