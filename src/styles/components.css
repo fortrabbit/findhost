@@ -655,7 +655,8 @@ html:not(.js) .theme-switch {
   place-items: center;
   width: 100%;
   aspect-ratio: 1;
-  border-radius: var(--radius);
+  /* A share of the side, so a filling app icon is clipped to one shape at every size. */
+  border-radius: 20%;
   background: #efefef;
   color: #1a1a1a;
   font-size: 1.35rem;
@@ -687,7 +688,7 @@ html:not(.js) .theme-switch {
   width: 100%;
   aspect-ratio: 1;
   padding: 12%;
-  border-radius: var(--radius);
+  border-radius: 20%;
   background: #efefef;
 }
 

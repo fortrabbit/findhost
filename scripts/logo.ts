@@ -50,7 +50,19 @@ const assess = (pixels: Uint8Array) => {
     pixels.subarray(index * 4, index * 4 + 4),
   );
   const opaque = corners.every((pixel) => pixel[3]! > 200);
-  const fills = opaque && !corners.every((pixel) => Math.min(pixel[0]!, pixel[1]!, pixel[2]!) > 240);
+  // An app-icon shape, a rounded square in colour, reaches the edges but not the corners; it fills too, clipped by the tile.
+  const inset = Math.round(logoSize * 0.04);
+  const half = Math.round(logoSize / 2);
+  const edges = [inset * logoSize + half, (edge - inset) * logoSize + half, half * logoSize + inset, half * logoSize + edge - inset].map(
+    (index) => pixels.subarray(index * 4, index * 4 + 4),
+  );
+  const coloured = (pixels: Uint8Array[]) => pixels.every((pixel) => pixel[3]! > 200) && !pixels.every((pixel) => Math.min(pixel[0]!, pixel[1]!, pixel[2]!) > 240);
+  // A circle reaches the edges too, but leaves the diagonal 12% in from each corner empty; it keeps the margin.
+  const near = Math.round(logoSize * 0.12);
+  const diagonals = [near * logoSize + near, near * logoSize + edge - near, (edge - near) * logoSize + near, (edge - near) * logoSize + edge - near].map(
+    (index) => pixels.subarray(index * 4, index * 4 + 4),
+  );
+  const fills = coloured(corners) || (coloured(edges) && coloured(diagonals));
   let weight = 0;
   let luminance = 0;
   for (let at = 0; at < pixels.length; at += 4) {

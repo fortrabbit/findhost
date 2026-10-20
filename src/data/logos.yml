@@ -59,6 +59,7 @@ apiscp:
   image: https://apiscp.com/images/favicon.png
   page: https://apiscp.com
   fetchedAt: 2026-10-20
+  fills: true
 appwrite:
   kind: favicon
   image: https://appwrite.io/logo.svg
@@ -69,6 +70,7 @@ aptible:
   image: https://framerusercontent.com/images/loDpzbr2Cn7fxQFHUZ2YCGEXY50.png
   page: https://www.aptible.com
   fetchedAt: 2026-10-20
+  fills: true
 arcustech:
   kind: favicon
   image: https://www.arcustech.com/images/favicon-512x512.png
@@ -117,6 +119,7 @@ back4app:
   image: https://www.back4app.com/_public/apple-touch-icon.png
   page: https://www.back4app.com
   fetchedAt: 2026-10-20
+  fills: true
 baseten:
   kind: favicon
   image: https://www.baseten.co/icon.png
@@ -128,6 +131,7 @@ beam:
   image: https://www.beam.cloud/favicon.svg
   page: https://www.beam.cloud
   fetchedAt: 2026-10-20
+  fills: true
 beget:
   kind: favicon
   image: https://beget.com/apple-touch-icon-195x195-precomposed.png
@@ -158,6 +162,7 @@ blacknight:
   image: https://www.blacknight.com/wp-content/themes/blacknight/favicons/android-icon-192x192.png
   page: https://www.blacknight.com
   fetchedAt: 2026-10-20
+  fills: true
 block:
   kind: favicon
   image: https://block.xyz/apple-touch-icon.png
@@ -168,16 +173,19 @@ bluehost:
   image: https://www.bluehost.com/favicon.ico
   page: https://www.bluehost.com
   fetchedAt: 2026-10-20
+  fills: true
 bolt:
   kind: favicon
   image: https://bolt.new/static/favicon.svg
   page: https://bolt.new
   fetchedAt: 2026-10-20
+  fills: true
 bplaced:
   kind: favicon
   image: https://www.bplaced.net/android-chrome-384x384.png?5a1b
   page: https://www.bplaced.net
   fetchedAt: 2026-10-20
+  fills: true
 bubble:
   kind: favicon
   image: https://meta-q.cdn.bubble.io/cdn-cgi/image/w=192,h=,f=auto,dpr=1,fit=contain/f1534423790492x745180500205606300/icon_512x512%402x.png
@@ -198,6 +206,7 @@ cafe24:
   image: https://img.echosting.cafe24.com/imgcafe24com/favicon/cafe24.ico
   page: https://www.cafe24.com
   fetchedAt: 2026-10-20
+  fills: true
 cerebrium:
   kind: favicon
   image: https://www.datocms-assets.com/180613/1770487378-iiynr41hlhnjq7vtreipiv8k6eo.png?auto=format&h=192&w=192
@@ -219,6 +228,7 @@ civo:
   image: https://www.civo.com/assets-rebrand/favicons/favicon.svg
   page: https://www.civo.com
   fetchedAt: 2026-10-20
+  fills: true
 clearlake:
   kind: favicon
   image: https://clearlake.com/favicon/favicon.ico
@@ -249,6 +259,7 @@ cloudflare-workers:
   image: https://www.cloudflare.com/favicon.ico
   page: https://www.cloudflare.com/products/workers/
   fetchedAt: 2026-10-20
+  fills: true
 cloudone-digital:
   kind: favicon
   image: https://res.cloudinary.com/nxcom/images/w_300,h_300,c_fill,g_auto/f_auto,q_auto/v1790249524/favicon-1/favicon-1.webp?_i=AA
@@ -279,6 +290,7 @@ code-storage:
   image: https://code.storage/assets/brand/icon.svg
   page: https://code.storage
   fetchedAt: 2026-10-20
+  fills: true
 codeberg:
   kind: mark
   image: https://codeberg.org/assets/img/svg/cb-logo.svg
@@ -320,16 +332,19 @@ craft-cloud:
   image: https://craftcms.com/dist/images/siteicons/android-chrome-512x512.png
   page: https://craftcms.com/cloud
   fetchedAt: 2026-10-20
+  fills: true
 cratedb:
   kind: favicon
   image: https://cratedb.com/hubfs/cratedb-favicon.png
   page: https://cratedb.com
   fetchedAt: 2026-10-20
+  fills: true
 crusoe:
   kind: favicon
   image: https://cdn.prod.website-files.com/6855c1aa175582ee23e0aa19/68934b7ef165ad996914d921_Webclip.png
   page: https://www.crusoe.ai
   fetchedAt: 2026-10-20
+  fills: true
 cube-infrastructure:
   kind: favicon
   image: https://www.cubeinfrastructure.com/wp-content/uploads/2023/06/cropped-cube-favicon-300x300.png
@@ -340,16 +355,19 @@ cvc:
   image: https://www.cvc.com/favicon.ico
   page: https://www.cvc.com
   fetchedAt: 2026-10-20
+  fills: true
 cyber-folks:
   kind: favicon
   image: https://cyberfolks.pl/wp-content/themes/cyberfolks/new/dist/images/favicons/favicon-196x196.png
   page: https://cyberfolks.pl
   fetchedAt: 2026-10-20
+  fills: true
 cyberpanel:
   kind: favicon
   image: https://cyberpanel.net/wp-content/uploads/cyberpanel-design/brand-20260909/favicon.svg
   page: https://cyberpanel.net
   fetchedAt: 2026-10-20
+  fills: true
 deno-deploy:
   kind: mark
   image: https://deno.com/logos/deploy/mark.svg
@@ -397,6 +415,7 @@ divio:
   image: https://www.divio.com/apple-icon.png?053c2725ffb3aaf8
   page: https://www.divio.com
   fetchedAt: 2026-10-20
+  fills: true
 dnsimple:
   kind: favicon
   image: https://assets-production.dnsimple.com/assets/site/apple-touch-icon-ede258f5.png
@@ -414,6 +433,7 @@ donweb:
   image: https://images.donweb.com/favicon.ico
   page: https://donweb.com
   fetchedAt: 2026-10-20
+  fills: true
 dotmoose:
   kind: mark
   image: https://dotmoose.com/dotmoose-mark.svg
@@ -429,6 +449,7 @@ duda:
   image: https://irp.cdn-website.com/a8ff2f1c/site_favicon_16_1753604947224.ico
   page: https://www.duda.co
   fetchedAt: 2026-10-20
+  fills: true
 e2b:
   kind: favicon
   image: https://e2b.dev/icon2.png?icon2.2h_70q4cu8mj-.png
@@ -455,11 +476,13 @@ emergent:
   image: https://cdn.prod.website-files.com/6a0edf12ef1a8562ed56d806/6a16a2342289a062e853d068_emergent.png
   page: https://emergent.sh
   fetchedAt: 2026-10-20
+  fills: true
 encore:
   kind: favicon
   image: https://encore.dev/assets/branding/icons/favicon.svg
   page: https://encore.dev
   fetchedAt: 2026-10-20
+  fills: true
 endurance:
   kind: favicon
   image: https://newfold.com/content/dam/newfold/favicons/android-chrome-192x192.png
@@ -512,6 +535,7 @@ fly:
   image: https://fly.io/phx/ui/images/favicon/android-chrome-512x512.png
   page: https://fly.io
   fetchedAt: 2026-10-20
+  fills: true
 flywheel:
   kind: favicon
   image: https://getflywheel.com/wp-content/themes/flywheel15/favicon.png
@@ -544,6 +568,7 @@ gandi:
   image: https://www.gandi.net/static/images/favicon.e848261f33f9.svg
   page: https://www.gandi.net
   fetchedAt: 2026-10-20
+  fills: true
 gcore:
   kind: favicon
   image: https://gcore.com/assets/favicon/android-icon-512x512.png
@@ -672,6 +697,7 @@ hostim:
   image: https://hostim.dev/img/favicon.ico
   page: https://hostim.dev
   fetchedAt: 2026-10-20
+  fills: true
 hosting-com:
   kind: favicon
   image: https://hosting.com/assets/brand/favicons/apple-touch-icon.png
@@ -771,6 +797,7 @@ interserver:
   image: https://www.interserver.net/common/images/apple/logo-ios-144px.png
   page: https://www.interserver.net
   fetchedAt: 2026-10-20
+  fills: true
 ionos:
   kind: favicon
   image: https://www.ionos.de/favicon.svg
@@ -788,16 +815,19 @@ iwantmyname:
   image: https://iwantmyname.com/themes/iwantmyname/images/apple-touch-icon.png
   page: https://iwantmyname.com
   fetchedAt: 2026-10-20
+  fills: true
 jarvislabs:
   kind: favicon
   image: https://jarvislabs.ai/img/jarvislabs-app-icon.png?v=4
   page: https://jarvislabs.ai
   fetchedAt: 2026-10-20
+  fills: true
 jimdo:
   kind: favicon
   image: https://www.jimdo.com/icons/android-chrome-512x512.png
   page: https://www.jimdo.com
   fetchedAt: 2026-10-20
+  fills: true
 jweiland:
   kind: favicon
   image: https://jweiland.net/fileadmin/favicons/favicon-196x196.png
@@ -819,6 +849,7 @@ kinsta:
   image: https://kinsta.com/wp-content/uploads/2024/09/cropped-Kinsta-black-favicon-1-192x192.png
   page: https://kinsta.com
   fetchedAt: 2026-10-20
+  fills: true
 kkr:
   kind: favicon
   image: https://www.kkr.com/etc.clientlibs/kkr/clientlibs/clientlib-site/resources/apple-touch-icon.png
@@ -872,6 +903,7 @@ leapcell:
   image: https://leapcell.io/favicon.ico
   page: https://leapcell.io
   fetchedAt: 2026-10-20
+  fills: true
 leaseweb:
   kind: favicon
   image: https://www.leaseweb.com/favicon.ico
@@ -892,6 +924,7 @@ liquid-web:
   image: https://res.cloudinary.com/lwcom/images/f_auto,q_auto/v1776858458/prod/favicon/favicon.svg?_i=AA
   page: https://www.liquidweb.com
   fetchedAt: 2026-10-20
+  fills: true
 locaweb:
   kind: favicon
   image: https://www.locaweb.com.br/images/favicon.ico
@@ -918,6 +951,7 @@ lowcloud:
   image: https://lowcloud.io/favicon.svg
   page: https://lowcloud.io/en
   fetchedAt: 2026-10-20
+  fills: true
 manitu:
   kind: mark
   image: https://www.manitu.de/images/icons/icon-512x512.png
@@ -933,6 +967,7 @@ mittwald:
   image: https://www.mittwald.de/_Resources/Static/Packages/KaufmannDigital.Site.Mittwald/Assets/Favicons/apple-touch-icon.png?bust=a91310c3
   page: https://www.mittwald.de
   fetchedAt: 2026-10-20
+  fills: true
 modal:
   kind: mark
   image: https://modal.com/assets/favicon.svg
@@ -958,6 +993,7 @@ namecheap:
   image: https://www.namecheap.com/assets/img/nc-icon/namecheap-icon-144x144.png
   page: https://www.namecheap.com
   fetchedAt: 2026-10-20
+  fills: true
 nazwa-pl:
   kind: favicon
   image: https://www.nazwa.pl/fileadmin/nazwa/favicon.ico
@@ -990,6 +1026,7 @@ netcup:
   image: https://www.netcup.com/favicon.ico
   page: https://www.netcup.com
   fetchedAt: 2026-10-20
+  fills: true
 netlify:
   kind: mark
   image: https://www.netlify.com/favicon/icon-512.png
@@ -1171,6 +1208,7 @@ radicle-garden:
   image: https://radicle.garden/android-chrome-512x512.png
   page: https://radicle.garden
   fetchedAt: 2026-10-20
+  fills: true
 raidboxes:
   kind: mark
   image: https://raidboxes.io/wp-content/uploads/2024/09/cropped-Raidboxes-fav-icon-192x192.png
@@ -1260,6 +1298,7 @@ selectel:
   image: https://selectel.ru/favicon.svg
   page: https://selectel.ru/en/
   fetchedAt: 2026-10-20
+  fills: true
 seravo:
   kind: mark
   image: https://seravo.com/wp-content/uploads/2024/06/cropped-seravo-logo-512-1-192x192.png
@@ -1295,6 +1334,7 @@ sevalla:
   image: https://sevalla.com/favicon.ico?6ce9957ceb175612
   page: https://sevalla.com
   fetchedAt: 2026-10-20
+  fills: true
 shopify:
   kind: mark
   image: https://cdn.shopify.com/b/shopify-brochure2-assets/c97c60ca19c64a8b5378d9f9e971f7bd.png
@@ -1371,6 +1411,7 @@ supabase:
   image: https://supabase.com/favicon/android-icon-512x512.png
   page: https://supabase.com/
   fetchedAt: 2026-10-20
+  fills: true
 surge:
   kind: mark
   image: https://surge.sh/android-chrome-512x512.png
@@ -1451,6 +1492,7 @@ vast-ai:
   image: https://vast.ai/icon.png
   page: https://vast.ai/
   fetchedAt: 2026-10-20
+  fills: true
 ventraip:
   kind: favicon
   image: https://ventraip.com.au/favicon.ico
@@ -1467,6 +1509,7 @@ verda:
   image: https://verda.com/web-app-manifest-512x512.png?v=20251113
   page: https://verda.com/
   fetchedAt: 2026-10-20
+  fills: true
 vsys:
   kind: favicon
   image: https://d2bu8e175fapp8.cloudfront.net/favicon.png
@@ -1498,6 +1541,7 @@ webempresa:
   image: https://www.webempresa.com/wp-content/uploads/2023/05/webempresa-isotipo.png
   page: https://www.webempresa.com/
   fetchedAt: 2026-10-20
+  fills: true
 webflow:
   kind: mark
   image: https://cdn.prod.website-files.com/686294e263eb7e215bd232f7/686d53d0446d4237b2f38c5f_webclip.png
