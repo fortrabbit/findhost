@@ -671,7 +671,7 @@ html:not(.js) .theme-switch {
 
 /*
  * A provider's own logo, fetched once by scripts/logo.ts and served from here.
- * White in both themes because nearly every logo is drawn for white; the
+ * Near-white in both themes because nearly every logo is drawn for white; the
  * record's colour stays on the figure band below the heading.
  */
 .provider-logo {
@@ -685,7 +685,7 @@ html:not(.js) .theme-switch {
   aspect-ratio: 1;
   padding: 12%;
   border-radius: var(--radius);
-  background: #fff;
+  background: #efefef;
 }
 
 .provider-logo-tile.light {
@@ -701,6 +701,11 @@ html:not(.js) .theme-switch {
   display: block;
   width: 100%;
   height: auto;
+}
+
+/* Grey so the tile reads as a frame on a white page; multiply takes an icon's own white background into it. */
+.provider-logo-tile:not(.light, .fills) img {
+  mix-blend-mode: multiply;
 }
 
 /*
