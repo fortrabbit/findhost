@@ -699,6 +699,8 @@ html:not(.js) .theme-switch {
 .provider-logo-tile.fills {
   padding: 0;
   overflow: hidden;
+  /* The icon brings its own background; ours would show as a rim in the anti-aliased corners. */
+  background: none;
 }
 
 .provider-logo img {
