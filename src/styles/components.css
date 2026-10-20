@@ -688,6 +688,10 @@ html:not(.js) .theme-switch {
   background: #fff;
 }
 
+.provider-logo-tile.light {
+  background: #1a1a1a;
+}
+
 .provider-logo-tile.fills {
   padding: 0;
   overflow: hidden;

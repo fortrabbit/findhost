@@ -31,6 +31,46 @@ const fail = (message: string): never => {
   process.exit(1);
 };
 
+/*
+ * What the tile needs to know about the picture. An icon painted edge to edge
+ * brings its own background and drops our margin; one drawn in white on
+ * transparent would vanish on the white tile, so it gets a dark one.
+ */
+const assess = (pixels: Uint8Array) => {
+  const alphaAt = (x: number, y: number) => pixels[(y * logoSize + x) * 4 + 3]!;
+  const edge = logoSize - 1;
+  const fills = [alphaAt(0, 0), alphaAt(edge, 0), alphaAt(0, edge), alphaAt(edge, edge)].every((alpha) => alpha > 200);
+  let weight = 0;
+  let luminance = 0;
+  for (let at = 0; at < pixels.length; at += 4) {
+    const alpha = pixels[at + 3]! / 255;
+    if (alpha < 0.5) continue;
+    weight += alpha;
+    luminance += (alpha * (0.2126 * pixels[at]! + 0.7152 * pixels[at + 1]! + 0.0722 * pixels[at + 2]!)) / 255;
+  }
+  const light = !fills && weight > 0 && luminance / weight > 0.85;
+  return { ...(fills ? { fills } : {}), ...(light ? { light } : {}) };
+};
+
+const startRenderer = () => initWasm(readFileSync('node_modules/@resvg/resvg-wasm/index_bg.wasm'));
+const draw = (mime: string, bytes: Buffer) =>
+  new Resvg(
+    `<svg xmlns="http://www.w3.org/2000/svg" width="${logoSize}" height="${logoSize}"><image href="data:${mime};base64,${bytes.toString('base64')}" width="${logoSize}" height="${logoSize}" preserveAspectRatio="xMidYMid meet"/></svg>`,
+  ).render();
+
+/* Re-reads the files on disk, no network: for when `assess` changes. */
+if (process.argv.includes('--recheck')) {
+  await startRenderer();
+  const manifest = parseYaml(readFileSync(logoManifest, 'utf8')) as Record<string, LogoEntry>;
+  for (const [key, entry] of Object.entries(manifest)) {
+    const { fills, light, ...rest } = entry;
+    manifest[key] = { ...rest, ...assess(draw('image/png', readFileSync(join(logoDir, logoFile(key)))).pixels) };
+  }
+  writeFileSync(logoManifest, stringify(manifest));
+  console.log(`rechecked ${Object.keys(manifest).length}`);
+  process.exit(0);
+}
+
 const args = process.argv.slice(2);
 const option = (name: string) => {
   const at = args.indexOf(`--${name}`);
@@ -161,7 +201,8 @@ const declaredIcons = async (homeUrl: string) => {
   for (const [tag] of html.matchAll(/<link\b[^>]*>/gi)) {
     const link = attributes(tag);
     const rel = (link.rel ?? '').toLowerCase().split(/\s+/);
-    if (!link.href) continue;
+    /* An inline data: icon has no address to cite, and the manifest records where each logo came from. */
+    if (!link.href || link.href.startsWith('data:')) continue;
     /* mask-icon is Safari's one-colour silhouette, drawn to be tinted. */
     if (rel.includes('icon') || rel.some((name) => name.startsWith('apple-touch-icon'))) {
       urls.add(new URL(link.href, base).href);
@@ -220,15 +261,9 @@ for (const url of [image.url, foundOn]) if (hasAffiliateParams(url)) fail(`affil
  * centres and scales it, and throws away whatever an SVG carried besides its
  * picture. The tile behind it is CSS, so the PNG stays transparent.
  */
-await initWasm(readFileSync('node_modules/@resvg/resvg-wasm/index_bg.wasm'));
-const frame = `<svg xmlns="http://www.w3.org/2000/svg" width="${logoSize}" height="${logoSize}"><image href="data:${image.mime};base64,${image.bytes.toString('base64')}" width="${logoSize}" height="${logoSize}" preserveAspectRatio="xMidYMid meet"/></svg>`;
-const rendered = new Resvg(frame).render();
+await startRenderer();
+const rendered = draw(image.mime, image.bytes);
 if (!rendered.pixels.some((value, index) => index % 4 === 3 && value > 0)) fail(`${image.url} rendered empty`);
-
-/* An icon painted edge to edge brings its own tile; a transparent one gets ours, with room around it. */
-const alphaAt = (x: number, y: number) => rendered.pixels[(y * logoSize + x) * 4 + 3]!;
-const edge = logoSize - 1;
-const fills = [alphaAt(0, 0), alphaAt(edge, 0), alphaAt(0, edge), alphaAt(edge, edge)].every((alpha) => alpha > 200);
 
 mkdirSync(logoDir, { recursive: true });
 writeFileSync(join(logoDir, logoFile(id!)), rendered.asPng());
@@ -254,7 +289,7 @@ try {
     image: image.url,
     page: foundOn,
     fetchedAt: new Date().toISOString().slice(0, 10),
-    ...(fills ? { fills } : {}),
+    ...assess(rendered.pixels),
   };
   const sorted = Object.fromEntries(Object.entries(manifest).sort(([a], [b]) => a.localeCompare(b)));
   writeFileSync(logoManifest, stringify(sorted));

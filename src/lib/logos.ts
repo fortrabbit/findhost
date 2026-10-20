@@ -18,6 +18,8 @@ export interface LogoEntry {
   fetchedAt: string;
   /** The image is opaque to its corners, so it is drawn without the white tile's margin. */
   fills?: boolean;
+  /** Drawn in white or near it, so it sits on a dark tile instead of the white one. */
+  light?: boolean;
 }
 
 /** Project-relative, as fields.ts explains: the build moves this module. */
@@ -37,5 +39,11 @@ export const logoEntries = () => entries;
 /** The address to draw, with the fetch date on it so a re-fetched logo is not served from a stale cache. */
 export const logoOf = (id: string) => {
   const entry = entries[id];
-  return entry && { src: `/logos/${logoFile(id)}?v=${entry.fetchedAt}`, fills: Boolean(entry.fills) };
+  return (
+    entry && {
+      src: `/logos/${logoFile(id)}?v=${entry.fetchedAt}`,
+      fills: Boolean(entry.fills),
+      light: Boolean(entry.light),
+    }
+  );
 };
