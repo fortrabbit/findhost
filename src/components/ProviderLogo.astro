@@ -4,9 +4,11 @@ import { logoOf } from '../lib/logos';
 interface Props {
   id: string;
   class?: string;
+  /** Above the fold on a record page; lists leave it lazy. */
+  eager?: boolean;
 }
 
-const { id, class: className } = Astro.props;
+const { id, class: className, eager = false } = Astro.props;
 const logo = logoOf(id);
 
 /*
@@ -20,7 +22,7 @@ const logo = logoOf(id);
   logo && (
     <figure class:list={['provider-logo', className]}>
       <div class:list={['provider-logo-tile', { fills: logo.fills }]}>
-        <img src={logo.src} alt="" width="128" height="128" loading="lazy" decoding="async" />
+        <img src={logo.src} alt="" width="128" height="128" loading={eager ? 'eager' : 'lazy'} decoding="async" />
       </div>
     </figure>
   )

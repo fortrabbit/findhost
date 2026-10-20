@@ -47,6 +47,10 @@ if (!existsSync(recordFile)) fail(`no record ${recordFile}`);
 const record = parseYaml(readFileSync(recordFile, 'utf8').split(/^---$/m)[1]!) as { urls?: { home?: string } };
 const home = record.urls?.home;
 if (!chosen && !home) fail(`${id} has no urls.home to look for icons on`);
+const held = existsSync(logoManifest)
+  ? (parseYaml(readFileSync(logoManifest, 'utf8')) as Record<string, LogoEntry> | null)?.[id!]
+  : undefined;
+if (!chosen && held?.kind === 'mark') fail(`${id} already has a chosen mark; the favicon would replace it`);
 
 const get = async (url: string) => {
   const response = await fetch(url, {
@@ -124,7 +128,9 @@ const sniff = (url: string, raw: Buffer): Image | string => {
   }
   if (head.startsWith('RIFF') && head.endsWith('WEBP')) return 'WebP, which the renderer cannot read';
   const text = bytes.toString('utf8');
-  if (/<svg\b/i.test(text)) return { url, mime: 'image/svg+xml', bytes, ...svgSize(text) };
+  /* Anchored: a soft-404 page carrying an inline icon is HTML, not an SVG. */
+  if (/^\s*(<\?xml[^>]*>\s*)?(<!--[\s\S]*?-->\s*)*(<!doctype svg[^>]*>\s*)?<svg\b/i.test(text))
+    return { url, mime: 'image/svg+xml', bytes, ...svgSize(text) };
   return 'not an image';
 };
 
@@ -187,7 +193,8 @@ const pick = async (): Promise<{ image: Image; kind: LogoEntry['kind']; page: st
   }
 
   const images: Image[] = [];
-  for (const url of await declaredIcons(home!)) {
+  const urls = await declaredIcons(home!).catch((error: Error) => fail(`${home}: ${error.message}`));
+  for (const url of urls) {
     const image = await fetchImage(url);
     console.log(`  ${typeof image === 'string' ? `skip  ${image}` : `${image.width}×${image.height}`}  ${url}`);
     if (typeof image !== 'string') images.push(image);

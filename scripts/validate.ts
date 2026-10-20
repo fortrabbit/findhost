@@ -963,7 +963,7 @@ for (const [id, entry] of Object.entries(logos)) {
     else if (hasAffiliateParams(url)) fail(logoManifest, `affiliate parameters in ${url}`);
   }
 }
-for (const name of existsSync(logoDir) ? readdirSync(logoDir) : []) {
+for (const name of existsSync(logoDir) ? readdirSync(logoDir).filter((file) => !file.startsWith('.')) : []) {
   if (!logos[name.replace(/\.png$/, '')]) fail(join(logoDir, name), `not in ${logoManifest}`);
 }
 
