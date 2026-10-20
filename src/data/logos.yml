@@ -18,11 +18,22 @@ afrihost:
   image: https://www.afrihost.com/favicon/favicon-152.png
   page: https://www.afrihost.com
   fetchedAt: 2026-10-20
+alibaba-cloud:
+  kind: favicon
+  image: https://img.alicdn.com/tfs/TB1ugg7M9zqK1RjSZPxXXc4tVXa-32-32.png_.webp
+  page: https://alibabacloud.com
+  fetchedAt: 2026-10-20
 all-inkl:
   kind: favicon
   image: https://all-inkl.com/images/favicon.svg
   page: https://all-inkl.com
   fetchedAt: 2026-10-20
+alphabet:
+  kind: favicon
+  image: https://s206.q4cdn.com/479360582/files/favicon-16.png
+  page: https://abc.xyz
+  fetchedAt: 2026-10-20
+  fills: true
 altervista:
   kind: favicon
   image: https://it.altervista.org/images/favicon/apple-touch-icon-152x152.png
@@ -37,6 +48,11 @@ anaconda:
   kind: favicon
   image: https://www.anaconda.com/wp-content/uploads/2025/05/cropped-favicon-192x192.png
   page: https://www.anaconda.com
+  fetchedAt: 2026-10-20
+antagonist:
+  kind: favicon
+  image: https://www.antagonist.nl/favicon.ico
+  page: https://www.antagonist.nl
   fetchedAt: 2026-10-20
 apiscp:
   kind: favicon
@@ -127,6 +143,11 @@ bitbucket:
   image: https://wac-cdn.atlassian.com/assets/img/favicons/bitbucket/android-chrome-256x256.png
   page: https://bitbucket.org
   fetchedAt: 2026-10-20
+bitfolk:
+  kind: favicon
+  image: https://bitfolk.com/favicon.ico
+  page: https://bitfolk.com
+  fetchedAt: 2026-10-20
 bithost:
   kind: favicon
   image: https://bithost.io/android-icon-192x192.png
@@ -167,12 +188,27 @@ bunny-net:
   image: https://bunny.net/icons/icon-512x512.png?v=1ca91ab4134c7fdacfd5e433633a1572
   page: https://bunny.net
   fetchedAt: 2026-10-20
+byet:
+  kind: favicon
+  image: https://byet.host/favicon.ico
+  page: https://byet.host
+  fetchedAt: 2026-10-20
+cafe24:
+  kind: favicon
+  image: https://img.echosting.cafe24.com/imgcafe24com/favicon/cafe24.ico
+  page: https://www.cafe24.com
+  fetchedAt: 2026-10-20
 cerebrium:
   kind: favicon
   image: https://www.datocms-assets.com/180613/1770487378-iiynr41hlhnjq7vtreipiv8k6eo.png?auto=format&h=192&w=192
   page: https://www.cerebrium.ai
   fetchedAt: 2026-10-20
   fills: true
+cherry-servers:
+  kind: favicon
+  image: https://www.cherryservers.com/cherryservers-favicon.ico
+  page: https://www.cherryservers.com
+  fetchedAt: 2026-10-20
 cinven:
   kind: mark
   image: https://www.cinven.com/web-app-manifest-512x512.png
@@ -182,6 +218,11 @@ civo:
   kind: favicon
   image: https://www.civo.com/assets-rebrand/favicons/favicon.svg
   page: https://www.civo.com
+  fetchedAt: 2026-10-20
+clearlake:
+  kind: favicon
+  image: https://clearlake.com/favicon/apple-touch-icon.png
+  page: https://www.clearlake.com
   fetchedAt: 2026-10-20
 cleavr:
   kind: favicon
@@ -294,6 +335,11 @@ cube-infrastructure:
   image: https://www.cubeinfrastructure.com/wp-content/uploads/2023/06/cropped-cube-favicon-300x300.png
   page: https://www.cubeinfrastructure.com
   fetchedAt: 2026-10-20
+cvc:
+  kind: favicon
+  image: https://www.cvc.com/favicon.ico
+  page: https://www.cvc.com
+  fetchedAt: 2026-10-20
 cyber-folks:
   kind: favicon
   image: https://cyberfolks.pl/wp-content/themes/cyberfolks/new/dist/images/favicons/favicon-196x196.png
@@ -363,6 +409,11 @@ dokploy:
   page: https://dokploy.com
   fetchedAt: 2026-10-20
   light: true
+donweb:
+  kind: favicon
+  image: https://images.donweb.com/favicon.ico
+  page: https://donweb.com
+  fetchedAt: 2026-10-20
 dotmoose:
   kind: mark
   image: https://dotmoose.com/dotmoose-mark.svg
@@ -373,12 +424,22 @@ dreamhost:
   image: https://www.dreamhost.com/icon.svg?icon.003t-algmmvru.svg
   page: https://www.dreamhost.com
   fetchedAt: 2026-10-20
+duda:
+  kind: favicon
+  image: https://irp.cdn-website.com/a8ff2f1c/site_favicon_16_1753604947224.ico
+  page: https://www.duda.co
+  fetchedAt: 2026-10-20
 e2b:
   kind: favicon
   image: https://e2b.dev/icon2.png?icon2.2h_70q4cu8mj-.png
   page: https://e2b.dev
   fetchedAt: 2026-10-20
   fills: true
+e2e-networks:
+  kind: favicon
+  image: https://www.e2enetworks.com/favicon.ico
+  page: https://www.e2enetworks.com
+  fetchedAt: 2026-10-20
 easypanel:
   kind: mark
   image: https://easypanel.io/img/logomark.svg
@@ -409,6 +470,11 @@ enhance:
   image: https://enhance.com/favicon.svg
   page: https://enhance.com
   fetchedAt: 2026-10-20
+evennode:
+  kind: favicon
+  image: https://www.evennode.com/favicon.png
+  page: https://www.evennode.com
+  fetchedAt: 2026-10-20
 exe:
   kind: favicon
   image: https://exe.dev/apple-touch-icon.png
@@ -420,6 +486,11 @@ exoscale:
   page: https://www.exoscale.com
   fetchedAt: 2026-10-20
   fills: true
+fasthosts:
+  kind: favicon
+  image: https://static.fasthosts.co.uk/icons/favicon.ico
+  page: https://www.fasthosts.co.uk
+  fetchedAt: 2026-10-20
 fastmail:
   kind: favicon
   image: https://www.fastmail.com/favicon.svg?v=5843ac65
@@ -497,6 +568,11 @@ github:
   kind: favicon
   image: https://github.githubassets.com/favicons/favicon.svg
   page: https://github.com
+  fetchedAt: 2026-10-20
+github-pages:
+  kind: favicon
+  image: https://pages.github.com/favicon.ico
+  page: https://pages.github.com
   fetchedAt: 2026-10-20
 gitlab:
   kind: favicon
@@ -592,10 +668,20 @@ hostgator:
   page: https://www.hostgator.com
   fetchedAt: 2026-10-20
   fills: true
+hostim:
+  kind: favicon
+  image: https://hostim.dev/img/favicon.ico
+  page: https://hostim.dev
+  fetchedAt: 2026-10-20
 hosting-com:
   kind: favicon
   image: https://hosting.com/assets/brand/favicons/apple-touch-icon.png
   page: https://hosting.com
+  fetchedAt: 2026-10-20
+hosting-de:
+  kind: favicon
+  image: https://www.hosting.de/images/favicon.ico
+  page: https://www.hosting.de
   fetchedAt: 2026-10-20
 hostinger:
   kind: favicon
@@ -644,6 +730,11 @@ hypernode:
   image: https://www.hypernode.com/wp-content/uploads/2024/05/cropped-Hypernode-logo1-192x192.png
   page: https://www.hypernode.com
   fetchedAt: 2026-10-20
+hyperstack:
+  kind: favicon
+  image: https://www.hyperstack.cloud/favicon.ico
+  page: https://www.hyperstack.cloud
+  fetchedAt: 2026-10-20
 idcloudhost:
   kind: favicon
   image: https://idcloudhost.com/wp-content/uploads/2019/11/Logo-favicon-idcloudhost.png
@@ -665,6 +756,17 @@ incognet:
   image: https://incognet.io/assets/icons/favicon.svg
   page: https://incognet.io
   fetchedAt: 2026-10-20
+infinityfree:
+  kind: favicon
+  image: https://www.infinityfree.com/images/favicon.ico
+  page: https://www.infinityfree.com
+  fetchedAt: 2026-10-20
+infomaniak:
+  kind: favicon
+  image: https://www.infomaniak.com/favicon.ico
+  page: https://www.infomaniak.com
+  fetchedAt: 2026-10-20
+  fills: true
 interserver:
   kind: favicon
   image: https://www.interserver.net/common/images/apple/logo-ios-144px.png
@@ -776,6 +878,11 @@ leaseweb:
   image: https://www.leaseweb.com/favicon.ico
   page: https://www.leaseweb.com
   fetchedAt: 2026-10-20
+liara:
+  kind: favicon
+  image: https://liara.ir/assets/favicon.ico
+  page: https://liara.ir
+  fetchedAt: 2026-10-20
 linode:
   kind: favicon
   image: https://assets.linode.com/icons/favicon-194x194.png
@@ -785,6 +892,11 @@ liquid-web:
   kind: favicon
   image: https://res.cloudinary.com/lwcom/images/f_auto,q_auto/v1776858458/prod/favicon/favicon.svg?_i=AA
   page: https://www.liquidweb.com
+  fetchedAt: 2026-10-20
+locaweb:
+  kind: favicon
+  image: https://www.locaweb.com.br/images/favicon.ico
+  page: https://www.locaweb.com.br
   fetchedAt: 2026-10-20
 lolipop:
   kind: favicon
@@ -812,6 +924,11 @@ manitu:
   image: https://www.manitu.de/images/icons/icon-512x512.png
   page: https://www.manitu.de
   fetchedAt: 2026-10-20
+milesweb:
+  kind: favicon
+  image: https://www.milesweb.in/img-assets/favicon.ico
+  page: https://www.milesweb.in
+  fetchedAt: 2026-10-20
 mittwald:
   kind: favicon
   image: https://www.mittwald.de/_Resources/Static/Packages/KaufmannDigital.Site.Mittwald/Assets/Favicons/apple-touch-icon.png?bust=a91310c3
@@ -827,12 +944,42 @@ mydevil:
   image: https://www.mydevil.net/wp-content/uploads/2025/01/cropped-md-favicon-192x192.png
   page: https://www.mydevil.net
   fetchedAt: 2026-10-20
+mynymbox:
+  kind: favicon
+  image: https://mynymbox.io/assets/img/favicon.ico
+  page: https://mynymbox.io
+  fetchedAt: 2026-10-20
+mythic-beasts:
+  kind: favicon
+  image: https://www.mythic-beasts.com/favicon.ico
+  page: https://www.mythic-beasts.com
+  fetchedAt: 2026-10-20
+namecheap:
+  kind: favicon
+  image: https://www.namecheap.com/assets/img/nc-icon/namecheap-icon-152x152.png
+  page: https://www.namecheap.com
+  fetchedAt: 2026-10-20
+nazwa-pl:
+  kind: favicon
+  image: https://www.nazwa.pl/fileadmin/nazwa/favicon.ico
+  page: https://www.nazwa.pl
+  fetchedAt: 2026-10-20
+nearlyfreespeech:
+  kind: favicon
+  image: https://www.nearlyfreespeech.net/favicon.ico
+  page: https://nearlyfreespeech.net
+  fetchedAt: 2026-10-20
 nebius:
   kind: mark
   image: https://nebius.com/favicon/web-app-manifest-512x512.png
   page: https://nebius.com
   fetchedAt: 2026-10-20
   fills: true
+neocities:
+  kind: favicon
+  image: https://neocities.org/img/favicon.png
+  page: https://neocities.org
+  fetchedAt: 2026-10-20
 neon:
   kind: mark
   image: https://neon.com/apple-touch-icon.png
@@ -917,6 +1064,11 @@ opalstack:
   page: https://www.opalstack.com
   fetchedAt: 2026-10-20
   fills: true
+orangewebsite:
+  kind: favicon
+  image: https://orangewebsite.com/fav.ico
+  page: https://www.orangewebsite.com
+  fetchedAt: 2026-10-20
 ovh:
   kind: mark
   image: https://www.ovhcloud.com/android-icon-512x512.png
@@ -934,6 +1086,12 @@ pantheon:
   image: https://pantheon.io/themes/custom/pagoda/favicon.ico
   page: https://pantheon.io
   fetchedAt: 2026-10-20
+papaki:
+  kind: favicon
+  image: https://www.papaki.com/wp-content/themes/dada-papakicom-child/favicon.ico
+  page: https://www.papaki.com
+  fetchedAt: 2026-10-20
+  fills: true
 permira:
   kind: mark
   image: https://media.permira.com/media/bqjph5wp/permira_favicon-01.png
@@ -945,6 +1103,11 @@ pico-sh:
   page: https://pico.sh
   fetchedAt: 2026-10-20
   light: true
+planethoster:
+  kind: favicon
+  image: https://www.planethoster.com/favicon.ico
+  page: https://www.planethoster.com
+  fetchedAt: 2026-10-20
 planetscale:
   kind: mark
   image: https://planetscale.com/icon-512.png
@@ -994,6 +1157,16 @@ pushin:
   image: https://cdn.pushin.eu/images/apple-touch-icon-b193a37c188d6dc6d5e32d7b8fade8f7.png?vsn=d
   page: https://pushin.eu
   fetchedAt: 2026-10-20
+pythonanywhere:
+  kind: favicon
+  image: https://www.pythonanywhere.com/favicon.ico
+  page: https://www.pythonanywhere.com
+  fetchedAt: 2026-10-20
+qoddi:
+  kind: favicon
+  image: https://qoddi.com/images2/favicon.ico
+  page: https://qoddi.com
+  fetchedAt: 2026-10-20
 radicle-garden:
   kind: mark
   image: https://radicle.garden/android-chrome-512x512.png
@@ -1025,6 +1198,16 @@ replit:
   image: https://replit.com/public/icons/icon-rebrand-512x512.png
   page: https://replit.com
   fetchedAt: 2026-10-20
+rocket-net:
+  kind: favicon
+  image: https://rocket.net/wp-content/uploads/2022/12/cropped-favicon-32x32-1.png
+  page: https://rocket.net
+  fetchedAt: 2026-10-20
+rocket-new:
+  kind: favicon
+  image: https://www.rocket.new/favicon.ico
+  page: https://rocket.new
+  fetchedAt: 2026-10-20
 runcloud:
   kind: mark
   image: https://cf1.cdn.runcloud.io/apple-touch-icon-152x152.png
@@ -1047,6 +1230,11 @@ saladcloud:
   kind: mark
   image: https://salad.com/img/favicon.svg
   page: https://salad.com
+  fetchedAt: 2026-10-20
+salesforce:
+  kind: favicon
+  image: https://www.salesforce.com/c2/public/app/favicon.ico
+  page: https://www.salesforce.com
   fetchedAt: 2026-10-20
 scaleway:
   kind: mark
@@ -1102,6 +1290,11 @@ sesterce:
   kind: favicon
   image: https://www.sesterce.com/favicon.ico
   page: https://www.sesterce.com
+  fetchedAt: 2026-10-20
+sevalla:
+  kind: favicon
+  image: https://sevalla.com/favicon.ico?6ce9957ceb175612
+  page: https://sevalla.com
   fetchedAt: 2026-10-20
 shopify:
   kind: mark
@@ -1195,6 +1388,11 @@ team-blue:
   image: https://team.blue/cache-6968dd09/img/teamblue2026/favicons/apple-touch-icon.png
   page: https://team.blue/
   fetchedAt: 2026-10-20
+tencent-cloud:
+  kind: favicon
+  image: https://www.tencentcloud.com/favicon.ico?t=201902181234
+  page: https://tencentcloud.com
+  fetchedAt: 2026-10-20
 tensordock:
   kind: mark
   image: https://www.tensordock.com/assets/favicon/apple-touch-icon.png
@@ -1204,6 +1402,18 @@ thunder-compute:
   kind: mark
   image: https://www.thundercompute.com/apple-icon.png
   page: https://www.thundercompute.com/
+  fetchedAt: 2026-10-20
+  fills: true
+tigris:
+  kind: favicon
+  image: https://www.tigrisdata.com/favicon.jpg
+  page: https://www.tigrisdata.com
+  fetchedAt: 2026-10-20
+  fills: true
+tornado-vps:
+  kind: favicon
+  image: https://tornadovps.com/favicon.ico
+  page: https://tornadovps.com
   fetchedAt: 2026-10-20
   fills: true
 transip:
@@ -1241,6 +1451,11 @@ vast-ai:
   kind: mark
   image: https://vast.ai/icon.png
   page: https://vast.ai/
+  fetchedAt: 2026-10-20
+ventraip:
+  kind: favicon
+  image: https://ventraip.com.au/favicon.ico
+  page: https://ventraip.com.au
   fetchedAt: 2026-10-20
 vercel:
   kind: mark
@@ -1310,6 +1525,11 @@ wedevs:
   image: https://wedevs.com/favicon.svg
   page: https://wedevs.com/
   fetchedAt: 2026-10-20
+weebly:
+  kind: favicon
+  image: https://www.weebly.com/favicon.ico
+  page: https://www.weebly.com
+  fetchedAt: 2026-10-20
 wix:
   kind: favicon
   image: https://www.wix.com/favicon.ico
@@ -1334,6 +1554,11 @@ wpengine:
   kind: mark
   image: https://wpengine.com/assets/manifest/apple-touch-icon.png
   page: https://wpengine.com/
+  fetchedAt: 2026-10-20
+wpserveur:
+  kind: favicon
+  image: https://www.wpserveur.net/favicon.ico
+  page: https://www.wpserveur.net
   fetchedAt: 2026-10-20
 xcloud:
   kind: mark

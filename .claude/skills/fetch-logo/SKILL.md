@@ -32,7 +32,7 @@ Record ids, or "listed": every record `lib/providers.ts` would put in the regist
    node scripts/logo.ts <id>
    ```
 
-   It refuses anything under 48px. Then the record keeps its emoji tile; that is a fine outcome, not a failure to work around.
+   It takes favicons down to 16px and draws small ones with hard pixel edges. A chosen mark must be 48px or more. When nothing qualifies the record keeps its emoji tile; that is a fine outcome, not a failure to work around.
 
 4. **Look at the result**: Read `public/logos/<id>.png`. Delete the file and its `src/data/logos.yml` entry when it is blank, a generic CMS or hosting-panel icon, a parked-domain icon, or a different company's mark.
 

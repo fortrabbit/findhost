@@ -21,8 +21,14 @@ import { initWasm, Resvg } from '@resvg/resvg-wasm';
 import { hasAffiliateParams } from '../src/lib/affiliate.ts';
 import { logoDir, logoFile, logoManifest, logoSize, type LogoEntry } from '../src/lib/logos.ts';
 
-/** Below this a favicon is a blur, and the record's emoji tile reads better. */
-const minSide = 48;
+/**
+ * A chosen mark should be drawn for the size it is shown at. A favicon is
+ * whatever the provider has, and a 16px one drawn crisp still names the
+ * company better than an emoji does.
+ */
+const minSide = { mark: 48, favicon: 16 };
+/** Below this a raster is enlarged by whole multiples with hard edges, since smoothing it would blur it. */
+const pixelBelow = 64;
 /** A wordmark wider than this shrinks to a line inside a square tile. */
 const maxAspect = 1.5;
 const userAgent = 'FindHost logo fetch (+https://www.findhost.app/about/)';
@@ -58,10 +64,14 @@ const assess = (pixels: Uint8Array) => {
 };
 
 const startRenderer = () => initWasm(readFileSync('node_modules/@resvg/resvg-wasm/index_bg.wasm'));
-const draw = (mime: string, bytes: Buffer) =>
-  new Resvg(
-    `<svg xmlns="http://www.w3.org/2000/svg" width="${logoSize}" height="${logoSize}"><image href="data:${mime};base64,${bytes.toString('base64')}" width="${logoSize}" height="${logoSize}" preserveAspectRatio="xMidYMid meet"/></svg>`,
+const draw = (mime: string, bytes: Buffer, side = logoSize) => {
+  const pixelated = mime !== 'image/svg+xml' && side < pixelBelow;
+  const size = pixelated ? side * Math.floor(logoSize / side) : logoSize;
+  const offset = (logoSize - size) / 2;
+  return new Resvg(
+    `<svg xmlns="http://www.w3.org/2000/svg" width="${logoSize}" height="${logoSize}"><image href="data:${mime};base64,${bytes.toString('base64')}" x="${offset}" y="${offset}" width="${size}" height="${size}" preserveAspectRatio="xMidYMid meet"${pixelated ? ' image-rendering="optimizeSpeed"' : ''}/></svg>`,
   ).render();
+};
 
 /* Re-reads the files on disk, no network: for when `assess` changes. */
 if (process.argv.includes('--recheck')) {
@@ -328,8 +338,8 @@ const pick = async (): Promise<{ image: Image; kind: LogoEntry['kind']; page: st
 const { image, kind, page: foundOn } = await pick();
 const aspect = Math.max(image.width, image.height) / Math.min(image.width, image.height);
 if (aspect > maxAspect) fail(`${image.url} is ${image.width}×${image.height}, too wide to read in a square`);
-if (Math.min(image.width, image.height) < minSide) {
-  fail(`${image.url} is ${image.width}×${image.height}, under ${minSide}px; the emoji tile stays`);
+if (Math.min(image.width, image.height) < minSide[kind]) {
+  fail(`${image.url} is ${image.width}×${image.height}, under ${minSide[kind]}px; the emoji tile stays`);
 }
 for (const url of [image.url, foundOn]) if (hasAffiliateParams(url)) fail(`affiliate parameters in ${url}`);
 
@@ -339,7 +349,7 @@ for (const url of [image.url, foundOn]) if (hasAffiliateParams(url)) fail(`affil
  * picture. The tile behind it is CSS, so the PNG stays transparent.
  */
 await startRenderer();
-const rendered = draw(image.mime, image.bytes);
+const rendered = draw(image.mime, image.bytes, Math.max(image.width, image.height));
 if (!rendered.pixels.some((value, index) => index % 4 === 3 && value > 0)) fail(`${image.url} rendered empty`);
 
 mkdirSync(logoDir, { recursive: true });
