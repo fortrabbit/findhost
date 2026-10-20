@@ -71,17 +71,17 @@ apiAvailable: public
 referringSubnets: { now: 675, before: 693 }
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-10-20
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1242', checkedAt: 2026-08-10 }
-  - { field: priceFrom, url: 'https://www.alwaysdata.com/en/offers/plus/', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://www.alwaysdata.com/en/offers/plus/', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://www.alwaysdata.com/en/offers/plus/', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://www.alwaysdata.com/en/offers/plus/', checkedAt: 2026-08-02 }
-  - { field: billingTiming, url: 'https://help.alwaysdata.com/en/admin-billing/billing/', checkedAt: 2026-08-02 }
-  - { field: freeTier, url: 'https://www.alwaysdata.com/en/pricing/', checkedAt: 2026-08-01 }
-  - { field: pricingModel, url: 'https://www.alwaysdata.com/en/pricing/', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://www.alwaysdata.com/en/offers/plus/', checkedAt: 2026-10-20 }
+  - { field: priceTo, url: 'https://www.alwaysdata.com/en/offers/plus/', checkedAt: 2026-10-20 }
+  - { field: currencies, url: 'https://www.alwaysdata.com/en/offers/plus/', checkedAt: 2026-10-20 }
+  - { field: billingPeriods, url: 'https://www.alwaysdata.com/en/offers/plus/', checkedAt: 2026-10-20 }
+  - { field: billingTiming, url: 'https://help.alwaysdata.com/en/admin-billing/billing/', checkedAt: 2026-10-20 }
+  - { field: freeTier, url: 'https://www.alwaysdata.com/en/pricing/', checkedAt: 2026-10-20 }
+  - { field: pricingModel, url: 'https://www.alwaysdata.com/en/pricing/', checkedAt: 2026-10-20 }
 figure:
   emoji: 🧬
   color: rgb(69, 166, 138)
