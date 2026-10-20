@@ -22,7 +22,14 @@ const logo = logoOf(id);
   logo && (
     <figure class:list={['provider-logo', className]}>
       <div class:list={['provider-logo-tile', { fills: logo.fills, light: logo.light }]}>
-        <img src={logo.src} alt="" width={logoSize} height={logoSize} loading={eager ? 'eager' : 'lazy'} decoding="async" />
+        <img
+          src={logo.src}
+          alt=""
+          width={logoSize}
+          height={logoSize}
+          loading={eager ? 'eager' : 'lazy'}
+          decoding="async"
+        />
       </div>
     </figure>
   )
