@@ -58,7 +58,6 @@ arcustech:
   image: https://www.arcustech.com/images/favicon-512x512.png
   page: https://www.arcustech.com
   fetchedAt: 2026-10-20
-  fills: true
 arsys:
   kind: favicon
   image: https://www.arsys.es/get/favicon/favicon.svg
@@ -69,7 +68,6 @@ aruba-it:
   image: https://www.arubacloud.com/.resources/aruba/webresources/business/images/favicons/apple-icon-180x180.png
   page: https://www.arubacloud.com
   fetchedAt: 2026-10-20
-  fills: true
 automattic:
   kind: favicon
   image: https://automattic.com/wp-content/uploads/2026/10/a8c-favicon-1.png?w=192
@@ -92,7 +90,6 @@ azdigi:
   image: https://azdigi.com/images/azdigi-white-bg.png
   page: https://azdigi.com/en/
   fetchedAt: 2026-10-20
-  fills: true
 azure:
   kind: favicon
   image: https://azure.microsoft.com/favicon.ico?v2
@@ -150,7 +147,6 @@ bluehost:
   image: https://www.bluehost.com/content/dam/bluehost/favicons/favicon.ico
   page: https://www.bluehost.com
   fetchedAt: 2026-10-20
-  fills: true
 bolt:
   kind: favicon
   image: https://bolt.new/static/favicon.svg
@@ -166,7 +162,6 @@ bubble:
   image: https://meta-q.cdn.bubble.io/cdn-cgi/image/w=192,h=,f=auto,dpr=1,fit=contain/f1534423790492x745180500205606300/icon_512x512%402x.png
   page: https://bubble.io
   fetchedAt: 2026-10-20
-  fills: true
 bunny-net:
   kind: favicon
   image: https://bunny.net/icons/icon-512x512.png?v=1ca91ab4134c7fdacfd5e433633a1572
@@ -419,7 +414,6 @@ exe:
   image: https://exe.dev/apple-touch-icon.png
   page: https://exe.dev
   fetchedAt: 2026-10-20
-  fills: true
 exoscale:
   kind: favicon
   image: https://www.exoscale.com/static/android-chrome-512x512.png
@@ -484,7 +478,6 @@ gcore:
   image: https://gcore.com/assets/favicon/android-icon-512x512.png
   page: https://gcore.com
   fetchedAt: 2026-10-20
-  fills: true
 gcp:
   kind: favicon
   image: https://www.gstatic.com/cgc/super_cloud_gradient.png
@@ -521,7 +514,6 @@ gmo-pepabo:
   image: https://pepabo.com/apple-touch-icon.png
   page: https://pepabo.com
   fetchedAt: 2026-10-20
-  fills: true
 google-cloud-run:
   kind: favicon
   image: https://www.gstatic.com/cgc/super_cloud_gradient.png
@@ -589,7 +581,6 @@ home-pl:
   image: https://home.pl/img/home/base/favicon/android-icon-192x192.png
   page: https://home.pl
   fetchedAt: 2026-10-20
-  fills: true
 hostafrica:
   kind: favicon
   image: https://www.hostafrica.com/favicon.svg
@@ -627,7 +618,6 @@ hosttech:
   image: https://www.hosttech.ch/wp-content/uploads/fbrfg/apple-touch-icon.png
   page: https://www.hosttech.ch
   fetchedAt: 2026-10-20
-  fills: true
 huawei-cloud:
   kind: favicon
   image: https://www.huaweicloud.com/favicon.ico
@@ -680,7 +670,6 @@ interserver:
   image: https://www.interserver.net/common/images/apple/logo-ios-144px.png
   page: https://www.interserver.net
   fetchedAt: 2026-10-20
-  fills: true
 ionos:
   kind: favicon
   image: https://www.ionos.de/favicon.svg
@@ -745,7 +734,6 @@ koyeb:
   image: https://www.koyeb.com/favicon/apple-touch-icon.png
   page: https://www.koyeb.com
   fetchedAt: 2026-10-20
-  fills: true
 krystal:
   kind: mark
   image: https://krystal.io/android-chrome-512x512.png
@@ -773,7 +761,6 @@ laravel-vapor:
   image: https://d2n6cmh8j179w8.cloudfront.net/9fba44b7-9ea9-4970-bb12-e58fdbeda684/build/assets/apple-touch-icon-8a64f4ec.png
   page: https://vapor.laravel.com
   fetchedAt: 2026-10-20
-  fills: true
 latitude-sh:
   kind: mark
   image: https://www.latitude.sh/android-chrome-512x512.png
@@ -804,7 +791,6 @@ lolipop:
   image: https://lolipop.jp/img/common/favicon/apple-touch-icon.png
   page: https://lolipop.jp
   fetchedAt: 2026-10-20
-  fills: true
 loopia:
   kind: favicon
   image: https://static.loopia.se/responsive/images/iOS-152.png
@@ -863,7 +849,6 @@ netlify:
   image: https://www.netlify.com/favicon/icon-512.png
   page: https://www.netlify.com
   fetchedAt: 2026-10-20
-  fills: true
 neubox:
   kind: favicon
   image: https://neubox.com/images/icon/apple-touch-icon.png
@@ -926,7 +911,6 @@ one-com:
   image: https://storefront.group-cdn.one/_next/static/media/apple-touch-icon.15j8sos-0ibgi.png
   page: https://www.one.com
   fetchedAt: 2026-10-20
-  fills: true
 opalstack:
   kind: mark
   image: https://my.opalstack.com/assets/media/logos/opalstack-logo-square.png
@@ -972,7 +956,6 @@ plesk:
   image: https://www.plesk.com/wp-content/uploads/2020/11/cropped-Logo_Plesk-192x192.png
   page: https://www.plesk.com
   fetchedAt: 2026-10-20
-  fills: true
 ploi:
   kind: mark
   image: https://ploi.io/android-chrome-512x512.png
@@ -1042,7 +1025,6 @@ replit:
   image: https://replit.com/public/icons/icon-rebrand-512x512.png
   page: https://replit.com
   fetchedAt: 2026-10-20
-  fills: true
 runcloud:
   kind: mark
   image: https://cf1.cdn.runcloud.io/apple-touch-icon-152x152.png
@@ -1081,13 +1063,11 @@ scalingo:
   image: https://framerusercontent.com/images/oiGqcWF1TfNLGyQxfXSoI83FpoM.png
   page: https://scalingo.com
   fetchedAt: 2026-10-20
-  fills: true
 seeweb:
   kind: mark
   image: https://seeweb.it/assets/favicons/apple-touch-icon-180x180.png
   page: https://seeweb.it
   fetchedAt: 2026-10-20
-  fills: true
 selectel:
   kind: mark
   image: https://selectel.ru/favicon.svg
@@ -1103,7 +1083,6 @@ servd:
   image: https://servd.host/assets/icons/android-chrome-512x512.png
   page: https://servd.host
   fetchedAt: 2026-10-20
-  fills: true
 servebolt:
   kind: mark
   image: https://servebolt.com/wp-content/uploads/2023/09/cropped-servebolt-logo.png
@@ -1149,7 +1128,6 @@ siteground:
   image: https://www.siteground.com/img/apple-touch-icon.png
   page: https://www.siteground.com
   fetchedAt: 2026-10-20
-  fills: true
 sitehost:
   kind: mark
   image: https://sitehost.nz/glide-cache/containers/assets/icon/favicon.png/c6b2b366ec004316c77c936bef3d474f/favicon.png
@@ -1222,7 +1200,6 @@ tensordock:
   image: https://www.tensordock.com/assets/favicon/apple-touch-icon.png
   page: https://www.tensordock.com/
   fetchedAt: 2026-10-20
-  fills: true
 thunder-compute:
   kind: mark
   image: https://www.thundercompute.com/apple-icon.png
@@ -1234,7 +1211,6 @@ transip:
   image: https://www.transip.nl/cache-66e443d9/img/transip2022/favicons/apple-touch-icon.png
   page: https://www.transip.nl/
   fetchedAt: 2026-10-20
-  fills: true
 truehost:
   kind: mark
   image: https://truehost.co.ke/wp-content/uploads/2021/09/cropped-truehost-180x180.png
@@ -1251,7 +1227,6 @@ united-internet:
   image: https://www.united-internet.de/apple-touch-icon-144x144-precomposed.png
   page: https://www.united-internet.de/
   fetchedAt: 2026-10-20
-  fills: true
 upcloud:
   kind: mark
   image: https://upcloud.com/media/android-chrome-512x512-2-300x300.png
@@ -1288,7 +1263,6 @@ vultr:
   image: https://www.vultr.com/apple-touch-icon.png
   page: https://www.vultr.com/
   fetchedAt: 2026-10-20
-  fills: true
 walrus:
   kind: mark
   image: https://walrus.xyz/favicon-196x196.png
@@ -1341,7 +1315,6 @@ wix:
   image: https://www.wix.com/favicon.ico
   page: https://www.wix.com
   fetchedAt: 2026-10-20
-  fills: true
 world-host-group:
   kind: favicon
   image: https://hosting.com/assets/brand/favicons/apple-touch-icon.png
@@ -1362,7 +1335,6 @@ wpengine:
   image: https://wpengine.com/assets/manifest/apple-touch-icon.png
   page: https://wpengine.com/
   fetchedAt: 2026-10-20
-  fills: true
 xcloud:
   kind: mark
   image: https://xcloud.host/apple-touch-icon.png
@@ -1378,7 +1350,6 @@ xserver:
   image: https://www.xserver.ne.jp/img/common/apple-touch-icon.png?date=241227
   page: https://www.xserver.ne.jp/
   fetchedAt: 2026-10-20
-  fills: true
 your-online:
   kind: mark
   image: https://your.online/wp-content/uploads/2023/02/cropped-Logo-Figure-300x300.png
@@ -1389,7 +1360,6 @@ zeabur:
   image: https://zeabur.com/apple-touch-icon.png
   page: https://zeabur.com/
   fetchedAt: 2026-10-20
-  fills: true
 zerops:
   kind: favicon
   image: https://zerops.io/favicon.ico

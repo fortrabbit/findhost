@@ -34,13 +34,17 @@ const fail = (message: string): never => {
 
 /*
  * What the tile needs to know about the picture. An icon painted edge to edge
- * brings its own background and drops our margin; one drawn in white on
+ * in a colour brings its own background and drops our margin; painted on
+ * white, it is our tile already and keeps the margin. One drawn in white on
  * transparent would vanish on the white tile, so it gets a dark one.
  */
 const assess = (pixels: Uint8Array) => {
-  const alphaAt = (x: number, y: number) => pixels[(y * logoSize + x) * 4 + 3]!;
   const edge = logoSize - 1;
-  const fills = [alphaAt(0, 0), alphaAt(edge, 0), alphaAt(0, edge), alphaAt(edge, edge)].every((alpha) => alpha > 200);
+  const corners = [0, edge * logoSize, edge, edge * logoSize + edge].map((index) =>
+    pixels.subarray(index * 4, index * 4 + 4),
+  );
+  const opaque = corners.every((pixel) => pixel[3]! > 200);
+  const fills = opaque && !corners.every((pixel) => Math.min(pixel[0]!, pixel[1]!, pixel[2]!) > 240);
   let weight = 0;
   let luminance = 0;
   for (let at = 0; at < pixels.length; at += 4) {
@@ -49,7 +53,7 @@ const assess = (pixels: Uint8Array) => {
     weight += alpha;
     luminance += (alpha * (0.2126 * pixels[at]! + 0.7152 * pixels[at + 1]! + 0.0722 * pixels[at + 2]!)) / 255;
   }
-  const light = !fills && weight > 0 && luminance / weight > 0.85;
+  const light = !opaque && weight > 0 && luminance / weight > 0.85;
   return { ...(fills ? { fills } : {}), ...(light ? { light } : {}) };
 };
 
