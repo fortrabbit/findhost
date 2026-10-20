@@ -98,8 +98,9 @@
   }
 }
 
-/* An explicit choice always wins over the OS preference, in both directions. */
+/* An explicit choice always wins over the OS preference, in both directions, and takes the browser's own controls with it. */
 :root[data-theme='dark'] {
+  color-scheme: dark;
   --color-page: var(--pitch);
   --color-ink: var(--paper);
   --color-link: var(--blue-300);
@@ -112,6 +113,7 @@
 }
 
 :root[data-theme='light'] {
+  color-scheme: light;
   --color-hover: var(--blue-50);
   --color-liked: var(--rose-50);
   --color-heart: var(--rose-500);
