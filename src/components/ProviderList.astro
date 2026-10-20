@@ -57,11 +57,7 @@ const { providers, namesOnly = false } = Astro.props;
           {logoOf(provider.id) ? (
             <ProviderLogo id={provider.id} class="provider-tile" />
           ) : provider.figure ? (
-            <span
-              class="provider-tile"
-              style={`background:${provider.figure.color};color:${provider.figure.textColor}`}
-              aria-hidden="true"
-            >
+            <span class="provider-tile" aria-hidden="true">
               {provider.figure.emoji}
             </span>
           ) : (

@@ -165,7 +165,7 @@ block:
   fetchedAt: 2026-10-20
 bluehost:
   kind: favicon
-  image: https://www.bluehost.com/content/dam/bluehost/favicons/favicon.ico
+  image: https://www.bluehost.com/favicon.ico
   page: https://www.bluehost.com
   fetchedAt: 2026-10-20
 bolt:
@@ -221,7 +221,7 @@ civo:
   fetchedAt: 2026-10-20
 clearlake:
   kind: favicon
-  image: https://clearlake.com/favicon/apple-touch-icon.png
+  image: https://clearlake.com/favicon/favicon.ico
   page: https://www.clearlake.com
   fetchedAt: 2026-10-20
 cleavr:
@@ -322,7 +322,7 @@ craft-cloud:
   fetchedAt: 2026-10-20
 cratedb:
   kind: favicon
-  image: https://cratedb.com/favicon.ico
+  image: https://cratedb.com/hubfs/cratedb-favicon.png
   page: https://cratedb.com
   fetchedAt: 2026-10-20
 crusoe:
@@ -664,10 +664,9 @@ hostafrica:
   fetchedAt: 2026-10-20
 hostgator:
   kind: favicon
-  image: https://www.hostgator.com/apple-touch-icon.png
+  image: https://www.hostgator.com/favicon.ico
   page: https://www.hostgator.com
   fetchedAt: 2026-10-20
-  fills: true
 hostim:
   kind: favicon
   image: https://hostim.dev/img/favicon.ico
@@ -956,7 +955,7 @@ mythic-beasts:
   fetchedAt: 2026-10-20
 namecheap:
   kind: favicon
-  image: https://www.namecheap.com/assets/img/nc-icon/namecheap-icon-152x152.png
+  image: https://www.namecheap.com/assets/img/nc-icon/namecheap-icon-144x144.png
   page: https://www.namecheap.com
   fetchedAt: 2026-10-20
 nazwa-pl:

@@ -25,8 +25,8 @@ export interface LogoEntry {
 /** Project-relative, as fields.ts explains: the build moves this module. */
 export const logoManifest = 'src/data/logos.yml';
 export const logoDir = 'public/logos';
-/** Twice the largest tile it is drawn in, for high-density screens. */
-export const logoSize = 128;
+/** The largest tile is 72 CSS pixels; this covers it on a 3x screen. */
+export const logoSize = 256;
 export const logoFile = (id: string) => `${id}.png`;
 
 const entries = (existsSync(logoManifest) ? (parseYaml(readFileSync(logoManifest, 'utf8')) ?? {}) : {}) as Record<

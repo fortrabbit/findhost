@@ -321,7 +321,10 @@ const pick = async (): Promise<{ image: Image; kind: LogoEntry['kind']; page: st
   }
 
   const images: Image[] = [];
-  const urls = await declaredIcons(home!).catch((error: Error) => fail(`${home}: ${error.message}`));
+  /* A home page that turns the script away still served the icon it recorded last time. */
+  const urls = await declaredIcons(home!).catch((error: Error) =>
+    held ? [held.image] : fail(`${home}: ${error.message}`),
+  );
   for (const url of urls) {
     const image = await fetchImage(url);
     console.log(`  ${typeof image === 'string' ? `skip  ${image}` : `${image.width}×${image.height}`}  ${url}`);
