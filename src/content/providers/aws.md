@@ -65,21 +65,21 @@ referringSubnets: { now: 46557, before: 46404 }
 wikidata: Q456157
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-10-20
 sources:
-  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q456157', checkedAt: 2026-09-09 }
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q456157', checkedAt: 2026-10-20 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: infraContract, url: 'https://aws.amazon.com/about-aws/global-infrastructure/regions_az/', checkedAt: 2026-07-31 }
-  - { field: regions, url: 'https://docs.aws.amazon.com/global-infrastructure/latest/regions/aws-regions.html', checkedAt: 2026-08-01 }
+  - { field: regions, url: 'https://docs.aws.amazon.com/global-infrastructure/latest/regions/aws-regions.html', checkedAt: 2026-10-20 }
   - { field: priceFrom, url: 'https://aws.amazon.com/ec2/pricing/on-demand/', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://aws.amazon.com/ec2/pricing/on-demand/', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://aws.amazon.com/agreement/', checkedAt: 2026-08-02 }
-  - { field: billingTiming, url: 'https://aws.amazon.com/agreement/', checkedAt: 2026-08-02 }
-  - { field: exitWithin, url: 'https://aws.amazon.com/agreement/', checkedAt: 2026-08-02 }
-  - { field: sla, url: 'https://aws.amazon.com/compute/sla/', checkedAt: 2026-08-30 }
-  - { field: gpuCapacity, url: 'https://aws.amazon.com/ec2/instance-types/accelerated-computing/', checkedAt: 2026-09-24 }
-  - { field: gpuCapacity, url: 'https://aws.amazon.com/sagemaker/ai/deploy/', checkedAt: 2026-09-24 }
-  - { field: gpuCapacity, url: 'https://aws.amazon.com/bedrock/pricing/', checkedAt: 2026-09-24 }
+  - { field: billingPeriods, url: 'https://aws.amazon.com/agreement/', checkedAt: 2026-10-20 }
+  - { field: billingTiming, url: 'https://aws.amazon.com/agreement/', checkedAt: 2026-10-20 }
+  - { field: exitWithin, url: 'https://aws.amazon.com/agreement/', checkedAt: 2026-10-20 }
+  - { field: sla, url: 'https://aws.amazon.com/compute/sla/', checkedAt: 2026-10-20 }
+  - { field: gpuCapacity, url: 'https://aws.amazon.com/ec2/instance-types/accelerated-computing/', checkedAt: 2026-10-20 }
+  - { field: gpuCapacity, url: 'https://aws.amazon.com/sagemaker/ai/deploy/', checkedAt: 2026-10-20 }
+  - { field: gpuCapacity, url: 'https://aws.amazon.com/bedrock/pricing/', checkedAt: 2026-10-20 }
 figure:
   emoji: 📦
   color: rgb(255, 153, 0)
