@@ -708,11 +708,7 @@ html:not(.js) .theme-switch {
   mix-blend-mode: multiply;
 }
 
-/*
- * The record's heading with its logo on the same line. Where the gutter has
- * room, a negative margin hangs the logo in it, so the name keeps the edge the
- * text below it shares.
- */
+/* The record's heading with its logo on the same line, both inside the page edge. */
 .record-title {
   --logo: 3rem;
 
@@ -731,15 +727,11 @@ html:not(.js) .theme-switch {
   width: var(--logo);
 }
 
-@media (min-width: 75rem) {
+@media (min-width: 48rem) {
   .record-title {
     --logo: 4.5rem;
 
     gap: var(--space-md);
-  }
-
-  .record-title:has(.record-logo) {
-    margin-inline-start: calc((var(--logo) + var(--space-md)) * -1);
   }
 }
 
