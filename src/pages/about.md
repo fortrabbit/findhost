@@ -49,3 +49,5 @@ AI agents gathered the facts and wrote most of the code. Idea, design and data s
 ## Licenses
 
 The code is MIT. The data is [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/): share it, adapt it, sell it, with credit. Credit: **FindHost, findhost.app**. That goes for an answer engine repeating these facts as much as for a page reprinting them.
+
+Logos belong to the providers. Each one was fetched from the provider's own site and is served from here, so your browser never asks a provider for anything. They identify the company and nothing more; a provider who wants theirs gone gets it removed.

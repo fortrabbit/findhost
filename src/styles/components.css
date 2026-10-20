@@ -649,17 +649,20 @@ html:not(.js) .theme-switch {
 }
 
 /** Colour on the page comes from the records, never from the palette. */
+/* The same grey frame a logo sits in, so a row with an emoji lines up with one that has a logo. */
 .provider-tile {
   display: grid;
   place-items: center;
   width: 100%;
   aspect-ratio: 1;
+  border-radius: var(--radius);
+  background: #efefef;
+  color: #1a1a1a;
   font-size: 1.35rem;
   line-height: 1;
 }
 
 .provider-tile.letter {
-  border: var(--rule-hairline) solid var(--color-ink);
   font-family: var(--font-display);
   font-size: var(--text-md);
   font-weight: var(--weight-strong);
@@ -667,6 +670,72 @@ html:not(.js) .theme-switch {
 
 .one-line .provider-tile {
   font-size: 0.85rem;
+}
+
+/*
+ * A provider's own logo, fetched once by scripts/logo.ts and served from here.
+ * Near-white in both themes because nearly every logo is drawn for white; the
+ * record's colour stays on the figure band below the heading.
+ */
+.provider-logo {
+  margin: 0;
+}
+
+.provider-logo-tile {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 1;
+  padding: 12%;
+  border-radius: var(--radius);
+  background: #efefef;
+}
+
+.provider-logo-tile.light {
+  background: #1a1a1a;
+}
+
+.provider-logo-tile.fills {
+  padding: 0;
+  overflow: hidden;
+}
+
+.provider-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Grey so the tile reads as a frame on a white page; multiply takes an icon's own white background into it. */
+.provider-logo-tile:not(.light, .fills) img {
+  mix-blend-mode: multiply;
+}
+
+/* The record's heading with its logo on the same line, both inside the page edge. */
+.record-title {
+  --logo: 3rem;
+
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin: var(--space-md) 0 var(--space-xs);
+}
+
+.record-title > h1 {
+  margin: 0;
+}
+
+.record-logo {
+  flex: none;
+  width: var(--logo);
+}
+
+@media (min-width: 48rem) {
+  .record-title {
+    --logo: 4.5rem;
+
+    gap: var(--space-md);
+  }
 }
 
 .one-line .provider-tile.letter {

@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import { dictionaryFile } from './src/lib/fields.ts';
+import { logoManifest } from './src/lib/logos.ts';
 import { satteri } from '@astrojs/markdown-satteri';
 import { outboundProse } from './src/lib/outbound-prose.ts';
 
@@ -151,13 +152,15 @@ export default defineConfig({
        * leaves Vite with no dependency edge to it: editing src/data/fields.yml
        * changed nothing in `astro dev` until the server was restarted, so a
        * facet went on showing values that had been renamed hours earlier.
+       * The logo manifest is read the same way, for the same reason.
        */
       {
         name: 'findhost:watch-dictionary',
         configureServer(server) {
-          server.watcher.add(dictionaryFile);
+          server.watcher.add([dictionaryFile, logoManifest]);
           server.watcher.on('change', (path) => {
-            if (path.replaceAll('\\', '/').endsWith(dictionaryFile)) server.restart();
+            const file = path.replaceAll('\\', '/');
+            if (file.endsWith(dictionaryFile) || file.endsWith(logoManifest)) server.restart();
           });
         },
       },
