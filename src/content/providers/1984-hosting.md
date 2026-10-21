@@ -28,14 +28,13 @@ deployMethods:
   - file-transfer
   - control-panel
 pricingModel: fixed-tier
-priceFrom: sm
-priceTo: xl
+priceFrom: md
+priceTo: md
 billingPeriods:
-  - monthly
   - yearly
   - multi-year
 billingTiming: advance
-exitWithin: a-quarter
+exitWithin: a-month
 freeTier: none
 regions:
   - IS
@@ -44,16 +43,16 @@ certifications:
   - iso-27001
 referringSubnets: { now: 646, before: 651 }
 addedAt: 2026-07-31
-checkedAt: 2026-08-01
+checkedAt: 2026-10-21
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1205', checkedAt: 2026-08-10 }
-  - { field: regions, url: 'https://1984.hosting/', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://1984.hosting/product/pricelist/', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://1984.hosting/product/pricelist/', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://1984.hosting/product/pricelist/', checkedAt: 2026-08-02 }
+  - { field: regions, url: 'https://1984.hosting/', checkedAt: 2026-10-21 }
+  - { field: priceFrom, url: 'https://1984.hosting/product/pricelist/', checkedAt: 2026-10-21 }
+  - { field: priceTo, url: 'https://1984.hosting/product/pricelist/', checkedAt: 2026-10-21 }
+  - { field: billingPeriods, url: 'https://1984.hosting/product/pricelist/', checkedAt: 2026-10-21 }
   - { field: billingTiming, url: 'https://1984.hosting/tos/', checkedAt: 2026-08-02 }
-  - { field: exitWithin, url: 'https://1984.hosting/tos/', checkedAt: 2026-08-02 }
+  - { field: exitWithin, url: 'https://1984.hosting/tos/', checkedAt: 2026-10-21 }
 figure:
   emoji: 🌋
   color: rgb(157, 77, 77)
