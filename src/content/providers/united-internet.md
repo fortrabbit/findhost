@@ -8,7 +8,7 @@ referringSubnets: { now: 607, before: 595 }
 wikidata: Q322579
 status: unlisted
 addedAt: 2026-08-06
-checkedAt: 2026-08-06
+checkedAt: 2026-10-22
 figure:
   emoji: 🇩🇪
   color: rgb(223, 72, 72)
@@ -16,7 +16,7 @@ figure:
   text: German parent company of Ionos and 1&1.
 ai: authored
 sources:
-  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q322579', checkedAt: 2026-09-09 }
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q322579', checkedAt: 2026-10-22 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 ---
 
