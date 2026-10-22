@@ -17,11 +17,11 @@ regions:
 referringSubnets: { now: 826, before: 817 }
 status: active
 addedAt: 2026-08-04
-checkedAt: 2026-08-04
+checkedAt: 2026-10-22
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: regions, url: 'https://status.idcloudhost.com', checkedAt: 2026-08-04 }
-  - { field: ownership, url: 'https://init-6.fund/news/4', checkedAt: 2026-08-21 }
+  - { field: regions, url: 'https://status.idcloudhost.com', checkedAt: 2026-10-22 }
+  - { field: ownership, url: 'https://init-6.fund/news/4', checkedAt: 2026-10-22 }
 figure:
   emoji: 🇮🇩
   color: rgb(77, 157, 125)
