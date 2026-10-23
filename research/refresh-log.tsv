@@ -94,3 +94,4 @@
 2026-10-21	1984-hosting	confirmed	Home, pricelist and tos pages read; regions confirmed unchanged; priceFrom/priceTo corrected from sm/xl to md on the renewal (non-promo) price, billingPeriods dropped monthly (only 1-year and 3-year terms listed), exitWithin corrected from a-quarter to a-month on the mid-term refund clause; billingTiming source no longer states advance or arrears, stale; record checkedAt set
 2026-10-22	idcloudhost	confirmed	Status and init-6.fund pages read; home still Cloudflare-blocked; regions and ownership confirmed unchanged; record checkedAt set
 2026-10-22	united-internet	confirmed	Home and wikidata pages read; wikidata confirmed unchanged; record checkedAt set
+2026-10-23	wpdeveloper	confirmed	Home page read; only source is referringSubnets (script-owned), nothing to compare; status unlisted still consistent with xCloud as a connected product
