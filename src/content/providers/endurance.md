@@ -8,7 +8,7 @@ referringSubnets: { now: 524, before: 516 }
 wikidata: Q5376661
 status: unlisted
 addedAt: 2026-08-06
-checkedAt: 2026-08-06
+checkedAt: 2026-10-23
 figure:
   emoji: 🏢
   color: rgb(110, 105, 100)
@@ -16,7 +16,7 @@ figure:
   text: Holds Bluehost, HostGator, and others.
 ai: authored
 sources:
-  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q5376661', checkedAt: 2026-09-09 }
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q5376661', checkedAt: 2026-10-23 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 ---
 
