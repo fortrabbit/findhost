@@ -95,3 +95,4 @@
 2026-10-22	idcloudhost	confirmed	Status and init-6.fund pages read; home still Cloudflare-blocked; regions and ownership confirmed unchanged; record checkedAt set
 2026-10-22	united-internet	confirmed	Home and wikidata pages read; wikidata confirmed unchanged; record checkedAt set
 2026-10-23	endurance	confirmed	Home (redirects to newfold.com) and wikidata pages read; wikidata confirmed unchanged; record checkedAt set
+2026-10-23	wpdeveloper	confirmed	Home page read; only source is referringSubnets (script-owned), nothing to compare; status unlisted still consistent with xCloud as a connected product
