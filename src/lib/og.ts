@@ -52,33 +52,32 @@ export const cardWidth = 1200;
 export const cardHeight = 630;
 
 /**
- * The page sets Charter and falls back through the serifs a system happens to
- * have. A renderer has no system, so the card needs a file — Charis SIL is
- * Charter's open descendant and the closest thing to what a reader on a Mac
- * already sees.
+ * The page sets the system sans at its heaviest. A renderer has no system, so
+ * the card needs a file — Inter is the open face closest to what a reader on a
+ * Mac already sees, and it has a black weight to match.
  *
  * WOFF rather than WOFF2: satori reads font tables with opentype.js, which
  * inflates WOFF and cannot decompress WOFF2's Brotli.
  *
  * The extended cut is a second family rather than more of the first. Satori
- * picks one file per family and stops — two faces both called Charis SIL means
+ * picks one file per family and stops — two faces both called Inter means
  * the ASCII one answers for every letter and Poznań loses its ń to a tofu box.
  * Named apart, it is a fallback family and the glyph is found.
  */
-const bodyFace = 'Charis SIL';
-const extendedFace = 'Charis SIL Extended';
+const bodyFace = 'Inter';
+const extendedFace = 'Inter Extended';
 
 const faces = [
-  { file: 'charis-sil-latin-400-normal.woff', name: bodyFace, weight: 400 },
-  { file: 'charis-sil-latin-700-normal.woff', name: bodyFace, weight: 700 },
-  { file: 'charis-sil-latin-ext-400-normal.woff', name: extendedFace, weight: 400 },
-  { file: 'charis-sil-latin-ext-700-normal.woff', name: extendedFace, weight: 700 },
+  { file: 'inter-latin-400-normal.woff', name: bodyFace, weight: 400 },
+  { file: 'inter-latin-900-normal.woff', name: bodyFace, weight: 900 },
+  { file: 'inter-latin-ext-400-normal.woff', name: extendedFace, weight: 400 },
+  { file: 'inter-latin-ext-900-normal.woff', name: extendedFace, weight: 900 },
 ] as const;
 
-let fonts: { name: string; data: Buffer; weight: 400 | 700; style: 'normal' }[] | undefined;
+let fonts: { name: string; data: Buffer; weight: 400 | 900; style: 'normal' }[] | undefined;
 
 const loadFonts = () => {
-  const dir = join(packageDir('@fontsource/charis-sil'), 'files');
+  const dir = join(packageDir('@fontsource/inter'), 'files');
   fonts ??= faces.map((face) => ({
     name: face.name,
     data: readFileSync(join(dir, face.file)),
@@ -145,8 +144,6 @@ export interface CardSpec {
   facts?: string[];
   /** The band of colour the page carries, where it carries one. */
   figure?: { emoji: string; color: string; textColor: string; text: string };
-  /** Small print above the rule, opposite the wordmark. */
-  strapline?: string;
 }
 
 /*
@@ -155,7 +152,7 @@ export interface CardSpec {
  * four buckets — a long name simply gets set smaller, exactly as it would be by
  * hand.
  */
-const displaySize = (name: string) => (name.length <= 14 ? 96 : name.length <= 22 ? 78 : name.length <= 32 ? 64 : 50);
+const displaySize = (name: string) => (name.length <= 14 ? 120 : name.length <= 22 ? 96 : name.length <= 32 ? 76 : 60);
 
 const ink = '#000000';
 const paper = '#ffffff';
@@ -173,24 +170,14 @@ const box = (style: Record<string, unknown>, children?: unknown): Box => ({
 });
 
 const compose = (spec: CardSpec): Box => {
-  const { name, description, facts = [], figure, strapline = 'A register of web hosting providers' } = spec;
+  const { name, description, facts = [], figure } = spec;
 
   const body: Box[] = [
-    /* The masthead, and under it the heavy rule the site uses to open a page. */
-    box(
-      {
-        justifyContent: 'space-between',
-        alignItems: 'flex-end',
-        fontSize: 25,
-        fontWeight: 700,
-        letterSpacing: '0.09em',
-        textTransform: 'uppercase',
-      },
-      [box({}, 'FindHost'), box({ fontWeight: 400, letterSpacing: '0.04em' }, strapline)],
-    ),
+    /* The wordmark alone, and under it the heavy rule the site uses to open a page. */
+    box({ fontSize: 34, fontWeight: 900, letterSpacing: '-0.01em' }, 'FindHost'),
     box({ height: 6, background: ink, marginTop: 14 }),
     box(
-      { fontSize: displaySize(name), fontWeight: 700, lineHeight: 1.04, marginTop: 38, letterSpacing: '-0.015em' },
+      { fontSize: displaySize(name), fontWeight: 900, lineHeight: 1.02, marginTop: 34, letterSpacing: '-0.03em' },
       name,
     ),
   ];
@@ -199,13 +186,14 @@ const compose = (spec: CardSpec): Box => {
     body.push(
       box(
         {
-          fontSize: 31,
-          lineHeight: 1.38,
-          marginTop: 24,
-          /* Three lines is what fits under the longest name without crowding the facts. */
+          fontSize: 38,
+          lineHeight: 1.3,
+          marginTop: 22,
+          /* Two lines: a card is read at a glance, and the page holds the rest. Satori clamps only a -webkit-box. */
+          display: '-webkit-box',
           overflow: 'hidden',
           textOverflow: 'ellipsis',
-          WebkitLineClamp: 3,
+          WebkitLineClamp: 2,
           WebkitBoxOrient: 'vertical',
         },
         description,
@@ -218,7 +206,7 @@ const compose = (spec: CardSpec): Box => {
 
   if (facts.length > 0) {
     body.push(box({ height: 2, background: ink }));
-    body.push(box({ fontSize: 27, marginTop: 15, letterSpacing: '0.005em' }, facts.join('  ·  ')));
+    body.push(box({ fontSize: 32, marginTop: 15 }, facts.join('  ·  ')));
   }
 
   /*
@@ -244,12 +232,12 @@ const compose = (spec: CardSpec): Box => {
           padding: '24px 72px 26px',
           background: figure.color,
           color: figure.textColor,
-          fontSize: 28,
+          fontSize: 32,
           lineHeight: 1.3,
           alignItems: 'center',
           gap: 18,
         },
-        [box({ fontSize: 34, lineHeight: 1 }, figure.emoji), box({}, figure.text)],
+        [box({ fontSize: 38, lineHeight: 1 }, figure.emoji), box({}, figure.text)],
       ),
     );
   }
@@ -365,7 +353,7 @@ const template = () => {
   drawing ??= [
     readFileSync(join(dirname(nodeModules), 'src', 'lib', 'og.ts'), 'utf8'),
     ...[
-      ...['satori', '@resvg/resvg-wasm', '@fontsource/charis-sil', '@twemoji/svg'].map(packageDir),
+      ...['satori', '@resvg/resvg-wasm', '@fontsource/inter', '@twemoji/svg'].map(packageDir),
       ...satoriDependencies(),
     ].map((dir) => {
       const { name, version } = manifest(dir);
