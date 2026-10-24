@@ -164,8 +164,8 @@ html:not(.js) .theme-switch {
 
 /** Something true about our data or our process rather than about a provider. */
 .annotation {
-  /* As wide as the column: at the small size the prose measure would cut it short of the paragraph above. */
-  max-width: none;
+  /* As wide as the paragraph above: the prose measure counted in body-size characters (--text-base / --text-sm). */
+  max-width: calc(var(--measure-prose) * 1.09 / 0.86);
   margin-bottom: var(--space-md);
   font-size: var(--text-sm);
 }
