@@ -55,21 +55,35 @@ export function asideKindGroup(provider: Provider): string | undefined {
   return asideCategoryOf.get(held[0]!)!.key;
 }
 
+/*
+ * The whole collection, read once per build. getCollection deep-copies every
+ * entry on each call, and every record page asks for all of them. Only in a
+ * build: `astro dev` reads afresh, so an edited record shows on the next
+ * request. A new array each time, so a caller sorting it in place cannot
+ * reorder anyone else's.
+ */
+let collection: Promise<Provider[]> | undefined;
+export async function loadAllProviders(): Promise<Provider[]> {
+  if (!import.meta.env.PROD) return getCollection('providers');
+  collection ??= getCollection('providers');
+  return [...(await collection)];
+}
+
 /**
  * Every page that shows, counts or indexes providers loads them through here,
  * so hiding a record is one field rather than a filter each page has to
  * remember. Only /<id>/ reads the collection whole.
  */
 export async function loadProviders(): Promise<Provider[]> {
-  return (await getCollection('providers')).filter((provider) => isListed(provider) && !asideGroup(provider));
+  return (await loadAllProviders()).filter((provider) => isListed(provider) && !asideGroup(provider));
 }
 
 /** The ones beside it, grouped — the same shape, never merged into the count. */
 export async function loadAsideProviders(): Promise<Provider[]> {
-  return (await getCollection('providers')).filter((provider) => isListed(provider) && asideGroup(provider));
+  return (await loadAllProviders()).filter((provider) => isListed(provider) && asideGroup(provider));
 }
 
 /** Everything with an indexed page: the register plus the ones that stopped. Never the stubs. */
 export async function loadIndexed(): Promise<Provider[]> {
-  return (await getCollection('providers')).filter(isListed);
+  return (await loadAllProviders()).filter(isListed);
 }

@@ -1,8 +1,7 @@
 import { asideCategoryOf, asideOf, facetFields, fields } from './fields';
-import { asideGroup, isListed, loadAsideProviders, loadProviders } from './providers';
+import { asideGroup, isListed, loadAsideProviders, loadProviders, loadAllProviders } from './providers';
 import { byName, countValues, rowHolds, toRow, type Facet, type FacetValue, type ProviderRow } from './rows';
 import { pairIndexPath, pairPages, pairPath, type PairPage } from './pairs';
-import { getCollection } from 'astro:content';
 
 /*
  * The shapes live in lib/rows.ts, with the functions that build them, and are
@@ -35,7 +34,7 @@ const once = <T>(work: () => Promise<T>): (() => Promise<T>) => {
  * unknown count and quietly change what the register claims.
  */
 export const loadDrafts = once(async (): Promise<ProviderRow[]> => {
-  const records = (await getCollection('providers')).filter((record) => !isListed(record));
+  const records = (await loadAllProviders()).filter((record) => !isListed(record));
 
   return records
     .map((record) => ({

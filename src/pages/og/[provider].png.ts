@@ -1,11 +1,11 @@
 import type { APIRoute } from 'astro';
-import { getCollection } from 'astro:content';
+import { loadAllProviders } from '../../lib/providers';
 import { labelOf } from '../../lib/fields';
 import { price } from '../../lib/record';
 import { shareCard } from '../../lib/og';
 
 export async function getStaticPaths() {
-  const providers = await getCollection('providers');
+  const providers = await loadAllProviders();
   return providers.map((provider) => ({ params: { provider: provider.id }, props: { provider } }));
 }
 

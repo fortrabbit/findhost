@@ -1,5 +1,5 @@
 import type { APIRoute } from 'astro';
-import { getCollection } from 'astro:content';
+import { loadAllProviders, type Provider } from '../lib/providers';
 import { fieldGroups, hiddenStatuses } from '../lib/fields';
 import { attribution } from '../lib/seo';
 import { updatedAfterCheck } from '../lib/modified';
@@ -12,7 +12,7 @@ import { recordMarkdownPath, recordPath } from '../lib/paths';
  * a sparse record for a complete one.
  */
 export async function getStaticPaths() {
-  const providers = await getCollection('providers');
+  const providers = await loadAllProviders();
   /* The twin of the page, so the two move together. See lib/paths.ts. */
   return providers.map((provider) => ({
     params: { record: recordMarkdownPath(provider).slice(1).replace(/\.md$/, '') },
@@ -34,7 +34,7 @@ const label = (value: unknown): string => {
 };
 
 export const GET: APIRoute = async ({ props, site }) => {
-  const { provider } = props as { provider: Awaited<ReturnType<typeof getCollection<'providers'>>>[number] };
+  const { provider } = props as { provider: Provider };
   const data = provider.data as Record<string, unknown>;
   const updated = updatedAfterCheck(provider.data);
   const origin = site?.origin ?? '';

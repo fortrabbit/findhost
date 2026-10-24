@@ -1,9 +1,9 @@
 ---
-import { getCollection, render } from 'astro:content';
+import { render } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import { fieldGroups, fieldOf, labelOf, type Field } from '../lib/fields';
 import { backlinks, cells, footnotes } from '../lib/record';
-import { asideKindGroup, isListed } from '../lib/providers';
+import { asideKindGroup, isListed, loadAllProviders } from '../lib/providers';
 import { recordMarkdownPath, recordPath } from '../lib/paths';
 import { asideGroupOf, loadFacets } from '../lib/facets';
 import { toRow } from '../lib/rows';
@@ -32,7 +32,7 @@ import { badgeTerms } from '../lib/badge';
 import infoIcon from 'bootstrap-icons/icons/info-lg.svg?raw';
 
 export async function getStaticPaths() {
-  const providers = await getCollection('providers');
+  const providers = await loadAllProviders();
   /*
    * A rest parameter because a record's address is not one shape: a holding
    * company sits under /holdings/, everything else at the root. One route
@@ -62,7 +62,7 @@ const historyUrl = `https://github.com/fortrabbit/findhost/commits/main/src/cont
  * Every record, because a relation is read from both ends: this one names its
  * parent and its suppliers, and every other one may name this one as theirs.
  */
-const everyRecord = await getCollection('providers');
+const everyRecord = await loadAllProviders();
 const nameOf = new Map(everyRecord.map((entry) => [String(entry.data.id), entry.data.name]));
 const pathOf = new Map(everyRecord.map((entry) => [String(entry.data.id), recordPath(entry)]));
 const valueOf = (field: string) => (data as Record<string, unknown>)[field];
