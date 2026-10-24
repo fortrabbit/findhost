@@ -4,11 +4,11 @@
     x="32"
     y="33"
     fill="#ffffff"
-    font-family="Charter, 'Bitstream Charter', Cambria, Georgia, 'Times New Roman', serif"
+    font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"
     font-size="34"
-    font-weight="600"
+    font-weight="900"
     text-anchor="middle"
     dominant-baseline="central"
-    letter-spacing="-1"
+    letter-spacing="-1.5"
   >FH</text>
 </svg>
