@@ -26,20 +26,20 @@ export const badgeWords = 'Listed on FindHost';
  * cards use. Outlined glyphs would render identically on every machine, and
  * would cost six kilobytes of bezier data — a blob nobody can check before
  * pasting it, from a project whose whole argument is that you should be able to
- * check things. A stranger's serif is the cheaper mistake.
+ * check things. A stranger's system face is the cheaper mistake.
  *
  * `currentColor` throughout, so the badge takes the ink of the footer it lands
  * in and is right in their light theme and their dark one without them choosing
  * a variant.
  *
- * The serif list is the one `--font-display` names, so the badge and the site's
- * own wordmark fall through to the same face on the same machine.
+ * The face is the system sans at its heaviest, as the site's own wordmark is,
+ * so the two fall through to the same face on the same machine.
  *
  * Both lines are centred and neither is pinned to a width. `textLength` was the
  * obvious way to stop a wide fallback growing out through the rule — and it
  * scales the glyphs sideways to hit the number, which stretched the wordmark by
- * nearly forty percent wherever Charter was present. The box is drawn wide
- * enough for the widest serif a machine is likely to fall back to instead, so
+ * nearly forty percent where the face was narrower. The box is drawn wide
+ * enough for the widest face a machine is likely to fall back to instead, so
  * font variance shows as padding rather than as distorted letterforms. The e2e
  * suite measures the rendered lines against the frame.
  */
@@ -47,7 +47,7 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="120" height="44" vie
   <title>${badgeWords}</title>
   <rect x="0.5" y="0.5" width="119" height="43" rx="3" fill="none" stroke="currentColor" />
   <text x="60" y="17" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="8" letter-spacing="1.5">LISTED ON</text>
-  <text x="60" y="35" text-anchor="middle" font-family="Charter, 'Bitstream Charter', 'Sitka Text', Cambria, Georgia, serif" font-size="18" font-weight="600">FindHost</text>
+  <text x="60" y="35" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="18" font-weight="900">FindHost</text>
 </svg>`;
 
 /** The artwork on its own, for the preview on /badge/ and for the snippet. */

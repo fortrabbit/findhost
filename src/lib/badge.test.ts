@@ -138,10 +138,10 @@ describe('the artwork', () => {
   });
 
   /*
-   * The wordmark is set in whatever serif the visitor's machine has, and the
-   * natural width of "FindHost" at this size runs from 72 to 87 depending on
-   * which one answers. Pinning it to a number made the renderer scale the glyphs
-   * sideways to fit — nearly forty percent wider than Charter draws them.
+   * The wordmark is set in whatever system sans the visitor's machine has, and
+   * its natural width at this size depends on which one answers. Pinning it to
+   * a number made the renderer scale the glyphs sideways to fit, nearly forty
+   * percent wider than the face draws them.
    * Centring absorbs the same variance as padding. The e2e suite measures what
    * a browser then does with it.
    */
