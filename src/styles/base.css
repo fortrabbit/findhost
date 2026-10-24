@@ -68,8 +68,8 @@ h2,
 h3,
 h4 {
   margin: var(--space-lg) 0 var(--space-xs);
-  font-family: var(--font-display);
-  font-weight: var(--weight-strong);
+  font-family: var(--font-heading);
+  font-weight: var(--weight-heading);
   line-height: var(--leading-tight);
   text-wrap: balance;
 }

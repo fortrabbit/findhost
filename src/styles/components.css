@@ -8,15 +8,13 @@
 
 /** An anchor, so it has to opt out of the link colour explicitly. */
 /*
- * The name, in the display face. It is the same wordmark the badge carries onto
- * other people's footers, and the two have to be the same word in the same
- * letters — a serif on their page and a sans on ours reads as two projects.
+ * The name, in the heading face at its heaviest.
  */
 .wordmark {
   color: var(--color-ink);
-  font-family: var(--font-display);
+  font-family: var(--font-heading);
   font-size: var(--text-sm);
-  font-weight: bold;
+  font-weight: var(--weight-heading);
   text-underline-offset: 0.25em;
 }
 
@@ -166,6 +164,8 @@ html:not(.js) .theme-switch {
 
 /** Something true about our data or our process rather than about a provider. */
 .annotation {
+  /* As wide as the column: at the small size the prose measure would cut it short of the paragraph above. */
+  max-width: none;
   margin-bottom: var(--space-md);
   font-size: var(--text-sm);
 }
@@ -1629,7 +1629,8 @@ html.js [data-find-fallback] {
   margin: 0 0 var(--space-2xs);
   padding-bottom: var(--space-3xs);
   border-bottom: var(--rule-strong) solid var(--color-ink);
-  font-size: var(--text-md);
+  /* The heavy sans reads larger than the serif did at the same size. */
+  font-size: calc(var(--text-md) * 0.8);
 }
 
 /*
