@@ -8,7 +8,7 @@ wikidata: Q18444030
 status: stub
 criterion: 3
 addedAt: 2026-08-04
-checkedAt: 2026-08-04
+checkedAt: 2026-10-25
 boundedSearch: true
 figure:
   emoji: 🏯
@@ -19,7 +19,7 @@ ai: authored
 gpuCapacity:
   - instances
 sources:
-  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q18444030', checkedAt: 2026-09-09 }
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q18444030', checkedAt: 2026-10-25 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 ---
 
