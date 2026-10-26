@@ -18,7 +18,7 @@ sshAccess: jailed
 staging: included
 regions:
   - DE
-entryPrice: { amount: 17, currency: EUR, period: month }
+entryPrice: { amount: 18, currency: EUR, period: month }
 priceFrom: md
 currencies:
   - EUR
@@ -36,16 +36,16 @@ favoriteNote: Managed WordPress without the upsell maze.
 referringSubnets: { now: 1104, before: 1109 }
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-07
+checkedAt: 2026-10-26
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1466', checkedAt: 2026-08-10 }
-  - { field: category, url: 'https://raidboxes.io', checkedAt: 2026-08-07 }
-  - { field: software, url: 'https://raidboxes.io', checkedAt: 2026-08-07 }
+  - { field: category, url: 'https://raidboxes.io', checkedAt: 2026-10-26 }
+  - { field: software, url: 'https://raidboxes.io', checkedAt: 2026-10-26 }
   - { field: sshAccess, url: 'https://raidboxes.io', checkedAt: 2026-08-07 }
-  - { field: staging, url: 'https://raidboxes.io', checkedAt: 2026-08-07 }
-  - { field: regions, url: 'https://raidboxes.io', checkedAt: 2026-08-07 }
-  - { field: entryPrice, url: 'https://raidboxes.io/wordpress-hosting-pricing/', checkedAt: 2026-08-07 }
+  - { field: staging, url: 'https://raidboxes.io', checkedAt: 2026-10-26 }
+  - { field: regions, url: 'https://raidboxes.io', checkedAt: 2026-10-26 }
+  - { field: entryPrice, url: 'https://raidboxes.io/wordpress-hosting-pricing/', checkedAt: 2026-10-26 }
 figure:
   emoji: 🇩🇪
   color: rgb(180, 140, 80)
