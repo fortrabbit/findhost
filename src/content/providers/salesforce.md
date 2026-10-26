@@ -8,7 +8,7 @@ referringSubnets: { now: 30604, before: 30380 }
 wikidata: Q941127
 status: unlisted
 addedAt: 2026-08-07
-checkedAt: 2026-08-07
+checkedAt: 2026-10-26
 figure:
   emoji: ☁️
   color: rgb(0, 112, 192)
@@ -16,7 +16,7 @@ figure:
   text: Software company that acquired Heroku.
 ai: authored
 sources:
-  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q941127', checkedAt: 2026-09-09 }
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q941127', checkedAt: 2026-10-26 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 ---
 
