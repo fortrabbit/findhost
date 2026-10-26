@@ -101,3 +101,4 @@
 2026-10-25	gabia	confirmed	Home and wikidata pages read; wikidata confirmed unchanged; no pricing visible on home, criterion 3 still unmet
 2026-10-25	contentful	unreadable	Home page (contentful.com) returned a Vercel bot-challenge page; not read
 2026-10-25	vshosting	confirmed	Home page read; no sources entries, nothing to compare; status stub unchanged
+2026-10-26	salesforce	confirmed	Home and wikidata pages read; wikidata confirmed unchanged; record checkedAt set
