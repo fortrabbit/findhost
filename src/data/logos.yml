@@ -444,6 +444,12 @@ dreamhost:
   image: https://www.dreamhost.com/icon.svg?icon.003t-algmmvru.svg
   page: https://www.dreamhost.com
   fetchedAt: 2026-10-20
+dredge-host:
+  kind: mark
+  image: https://dredgehost.com/assets/dredge-app-tile-512.png
+  page: https://dredgehost.com/site.webmanifest
+  fetchedAt: 2026-10-27
+  fills: true
 duda:
   kind: favicon
   image: https://irp.cdn-website.com/a8ff2f1c/site_favicon_16_1753604947224.ico
@@ -1638,6 +1644,11 @@ your-online:
   image: https://your.online/wp-content/uploads/2023/02/cropped-Logo-Figure-300x300.png
   page: https://your.online/
   fetchedAt: 2026-10-20
+youstable:
+  kind: mark
+  image: https://www.youstable.com/assets/img/icons/favicon.png?v=2
+  page: https://www.youstable.com/
+  fetchedAt: 2026-10-27
 zeabur:
   kind: mark
   image: https://zeabur.com/apple-touch-icon.png
