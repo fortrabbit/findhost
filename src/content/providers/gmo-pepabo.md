@@ -8,7 +8,7 @@ referringSubnets: { now: 851, before: 854 }
 wikidata: Q11239347
 status: unlisted
 addedAt: 2026-08-07
-checkedAt: 2026-08-07
+checkedAt: 2026-10-27
 figure:
   emoji: 🇯🇵
   color: rgb(188, 0, 0)
@@ -16,7 +16,7 @@ figure:
   text: Japanese internet holding company; real operators are its subsidiaries.
 ai: authored
 sources:
-  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q11239347', checkedAt: 2026-09-09 }
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q11239347', checkedAt: 2026-10-27 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 ---
 
