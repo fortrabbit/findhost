@@ -47,10 +47,10 @@ checkedAt: 2026-08-07
 sources:
   - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q30324817', checkedAt: 2026-09-09 }
   - { field: category, url: 'https://pages.github.com', checkedAt: 2026-08-07 }
-  - { field: runtimes, url: 'https://docs.github.com/en/pages', checkedAt: 2026-08-07 }
-  - { field: deployMethods, url: 'https://docs.github.com/en/pages', checkedAt: 2026-08-07 }
+  - { field: runtimes, url: 'https://docs.github.com/en/pages', checkedAt: 2026-10-27 }
+  - { field: deployMethods, url: 'https://docs.github.com/en/pages', checkedAt: 2026-10-27 }
   - { field: freeTier, url: 'https://github.com/pricing', checkedAt: 2026-08-07 }
-  - { field: software, url: 'https://docs.github.com/en/pages', checkedAt: 2026-08-07 }
+  - { field: software, url: 'https://docs.github.com/en/pages', checkedAt: 2026-10-27 }
 figure:
   emoji: 📄
   color: rgb(36, 41, 46)

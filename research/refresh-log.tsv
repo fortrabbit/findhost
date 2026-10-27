@@ -110,3 +110,4 @@
 2026-10-27	gorails	confirmed	Home page read; no sources entries to compare but script-owned; status unlisted unchanged
 2026-10-27	godaddy	unreadable	Home page (www.godaddy.com) returned an Akamai Access Denied page; not read
 2026-10-27	gmo-pepabo	confirmed	Home (pepabo.com) and wikidata pages read; wikidata confirmed unchanged; record checkedAt set
+2026-10-27	github-pages	confirmed	Home and docs pages read; runtimes, deployMethods and software confirmed unchanged; pricing page (403) and wikidata (429) unreadable so freeTier and wikidata not dated; category source stale (home page no longer says static); record checkedAt untouched
