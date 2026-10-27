@@ -103,3 +103,4 @@
 2026-10-25	vshosting	confirmed	Home page read; no sources entries, nothing to compare; status stub unchanged
 2026-10-26	salesforce	confirmed	Home and wikidata pages read; wikidata confirmed unchanged; record checkedAt set
 2026-10-26	raidboxes	confirmed	Home and pricing pages read; entryPrice 17 -> 18 EUR (regular rate); category, software, staging, regions confirmed; sshAccess source stale (SSH not mentioned); record checkedAt set
+2026-10-27	permira	confirmed	Home and wikidata pages read; wikidata confirmed unchanged; record checkedAt set

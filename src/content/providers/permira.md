@@ -8,7 +8,7 @@ referringSubnets: { now: 687, before: 687 }
 wikidata: Q662030
 status: unlisted
 addedAt: 2026-08-07
-checkedAt: 2026-08-07
+checkedAt: 2026-10-27
 figure:
   emoji: 💼
   color: rgb(45, 60, 110)
@@ -16,7 +16,7 @@ figure:
   text: Private-equity firm, owns hosting companies.
 ai: authored
 sources:
-  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q662030', checkedAt: 2026-09-09 }
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q662030', checkedAt: 2026-10-27 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 ---
 
