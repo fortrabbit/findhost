@@ -112,3 +112,4 @@
 2026-10-27	gmo-pepabo	confirmed	Home (pepabo.com) and wikidata pages read; wikidata confirmed unchanged; record checkedAt set
 2026-10-27	github-pages	confirmed	Home and docs pages read; runtimes, deployMethods and software confirmed unchanged; pricing page (403) and wikidata (429) unreadable so freeTier and wikidata not dated; category source stale (home page no longer says static); record checkedAt untouched
 2026-10-28	deno-land	stopped	Announced team move to Cloudflare and Deploy shutdown; status escalated to MR-495
+2026-10-28	cube-infrastructure	confirmed	Home page read; no provider-field sources to compare (wikidata only); status unlisted unchanged
