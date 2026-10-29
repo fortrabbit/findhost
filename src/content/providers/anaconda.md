@@ -8,7 +8,7 @@ referringSubnets: { now: 5410, before: 5429 }
 wikidata: Q107517996
 status: unlisted
 addedAt: 2026-08-07
-checkedAt: 2026-08-07
+checkedAt: 2026-10-29
 figure:
   emoji: 🐍
   color: rgb(62, 159, 58)
@@ -16,7 +16,7 @@ figure:
   text: Python tools, PythonAnywhere owner.
 ai: authored
 sources:
-  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q107517996', checkedAt: 2026-09-09 }
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q107517996', checkedAt: 2026-10-29 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 ---
 
