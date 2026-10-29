@@ -114,3 +114,5 @@
 2026-10-28	deno-land	stopped	Announced team move to Cloudflare and Deploy shutdown; status escalated to MR-495
 2026-10-28	cube-infrastructure	confirmed	Home page read; no provider-field sources to compare (wikidata only); status unlisted unchanged
 2026-10-29	cloudone-digital	unreadable	home URL redirects to nexcess.com, which does not mention CloudOne; no provider page read
+2026-10-29	block	confirmed	Home page read; wikidata matches Block, Inc.; re-dated; no field changed
+2026-10-29	anaconda	confirmed	Home page read; wikidata matches Anaconda, Inc.; re-dated; no field changed
