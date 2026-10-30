@@ -8,7 +8,7 @@ referringSubnets: { now: 518, before: 513 }
 wikidata: Q688755
 status: unlisted
 addedAt: 2026-08-07
-checkedAt: 2026-08-07
+checkedAt: 2026-10-30
 figure:
   emoji: 📡
   color: rgb(230, 95, 60)
@@ -16,7 +16,7 @@ figure:
   text: Telecoms conglomerate, Exoscale cloud owner.
 ai: authored
 sources:
-  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q688755', checkedAt: 2026-09-09 }
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q688755', checkedAt: 2026-10-30 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
 ---
 
