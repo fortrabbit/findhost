@@ -9,7 +9,7 @@ urls:
 category:
   - shared-hosting
   - vps
-description: FasterHost is a sole proprietorship in Hathras Junction, Uttar Pradesh, selling cPanel hosting and KVM virtual servers in India, and cPanel hosting in Germany.
+description: Indian host selling cPanel hosting and KVM virtual servers.
 hqCountry: IN
 ownership: independent
 regions:
@@ -74,10 +74,10 @@ figure:
 ai: authored
 ---
 
-FasterHost is a sole proprietorship owned by Om Varshney and based in Hathras Junction, Uttar Pradesh, as its [terms of service](https://www.fasterhost.in/legal/terms-of-service.php) state. It sells cPanel hosting as shared, WordPress, cloud and reseller plans, and KVM virtual servers with root access, among them VDS plans whose CPU cores are pinned to one server. Bare-metal servers are quoted per build, as the [VDS page](https://www.fasterhost.in/vds-hosting.php) describes. The cPanel plans can be hosted in Mumbai or Delhi NCR, and shared and reseller plans also in Germany; the virtual servers run in India. Prices are published in rupees, before GST, and can be paid by UPI or NetBanking as well as by card.
+FasterHost is a sole proprietorship based in Uttar Pradesh, as its [terms of service](https://www.fasterhost.in/legal/terms-of-service.php) state. It sells cPanel hosting as shared, WordPress, cloud and reseller plans, and KVM virtual servers with root access, among them VDS plans whose CPU cores are pinned to one server. Bare-metal servers are quoted per build, as the [VDS page](https://www.fasterhost.in/vds-hosting.php) describes. The cPanel plans can be hosted in Mumbai or Delhi NCR, and shared and reseller plans also in Germany; the virtual servers run in India. Prices are published in rupees, before GST, and can be paid by UPI or NetBanking as well as by card.
 
 ## Worth knowing
 
 Virtual servers are ordered and run from a separate panel at cloud.fasterhost.in, with an account of their own, and are billed monthly, while the cPanel plans can also be paid for longer terms. Daily off-site backups come with the cPanel plans; a virtual server's backups are a paid add-on, as the [VPS page](https://www.fasterhost.in/vps-hosting.php) lists.
 
-The [refund policy](https://www.fasterhost.in/legal/refund-policy.php) gives seven days on a first purchase of shared, WordPress, cloud or reseller hosting, and excludes renewals, domains, licenses and other add-ons.
+The [refund policy](https://www.fasterhost.in/legal/refund-policy.php) covers a first purchase of hosting only, not renewals, domains, licenses or other add-ons.
