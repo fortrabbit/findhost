@@ -47,10 +47,11 @@ favorite: true
 favoriteNote: Shipped the standards-first argument rather than waiting for it.
 referringSubnets: null
 wikidata: Q131417385
-status: active
+status: winding-down
 addedAt: 2026-07-31
 checkedAt: 2026-08-12
 sources:
+  - { field: status, url: 'https://deno.com/blog/cloudflare', checkedAt: 2026-10-30 }
   - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q131417385', checkedAt: 2026-09-09 }
   - { field: priceFrom, url: 'https://deno.com/deploy/pricing', checkedAt: 2026-08-02 }
   - { field: priceTo, url: 'https://deno.com/deploy/pricing', checkedAt: 2026-08-02 }
@@ -71,5 +72,7 @@ Deno Deploy is the hosting service built by the company that makes the Deno runt
 Plans run from a permanent free tier through a paid individual tier to one aimed at customers reselling the platform to their own users, with a negotiated enterprise arrangement above them. Each tier carries an allowance of requests and CPU time, and the rates charged beyond that allowance are published rather than quoted.
 
 ## Worth knowing
+
+Deno [announced on its blog](https://deno.com/blog/cloudflare) on October 9, 2026, that its team is joining Cloudflare and that Deno Deploy will keep operating for six months before shutting down, with migration support to Cloudflare Workers for paying customers.
 
 Free accounts carry community support only, with no data-processing agreement and no SOC 2 report attached to the tier.
