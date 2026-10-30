@@ -64,7 +64,8 @@ jobs:
           git checkout main
           git merge --no-ff claude/refresh -m "Merge sourced changes from the refresh routine"
           git push origin main
-          git push origin --delete claude/refresh
+          # A queued run for a later push finds the branch already deleted.
+          git push origin --delete claude/refresh || true
       # The same ping CI sends on a push to main, for the pages this merge
       # changed. The sitemap it reads is the one the build above wrote, which
       # lists the same pages main will serve. Reported, never blocking.
