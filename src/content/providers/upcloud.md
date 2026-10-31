@@ -35,17 +35,17 @@ social:
   github: https://github.com/UpCloudLtd
 referringSubnets: { now: 1189, before: 1200 }
 addedAt: 2026-07-31
-checkedAt: 2026-08-08
+checkedAt: 2026-10-31
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1416', checkedAt: 2026-08-10 }
-  - { field: regions, url: 'https://status.upcloud.com/', checkedAt: 2026-08-01 }
-  - { field: apiAvailable, url: 'https://developers.upcloud.com/1.3/', checkedAt: 2026-08-01 }
-  - { field: billingPeriods, url: 'https://developers.upcloud.com/1.3/4-pricing/', checkedAt: 2026-08-02 }
-  - { field: urls, url: 'https://developers.upcloud.com/', checkedAt: 2026-08-01 }
-  - { field: pricingModel, url: 'https://developers.upcloud.com/1.3/4-pricing/', checkedAt: 2026-08-08 }
-  - { field: ownership, url: 'https://tech.eu/2020/01/21/helsinki-based-upcloud-raises-e18-million-to-rapidly-grow-its-team-and-cloud-computing-services/', checkedAt: 2026-08-21 }
-  - { field: gpuCapacity, url: 'https://upcloud.com/docs/products/gpu-servers/', checkedAt: 2026-09-24 }
+  - { field: regions, url: 'https://status.upcloud.com/', checkedAt: 2026-10-31 }
+  - { field: apiAvailable, url: 'https://developers.upcloud.com/1.3/', checkedAt: 2026-10-31 }
+  - { field: billingPeriods, url: 'https://developers.upcloud.com/1.3/4-pricing/', checkedAt: 2026-10-31 }
+  - { field: urls, url: 'https://developers.upcloud.com/', checkedAt: 2026-10-31 }
+  - { field: pricingModel, url: 'https://developers.upcloud.com/1.3/4-pricing/', checkedAt: 2026-10-31 }
+  - { field: ownership, url: 'https://tech.eu/2020/01/21/helsinki-based-upcloud-raises-e18-million-to-rapidly-grow-its-team-and-cloud-computing-services/', checkedAt: 2026-10-31 }
+  - { field: gpuCapacity, url: 'https://upcloud.com/docs/products/gpu-servers/', checkedAt: 2026-10-31 }
 greenWebId: 1416
 figure:
   emoji: ☁️
