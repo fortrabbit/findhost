@@ -31,18 +31,18 @@ runsOn:
 referringSubnets: { now: 1208, before: 1211 }
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-08
+checkedAt: 2026-10-31
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: audience, url: 'https://runcloud.io/pricing', checkedAt: 2026-07-31 }
-  - { field: freeTier, url: 'https://runcloud.io/', checkedAt: 2026-08-01 }
-  - { field: runsOn, url: 'https://runcloud.io/', checkedAt: 2026-08-01 }
+  - { field: audience, url: 'https://runcloud.io/pricing', checkedAt: 2026-10-31 }
+  - { field: freeTier, url: 'https://runcloud.io/', checkedAt: 2026-10-31 }
+  - { field: runsOn, url: 'https://runcloud.io/', checkedAt: 2026-10-31 }
   - { field: infraContract, url: 'https://runcloud.io/', checkedAt: 2026-08-01 }
-  - { field: billingPeriods, url: 'https://runcloud.io/docs/updating-your-subscription', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://runcloud.io/docs/updating-your-subscription', checkedAt: 2026-10-31 }
   - { field: billingTiming, url: 'https://runcloud.io/docs/updating-your-subscription', checkedAt: 2026-08-02 }
   - { field: exitWithin, url: 'https://runcloud.io/docs/cancel-runcloud-subscription', checkedAt: 2026-08-02 }
   - { field: hqCountry, url: 'https://runcloud.io/blog', checkedAt: 2026-08-08 }
-  - { field: ownership, url: 'https://indelible.vc/portfolio/whyweinvested/runcloud', checkedAt: 2026-08-21 }
+  - { field: ownership, url: 'https://indelible.vc/portfolio/whyweinvested/runcloud', checkedAt: 2026-10-31 }
 figure:
   emoji: 🔁
   color: rgb(45, 175, 190)
