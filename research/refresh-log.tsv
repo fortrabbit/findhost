@@ -120,3 +120,4 @@
 2026-10-30	alphabet	unreadable	abc.xyz answers a Cloudflare challenge (403); no provider page read
 2026-10-30	wix	confirmed	Home, about and investor pages read; founded, ownership, HQ and wikidata match; re-dated; no field changed
 2026-10-31	upcloud	confirmed	Home page behind a Cloudflare challenge; developers, status and GPU docs read; regions, API, pricing and funding match; re-dated
+2026-10-31	runcloud	confirmed	All cited runcloud.io pages and the investor page read; audience, free trial, billing periods, runsOn and ownership confirmed; hqCountry, infraContract, billingTiming, exitWithin not on cited pages (stale); re-dated
