@@ -9,13 +9,13 @@ parent: your-online
 referringSubnets: { now: 475, before: 475 }
 status: stub
 addedAt: 2026-08-07
-checkedAt: 2026-08-07
+checkedAt: 2026-11-01
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: parent, url: 'https://your.online/brands', checkedAt: 2026-08-21 }
-  - { field: ownership, url: 'https://your.online/brands', checkedAt: 2026-08-21 }
+  - { field: parent, url: 'https://your.online/brands', checkedAt: 2026-11-01 }
+  - { field: ownership, url: 'https://your.online/brands', checkedAt: 2026-11-01 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1454', checkedAt: 2026-08-10 }
-  - { field: status, url: 'https://aboutus.godaddy.net/newsroom/company-news/news-details/2024/GoDaddy-Divests-Heart-Internet/default.aspx', checkedAt: 2026-08-07 }
+  - { field: status, url: 'https://aboutus.godaddy.net/newsroom/company-news/news-details/2024/GoDaddy-Divests-Heart-Internet/default.aspx', checkedAt: 2026-11-01 }
 figure:
   emoji: ❤️
   color: rgb(130, 20, 50)
