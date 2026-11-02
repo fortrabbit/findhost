@@ -10,10 +10,10 @@ hqCountry: US
 ownership: independent
 runtimes:
   - php
-priceFrom: sm
+priceFrom: xs
 priceTo: md
 entryPrice:
-  amount: 8
+  amount: 4.99
   currency: USD
   period: month
 billingPeriods:
@@ -24,17 +24,17 @@ exitWithin: a-quarter
 referringSubnets: null
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-08
+checkedAt: 2026-11-02
 sources:
-  - { field: priceFrom, url: 'https://www.nixihost.com/hosting/shared', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://www.nixihost.com/hosting/shared', checkedAt: 2026-08-02 }
+  - { field: priceFrom, url: 'https://www.nixihost.com/hosting/shared', checkedAt: 2026-11-02 }
+  - { field: priceTo, url: 'https://www.nixihost.com/hosting/shared', checkedAt: 2026-11-02 }
   - { field: billingPeriods, url: 'https://www.nixihost.com/hosting/vps', checkedAt: 2026-08-02 }
-  - { field: billingTiming, url: 'https://www.nixihost.com/terms-of-service', checkedAt: 2026-08-02 }
+  - { field: billingTiming, url: 'https://www.nixihost.com/terms-of-service', checkedAt: 2026-11-02 }
   - { field: exitWithin, url: 'https://www.nixihost.com/terms-of-service', checkedAt: 2026-08-02 }
-  - { field: hqCountry, url: 'https://www.nixihost.com', checkedAt: 2026-08-08 }
-  - { field: ownership, url: 'https://www.nixihost.com', checkedAt: 2026-08-08 }
-  - { field: runtimes, url: 'https://www.nixihost.com/hosting/shared', checkedAt: 2026-08-08 }
-  - { field: entryPrice, url: 'https://www.nixihost.com/hosting/shared', checkedAt: 2026-08-08 }
+  - { field: hqCountry, url: 'https://www.nixihost.com', checkedAt: 2026-11-02 }
+  - { field: ownership, url: 'https://www.nixihost.com', checkedAt: 2026-11-02 }
+  - { field: runtimes, url: 'https://www.nixihost.com/hosting/shared', checkedAt: 2026-11-02 }
+  - { field: entryPrice, url: 'https://www.nixihost.com/hosting/shared', checkedAt: 2026-11-02 }
 figure:
   emoji: 👽
   color: rgb(157, 77, 77)
