@@ -37,17 +37,17 @@ audience:
 referringSubnets: { now: 631, before: 635 }
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-08
+checkedAt: 2026-11-03
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: parent, url: 'https://your.online/brands', checkedAt: 2026-08-21 }
-  - { field: ownership, url: 'https://your.online/brands', checkedAt: 2026-08-21 }
+  - { field: parent, url: 'https://your.online/brands/', checkedAt: 2026-11-03 }
+  - { field: ownership, url: 'https://your.online/brands/', checkedAt: 2026-11-03 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#837', checkedAt: 2026-08-10 }
-  - { field: entryPrice, url: 'https://www.manitu.de/webhosting/', checkedAt: 2026-08-08 }
-  - { field: runtimes, url: 'https://www.manitu.de/webhosting/', checkedAt: 2026-08-08 }
-  - { field: managedDatabases, url: 'https://www.manitu.de/webhosting/', checkedAt: 2026-08-08 }
-  - { field: sshAccess, url: 'https://www.manitu.de/webhosting/', checkedAt: 2026-08-08 }
-  - { field: infraContract, url: 'https://www.manitu.de/webhosting/', checkedAt: 2026-08-08 }
+  - { field: entryPrice, url: 'https://www.manitu.de/webhosting/', checkedAt: 2026-11-03 }
+  - { field: runtimes, url: 'https://www.manitu.de/webhosting/', checkedAt: 2026-11-03 }
+  - { field: managedDatabases, url: 'https://www.manitu.de/webhosting/', checkedAt: 2026-11-03 }
+  - { field: sshAccess, url: 'https://www.manitu.de/webhosting/', checkedAt: 2026-11-03 }
+  - { field: infraContract, url: 'https://www.manitu.de/webhosting/', checkedAt: 2026-11-03 }
 figure:
   emoji: 🌱
   color: rgb(90, 150, 100)
