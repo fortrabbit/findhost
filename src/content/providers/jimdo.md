@@ -21,15 +21,15 @@ referringSubnets: { now: 28716, before: 28785 }
 wikidata: Q2735411
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-08
+checkedAt: 2026-11-03
 sources:
-  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q2735411', checkedAt: 2026-09-09 }
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q2735411', checkedAt: 2026-11-03 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: founded, url: 'https://www.jimdo.com/pricing/', checkedAt: 2026-08-01 }
-  - { field: freeTier, url: 'https://www.jimdo.com/pricing/', checkedAt: 2026-08-01 }
-  - { field: billingPeriods, url: 'https://www.jimdo.com/pricing/website/', checkedAt: 2026-08-02 }
-  - { field: hqCountry, url: 'https://www.jimdo.com', checkedAt: 2026-08-08 }
-  - { field: ownership, url: 'https://www.noerr.com/en/press/noerr-advises-jimdo-on-exit-of-spectrum-equity-and-global-founders-capital', checkedAt: 2026-08-21 }
+  - { field: founded, url: 'https://www.jimdo.com/pricing/website/', checkedAt: 2026-11-03 }
+  - { field: freeTier, url: 'https://www.jimdo.com/pricing/website/', checkedAt: 2026-11-03 }
+  - { field: billingPeriods, url: 'https://www.jimdo.com/pricing/website/', checkedAt: 2026-11-03 }
+  - { field: hqCountry, url: 'https://www.jimdo.com', checkedAt: 2026-11-03 }
+  - { field: ownership, url: 'https://www.noerr.com/en/press/noerr-advises-jimdo-on-exit-of-spectrum-equity-and-global-founders-capital', checkedAt: 2026-11-03 }
 figure:
   emoji: 🪴
   color: rgb(77, 157, 77)
