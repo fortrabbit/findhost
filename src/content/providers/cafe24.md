@@ -28,10 +28,10 @@ checkedAt: 2026-08-08
 sources:
   - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q12604947', checkedAt: 2026-09-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: hqCountry, url: 'https://hosting.cafe24.com', checkedAt: 2026-08-04 }
-  - { field: priceFrom, url: 'https://hosting.cafe24.com', checkedAt: 2026-08-04 }
-  - { field: software, url: 'https://hosting.cafe24.com', checkedAt: 2026-08-04 }
-  - { field: supportChannels, url: 'https://hosting.cafe24.com', checkedAt: 2026-08-08 }
+  - { field: hqCountry, url: 'https://hosting.cafe24.com', checkedAt: 2026-11-04 }
+  - { field: priceFrom, url: 'https://hosting.cafe24.com', checkedAt: 2026-11-04 }
+  - { field: software, url: 'https://hosting.cafe24.com', checkedAt: 2026-11-04 }
+  - { field: supportChannels, url: 'https://hosting.cafe24.com', checkedAt: 2026-11-04 }
   - { field: billingTiming, url: 'https://hosting.cafe24.com', checkedAt: 2026-08-08 }
   - { field: ownership, url: 'https://news.cafe24.com/global/cafe24-begins-ipo-procedures-as-1st-venture-firm-under-tesla-policy/', checkedAt: 2026-08-21 }
 figure:
