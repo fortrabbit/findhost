@@ -128,3 +128,4 @@
 2026-11-03	manitu	confirmed	All sourced fields read on provider pages; dates only
 2026-11-03	jimdo	confirmed	All sourced fields read; pricing redirected to /pricing/website/; terms and help 403
 2026-11-04	hostpinnacle	confirmed	Home and VPS pages read; whoManagesOs stale on home, which does not say self-managed; record re-dated
+2026-11-04	hostgator	unreadable	Cloudflare challenge on home, pricing, about, tos and terms (403)
