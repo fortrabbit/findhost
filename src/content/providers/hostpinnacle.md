@@ -30,14 +30,14 @@ supportHours: 24-7
 referringSubnets: null
 status: active
 addedAt: 2026-08-04
-checkedAt: 2026-08-08
+checkedAt: 2026-11-04
 sources:
-  - { field: hqCountry, url: 'https://www.hostpinnacle.co.ke', checkedAt: 2026-08-04 }
+  - { field: hqCountry, url: 'https://www.hostpinnacle.co.ke', checkedAt: 2026-11-04 }
   - { field: whoManagesOs, url: 'https://www.hostpinnacle.co.ke', checkedAt: 2026-08-04 }
-  - { field: sshAccess, url: 'https://www.hostpinnacle.co.ke/vps-hosting/', checkedAt: 2026-08-04 }
-  - { field: software, url: 'https://www.hostpinnacle.co.ke', checkedAt: 2026-08-04 }
-  - { field: supportChannels, url: 'https://www.hostpinnacle.co.ke', checkedAt: 2026-08-08 }
-  - { field: supportHours, url: 'https://www.hostpinnacle.co.ke', checkedAt: 2026-08-08 }
+  - { field: sshAccess, url: 'https://www.hostpinnacle.co.ke/vps-hosting/', checkedAt: 2026-11-04 }
+  - { field: software, url: 'https://www.hostpinnacle.co.ke', checkedAt: 2026-11-04 }
+  - { field: supportChannels, url: 'https://www.hostpinnacle.co.ke', checkedAt: 2026-11-04 }
+  - { field: supportHours, url: 'https://www.hostpinnacle.co.ke', checkedAt: 2026-11-04 }
 figure:
   emoji: 🇰🇪
   color: rgb(59, 176, 117)
