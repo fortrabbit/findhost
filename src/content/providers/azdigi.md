@@ -41,11 +41,11 @@ figure:
   text: Vietnamese host in Ho Chi Minh City.
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: category, url: 'https://azdigi.com/en/', checkedAt: 2026-08-08 }
-  - { field: regions, url: 'https://azdigi.com/en/', checkedAt: 2026-08-08 }
-  - { field: gpuCapacity, url: 'https://azdigi.com/en/', checkedAt: 2026-08-08 }
-  - { field: currencies, url: 'https://azdigi.com/en/', checkedAt: 2026-08-08 }
-  - { field: deployMethods, url: 'https://azdigi.com/en/', checkedAt: 2026-08-08 }
+  - { field: category, url: 'https://azdigi.com/en/', checkedAt: 2026-11-05 }
+  - { field: regions, url: 'https://azdigi.com/en/', checkedAt: 2026-11-05 }
+  - { field: gpuCapacity, url: 'https://azdigi.com/en/', checkedAt: 2026-11-05 }
+  - { field: currencies, url: 'https://azdigi.com/en/', checkedAt: 2026-11-05 }
+  - { field: deployMethods, url: 'https://azdigi.com/en/', checkedAt: 2026-11-05 }
 ai: authored
 ---
 

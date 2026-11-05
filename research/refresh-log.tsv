@@ -131,3 +131,4 @@
 2026-11-04	hostgator	unreadable	Cloudflare challenge on home, pricing, about, tos and terms (403)
 2026-11-04	cafe24	confirmed	Pricing host page read; home behind captcha and ownership news page reset; billingTiming stale on pricing page; record not re-dated
 2026-11-05	bubble	confirmed	Home page behind JavaScript shell; manual pricing, hosting and blog pages read; entryPrice $29 to $39 monthly; billingTiming and exitWithin not stated on pricing page (stale); re-dated
+2026-11-05	azdigi	confirmed	Home page read; category, regions, gpuCapacity, currencies and deployMethods match; re-dated; no field changed
