@@ -14,7 +14,7 @@ runsOn:
   - aws
 priceFrom: md
 priceTo: xl
-entryPrice: { amount: 29, currency: USD, period: month }
+entryPrice: { amount: 39, currency: USD, period: month }
 currencies:
   - USD
 billingPeriods:
@@ -26,20 +26,20 @@ referringSubnets: { now: 3844, before: 3872 }
 wikidata: Q28930667
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-08
+checkedAt: 2026-11-05
 sources:
-  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q28930667', checkedAt: 2026-09-09 }
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q28930667', checkedAt: 2026-11-05 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: regions, url: 'https://manual.bubble.io/help-guides/optimizing-an-application/hosting-and-scaling/how-bubble-hosting-works', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://manual.bubble.io/account-and-marketplace/account-and-billing/pricing-plans', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://manual.bubble.io/account-and-marketplace/account-and-billing/pricing-plans', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://manual.bubble.io/account-and-marketplace/account-and-billing/pricing-plans', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://manual.bubble.io/account-and-marketplace/account-and-billing/pricing-plans', checkedAt: 2026-08-02 }
+  - { field: regions, url: 'https://manual.bubble.io/help-guides/optimizing-an-application/hosting-and-scaling/how-bubble-hosting-works', checkedAt: 2026-11-05 }
+  - { field: priceFrom, url: 'https://manual.bubble.io/account-and-marketplace/account-and-billing/pricing-plans', checkedAt: 2026-11-05 }
+  - { field: priceTo, url: 'https://manual.bubble.io/account-and-marketplace/account-and-billing/pricing-plans', checkedAt: 2026-11-05 }
+  - { field: currencies, url: 'https://manual.bubble.io/account-and-marketplace/account-and-billing/pricing-plans', checkedAt: 2026-11-05 }
+  - { field: billingPeriods, url: 'https://manual.bubble.io/account-and-marketplace/account-and-billing/pricing-plans', checkedAt: 2026-11-05 }
   - { field: billingTiming, url: 'https://manual.bubble.io/account-and-marketplace/account-and-billing/pricing-plans', checkedAt: 2026-08-02 }
   - { field: exitWithin, url: 'https://manual.bubble.io/account-and-marketplace/account-and-billing/pricing-plans', checkedAt: 2026-08-02 }
-  - { field: runsOn, url: 'https://manual.bubble.io/help-guides/optimizing-an-application/hosting-and-scaling/how-bubble-hosting-works', checkedAt: 2026-08-01 }
-  - { field: entryPrice, url: 'https://manual.bubble.io/account-and-marketplace/account-and-billing/pricing-plans', checkedAt: 2026-08-08 }
-  - { field: ownership, url: 'https://bubble.io/blog/bubble-series-a-100m/', checkedAt: 2026-08-21 }
+  - { field: runsOn, url: 'https://manual.bubble.io/help-guides/optimizing-an-application/hosting-and-scaling/how-bubble-hosting-works', checkedAt: 2026-11-05 }
+  - { field: entryPrice, url: 'https://manual.bubble.io/account-and-marketplace/account-and-billing/pricing-plans', checkedAt: 2026-11-05 }
+  - { field: ownership, url: 'https://bubble.io/blog/bubble-series-a-100m/', checkedAt: 2026-11-05 }
 figure:
   emoji: 🫧
   color: rgb(79, 144, 160)
