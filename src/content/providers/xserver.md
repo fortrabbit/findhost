@@ -46,7 +46,7 @@ referringSubnets: { now: 4251, before: 4265 }
 wikidata: Q74670812
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-09
+checkedAt: 2026-11-06
 apiAvailable: public
 certifications:
   - iso-27001
@@ -54,20 +54,20 @@ social:
   x: https://x.com/xserverjp
   facebook: https://www.facebook.com/xserver.co.jp/
 sources:
-  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q74670812', checkedAt: 2026-09-09 }
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q74670812', checkedAt: 2026-11-06 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: hqCountry, url: 'https://www.xserver.ne.jp/company.php', checkedAt: 2026-08-01 }
-  - { field: certifications, url: 'https://www.xserver.ne.jp/company.php', checkedAt: 2026-08-01 }
-  - { field: entryPrice, url: 'https://www.xserver.ne.jp/price/', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://www.xserver.ne.jp/price/', checkedAt: 2026-08-01 }
-  - { field: priceTo, url: 'https://www.xserver.ne.jp/price/', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://www.xserver.ne.jp/price/', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://www.xserver.ne.jp/price/', checkedAt: 2026-08-02 }
-  - { field: billingTiming, url: 'https://www.xserver.ne.jp/price/', checkedAt: 2026-08-02 }
-  - { field: freeTier, url: 'https://www.xserver.ne.jp/price/', checkedAt: 2026-08-01 }
+  - { field: hqCountry, url: 'https://www.xserver.ne.jp/company.php', checkedAt: 2026-11-06 }
+  - { field: certifications, url: 'https://www.xserver.ne.jp/company.php', checkedAt: 2026-11-06 }
+  - { field: entryPrice, url: 'https://www.xserver.ne.jp/price/', checkedAt: 2026-11-06 }
+  - { field: priceFrom, url: 'https://www.xserver.ne.jp/price/', checkedAt: 2026-11-06 }
+  - { field: priceTo, url: 'https://www.xserver.ne.jp/price/', checkedAt: 2026-11-06 }
+  - { field: currencies, url: 'https://www.xserver.ne.jp/price/', checkedAt: 2026-11-06 }
+  - { field: billingPeriods, url: 'https://www.xserver.ne.jp/price/', checkedAt: 2026-11-06 }
+  - { field: billingTiming, url: 'https://www.xserver.ne.jp/price/', checkedAt: 2026-11-06 }
+  - { field: freeTier, url: 'https://www.xserver.ne.jp/price/', checkedAt: 2026-11-06 }
   - { field: contractMinimum, url: 'https://www.xserver.ne.jp/price/', checkedAt: 2026-08-01 }
-  - { field: apiAvailable, url: 'https://www.xserver.ne.jp', checkedAt: 2026-08-09 }
-  - { field: ownership, url: 'https://prtimes.jp/main/html/rd/p/000000218.000076849.html', checkedAt: 2026-08-21 }
+  - { field: apiAvailable, url: 'https://www.xserver.ne.jp', checkedAt: 2026-11-06 }
+  - { field: ownership, url: 'https://prtimes.jp/main/html/rd/p/000000218.000076849.html', checkedAt: 2026-11-06 }
 figure:
   emoji: 🎌
   color: rgb(161, 73, 103)
