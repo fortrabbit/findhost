@@ -39,9 +39,10 @@ currencies:
   - USD
 billingPeriods:
   - monthly
+  - yearly
 billingTiming: advance
 exitWithin: a-month
-entryPrice: { amount: 3, currency: USD, period: month }
+entryPrice: { amount: 5, currency: USD, period: month }
 social:
   x: https://x.com/xCloud_host
   facebook: https://www.facebook.com/xCloud.host
@@ -50,23 +51,23 @@ social:
 referringSubnets: { now: 1203, before: 1203 }
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-09
+checkedAt: 2026-11-06
 apiAvailable: public
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: hqCountry, url: 'https://xcloud.host/contact/', checkedAt: 2026-08-01 }
-  - { field: entryPrice, url: 'https://xcloud.host/pricing/', checkedAt: 2026-08-01 }
-  - { field: urls, url: 'https://xcloud.host/terms-and-conditions/', checkedAt: 2026-08-01 }
+  - { field: hqCountry, url: 'https://xcloud.host/contact/', checkedAt: 2026-11-06 }
+  - { field: entryPrice, url: 'https://xcloud.host/pricing/', checkedAt: 2026-11-06 }
+  - { field: urls, url: 'https://xcloud.host/terms-and-conditions/', checkedAt: 2026-11-06 }
   - { field: priceFrom, url: 'https://xcloud.host/pricing/', checkedAt: 2026-07-31 }
   - { field: priceTo, url: 'https://xcloud.host/pricing/', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://xcloud.host/terms-and-conditions/', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://xcloud.host/pricing/', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://xcloud.host/terms-and-conditions/', checkedAt: 2026-11-06 }
+  - { field: billingPeriods, url: 'https://xcloud.host/pricing/', checkedAt: 2026-11-06 }
   - { field: billingTiming, url: 'https://xcloud.host/terms-and-conditions/', checkedAt: 2026-08-02 }
   - { field: exitWithin, url: 'https://xcloud.host/terms-and-conditions/', checkedAt: 2026-08-02 }
-  - { field: pricingModel, url: 'https://xcloud.host/pricing/', checkedAt: 2026-07-31 }
-  - { field: infraContract, url: 'https://xcloud.host/pricing/', checkedAt: 2026-07-31 }
-  - { field: runsOn, url: 'https://xcloud.host/pricing/', checkedAt: 2026-07-31 }
-  - { field: apiAvailable, url: 'https://xcloud.host', checkedAt: 2026-08-09 }
+  - { field: pricingModel, url: 'https://xcloud.host/pricing/', checkedAt: 2026-11-06 }
+  - { field: infraContract, url: 'https://xcloud.host/pricing/', checkedAt: 2026-11-06 }
+  - { field: runsOn, url: 'https://xcloud.host/pricing/', checkedAt: 2026-11-06 }
+  - { field: apiAvailable, url: 'https://xcloud.host', checkedAt: 2026-11-06 }
   - { field: ownership, url: 'https://startise.com/brands/', checkedAt: 2026-08-21 }
 figure:
   emoji: ⚡
