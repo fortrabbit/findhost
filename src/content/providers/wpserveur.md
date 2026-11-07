@@ -31,13 +31,13 @@ audience:
 referringSubnets: { now: 416, before: 420 }
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-09
+checkedAt: 2026-11-07
 cliTool: official
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: software, url: 'https://www.wpserveur.net', checkedAt: 2026-07-31 }
+  - { field: software, url: 'https://www.wpserveur.net', checkedAt: 2026-11-07 }
   - { field: sshAccess, url: 'https://www.wpserveur.net', checkedAt: 2026-07-31 }
-  - { field: deployMethods, url: 'https://www.wpserveur.net', checkedAt: 2026-07-31 }
+  - { field: deployMethods, url: 'https://www.wpserveur.net', checkedAt: 2026-11-07 }
   - { field: infraContract, url: 'https://www.wpserveur.net', checkedAt: 2026-07-31 }
   - { field: cliTool, url: 'https://www.wpserveur.net', checkedAt: 2026-08-09 }
 figure:

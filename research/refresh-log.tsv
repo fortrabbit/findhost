@@ -134,3 +134,4 @@
 2026-11-05	azdigi	confirmed	Home page read; category, regions, gpuCapacity, currencies and deployMethods match; re-dated; no field changed
 2026-11-06	xserver	confirmed	Home, price, company, Wikidata and PR Times pages read; contractMinimum left, price page shows a 3-month term as shortest
 2026-11-06	xcloud	confirmed	Home, pricing, terms, docs and contact pages read; entryPrice $3 to $5 and yearly billing added; billingTiming and exitWithin not re-dated
+2026-11-07	wpserveur	confirmed	Home page read; software, deployMethods still stated; infraContract, sshAccess, cliTool not restated on home page (left, stale); re-dated
