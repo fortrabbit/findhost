@@ -52,19 +52,19 @@ addedAt: 2026-07-31
 checkedAt: 2026-08-09
 apiAvailable: public
 sources:
-  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q19903819', checkedAt: 2026-09-09 }
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q19903819', checkedAt: 2026-11-07 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: founded, url: 'https://wpengine.com/about-us/', checkedAt: 2026-08-01 }
-  - { field: hqCountry, url: 'https://wpengine.com/about-us/', checkedAt: 2026-08-01 }
-  - { field: urls, url: 'https://wpengine.com/legal/terms-of-service/', checkedAt: 2026-08-01 }
+  - { field: founded, url: 'https://wpengine.com/about-us/', checkedAt: 2026-11-07 }
+  - { field: hqCountry, url: 'https://wpengine.com/about-us/', checkedAt: 2026-11-07 }
+  - { field: urls, url: 'https://wpengine.com/legal/terms-of-service/', checkedAt: 2026-11-07 }
   - { field: priceFrom, url: 'https://wpengine.com/plans/', checkedAt: 2026-07-31 }
   - { field: priceTo, url: 'https://wpengine.com/plans/', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://wpengine.com/plans/', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://wpengine.com/plans/', checkedAt: 2026-08-02 }
-  - { field: billingTiming, url: 'https://wpengine.com/legal/terms-of-service/', checkedAt: 2026-08-02 }
+  - { field: currencies, url: 'https://wpengine.com/plans/', checkedAt: 2026-11-07 }
+  - { field: billingPeriods, url: 'https://wpengine.com/plans/', checkedAt: 2026-11-07 }
+  - { field: billingTiming, url: 'https://wpengine.com/legal/terms-of-service/', checkedAt: 2026-11-07 }
   - { field: exitWithin, url: 'https://wpengine.com/legal/terms-of-service/', checkedAt: 2026-08-02 }
-  - { field: pricingModel, url: 'https://wpengine.com/plans/', checkedAt: 2026-07-31 }
-  - { field: backupsIncluded, url: 'https://wpengine.com/plans/', checkedAt: 2026-07-31 }
+  - { field: pricingModel, url: 'https://wpengine.com/plans/', checkedAt: 2026-11-07 }
+  - { field: backupsIncluded, url: 'https://wpengine.com/plans/', checkedAt: 2026-11-07 }
   - { field: contractMinimum, url: 'https://wpengine.com/plans/', checkedAt: 2026-07-31 }
   - { field: apiAvailable, url: 'https://wpengine.com', checkedAt: 2026-08-09 }
   - { field: ownership, url: 'https://www.silverlake.com/portfolio/', checkedAt: 2026-08-21 }
