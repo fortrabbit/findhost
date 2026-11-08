@@ -631,6 +631,11 @@ gorails:
   image: https://gorails.com/favicon.svg
   page: https://gorails.com
   fetchedAt: 2026-10-20
+greencloud:
+  kind: favicon
+  image: https://greencloudvps.com/img/site/favicon.png
+  page: https://greencloudvps.com
+  fetchedAt: 2026-11-08
 greenhost:
   kind: favicon
   image: https://greenhost.net/static/favicon/favicon-194x194.png
