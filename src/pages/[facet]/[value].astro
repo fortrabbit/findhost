@@ -11,6 +11,7 @@ import { summarise, valueOpening, valueSentences } from '../../lib/summarise';
 import { valueCardPath } from '../../lib/og';
 import { newest } from '../../lib/modified';
 import { faqSchema, questionsFor, topicOf } from '../../lib/questions';
+import { findsoftwareUrl } from '../../lib/findsoftware';
 
 /*
  * One static page per facet value in use. These are what a crawler follows and
@@ -28,6 +29,10 @@ export async function getStaticPaths() {
 const { facet, value, matches } = Astro.props;
 
 const { facets } = await loadFacets();
+
+/* What the software itself is lives on the sibling site; this page only says who hosts it. */
+const softwareRecord =
+  facet.id === 'software' ? findsoftwareUrl(import.meta.env.FINDSOFTWARE_URL, value.id) : undefined;
 
 /* Phrased in fields.yml, beside the field it describes — see subjectOf. */
 const summary = summarise(matches, facets, facet.id, subjectOf(fieldOf.get(facet.field)!, value, matches.length));
@@ -143,6 +148,13 @@ const combined = (await pairsFor(facet.id, value.id)).map((group) => ({
 
   <div class="page-head">
     <h1>{value.label}</h1>
+    {
+      softwareRecord && (
+        <a class="find-onward" data-pagefind-ignore href={softwareRecord}>
+          About {value.label} on FindSoftware →
+        </a>
+      )
+    }
     <a class="find-onward" data-pagefind-ignore href={`/?${facet.id}=${value.id}`}>Combine filters →</a>
   </div>
 
