@@ -139,3 +139,4 @@
 2026-11-08	domainfactory	confirmed	Home page read; stub with nothing to compare but script-owned referringSubnets; no field changed
 2026-11-08	anexia	confirmed	Home page read; stub with nothing to compare but script-owned fields; no field changed
 2026-11-09	arcustech	unreadable	Cloudflare challenge on home and craftcms-hosting pages (403)
+2026-11-09	locaweb	confirmed	Home read; currencies still BRL, wikidata Q-id matches; ownership and sshAccess not restated on home (stale); re-dated
