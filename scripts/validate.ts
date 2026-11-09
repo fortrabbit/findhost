@@ -25,6 +25,7 @@ import {
 } from '../src/lib/fields.ts';
 import { hasAffiliateParams } from '../src/lib/affiliate.ts';
 import { contrast } from '../src/lib/contrast.ts';
+import { findsoftwareFile, findsoftwarePaths } from '../src/lib/findsoftware.ts';
 import { logoDir, logoEntries, logoFile, logoManifest } from '../src/lib/logos.ts';
 import { priceBands } from '../src/lib/price.ts';
 import { rowHolds, toRow } from '../src/lib/rows.ts';
@@ -965,6 +966,14 @@ for (const [id, entry] of Object.entries(logos)) {
 }
 for (const name of existsSync(logoDir) ? readdirSync(logoDir).filter((file) => !file.startsWith('.')) : []) {
   if (!logos[name.replace(/\.png$/, '')]) fail(join(logoDir, name), `not in ${logoManifest}`);
+}
+
+// FindSoftware links back through src/data/findhost-ids.yml there; this end names software values only.
+const softwareValues = new Set((fieldOf.get('software')?.values ?? []).map((value) => value.id));
+for (const [value, path] of Object.entries(findsoftwarePaths)) {
+  if (!softwareValues.has(value)) fail(findsoftwareFile, `"${value}" is not a software value`);
+  if (!/^\/[a-z0-9-]+(\/[a-z0-9-]+)*\/$/.test(path))
+    fail(findsoftwareFile, `"${value}" path ${path} is not a record path`);
 }
 
 if (errors.length) {
