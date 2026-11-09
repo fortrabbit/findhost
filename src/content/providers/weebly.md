@@ -33,19 +33,19 @@ hqCountry: US
 referringSubnets: { now: 56393, before: 56472 }
 wikidata: Q2705110
 addedAt: 2026-07-31
-checkedAt: 2026-08-09
+checkedAt: 2026-11-09
 sources:
-  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q2705110', checkedAt: 2026-09-09 }
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q2705110', checkedAt: 2026-11-09 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: hqCountry, url: 'https://www.weebly.com/about', checkedAt: 2026-08-09 }
-  - { field: freeTier, url: 'https://www.weebly.com/pricing', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://www.weebly.com/pricing', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://www.weebly.com/pricing', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://www.weebly.com/pricing', checkedAt: 2026-08-02 }
-  - { field: pricingModel, url: 'https://www.weebly.com/pricing', checkedAt: 2026-08-01 }
-  - { field: urls, url: 'https://www.weebly.com/terms-of-service', checkedAt: 2026-08-01 }
+  - { field: freeTier, url: 'https://www.weebly.com/pricing', checkedAt: 2026-11-09 }
+  - { field: priceFrom, url: 'https://www.weebly.com/pricing', checkedAt: 2026-11-09 }
+  - { field: priceTo, url: 'https://www.weebly.com/pricing', checkedAt: 2026-11-09 }
+  - { field: billingPeriods, url: 'https://www.weebly.com/pricing', checkedAt: 2026-11-09 }
+  - { field: pricingModel, url: 'https://www.weebly.com/pricing', checkedAt: 2026-11-09 }
+  - { field: urls, url: 'https://www.weebly.com/terms-of-service', checkedAt: 2026-11-09 }
   - { field: billingTiming, url: 'https://www.weebly.com', checkedAt: 2026-08-08 }
-  - { field: supportChannels, url: 'https://www.weebly.com', checkedAt: 2026-08-08 }
+  - { field: supportChannels, url: 'https://www.weebly.com', checkedAt: 2026-11-09 }
 figure:
   emoji: 🧰
   color: rgb(160, 128, 79)
