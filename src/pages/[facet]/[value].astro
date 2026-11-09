@@ -148,19 +148,20 @@ const combined = (await pairsFor(facet.id, value.id)).map((group) => ({
 
   <div class="page-head">
     <h1>{value.label}</h1>
-    {
-      softwareRecord && (
-        <a class="find-onward" data-pagefind-ignore href={softwareRecord}>
-          About {value.label} on FindSoftware →
-        </a>
-      )
-    }
     <a class="find-onward" data-pagefind-ignore href={`/?${facet.id}=${value.id}`}>Combine filters →</a>
   </div>
 
   <PageFigure figure={figure} />
 
   {Note && <Note />}
+
+  {
+    softwareRecord && (
+      <p data-pagefind-ignore>
+        <a href={softwareRecord}>About {value.label} on FindSoftware →</a>
+      </p>
+    )
+  }
 
   {/* What we know about the set, after what a person wrote about it. */}
   <p class="annotation">{counted}</p>
