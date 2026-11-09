@@ -140,3 +140,4 @@
 2026-11-08	anexia	confirmed	Home page read; stub with nothing to compare but script-owned fields; no field changed
 2026-11-09	arcustech	unreadable	Cloudflare challenge on home and craftcms-hosting pages (403)
 2026-11-09	locaweb	confirmed	Home read; currencies still BRL, wikidata Q-id matches; ownership and sshAccess not restated on home (stale); re-dated
+2026-11-09	weebly	confirmed	Home, pricing, terms, about and Wikidata read; tiers, billing periods, free tier, support channels and subsidiary match; billingTiming not on home (stale); hqCountry names San Francisco, not the country, left; re-dated
