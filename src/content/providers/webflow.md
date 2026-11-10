@@ -24,15 +24,15 @@ hqCountry: US
 referringSubnets: { now: 11619, before: 11594 }
 wikidata: Q20160951
 addedAt: 2026-07-31
-checkedAt: 2026-08-09
+checkedAt: 2026-11-10
 sources:
-  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q20160951', checkedAt: 2026-09-09 }
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q20160951', checkedAt: 2026-11-10 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: hqCountry, url: 'https://webflow.com/about', checkedAt: 2026-08-09 }
-  - { field: founded, url: 'https://webflow.com/about', checkedAt: 2026-08-01 }
-  - { field: ownership, url: 'https://webflow.com/about', checkedAt: 2026-08-01 }
-  - { field: apiAvailable, url: 'https://developers.webflow.com/', checkedAt: 2026-08-01 }
-  - { field: urls, url: 'https://webflow.com/legal/terms', checkedAt: 2026-08-01 }
+  - { field: hqCountry, url: 'https://webflow.com/about', checkedAt: 2026-11-10 }
+  - { field: founded, url: 'https://webflow.com/about', checkedAt: 2026-11-10 }
+  - { field: ownership, url: 'https://webflow.com/about', checkedAt: 2026-11-10 }
+  - { field: apiAvailable, url: 'https://developers.webflow.com/', checkedAt: 2026-11-10 }
+  - { field: urls, url: 'https://webflow.com/legal/terms', checkedAt: 2026-11-10 }
 figure:
   emoji: 🕸️
   color: rgb(63, 109, 172)
