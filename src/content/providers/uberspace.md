@@ -70,25 +70,25 @@ favoriteNote: Pay what it is worth to you. They mean it.
 referringSubnets: { now: 1715, before: 1701 }
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-09
+checkedAt: 2026-11-10
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: software, url: 'https://lab.uberspace.de/', checkedAt: 2026-08-09 }
-  - { field: founded, url: 'https://uberspace.de/en/about/', checkedAt: 2026-08-09 }
-  - { field: ownership, url: 'https://uberspace.de/en/about/', checkedAt: 2026-08-09 }
-  - { field: entryPrice, url: 'https://uberspace.de/en/product/', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://uberspace.de/en/product/', checkedAt: 2026-08-01 }
-  - { field: priceTo, url: 'https://uberspace.de/en/product/', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://uberspace.de/en/product/', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://uberspace.de/en/product/', checkedAt: 2026-08-02 }
+  - { field: software, url: 'https://lab.uberspace.de/', checkedAt: 2026-11-10 }
+  - { field: founded, url: 'https://uberspace.de/en/about/', checkedAt: 2026-11-10 }
+  - { field: ownership, url: 'https://uberspace.de/en/about/', checkedAt: 2026-11-10 }
+  - { field: entryPrice, url: 'https://uberspace.de/en/product/', checkedAt: 2026-11-10 }
+  - { field: priceFrom, url: 'https://uberspace.de/en/product/', checkedAt: 2026-11-10 }
+  - { field: priceTo, url: 'https://uberspace.de/en/product/', checkedAt: 2026-11-10 }
+  - { field: currencies, url: 'https://uberspace.de/en/product/', checkedAt: 2026-11-10 }
+  - { field: billingPeriods, url: 'https://uberspace.de/en/product/', checkedAt: 2026-11-10 }
   - { field: exitWithin, url: 'https://uberspace.de/en/about/', checkedAt: 2026-08-02 }
-  - { field: freeTier, url: 'https://uberspace.de/en/about/', checkedAt: 2026-08-01 }
-  - { field: contractMinimum, url: 'https://uberspace.de/en/about/', checkedAt: 2026-08-01 }
+  - { field: freeTier, url: 'https://uberspace.de/en/about/', checkedAt: 2026-11-10 }
+  - { field: contractMinimum, url: 'https://uberspace.de/en/about/', checkedAt: 2026-11-10 }
   - { field: energyClaim, url: 'https://uberspace.de/en/product/', checkedAt: 2026-08-01 }
-  - { field: hqCountry, url: 'https://uberspace.de/en/about/imprint/', checkedAt: 2026-08-01 }
-  - { field: urls, url: 'https://manual.uberspace.de/', checkedAt: 2026-08-01 }
-  - { field: runtimes, url: 'https://manual.uberspace.de/', checkedAt: 2026-07-31 }
-  - { field: managedDatabases, url: 'https://manual.uberspace.de/', checkedAt: 2026-07-31 }
+  - { field: hqCountry, url: 'https://uberspace.de/en/about/imprint/', checkedAt: 2026-11-10 }
+  - { field: urls, url: 'https://manual.uberspace.de/', checkedAt: 2026-11-10 }
+  - { field: runtimes, url: 'https://manual.uberspace.de/', checkedAt: 2026-11-10 }
+  - { field: managedDatabases, url: 'https://manual.uberspace.de/', checkedAt: 2026-11-10 }
   - { field: sshAccess, url: 'https://manual.uberspace.de/', checkedAt: 2026-07-31 }
   - { field: software, url: 'https://manual.uberspace.de/', checkedAt: 2026-07-31 }
 figure:

@@ -142,3 +142,4 @@
 2026-11-09	locaweb	confirmed	Home read; currencies still BRL, wikidata Q-id matches; ownership and sshAccess not restated on home (stale); re-dated
 2026-11-09	weebly	confirmed	Home, pricing, terms, about and Wikidata read; tiers, billing periods, free tier, support channels and subsidiary match; billingTiming not on home (stale); hqCountry names San Francisco, not the country, left; re-dated
 2026-11-10	webflow	confirmed	Home, pricing, status, terms, developers, about and Wikidata read; hqCountry, founded, ownership, apiAvailable and urls match; re-dated; no field changed
+2026-11-10	uberspace	confirmed	Home, product, manual, lab, about and imprint read; founded, ownership, hqCountry, prices, freeTier, contractMinimum, software, runtimes, databases match; exitWithin, energyClaim, sshAccess not restated on cited pages (stale); re-dated
