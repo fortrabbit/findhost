@@ -58,22 +58,22 @@ social:
 referringSubnets: { now: 19313, before: 19596 }
 wikidata: Q2353933
 addedAt: 2026-07-31
-checkedAt: 2026-08-09
+checkedAt: 2026-11-11
 sources:
-  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q2353933', checkedAt: 2026-09-09 }
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q2353933', checkedAt: 2026-11-11 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: software, url: 'https://www.strato.de/hosting', checkedAt: 2026-08-09 }
-  - { field: priceFrom, url: 'https://www.strato.de/webhosting/', checkedAt: 2026-07-31 }
-  - { field: priceTo, url: 'https://www.strato.de/webhosting/', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://www.strato.de/webhosting/', checkedAt: 2026-08-02 }
-  - { field: billingTiming, url: 'https://www.strato.de/agb/', checkedAt: 2026-08-02 }
-  - { field: exitWithin, url: 'https://www.strato.de/agb/', checkedAt: 2026-08-02 }
-  - { field: renewalMultiple, url: 'https://www.strato.de/webhosting/', checkedAt: 2026-07-31 }
+  - { field: software, url: 'https://www.strato.de/hosting/', checkedAt: 2026-11-11 }
+  - { field: priceFrom, url: 'https://www.strato.de/hosting/', checkedAt: 2026-11-11 }
+  - { field: priceTo, url: 'https://www.strato.de/hosting/', checkedAt: 2026-11-11 }
+  - { field: currencies, url: 'https://www.strato.de/hosting/', checkedAt: 2026-11-11 }
+  - { field: billingTiming, url: 'https://www.strato.de/agb/', checkedAt: 2026-11-11 }
+  - { field: exitWithin, url: 'https://www.strato.de/agb/', checkedAt: 2026-11-11 }
+  - { field: renewalMultiple, url: 'https://www.strato.de/hosting/', checkedAt: 2026-11-11 }
   - { field: contractMinimum, url: 'https://www.strato.de/webhosting/', checkedAt: 2026-07-31 }
-  - { field: regions, url: 'https://www.strato.de/ueber-uns/nachhaltigkeit/', checkedAt: 2026-08-01 }
+  - { field: regions, url: 'https://www.strato.de/ueber-uns/nachhaltigkeit/', checkedAt: 2026-11-11 }
   - { field: energyClaim, url: 'https://www.strato.de/ueber-uns/nachhaltigkeit/', checkedAt: 2026-08-01 }
   - { field: certifications, url: 'https://www.strato.de/ueber-uns/nachhaltigkeit/', checkedAt: 2026-08-01 }
-  - { field: urls, url: 'https://www.strato.de/agb/', checkedAt: 2026-08-01 }
+  - { field: urls, url: 'https://www.strato.de/agb/', checkedAt: 2026-11-11 }
 figure:
   emoji: 📻
   color: rgb(128, 64, 171)
