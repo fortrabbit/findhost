@@ -4,7 +4,7 @@ name: SiteGround
 urls:
   home: https://www.siteground.com
   pricing: https://eu.siteground.com/web-hosting.htm
-  terms: https://www.siteground.com/viewtos/terms_of_service
+  terms: https://www.siteground.com/terms.htm
   docs: https://www.siteground.com/kb/
 category:
   - shared-hosting
@@ -36,14 +36,14 @@ deployMethods:
   - control-panel
   - git
 pricingModel: fixed-tier
-priceFrom: md
+priceFrom: xs
 priceTo: md
 billingPeriods:
   - yearly
 exitWithin: a-year
 billingTiming: advance
-entryPrice: { amount: 15.99, currency: EUR, period: month }
-renewalMultiple: 5.3
+entryPrice: { amount: 1.99, currency: EUR, period: month }
+renewalMultiple: 8
 freeTier: none
 contractMinimum: annual
 supportChannels:
@@ -58,21 +58,21 @@ social:
 addedAt: 2026-07-31
 checkedAt: 2026-08-01
 sources:
-  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q17081038', checkedAt: 2026-09-11 }
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q17081038', checkedAt: 2026-11-11 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1203', checkedAt: 2026-08-10 }
   - { field: founded, url: 'https://www.siteground.com/company', checkedAt: 2026-07-31 }
   - { field: runsOn, url: 'https://www.siteground.com/company', checkedAt: 2026-07-31 }
   - { field: ownership, url: 'https://www.siteground.com/company', checkedAt: 2026-08-01 }
   - { field: supportHours, url: 'https://www.siteground.com/company', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://eu.siteground.com/web-hosting.htm', checkedAt: 2026-07-31 }
-  - { field: priceTo, url: 'https://eu.siteground.com/web-hosting.htm', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://eu.siteground.com/web-hosting.htm', checkedAt: 2026-08-02 }
-  - { field: billingTiming, url: 'https://eu.siteground.com/web-hosting.htm', checkedAt: 2026-08-02 }
-  - { field: entryPrice, url: 'https://www.siteground.com/web-hosting.htm', checkedAt: 2026-08-01 }
-  - { field: renewalMultiple, url: 'https://www.siteground.com/web-hosting.htm', checkedAt: 2026-08-01 }
-  - { field: urls, url: 'https://www.siteground.com/viewtos/terms_of_service', checkedAt: 2026-08-01 }
-  - { field: software, url: 'https://www.siteground.com/kb/', checkedAt: 2026-07-31 }
+  - { field: priceFrom, url: 'https://eu.siteground.com/web-hosting.htm', checkedAt: 2026-11-11 }
+  - { field: priceTo, url: 'https://eu.siteground.com/web-hosting.htm', checkedAt: 2026-11-11 }
+  - { field: billingPeriods, url: 'https://eu.siteground.com/web-hosting.htm', checkedAt: 2026-11-11 }
+  - { field: billingTiming, url: 'https://eu.siteground.com/web-hosting.htm', checkedAt: 2026-11-11 }
+  - { field: entryPrice, url: 'https://www.siteground.com/web-hosting.htm', checkedAt: 2026-11-11 }
+  - { field: renewalMultiple, url: 'https://www.siteground.com/web-hosting.htm', checkedAt: 2026-11-11 }
+  - { field: urls, url: 'https://www.siteground.com/terms.htm', checkedAt: 2026-11-11 }
+  - { field: software, url: 'https://www.siteground.com/kb/', checkedAt: 2026-11-11 }
 referringSubnets: { now: 6661, before: 6666 }
 wikidata: Q17081038
 status: active
