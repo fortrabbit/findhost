@@ -361,6 +361,15 @@ test.describe('governance, as behaviour rather than policy text', () => {
     expect(await record.text()).toMatch(/we publish/i);
   });
 
+  test('publishes the agent discovery files', async ({ page }) => {
+    const home = await page.request.get('/index.md');
+    expect(await home.text()).toMatch(/^# FindHost/);
+    // Read from the build: astro preview does not serve dot-directories, Apache does.
+    const catalog = JSON.parse(readFileSync('dist/.well-known/api-catalog', 'utf8'));
+    expect(catalog.linkset[0]['service-desc'][0].href).toMatch(/\/openapi\.json$/);
+    expect((await page.request.get('/openapi.json')).status()).toBe(200);
+  });
+
   test('carries no affiliate parameters anywhere', async ({ page }) => {
     await page.goto('/');
     const hrefs = await page
