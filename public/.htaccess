@@ -84,3 +84,35 @@ ErrorDocument 404 /404.html
 <IfModule mod_headers.c>
   Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' https://cdn.usefathom.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://cdn.usefathom.com; font-src 'self'; connect-src 'self' https://cdn.usefathom.com; form-action 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none'"
 </IfModule>
+
+# An agent that asks for markdown gets the twin of the page it named, at the
+# same address. Only where the twin exists; a browser asks for HTML first and is
+# never sent here. Vary tells a cache that the answer depends on Accept.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTP_ACCEPT} !text/html
+  RewriteCond %{HTTP_ACCEPT} text/markdown
+  RewriteCond %{REQUEST_URI} ^/(.+)/$
+  RewriteCond %{DOCUMENT_ROOT}/%1.md -f
+  RewriteRule ^(.+)/$ /$1.md [L]
+  RewriteCond %{HTTP_ACCEPT} !text/html
+  RewriteCond %{HTTP_ACCEPT} text/markdown
+  RewriteRule ^$ /index.md [L]
+</IfModule>
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|md)$">
+    Header append Vary Accept
+  </FilesMatch>
+</IfModule>
+
+# The API catalog has no extension to type it by (RFC 9727 fixes the path).
+<Files "api-catalog">
+  ForceType application/linkset+json
+</Files>
+
+# RFC 8288: the homepage names where an agent goes next, before it parses any HTML.
+<IfModule mod_headers.c>
+  <If "%{REQUEST_URI} == '/' || %{REQUEST_URI} == '/index.html'">
+    Header always set Link "</.well-known/api-catalog>; rel=\"api-catalog\", </openapi.json>; rel=\"service-desc\"; type=\"application/openapi+json\", </llms.txt>; rel=\"service-doc\"; type=\"text/plain\", </index.md>; rel=\"alternate\"; type=\"text/markdown\""
+  </If>
+</IfModule>

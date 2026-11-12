@@ -46,6 +46,8 @@ export const GET: APIRoute = ({ site }) => {
         `# Credit, in full: ${credit}`,
         '',
         'User-agent: *',
+        // contentsignals.org: the same consent as the named readers below, said in the vocabulary agents check for.
+        'Content-Signal: search=yes, ai-input=yes, ai-train=yes',
         'Allow: /',
         '',
         ...readers.flatMap((agent) => [`User-agent: ${agent}`, 'Allow: /', '']),
