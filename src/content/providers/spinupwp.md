@@ -41,7 +41,7 @@ currencies:
 billingPeriods:
   - monthly
 billingTiming: advance
-exitWithin: a-quarter
+exitWithin: a-month
 entryPrice: { amount: 12, currency: USD, period: month }
 freeTier: trial
 social:
@@ -53,31 +53,31 @@ status: active
 hqCountry: CA
 ownership: independent
 addedAt: 2026-07-31
-checkedAt: 2026-08-09
+checkedAt: 2026-11-12
 apiAvailable: public
 cliTool: official
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: hqCountry, url: 'https://spinupwp.com/about', checkedAt: 2026-08-09 }
-  - { field: entryPrice, url: 'https://spinupwp.com/pricing/', checkedAt: 2026-08-01 }
-  - { field: urls, url: 'https://spinupwp.com/terms/', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://spinupwp.com/pricing/', checkedAt: 2026-07-31 }
-  - { field: priceTo, url: 'https://spinupwp.com/pricing/', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://spinupwp.com/terms/', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://spinupwp.com/terms/', checkedAt: 2026-08-02 }
-  - { field: billingTiming, url: 'https://spinupwp.com/terms/', checkedAt: 2026-08-02 }
-  - { field: exitWithin, url: 'https://spinupwp.com/terms/', checkedAt: 2026-08-02 }
-  - { field: pricingModel, url: 'https://spinupwp.com/pricing/', checkedAt: 2026-07-31 }
-  - { field: freeTier, url: 'https://spinupwp.com/pricing/', checkedAt: 2026-07-31 }
-  - { field: infraContract, url: 'https://spinupwp.com/pricing/', checkedAt: 2026-07-31 }
-  - { field: runsOn, url: 'https://spinupwp.com/pricing/', checkedAt: 2026-07-31 }
-  - { field: sshAccess, url: 'https://spinupwp.com/', checkedAt: 2026-07-31 }
-  - { field: deployMethods, url: 'https://spinupwp.com/', checkedAt: 2026-07-31 }
-  - { field: software, url: 'https://spinupwp.com/', checkedAt: 2026-07-31 }
-  - { field: audience, url: 'https://spinupwp.com/', checkedAt: 2026-07-31 }
-  - { field: apiAvailable, url: 'https://spinupwp.com', checkedAt: 2026-08-09 }
-  - { field: cliTool, url: 'https://spinupwp.com', checkedAt: 2026-08-09 }
-  - { field: ownership, url: 'https://spinupwp.com/about/', checkedAt: 2026-08-21 }
+  - { field: entryPrice, url: 'https://spinupwp.com/pricing/', checkedAt: 2026-11-12 }
+  - { field: urls, url: 'https://spinupwp.com/terms/', checkedAt: 2026-11-12 }
+  - { field: priceFrom, url: 'https://spinupwp.com/pricing/', checkedAt: 2026-11-12 }
+  - { field: priceTo, url: 'https://spinupwp.com/pricing/', checkedAt: 2026-11-12 }
+  - { field: currencies, url: 'https://spinupwp.com/terms/', checkedAt: 2026-11-12 }
+  - { field: billingPeriods, url: 'https://spinupwp.com/terms/', checkedAt: 2026-11-12 }
+  - { field: billingTiming, url: 'https://spinupwp.com/terms/', checkedAt: 2026-11-12 }
+  - { field: exitWithin, url: 'https://spinupwp.com/terms/', checkedAt: 2026-11-12 }
+  - { field: pricingModel, url: 'https://spinupwp.com/pricing/', checkedAt: 2026-11-12 }
+  - { field: freeTier, url: 'https://spinupwp.com/pricing/', checkedAt: 2026-11-12 }
+  - { field: infraContract, url: 'https://spinupwp.com/pricing/', checkedAt: 2026-11-12 }
+  - { field: runsOn, url: 'https://spinupwp.com/pricing/', checkedAt: 2026-11-12 }
+  - { field: sshAccess, url: 'https://spinupwp.com/', checkedAt: 2026-11-12 }
+  - { field: deployMethods, url: 'https://spinupwp.com/', checkedAt: 2026-11-12 }
+  - { field: software, url: 'https://spinupwp.com/', checkedAt: 2026-11-12 }
+  - { field: audience, url: 'https://spinupwp.com/', checkedAt: 2026-11-12 }
+  - { field: apiAvailable, url: 'https://spinupwp.com', checkedAt: 2026-11-12 }
+  - { field: cliTool, url: 'https://spinupwp.com', checkedAt: 2026-11-12 }
+  - { field: ownership, url: 'https://spinupwp.com/about/', checkedAt: 2026-11-12 }
 figure:
   emoji: 🌪️
   color: rgb(97, 77, 157)
