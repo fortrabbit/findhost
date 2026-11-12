@@ -32,7 +32,11 @@ export const GET: APIRoute = ({ site }) => {
       ),
       '/providers.csv': file('Every record as one table', 'text/csv', 'The records of providers.json as CSV.'),
       '/{id}.md': {
-        ...file('One record as markdown', 'text/markdown', 'The record page as markdown, absent fields printed as unknown.'),
+        ...file(
+          'One record as markdown',
+          'text/markdown',
+          'The record page as markdown, absent fields printed as unknown.',
+        ),
         parameters: [
           {
             name: 'id',
@@ -45,7 +49,11 @@ export const GET: APIRoute = ({ site }) => {
       },
       '/llms.txt': file('Index for language models', 'text/plain', 'Where everything is, one line each.'),
       '/llms-full.txt': file('The whole register as one document', 'text/plain', 'Every record as markdown.'),
-      '/feed.xml': file('Recently checked records', 'application/atom+xml', 'Records ordered by the date they were last checked.'),
+      '/feed.xml': file(
+        'Recently checked records',
+        'application/atom+xml',
+        'Records ordered by the date they were last checked.',
+      ),
     },
   };
   return new Response(JSON.stringify(spec, null, 2), {
