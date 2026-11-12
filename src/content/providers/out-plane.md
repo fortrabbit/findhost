@@ -6,6 +6,7 @@ urls:
   pricing: https://outplane.com/pricing
   terms: https://outplane.com/terms
   docs: https://docs.outplane.com
+  linkedin: https://www.linkedin.com/company/outplane
 category:
   - paas
   - dbaas
@@ -70,6 +71,7 @@ sources:
   - { field: exitWithin, url: 'https://outplane.com/pricing', checkedAt: 2026-11-12 }
   - { field: collaboration, url: 'https://outplane.com/pricing', checkedAt: 2026-11-12 }
   - { field: testDomain, url: 'https://docs.outplane.com/docs/console/domains', checkedAt: 2026-11-12 }
+  - { field: Istanbul, url: 'https://www.linkedin.com/company/outplane', checkedAt: 2026-11-12 }
   - { field: apiAvailable, url: 'https://docs.outplane.com/docs/api', checkedAt: 2026-11-12 }
 figure:
   emoji: 🛩️
@@ -81,7 +83,7 @@ ai: authored
 
 Out Plane runs applications deployed from a git push or a container image, with managed PostgreSQL, S3 compatible buckets and persistent volumes beside them. Each plan has a monthly base price that includes an amount of usage. Compute is metered by the minute, usage above the included amount is added to the same invoice, and bandwidth is free.
 
-Hangars are free cloud machines next to the apps, where a team's AI coding agents work and share a terminal and files. A CLI with an agent skill, an API and an agent inside the console deploy and operate the apps. The company is Out Plane LLC in Delaware, and the [funding announcement](https://outplane.com/blog/out-plane-raises-from-maza-vc) names Maza Ventures as its backer.
+Hangars are free cloud machines next to the apps, where a team's AI coding agents work and share a terminal and files. A CLI with an agent skill, an API and an agent inside the console deploy and operate the apps. The company is Out Plane LLC in Delaware, run from Istanbul according to its [LinkedIn page](https://www.linkedin.com/company/outplane). The [funding announcement](https://outplane.com/blog/out-plane-raises-from-maza-vc) names Maza Ventures as its backer.
 
 ## Worth knowing
 
