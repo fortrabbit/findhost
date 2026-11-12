@@ -30,16 +30,16 @@ addedAt: 2026-08-04
 checkedAt: 2026-08-09
 apiAvailable: public
 sources:
-  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q16495806', checkedAt: 2026-09-09 }
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q16495806', checkedAt: 2026-11-12 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: hqCountry, url: 'https://selectel.ru/en/', checkedAt: 2026-08-04 }
-  - { field: infraContract, url: 'https://selectel.ru/en/', checkedAt: 2026-08-04 }
+  - { field: hqCountry, url: 'https://selectel.ru/en/', checkedAt: 2026-11-12 }
+  - { field: infraContract, url: 'https://selectel.ru/en/', checkedAt: 2026-11-12 }
   - { field: iacSupport, url: 'https://github.com/selectel/terraform-provider-selectel', checkedAt: 2026-08-04 }
-  - { field: founded, url: 'https://selectel.ru/en/', checkedAt: 2026-08-08 }
-  - { field: supportChannels, url: 'https://selectel.ru/en/', checkedAt: 2026-08-08 }
-  - { field: supportHours, url: 'https://selectel.ru/en/', checkedAt: 2026-08-08 }
-  - { field: apiAvailable, url: 'https://selectel.ru/en/', checkedAt: 2026-08-09 }
-  - { field: gpuCapacity, url: 'https://selectel.ru/services/gpu/', checkedAt: 2026-09-24 }
+  - { field: founded, url: 'https://selectel.ru/en/', checkedAt: 2026-11-12 }
+  - { field: supportChannels, url: 'https://selectel.ru/en/', checkedAt: 2026-11-12 }
+  - { field: supportHours, url: 'https://selectel.ru/en/', checkedAt: 2026-11-12 }
+  - { field: apiAvailable, url: 'https://selectel.ru/en/', checkedAt: 2026-11-12 }
+  - { field: gpuCapacity, url: 'https://selectel.ru/services/gpu/', checkedAt: 2026-11-12 }
 figure:
   emoji: 🇷🇺
   color: rgb(77, 100, 157)
