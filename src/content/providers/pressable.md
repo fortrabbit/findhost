@@ -46,27 +46,27 @@ referringSubnets: { now: 744, before: 745 }
 status: active
 hqCountry: US
 addedAt: 2026-07-31
-checkedAt: 2026-08-09
+checkedAt: 2026-11-13
 apiAvailable: public
 cliTool: official
 mcpServer: official
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: hqCountry, url: 'https://pressable.com', checkedAt: 2026-08-09 }
-  - { field: entryPrice, url: 'https://pressable.com/plans/', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://pressable.com/plans/', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://pressable.com/plans/', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://pressable.com/plans/', checkedAt: 2026-08-02 }
+  - { field: entryPrice, url: 'https://pressable.com/plans/', checkedAt: 2026-11-13 }
+  - { field: priceFrom, url: 'https://pressable.com/plans/', checkedAt: 2026-11-13 }
+  - { field: priceTo, url: 'https://pressable.com/plans/', checkedAt: 2026-11-13 }
+  - { field: currencies, url: 'https://pressable.com/plans/', checkedAt: 2026-11-13 }
   - { field: billingPeriods, url: 'https://pressable.com/legal/terms-of-service/', checkedAt: 2026-08-02 }
   - { field: billingTiming, url: 'https://pressable.com/legal/terms-of-service/', checkedAt: 2026-08-02 }
-  - { field: exitWithin, url: 'https://pressable.com/legal/terms-of-service/', checkedAt: 2026-08-02 }
-  - { field: pricingModel, url: 'https://pressable.com/plans/', checkedAt: 2026-08-01 }
-  - { field: freeTier, url: 'https://pressable.com/plans/', checkedAt: 2026-08-01 }
-  - { field: regions, url: 'https://pressable.com/knowledgebase/where-are-pressable-data-centers-located/', checkedAt: 2026-08-01 }
-  - { field: supportHours, url: 'https://pressable.com/knowledgebase/', checkedAt: 2026-08-01 }
-  - { field: apiAvailable, url: 'https://pressable.com', checkedAt: 2026-08-09 }
+  - { field: exitWithin, url: 'https://pressable.com/legal/terms-of-service/', checkedAt: 2026-11-13 }
+  - { field: pricingModel, url: 'https://pressable.com/plans/', checkedAt: 2026-11-13 }
+  - { field: freeTier, url: 'https://pressable.com/plans/', checkedAt: 2026-11-13 }
+  - { field: regions, url: 'https://pressable.com/knowledgebase/where-are-pressable-data-centers-located/', checkedAt: 2026-11-13 }
+  - { field: supportHours, url: 'https://pressable.com/knowledgebase/', checkedAt: 2026-11-13 }
+  - { field: apiAvailable, url: 'https://pressable.com', checkedAt: 2026-11-13 }
   - { field: cliTool, url: 'https://pressable.com', checkedAt: 2026-08-09 }
-  - { field: mcpServer, url: 'https://pressable.com', checkedAt: 2026-08-09 }
+  - { field: mcpServer, url: 'https://pressable.com', checkedAt: 2026-11-13 }
 figure:
   emoji: 🅰️
   color: rgb(73, 111, 151)
