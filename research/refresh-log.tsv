@@ -149,3 +149,4 @@
 2026-11-12	selectel	confirmed	Home, GPU page and Wikidata read; founded, support, API, hqCountry and gpuCapacity match; GitHub source 403 so iacSupport unread and record checkedAt left; prose says 36,000 clients, home says 44,000+, left for review; re-dated
 2026-11-13	rocket-net	confirmed	Pricing, terms, parent and home read; no field changed; exitWithin a-quarter left for review
 2026-11-13	pressable	confirmed	Home, plans, terms and both knowledgebase pages read; no field changed; hqCountry, billingTiming, billingPeriods and cliTool not confirmed by their cited pages, left as they are
+2026-11-13	scaleway-functions	unreadable	Bot challenge (403, shield interstitial) on home, pricing and about pages
