@@ -47,24 +47,24 @@ supportHours: 24-7
 referringSubnets: { now: 580, before: 574 }
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-09
+checkedAt: 2026-11-13
 mcpServer: official
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: parent, url: 'https://hosting.com/about/mergers-and-acquisitions/', checkedAt: 2026-08-21 }
-  - { field: entryPrice, url: 'https://rocket.net/pricing/', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://rocket.net/pricing/', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://rocket.net/pricing/', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://rocket.net/pricing/', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://rocket.net/pricing/', checkedAt: 2026-08-02 }
-  - { field: billingTiming, url: 'https://rocket.net/terms-of-service/', checkedAt: 2026-08-02 }
+  - { field: parent, url: 'https://hosting.com/about/mergers-and-acquisitions/', checkedAt: 2026-11-13 }
+  - { field: entryPrice, url: 'https://rocket.net/pricing/', checkedAt: 2026-11-13 }
+  - { field: priceFrom, url: 'https://rocket.net/pricing/', checkedAt: 2026-11-13 }
+  - { field: priceTo, url: 'https://rocket.net/pricing/', checkedAt: 2026-11-13 }
+  - { field: currencies, url: 'https://rocket.net/pricing/', checkedAt: 2026-11-13 }
+  - { field: billingPeriods, url: 'https://rocket.net/pricing/', checkedAt: 2026-11-13 }
+  - { field: billingTiming, url: 'https://rocket.net/terms-of-service/', checkedAt: 2026-11-13 }
   - { field: exitWithin, url: 'https://rocket.net/terms-of-service/', checkedAt: 2026-08-02 }
-  - { field: pricingModel, url: 'https://rocket.net/pricing/', checkedAt: 2026-08-01 }
-  - { field: freeTier, url: 'https://rocket.net/pricing/', checkedAt: 2026-08-01 }
-  - { field: supportHours, url: 'https://rocket.net/pricing/', checkedAt: 2026-08-01 }
-  - { field: supportChannels, url: 'https://rocket.net/pricing/', checkedAt: 2026-08-01 }
-  - { field: mcpServer, url: 'https://rocket.net', checkedAt: 2026-08-09 }
-  - { field: ownership, url: 'https://hosting.com/about/mergers-and-acquisitions/', checkedAt: 2026-08-21 }
+  - { field: pricingModel, url: 'https://rocket.net/pricing/', checkedAt: 2026-11-13 }
+  - { field: freeTier, url: 'https://rocket.net/pricing/', checkedAt: 2026-11-13 }
+  - { field: supportHours, url: 'https://rocket.net/pricing/', checkedAt: 2026-11-13 }
+  - { field: supportChannels, url: 'https://rocket.net/pricing/', checkedAt: 2026-11-13 }
+  - { field: mcpServer, url: 'https://rocket.net', checkedAt: 2026-11-13 }
+  - { field: ownership, url: 'https://hosting.com/about/mergers-and-acquisitions/', checkedAt: 2026-11-13 }
 figure:
   emoji: 🚀
   color: rgb(69, 83, 166)
