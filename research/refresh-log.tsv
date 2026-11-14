@@ -151,3 +151,4 @@
 2026-11-13	pressable	confirmed	Home, plans, terms and both knowledgebase pages read; no field changed; hqCountry, billingTiming, billingPeriods and cliTool not confirmed by their cited pages, left as they are
 2026-11-13	scaleway-functions	unreadable	Bot challenge (403, shield interstitial) on home, pricing and about pages
 2026-11-14	ploi	confirmed	Home, pricing and about read; plans, currencies, billing, free tier, runsOn, software, API, CLI, MCP and ownership match; billingTiming not on pricing page (stale); re-dated
+2026-11-14	planethoster	confirmed	Home read; regions, runtimes, shell (CageFS jail), API and CLI match; currencies not sourced, shown list (USD, GBP, CHF) left unchanged; re-dated
