@@ -48,27 +48,27 @@ social:
 referringSubnets: { now: 786, before: 802 }
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-09
+checkedAt: 2026-11-14
 apiAvailable: public
 cliTool: official
 mcpServer: official
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: hqCountry, url: 'https://ploi.io/pricing', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://ploi.io/pricing', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://ploi.io/pricing', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://ploi.io/pricing', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://ploi.io/pricing', checkedAt: 2026-08-02 }
+  - { field: hqCountry, url: 'https://ploi.io/pricing', checkedAt: 2026-11-14 }
+  - { field: priceFrom, url: 'https://ploi.io/pricing', checkedAt: 2026-11-14 }
+  - { field: priceTo, url: 'https://ploi.io/pricing', checkedAt: 2026-11-14 }
+  - { field: currencies, url: 'https://ploi.io/pricing', checkedAt: 2026-11-14 }
+  - { field: billingPeriods, url: 'https://ploi.io/pricing', checkedAt: 2026-11-14 }
   - { field: billingTiming, url: 'https://ploi.io/pricing', checkedAt: 2026-08-02 }
-  - { field: pricingModel, url: 'https://ploi.io/pricing', checkedAt: 2026-07-31 }
-  - { field: freeTier, url: 'https://ploi.io/pricing', checkedAt: 2026-07-31 }
-  - { field: infraContract, url: 'https://ploi.io/pricing', checkedAt: 2026-07-31 }
-  - { field: runsOn, url: 'https://ploi.io/', checkedAt: 2026-07-31 }
-  - { field: software, url: 'https://ploi.io/', checkedAt: 2026-07-31 }
-  - { field: apiAvailable, url: 'https://ploi.io', checkedAt: 2026-08-09 }
-  - { field: cliTool, url: 'https://ploi.io', checkedAt: 2026-08-09 }
-  - { field: mcpServer, url: 'https://ploi.io', checkedAt: 2026-08-09 }
-  - { field: ownership, url: 'https://ploi.io/about', checkedAt: 2026-08-21 }
+  - { field: pricingModel, url: 'https://ploi.io/pricing', checkedAt: 2026-11-14 }
+  - { field: freeTier, url: 'https://ploi.io/pricing', checkedAt: 2026-11-14 }
+  - { field: infraContract, url: 'https://ploi.io/pricing', checkedAt: 2026-11-14 }
+  - { field: runsOn, url: 'https://ploi.io/', checkedAt: 2026-11-14 }
+  - { field: software, url: 'https://ploi.io/', checkedAt: 2026-11-14 }
+  - { field: apiAvailable, url: 'https://ploi.io', checkedAt: 2026-11-14 }
+  - { field: cliTool, url: 'https://ploi.io', checkedAt: 2026-11-14 }
+  - { field: mcpServer, url: 'https://ploi.io', checkedAt: 2026-11-14 }
+  - { field: ownership, url: 'https://ploi.io/about', checkedAt: 2026-11-14 }
 figure:
   emoji: 🪄
   color: rgb(98, 60, 175)
