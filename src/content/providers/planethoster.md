@@ -32,17 +32,17 @@ audience:
 referringSubnets: { now: 1271, before: 1267 }
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-09
+checkedAt: 2026-11-14
 apiAvailable: public
 cliTool: official
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#749', checkedAt: 2026-08-10 }
-  - { field: regions, url: 'https://www.planethoster.com', checkedAt: 2026-07-31 }
-  - { field: runtimes, url: 'https://www.planethoster.com', checkedAt: 2026-07-31 }
-  - { field: sshAccess, url: 'https://www.planethoster.com', checkedAt: 2026-07-31 }
-  - { field: apiAvailable, url: 'https://www.planethoster.com', checkedAt: 2026-08-09 }
-  - { field: cliTool, url: 'https://www.planethoster.com', checkedAt: 2026-08-09 }
+  - { field: regions, url: 'https://www.planethoster.com', checkedAt: 2026-11-14 }
+  - { field: runtimes, url: 'https://www.planethoster.com', checkedAt: 2026-11-14 }
+  - { field: sshAccess, url: 'https://www.planethoster.com', checkedAt: 2026-11-14 }
+  - { field: apiAvailable, url: 'https://www.planethoster.com', checkedAt: 2026-11-14 }
+  - { field: cliTool, url: 'https://www.planethoster.com', checkedAt: 2026-11-14 }
 figure:
   emoji: 🌍
   color: rgb(82, 143, 102)
