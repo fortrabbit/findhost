@@ -36,30 +36,31 @@ regions:
   - SG
   - AU
   - IN
+  - IT
 referringSubnets: { now: 29446, before: 29584 }
 wikidata: Q568183
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-09
+checkedAt: 2026-11-16
 apiAvailable: public
 cliTool: official
 mcpServer: official
 sources:
-  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q568183', checkedAt: 2026-09-09 }
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q568183', checkedAt: 2026-11-16 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: founded, url: 'https://www.ovhcloud.com/en/about-us/', checkedAt: 2026-07-31 }
-  - { field: hqCountry, url: 'https://www.ovhcloud.com/en/about-us/', checkedAt: 2026-07-31 }
-  - { field: priceFrom, url: 'https://www.ovhcloud.com/en/vps/', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://www.ovhcloud.com/en/vps/', checkedAt: 2026-08-02 }
+  - { field: founded, url: 'https://www.ovhcloud.com/en/about-us/', checkedAt: 2026-11-16 }
+  - { field: hqCountry, url: 'https://www.ovhcloud.com/en/about-us/', checkedAt: 2026-11-16 }
+  - { field: priceFrom, url: 'https://www.ovhcloud.com/en/vps/', checkedAt: 2026-11-16 }
+  - { field: priceTo, url: 'https://www.ovhcloud.com/en/vps/', checkedAt: 2026-11-16 }
   - {
       field: billingPeriods,
       url: 'https://docs.ovhcloud.com/en/guides/account-and-service-management/managing-billing-payments-and-services/automatic-renewal',
-      checkedAt: 2026-08-02,
+      checkedAt: 2026-11-16,
     }
   - {
       field: billingTiming,
       url: 'https://docs.ovhcloud.com/en/guides/account-and-service-management/managing-billing-payments-and-services/automatic-renewal',
-      checkedAt: 2026-08-02,
+      checkedAt: 2026-11-16,
     }
   - {
       field: exitWithin,
@@ -69,36 +70,36 @@ sources:
   - {
       field: '2021 fire',
       url: 'https://corporate.ovhcloud.com/en/newsroom/news/informations-site-strasbourg/',
-      checkedAt: 2026-08-02,
+      checkedAt: 2026-11-16,
     }
   - {
       field: '2021 fire',
       url: 'https://www.igedd.developpement-durable.gouv.fr/IMG/pdf/rapport_ovh_67_vdif_cle01cf13.pdf',
-      checkedAt: 2026-08-02,
+      checkedAt: 2026-11-16,
     }
   - {
       field: '2021 fire',
       url: 'https://corporate.ovhcloud.com/sites/default/files/2021-12/ovh-groupe-urd-2021-eng-vdef_0.pdf',
-      checkedAt: 2026-08-02,
+      checkedAt: 2026-11-16,
     }
   - {
       field: '2021 fire',
       url: 'https://corporate.ovhcloud.com/en-gb/newsroom/news/SBG5-opening/',
-      checkedAt: 2026-08-02,
+      checkedAt: 2026-11-16,
     }
-  - { field: regions, url: 'https://www.ovhcloud.com/en/datacenter/', checkedAt: 2026-08-01 }
-  - { field: infraContract, url: 'https://www.ovhcloud.com/en/datacenter/', checkedAt: 2026-08-01 }
-  - { field: apiAvailable, url: 'https://www.ovhcloud.com', checkedAt: 2026-08-09 }
+  - { field: regions, url: 'https://www.ovhcloud.com/en/datacenter/', checkedAt: 2026-11-16 }
+  - { field: infraContract, url: 'https://www.ovhcloud.com/en/datacenter/', checkedAt: 2026-11-16 }
+  - { field: apiAvailable, url: 'https://www.ovhcloud.com', checkedAt: 2026-11-16 }
   - { field: cliTool, url: 'https://www.ovhcloud.com', checkedAt: 2026-08-09 }
   - { field: mcpServer, url: 'https://www.ovhcloud.com', checkedAt: 2026-08-09 }
   - {
       field: ownership,
       url: 'https://www.euronext.com/en/about/media/euronext-press-releases/ovhcloud-lists-euronext-paris',
-      checkedAt: 2026-08-21,
+      checkedAt: 2026-11-16,
     }
-  - { field: gpuCapacity, url: 'https://www.ovhcloud.com/en/public-cloud/gpu/', checkedAt: 2026-09-24 }
-  - { field: gpuCapacity, url: 'https://docs.ovhcloud.com/en/guides/public-cloud/ai-machine-learning/ai-deploy-build-use-custom-image', checkedAt: 2026-09-24 }
-  - { field: gpuCapacity, url: 'https://endpoints.ai.cloud.ovh.net/', checkedAt: 2026-09-24 }
+  - { field: gpuCapacity, url: 'https://www.ovhcloud.com/en/public-cloud/gpu/', checkedAt: 2026-11-16 }
+  - { field: gpuCapacity, url: 'https://docs.ovhcloud.com/en/guides/public-cloud/ai-machine-learning/ai-deploy-build-use-custom-image', checkedAt: 2026-11-16 }
+  - { field: gpuCapacity, url: 'https://endpoints.ai.cloud.ovh.net/', checkedAt: 2026-11-16 }
 figure:
   emoji: 🧯
   color: rgb(190, 45, 49)

@@ -154,3 +154,4 @@
 2026-11-14	planethoster	confirmed	Home read; regions, runtimes, shell (CageFS jail), API and CLI match; currencies not sourced, shown list (USD, GBP, CHF) left unchanged; re-dated
 2026-11-15	timme-hosting	confirmed	Home read; stub with nothing to compare but script-owned fields; no field changed
 2026-11-15	qovery	confirmed	Home read; stub with nothing to compare but script-owned fields; criterion 3 already recorded, no field changed
+2026-11-16	ovh	confirmed	Home, about, VPS, datacenter, GPU, AI Endpoints, automatic-renewal, SBG5, IGEDD, URD, Euronext and Wikidata read; Milan added to regions; exitWithin and CLI/MCP not restated on cited pages (stale); re-dated
