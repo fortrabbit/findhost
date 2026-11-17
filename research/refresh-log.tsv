@@ -156,3 +156,5 @@
 2026-11-15	qovery	confirmed	Home read; stub with nothing to compare but script-owned fields; criterion 3 already recorded, no field changed
 2026-11-16	ovh	confirmed	Home, about, VPS, datacenter, GPU, AI Endpoints, automatic-renewal, SBG5, IGEDD, URD, Euronext and Wikidata read; Milan added to regions; exitWithin and CLI/MCP not restated on cited pages (stale); re-dated
 2026-11-16	mythic-beasts	confirmed	Home, pricing, status, terms, support and Wikidata read; quarterly billing added; entry price, currencies, billing timing, ownership and support channels match; re-dated
+2026-11-17	laravel-vapor	stopped	Home says no longer accepting new signups, status left to a person (MR-510)
+2026-11-17	knownhost	confirmed	Home, pricing, terms, KB, contact and network read; no field changed; all sources re-dated
