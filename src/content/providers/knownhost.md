@@ -35,22 +35,22 @@ referringSubnets: { now: 1006, before: 1017 }
 status: active
 hqCountry: US
 addedAt: 2026-07-31
-checkedAt: 2026-08-09
+checkedAt: 2026-11-17
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: hqCountry, url: 'https://www.knownhost.com/contact', checkedAt: 2026-08-09 }
-  - { field: regions, url: 'https://www.knownhost.com/network', checkedAt: 2026-08-01 }
-  - { field: founded, url: 'https://www.knownhost.com/', checkedAt: 2026-08-01 }
-  - { field: entryPrice, url: 'https://www.knownhost.com/web-hosting', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://www.knownhost.com/web-hosting', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://www.knownhost.com/web-hosting', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://www.knownhost.com/web-hosting', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://www.knownhost.com/web-hosting', checkedAt: 2026-08-02 }
-  - { field: billingTiming, url: 'https://www.knownhost.com/terms-of-service', checkedAt: 2026-08-02 }
-  - { field: exitWithin, url: 'https://www.knownhost.com/terms-of-service', checkedAt: 2026-08-02 }
-  - { field: renewalMultiple, url: 'https://www.knownhost.com/web-hosting', checkedAt: 2026-08-01 }
-  - { field: pricingModel, url: 'https://www.knownhost.com/web-hosting', checkedAt: 2026-08-01 }
-  - { field: contractMinimum, url: 'https://www.knownhost.com/web-hosting', checkedAt: 2026-08-01 }
+  - { field: hqCountry, url: 'https://www.knownhost.com/contact', checkedAt: 2026-11-17 }
+  - { field: regions, url: 'https://www.knownhost.com/network', checkedAt: 2026-11-17 }
+  - { field: founded, url: 'https://www.knownhost.com/', checkedAt: 2026-11-17 }
+  - { field: entryPrice, url: 'https://www.knownhost.com/web-hosting', checkedAt: 2026-11-17 }
+  - { field: priceFrom, url: 'https://www.knownhost.com/web-hosting', checkedAt: 2026-11-17 }
+  - { field: priceTo, url: 'https://www.knownhost.com/web-hosting', checkedAt: 2026-11-17 }
+  - { field: currencies, url: 'https://www.knownhost.com/web-hosting', checkedAt: 2026-11-17 }
+  - { field: billingPeriods, url: 'https://www.knownhost.com/web-hosting', checkedAt: 2026-11-17 }
+  - { field: billingTiming, url: 'https://www.knownhost.com/terms-of-service', checkedAt: 2026-11-17 }
+  - { field: exitWithin, url: 'https://www.knownhost.com/terms-of-service', checkedAt: 2026-11-17 }
+  - { field: renewalMultiple, url: 'https://www.knownhost.com/web-hosting', checkedAt: 2026-11-17 }
+  - { field: pricingModel, url: 'https://www.knownhost.com/web-hosting', checkedAt: 2026-11-17 }
+  - { field: contractMinimum, url: 'https://www.knownhost.com/web-hosting', checkedAt: 2026-11-17 }
 figure:
   emoji: 🧠
   color: rgb(41, 110, 174)
