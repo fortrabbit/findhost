@@ -160,3 +160,4 @@
 2026-11-17	knownhost	confirmed	Home, pricing, terms, KB, contact and network read; no field changed; all sources re-dated
 2026-11-18	hatchbox	confirmed	Home, pricing, about and terms read; entryPrice 10 to 15 USD a month per the pricing page; hqCountry, exitWithin and billingTiming not restated on cited pages (stale)
 2026-11-18	kamatera	unreadable	Home, pricing and about return 403 to the run
+2026-11-18	gcore	confirmed	Home, pricing, about, cloud, GPU, inference, press release and Wikidata read; billingPeriods gains quarterly and yearly; hqCountry LU restated by about; billingTiming not restated (stale)
