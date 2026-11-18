@@ -48,7 +48,7 @@ status: active
 hqCountry: LU
 ownership: vc-backed
 addedAt: 2026-07-31
-checkedAt: 2026-11-18
+checkedAt: 2026-08-09
 sources:
   - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q114616935', checkedAt: 2026-11-18 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
