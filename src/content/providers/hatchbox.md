@@ -45,25 +45,25 @@ billingPeriods:
   - yearly
 billingTiming: advance
 exitWithin: a-month
-entryPrice: { amount: 10, currency: USD, period: month }
+entryPrice: { amount: 15, currency: USD, period: month }
 freeTier: trial
 referringSubnets: { now: 226 }
 status: active
 hqCountry: US
 addedAt: 2026-07-31
-checkedAt: 2026-08-09
+checkedAt: 2026-11-18
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: hqCountry, url: 'https://www.hatchbox.io/about', checkedAt: 2026-08-09 }
-  - { field: entryPrice, url: 'https://www.hatchbox.io/pricing', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://www.hatchbox.io/pricing', checkedAt: 2026-08-01 }
-  - { field: priceTo, url: 'https://www.hatchbox.io/pricing', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://www.hatchbox.io/pricing', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://www.hatchbox.io/pricing', checkedAt: 2026-08-02 }
+  - { field: entryPrice, url: 'https://www.hatchbox.io/pricing', checkedAt: 2026-11-18 }
+  - { field: priceFrom, url: 'https://www.hatchbox.io/pricing', checkedAt: 2026-11-18 }
+  - { field: priceTo, url: 'https://www.hatchbox.io/pricing', checkedAt: 2026-11-18 }
+  - { field: currencies, url: 'https://www.hatchbox.io/pricing', checkedAt: 2026-11-18 }
+  - { field: billingPeriods, url: 'https://www.hatchbox.io/pricing', checkedAt: 2026-11-18 }
   - { field: billingTiming, url: 'https://www.hatchbox.io/terms', checkedAt: 2026-08-02 }
   - { field: exitWithin, url: 'https://www.hatchbox.io/terms', checkedAt: 2026-08-02 }
-  - { field: pricingModel, url: 'https://www.hatchbox.io/pricing', checkedAt: 2026-08-01 }
-  - { field: freeTier, url: 'https://www.hatchbox.io/pricing', checkedAt: 2026-08-01 }
+  - { field: pricingModel, url: 'https://www.hatchbox.io/pricing', checkedAt: 2026-11-18 }
+  - { field: freeTier, url: 'https://www.hatchbox.io/pricing', checkedAt: 2026-11-18 }
 figure:
   emoji: 🛤️
   color: rgb(166, 69, 69)
