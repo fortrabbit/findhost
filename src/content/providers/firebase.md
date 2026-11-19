@@ -45,15 +45,15 @@ wikidata: Q18150728
 status: active
 hqCountry: US
 addedAt: 2026-07-31
-checkedAt: 2026-08-09
+checkedAt: 2026-11-19
 sources:
-  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q18150728', checkedAt: 2026-09-09 }
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q18150728', checkedAt: 2026-11-19 }
   - { field: hqCountry, url: 'https://firebase.google.com', checkedAt: 2026-08-09 }
-  - { field: priceFrom, url: 'https://firebase.google.com/pricing', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://docs.cloud.google.com/billing/docs/how-to/billing-cycle', checkedAt: 2026-08-02 }
-  - { field: billingTiming, url: 'https://docs.cloud.google.com/billing/docs/how-to/billing-cycle', checkedAt: 2026-08-02 }
-  - { field: freeTier, url: 'https://firebase.google.com/pricing', checkedAt: 2026-08-01 }
-  - { field: pricingModel, url: 'https://firebase.google.com/pricing', checkedAt: 2026-08-01 }
+  - { field: priceFrom, url: 'https://firebase.google.com/pricing', checkedAt: 2026-11-19 }
+  - { field: billingPeriods, url: 'https://docs.cloud.google.com/billing/docs/how-to/billing-cycle', checkedAt: 2026-11-19 }
+  - { field: billingTiming, url: 'https://docs.cloud.google.com/billing/docs/how-to/billing-cycle', checkedAt: 2026-11-19 }
+  - { field: freeTier, url: 'https://firebase.google.com/pricing', checkedAt: 2026-11-19 }
+  - { field: pricingModel, url: 'https://firebase.google.com/pricing', checkedAt: 2026-11-19 }
 apiAvailable: public
 cliTool: official
 figure:

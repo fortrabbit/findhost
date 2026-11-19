@@ -162,3 +162,4 @@
 2026-11-18	kamatera	unreadable	Home, pricing and about return 403 to the run
 2026-11-18	gcore	confirmed	Home, pricing, about, cloud, GPU, inference, press release and Wikidata read; billingPeriods gains quarterly and yearly; hqCountry LU restated by about; billingTiming not restated (stale); status page returns an empty shell, record checkedAt left as it was
 2026-11-19	servd	unreadable	Home, pricing and terms return 403 with a Cloudflare challenge
+2026-11-19	firebase	confirmed	Home, pricing, billing-cycle doc and Wikidata read; no field changed; six sources re-dated; hqCountry stale (home says nothing on HQ)
