@@ -37,22 +37,22 @@ status: active
 hqCountry: IL
 ownership: vc-backed
 addedAt: 2026-07-31
-checkedAt: 2026-08-09
+checkedAt: 2026-11-19
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: hqCountry, url: 'https://www.duda.co/about', checkedAt: 2026-08-09 }
-  - { field: entryPrice, url: 'https://www.duda.co/pricing', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://www.duda.co/pricing', checkedAt: 2026-08-01 }
-  - { field: priceTo, url: 'https://www.duda.co/pricing', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://www.duda.co/pricing', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://www.duda.co/pricing', checkedAt: 2026-08-02 }
-  - { field: billingTiming, url: 'https://www.duda.co/legal/terms', checkedAt: 2026-08-02 }
-  - { field: exitWithin, url: 'https://www.duda.co/legal/terms', checkedAt: 2026-08-02 }
-  - { field: pricingModel, url: 'https://www.duda.co/pricing', checkedAt: 2026-08-01 }
-  - { field: freeTier, url: 'https://www.duda.co/pricing', checkedAt: 2026-08-01 }
-  - { field: audience, url: 'https://www.duda.co/pricing', checkedAt: 2026-08-01 }
+  - { field: entryPrice, url: 'https://www.duda.co/pricing', checkedAt: 2026-11-19 }
+  - { field: priceFrom, url: 'https://www.duda.co/pricing', checkedAt: 2026-11-19 }
+  - { field: priceTo, url: 'https://www.duda.co/pricing', checkedAt: 2026-11-19 }
+  - { field: currencies, url: 'https://www.duda.co/pricing', checkedAt: 2026-11-19 }
+  - { field: billingPeriods, url: 'https://www.duda.co/pricing', checkedAt: 2026-11-19 }
+  - { field: billingTiming, url: 'https://www.duda.co/legal/terms', checkedAt: 2026-11-19 }
+  - { field: exitWithin, url: 'https://www.duda.co/legal/terms', checkedAt: 2026-11-19 }
+  - { field: pricingModel, url: 'https://www.duda.co/pricing', checkedAt: 2026-11-19 }
+  - { field: freeTier, url: 'https://www.duda.co/pricing', checkedAt: 2026-11-19 }
+  - { field: audience, url: 'https://www.duda.co/pricing', checkedAt: 2026-11-19 }
   - { field: supportChannels, url: 'https://www.duda.co/', checkedAt: 2026-08-08 }
-  - { field: ownership, url: 'https://blog.duda.co/duda-announces-growth-funding-50-million-series-d', checkedAt: 2026-08-21 }
+  - { field: ownership, url: 'https://blog.duda.co/duda-announces-growth-funding-50-million-series-d', checkedAt: 2026-11-19 }
 figure:
   emoji: 🧑‍💼
   color: rgb(73, 111, 151)
