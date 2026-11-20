@@ -55,20 +55,20 @@ hqCountry: US
 referringSubnets: { now: 74427, before: 74596 }
 wikidata: Q283637
 addedAt: 2026-07-31
-checkedAt: 2026-08-09
+checkedAt: 2026-11-20
 sources:
-  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q283637', checkedAt: 2026-09-09 }
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q283637', checkedAt: 2026-11-20 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: hqCountry, url: 'https://cpanel.net', checkedAt: 2026-08-09 }
-  - { field: entryPrice, url: 'https://cpanel.net/pricing/', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://cpanel.net/pricing/', checkedAt: 2026-08-01 }
-  - { field: freeTier, url: 'https://cpanel.net/pricing/', checkedAt: 2026-08-01 }
-  - { field: priceTo, url: 'https://cpanel.net/pricing/', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://cpanel.net/pricing/', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://cpanel.net/pricing/', checkedAt: 2026-08-02 }
-  - { field: billingTiming, url: 'https://cpanel.net/pricing/', checkedAt: 2026-08-02 }
-  - { field: exitWithin, url: 'https://cpanel.net/pricing/', checkedAt: 2026-08-02 }
-  - { field: apiAvailable, url: 'https://cpanel.net/developers/', checkedAt: 2026-08-09 }
+  - { field: entryPrice, url: 'https://cpanel.net/pricing/', checkedAt: 2026-11-20 }
+  - { field: priceFrom, url: 'https://cpanel.net/pricing/', checkedAt: 2026-11-20 }
+  - { field: freeTier, url: 'https://cpanel.net/pricing/', checkedAt: 2026-11-20 }
+  - { field: priceTo, url: 'https://cpanel.net/pricing/', checkedAt: 2026-11-20 }
+  - { field: currencies, url: 'https://cpanel.net/pricing/', checkedAt: 2026-11-20 }
+  - { field: billingPeriods, url: 'https://cpanel.net/pricing/', checkedAt: 2026-11-20 }
+  - { field: billingTiming, url: 'https://cpanel.net/pricing/', checkedAt: 2026-11-20 }
+  - { field: exitWithin, url: 'https://cpanel.net/pricing/', checkedAt: 2026-11-20 }
+  - { field: apiAvailable, url: 'https://cpanel.net/developers/', checkedAt: 2026-11-20 }
 figure:
   emoji: 🎛️
   color: rgb(188, 112, 56)
