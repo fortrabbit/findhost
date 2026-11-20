@@ -36,22 +36,22 @@ status: active
 hqCountry: US
 ownership: independent
 addedAt: 2026-07-31
-checkedAt: 2026-08-09
+checkedAt: 2026-11-20
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: hqCountry, url: 'https://craftcms.com/cloud', checkedAt: 2026-08-09 }
-  - { field: entryPrice, url: 'https://craftcms.com/cloud', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://craftcms.com/cloud', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://craftcms.com/cloud', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://craftcms.com/cloud', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://craftcms.com/docs/cloud/billing', checkedAt: 2026-08-02 }
-  - { field: billingTiming, url: 'https://craftcms.com/docs/cloud/billing', checkedAt: 2026-08-02 }
-  - { field: exitWithin, url: 'https://craftcms.com/docs/cloud/billing', checkedAt: 2026-08-02 }
-  - { field: pricingModel, url: 'https://craftcms.com/cloud', checkedAt: 2026-07-31 }
-  - { field: deployMethods, url: 'https://craftcms.com/cloud', checkedAt: 2026-07-31 }
-  - { field: specialisation, url: 'https://craftcms.com/docs/cloud/', checkedAt: 2026-07-31 }
-  - { field: cliTool, url: 'https://craftcms.com/cloud', checkedAt: 2026-08-09 }
-  - { field: ownership, url: 'https://brandonkelly.io/15-years', checkedAt: 2026-08-21 }
+  - { field: entryPrice, url: 'https://craftcms.com/cloud', checkedAt: 2026-11-20 }
+  - { field: priceFrom, url: 'https://craftcms.com/cloud', checkedAt: 2026-11-20 }
+  - { field: priceTo, url: 'https://craftcms.com/cloud', checkedAt: 2026-11-20 }
+  - { field: currencies, url: 'https://craftcms.com/cloud', checkedAt: 2026-11-20 }
+  - { field: billingPeriods, url: 'https://craftcms.com/docs/cloud/billing', checkedAt: 2026-11-20 }
+  - { field: billingTiming, url: 'https://craftcms.com/docs/cloud/billing', checkedAt: 2026-11-20 }
+  - { field: exitWithin, url: 'https://craftcms.com/docs/cloud/billing', checkedAt: 2026-11-20 }
+  - { field: pricingModel, url: 'https://craftcms.com/cloud', checkedAt: 2026-11-20 }
+  - { field: deployMethods, url: 'https://craftcms.com/cloud', checkedAt: 2026-11-20 }
+  - { field: specialisation, url: 'https://craftcms.com/docs/cloud/', checkedAt: 2026-11-20 }
+  - { field: cliTool, url: 'https://craftcms.com/cloud', checkedAt: 2026-11-20 }
+  - { field: ownership, url: 'https://brandonkelly.io/15-years', checkedAt: 2026-11-20 }
 figure:
   emoji: ⛅
   color: rgb(48, 48, 186)
