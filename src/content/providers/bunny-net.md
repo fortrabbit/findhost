@@ -56,19 +56,19 @@ ownership: vc-backed
 referringSubnets: { now: 3534, before: 3545 }
 wikidata: Q110644081
 addedAt: 2026-07-31
-checkedAt: 2026-08-09
+checkedAt: 2026-11-21
 sources:
-  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q110644081', checkedAt: 2026-09-09 }
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q110644081', checkedAt: 2026-11-21 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: hqCountry, url: 'https://bunny.net', checkedAt: 2026-08-09 }
-  - { field: regions, url: 'https://bunny.net/pricing/storage/', checkedAt: 2026-08-01 }
-  - { field: entryPrice, url: 'https://bunny.net/pricing/', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://bunny.net/pricing/', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://bunny.net/pricing/', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://bunny.net/pricing/', checkedAt: 2026-08-02 }
-  - { field: billingTiming, url: 'https://bunny.net/tos/', checkedAt: 2026-08-02 }
+  - { field: regions, url: 'https://bunny.net/pricing/storage/', checkedAt: 2026-11-21 }
+  - { field: entryPrice, url: 'https://bunny.net/pricing/', checkedAt: 2026-11-21 }
+  - { field: priceFrom, url: 'https://bunny.net/pricing/', checkedAt: 2026-11-21 }
+  - { field: priceTo, url: 'https://bunny.net/pricing/', checkedAt: 2026-11-21 }
+  - { field: billingPeriods, url: 'https://bunny.net/pricing/', checkedAt: 2026-11-21 }
+  - { field: billingTiming, url: 'https://bunny.net/tos/', checkedAt: 2026-11-21 }
   - { field: founded, url: 'https://bunny.net/about/', checkedAt: 2026-08-01 }
-  - { field: ownership, url: 'https://bunny.net/blog/series-a-funding-announcement/', checkedAt: 2026-08-21 }
+  - { field: ownership, url: 'https://bunny.net/blog/series-a-funding-announcement/', checkedAt: 2026-11-21 }
 figure:
   emoji: 🐰
   color: rgb(157, 77, 141)
