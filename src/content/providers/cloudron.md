@@ -47,19 +47,19 @@ ownership: independent
 referringSubnets: { now: 1413, before: 1406 }
 wikidata: Q130299941
 addedAt: 2026-07-31
-checkedAt: 2026-08-09
+checkedAt: 2026-11-21
 sources:
-  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q130299941', checkedAt: 2026-09-09 }
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q130299941', checkedAt: 2026-11-21 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: hqCountry, url: 'https://www.cloudron.io/about.html', checkedAt: 2026-08-09 }
-  - { field: priceFrom, url: 'https://www.cloudron.io/pricing.html', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://www.cloudron.io/pricing.html', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://www.cloudron.io/pricing.html', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://www.cloudron.io/legal/terms.html', checkedAt: 2026-08-02 }
+  - { field: priceFrom, url: 'https://www.cloudron.io/pricing.html', checkedAt: 2026-11-21 }
+  - { field: priceTo, url: 'https://www.cloudron.io/pricing.html', checkedAt: 2026-11-21 }
+  - { field: currencies, url: 'https://www.cloudron.io/pricing.html', checkedAt: 2026-11-21 }
+  - { field: billingPeriods, url: 'https://www.cloudron.io/legal/terms.html', checkedAt: 2026-11-21 }
   - { field: exitWithin, url: 'https://www.cloudron.io/legal/terms.html', checkedAt: 2026-08-02 }
-  - { field: freeTier, url: 'https://www.cloudron.io/pricing.html', checkedAt: 2026-08-01 }
-  - { field: pricingModel, url: 'https://www.cloudron.io/pricing.html', checkedAt: 2026-08-01 }
-  - { field: ownership, url: 'https://forum.cloudron.io/topic/2196/who-is-building-running-a-business-on-top-of-cloudron-what-s-your-model', checkedAt: 2026-08-21 }
+  - { field: freeTier, url: 'https://www.cloudron.io/pricing.html', checkedAt: 2026-11-21 }
+  - { field: pricingModel, url: 'https://www.cloudron.io/pricing.html', checkedAt: 2026-11-21 }
+  - { field: ownership, url: 'https://forum.cloudron.io/topic/2196/who-is-building-running-a-business-on-top-of-cloudron-what-s-your-model', checkedAt: 2026-11-21 }
 figure:
   emoji: 🏡
   color: rgb(77, 157, 131)
