@@ -44,17 +44,17 @@ hqCountry: US
 ownership: vc-backed
 referringSubnets: { now: 740, before: 736 }
 addedAt: 2026-07-31
-checkedAt: 2026-08-09
+checkedAt: 2026-11-23
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: hqCountry, url: 'https://www.back4app.com/about', checkedAt: 2026-08-09 }
-  - { field: priceFrom, url: 'https://www.back4app.com/pricing/backend-as-a-service', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://www.back4app.com/pricing/backend-as-a-service', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://www.back4app.com/pricing/backend-as-a-service', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://www.back4app.com/pricing/backend-as-a-service', checkedAt: 2026-08-02 }
+  - { field: hqCountry, url: 'https://www.back4app.com/about-us', checkedAt: 2026-11-23 }
+  - { field: priceFrom, url: 'https://www.back4app.com/pricing/backend-as-a-service', checkedAt: 2026-11-23 }
+  - { field: priceTo, url: 'https://www.back4app.com/pricing/backend-as-a-service', checkedAt: 2026-11-23 }
+  - { field: currencies, url: 'https://www.back4app.com/pricing/backend-as-a-service', checkedAt: 2026-11-23 }
+  - { field: billingPeriods, url: 'https://www.back4app.com/pricing/backend-as-a-service', checkedAt: 2026-11-23 }
   - { field: billingTiming, url: 'https://www.back4app.com/pricing/backend-as-a-service', checkedAt: 2026-08-02 }
   - { field: exitWithin, url: 'https://www.back4app.com/pricing/backend-as-a-service', checkedAt: 2026-08-02 }
-  - { field: ownership, url: 'https://www.back4app.com/about', checkedAt: 2026-08-21 }
+  - { field: ownership, url: 'https://www.back4app.com/about-us', checkedAt: 2026-11-23 }
 social:
   github: https://github.com/back4app
 figure:
