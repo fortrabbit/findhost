@@ -47,23 +47,23 @@ regions:
 referringSubnets: { now: 3770, before: 3794 }
 wikidata: Q138835306
 addedAt: 2026-07-31
-checkedAt: 2026-08-09
+checkedAt: 2026-11-23
 sources:
-  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q138835306', checkedAt: 2026-09-09 }
+  - { field: wikidata, url: 'https://www.wikidata.org/wiki/Q138835306', checkedAt: 2026-11-23 }
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#791', checkedAt: 2026-08-10 }
-  - { field: software, url: 'https://www.all-inkl.com/webhosting/software-installer/', checkedAt: 2026-08-09 }
-  - { field: priceFrom, url: 'https://all-inkl.com/webhosting/paketvergleich/', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://all-inkl.com/server/', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://all-inkl.com/agb/', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://all-inkl.com/agb/', checkedAt: 2026-08-02 }
-  - { field: billingTiming, url: 'https://all-inkl.com/agb/', checkedAt: 2026-08-02 }
-  - { field: exitWithin, url: 'https://all-inkl.com/agb/', checkedAt: 2026-08-02 }
-  - { field: contractMinimum, url: 'https://www.all-inkl.com/webhosting/', checkedAt: 2026-07-31 }
-  - { field: regions, url: 'https://all-inkl.com/webhosting/', checkedAt: 2026-08-01 }
-  - { field: entryPrice, url: 'https://all-inkl.com/webhosting/', checkedAt: 2026-08-01 }
-  - { field: urls, url: 'https://all-inkl.com/webhosting/', checkedAt: 2026-08-01 }
-  - { field: supportHours, url: 'https://all-inkl.com/webhosting/', checkedAt: 2026-08-01 }
+  - { field: software, url: 'https://all-inkl.com/webhosting/software-installer/', checkedAt: 2026-11-23 }
+  - { field: priceFrom, url: 'https://all-inkl.com/webhosting/paketvergleich/', checkedAt: 2026-11-23 }
+  - { field: priceTo, url: 'https://all-inkl.com/server/', checkedAt: 2026-11-23 }
+  - { field: currencies, url: 'https://all-inkl.com/agb/', checkedAt: 2026-11-23 }
+  - { field: billingPeriods, url: 'https://all-inkl.com/agb/', checkedAt: 2026-11-23 }
+  - { field: billingTiming, url: 'https://all-inkl.com/agb/', checkedAt: 2026-11-23 }
+  - { field: exitWithin, url: 'https://all-inkl.com/agb/', checkedAt: 2026-11-23 }
+  - { field: contractMinimum, url: 'https://all-inkl.com/webhosting/', checkedAt: 2026-11-23 }
+  - { field: regions, url: 'https://all-inkl.com/webhosting/', checkedAt: 2026-11-23 }
+  - { field: entryPrice, url: 'https://all-inkl.com/webhosting/', checkedAt: 2026-11-23 }
+  - { field: urls, url: 'https://all-inkl.com/webhosting/', checkedAt: 2026-11-23 }
+  - { field: supportHours, url: 'https://all-inkl.com/webhosting/', checkedAt: 2026-11-23 }
 supportChannels:
   - phone
   - email
