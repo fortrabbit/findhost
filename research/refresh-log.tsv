@@ -171,3 +171,4 @@
 2026-11-21	cloudways	unreadable	Home and pricing return a Cloudflare challenge (403); developers.cloudways.com is an empty JavaScript shell
 2026-11-22	privex	confirmed	Home and about read; Privex Inc in Belize and name-and-email sign-up still stated; no sources to compare, nothing changed
 2026-11-22	koddos	confirmed	Home read; Amarutu Technology Ltd still named in footer, offshore hosting still sold; no sources to compare, nothing changed
+2026-11-23	back4app	confirmed	Home, pricing and about read; prices, currencies and billing periods match; about moved to /about-us and cited there; billingTiming and exitWithin not restated on pricing (stale); re-dated
