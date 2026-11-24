@@ -86,18 +86,18 @@ checkedAt: 2026-08-12
 favorite: true
 favoriteNote: Interesting newer project.
 sources:
-  - { field: regions, url: 'https://docs.zerops.io/company/about', checkedAt: 2026-08-01 }
-  - { field: runsOn, url: 'https://docs.zerops.io/company/about', checkedAt: 2026-08-01 }
-  - { field: founded, url: 'https://docs.zerops.io/company/about', checkedAt: 2026-08-01 }
-  - { field: hqCountry, url: 'https://docs.zerops.io/company/about', checkedAt: 2026-08-01 }
-  - { field: ownership, url: 'https://docs.zerops.io/company/about', checkedAt: 2026-08-01 }
-  - { field: infraContract, url: 'https://docs.zerops.io/company/about', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://docs.zerops.io/company/pricing', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://docs.zerops.io/company/pricing', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://docs.zerops.io/company/pricing', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://docs.zerops.io/company/pricing', checkedAt: 2026-08-02 }
-  - { field: billingTiming, url: 'https://docs.zerops.io/company/pricing', checkedAt: 2026-08-02 }
-  - { field: urls, url: 'https://zerops.io/terms', checkedAt: 2026-08-01 }
+  - { field: regions, url: 'https://docs.zerops.io/company/about', checkedAt: 2026-11-24 }
+  - { field: runsOn, url: 'https://docs.zerops.io/company/about', checkedAt: 2026-11-24 }
+  - { field: founded, url: 'https://docs.zerops.io/company/about', checkedAt: 2026-11-24 }
+  - { field: hqCountry, url: 'https://docs.zerops.io/company/about', checkedAt: 2026-11-24 }
+  - { field: ownership, url: 'https://docs.zerops.io/company/about', checkedAt: 2026-11-24 }
+  - { field: infraContract, url: 'https://docs.zerops.io/company/about', checkedAt: 2026-11-24 }
+  - { field: priceFrom, url: 'https://docs.zerops.io/billing/pricing', checkedAt: 2026-11-24 }
+  - { field: priceTo, url: 'https://docs.zerops.io/billing/pricing', checkedAt: 2026-11-24 }
+  - { field: currencies, url: 'https://docs.zerops.io/billing/pricing', checkedAt: 2026-11-24 }
+  - { field: billingPeriods, url: 'https://docs.zerops.io/billing/pricing', checkedAt: 2026-11-24 }
+  - { field: billingTiming, url: 'https://docs.zerops.io/billing/pricing', checkedAt: 2026-11-24 }
+  - { field: urls, url: 'https://zerops.io/terms', checkedAt: 2026-11-24 }
   - { field: dnsHosting, url: 'https://docs.zerops.io/features/networking/dns', checkedAt: 2026-08-12 }
   - { field: cdnIncluded, url: 'https://docs.zerops.io/features/cdn', checkedAt: 2026-08-12 }
   - { field: staging, url: 'https://docs.zerops.io/features/environments', checkedAt: 2026-08-12 }

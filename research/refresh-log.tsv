@@ -174,3 +174,4 @@
 2026-11-23	back4app	confirmed	Home, pricing and about read; prices, currencies and billing periods match; about moved to /about-us and cited there; billingTiming and exitWithin not restated on pricing (stale); re-dated
 2026-11-23	all-inkl	confirmed	Home, pricing, server, terms, webhosting, installer and Wikidata read; no field changed; sources re-dated; www URLs moved to apex
 2026-11-24	zone-media	confirmed	Home, pricing, about, help and Your.Online read; prices, founding, regions and parent match; sources moved to redirect targets and re-dated
+2026-11-24	zerops	confirmed	Home, pricing, terms and about read; DNS and environments URLs serve the docs intro, not their pages; CDN and RBAC pages do not restate included or client access; record date kept
