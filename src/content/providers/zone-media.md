@@ -63,24 +63,24 @@ dnsHosting: included
 emailHosting: included
 referringSubnets: { now: 2558, before: 2553 }
 addedAt: 2026-07-31
-checkedAt: 2026-08-12
+checkedAt: 2026-11-24
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: parent, url: 'https://your.online/brands', checkedAt: 2026-08-21 }
-  - { field: ownership, url: 'https://your.online/brands', checkedAt: 2026-08-21 }
-  - { field: regions, url: 'https://www.zone.ee/en/about/', checkedAt: 2026-08-01 }
-  - { field: founded, url: 'https://www.zone.ee/en/about/', checkedAt: 2026-08-01 }
-  - { field: hqCountry, url: 'https://www.zone.ee/en/about/', checkedAt: 2026-08-01 }
-  - { field: supportChannels, url: 'https://www.zone.ee/en/about/', checkedAt: 2026-08-01 }
-  - { field: entryPrice, url: 'https://www.zone.ee/en/web-hosting/prices/', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://www.zone.ee/en/web-hosting/prices/', checkedAt: 2026-08-01 }
-  - { field: priceTo, url: 'https://www.zone.ee/en/web-hosting/prices/', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://www.zone.ee/en/web-hosting/prices/', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://www.zone.ee/en/web-hosting/prices/', checkedAt: 2026-08-02 }
-  - { field: urls, url: 'https://help.zone.eu/en/', checkedAt: 2026-08-01 }
-  - { field: domainRegistration, url: 'https://www.zone.ee/en/web-hosting/prices/', checkedAt: 2026-08-12 }
-  - { field: dnsHosting, url: 'https://www.zone.ee/en/web-hosting/prices/', checkedAt: 2026-08-12 }
-  - { field: emailHosting, url: 'https://www.zone.ee/en/web-hosting/prices/', checkedAt: 2026-08-12 }
+  - { field: parent, url: 'https://your.online/brands/', checkedAt: 2026-11-24 }
+  - { field: ownership, url: 'https://your.online/brands/', checkedAt: 2026-11-24 }
+  - { field: regions, url: 'https://www.zone.ee/en/about-us/', checkedAt: 2026-11-24 }
+  - { field: founded, url: 'https://www.zone.ee/en/about-us/', checkedAt: 2026-11-24 }
+  - { field: hqCountry, url: 'https://www.zone.ee/en/about-us/', checkedAt: 2026-11-24 }
+  - { field: supportChannels, url: 'https://www.zone.ee/en/about-us/', checkedAt: 2026-11-24 }
+  - { field: entryPrice, url: 'https://www.zone.ee/en/web-hosting/', checkedAt: 2026-11-24 }
+  - { field: priceFrom, url: 'https://www.zone.ee/en/web-hosting/', checkedAt: 2026-11-24 }
+  - { field: priceTo, url: 'https://www.zone.ee/en/web-hosting/', checkedAt: 2026-11-24 }
+  - { field: currencies, url: 'https://www.zone.ee/en/web-hosting/', checkedAt: 2026-11-24 }
+  - { field: billingPeriods, url: 'https://www.zone.ee/en/web-hosting/', checkedAt: 2026-11-24 }
+  - { field: urls, url: 'https://help.zone.eu/en/', checkedAt: 2026-11-24 }
+  - { field: domainRegistration, url: 'https://www.zone.ee/en/web-hosting/', checkedAt: 2026-11-24 }
+  - { field: dnsHosting, url: 'https://www.zone.ee/en/web-hosting/', checkedAt: 2026-11-24 }
+  - { field: emailHosting, url: 'https://www.zone.ee/en/web-hosting/', checkedAt: 2026-11-24 }
 figure:
   emoji: 🛰️
   color: rgb(55, 97, 179)
