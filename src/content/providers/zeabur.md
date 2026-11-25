@@ -66,19 +66,19 @@ testDomain: included
 collaboration: team
 referringSubnets: { now: 672, before: 676 }
 addedAt: 2026-07-31
-checkedAt: 2026-08-12
+checkedAt: 2026-11-25
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: testDomain, url: 'https://zeabur.com/docs/deploy/networking/public-networking', checkedAt: 2026-08-12 }
-  - { field: collaboration, url: 'https://zeabur.com/docs/operations/team/invite-member', checkedAt: 2026-08-12 }
-  - { field: hqCountry, url: 'https://zeabur.com/about', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://zeabur.com/pricing', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://zeabur.com/pricing', checkedAt: 2026-08-02 }
+  - { field: testDomain, url: 'https://zeabur.com/docs/en-US/deploy/networking/public-networking', checkedAt: 2026-11-25 }
+  - { field: collaboration, url: 'https://zeabur.com/docs/en-US/operations/team/invite-member', checkedAt: 2026-11-25 }
+  - { field: hqCountry, url: 'https://zeabur.com/about', checkedAt: 2026-11-25 }
+  - { field: priceFrom, url: 'https://zeabur.com/pricing', checkedAt: 2026-11-25 }
+  - { field: priceTo, url: 'https://zeabur.com/pricing', checkedAt: 2026-11-25 }
   - { field: currencies, url: 'https://zeabur.com/docs/legal/terms', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://zeabur.com/pricing', checkedAt: 2026-08-02 }
+  - { field: billingPeriods, url: 'https://zeabur.com/pricing', checkedAt: 2026-11-25 }
   - { field: exitWithin, url: 'https://zeabur.com/docs/legal/terms', checkedAt: 2026-08-02 }
-  - { field: urls, url: 'https://zeabur.com/docs/legal/terms', checkedAt: 2026-08-01 }
-  - { field: ownership, url: 'https://zeabur.com/blogs/our-2m-seed-round', checkedAt: 2026-08-21 }
+  - { field: urls, url: 'https://zeabur.com/docs/en-US/terms-of-service', checkedAt: 2026-11-25 }
+  - { field: ownership, url: 'https://zeabur.com/blogs/our-2m-seed-round', checkedAt: 2026-11-25 }
 figure:
   emoji: 🧩
   color: rgb(73, 88, 161)
