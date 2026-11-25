@@ -175,3 +175,4 @@
 2026-11-23	all-inkl	confirmed	Home, pricing, server, terms, webhosting, installer and Wikidata read; no field changed; sources re-dated; www URLs moved to apex
 2026-11-24	zone-media	confirmed	Home, pricing, about, help and Your.Online read; prices, founding, regions and parent match; sources moved to redirect targets and re-dated
 2026-11-24	zerops	confirmed	Home, pricing, terms and about read; DNS and environments URLs serve the docs intro, not their pages; CDN and RBAC pages do not restate included or client access; record date kept
+2026-11-25	zeabur	confirmed	Home, pricing, terms, docs, networking, team invite, about and seed-round post read; no field changed; eight sources re-dated; currencies and exitWithin stale (terms state neither)
