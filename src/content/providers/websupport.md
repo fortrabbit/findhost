@@ -34,11 +34,13 @@ deployMethods:
 backupsIncluded: included
 pricingModel: fixed-tier
 priceFrom: xs
-priceTo: md
+priceTo: lg
 currencies:
   - EUR
 billingPeriods:
   - monthly
+  - quarterly
+  - half-yearly
   - yearly
 exitWithin: a-quarter
 entryPrice: { amount: 2.99, currency: EUR, period: month }
@@ -66,21 +68,21 @@ social:
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
   - { field: greenWebId, url: 'https://app.greenweb.org/directory/#1463', checkedAt: 2026-08-10 }
-  - { field: regions, url: 'https://www.websupport.sk/datacentrum', checkedAt: 2026-08-01 }
+  - { field: regions, url: 'https://www.websupport.sk/o-nas/datacentrum/', checkedAt: 2026-11-25 }
   - { field: energyClaim, url: 'https://www.websupport.sk/o-nas', checkedAt: 2026-08-01 }
-  - { field: parent, url: 'https://www.websupport.sk/o-nas', checkedAt: 2026-08-01 }
+  - { field: parent, url: 'https://www.websupport.sk/o-nas', checkedAt: 2026-11-25 }
   - { field: supportHours, url: 'https://www.websupport.sk/o-nas', checkedAt: 2026-08-01 }
-  - { field: entryPrice, url: 'https://www.websupport.sk/webhosting', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://www.websupport.sk/cennik', checkedAt: 2026-08-02 }
-  - { field: priceTo, url: 'https://www.websupport.sk/cennik', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://www.websupport.sk/cennik', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://www.websupport.sk/cennik', checkedAt: 2026-08-02 }
+  - { field: entryPrice, url: 'https://www.websupport.sk/webhosting', checkedAt: 2026-11-25 }
+  - { field: priceFrom, url: 'https://www.websupport.sk/cennik', checkedAt: 2026-11-25 }
+  - { field: priceTo, url: 'https://www.websupport.sk/cennik', checkedAt: 2026-11-25 }
+  - { field: currencies, url: 'https://www.websupport.sk/cennik', checkedAt: 2026-11-25 }
+  - { field: billingPeriods, url: 'https://www.websupport.sk/cennik', checkedAt: 2026-11-25 }
   - { field: exitWithin, url: 'https://www.websupport.sk/obchodne-podmienky/', checkedAt: 2026-08-02 }
   - { field: urls, url: 'https://www.websupport.sk/podmienky', checkedAt: 2026-08-01 }
   - { field: apiAvailable, url: 'https://www.websupport.sk', checkedAt: 2026-08-09 }
-  - { field: domainRegistration, url: 'https://www.websupport.sk/domeny', checkedAt: 2026-08-12 }
+  - { field: domainRegistration, url: 'https://www.websupport.sk/domeny', checkedAt: 2026-11-25 }
   - { field: dnsHosting, url: 'https://www.websupport.sk/cennik', checkedAt: 2026-08-12 }
-  - { field: emailHosting, url: 'https://www.websupport.sk/webhosting', checkedAt: 2026-08-12 }
+  - { field: emailHosting, url: 'https://www.websupport.sk/webhosting', checkedAt: 2026-11-25 }
 figure:
   emoji: 🏔️
   color: rgb(63, 112, 150)
