@@ -25,18 +25,18 @@ software:
 runtimes:
   - php
 persistentStorage: false
-pricingModel: fixed-tier
+pricingModel: plan-plus-overage
 priceFrom: sm
 priceTo: md
 currencies:
   - USD
 billingPeriods:
   - monthly
+  - yearly
 freeTier: permanent
 regions:
   - FR
   - DE
-  - CA
   - US
 cdnIncluded: included
 collaboration: team
@@ -49,23 +49,23 @@ favoriteNote: A different bet from everyone else here, not a cheaper version of 
 referringSubnets: { now: 894, before: 890 }
 status: active
 addedAt: 2026-07-31
-checkedAt: 2026-08-12
+checkedAt: 2026-11-26
 cliTool: official
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: regions, url: 'https://docs.wasmer.io/edge/learn/regions', checkedAt: 2026-08-01 }
-  - { field: urls, url: 'https://docs.wasmer.io/', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://wasmer.io/pricing', checkedAt: 2026-08-02 }
+  - { field: regions, url: 'https://docs.wasmer.io/edge/learn/regions/', checkedAt: 2026-11-26 }
+  - { field: urls, url: 'https://docs.wasmer.io/', checkedAt: 2026-11-26 }
+  - { field: priceFrom, url: 'https://wasmer.io/pricing', checkedAt: 2026-11-26 }
   - { field: priceTo, url: 'https://wasmer.io/pricing', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://wasmer.io/pricing', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://wasmer.io/pricing', checkedAt: 2026-08-02 }
-  - { field: freeTier, url: 'https://wasmer.io/pricing', checkedAt: 2026-07-31 }
-  - { field: pricingModel, url: 'https://wasmer.io/pricing', checkedAt: 2026-07-31 }
+  - { field: currencies, url: 'https://wasmer.io/pricing', checkedAt: 2026-11-26 }
+  - { field: billingPeriods, url: 'https://wasmer.io/pricing', checkedAt: 2026-11-26 }
+  - { field: freeTier, url: 'https://wasmer.io/pricing', checkedAt: 2026-11-26 }
+  - { field: pricingModel, url: 'https://wasmer.io/pricing', checkedAt: 2026-11-26 }
   - { field: software, url: 'https://wasmer.io/pricing', checkedAt: 2026-07-31 }
-  - { field: cliTool, url: 'https://wasmer.io', checkedAt: 2026-08-09 }
-  - { field: cdnIncluded, url: 'https://wasmer.io/pricing', checkedAt: 2026-08-12 }
-  - { field: collaboration, url: 'https://wasmer.io/pricing', checkedAt: 2026-08-12 }
-  - { field: ownership, url: 'https://www.ycombinator.com/companies/wasmer', checkedAt: 2026-08-21 }
+  - { field: cliTool, url: 'https://wasmer.io', checkedAt: 2026-11-26 }
+  - { field: cdnIncluded, url: 'https://wasmer.io/pricing', checkedAt: 2026-11-26 }
+  - { field: collaboration, url: 'https://wasmer.io/pricing', checkedAt: 2026-11-26 }
+  - { field: ownership, url: 'https://www.ycombinator.com/companies/wasmer', checkedAt: 2026-11-26 }
 figure:
   emoji: 🧩
   color: rgb(55, 83, 179)
