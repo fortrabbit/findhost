@@ -59,21 +59,21 @@ social:
   youtube: https://www.youtube.com/c/VentraIPAU/videos
 referringSubnets: { now: 537, before: 541 }
 addedAt: 2026-07-31
-checkedAt: 2026-08-12
+checkedAt: 2026-11-27
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: founded, url: 'https://ventraip.com.au/about-us/', checkedAt: 2026-08-01 }
-  - { field: hqCountry, url: 'https://ventraip.com.au/about-us/', checkedAt: 2026-08-01 }
-  - { field: parent, url: 'https://ventraip.com.au/about-us/', checkedAt: 2026-08-01 }
-  - { field: regions, url: 'https://ventraip.com.au/about-us/', checkedAt: 2026-08-01 }
-  - { field: supportHours, url: 'https://ventraip.com.au/about-us/', checkedAt: 2026-08-01 }
-  - { field: certifications, url: 'https://ventraip.com.au/about-us/', checkedAt: 2026-08-01 }
-  - { field: priceFrom, url: 'https://ventraip.com.au/web-hosting/', checkedAt: 2026-08-02 }
+  - { field: founded, url: 'https://ventraip.com.au/about-us/', checkedAt: 2026-11-27 }
+  - { field: hqCountry, url: 'https://ventraip.com.au/about-us/', checkedAt: 2026-11-27 }
+  - { field: parent, url: 'https://ventraip.com.au/about-us/', checkedAt: 2026-11-27 }
+  - { field: regions, url: 'https://ventraip.com.au/about-us/', checkedAt: 2026-11-27 }
+  - { field: supportHours, url: 'https://ventraip.com.au/about-us/', checkedAt: 2026-11-27 }
+  - { field: certifications, url: 'https://ventraip.com.au/about-us/', checkedAt: 2026-11-27 }
+  - { field: priceFrom, url: 'https://ventraip.com.au/web-hosting/', checkedAt: 2026-11-27 }
   - { field: priceTo, url: 'https://ventraip.com.au/web-hosting/custom-hosting/', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://ventraip.com.au/web-hosting/', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://ventraip.com.au/web-hosting/', checkedAt: 2026-08-02 }
-  - { field: domainRegistration, url: 'https://ventraip.com.au/domain-names/', checkedAt: 2026-08-12 }
-  - { field: dnsHosting, url: 'https://ventraip.com.au/domain-names/', checkedAt: 2026-08-12 }
+  - { field: currencies, url: 'https://ventraip.com.au/web-hosting/', checkedAt: 2026-11-27 }
+  - { field: billingPeriods, url: 'https://ventraip.com.au/web-hosting/', checkedAt: 2026-11-27 }
+  - { field: domainRegistration, url: 'https://ventraip.com.au/domain-names/', checkedAt: 2026-11-27 }
+  - { field: dnsHosting, url: 'https://ventraip.com.au/domain-names/', checkedAt: 2026-11-27 }
   - { field: emailHosting, url: 'https://ventraip.com.au/domain-names/', checkedAt: 2026-08-12 }
 figure:
   emoji: 🪃
