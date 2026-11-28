@@ -182,3 +182,4 @@
 2026-11-27	ventraip	confirmed	About, web hosting, domains and custom hosting read; eleven sources re-dated; emailHosting and priceTo stale
 2026-11-27	vercel	confirmed	Home, pricing, status, terms and docs read; no sources to compare
 2026-11-28	sesterce	confirmed	Home, pricing, terms, docs, instance config, billing and API reference read; regions gains AU, DE, GB, IL, NL, SG; inference docs 404 and npm 403, so useCases, runtimes, deployMethods and gpuCapacity inference stale
+2026-11-28	upsun	confirmed	Home, pricing, status, docs, regions, stacks, Series D post read; no field changed; sources re-dated; staging wording on pricing now reads preview environments, same inclusion, kept
