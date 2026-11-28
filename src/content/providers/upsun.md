@@ -69,26 +69,26 @@ collaboration: team
 apiAvailable: public
 cliTool: official
 addedAt: 2026-07-31
-checkedAt: 2026-08-12
+checkedAt: 2026-11-28
 sources:
   - { field: referringSubnets, url: 'https://majestic.com/reports/majestic-million', checkedAt: 2026-09-07 }
-  - { field: staging, url: 'https://upsun.com/pricing/', checkedAt: 2026-08-12 }
-  - { field: collaboration, url: 'https://upsun.com/pricing/', checkedAt: 2026-08-12 }
-  - { field: regions, url: 'https://developer.upsun.com/docs/development/regions', checkedAt: 2026-08-01 }
-  - { field: urls, url: 'https://status.upsun.com/', checkedAt: 2026-08-01 }
-  - { field: runtimes, url: 'https://developer.upsun.com/docs/get-started/stacks', checkedAt: 2026-07-31 }
-  - { field: software, url: 'https://developer.upsun.com/docs/get-started/stacks', checkedAt: 2026-07-31 }
-  - { field: pricingModel, url: 'https://upsun.com/pricing/', checkedAt: 2026-07-31 }
-  - { field: priceFrom, url: 'https://upsun.com/pricing/', checkedAt: 2026-07-31 }
-  - { field: priceTo, url: 'https://upsun.com/pricing/', checkedAt: 2026-08-02 }
-  - { field: currencies, url: 'https://upsun.com/pricing/', checkedAt: 2026-08-02 }
-  - { field: billingPeriods, url: 'https://upsun.com/pricing/', checkedAt: 2026-08-02 }
-  - { field: billingTiming, url: 'https://upsun.com/pricing/', checkedAt: 2026-08-02 }
-  - { field: freeTier, url: 'https://upsun.com/pricing/', checkedAt: 2026-07-31 }
-  - { field: audience, url: 'https://upsun.com/pricing/', checkedAt: 2026-07-31 }
-  - { field: apiAvailable, url: 'https://upsun.com', checkedAt: 2026-08-09 }
-  - { field: cliTool, url: 'https://upsun.com', checkedAt: 2026-08-09 }
-  - { field: ownership, url: 'https://upsun.com/blog/securing-series-d-financing/', checkedAt: 2026-08-21 }
+  - { field: staging, url: 'https://upsun.com/pricing/', checkedAt: 2026-11-28 }
+  - { field: collaboration, url: 'https://upsun.com/pricing/', checkedAt: 2026-11-28 }
+  - { field: regions, url: 'https://developer.upsun.com/docs/development/regions', checkedAt: 2026-11-28 }
+  - { field: urls, url: 'https://status.upsun.com/', checkedAt: 2026-11-28 }
+  - { field: runtimes, url: 'https://developer.upsun.com/docs/get-started/stacks', checkedAt: 2026-11-28 }
+  - { field: software, url: 'https://developer.upsun.com/docs/get-started/stacks', checkedAt: 2026-11-28 }
+  - { field: pricingModel, url: 'https://upsun.com/pricing/', checkedAt: 2026-11-28 }
+  - { field: priceFrom, url: 'https://upsun.com/pricing/', checkedAt: 2026-11-28 }
+  - { field: priceTo, url: 'https://upsun.com/pricing/', checkedAt: 2026-11-28 }
+  - { field: currencies, url: 'https://upsun.com/pricing/', checkedAt: 2026-11-28 }
+  - { field: billingPeriods, url: 'https://upsun.com/pricing/', checkedAt: 2026-11-28 }
+  - { field: billingTiming, url: 'https://upsun.com/pricing/', checkedAt: 2026-11-28 }
+  - { field: freeTier, url: 'https://upsun.com/pricing/', checkedAt: 2026-11-28 }
+  - { field: audience, url: 'https://upsun.com/pricing/', checkedAt: 2026-11-28 }
+  - { field: apiAvailable, url: 'https://upsun.com', checkedAt: 2026-11-28 }
+  - { field: cliTool, url: 'https://upsun.com', checkedAt: 2026-11-28 }
+  - { field: ownership, url: 'https://upsun.com/blog/securing-series-d-financing/', checkedAt: 2026-11-28 }
 figure:
   emoji: ☀️
   color: rgb(42, 111, 178)

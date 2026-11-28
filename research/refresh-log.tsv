@@ -181,3 +181,4 @@
 2026-11-26	wasmer	confirmed	Pricing, home, docs, regions and YC read; pricingModel plan-plus-overage, billingPeriods gains yearly, regions drop CA (not in the regions table); software stale, pricing page names no frameworks; priceTo stale
 2026-11-27	ventraip	confirmed	About, web hosting, domains and custom hosting read; eleven sources re-dated; emailHosting and priceTo stale
 2026-11-27	vercel	confirmed	Home, pricing, status, terms and docs read; no sources to compare
+2026-11-28	upsun	confirmed	Home, pricing, status, docs, regions, stacks, Series D post read; no field changed; sources re-dated; staging wording on pricing now reads preview environments, same inclusion, kept
