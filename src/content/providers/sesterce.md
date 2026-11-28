@@ -45,29 +45,35 @@ regions:
   - NO
   - IN
   - JP
+  - AU
+  - DE
+  - GB
+  - IL
+  - NL
+  - SG
 apiAvailable: public
 cliTool: official
 status: active
 addedAt: 2026-09-24
 sources:
-  - { field: category, url: 'https://cloud.sesterce.com/compute', checkedAt: 2026-09-28 }
-  - { field: hqCountry, url: 'https://www.sesterce.com/terms-of-use', checkedAt: 2026-09-28 }
-  - { field: whoManagesOs, url: 'https://docs.sesterce.com/compute-instances/configure-your-compute-instance', checkedAt: 2026-09-24 }
+  - { field: category, url: 'https://cloud.sesterce.com/compute', checkedAt: 2026-11-28 }
+  - { field: hqCountry, url: 'https://www.sesterce.com/terms-of-use', checkedAt: 2026-11-28 }
+  - { field: whoManagesOs, url: 'https://docs.sesterce.com/compute-instances/configure-your-compute-instance', checkedAt: 2026-11-28 }
   - { field: useCases, url: 'https://docs.sesterce.com/ai-inference-instances', checkedAt: 2026-09-28 }
   - { field: runtimes, url: 'https://docs.sesterce.com/ai-inference-instances/inference-instance-configuration', checkedAt: 2026-09-28 }
   - { field: deployMethods, url: 'https://docs.sesterce.com/ai-inference-instances/inference-instance-configuration', checkedAt: 2026-09-28 }
-  - { field: gpuCapacity, url: 'https://cloud.sesterce.com/compute', checkedAt: 2026-09-28 }
+  - { field: gpuCapacity, url: 'https://cloud.sesterce.com/compute', checkedAt: 2026-11-28 }
   - { field: gpuCapacity, url: 'https://docs.sesterce.com/ai-inference-instances', checkedAt: 2026-09-28 }
-  - { field: pricingModel, url: 'https://cloud.sesterce.com/compute', checkedAt: 2026-09-28 }
-  - { field: priceFrom, url: 'https://cloud.sesterce.com/compute', checkedAt: 2026-09-28 }
-  - { field: priceTo, url: 'https://cloud.sesterce.com/compute', checkedAt: 2026-09-28 }
-  - { field: entryPrice, url: 'https://cloud.sesterce.com/compute', checkedAt: 2026-09-28 }
-  - { field: currencies, url: 'https://cloud.sesterce.com/compute', checkedAt: 2026-09-28 }
-  - { field: billingPeriods, url: 'https://docs.sesterce.com/welcome-on-sesterce-cloud/payment-and-billing', checkedAt: 2026-09-24 }
-  - { field: billingTiming, url: 'https://docs.sesterce.com/welcome-on-sesterce-cloud/payment-and-billing', checkedAt: 2026-09-28 }
-  - { field: paymentMethods, url: 'https://docs.sesterce.com/welcome-on-sesterce-cloud/payment-and-billing', checkedAt: 2026-09-28 }
-  - { field: regions, url: 'https://cloud.sesterce.com/compute', checkedAt: 2026-09-28 }
-  - { field: apiAvailable, url: 'https://docs.sesterce.com/api-reference', checkedAt: 2026-09-28 }
+  - { field: pricingModel, url: 'https://cloud.sesterce.com/compute', checkedAt: 2026-11-28 }
+  - { field: priceFrom, url: 'https://cloud.sesterce.com/compute', checkedAt: 2026-11-28 }
+  - { field: priceTo, url: 'https://cloud.sesterce.com/compute', checkedAt: 2026-11-28 }
+  - { field: entryPrice, url: 'https://cloud.sesterce.com/compute', checkedAt: 2026-11-28 }
+  - { field: currencies, url: 'https://cloud.sesterce.com/compute', checkedAt: 2026-11-28 }
+  - { field: billingPeriods, url: 'https://docs.sesterce.com/welcome-on-sesterce-cloud/payment-and-billing', checkedAt: 2026-11-28 }
+  - { field: billingTiming, url: 'https://docs.sesterce.com/welcome-on-sesterce-cloud/payment-and-billing', checkedAt: 2026-11-28 }
+  - { field: paymentMethods, url: 'https://docs.sesterce.com/welcome-on-sesterce-cloud/payment-and-billing', checkedAt: 2026-11-28 }
+  - { field: regions, url: 'https://cloud.sesterce.com/compute', checkedAt: 2026-11-28 }
+  - { field: apiAvailable, url: 'https://docs.sesterce.com/api-reference', checkedAt: 2026-11-28 }
   - { field: cliTool, url: 'https://www.npmjs.com/package/sesterce-cli', checkedAt: 2026-09-24 }
 figure:
   emoji: 🏛️
